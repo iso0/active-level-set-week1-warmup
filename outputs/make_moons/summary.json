@@ -4,6 +4,8 @@
   "initial_size": 6,
   "total_budget": 50,
   "selection_rule": "argmin_abs_posterior_mean",
+  "initial_design": "stratified random: three points from each class",
+  "model_note": "GaussianProcessRegressor on {-1,+1} labels is a Week 1 stand-in; the displayed score is not a calibrated class probability.",
   "snapshot_uncertain_fractions": {
     "6": 0.82078125,
     "20": 0.5638671875,

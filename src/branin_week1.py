@@ -7,7 +7,6 @@ classifier planned for the thesis.
 
 from __future__ import annotations
 
-from email.mime import image
 import json
 import warnings
 from dataclasses import dataclass
@@ -342,14 +341,14 @@ def plot_snapshots(run: BraninRun, output_path: Path) -> None:
     ]
     fig.legend(handles=legend, loc="lower center", ncol=2, frameon=False)
     fig.suptitle(
-    f"Week 1 active learning on thresholded Branin (seed {run.seed})",
-    fontsize=15,
+        f"Week 1 active learning on thresholded Branin (seed {run.seed})",
+        fontsize=15,
     )
     # Leave explicit space on the right for the colorbar.
     fig.subplots_adjust(bottom=0.20, top=0.82, right=0.84, wspace=0.18)
     # Put the colorbar in its own dedicated axis so it cannot overlap the third plot.
     cbar_ax = fig.add_axes([0.87, 0.24, 0.015, 0.52])
-    fig.colorbar(image, cax=cbar_ax, label="GP latent mean μ(x)")
+    fig.colorbar(image, cax=cbar_ax, label="GP latent mean mu(x)")
     fig.savefig(output_path, dpi=200, bbox_inches="tight")
     plt.close(fig)
 

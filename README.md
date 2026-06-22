@@ -5,11 +5,11 @@ Current thesis title:
 > Sample-Efficient Active Level-Set Estimation, with an Application to
 > Melt-Pool Regime Boundaries
 
-This repository contains the Week 1 warm-up project from Ioan's working brief.
-It is the 2D synthetic-data plumbing stage before the main thesis work on
-melt-pool regime boundaries. The purpose is to build one complete
-active-learning loop before introducing the final thesis model or new
-acquisition functions.
+This repository contains the Week 1 and Week 2 warm-up project from Ioan's
+working brief. It is the 2D synthetic-data plumbing stage before the main thesis
+work on melt-pool regime boundaries. The purpose is to build one complete
+active-learning loop, then compare acquisition rules before introducing the
+final thesis model.
 
 ## Setup
 
@@ -111,3 +111,61 @@ of its boundary while improving another. The important Week 1 check is a clear
 downward trend across the full budget and across multiple seeds.
 
 Slide-ready notes are in `outputs/week1_slide_notes.md`.
+
+## Week 2 in plain language
+
+Week 2 asks a fair comparison question:
+
+```text
+If the data, GP model, initial labelled points, test set, and budget stay fixed,
+which acquisition rule chooses the most useful next Branin labels?
+```
+
+Ioan's Week 2 brief asks us to hold the loop fixed and change only the
+selection rule. The original brief names three rules: random, smallest `|mu|`,
+and straddle. This project also adds two useful boundary-focused variants, for
+five rules total:
+
+- `random`: choose a random unlabelled pool point. This is the floor baseline.
+- `smallest_abs_mu`: choose the point with the smallest `|mu(x)|`. This is the
+  Week 1 rule.
+- `straddle`: choose the largest `1.96 * sigma(x) - |mu(x)|`, balancing boundary
+  closeness and uncertainty.
+- `randomized_straddle`: draw one reproducible `beta ~ chi-square(df=2)` per
+  acquisition step, then choose the largest `sqrt(beta) * sigma(x) - |mu(x)|`.
+- `expected_feasibility`: choose a point with high expected improvement for the
+  zero contour, approximating
+  `E[max((1.96*sigma(x))^2 - Y(x)^2, 0)]` for
+  `Y(x) ~ Normal(mu(x), sigma(x)^2)`.
+
+The Week 2 comparison still uses `GaussianProcessRegressor` on `{-1, +1}`
+labels. This keeps it aligned with the Week 1 plumbing, but it is still a
+stand-in rather than the final GP classifier.
+
+## Run Week 2 acquisition comparison
+
+```powershell
+python -m src.week2_acquisition_comparison
+```
+
+Or open:
+
+```text
+notebooks/03_week2_acquisition_comparison.ipynb
+```
+
+Outputs are saved under `outputs/week2_acquisition_comparison/`:
+
+- `summary.json`: threshold, settings, fairness checks, full error histories,
+  per-method/per-seed errors, an 8% test-error tolerance check, and the best
+  method by mean final error.
+- `error_curves_all_methods.png`: mean error-vs-evaluations curves for all five
+  acquisition rules.
+- `final_error_bar_chart.png`: final error at budget 50 for each method.
+- `selected_budget_table.csv`: method errors at budgets 6, 20, and 50.
+- `method_summary_table.csv`: initial/final mean error, improvement, standard
+  deviation, and rank.
+- `query_locations_seed0.png`: where each method queried by budget 50.
+- `snapshots_best_*_seed0.png` and `snapshots_straddle_seed0.png`: model belief
+  snapshots at 6, 20, and 50 labels.
+- `week2_slide_notes.md`: beginner-friendly notes for Google Slides.
