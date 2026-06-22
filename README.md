@@ -1,0 +1,113 @@
+# Active Level-Set Estimation Thesis
+
+Current thesis title:
+
+> Sample-Efficient Active Level-Set Estimation, with an Application to
+> Melt-Pool Regime Boundaries
+
+This repository contains the Week 1 warm-up project from Ioan's working brief.
+It is the 2D synthetic-data plumbing stage before the main thesis work on
+melt-pool regime boundaries. The purpose is to build one complete
+active-learning loop before introducing the final thesis model or new
+acquisition functions.
+
+## Setup
+
+From the project root in VS Code's PowerShell terminal:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+```
+
+For notebooks, select `.venv` as the Python kernel in VS Code.
+
+## Week 1 in plain language
+
+Week 1 asks two different questions:
+
+1. **Does the loop visibly work?** `make_moons` is a simple visual sanity
+   check. We can watch the estimated boundary change as labels are acquired.
+2. **Can we measure whether it works?** Thresholded Branin has an exact known
+   boundary. This lets us count how many independent test points the model
+   labels incorrectly.
+
+Both experiments currently use `GaussianProcessRegressor` on labels in
+`{-1, +1}`. Its latent posterior mean is called `mu(x)`, and the believed
+boundary is `mu(x) = 0`. This is a deliberately simple stand-in for Week 1. It
+is **not** the final GP classifier, and its displayed scores are not calibrated
+class probabilities.
+
+The Week 1 acquisition rule is also intentionally simple:
+
+```text
+Choose the unlabelled pool point with the smallest |mu(x)|.
+```
+
+That is the point the current GP believes is nearest its decision boundary.
+Only the selected point's label is revealed, mimicking an expensive simulator.
+
+## Run make_moons
+
+```powershell
+python -m src.make_moons_sanity_check
+```
+
+Or run:
+
+```text
+notebooks/01_make_moons_sanity_check.ipynb
+```
+
+Outputs are saved under `outputs/make_moons/`.
+
+The experiment uses 600 noisy-but-nearly-deterministic moon points, maps labels
+to `{-1, +1}`, scales coordinates to `[0,1]^2`, starts from 6 labels, and stops
+at 50. Its initial design is stratified random: three points from each class.
+This avoids an uninformative one-class start and is recorded in the JSON.
+
+## Run thresholded Branin
+
+```powershell
+python -m src.branin_week1
+```
+
+Or run:
+
+```text
+notebooks/02_branin_week1_loop.ipynb
+```
+
+Outputs are saved under `outputs/branin_week1/`:
+
+- `dataset_overview.png`: exact thresholded-Branin regimes and boundary.
+- `active_learning_snapshots_seed0.png`: GP belief at 6, 20, and 50 labels.
+- `error_vs_evaluations.png`: error histories for three seeds and their mean.
+- `summary.json`: threshold, settings, initial/final errors, and full histories.
+
+The Branin threshold is estimated once as the 45th percentile over 20,000
+uniform random domain points. Each seed then gets a reproducible pool of 1,500
+points and an independent test set of 4,000 points. The model receives scaled
+coordinates, while figures use the original Branin axes.
+
+The six initial Branin points are random. In the rare case that all six have
+the same label, the complete six-point draw is repeated until both classes are
+present. The number of attempts is recorded in `summary.json`.
+
+## Understanding the Branin error
+
+After every GP fit, predictions on the 4,000-point test set are converted to
+labels using:
+
+```text
+mu(x) >= 0  ->  +1
+mu(x) < 0   ->  -1
+```
+
+The reported error is the fraction of these labels that disagree with the
+exact thresholded-Branin labels. Lower is better. The curve does not need to
+decrease after every single query because a newly fitted GP can move one part
+of its boundary while improving another. The important Week 1 check is a clear
+downward trend across the full budget and across multiple seeds.
+
+Slide-ready notes are in `outputs/week1_slide_notes.md`.
