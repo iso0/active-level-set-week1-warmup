@@ -174,16 +174,73 @@ Outputs are saved under `outputs/week2_acquisition_comparison/`:
 
 Week 3 starts moving the benchmark from 2D Branin toward the real
 laser-metal setting, where the process-parameter space is four-dimensional.
-The new experiment is still synthetic, but it uses a deterministic 4D
-continuous function on `[0,1]^4` and exact labels from a fixed threshold.
+The main Week 3 benchmark is now a named analytic benchmark:
+thresholded 4D Ackley.
 
-The selected first 4D benchmark is a controlled synthetic boundary function.
-It combines a tilted 4D trend, nonlinear interaction waves, and a localized
-bump. The threshold is fixed as the median of a reproducible uniform sample,
-so labels are deterministic and the test labels are known exactly. This is
-better aligned with active level-set estimation than ordinary classification
-datasets such as Iris, because those datasets do not provide an exact
-continuous level-set oracle.
+Ackley is deterministic and can be evaluated exactly in four dimensions. After
+thresholding the continuous function, every pool and test point has an exact
+binary label:
+
+```text
+Ackley(x) >= threshold  ->  +1
+Ackley(x) < threshold   ->  -1
+```
+
+The script uses the domain `[-5,5]^4`. This keeps the central Ackley basin and
+level-set boundary visible for a finite pool and an 80-query active-learning
+budget. Internally, the GP receives linearly scaled coordinates in `[0,1]^4`,
+similar to the Branin scaling from Week 1 and Week 2.
+
+The previous controlled synthetic 4D boundary script is still present as a
+secondary / optional experiment:
+
+```powershell
+python -m src.week3_4d_benchmark_comparison
+```
+
+It is useful for controlled studies, but it is no longer the main Week 3
+benchmark because Ioan asked for a known 4D dataset or benchmark.
+
+## Understanding the 4D Ackley benchmark
+
+In 2D Branin we could draw the full exact boundary. In 4D, we cannot visualize
+the full boundary in one plot. The named Week 3 script therefore creates
+diagnostic views:
+
+- `dataset_value_distribution.png`: histogram of Ackley values with the chosen
+  threshold and class balance.
+- `pairwise_label_projections_seed0.png`: all six pairwise 2D projections of
+  seed-0 pool labels.
+- `exact_boundary_2d_slices.png`: exact label regions and threshold contours on
+  fixed 2D slices through the 4D function.
+- `query_locations_projection_seed0.png`: seed-0 acquisition locations,
+  projected to `x0` vs `x1`.
+- `straddle_slice_snapshots_seed0.png` and
+  `randomized_straddle_slice_snapshots_seed0.png`: GP boundary snapshots on a
+  fixed 2D slice, compared with the exact threshold contour.
+
+These plots are diagnostics, not complete pictures of the 4D boundary.
+
+## Run Week 3 named 4D benchmark comparison
+
+```powershell
+python -m src.week3_4d_named_benchmark_comparison
+```
+
+Outputs are saved under `outputs/week3_4d_named_benchmark_comparison/`:
+
+- `summary.json`: benchmark choice, formula in words, domain, scaling,
+  threshold, class balance, fairness checks, method summaries, richer tolerance
+  analysis, caveats, and generated diagnostics.
+- `error_curves_all_methods.png`: mean error-vs-evaluations curves for all five
+  acquisition rules.
+- `final_error_bar_chart.png`: final error at budget 80 for each method.
+- `selected_budget_table.csv`: method errors at budgets 12, 40, and 80.
+- `method_summary_table.csv`: initial/final mean error, improvement, standard
+  deviation, and rank.
+- `tolerance_reach_table.csv` and `tolerance_reach_table.md`: first budgets at
+  which each method reaches several test-error tolerances.
+- `week3_slide_notes.md`: beginner-friendly notes for Google Slides.
 
 The comparison keeps the Week 2 fairness structure:
 
@@ -199,27 +256,9 @@ The Week 3 settings are intentionally larger than Branin while still
 laptop-reasonable: five seeds, pool size 4,000, test size 10,000, initial
 labelled size 12, and total budget 80.
 
-## Run Week 3 4D benchmark comparison
-
-```powershell
-python -m src.week3_4d_benchmark_comparison
-```
-
-Outputs are saved under `outputs/week3_4d_benchmark_comparison/`:
-
-- `summary.json`: benchmark definition, threshold rule, settings, fairness
-  checks, method summaries, fixed test-error tolerance check, and caveats.
-- `error_curves_all_methods.png`: mean error-vs-evaluations curves for all five
-  acquisition rules.
-- `final_error_bar_chart.png`: final error at budget 80 for each method.
-- `selected_budget_table.csv`: method errors at budgets 12, 40, and 80.
-- `method_summary_table.csv`: initial/final mean error, improvement, standard
-  deviation, and rank.
-- `week3_slide_notes.md`: beginner-friendly notes for Google Slides.
-
-Important caveats: this is a first 4D synthetic benchmark. The model is still
-`GaussianProcessRegressor` on `{-1,+1}` labels, not the final GP classifier.
-The metric is test-label misclassification error, not a geometric
+Important caveats: this is a first named 4D synthetic benchmark. The model is
+still `GaussianProcessRegressor` on `{-1,+1}` labels, not the final GP
+classifier. The metric is test-label misclassification error, not a geometric
 boundary-distance metric. The result is preliminary and should be discussed
 with Ioan before treating it as a final thesis direction.
 
