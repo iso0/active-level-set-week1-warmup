@@ -169,3 +169,59 @@ Outputs are saved under `outputs/week2_acquisition_comparison/`:
 - `snapshots_best_*_seed0.png` and `snapshots_straddle_seed0.png`: model belief
   snapshots at 6, 20, and 50 labels.
 - `week2_slide_notes.md`: beginner-friendly notes for Google Slides.
+
+## Week 3 in plain language
+
+Week 3 starts moving the benchmark from 2D Branin toward the real
+laser-metal setting, where the process-parameter space is four-dimensional.
+The new experiment is still synthetic, but it uses a deterministic 4D
+continuous function on `[0,1]^4` and exact labels from a fixed threshold.
+
+The selected first 4D benchmark is a controlled synthetic boundary function.
+It combines a tilted 4D trend, nonlinear interaction waves, and a localized
+bump. The threshold is fixed as the median of a reproducible uniform sample,
+so labels are deterministic and the test labels are known exactly. This is
+better aligned with active level-set estimation than ordinary classification
+datasets such as Iris, because those datasets do not provide an exact
+continuous level-set oracle.
+
+The comparison keeps the Week 2 fairness structure:
+
+- same threshold,
+- same 4D pool and test set within each seed,
+- same initial labelled points within each seed,
+- same GP-regression stand-in,
+- same total budget,
+- same five acquisition rules,
+- only the acquisition rule changes.
+
+The Week 3 settings are intentionally larger than Branin while still
+laptop-reasonable: five seeds, pool size 4,000, test size 10,000, initial
+labelled size 12, and total budget 80.
+
+## Run Week 3 4D benchmark comparison
+
+```powershell
+python -m src.week3_4d_benchmark_comparison
+```
+
+Outputs are saved under `outputs/week3_4d_benchmark_comparison/`:
+
+- `summary.json`: benchmark definition, threshold rule, settings, fairness
+  checks, method summaries, fixed test-error tolerance check, and caveats.
+- `error_curves_all_methods.png`: mean error-vs-evaluations curves for all five
+  acquisition rules.
+- `final_error_bar_chart.png`: final error at budget 80 for each method.
+- `selected_budget_table.csv`: method errors at budgets 12, 40, and 80.
+- `method_summary_table.csv`: initial/final mean error, improvement, standard
+  deviation, and rank.
+- `week3_slide_notes.md`: beginner-friendly notes for Google Slides.
+
+Important caveats: this is a first 4D synthetic benchmark. The model is still
+`GaussianProcessRegressor` on `{-1,+1}` labels, not the final GP classifier.
+The metric is test-label misclassification error, not a geometric
+boundary-distance metric. The result is preliminary and should be discussed
+with Ioan before treating it as a final thesis direction.
+
+The short benchmark search note is saved in
+`week3_4d_benchmark_search/week3_4d_benchmark_candidates.md`.
