@@ -48,9 +48,8 @@ not the final GP classifier. The metric is test-label misclassification error,
 not a geometric boundary-distance metric. The result is preliminary and should
 be discussed with Ioan before treating it as a final thesis direction.
 
-## Suggested next step for Ioan
+## Q
 
-Ask Ioan whether this controlled 4D boundary is a good first Week 3 bridge, or
-whether he would prefer the next run to use thresholded 4D Ackley as a named
-benchmark. Also ask whether the next metric should include a boundary-distance
-or contour-quality measure in addition to test misclassification error.
+Is this controlled 4D boundary is a good first Week 3 bridge, or
+whether we would prefer the next run to use thresholded 4D Ackley as a named
+benchmark. 
