@@ -127,3 +127,13 @@ In both Branin and thresholded 4D Ackley, global test error improves substantial
   - Query distance measures sampling behavior, not predictive correctness.
   - The uncertainty-region fraction is a GP-regression latent diagnostic, not proof that the true boundary is correct.
   - The model is still a GP regressor stand-in, not the final GP classifier.
+
+### Boundary-gated diversified straddle follow-up
+
+- Motivation: the first `diversified_straddle` result was negative, suggesting that generic input-space diversity over the whole pool can pull sampling away from the boundary.
+- Added `boundary_gated_diversified_straddle` as a seventh method while preserving the previous `diversified_straddle`.
+- Method: keep the top 10% unlabelled candidates by straddle score, with minimum shortlist size 25 when possible; inside the shortlist use `(1-beta) * normalized_straddle + beta * normalized_diversity` with `beta=0.50`.
+- Branin result: the gated method improved global error over `diversified_straddle` (0.063450 vs 0.064450) and queried closer than it, but did not beat the best original methods on global, q20, or q30 error.
+- Ackley result: the gated method improved q20 and q30 near-boundary error over `diversified_straddle`, and improved q20 over `straddle`, but did not beat `randomized_straddle` on q20/q30 or `straddle` on global error.
+- Interpretation: boundary gating helped some diagnostics relative to naive diversity, especially on Ackley boundary metrics, but it still did not clearly beat the strongest original baselines.
+- Next step: discuss with Ioan whether to run gate/beta sensitivity, use diversity along the predicted boundary rather than full input space, or move to lookahead boundary-uncertainty reduction.

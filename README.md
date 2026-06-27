@@ -365,3 +365,54 @@ classifier. The metric is test-label misclassification error plus diagnostic
 boundary proxies, not a geometric boundary-distance metric. Alpha sensitivity
 was skipped to keep runtime manageable. This result should be discussed with
 Ioan before treating it as a final thesis direction.
+
+### Week 5 boundary-gated extension
+
+The first `diversified_straddle` result suggested that generic input-space
+diversity over the full unlabelled pool was not enough. It can pull queries
+away from the boundary, while the thesis goal is boundary coverage.
+
+The boundary-gated follow-up keeps `diversified_straddle` and adds a seventh
+method:
+
+```text
+boundary_gated_diversified_straddle
+```
+
+The method first computes the usual straddle score:
+
+```text
+straddle_score(x) = 1.96 * sigma(x) - abs(mu(x))
+```
+
+It then keeps only the top 10% of unlabelled candidates by straddle score, with
+a minimum shortlist size of 25 when possible. Inside that shortlist only, it
+uses:
+
+```text
+score = (1 - beta) * normalized_straddle + beta * normalized_diversity
+```
+
+with `beta=0.50`. Diversity is the minimum distance to the currently labelled
+set in scaled input coordinates.
+
+Run:
+
+```powershell
+python -m src.week5_boundary_gated_straddle_comparison
+```
+
+Outputs are saved under:
+
+```text
+outputs/week5_boundary_gated_diversified_straddle_comparison/
+```
+
+The run compares seven methods on Branin and thresholded 4D Ackley. It keeps the
+same threshold, pool, test set, initial labelled points, GP model, seeds, and
+budget within each benchmark. Sensitivity over `gate_fraction` and `beta` was
+skipped to keep runtime manageable.
+
+This is still a heuristic benchmark extension. Query distance is a sampling
+diagnostic, not predictive correctness. The uncertainty-region fraction is a
+GP-regression latent diagnostic, not calibrated classification uncertainty.
