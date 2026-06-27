@@ -213,19 +213,21 @@ def evaluate_budget(
     test_mean, test_std = gp.predict(dataset.test_scaled, return_std=True)
     prediction = np.where(test_mean >= 0.0, 1.0, -1.0)
     errors = prediction != dataset.test_labels
+    uncertainty_region = np.abs(test_mean) <= UNCERTAINTY_MULTIPLIER * test_std
     row: dict[str, object] = {
         "benchmark": benchmark,
         "method": method,
         "seed": seed,
         "budget": budget,
         "global_error": float(np.mean(errors)),
-        "latent_uncertainty_region_fraction": float(
-            np.mean(np.abs(test_mean) <= UNCERTAINTY_MULTIPLIER * test_std)
-        ),
+        "latent_uncertainty_region_fraction": float(np.mean(uncertainty_region)),
         "mean_true_boundary_distance_test": float(test_distances.mean()),
     }
     for quantile, mask in test_masks.items():
         row[f"near_boundary_error_q{quantile}"] = float(np.mean(errors[mask]))
+        row[f"latent_uncertainty_region_fraction_q{quantile}"] = float(
+            np.mean(uncertainty_region[mask])
+        )
         row[f"near_boundary_test_size_q{quantile}"] = int(mask.sum())
     return row
 
@@ -372,6 +374,9 @@ def summarize_selected_budgets(
                 "near_boundary_error_q20",
                 "near_boundary_error_q30",
                 "latent_uncertainty_region_fraction",
+                "latent_uncertainty_region_fraction_q10",
+                "latent_uncertainty_region_fraction_q20",
+                "latent_uncertainty_region_fraction_q30",
             ]:
                 mean, std = mean_std([float(item[metric]) for item in subset])
                 row[f"mean_{metric}"] = f"{mean:.6f}"
@@ -411,6 +416,15 @@ def summarize_final_metrics(
             )[0],
             "mean_latent_uncertainty_region_fraction": mean_std(
                 [float(item["latent_uncertainty_region_fraction"]) for item in subset]
+            )[0],
+            "mean_latent_uncertainty_region_fraction_q10": mean_std(
+                [float(item["latent_uncertainty_region_fraction_q10"]) for item in subset]
+            )[0],
+            "mean_latent_uncertainty_region_fraction_q20": mean_std(
+                [float(item["latent_uncertainty_region_fraction_q20"]) for item in subset]
+            )[0],
+            "mean_latent_uncertainty_region_fraction_q30": mean_std(
+                [float(item["latent_uncertainty_region_fraction_q30"]) for item in subset]
             )[0],
             "median_query_distance": float(np.median(distances)),
         }
@@ -464,6 +478,9 @@ def summarize_final_metrics(
             "near_boundary_error_q20",
             "near_boundary_error_q30",
             "latent_uncertainty_region_fraction",
+            "latent_uncertainty_region_fraction_q10",
+            "latent_uncertainty_region_fraction_q20",
+            "latent_uncertainty_region_fraction_q30",
         ]:
             mean, std = mean_std([float(item[metric]) for item in subset])
             row[f"mean_final_{metric}"] = f"{mean:.6f}"
@@ -673,6 +690,59 @@ def plot_query_distance_over_budget(
     plt.close(fig)
 
 
+def plot_query_distance_over_budget_median_iqr(
+    query_rows: list[dict[str, object]],
+    config: BenchmarkConfig,
+    output_path: Path,
+) -> None:
+    """Median query distance over acquisition steps with q25/q75 bands."""
+    fig, ax = plt.subplots(figsize=(10.5, 6.3))
+    for method in METHOD_ORDER:
+        method_rows = [row for row in query_rows if row["method"] == method]
+        query_numbers = sorted({int(row["query_number"]) for row in method_rows})
+        medians = []
+        q25_values = []
+        q75_values = []
+        budgets_after_query = []
+        for query_number in query_numbers:
+            subset = [row for row in method_rows if row["query_number"] == query_number]
+            values = np.asarray(
+                [max(float(row["true_boundary_distance"]), 1e-12) for row in subset],
+                dtype=float,
+            )
+            medians.append(float(np.median(values)))
+            q25_values.append(float(np.percentile(values, 25)))
+            q75_values.append(float(np.percentile(values, 75)))
+            budgets_after_query.append(int(subset[0]["budget_after_query"]))
+        ax.plot(
+            budgets_after_query,
+            medians,
+            color=METHOD_COLORS[method],
+            label=method,
+            linewidth=2.4,
+        )
+        ax.fill_between(
+            budgets_after_query,
+            np.maximum(1e-12, q25_values),
+            q75_values,
+            color=METHOD_COLORS[method],
+            alpha=0.12,
+            linewidth=0,
+        )
+    ax.set_yscale("log")
+    ax.set(
+        title=f"{config.display_name}: median query distance over budget",
+        xlabel="Labelled evaluations after query",
+        ylabel="median abs(f(x_query) - threshold), q25-q75 band, log scale",
+        xlim=(config.initial_size + 1, config.total_budget),
+    )
+    ax.grid(alpha=0.25)
+    ax.legend(title="Acquisition rule", fontsize=9)
+    fig.tight_layout()
+    fig.savefig(output_path, dpi=200, bbox_inches="tight")
+    plt.close(fig)
+
+
 def write_benchmark_notes(result: BenchmarkResult, output_path: Path) -> None:
     """Write benchmark-specific Week 4 notes."""
     final_rows = result.final_rows
@@ -702,6 +772,8 @@ metrics to complement global test-label misclassification error.
 - Query distance: `abs(f(x_query) - threshold)` for each newly acquired point.
 - Uncertainty-region fraction: fraction of test points with
   `abs(mu(x)) <= 1.96 * sigma(x)`.
+- Near-boundary uncertainty-region fraction: the same uncertainty proxy
+  restricted to q10/q20/q30 near-boundary test subsets.
 
 ## Main findings
 
@@ -710,6 +782,22 @@ metrics to complement global test-label misclassification error.
 - Best final q20 near-boundary error: `{best_q20}`.
 - Best final q30 near-boundary error: `{best_q30}`.
 - Closest median query distance: `{best_query}` with median `{float(best_query_row['median_query_distance']):.6f}`.
+
+## Interpretation guidance
+
+- q10 is the hardest and noisiest near-boundary diagnostic because it contains
+  only the points closest to the true threshold.
+- q20 is a good primary near-boundary metric for comparing methods.
+- q30 is a more stable boundary-region confirmation metric.
+- Query distance measures sampling behavior, not predictive correctness.
+- A small query distance does not guarantee a good model.
+- Latent uncertainty-region fraction measures model uncertainty, not
+  correctness.
+- A method can become confidently wrong, so uncertainty shrinkage alone is not
+  proof that the true boundary is learned.
+- The recommended query-distance plot is
+  `query_distance_to_boundary_over_budget_median_iqr.png`; the mean/std version
+  is kept for continuity but is harder to read on a log scale.
 
 ## Caveats
 
@@ -757,6 +845,11 @@ def save_benchmark_outputs(result: BenchmarkResult, base_output_dir: Path = OUTP
         config,
         output_dir / "query_distance_to_boundary_over_budget.png",
     )
+    plot_query_distance_over_budget_median_iqr(
+        result.query_rows,
+        config,
+        output_dir / "query_distance_to_boundary_over_budget_median_iqr.png",
+    )
     plot_metric_curves(
         raw_rows=result.raw_metric_rows,
         metric="latent_uncertainty_region_fraction",
@@ -765,6 +858,23 @@ def save_benchmark_outputs(result: BenchmarkResult, base_output_dir: Path = OUTP
         title=f"{config.display_name}: latent uncertainty-region fraction",
         ylabel="Fraction of test points with abs(mu) <= 1.96*sigma",
     )
+    plot_metric_curves(
+        raw_rows=result.raw_metric_rows,
+        metric="latent_uncertainty_region_fraction",
+        config=config,
+        output_path=output_dir / "uncertainty_region_fraction_curves_global.png",
+        title=f"{config.display_name}: global latent uncertainty-region fraction",
+        ylabel="Global fraction with abs(mu) <= 1.96*sigma",
+    )
+    for quantile in BOUNDARY_QUANTILES:
+        plot_metric_curves(
+            raw_rows=result.raw_metric_rows,
+            metric=f"latent_uncertainty_region_fraction_q{quantile}",
+            config=config,
+            output_path=output_dir / f"uncertainty_region_fraction_curves_q{quantile}.png",
+            title=f"{config.display_name}: q{quantile} latent uncertainty-region fraction",
+            ylabel=f"Closest {quantile}% fraction with abs(mu) <= 1.96*sigma",
+        )
     write_benchmark_notes(result, output_dir / "week4_boundary_metric_notes.md")
 
     summary = {
@@ -792,6 +902,9 @@ def save_benchmark_outputs(result: BenchmarkResult, base_output_dir: Path = OUTP
             "near_boundary_error_q30": "error on closest 30% test points by abs(f(x)-threshold)",
             "query_distance": "abs(f(x_query)-threshold) for newly acquired points",
             "latent_uncertainty_region_fraction": "fraction of test points with abs(mu)<=1.96*sigma",
+            "latent_uncertainty_region_fraction_q10": "same uncertainty proxy on closest 10% test points by abs(f(x)-threshold)",
+            "latent_uncertainty_region_fraction_q20": "same uncertainty proxy on closest 20% test points by abs(f(x)-threshold)",
+            "latent_uncertainty_region_fraction_q30": "same uncertainty proxy on closest 30% test points by abs(f(x)-threshold)",
         },
         "fairness_checks": result.fairness_checks,
         "final_boundary_metrics": result.final_rows,
@@ -809,7 +922,12 @@ def save_benchmark_outputs(result: BenchmarkResult, base_output_dir: Path = OUTP
             "final_global_vs_near_boundary_error.png",
             "query_distance_to_boundary_boxplot.png",
             "query_distance_to_boundary_over_budget.png",
+            "query_distance_to_boundary_over_budget_median_iqr.png",
             "uncertainty_region_fraction_curves.png",
+            "uncertainty_region_fraction_curves_global.png",
+            "uncertainty_region_fraction_curves_q10.png",
+            "uncertainty_region_fraction_curves_q20.png",
+            "uncertainty_region_fraction_curves_q30.png",
             "week4_boundary_metric_notes.md",
         ],
         "caveats": [
@@ -890,7 +1008,7 @@ def write_combined_outputs(
             "## Caveats",
             "",
             "- Near-boundary subsets use `abs(f(x)-threshold)` percentiles, not Euclidean contour distance.",
-            "- Query-distance plots use a log y-axis because function-value distances are skewed.",
+            "- The recommended query-distance-over-budget plot uses median and q25/q75 bands; the older mean/std plot is kept for continuity.",
             "- The GP uncertainty-region metric is latent-regression uncertainty, not calibrated class probability.",
         ]
     )

@@ -14,6 +14,8 @@ metrics to complement global test-label misclassification error.
 - Query distance: `abs(f(x_query) - threshold)` for each newly acquired point.
 - Uncertainty-region fraction: fraction of test points with
   `abs(mu(x)) <= 1.96 * sigma(x)`.
+- Near-boundary uncertainty-region fraction: the same uncertainty proxy
+  restricted to q10/q20/q30 near-boundary test subsets.
 
 ## Main findings
 
@@ -22,6 +24,22 @@ metrics to complement global test-label misclassification error.
 - Best final q20 near-boundary error: `randomized_straddle`.
 - Best final q30 near-boundary error: `randomized_straddle`.
 - Closest median query distance: `smallest_abs_mu` with median `0.839807`.
+
+## Interpretation guidance
+
+- q10 is the hardest and noisiest near-boundary diagnostic because it contains
+  only the points closest to the true threshold.
+- q20 is a good primary near-boundary metric for comparing methods.
+- q30 is a more stable boundary-region confirmation metric.
+- Query distance measures sampling behavior, not predictive correctness.
+- A small query distance does not guarantee a good model.
+- Latent uncertainty-region fraction measures model uncertainty, not
+  correctness.
+- A method can become confidently wrong, so uncertainty shrinkage alone is not
+  proof that the true boundary is learned.
+- The recommended query-distance plot is
+  `query_distance_to_boundary_over_budget_median_iqr.png`; the mean/std version
+  is kept for continuity but is harder to read on a log scale.
 
 ## Caveats
 

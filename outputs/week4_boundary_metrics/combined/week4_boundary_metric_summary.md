@@ -11,5 +11,5 @@ using boundary-focused metrics in addition to global test error.
 ## Caveats
 
 - Near-boundary subsets use `abs(f(x)-threshold)` percentiles, not Euclidean contour distance.
-- Query-distance plots use a log y-axis because function-value distances are skewed.
+- The recommended query-distance-over-budget plot uses median and q25/q75 bands; the older mean/std plot is kept for continuity.
 - The GP uncertainty-region metric is latent-regression uncertainty, not calibrated class probability.

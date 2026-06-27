@@ -5,11 +5,11 @@ Current thesis title:
 > Sample-Efficient Active Level-Set Estimation, with an Application to
 > Melt-Pool Regime Boundaries
 
-This repository contains the Week 1 and Week 2 warm-up project from Ioan's
-working brief. It is the 2D synthetic-data plumbing stage before the main thesis
-work on melt-pool regime boundaries. The purpose is to build one complete
-active-learning loop, then compare acquisition rules before introducing the
-final thesis model.
+This repository contains the Week 1-5 warm-up and benchmark-extension work
+from Ioan's working brief. It starts with 2D synthetic-data plumbing, moves to a
+named 4D analytic benchmark, adds boundary-focused diagnostics, and tests a
+first diversity-augmented acquisition heuristic before the main thesis work on
+melt-pool regime boundaries.
 
 ## Setup
 
@@ -318,3 +318,50 @@ Each benchmark folder includes:
 The run computes all budgets for both benchmarks. On the current laptop setup,
 it takes about 5-6 minutes because it predicts both GP means and standard
 deviations on the full test sets at every budget.
+
+## Week 5 in plain language
+
+Week 5 tests a first new acquisition heuristic:
+
+```text
+diversified_straddle =
+    (1 - alpha) * normalized_straddle + alpha * normalized_diversity
+```
+
+Here `straddle = 1.96 * sigma(x) - |mu(x)|`, and diversity is the minimum
+distance from a candidate pool point to the currently labelled set in scaled
+input coordinates. The default `alpha` is 0.25. The purpose is to test whether
+adding a small coverage pressure to straddle helps avoid repeatedly sampling
+near the same part of the boundary.
+
+Run:
+
+```powershell
+python -m src.week5_diversified_straddle_comparison
+```
+
+Outputs are saved under `outputs/week5_diversified_straddle_comparison/`:
+
+- `branin/`: Week 2 Branin with the five original rules plus
+  `diversified_straddle`.
+- `ackley/`: Week 3 thresholded-4D-Ackley with the same six-rule comparison.
+- `combined/`: summary tables comparing `diversified_straddle` against the best
+  original methods and selected baselines.
+
+Each benchmark folder includes final metric tables, selected-budget tables,
+raw metric traces, query-distance tables, global and near-boundary error plots,
+query-distance plots, uncertainty-region fraction plots, `summary.json`, and
+`week5_notes.md`.
+
+The first result is preliminary: `diversified_straddle` with `alpha=0.25` did
+not beat the best original acquisition rule on global error, q20 near-boundary
+error, q30 near-boundary error, query distance, or q20/q30 uncertainty-region
+fraction on either Branin or Ackley. This does not rule out diversity as a useful
+idea; it only says that this simple fixed-alpha version was not better in the
+current settings.
+
+Important caveats: the GP regressor is still a stand-in, not the final GP
+classifier. The metric is test-label misclassification error plus diagnostic
+boundary proxies, not a geometric boundary-distance metric. Alpha sensitivity
+was skipped to keep runtime manageable. This result should be discussed with
+Ioan before treating it as a final thesis direction.

@@ -78,6 +78,17 @@
   - The uncertainty-region fraction uses GP-regression latent uncertainty, not calibrated class probability.
   - The model is still a GP regressor stand-in, not the final GP classifier.
   - Runtime is about 5-6 minutes because the script computes GP mean and standard deviation on full test sets at every budget.
+### Week 4 additional interpretation: Ackley boundary metrics
+
+The Ackley boundary-focused metrics show that global classification error alone is not sufficient for interpreting active level-set performance. On thresholded 4D Ackley, `straddle` gives the best final global error, but `randomized_straddle` gives the best final near-boundary errors on q10, q20, and q30 subsets. The q10 subset is the hardest and noisiest diagnostic because it contains the test points closest to the true level set; q20 and q30 appear more stable and are more suitable as primary boundary-region metrics.
+
+The query-distance analysis gives a separate view of sampling behavior. `smallest_abs_mu` has the closest median query distance to the true boundary in function-value units, but it does not achieve the best global or near-boundary error. This suggests that querying points close to the boundary is not sufficient by itself. The selected points must also be informative, uncertain, and well distributed across the boundary.
+
+The latent uncertainty-region fraction gives a model-belief diagnostic rather than a correctness metric. A smaller uncertainty region means the GP-regression surrogate is less uncertain about where its latent decision boundary may lie, but this does not necessarily mean that the true boundary has been learned correctly. A method can become confidently wrong. Conversely, a method can query close to the boundary while leaving large parts of the latent boundary region uncertain.
+
+The main methodological insight is that active level-set estimation should balance at least three signals: boundary proximity, uncertainty reduction, and coverage/diversity. The current results motivate a possible next acquisition rule that combines straddle-style boundary uncertainty with a lookahead or expected uncertainty-region reduction criterion.
+
+In both Branin and thresholded 4D Ackley, global test error improves substantially under boundary-aware acquisition rules. However, boundary-focused metrics reveal a more nuanced picture. On Branin, several boundary-aware rules perform similarly near the boundary, with the winner changing between q10, q20, and q30. On Ackley, randomized straddle is more consistently best on near-boundary subsets, while straddle remains best globally. In both benchmarks, smallest_abs_mu tends to query closest to the true boundary in function-value distance, but this does not always translate into the best prediction error. This suggests that sampling close to the boundary is useful but insufficient; uncertainty and coverage also matter.
 
 ## Open Next Steps
 
@@ -86,3 +97,33 @@
 - Build a real laser-data loader skeleton and document expected columns, units, labels, and preprocessing.
 - Transition from `GaussianProcessRegressor` on `{-1,+1}` labels to a proper GP classifier or a more defensible surrogate.
 - Investigate a geometric boundary-distance metric if feasible, especially for 2D Branin and controlled 2D/4D slices.
+
+## Week 5
+
+- Implemented `diversified_straddle`, a first diversity-augmented acquisition heuristic.
+- Rule: `(1-alpha) * normalized_straddle + alpha * normalized_diversity`, with `alpha=0.25`.
+- Straddle term: `1.96 * sigma(x) - abs(mu(x))`.
+- Diversity term: minimum distance from the candidate to the currently labelled set in scaled input coordinates.
+- Compared six methods on both Branin and thresholded 4D Ackley: the five original Week 2/3 rules plus `diversified_straddle`.
+- Kept the comparison fair by using the same threshold, pool, test set, initial labelled points, GP model, seeds, and budget within each benchmark.
+- Added Week 5 outputs under `outputs/week5_diversified_straddle_comparison/`.
+- Branin final mean results:
+  - `diversified_straddle` global error: 0.064450.
+  - Best original global error: `randomized_straddle`, 0.060200.
+  - `diversified_straddle` q20 near-boundary error: 0.259250.
+  - Best original q20 near-boundary error: `smallest_abs_mu`, 0.246750.
+  - `diversified_straddle` q30 near-boundary error: 0.197333.
+  - Best original q30 near-boundary error: `randomized_straddle`, 0.186500.
+- Ackley final mean results:
+  - `diversified_straddle` global error: 0.182420.
+  - Best original global error: `straddle`, 0.168400.
+  - `diversified_straddle` q20 near-boundary error: 0.418500.
+  - Best original q20 near-boundary error: `randomized_straddle`, 0.408400.
+  - `diversified_straddle` q30 near-boundary error: 0.377600.
+  - Best original q30 near-boundary error: `randomized_straddle`, 0.368200.
+- Main interpretation: this simple fixed-alpha diversity term did not improve the strongest original baselines in the current settings.
+- Main caveats:
+  - Alpha sensitivity was skipped to keep runtime manageable.
+  - Query distance measures sampling behavior, not predictive correctness.
+  - The uncertainty-region fraction is a GP-regression latent diagnostic, not proof that the true boundary is correct.
+  - The model is still a GP regressor stand-in, not the final GP classifier.
