@@ -264,3 +264,57 @@ with Ioan before treating it as a final thesis direction.
 
 The short benchmark search note is saved in
 `week3_4d_benchmark_search/week3_4d_benchmark_candidates.md`.
+
+## Week 4 in plain language
+
+Week 4 strengthens the evaluation. Global test-label misclassification error is
+useful, but the thesis is about active level-set estimation and boundary
+identification. A method can improve global accuracy while still doing poorly
+near the true threshold boundary.
+
+The Week 4 script keeps the existing Week 2 Branin and Week 3 Ackley
+experiments fixed and adds boundary-focused metrics:
+
+- Near-boundary error: test error restricted to the closest 10%, 20%, and 30%
+  of test points by `abs(f(x) - threshold)`.
+- Query distance to boundary: `abs(f(x_query) - threshold)` for each newly
+  acquired point.
+- Latent uncertainty-region fraction: the fraction of test points satisfying
+  `abs(mu(x)) <= 1.96 * sigma(x)` under the GP-regression stand-in.
+- Global error: the original all-test-point misclassification error, kept for
+  comparison.
+
+The near-boundary distance is a function-value distance proxy. It is not
+Euclidean distance to the geometric contour. The uncertainty-region fraction is
+based on the GP-regression latent mean and standard deviation, not calibrated
+class probability.
+
+Run:
+
+```powershell
+python -m src.week4_boundary_metrics
+```
+
+Outputs are saved under `outputs/week4_boundary_metrics/`:
+
+- `branin/`: Week 2 Branin boundary metrics, plots, tables, and notes.
+- `ackley/`: Week 3 thresholded-4D-Ackley boundary metrics, plots, tables, and
+  notes.
+- `combined/`: high-level comparison of Branin and Ackley conclusions.
+
+Each benchmark folder includes:
+
+- `summary.json`
+- `boundary_metric_summary_table.csv`
+- `final_boundary_metrics_table.csv`
+- `raw_boundary_metrics.csv`
+- `query_distance_table.csv`
+- near-boundary error curves for q10/q20/q30
+- final global-vs-near-boundary error plot
+- query-distance boxplot and over-budget plot
+- uncertainty-region fraction curves
+- `week4_boundary_metric_notes.md`
+
+The run computes all budgets for both benchmarks. On the current laptop setup,
+it takes about 5-6 minutes because it predicts both GP means and standard
+deviations on the full test sets at every budget.
