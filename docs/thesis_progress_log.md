@@ -151,3 +151,17 @@ In both Branin and thresholded 4D Ackley, global test error improves substantial
 - Interpretation: expected boundary-uncertainty reduction helped strongly on 2D Branin but failed on 4D Ackley under the current GP-regression surrogate. This suggests the idea is thesis-relevant but sensitive to surrogate quality, fantasy-label calibration, and the alignment between latent uncertainty reduction and true boundary correctness.
 - Caveats: fantasy probabilities use `Phi(mu / sigma)` from the GP-regression latent model, not calibrated GP-classifier probabilities; query distance is an evaluation diagnostic only; shortlist sensitivity was skipped to keep runtime manageable.
 - Next step: ask Ioan whether the Branin improvement is enough motivation to test a GP classifier or Ackley shortlist sensitivity, or whether to move toward a better boundary-specific objective before more acquisition variants.
+
+### Week 5.3: Gated geometric boundary contraction
+
+- Motivation: after diversity and lookahead experiments, Week 5.3 tests whether local GP-posterior geometry helps identify difficult boundary regions.
+- Added `gated_geometric_boundary_contraction` as an eighth method, without rerunning the expensive Week 5.2 lookahead method.
+- Method: shortlist the top 200 unlabelled candidates by straddle score; inside that gate, score candidates by normalized finite-difference curvature, normalized uncertainty, corrected boundary weight, and labelled-set repulsion.
+- Implementation detail: curvature is a finite-difference diagonal-Hessian proxy of the GP posterior mean in scaled coordinates, clipped at 10.0; repulsion uses fixed bandwidth 0.15.
+- Branin result: GBC did not improve over `straddle`, `randomized_straddle`, `diversified_straddle`, `boundary_gated_diversified_straddle`, or the best original methods on global, q20, or q30 error. Final means were global 0.071700, q20 0.271750, q30 0.210000.
+- Branin diagnostics: GBC reduced latent uncertainty fractions strongly, with global 0.231450, q20 0.438750, q30 0.386500, but median query distance was worse at 24.222446.
+- Ackley result: GBC also did not improve over the strongest baselines on global, q20, or q30 error. Final means were global 0.200440, q20 0.422000, q30 0.384733.
+- Ackley diagnostics: GBC reduced q20/q30 uncertainty fractions to 0.838000 and 0.833667, but this did not translate into better boundary classification.
+- Interpretation: finite-difference curvature under the current GP-regression surrogate is not reliably aligned with true boundary classification accuracy. The result reinforces that lower latent uncertainty can mean confident wrongness.
+- Caveats: GBC is heuristic; curvature is from the GP posterior mean, not the true function; the Hessian is diagonal-only; boundary weights use a GP-regression latent probability heuristic, not calibrated GP-classifier probabilities.
+- Next step: discuss with Ioan whether curvature should be abandoned for now, revisited only after a GP classifier, or tested on controlled 2D slices where geometric curvature can be inspected directly.

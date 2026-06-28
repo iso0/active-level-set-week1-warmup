@@ -478,3 +478,63 @@ values, test labels, or true boundary masks during acquisition. Query distance
 is still only an evaluation diagnostic. The uncertainty-region fraction measures
 GP latent uncertainty, not correctness, and a method can become confidently
 wrong.
+
+### Week 5.3 gated geometric boundary contraction
+
+Week 5.3 tests a curvature-aware acquisition rule inspired by geometric boundary
+contraction, reimplemented inside the existing sklearn `GaussianProcessRegressor`
+pipeline:
+
+```text
+gated_geometric_boundary_contraction
+```
+
+The motivation is that not all predicted boundary points are equally useful:
+high-curvature parts of the GP-predicted boundary may need more samples than
+flat parts. The method is gated by straddle so curvature is only considered
+among candidates that already look boundary-relevant.
+
+At each step it keeps the top 200 unlabelled candidates by:
+
+```text
+1.96 * sigma(x) - abs(mu(x))
+```
+
+Inside that shortlist it computes:
+
+```text
+normalized_curvature
+* normalized_uncertainty
+* boundary_weight
+* repulsion
+```
+
+Curvature is estimated by finite differences of the GP posterior mean in scaled
+coordinates using only the diagonal Hessian terms. The boundary weight uses the
+heuristic GP-regression latent probability
+`Phi(mu / sqrt(1 + sigma^2))`, not calibrated GP-classifier probabilities.
+Repulsion uses distance to the currently labelled set with fixed bandwidth
+`0.15`.
+
+Run:
+
+```powershell
+python -m src.week5_3_gated_geometric_boundary_contraction
+```
+
+Outputs are saved under:
+
+```text
+outputs/week5_3_gated_geometric_boundary_contraction/
+```
+
+The run compares eight methods: the five original rules, the two Week 5.1
+diversity rules, and GBC. It does not rerun the expensive Week 5.2 lookahead
+method; if Week 5.2 outputs are present, the combined summary includes those
+lookahead numbers only as labelled reference data.
+
+Caveats: GBC is heuristic. Curvature is estimated from the GP posterior mean,
+not the true function. The Hessian approximation is diagonal-only for speed.
+Curvature is evaluated only within a straddle-gated shortlist. Lower
+uncertainty-region fraction or closer query distance does not necessarily imply
+better boundary classification.
