@@ -165,3 +165,17 @@ In both Branin and thresholded 4D Ackley, global test error improves substantial
 - Interpretation: finite-difference curvature under the current GP-regression surrogate is not reliably aligned with true boundary classification accuracy. The result reinforces that lower latent uncertainty can mean confident wrongness.
 - Caveats: GBC is heuristic; curvature is from the GP posterior mean, not the true function; the Hessian is diagonal-only; boundary weights use a GP-regression latent probability heuristic, not calibrated GP-classifier probabilities.
 - Next step: discuss with Ioan whether curvature should be abandoned for now, revisited only after a GP classifier, or tested on controlled 2D slices where geometric curvature can be inspected directly.
+
+## Week 6
+
+- Objective: switch from the GP-regression warm-up surrogate to `GaussianProcessClassifier` and test classifier-native acquisition rules on Branin and thresholded 4D Ackley.
+- Implemented `src/week6_gp_classifier_surrogate_comparison.py` with five classifier acquisitions: `random`, `classifier_margin`, `classifier_entropy`, `classifier_gated_diversity`, and `classifier_uncertainty_repulsion`.
+- Model detail: used sklearn `GaussianProcessClassifier` with fixed RBF kernel length scale 0.25 and `optimizer=None` for runtime stability and reproducibility.
+- Acquisition detail: classifier rules use `predict_proba`; they do not reuse GP-regressor latent `mu`/`sigma` acquisition formulas.
+- Branin result: best classifier method was `classifier_uncertainty_repulsion`, with global error 0.080400, q20 error 0.261000, and q30 error 0.197833.
+- Branin reference comparison: the best available GP-regressor reference from Week 5.3 was better on global, q20, and q30 error.
+- Ackley result: best classifier method was also `classifier_uncertainty_repulsion`, with global error 0.175900, q20 error 0.417500, and q30 error 0.379667.
+- Ackley reference comparison: the best available GP-regressor reference from Week 5.3 was still better on global, q20, and q30 error.
+- Interpretation: the GP-classifier surrogate did not clearly improve boundary metrics under this fixed-kernel implementation. Surrogate choice alone is not sufficient; kernel choice, calibration, pool geometry, and acquisition design remain important.
+- Caveats: classifier probabilities are not the same as regressor latent uncertainty; binary entropy and margin are monotone-equivalent; fixed-kernel GP classification is a practical approximation; q10/q20/q30 are evaluation subsets only.
+- Next step: discuss with Ioan whether to tune/calibrate the GP classifier kernel, compare against the Week 5.2 lookahead reference explicitly, or move toward real laser-data preprocessing before adding more acquisition rules.

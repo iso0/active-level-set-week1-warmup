@@ -538,3 +538,46 @@ not the true function. The Hessian approximation is diagonal-only for speed.
 Curvature is evaluated only within a straddle-gated shortlist. Lower
 uncertainty-region fraction or closer query distance does not necessarily imply
 better boundary classification.
+
+## Week 6 in plain language
+
+Week 6 changes the surrogate model. Weeks 1-5 used
+`GaussianProcessRegressor` on `{-1,+1}` labels as a warm-up stand-in. Week 6
+uses sklearn's `GaussianProcessClassifier`, so acquisition rules are based on
+class probabilities from `predict_proba` instead of GP-regression latent
+`mu`/`sigma`.
+
+Run:
+
+```powershell
+python -m src.week6_gp_classifier_surrogate_comparison
+```
+
+Outputs are saved under:
+
+```text
+outputs/week6_gp_classifier_surrogate_comparison/
+```
+
+The script compares classifier-native acquisition rules:
+
+- `random`
+- `classifier_margin`
+- `classifier_entropy`
+- `classifier_gated_diversity`
+- `classifier_uncertainty_repulsion`
+
+The classifier uses a fixed RBF kernel with `optimizer=None` for runtime
+stability and reproducibility. This is a practical first GP-classifier
+surrogate benchmark, not the final modelling choice.
+
+The combined summary includes labelled reference comparisons against existing
+GP-regressor outputs when available. Those rows are not acquisition-only
+comparisons, because the surrogate model family changed. Previous Week 1-5
+outputs are preserved.
+
+Caveats: GP-classifier probabilities are not the same object as GP-regressor
+latent mean and standard deviation. Binary entropy and margin are
+monotone-equivalent, so they may select identical points. Lower classifier
+uncertainty-region fraction does not automatically prove correct boundary
+learning. The q10/q20/q30 subsets are evaluation diagnostics only.
