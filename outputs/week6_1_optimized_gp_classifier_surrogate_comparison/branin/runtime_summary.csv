@@ -1,0 +1,17 @@
+benchmark,surrogate_variant,acquisition_rule,method,total_runtime_seconds_sum_over_seeds,mean_runtime_seconds_per_seed,mean_fit_time_seconds,fit_count_sum,optimized_fit_count_sum,seed_count
+branin,fixed_iso_gpc,classifier_entropy,classifier_entropy,2.469033,0.493807,0.003175,225,0,5
+branin,fixed_iso_gpc,classifier_gated_diversity,classifier_gated_diversity,2.197369,0.439474,0.002709,225,0,5
+branin,fixed_iso_gpc,classifier_margin,classifier_margin,2.538204,0.507641,0.003059,225,0,5
+branin,fixed_iso_gpc,classifier_uncertainty_repulsion,classifier_uncertainty_repulsion,2.015132,0.403026,0.002481,225,0,5
+branin,fixed_iso_gpc,random,random,2.058498,0.411700,0.002714,225,0,5
+branin,optimized_ard_gpc,classifier_entropy,classifier_entropy,19.301797,3.860359,0.079310,225,225,5
+branin,optimized_ard_gpc,classifier_gated_diversity,classifier_gated_diversity,20.810697,4.162139,0.085873,225,225,5
+branin,optimized_ard_gpc,classifier_margin,classifier_margin,19.510362,3.902072,0.080455,225,225,5
+branin,optimized_ard_gpc,classifier_uncertainty_repulsion,classifier_uncertainty_repulsion,20.096526,4.019305,0.082642,225,225,5
+branin,optimized_ard_gpc,random,random,17.375595,3.475119,0.071241,225,225,5
+branin,optimized_iso_gpc,classifier_entropy,classifier_entropy,14.269245,2.853849,0.056182,225,225,5
+branin,optimized_iso_gpc,classifier_gated_diversity,classifier_gated_diversity,12.990797,2.598159,0.051329,225,225,5
+branin,optimized_iso_gpc,classifier_margin,classifier_margin,12.789876,2.557975,0.050327,225,225,5
+branin,optimized_iso_gpc,classifier_uncertainty_repulsion,classifier_uncertainty_repulsion,13.660815,2.732163,0.053911,225,225,5
+branin,optimized_iso_gpc,random,random,12.956734,2.591347,0.051192,225,225,5
+branin,all,all,all,175.040679,2.333876,0.045107,3375,2250,75

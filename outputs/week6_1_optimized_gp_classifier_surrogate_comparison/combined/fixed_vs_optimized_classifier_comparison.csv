@@ -1,0 +1,7 @@
+benchmark,metric,fixed_iso_best_method,fixed_iso_value,optimized_iso_best_method,optimized_iso_value,optimized_iso_improves_over_fixed,optimized_ard_best_method,optimized_ard_value,optimized_ard_improves_over_optimized_iso,best_optimized_variant,best_optimized_value,best_optimized_improves_over_fixed
+branin,global_error,classifier_uncertainty_repulsion,0.080400,classifier_margin,0.042900,True,classifier_gated_diversity,0.035150,True,optimized_ard_gpc,0.035150,True
+branin,near_boundary_error_q20,classifier_uncertainty_repulsion,0.261000,classifier_margin,0.182500,True,classifier_gated_diversity,0.163750,True,optimized_ard_gpc,0.163750,True
+branin,near_boundary_error_q30,classifier_uncertainty_repulsion,0.197833,classifier_margin,0.127833,True,classifier_gated_diversity,0.114333,True,optimized_ard_gpc,0.114333,True
+ackley,global_error,classifier_uncertainty_repulsion,0.175900,random,0.197640,False,classifier_entropy,0.248280,False,optimized_iso_gpc,0.197640,False
+ackley,near_boundary_error_q20,classifier_uncertainty_repulsion,0.417500,random,0.423600,False,classifier_entropy,0.447900,False,optimized_iso_gpc,0.423600,False
+ackley,near_boundary_error_q30,classifier_uncertainty_repulsion,0.379667,random,0.381333,False,classifier_uncertainty_repulsion,0.420600,False,optimized_iso_gpc,0.381333,False

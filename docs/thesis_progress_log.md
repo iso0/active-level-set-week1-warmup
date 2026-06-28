@@ -179,3 +179,24 @@ In both Branin and thresholded 4D Ackley, global test error improves substantial
 - Interpretation: the GP-classifier surrogate did not clearly improve boundary metrics under this fixed-kernel implementation. Surrogate choice alone is not sufficient; kernel choice, calibration, pool geometry, and acquisition design remain important.
 - Caveats: classifier probabilities are not the same as regressor latent uncertainty; binary entropy and margin are monotone-equivalent; fixed-kernel GP classification is a practical approximation; q10/q20/q30 are evaluation subsets only.
 - Next step: discuss with Ioan whether to tune/calibrate the GP classifier kernel, compare against the Week 5.2 lookahead reference explicitly, or move toward real laser-data preprocessing before adding more acquisition rules.
+
+### Week 6.1: Optimized GP-classifier surrogate
+
+- Motivation: Week 6 used a fixed-kernel GP classifier, so the negative result could have been caused by an overly restrictive length-scale rather than by GP classification itself.
+- Implemented `src/week6_1_optimized_gp_classifier_surrogate.py`.
+- Compared three surrogates: `fixed_iso_gpc`, `optimized_iso_gpc`, and `optimized_ard_gpc`.
+- Acquisition rules: `random`, `classifier_margin`, `classifier_entropy`, `classifier_gated_diversity`, and `classifier_uncertainty_repulsion`.
+- Full command used: `.\.venv\Scripts\python.exe -m src.week6_1_optimized_gp_classifier_surrogate --full`.
+- Runtime settings: `n_restarts_optimizer=2`, `optimize_every=1`, all five seeds, no runtime reduction.
+- Full command runtime: about 536.9 seconds.
+- Branin result: optimized ARD with `classifier_gated_diversity` was best on all primary metrics, with global error 0.035150, q20 error 0.163750, and q30 error 0.114333.
+- Branin comparison: optimized ARD beat the previous Week 6 fixed classifier and the available Week 5.2 GP-regressor lookahead reference on global, q20, and q30.
+- Ackley result: the fixed Week 6 classifier with `classifier_uncertainty_repulsion` remained best, with global error 0.175900, q20 error 0.417500, and q30 error 0.379667.
+- Ackley comparison: optimized isotropic and ARD classifiers did not beat the fixed Week 6 classifier or the previous GP-regressor references (`straddle` for global, `randomized_straddle` for q20/q30).
+- ARD helped on Branin but not on 4D Ackley; it did not support the hypothesis that ARD is automatically more useful in the higher-dimensional benchmark.
+- Hyperparameter diagnostics: optimized fits often hit bounds, especially on Ackley. Ackley length-scale bound-hit fraction was 0.763 and constant bound-hit fraction was 0.504; Branin fractions were 0.425 and 0.885.
+- Interpretation: kernel learning improves the classifier strongly on Branin, including boundary metrics, but does not dominate on Ackley. The result supports continuing classifier-native surrogate work, while warning that kernel optimization alone is not enough for the harder named 4D benchmark.
+- Limitation: q10 remains noisy; q20/q30 are better primary boundary metrics. Query distance and uncertainty-region contraction are diagnostics, not correctness proofs.
+- Reproducibility check: two quick-mode reruns in temporary output directories matched exactly for deterministic metric curves, query-distance tables, best-method rows, and comparison tables. Final metric tables matched after excluding wall-clock fit-time columns.
+- Main outputs: `outputs/week6_1_optimized_gp_classifier_surrogate_comparison/`.
+- Next steps: inspect why optimized Ackley hyperparameters collapse toward bounds, discuss with Ioan whether to constrain/calibrate the classifier differently, and avoid adding more acquisition complexity until the surrogate behavior is better understood.

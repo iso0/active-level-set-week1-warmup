@@ -581,3 +581,52 @@ latent mean and standard deviation. Binary entropy and margin are
 monotone-equivalent, so they may select identical points. Lower classifier
 uncertainty-region fraction does not automatically prove correct boundary
 learning. The q10/q20/q30 subsets are evaluation diagnostics only.
+
+### Week 6.1 optimized GP-classifier surrogate
+
+Week 6.1 tests whether learning `GaussianProcessClassifier` kernel
+hyperparameters fixes the main limitation of the Week 6 fixed-kernel
+classifier. The run compares three classifier surrogates:
+
+- `fixed_iso_gpc`: the Week 6 fixed isotropic RBF classifier.
+- `optimized_iso_gpc`: learns one shared RBF length-scale and kernel constant.
+- `optimized_ard_gpc`: learns one RBF length-scale per input dimension plus the
+  kernel constant.
+
+Run:
+
+```powershell
+python -m src.week6_1_optimized_gp_classifier_surrogate --full
+```
+
+Outputs are saved under:
+
+```text
+outputs/week6_1_optimized_gp_classifier_surrogate_comparison/
+```
+
+The full run used all five seeds, all five Week 6 classifier acquisitions,
+`n_restarts_optimizer=2`, and `optimize_every=1`; no runtime reduction was
+needed. On this machine the command completed in about 537 seconds.
+
+Main result:
+
+- Branin: optimized ARD with `classifier_gated_diversity` was best on global
+  error, q20, and q30, with final means 0.035150, 0.163750, and 0.114333. It
+  beat the previous Week 6 fixed classifier and the available Week 5.2
+  GP-regressor reference on those metrics.
+- Ackley: the fixed Week 6 classifier with `classifier_uncertainty_repulsion`
+  remained best, with final means 0.175900, 0.417500, and 0.379667. Optimized
+  isotropic and ARD classifiers did not beat the fixed classifier or the
+  previous GP-regressor references.
+
+Interpretation: kernel learning clearly helps the classifier on 2D Branin, but
+does not solve the harder 4D Ackley benchmark. Hyperparameter bound hits are
+common, especially on Ackley, so this is diagnostic rather than a final claim
+that GP classification dominates. q20/q30 remain the main boundary metrics;
+q10 is kept only as a noisy diagnostic.
+
+Reproducibility check: two quick-mode reruns into temporary output directories
+matched exactly on deterministic metric curves, query-distance tables,
+best-method tables, and comparison tables. Final metric tables also matched
+after excluding wall-clock fit-time columns.
