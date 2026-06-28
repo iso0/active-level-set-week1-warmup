@@ -416,3 +416,65 @@ skipped to keep runtime manageable.
 This is still a heuristic benchmark extension. Query distance is a sampling
 diagnostic, not predictive correctness. The uncertainty-region fraction is a
 GP-regression latent diagnostic, not calibrated classification uncertainty.
+
+### Week 5.2 lookahead boundary-uncertainty extension
+
+Week 5.2 tests a more thesis-aligned acquisition idea. Instead of asking only
+whether a candidate itself has high straddle score, it asks which candidate is
+expected to reduce aggregate boundary uncertainty over the unlabelled pool.
+
+The new method is:
+
+```text
+lookahead_boundary_uncertainty_reduction
+```
+
+At each step it shortlists the top 30 unlabelled candidates by straddle score:
+
+```text
+1.96 * sigma(x) - abs(mu(x))
+```
+
+For each shortlisted candidate, it creates two fantasy updates, one with label
+`+1` and one with label `-1`. It refits the GP posterior under each fantasy
+label and computes the mean positive straddle value over the current unlabelled
+pool:
+
+```text
+mean(max(0, 1.96 * sigma(x) - abs(mu(x))))
+```
+
+The selected point is the one with the largest expected reduction in that
+aggregate uncertainty. The fantasy label probability uses
+`Phi(mu / max(sigma, 1e-9))`, which is a heuristic GP-regression latent
+probability, not a calibrated GP-classifier probability.
+
+Run:
+
+```powershell
+python -m src.week5_2_lookahead_boundary_uncertainty
+```
+
+Outputs are saved under:
+
+```text
+outputs/week5_2_lookahead_boundary_uncertainty/
+```
+
+The run compares eight methods: the five original rules, the two Week 5.1
+diversity rules, and the new lookahead rule. It keeps the same threshold, pool,
+test set, initial labelled points, GP model, seeds, and budget within each
+benchmark.
+
+The lookahead computation is expensive because each query evaluates fantasy
+`+1` and `-1` refits for 30 shortlisted candidates. To keep the runtime
+manageable, fantasy fits keep the current fitted kernel hyperparameters fixed
+and refit only the posterior; the actual active-learning model fit at each
+budget still uses the existing `fit_gp` helper. Ackley shortlist sensitivity was
+skipped to keep runtime manageable.
+
+Caveats: this is still a heuristic. It does not use true labels, function
+values, test labels, or true boundary masks during acquisition. Query distance
+is still only an evaluation diagnostic. The uncertainty-region fraction measures
+GP latent uncertainty, not correctness, and a method can become confidently
+wrong.

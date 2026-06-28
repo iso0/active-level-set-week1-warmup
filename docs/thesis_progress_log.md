@@ -137,3 +137,17 @@ In both Branin and thresholded 4D Ackley, global test error improves substantial
 - Ackley result: the gated method improved q20 and q30 near-boundary error over `diversified_straddle`, and improved q20 over `straddle`, but did not beat `randomized_straddle` on q20/q30 or `straddle` on global error.
 - Interpretation: boundary gating helped some diagnostics relative to naive diversity, especially on Ackley boundary metrics, but it still did not clearly beat the strongest original baselines.
 - Next step: discuss with Ioan whether to run gate/beta sensitivity, use diversity along the predicted boundary rather than full input space, or move to lookahead boundary-uncertainty reduction.
+
+### Week 5.2: Lookahead boundary-uncertainty reduction
+
+- Motivation: Week 5.1 showed that simple input-space diversity is not enough, so Week 5.2 tests whether a query can be chosen by expected reduction in aggregate boundary uncertainty.
+- Added `lookahead_boundary_uncertainty_reduction` as an eighth method while preserving both Week 5.1 diversity methods.
+- Method: shortlist the top 30 unlabelled candidates by straddle score; for each candidate, fantasy-refit `+1` and `-1` labels and choose the largest expected reduction in mean positive straddle over the current unlabelled pool.
+- Runtime detail: fantasy fits keep the current fitted kernel hyperparameters fixed and refit only the GP posterior; the actual active-learning fit still uses the existing `fit_gp` helper.
+- Branin result: lookahead improved over the best original methods and all Week 5.1 variants on global error, q20 error, and q30 error. Final means were global 0.055900, q20 0.235500, q30 0.175333.
+- Branin diagnostics: median query distance was 20.954706, global uncertainty fraction 0.284200, q20 uncertainty fraction 0.478500, and q30 uncertainty fraction 0.416833.
+- Ackley result: lookahead did not improve over `straddle`, `randomized_straddle`, `diversified_straddle`, or `boundary_gated_diversified_straddle` on global, q20, or q30 error. Final means were global 0.228960, q20 0.444200, q30 0.408000.
+- Ackley diagnostics: median query distance was 0.888686, closer than straddle-style methods except `smallest_abs_mu`, but uncertainty fractions were worse: global 0.849940, q20 0.917200, q30 0.911933.
+- Interpretation: expected boundary-uncertainty reduction helped strongly on 2D Branin but failed on 4D Ackley under the current GP-regression surrogate. This suggests the idea is thesis-relevant but sensitive to surrogate quality, fantasy-label calibration, and the alignment between latent uncertainty reduction and true boundary correctness.
+- Caveats: fantasy probabilities use `Phi(mu / sigma)` from the GP-regression latent model, not calibrated GP-classifier probabilities; query distance is an evaluation diagnostic only; shortlist sensitivity was skipped to keep runtime manageable.
+- Next step: ask Ioan whether the Branin improvement is enough motivation to test a GP classifier or Ackley shortlist sensitivity, or whether to move toward a better boundary-specific objective before more acquisition variants.
