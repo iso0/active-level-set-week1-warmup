@@ -1,0 +1,14 @@
+benchmark,surrogate_variant,acquisition_rule,method,seed_count,total_runtime_seconds_sum_over_seeds,mean_runtime_seconds_per_seed,mean_fit_time_seconds,mean_acquisition_time_seconds,fit_count_sum,acquisition_count_sum
+hartmann4,gpc_fixed_iso,classifier_entropy,classifier_entropy,5,36.745134,7.349027,0.011343,0.028221,345,340
+hartmann4,gpc_fixed_iso,classifier_margin,classifier_margin,5,36.956730,7.391346,0.011417,0.028327,345,340
+hartmann4,gpc_fixed_iso,classifier_uncertainty_repulsion,classifier_uncertainty_repulsion,5,47.610416,9.522083,0.011312,0.061001,345,340
+hartmann4,gpc_fixed_iso,gpc_bernoulli_sur_refit,gpc_bernoulli_sur_refit,1,49.908204,49.908204,0.011028,0.656561,69,68
+hartmann4,gpr_fixed_or_existing,boundary_gated_diversified_straddle,boundary_gated_diversified_straddle,5,46.260054,9.252011,0.054039,0.024967,345,340
+hartmann4,gpr_fixed_or_existing,expected_feasibility,expected_feasibility,5,47.756611,9.551322,0.056460,0.025860,345,340
+hartmann4,gpr_fixed_or_existing,gpr_bernoulli_sur_refit,gpr_bernoulli_sur_refit,5,144.558581,28.911716,0.048829,0.317784,345,340
+hartmann4,gpr_fixed_or_existing,gpr_boundary_weighted_ivr,gpr_boundary_weighted_ivr,5,135.497277,27.099455,0.048728,0.292538,345,340
+hartmann4,gpr_fixed_or_existing,random,random,5,36.162526,7.232505,0.048554,0.000070,345,340
+hartmann4,gpr_fixed_or_existing,randomized_straddle,randomized_straddle,5,46.081052,9.216210,0.055574,0.021770,345,340
+hartmann4,gpr_fixed_or_existing,smallest_abs_mu,smallest_abs_mu,5,44.655687,8.931137,0.053732,0.021160,345,340
+hartmann4,gpr_fixed_or_existing,straddle,straddle,5,45.244798,9.048960,0.054965,0.021120,345,340
+hartmann4,all,all,all,56,717.437069,12.811376,0.040818,0.086976,3864,3808

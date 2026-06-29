@@ -1,0 +1,14 @@
+benchmark,surrogate_variant,acquisition_rule,method,seed_count,total_runtime_seconds_sum_over_seeds,mean_runtime_seconds_per_seed,mean_fit_time_seconds,mean_acquisition_time_seconds,fit_count_sum,acquisition_count_sum
+ackley,gpc_fixed_iso,classifier_entropy,classifier_entropy,1,0.078714,0.078714,0.009427,0.002752,5,4
+ackley,gpc_fixed_iso,classifier_margin,classifier_margin,1,0.080944,0.080944,0.009839,0.002868,5,4
+ackley,gpc_fixed_iso,classifier_uncertainty_repulsion,classifier_uncertainty_repulsion,1,0.082213,0.082213,0.009459,0.003652,5,4
+ackley,gpc_fixed_iso,gpc_bernoulli_sur_refit,gpc_bernoulli_sur_refit,1,1.041863,1.041863,0.009300,0.243577,5,4
+ackley,gpr_fixed_or_existing,boundary_gated_diversified_straddle,boundary_gated_diversified_straddle,1,0.245961,0.245961,0.043580,0.002583,5,4
+ackley,gpr_fixed_or_existing,expected_feasibility,expected_feasibility,1,0.243996,0.243996,0.041859,0.004363,5,4
+ackley,gpr_fixed_or_existing,gpr_bernoulli_sur_refit,gpr_bernoulli_sur_refit,1,0.305539,0.305539,0.039688,0.022445,5,4
+ackley,gpr_fixed_or_existing,gpr_boundary_weighted_ivr,gpr_boundary_weighted_ivr,1,0.284269,0.284269,0.039539,0.017338,5,4
+ackley,gpr_fixed_or_existing,random,random,1,0.228831,0.228831,0.042144,0.000074,5,4
+ackley,gpr_fixed_or_existing,randomized_straddle,randomized_straddle,1,0.262302,0.262302,0.046812,0.002470,5,4
+ackley,gpr_fixed_or_existing,smallest_abs_mu,smallest_abs_mu,1,0.228609,0.228609,0.040322,0.002220,5,4
+ackley,gpr_fixed_or_existing,straddle,straddle,1,0.247315,0.247315,0.044175,0.002120,5,4
+ackley,all,all,all,12,3.330557,0.277546,0.031345,0.025538,60,48

@@ -200,3 +200,26 @@ In both Branin and thresholded 4D Ackley, global test error improves substantial
 - Reproducibility check: two quick-mode reruns in temporary output directories matched exactly for deterministic metric curves, query-distance tables, best-method rows, and comparison tables. Final metric tables matched after excluding wall-clock fit-time columns.
 - Main outputs: `outputs/week6_1_optimized_gp_classifier_surrogate_comparison/`.
 - Next steps: inspect why optimized Ackley hyperparameters collapse toward bounds, discuss with Ioan whether to constrain/calibrate the classifier differently, and avoid adding more acquisition complexity until the surrogate behavior is better understood.
+
+## Week 7: Boundary-weighted IVR / Bernoulli SUR
+
+- Motivation: test a literature-inspired Stepwise Uncertainty Reduction / targeted-IMSE idea for active level-set estimation, without claiming novelty. The question was whether globally reducing boundary-relevant membership uncertainty can beat pointwise rules such as `straddle`, `randomized_straddle`, margin, or entropy.
+- Implemented `src/week7_boundary_weighted_sur.py`.
+- Added benchmark: thresholded standard 4D Hartmann on `[0,1]^4`, with 50th percentile threshold, threshold seed 2026, threshold sample size 100,000, pool size 4,000, test size 10,000, five seeds, initial labelled size 12, and total budget 80.
+- New GP-regressor acquisitions:
+  - `gpr_boundary_weighted_ivr`: straddle-gated posterior covariance variance reduction, weighted by heuristic Bernoulli membership uncertainty `p(+1)(1-p(+1))` with `p(+1)=Phi(mu/sigma)`.
+  - `gpr_bernoulli_sur_refit`: expected reduction in integrated Bernoulli uncertainty after fantasy `+1/-1` labels, implemented by an exact fixed-kernel rank-one GP posterior update equivalent to fixed-kernel refit.
+- Classifier acquisition:
+  - `gpc_bernoulli_sur_refit`: fixed GP-classifier fantasy refit SUR.
+  - Runtime limitation: full mode ran this only on Branin and Hartmann seed 0 with classifier SUR shortlist size 15; all GP-regressor methods and fixed classifier baselines ran on all five seeds.
+- Full command used: `.\.venv\Scripts\python.exe -m src.week7_boundary_weighted_sur --full`.
+- Full command runtime: about 1735.1 seconds.
+- Verification also ran `.\.venv\Scripts\python.exe -m compileall -q src`, `.\.venv\Scripts\python.exe -m src.week7_boundary_weighted_sur --quick`, and `.\.venv\Scripts\python.exe -m src.week7_boundary_weighted_sur --full --summarize-existing`.
+- Branin five-seed comparable result: best global was `randomized_straddle` at 0.060200, best q20 was `smallest_abs_mu` at 0.246750, and best q30 was `randomized_straddle` at 0.186500. `gpr_boundary_weighted_ivr` ended at global/q20/q30 0.071350 / 0.278250 / 0.212000, and `gpr_bernoulli_sur_refit` ended at 0.074200 / 0.283250 / 0.215833. The new GP-regressor methods did not beat randomized straddle on q20/q30.
+- Ackley five-seed comparable result: best global remained `straddle` at 0.168400, and best q20/q30 remained `randomized_straddle` at 0.408400 / 0.368200. `gpr_boundary_weighted_ivr` ended at 0.235560 / 0.446300 / 0.412933, and `gpr_bernoulli_sur_refit` ended at 0.272560 / 0.457600 / 0.435800. Ackley again rejected the more global uncertainty-reduction methods.
+- Hartmann4 five-seed comparable result: best global was fixed classifier `classifier_uncertainty_repulsion` at 0.123640; best q20/q30 were GP-regressor `expected_feasibility` at 0.380400 / 0.325533. `gpr_boundary_weighted_ivr` ended at 0.127680 / 0.380800 / 0.327667, beating `randomized_straddle` on q20/q30 but not beating the strongest Hartmann boundary method. `gpr_bernoulli_sur_refit` ended at 0.133400 / 0.392500 / 0.338933.
+- Limited classifier SUR diagnostic: `gpc_bernoulli_sur_refit` was promising on the two seed-0 benchmarks where it ran, with Branin 0.058500 / 0.221250 / 0.156667 and Hartmann4 0.112200 / 0.365500 / 0.301000, but these are one-seed limited rows and should not be compared as full five-seed winners.
+- Integrated Bernoulli uncertainty did not reliably align with true q20/q30 error. On Branin, cheap IVR reduced integrated uncertainty relative to randomized straddle while worsening q20, a concrete confidently-wrong warning.
+- Interpretation: Hartmann partly contradicts Ackley because cheap IVR improves over randomized straddle on Hartmann q20/q30, but the broader Week 7 lesson is still cautious. The faithful Bernoulli SUR refit did not improve over cheap IVR, and neither new GP-regressor method displaced the strongest simple baselines across benchmarks. Ackley remains uniquely hard for these uncertainty-reduction rules under the current surrogate; Hartmann suggests the failure is not universal, but also does not justify replacing robust baselines.
+- Thesis-level conclusion: boundary-weighted IVR/SUR is useful as a diagnostic and literature bridge, but not yet a main method. q20/q30 remain primary. Query distance, uncertainty-region fraction, and integrated uncertainty should explain behavior, not define success.
+- Main outputs: `outputs/week7_boundary_weighted_sur/`.

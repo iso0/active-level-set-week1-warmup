@@ -630,3 +630,61 @@ Reproducibility check: two quick-mode reruns into temporary output directories
 matched exactly on deterministic metric curves, query-distance tables,
 best-method tables, and comparison tables. Final metric tables also matched
 after excluding wall-clock fit-time columns.
+
+### Week 7 boundary-weighted SUR / IVR
+
+Week 7 tests a literature-inspired boundary-weighted uncertainty-reduction
+family before the real melt-pool dataset arrives. The new script is:
+
+```powershell
+python -m src.week7_boundary_weighted_sur --full
+```
+
+Outputs are saved under:
+
+```text
+outputs/week7_boundary_weighted_sur/
+```
+
+The experiment keeps Branin and thresholded 4D Ackley and adds thresholded 4D
+Hartmann on `[0,1]^4`. Hartmann uses the standard 4D Hartmann function, a 50th
+percentile threshold estimated from 100,000 random points with seed 2026, pools
+of 4,000 points, test sets of 10,000 points, five seeds, 12 initial labels, and
+budget 80.
+
+The new GP-regressor acquisitions are:
+
+- `gpr_boundary_weighted_ivr`: straddle-gated posterior variance reduction over
+  a boundary-weighted reference set, with weights `p(+1)(1-p(+1))`.
+- `gpr_bernoulli_sur_refit`: expected reduction in integrated Bernoulli
+  membership uncertainty after fantasy `+1/-1` updates. The implementation uses
+  the exact fixed-kernel rank-one posterior update equivalent to a fixed-kernel
+  GP posterior refit.
+
+The classifier version, `gpc_bernoulli_sur_refit`, is much more expensive. In
+the full Week 7 run it was limited to Branin and Hartmann seed 0 with classifier
+SUR shortlist size 15; GP-regressor methods and fixed classifier baselines were
+run on all five seeds.
+
+Full-run comparable five-seed results:
+
+- Branin: best global was `randomized_straddle` (0.060200), best q20 was
+  `smallest_abs_mu` (0.246750), and best q30 was `randomized_straddle`
+  (0.186500). The new GP-regressor IVR/SUR methods did not beat randomized
+  straddle on q20 or q30.
+- Ackley: best global was `straddle` (0.168400), and best q20/q30 remained
+  `randomized_straddle` (0.408400 / 0.368200). Both new GP-regressor methods
+  were worse on q20/q30.
+- Hartmann4: best comparable global was fixed classifier
+  `classifier_uncertainty_repulsion` (0.123640), while best q20/q30 were
+  GP-regressor `expected_feasibility` (0.380400 / 0.325533). Cheap
+  boundary-weighted IVR beat `randomized_straddle` on q20/q30, but did not beat
+  the strongest Hartmann q20/q30 method.
+
+Interpretation: boundary-weighted IVR is useful enough to keep as a thesis
+diagnostic, especially because Hartmann differs from Ackley, but Bernoulli SUR
+refit did not justify its extra complexity under the current GP-regression
+surrogate. Ackley remains the hardest benchmark for these uncertainty-reduction
+rules. Lower integrated Bernoulli uncertainty did not reliably imply lower
+q20/q30 error, so uncertainty contraction must be treated as a diagnostic, not
+as success by itself.
