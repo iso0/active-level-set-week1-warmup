@@ -688,3 +688,52 @@ surrogate. Ackley remains the hardest benchmark for these uncertainty-reduction
 rules. Lower integrated Bernoulli uncertainty did not reliably imply lower
 q20/q30 error, so uncertainty contraction must be treated as a diagnostic, not
 as success by itself.
+
+### Week 7.1 fixed-GPC Bernoulli SUR validation
+
+Week 7.1 validates the promising Week 7 seed-0 classifier SUR result across
+seeds without rerunning every earlier method. The new script is:
+
+```powershell
+python -m src.week7_1_gpc_sur_validation --full --benchmarks branin hartmann4
+```
+
+Outputs are saved under:
+
+```text
+outputs/week7_1_gpc_sur_validation/
+```
+
+The experiment uses the same fixed-kernel GP classifier as Week 6 and Week 7:
+`ConstantKernel(1.0, fixed) * RBF(length_scale=0.25, fixed)`, with
+`optimizer=None`. It compares `random_classifier`, `classifier_margin`,
+`classifier_entropy`, `classifier_uncertainty_repulsion`, and classifier-native
+Bernoulli SUR refit with shortlists k15 and k25. k40 was not run. The SUR
+objective is expected reduction in mean reference-set Bernoulli uncertainty
+`p(+1)(1-p(+1))` after fantasy `+1/-1` classifier refits.
+
+Full primary validation used Branin and Hartmann4, all five seeds, reference
+size 1500, and shortlists 15 and 25. Ackley was run only as an optional
+three-seed diagnostic.
+
+Main results:
+
+- Branin: `classifier_uncertainty_repulsion` was best on global/q20/q30 with
+  0.073200 / 0.256000 / 0.189667. SUR k15 reached 0.073300 / 0.265500 /
+  0.201500, so the Week 7 seed-0 classifier SUR signal did not generalize on
+  Branin.
+- Hartmann4: SUR won the primary boundary metrics. k15 was best on global
+  error at 0.116020, while k25 was best on q20/q30 at 0.373000 / 0.315467.
+  Both k15 and k25 beat `classifier_uncertainty_repulsion` on q20/q30.
+- Optional Ackley, three seeds: SUR did not help. Best global was
+  `classifier_uncertainty_repulsion` at 0.178367, while best q20/q30 were
+  `classifier_entropy` at 0.421167 / 0.379667.
+
+Interpretation: fixed-GPC Bernoulli SUR is a serious diagnostic and a
+Hartmann4 candidate, but it is not robust enough to replace
+`classifier_uncertainty_repulsion` or the stronger GP-regressor baselines as a
+default method. Integrated Bernoulli uncertainty had positive curve-level
+correlation with q20/q30 error, but Branin and optional Ackley show that lower
+uncertainty can still mean confidently wrong boundary classification. The
+runtime cost is only defensible for focused diagnostics, not as a default
+pool-based acquisition loop for real laser data.

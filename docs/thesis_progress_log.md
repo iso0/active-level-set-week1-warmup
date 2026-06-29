@@ -223,3 +223,34 @@ In both Branin and thresholded 4D Ackley, global test error improves substantial
 - Interpretation: Hartmann partly contradicts Ackley because cheap IVR improves over randomized straddle on Hartmann q20/q30, but the broader Week 7 lesson is still cautious. The faithful Bernoulli SUR refit did not improve over cheap IVR, and neither new GP-regressor method displaced the strongest simple baselines across benchmarks. Ackley remains uniquely hard for these uncertainty-reduction rules under the current surrogate; Hartmann suggests the failure is not universal, but also does not justify replacing robust baselines.
 - Thesis-level conclusion: boundary-weighted IVR/SUR is useful as a diagnostic and literature bridge, but not yet a main method. q20/q30 remain primary. Query distance, uncertainty-region fraction, and integrated uncertainty should explain behavior, not define success.
 - Main outputs: `outputs/week7_boundary_weighted_sur/`.
+
+## Week 7.1: Fixed-GPC Bernoulli SUR validation
+
+- Motivation: Week 7 found a promising but inconclusive seed-0 fixed-GP-classifier Bernoulli SUR result on Branin and Hartmann4. Week 7.1 tests whether that signal is robust across seeds without rerunning every Week 7 method.
+- Implemented `src/week7_1_gpc_sur_validation.py`.
+- Surrogate: fixed-kernel `GaussianProcessClassifier` with `ConstantKernel(1.0, fixed) * RBF(length_scale=0.25, fixed)`, `optimizer=None`, matching the fixed classifier setup from Weeks 6 and 7.
+- Benchmarks:
+  - Branin: threshold percentile 45, threshold seed 2026, pool 1,500, test 4,000, seeds 0-4, initial 6, budget 50.
+  - Hartmann4: standard 4D Hartmann on `[0,1]^4`, threshold percentile 50, threshold seed 2026, threshold sample size 100,000, pool 4,000, test 10,000, seeds 0-4, initial 12, budget 80.
+  - Ackley4: optional three-seed diagnostic only, not part of the primary validation.
+- Methods: `random_classifier`, `classifier_margin`, `classifier_entropy`, `classifier_uncertainty_repulsion`, `gpc_bernoulli_sur_refit_k15`, and `gpc_bernoulli_sur_refit_k25`.
+- SUR definition: choose a classifier-repulsion shortlist, fantasy-refit fixed GP classifiers with candidate label `+1` and `-1`, and maximize expected reduction in mean reference-set Bernoulli uncertainty `p(+1)(1-p(+1))`. The reference set size was 1,500 and included the most uncertain unlabelled points.
+- Fairness: within each benchmark and seed, all methods used the same threshold, pool, test set, initial labelled indices, initial labels, and budget grid. Fairness checks passed for Branin, Hartmann4, and optional Ackley.
+- Verification and run commands:
+  - `.\.venv\Scripts\python.exe -m compileall -q src`
+  - `.\.venv\Scripts\python.exe -m src.week7_1_gpc_sur_validation --quick`
+  - `.\.venv\Scripts\python.exe -m src.week7_1_gpc_sur_validation --full --benchmarks branin hartmann4`
+  - `.\.venv\Scripts\python.exe -m src.week7_1_gpc_sur_validation --full --benchmarks ackley --max-seeds 3`
+  - `.\.venv\Scripts\python.exe -m src.week7_1_gpc_sur_validation --summarize-existing --benchmarks branin hartmann4 ackley`
+- Runtime: quick smoke run took about 42.2 seconds; the full Branin/Hartmann primary run took about 1230.1 seconds; the optional Ackley three-seed diagnostic took about 535.0 seconds. k40 was not run.
+- Branin result: `classifier_uncertainty_repulsion` was best on global/q20/q30 with 0.073200 / 0.256000 / 0.189667. k15 reached 0.073300 / 0.265500 / 0.201500, and k25 reached 0.077950 / 0.286250 / 0.216833.
+- Hartmann4 result: `gpc_bernoulli_sur_refit_k15` was best on global error at 0.116020. `gpc_bernoulli_sur_refit_k25` was best on q20/q30 with 0.373000 / 0.315467. Both k15 and k25 beat `classifier_uncertainty_repulsion` on q20/q30.
+- Optional Ackley result: SUR did not help. Best global was `classifier_uncertainty_repulsion` at 0.178367; best q20/q30 were `classifier_entropy` at 0.421167 / 0.379667. k15 and k25 both lost to `classifier_uncertainty_repulsion` on q20/q30.
+- Interpretation:
+  - The Week 7 seed-0 classifier SUR signal generalized on Hartmann4 but not on Branin; optional Ackley also did not support SUR.
+  - k25 improved over k15 on Hartmann4 q20/q30, worsened Branin q20/q30, and was mixed on optional Ackley.
+  - Integrated Bernoulli uncertainty had positive curve-level correlation with q20/q30 error, but it was not a reliable standalone objective. Branin and optional Ackley showed lower integrated uncertainty with worse boundary error versus `classifier_uncertainty_repulsion`.
+  - The runtime cost is not justified as a default acquisition. Fixed-GPC SUR remains useful as a diagnostic and a Hartmann-like candidate, but not as a robust main method.
+- Limitations: fixed classifier kernel only; no optimized classifier; k40 skipped; optional Ackley used three seeds; no real melt-pool data yet.
+- Next steps: keep `classifier_uncertainty_repulsion`, randomized straddle, expected feasibility, and Hartmann4 SUR as comparison points; avoid adding more expensive acquisition variants until the surrogate calibration and real-data interface are clearer.
+- Main outputs: `outputs/week7_1_gpc_sur_validation/`.
