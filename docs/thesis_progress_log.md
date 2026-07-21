@@ -254,3 +254,28 @@ In both Branin and thresholded 4D Ackley, global test error improves substantial
 - Limitations: fixed classifier kernel only; no optimized classifier; k40 skipped; optional Ackley used three seeds; no real melt-pool data yet.
 - Next steps: keep `classifier_uncertainty_repulsion`, randomized straddle, expected feasibility, and Hartmann4 SUR as comparison points; avoid adding more expensive acquisition variants until the surrogate calibration and real-data interface are clearer.
 - Main outputs: `outputs/week7_1_gpc_sur_validation/`.
+
+## Chronology correction — actual Week 4 organization (2026-07-21)
+
+The historical entries above are intentionally preserved as originally written.
+The studies previously labelled Week 5 through Week 7.1 were in fact completed
+during the actual Week 4. The repository now presents this work as:
+
+1. Week 4 Experiment 01 — boundary-focused evaluation metrics.
+2. Week 4 Experiment 02 — diversified straddle.
+3. Week 4 Experiment 03 — boundary-gated diversified straddle.
+4. Week 4 Experiment 04 — lookahead boundary-uncertainty reduction.
+5. Week 4 Experiment 05 — gated geometric boundary contraction.
+6. Week 4 Experiment 06 — fixed-kernel GP classifier surrogate.
+7. Week 4 Experiment 07 — optimized GP classifier surrogate.
+8. Week 4 Experiment 08 — boundary-weighted IVR / Bernoulli SUR.
+9. Week 4 Experiment 09 — fixed-GPC Bernoulli SUR validation.
+
+The corresponding code is organized under flat modules
+`src/week4_01_*.py` through `src/week4_09_*.py`, and the existing generated
+results are preserved under `outputs/week4_01_*/` through
+`outputs/week4_09_*/`. Scientific metric values, random seeds, RNG namespace
+strings, quick runs, logs, figures, and historical Git commits were preserved.
+Some internal CSV/JSON field names retain `previous_week6_*` or `week7_*`
+prefixes for schema compatibility; these are legacy identifiers for Week 4
+Experiments 06 and 08, not statements of the corrected thesis chronology.

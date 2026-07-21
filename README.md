@@ -265,14 +265,21 @@ with Ioan before treating it as a final thesis direction.
 The short benchmark search note is saved in
 `week3_4d_benchmark_search/week3_4d_benchmark_candidates.md`.
 
-## Week 4 in plain language
+## Week 4 — Boundary Metrics, Acquisition Experiments and GP Classifier/SUR Studies
 
-Week 4 strengthens the evaluation. Global test-label misclassification error is
-useful, but the thesis is about active level-set estimation and boundary
-identification. A method can improve global accuracy while still doing poorly
-near the true threshold boundary.
+The nine studies in this section were all performed during the actual Week 4
+and are therefore organized as Experiments 01–09. Older Git commits and legacy
+branch names may still contain the original incorrect Week 5–7.1 labels because
+Git history was intentionally preserved.
 
-The Week 4 script keeps the existing Week 2 Branin and Week 3 Ackley
+### Experiment 01 — Boundary-focused evaluation metrics
+
+Experiment 01 strengthens the evaluation. Global test-label misclassification
+error is useful, but the thesis is about active level-set estimation and
+boundary identification. A method can improve global accuracy while still
+doing poorly near the true threshold boundary.
+
+The Experiment 01 script keeps the existing Week 2 Branin and Week 3 Ackley
 experiments fixed and adds boundary-focused metrics:
 
 - Near-boundary error: test error restricted to the closest 10%, 20%, and 30%
@@ -292,10 +299,10 @@ class probability.
 Run:
 
 ```powershell
-python -m src.week4_boundary_metrics
+python -m src.week4_01_boundary_metrics
 ```
 
-Outputs are saved under `outputs/week4_boundary_metrics/`:
+Outputs are saved under `outputs/week4_01_boundary_metrics/`:
 
 - `branin/`: Week 2 Branin boundary metrics, plots, tables, and notes.
 - `ackley/`: Week 3 thresholded-4D-Ackley boundary metrics, plots, tables, and
@@ -313,15 +320,15 @@ Each benchmark folder includes:
 - final global-vs-near-boundary error plot
 - query-distance boxplot and over-budget plot
 - uncertainty-region fraction curves
-- `week4_boundary_metric_notes.md`
+- `boundary_metric_notes.md`
 
 The run computes all budgets for both benchmarks. On the current laptop setup,
 it takes about 5-6 minutes because it predicts both GP means and standard
 deviations on the full test sets at every budget.
 
-## Week 5 in plain language
+### Experiment 02 — Diversified straddle
 
-Week 5 tests a first new acquisition heuristic:
+Experiment 02 tests a first new acquisition heuristic:
 
 ```text
 diversified_straddle =
@@ -337,10 +344,10 @@ near the same part of the boundary.
 Run:
 
 ```powershell
-python -m src.week5_diversified_straddle_comparison
+python -m src.week4_02_diversified_straddle
 ```
 
-Outputs are saved under `outputs/week5_diversified_straddle_comparison/`:
+Outputs are saved under `outputs/week4_02_diversified_straddle/`:
 
 - `branin/`: Week 2 Branin with the five original rules plus
   `diversified_straddle`.
@@ -351,7 +358,7 @@ Outputs are saved under `outputs/week5_diversified_straddle_comparison/`:
 Each benchmark folder includes final metric tables, selected-budget tables,
 raw metric traces, query-distance tables, global and near-boundary error plots,
 query-distance plots, uncertainty-region fraction plots, `summary.json`, and
-`week5_notes.md`.
+`diversified_straddle_notes.md`.
 
 The first result is preliminary: `diversified_straddle` with `alpha=0.25` did
 not beat the best original acquisition rule on global error, q20 near-boundary
@@ -366,7 +373,7 @@ boundary proxies, not a geometric boundary-distance metric. Alpha sensitivity
 was skipped to keep runtime manageable. This result should be discussed with
 Ioan before treating it as a final thesis direction.
 
-### Week 5 boundary-gated extension
+### Experiment 03 — Boundary-gated diversified straddle
 
 The first `diversified_straddle` result suggested that generic input-space
 diversity over the full unlabelled pool was not enough. It can pull queries
@@ -399,13 +406,13 @@ set in scaled input coordinates.
 Run:
 
 ```powershell
-python -m src.week5_boundary_gated_straddle_comparison
+python -m src.week4_03_boundary_gated_diversified_straddle
 ```
 
 Outputs are saved under:
 
 ```text
-outputs/week5_boundary_gated_diversified_straddle_comparison/
+outputs/week4_03_boundary_gated_diversified_straddle/
 ```
 
 The run compares seven methods on Branin and thresholded 4D Ackley. It keeps the
@@ -417,11 +424,12 @@ This is still a heuristic benchmark extension. Query distance is a sampling
 diagnostic, not predictive correctness. The uncertainty-region fraction is a
 GP-regression latent diagnostic, not calibrated classification uncertainty.
 
-### Week 5.2 lookahead boundary-uncertainty extension
+### Experiment 04 — Lookahead boundary-uncertainty reduction
 
-Week 5.2 tests a more thesis-aligned acquisition idea. Instead of asking only
-whether a candidate itself has high straddle score, it asks which candidate is
-expected to reduce aggregate boundary uncertainty over the unlabelled pool.
+Experiment 04 tests a more thesis-aligned acquisition idea. Instead of asking
+only whether a candidate itself has high straddle score, it asks which
+candidate is expected to reduce aggregate boundary uncertainty over the
+unlabelled pool.
 
 The new method is:
 
@@ -452,16 +460,16 @@ probability, not a calibrated GP-classifier probability.
 Run:
 
 ```powershell
-python -m src.week5_2_lookahead_boundary_uncertainty
+python -m src.week4_04_lookahead_boundary_uncertainty
 ```
 
 Outputs are saved under:
 
 ```text
-outputs/week5_2_lookahead_boundary_uncertainty/
+outputs/week4_04_lookahead_boundary_uncertainty/
 ```
 
-The run compares eight methods: the five original rules, the two Week 5.1
+The run compares eight methods: the five original rules, the two Experiments 02–03
 diversity rules, and the new lookahead rule. It keeps the same threshold, pool,
 test set, initial labelled points, GP model, seeds, and budget within each
 benchmark.
@@ -479,11 +487,11 @@ is still only an evaluation diagnostic. The uncertainty-region fraction measures
 GP latent uncertainty, not correctness, and a method can become confidently
 wrong.
 
-### Week 5.3 gated geometric boundary contraction
+### Experiment 05 — Gated geometric boundary contraction
 
-Week 5.3 tests a curvature-aware acquisition rule inspired by geometric boundary
-contraction, reimplemented inside the existing sklearn `GaussianProcessRegressor`
-pipeline:
+Experiment 05 tests a curvature-aware acquisition rule inspired by geometric
+boundary contraction, reimplemented inside the existing sklearn
+`GaussianProcessRegressor` pipeline:
 
 ```text
 gated_geometric_boundary_contraction
@@ -519,18 +527,18 @@ Repulsion uses distance to the currently labelled set with fixed bandwidth
 Run:
 
 ```powershell
-python -m src.week5_3_gated_geometric_boundary_contraction
+python -m src.week4_05_gated_geometric_boundary_contraction
 ```
 
 Outputs are saved under:
 
 ```text
-outputs/week5_3_gated_geometric_boundary_contraction/
+outputs/week4_05_gated_geometric_boundary_contraction/
 ```
 
-The run compares eight methods: the five original rules, the two Week 5.1
-diversity rules, and GBC. It does not rerun the expensive Week 5.2 lookahead
-method; if Week 5.2 outputs are present, the combined summary includes those
+The run compares eight methods: the five original rules, the two Experiments 02–03
+diversity rules, and GBC. It does not rerun the expensive Experiment 04 lookahead
+method; if Experiment 04 outputs are present, the combined summary includes those
 lookahead numbers only as labelled reference data.
 
 Caveats: GBC is heuristic. Curvature is estimated from the GP posterior mean,
@@ -539,10 +547,10 @@ Curvature is evaluated only within a straddle-gated shortlist. Lower
 uncertainty-region fraction or closer query distance does not necessarily imply
 better boundary classification.
 
-## Week 6 in plain language
+### Experiment 06 — Fixed-kernel GP classifier surrogate
 
-Week 6 changes the surrogate model. Weeks 1-5 used
-`GaussianProcessRegressor` on `{-1,+1}` labels as a warm-up stand-in. Week 6
+Experiment 06 changes the surrogate model. The preceding experiments used
+`GaussianProcessRegressor` on `{-1,+1}` labels as a warm-up stand-in. Experiment 06
 uses sklearn's `GaussianProcessClassifier`, so acquisition rules are based on
 class probabilities from `predict_proba` instead of GP-regression latent
 `mu`/`sigma`.
@@ -550,13 +558,13 @@ class probabilities from `predict_proba` instead of GP-regression latent
 Run:
 
 ```powershell
-python -m src.week6_gp_classifier_surrogate_comparison
+python -m src.week4_06_gp_classifier_surrogate
 ```
 
 Outputs are saved under:
 
 ```text
-outputs/week6_gp_classifier_surrogate_comparison/
+outputs/week4_06_gp_classifier_surrogate/
 ```
 
 The script compares classifier-native acquisition rules:
@@ -573,8 +581,8 @@ surrogate benchmark, not the final modelling choice.
 
 The combined summary includes labelled reference comparisons against existing
 GP-regressor outputs when available. Those rows are not acquisition-only
-comparisons, because the surrogate model family changed. Previous Week 1-5
-outputs are preserved.
+comparisons, because the surrogate model family changed. Previous Week 1–3 and
+Week 4 Experiment 01–05 outputs are preserved.
 
 Caveats: GP-classifier probabilities are not the same object as GP-regressor
 latent mean and standard deviation. Binary entropy and margin are
@@ -582,13 +590,13 @@ monotone-equivalent, so they may select identical points. Lower classifier
 uncertainty-region fraction does not automatically prove correct boundary
 learning. The q10/q20/q30 subsets are evaluation diagnostics only.
 
-### Week 6.1 optimized GP-classifier surrogate
+### Experiment 07 — Optimized GP classifier surrogate
 
-Week 6.1 tests whether learning `GaussianProcessClassifier` kernel
-hyperparameters fixes the main limitation of the Week 6 fixed-kernel
+Experiment 07 tests whether learning `GaussianProcessClassifier` kernel
+hyperparameters fixes the main limitation of the Experiment 06 fixed-kernel
 classifier. The run compares three classifier surrogates:
 
-- `fixed_iso_gpc`: the Week 6 fixed isotropic RBF classifier.
+- `fixed_iso_gpc`: the Experiment 06 fixed isotropic RBF classifier.
 - `optimized_iso_gpc`: learns one shared RBF length-scale and kernel constant.
 - `optimized_ard_gpc`: learns one RBF length-scale per input dimension plus the
   kernel constant.
@@ -596,16 +604,16 @@ classifier. The run compares three classifier surrogates:
 Run:
 
 ```powershell
-python -m src.week6_1_optimized_gp_classifier_surrogate --full
+python -m src.week4_07_optimized_gp_classifier_surrogate --full
 ```
 
 Outputs are saved under:
 
 ```text
-outputs/week6_1_optimized_gp_classifier_surrogate_comparison/
+outputs/week4_07_optimized_gp_classifier_surrogate/
 ```
 
-The full run used all five seeds, all five Week 6 classifier acquisitions,
+The full run used all five seeds, all five Experiment 06 classifier acquisitions,
 `n_restarts_optimizer=2`, and `optimize_every=1`; no runtime reduction was
 needed. On this machine the command completed in about 537 seconds.
 
@@ -613,9 +621,9 @@ Main result:
 
 - Branin: optimized ARD with `classifier_gated_diversity` was best on global
   error, q20, and q30, with final means 0.035150, 0.163750, and 0.114333. It
-  beat the previous Week 6 fixed classifier and the available Week 5.2
+  beat the previous Experiment 06 fixed classifier and the available Experiment 04
   GP-regressor reference on those metrics.
-- Ackley: the fixed Week 6 classifier with `classifier_uncertainty_repulsion`
+- Ackley: the fixed Experiment 06 classifier with `classifier_uncertainty_repulsion`
   remained best, with final means 0.175900, 0.417500, and 0.379667. Optimized
   isotropic and ARD classifiers did not beat the fixed classifier or the
   previous GP-regressor references.
@@ -631,19 +639,23 @@ matched exactly on deterministic metric curves, query-distance tables,
 best-method tables, and comparison tables. Final metric tables also matched
 after excluding wall-clock fit-time columns.
 
-### Week 7 boundary-weighted SUR / IVR
+For schema compatibility, existing CSV/JSON keys such as `previous_week6_*` and
+`optimized_classifier_beats_previous_fixed_week6` are retained as legacy field
+names. They refer to Experiment 06 and do not describe the corrected chronology.
 
-Week 7 tests a literature-inspired boundary-weighted uncertainty-reduction
+### Experiment 08 — Boundary-weighted IVR / Bernoulli SUR
+
+Experiment 08 tests a literature-inspired boundary-weighted uncertainty-reduction
 family before the real melt-pool dataset arrives. The new script is:
 
 ```powershell
-python -m src.week7_boundary_weighted_sur --full
+python -m src.week4_08_boundary_weighted_sur --full
 ```
 
 Outputs are saved under:
 
 ```text
-outputs/week7_boundary_weighted_sur/
+outputs/week4_08_boundary_weighted_sur/
 ```
 
 The experiment keeps Branin and thresholded 4D Ackley and adds thresholded 4D
@@ -662,7 +674,7 @@ The new GP-regressor acquisitions are:
   GP posterior refit.
 
 The classifier version, `gpc_bernoulli_sur_refit`, is much more expensive. In
-the full Week 7 run it was limited to Branin and Hartmann seed 0 with classifier
+the full Experiment 08 run it was limited to Branin and Hartmann seed 0 with classifier
 SUR shortlist size 15; GP-regressor methods and fixed classifier baselines were
 run on all five seeds.
 
@@ -689,22 +701,22 @@ rules. Lower integrated Bernoulli uncertainty did not reliably imply lower
 q20/q30 error, so uncertainty contraction must be treated as a diagnostic, not
 as success by itself.
 
-### Week 7.1 fixed-GPC Bernoulli SUR validation
+### Experiment 09 — Fixed-GPC Bernoulli SUR validation
 
-Week 7.1 validates the promising Week 7 seed-0 classifier SUR result across
+Experiment 09 validates the promising Experiment 08 seed-0 classifier SUR result across
 seeds without rerunning every earlier method. The new script is:
 
 ```powershell
-python -m src.week7_1_gpc_sur_validation --full --benchmarks branin hartmann4
+python -m src.week4_09_gpc_bernoulli_sur_validation --full --benchmarks branin hartmann4
 ```
 
 Outputs are saved under:
 
 ```text
-outputs/week7_1_gpc_sur_validation/
+outputs/week4_09_gpc_bernoulli_sur_validation/
 ```
 
-The experiment uses the same fixed-kernel GP classifier as Week 6 and Week 7:
+The experiment uses the same fixed-kernel GP classifier as Experiments 06 and 08:
 `ConstantKernel(1.0, fixed) * RBF(length_scale=0.25, fixed)`, with
 `optimizer=None`. It compares `random_classifier`, `classifier_margin`,
 `classifier_entropy`, `classifier_uncertainty_repulsion`, and classifier-native
@@ -720,7 +732,7 @@ Main results:
 
 - Branin: `classifier_uncertainty_repulsion` was best on global/q20/q30 with
   0.073200 / 0.256000 / 0.189667. SUR k15 reached 0.073300 / 0.265500 /
-  0.201500, so the Week 7 seed-0 classifier SUR signal did not generalize on
+  0.201500, so the Experiment 08 seed-0 classifier SUR signal did not generalize on
   Branin.
 - Hartmann4: SUR won the primary boundary metrics. k15 was best on global
   error at 0.116020, while k25 was best on q20/q30 at 0.373000 / 0.315467.
@@ -737,3 +749,8 @@ correlation with q20/q30 error, but Branin and optional Ackley show that lower
 uncertainty can still mean confidently wrong boundary classification. The
 runtime cost is only defensible for focused diagnostics, not as a default
 pool-based acquisition loop for real laser data.
+
+For schema compatibility, the generated validation summaries retain legacy
+`week7_seed0_*` and `week7_best_full_*` column names. These fields refer to the
+Experiment 08 reference run; RNG namespace strings are also intentionally
+unchanged so that reruns remain reproducible.
