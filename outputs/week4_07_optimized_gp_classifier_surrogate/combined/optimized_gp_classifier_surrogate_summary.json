@@ -1,0 +1,400 @@
+{
+  "experiment": "week4_07_optimized_gp_classifier_surrogate_combined",
+  "benchmarks": [
+    "branin",
+    "ackley"
+  ],
+  "run_settings": {
+    "quick": false,
+    "n_restarts_optimizer": 2,
+    "optimize_every": 1,
+    "max_seeds": null,
+    "runtime_reduction_used": false
+  },
+  "best_method_by_metric": [
+    {
+      "benchmark": "branin",
+      "metric": "global_error",
+      "surrogate_variant": "optimized_ard_gpc",
+      "acquisition_rule": "classifier_gated_diversity",
+      "method": "classifier_gated_diversity",
+      "value": "0.035150",
+      "field": "mean_final_global_error"
+    },
+    {
+      "benchmark": "branin",
+      "metric": "near_boundary_error_q20",
+      "surrogate_variant": "optimized_ard_gpc",
+      "acquisition_rule": "classifier_gated_diversity",
+      "method": "classifier_gated_diversity",
+      "value": "0.163750",
+      "field": "mean_final_near_boundary_error_q20"
+    },
+    {
+      "benchmark": "branin",
+      "metric": "near_boundary_error_q30",
+      "surrogate_variant": "optimized_ard_gpc",
+      "acquisition_rule": "classifier_gated_diversity",
+      "method": "classifier_gated_diversity",
+      "value": "0.114333",
+      "field": "mean_final_near_boundary_error_q30"
+    },
+    {
+      "benchmark": "branin",
+      "metric": "median_query_distance",
+      "surrogate_variant": "fixed_iso_gpc",
+      "acquisition_rule": "classifier_entropy",
+      "method": "classifier_entropy",
+      "value": "8.267937",
+      "field": "median_query_distance"
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "global_error",
+      "surrogate_variant": "fixed_iso_gpc",
+      "acquisition_rule": "classifier_uncertainty_repulsion",
+      "method": "classifier_uncertainty_repulsion",
+      "value": "0.175900",
+      "field": "mean_final_global_error"
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "near_boundary_error_q20",
+      "surrogate_variant": "fixed_iso_gpc",
+      "acquisition_rule": "classifier_uncertainty_repulsion",
+      "method": "classifier_uncertainty_repulsion",
+      "value": "0.417500",
+      "field": "mean_final_near_boundary_error_q20"
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "near_boundary_error_q30",
+      "surrogate_variant": "fixed_iso_gpc",
+      "acquisition_rule": "classifier_uncertainty_repulsion",
+      "method": "classifier_uncertainty_repulsion",
+      "value": "0.379667",
+      "field": "mean_final_near_boundary_error_q30"
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "median_query_distance",
+      "surrogate_variant": "fixed_iso_gpc",
+      "acquisition_rule": "classifier_entropy",
+      "method": "classifier_entropy",
+      "value": "0.844044",
+      "field": "median_query_distance"
+    }
+  ],
+  "fixed_vs_optimized_classifier_comparison": [
+    {
+      "benchmark": "branin",
+      "metric": "global_error",
+      "fixed_iso_best_method": "classifier_uncertainty_repulsion",
+      "fixed_iso_value": "0.080400",
+      "optimized_iso_best_method": "classifier_margin",
+      "optimized_iso_value": "0.042900",
+      "optimized_iso_improves_over_fixed": true,
+      "optimized_ard_best_method": "classifier_gated_diversity",
+      "optimized_ard_value": "0.035150",
+      "optimized_ard_improves_over_optimized_iso": true,
+      "best_optimized_variant": "optimized_ard_gpc",
+      "best_optimized_value": "0.035150",
+      "best_optimized_improves_over_fixed": true
+    },
+    {
+      "benchmark": "branin",
+      "metric": "near_boundary_error_q20",
+      "fixed_iso_best_method": "classifier_uncertainty_repulsion",
+      "fixed_iso_value": "0.261000",
+      "optimized_iso_best_method": "classifier_margin",
+      "optimized_iso_value": "0.182500",
+      "optimized_iso_improves_over_fixed": true,
+      "optimized_ard_best_method": "classifier_gated_diversity",
+      "optimized_ard_value": "0.163750",
+      "optimized_ard_improves_over_optimized_iso": true,
+      "best_optimized_variant": "optimized_ard_gpc",
+      "best_optimized_value": "0.163750",
+      "best_optimized_improves_over_fixed": true
+    },
+    {
+      "benchmark": "branin",
+      "metric": "near_boundary_error_q30",
+      "fixed_iso_best_method": "classifier_uncertainty_repulsion",
+      "fixed_iso_value": "0.197833",
+      "optimized_iso_best_method": "classifier_margin",
+      "optimized_iso_value": "0.127833",
+      "optimized_iso_improves_over_fixed": true,
+      "optimized_ard_best_method": "classifier_gated_diversity",
+      "optimized_ard_value": "0.114333",
+      "optimized_ard_improves_over_optimized_iso": true,
+      "best_optimized_variant": "optimized_ard_gpc",
+      "best_optimized_value": "0.114333",
+      "best_optimized_improves_over_fixed": true
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "global_error",
+      "fixed_iso_best_method": "classifier_uncertainty_repulsion",
+      "fixed_iso_value": "0.175900",
+      "optimized_iso_best_method": "random",
+      "optimized_iso_value": "0.197640",
+      "optimized_iso_improves_over_fixed": false,
+      "optimized_ard_best_method": "classifier_entropy",
+      "optimized_ard_value": "0.248280",
+      "optimized_ard_improves_over_optimized_iso": false,
+      "best_optimized_variant": "optimized_iso_gpc",
+      "best_optimized_value": "0.197640",
+      "best_optimized_improves_over_fixed": false
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "near_boundary_error_q20",
+      "fixed_iso_best_method": "classifier_uncertainty_repulsion",
+      "fixed_iso_value": "0.417500",
+      "optimized_iso_best_method": "random",
+      "optimized_iso_value": "0.423600",
+      "optimized_iso_improves_over_fixed": false,
+      "optimized_ard_best_method": "classifier_entropy",
+      "optimized_ard_value": "0.447900",
+      "optimized_ard_improves_over_optimized_iso": false,
+      "best_optimized_variant": "optimized_iso_gpc",
+      "best_optimized_value": "0.423600",
+      "best_optimized_improves_over_fixed": false
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "near_boundary_error_q30",
+      "fixed_iso_best_method": "classifier_uncertainty_repulsion",
+      "fixed_iso_value": "0.379667",
+      "optimized_iso_best_method": "random",
+      "optimized_iso_value": "0.381333",
+      "optimized_iso_improves_over_fixed": false,
+      "optimized_ard_best_method": "classifier_uncertainty_repulsion",
+      "optimized_ard_value": "0.420600",
+      "optimized_ard_improves_over_optimized_iso": false,
+      "best_optimized_variant": "optimized_iso_gpc",
+      "best_optimized_value": "0.381333",
+      "best_optimized_improves_over_fixed": false
+    }
+  ],
+  "regressor_reference_comparison": [
+    {
+      "benchmark": "branin",
+      "metric": "global_error",
+      "best_optimized_classifier_variant": "optimized_ard_gpc",
+      "best_optimized_classifier_method": "classifier_gated_diversity",
+      "best_optimized_classifier_value": "0.035150",
+      "regressor_reference_method": "lookahead_boundary_uncertainty_reduction",
+      "regressor_reference_value": "0.055900",
+      "regressor_reference_source": "outputs\\week4_04_lookahead_boundary_uncertainty\\branin\\final_metrics_table.csv",
+      "optimized_classifier_beats_regressor_reference": true
+    },
+    {
+      "benchmark": "branin",
+      "metric": "near_boundary_error_q20",
+      "best_optimized_classifier_variant": "optimized_ard_gpc",
+      "best_optimized_classifier_method": "classifier_gated_diversity",
+      "best_optimized_classifier_value": "0.163750",
+      "regressor_reference_method": "lookahead_boundary_uncertainty_reduction",
+      "regressor_reference_value": "0.235500",
+      "regressor_reference_source": "outputs\\week4_04_lookahead_boundary_uncertainty\\branin\\final_metrics_table.csv",
+      "optimized_classifier_beats_regressor_reference": true
+    },
+    {
+      "benchmark": "branin",
+      "metric": "near_boundary_error_q30",
+      "best_optimized_classifier_variant": "optimized_ard_gpc",
+      "best_optimized_classifier_method": "classifier_gated_diversity",
+      "best_optimized_classifier_value": "0.114333",
+      "regressor_reference_method": "lookahead_boundary_uncertainty_reduction",
+      "regressor_reference_value": "0.175333",
+      "regressor_reference_source": "outputs\\week4_04_lookahead_boundary_uncertainty\\branin\\final_metrics_table.csv",
+      "optimized_classifier_beats_regressor_reference": true
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "global_error",
+      "best_optimized_classifier_variant": "optimized_iso_gpc",
+      "best_optimized_classifier_method": "random",
+      "best_optimized_classifier_value": "0.197640",
+      "regressor_reference_method": "straddle",
+      "regressor_reference_value": "0.168400",
+      "regressor_reference_source": "outputs\\week4_05_gated_geometric_boundary_contraction\\ackley\\final_metrics_table.csv",
+      "optimized_classifier_beats_regressor_reference": false
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "near_boundary_error_q20",
+      "best_optimized_classifier_variant": "optimized_iso_gpc",
+      "best_optimized_classifier_method": "random",
+      "best_optimized_classifier_value": "0.423600",
+      "regressor_reference_method": "randomized_straddle",
+      "regressor_reference_value": "0.408400",
+      "regressor_reference_source": "outputs\\week4_05_gated_geometric_boundary_contraction\\ackley\\final_metrics_table.csv",
+      "optimized_classifier_beats_regressor_reference": false
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "near_boundary_error_q30",
+      "best_optimized_classifier_variant": "optimized_iso_gpc",
+      "best_optimized_classifier_method": "random",
+      "best_optimized_classifier_value": "0.381333",
+      "regressor_reference_method": "randomized_straddle",
+      "regressor_reference_value": "0.368200",
+      "regressor_reference_source": "outputs\\week4_05_gated_geometric_boundary_contraction\\ackley\\final_metrics_table.csv",
+      "optimized_classifier_beats_regressor_reference": false
+    }
+  ],
+  "previous_week6_fixed_classifier_comparison": [
+    {
+      "benchmark": "branin",
+      "metric": "global_error",
+      "best_optimized_classifier_variant": "optimized_ard_gpc",
+      "best_optimized_classifier_method": "classifier_gated_diversity",
+      "best_optimized_classifier_value": "0.035150",
+      "previous_week6_fixed_method": "classifier_uncertainty_repulsion",
+      "previous_week6_fixed_value": "0.080400",
+      "previous_week6_fixed_source": "outputs\\week4_06_gp_classifier_surrogate\\branin\\final_metrics_table.csv",
+      "optimized_classifier_beats_previous_fixed_week6": true
+    },
+    {
+      "benchmark": "branin",
+      "metric": "near_boundary_error_q20",
+      "best_optimized_classifier_variant": "optimized_ard_gpc",
+      "best_optimized_classifier_method": "classifier_gated_diversity",
+      "best_optimized_classifier_value": "0.163750",
+      "previous_week6_fixed_method": "classifier_uncertainty_repulsion",
+      "previous_week6_fixed_value": "0.261000",
+      "previous_week6_fixed_source": "outputs\\week4_06_gp_classifier_surrogate\\branin\\final_metrics_table.csv",
+      "optimized_classifier_beats_previous_fixed_week6": true
+    },
+    {
+      "benchmark": "branin",
+      "metric": "near_boundary_error_q30",
+      "best_optimized_classifier_variant": "optimized_ard_gpc",
+      "best_optimized_classifier_method": "classifier_gated_diversity",
+      "best_optimized_classifier_value": "0.114333",
+      "previous_week6_fixed_method": "classifier_uncertainty_repulsion",
+      "previous_week6_fixed_value": "0.197833",
+      "previous_week6_fixed_source": "outputs\\week4_06_gp_classifier_surrogate\\branin\\final_metrics_table.csv",
+      "optimized_classifier_beats_previous_fixed_week6": true
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "global_error",
+      "best_optimized_classifier_variant": "optimized_iso_gpc",
+      "best_optimized_classifier_method": "random",
+      "best_optimized_classifier_value": "0.197640",
+      "previous_week6_fixed_method": "classifier_uncertainty_repulsion",
+      "previous_week6_fixed_value": "0.175900",
+      "previous_week6_fixed_source": "outputs\\week4_06_gp_classifier_surrogate\\ackley\\final_metrics_table.csv",
+      "optimized_classifier_beats_previous_fixed_week6": false
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "near_boundary_error_q20",
+      "best_optimized_classifier_variant": "optimized_iso_gpc",
+      "best_optimized_classifier_method": "random",
+      "best_optimized_classifier_value": "0.423600",
+      "previous_week6_fixed_method": "classifier_uncertainty_repulsion",
+      "previous_week6_fixed_value": "0.417500",
+      "previous_week6_fixed_source": "outputs\\week4_06_gp_classifier_surrogate\\ackley\\final_metrics_table.csv",
+      "optimized_classifier_beats_previous_fixed_week6": false
+    },
+    {
+      "benchmark": "ackley",
+      "metric": "near_boundary_error_q30",
+      "best_optimized_classifier_variant": "optimized_iso_gpc",
+      "best_optimized_classifier_method": "random",
+      "best_optimized_classifier_value": "0.381333",
+      "previous_week6_fixed_method": "classifier_uncertainty_repulsion",
+      "previous_week6_fixed_value": "0.379667",
+      "previous_week6_fixed_source": "outputs\\week4_06_gp_classifier_surrogate\\ackley\\final_metrics_table.csv",
+      "optimized_classifier_beats_previous_fixed_week6": false
+    }
+  ],
+  "fairness_checks": {
+    "branin": {
+      "same_initial_indices_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_threshold_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_pool_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_test_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_budget_grid_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_pool_test_initial_threshold_within_seed_for_all_surrogates_and_acquisitions": true,
+      "only_surrogate_variant_and_acquisition_rule_change": true,
+      "acquisition_does_not_use_true_labels_or_true_function_values": true,
+      "all_checks_passed": true
+    },
+    "ackley": {
+      "same_initial_indices_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_threshold_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_pool_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_test_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_budget_grid_per_seed": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true
+      },
+      "same_pool_test_initial_threshold_within_seed_for_all_surrogates_and_acquisitions": true,
+      "only_surrogate_variant_and_acquisition_rule_change": true,
+      "acquisition_does_not_use_true_labels_or_true_function_values": true,
+      "all_checks_passed": true
+    }
+  }
+}

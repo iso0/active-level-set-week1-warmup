@@ -1,0 +1,8 @@
+benchmark,method,seed_count,total_runtime_seconds_sum_over_seeds,mean_runtime_seconds_per_seed,mean_fit_time_seconds,mean_acquisition_time_seconds,fit_count_sum,fantasy_refit_count_sum,total_fantasy_refit_time_seconds,mean_fantasy_refit_time_seconds_per_step
+ackley,classifier_entropy,3,28.091602,9.363867,0.011665,0.001553,207,0,0.000000,0.000000
+ackley,classifier_margin,3,27.661332,9.220444,0.011477,0.001555,207,0,0.000000,0.000000
+ackley,classifier_uncertainty_repulsion,3,34.366580,11.455527,0.011309,0.035007,207,0,0.000000,0.000000
+ackley,gpc_bernoulli_sur_refit_k15,3,158.752830,52.917610,0.011365,0.646012,207,6120,131.738819,0.645779
+ackley,gpc_bernoulli_sur_refit_k25,3,243.005059,81.001686,0.011455,1.057131,207,10200,215.613688,1.056930
+ackley,random_classifier,3,28.097260,9.365753,0.012142,0.000516,207,0,0.000000,0.000000
+ackley,all,18,519.974662,28.887481,0.011569,0.290295,1242,16320,347.352507,0.283785

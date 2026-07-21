@@ -1,0 +1,13 @@
+benchmark,comparator_role,comparator_method,global_error_diff,q20_error_diff,q30_error_diff,median_query_distance_diff,q20_uncertainty_fraction_diff,q30_uncertainty_fraction_diff
+branin,best_original_global,randomized_straddle,0.004250,0.007750,0.010833,4.298901,-0.114000,-0.160000
+branin,best_original_q20,smallest_abs_mu,-0.001450,0.012500,0.010500,9.812095,-0.107750,-0.176833
+branin,best_original_q30,randomized_straddle,0.004250,0.007750,0.010833,4.298901,-0.114000,-0.160000
+branin,straddle,straddle,0.002450,0.002000,0.004500,2.410925,-0.033750,-0.051667
+branin,randomized_straddle,randomized_straddle,0.004250,0.007750,0.010833,4.298901,-0.114000,-0.160000
+branin,smallest_abs_mu,smallest_abs_mu,-0.001450,0.012500,0.010500,9.812095,-0.107750,-0.176833
+ackley,best_original_global,straddle,0.014020,0.003100,0.007867,0.133591,0.017100,0.017800
+ackley,best_original_q20,randomized_straddle,0.007040,0.010100,0.009400,0.164973,0.019300,0.020733
+ackley,best_original_q30,randomized_straddle,0.007040,0.010100,0.009400,0.164973,0.019300,0.020733
+ackley,straddle,straddle,0.014020,0.003100,0.007867,0.133591,0.017100,0.017800
+ackley,randomized_straddle,randomized_straddle,0.007040,0.010100,0.009400,0.164973,0.019300,0.020733
+ackley,smallest_abs_mu,smallest_abs_mu,-0.053820,-0.021100,-0.035000,0.576008,-0.068000,-0.074600
