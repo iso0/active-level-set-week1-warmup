@@ -1,0 +1,9 @@
+dataset,input,standardized_space_lengthscale,inverse_lengthscale_diagnostic,full_fit_anisotropy_ratio_max_over_min,interpretation
+clean,P,0.7641767460593496,1.3085977886094107,376.49513370488927,descriptive model diagnostic; not causal feature importance
+clean,VX,0.26560768267029905,3.764951337048891,376.49513370488927,descriptive model diagnostic; not causal feature importance
+clean,LS,100.00000000000004,0.009999999999999995,376.49513370488927,descriptive model diagnostic; not causal feature importance
+clean,ST,1.7331659647341577,0.5769787893067617,376.49513370488927,descriptive model diagnostic; not causal feature importance
+broad,P,0.9449332904134028,1.0582757641679719,5.9849223967982965,descriptive model diagnostic; not causal feature importance
+broad,VX,0.4044668957038396,2.472390226794294,5.9849223967982965,descriptive model diagnostic; not causal feature importance
+broad,LS,0.8200522860152455,1.2194344397954755,5.9849223967982965,descriptive model diagnostic; not causal feature importance
+broad,ST,0.15788563790215657,6.333698322957727,5.9849223967982965,descriptive model diagnostic; not causal feature importance

@@ -279,3 +279,41 @@ strings, quick runs, logs, figures, and historical Git commits were preserved.
 Some internal CSV/JSON field names retain `previous_week6_*` or `week7_*`
 prefixes for schema compatibility; these are legacy identifiers for Week 4
 Experiments 06 and 08, not statements of the corrected thesis chronology.
+
+## Week 5 — Real-data first-Conduction GP regression (2026-07-22)
+
+- Audited the pinned Hugging Face simulation CSV at one observation per name:
+  241 simulations total, 238 with an observed Conduction target, and three
+  excluded because Conduction is never observed.
+- Defined the response as the minimum raw timestep labelled Conduction, using
+  P, VX, LS and ST as inputs. No physical-time conversion, interpolation,
+  persistent-onset replacement, censored likelihood or frame-level split was
+  used.
+- Evaluated isotropic RBF, ARD RBF, Matérn 3/2 and Matérn 5/2 with
+  simulation-level LOO and fold-local scaling on the operational no-Bug
+  subgroup (91 simulations) and the inclusive broad dataset (238 simulations).
+- Matérn 3/2 is the point-prediction winner on both datasets: no-Bug RMSE
+  2,537.0 (R² 0.9171) and broad RMSE 16,256.3 (R² 0.4060). Broad Matérn 5/2
+  has slightly better NLPD and 95% coverage, retained as a calibration caveat.
+- The same-clean-points analysis shows broad training worsens predictions on
+  the fixed 91 no-Bug targets for all four kernels. This is interpreted as
+  subgroup/design heterogeneity, not proof that broad labels are invalid.
+- Incorporated Ioan's later clarification that Screenshot Bug may describe
+  repeated Initial Emptiness images. In the stored labels, 0/150 Bug
+  simulations starts with Initial Emptiness, but all 147 simulations with
+  pre-Conduction Bug frames keep them inside the initial empty-like block.
+- Bug-containing simulations have median LS 66.48 µm versus 59.86 µm for
+  no-Bug simulations, but P, VX, ST, empty-like duration and target
+  distribution also differ. LS-only and four-input Bug diagnostics are weak
+  (out-of-fold ROC AUC 0.5952 and 0.5926).
+- The largest broad Matérn 3/2 errors are not enriched for Bug labels; they are
+  more strongly associated with early/late targets and higher LS.
+- L-BFGS-B, SLSQP and Powell give practically identical Matérn 3/2 LOO
+  predictions, with zero fit failures, warnings or bound hits. Powell is much
+  slower and no alternative materially improves on L-BFGS-B, so L-BFGS-B is
+  retained.
+- Permanent record: docs/week5_first_conduction_gp_log.md.
+- Meeting brief: docs/week5_gp_meeting_brief.md.
+- Notebooks: notebooks/week_05/01 through 04; outputs:
+  outputs/week5_01_* through outputs/week5_04_*.
+- Stop condition: active learning and level-set estimation were not started.

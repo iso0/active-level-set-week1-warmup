@@ -1,0 +1,121 @@
+{
+  "experiment": "Week 5 Experiment 03 — Bug, Initial Emptiness and laser-radius diagnostics",
+  "execution_date": "2026-07-22",
+  "provenance": {
+    "hugging_face_repository": "ioandanielc/sph_dataset",
+    "filename": "final-labels_all.csv",
+    "revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+    "sha256": "964a12d86435e9f0879e2e43384d997e1cc2faa7b9e4c3aeb49cf0e73e3fb154"
+  },
+  "fixed_target": "minimum raw timestep with label_final == Conduction",
+  "simulations": {
+    "total": 241,
+    "observed_conduction": 238,
+    "never_conduction": 3,
+    "bug": 150,
+    "no_bug": 91
+  },
+  "sequence_evidence": {
+    "Bug-containing simulations": {
+      "count": 150,
+      "denominator": 241,
+      "percentage": 0.6224066390041494
+    },
+    "Bug simulations beginning with Initial Emptiness": {
+      "count": 0,
+      "denominator": 150,
+      "percentage": 0.0
+    },
+    "Strict Initial Emptiness then immediate Bug": {
+      "count": 0,
+      "denominator": 150,
+      "percentage": 0.0
+    },
+    "All pre-Conduction Bugs in initial empty-like block": {
+      "count": 147,
+      "denominator": 147,
+      "percentage": 1.0
+    },
+    "Bug frames outside initial empty-like block": {
+      "count": 51,
+      "denominator": 150,
+      "percentage": 0.34
+    },
+    "Bug after a physical regime appeared": {
+      "count": 51,
+      "denominator": 150,
+      "percentage": 0.34
+    },
+    "One contiguous Bug block": {
+      "count": 99,
+      "denominator": 150,
+      "percentage": 0.66
+    },
+    "Multiple separated Bug blocks": {
+      "count": 51,
+      "denominator": 150,
+      "percentage": 0.34
+    }
+  },
+  "logistic_diagnostic": {
+    "LS_only": {
+      "overall_out_of_fold_ROC_AUC": 0.5951648351648352,
+      "mean_fold_ROC_AUC": 0.6203703703703703,
+      "standardized_coefficients": {
+        "LS": 0.40301054056507873
+      }
+    },
+    "four_inputs": {
+      "overall_out_of_fold_ROC_AUC": 0.5926007326007325,
+      "mean_fold_ROC_AUC": 0.6106432748538012,
+      "standardized_coefficients": {
+        "P": 0.25618786425587864,
+        "VX": 0.16181478728384702,
+        "LS": 0.3011503029595309,
+        "ST": 0.183947515722206
+      }
+    }
+  },
+  "LS_only_minus_four_input_AUC": 0.002564102564102666,
+  "high_error_diagnostics": [
+    {
+      "dataset": "clean",
+      "top_case_count": 10,
+      "top_case_bug_rate": 0.0,
+      "all_case_bug_rate": 0.0,
+      "top_median_LS_micrometres": 59.58456251505,
+      "all_median_LS_micrometres": 59.8563054886,
+      "top_median_absolute_error": 4713.221149668461,
+      "top_early_or_late_target_count_Q1_or_Q4": 8,
+      "top_sparse_region_count": 1,
+      "top_process_boundary_count": 4,
+      "top_median_5nn_distance": 0.9706666211357702,
+      "all_median_5nn_distance": 0.9659847561045899,
+      "top_dominant_sequence_pattern": "no_bug",
+      "top_outside_95_interval_count": 3
+    },
+    {
+      "dataset": "broad",
+      "top_case_count": 20,
+      "top_case_bug_rate": 0.55,
+      "all_case_bug_rate": 0.6176470588235294,
+      "top_median_LS_micrometres": 75.7654106019,
+      "all_median_LS_micrometres": 64.4214989264,
+      "top_median_absolute_error": 35091.90270494155,
+      "top_early_or_late_target_count_Q1_or_Q4": 15,
+      "top_sparse_region_count": 4,
+      "top_process_boundary_count": 0,
+      "top_median_5nn_distance": 0.8009574564857838,
+      "all_median_5nn_distance": 0.7602664640263059,
+      "top_dominant_sequence_pattern": "initial_empty_like_block_bug_only",
+      "top_outside_95_interval_count": 15
+    }
+  ],
+  "interpretation": {
+    "screenshot_bug_not_necessarily_corruption": true,
+    "clean_is_operational_no_bug_label": true,
+    "broad_policy_remains_fixed": true,
+    "causal_claim_made": false,
+    "outliers_removed": false
+  }
+}

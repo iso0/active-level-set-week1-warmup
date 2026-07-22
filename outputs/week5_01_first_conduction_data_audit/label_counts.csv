@@ -1,0 +1,16 @@
+label_column,label,frame_count,frame_percent,name_group_count,rare_below_1_percent
+label_1,Conduction,43881,67.02254398826979,238,False
+label_1,Forming Phase,10326,15.771627565982405,177,False
+label_1,Screenshot Bug,7469,11.407930107526882,150,False
+label_1,Initial Emptiness,3275,5.002138318670577,116,False
+label_1,Keyhole,521,0.7957600195503421,9,True
+label_2,Conduction,43881,67.02254398826979,238,False
+label_2,Forming Phase,10326,15.771627565982405,177,False
+label_2,Screenshot Bug,7469,11.407930107526882,150,False
+label_2,Initial Emptiness,3275,5.002138318670577,116,False
+label_2,Keyhole,521,0.7957600195503421,9,True
+label_final,Conduction,43881,67.02254398826979,238,False
+label_final,Forming Phase,10326,15.771627565982405,177,False
+label_final,Screenshot Bug,7469,11.407930107526882,150,False
+label_final,Initial Emptiness,3275,5.002138318670577,116,False
+label_final,Keyhole,521,0.7957600195503421,9,True

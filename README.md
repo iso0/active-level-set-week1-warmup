@@ -754,3 +754,42 @@ For schema compatibility, the generated validation summaries retain legacy
 `week7_seed0_*` and `week7_best_full_*` column names. These fields refer to the
 Experiment 08 reference run; RNG namespace strings are also intentionally
 unchanged so that reruns remain reproducible.
+
+## Week 5 — First-Conduction GP Regression on Real Simulation Data
+
+The actual Week 5 work begins the real-data surrogate-model warm-up. One
+observation is one simulation, identified by name. The four inputs are laser
+power (P), scan velocity (VX), laser spot radius (LS), and substrate
+temperature (ST). The target is the first raw timestep at which
+label_final equals Conduction; it is not converted to physical time.
+
+The pinned CSV contains 241 simulations. Of these, 238 have an observed
+Conduction target and three are excluded because the target is undefined.
+The regression is reported separately for an operational no-Screenshot-Bug
+subgroup (91 simulations) and the inclusive broad dataset (238 simulations).
+The no-Bug subgroup is not claimed to be higher-quality data.
+
+Four kernels were compared with simulation-level leave-one-out evaluation:
+isotropic RBF, ARD RBF, Matérn 3/2, and Matérn 5/2. Matérn 3/2 gives the best
+point-prediction metrics on both datasets. A subsequent L-BFGS-B, SLSQP,
+Powell, and no-optimization comparison finds the three optimized solutions
+practically identical; L-BFGS-B remains the recommended default.
+
+The Week 5 notebooks are:
+
+- notebooks/week_05/01_first_conduction_data_audit.ipynb
+- notebooks/week_05/02_first_conduction_gp_kernel_comparison.ipynb
+- notebooks/week_05/03_bug_initial_emptiness_ls_analysis.ipynb
+- notebooks/week_05/04_matern32_optimizer_comparison.ipynb
+
+The label-sequence diagnostic incorporates the supervisor's clarification that
+Screenshot Bug may represent repeated Initial Emptiness frames rather than
+corrupted simulation data. It also reviews LS and other input differences and
+the largest Matérn 3/2 LOO errors without changing the fixed regression target.
+
+See the cumulative [Week 5 thesis decision log](docs/week5_first_conduction_gp_log.md)
+and the concise [Week 5 meeting brief](docs/week5_gp_meeting_brief.md). Generated
+artifacts are under outputs/week5_01_* through outputs/week5_04_*.
+
+Week 5 stops at regression diagnostics and packaging. Active learning and
+level-set estimation have not started.

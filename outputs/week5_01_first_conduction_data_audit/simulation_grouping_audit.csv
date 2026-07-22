@@ -1,0 +1,3 @@
+candidate_key,unique_groups,missing_identifier_rows,rows_per_group_min,rows_per_group_median,rows_per_group_max,groups_with_varying_P_VX_LS_ST,groups_merging_multiple_names,maximum_names_merged_in_one_group
+name,241,0,41,265.0,659,0,0,1
+hash,103,0,102,405.0,6293,50,50,20

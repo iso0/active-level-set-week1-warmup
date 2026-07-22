@@ -1,0 +1,15 @@
+check,status,evidence
+raw SHA-256 unchanged,PASS,964a12d86435e9f0879e2e43384d997e1cc2faa7b9e4c3aeb49cf0e73e3fb154
+one row per name,PASS,rows=241
+observed-Conduction count,PASS,observed=238
+no-Bug observed-Conduction count,PASS,expected=91
+never-Conduction count,PASS,expected=3
+required sequence columns,PASS,present
+clean high-error rows,PASS,rows=10
+broad high-error rows,PASS,rows=20
+finite high-error predictions,PASS,finite
+finite nearest-neighbour distances,PASS,finite
+logistic models,PASS,2 models
+finite logistic AUC,PASS,"within [0,1]"
+required artifacts,PASS,present=11/11
+no model binaries,PASS,none
