@@ -45,6 +45,18 @@ L-BFGS-B, SLSQP and Powell produce practically identical Matérn 3/2 LOO predict
 
 The broad full-data Matérn 5/2 check is also optimizer-stable: all three optimizers obtain signal scale 1.01², lengthscale 0.554 and log marginal likelihood about -283.7208.
 
+## Targeted ARD Matérn 3/2 robustness extension
+
+A matched ARD Matérn 3/2 extension was completed on 2026-07-23. It used the same fold-local scaling, fixed jitter, L-BFGS-B settings and experiment-level LOO protocol as Phase 2.
+
+- On the 91 no-Bug simulations, ARD lowers MAE from 1,735.8 to 1,560.0 but raises RMSE from 2,537.0 to 2,808.3 and lowers 95% coverage from 90.1% to 83.5%.
+- On the 238 broad simulations, ARD worsens MAE from 11,616.9 to 12,391.4 and RMSE from 16,256.3 to 17,596.2; coverage falls from 92.9% to 89.5%.
+- Ten-thousand-resample paired bootstrap intervals cross zero, but the RMSE point estimates favour isotropic Matérn 3/2 on both datasets.
+- Broad-trained ARD still performs poorly on the same 91 no-Bug targets: RMSE 18,051.8 versus 2,808.3 for no-Bug-only training, with 15 points improved and 76 worsened.
+- No-Bug LS reaches the ARD upper bound in 94.5% of folds and moves from 100 to 1,000 under the widened bound with only a 0.0717 LML gain. This is a weakly identified almost-flat direction, not causal importance. Broad lengthscales are stable and do not hit the bound.
+
+The extension does not change the recommendation: retain isotropic Matérn 3/2 with L-BFGS-B. The evidence points toward subgroup or missing-design structure rather than a need for additional kernel complexity.
+
 ## Ioan’s clarification and revised interpretation
 
 Ioan clarified after the kernel experiment that the annotator may have labelled only the first empty image as Initial Emptiness and subsequent empty images as Screenshot Bug. Screenshot Bug therefore does not necessarily identify corrupted simulation data. He also suggested that empty images may have become more common after LS began to vary.

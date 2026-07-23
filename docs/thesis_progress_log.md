@@ -317,3 +317,13 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
 - Notebooks: notebooks/week_05/01 through 04; outputs:
   outputs/week5_01_* through outputs/week5_04_*.
 - Stop condition: active learning and level-set estimation were not started.
+
+### Week 5 targeted ARD Matérn 3/2 extension (2026-07-23)
+
+- Added `notebooks/week_05/05_ard_matern32_extension.ipynb` and structured outputs under `outputs/week5_05_ard_matern32_extension/`.
+- Compared the verified Phase 2 isotropic Matérn 3/2 results with new ARD Matérn 3/2 LOO fits under identical fold-local scaling, jitter, optimizer, seed, restart and bound settings.
+- No-Bug ARD improves MAE (1,560.0 versus 1,735.8) but worsens RMSE (2,808.3 versus 2,537.0) and 95% coverage (83.5% versus 90.1%). Broad ARD worsens MAE, RMSE, R² and coverage.
+- Paired 10,000-resample bootstrap intervals cross zero, but RMSE point estimates favour isotropic Matérn 3/2 on both datasets.
+- Broad-trained ARD still degrades the same 91 no-Bug targets: RMSE 18,051.8 versus 2,808.3 for no-Bug-only training; 15 points improve and 76 worsen.
+- No-Bug LS reaches the primary ARD upper bound in 94.5% of folds and moves from 100 to 1,000 under a widened full-data bound for only a 0.0717 LML gain, indicating a weakly identified flat direction. Broad ARD lengthscales remain stable.
+- Decision: retain isotropic Matérn 3/2 with L-BFGS-B; do not add further kernel complexity before discussing missing batch/design information. Active learning and level-set estimation remain not started.

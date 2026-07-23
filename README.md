@@ -775,12 +775,15 @@ point-prediction metrics on both datasets. A subsequent L-BFGS-B, SLSQP,
 Powell, and no-optimization comparison finds the three optimized solutions
 practically identical; L-BFGS-B remains the recommended default.
 
+A targeted [ARD Matérn 3/2 robustness extension](notebooks/week_05/05_ard_matern32_extension.ipynb) did not improve RMSE on either dataset and therefore leaves the isotropic Matérn 3/2 recommendation unchanged; see the [concise extension results](outputs/week5_05_ard_matern32_extension/week5_05_results_summary.md).
+
 The Week 5 notebooks are:
 
 - notebooks/week_05/01_first_conduction_data_audit.ipynb
 - notebooks/week_05/02_first_conduction_gp_kernel_comparison.ipynb
 - notebooks/week_05/03_bug_initial_emptiness_ls_analysis.ipynb
 - notebooks/week_05/04_matern32_optimizer_comparison.ipynb
+- notebooks/week_05/05_ard_matern32_extension.ipynb
 
 The label-sequence diagnostic incorporates the supervisor's clarification that
 Screenshot Bug may represent repeated Initial Emptiness frames rather than
@@ -789,7 +792,7 @@ the largest Matérn 3/2 LOO errors without changing the fixed regression target.
 
 See the cumulative [Week 5 thesis decision log](docs/week5_first_conduction_gp_log.md)
 and the concise [Week 5 meeting brief](docs/week5_gp_meeting_brief.md). Generated
-artifacts are under outputs/week5_01_* through outputs/week5_04_*.
+artifacts are under outputs/week5_01_* through outputs/week5_05_*.
 
 Week 5 stops at regression diagnostics and packaging. Active learning and
 level-set estimation have not started.

@@ -264,3 +264,67 @@ The limited broad full-data Matérn 5/2 check is likewise stable: all three opti
 - **Scientific limit:** the response is an observed raw timestep, not an exact physical transition time. Missing batch/design variables, the label convention and deterministic-simulator extraction ambiguity remain plausible explanations for heterogeneity.
 
 Week 5 ends here. No active learning, level-set estimation, GP classification, ARD Matérn expansion or additional optimizer family was started.
+
+## ARD Matérn 3/2 extension
+
+**Recorded 2026-07-23.** This dated extension supersedes only the preceding statement that an ARD Matérn expansion had not been started. It does not change the fixed data policy, target, grouping, or earlier Phase 2 results. Active learning, level-set estimation and GP classification remain not started.
+
+### Objective and fixed protocol
+
+The targeted question was whether allowing four separate Matérn 3/2 lengthscales materially improves first-observed-Conduction regression relative to the existing isotropic Matérn 3/2 baseline. The inputs remain `P`, `VX`, `LS` and `ST`; the response remains the minimum raw timestep with `label_final == "Conduction"` in each `name` simulation. The three never-Conduction simulations remain excluded. No physical-time conversion, interpolation, persistent-onset substitution, relabelling or frame-level split was introduced.
+
+The operational no-Bug dataset contains 91 simulations and the broad dataset contains 238. The new ARD fits used the exact Phase 2 protocol: `StandardScaler` fitted inside every LOO training fold, `normalize_y=True`, fixed `alpha=1e-6` numerical jitter, no `WhiteKernel`, sklearn L-BFGS-B, seed 20260721, one additional optimizer restart, signal-variance bounds `(1e-3, 1e3)` and four initial lengthscales equal to one with bounds `(1e-2, 1e2)`. The Phase 2 isotropic Matérn 3/2 predictions were reused only after simulation membership, targets, fold order, optimizer settings and every fold-specific scaler moment were verified exactly.
+
+### LOO results
+
+| Dataset | Kernel | MAE | Median AE | RMSE | R² | Normalized RMSE | Mean NLPD | 95% coverage | Mean 95% width |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| No-Bug | Isotropic Matérn 3/2 | 1,735.765 | 1,092.087 | 2,537.007 | 0.9171 | 0.2863 | 9.8156 | 90.11% | 13,861.9 |
+| No-Bug | ARD Matérn 3/2 | 1,559.990 | 654.464 | 2,808.296 | 0.8984 | 0.3169 | 10.1858 | 83.52% | 7,223.4 |
+| Broad | Isotropic Matérn 3/2 | 11,616.871 | 7,414.184 | 16,256.262 | 0.4060 | 0.7691 | 11.0404 | 92.86% | 58,070.3 |
+| Broad | ARD Matérn 3/2 | 12,391.368 | 8,142.189 | 17,596.191 | 0.3040 | 0.8325 | 11.0712 | 89.50% | 55,036.6 |
+
+On the no-Bug data, ARD reduces MAE by 175.775 timesteps and improves 56 of 91 paired absolute errors, but increases RMSE by 271.289 timesteps. The mismatch indicates that the average absolute error improves while larger residuals receive a worse squared-error penalty. Its substantially narrower intervals also reduce empirical coverage from 90.11% to 83.52%, so the apparent MAE gain does not constitute a robust overall improvement.
+
+On the broad data, ARD worsens MAE by 774.498 timesteps and RMSE by 1,339.929 timesteps, reduces R², slightly worsens NLPD, and reduces coverage. It improves 118 paired absolute errors and worsens 120. Isotropic Matérn 3/2 therefore remains the stronger broad-data model.
+
+### Paired bootstrap robustness
+
+Ten thousand deterministic paired bootstrap resamples were used. Positive differences denote an isotropic-minus-ARD error reduction and therefore favour ARD.
+
+- No-Bug MAE difference: +175.775; 95% percentile interval `[-342.390, 627.964]`; probability positive 0.7593.
+- No-Bug RMSE difference: -271.289; interval `[-1,203.379, 617.801]`; probability positive 0.3005.
+- Broad MAE difference: -774.498; interval `[-1,748.475, 184.527]`; probability positive 0.0580.
+- Broad RMSE difference: -1,339.929; interval `[-2,763.252, 101.824]`; probability positive 0.0341.
+
+All four percentile intervals cross zero. The point estimates and low positive probabilities nevertheless consistently oppose an ARD RMSE advantage, especially on broad data. The extension therefore does not supply evidence strong enough to replace the isotropic baseline.
+
+### Same 91 no-Bug targets
+
+The earlier clean-versus-broad conflict persists under ARD. Training ARD Matérn 3/2 on the other 90 no-Bug simulations gives RMSE 2,808.296 and MAE 1,559.990 on the 91 no-Bug held-out targets. Training on the broad data except the same held-out simulation gives RMSE 18,051.785 and MAE 13,676.417. Broad training improves 15 points, worsens 76 and gives a median paired improvement of -9,415.964 timesteps.
+
+For the prior isotropic Matérn 3/2, the corresponding RMSE values were 2,537.007 and 17,398.491, with 10 points improved and 81 worsened by broad training. ARD slightly increases the number of individually improved points but does not resolve the severe aggregate degradation. This remains evidence of training-population heterogeneity under the four recorded inputs, not proof that broad labels are incorrect.
+
+### ARD lengthscales and bound sensitivity
+
+The no-Bug fold-median standardized lengthscales are `P=1.772`, `VX=0.901`, `LS=100.000` and `ST=3.344`. LS reaches the primary upper bound in 94.51% of no-Bug folds; ST reaches it in 3.30%. The full-data no-Bug kernel is `1.05**2 * Matern(length_scale=[1.78, 0.905, 100, 3.36], nu=1.5)` with log marginal likelihood -24.6637.
+
+Under a widened LS upper bound of 1,000 and five matched deterministic starts, the selected no-Bug solution becomes `1.06**2 * Matern(length_scale=[1.79, 0.908, 1e+03, 3.38], nu=1.5)` with log marginal likelihood -24.5920. P, VX and ST remain almost unchanged while LS moves from 100 to 1,000 for an LML gain of only 0.0717. LS is therefore weakly identified as an almost-flat direction in the no-Bug fit; 1,000 is not interpreted as a precise physical or causal importance value.
+
+The broad fold-median lengthscales are `P=1.426`, `VX=0.954`, `LS=0.893` and `ST=0.228`. The full-data broad kernel is `1.07**2 * Matern(length_scale=[1.43, 0.955, 0.893, 0.229], nu=1.5)` with LML -269.9448. The selected broad solution is unchanged when the upper bound increases from 100 to 1,000, indicating that its anisotropy is not an upper-bound artefact.
+
+These standardized-space lengthscales describe fitted smoothness and are not causal feature-importance scores. The contrast between an effectively flat no-Bug LS direction and a finite broad LS lengthscale is also consistent with the two datasets representing different designs or subgroups.
+
+### Warnings, failures and runtime
+
+- New ARD LOO runtime was 12.182 seconds on no-Bug data (median 0.130 seconds per fold) and 184.095 seconds on broad data (median 0.749 seconds per fold).
+- The no-Bug ARD LOO produced 89 convergence warnings across 89 folds, all associated with upper-bound solutions; 86 LS components and three ST components reached 100.
+- Broad ARD LOO produced no warnings. No LOO fit failed and no fallback prediction was used.
+- The primary full-data no-Bug fit produced one LS upper-bound warning; the broad full-data fit produced none.
+- All 20 matched-start bound-sensitivity fits completed. Expected bound warnings were retained rather than suppressed; no fit failed.
+
+### Thesis decision
+
+Do not replace isotropic Matérn 3/2 with ARD Matérn 3/2 as the Week 5 default. ARD improves no-Bug MAE but worsens no-Bug RMSE and uncertainty coverage, and it worsens the broad point metrics. The paired bootstrap intervals do not establish a reliable ARD advantage. The no-Bug LS boundary behaviour further shows that one ARD component is weakly identified rather than precisely estimated.
+
+Retain isotropic Matérn 3/2 with L-BFGS-B as the point-prediction baseline. Preserve the broad dataset as the inclusive record and the no-Bug set as an operational subgroup sensitivity analysis. The next scientific discussion should focus on missing batch/design information or the representation of initial empty-like duration rather than adding more kernel complexity. Active learning and level-set estimation remain not started.
