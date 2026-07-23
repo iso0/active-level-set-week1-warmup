@@ -317,7 +317,7 @@ These standardized-space lengthscales describe fitted smoothness and are not cau
 
 ### Warnings, failures and runtime
 
-- New ARD LOO runtime was 12.182 seconds on no-Bug data (median 0.130 seconds per fold) and 184.095 seconds on broad data (median 0.749 seconds per fold).
+- New ARD LOO runtime was 12.774 seconds on no-Bug data (median 0.134 seconds per fold) and 185.009 seconds on broad data (median 0.752 seconds per fold).
 - The no-Bug ARD LOO produced 89 convergence warnings across 89 folds, all associated with upper-bound solutions; 86 LS components and three ST components reached 100.
 - Broad ARD LOO produced no warnings. No LOO fit failed and no fallback prediction was used.
 - The primary full-data no-Bug fit produced one LS upper-bound warning; the broad full-data fit produced none.

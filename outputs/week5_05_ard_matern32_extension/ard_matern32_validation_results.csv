@@ -4,17 +4,22 @@ raw target reconciliation,PASS,mismatches=0
 raw CSV SHA-256 unchanged,PASS,964a12d86435e9f0879e2e43384d997e1cc2faa7b9e4c3aeb49cf0e73e3fb154
 isotropic Phase 2 reuse,PASS,"settings, membership, targets, fold order, and scaler moments verified"
 ARD prediction accounting,PASS,"rows=329, duplicates=0"
+finite predictive means,PASS,rows=329
 finite positive predictive standard deviations,PASS,minimum=623.126
 experiment-level scaler isolation,PASS,clean scaler rows=90; broad scaler rows=237; held-out rows excluded
 matching ARD optimization settings,PASS,"alpha=1e-6, L-BFGS-B, one extra restart, seed=20260721"
 four ARD lengthscales per fold,PASS,"P, VX, LS, ST all present for 329 folds"
+independent ARD bound-flag recomputation,PASS,"P, VX, LS and ST flags agree with primary bounds"
 no optimization fallback,PASS,"failures=0, fallbacks=0"
 metric table accounting,PASS,rows=4
 paired error accounting,PASS,rows=329
+paired summary accounting,PASS,rows=2
 paired bootstrap specification,PASS,"rows=4, resamples=10000"
 same no-Bug point accounting,PASS,rows=91
 fold hyperparameter accounting,PASS,"fold rows=329, summary rows=8"
 full-data fit accounting,PASS,two kernels × two datasets
 bound sensitivity matched starts,PASS,"fits=20, selected=4"
+context table bound-hit behaviour,PASS,rows=8
 exactly five requested PNG figures,PASS,"files=['ard_matern32_fold_lengthscale_distributions.png', 'ard_matern32_full_data_lengthscales.png', 'ard_matern32_same_clean_points_errors.png', 'matern32_metric_comparison.png', 'matern32_paired_absolute_error_differences.png']"
 Phase 1 audit remains available,PASS,outputs\week5_01_first_conduction_data_audit\simulation_level_audit.csv
+previous Week 5 artifacts remain available,PASS,Phase 2 predictions and full-data fits present
