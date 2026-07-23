@@ -1,0 +1,21 @@
+check,status,evidence
+raw SHA-256 unchanged,PASS,964a12d86435e9f0879e2e43384d997e1cc2faa7b9e4c3aeb49cf0e73e3fb154
+expected sample counts,PASS,"clean=91, broad=238"
+clean prediction rows,PASS,rows=364
+broad prediction rows,PASS,rows=952
+unique clean simulation-optimizer rows,PASS,duplicates=0
+unique broad simulation-optimizer rows,PASS,duplicates=0
+finite predictive means,PASS,finite
+finite positive predictive std,PASS,finite and positive
+fold-local clean scaler,PASS,90 training rows
+fold-local broad scaler,PASS,237 training rows
+optimizer parameter vectors finite,PASS,runs=1974
+optimizer objectives finite,PASS,runs=1974
+common deterministic starts,PASS,"identical across L-BFGS-B, SLSQP and Powell in every fold"
+failed fits explicitly recorded,PASS,failed=0
+matching model specification,PASS,alpha and normalize_y match
+full Matérn 3/2 fits,PASS,2 datasets × 4 optimizers
+broad Matérn 5/2 check,PASS,4 full-data fits
+metric tables saved,PASS,present
+no model binaries,PASS,none
+out-of-scope methods not started,PASS,not started

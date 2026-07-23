@@ -1,0 +1,19 @@
+transition_pattern,simulations
+Screenshot Bug → Forming Phase → Conduction,80
+Initial Emptiness → Conduction,43
+Screenshot Bug → Forming Phase → Conduction → Screenshot Bug,41
+Initial Emptiness → Forming Phase → Conduction,23
+Initial Emptiness → Conduction → Initial Emptiness,18
+Screenshot Bug → Initial Emptiness → Forming Phase → Conduction,13
+Screenshot Bug → Initial Emptiness → Forming Phase → Conduction → Screenshot Bug,10
+Initial Emptiness → Forming Phase → Conduction → Keyhole,3
+Screenshot Bug → Forming Phase → Conduction → Keyhole,1
+Screenshot Bug → Initial Emptiness → Forming Phase,1
+Screenshot Bug → Initial Emptiness → Forming Phase → Conduction → Keyhole,1
+Screenshot Bug → Forming Phase → Keyhole,1
+Initial Emptiness → Conduction → Keyhole → Conduction → Keyhole → Conduction → Keyhole → Conduction → Keyhole → Conduction → Keyhole → Conduction → Keyhole → Conduction,1
+Initial Emptiness → Forming Phase → Conduction → Forming Phase → Conduction,1
+Screenshot Bug → Forming Phase,1
+Screenshot Bug → Forming Phase → Conduction → Forming Phase → Conduction,1
+Initial Emptiness → Conduction → Keyhole → Conduction → Keyhole → Conduction → Keyhole → Conduction,1
+Initial Emptiness → Conduction → Keyhole → Conduction,1

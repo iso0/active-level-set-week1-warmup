@@ -1,0 +1,3 @@
+dataset,top_case_count,top_case_bug_rate,all_case_bug_rate,top_median_LS_micrometres,all_median_LS_micrometres,top_median_absolute_error,top_early_or_late_target_count_Q1_or_Q4,top_sparse_region_count,top_process_boundary_count,top_median_5nn_distance,all_median_5nn_distance,top_dominant_sequence_pattern,top_outside_95_interval_count
+clean,10,0.0,0.0,59.58456251505,59.8563054886,4713.221149668461,8,1,4,0.9706666211357702,0.9659847561045899,no_bug,3
+broad,20,0.55,0.6176470588235294,75.7654106019,64.4214989264,35091.90270494155,15,4,0,0.8009574564857838,0.7602664640263059,initial_empty_like_block_bug_only,15

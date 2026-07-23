@@ -1,0 +1,37 @@
+group,predictor,outcome,n,spearman_rho,two_sided_p_value,status
+All,P,initial_empty_like_block_timestep_width,241,0.07376978409311426,0.2539465179296072,calculated
+All,P,screenshot_bug_frame_count,241,0.012164565663485505,0.8509785898260347,calculated
+All,P,first_observed_conduction_timestep,238,0.08124080096526722,0.21174236007885197,calculated
+All,VX,initial_empty_like_block_timestep_width,241,-0.7296341664840784,2.519923803905482e-41,calculated
+All,VX,screenshot_bug_frame_count,241,0.28901097229217165,5.090159724956756e-06,calculated
+All,VX,first_observed_conduction_timestep,238,-0.5129456575472343,2.2556488194220567e-17,calculated
+All,LS_micrometres,initial_empty_like_block_timestep_width,241,0.28402455150291095,7.502683361034115e-06,calculated
+All,LS_micrometres,screenshot_bug_frame_count,241,0.088725017751343,0.16977392146993692,calculated
+All,LS_micrometres,first_observed_conduction_timestep,238,0.3189136253515664,5.010593729254502e-07,calculated
+All,ST,initial_empty_like_block_timestep_width,241,0.34676097059213074,3.2454714334740006e-08,calculated
+All,ST,screenshot_bug_frame_count,241,0.14446198582988168,0.024911611298815205,calculated
+All,ST,first_observed_conduction_timestep,238,0.1611824938201911,0.012781065997579543,calculated
+Bug,P,initial_empty_like_block_timestep_width,150,-0.21147784345970935,0.009381014746016037,calculated
+Bug,P,screenshot_bug_frame_count,150,-0.3479374810372498,1.2840419498844852e-05,calculated
+Bug,P,first_observed_conduction_timestep,147,-0.18354502111840662,0.026060580298648935,calculated
+Bug,VX,initial_empty_like_block_timestep_width,150,-0.9864989555091338,3.369936515016445e-118,calculated
+Bug,VX,screenshot_bug_frame_count,150,0.5570852244681107,1.3266250319004265e-13,calculated
+Bug,VX,first_observed_conduction_timestep,147,-0.8077507196880974,4.309300807444963e-35,calculated
+Bug,LS_micrometres,initial_empty_like_block_timestep_width,150,0.02975954486866083,0.717718558366562,calculated
+Bug,LS_micrometres,screenshot_bug_frame_count,150,-0.24425546885771104,0.0025932524710564294,calculated
+Bug,LS_micrometres,first_observed_conduction_timestep,147,0.35934536717315585,7.826844224177803e-06,calculated
+Bug,ST,initial_empty_like_block_timestep_width,150,0.11198897728787947,0.17244126437549093,calculated
+Bug,ST,screenshot_bug_frame_count,150,0.045480381487640595,0.5805065102912543,calculated
+Bug,ST,first_observed_conduction_timestep,147,0.05632456610930192,0.4980206149202947,calculated
+No Bug,P,initial_empty_like_block_timestep_width,91,0.3603749164723707,0.0004499396201554822,calculated
+No Bug,P,screenshot_bug_frame_count,91,,,not_meaningful_constant_or_small_group
+No Bug,P,first_observed_conduction_timestep,91,0.1803790412486065,0.08708401394717541,calculated
+No Bug,VX,initial_empty_like_block_timestep_width,91,-0.40155605010166623,7.978767953461774e-05,calculated
+No Bug,VX,screenshot_bug_frame_count,91,,,not_meaningful_constant_or_small_group
+No Bug,VX,first_observed_conduction_timestep,91,-0.8683229813664597,7.649030752204956e-29,calculated
+No Bug,LS_micrometres,initial_empty_like_block_timestep_width,91,0.5800561024931479,1.6847448051243208e-09,calculated
+No Bug,LS_micrometres,screenshot_bug_frame_count,91,,,not_meaningful_constant_or_small_group
+No Bug,LS_micrometres,first_observed_conduction_timestep,91,0.18369873330325773,0.08133094439617339,calculated
+No Bug,ST,initial_empty_like_block_timestep_width,91,0.6193371515803726,5.974405653636691e-11,calculated
+No Bug,ST,screenshot_bug_frame_count,91,,,not_meaningful_constant_or_small_group
+No Bug,ST,first_observed_conduction_timestep,91,0.23158014784342865,0.027194619840374593,calculated

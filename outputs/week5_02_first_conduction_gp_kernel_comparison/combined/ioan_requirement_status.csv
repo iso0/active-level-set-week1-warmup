@@ -1,0 +1,13 @@
+requirement,status,evidence_or_reason
+real dataset,completed,Pinned Hugging Face CSV; SHA-256 verified
+experiment-level target,completed,One name group; first observed Conduction raw timestep
+clean GP comparison,completed,91-simulation strict-clean LOO
+broad GP comparison,completed,238-simulation broad LOO
+isotropic RBF,completed,ConstantKernel × shared-lengthscale RBF
+ARD RBF,completed,ConstantKernel × four-lengthscale RBF
+Matérn 3/2,completed,ConstantKernel × isotropic Matérn nu=1.5
+Matérn 5/2,completed,ConstantKernel × isotropic Matérn nu=2.5
+hyperparameter optimization,completed,L-BFGS-B with one equal extra restart for every fit
+leave-one-out evaluation,completed,Simulation-level LOO; fold-local scaling
+optimizer-family comparison,not started,Adam/SGD or alternative optimizer families out of scope
+active learning / level-set estimation,not started,Explicitly outside Phase 2
