@@ -1,0 +1,23 @@
+validation_check,status,passed,details
+exact immutable Hugging Face revision recorded,PASS,True,0e859b748fdbc8454f66e58e101e333ac0479d42
+top-level enumeration completes,PASS,True,5 HTTP pages consumed
+direct existence of sim_00242 tested,PASS,True,chosen-revision direct path check
+direct checks and enumerated list agree,PASS,True,6 required paths checked
+independent enumeration methods agree,PASS,True,HfApi immediate folders equal explicitly paginated HTTP folders
+pagination and truncation safeguards pass,PASS,True,318 explicit per-simulation HTTP pages plus 12 fully consumed HfApi fallback iterators; faulty global sibling payload rejected
+master table and folder tree reconciled,PASS,True,241 records match exactly
+numeric ID gaps reported,PASS,True,1 gap row(s)
+one output row per actual folder,PASS,True,241 dataset rows and 241 folders
+simulation IDs unique,PASS,True,241 unique IDs
+no simulation silently lost,PASS,True,dataset and folder ID sets are identical
+all four process inputs handled,PASS,True,"P, VX, LS, and ST finite in every row"
+melt extents non-negative after sentinel filtering,PASS,True,no ordered-bound violation in accepted rows
+bounds rows align with time and iteration rows,PASS,True,all three streams align in every simulation
+selected targets trace to raw time-series rows,PASS,True,selected target equals recorded selected-window median for all responses
+missing simulations explicitly flagged,PASS,True,0 incomplete folder(s)
+no stale false-row-count dataset remains,PASS,True,corrected dataset replaces the obsolete generated artifacts
+no stale false-count statement in current outputs,PASS,True,none
+notebook has no error outputs,PASS,True,"code_cells=13, executed=True, error_outputs=0"
+original dirty worktree remains unchanged,PASS,True,status and all dirty-file SHA-256 values match
+all required output paths exist,PASS,True,30/30 exist
+no GP or Phase 2 modelling performed,PASS,True,audit module imports no estimator and emits only Phase 1 artifacts

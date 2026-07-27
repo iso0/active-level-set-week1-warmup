@@ -1,0 +1,13 @@
+{
+  "status": "smoke_only_not_scientific_result",
+  "simulation_count": 8,
+  "methods": [
+    "B_learned_nugget",
+    "C_heteroskedastic"
+  ],
+  "prediction_rows": 16,
+  "identical_fold_order": true,
+  "identical_fold_seeds": true,
+  "failed_folds": 0,
+  "runtime_seconds": 3.6600723000010476
+}

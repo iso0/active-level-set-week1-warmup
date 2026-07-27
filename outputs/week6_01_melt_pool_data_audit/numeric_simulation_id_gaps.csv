@@ -1,0 +1,2 @@
+missing_numeric_id,expected_simulation_id,present_in_experiments_csv,present_in_folder_tree,interpretation
+136,sim_00136,False,False,"numeric naming gap, not a silently dropped simulation; absent from both sources"

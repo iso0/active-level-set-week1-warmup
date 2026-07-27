@@ -1,0 +1,31 @@
+validation_number,validation_check,status,passed,details
+1,exact Phase 1 provenance,PASS,True,revision=0e859b748fdbc8454f66e58e101e333ac0479d42
+2,unchanged Phase 1 ledger hash,PASS,True,sha256=10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF
+3,exactly 230 stable simulations,PASS,True,"rows=230, unique=230"
+4,exactly the expected 11 removed simulation IDs,PASS,True,"[""sim_00002"",""sim_00006"",""sim_00018"",""sim_00029"",""sim_00036"",""sim_00038"",""sim_00095"",""sim_00105"",""sim_00124"",""sim_00154"",""sim_00222""]"
+5,"features exactly P, VX, LS, ST",PASS,True,"[""P"",""VX"",""LS"",""ST""]"
+6,target exactly penetration depth,PASS,True,melt_pool_depth_below_surface_selected_primary_scalar_target_m
+7,B and C use identical stable simulation IDs,PASS,True,aligned IDs=230
+8,B and C use identical fold order,PASS,True,fold indices 0..229 and fold seeds are identical
+9,exactly 230 B predictions,PASS,True,rows=230
+10,exactly 230 C predictions,PASS,True,rows=230
+11,no duplicate held-out predictions,PASS,True,unique simulation ID within both methods
+12,fold-local X scaling,PASS,True,independently recomputed 460 folds
+13,fold-local y scaling,PASS,True,independently recomputed 460 folds
+14,no held-out-target leakage,PASS,True,training-only flags and independently recomputed scalers agree
+15,finite predictive means,PASS,True,460 predictive means checked
+16,finite positive predictive standard deviations,PASS,True,latent plus B total and C oracle standard deviations checked
+17,correct B total-variance calculation,PASS,True,total = latent + WhiteKernel variance in physical units
+18,correct C oracle-variance calculation,PASS,True,oracle = latent + held-out target-summary variance
+19,metrics independently recomputed from prediction rows,PASS,True,both metric rows independently recomputed
+20,paired comparisons aligned by simulation ID,PASS,True,paired rows=230
+21,paired bootstrap uses paired resampling,PASS,True,CIs independently reproduced from jointly indexed residual arrays
+22,optimizer failures and warnings recorded,PASS,True,warning folds=1; failed folds=0
+23,bound hits recorded,PASS,True,bound-hit folds=0
+24,stable-only versus full-population comparisons use identical held-out IDs,PASS,True,230 identical stable held-outs for B and C
+25,Phase 1 outputs unchanged,PASS,True,protected_files=34; aggregate_sha256=21FF34AD767C8D4D6C536D66AFD147B8C700884321415078231B7A24D4C7D198
+26,existing Phase 2 prediction files unchanged,PASS,True,"{""width_loo_predictions.csv"":""32FF3A2DB237D1A13CE35903F6B95E66EB614D9FD3028F4E9D429FA915A68F75"",""length_loo_predictions.csv"":""50531D5BC00DC5C9FBAC897A2568929C344BB371FBF181339808B6EB8F44E1D0"",""depth_loo_predictions.csv"":""B511702EAD9A91BBC407E2F9D447E62998470F3FD4214CE020520418B589DC00"",""stable_subset_loo_predictions.csv"":""26C6A6E78B441B22DCCCE8B1573028F539ACD66FC962796ADE43344302E44525""}"
+27,original dirty worktree unchanged,PASS,True,status and all dirty-file SHA-256 values match
+28,notebook has zero error outputs,PASS,True,"code_cells=16, executed=True, error_outputs=0"
+29,git diff --check passes,PASS,True,"warning: in the working copy of 'requirements.txt', LF will be replaced by CRLF the next time Git touches it"
+30,runtime metadata corrected or accurately renamed with provenance,PASS,True,historical_value=11.208154400024796; corrected_name=cached_artifact_assembly_figure_and_validation_runtime_seconds

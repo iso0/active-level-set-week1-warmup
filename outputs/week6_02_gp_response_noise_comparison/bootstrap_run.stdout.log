@@ -1,0 +1,33 @@
+Phase 1 verified: 241 rows, 34 protected files
+bootstrap windows: 10/241
+bootstrap windows: 20/241
+bootstrap windows: 30/241
+bootstrap windows: 40/241
+bootstrap windows: 50/241
+bootstrap windows: 60/241
+bootstrap windows: 70/241
+bootstrap windows: 80/241
+bootstrap windows: 90/241
+bootstrap windows: 100/241
+bootstrap windows: 110/241
+bootstrap windows: 120/241
+bootstrap windows: 130/241
+bootstrap windows: 140/241
+bootstrap windows: 150/241
+bootstrap windows: 160/241
+bootstrap windows: 170/241
+bootstrap windows: 180/241
+bootstrap windows: 190/241
+bootstrap windows: 200/241
+bootstrap windows: 210/241
+bootstrap windows: 220/241
+bootstrap windows: 230/241
+bootstrap windows: 240/241
+bootstrap windows: 241/241
+{
+  "status": "bootstrap_only_complete",
+  "phase1_rows": 241,
+  "uncertainty_rows": 723,
+  "sensitivity_rows": 27,
+  "runtime_seconds": 131.8021499000024
+}

@@ -1,0 +1,94 @@
+{
+  "created_at_utc": "2026-07-25T16:36:17.116164+00:00",
+  "phase1_input": "outputs\\week6_01_melt_pool_data_audit\\week6_phase1_simulation_level_responses.csv",
+  "phase1_revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+  "phase1_ledger_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF",
+  "phase1_aggregate_sha256": "21FF34AD767C8D4D6C536D66AFD147B8C700884321415078231B7A24D4C7D198",
+  "feature_columns": [
+    "P",
+    "VX",
+    "LS",
+    "ST"
+  ],
+  "target_columns_m": {
+    "width": "melt_pool_width_selected_primary_scalar_target_m",
+    "length": "melt_pool_length_selected_primary_scalar_target_m",
+    "depth": "melt_pool_depth_below_surface_selected_primary_scalar_target_m"
+  },
+  "target_unit_conversion": "y_um = y_m * 1e6",
+  "kernel_family": "ConstantKernel * isotropic Matern(nu=1.5)",
+  "constant_initial": 1.0,
+  "constant_bounds": [
+    0.001,
+    1000.0
+  ],
+  "length_scale_initial": 1.0,
+  "length_scale_bounds": [
+    0.01,
+    100.0
+  ],
+  "matern_nu": 1.5,
+  "optimizer": "fmin_l_bfgs_b (scikit-learn L-BFGS-B)",
+  "n_restarts_optimizer": 1,
+  "random_seed": 6202,
+  "fold_order": "ascending numeric simulation_id",
+  "x_scaling": "fold-local StandardScaler fit on training X only",
+  "y_scaling": "fold-local population mean/std fit on training y only; GaussianProcessRegressor normalize_y=False",
+  "approaches": {
+    "A_tiny_jitter": {
+      "kernel": "ConstantKernel * Matern(nu=1.5)",
+      "alpha_normalized": 1e-06,
+      "interpretation": "fixed numerical stabilization only"
+    },
+    "B_learned_nugget": {
+      "kernel": "ConstantKernel * Matern(nu=1.5) + WhiteKernel",
+      "white_initial_normalized_variance": 0.01,
+      "white_bounds_normalized_variance": [
+        1e-08,
+        10.0
+      ],
+      "alpha_normalized": 1e-08,
+      "interpretation": "learned effective nugget; not stochastic simulator noise"
+    },
+    "C_heteroskedastic": {
+      "kernel": "ConstantKernel * Matern(nu=1.5)",
+      "alpha_formula": "bootstrap_variance_um2 / training_y_std_um**2 + 1e-6",
+      "interpretation": "observation-specific target-summary uncertainty proxy"
+    }
+  },
+  "bootstrap": {
+    "method": "circular moving-block bootstrap of selected-window median",
+    "resamples": 500,
+    "block_length_rule": "max(5, round(n_window ** (1/3)))",
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "simulation_and_response_specific_seed": true
+  },
+  "cross_validation": {
+    "method": "exact simulation-level leave-one-out",
+    "population_size": 241,
+    "predictions_per_target_and_method": 241
+  },
+  "paired_bootstrap": {
+    "resamples": 10000,
+    "confidence": 0.95,
+    "paired_on": "simulation_id"
+  },
+  "nrmse_definition": "RMSE divided by observed target range",
+  "nlpd_variance_definitions": {
+    "A_tiny_jitter": "latent predictive variance",
+    "B_learned_nugget": "total predictive variance including learned WhiteKernel nugget",
+    "C_heteroskedastic": "oracle retrospective total variance = latent variance + held-out target-summary variance"
+  },
+  "strict_scope_exclusions": [
+    "new kernel families",
+    "ARD",
+    "active learning",
+    "level-set estimation",
+    "feature-effect or Sobol analysis",
+    "GP classification",
+    "new Keyhole-label analysis"
+  ]
+}
