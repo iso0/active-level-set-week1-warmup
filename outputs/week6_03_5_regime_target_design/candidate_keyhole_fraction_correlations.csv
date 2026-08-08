@@ -1,0 +1,11 @@
+candidate_id,evaluation_score_column,outcome,simulation_count,spearman_rho,two_sided_p_value_descriptive,interpretation
+G0,G0,keyhole_fraction,241,0.3064397264862862,1.2366763255605289e-06,descriptive; provisional labels and depth-seeded circularity apply
+G1,G1,keyhole_fraction,241,0.32838364523854696,1.820719769333755e-07,descriptive; provisional labels and depth-seeded circularity apply
+G2,G2,keyhole_fraction,240,0.3132345658061042,7.327785520797283e-07,descriptive; provisional labels and depth-seeded circularity apply
+G3,G3,keyhole_fraction,240,0.31041785999072535,9.314816252200763e-07,descriptive; provisional labels and depth-seeded circularity apply
+G4,G4,keyhole_fraction,240,0.31355632433557634,7.128547430151824e-07,descriptive; provisional labels and depth-seeded circularity apply
+R0,R0,keyhole_fraction,241,0.3191198560364597,4.164736972193176e-07,descriptive; provisional labels and depth-seeded circularity apply
+R1,R1,keyhole_fraction,241,0.3283914748955708,1.819425615272846e-07,descriptive; provisional labels and depth-seeded circularity apply
+R2,R2,keyhole_fraction,240,0.3148248968984952,6.392397487966364e-07,descriptive; provisional labels and depth-seeded circularity apply
+R3,R3,keyhole_fraction,240,0.3091967599977287,1.0327952379991883e-06,descriptive; provisional labels and depth-seeded circularity apply
+R4,R4_LOO,keyhole_fraction,240,0.4821033213426181,2.2580913614081725e-15,descriptive; provisional labels and depth-seeded circularity apply

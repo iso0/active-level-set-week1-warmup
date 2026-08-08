@@ -7,5 +7,6 @@ nbformat>=5.10,<6
 numpy>=2.3,<3
 pandas>=2.3,<3
 pillow>=11,<13
+pyarrow>=25,<26
 scipy>=1.17,<2
 scikit-learn>=1.7,<2

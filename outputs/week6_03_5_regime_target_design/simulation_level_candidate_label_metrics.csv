@@ -1,0 +1,11 @@
+candidate_id,evaluation_score_column,outcome,simulation_count,positive_keyhole_simulations,negative_simulations,mixed_label_simulations,effective_sample_size,roc_auc,pr_auc,prevalence_baseline,comparison_type
+G0,G0,any_keyhole,241,9,232,8,241,0.9674329501915708,0.6775510204081634,0.03734439834024896,fixed continuous score
+G1,G1,any_keyhole,241,9,232,8,241,1.0,1.0,0.03734439834024896,fixed continuous score
+G2,G2,any_keyhole,240,9,231,8,240,0.9754689754689755,0.7627740751473002,0.0375,fixed continuous score
+G3,G3,any_keyhole,240,9,231,8,240,0.9711399711399712,0.761702041395528,0.0375,fixed continuous score
+G4,G4,any_keyhole,240,9,231,8,240,0.975949975949976,0.778647091020316,0.0375,fixed continuous score
+R0,R0,any_keyhole,241,9,232,8,241,0.986111111111111,0.7703010497128144,0.03734439834024896,fixed continuous score
+R1,R1,any_keyhole,241,9,232,8,241,1.0,1.0,0.03734439834024896,fixed continuous score
+R2,R2,any_keyhole,240,9,231,8,240,0.9778739778739779,0.7971218896915491,0.0375,fixed continuous score
+R3,R3,any_keyhole,240,9,231,8,240,0.9692159692159693,0.7710018774534904,0.0375,fixed continuous score
+R4,R4_LOO,any_keyhole,240,9,231,8,240,0.9129389129389129,0.46522727272727266,0.0375,leakage-safe outer-training geometry threshold

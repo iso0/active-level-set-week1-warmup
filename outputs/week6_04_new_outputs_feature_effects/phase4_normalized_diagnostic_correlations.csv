@@ -1,0 +1,16 @@
+diagnostic_a,diagnostic_b,spearman_rho,sample_size,units,mathematical_coupling_warning_applies
+T0_penetration_depth_um,T0_depth_over_LS,0.8040645039607696,241,um for absolute depth/G3; dimensionless for normalized ratios,True
+T0_penetration_depth_um,G3,0.9890727269570652,240,um for absolute depth/G3; dimensionless for normalized ratios,False
+T0_penetration_depth_um,G3_over_LS,0.8014071424851125,240,um for absolute depth/G3; dimensionless for normalized ratios,True
+T0_penetration_depth_um,R0,0.6389535681218066,241,um for absolute depth/G3; dimensionless for normalized ratios,False
+T0_penetration_depth_um,R3,0.6076485702876785,240,um for absolute depth/G3; dimensionless for normalized ratios,False
+T0_depth_over_LS,G3,0.7926639351377627,240,um for absolute depth/G3; dimensionless for normalized ratios,True
+T0_depth_over_LS,G3_over_LS,0.9906309137311409,240,um for absolute depth/G3; dimensionless for normalized ratios,True
+T0_depth_over_LS,R0,0.8312232090806214,241,um for absolute depth/G3; dimensionless for normalized ratios,True
+T0_depth_over_LS,R3,0.8167120956961057,240,um for absolute depth/G3; dimensionless for normalized ratios,True
+G3,G3_over_LS,0.8046936578760047,240,um for absolute depth/G3; dimensionless for normalized ratios,True
+G3,R0,0.6454669351898469,240,um for absolute depth/G3; dimensionless for normalized ratios,False
+G3,R3,0.6355744023333737,240,um for absolute depth/G3; dimensionless for normalized ratios,False
+G3_over_LS,R0,0.8320847584159446,240,um for absolute depth/G3; dimensionless for normalized ratios,True
+G3_over_LS,R3,0.840646539002413,240,um for absolute depth/G3; dimensionless for normalized ratios,True
+R0,R3,0.9744795916595772,240,um for absolute depth/G3; dimensionless for normalized ratios,False

@@ -1,0 +1,37 @@
+validation_id,validation,passed,evidence
+1,correct isolated worktree,True,C:\Users\ozgur\Documents\thesis-week6-melt-pool-audit; codex/week6-phase4-new-outputs-feature-effects
+2,original dirty worktree unchanged,True,branch/head/status and 6 hashes match preflight
+3,pinned Phase 1 revision unchanged,True,0e859b748fdbc8454f66e58e101e333ac0479d42
+4,protected Phase 1-3.5 artifacts unchanged,True,22 hashes
+5,241 expected simulations and exact stable-depth 230,True,"all rows=241; stable rows=230; exclusions=[""sim_00002"",""sim_00006"",""sim_00018"",""sim_00029"",""sim_00036"",""sim_00038"",""sim_00095"",""sim_00105"",""sim_00124"",""sim_00154"",""sim_00222""]"
+6,"features exactly P, VX, LS, ST",True,"{'[""P"",""VX"",""LS"",""ST""]'}"
+7,LS is laser spot radius in micrometres,True,LS = source metres x 1e6
+8,position-bounds ordering unchanged,True,"[""x_min"",""x_max"",""y_min"",""y_max"",""z_min"",""z_max""]"
+9,total_height = z_max - z_min,True,all 241 identity audits pass
+10,penetration depth not substituted for total height,True,distinct per-series and population values
+11,kinetic semantics and units documented,True,instantaneous aggregate kinetic energy over the melt-phase particle subset
+12,invalid kinetic rows recorded,True,invalid total=236
+13,T0 reproduced exactly from validated utilities,True,validated ledger value used exactly; float32 partition cross-check max error=3.599e-12 m
+14,adaptive active-interior sensitivity documented,True,rows=2
+15,no normalized first-Conduction work,True,explicit false in configuration
+16,no Hugging Face update check,True,direct exact-revision file requests only
+17,width/length/depth model-selection pipelines not rerun,True,"['kinetic_energy', 'total_height']"
+18,length not a Phase 4 primary response,True,new models only kinetic_energy and total_height
+19,fold-local scaling leakage-safe,True,all fitted folds have training-only scaler/tuning flags
+20,paired model comparisons preserve simulation pairing,True,identical held-out ID sets per response/model
+21,bootstrap sample count reproducible,True,10000 deterministic resamples
+22,learned nugget not called simulator noise,True,effective unresolved model-data discrepancy wording
+23,GP effect curves remain within observed input range and plots use support mask,True,every curve row has explicit support flag; figures filter it; depth training population={230}
+24,sparse interaction regions marked or masked,True,masked cells=1227
+25,feature-effect statements use associative language,True,association/conditional prediction language used
+26,T0 depth/LS units cancel correctly,True,um/um = dimensionless
+27,G3/LS identity verified,True,max error=0.000e+00
+28,LS-versus-D/LS mathematical coupling documented,True,decision log warning
+29,no Keyhole classifier fitted,True,configuration and model list
+30,no active-learning loop implemented,True,explicit false in configuration
+31,all final metrics independently recomputed,True,14 model rows
+32,notebook has zero error outputs,True,notebooks\week_06\06_phase4_new_outputs_feature_effects.ipynb
+33,all presentation-ready figures appear in manifest,True,10 manifest rows and files
+34,git diff --check passes,True,"warning: in the working copy of 'requirements.txt', LF will be replaced by CRLF the next time Git touches it
+"
+35,"no commit, push, staging, reset, clean or stash occurred",True,HEAD unchanged; staged empty; no Phase4 remote; pre-existing status retained

@@ -1,0 +1,487 @@
+record_type,normalized_position,simulation_count,simulation_fraction,definition
+cutoff,0.85,136,0.5643153526970954,last active melt position reaches cutoff
+cutoff,0.9,130,0.5394190871369294,last active melt position reaches cutoff
+cutoff,0.95,121,0.5020746887966805,last active melt position reaches cutoff
+cutoff,1.0,113,0.46887966804979253,last active melt position reaches cutoff
+active_melt_coverage_curve,0.0,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.0,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.005,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.005,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.01,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.01,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.015,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.015,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.02,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.02,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.025,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.025,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.03,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.03,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.035,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.035,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.04,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.04,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.045,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.045,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.05,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.05,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.055,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.055,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.06,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.06,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.065,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.065,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.07,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.07,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.075,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.075,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.08,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.08,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.085,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.085,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.09,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.09,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.095,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.095,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.1,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.1,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.105,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.105,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.11,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.11,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.115,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.115,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.12,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.12,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.125,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.125,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.13,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.13,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.135,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.135,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.14,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.14,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.145,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.145,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.15,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.15,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.155,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.155,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.16,241,1.0,simulation has valid melt at or beyond position
+recording_coverage_curve,0.16,241,1.0,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.165,240,0.995850622406639,simulation has valid melt at or beyond position
+recording_coverage_curve,0.165,240,0.995850622406639,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.17,240,0.995850622406639,simulation has valid melt at or beyond position
+recording_coverage_curve,0.17,240,0.995850622406639,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.175,240,0.995850622406639,simulation has valid melt at or beyond position
+recording_coverage_curve,0.175,240,0.995850622406639,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.18,240,0.995850622406639,simulation has valid melt at or beyond position
+recording_coverage_curve,0.18,240,0.995850622406639,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.185,240,0.995850622406639,simulation has valid melt at or beyond position
+recording_coverage_curve,0.185,240,0.995850622406639,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.19,240,0.995850622406639,simulation has valid melt at or beyond position
+recording_coverage_curve,0.19,240,0.995850622406639,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.195,240,0.995850622406639,simulation has valid melt at or beyond position
+recording_coverage_curve,0.195,240,0.995850622406639,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.2,240,0.995850622406639,simulation has valid melt at or beyond position
+recording_coverage_curve,0.2,240,0.995850622406639,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.205,240,0.995850622406639,simulation has valid melt at or beyond position
+recording_coverage_curve,0.205,240,0.995850622406639,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.21,237,0.983402489626556,simulation has valid melt at or beyond position
+recording_coverage_curve,0.21,237,0.983402489626556,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.215,237,0.983402489626556,simulation has valid melt at or beyond position
+recording_coverage_curve,0.215,237,0.983402489626556,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.22,237,0.983402489626556,simulation has valid melt at or beyond position
+recording_coverage_curve,0.22,237,0.983402489626556,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.225,237,0.983402489626556,simulation has valid melt at or beyond position
+recording_coverage_curve,0.225,237,0.983402489626556,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.23,235,0.975103734439834,simulation has valid melt at or beyond position
+recording_coverage_curve,0.23,235,0.975103734439834,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.235,235,0.975103734439834,simulation has valid melt at or beyond position
+recording_coverage_curve,0.235,235,0.975103734439834,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.24,235,0.975103734439834,simulation has valid melt at or beyond position
+recording_coverage_curve,0.24,235,0.975103734439834,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.245,235,0.975103734439834,simulation has valid melt at or beyond position
+recording_coverage_curve,0.245,235,0.975103734439834,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.25,234,0.970954356846473,simulation has valid melt at or beyond position
+recording_coverage_curve,0.25,234,0.970954356846473,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.255,234,0.970954356846473,simulation has valid melt at or beyond position
+recording_coverage_curve,0.255,234,0.970954356846473,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.26,234,0.970954356846473,simulation has valid melt at or beyond position
+recording_coverage_curve,0.26,234,0.970954356846473,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.265,232,0.9626556016597511,simulation has valid melt at or beyond position
+recording_coverage_curve,0.265,232,0.9626556016597511,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.27,232,0.9626556016597511,simulation has valid melt at or beyond position
+recording_coverage_curve,0.27,232,0.9626556016597511,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.275,232,0.9626556016597511,simulation has valid melt at or beyond position
+recording_coverage_curve,0.275,232,0.9626556016597511,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.28,232,0.9626556016597511,simulation has valid melt at or beyond position
+recording_coverage_curve,0.28,232,0.9626556016597511,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.285,232,0.9626556016597511,simulation has valid melt at or beyond position
+recording_coverage_curve,0.285,232,0.9626556016597511,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.29,232,0.9626556016597511,simulation has valid melt at or beyond position
+recording_coverage_curve,0.29,232,0.9626556016597511,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.295,232,0.9626556016597511,simulation has valid melt at or beyond position
+recording_coverage_curve,0.295,232,0.9626556016597511,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.3,232,0.9626556016597511,simulation has valid melt at or beyond position
+recording_coverage_curve,0.3,232,0.9626556016597511,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.305,232,0.9626556016597511,simulation has valid melt at or beyond position
+recording_coverage_curve,0.305,232,0.9626556016597511,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.31,231,0.9585062240663901,simulation has valid melt at or beyond position
+recording_coverage_curve,0.31,231,0.9585062240663901,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.315,231,0.9585062240663901,simulation has valid melt at or beyond position
+recording_coverage_curve,0.315,231,0.9585062240663901,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.32,231,0.9585062240663901,simulation has valid melt at or beyond position
+recording_coverage_curve,0.32,231,0.9585062240663901,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.325,231,0.9585062240663901,simulation has valid melt at or beyond position
+recording_coverage_curve,0.325,231,0.9585062240663901,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.33,231,0.9585062240663901,simulation has valid melt at or beyond position
+recording_coverage_curve,0.33,231,0.9585062240663901,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.335,231,0.9585062240663901,simulation has valid melt at or beyond position
+recording_coverage_curve,0.335,231,0.9585062240663901,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.34,231,0.9585062240663901,simulation has valid melt at or beyond position
+recording_coverage_curve,0.34,231,0.9585062240663901,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.345,231,0.9585062240663901,simulation has valid melt at or beyond position
+recording_coverage_curve,0.345,231,0.9585062240663901,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.35,230,0.9543568464730291,simulation has valid melt at or beyond position
+recording_coverage_curve,0.35,230,0.9543568464730291,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.355,230,0.9543568464730291,simulation has valid melt at or beyond position
+recording_coverage_curve,0.355,230,0.9543568464730291,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.36,229,0.950207468879668,simulation has valid melt at or beyond position
+recording_coverage_curve,0.36,229,0.950207468879668,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.365,229,0.950207468879668,simulation has valid melt at or beyond position
+recording_coverage_curve,0.365,229,0.950207468879668,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.37,229,0.950207468879668,simulation has valid melt at or beyond position
+recording_coverage_curve,0.37,229,0.950207468879668,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.375,229,0.950207468879668,simulation has valid melt at or beyond position
+recording_coverage_curve,0.375,229,0.950207468879668,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.38,229,0.950207468879668,simulation has valid melt at or beyond position
+recording_coverage_curve,0.38,229,0.950207468879668,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.385,228,0.946058091286307,simulation has valid melt at or beyond position
+recording_coverage_curve,0.385,228,0.946058091286307,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.39,228,0.946058091286307,simulation has valid melt at or beyond position
+recording_coverage_curve,0.39,228,0.946058091286307,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.395,227,0.941908713692946,simulation has valid melt at or beyond position
+recording_coverage_curve,0.395,227,0.941908713692946,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.4,226,0.9377593360995851,simulation has valid melt at or beyond position
+recording_coverage_curve,0.4,226,0.9377593360995851,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.405,223,0.9253112033195021,simulation has valid melt at or beyond position
+recording_coverage_curve,0.405,223,0.9253112033195021,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.41,222,0.921161825726141,simulation has valid melt at or beyond position
+recording_coverage_curve,0.41,222,0.921161825726141,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.415,221,0.91701244813278,simulation has valid melt at or beyond position
+recording_coverage_curve,0.415,221,0.91701244813278,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.42,221,0.91701244813278,simulation has valid melt at or beyond position
+recording_coverage_curve,0.42,221,0.91701244813278,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.425,219,0.9087136929460581,simulation has valid melt at or beyond position
+recording_coverage_curve,0.425,219,0.9087136929460581,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.43,219,0.9087136929460581,simulation has valid melt at or beyond position
+recording_coverage_curve,0.43,219,0.9087136929460581,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.435,219,0.9087136929460581,simulation has valid melt at or beyond position
+recording_coverage_curve,0.435,219,0.9087136929460581,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.44,216,0.8962655601659751,simulation has valid melt at or beyond position
+recording_coverage_curve,0.44,216,0.8962655601659751,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.445,214,0.8879668049792531,simulation has valid melt at or beyond position
+recording_coverage_curve,0.445,214,0.8879668049792531,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.45,214,0.8879668049792531,simulation has valid melt at or beyond position
+recording_coverage_curve,0.45,214,0.8879668049792531,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.455,213,0.8838174273858921,simulation has valid melt at or beyond position
+recording_coverage_curve,0.455,213,0.8838174273858921,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.46,213,0.8838174273858921,simulation has valid melt at or beyond position
+recording_coverage_curve,0.46,213,0.8838174273858921,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.465,213,0.8838174273858921,simulation has valid melt at or beyond position
+recording_coverage_curve,0.465,213,0.8838174273858921,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.47,213,0.8838174273858921,simulation has valid melt at or beyond position
+recording_coverage_curve,0.47,213,0.8838174273858921,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.475,213,0.8838174273858921,simulation has valid melt at or beyond position
+recording_coverage_curve,0.475,213,0.8838174273858921,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.48,212,0.8796680497925311,simulation has valid melt at or beyond position
+recording_coverage_curve,0.48,212,0.8796680497925311,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.485,212,0.8796680497925311,simulation has valid melt at or beyond position
+recording_coverage_curve,0.485,212,0.8796680497925311,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.49,211,0.8755186721991701,simulation has valid melt at or beyond position
+recording_coverage_curve,0.49,211,0.8755186721991701,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.495,211,0.8755186721991701,simulation has valid melt at or beyond position
+recording_coverage_curve,0.495,211,0.8755186721991701,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.5,209,0.8672199170124482,simulation has valid melt at or beyond position
+recording_coverage_curve,0.5,209,0.8672199170124482,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.505,209,0.8672199170124482,simulation has valid melt at or beyond position
+recording_coverage_curve,0.505,209,0.8672199170124482,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.51,207,0.8589211618257261,simulation has valid melt at or beyond position
+recording_coverage_curve,0.51,207,0.8589211618257261,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.515,207,0.8589211618257261,simulation has valid melt at or beyond position
+recording_coverage_curve,0.515,207,0.8589211618257261,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.52,206,0.8547717842323651,simulation has valid melt at or beyond position
+recording_coverage_curve,0.52,206,0.8547717842323651,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.525,205,0.8506224066390041,simulation has valid melt at or beyond position
+recording_coverage_curve,0.525,205,0.8506224066390041,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.53,201,0.8340248962655602,simulation has valid melt at or beyond position
+recording_coverage_curve,0.53,201,0.8340248962655602,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.535,200,0.8298755186721992,simulation has valid melt at or beyond position
+recording_coverage_curve,0.535,200,0.8298755186721992,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.54,200,0.8298755186721992,simulation has valid melt at or beyond position
+recording_coverage_curve,0.54,200,0.8298755186721992,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.545,198,0.8215767634854771,simulation has valid melt at or beyond position
+recording_coverage_curve,0.545,198,0.8215767634854771,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.55,197,0.8174273858921162,simulation has valid melt at or beyond position
+recording_coverage_curve,0.55,197,0.8174273858921162,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.555,193,0.8008298755186722,simulation has valid melt at or beyond position
+recording_coverage_curve,0.555,193,0.8008298755186722,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.56,191,0.7925311203319502,simulation has valid melt at or beyond position
+recording_coverage_curve,0.56,191,0.7925311203319502,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.565,191,0.7925311203319502,simulation has valid melt at or beyond position
+recording_coverage_curve,0.565,191,0.7925311203319502,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.57,190,0.7883817427385892,simulation has valid melt at or beyond position
+recording_coverage_curve,0.57,190,0.7883817427385892,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.575,189,0.7842323651452282,simulation has valid melt at or beyond position
+recording_coverage_curve,0.575,189,0.7842323651452282,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.58,187,0.7759336099585062,simulation has valid melt at or beyond position
+recording_coverage_curve,0.58,187,0.7759336099585062,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.585,187,0.7759336099585062,simulation has valid melt at or beyond position
+recording_coverage_curve,0.585,187,0.7759336099585062,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.59,185,0.7676348547717843,simulation has valid melt at or beyond position
+recording_coverage_curve,0.59,185,0.7676348547717843,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.595,184,0.7634854771784232,simulation has valid melt at or beyond position
+recording_coverage_curve,0.595,184,0.7634854771784232,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.6,183,0.7593360995850622,simulation has valid melt at or beyond position
+recording_coverage_curve,0.6,183,0.7593360995850622,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.605,183,0.7593360995850622,simulation has valid melt at or beyond position
+recording_coverage_curve,0.605,183,0.7593360995850622,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.61,183,0.7593360995850622,simulation has valid melt at or beyond position
+recording_coverage_curve,0.61,183,0.7593360995850622,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.615,183,0.7593360995850622,simulation has valid melt at or beyond position
+recording_coverage_curve,0.615,183,0.7593360995850622,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.62,180,0.7468879668049793,simulation has valid melt at or beyond position
+recording_coverage_curve,0.62,180,0.7468879668049793,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.625,180,0.7468879668049793,simulation has valid melt at or beyond position
+recording_coverage_curve,0.625,180,0.7468879668049793,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.63,179,0.7427385892116183,simulation has valid melt at or beyond position
+recording_coverage_curve,0.63,179,0.7427385892116183,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.635,179,0.7427385892116183,simulation has valid melt at or beyond position
+recording_coverage_curve,0.635,179,0.7427385892116183,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.64,179,0.7427385892116183,simulation has valid melt at or beyond position
+recording_coverage_curve,0.64,179,0.7427385892116183,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.645,179,0.7427385892116183,simulation has valid melt at or beyond position
+recording_coverage_curve,0.645,179,0.7427385892116183,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.65,177,0.7344398340248963,simulation has valid melt at or beyond position
+recording_coverage_curve,0.65,177,0.7344398340248963,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.655,176,0.7302904564315352,simulation has valid melt at or beyond position
+recording_coverage_curve,0.655,176,0.7302904564315352,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.66,173,0.7178423236514523,simulation has valid melt at or beyond position
+recording_coverage_curve,0.66,173,0.7178423236514523,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.665,172,0.7136929460580913,simulation has valid melt at or beyond position
+recording_coverage_curve,0.665,172,0.7136929460580913,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.67,170,0.7053941908713693,simulation has valid melt at or beyond position
+recording_coverage_curve,0.67,170,0.7053941908713693,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.675,169,0.7012448132780082,simulation has valid melt at or beyond position
+recording_coverage_curve,0.675,169,0.7012448132780082,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.68,167,0.6929460580912863,simulation has valid melt at or beyond position
+recording_coverage_curve,0.68,167,0.6929460580912863,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.685,167,0.6929460580912863,simulation has valid melt at or beyond position
+recording_coverage_curve,0.685,167,0.6929460580912863,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.69,166,0.6887966804979253,simulation has valid melt at or beyond position
+recording_coverage_curve,0.69,166,0.6887966804979253,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.695,166,0.6887966804979253,simulation has valid melt at or beyond position
+recording_coverage_curve,0.695,166,0.6887966804979253,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.7,165,0.6846473029045643,simulation has valid melt at or beyond position
+recording_coverage_curve,0.7,165,0.6846473029045643,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.705,164,0.6804979253112033,simulation has valid melt at or beyond position
+recording_coverage_curve,0.705,164,0.6804979253112033,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.71,162,0.6721991701244814,simulation has valid melt at or beyond position
+recording_coverage_curve,0.71,162,0.6721991701244814,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.715,161,0.6680497925311203,simulation has valid melt at or beyond position
+recording_coverage_curve,0.715,161,0.6680497925311203,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.72,159,0.6597510373443983,simulation has valid melt at or beyond position
+recording_coverage_curve,0.72,159,0.6597510373443983,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.725,159,0.6597510373443983,simulation has valid melt at or beyond position
+recording_coverage_curve,0.725,159,0.6597510373443983,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.73,159,0.6597510373443983,simulation has valid melt at or beyond position
+recording_coverage_curve,0.73,159,0.6597510373443983,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.735,158,0.6556016597510373,simulation has valid melt at or beyond position
+recording_coverage_curve,0.735,158,0.6556016597510373,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.74,155,0.6431535269709544,simulation has valid melt at or beyond position
+recording_coverage_curve,0.74,155,0.6431535269709544,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.745,155,0.6431535269709544,simulation has valid melt at or beyond position
+recording_coverage_curve,0.745,155,0.6431535269709544,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.75,155,0.6431535269709544,simulation has valid melt at or beyond position
+recording_coverage_curve,0.75,155,0.6431535269709544,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.755,154,0.6390041493775933,simulation has valid melt at or beyond position
+recording_coverage_curve,0.755,154,0.6390041493775933,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.76,151,0.6265560165975104,simulation has valid melt at or beyond position
+recording_coverage_curve,0.76,151,0.6265560165975104,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.765,151,0.6265560165975104,simulation has valid melt at or beyond position
+recording_coverage_curve,0.765,151,0.6265560165975104,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.77,151,0.6265560165975104,simulation has valid melt at or beyond position
+recording_coverage_curve,0.77,151,0.6265560165975104,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.775,151,0.6265560165975104,simulation has valid melt at or beyond position
+recording_coverage_curve,0.775,151,0.6265560165975104,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.78,151,0.6265560165975104,simulation has valid melt at or beyond position
+recording_coverage_curve,0.78,151,0.6265560165975104,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.785,150,0.6224066390041494,simulation has valid melt at or beyond position
+recording_coverage_curve,0.785,150,0.6224066390041494,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.79,150,0.6224066390041494,simulation has valid melt at or beyond position
+recording_coverage_curve,0.79,150,0.6224066390041494,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.795,148,0.6141078838174274,simulation has valid melt at or beyond position
+recording_coverage_curve,0.795,148,0.6141078838174274,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.8,148,0.6141078838174274,simulation has valid melt at or beyond position
+recording_coverage_curve,0.8,148,0.6141078838174274,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.805,146,0.6058091286307054,simulation has valid melt at or beyond position
+recording_coverage_curve,0.805,146,0.6058091286307054,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.81,145,0.6016597510373444,simulation has valid melt at or beyond position
+recording_coverage_curve,0.81,145,0.6016597510373444,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.815,145,0.6016597510373444,simulation has valid melt at or beyond position
+recording_coverage_curve,0.815,145,0.6016597510373444,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.82,144,0.5975103734439834,simulation has valid melt at or beyond position
+recording_coverage_curve,0.82,144,0.5975103734439834,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.825,144,0.5975103734439834,simulation has valid melt at or beyond position
+recording_coverage_curve,0.825,144,0.5975103734439834,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.83,140,0.5809128630705395,simulation has valid melt at or beyond position
+recording_coverage_curve,0.83,140,0.5809128630705395,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.835,138,0.5726141078838174,simulation has valid melt at or beyond position
+recording_coverage_curve,0.835,138,0.5726141078838174,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.84,137,0.5684647302904564,simulation has valid melt at or beyond position
+recording_coverage_curve,0.84,137,0.5684647302904564,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.845,136,0.5643153526970954,simulation has valid melt at or beyond position
+recording_coverage_curve,0.845,136,0.5643153526970954,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.85,136,0.5643153526970954,simulation has valid melt at or beyond position
+recording_coverage_curve,0.85,136,0.5643153526970954,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.855,136,0.5643153526970954,simulation has valid melt at or beyond position
+recording_coverage_curve,0.855,136,0.5643153526970954,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.86,135,0.5601659751037344,simulation has valid melt at or beyond position
+recording_coverage_curve,0.86,135,0.5601659751037344,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.865,134,0.5560165975103735,simulation has valid melt at or beyond position
+recording_coverage_curve,0.865,134,0.5560165975103735,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.87,132,0.5477178423236515,simulation has valid melt at or beyond position
+recording_coverage_curve,0.87,132,0.5477178423236515,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.875,131,0.5435684647302904,simulation has valid melt at or beyond position
+recording_coverage_curve,0.875,131,0.5435684647302904,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.88,130,0.5394190871369294,simulation has valid melt at or beyond position
+recording_coverage_curve,0.88,130,0.5394190871369294,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.885,130,0.5394190871369294,simulation has valid melt at or beyond position
+recording_coverage_curve,0.885,130,0.5394190871369294,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.89,130,0.5394190871369294,simulation has valid melt at or beyond position
+recording_coverage_curve,0.89,130,0.5394190871369294,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.895,130,0.5394190871369294,simulation has valid melt at or beyond position
+recording_coverage_curve,0.895,130,0.5394190871369294,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.9,130,0.5394190871369294,simulation has valid melt at or beyond position
+recording_coverage_curve,0.9,130,0.5394190871369294,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.905,128,0.5311203319502075,simulation has valid melt at or beyond position
+recording_coverage_curve,0.905,128,0.5311203319502075,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.91,126,0.5228215767634855,simulation has valid melt at or beyond position
+recording_coverage_curve,0.91,126,0.5228215767634855,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.915,126,0.5228215767634855,simulation has valid melt at or beyond position
+recording_coverage_curve,0.915,126,0.5228215767634855,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.92,123,0.5103734439834025,simulation has valid melt at or beyond position
+recording_coverage_curve,0.92,123,0.5103734439834025,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.925,123,0.5103734439834025,simulation has valid melt at or beyond position
+recording_coverage_curve,0.925,123,0.5103734439834025,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.93,122,0.5062240663900415,simulation has valid melt at or beyond position
+recording_coverage_curve,0.93,122,0.5062240663900415,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.935,122,0.5062240663900415,simulation has valid melt at or beyond position
+recording_coverage_curve,0.935,122,0.5062240663900415,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.94,122,0.5062240663900415,simulation has valid melt at or beyond position
+recording_coverage_curve,0.94,122,0.5062240663900415,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.945,122,0.5062240663900415,simulation has valid melt at or beyond position
+recording_coverage_curve,0.945,122,0.5062240663900415,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.95,121,0.5020746887966805,simulation has valid melt at or beyond position
+recording_coverage_curve,0.95,121,0.5020746887966805,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.955,121,0.5020746887966805,simulation has valid melt at or beyond position
+recording_coverage_curve,0.955,121,0.5020746887966805,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.96,121,0.5020746887966805,simulation has valid melt at or beyond position
+recording_coverage_curve,0.96,121,0.5020746887966805,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.965,120,0.4979253112033195,simulation has valid melt at or beyond position
+recording_coverage_curve,0.965,120,0.4979253112033195,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.97,120,0.4979253112033195,simulation has valid melt at or beyond position
+recording_coverage_curve,0.97,120,0.4979253112033195,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.975,120,0.4979253112033195,simulation has valid melt at or beyond position
+recording_coverage_curve,0.975,120,0.4979253112033195,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.98,119,0.49377593360995853,simulation has valid melt at or beyond position
+recording_coverage_curve,0.98,119,0.49377593360995853,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.985,117,0.4854771784232365,simulation has valid melt at or beyond position
+recording_coverage_curve,0.985,117,0.4854771784232365,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.99,115,0.47717842323651455,simulation has valid melt at or beyond position
+recording_coverage_curve,0.99,115,0.47717842323651455,recording reaches position regardless of melt validity
+active_melt_coverage_curve,0.995,113,0.46887966804979253,simulation has valid melt at or beyond position
+recording_coverage_curve,0.995,113,0.46887966804979253,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.0,113,0.46887966804979253,simulation has valid melt at or beyond position
+recording_coverage_curve,1.0,113,0.46887966804979253,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.005,109,0.45228215767634855,simulation has valid melt at or beyond position
+recording_coverage_curve,1.005,109,0.45228215767634855,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.01,109,0.45228215767634855,simulation has valid melt at or beyond position
+recording_coverage_curve,1.01,109,0.45228215767634855,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.015,108,0.44813278008298757,simulation has valid melt at or beyond position
+recording_coverage_curve,1.015,108,0.44813278008298757,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.02,107,0.44398340248962653,simulation has valid melt at or beyond position
+recording_coverage_curve,1.02,107,0.44398340248962653,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.025,107,0.44398340248962653,simulation has valid melt at or beyond position
+recording_coverage_curve,1.025,107,0.44398340248962653,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.03,107,0.44398340248962653,simulation has valid melt at or beyond position
+recording_coverage_curve,1.03,107,0.44398340248962653,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.035,106,0.43983402489626555,simulation has valid melt at or beyond position
+recording_coverage_curve,1.035,106,0.43983402489626555,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.04,106,0.43983402489626555,simulation has valid melt at or beyond position
+recording_coverage_curve,1.04,106,0.43983402489626555,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.045,105,0.43568464730290457,simulation has valid melt at or beyond position
+recording_coverage_curve,1.045,105,0.43568464730290457,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.05,105,0.43568464730290457,simulation has valid melt at or beyond position
+recording_coverage_curve,1.05,105,0.43568464730290457,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.055,104,0.4315352697095436,simulation has valid melt at or beyond position
+recording_coverage_curve,1.055,104,0.4315352697095436,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.06,104,0.4315352697095436,simulation has valid melt at or beyond position
+recording_coverage_curve,1.06,104,0.4315352697095436,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.065,103,0.42738589211618255,simulation has valid melt at or beyond position
+recording_coverage_curve,1.065,103,0.42738589211618255,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.07,102,0.42323651452282157,simulation has valid melt at or beyond position
+recording_coverage_curve,1.07,102,0.42323651452282157,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.075,102,0.42323651452282157,simulation has valid melt at or beyond position
+recording_coverage_curve,1.075,102,0.42323651452282157,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.08,101,0.4190871369294606,simulation has valid melt at or beyond position
+recording_coverage_curve,1.08,101,0.4190871369294606,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.085,101,0.4190871369294606,simulation has valid melt at or beyond position
+recording_coverage_curve,1.085,101,0.4190871369294606,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.09,100,0.4149377593360996,simulation has valid melt at or beyond position
+recording_coverage_curve,1.09,100,0.4149377593360996,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.095,100,0.4149377593360996,simulation has valid melt at or beyond position
+recording_coverage_curve,1.095,100,0.4149377593360996,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.1,100,0.4149377593360996,simulation has valid melt at or beyond position
+recording_coverage_curve,1.1,100,0.4149377593360996,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.105,99,0.4107883817427386,simulation has valid melt at or beyond position
+recording_coverage_curve,1.105,99,0.4107883817427386,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.11,98,0.4066390041493776,simulation has valid melt at or beyond position
+recording_coverage_curve,1.11,99,0.4107883817427386,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.115,97,0.4024896265560166,simulation has valid melt at or beyond position
+recording_coverage_curve,1.115,98,0.4066390041493776,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.12,96,0.3983402489626556,simulation has valid melt at or beyond position
+recording_coverage_curve,1.12,97,0.4024896265560166,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.125,95,0.3941908713692946,simulation has valid melt at or beyond position
+recording_coverage_curve,1.125,97,0.4024896265560166,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.13,95,0.3941908713692946,simulation has valid melt at or beyond position
+recording_coverage_curve,1.13,97,0.4024896265560166,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.135,94,0.3900414937759336,simulation has valid melt at or beyond position
+recording_coverage_curve,1.135,96,0.3983402489626556,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.14,91,0.3775933609958506,simulation has valid melt at or beyond position
+recording_coverage_curve,1.14,96,0.3983402489626556,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.145,91,0.3775933609958506,simulation has valid melt at or beyond position
+recording_coverage_curve,1.145,96,0.3983402489626556,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.15,90,0.37344398340248963,simulation has valid melt at or beyond position
+recording_coverage_curve,1.15,95,0.3941908713692946,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.155,89,0.36929460580912865,simulation has valid melt at or beyond position
+recording_coverage_curve,1.155,94,0.3900414937759336,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.16,86,0.35684647302904565,simulation has valid melt at or beyond position
+recording_coverage_curve,1.16,94,0.3900414937759336,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.165,84,0.34854771784232363,simulation has valid melt at or beyond position
+recording_coverage_curve,1.165,94,0.3900414937759336,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.17,83,0.34439834024896265,simulation has valid melt at or beyond position
+recording_coverage_curve,1.17,93,0.38589211618257263,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.175,82,0.34024896265560167,simulation has valid melt at or beyond position
+recording_coverage_curve,1.175,93,0.38589211618257263,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.18,81,0.3360995850622407,simulation has valid melt at or beyond position
+recording_coverage_curve,1.18,93,0.38589211618257263,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.185,81,0.3360995850622407,simulation has valid melt at or beyond position
+recording_coverage_curve,1.185,93,0.38589211618257263,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.19,80,0.33195020746887965,simulation has valid melt at or beyond position
+recording_coverage_curve,1.19,92,0.3817427385892116,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.195,78,0.3236514522821577,simulation has valid melt at or beyond position
+recording_coverage_curve,1.195,91,0.3775933609958506,recording reaches position regardless of melt validity
+active_melt_coverage_curve,1.2,76,0.3153526970954357,simulation has valid melt at or beyond position
+recording_coverage_curve,1.2,89,0.36929460580912865,recording reaches position regardless of melt validity

@@ -1,0 +1,67 @@
+{
+  "started_at_utc": "2026-07-30T01:40:31.969546+00:00",
+  "completed_at_utc": "2026-07-30T01:41:04.698985+00:00",
+  "wall_seconds": 32.72756299993489,
+  "stage_seconds": {
+    "preflight_and_label_audit": 1.327622800017707,
+    "simulation_geometry_and_checkpoints": 1.0152566999895498,
+    "alignment_candidates_and_profiles": 6.798456200049259,
+    "robustness_tables": 0.7513827999355271,
+    "label_metrics_and_bootstrap": 0.012463500024750829,
+    "representatives_and_decision": 0.3141308999620378,
+    "figures_and_reports": 14.047874700045213,
+    "notebook_build_and_first_execution": 3.9287865000078455,
+    "notebook_and_validation_closeout": 8.2546043000184
+  },
+  "command": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Scripts\\python.exe C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\src\\week6_phase3_5_regime_target_design.py --full --workers 4 --bootstrap-resamples 10000",
+  "rebuild_command": ".\\.venv\\Scripts\\python.exe src\\week6_phase3_5_regime_target_design.py --full --force --workers 4",
+  "mode": "full",
+  "force_recompute": false,
+  "workers": 4,
+  "cache": {
+    "computed_simulations": 0,
+    "reused_simulations": 241,
+    "checkpoint_directory": "outputs\\week6_03_5_regime_target_design\\checkpoints",
+    "partitioned_parquet_parts": 241,
+    "partitioned_parquet_bytes": 943952723,
+    "metric_bundle_reused": true
+  },
+  "environment": {
+    "python": "3.14.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "scipy": "1.18.0",
+    "scikit_learn": "1.9.0",
+    "matplotlib": "3.11.1",
+    "pyarrow": "25.0.0",
+    "nbformat": "5.10.4",
+    "nbclient": "0.11.0"
+  },
+  "notebook": {
+    "wall_seconds": 2.5970148000633344,
+    "code_cells": 9,
+    "executed_code_cells": 9,
+    "error_outputs": 0,
+    "all_code_cells_followed_by_markdown": true,
+    "missing_scope_sections": []
+  },
+  "validation": {
+    "pass_count": 59,
+    "total_count": 59
+  },
+  "requirement_checklist": {
+    "pass_count": 150,
+    "total_count": 150
+  },
+  "optimizer": {
+    "used": false,
+    "issues": "No GP or other optimizer is fitted in Phase 3.5."
+  },
+  "runtime_notes": [
+    "Full geometry time series is a partitioned Parquet dataset with one resumable part per simulation.",
+    "Frame bootstrap resamples simulation clusters.",
+    "A complete deterministic metric bundle is reused on non-force closeout reruns.",
+    "Only three selected actual frame images may be downloaded; all other raw monitor inputs were reused locally."
+  ]
+}

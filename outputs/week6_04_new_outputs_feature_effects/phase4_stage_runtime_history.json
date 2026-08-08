@@ -1,0 +1,50 @@
+{
+  "measurement_source": "Codex shell-command wall-time records for this Phase 4 execution",
+  "successful_runs": [
+    {
+      "stage": "smoke_targets_and_models",
+      "population": 12,
+      "wall_runtime_seconds": 27.2,
+      "scientific_results": false
+    },
+    {
+      "stage": "full_target_extraction",
+      "population": 241,
+      "wall_runtime_seconds": 30.5,
+      "scientific_results": true
+    },
+    {
+      "stage": "full_exact_loo_compact_model_comparison",
+      "population": 241,
+      "wall_runtime_seconds": 981.8,
+      "scientific_results": true
+    },
+    {
+      "stage": "full_relationship_analysis_initial",
+      "population": 241,
+      "wall_runtime_seconds": 99.6,
+      "scientific_results": true,
+      "note": "Relationship outputs completed before a downstream normalized-diagnostic availability guard stopped the process."
+    },
+    {
+      "stage": "normalized_diagnostics",
+      "population": 241,
+      "persistent_population": 240,
+      "wall_runtime_seconds": 4.2,
+      "scientific_results": true
+    },
+    {
+      "stage": "relationship_analysis_exact_stable_depth_population_rebuild",
+      "population": 241,
+      "depth_controlled_gp_population": 230,
+      "wall_runtime_seconds": 98.2,
+      "scientific_results": true
+    },
+    {
+      "stage": "cached_finalization_before_caption_qa",
+      "wall_runtime_seconds": 22.4,
+      "scientific_results": true,
+      "note": "Figures, notebook execution, documentation, and 35 validations."
+    }
+  ]
+}

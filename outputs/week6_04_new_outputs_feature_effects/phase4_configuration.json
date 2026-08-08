@@ -1,0 +1,221 @@
+{
+  "phase": "Week 6 Phase 4",
+  "analysis_name": "new outputs and focused physical feature associations",
+  "repository_root": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit",
+  "original_dirty_worktree": "C:\\Users\\ozgur\\Documents\\thesis",
+  "branch": "codex/week6-phase4-new-outputs-feature-effects",
+  "starting_head": "b112f6b22898976f77410190614cb4fb218d38f9",
+  "dataset": {
+    "repo_id": "ioandanielc/sph_dataset",
+    "pinned_revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+    "revision_discovery_performed": false,
+    "dataset_update_check_performed": false,
+    "new_label_check_performed": false,
+    "expected_simulations": 241,
+    "phase1_ledger": "outputs/week6_01_melt_pool_data_audit/week6_phase1_simulation_level_responses.csv",
+    "phase1_ledger_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF"
+  },
+  "features": {
+    "columns_exactly": [
+      "P",
+      "VX",
+      "LS",
+      "ST"
+    ],
+    "units": {
+      "P": "W",
+      "VX": "m/s",
+      "LS": "um",
+      "ST": "K"
+    },
+    "LS_definition": "laser spot radius",
+    "LS_stored_for_phase4_models_in": "micrometres",
+    "source_LS_unit": "metres"
+  },
+  "coordinate_convention": {
+    "position_bounds_order": [
+      "x_min",
+      "x_max",
+      "y_min",
+      "y_max",
+      "z_min",
+      "z_max"
+    ],
+    "penetration_depth_formula": "max(0, -z_min)",
+    "total_height_formula": "z_max - z_min",
+    "internal_geometry_unit": "metres",
+    "reported_geometry_unit": "micrometres"
+  },
+  "kinetic_energy_monitor": {
+    "file_name": "kinetic-energy_melt.dat",
+    "path_pattern": "final_data_processed/sim_XXXXX/monitor/kinetic-energy_melt.dat",
+    "source_unit": "J",
+    "report_unit": "nJ",
+    "semantic_classification": "instantaneous aggregate kinetic energy over the melt-phase particle subset",
+    "semantic_confidence": "moderate-high",
+    "formula_caveat": "The local repository does not include the solver reduction formula; Ioan should confirm the exact particle-mass weighting. File naming, SI-unit metadata, aggregate-monitor documentation, row alignment, and strongly non-monotone time behaviour support the stated interpretation.",
+    "invalid_rule": "non-finite or negative rows are invalid",
+    "time_alignment": "nominally one value per time.dat/iter.dat monitor row; the audit records one pinned source-short file whose T0 and adaptive windows remain fully covered",
+    "documentation_sources": [
+      "data/raw/huggingface/sph_dataset/croissant_rai_sph_dataset.json",
+      "data/raw/huggingface/sph_dataset/README.md",
+      "outputs/week6_01_melt_pool_data_audit/week6_monitor_data_dictionary.csv",
+      "time-series behaviour audited across 241 simulations"
+    ]
+  },
+  "target_definitions": {
+    "primary": "validated T0: median over final 20% of melt-present observations before laser reaches 90% of positive-X domain",
+    "limited_sensitivity": "median over the Phase 3.5 adaptive active-interior interval",
+    "responses": {
+      "kinetic_energy": {
+        "label": "T0 melt-pool kinetic energy",
+        "column": "T0_melt_pool_kinetic_energy_nJ",
+        "alternative_column": "adaptive_melt_pool_kinetic_energy_nJ",
+        "unit": "nJ"
+      },
+      "total_height": {
+        "label": "T0 total vertical melt-pool height",
+        "column": "T0_total_vertical_height_um",
+        "alternative_column": "adaptive_total_vertical_height_um",
+        "unit": "um"
+      }
+    }
+  },
+  "model_protocol": {
+    "responses_only": [
+      "kinetic_energy",
+      "total_height"
+    ],
+    "outer_cv": "exact leave-one-simulation-out",
+    "ridge_inner_cv": {
+      "folds": 5,
+      "selection_metric": "mean validation RMSE",
+      "alpha_grid": [
+        1e-06,
+        1e-05,
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0,
+        10000.0,
+        100000.0,
+        1000000.0
+      ]
+    },
+    "models": [
+      "training_mean",
+      "linear_ridge",
+      "polynomial_ridge_degree2",
+      "matern32_learned_nugget",
+      "rbf_learned_nugget",
+      "matern52_learned_nugget",
+      "selected_kernel_no_nugget"
+    ],
+    "gp": {
+      "constant_initial": 1.0,
+      "constant_bounds": [
+        0.001,
+        1000.0
+      ],
+      "isotropic_length_scale_initial": 1.0,
+      "isotropic_length_scale_bounds": [
+        0.01,
+        100.0
+      ],
+      "white_kernel_initial_normalized_variance": 0.01,
+      "white_kernel_bounds": [
+        1e-08,
+        10.0
+      ],
+      "learned_nugget_numerical_alpha": 1e-08,
+      "no_nugget_numerical_alpha": 1e-06,
+      "optimizer": "L-BFGS-B",
+      "deterministic_additional_restarts_full": 1,
+      "normalize_y": false,
+      "fold_local_X_scaling": true,
+      "fold_local_y_scaling": true,
+      "nugget_interpretation": "effective residual or unresolved model-data discrepancy; not identified as simulator noise"
+    },
+    "paired_bootstrap_resamples": 10000,
+    "paired_bootstrap_seed_base": 6404,
+    "practical_rmse_difference_threshold": "max(1% of observed target range, 2% of observed target IQR)"
+  },
+  "relationship_analysis": {
+    "responses": [
+      "width",
+      "depth",
+      "kinetic_energy",
+      "total_height"
+    ],
+    "descriptive_population": "all 241 simulations",
+    "depth_controlled_gp_population": "exact stable 230 from Phase 2.5",
+    "depth_exclusions": [
+      "sim_00002",
+      "sim_00006",
+      "sim_00018",
+      "sim_00029",
+      "sim_00036",
+      "sim_00038",
+      "sim_00095",
+      "sim_00105",
+      "sim_00124",
+      "sim_00154",
+      "sim_00222"
+    ],
+    "spearman_bootstrap_resamples": 10000,
+    "standardized_ridge": true,
+    "controlled_curve_grid_size": 101,
+    "interaction_pairs_only": [
+      [
+        "P",
+        "VX"
+      ],
+      [
+        "P",
+        "LS"
+      ]
+    ],
+    "interaction_grid_size": 31,
+    "support_rule": "inside pairwise convex hull where applicable and nearest four-dimensional standardized training distance no larger than 1.25 times the q95 leave-nearest-neighbour distance",
+    "causal_claims_authorized": false
+  },
+  "normalized_diagnostics": {
+    "quantities": [
+      "T0 depth",
+      "T0 depth / LS",
+      "G3",
+      "G3 / LS",
+      "R0",
+      "R3"
+    ],
+    "LS_and_depth_unit": "micrometres",
+    "ratio_unit": "dimensionless",
+    "G3_over_LS_identity": "persistent depth / LS = G3 / LS",
+    "mathematical_coupling_warning": "LS appears in the denominator; interpret LS primarily using absolute depth",
+    "R3_status": "provisional; not established Keyhole ground truth"
+  },
+  "scope_exclusions": {
+    "normalized_first_conduction_analysis": false,
+    "dataset_revision_update_check": false,
+    "new_revision_download": false,
+    "width_model_selection_rerun": false,
+    "length_model_selection_rerun": false,
+    "depth_model_selection_rerun": false,
+    "phase3_full_matrix_rerun": false,
+    "phase3_5_label_tournament_rerun": false,
+    "keyhole_classifier": false,
+    "active_learning": false,
+    "level_set_estimation": false,
+    "acquisition_functions": false,
+    "ARD": false,
+    "causal_inference": false,
+    "commit": false,
+    "push": false,
+    "stage": false
+  },
+  "preflight_specification_sha256": "7FCE14E1CFF315D7193270C5ED7EC0604CED132F56AD5044DA97E0C62A10297F"
+}

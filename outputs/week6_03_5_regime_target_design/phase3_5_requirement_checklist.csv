@@ -1,0 +1,151 @@
+requirement_id,requirement_group,requirement,notebook_section,output_evidence,status
+VAL-01,automated_validation,Exact repository/worktree provenance,A-G as applicable,validation_results.csv,PASS
+VAL-02,automated_validation,Phase 1 revision unchanged,A-G as applicable,validation_results.csv,PASS
+VAL-03,automated_validation,Phase 1 ledger hash unchanged,A-G as applicable,validation_results.csv,PASS
+VAL-04,automated_validation,"Phase 2, 2.5 and 3 protected artifacts unchanged",A-G as applicable,validation_results.csv,PASS
+VAL-05,automated_validation,241 unique simulations,A-G as applicable,validation_results.csv,PASS
+VAL-06,automated_validation,"Features remain exactly P, VX, LS, ST where used",A-G as applicable,validation_results.csv,PASS
+VAL-07,automated_validation,Monitor units verified,A-G as applicable,validation_results.csv,PASS
+VAL-08,automated_validation,Bounds ordering verified,A-G as applicable,validation_results.csv,PASS
+VAL-09,automated_validation,Width calculation correct,A-G as applicable,validation_results.csv,PASS
+VAL-10,automated_validation,Depth calculation correct,A-G as applicable,validation_results.csv,PASS
+VAL-11,automated_validation,Aspect-ratio denominator guard applied,A-G as applicable,validation_results.csv,PASS
+VAL-12,automated_validation,Invalid ratio rows recorded,A-G as applicable,validation_results.csv,PASS
+VAL-13,automated_validation,Physical and technical labels separated,A-G as applicable,validation_results.csv,PASS
+VAL-14,automated_validation,Screenshot Bug excluded as physical regime,A-G as applicable,validation_results.csv,PASS
+VAL-15,automated_validation,Label counts reproducible,A-G as applicable,validation_results.csv,PASS
+VAL-16,automated_validation,Alignment tolerance documented,A-G as applicable,validation_results.csv,PASS
+VAL-17,automated_validation,Ambiguous alignments recorded,A-G as applicable,validation_results.csv,PASS
+VAL-18,automated_validation,No held-out label leakage in threshold selection,A-G as applicable,validation_results.csv,PASS
+VAL-19,automated_validation,Normalized scan position uses physical domain bounds,A-G as applicable,validation_results.csv,PASS
+VAL-20,automated_validation,Per-simulation maximum observed progress recorded,A-G as applicable,validation_results.csv,PASS
+VAL-21,automated_validation,Right-censoring recorded,A-G as applicable,validation_results.csv,PASS
+VAL-22,automated_validation,No interpolation across excessive gaps,A-G as applicable,validation_results.csv,PASS
+VAL-23,automated_validation,Aggregate profiles show contributor counts,A-G as applicable,validation_results.csv,PASS
+VAL-24,automated_validation,Candidate definitions machine-readable,A-G as applicable,validation_results.csv,PASS
+VAL-25,automated_validation,Global maximum is spike-sensitive reference only,A-G as applicable,validation_results.csv,PASS
+VAL-26,automated_validation,Persistence primarily physical-distance based,A-G as applicable,validation_results.csv,PASS
+VAL-27,automated_validation,Persistence windows predeclared,A-G as applicable,validation_results.csv,PASS
+VAL-28,automated_validation,No post-hoc best-window cherry-picking,A-G as applicable,validation_results.csv,PASS
+VAL-29,automated_validation,Exact T0 reproduced,A-G as applicable,validation_results.csv,PASS
+VAL-30,automated_validation,Common-interior rule documented,A-G as applicable,validation_results.csv,PASS
+VAL-31,automated_validation,Adaptive-interior rule documented,A-G as applicable,validation_results.csv,PASS
+VAL-32,automated_validation,Candidate availability recorded,A-G as applicable,validation_results.csv,PASS
+VAL-33,automated_validation,Selected example rules reproducible,A-G as applicable,validation_results.csv,PASS
+VAL-34,automated_validation,Examples not manually cherry-picked,A-G as applicable,validation_results.csv,PASS
+VAL-35,automated_validation,Actual frames match selected simulation IDs,A-G as applicable,validation_results.csv,PASS
+VAL-36,automated_validation,Actual frame revision and paths recorded,A-G as applicable,validation_results.csv,PASS
+VAL-37,automated_validation,Frame bootstrap clusters by simulation,A-G as applicable,validation_results.csv,PASS
+VAL-38,automated_validation,PR AUC includes prevalence baseline,A-G as applicable,validation_results.csv,PASS
+VAL-39,automated_validation,Exact positive and negative counts reported,A-G as applicable,validation_results.csv,PASS
+VAL-40,automated_validation,Nested thresholds use outer-training data only,A-G as applicable,validation_results.csv,PASS
+VAL-41,automated_validation,Paired bootstrap preserves simulation pairing,A-G as applicable,validation_results.csv,PASS
+VAL-42,automated_validation,Final confidence intervals reproducible,A-G as applicable,validation_results.csv,PASS
+VAL-43,automated_validation,Instability sensitivity completed,A-G as applicable,validation_results.csv,PASS
+VAL-44,automated_validation,Censoring sensitivity completed,A-G as applicable,validation_results.csv,PASS
+VAL-45,automated_validation,VX-stratified sensitivity completed,A-G as applicable,validation_results.csv,PASS
+VAL-46,automated_validation,Metrics independently recomputed,A-G as applicable,validation_results.csv,PASS
+VAL-47,automated_validation,No unsupported causal claims,A-G as applicable,validation_results.csv,PASS
+VAL-48,automated_validation,No universal external aspect-ratio threshold imposed,A-G as applicable,validation_results.csv,PASS
+VAL-49,automated_validation,Possible label circularity documented,A-G as applicable,validation_results.csv,PASS
+VAL-50,automated_validation,Notebook has zero error outputs,A-G as applicable,validation_results.csv,PASS
+VAL-51,automated_validation,Every major notebook code cell has explanatory Markdown,A-G as applicable,validation_results.csv,PASS
+VAL-52,automated_validation,Every figure appears in manifest,A-G as applicable,validation_results.csv,PASS
+VAL-53,automated_validation,Presentation figures have captions and caveats,A-G as applicable,validation_results.csv,PASS
+VAL-54,automated_validation,Original dirty worktree unchanged,A-G as applicable,validation_results.csv,PASS
+VAL-55,automated_validation,git diff --check passes,A-G as applicable,validation_results.csv,PASS
+VAL-56,automated_validation,No active-learning loop implemented,A-G as applicable,validation_results.csv,PASS
+VAL-57,automated_validation,No GP classifier implemented,A-G as applicable,validation_results.csv,PASS
+VAL-58,automated_validation,No kinetic-energy Phase 4 work introduced,A-G as applicable,validation_results.csv,PASS
+VAL-59,automated_validation,No commit or push occurred,A-G as applicable,validation_results.csv,PASS
+FIG-01,required_figure,Required focused figure 1,Overview,figures/01_phase3_5_experiment_tree.png,PASS
+FIG-02,required_figure,Required focused figure 2,A,figures/02_data_label_population_flowchart.png,PASS
+FIG-03,required_figure,Required focused figure 3,A,figures/03_label_count_overview.png,PASS
+FIG-04,required_figure,Required focused figure 4,A,figures/04_scan_coverage_curve.png,PASS
+FIG-05,required_figure,Required focused figure 5,A,figures/05_observed_maximum_scan_position_by_vx.png,PASS
+FIG-06,required_figure,Required focused figure 6,B,figures/06_aggregate_depth_profiles_by_label_group.png,PASS
+FIG-07,required_figure,Required focused figure 7,B,figures/07_aggregate_width_profiles_by_label_group.png,PASS
+FIG-08,required_figure,Required focused figure 8,B,figures/08_aggregate_aspect_ratio_profiles_by_label_group.png,PASS
+FIG-09,required_figure,Required focused figure 9,B,figures/09_aggregate_profile_contributing_counts.png,PASS
+FIG-10,required_figure,Required focused figure 10,B,figures/10_global_maximum_depth_position_histogram.png,PASS
+FIG-11,required_figure,Required focused figure 11,B,figures/11_persistent_maximum_depth_position_histogram.png,PASS
+FIG-12,required_figure,Required focused figure 12,B,figures/12_global_maximum_aspect_ratio_position_histogram.png,PASS
+FIG-13,required_figure,Required focused figure 13,B,figures/13_persistent_maximum_aspect_ratio_position_histogram.png,PASS
+FIG-14,required_figure,Required focused figure 14,B,figures/14_T0_window_vs_maximum_and_persistent_event_locations.png,PASS
+FIG-15,required_figure,Required focused figure 15,D,figures/15_global_maximum_q95_persistent_depth_scatter.png,PASS
+FIG-16,required_figure,Required focused figure 16,D,figures/16_global_maximum_vs_persistent_aspect_ratio.png,PASS
+FIG-17,required_figure,Required focused figure 17,F,figures/17_persistence_window_sensitivity.png,PASS
+FIG-18,required_figure,Required focused figure 18,F,figures/18_candidate_availability_and_censoring.png,PASS
+FIG-19,required_figure,Required focused figure 19,E,figures/19_candidate_target_distributions_by_simulation_label.png,PASS
+FIG-20,required_figure,Required focused figure 20,E,figures/20_frame_level_depth_distributions_by_physical_label.png,PASS
+FIG-21,required_figure,Required focused figure 21,E,figures/21_frame_level_aspect_ratio_distributions_by_physical_label.png,PASS
+FIG-22,required_figure,Required focused figure 22,E,figures/22_candidate_simulation_level_ROC_curves.png,PASS
+FIG-23,required_figure,Required focused figure 23,E,figures/23_candidate_precision_recall_curves_with_prevalence.png,PASS
+FIG-24,required_figure,Required focused figure 24,E,figures/24_candidate_score_vs_keyhole_fraction.png,PASS
+FIG-25,required_figure,Required focused figure 25,E,figures/25_nested_heldout_confusion_matrices.png,PASS
+FIG-26,required_figure,Required focused figure 26,F,figures/26_candidate_robustness_across_analysis_domains.png,PASS
+FIG-27,required_figure,Required focused figure 27,F,figures/27_candidate_robustness_with_without_unstable_simulations.png,PASS
+FIG-28,required_figure,Required focused figure 28,C,figures/28_case_typical_conduction_only.png,PASS
+FIG-29,required_figure,Required focused figure 29,C,figures/29_case_typical_keyhole_containing.png,PASS
+FIG-30,required_figure,Required focused figure 30,C,figures/30_case_mixed_conduction_to_keyhole.png,PASS
+FIG-31,required_figure,Required focused figure 31,C,figures/31_case_spike_vs_persistent_disagreement.png,PASS
+FIG-32,required_figure,Required focused figure 32,C,figures/32_case_persistent_deep_melt.png,PASS
+FIG-33,required_figure,Required focused figure 33,C,figures/33_case_phase1_unstable_window.png,PASS
+FIG-34,required_figure,Required focused figure 34,C,figures/34_actual_frame_sequence_mixed_keyhole_case.png,PASS
+FIG-35,required_figure,Required focused figure 35,G,figures/35_final_physical_interpretation_diagram.png,PASS
+FIG-36,required_figure,Required focused figure 36,G,figures/36_final_candidate_decision_matrix.png,PASS
+FIG-37,required_figure,Required focused figure 37,G,figures/37_final_recommended_geometry_regime_active_learning_roles.png,PASS
+OUT-01,required_output,Create phase3_5_configuration.json,A-G as applicable,phase3_5_configuration.json,PASS
+OUT-02,required_output,Create phase3_5_preflight_snapshot.json,A-G as applicable,phase3_5_preflight_snapshot.json,PASS
+OUT-03,required_output,Create phase3_5_runtime_provenance.json,A-G as applicable,phase3_5_runtime_provenance.json,PASS
+OUT-04,required_output,Create ioan_requirement_mapping.md,A-G as applicable,ioan_requirement_mapping.md,PASS
+OUT-05,required_output,Create label_dictionary.csv,A-G as applicable,label_dictionary.csv,PASS
+OUT-06,required_output,Create label_population_audit.csv,A-G as applicable,label_population_audit.csv,PASS
+OUT-07,required_output,Create label_sequence_audit.csv,A-G as applicable,label_sequence_audit.csv,PASS
+OUT-08,required_output,Create label_monitor_alignment_audit.csv,A-G as applicable,label_monitor_alignment_audit.csv,PASS
+OUT-09,required_output,Create label_alignment_ambiguities.csv,A-G as applicable,label_alignment_ambiguities.csv,PASS
+OUT-10,required_output,Create scan_coverage_summary.csv,A-G as applicable,scan_coverage_summary.csv,PASS
+OUT-11,required_output,Create regime_geometry_time_series.parquet,A-G as applicable,regime_geometry_time_series.parquet,PASS
+OUT-12,required_output,Create label_aligned_geometry_time_series.parquet,A-G as applicable,label_aligned_geometry_time_series.parquet,PASS
+OUT-13,required_output,Create simulation_active_interval_summary.csv,A-G as applicable,simulation_active_interval_summary.csv,PASS
+OUT-14,required_output,Create normalized_position_support.csv,A-G as applicable,normalized_position_support.csv,PASS
+OUT-15,required_output,Create regime_target_candidates.csv,A-G as applicable,regime_target_candidates.csv,PASS
+OUT-16,required_output,Create regime_target_candidate_definitions.csv,A-G as applicable,regime_target_candidate_definitions.csv,PASS
+OUT-17,required_output,Create persistence_window_sensitivity.csv,A-G as applicable,persistence_window_sensitivity.csv,PASS
+OUT-18,required_output,Create candidate_domain_sensitivity.csv,A-G as applicable,candidate_domain_sensitivity.csv,PASS
+OUT-19,required_output,Create candidate_unstable_subset_sensitivity.csv,A-G as applicable,candidate_unstable_subset_sensitivity.csv,PASS
+OUT-20,required_output,Create candidate_censoring_sensitivity.csv,A-G as applicable,candidate_censoring_sensitivity.csv,PASS
+OUT-21,required_output,Create frame_level_candidate_label_metrics.csv,A-G as applicable,frame_level_candidate_label_metrics.csv,PASS
+OUT-22,required_output,Create frame_level_cluster_bootstrap_summary.csv,A-G as applicable,frame_level_cluster_bootstrap_summary.csv,PASS
+OUT-23,required_output,Create simulation_level_candidate_label_metrics.csv,A-G as applicable,simulation_level_candidate_label_metrics.csv,PASS
+OUT-24,required_output,Create simulation_level_bootstrap_summary.csv,A-G as applicable,simulation_level_bootstrap_summary.csv,PASS
+OUT-25,required_output,Create nested_threshold_loo_predictions.csv,A-G as applicable,nested_threshold_loo_predictions.csv,PASS
+OUT-26,required_output,Create nested_threshold_metrics.csv,A-G as applicable,nested_threshold_metrics.csv,PASS
+OUT-27,required_output,Create selected_thresholds_by_fold.csv,A-G as applicable,selected_thresholds_by_fold.csv,PASS
+OUT-28,required_output,Create candidate_keyhole_fraction_correlations.csv,A-G as applicable,candidate_keyhole_fraction_correlations.csv,PASS
+OUT-29,required_output,Create representative_simulation_selection.csv,A-G as applicable,representative_simulation_selection.csv,PASS
+OUT-30,required_output,Create representative_frame_selection.csv,A-G as applicable,representative_frame_selection.csv,PASS
+OUT-31,required_output,Create representative_frame_provenance.csv,A-G as applicable,representative_frame_provenance.csv,PASS
+OUT-32,required_output,Create phase3_5_candidate_decision_matrix.csv,A-G as applicable,phase3_5_candidate_decision_matrix.csv,PASS
+OUT-33,required_output,Create phase3_5_final_target_recommendation.csv,A-G as applicable,phase3_5_final_target_recommendation.csv,PASS
+OUT-34,required_output,Create phase3_5_active_learning_implications.md,A-G as applicable,phase3_5_active_learning_implications.md,PASS
+OUT-35,required_output,Create phase3_5_requirement_checklist.csv,A-G as applicable,phase3_5_requirement_checklist.csv,PASS
+OUT-36,required_output,Create validation_results.csv,A-G as applicable,validation_results.csv,PASS
+OUT-37,required_output,Create decision_log.md,A-G as applicable,decision_log.md,PASS
+OUT-38,required_output,Create results_summary.md,A-G as applicable,results_summary.md,PASS
+OUT-39,required_output,Create summary.json,A-G as applicable,summary.json,PASS
+OUT-40,required_output,Create figure_manifest.csv,A-G as applicable,figure_manifest.csv,PASS
+NB-A,notebook_scope_tree,Visible notebook section A,A,notebooks\week_06\05_phase3_5_regime_target_design.ipynb,PASS
+NB-B,notebook_scope_tree,Visible notebook section B,B,notebooks\week_06\05_phase3_5_regime_target_design.ipynb,PASS
+NB-C,notebook_scope_tree,Visible notebook section C,C,notebooks\week_06\05_phase3_5_regime_target_design.ipynb,PASS
+NB-D,notebook_scope_tree,Visible notebook section D,D,notebooks\week_06\05_phase3_5_regime_target_design.ipynb,PASS
+NB-E,notebook_scope_tree,Visible notebook section E,E,notebooks\week_06\05_phase3_5_regime_target_design.ipynb,PASS
+NB-F,notebook_scope_tree,Visible notebook section F,F,notebooks\week_06\05_phase3_5_regime_target_design.ipynb,PASS
+NB-G,notebook_scope_tree,Visible notebook section G,G,notebooks\week_06\05_phase3_5_regime_target_design.ipynb,PASS
+SCOPE-01,strict_scope,T0 preserved as geometry target,G,decision_log.md; phase3_5_configuration.json,PASS
+SCOPE-02,strict_scope,No active-learning loop,G,decision_log.md; phase3_5_configuration.json,PASS
+SCOPE-03,strict_scope,No level-set estimation,G,decision_log.md; phase3_5_configuration.json,PASS
+SCOPE-04,strict_scope,No GP classifier,G,decision_log.md; phase3_5_configuration.json,PASS
+SCOPE-05,strict_scope,No kinetic-energy or total-height Phase 4 model,G,decision_log.md; phase3_5_configuration.json,PASS
+SCOPE-06,strict_scope,No Phase 3 kernel rerun or ARD,G,decision_log.md; phase3_5_configuration.json,PASS
+SCOPE-07,strict_scope,No commit or push,G,decision_log.md; phase3_5_configuration.json,PASS
