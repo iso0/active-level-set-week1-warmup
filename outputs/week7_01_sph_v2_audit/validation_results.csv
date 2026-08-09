@@ -1,0 +1,23 @@
+validation_id,requirement,status,detail
+V01,Exact sph_v2 revision recorded,PASS,d69dac5bda8b622bc0de316b112815c6056c06ec
+V02,Scientific downloads use no floating revision,PASS,All hf_hub_download and tree calls use the 40-character revision
+V03,Experiment count internally consistent,PASS,registry=407; sequence=407; expected=407
+V04,Frame count internally consistent,PASS,labels=110804; registry sum=110804
+V05,Partition totals sum correctly,PASS,"{'new-data': 45156, 'old-data-local': 49304, 'old-data-remote-clean': 16344}"
+V06,Label totals sum correctly,PASS,label total=110804
+V07,All P/VX/LS/ST finite,PASS,four parameters checked in every registry row
+V08,Experiment identifiers unique,PASS,unique=407; rows=407
+V09,Folder/JSON/partition inputs agree,PASS,mismatches=0
+V10,Input units agree with Week 6,PASS,"{'P': 'W', 'VX': 'm/s', 'LS': 'm', 'ST': 'K'}"
+V11,frames.csv and top-level final labels agree,PASS,mismatches=0
+V12,frames.csv timesteps agree with partition ledgers,PASS,mismatches=0
+V13,All required files present,FAIL,required-file/frame-count issues=114
+V14,Every perspective count equals its label ledger,PASS,mismatches=0
+V15,Ioan screenshot counts independently reproduced,PASS,PASS=20/20
+V16,No experiment is silently removed,PASS,registry and label populations match exactly
+V17,No source label is modified,PASS,source ledgers are read-only; output carries original labels
+V18,No exact duplicate complete experiment content,PASS,duplicate bundles=0
+V19,No identifier occurs across partitions,PASS,cross-partition identifiers=0
+V20,No predictive model fitting code in Phase 1,PASS,executable forbidden imports/calls=none
+V21,Week 6 comparison source pinned,PASS,0e859b748fdbc8454f66e58e101e333ac0479d42
+V22,Teaching notebook exists with no stored error output,PASS,notebooks\week_07\01_sph_v2_dataset_shift_audit.ipynb

@@ -1,0 +1,5 @@
+target,exact_match_count,pearson_correlation,maximum_absolute_difference,median_absolute_difference,identical_within_tolerance_count,materially_changed_count
+width_um,186,0.9999999999999994,1.000159954855917e-10,0.0,186,0
+depth_um,186,1.0,1.4210854715202004e-14,0.0,186,0
+total_height_um,186,0.9999999999999996,1.000017846308765e-10,0.0,186,0
+kinetic_energy_nJ,186,1.0,4.440892098500626e-16,0.0,186,0

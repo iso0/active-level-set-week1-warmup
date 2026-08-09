@@ -1,0 +1,74 @@
+{
+  "all_scientific_access_pinned": true,
+  "analysis_mode": "full",
+  "analysis_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "experiment_count": 407,
+  "floating_main_equal_to_analysis_revision": true,
+  "floating_main_resolved_at_run_start": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "label_files": [
+    {
+      "experiment_count_in_analysis": 165,
+      "frame_rows_in_analysis": 45156,
+      "partition": "new-data",
+      "relative_path": "labels_partition_1_new-data.csv",
+      "sha256": "6d2fe65e245a41da31f9a3200d12d7228b699d740a4c1f44a51219045b2c9e2e",
+      "size_bytes": 11950199
+    },
+    {
+      "experiment_count_in_analysis": 179,
+      "frame_rows_in_analysis": 49304,
+      "partition": "old-data-local",
+      "relative_path": "labels_partition_2_old-data-local.csv",
+      "sha256": "2fb97ab5976e2d994aa603c6f3145d362c44737633950d7dc9c8a78c68d7aee8",
+      "size_bytes": 12713730
+    },
+    {
+      "experiment_count_in_analysis": 63,
+      "frame_rows_in_analysis": 16344,
+      "partition": "old-data-remote-clean",
+      "relative_path": "labels_partition_3_old-data-remote-clean.csv",
+      "sha256": "5fc2eab56bfb7360af5ae8877cf1f6ff6395bf47288e1aca9708b3b8b38f2e2b",
+      "size_bytes": 4349526
+    }
+  ],
+  "labelled_frame_count": 110804,
+  "partition_counts": {
+    "new-data": {
+      "experiments": 165,
+      "labelled_frames": 45156
+    },
+    "old-data-local": {
+      "experiments": 179,
+      "labelled_frames": 49304
+    },
+    "old-data-remote-clean": {
+      "experiments": 63,
+      "labelled_frames": 16344
+    }
+  },
+  "partition_names": [
+    "new-data",
+    "old-data-local",
+    "old-data-remote-clean"
+  ],
+  "repository_file_count": 346472,
+  "repository_folder_count": 2849,
+  "repository_inventory_artifact": "outputs/week7_01_sph_v2_audit/repository_file_inventory.parquet",
+  "repository_inventory_sha256": "66d564b78cd6daf7ce7ad35e8b7679f3704d6c23887029695b19cc87f47dc116",
+  "repository_name": "ioandanielc/sph_v2",
+  "repository_tree_item_count": 349321,
+  "repository_type": "Hugging Face dataset",
+  "retrieval_completed_at_utc": "2026-08-08T15:58:11+00:00",
+  "retrieval_started_at_utc": "2026-08-08T15:46:13+00:00",
+  "revision_semantics": {
+    "analysis_revision": "immutable 40-character Git commit used for every scientific download and tree request",
+    "floating_main": "branch pointer queried only for drift reporting; never used for analysis access"
+  },
+  "week6_comparison": {
+    "repository": "ioandanielc/sph_dataset",
+    "repository_base_commit": "cba151880fc670d1b8a20ff2f7f25295f9bcb892",
+    "revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+    "source_ledger": "outputs/week6_01_melt_pool_data_audit/week6_phase1_simulation_level_responses.csv",
+    "source_ledger_sha256": "d0d38d6cff6fd93f5ccb8b1fb3455c1fe079ae8af5828768318f60f08bf64469"
+  }
+}

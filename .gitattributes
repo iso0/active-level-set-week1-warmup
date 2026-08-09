@@ -1,0 +1,3 @@
+# Preserve Week 7 scientific artifact bytes so recorded SHA-256 manifests remain valid.
+outputs/week7_01_sph_v2_audit/** -text whitespace=cr-at-eol
+outputs/week7_02_sph_v2_target_extraction/** -text whitespace=cr-at-eol
