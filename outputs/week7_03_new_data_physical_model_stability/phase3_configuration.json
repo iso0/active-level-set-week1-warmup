@@ -1,0 +1,105 @@
+{
+  "phase": "Week 7 Phase 3",
+  "mode": "full",
+  "generated_at_utc": "2026-08-09T18:16:37.132689+00:00",
+  "repository": "https://github.com/iso0/active-level-set-week1-warmup",
+  "starting_branch": "codex/week7-phase1-2-sph-v2-audit",
+  "starting_remote_head_sha": "f26f0671dd59938a8111883398fe38afedb6915d",
+  "phase3_branch": "codex/week7-phase3-new-data-model-stability",
+  "dataset_repo_id": "ioandanielc/sph_v2",
+  "dataset_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "primary_population": "partition == 'new-data'",
+  "pooled_old_new_primary_analysis": false,
+  "feature_meanings": {
+    "P": "laser power",
+    "VX": "scan speed",
+    "LS": "laser spot radius",
+    "ST": "substrate temperature"
+  },
+  "feature_units": {
+    "P": "W",
+    "VX": "m/s",
+    "LS": "um",
+    "ST": "K"
+  },
+  "primary_targets": {
+    "width": {
+      "label": "T0 melt-pool width",
+      "phase2_column": "T0_width_um",
+      "unit": "um",
+      "eligibility_fields": [
+        "geometry_monitor_available",
+        "geometry_parse_ok",
+        "geometry_target_ready",
+        "time_monitor_available",
+        "time_parse_ok",
+        "time_target_ready",
+        "physical_target_extraction_success"
+      ]
+    },
+    "depth": {
+      "label": "T0 penetration depth",
+      "phase2_column": "T0_depth_um",
+      "unit": "um",
+      "eligibility_fields": [
+        "geometry_monitor_available",
+        "geometry_parse_ok",
+        "geometry_target_ready",
+        "time_monitor_available",
+        "time_parse_ok",
+        "time_target_ready",
+        "physical_target_extraction_success"
+      ]
+    },
+    "total_height": {
+      "label": "T0 total vertical melt-pool height",
+      "phase2_column": "T0_total_height_um",
+      "unit": "um",
+      "eligibility_fields": [
+        "geometry_monitor_available",
+        "geometry_parse_ok",
+        "geometry_target_ready",
+        "time_monitor_available",
+        "time_parse_ok",
+        "time_target_ready",
+        "physical_target_extraction_success"
+      ]
+    },
+    "kinetic_energy": {
+      "label": "T0 melt kinetic energy",
+      "phase2_column": "T0_kinetic_energy_nJ",
+      "unit": "nJ",
+      "eligibility_fields": [
+        "geometry_monitor_available",
+        "geometry_parse_ok",
+        "geometry_target_ready",
+        "time_monitor_available",
+        "time_parse_ok",
+        "time_target_ready",
+        "kinetic_energy_monitor_available",
+        "kinetic_energy_parse_ok",
+        "kinetic_energy_target_ready",
+        "physical_target_extraction_success"
+      ]
+    }
+  },
+  "outer_evaluation": "exact simulation-level leave-one-out",
+  "inner_ridge_selection": "Week 6 nested shuffled five-fold CV inside each outer training fold",
+  "gp_optimizer": "fmin_l_bfgs_b",
+  "gp_restarts": 1,
+  "workers": 6,
+  "target_summary_bootstrap_resamples": 500,
+  "paired_bootstrap_resamples": 10000,
+  "random_seed_protocol": "exact Week 6 deterministic hashes; GP base seed 6303",
+  "scope": {
+    "pooled_old_new_model": false,
+    "keyhole_classifier": false,
+    "extreme_event_classifier": false,
+    "feature_effect_analysis": false,
+    "causal_interpretation": false,
+    "active_learning": false,
+    "level_set_estimation": false,
+    "acquisition_function_change": false,
+    "later_week7_phase": false
+  }
+}

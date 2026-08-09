@@ -1,0 +1,13 @@
+{
+  "starting_remote_head_sha": "f26f0671dd59938a8111883398fe38afedb6915d",
+  "dataset_repo_id": "ioandanielc/sph_v2",
+  "dataset_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "phase2_target_csv": "outputs/week7_02_sph_v2_target_extraction/sph_v2_simulation_level_targets.csv",
+  "phase2_target_csv_sha256": "bd63d25911e9d172bb6e299fa7c4c3d19539225a423f86db093ebf33f94585e2",
+  "phase2_target_parquet": "outputs/week7_02_sph_v2_target_extraction/sph_v2_simulation_level_targets.parquet",
+  "phase2_target_parquet_sha256": "a3d572ab45553e049702dfdd6c0fe587dc9a1dc0d058f0bf5c0768b89705fdc3",
+  "phase2_summary_sha256": "4af631de90df0692b3664b4bc7ee35eea8a2b3861e2eada339d4102d5a7dbb97",
+  "phase2_summary_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "target_values_recalculated": false,
+  "raw_monitor_use": "Method C target-summary uncertainty only; Phase 2 target medians reproduced and verified"
+}

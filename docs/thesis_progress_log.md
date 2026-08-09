@@ -474,3 +474,75 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
   occurrence and before/after comparison, and preserves all four prior manual
   depth-review decisions. No Phase 3 modelling, classifier fitting, active
   learning, or level-set estimation was started.
+
+### Week 7 Phase 3: new-data physical-response model stability (2026-08-09)
+
+- Phase 3 starts from the verified current remote head
+  `codex/week7-phase1-2-sph-v2-audit@f26f0671dd59938a8111883398fe38afedb6915d`
+  on the isolated branch `codex/week7-phase3-new-data-model-stability`. The
+  immutable dataset remains
+  `ioandanielc/sph_v2@d69dac5bda8b622bc0de316b112815c6056c06ec`.
+- The complete 165-row `new-data` audit/label population is retained. The
+  corrected Phase 2 readiness fields independently yield 164 eligible
+  experiments for each of T0 width, penetration depth, total height, and melt
+  kinetic energy. The one monitor-incomplete experiment remains explicit in
+  the audit table and is not fabricated into a regression row.
+- The executable Week 6 protocol was traced and reused: exact simulation-level
+  outer LOO; fold-local X and y scaling; nested five-fold Ridge-alpha selection
+  inside each outer training fold; degree-2 polynomial construction inside the
+  fold; RBF, isotropic Matérn 3/2, and isotropic Matérn 5/2 GPs; the original
+  bounds, L-BFGS-B optimizer, one full-run restart, deterministic seeds, and
+  numerical-jitter/shared-nugget/target-summary-alpha treatments. Method C
+  reproduces the 500-resample circular moving-block bootstrap and verifies
+  every saved Phase 2 T0 median before estimating the uncertainty proxy.
+- The primary fold table contains all 6,560 expected rows (four targets × ten
+  models × 164 held-out simulations), with zero fit failures and no old-data
+  row. All aggregate metrics reconcile with these held-out predictions.
+- Width remains simple. Matérn 3/2 plus learned nugget has the lowest raw RMSE
+  (3.505 µm; 2.103% of the 166.657 µm median scale), while degree-2 Polynomial
+  Ridge remains practically competitive and is the protocol point model (MAE
+  3.241 µm / 1.945%; RMSE 4.300 µm / 2.580%; R² 0.9861).
+- Depth still benefits materially from GP flexibility. The raw RMSE minimum is
+  Matérn 5/2 without a learned nugget (21.065 µm; 28.184%), essentially tied in
+  RMSE with Matérn 3/2 without a nugget (21.068 µm). The Week 6 replacement rule
+  retains Matérn 3/2 as the protocol kernel family; its learned-nugget model has
+  MAE 11.937 µm / 15.972%, RMSE 21.808 µm / 29.178%, and R² 0.9103. Neither
+  Ridge baseline is competitive.
+- Total height changes qualitatively: Polynomial Ridge is no longer
+  competitive. Matérn 3/2 without a learned nugget is the raw RMSE winner
+  (21.821 µm; 21.685%); the retained protocol learned-nugget GP has MAE 12.609
+  µm / 12.530%, RMSE 22.401 µm / 22.261%, and R² 0.9002.
+- Kinetic energy also changes qualitatively: Matérn 3/2 plus learned nugget is
+  now the raw and protocol point winner (MAE 0.3022 nJ / 9.022%; RMSE 0.5639 nJ
+  / 16.832%; R² 0.8900). The Week 6 parsimonious Linear Ridge choice is not
+  competitive in the new sampled domain.
+- The shared learned nugget remains useful under the current regression model
+  for width and kinetic energy, through calibration and/or NLPD, but not for
+  depth or total height. This is predictive-model evidence only and does not
+  prove physical measurement or simulator noise. The within-window Method C
+  proxy is retained as a retrospective/oracle diagnostic, not a deployable
+  uncertainty source.
+- Relative selected-model RMSE is lower than Week 6 for width and higher for
+  depth, total height, and kinetic energy. This is evidence about predictive
+  error in the shifted sampled design, not evidence that the underlying physics
+  became more complex.
+- The Phase 2 maximum-kinetic-energy anomaly has T0 kinetic energy 4.094 nJ
+  (64.6th percentile and below the conservative T0 extreme threshold), so its
+  maximum remains explicitly out of Phase 3 scope and the T0 row is retained.
+- A 12-experiment smoke run preceded the full run. The full command was
+  `python -m src.week7_phase3_new_data_model_stability --workers 6`; a bounded
+  one-hour invocation checkpointed width, depth, total height, and kinetic-
+  energy Linear Ridge, and the same command resumed the remaining work in
+  884.3 s. `execution_history.json` records both segments and the unmeasured
+  detached-continuation boundary; `runtime_summary.json` is explicitly scoped
+  to its current invocation so a cached refresh is not misreported as the full
+  scientific runtime.
+- The executed teaching notebook is
+  `notebooks/week_07/03_new_data_physical_model_stability.ipynb`. Machine-
+  readable predictions, metrics, comparisons, diagnostics, figures,
+  conclusions, manifests, and summaries are under
+  `outputs/week7_03_new_data_physical_model_stability/`. Final validation is
+  24/24 PASS and the requirement checklist is 15/15 PASS.
+- Hard stop reached after Phase 3. No classifier, feature-effect or causal
+  analysis, T0-versus-maximum target decision, active learning, level-set
+  estimation, acquisition change, or pooled old+new production model was run.

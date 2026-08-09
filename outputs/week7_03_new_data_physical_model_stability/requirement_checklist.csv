@@ -1,0 +1,16 @@
+requirement_id,requirement,status,notebook_section,output_artifact,validation_ids
+P3-01,Exact remote Week 7 base head and immutable sph_v2 revision recorded,PASS,Notebook §1,phase3_configuration.json,V01;V02
+P3-02,Complete new-data audit population retained; readiness fields select each regression population,PASS,Notebook §2,model_ready_population.csv; model_ready_population_long.csv,V03;V04;V05;V09
+P3-03,Executable Week 6 modelling protocol traced before fitting,PASS,Notebook §3,week6_model_traceability.csv,V02
+P3-04,Exactly four saved Phase 2 T0 targets and P/VX/LS/ST inputs used,PASS,Notebook §§2–4,model_ready_population_long.csv,V06;V07;V08
+P3-05,"Mean, Linear Ridge and degree-2 Polynomial Ridge evaluated by exact outer LOO",PASS,Notebook §5,fold_level_predictions.csv; model_metric_table.csv,V11;V12;V14
+P3-06,"RBF, Matérn 3/2 and Matérn 5/2 GP candidates reproduce Week 6 settings",PASS,Notebook §6,kernel_comparison.csv; week6_model_traceability.csv,V11;V12
+P3-07,"Numerical jitter, shared learned nugget and heteroskedastic-alpha methods compared",PASS,Notebook §7,noise_treatment_comparison.csv; target_summary_uncertainty.csv,V16;V17
+P3-08,One explicit row is retained for every expected held-out prediction or fit failure,PASS,Notebook §8,fold_level_predictions.csv,V11;V13
+P3-09,Median-scale relative MAE/RMSE are primary percentage metrics,PASS,Notebook §9,relative_error_table.csv,V14;V15
+P3-10,"Observed/predicted, residual, scale-error, calibration and model comparison plots exist",PASS,Notebook §§10–12,figure_manifest.csv,V19
+P3-11,Saved Week 6 results are compared with new data without pooling,PASS,Notebook §13,week6_vs_new_data_comparison.csv,V03;V18
+P3-12,Target-by-target stability questions and conclusion classes are explicit,PASS,Notebook §14,stability_conclusion_table.csv,V24
+P3-13,No label or simulation is silently altered; max-KE anomaly is not promoted,PASS,"Notebook §§2,14",kinetic_energy_scope_caution.csv,V10;V20
+P3-14,Teaching notebook is executed and error-free,PASS,Notebook §§1–15,notebooks/week_07/03_new_data_physical_model_stability.ipynb,V22
+P3-15,Hard stop before later Week 7 phases,PASS,Notebook §15,phase3_configuration.json; validation_results.csv,V21;V23

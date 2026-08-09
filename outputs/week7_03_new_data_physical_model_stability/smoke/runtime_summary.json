@@ -1,0 +1,690 @@
+{
+  "mode": "smoke",
+  "total_wall_runtime_seconds": 52.59354110003915,
+  "events": [
+    {
+      "stage": "model_loo",
+      "target": "width",
+      "model": "training_mean",
+      "wall_runtime_seconds": 0.09723319998010993,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "width",
+      "model": "linear_ridge",
+      "wall_runtime_seconds": 0.0755490000010468,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "width",
+      "model": "polynomial_ridge_degree2",
+      "wall_runtime_seconds": 0.07105299999238923,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "width",
+      "model": "rbf_no_nugget",
+      "wall_runtime_seconds": 0.0689853000221774,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "width",
+      "model": "rbf_learned_nugget",
+      "wall_runtime_seconds": 0.07091509999008849,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "width",
+      "model": "matern32_no_nugget",
+      "wall_runtime_seconds": 0.07965979998698458,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "width",
+      "model": "matern32_learned_nugget",
+      "wall_runtime_seconds": 0.0675959000363946,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "width",
+      "model": "matern52_no_nugget",
+      "wall_runtime_seconds": 0.06696460000239313,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "width",
+      "model": "matern52_learned_nugget",
+      "wall_runtime_seconds": 0.07167610002215952,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "depth",
+      "model": "training_mean",
+      "wall_runtime_seconds": 0.08997520001139492,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "depth",
+      "model": "linear_ridge",
+      "wall_runtime_seconds": 0.06998070003464818,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "depth",
+      "model": "polynomial_ridge_degree2",
+      "wall_runtime_seconds": 0.06747279997216538,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "depth",
+      "model": "rbf_no_nugget",
+      "wall_runtime_seconds": 0.06985739996889606,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "depth",
+      "model": "rbf_learned_nugget",
+      "wall_runtime_seconds": 0.0687113999738358,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "depth",
+      "model": "matern32_no_nugget",
+      "wall_runtime_seconds": 0.06764289998682216,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "depth",
+      "model": "matern32_learned_nugget",
+      "wall_runtime_seconds": 0.06660269998246804,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "depth",
+      "model": "matern52_no_nugget",
+      "wall_runtime_seconds": 0.0688158999546431,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "depth",
+      "model": "matern52_learned_nugget",
+      "wall_runtime_seconds": 0.0638528999988921,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "total_height",
+      "model": "training_mean",
+      "wall_runtime_seconds": 0.09503460000269115,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "total_height",
+      "model": "linear_ridge",
+      "wall_runtime_seconds": 0.073483899992425,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "total_height",
+      "model": "polynomial_ridge_degree2",
+      "wall_runtime_seconds": 0.06915170000866055,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "total_height",
+      "model": "rbf_no_nugget",
+      "wall_runtime_seconds": 0.07261169998673722,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "total_height",
+      "model": "rbf_learned_nugget",
+      "wall_runtime_seconds": 0.06799499999033287,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "total_height",
+      "model": "matern32_no_nugget",
+      "wall_runtime_seconds": 0.06895620003342628,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "total_height",
+      "model": "matern32_learned_nugget",
+      "wall_runtime_seconds": 0.08364839997375384,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "total_height",
+      "model": "matern52_no_nugget",
+      "wall_runtime_seconds": 0.07023489999119192,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "total_height",
+      "model": "matern52_learned_nugget",
+      "wall_runtime_seconds": 0.06666160002350807,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "kinetic_energy",
+      "model": "training_mean",
+      "wall_runtime_seconds": 0.08507420000387356,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "kinetic_energy",
+      "model": "linear_ridge",
+      "wall_runtime_seconds": 0.0762442999985069,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "kinetic_energy",
+      "model": "polynomial_ridge_degree2",
+      "wall_runtime_seconds": 0.07331420003902167,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "kinetic_energy",
+      "model": "rbf_no_nugget",
+      "wall_runtime_seconds": 0.06603990000439808,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "kinetic_energy",
+      "model": "rbf_learned_nugget",
+      "wall_runtime_seconds": 0.07479019998572767,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "kinetic_energy",
+      "model": "matern32_no_nugget",
+      "wall_runtime_seconds": 0.06777640001382679,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "kinetic_energy",
+      "model": "matern32_learned_nugget",
+      "wall_runtime_seconds": 0.06869169999845326,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "kinetic_energy",
+      "model": "matern52_no_nugget",
+      "wall_runtime_seconds": 0.07501209998736158,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "model_loo",
+      "target": "kinetic_energy",
+      "model": "matern52_learned_nugget",
+      "wall_runtime_seconds": 0.07389530004002154,
+      "fold_rows": 12,
+      "fit_failures": 0
+    },
+    {
+      "stage": "mean_predictor_loo",
+      "target": "width",
+      "cache_reused": false,
+      "wall_runtime_seconds": 0.04045100003713742,
+      "fold_count": 12
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "width",
+      "model": "linear_ridge",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\ridge__width__linear_ridge.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 75.51304339984199,
+      "fold_count": 12
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "width",
+      "model": "polynomial_ridge_degree2",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\ridge__width__polynomial_ridge_degree2.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 124.95971590006957,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "rbf_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__width__T0__rbf_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.6532302999985404,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "rbf_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__width__T0__rbf_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 10.712445799959823,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "matern32_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__width__T0__matern32_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 4.000011699972674,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__width__T0__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 10.109146000235341,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "matern52_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__width__T0__matern52_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 4.3326100002159365,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__width__T0__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 10.633948699920438,
+      "fold_count": 12
+    },
+    {
+      "stage": "mean_predictor_loo",
+      "target": "depth",
+      "cache_reused": false,
+      "wall_runtime_seconds": 0.0345822999952361,
+      "fold_count": 12
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "depth",
+      "model": "linear_ridge",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\ridge__depth__linear_ridge.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 89.95530990004772,
+      "fold_count": 12
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "depth",
+      "model": "polynomial_ridge_degree2",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\ridge__depth__polynomial_ridge_degree2.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 131.409363499959,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "rbf_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__depth__T0__rbf_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.701334100042004,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "rbf_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__depth__T0__rbf_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 9.71931500005303,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "matern32_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__depth__T0__matern32_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.58921669999836,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__depth__T0__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 9.902504499943461,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "matern52_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__depth__T0__matern52_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.606177500099875,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__depth__T0__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 10.619672300061211,
+      "fold_count": 12
+    },
+    {
+      "stage": "mean_predictor_loo",
+      "target": "total_height",
+      "cache_reused": false,
+      "wall_runtime_seconds": 0.036935799987986684,
+      "fold_count": 12
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "total_height",
+      "model": "linear_ridge",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\ridge__total_height__linear_ridge.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 90.4936982000363,
+      "fold_count": 12
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "total_height",
+      "model": "polynomial_ridge_degree2",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\ridge__total_height__polynomial_ridge_degree2.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 132.51838719990337,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "total_height",
+      "target_definition": "T0",
+      "configuration": "rbf_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__total_height__T0__rbf_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.2272594001260586,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "total_height",
+      "target_definition": "T0",
+      "configuration": "rbf_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__total_height__T0__rbf_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 10.098543000058271,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "total_height",
+      "target_definition": "T0",
+      "configuration": "matern32_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__total_height__T0__matern32_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.9305381999583915,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "total_height",
+      "target_definition": "T0",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__total_height__T0__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 10.15030349988956,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "total_height",
+      "target_definition": "T0",
+      "configuration": "matern52_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__total_height__T0__matern52_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.4244343999307603,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "total_height",
+      "target_definition": "T0",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__total_height__T0__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 10.623690899985377,
+      "fold_count": 12
+    },
+    {
+      "stage": "mean_predictor_loo",
+      "target": "kinetic_energy",
+      "cache_reused": false,
+      "wall_runtime_seconds": 0.03322759998263791,
+      "fold_count": 12
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "kinetic_energy",
+      "model": "linear_ridge",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\ridge__kinetic_energy__linear_ridge.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 86.871294499957,
+      "fold_count": 12
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "kinetic_energy",
+      "model": "polynomial_ridge_degree2",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\ridge__kinetic_energy__polynomial_ridge_degree2.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 126.5043985999655,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "kinetic_energy",
+      "target_definition": "T0",
+      "configuration": "rbf_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__kinetic_energy__T0__rbf_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.4286048999638297,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "kinetic_energy",
+      "target_definition": "T0",
+      "configuration": "rbf_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__kinetic_energy__T0__rbf_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 10.02264300006209,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "kinetic_energy",
+      "target_definition": "T0",
+      "configuration": "matern32_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__kinetic_energy__T0__matern32_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.1988236000179313,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "kinetic_energy",
+      "target_definition": "T0",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__kinetic_energy__T0__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 9.468767000013031,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "kinetic_energy",
+      "target_definition": "T0",
+      "configuration": "matern52_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__kinetic_energy__T0__matern52_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 3.203100399929099,
+      "fold_count": 12
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "week7_phase3_new_data_replication",
+      "target": "kinetic_energy",
+      "target_definition": "T0",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week7_03_new_data_physical_model_stability\\smoke\\checkpoints\\gp__week7_phase3_new_data_replication__kinetic_energy__T0__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 9.343132400070317,
+      "fold_count": 12
+    }
+  ]
+}

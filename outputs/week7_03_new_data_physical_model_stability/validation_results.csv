@@ -1,0 +1,25 @@
+validation_id,requirement,status,evidence
+V01,Immutable sph_v2 revision is exactly the corrected Phase 2 revision,PASS,revision=d69dac5bda8b622bc0de316b112815c6056c06ec
+V02,Phase 3 starts from the current remote Week 7 Phase 1+2 head,PASS,codex/week7-phase1-2-sph-v2-audit@f26f0671dd59938a8111883398fe38afedb6915d
+V03,Primary population is new-data only and old/new populations are never pooled,PASS,audit rows=165; model-ready rows=656; old primary rows=0
+V04,Eligibility is derived only from corrected Phase 2 readiness fields and finite saved targets,PASS,"eligible counts={""depth"":164,""kinetic_energy"":164,""total_height"":164,""width"":164}"
+V05,No simulation-identifier exclusion list is hard-coded,PASS,population membership follows readiness masks; no identifier exclusion constant exists
+V06,T0 target values are copied exactly from corrected Phase 2 and are not redefined,PASS,four saved Phase 2 T0 columns matched exactly; raw windows used only for Method C uncertainty verification
+V07,ST is substrate temperature with the Phase 1/2 unit K,PASS,ST=substrate temperature [K]
+V08,Only the four requested physical responses are primary targets,PASS,"targets=[""depth"",""kinetic_energy"",""total_height"",""width""]"
+V09,The complete 165-row new-data label/audit population is retained,PASS,audit rows=165; incomplete rows retained=1
+V10,No label is modified and no simulation is silently removed,PASS,source label flags and Phase 3 prediction flags are all false
+V11,Every selected eligible simulation has one held-out prediction per model,PASS,prediction rows=6560; expected=6560; models=10
+V12,"All transformations, target normalization, tuning and GP fitting are fold-local",PASS,held-out flags false; Ridge scalers/inner CV and GP feature scalers report training-only fits
+V13,Model-fit failures are retained explicitly rather than silently skipped,PASS,retained failure rows=0
+V14,All aggregate metric rows reconcile with held-out predictions,PASS,metric rows=40; groups=40
+V15,Median-scale relative MAE and RMSE denominators are stored explicitly,PASS,relative error denominator=median(abs(y_observed)); MAPE is not used
+V16,GP predictive intervals are ordered and contain their predictive mean,PASS,checked interval rows=4592
+V17,Method C reproduces the exact Week 6 moving-block bootstrap definition,PASS,bootstrap resamples=[np.int64(500)]
+V18,Historical comparison uses saved Week 6 results and separate populations,PASS,one row per primary target; old and new metrics reported side by side
+V19,Required scientific diagnostic figures were generated,PASS,figures=23; expected=23
+V20,Maximum kinetic-energy anomaly is scoped separately and no T0 row is removed,PASS,maximum-energy anomaly recorded as out of Phase 3 scope; T0 row retained
+V21,"Phase 3 hard stop excludes classifiers, feature effects, causal claims, active learning and level-set work",PASS,"{""acquisition_function_change"":false,""active_learning"":false,""causal_interpretation"":false,""extreme_event_classifier"":false,""feature_effect_analysis"":false,""keyhole_classifier"":false,""later_week7_phase"":false,""level_set_estimation"":false,""pooled_old_new_model"":false}"
+V22,Executed teaching notebook exists and has no stored execution errors,PASS,path=notebooks\week_07\03_new_data_physical_model_stability.ipynb; exists=True; stored_errors=False
+V23,This is a full-population analysis rather than the cheap smoke path,PASS,mode=full; selected audit rows=165
+V24,All requested primary model-ranking rows and decisions are present,PASS,metric rows=40; decision rows=4

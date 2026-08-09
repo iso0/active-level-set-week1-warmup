@@ -1,0 +1,35 @@
+{
+  "phase": "Week 7 Phase 3",
+  "mode": "full",
+  "command": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Scripts\\python.exe -m src.week7_phase3_new_data_model_stability --workers 6",
+  "checkpointing": "Model-level CSV checkpoints; compatible completed targets and models are reused on resume.",
+  "segments": [
+    {
+      "segment": "initial full invocation",
+      "started_local": "2026-08-09T18:48:16+02:00",
+      "command_wrapper_wall_seconds": 3604.1,
+      "outcome": "The one-hour wrapper timed out after all width, depth, and total-height models plus kinetic-energy Linear Ridge were checkpointed. The child process continued briefly after the wrapper ended."
+    },
+    {
+      "segment": "detached continuation after wrapper timeout",
+      "wall_seconds": null,
+      "outcome": "The responsive child process continued kinetic-energy Polynomial Ridge but exited before that model checkpoint was written. Exact detached wall time was not available from the expired wrapper, so it is not fabricated."
+    },
+    {
+      "segment": "checkpointed completion resume",
+      "started_local": "2026-08-09T19:52:37+02:00",
+      "command_wrapper_wall_seconds": 884.3,
+      "analysis_internal_wall_seconds": 853.5312569999951,
+      "completed_summary_utc": "2026-08-09T18:07:15.476998+00:00",
+      "outcome": "Reused all compatible checkpoints, completed kinetic-energy Polynomial Ridge, six kinetic-energy GP configurations, Method C, figures, tables, and the preliminary validation dashboard."
+    },
+    {
+      "segment": "cached scientific-report refresh",
+      "command_wrapper_wall_seconds": 21.3,
+      "analysis_internal_wall_seconds": 13.691507300012745,
+      "outcome": "Reused every scientific checkpoint and added the explicit Q10 pipeline handoff; no model was refitted."
+    }
+  ],
+  "end_to_end_elapsed_note": "From the observed initial process start to the first complete summary, elapsed wall time was approximately 4739 seconds. This includes the detached continuation and the resume; it is reported as approximate because the original process start timestamp was available only to whole seconds.",
+  "interpretation": "runtime_summary.json reports only the current invocation. This history preserves the long checkpointed execution boundary so a short cached refresh is not misreported as the full scientific runtime."
+}

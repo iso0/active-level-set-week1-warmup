@@ -1,0 +1,7 @@
+{
+  "mode": "full",
+  "current_invocation_wall_runtime_seconds": 13.96696210000664,
+  "runtime_scope": "current invocation only; checkpoint-reusing report refreshes can be much shorter than the original model computation",
+  "execution_history_artifact": "execution_history.json",
+  "events": []
+}
