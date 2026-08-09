@@ -1,0 +1,31 @@
+validation_id,requirement,status,detail
+V01,Exact sph_v2 revision recorded on every row,PASS,d69dac5bda8b622bc0de316b112815c6056c06ec
+V02,One target row retained per Phase 1 experiment,PASS,targets=407; labels=407
+V03,All P/VX/LS/ST finite,PASS,all target-table input fields checked
+V04,Every required monitor exists,WARNING,missing monitor rows=114
+V05,All present monitor bytes match pinned Git blobs,PASS,verified=1514/1514
+V06,All present monitor schemas compatible,PASS,compatible=1514/1514
+V07,Every extraction failure is retained explicitly,PASS,invalid rows retained=57
+V08,Targets finite where extraction succeeds,PASS,valid rows=350
+V09,Physical dimensions and energy non-negative,PASS,width/depth/height/energy checked
+V10,Total height >= penetration depth where observed melt crosses surface,PASS,violations=0
+V11,Max responses >= corresponding T0 medians,PASS,"depth, height, and kinetic energy"
+V12,T0 lies inside active region,PASS,violations=0
+V13,No cooling-only rows selected in T0,PASS,selected cooling rows=0
+V14,Folder-domain mapping reproduces Week 6,PASS,matches=241/241
+V15,All comparable exact old matches reproduce Week 6 targets,PASS,comparable matches=186/186; target mismatches=0; endpoint mismatches=0
+V16,No source label modified,PASS,read-only label context
+V17,No simulation silently removed,PASS,Phase 1 and Phase 2 populations match
+V18,No predictive model fitting code in Phase 2,PASS,executable forbidden imports/calls=none
+V19,Teaching notebook exists with no stored errors,PASS,notebooks\week_07\02_sph_v2_physical_target_extraction.ipynb
+V20,Small automatically selected depth-ambiguity set visually reviewed,PASS,selected=4; side frames available=4; reviewed=4
+V21,Only the exact supervisor-confirmed textual sentinel variant is recognized,PASS,token=s3.402823e+38; recognized fields=1; smoke deferral=False
+V22,Recognized textual sentinel rows are excluded from physical coordinates,PASS,affected experiments=1; excluded rows=1
+V23,No unrelated malformed token is coerced,PASS,generic letter stripping is absent; unrelated coercion count=0
+V24,Extraction-status changes are confined to sentinel-affected experiments,PASS,status changes=1; sentinel-affected=1; rows compared=407
+V25,Previously valid physical targets remain unchanged,PASS,unexpected previously-valid changes=0
+V26,Per-experiment label context is unchanged from the pre-clarification baseline,PASS,label-context changes=0
+V27,"Generic monitor, target-readiness, and extraction eligibility flags are consistent",PASS,required fields=11; successful rows=350
+V28,Completely monitor-missing new-data targets remain explicitly unavailable,PASS,source-derived unavailable new-data experiments=1
+V29,Old-data-local missing monitors remain unresolved and are not backfilled,PASS,missing monitor rows=112; affected experiments=56
+V30,Target formulas and units remain the Week 6 definitions,PASS,geometry reported in um; kinetic energy source J and reported nJ

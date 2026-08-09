@@ -1,0 +1,9 @@
+field,value
+repository,ioandanielc/sph_v2
+analysis revision,d69dac5bda8b622bc0de316b112815c6056c06ec
+floating main at retrieval,d69dac5bda8b622bc0de316b112815c6056c06ec
+retrieval started UTC,2026-08-08T15:46:13+00:00
+experiment count,407
+labelled frame count,110804
+partition names,"new-data, old-data-local, old-data-remote-clean"
+repository tree items,349321

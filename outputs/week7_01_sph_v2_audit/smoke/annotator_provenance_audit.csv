@@ -1,0 +1,2 @@
+question,answer,status,evidence,label_columns,provenance_path_count,provenance_paths,decision
+Can working-student-labelled records be identified reliably?,No,WARNING,No annotator/label-provenance column is present in the three ledgers; no annotator or labeling_provenance file exists in the pinned tree. label_1 and label_2 identities are not documented.,"[""label_1"", ""label_2"", ""label_final"", ""partition_label_file""]",0,[],Do not fabricate an annotator split; retain partition and disagreement diagnostics only.

@@ -1,0 +1,4 @@
+partition,experiment_count,geometry_monitor_available_count,geometry_parse_ok_count,geometry_target_ready_count,time_monitor_available_count,time_parse_ok_count,time_target_ready_count,iteration_monitor_available_count,iteration_parse_ok_count,iteration_target_ready_count,kinetic_energy_monitor_available_count,kinetic_energy_parse_ok_count,kinetic_energy_target_ready_count,physical_target_extraction_success_count,label_analysis_ready_count
+new-data,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+old-data-local,6,6,6,5,5,5,5,6,6,5,5,5,5,5,6
+old-data-remote-clean,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6

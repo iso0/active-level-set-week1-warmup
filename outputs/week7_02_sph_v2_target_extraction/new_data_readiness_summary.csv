@@ -1,0 +1,4 @@
+partition,experiment_count,geometry_monitor_available_count,geometry_parse_ok_count,geometry_target_ready_count,time_monitor_available_count,time_parse_ok_count,time_target_ready_count,iteration_monitor_available_count,iteration_parse_ok_count,iteration_target_ready_count,kinetic_energy_monitor_available_count,kinetic_energy_parse_ok_count,kinetic_energy_target_ready_count,physical_target_extraction_success_count,label_analysis_ready_count
+new-data,165,164,164,164,165,165,164,165,165,164,164,164,164,164,165
+old-data-local,179,179,179,123,123,123,123,179,179,123,123,123,123,123,179
+old-data-remote-clean,63,63,63,63,63,63,63,63,63,63,63,63,63,63,63

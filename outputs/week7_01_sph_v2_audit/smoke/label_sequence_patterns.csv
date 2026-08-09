@@ -1,0 +1,24 @@
+partition,collapsed_label_sequence,experiment_count,partition_experiment_count,experiment_percent
+combined,Initial Emptiness -> Forming Phase -> Conduction,6,18,33.333333333333336
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,3,18,16.666666666666668
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,3,18,16.666666666666668
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Keyhole,1,18,5.555555555555555
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Keyhole -> Scanning Stopped,1,18,5.555555555555555
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction,1,18,5.555555555555555
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped,1,18,5.555555555555555
+combined,Initial Emptiness -> Forming Phase -> Unsure -> Forming Phase -> Conduction,1,18,5.555555555555555
+combined,Screenshot Bug -> Initial Emptiness -> Screenshot Bug -> Initial Emptiness -> Screenshot Bug -> Forming Phase -> Screenshot Bug -> Forming Phase -> Screenshot Bug -> Forming Phase -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction,1,18,5.555555555555555
+new-data,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,2,6,33.333333333333336
+new-data,Initial Emptiness -> Forming Phase -> Conduction,1,6,16.666666666666668
+new-data,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,6,16.666666666666668
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction,1,6,16.666666666666668
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped,1,6,16.666666666666668
+old-data-local,Initial Emptiness -> Forming Phase -> Conduction,3,6,50.0
+old-data-local,Initial Emptiness -> Forming Phase -> Conduction -> Keyhole,1,6,16.666666666666668
+old-data-local,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,6,16.666666666666668
+old-data-local,Initial Emptiness -> Forming Phase -> Unsure -> Forming Phase -> Conduction,1,6,16.666666666666668
+old-data-remote-clean,Initial Emptiness -> Forming Phase -> Conduction,2,6,33.333333333333336
+old-data-remote-clean,Initial Emptiness -> Forming Phase -> Conduction -> Keyhole -> Scanning Stopped,1,6,16.666666666666668
+old-data-remote-clean,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,1,6,16.666666666666668
+old-data-remote-clean,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,6,16.666666666666668
+old-data-remote-clean,Screenshot Bug -> Initial Emptiness -> Screenshot Bug -> Initial Emptiness -> Screenshot Bug -> Forming Phase -> Screenshot Bug -> Forming Phase -> Screenshot Bug -> Forming Phase -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction,1,6,16.666666666666668

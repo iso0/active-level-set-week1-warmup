@@ -1,0 +1,19 @@
+requirement_id,requirement,status,notebook_section,output_artifact,validation_ids
+P1-01,"Exact Hugging Face revision resolved, pinned, and displayed",PASS,Notebook §2,dataset_provenance.json; dataset_provenance_table.csv,V01;V02
+P1-02,Complete repository tree and file types audited,PASS,Notebook §3,repository_file_inventory.parquet; file_type_counts.csv,V01;V03;V04
+P1-03,Partition and missing-file structure audited,WARNING,Notebook §3,partition_summary.csv; missing_unexpected_files.csv,V13;V14
+P1-04,New structure compared with Week 6,PASS,Notebook §3,week6_structure_comparison.csv,V09;V10
+P1-05,Per-partition and combined label distributions reproduced,PASS,Notebook §4,label_distribution.csv,V05;V06
+P1-06,Ioan screenshot values compared with tolerances,PASS,Notebook §4,ioan_reference_comparison.csv,V15
+P1-07,Experiment-level sequences and Keyhole episodes derived,PASS,Notebook §5,experiment_label_sequences.csv; keyhole_episodes.csv,V03;V04
+P1-08,Frame-based short/transient/persistent Keyhole evidence quantified,PASS,Notebook §5,experiment_label_sequences.csv; figures/10_keyhole_duration_segments.png,V04
+P1-09,Working-student identifiability assessed without guessing,PASS,Notebook §6,annotator_provenance_audit.csv,V16;V17
+P1-10,Suspicious label records retained and flagged,PASS,Notebook §6,suspicious_label_anomalies.csv,V16;V17
+P1-11,P/VX/LS/ST units and descriptive statistics verified,PASS,Notebook §7,parameter_summary_by_partition.csv,V07;V09;V10
+P1-12,Week 6 domain shift and new-only regions quantified,PASS,Notebook §7,parameter_bounds_shift.csv; new_data_domain_membership.csv,V21
+P1-13,"Identifiers, tuples, sequences, and folder content audited",PASS,Notebook §8,integrity_audit.csv; experiment_content_bundles.csv,V08;V18;V19
+P1-14,Readable scientific figures generated,PASS,Notebook §§4–8,figure_manifest.csv,V03;V04
+P1-15,Phase 1 conclusions and machine-readable summary written,PASS,Notebook §9,results_summary.md; summary.json,V01
+P1-16,No labels changed and no simulations silently removed,PASS,Notebook §10,validation_results.csv,V16;V17
+P1-17,"No model fitting, active learning, or level-set work occurred",PASS,Notebook §10,validation_results.csv,V20
+P1-18,Executed teaching notebook contains no stored errors,PASS,Notebook §§1–10,notebooks/week_07/01_sph_v2_dataset_shift_audit.ipynb,V22

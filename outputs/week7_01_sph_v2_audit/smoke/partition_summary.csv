@@ -1,0 +1,4 @@
+partition,experiment_count,labelled_frame_count,min_frames_per_experiment,median_frames_per_experiment,max_frames_per_experiment,repository_file_count,repository_size_bytes
+new-data,6,1573,113,277.0,388,4953,407297195.0
+old-data-local,6,1345,121,170.5,390,4237,275435056.0
+old-data-remote-clean,6,1368,100,221.0,392,4338,406510695.0

@@ -1,0 +1,11 @@
+figure,path,question
+01_frame_label_distribution_by_partition.png,outputs/week7_01_sph_v2_audit/smoke/figures/01_frame_label_distribution_by_partition.png,Frame-label distribution by partition
+02_experiment_label_prevalence_by_partition.png,outputs/week7_01_sph_v2_audit/smoke/figures/02_experiment_label_prevalence_by_partition.png,Experiment-level label prevalence
+03_keyhole_experiment_prevalence.png,outputs/week7_01_sph_v2_audit/smoke/figures/03_keyhole_experiment_prevalence.png,How prevalent is Keyhole in each partition?
+04_parameter_distributions_by_partition.png,outputs/week7_01_sph_v2_audit/smoke/figures/04_parameter_distributions_by_partition.png,How do marginal input distributions differ?
+05_parameter_boxplots_by_partition.png,outputs/week7_01_sph_v2_audit/smoke/figures/05_parameter_boxplots_by_partition.png,Where do partition ranges and quartiles differ?
+06_parameter_space_projections.png,outputs/week7_01_sph_v2_audit/smoke/figures/06_parameter_space_projections.png,Where do partitions occupy the four-dimensional design space?
+07_week6_vs_new_parameter_bounds.png,outputs/week7_01_sph_v2_audit/smoke/figures/07_week6_vs_new_parameter_bounds.png,How did observed parameter bounds change from Week 6?
+08_keyhole_parameter_overlays.png,outputs/week7_01_sph_v2_audit/smoke/figures/08_keyhole_parameter_overlays.png,Where are Keyhole-positive experiments observed? (descriptive only)
+09_label_sequence_patterns.png,outputs/week7_01_sph_v2_audit/smoke/figures/09_label_sequence_patterns.png,Which label-transition patterns actually occur?
+10_keyhole_duration_segments.png,outputs/week7_01_sph_v2_audit/smoke/figures/10_keyhole_duration_segments.png,How many Keyhole observations and episodes are present?

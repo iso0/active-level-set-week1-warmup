@@ -1,0 +1,21 @@
+partition,label,metric,unit,reproduced_value,supervisor_screenshot_value,difference,absolute_difference,status,tolerance_definition
+new-data,all,experiment_count,count,165.0,165.0,0.0,0.0,PASS,exact integer equality
+new-data,all,frame_count,count,45156.0,45156.0,0.0,0.0,PASS,exact integer equality
+new-data,Keyhole,experiment_count,count,63.0,63.0,0.0,0.0,PASS,exact integer equality
+new-data,Keyhole,experiment_percent,percentage_points,38.18181818181818,38.18,0.0018181818181801646,0.0018181818181801646,PASS,PASS <= 0.01 percentage points; WARNING <= 0.05; otherwise FAIL
+old-data-local,all,experiment_count,count,179.0,179.0,0.0,0.0,PASS,exact integer equality
+old-data-local,all,frame_count,count,49304.0,49304.0,0.0,0.0,PASS,exact integer equality
+old-data-local,Keyhole,experiment_count,count,8.0,8.0,0.0,0.0,PASS,exact integer equality
+old-data-local,Keyhole,experiment_percent,percentage_points,4.4692737430167595,4.47,-0.0007262569832402477,0.0007262569832402477,PASS,PASS <= 0.01 percentage points; WARNING <= 0.05; otherwise FAIL
+old-data-remote-clean,all,experiment_count,count,63.0,63.0,0.0,0.0,PASS,exact integer equality
+old-data-remote-clean,all,frame_count,count,16344.0,16344.0,0.0,0.0,PASS,exact integer equality
+old-data-remote-clean,Keyhole,experiment_count,count,2.0,2.0,0.0,0.0,PASS,exact integer equality
+old-data-remote-clean,Keyhole,experiment_percent,percentage_points,3.1746031746031744,3.17,0.004603174603174498,0.004603174603174498,PASS,PASS <= 0.01 percentage points; WARNING <= 0.05; otherwise FAIL
+combined,all,experiment_count,count,407.0,407.0,0.0,0.0,PASS,exact integer equality
+combined,all,frame_count,count,110804.0,110804.0,0.0,0.0,PASS,exact integer equality
+combined,Keyhole,frame_count,count,6700.0,6700.0,0.0,0.0,PASS,exact integer equality
+combined,Keyhole,experiment_count,count,73.0,73.0,0.0,0.0,PASS,exact integer equality
+combined,Keyhole,experiment_percent,percentage_points,17.936117936117935,17.94,-0.0038820638820666886,0.0038820638820666886,PASS,PASS <= 0.01 percentage points; WARNING <= 0.05; otherwise FAIL
+combined,Conduction,frame_count,count,52080.0,52080.0,0.0,0.0,PASS,exact integer equality
+combined,Conduction,experiment_count,count,373.0,373.0,0.0,0.0,PASS,exact integer equality
+combined,Conduction,experiment_percent,percentage_points,91.64619164619165,91.65,-0.003808353808352649,0.003808353808352649,PASS,PASS <= 0.01 percentage points; WARNING <= 0.05; otherwise FAIL

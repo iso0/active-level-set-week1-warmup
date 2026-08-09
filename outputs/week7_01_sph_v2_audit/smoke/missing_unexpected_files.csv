@@ -1,0 +1,3 @@
+severity,issue_type,partition,experiment_name,relative_path,detail
+FAIL,missing_expected_file,old-data-local,P-107p176159755_VX-0p320752066655_LS-8p75302281584e-05_ST-393p859643937_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p50400296819e-05_H-8daf8adcd4,monitor/time.dat,Required for Phase 1/2
+FAIL,missing_expected_file,old-data-local,P-107p176159755_VX-0p320752066655_LS-8p75302281584e-05_ST-393p859643937_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p50400296819e-05_H-8daf8adcd4,monitor/kinetic-energy_melt.dat,Required for Phase 1/2

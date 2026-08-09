@@ -1,0 +1,100 @@
+partition,collapsed_label_sequence,experiment_count,partition_experiment_count,experiment_percent
+combined,Initial Emptiness -> Forming Phase -> Conduction,135,407,33.16953316953317
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,95,407,23.34152334152334
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,92,407,22.604422604422606
+combined,Initial Emptiness -> Forming Phase -> Keyhole,27,407,6.6339066339066335
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Keyhole,8,407,1.9656019656019657
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction,6,407,1.4742014742014742
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Scanning Stopped -> Screenshot Bug,4,407,0.9828009828009828
+combined,Forming Phase -> Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,2,407,0.4914004914004914
+combined,Forming Phase -> Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,1,407,0.2457002457002457
+combined,Forming Phase -> Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Forming Phase -> Conduction,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Forming Phase -> Conduction -> Scanning Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Keyhole -> Scanning Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped -> Initial Emptiness,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Initial Emptiness -> Forming Phase -> Conduction,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Initial Emptiness -> Keyhole,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Solidifying Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Solidifying Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Solidifying Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Solidifying Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Keyhole -> Scanning Stopped,1,407,0.2457002457002457
+combined,Initial Emptiness -> Forming Phase -> Unsure -> Forming Phase -> Conduction,1,407,0.2457002457002457
+combined,Screenshot Bug -> Initial Emptiness -> Screenshot Bug -> Initial Emptiness -> Screenshot Bug -> Forming Phase -> Screenshot Bug -> Forming Phase -> Screenshot Bug -> Forming Phase -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction,1,407,0.2457002457002457
+new-data,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,42,165,25.454545454545453
+new-data,Initial Emptiness -> Forming Phase -> Conduction,30,165,18.181818181818183
+new-data,Initial Emptiness -> Forming Phase -> Keyhole,26,165,15.757575757575758
+new-data,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,23,165,13.93939393939394
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction,6,165,3.6363636363636362
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Scanning Stopped -> Screenshot Bug,4,165,2.4242424242424243
+new-data,Forming Phase -> Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,2,165,1.2121212121212122
+new-data,Forming Phase -> Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,1,165,0.6060606060606061
+new-data,Forming Phase -> Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Conduction -> Forming Phase -> Conduction -> Scanning Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped -> Initial Emptiness,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Initial Emptiness -> Keyhole,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Solidifying Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Solidifying Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Solidifying Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Screenshot Bug,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Screenshot Bug -> Scanning Stopped -> Solidifying Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Forming Phase -> Keyhole -> Conduction -> Scanning Stopped -> Solidifying Stopped,1,165,0.6060606060606061
+new-data,Initial Emptiness -> Forming Phase -> Keyhole -> Scanning Stopped,1,165,0.6060606060606061
+old-data-local,Initial Emptiness -> Forming Phase -> Conduction,81,179,45.25139664804469
+old-data-local,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,51,179,28.491620111731844
+old-data-local,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,35,179,19.553072625698324
+old-data-local,Initial Emptiness -> Forming Phase -> Conduction -> Keyhole,8,179,4.4692737430167595
+old-data-local,Initial Emptiness -> Forming Phase,1,179,0.5586592178770949
+old-data-local,Initial Emptiness -> Forming Phase -> Conduction -> Forming Phase -> Conduction,1,179,0.5586592178770949
+old-data-local,Initial Emptiness -> Forming Phase -> Initial Emptiness -> Forming Phase -> Conduction,1,179,0.5586592178770949
+old-data-local,Initial Emptiness -> Forming Phase -> Unsure -> Forming Phase -> Conduction,1,179,0.5586592178770949
+old-data-remote-clean,Initial Emptiness -> Forming Phase -> Conduction,24,63,38.095238095238095
+old-data-remote-clean,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped,18,63,28.571428571428573
+old-data-remote-clean,Initial Emptiness -> Forming Phase -> Conduction -> Scanning Stopped -> Solidifying Stopped,18,63,28.571428571428573
+old-data-remote-clean,Initial Emptiness -> Forming Phase -> Conduction -> Keyhole -> Scanning Stopped,1,63,1.5873015873015872
+old-data-remote-clean,Initial Emptiness -> Forming Phase -> Keyhole,1,63,1.5873015873015872
+old-data-remote-clean,Screenshot Bug -> Initial Emptiness -> Screenshot Bug -> Initial Emptiness -> Screenshot Bug -> Forming Phase -> Screenshot Bug -> Forming Phase -> Screenshot Bug -> Forming Phase -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction -> Screenshot Bug -> Conduction,1,63,1.5873015873015872

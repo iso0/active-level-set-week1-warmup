@@ -327,3 +327,150 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
 - Broad-trained ARD still degrades the same 91 no-Bug targets: RMSE 18,051.8 versus 2,808.3 for no-Bug-only training; 15 points improve and 76 worsen.
 - No-Bug LS reaches the primary ARD upper bound in 94.5% of folds and moves from 100 to 1,000 under a widened full-data bound for only a 0.0717 LML gain, indicating a weakly identified flat direction. Broad ARD lengthscales remain stable.
 - Decision: retain isotropic Matérn 3/2 with L-BFGS-B; do not add further kernel complexity before discussing missing batch/design information. Active learning and level-set estimation remain not started.
+
+## Week 7 — `sph_v2` audit and Week 6 physical-target migration (2026-08-08)
+
+- Scope was deliberately limited to Week 7 Phase 1 and Phase 2. No GP, Ridge,
+  polynomial model, classifier, kernel comparison, active learning, level-set
+  estimation, or final target selection was run.
+- Work was isolated from the dirty main checkout in
+  `C:\Users\ozgur\Documents\thesis-week7-sph-v2-audit` on branch
+  `codex/week7-phase1-2-sph-v2-audit`, based exactly on Week 6 commit
+  `cba151880fc670d1b8a20ff2f7f25295f9bcb892`.
+- The new Hugging Face dataset was resolved and pinned at
+  `ioandanielc/sph_v2@d69dac5bda8b622bc0de316b112815c6056c06ec`.
+  Every scientific tree request and download used this 40-character revision;
+  floating `main` was recorded only as a retrieval-time drift check.
+- Phase 1 full remote inventory: 349,321 tree objects, 346,472 files, and 2,849
+  folders. The pinned snapshot contains 407 semantic experiment folders and
+  110,804 labelled frames across `new-data` (165 / 45,156),
+  `old-data-local` (179 / 49,304), and `old-data-remote-clean` (63 / 16,344).
+- All 20 supervisor-screenshot checks passed. The audit independently reproduced
+  6,700 Keyhole frames in 73/407 experiments and 52,080 Conduction frames in
+  373/407 experiments, including the reported partition-level Keyhole counts
+  and rounded percentages.
+- Experiment-level labels are not mutually exclusive. Among the 73 Keyhole
+  experiments, none has only one saved Keyhole frame, two have at most three,
+  five have at most five, 30 are transient by the stored sequence, 43 remain
+  Keyhole through the last physical frame, and 16 contain more than one Keyhole
+  segment. No frame-to-millisecond conversion was made in Phase 1.
+- The working-student subset is not reliably identifiable. The pinned ledgers
+  contain no documented annotator/provenance field or file, and the identities
+  behind `label_1` and `label_2` are undocumented. Partition was not used as an
+  annotator proxy. Channel disagreement occurs in 387 experiments and is kept
+  as a broad review flag rather than evidence that either channel is wrong.
+- The new repository retains `parameters.json`, three frame views, and
+  `monitor/*.dat`, removes the Week 6 per-simulation metadata/provenance JSON,
+  uses semantic folders at repository root, and adds three GIFs per experiment.
+  Frame ledgers, top-level final labels, timesteps, parameters, units, and all
+  three rendered-view counts are internally consistent.
+- Structural limitation: 114 required-monitor entries are absent across 57
+  experiments. Fifty-six `old-data-local` experiments lack both `time.dat` and
+  `kinetic-energy_melt.dat`; one `new-data` experiment lacks both
+  `position-bounds_melt.dat` and `kinetic-energy_melt.dat`. These source defects
+  remain explicit and were not repaired from another dataset.
+- Relative to the 241-experiment Week 6 design, `new-data` extends the observed
+  lower LS bound by 4.971 µm, the upper P bound by 201.067 W, and the upper ST
+  bound by only 0.360 K; VX adds no marginal range. Of 165 new-data experiments,
+  95 lie outside at least one Week 6 marginal range and 118 lie outside the Week
+  6 four-dimensional convex hull. Keyhole is observed in 59/95 outside-range
+  experiments versus 4/70 inside all four old marginal ranges. This is
+  descriptive design-space/covariate-shift evidence, not a causal result.
+- Phase 2 imported the actual Week 6 constants and rolling-window helpers. It
+  preserved valid melt rows as finite, ordered bounds below the `1e30` sentinel;
+  width `y_max-y_min`; diagnostic length `x_max-x_min`; depth
+  `max(0,-z_min)`; total height `z_max-z_min`; instantaneous aggregate melt
+  kinetic energy in J reported as nJ; and the Week 6 T0 median over the final
+  20% before `min(recording end, 0.90 × laser-exit time)`, with the unchanged
+  final-50-row fallback. G3/R3 retain the 50 µm rolling-median definitions.
+- The only repository-layout compatibility rule is
+  `domain_max_x = min(XF, XL) + 12 µm`. It reproduces the Week 6 reconstructed
+  domain end for all 241 exact identifiers. Local Week 6 monitor bytes were
+  reused only when their computed Git blob IDs matched the pinned `sph_v2`
+  tree; no fuzzy experiment matching was used.
+- Phase 2 retained 407 target rows: 349 successful extractions and 58 explicit
+  failures. By partition, successful counts are 163/165 `new-data`, 123/179
+  `old-data-local`, and 63/63 `old-data-remote-clean`. The additional failure
+  beyond the 57 monitor-incomplete experiments is one `new-data` bounds file
+  containing the malformed token `s3.402823e+38`; it was not silently coerced.
+- There are 241 exact Week 6 identifiers and 186 exact matches with sufficient
+  pinned monitors for direct comparison. All comparable T0 widths, depths,
+  total heights, kinetic energies, and window endpoints reproduce Week 6 within
+  the declared near-machine-precision tolerances; zero material changes were
+  detected.
+- For the 349 successful rows, maximum depth occurs before / inside / after T0
+  in 245 / 68 / 36 experiments. Among 69 successful Keyhole-positive rows, 21
+  contain no saved Keyhole frame inside T0. This does not make T0 wrong: T0
+  summarizes typical late-active behaviour, whereas maximum depth and a brief
+  Keyhole episode answer different physical questions.
+- Diagnostic flags remain visible: 141 recordings end before the 90%-domain
+  cutoff under the exact Week 6 `min` rule, 16 rows meet the Week 6 T0-CV
+  instability rule, eight meet the automatic depth-ambiguity candidate rule,
+  and one otherwise successful row lacks the adaptive interior for G3/R3.
+- Four automatically ranked side frames were inspected. One shows clearly
+  separated lower components below the main melt pool, one shows a continuous
+  main melt region without an obvious detached component, and two are
+  inconclusive at the nearest saved-frame cadence. All flags and pinned GIF
+  references are retained; no experiment is excluded.
+- Validation after executed-notebook refresh: Phase 1 has 21 PASS and one FAIL
+  (the upstream missing-monitor check). Phase 2 has 18 PASS, one WARNING
+  (missing monitors), and one FAIL (the single malformed present bounds file).
+  Requirement checklists distinguish these source-data caveats from completed
+  audit deliverables.
+- Smoke commands were
+  `python -m src.week7_phase1_sph_v2_dataset_shift_audit --smoke --refresh-tree --workers 4`
+  and
+  `python -m src.week7_phase2_sph_v2_physical_target_extraction --smoke --workers 4`.
+  Full commands were
+  `python -m src.week7_phase1_sph_v2_dataset_shift_audit --workers 6 --refresh-tree`
+  (765.1 s) and
+  `python -m src.week7_phase2_sph_v2_physical_target_extraction --workers 6`
+  (817.0 s).
+- Executed teaching notebooks:
+  `notebooks/week_07/01_sph_v2_dataset_shift_audit.ipynb` and
+  `notebooks/week_07/02_sph_v2_physical_target_extraction.ipynb`. Main machine-
+  readable and human-readable artifacts are under
+  `outputs/week7_01_sph_v2_audit/` and
+  `outputs/week7_02_sph_v2_target_extraction/`.
+- Hard stop reached after Phase 2 validation. Later predictive modelling,
+  classification, active learning, level-set estimation, sensitivity-based
+  exclusion, and target selection remain unresolved by design.
+
+### Phase 2 supervisor-feedback correction: no-melt sentinel (2026-08-09)
+
+- **Observation:** A pinned-revision scan of all 406 available bounds files
+  found exactly one
+  textual variant, `s3.402823e+38`, as a complete CSV field. It occurs in the
+  first row and `x_min` field of
+  `P-447p413798058_VX-0p91078629156_LS-5p3177056457e-05_ST-328p907838563_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p29665482201e-06_H-1553ff852f`.
+  No other malformed bounds token or numeric exponent in the `1e30` to
+  `1e39` range was found.
+- **Supervisor clarification:** Ioan confirmed that values near `1e38` in
+  `position-bounds_melt.dat` are normal artifacts indicating missing melt,
+  not physical melt coordinates.
+- **Implementation decision:** The parser correction is deliberately narrow:
+  only that exact standalone
+  field is normalized to the positive numeric sentinel, after which the
+  existing `abs(value) < 1e30` validity mask excludes the entire no-melt row.
+  It does not strip arbitrary prefixes, replace the value with zero,
+  interpolate it, or coerce unrelated malformed tokens.
+- **Separate maintenance issue:** Ioan confirmed that the old-data-local
+  missing monitor files can be added later through a separate Hugging Face pull
+  request. They were not backfilled here and are not a blocker for new-data
+  modelling.
+- The rerun changed only the affected experiment from parse failure to success.
+  Overall extraction is now 350/407: new-data 164/165, old-data-local 123/179,
+  and remote-clean 63/63. All previously valid targets and all label-context
+  fields are unchanged.
+- The one remaining new-data failure,
+  `P-204p165012598_VX-0p624752635414_LS-8p54709329997e-05_ST-334p626206985_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-7p72164906486e-06_H-4ecd858c02`,
+  remains explicitly unavailable because both `position-bounds_melt.dat` and
+  `kinetic-energy_melt.dat` are absent. The 56 old-data-local failures remain
+  unchanged, each missing `time.dat` and `kinetic-energy_melt.dat`.
+- Generic per-monitor availability, parse, and target-readiness flags now make
+  these limitations explicit without a fixed simulation exclusion list. The
+  validation result is 29 PASS, 1 expected missing-monitor WARNING, and 0 FAIL.
+- The Phase 2 notebook now explains the sentinel semantics, shows the exact raw
+  occurrence and before/after comparison, and preserves all four prior manual
+  depth-review decisions. No Phase 3 modelling, classifier fitting, active
+  learning, or level-set estimation was started.

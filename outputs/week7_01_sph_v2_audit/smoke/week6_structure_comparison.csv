@@ -1,0 +1,10 @@
+component,week6_structure,sph_v2_structure,assessment
+experiment root,final_data_processed/sim_XXXXX,semantic parameter/hash folder at repository root,changed
+experiment identity,sim_XXXXX plus metadata.json original_folder_name,semantic folder name; no sim_XXXXX alias,changed
+parameters,parameters.json,parameters.json,same
+configuration metadata,metadata.json and experiment_details.json,removed,changed; folder tokens retain XI/XF/XL/TE/DT/H
+labels,top-level final-labels_all.csv plus per-simulation provenance,three top-level partition ledgers plus frames.csv,changed
+annotator provenance,labeling_provenance.json in prior labelled material,no reliable annotator metadata discovered,changed/absent
+monitor files,monitor/*.dat,monitor/*.dat,same required path names
+rendered frames,"frames/front, side, top","frames/front, side, top",same
+GIFs,not part of Week 6 expected structure,"gif_files with front, side, top animations",added

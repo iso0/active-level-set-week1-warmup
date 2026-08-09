@@ -1,0 +1,33 @@
+partition,label,frame_count,total_frames,frame_percent,experiment_count,total_experiments,experiment_percent,label_discovered_from_data
+new-data,Conduction,804,1573,51.112523839796566,6,6,100.0,True
+new-data,Forming Phase,250,1573,15.89319771137953,6,6,100.0,True
+new-data,Initial Emptiness,214,1573,13.604577240940877,6,6,100.0,True
+new-data,Keyhole,53,1573,3.3693579148124604,2,6,33.333333333333336,True
+new-data,Scanning Stopped,146,1573,9.281627463445645,4,6,66.66666666666667,True
+new-data,Screenshot Bug,22,1573,1.3986013986013985,1,6,16.666666666666668,True
+new-data,Solidifying Stopped,84,1573,5.340114431023522,1,6,16.666666666666668,True
+new-data,Unsure,0,1573,0.0,0,6,0.0,True
+old-data-local,Conduction,797,1345,59.25650557620818,6,6,100.0,True
+old-data-local,Forming Phase,235,1345,17.472118959107807,6,6,100.0,True
+old-data-local,Initial Emptiness,136,1345,10.111524163568774,6,6,100.0,True
+old-data-local,Keyhole,21,1345,1.5613382899628252,1,6,16.666666666666668,True
+old-data-local,Scanning Stopped,68,1345,5.055762081784387,1,6,16.666666666666668,True
+old-data-local,Screenshot Bug,0,1345,0.0,0,6,0.0,True
+old-data-local,Solidifying Stopped,86,1345,6.394052044609666,1,6,16.666666666666668,True
+old-data-local,Unsure,2,1345,0.14869888475836432,1,6,16.666666666666668,True
+old-data-remote-clean,Conduction,630,1368,46.05263157894737,6,6,100.0,True
+old-data-remote-clean,Forming Phase,169,1368,12.353801169590643,6,6,100.0,True
+old-data-remote-clean,Initial Emptiness,179,1368,13.084795321637428,6,6,100.0,True
+old-data-remote-clean,Keyhole,164,1368,11.988304093567251,1,6,16.666666666666668,True
+old-data-remote-clean,Scanning Stopped,91,1368,6.652046783625731,3,6,50.0,True
+old-data-remote-clean,Screenshot Bug,39,1368,2.8508771929824563,1,6,16.666666666666668,True
+old-data-remote-clean,Solidifying Stopped,96,1368,7.017543859649122,1,6,16.666666666666668,True
+old-data-remote-clean,Unsure,0,1368,0.0,0,6,0.0,True
+combined,Conduction,2231,4286,52.05319645356976,18,18,100.0,True
+combined,Forming Phase,654,4286,15.258982734484368,18,18,100.0,True
+combined,Initial Emptiness,529,4286,12.342510499300047,18,18,100.0,True
+combined,Keyhole,238,4286,5.5529631357909475,4,18,22.22222222222222,True
+combined,Scanning Stopped,305,4286,7.116192253849744,8,18,44.44444444444444,True
+combined,Screenshot Bug,61,4286,1.4232384507699487,2,18,11.11111111111111,True
+combined,Solidifying Stopped,266,4286,6.206252916472235,3,18,16.666666666666668,True
+combined,Unsure,2,4286,0.04666355576294914,1,18,5.555555555555555,True

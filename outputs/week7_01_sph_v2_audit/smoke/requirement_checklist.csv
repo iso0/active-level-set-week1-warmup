@@ -1,0 +1,18 @@
+requirement_id,requirement,status,notebook_section,output_artifact
+P1-01,"Exact Hugging Face revision resolved, pinned, and displayed",FAIL,Notebook §2,dataset_provenance.json; dataset_provenance_table.csv
+P1-02,Complete repository tree and file types audited,FAIL,Notebook §3,repository_file_inventory.parquet; file_type_counts.csv
+P1-03,Partition and missing-file structure audited,FAIL,Notebook §3,partition_summary.csv; missing_unexpected_files.csv
+P1-04,New structure compared with Week 6,FAIL,Notebook §3,week6_structure_comparison.csv
+P1-05,Per-partition and combined label distributions reproduced,FAIL,Notebook §4,label_distribution.csv
+P1-06,Ioan screenshot values compared with tolerances,FAIL,Notebook §4,ioan_reference_comparison.csv
+P1-07,Experiment-level sequences and Keyhole episodes derived,FAIL,Notebook §5,experiment_label_sequences.csv; keyhole_episodes.csv
+P1-08,Frame-based short/transient/persistent Keyhole evidence quantified,FAIL,Notebook §5,experiment_label_sequences.csv; figures/10_keyhole_duration_segments.png
+P1-09,Working-student identifiability assessed without guessing,FAIL,Notebook §6,annotator_provenance_audit.csv
+P1-10,Suspicious label records retained and flagged,FAIL,Notebook §6,suspicious_label_anomalies.csv
+P1-11,P/VX/LS/ST units and descriptive statistics verified,FAIL,Notebook §7,parameter_summary_by_partition.csv
+P1-12,Week 6 domain shift and new-only regions quantified,FAIL,Notebook §7,parameter_bounds_shift.csv; new_data_domain_membership.csv
+P1-13,"Identifiers, tuples, sequences, and folder content audited",FAIL,Notebook §8,integrity_audit.csv; experiment_content_bundles.csv
+P1-14,Readable scientific figures generated,FAIL,Notebook §§4–8,figure_manifest.csv
+P1-15,Phase 1 conclusions and machine-readable summary written,FAIL,Notebook §9,results_summary.md; summary.json
+P1-16,No labels changed and no simulations silently removed,FAIL,Notebook §10,validation_results.csv
+P1-17,"No model fitting, active learning, or level-set work occurred",FAIL,Notebook §10,validation_results.csv
