@@ -1,0 +1,14 @@
+check_id,check,status,detail
+V01,exact Phase 5 parent,PASS,3367f4c9b5af2def802f72a65258f5cc01896bac
+V02,exact current HF revision,PASS,b6dc254a2b607a31cb9f97b40990339c3d5ca1e8
+V03,only 110 authorized monitor additions,PASS,"{'kinetic-energy_melt.dat': 55, 'time.dat': 55}"
+V04,"no new-data, label, geometry, or iteration change",PASS,all protected path classes unchanged
+V05,407 rows retained,PASS,rows=407
+V06,405 physical targets usable,PASS,usable=405
+V07,partition readiness exact,PASS,164/165; 178/179; 63/63
+V08,all five within-population LOO analyses present,PASS,rows=40
+V09,transfer train/test disjoint except pooled descriptive,PASS,held-out routes overlap=0
+V10,bootstrap is simulation-level with requested full count,PASS,resamples=300
+V11,at least 20 explanatory figures,PASS,figures=20
+V12,original dirty checkout still matches preflight,PASS,status_lines=6
+V13,scope hard stop recorded,PASS,all prohibited actions false

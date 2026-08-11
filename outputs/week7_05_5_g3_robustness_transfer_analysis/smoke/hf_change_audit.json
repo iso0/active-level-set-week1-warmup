@@ -1,0 +1,26 @@
+{
+  "audit_method": "Git tree name-status diff plus current blob IDs and byte sizes",
+  "change_record_count": 110,
+  "changed_experiment_count": 55,
+  "current_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "filename_counts": {
+    "kinetic-energy_melt.dat": 55,
+    "time.dat": 55
+  },
+  "geometry_paths_changed": false,
+  "iteration_paths_changed": false,
+  "label_paths_changed": false,
+  "live_main_matches_current": true,
+  "live_main_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "modified_or_deleted_paths": 0,
+  "new_data_paths_changed": false,
+  "only_expected_monitor_additions": true,
+  "partition_experiment_counts": {
+    "old-data-local": 55
+  },
+  "pinned_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "repository": "ioandanielc/sph_v2",
+  "status_counts": {
+    "A": 110
+  }
+}

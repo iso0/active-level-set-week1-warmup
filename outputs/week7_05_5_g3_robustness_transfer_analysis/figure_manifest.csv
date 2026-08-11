@@ -1,0 +1,21 @@
+figure,question,sha256,bytes,population_units_method_caveat_in_figure
+figures/01_partition_overview.png,How many simulations are retained and physically usable?,ac93c989e8a526a42fdea7eccbd664b314480b0a78ddea651ba3a22ef4baad42,56150,True
+figures/02_label_composition.png,Does label prevalence differ by partition?,de0501b2e44e30d1f21244a7904069bed0a910ed8457c7d201b68db35d282e0a,51684,True
+figures/03_G3_distributions.png,How does G3 separate labels across partitions?,62cf68053e4efc5b538ce9470126a70a3138994c0755456a5770adc0ffa69a62,108062,True
+figures/04_R3_distributions.png,How does R3 separate labels across partitions?,9096084ca815ad5ab160ce7800c26e2feebca4c95ebb23cffd4f6ce22de96153,113300,True
+figures/05_max_depth_distributions.png,How does max_depth separate labels across partitions?,0c8e72918fdea3227a2c2eb7b8a950aa73b88e451f71b91fc3bc6000640698e4,107337,True
+figures/06_T0_depth_distributions.png,How does T0_depth separate labels across partitions?,a0bc8fb6af97728ba1ebcdec87022ece5fce8a1d1f32bb2e88f9c2d08027d980,108642,True
+figures/07_sorted_values_thresholds.png,Do candidate thresholds shift between new and old data?,f1d5255b2c13345d9c37b99080078f8601539a83e32a980679f40bc2696db494,237415,True
+figures/08_threshold_gap_margin.png,Is there an empty G3 margin between classes?,46b740406b1730503b7c8d1c76ee8d3fa3ab6836252b9c091d7ea1544eba4bcc,59664,True
+figures/09_roc_by_population.png,Does rank separation persist across populations?,440e1a08afb4dc055e2c39e88e0f83b43d74736cf4ec1e634219d9a9b443200a,106928,True
+figures/10_pr_by_population.png,Does precision-recall separation persist under prevalence shift?,8db10abdb6c0e0f8f9c626062d3be979104951483b7be1463dbb3f684bbef9a0,97997,True
+figures/11_within_population_performance.png,How well do within-population thresholds generalize?,5bf95a88411c69cd14fc74575355de7e76c80d6d5408a247187f321e3125e9f4,82002,True
+figures/12_cross_population_transfer.png,Which scalar thresholds transfer between domains?,1aa9116ae7672dd31dfd244adeba52d248736767da341dabf39caa4592567f65,96940,True
+figures/13_threshold_stability.png,Are G3 training thresholds stable within and between populations?,0909c54994fffbcd4c8bbe4ac83cae96734b606e939d16aea72255e631f362f6,60838,True
+figures/14_persistence_subgroups.png,Does G3 remain informative for transient and persistent keyhole?,4bbcabe9580de943fabfff8933fedc3ac04fa80516b93580e1e6d2070fca3050,57140,True
+figures/15_t0_timing_subgroups.png,Does G3 remain informative for keyhole timing relative to t0?,4c684272eeccbb74a636f8868e32b948a84b9704eb0bb2eb1a0c277fff8d0950,60169,True
+figures/16_process_map_label.png,How do partitions and label occupy the P-VX domain?,4ca0316bcce08cb4da84834cc16764c34e9a9f5c78e16818d1946ce4e2ab5062,270845,True
+figures/17_process_map_G3.png,How do partitions and G3 occupy the P-VX domain?,90bf1c3601ea72cb32aaae9cde90ee2ede9b032394ba3f2fa834382ddefe35ae,295289,True
+figures/18_G3_vs_R3.png,How does G3 relate to R3 across labels?,12bf44f2cddbdc9a8c121e735936510ab9387d077280b12761f8d592b872354c,112511,True
+figures/19_G3_vs_max_depth.png,How does G3 relate to max_depth across labels?,fdcfc85b8a93b0edb077dafb24983bbb05726f7f1205e26187b30174b51fc062,80820,True
+figures/20_phase55_decision_summary.png,"Which scalar is most robust, and what should Phase 6 carry forward?",b2c2db50c36f76fb9c80f7dc7b0aa2ae4da104c530311549feccb468c1c87803,59313,True

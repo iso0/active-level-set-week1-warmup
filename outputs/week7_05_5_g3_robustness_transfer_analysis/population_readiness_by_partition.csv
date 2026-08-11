@@ -1,0 +1,6 @@
+population,experiment_count,physical_target_ready_count,physical_target_ineligible_count,physical_target_ready_fraction,label_ready_count,retained_row_count,simulations_removed
+new-data,165,164,1,0.9939393939393939,165,165,0
+old-data-local,179,178,1,0.994413407821229,179,179,0
+old-data-remote-clean,63,63,0,1.0,63,63,0
+all-old,242,241,1,0.9958677685950413,242,242,0
+all-combined,407,405,2,0.995085995085995,407,407,0

@@ -1,0 +1,41 @@
+population,candidate_id,candidate_name,unit,available_count,unavailable_count,availability_fraction,available_keyhole_positive_count,available_keyhole_negative_count
+new-data,T0_depth,T0 penetration depth,um,164,1,0.9939393939393939,63,101
+new-data,max_depth,Maximum penetration depth,um,164,1,0.9939393939393939,63,101
+new-data,G3,G3 persistent depth,um,164,1,0.9939393939393939,63,101
+new-data,R3,R3 persistent aspect ratio,dimensionless,164,1,0.9939393939393939,63,101
+new-data,T0_width,T0 width,um,164,1,0.9939393939393939,63,101
+new-data,T0_total_height,T0 total height,um,164,1,0.9939393939393939,63,101
+new-data,T0_kinetic_energy,T0 kinetic energy,nJ,164,1,0.9939393939393939,63,101
+new-data,R0,R0 T0 aspect ratio,dimensionless,164,1,0.9939393939393939,63,101
+old-data-local,T0_depth,T0 penetration depth,um,178,1,0.994413407821229,8,170
+old-data-local,max_depth,Maximum penetration depth,um,178,1,0.994413407821229,8,170
+old-data-local,G3,G3 persistent depth,um,177,2,0.9888268156424581,8,169
+old-data-local,R3,R3 persistent aspect ratio,dimensionless,177,2,0.9888268156424581,8,169
+old-data-local,T0_width,T0 width,um,178,1,0.994413407821229,8,170
+old-data-local,T0_total_height,T0 total height,um,178,1,0.994413407821229,8,170
+old-data-local,T0_kinetic_energy,T0 kinetic energy,nJ,178,1,0.994413407821229,8,170
+old-data-local,R0,R0 T0 aspect ratio,dimensionless,178,1,0.994413407821229,8,170
+old-data-remote-clean,T0_depth,T0 penetration depth,um,63,0,1.0,2,61
+old-data-remote-clean,max_depth,Maximum penetration depth,um,63,0,1.0,2,61
+old-data-remote-clean,G3,G3 persistent depth,um,63,0,1.0,2,61
+old-data-remote-clean,R3,R3 persistent aspect ratio,dimensionless,63,0,1.0,2,61
+old-data-remote-clean,T0_width,T0 width,um,63,0,1.0,2,61
+old-data-remote-clean,T0_total_height,T0 total height,um,63,0,1.0,2,61
+old-data-remote-clean,T0_kinetic_energy,T0 kinetic energy,nJ,63,0,1.0,2,61
+old-data-remote-clean,R0,R0 T0 aspect ratio,dimensionless,63,0,1.0,2,61
+all-old,T0_depth,T0 penetration depth,um,241,1,0.9958677685950413,10,231
+all-old,max_depth,Maximum penetration depth,um,241,1,0.9958677685950413,10,231
+all-old,G3,G3 persistent depth,um,240,2,0.9917355371900827,10,230
+all-old,R3,R3 persistent aspect ratio,dimensionless,240,2,0.9917355371900827,10,230
+all-old,T0_width,T0 width,um,241,1,0.9958677685950413,10,231
+all-old,T0_total_height,T0 total height,um,241,1,0.9958677685950413,10,231
+all-old,T0_kinetic_energy,T0 kinetic energy,nJ,241,1,0.9958677685950413,10,231
+all-old,R0,R0 T0 aspect ratio,dimensionless,241,1,0.9958677685950413,10,231
+all-combined,T0_depth,T0 penetration depth,um,405,2,0.995085995085995,73,332
+all-combined,max_depth,Maximum penetration depth,um,405,2,0.995085995085995,73,332
+all-combined,G3,G3 persistent depth,um,404,3,0.9926289926289926,73,331
+all-combined,R3,R3 persistent aspect ratio,dimensionless,404,3,0.9926289926289926,73,331
+all-combined,T0_width,T0 width,um,405,2,0.995085995085995,73,332
+all-combined,T0_total_height,T0 total height,um,405,2,0.995085995085995,73,332
+all-combined,T0_kinetic_energy,T0 kinetic energy,nJ,405,2,0.995085995085995,73,332
+all-combined,R0,R0 T0 aspect ratio,dimensionless,405,2,0.995085995085995,73,332

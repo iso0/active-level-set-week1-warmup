@@ -1,0 +1,167 @@
+{
+  "analysis_populations": [
+    "new-data",
+    "old-data-local",
+    "old-data-remote-clean",
+    "all-old",
+    "all-combined"
+  ],
+  "analysis_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "candidate_ids": [
+    "T0_depth",
+    "max_depth",
+    "G3",
+    "R3",
+    "T0_width",
+    "T0_total_height",
+    "T0_kinetic_energy",
+    "R0"
+  ],
+  "created_at_utc": "2026-08-11T16:09:25+00:00",
+  "dataset_repository": "ioandanielc/sph_v2",
+  "hf_change_audit": {
+    "audit_method": "Git tree name-status diff plus current blob IDs and byte sizes",
+    "change_record_count": 110,
+    "changed_experiment_count": 55,
+    "current_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "filename_counts": {
+      "kinetic-energy_melt.dat": 55,
+      "time.dat": 55
+    },
+    "geometry_paths_changed": false,
+    "iteration_paths_changed": false,
+    "label_paths_changed": false,
+    "live_main_matches_current": true,
+    "live_main_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "modified_or_deleted_paths": 0,
+    "new_data_paths_changed": false,
+    "only_expected_monitor_additions": true,
+    "partition_experiment_counts": {
+      "old-data-local": 55
+    },
+    "pinned_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+    "repository": "ioandanielc/sph_v2",
+    "status_counts": {
+      "A": 110
+    }
+  },
+  "inputs": [
+    {
+      "bytes": 325614,
+      "path": "outputs\\week7_01_sph_v2_audit\\experiment_registry.csv",
+      "sha256": "48e7a4268ec3010277d360b375e070b4aef824f1500d20beb4032135bef6e04d"
+    },
+    {
+      "bytes": 180000,
+      "path": "outputs\\week7_01_sph_v2_audit\\experiment_label_sequences.csv",
+      "sha256": "13e75c6b4ddb59b82c3bf1af93316ea6ef46d511e7e9651675f6f15a1ee4580b"
+    },
+    {
+      "bytes": 367813,
+      "path": "outputs\\week7_02_sph_v2_target_extraction\\sph_v2_simulation_level_targets.parquet",
+      "sha256": "a3d572ab45553e049702dfdd6c0fe587dc9a1dc0d058f0bf5c0768b89705fdc3"
+    },
+    {
+      "bytes": 98810,
+      "path": "outputs\\week7_02_sph_v2_target_extraction\\week6_exact_identifier_map.csv",
+      "sha256": "30385eda331ee565e9df4f0a6320b1802bed291ebe86695200b1c53b5fb2d907"
+    },
+    {
+      "bytes": 132354,
+      "path": "outputs\\week7_04_new_data_feature_effects_depth_diagnostics\\depth_consensus_hard_cases.csv",
+      "sha256": "06f877f80f72c7152ff40f927db3e6426546de0ab55cc8a12dde03e8906cdb5a"
+    },
+    {
+      "bytes": 3569,
+      "path": "outputs\\week7_05_keyhole_physical_proxy_analysis\\physical_proxy_discordant_cases.csv",
+      "sha256": "ac28bab097965d04e8a8a2b2d93b4ae636321fcac6aaeeb00357729d18903824"
+    },
+    {
+      "bytes": 128785,
+      "path": "src\\week7_phase2_sph_v2_physical_target_extraction.py",
+      "sha256": "c4b975830a7cc4dd09fe214bb3e98383fa337b93e3075e2812c27ed5382bd3a0"
+    },
+    {
+      "bytes": 115241,
+      "path": "src\\week7_phase5_keyhole_physical_proxy_analysis.py",
+      "sha256": "e3705cded3369b5e7c8733e616aa388d0d6518219b7613d594c49b790a8349c8"
+    }
+  ],
+  "label_semantics": "has_keyhole means at least one valid saved physical frame was manually labelled Keyhole",
+  "phase55_parent": "3367f4c9b5af2def802f72a65258f5cc01896bac",
+  "pinned_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "preflight_original_worktree": {
+    "branch": "main",
+    "git_status_short": [
+      "M outputs/week2_acquisition_comparison/week2_slide_notes.md",
+      "?? docs/",
+      "?? outputs/week1_active_level_set_progress.pptx",
+      "?? outputs/week2_active_level_set_progress_v2.pptx",
+      "?? outputs/week3_active_level_set_progress.pptx",
+      "?? outputs/week3_active_level_set_progress_v2.pptx"
+    ],
+    "head": "6fd6be57e5341e083a7023a3ae29e65b7b326bbd",
+    "path": "C:\\Users\\ozgur\\Documents\\thesis",
+    "protected_dirty_files": [
+      {
+        "actual_sha256": "a714e0c2249a134287b76a86fc8d660a075c69184a5cab851a3c1f52412e321c",
+        "expected_sha256": "a714e0c2249a134287b76a86fc8d660a075c69184a5cab851a3c1f52412e321c",
+        "matches": true,
+        "path": "docs/deep-research-report.md"
+      },
+      {
+        "actual_sha256": "bdd1f515eaab313e5371cbe5e2c0b7fb3e87713037a21337dd7d078406c23577",
+        "expected_sha256": "bdd1f515eaab313e5371cbe5e2c0b7fb3e87713037a21337dd7d078406c23577",
+        "matches": true,
+        "path": "outputs/week1_active_level_set_progress.pptx"
+      },
+      {
+        "actual_sha256": "9f00ece946170f936e5efffa019cdb4c3b2dbcc93037155cdfccfca716e2e99c",
+        "expected_sha256": "9f00ece946170f936e5efffa019cdb4c3b2dbcc93037155cdfccfca716e2e99c",
+        "matches": true,
+        "path": "outputs/week2_acquisition_comparison/week2_slide_notes.md"
+      },
+      {
+        "actual_sha256": "92a760d21a1c9b9e07f15724d2cedd225a19b05439af8eca6273ac4212b913ab",
+        "expected_sha256": "92a760d21a1c9b9e07f15724d2cedd225a19b05439af8eca6273ac4212b913ab",
+        "matches": true,
+        "path": "outputs/week2_active_level_set_progress_v2.pptx"
+      },
+      {
+        "actual_sha256": "f129a4f5310b808d23f810b1e4cbfb8be2039a5ddfe408d9b26de55e7c9cfcbd",
+        "expected_sha256": "f129a4f5310b808d23f810b1e4cbfb8be2039a5ddfe408d9b26de55e7c9cfcbd",
+        "matches": true,
+        "path": "outputs/week3_active_level_set_progress.pptx"
+      },
+      {
+        "actual_sha256": "aec8efe32b358d2f6bbd3c3610fc9d76ff8b45d74cddbdd0074c261e127ae09e",
+        "expected_sha256": "aec8efe32b358d2f6bbd3c3610fc9d76ff8b45d74cddbdd0074c261e127ae09e",
+        "matches": true,
+        "path": "outputs/week3_active_level_set_progress_v2.pptx"
+      }
+    ],
+    "protected_hashes_match": true
+  },
+  "primary_candidates": [
+    "G3",
+    "R3",
+    "max_depth",
+    "T0_depth"
+  ],
+  "secondary_candidates": [
+    "R0",
+    "T0_kinetic_energy",
+    "T0_total_height",
+    "T0_width"
+  ],
+  "target_refresh_rule": "re-extract exactly the 55 changed monitor bundles; reuse 352 rows only after exact Git-tree proof of unchanged inputs",
+  "transfer_routes": [
+    "new_to_old_local",
+    "new_to_old_remote",
+    "new_to_all_old",
+    "all_old_to_new",
+    "old_local_to_new",
+    "old_remote_to_new",
+    "pooled_descriptive"
+  ]
+}

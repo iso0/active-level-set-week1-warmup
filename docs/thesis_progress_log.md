@@ -693,3 +693,94 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
   new GP regression, active learning, level-set estimation, acquisition-rule
   comparison, label alteration, or pooled old/new model was run. Phase 5 is
   intentionally not committed or pushed pending review.
+
+### Week 7 Phase 5.5: G3 robustness, partition transfer, and threshold stress tests (2026-08-11)
+
+- Phase 5 was finalized before this extension. The approved 94-file scope was
+  committed as `3367f4c9b5af2def802f72a65258f5cc01896bac` with message
+  `Add Week 7 Phase 5 keyhole physical proxy analysis` and pushed to
+  `origin/codex/week7-phase5-keyhole-physical-proxy-analysis`. Local HEAD,
+  upstream, and remote `ls-remote` all matched that exact SHA. Phase 5.5 starts
+  from this commit on the isolated branch
+  `codex/week7-phase5-5-g3-robustness-transfer`.
+- The current `ioandanielc/sph_v2` revision is exactly
+  `b6dc254a2b607a31cb9f97b40990339c3d5ca1e8`. Its Git-tree diff from the pinned
+  Phase 5 revision `d69dac5bda8b622bc0de316b112815c6056c06ec`
+  contains 110 additions only: 55 `time.dat` and 55
+  `kinetic-energy_melt.dat` files for 55 `old-data-local` experiments. There
+  are no modified or deleted paths and no new-data, label, position-bounds, or
+  iteration change.
+- The corrected Phase 2 population was refreshed without changing its target,
+  T0, active-region, sentinel, readiness, or label definitions. The 55 changed
+  monitor bundles were re-extracted after every local Week 6 monitor byte was
+  verified against the current Hugging Face Git blob. The other 352 rows were
+  reused only because the exact revision diff proves their scientific inputs
+  are unchanged. Exactly those 55 old-local rows changed from failure to pass;
+  no unchanged-input target status changed.
+- All 407 simulations remain explicit. Physical-target readiness is 164/165
+  for new-data, 178/179 for old-data-local, 63/63 for
+  old-data-remote-clean, 241/242 for all old data, and 405/407 for the combined
+  population. One old-local experiment still lacks both restored monitors and
+  one new-data experiment still lacks the geometry and kinetic-energy
+  monitors. Candidate-specific availability is recorded separately; G3 and R3
+  are available for 404/407 retained simulations.
+- Label prevalence shifts sharply across partitions: 63/165 new-data
+  simulations are Keyhole-positive, compared with 8/179 old-local and 2/63
+  old-remote. These sparse old positive classes are retained as a deliberate
+  robustness stress test and make precision-recall and interval uncertainty
+  essential; they are not silently rebalanced or relabelled.
+- Exact leave-one-simulation-out scalar thresholds were evaluated separately
+  in new-data, old-local, old-remote, all-old, and all-combined populations for
+  G3, R3, maximum depth, T0 depth, R0, T0 kinetic energy, T0 total height, and
+  T0 width. G3 balanced accuracy is 1.0000 in new-data, 0.9645 in old-local,
+  0.7500 in old-remote, 0.9587 in all-old, and 0.9795 combined. The old-remote
+  G3 estimate has a wide 95% simulation-bootstrap interval of 0.50 to 1.00
+  because only two positives are available.
+- G3 preserves a higher-is-more-Keyhole-like direction in all five populations,
+  but the descriptive threshold location moves materially: 100.959
+  micrometres in new-data, 76.413 micrometres in old-local, and 118.327
+  micrometres in old-remote. New-data retains a 4.786 micrometre empty G3 class
+  gap, whereas old-local has 12.198 micrometres of signed class overlap. The
+  perfect new-data gap is therefore not treated as a universal physical
+  constant.
+- Six disjoint cross-population transfers froze the complete source-population
+  threshold before testing. For G3, new-to-old-local balanced accuracy is
+  0.8125 with sensitivity 0.6250; new-to-old-remote is 1.0000;
+  new-to-all-old is 0.8500; all-old-to-new and old-local-to-new are both
+  0.8564; and old-remote-to-new is 0.9444. The pooled combined threshold is
+  stored only as a descriptive, non-held-out reference.
+- Maximum depth is the strongest scalar transfer benchmark in this dataset:
+  mean held-out transfer balanced accuracy is 0.9891 and the worst route is
+  0.9444. G3 averages 0.8866 with a worst route of 0.8125; R3 averages 0.8669
+  with a worst route of 0.7500; and T0 depth averages 0.8367 with a worst route
+  of 0.7353. Maximum depth is classified as a robust cross-partition scalar
+  companion, G3 and R3 as transferable with a partition-shift caveat, and T0
+  depth as partition-sensitive. These are physical-association diagnostics,
+  not label definitions or causal findings.
+- All main rank, average-precision, LOO, and transfer performance intervals use
+  5,000 deterministic simulation-level stratified bootstrap resamples. The
+  vectorized implementation is exactly tie-aware through multinomial counts at
+  unique score levels; it does not treat resampled copies as new simulations.
+  Transient/persistent, repeated-episode, T0-timing, process-map, and linked
+  Phase 4/5 hard-case tables remain descriptive and preserve every row.
+- The final recommendation is conservative: retain the unchanged binary
+  `has_keyhole` morphology reference, do not universalize the new-data G3
+  threshold, and carry G3 with maximum depth as a comparison only under a
+  separately approved Phase 6 protocol. No universal fixed G3 threshold, new
+  target, relabelling rule, or automatic exclusion is declared here.
+- The first successful current-revision extraction smoke run took about 221 s;
+  the revision-and-blob-verified checkpoint then allowed the optimized smoke
+  and full robustness calculations to finish in 95.1 s and 94.4 s,
+  respectively. The executed teaching notebook is
+  `notebooks/week_07/05_5_g3_robustness_transfer_analysis.ipynb` with 20
+  executed code cells and no stored errors. The 20 visually reviewed figures,
+  full target refresh audit, fold predictions, transfer details, 5,000-
+  resample intervals, subgroup diagnostics, decisions, and manifests are under
+  `outputs/week7_05_5_g3_robustness_transfer_analysis/`. Final validation is
+  24/24 PASS, the requirement checklist is 12/12 PASS, and the output manifest
+  verifies 106/106 files.
+- Hard stop reached after Phase 5.5. No classifier, Gaussian-process or other
+  predictive model, active learning, acquisition, level-set estimation,
+  relabelling, or new physical target was run. Phase 5.5 remains intentionally
+  uncommitted and unpushed for review; main was not merged and no pull request
+  was opened.
