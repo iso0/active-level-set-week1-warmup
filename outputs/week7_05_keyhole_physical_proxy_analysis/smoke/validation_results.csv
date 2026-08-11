@@ -1,0 +1,37 @@
+check_id,description,status,evidence
+V01,Exact Phase 4 parent commit,PASS,5b7004017cadc5ecd0eb128f2031f9148ed70900
+V02,Exact Phase 5 branch,PASS,codex/week7-phase5-keyhole-physical-proxy-analysis
+V03,Current HF revision recorded,PASS,b6dc254a2b607a31cb9f97b40990339c3d5ca1e8
+V04,Pinned-to-current diff audited,PASS,110 paths
+V05,Only accepted restored file names changed,PASS,"{'kinetic-energy_melt.dat': 55, 'time.dat': 55}"
+V06,All changed experiments are old-data-local,PASS,55 experiments
+V07,No restored file enters primary analysis,PASS,0 new-data changed paths
+V08,New-data labels and monitors unchanged by tree diff,PASS,no new-data path changed
+V09,Primary analysis is new-data only,PASS,n=165
+V10,No experiment silently removed,PASS,165/165 represented
+V11,Source labels unchanged,PASS,0 modified; hashes present
+V12,has_keyhole uses Phase 1 semantics,PASS,"63 positive, 102 negative"
+V13,Negative label composition audited,PASS,102/102 negatives contain Conduction
+V14,Candidate quantities use exact saved definitions,PASS,T0_depth; max_depth; G3; R3; T0_width; T0_total_height; T0_kinetic_energy; R0
+V15,T0 unchanged,PASS,Phase 2 T0_depth_um
+V16,Maximum depth unchanged,PASS,Phase 2 max_depth_um
+V17,G3 unchanged,PASS,Phase 2 G3
+V18,R3 unchanged,PASS,Phase 2 R3
+V19,No post-hoc ratio introduced,PASS,only predefined R0/R3
+V20,Group counts reconcile,PASS,63+102=165
+V21,ROC AUC reconciles from raw rows,PASS,8/8
+V22,PR AUC reconciles from raw rows,PASS,8/8
+V23,Bootstrap unit is simulation,PASS,300 resamples
+V24,Pairwise comparisons are common-complete and paired,PASS,6 comparisons
+V25,Threshold performance is genuinely held out,PASS,exact LOO folds reconcile
+V26,In-sample threshold not mislabelled predictive,PASS,descriptive only
+V27,Transient/persistent definitions reused,PASS,Phase 1 fields
+V28,Phase 4 hard-case join reconciles,PASS,164 saved cases
+V29,Discordant review changes no labels,PASS,4 diagnostic rows
+V30,No multivariate or GP classifier fitted,PASS,univariate scalars only
+V31,No new GP regression fitted,PASS,saved Phase 4 residuals only
+V32,No active learning or level-set experiment,PASS,hard stop respected
+V33,All 15 required figures exist and hash-match,PASS,15/15
+V34,Teaching notebook executes without stored errors,PASS,not required for smoke
+V35,Manual label remains reference,PASS,no label replacement
+V36,Output manifest is structurally ready,PASS,manifest generated after validation

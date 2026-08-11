@@ -1,0 +1,9 @@
+candidate_id,candidate_name,unit,cv_scheme,cv_n,balanced_accuracy,sensitivity_keyhole_recall,specificity,precision,f1,true_negative,false_positive,false_negative,true_positive,full_data_descriptive_direction,full_data_descriptive_threshold,full_data_descriptive_balanced_accuracy,full_data_threshold_is_predictive_performance
+G3,G3 persistent depth,um,exact_leave_one_simulation_out,164,1.0,1.0,1.0,1.0,1.0,101,0,0,63,higher,100.9587625,1.0,False
+R3,R3 persistent aspect ratio,dimensionless,exact_leave_one_simulation_out,164,0.9900990099009901,1.0,0.9801980198019802,0.9692307692307692,0.984375,99,2,0,63,higher,0.5782153663226665,0.9900990099009901,False
+max_depth,Maximum penetration depth,um,exact_leave_one_simulation_out,164,0.9871129970139871,0.9841269841269841,0.9900990099009901,0.9841269841269841,0.9841269841269841,100,1,1,62,higher,108.601,0.995049504950495,False
+R0,R0 T0 aspect ratio,dimensionless,exact_leave_one_simulation_out,164,0.9137199434229137,0.8571428571428571,0.9702970297029703,0.9473684210526315,0.9,98,3,9,54,higher,0.5185328763247001,0.9266069464089266,False
+T0_kinetic_energy,T0 kinetic energy,nJ,exact_leave_one_simulation_out,164,0.8206820682068207,0.8888888888888888,0.7524752475247525,0.691358024691358,0.7777777777777778,76,25,7,56,higher,3.366769,0.8385195662423386,False
+T0_depth,T0 penetration depth,um,exact_leave_one_simulation_out,164,0.778956467075279,0.746031746031746,0.8118811881188119,0.7121212121212122,0.7286821705426356,82,19,16,47,higher,82.41506749999999,0.8691654879773691,False
+T0_total_height,T0 total height,um,exact_leave_one_simulation_out,164,0.765990884802766,0.6507936507936508,0.8811881188118812,0.7735849056603774,0.7068965517241379,89,12,22,41,higher,112.91155499999999,0.8254754046833255,False
+T0_width,T0 width,um,exact_leave_one_simulation_out,164,0.5668709728115668,0.5396825396825397,0.594059405940594,0.4533333333333333,0.4927536231884058,60,41,29,34,lower,159.2590775,0.5946094609460946,False

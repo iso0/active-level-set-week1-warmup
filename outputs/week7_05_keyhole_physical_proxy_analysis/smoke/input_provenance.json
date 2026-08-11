@@ -1,0 +1,106 @@
+{
+  "phase4_parent_sha": "5b7004017cadc5ecd0eb128f2031f9148ed70900",
+  "phase5_branch": "codex/week7-phase5-keyhole-physical-proxy-analysis",
+  "dataset": {
+    "dataset_repo_id": "ioandanielc/sph_v2",
+    "pinned_scientific_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+    "current_main_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "current_commit_subject": "Restore missing old-data monitor streams (#1)",
+    "changed_path_count": 110,
+    "changed_experiment_count": 55,
+    "status_counts": {
+      "A": 110
+    },
+    "file_name_counts": {
+      "kinetic-energy_melt.dat": 55,
+      "time.dat": 55
+    },
+    "partition_counts": {
+      "old-data-local": 55
+    },
+    "new_data_changed_path_count": 0,
+    "label_or_geometry_changed_path_count": 0,
+    "accepted_old_data_monitor_restoration_only": true,
+    "new_data_scientific_content_unchanged_by_git_tree_diff": true,
+    "evidence_boundary": "Git tree comparison proves that every path outside the 55 old-data-local monitor restorations, including all new-data labels and monitors, retains the pinned blob content.",
+    "audited_at_utc": "2026-08-11T12:43:32.594018+00:00"
+  },
+  "inputs": {
+    "phase1_registry": {
+      "relative_path": "outputs/week7_01_sph_v2_audit/experiment_registry.csv",
+      "size_bytes": 325614,
+      "sha256": "48e7a4268ec3010277d360b375e070b4aef824f1500d20beb4032135bef6e04d"
+    },
+    "phase1_label_sequences": {
+      "relative_path": "outputs/week7_01_sph_v2_audit/experiment_label_sequences.csv",
+      "size_bytes": 180000,
+      "sha256": "13e75c6b4ddb59b82c3bf1af93316ea6ef46d511e7e9651675f6f15a1ee4580b"
+    },
+    "phase1_structure": {
+      "relative_path": "outputs/week7_01_sph_v2_audit/experiment_structure_summary.csv",
+      "size_bytes": 467086,
+      "sha256": "27d6ca5f99768663a22bc3e7742f7810b51edd3e06d44b2ed99a40b1d49c0f0d"
+    },
+    "phase2_targets": {
+      "relative_path": "outputs/week7_02_sph_v2_target_extraction/sph_v2_simulation_level_targets.csv",
+      "size_bytes": 778004,
+      "sha256": "bd63d25911e9d172bb6e299fa7c4c3d19539225a423f86db093ebf33f94585e2"
+    },
+    "phase2_depth_ambiguity": {
+      "relative_path": "outputs/week7_02_sph_v2_target_extraction/flagged_depth_ambiguity.csv",
+      "size_bytes": 236815,
+      "sha256": "93584672be0b1811f70ef0c252566d2c45c818af7f1bc32b8c1d82ef3abe77d3"
+    },
+    "phase4_hard_cases": {
+      "relative_path": "outputs/week7_04_new_data_feature_effects_depth_diagnostics/depth_consensus_hard_cases.csv",
+      "size_bytes": 132354,
+      "sha256": "06f877f80f72c7152ff40f927db3e6426546de0ab55cc8a12dde03e8906cdb5a"
+    }
+  },
+  "primary_population": "new-data",
+  "candidate_sources": [
+    {
+      "candidate_id": "T0_depth",
+      "value_column": "T0_depth_um",
+      "source": "corrected Phase 2 T0_depth_um"
+    },
+    {
+      "candidate_id": "max_depth",
+      "value_column": "max_depth_um",
+      "source": "corrected Phase 2 max_depth_um"
+    },
+    {
+      "candidate_id": "G3",
+      "value_column": "G3_persistent_depth_um",
+      "source": "corrected Phase 2 G3_persistent_depth_um; unchanged Week 6 G3 definition"
+    },
+    {
+      "candidate_id": "R3",
+      "value_column": "R3_persistent_depth_width_ratio",
+      "source": "corrected Phase 2 R3_persistent_depth_width_ratio; unchanged Week 6 R3 definition"
+    },
+    {
+      "candidate_id": "T0_width",
+      "value_column": "T0_width_um",
+      "source": "corrected Phase 2 T0_width_um"
+    },
+    {
+      "candidate_id": "T0_total_height",
+      "value_column": "T0_total_height_um",
+      "source": "corrected Phase 2 T0_total_height_um"
+    },
+    {
+      "candidate_id": "T0_kinetic_energy",
+      "value_column": "T0_kinetic_energy_nJ",
+      "source": "corrected Phase 2 T0_kinetic_energy_nJ"
+    },
+    {
+      "candidate_id": "R0",
+      "value_column": "R0_T0_depth_over_width",
+      "source": "predefined Week 6 R0 family, evaluated from corrected Phase 2 T0 depth and width scalars"
+    }
+  ],
+  "new_data_content_recomputed_from_current_restored_old_data": false,
+  "scientific_scalar_source_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "current_repository_provenance_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8"
+}

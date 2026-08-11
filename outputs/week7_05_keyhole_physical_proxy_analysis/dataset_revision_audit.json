@@ -1,0 +1,24 @@
+{
+  "dataset_repo_id": "ioandanielc/sph_v2",
+  "pinned_scientific_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "current_main_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "current_commit_subject": "Restore missing old-data monitor streams (#1)",
+  "changed_path_count": 110,
+  "changed_experiment_count": 55,
+  "status_counts": {
+    "A": 110
+  },
+  "file_name_counts": {
+    "kinetic-energy_melt.dat": 55,
+    "time.dat": 55
+  },
+  "partition_counts": {
+    "old-data-local": 55
+  },
+  "new_data_changed_path_count": 0,
+  "label_or_geometry_changed_path_count": 0,
+  "accepted_old_data_monitor_restoration_only": true,
+  "new_data_scientific_content_unchanged_by_git_tree_diff": true,
+  "evidence_boundary": "Git tree comparison proves that every path outside the 55 old-data-local monitor restorations, including all new-data labels and monitors, retains the pinned blob content.",
+  "audited_at_utc": "2026-08-11T12:48:17.803560+00:00"
+}

@@ -1,0 +1,6 @@
+{
+  "phase5_branch": "codex/week7-phase5-keyhole-physical-proxy-analysis",
+  "phase5_parent_sha": "5b7004017cadc5ecd0eb128f2031f9148ed70900",
+  "working_tree_status_at_preflight": "?? outputs/week7_05_keyhole_physical_proxy_analysis/\n?? src/week7_phase5_keyhole_physical_proxy_analysis.py",
+  "checked_at_utc": "2026-08-11T12:43:28.962903+00:00"
+}

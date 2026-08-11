@@ -610,3 +610,86 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
   redefinition, new GP family, causal analysis, active learning, level-set
   estimation, acquisition change, or pooled old+new production model was
   created. Phase 4 remains uncommitted and unpushed for review.
+
+### Week 7 Phase 5: manual Keyhole label and continuous physical proxies (2026-08-11)
+
+- Phase 4 was finalized and published on
+  `codex/week7-phase4-new-data-feature-effects-depth-diagnostics` as exact
+  commit `5b7004017cadc5ecd0eb128f2031f9148ed70900`. Phase 5 starts from that
+  commit on the isolated, intentionally uncommitted branch
+  `codex/week7-phase5-keyhole-physical-proxy-analysis`.
+- Current `ioandanielc/sph_v2` main is
+  `b6dc254a2b607a31cb9f97b40990339c3d5ca1e8`. The exact Git tree diff from
+  the pinned scientific revision
+  `d69dac5bda8b622bc0de316b112815c6056c06ec` contains only 110 added paths:
+  `time.dat` plus `kinetic-energy_melt.dat` for 55 registry-matched
+  `old-data-local` experiments. No new-data, label, geometry-monitor,
+  sentinel, or unmatched-experiment path changed. Primary Phase 5 science
+  therefore continues to reuse the pinned new-data labels and Phase 2 scalar
+  artifacts; restored old-data monitors never enter candidate estimation.
+- Ioan clarified the Keyhole-label provenance: "I did it by hand. So almost
+  qualitatively. Usually the existence of cavities directly under the
+  meltpool determined my decision for keyhole." The labels are manual
+  morphology annotations, not a reported deterministic threshold on depth,
+  G3, R3, width, or kinetic energy. Scalar results are physical-association
+  evidence, not causal findings or grounds for relabelling.
+- All 165 new-data experiments remain in the audit interface: 63 are
+  Keyhole-positive and 102 are Keyhole-negative under the validated Phase 1
+  `has_keyhole` semantics. Every negative contains at least one Conduction
+  frame. The positives include 30 transient, 33 persistent-to-last-frame, and
+  16 repeated-episode experiments; 22 positives occur only before T0 and 41
+  span multiple T0 regions. Physical targets are machine-ready for 164/165;
+  the one monitor-missing negative is retained with unavailable scalar values.
+- Eight predefined univariate candidates were compared with 5,000
+  deterministic simulation-level bootstrap resamples: T0 depth, maximum
+  depth, G3 persistent depth, R3 persistent depth/width, T0 width, T0 total
+  height, T0 kinetic energy, and the predefined R0 T0 depth/width diagnostic.
+  No candidate value was fabricated and no post-hoc physical ratio was added.
+- G3 is the leading scalar. On the 164 ready simulations its rank-biserial
+  effect, direction-adjusted ROC AUC, and average precision are all 1.000
+  (their saved 95% bootstrap intervals are also 1.000 to 1.000). Exact
+  leave-one-simulation-out threshold selection gives balanced accuracy,
+  sensitivity, and specificity of 1.000 with zero false positives and zero
+  false negatives. The fold-selected direction is always higher-is-Keyhole,
+  the median training threshold is 100.959 micrometres, and the threshold-IQR
+  to candidate-IQR ratio is zero (`stable`). This is an observed design gap,
+  not a claim of a universal physical constant.
+- R3 and maximum depth are nearly perfect but retain held-out exceptions. R3
+  has ROC AUC 0.9986 and balanced accuracy 0.9901 (two false positives);
+  maximum depth has ROC AUC 0.9998 and balanced accuracy 0.9871 (one false
+  positive and one transient-Keyhole false negative). Existing media and
+  Phase 2 quality references are preserved in the deterministic discordant-
+  case table; review notes never change labels or create new ground truth.
+- Ordinary T0 depth remains strongly associated but is not sufficient as the
+  best scalar proxy: ROC AUC is 0.9577, held-out balanced accuracy is 0.7790,
+  and transient-Keyhole sensitivity is only 0.4667 (0.2727 for the 22
+  before-T0 positives), despite 1.000 sensitivity for persistent Keyhole. On
+  common-complete rows, maximum depth, G3, and R3 each improve materially over
+  T0 depth under the predeclared paired-bootstrap rule; the G3-minus-T0 AUC
+  difference is 0.0423 with 95% interval 0.0201 to 0.0706.
+- The saved Phase 4 linkage covers all 164 target-ready rows and marks 21
+  consensus depth hard cases. Eighteen of those 21 are manual Keyhole cases,
+  and zero disagree with any of the top-three held-out proxy decisions. The
+  Phase 4 heavy error tail is therefore associated mainly with physically
+  clear Keyhole/extreme-response structure rather than manual-label/proxy
+  ambiguity. This is descriptive linkage; no Phase 3 or Phase 4 model was
+  refitted and no causal mechanism is claimed.
+- Final Phase 5 recommendation: `CONTINUOUS PROXY CANDIDATE`, selecting the
+  exact predefined G3 persistent-depth quantity. Phase 6 should compare a G3
+  threshold/level-set formulation against the unchanged binary `has_keyhole`
+  reference. G3 does not replace Ioan's manual labels, and the recommended
+  comparison has not yet been executed.
+- A cheap 300-resample smoke run preceded the full run. The executed teaching
+  notebook is
+  `notebooks/week_07/05_keyhole_physical_proxy_analysis.ipynb` with 20
+  executed code sections and no stored errors. Machine-readable provenance,
+  population audits, effect sizes, AUCs, paired comparisons, all LOO fold
+  predictions, timing/persistence diagnostics, discordant cases, the Phase 4
+  linkage, 15 figures, decisions, and manifests are under
+  `outputs/week7_05_keyhole_physical_proxy_analysis/`. Final automated checks
+  are 36/36 PASS, the requirement checklist is 14/14 PASS, and the output
+  manifest verifies 88/88 files.
+- Hard stop reached after Phase 5. No final Keyhole classifier, GP classifier,
+  new GP regression, active learning, level-set estimation, acquisition-rule
+  comparison, label alteration, or pooled old/new model was run. Phase 5 is
+  intentionally not committed or pushed pending review.

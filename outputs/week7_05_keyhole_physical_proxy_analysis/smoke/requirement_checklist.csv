@@ -1,0 +1,15 @@
+requirement_id,description,status,supporting_validation_checks
+R01,Exact Phase 4 parent and isolated Phase 5 branch,PASS,V01;V02
+R02,Current HF restoration audited without new-data drift,PASS,V03;V04;V05;V06;V07;V08
+R03,Primary population and labels preserved,PASS,V09;V10;V11;V12;V13
+R04,Eight predefined scalar candidates with machine readiness,PASS,V14;V15;V16;V17;V18;V19
+R05,Experiment-level label composition and groups reconcile,PASS,V20;V27
+R06,Univariate ROC and PR separation with bootstrap,PASS,V21;V22;V23
+R07,Fair paired/common-complete AUC comparison,PASS,V24
+R08,Leakage-free scalar threshold cross-validation,PASS,V25;V26
+R09,Discordant cases are diagnostic and labels unchanged,PASS,V29;V35
+R10,Phase 4 linkage reuses saved hard cases,PASS,V28;V31
+R11,"No prohibited classifier, active learning, or level set",PASS,V30;V31;V32
+R12,Fifteen figures are present and verified,PASS,V33
+R13,Teaching notebook executes cleanly,PASS,V34
+R14,Output manifest generated and verifiable,PASS,V36

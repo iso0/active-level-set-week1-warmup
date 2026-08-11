@@ -1,0 +1,128 @@
+{
+  "phase": "Week 7 Phase 5 manual Keyhole label to continuous physical proxy analysis",
+  "mode": "smoke",
+  "generated_at_utc": "2026-08-11T12:44:09.314807+00:00",
+  "phase5_preflight": {
+    "phase5_branch": "codex/week7-phase5-keyhole-physical-proxy-analysis",
+    "phase5_parent_sha": "5b7004017cadc5ecd0eb128f2031f9148ed70900",
+    "working_tree_status_at_preflight": "?? outputs/week7_05_keyhole_physical_proxy_analysis/\n?? src/week7_phase5_keyhole_physical_proxy_analysis.py",
+    "checked_at_utc": "2026-08-11T12:43:28.962903+00:00"
+  },
+  "dataset_revision_audit": {
+    "dataset_repo_id": "ioandanielc/sph_v2",
+    "pinned_scientific_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+    "current_main_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "current_commit_subject": "Restore missing old-data monitor streams (#1)",
+    "changed_path_count": 110,
+    "changed_experiment_count": 55,
+    "status_counts": {
+      "A": 110
+    },
+    "file_name_counts": {
+      "kinetic-energy_melt.dat": 55,
+      "time.dat": 55
+    },
+    "partition_counts": {
+      "old-data-local": 55
+    },
+    "new_data_changed_path_count": 0,
+    "label_or_geometry_changed_path_count": 0,
+    "accepted_old_data_monitor_restoration_only": true,
+    "new_data_scientific_content_unchanged_by_git_tree_diff": true,
+    "evidence_boundary": "Git tree comparison proves that every path outside the 55 old-data-local monitor restorations, including all new-data labels and monitors, retains the pinned blob content.",
+    "audited_at_utc": "2026-08-11T12:43:32.594018+00:00"
+  },
+  "label_provenance": {
+    "ioan_statement": "I did it by hand. So almost qualitatively. Usually the existence of cavities directly under the meltpool determined my decision for keyhole.",
+    "manual_qualitative": true,
+    "primary_visual_cue": "cavities directly under the melt pool",
+    "reported_deterministic_scalar_threshold": false,
+    "association_not_causation": true,
+    "manual_label_remains_reference": true
+  },
+  "population": {
+    "new_data_total": 165,
+    "keyhole_positive": 63,
+    "keyhole_negative": 102,
+    "keyhole_negative_with_conduction": 102,
+    "keyhole_negative_without_conduction": 0,
+    "target_ready": 164,
+    "target_ineligible_but_retained": 1,
+    "transient_keyhole": 30,
+    "persistent_keyhole": 33,
+    "repeated_keyhole": 16,
+    "timing_counts": {
+      "spans_multiple_T0_regions": 41,
+      "before_T0": 22
+    }
+  },
+  "candidate_count": 8,
+  "candidate_readiness": {
+    "T0_depth": {
+      "ready_n": 164,
+      "missing_n": 1
+    },
+    "max_depth": {
+      "ready_n": 164,
+      "missing_n": 1
+    },
+    "G3": {
+      "ready_n": 164,
+      "missing_n": 1
+    },
+    "R3": {
+      "ready_n": 164,
+      "missing_n": 1
+    },
+    "T0_width": {
+      "ready_n": 164,
+      "missing_n": 1
+    },
+    "T0_total_height": {
+      "ready_n": 164,
+      "missing_n": 1
+    },
+    "T0_kinetic_energy": {
+      "ready_n": 164,
+      "missing_n": 1
+    },
+    "R0": {
+      "ready_n": 164,
+      "missing_n": 1
+    }
+  },
+  "bootstrap_resamples": 300,
+  "top_rank_effect_candidate": "G3",
+  "highest_roc_auc_candidate": "G3",
+  "highest_roc_auc": 1.0,
+  "highest_average_precision_candidate": "G3",
+  "highest_average_precision": 0.9999999999999998,
+  "best_threshold_cv_candidate": "G3",
+  "best_threshold_cv_balanced_accuracy": 1.0,
+  "top_scorecard_candidate": "G3",
+  "top_scorecard_class": "STRONG PROXY CANDIDATE",
+  "top_threshold_stability": "stable",
+  "phase4_hard_case_count": 164,
+  "phase4_hard_case_keyhole_count": 63,
+  "phase4_hard_case_top3_proxy_discordant_count": 3,
+  "final_target_formulation": {
+    "decision": "CONTINUOUS PROXY CANDIDATE",
+    "selected_continuous_candidate": "G3",
+    "selected_candidate_name": "G3 persistent depth",
+    "rationale": "G3 combines strong rank separation, near-complete held-out threshold performance, stable thresholds, high readiness, and robustness to transient Keyhole.",
+    "phase6_target_formulation": "Carry G3 as the predefined continuous candidate and compare its threshold/level-set formulation against the unchanged binary has_keyhole reference.",
+    "manual_label_remains_reference_annotation": true,
+    "labels_replaced": false,
+    "causal_claim": false,
+    "next_step_is_recommendation_not_executed": true
+  },
+  "hard_stop": {
+    "final_keyhole_classifier_trained": false,
+    "gp_classifier_fitted": false,
+    "new_gp_regression_fitted": false,
+    "active_learning_performed": false,
+    "level_set_estimation_performed": false,
+    "labels_altered": false,
+    "old_new_pooled_for_model": false
+  }
+}

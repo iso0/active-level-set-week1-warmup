@@ -1,0 +1,7 @@
+baseline_candidate,comparator_candidate,common_complete_n,keyhole_positive_n,keyhole_negative_n,baseline_direction_adjusted_roc_auc,comparator_direction_adjusted_roc_auc,delta_roc_auc_comparator_minus_baseline,delta_roc_auc_ci_low,delta_roc_auc_ci_high,material_improvement_predeclared_rule,material_improvement,paired_stratified_bootstrap,bootstrap_unit,bootstrap_resamples
+T0_depth,max_depth,164,63,101,0.9577243438629577,0.9998428414269999,0.04211849756404218,0.02058777306302051,0.07134999214207127,point delta >= 0.02 and 95% CI lower bound > 0,True,True,simulation,5000
+T0_depth,G3,164,63,101,0.9577243438629577,1.0,0.04227565613704232,0.020116297344020203,0.07056419927707058,point delta >= 0.02 and 95% CI lower bound > 0,True,True,simulation,5000
+T0_depth,R3,164,63,101,0.9577243438629577,0.9985855728429985,0.04086122898004085,0.01885902876001888,0.06931085965739431,point delta >= 0.02 and 95% CI lower bound > 0,True,True,simulation,5000
+max_depth,G3,164,63,101,0.9998428414269999,1.0,0.0001571585730001379,-1.1102230246251565e-16,0.0009429514380009385,point delta >= 0.02 and 95% CI lower bound > 0,False,True,simulation,5000
+max_depth,R3,164,63,101,0.9998428414269999,0.9985855728429985,-0.0012572685840013254,-0.004400440044004417,1.1102230246251565e-16,point delta >= 0.02 and 95% CI lower bound > 0,False,True,simulation,5000
+G3,R3,164,63,101,1.0,0.9985855728429985,-0.0014144271570014633,-0.0047147571900046925,0.0,point delta >= 0.02 and 95% CI lower bound > 0,False,True,simulation,5000

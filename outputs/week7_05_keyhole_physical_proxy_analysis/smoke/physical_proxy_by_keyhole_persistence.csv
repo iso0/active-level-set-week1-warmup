@@ -1,0 +1,25 @@
+candidate_id,candidate_name,unit,grouping,group,n,keyhole_positive_n,median,q25,q75,mean,cv_predicted_keyhole_fraction,cv_sensitivity_within_positive_group,cv_false_positive_rate_within_negative_group,definitions_reused
+T0_depth,T0 penetration depth,um,keyhole_persistence_group,Keyhole-negative,101,0,62.75334,50.87139500000001,74.64661000000001,63.875443415841595,0.18811881188118812,,0.18811881188118812,True
+T0_depth,T0 penetration depth,um,keyhole_persistence_group,persistent Keyhole,33,33,231.41035,182.7688,297.60975,232.47049242424242,1.0,1.0,,True
+T0_depth,T0 penetration depth,um,keyhole_persistence_group,transient Keyhole,30,30,88.45677,78.629895,101.746,100.71912016666667,0.4666666666666667,0.4666666666666667,,True
+max_depth,Maximum penetration depth,um,keyhole_persistence_group,Keyhole-negative,101,0,66.837,55.06646,82.93315,69.2834112871287,0.009900990099009901,,0.009900990099009901,True
+max_depth,Maximum penetration depth,um,keyhole_persistence_group,persistent Keyhole,33,33,302.6773,301.9033,302.9467,292.5975121212121,1.0,1.0,,True
+max_depth,Maximum penetration depth,um,keyhole_persistence_group,transient Keyhole,30,30,205.709,138.52067499999998,302.77605,215.53593333333336,0.9666666666666667,0.9666666666666667,,True
+G3,G3 persistent depth,um,keyhole_persistence_group,Keyhole-negative,101,0,66.52321,54.82536,78.72644,66.92520836633663,0.0,,0.0,True
+G3,G3 persistent depth,um,keyhole_persistence_group,persistent Keyhole,33,33,300.57210000000003,292.3277,300.8724,284.7298606060606,1.0,1.0,,True
+G3,G3 persistent depth,um,keyhole_persistence_group,transient Keyhole,30,30,151.76780000000002,131.45908749999998,242.8133375,183.10116333333332,1.0,1.0,,True
+R3,R3 persistent aspect ratio,dimensionless,keyhole_persistence_group,Keyhole-negative,101,0,0.3928879904730948,0.3412277004390361,0.4376306309693392,0.39313638811401974,0.019801980198019802,,0.019801980198019802,True
+R3,R3 persistent aspect ratio,dimensionless,keyhole_persistence_group,persistent Keyhole,33,33,1.680001721594193,1.5512457062802671,1.8288296301162847,1.6253308973240455,1.0,1.0,,True
+R3,R3 persistent aspect ratio,dimensionless,keyhole_persistence_group,transient Keyhole,30,30,1.0179266110214602,0.7779581742688673,1.3721848202967144,1.1163878610265576,1.0,1.0,,True
+T0_width,T0 width,um,keyhole_persistence_group,Keyhole-negative,101,0,170.28470000000002,143.50918,190.8829,172.48651485148514,0.40594059405940597,,0.40594059405940597,True
+T0_width,T0 width,um,keyhole_persistence_group,persistent Keyhole,33,33,174.64655000000002,155.099615,198.80433,177.71076075757577,0.36363636363636365,0.36363636363636365,,True
+T0_width,T0 width,um,keyhole_persistence_group,transient Keyhole,30,30,142.56664999999998,134.50023125,176.91466625,160.90226416666664,0.7333333333333333,0.7333333333333333,,True
+T0_total_height,T0 total height,um,keyhole_persistence_group,Keyhole-negative,101,0,91.73953,79.83139,102.054405,90.8021905940594,0.1188118811881188,,0.1188118811881188,True
+T0_total_height,T0 total height,um,keyhole_persistence_group,persistent Keyhole,33,33,251.07847,227.37109,316.87069,254.12840196969697,1.0,1.0,,True
+T0_total_height,T0 total height,um,keyhole_persistence_group,transient Keyhole,30,30,107.19948500000001,98.79611249999999,125.544825,119.30635816666667,0.26666666666666666,0.26666666666666666,,True
+T0_kinetic_energy,T0 kinetic energy,nJ,keyhole_persistence_group,Keyhole-negative,101,0,2.471139,1.5058575,3.308473,2.5504314460396036,0.24752475247524752,,0.24752475247524752,True
+T0_kinetic_energy,T0 kinetic energy,nJ,keyhole_persistence_group,persistent Keyhole,33,33,5.245838,4.523251,6.751311,5.564036212121212,0.9393939393939394,0.9393939393939394,,True
+T0_kinetic_energy,T0 kinetic energy,nJ,keyhole_persistence_group,transient Keyhole,30,30,4.31594575,3.6991840000000002,4.590946375,4.100317516666666,0.8333333333333334,0.8333333333333334,,True
+R0,R0 T0 aspect ratio,dimensionless,keyhole_persistence_group,Keyhole-negative,101,0,0.37452289032841973,0.32282417104312777,0.4178936017392954,0.3737675739189918,0.0297029702970297,,0.0297029702970297,True
+R0,R0 T0 aspect ratio,dimensionless,keyhole_persistence_group,persistent Keyhole,33,33,1.2916039484427178,1.1680590657576186,1.5093599822498838,1.3244578463388013,1.0,1.0,,True
+R0,R0 T0 aspect ratio,dimensionless,keyhole_persistence_group,transient Keyhole,30,30,0.6141085666038191,0.49798102830248614,0.7233808353247044,0.6534525877445431,0.7,0.7,,True
