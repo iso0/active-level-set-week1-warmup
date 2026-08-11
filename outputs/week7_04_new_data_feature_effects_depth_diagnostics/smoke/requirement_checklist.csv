@@ -1,0 +1,21 @@
+requirement_id,requirement,status,validation_ids
+P4-01,Exact Phase 3 parent and immutable dataset provenance,PASS,V01;V02
+P4-02,Complete 165-row audit interface with machine-derived readiness,PASS,V03;V04;V05
+P4-03,Executable Week 6 feature-analysis traceability,PASS,V06
+P4-04,All 16 Spearman associations with simulation bootstrap,PASS,V07
+P4-05,Standardized Week 6 Ridge coefficient replication,PASS,V08
+P4-06,Controlled full-data GP curves inside observed support,PASS,V09
+P4-07,Standardized local GP sensitivities with guards,PASS,V10
+P4-08,Support-masked depth and total-height P-VX surfaces,PASS,V09;V23
+P4-09,Phase 3 LOO depth errors reused for three GP configurations,PASS,V11;V12
+P4-10,Error concentration and consensus cases retain all simulations,PASS,V13;V20
+P4-11,"Depth errors diagnosed against depth, Keyhole, sparsity and quality",PASS,V11;V13
+P4-12,G3/R3/max depth remain diagnostics rather than replacement targets,PASS,V21
+P4-13,Week 6 versus new-data feature stability is explicit,PASS,V06;V07;V08
+P4-14,"No label modification, classifier, active learning or level set",PASS,V14;V15;V16
+P4-15,No new GP kernel family,PASS,V17;V24
+P4-16,Teaching notebook is executed and error-free,PASS,V18
+P4-17,Output and figure manifests are complete,PASS,V19;V23
+P4-18,ST terminology remains substrate temperature,PASS,V22
+P4-19,D1-D10 diagnosis is conservative before model change,PASS,V24
+P4-20,Hard stop after Phase 4,PASS,V15;V16;V17;V24

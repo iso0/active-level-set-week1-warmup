@@ -1,0 +1,139 @@
+{
+  "phase": "Week 7 Phase 4",
+  "mode": "smoke",
+  "generated_at_utc": "2026-08-09T20:59:10.453715+00:00",
+  "phase4_branch": "codex/week7-phase4-new-data-feature-effects-depth-diagnostics",
+  "phase3_parent_sha": "1118d30f3199a97b9836591f8fdea75b46dfac0d",
+  "dataset_repo_id": "ioandanielc/sph_v2",
+  "dataset_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "audit_population_count": 165,
+  "eligible_counts": {
+    "width": 164,
+    "depth": 164,
+    "total_height": 164,
+    "kinetic_energy": 164
+  },
+  "strongest_new_data_spearman": [
+    {
+      "target": "kinetic_energy",
+      "input": "P",
+      "spearman_rho": 0.9343339587242028,
+      "ci_low": 0.8296282704574901,
+      "ci_high": 0.9806464541348547
+    },
+    {
+      "target": "depth",
+      "input": "P",
+      "spearman_rho": 0.8433395872420263,
+      "ci_low": 0.7022013610648734,
+      "ci_high": 0.9234175821399699
+    },
+    {
+      "target": "total_height",
+      "input": "P",
+      "spearman_rho": 0.8033771106941839,
+      "ci_low": 0.5789364634765195,
+      "ci_high": 0.9364832413303319
+    },
+    {
+      "target": "width",
+      "input": "VX",
+      "spearman_rho": -0.7343339587242026,
+      "ci_low": -0.8475620622286486,
+      "ci_high": -0.547322917658847
+    },
+    {
+      "target": "width",
+      "input": "LS",
+      "spearman_rho": 0.5838649155722327,
+      "ci_low": 0.32497578490701695,
+      "ci_high": 0.7571632448013454
+    },
+    {
+      "target": "depth",
+      "input": "LS",
+      "spearman_rho": -0.3801125703564729,
+      "ci_low": -0.6221762375195976,
+      "ci_high": -0.08900077206919631
+    },
+    {
+      "target": "width",
+      "input": "ST",
+      "spearman_rho": 0.34333958724202635,
+      "ci_low": 0.12170712166589806,
+      "ci_high": 0.5829844735462244
+    },
+    {
+      "target": "depth",
+      "input": "VX",
+      "spearman_rho": -0.2812382739212008,
+      "ci_low": -0.5271457119937277,
+      "ci_high": -0.03966467590124454
+    }
+  ],
+  "depth_trends": {
+    "P": {
+      "new_spearman_rho": 0.8433395872420263,
+      "new_standardized_ridge_coefficient": 0.5654092113014518,
+      "new_gp_median_standardized_local_sensitivity": 0.409279057838214,
+      "trend_status": "REPRODUCED"
+    },
+    "VX": {
+      "new_spearman_rho": -0.2812382739212008,
+      "new_standardized_ridge_coefficient": -0.19719650299746705,
+      "new_gp_median_standardized_local_sensitivity": -0.19554541908252818,
+      "trend_status": "REPRODUCED"
+    },
+    "LS": {
+      "new_spearman_rho": -0.3801125703564729,
+      "new_standardized_ridge_coefficient": -0.21491570707681523,
+      "new_gp_median_standardized_local_sensitivity": -0.025288086233343533,
+      "trend_status": "WEAKENED"
+    },
+    "ST": {
+      "new_spearman_rho": 0.17542213883677302,
+      "new_standardized_ridge_coefficient": 0.019167820862532176,
+      "new_gp_median_standardized_local_sensitivity": -0.022129578596475893,
+      "trend_status": "UNRESOLVED"
+    }
+  },
+  "depth_error": {
+    "primary_model": "matern32_learned_nugget",
+    "worst_1_squared_error_fraction": 0.1911871204018028,
+    "worst_3_squared_error_fraction": 0.35904606700701786,
+    "worst_5_squared_error_fraction": 0.48236837781684977,
+    "worst_10_squared_error_fraction": 0.6782198255684285,
+    "consensus_hard_case_count": 21,
+    "sparsity_error_rho": 0.04721350280912298,
+    "heterogeneity_error_rho": 0.5821256104362493,
+    "decision_category": "MIXED / UNRESOLVED",
+    "change_model_now": false
+  },
+  "feature_stability_counts": {
+    "REPRODUCED": 4,
+    "MIXED": 2,
+    "WEAKENED": 1
+  },
+  "validation_counts": {
+    "PASS": 24
+  },
+  "figure_count": 15,
+  "runtime_seconds": 10.636198799998965,
+  "scope": {
+    "primary_population": "new-data only",
+    "week6_values_loaded_from_saved_artifacts": true,
+    "phase3_loo_predictions_reused": true,
+    "labels_modified": false,
+    "simulations_excluded": false,
+    "classifier_fitted": false,
+    "active_learning": false,
+    "level_set_estimation": false,
+    "new_gp_kernel_family": false,
+    "T0_redefined": false
+  },
+  "phase2_summary_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "requirement_counts": {
+    "PASS": 20
+  },
+  "validation_refreshed_at_utc": "2026-08-09T20:59:23.211994+00:00"
+}

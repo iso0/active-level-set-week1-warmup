@@ -1,0 +1,21 @@
+target,diagnostic,varying_inputs,profile,grid_count,supported_grid_count,supported_fraction,support_distance_threshold,model_configuration,reference_LS,reference_ST
+width,controlled_curve,P,median_reference,101,101,1.0,1.1837705590429421,matern32_learned_nugget,,
+width,controlled_curve,VX,median_reference,101,101,1.0,1.1837705590429421,matern32_learned_nugget,,
+width,controlled_curve,LS,median_reference,101,100,0.9900990099009901,1.1837705590429421,matern32_learned_nugget,,
+width,controlled_curve,ST,median_reference,101,101,1.0,1.1837705590429421,matern32_learned_nugget,,
+depth,controlled_curve,P,median_reference,101,101,1.0,1.1837705590429421,matern32_no_nugget,,
+depth,controlled_curve,VX,median_reference,101,101,1.0,1.1837705590429421,matern32_no_nugget,,
+depth,controlled_curve,LS,median_reference,101,100,0.9900990099009901,1.1837705590429421,matern32_no_nugget,,
+depth,controlled_curve,ST,median_reference,101,101,1.0,1.1837705590429421,matern32_no_nugget,,
+total_height,controlled_curve,P,median_reference,101,101,1.0,1.1837705590429421,matern32_no_nugget,,
+total_height,controlled_curve,VX,median_reference,101,101,1.0,1.1837705590429421,matern32_no_nugget,,
+total_height,controlled_curve,LS,median_reference,101,100,0.9900990099009901,1.1837705590429421,matern32_no_nugget,,
+total_height,controlled_curve,ST,median_reference,101,101,1.0,1.1837705590429421,matern32_no_nugget,,
+kinetic_energy,controlled_curve,P,median_reference,101,101,1.0,1.1837705590429421,matern32_learned_nugget,,
+kinetic_energy,controlled_curve,VX,median_reference,101,101,1.0,1.1837705590429421,matern32_learned_nugget,,
+kinetic_energy,controlled_curve,LS,low_P_q10,101,101,1.0,1.1837705590429421,matern32_learned_nugget,,
+kinetic_energy,controlled_curve,LS,median_P_q50,101,100,0.9900990099009901,1.1837705590429421,matern32_learned_nugget,,
+kinetic_energy,controlled_curve,LS,high_P_q90,101,75,0.7425742574257426,1.1837705590429421,matern32_learned_nugget,,
+kinetic_energy,controlled_curve,ST,median_reference,101,101,1.0,1.1837705590429421,matern32_learned_nugget,,
+depth,P_x_VX_surface,P x VX,LS and ST at medians,961,821,0.854318418314256,1.1837705590429421,matern32_no_nugget,56.50856070155,348.19189117999997
+total_height,P_x_VX_surface,P x VX,LS and ST at medians,961,821,0.854318418314256,1.1837705590429421,matern32_no_nugget,56.50856070155,348.19189117999997

@@ -1,0 +1,11 @@
+decision_id,question,answer,evidence,decision_category,model_changed
+D1,Is relative depth RMSE broad or driven by a heavy-error tail?,heavy-error tail,Worst 5/10 contribute 48.2%/67.8% of total squared error.,MIXED / UNRESOLVED,False
+D2,Are large errors concentrated at high observed depth?,associated,"Spearman(|error|, observed depth)=0.607, p=7.23e-18.",MIXED / UNRESOLVED,False
+D3,Are they enriched in Keyhole-positive experiments?,enriched,RMSE Keyhole true/false=32.931/9.788 um.,MIXED / UNRESOLVED,False
+D4,Are they enriched when Keyhole timing is outside T0?,see timing groups,Timing-specific fixed-residual group metrics are reported without causal interpretation.,MIXED / UNRESOLVED,False
+D5,Are they associated with local 4D design sparsity?,weak or absent,"rho=0.047, p=0.548.",MIXED / UNRESOLVED,False
+D6,Are they associated with high local target heterogeneity?,yes,"rho=0.582, p=2.95e-16.",MIXED / UNRESOLVED,False
+D7,Are they associated with Phase 2 ambiguity or instability flags?,possible,"Strongest continuous quality association: T0_sample_count, rho=0.400.",MIXED / UNRESOLVED,False
+D8,Do multiple GP kernels fail on the same simulations?,yes,Common top-20 cases=17; three-way top-20 Jaccard=0.773.,MIXED / UNRESOLVED,False
+D9,Does the Week 6 P-positive/VX-negative depth relationship survive?,yes,P=REPRODUCED; VX=REPRODUCED.,MIXED / UNRESOLVED,False
+D10,Does current evidence justify changing the GP model family?,NO - retain for now,Phase 4 diagnoses fixed-model errors first; no new family is justified solely by uncomfortable RMSE. Revisit only after targeted regime/support and target-quality work.,MIXED / UNRESOLVED,False

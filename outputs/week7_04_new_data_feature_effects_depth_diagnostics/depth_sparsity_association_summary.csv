@@ -1,0 +1,6 @@
+diagnostic,spearman_rho_with_absolute_depth_error,p_value,simulation_count,input_space_uses_new_data_only,self_excluded,causal_claim
+nearest_neighbor_distance_standardized,0.04721350280912298,0.5482809382629732,164,True,True,False
+median_3nn_distance_standardized,0.08164125920833681,0.2986851073870148,164,True,True,False
+median_5nn_distance_standardized,0.013918768641325109,0.8595929108127267,164,True,True,False
+local_5nn_depth_std_um,0.5821256104362493,2.9491480962073305e-16,164,True,True,False
+local_5nn_depth_range_um,0.5684274963667847,2.0343690500975392e-15,164,True,True,False

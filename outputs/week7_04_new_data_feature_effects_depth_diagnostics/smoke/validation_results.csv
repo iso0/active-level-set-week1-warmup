@@ -1,0 +1,25 @@
+validation_id,requirement,status,evidence
+V01,Phase 4 parent is exact committed Phase 3 SHA,PASS,1118d30f3199a97b9836591f8fdea75b46dfac0d
+V02,Dataset revision is exact immutable sph_v2 revision,PASS,d69dac5bda8b622bc0de316b112815c6056c06ec
+V03,Primary feature population is new-data only,PASS,"audit=165; table_counts={width:40, depth:40, total_height:40, kinetic_energy:40}"
+V04,Eligibility comes from corrected Phase 2 readiness fields,PASS,per-target eligibility source fields retained
+V05,No hard-coded experiment exclusion is used,PASS,depth rows=164
+V06,Historical Week 6 definitions are traced to executable source and saved artifacts,PASS,traceability rows=8
+V07,Spearman results reconcile with raw target tables,PASS,rows=16
+V08,Standardized Ridge uses Week 6 alpha grid and five-fold setting,PASS,"alpha_grid=(1e-06, 1e-05, 0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0); folds=5"
+V09,Controlled curves use declared full-data interpretive GP only,PASS,rows=1818
+V10,GP sensitivity calculations apply range and support guards,PASS,rows=640
+V11,Phase 3 exact LOO residuals are reused,PASS,rows=492; expected=492
+V12,Residual/error tables reconcile exactly with Phase 3 predictions,PASS,three models matched by experiment
+V13,All eligible depth simulations remain in consensus table,PASS,rows=164
+V14,No source label is changed,PASS,source_label_modified=false
+V15,No classifier is fitted,PASS,analysis contains regression associations and fixed residual diagnostics only
+V16,No active learning or level-set estimation occurs,PASS,scope hard stop
+V17,No new GP kernel family is introduced,PASS,"['matern32_learned_nugget', 'matern32_no_nugget']"
+V18,Teaching notebook executes without stored errors,PASS,exists=True; executed=20; errors=0; required=True
+V19,Output manifest is generated for every current output artifact,PASS,manifest written and independently verified after validation
+V20,No hard-case simulation is excluded,PASS,review rows=8
+V21,Only T0 responses are primary targets,PASS,"['depth', 'kinetic_energy', 'total_height', 'width']"
+V22,ST is substrate temperature in kelvin,PASS,ST=substrate temperature [K]
+V23,Figures exist and are hash-recorded,PASS,figures=15
+V24,Phase 4 stops before model-family expansion,PASS,D10 conservative; no new model trained for evaluation

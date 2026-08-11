@@ -1,0 +1,4 @@
+model,model_label,simulation_count,MAE,RMSE,median_absolute_error,q75_absolute_error,q90_absolute_error,q95_absolute_error,maximum_absolute_error,residual_source,in_sample_residual
+matern32_no_nugget,"Matérn 3/2, numerical jitter",164,11.863614113553,21.06806977530666,4.645136144850966,13.68600585211287,32.70808133341551,46.32708737078701,121.56615235514471,Phase 3 exact LOO held-out predictions,False
+matern32_learned_nugget,Matérn 3/2 + learned nugget,164,11.937465947815776,21.808185280885954,4.47470486074338,13.66510656930599,32.88850983245655,51.147357708192224,122.11549332935994,Phase 3 exact LOO held-out predictions,False
+matern52_no_nugget,"Matérn 5/2, numerical jitter",164,12.635219460909017,21.064829220021977,5.805048772132913,15.244931790407433,33.65389340023465,47.16075716188585,118.50114559371713,Phase 3 exact LOO held-out predictions,False

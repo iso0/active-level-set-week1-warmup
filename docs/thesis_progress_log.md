@@ -546,3 +546,67 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
 - Hard stop reached after Phase 3. No classifier, feature-effect or causal
   analysis, T0-versus-maximum target decision, active learning, level-set
   estimation, acquisition change, or pooled old+new production model was run.
+
+### Week 7 Phase 4: new-data feature effects and depth-error diagnosis (2026-08-09)
+
+- Phase 4 starts from the exact committed and pushed Phase 3 parent
+  `1118d30f3199a97b9836591f8fdea75b46dfac0d` on the isolated branch
+  `codex/week7-phase4-new-data-feature-effects-depth-diagnostics`. The dataset
+  remains pinned to
+  `ioandanielc/sph_v2@d69dac5bda8b622bc0de316b112815c6056c06ec`.
+- The complete 165-row `new-data` audit interface is retained. Corrected Phase
+  2 readiness fields independently yield 164 target-ready simulations for T0
+  width, penetration depth, total height, and kinetic energy. Old-data rows are
+  historical comparators only and never enter the primary effect estimation.
+- The executable Week 6 feature workflow was traced before replication:
+  marginal Spearman associations, fully standardized five-fold-selected Ridge,
+  median-anchored controlled curves, 31 by 31 P-VX surfaces, convex-hull plus
+  four-dimensional neighbour support masks, and the retained Phase 3 Matérn
+  3/2 target-specific noise treatment. Full-data GPs are used only to interpret
+  supported response surfaces, not to estimate out-of-sample performance.
+- The strongest new-data marginal associations are P with kinetic energy
+  (Spearman rho 0.935), P with depth (0.838), P with total height (0.778), and
+  VX with width (-0.730). Simulation-level 2,000-resample bootstrap intervals
+  are stored for all 16 input-response pairs. These are associations in the
+  sampled design, not causal effects.
+- The Week 6 depth directions reproduce across three independent views. For P,
+  Spearman rho / standardized Ridge coefficient / median standardized local GP
+  sensitivity are 0.838 / 0.549 / 0.303. For VX they are -0.445 / -0.451 /
+  -0.132. LS is negative but weaker across the depth diagnostics, while the ST
+  depth result is unresolved. ST remains weak across the four new-data response
+  summaries, which does not establish physical unimportance.
+- LS remains a material width driver: new-data Spearman rho is 0.496,
+  standardized Ridge beta is 0.714, and median standardized local GP
+  sensitivity is 0.671. The KE-LS relationship remains profile-dependent and
+  is classified `MIXED`, not converted into a uniform global reduction claim.
+  Total height preserves the supported P-positive/VX-negative pattern.
+- The fixed Phase 3 LOO depth errors have a substantial heavy tail. For the
+  retained Matérn 3/2 learned-nugget diagnostic, the worst 1/3/5/10 simulations
+  contribute 19.1% / 35.9% / 48.2% / 67.8% of total squared error. Twenty-one
+  simulations meet the cross-kernel consensus hard-case rule, and 17 of the
+  top 20 are shared across all three inspected Matérn configurations.
+- Absolute depth error increases with observed depth and is enriched in
+  Keyhole-positive experiments, but these are diagnostic associations rather
+  than causal claims. Simple standardized four-dimensional nearest-neighbour
+  sparsity has weak association with absolute error (rho 0.047), whereas local
+  five-neighbour observed-depth heterogeneity is stronger (rho 0.582). Phase 2
+  quality indicators provide possible contributing evidence but do not support
+  a single automatic exclusion rule.
+- The conservative final diagnosis is `MIXED / UNRESOLVED`: high-depth and
+  Keyhole/regime context, local target heterogeneity, old-domain expansion, and
+  some target-quality indicators remain plausible contributors. Current
+  evidence does not establish a broad model-family failure and does not justify
+  replacing the retained depth GP before targeted support, regime, and raw-
+  quality follow-up.
+- A smoke run preceded the full 164-row analysis. The full run used 2,000
+  simulation bootstraps, generated 15 figures, and completed in about 38
+  seconds.
+  The executed teaching notebook is
+  `notebooks/week_07/04_new_data_feature_effects_depth_diagnostics.ipynb` with
+  20 executed code sections and no stored errors. Final automated checks are
+  24/24 PASS, the requirement checklist is 20/20 PASS, and the output manifest
+  is 101/101.
+- Hard stop reached after Phase 4. No Keyhole classifier, new label, T0
+  redefinition, new GP family, causal analysis, active learning, level-set
+  estimation, acquisition change, or pooled old+new production model was
+  created. Phase 4 remains uncommitted and unpushed for review.

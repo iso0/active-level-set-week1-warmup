@@ -1,0 +1,12 @@
+grouping,group,model,n,MAE,RMSE,median_absolute_error,q75_absolute_error,q90_absolute_error,q95_absolute_error,maximum_absolute_error,diagnostic_type,spearman_rho_with_absolute_error,p_value
+flag_primary_window_unstable_week6_rule,False,matern32_learned_nugget,157,10.86121743498674,20.22260809703656,4.003029590451675,12.715848554829904,27.680928883935845,43.82980450595243,122.11549332935994,Phase 2 boolean quality/context flag,,
+flag_primary_window_unstable_week6_rule,True,matern32_learned_nugget,7,36.076182592695574,44.38812604350782,31.341578829383906,49.114337690313405,71.56463288343166,77.03987622639973,82.51511956936784,Phase 2 boolean quality/context flag,,
+flag_depth_bounding_box_ambiguity_candidate,False,matern32_learned_nugget,158,12.061403186920675,22.126687362016185,4.206046890480913,13.416125626535717,33.67534626998713,53.05631162846874,122.11549332935994,Phase 2 boolean quality/context flag,,
+flag_depth_bounding_box_ambiguity_candidate,True,matern32_learned_nugget,6,8.673785318053412,10.34917572290719,7.865650007084341,13.729471675342758,15.916653371677256,16.182512028017726,16.448370684358196,Phase 2 boolean quality/context flag,,
+recording_ends_before_90pct_domain,False,matern32_learned_nugget,108,5.739747531420575,10.346154408964503,2.7792394558281046,5.868529028584515,12.395778783546577,20.957888526987354,60.19627330030724,Phase 2 boolean quality/context flag,,
+recording_ends_before_90pct_domain,True,matern32_learned_nugget,56,23.890208608006525,34.44386339352133,15.143012926598697,33.65470193538006,59.01812862297591,75.38350094943165,122.11549332935994,Phase 2 boolean quality/context flag,,
+T0_depth_cv,continuous_spearman,matern32_learned_nugget,164,,,,,,,,Phase 2 continuous extraction/context diagnostic,0.17294356100281583,0.0267921921768108
+T0_sample_count,continuous_spearman,matern32_learned_nugget,164,,,,,,,,Phase 2 continuous extraction/context diagnostic,0.4001686776488512,1.1023138488997243e-07
+max_depth_minus_G3_um,continuous_spearman,matern32_learned_nugget,164,,,,,,,,Phase 2 continuous extraction/context diagnostic,0.30370410675662807,7.706404147594026e-05
+max_depth_over_G3,continuous_spearman,matern32_learned_nugget,164,,,,,,,,Phase 2 continuous extraction/context diagnostic,0.17923632554786226,0.02165204346813516
+max_depth_over_T0_depth,continuous_spearman,matern32_learned_nugget,164,,,,,,,,Phase 2 continuous extraction/context diagnostic,0.2491722552473712,0.001293324329292255
