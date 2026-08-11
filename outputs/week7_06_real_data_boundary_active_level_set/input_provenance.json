@@ -1,0 +1,107 @@
+{
+  "T0_definition": [
+    "median over final 20% of valid melt-present time before 90% +X-domain cutoff"
+  ],
+  "active_region_definition": [
+    "valid melt rows from first valid melt through min(recording end, 90% laser-domain-exit time)"
+  ],
+  "canonical_target_table": "outputs\\week7_05_5_g3_robustness_transfer_analysis\\current_revision_simulation_level_targets.parquet",
+  "canonical_target_table_shape": [
+    407,
+    160
+  ],
+  "created_at_utc": "2026-08-11T20:36:12+00:00",
+  "dataset_repository": "ioandanielc/sph_v2",
+  "dataset_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "inputs": [
+    {
+      "bytes": 400404,
+      "path": "outputs\\week7_05_5_g3_robustness_transfer_analysis\\current_revision_simulation_level_targets.parquet",
+      "sha256": "e4b957f4bed8766f08ad0a5d1662edb6f5ada97c745b1285afd6772d1ec14cd2"
+    },
+    {
+      "bytes": 1130769,
+      "path": "outputs\\week7_05_5_g3_robustness_transfer_analysis\\physical_proxy_population_reference.csv",
+      "sha256": "6fa781f68c01d958793169e58ba1e5ae721f1afb0e2dc0d5ccbe9a56649c80b0"
+    },
+    {
+      "bytes": 24780,
+      "path": "outputs\\week7_01_sph_v2_audit\\keyhole_episodes.csv",
+      "sha256": "0247de7f041e9d38c4de9a3cf64715405211e37a0442b2866b9e852c11e86f02"
+    },
+    {
+      "bytes": 132354,
+      "path": "outputs\\week7_04_new_data_feature_effects_depth_diagnostics\\depth_consensus_hard_cases.csv",
+      "sha256": "06f877f80f72c7152ff40f927db3e6426546de0ab55cc8a12dde03e8906cdb5a"
+    },
+    {
+      "bytes": 852,
+      "path": "outputs\\week7_05_5_g3_robustness_transfer_analysis\\hf_change_audit.json",
+      "sha256": "656fe8e060316df4056a6a573ffa067aa3acb701451bb1ac96dd511b778665bf"
+    }
+  ],
+  "label_semantics": "has_keyhole means at least one valid saved physical frame was manually labelled Keyhole",
+  "maximum_depth_definition": [
+    "max(0, -z_min)"
+  ],
+  "original_dirty_checkout": {
+    "all_protected_hashes_match": true,
+    "branch": "main",
+    "git_status_short": [
+      "M outputs/week2_acquisition_comparison/week2_slide_notes.md",
+      "?? docs/deep-research-report.md",
+      "?? outputs/week1_active_level_set_progress.pptx",
+      "?? outputs/week2_active_level_set_progress_v2.pptx",
+      "?? outputs/week3_active_level_set_progress.pptx",
+      "?? outputs/week3_active_level_set_progress_v2.pptx"
+    ],
+    "head": "6fd6be57e5341e083a7023a3ae29e65b7b326bbd",
+    "path": "C:\\Users\\ozgur\\Documents\\thesis",
+    "protected_files": [
+      {
+        "actual_sha256": "a714e0c2249a134287b76a86fc8d660a075c69184a5cab851a3c1f52412e321c",
+        "expected_sha256": "a714e0c2249a134287b76a86fc8d660a075c69184a5cab851a3c1f52412e321c",
+        "matches": true,
+        "path": "docs/deep-research-report.md"
+      },
+      {
+        "actual_sha256": "bdd1f515eaab313e5371cbe5e2c0b7fb3e87713037a21337dd7d078406c23577",
+        "expected_sha256": "bdd1f515eaab313e5371cbe5e2c0b7fb3e87713037a21337dd7d078406c23577",
+        "matches": true,
+        "path": "outputs/week1_active_level_set_progress.pptx"
+      },
+      {
+        "actual_sha256": "9f00ece946170f936e5efffa019cdb4c3b2dbcc93037155cdfccfca716e2e99c",
+        "expected_sha256": "9f00ece946170f936e5efffa019cdb4c3b2dbcc93037155cdfccfca716e2e99c",
+        "matches": true,
+        "path": "outputs/week2_acquisition_comparison/week2_slide_notes.md"
+      },
+      {
+        "actual_sha256": "92a760d21a1c9b9e07f15724d2cedd225a19b05439af8eca6273ac4212b913ab",
+        "expected_sha256": "92a760d21a1c9b9e07f15724d2cedd225a19b05439af8eca6273ac4212b913ab",
+        "matches": true,
+        "path": "outputs/week2_active_level_set_progress_v2.pptx"
+      },
+      {
+        "actual_sha256": "f129a4f5310b808d23f810b1e4cbfb8be2039a5ddfe408d9b26de55e7c9cfcbd",
+        "expected_sha256": "f129a4f5310b808d23f810b1e4cbfb8be2039a5ddfe408d9b26de55e7c9cfcbd",
+        "matches": true,
+        "path": "outputs/week3_active_level_set_progress.pptx"
+      },
+      {
+        "actual_sha256": "aec8efe32b358d2f6bbd3c3610fc9d76ff8b45d74cddbdd0074c261e127ae09e",
+        "expected_sha256": "aec8efe32b358d2f6bbd3c3610fc9d76ff8b45d74cddbdd0074c261e127ae09e",
+        "matches": true,
+        "path": "outputs/week3_active_level_set_progress_v2.pptx"
+      }
+    ]
+  },
+  "phase": "Week 7 Phase 6",
+  "phase55_branch": "codex/week7-phase5-5-g3-robustness-transfer",
+  "phase55_parent_commit": "6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb",
+  "phase55_remote_commit": "6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb",
+  "phase6_branch": "codex/week7-phase6-real-data-boundary-active-level-set",
+  "primary_keyhole_count": 73,
+  "primary_population_count": 405,
+  "secondary_g3_population_count": 404
+}

@@ -1,0 +1,18 @@
+{
+  "not_a_scientific_result": true,
+  "phase": "Week 7 Phase 6 smoke",
+  "runtime": {
+    "active_arm_runtime_sum_seconds": 14.353592299856246,
+    "checkpoint_reuse_enabled": false,
+    "invocation_started_utc": "2026-08-11T19:56:25+00:00",
+    "mode": "smoke",
+    "stage_times": {
+      "active_seconds": 9.155897699994966,
+      "prepare_seconds": 8.967490799957886,
+      "static_seconds": 10.005845799983945
+    },
+    "wall_seconds_before_finalize": 28.12924949999433,
+    "workers": 2
+  },
+  "status": "PASS_if_validator_passes"
+}

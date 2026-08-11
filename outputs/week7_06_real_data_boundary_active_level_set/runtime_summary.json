@@ -1,0 +1,51 @@
+{
+  "active_arm_runtime_sum_seconds": 3377.476660000684,
+  "checkpoint_reuse_enabled": true,
+  "completed_at_utc": "2026-08-11T20:15:44+00:00",
+  "invocation_started_utc": "2026-08-11T20:00:22+00:00",
+  "mode": "full",
+  "stage_times": {
+    "active_seconds": 796.1144058999489,
+    "finalize_seconds": 50.98320890002651,
+    "prepare_seconds": 12.552130199968815,
+    "static_seconds": 62.7969635000336
+  },
+  "surface_diagnostics": {
+    "available_to_active_method": false,
+    "binary_gpc_fit_status": "optimized_primary",
+    "binary_gpc_kernel": "31.6**2 * Matern(length_scale=14.7, nu=1.5)",
+    "convex_hull_detail": "standardized_4d_convex_hull_QJ",
+    "convex_hull_status": "PASS",
+    "descriptive_full_common_threshold_um": 108.601,
+    "features": [
+      "P",
+      "VX",
+      "LS",
+      "ST"
+    ],
+    "fit_status": "descriptive_oracle_not_held_out",
+    "grid_size_per_axis": 51,
+    "input_scaler_scope": "full_common_descriptive_only",
+    "keyhole_count": 73,
+    "max_depth_gpr_fit_status": "optimized_primary",
+    "max_depth_gpr_kernel": "0.884**2 * Matern(length_scale=1.18, nu=1.5)",
+    "nn_support_quantile": 0.95,
+    "nn_support_radius_standardized_4d": 0.7360368371986483,
+    "non_keyhole_count": 332,
+    "observed_loo_nn_distance_max": 1.332959892167304,
+    "observed_loo_nn_distance_median": 0.4407121498012063,
+    "observed_loo_nn_distance_min": 0.08396890441541958,
+    "population": "primary_common_full",
+    "population_count": 405,
+    "slice_pairs": [
+      "P-VX",
+      "P-LS",
+      "VX-LS"
+    ],
+    "threshold_balanced_accuracy_descriptive": 0.9984939759036144,
+    "unique_standardized_input_count": 405
+  },
+  "total_wall_seconds": 922.4467235999764,
+  "wall_seconds_before_finalize": 871.4635148000089,
+  "workers": 4
+}

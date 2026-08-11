@@ -1,0 +1,17 @@
+{
+  "active_arm_runtime_sum_seconds": 14.353592299856246,
+  "checkpoint_reuse_enabled": false,
+  "completed_at_utc": "2026-08-11T19:56:54+00:00",
+  "invocation_started_utc": "2026-08-11T19:56:25+00:00",
+  "mode": "smoke",
+  "scientific_reduction": "2 primary folds, 1 G3 fold, budget 30, reduced methods",
+  "stage_times": {
+    "active_seconds": 9.155897699994966,
+    "finalize_seconds": 1.0561575000174344,
+    "prepare_seconds": 8.967490799957886,
+    "static_seconds": 10.005845799983945
+  },
+  "total_wall_seconds": 29.18540799996117,
+  "wall_seconds_before_finalize": 28.12924949999433,
+  "workers": 2
+}

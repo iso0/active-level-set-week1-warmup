@@ -1,0 +1,15 @@
+benchmark_population,run_id,method,formulation,budget,selected_set_diagnostic_only,bootstrap_resamples,valid_resamples,ci_low,median,ci_high,status
+primary_common,primary_common__r01_f01,max_depth_random,max_depth,12,True,100,100,92.340285625,101.421515,103.01101499999999,PASS
+primary_common,primary_common__r01_f01,max_depth_random,max_depth,20,True,100,100,95.25806837500001,101.421515,196.59509537499997,PASS
+primary_common,primary_common__r01_f01,max_depth_straddle,max_depth,12,True,100,100,93.057042,101.421515,103.01101499999999,PASS
+primary_common,primary_common__r01_f01,max_depth_straddle,max_depth,20,True,100,100,99.66685000000001,113.74000000000001,134.97379999999998,PASS
+primary_common,primary_common__r01_f02,max_depth_random,max_depth,12,True,100,100,107.43716500000001,123.267525,187.214225,PASS
+primary_common,primary_common__r01_f02,max_depth_random,max_depth,20,True,100,100,97.452567875,111.38377499999999,187.214225,PASS
+primary_common,primary_common__r01_f02,max_depth_straddle,max_depth,12,True,100,100,109.319225,123.267525,187.214225,PASS
+primary_common,primary_common__r01_f02,max_depth_straddle,max_depth,20,True,100,100,101.180813375,112.9485,146.6442181249998,PASS
+secondary_g3_common,secondary_g3_common__r01_f01,g3_random,g3,12,True,100,0,,,,NA_fewer_than_two_per_class
+secondary_g3_common,secondary_g3_common__r01_f01,g3_random,g3,20,True,100,0,,,,NA_fewer_than_two_per_class
+secondary_g3_common,secondary_g3_common__r01_f01,g3_straddle,g3,12,True,100,0,,,,NA_fewer_than_two_per_class
+secondary_g3_common,secondary_g3_common__r01_f01,g3_straddle,g3,20,True,100,100,75.89599,76.394305,146.6187525,PASS
+secondary_g3_common,secondary_g3_common__r01_f01,max_depth_g3_common_straddle,max_depth,12,True,100,0,,,,NA_fewer_than_two_per_class
+secondary_g3_common,secondary_g3_common__r01_f01,max_depth_g3_common_straddle,max_depth,20,True,100,100,95.45842,101.62008,151.44643000000002,PASS

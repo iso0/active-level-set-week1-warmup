@@ -1,0 +1,21 @@
+{
+  "duplicate_input_group_count": 0,
+  "expected_phase55_commit": "6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb",
+  "g3_common_count": 404,
+  "hard_stop_after_phase6": true,
+  "hf_revision_matches": true,
+  "original_dirty_checkout_protected": true,
+  "phase": "Week 7 Phase 6",
+  "phase55_remote_matches": true,
+  "phase6_branch": "codex/week7-phase6-real-data-boundary-active-level-set",
+  "phase6_head_exact_phase55_commit": "6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb",
+  "planned_full_primary_outer_run_count": 20,
+  "planned_full_secondary_outer_run_count": 20,
+  "primary_keyhole_count": 73,
+  "primary_non_keyhole_count": 332,
+  "primary_outer_run_count": 20,
+  "primary_population_count": 405,
+  "secondary_outer_run_count": 20,
+  "smoke_mode": false,
+  "status": "PASS"
+}

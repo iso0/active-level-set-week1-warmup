@@ -1,0 +1,21 @@
+metric,value,units,status,interpretation
+population_count,405.0,count,descriptive_semantic_audit,
+keyhole_count,73.0,count,descriptive_semantic_audit,
+exact_saved_frame_join_count,4.0,count,direct_timing_join_sparse,Exact saved-frame morphology at the max-depth iteration is generally unavailable; episode-span and nearest-frame fields are diagnostics only.
+exact_saved_Keyhole_frame_count,1.0,count,descriptive_semantic_audit,
+inside_saved_Keyhole_episode_span_positive_count,60.0,count,descriptive_semantic_audit,
+after_last_saved_Keyhole_frame_positive_count,12.0,count,descriptive_semantic_audit,
+before_T0_count,283.0,count,descriptive_semantic_audit,
+inside_T0_count,85.0,count,descriptive_semantic_audit,
+after_T0_count,37.0,count,descriptive_semantic_audit,
+inside_active_region_count,368.0,count,descriptive_semantic_audit,
+after_active_region_count,37.0,count,descriptive_semantic_audit,
+near_recording_end_count,32.0,count,descriptive_semantic_audit,
+near_laser_exit_count,24.0,count,descriptive_semantic_audit,
+ambiguity_flag_count,9.0,count,descriptive_semantic_audit,
+descriptive_oracle_false_positive_count,1.0,count,descriptive_semantic_audit,
+descriptive_oracle_false_negative_count,0.0,count,descriptive_semantic_audit,
+descriptive_oracle_threshold_um,108.601,um,descriptive_semantic_audit,
+descriptive_oracle_balanced_accuracy,0.9984939759036144,fraction,descriptive_semantic_audit,
+raw_review_single_point_spike_candidate_count,0.0,count,deterministic_raw_review_subset,Diagnostic only; maximum-depth definition is unchanged.
+oracle_error_single_point_spike_candidate_count,0.0,count,deterministic_raw_review_subset,Assesses whether the descriptive threshold errors are dominated by obvious isolated monitor spikes.

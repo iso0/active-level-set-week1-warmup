@@ -784,3 +784,96 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
   relabelling, or new physical target was run. Phase 5.5 remains intentionally
   uncommitted and unpushed for review; main was not merged and no pull request
   was opened.
+
+### Week 7 Phase 6: real-data boundary and active level-set benchmark (2026-08-11)
+
+- Phase 5.5 was finalized and published before this benchmark. Its authorized
+  113-file scope was committed and pushed on
+  `codex/week7-phase5-5-g3-robustness-transfer` as exact commit
+  `6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb`, whose parent is the published
+  Phase 5 commit `3367f4c9b5af2def802f72a65258f5cc01896bac`. Phase 6 starts from
+  that exact commit in the isolated branch
+  `codex/week7-phase6-real-data-boundary-active-level-set` and remains
+  intentionally uncommitted and unpushed for review.
+- The current `ioandanielc/sph_v2` revision was reverified as
+  `b6dc254a2b607a31cb9f97b40990339c3d5ca1e8`. The primary common population is
+  405 target-ready simulations (73 manual Keyhole and 332 non-Keyhole): 164
+  new-data, 178 old-local, and 63 old-remote. The binary ceiling contains 407
+  retained simulations; the explicitly secondary G3-common benchmark contains
+  404. No duplicate physical input groups were found.
+- The unchanged manual experiment-level `has_keyhole` annotation remains the
+  reference. Maximum depth is the unchanged physical quantity
+  `max(0, -min(z))`; it is not a replacement label. Only 4/405 maximum-depth
+  iterations coincide exactly with a saved labelled frame and only one of the
+  73 positives coincides with a saved Keyhole frame. Among positives, 60
+  maxima lie inside a saved-Keyhole episode-span proxy, 12 occur after the last
+  saved Keyhole frame, and one lies between spans. These timing results support
+  the at-least-once semantics only conservatively and do not establish
+  continuous morphology at the monitor timestep.
+- A descriptive full-population scalar threshold of 108.601 micrometres gives
+  balanced accuracy 0.9985 with one false positive and no false negatives.
+  Because it uses all data, it is reported only as an oracle description and
+  never used for held-out or active-learning evaluation. The sole false
+  positive is not an isolated monitor spike in the saved raw-series review.
+- The primary protocol uses repeated stratified five-fold outer evaluation
+  (five folds by four repeats), matched candidate pools, matched warm starts,
+  and a simulator-query budget of 80. Every queried simulation reveals both
+  the manual binary label and its maximum-depth response, so both formulations
+  use the same simulator budget. All thresholds and model fits are learned
+  only from the currently revealed training simulations. The empirical
+  boundary score is an evaluation-only standardized four-dimensional nearest
+  opposite-manual-label distance over P, VX, LS, and ST.
+- Static held-out results are mixed. Maximum-depth GPR improves balanced
+  accuracy (0.9490 versus 0.9192) and sensitivity (0.9521 versus 0.8550), while
+  binary GPC improves specificity (0.9834 versus 0.9458), global error (0.0395
+  versus 0.0531), Brier score (0.0280 versus 0.0368), and empirical-boundary
+  q20/q30 error (0.1765/0.1260 versus 0.2000/0.1520). ROC AUC and average
+  precision are similarly high for both.
+- The best primary active arms are binary uncertainty plus repulsion and
+  maximum-depth straddle. Across budgets 16--80, binary has lower mean
+  boundary-error AULC at q20 (0.1862 versus 0.2053) and q30 (0.1332 versus
+  0.1506), while maximum depth has higher balanced-accuracy AULC (0.9432 versus
+  0.9171). The 5,000-resample paired descriptive intervals for the
+  maximum-depth-minus-binary q20 and q30 AULC differences cross zero, whereas
+  the balanced-accuracy difference is positive (0.0261, 95% interval 0.0107 to
+  0.0433). Both best active arms improve on their shared random baselines.
+- No formulation wins every query-to-tolerance diagnostic. For balanced
+  accuracy at least 0.90, maximum depth reaches the target in all 20 runs with
+  median 14 queries, versus 19/20 and median 16 for binary. For q20 error at
+  most 0.20, maximum depth succeeds in 15/20 runs with median 15 queries among
+  successes, versus 18/20 and median 16 for binary. Maximum depth is stronger
+  in the saved transient, persistent, repeated-episode, before-T0, and
+  multiple-T0 descriptive subgroups, but the tiny inside-T0-only subgroup is
+  not sufficient for a stable claim.
+- Old/new transfer is explicitly secondary and strongly asymmetric. The
+  maximum-depth balanced-accuracy floor across all saved transfer routes is
+  0.515873 (old-local to new), compared with 0.745671 for binary; all-old to
+  new gives 0.537718 for maximum depth versus 0.903819 for binary, while new to
+  all-old gives 0.926190 versus 0.745671. This weakens any maximum-depth-only or
+  universal-threshold conclusion.
+- On the matched 404-row G3-common population, G3 does not provide a robust
+  reason to replace either primary formulation. Its active straddle arm has
+  q20/q30/BA AULCs of 0.2545/0.2030/0.9211, compared with
+  0.1786/0.1296/0.9206 for matched binary margin and
+  0.2335/0.1674/0.9319 for matched maximum-depth straddle. G3 remains a
+  secondary physical comparator with partition-dependent threshold location.
+- The final decision is `HYBRID / NO CLEAR WINNER`: retain manual binary labels
+  as the reference and evaluate both binary-GPC and maximum-depth-GPR routes.
+  Binary is preferable for empirical boundary localization and cross-domain
+  robustness; maximum depth is preferable for balanced accuracy and several
+  descriptive subgroups. No universal scalar threshold, relabelling rule,
+  causal mechanism, or single acquisition winner is claimed.
+- The authoritative full run used four workers and finished in 922.447 s
+  (15 min 22.4 s), after a reduced smoke test. It produced 40 matched outer
+  runs, 22,400 recorded query events, and deterministic atomic checkpoints.
+  The executed teaching notebook is
+  `notebooks/week_07/06_real_data_boundary_active_level_set.ipynb` with 38
+  Markdown cells, 40 sequentially executed code cells, and zero stored errors.
+  The output tree contains 79 independently checked explanatory PNGs and all
+  machine-readable tables, summaries, decisions, provenance, checkpoints, and
+  manifests. Final automated validation is 29/29 PASS, the requirement
+  checklist is 15/15 PASS, and the output manifest verifies 462/462 files.
+- Hard stop reached after the approved Phase 6 benchmark. No manual label was
+  changed, no scalar was promoted to ground truth, no causal claim was made,
+  and no Phase 6 file was staged, committed, pushed, merged, or submitted as a
+  pull request.

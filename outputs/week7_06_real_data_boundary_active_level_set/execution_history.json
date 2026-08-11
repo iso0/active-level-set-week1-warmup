@@ -1,0 +1,18 @@
+[
+  {
+    "completed_at_utc": "2026-08-11T20:15:44+00:00",
+    "force": false,
+    "mode": "full",
+    "scientific_scope": "full_20_run_primary_plus_20_run_G3_common",
+    "stage_times_seconds": {
+      "active_seconds": 796.1144058999489,
+      "finalize_seconds": 50.98320890002651,
+      "prepare_seconds": 12.552130199968815,
+      "static_seconds": 62.7969635000336
+    },
+    "started_at_utc": "2026-08-11T20:00:22+00:00",
+    "status": "PASS",
+    "wall_seconds": 922.4467235999764,
+    "workers": 4
+  }
+]

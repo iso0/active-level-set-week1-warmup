@@ -1,0 +1,181 @@
+{
+  "active": {
+    "best_binary_mean_balanced_accuracy_aulc": 0.917089626694046,
+    "best_binary_mean_q20_aulc": 0.1862362132352941,
+    "best_binary_mean_q30_aulc": 0.13320312499999992,
+    "best_binary_method": "binary_uncertainty_repulsion",
+    "best_max_depth_mean_balanced_accuracy_aulc": 0.9432146453709537,
+    "best_max_depth_mean_q20_aulc": 0.20528492647058819,
+    "best_max_depth_mean_q30_aulc": 0.15062499999999995,
+    "best_max_depth_method": "max_depth_straddle",
+    "best_vs_best_balanced_accuracy_paired": {
+      "ci_high": 0.0433370193093986,
+      "ci_low": 0.0106657021242711,
+      "difference": 0.0261250186769077
+    },
+    "best_vs_best_q20_paired": {
+      "ci_high": 0.0548259420955882,
+      "ci_low": -0.0181985294117646,
+      "difference": 0.0190487132352941
+    },
+    "best_vs_best_q30_paired": {
+      "ci_high": 0.0435640624999999,
+      "ci_low": -0.0075636718749999,
+      "difference": 0.017421875
+    },
+    "binary_vs_random_q20_paired": {
+      "ci_high": -0.0143106617647059,
+      "ci_low": -0.0709564568014706,
+      "difference": -0.0426930147058823
+    },
+    "max_depth_final_threshold_max_um": 113.74,
+    "max_depth_final_threshold_mean_um": 110.042955,
+    "max_depth_final_threshold_min_um": 108.1415,
+    "max_depth_final_threshold_std_um": 1.878417626753966,
+    "max_depth_vs_random_q20_paired": {
+      "ci_high": -0.0027332261029411,
+      "ci_low": -0.0634191176470587,
+      "difference": -0.0321001838235294
+    },
+    "median_max_depth_threshold_stability_budget": 20.5,
+    "persistent_sensitivity_by_method": {
+      "binary_uncertainty_repulsion": 0.8404058441558442,
+      "max_depth_straddle": 0.9471194083694083
+    },
+    "queries_to_balanced_accuracy_0_90": {
+      "binary_uncertainty_repulsion": {
+        "median_queries_among_reached": 16.0,
+        "reached_runs": 19,
+        "total_runs": 20
+      },
+      "max_depth_straddle": {
+        "median_queries_among_reached": 14.0,
+        "reached_runs": 20,
+        "total_runs": 20
+      }
+    },
+    "queries_to_q20_error_0_20": {
+      "binary_uncertainty_repulsion": {
+        "median_queries_among_reached": 16.0,
+        "reached_runs": 18,
+        "total_runs": 20
+      },
+      "max_depth_straddle": {
+        "median_queries_among_reached": 15.0,
+        "reached_runs": 15,
+        "total_runs": 20
+      }
+    },
+    "transient_sensitivity_by_method": {
+      "binary_uncertainty_repulsion": 0.9164880952380953,
+      "max_depth_straddle": 0.9729166666666667
+    }
+  },
+  "decision_reason": "The q20/q30 hierarchy, paired descriptive uncertainty, balanced-accuracy support, or semantic/domain evidence does not jointly justify a single formulation.",
+  "domain_transfer_balanced_accuracy_floor": {
+    "binary": 0.7456709956709957,
+    "max_depth": 0.5158730158730158
+  },
+  "final_decision": "HYBRID / NO CLEAR WINNER",
+  "g3_common_population_count": 404,
+  "g3_secondary_q20_aulc_by_method": {
+    "binary_g3_common_margin": 0.1785521193771626,
+    "binary_g3_common_random": 0.2645301686851211,
+    "g3_random": 0.2802808715397923,
+    "g3_straddle": 0.2544806985294117,
+    "max_depth_g3_common_random": 0.2820501730103806,
+    "max_depth_g3_common_straddle": 0.233484266868512
+  },
+  "max_depth_semantics": {
+    "ambiguity_error_fraction": 0.0,
+    "episode_span_is_not_exact_morphology": true,
+    "exact_saved_Keyhole_frame_count": 1,
+    "exact_saved_frame_join_count": 4,
+    "positive_after_last_saved_keyhole_frame_count": 12,
+    "positive_between_episode_spans_count": 1,
+    "positive_inside_episode_span_count": 60,
+    "raw_review_case_count": 16,
+    "raw_review_single_point_spike_candidate_count": 0
+  },
+  "phase": "Week 7 Phase 6",
+  "primary_keyhole_count": 73,
+  "primary_non_keyhole_count": 332,
+  "primary_population_count": 405,
+  "runtime": {
+    "active_arm_runtime_sum_seconds": 3377.476660000684,
+    "checkpoint_reuse_enabled": true,
+    "completed_at_utc": "2026-08-11T20:15:44+00:00",
+    "invocation_started_utc": "2026-08-11T20:00:22+00:00",
+    "mode": "full",
+    "stage_times": {
+      "active_seconds": 796.1144058999489,
+      "finalize_seconds": 50.98320890002651,
+      "prepare_seconds": 12.552130199968815,
+      "static_seconds": 62.7969635000336
+    },
+    "surface_diagnostics": {
+      "available_to_active_method": false,
+      "binary_gpc_fit_status": "optimized_primary",
+      "binary_gpc_kernel": "31.6**2 * Matern(length_scale=14.7, nu=1.5)",
+      "convex_hull_detail": "standardized_4d_convex_hull_QJ",
+      "convex_hull_status": "PASS",
+      "descriptive_full_common_threshold_um": 108.601,
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "fit_status": "descriptive_oracle_not_held_out",
+      "grid_size_per_axis": 51,
+      "input_scaler_scope": "full_common_descriptive_only",
+      "keyhole_count": 73,
+      "max_depth_gpr_fit_status": "optimized_primary",
+      "max_depth_gpr_kernel": "0.884**2 * Matern(length_scale=1.18, nu=1.5)",
+      "nn_support_quantile": 0.95,
+      "nn_support_radius_standardized_4d": 0.7360368371986483,
+      "non_keyhole_count": 332,
+      "observed_loo_nn_distance_max": 1.332959892167304,
+      "observed_loo_nn_distance_median": 0.4407121498012063,
+      "observed_loo_nn_distance_min": 0.08396890441541958,
+      "population": "primary_common_full",
+      "population_count": 405,
+      "slice_pairs": [
+        "P-VX",
+        "P-LS",
+        "VX-LS"
+      ],
+      "threshold_balanced_accuracy_descriptive": 0.9984939759036144,
+      "unique_standardized_input_count": 405
+    },
+    "total_wall_seconds": 922.4467235999764,
+    "wall_seconds_before_finalize": 871.4635148000089,
+    "workers": 4
+  },
+  "scope": {
+    "G3_redefined": false,
+    "manual_labels_changed": false,
+    "maximum_depth_redefined": false,
+    "phase6_committed": false,
+    "phase6_pushed": false,
+    "phase7_started": false
+  },
+  "static": {
+    "binary_gpc_balanced_accuracy": 0.9192118950701044,
+    "binary_gpc_global_error": 0.0395061728395061,
+    "binary_gpc_q20_error": 0.1764705882352941,
+    "binary_gpc_q30_error": 0.126,
+    "binary_gpc_sensitivity": 0.8550000000000001,
+    "max_depth_gpr_balanced_accuracy": 0.9489513471603026,
+    "max_depth_gpr_global_error": 0.0530864197530864,
+    "max_depth_gpr_q20_error": 0.2,
+    "max_depth_gpr_q30_error": 0.152,
+    "max_depth_gpr_r2": 0.921487540029573,
+    "max_depth_gpr_rmse_um": 21.69109792329602,
+    "max_depth_gpr_sensitivity": 0.9521428571428572
+  },
+  "supported_slice_disagreement_fraction_range": [
+    0.0486537553141237,
+    0.0709030100334448
+  ]
+}

@@ -1,0 +1,7 @@
+criterion,max_depth_value,binary_value,favours,status
+primary_q20_aulc,0.2052849264705882,0.1862362132352941,binary,primary
+primary_q30_aulc,0.15062499999999995,0.13320312499999995,binary,primary
+balanced_accuracy_aulc,0.9432146453709537,0.917089626694046,max_depth,primary_supporting
+semantic_artifact_audit,0.0,,max_depth_defensible,supporting_not_relabelling
+domain_transfer_floor,0.5158730158730158,0.7456709956709957,binary,secondary_robustness
+online_threshold_stability_budget,20.5,,diagnostic,queried_set_stability_not_population_CI
