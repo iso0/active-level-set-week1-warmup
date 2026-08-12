@@ -1,0 +1,25 @@
+{
+  "authoritative_fresh_full_wall_seconds": 262.0936554999789,
+  "checkpoint_reuse_enabled": true,
+  "current_invocation_reused_full_checkpoints": true,
+  "current_invocation_wall_seconds": 54.24128129996825,
+  "executed_methods": [
+    "shared_random_binary_head",
+    "shared_random_max_depth_head",
+    "binary_uncertainty_repulsion",
+    "max_depth_straddle",
+    "hybrid_binary_gate20_max_depth_straddle",
+    "hybrid_equal_rank_fusion"
+  ],
+  "executed_outer_runs": 20,
+  "final_budget": 80,
+  "mean_hybrid_fusion_overhead_vs_binary": 1.4261701773561384,
+  "mean_hybrid_gate_overhead_vs_binary": 1.4368688118502504,
+  "method_run_count": 120,
+  "simulator_sample_efficiency_distinct_from_computational_efficiency": true,
+  "smoke": false,
+  "total_method_run_runtime_seconds": 831.1817459004233,
+  "wall_seconds": 262.0936554999789,
+  "workers": 4,
+  "workers_reported_separately": true
+}

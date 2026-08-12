@@ -1,0 +1,4 @@
+method,run_count,mean_runtime_seconds,median_runtime_seconds,total_runtime_seconds,mean_binary_fit_seconds,mean_max_depth_fit_seconds,mean_acquisition_score_seconds,mean_seconds_per_post_warm_query,relative_overhead_vs_binary_champion,relative_overhead_vs_max_depth_champion,simulator_query_cost_equal
+binary_uncertainty_repulsion,2,1.089741750009125,1.089741750009125,2.17948350001825,0.5092471000971273,0.0,0.0,0.06054120833384028,1.0,,True
+hybrid_binary_gate20_max_depth_straddle,2,1.459636750019854,1.459636750019854,2.919273500039708,0.5249930998834316,0.2890666500898078,0.05645850003929809,0.08109093055665856,1.3394336318743698,,True
+hybrid_equal_rank_fusion,2,1.5400162999576423,1.5400162999576423,3.0800325999152847,0.5634894499671645,0.2877097000309732,0.05809859998407774,0.0855564611087579,1.4131938139882654,,True

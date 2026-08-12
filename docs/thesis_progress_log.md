@@ -877,3 +877,83 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
   changed, no scalar was promoted to ground truth, no causal claim was made,
   and no Phase 6 file was staged, committed, pushed, merged, or submitted as a
   pull request.
+
+### Week 7 Phase 7: final boundary robustness and Hybrid acquisition benchmark (2026-08-12)
+
+- Phase 6 was audited without rerunning its expensive science, committed as
+  exact revision `5734de6f533e1de1e15a07de24e7d4e6e53bb6fa`, and pushed on
+  `codex/week7-phase6-real-data-boundary-active-level-set` before Phase 7
+  began. Its parent is the published Phase 5.5 revision
+  `6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb`; local, upstream, and remote
+  Phase 6 revisions were equal with zero ahead/behind. No pull request or
+  merge was created.
+- Phase 7 uses the unchanged Hugging Face revision
+  `b6dc254a2b607a31cb9f97b40990339c3d5ca1e8` and exactly reuses the 405-row
+  Phase 6 primary population (73 manual Keyhole, 332 non-Keyhole), all 20
+  repeated five-fold outer runs, test folds, candidate pools, deterministic
+  permutations, effective warm starts, and simulator-budget accounting. All
+  23 numerical reproduction checks pass; the largest absolute replay
+  difference is approximately `8.24e-13`.
+- Manual experiment-level `has_keyhole` remains ground truth. Maximum depth is
+  side information revealed by the same queried simulation and enters only
+  the two preregistered Hybrid acquisitions; both Hybrid final predictors are
+  Binary GPCs. Unqueried labels/depths and all true boundary memberships are
+  excluded from fitting and selection.
+- The Phase 7 decision rule was written and SHA-256 locked before smoke/full
+  results as
+  `a3581cb61c4b2f95aa71838fc9c199ca8f992fef7de67104970767db0af9643f`.
+  It fixes a `ceil(20%)` Binary gate, equal `0.5/0.5` rank-fusion weights,
+  5,000 matched-run bootstrap resamples, and the A/B/C/D success hierarchy.
+  No method or hyperparameter was added after seeing results.
+- Three model-independent, maximum-depth-free boundary diagnostics were
+  evaluated: B1 nearest opposite-label distance, B2 local k=5 label
+  disagreement, and B3 the relative opposite-/same-class distance ratio.
+  Off-diagonal Spearman rank correlations span `0.3625--0.7135`; q20 subset
+  Jaccard overlap spans `0.5140--0.6200`. They overlap but are not
+  interchangeable, and they remain evaluation-only.
+- The full primary benchmark contains 20 matched outer runs through total
+  simulator budget 80. Mean q20 error AULCs for Binary, Max-Depth, Hybrid
+  Gate, and Hybrid Rank Fusion are respectively B1
+  `0.1862/0.2053/0.1943/0.1872`, B2
+  `0.1924/0.2018/0.2110/0.1961`, and B3
+  `0.1774/0.2219/0.1959/0.1835`. Binary therefore retains its mean boundary
+  advantage over Max-Depth under all three independent definitions, and
+  neither Hybrid improves on Binary under any q20 definition.
+- Mean balanced-accuracy AULCs are `0.9171` for Binary, `0.9432` for
+  Max-Depth, `0.8983` for Gate, and `0.9076` for Rank Fusion. Fusion's
+  Binary-relative difference is `-0.00949`, inside the preregistered 0.01
+  material-loss tolerance; Gate's `-0.01879` is outside it. This preserves the
+  Phase 6 trade-off: Max-Depth remains useful for global classification but
+  does not displace Binary for boundary acquisition.
+- In 5,000 paired resamples, Gate is reliably worse than Binary for B2/B3 q20;
+  Fusion's small positive q20 AULC differences have intervals crossing zero.
+  Both Hybrids beat the shared random baseline under all three q20 definitions,
+  but neither satisfies the robust Binary-improvement conditions A or B.
+  Gate also fails the no-material-BA-loss condition C; Fusion passes C. Both
+  pass condition D, so the mechanically preregistered final decision is
+  `BINARY ACQUISITION PRIMARY`.
+- Query-behaviour diagnostics show that the methods genuinely diverge rather
+  than merely renaming the same path. Gate and Binary have mean budget-80
+  query-set Jaccard about `0.63`; Gate and Rank Fusion about `0.72`. The two
+  Hybrids require about `1.44x` and `1.43x` Binary's local fitting time while
+  using the same simulator-query budget, and neither creates a new empirical
+  q20/q30 versus balanced-accuracy Pareto point.
+- The reduced smoke execution passed 31/31 validations, 14/14 requirements,
+  and 59/59 manifest hashes and was explicitly marked non-scientific. The
+  first complete scientific stage used four local workers and took
+  `262.094 s`; later report refreshes reused exact checkpoints and are recorded
+  separately so they cannot overwrite the authoritative full-run time.
+- The executed teaching notebook is
+  `notebooks/week_07/07_final_boundary_hybrid_benchmark.ipynb` with 41
+  Markdown cells, 40 sequentially executed code cells, and zero stored errors.
+  It exposes the allowed-information and leakage boundary before every major
+  calculation and answers five fixed interpretation questions afterward. The
+  output tree contains 50 visually audited explanatory PNGs plus the complete
+  machine-readable provenance, run, prediction, query, bootstrap, subgroup,
+  surface, decision, and checkpoint artifacts.
+- Hard stop reached after this final major scientific-method experiment. No
+  manual label, physical target, Phase 6 run, kernel family, gate fraction, or
+  fusion weight was changed. Phase 7 remains intentionally uncommitted and
+  unpushed for review; the next authorized work is thesis consolidation,
+  figure selection, method/results writing, limitations, supervisor feedback,
+  or a narrowly targeted correction if scientifically necessary.

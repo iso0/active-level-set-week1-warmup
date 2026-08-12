@@ -1,0 +1,4 @@
+selection,run_id,difference,algorithmic_selection
+median_gate_minus_binary_B1_q20,primary_common__r01_f01,-0.052287581699346414,True
+strongest_hybrid_improvement,primary_common__r01_f01,-0.052287581699346414,True
+strongest_hybrid_deterioration,primary_common__r01_f02,-0.011437908496732041,True

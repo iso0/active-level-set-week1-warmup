@@ -1,0 +1,51 @@
+[
+  {
+    "hf_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "outer_run_count": 20,
+    "phase6_commit": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+    "population_count": 405,
+    "preregistration_sha256": "a3581cb61c4b2f95aa71838fc9c199ca8f992fef7de67104970767db0af9643f",
+    "reproduction_checks": 23,
+    "stage": "prepare_and_reproduction",
+    "status": "PASS",
+    "timestamp_utc": "2026-08-11T22:14:18.569212+00:00"
+  },
+  {
+    "hf_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "outer_run_count": 20,
+    "phase6_commit": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+    "population_count": 405,
+    "preregistration_sha256": "a3581cb61c4b2f95aa71838fc9c199ca8f992fef7de67104970767db0af9643f",
+    "reproduction_checks": 23,
+    "stage": "prepare_and_reproduction",
+    "status": "PASS",
+    "timestamp_utc": "2026-08-11T22:15:00.352167+00:00"
+  },
+  {
+    "hf_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "outer_run_count": 20,
+    "phase6_commit": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+    "population_count": 405,
+    "preregistration_sha256": "a3581cb61c4b2f95aa71838fc9c199ca8f992fef7de67104970767db0af9643f",
+    "reproduction_checks": 23,
+    "stage": "prepare_and_reproduction",
+    "status": "PASS",
+    "timestamp_utc": "2026-08-11T22:15:36.506390+00:00"
+  },
+  {
+    "decision": "SMOKE_NOT_SCIENTIFIC",
+    "final_budget": 30,
+    "methods": [
+      "binary_uncertainty_repulsion",
+      "hybrid_binary_gate20_max_depth_straddle",
+      "hybrid_equal_rank_fusion"
+    ],
+    "outer_runs": 2,
+    "preregistration_sha256": "a3581cb61c4b2f95aa71838fc9c199ca8f992fef7de67104970767db0af9643f",
+    "stage": "smoke_benchmark",
+    "status": "PASS",
+    "timestamp_utc": "2026-08-11T22:15:42.464734+00:00",
+    "wall_seconds": 5.933125099982135,
+    "workers": 2
+  }
+]

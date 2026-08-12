@@ -1,0 +1,87 @@
+{
+  "phase": "Week 7 Phase 7",
+  "created_at_utc": "2026-08-11T21:56:21.8752958Z",
+  "status": "PREREGISTERED_BEFORE_SMOKE_AND_FULL_RESULTS",
+  "immutable_after_full_run_starts": true,
+  "scientific_target": "manual experiment-level has_keyhole",
+  "physical_side_information": "maximum depth revealed by the same queried simulation",
+  "primary_hybrid_predictor": "Binary GaussianProcessClassifier",
+  "primary_boundary_definitions": [
+    "B1_nearest_opposite_label_distance",
+    "B2_local_label_disagreement_k5",
+    "B3_relative_class_distance_ratio"
+  ],
+  "primary_boundary_quantiles": [20, 30],
+  "diagnostic_boundary_quantiles": [10],
+  "boundary_subset_scope": "ranked separately inside each untouched outer test fold",
+  "boundary_subset_tie_break": "metric direction, then experiment_name ascending; select ceil(q_percent * held_out_count)",
+  "boundary_information_is_evaluation_only": true,
+  "aulc_protocol": {
+    "budget_grid": "every integer budget from the maximum saved effective Phase 6 warm start through 80",
+    "expected_common_start_budget": 16,
+    "final_budget": 80,
+    "integration": "trapezoidal normalized by final_budget_minus_common_start",
+    "q20_and_q30_direction": "lower_is_better",
+    "balanced_accuracy_direction": "higher_is_better"
+  },
+  "hybrid_gate": {
+    "method": "hybrid_binary_gate20_max_depth_straddle",
+    "requested_fraction": 0.2,
+    "integer_rule": "ceil(0.20 * current_unqueried_pool_count)",
+    "binary_priority_completion": "Preserve the exact Phase 6 uncertainty-repulsion shortlist and within-shortlist score order first; deterministically order outside-shortlist candidates by full-pool normalized uncertainty times the same repulsion term, then index, solely to complete a total candidate order.",
+    "within_gate_selection": "maximum exact Phase 6 max_depth_straddle score, then population_row_index ascending",
+    "tuning_prohibited": true
+  },
+  "hybrid_rank_fusion": {
+    "method": "hybrid_equal_rank_fusion",
+    "binary_weight": 0.5,
+    "max_depth_weight": 0.5,
+    "percentile_rank_rule": "deterministic total order; best candidate rank 1, worst rank 0, population_row_index resolves ties",
+    "tuning_prohibited": true
+  },
+  "paired_uncertainty": {
+    "resamples": 5000,
+    "unit": "matched outer run",
+    "seed_rule": "stable deterministic SHA-256-derived seed",
+    "interpretation": "paired descriptive uncertainty because repeated CV reuses simulations"
+  },
+  "robust_hybrid_success_rule": {
+    "A_q20": "Hybrid mean q20 AULC lower than Binary champion under at least two of B1/B2/B3 AND the paired 95% interval upper endpoint for Hybrid-minus-Binary is below zero under at least two definitions.",
+    "B_q30": "Hybrid mean q30 AULC lower than Binary champion under at least two of B1/B2/B3.",
+    "C_balanced_accuracy": "Hybrid balanced-accuracy AULC is not more than 0.01 below Binary champion.",
+    "D_random": "Hybrid mean q20 AULC lower than the shared binary-random head under at least two definitions AND at least one paired 95% interval upper endpoint is below zero.",
+    "all_conditions_required": true
+  },
+  "final_decision_tree": [
+    {
+      "priority": 1,
+      "condition": "At least one preregistered Hybrid satisfies A, B, C, and D.",
+      "decision": "HYBRID ACQUISITION PRIMARY"
+    },
+    {
+      "priority": 2,
+      "condition": "Max-Depth has lower mean q20 and q30 AULC than Binary and both Hybrids under at least two definitions, has q20 paired intervals below zero versus Binary under at least two definitions, and is not more than 0.01 below the best balanced-accuracy AULC.",
+      "decision": "MAX-DEPTH FORMULATION PRIMARY"
+    },
+    {
+      "priority": 3,
+      "condition": "No Hybrid satisfies the robust rule; Binary mean q20 AULC is no worse than Max-Depth and both Hybrids under at least two definitions; and Binary mean q30 AULC is no worse than Max-Depth under at least two definitions.",
+      "decision": "BINARY ACQUISITION PRIMARY"
+    },
+    {
+      "priority": 4,
+      "condition": "None of the preceding conditions is met.",
+      "decision": "NO ROBUST WINNER / METRIC-DEPENDENT"
+    }
+  ],
+  "prohibited_after_results": [
+    "new acquisition methods",
+    "gate-fraction tuning",
+    "rank-weight tuning",
+    "kernel changes",
+    "manual-label changes",
+    "maximum-depth redefinition",
+    "boundary-metric tuning",
+    "post-result decision-rule edits"
+  ]
+}

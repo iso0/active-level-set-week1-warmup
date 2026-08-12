@@ -1,0 +1,8 @@
+{
+  "expected_phase6_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "live_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "matches_phase6": true,
+  "repository": "ioandanielc/sph_v2",
+  "scientific_data_rebuild_required": false,
+  "verified_at_utc": "2026-08-11T22:42:29.144393+00:00"
+}

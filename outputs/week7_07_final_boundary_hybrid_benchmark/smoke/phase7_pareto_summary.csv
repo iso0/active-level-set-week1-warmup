@@ -1,0 +1,19 @@
+boundary_definition,quantile,method,mean_boundary_error_aulc,mean_balanced_accuracy_aulc,pareto_dominated,dominated_by_json,on_pareto_frontier,arbitrary_weighted_score_used
+B1,20,binary_uncertainty_repulsion,0.20996732026143788,0.8813131313131313,True,"[""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion""]",False,False
+B1,20,hybrid_binary_gate20_max_depth_straddle,0.17810457516339867,0.9100799663299664,False,[],True,False
+B1,20,hybrid_equal_rank_fusion,0.1895424836601307,0.9046717171717171,True,"[""hybrid_binary_gate20_max_depth_straddle""]",False,False
+B1,30,binary_uncertainty_repulsion,0.17333333333333334,0.8813131313131313,True,"[""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion""]",False,False
+B1,30,hybrid_binary_gate20_max_depth_straddle,0.15944444444444444,0.9100799663299664,False,[],True,False
+B1,30,hybrid_equal_rank_fusion,0.1577777777777778,0.9046717171717171,False,[],True,False
+B2,20,binary_uncertainty_repulsion,0.23774509803921567,0.8813131313131313,True,"[""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion""]",False,False
+B2,20,hybrid_binary_gate20_max_depth_straddle,0.1968954248366013,0.9100799663299664,False,[],True,False
+B2,20,hybrid_equal_rank_fusion,0.2156862745098039,0.9046717171717171,True,"[""hybrid_binary_gate20_max_depth_straddle""]",False,False
+B2,30,binary_uncertainty_repulsion,0.16166666666666668,0.8813131313131313,True,"[""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion""]",False,False
+B2,30,hybrid_binary_gate20_max_depth_straddle,0.14444444444444446,0.9100799663299664,False,[],True,False
+B2,30,hybrid_equal_rank_fusion,0.14666666666666667,0.9046717171717171,True,"[""hybrid_binary_gate20_max_depth_straddle""]",False,False
+B3,20,binary_uncertainty_repulsion,0.1495098039215686,0.8813131313131313,True,"[""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion""]",False,False
+B3,20,hybrid_binary_gate20_max_depth_straddle,0.1454248366013072,0.9100799663299664,False,[],True,False
+B3,20,hybrid_equal_rank_fusion,0.13643790849673204,0.9046717171717171,False,[],True,False
+B3,30,binary_uncertainty_repulsion,0.15000000000000002,0.8813131313131313,True,"[""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion""]",False,False
+B3,30,hybrid_binary_gate20_max_depth_straddle,0.14833333333333334,0.9100799663299664,False,[],True,False
+B3,30,hybrid_equal_rank_fusion,0.14222222222222222,0.9046717171717171,False,[],True,False

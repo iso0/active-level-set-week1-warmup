@@ -1,0 +1,79 @@
+{
+  "T0_definition_unchanged": true,
+  "exact_phase6_parent": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+  "hf_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "manual_label_definition": "at least one valid saved physical frame manually labelled Keyhole",
+  "manual_labels_modified": false,
+  "maximum_depth_definition": "max(0, -z_min)",
+  "maximum_depth_redefined": false,
+  "original_dirty_checkout": {
+    "all_protected_hashes_match": true,
+    "branch": "main",
+    "git_status_short": [
+      "M outputs/week2_acquisition_comparison/week2_slide_notes.md",
+      "?? docs/deep-research-report.md",
+      "?? outputs/week1_active_level_set_progress.pptx",
+      "?? outputs/week2_active_level_set_progress_v2.pptx",
+      "?? outputs/week3_active_level_set_progress.pptx",
+      "?? outputs/week3_active_level_set_progress_v2.pptx"
+    ],
+    "head": "6fd6be57e5341e083a7023a3ae29e65b7b326bbd",
+    "path": "C:\\Users\\ozgur\\Documents\\thesis",
+    "protected_files": [
+      {
+        "actual_sha256": "a714e0c2249a134287b76a86fc8d660a075c69184a5cab851a3c1f52412e321c",
+        "expected_sha256": "a714e0c2249a134287b76a86fc8d660a075c69184a5cab851a3c1f52412e321c",
+        "matches": true,
+        "path": "docs/deep-research-report.md"
+      },
+      {
+        "actual_sha256": "bdd1f515eaab313e5371cbe5e2c0b7fb3e87713037a21337dd7d078406c23577",
+        "expected_sha256": "bdd1f515eaab313e5371cbe5e2c0b7fb3e87713037a21337dd7d078406c23577",
+        "matches": true,
+        "path": "outputs/week1_active_level_set_progress.pptx"
+      },
+      {
+        "actual_sha256": "9f00ece946170f936e5efffa019cdb4c3b2dbcc93037155cdfccfca716e2e99c",
+        "expected_sha256": "9f00ece946170f936e5efffa019cdb4c3b2dbcc93037155cdfccfca716e2e99c",
+        "matches": true,
+        "path": "outputs/week2_acquisition_comparison/week2_slide_notes.md"
+      },
+      {
+        "actual_sha256": "92a760d21a1c9b9e07f15724d2cedd225a19b05439af8eca6273ac4212b913ab",
+        "expected_sha256": "92a760d21a1c9b9e07f15724d2cedd225a19b05439af8eca6273ac4212b913ab",
+        "matches": true,
+        "path": "outputs/week2_active_level_set_progress_v2.pptx"
+      },
+      {
+        "actual_sha256": "f129a4f5310b808d23f810b1e4cbfb8be2039a5ddfe408d9b26de55e7c9cfcbd",
+        "expected_sha256": "f129a4f5310b808d23f810b1e4cbfb8be2039a5ddfe408d9b26de55e7c9cfcbd",
+        "matches": true,
+        "path": "outputs/week3_active_level_set_progress.pptx"
+      },
+      {
+        "actual_sha256": "aec8efe32b358d2f6bbd3c3610fc9d76ff8b45d74cddbdd0074c261e127ae09e",
+        "expected_sha256": "aec8efe32b358d2f6bbd3c3610fc9d76ff8b45d74cddbdd0074c261e127ae09e",
+        "matches": true,
+        "path": "outputs/week3_active_level_set_progress_v2.pptx"
+      }
+    ]
+  },
+  "phase": "Week 7 Phase 7",
+  "phase6_artifact_hashes": {
+    "active_initialization_audit.csv": "85175c2b19d55080622169c7f16103551384840bd275305572b7fc8511a29610",
+    "active_learning_aulc_summary.csv": "616802aadc11b831cff7703c85682488db5e1e5960ea687b4ae7cc2599f3e11e",
+    "active_learning_curve_summary.csv": "316e157c055b785d666d337e3a7912655577f43ec7786d0a65f2b3eaebefa592",
+    "active_prediction_history.csv": "3433038186db02210f5b785baa2cc2636b8d901e1c0ab428b4faf3c584a03720",
+    "active_query_history.csv": "5d7826bd37ae37757fbdc22e2fc41a758fb0758adead26f45a2b7fa05e798208",
+    "active_run_manifest.csv": "764b79d2156e328a8ea00edf83f4279916f99db0e63f56fe34e0ceb682762440",
+    "empirical_boundary_reference.csv": "48a8b085d970524b0f643b1e5cbe4f2fe703cff8023f3d92f66af1e28dad739f",
+    "online_threshold_history.csv": "380989bdb00a55c6451d6076e5e421be0405addf1a103a2a1882bd35e4817ec3",
+    "outer_split_manifest.csv": "637badaee28d3cd4ebe13851b686ec9266327cad25d1e76460d5e75ce47af73d",
+    "primary_common_population.csv": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7"
+  },
+  "phase6_output_directory": "outputs/week7_06_real_data_boundary_active_level_set",
+  "phase6_parent_parent": "6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb",
+  "phase7_branch": "codex/week7-phase7-final-boundary-hybrid-benchmark",
+  "phase7_head_before_changes": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+  "preregistered_decision_rule_sha256": "a3581cb61c4b2f95aa71838fc9c199ca8f992fef7de67104970767db0af9643f"
+}

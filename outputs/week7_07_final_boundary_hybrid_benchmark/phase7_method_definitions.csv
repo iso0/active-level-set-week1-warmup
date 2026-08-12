@@ -1,0 +1,7 @@
+method_id,method,query_trajectory,primary_predictor,max_depth_role,new_phase7_acquisition,preregistered,gate_fraction,rank_weights
+M0_binary_head,shared_random_binary_head,exact Phase 6 shared random trajectory,Binary GPC,not used,False,True,,
+M0_max_depth_head,shared_random_max_depth_head,same exact Phase 6 shared random trajectory,Max-Depth GPR plus queried-only tau,primary formulation,False,True,,
+M1,binary_uncertainty_repulsion,exact Phase 6 champion trajectory,Binary GPC,not used,False,True,,
+M2,max_depth_straddle,exact Phase 6 champion trajectory,Max-Depth GPR plus queried-only tau,primary formulation,False,True,,
+M3,hybrid_binary_gate20_max_depth_straddle,"top-20% Binary Phase-6-faithful priority, then Max-Depth straddle",Binary GPC,auxiliary acquisition only,True,True,0.2,NA
+M4,hybrid_equal_rank_fusion,equal deterministic percentile ranks of Binary priority and Max-Depth straddle,Binary GPC,auxiliary acquisition only,True,True,,0.5 Binary + 0.5 Max-Depth

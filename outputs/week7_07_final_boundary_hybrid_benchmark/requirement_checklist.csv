@@ -1,0 +1,19 @@
+requirement_id,requirement,supporting_checks,status
+R01,Phase 6 safely published before Phase 7,"V01,V02",PASS
+R02,Exact HF and 405-row population reused,"V03,V04",PASS
+R03,Exact 20 Phase 6 runs and warm starts reused,"V05,V13",PASS
+R04,Phase 6 reproduction check passed,"V06,V14",PASS
+R05,Decision rule preregistered before results,"V07,V08",PASS
+R06,B1/B2/B3 independently valid and evaluation-only,"V09,V10",PASS
+R07,Only preregistered methods and budgets executed,"V11,V12,V16",PASS
+R08,Leakage/fairness barriers hold,"V15,V19,V20,V21",PASS
+R09,Gate and fusion hyperparameters fixed,"V17,V18",PASS
+R10,Learning curves and AULCs reconcile,"V22,V23",PASS
+R11,Tolerance and paired uncertainty reconcile,"V24,V25",PASS
+R12,Pareto and representative-run logic reconcile,"V26,V27",PASS
+R13,Surrogate family and physical targets unchanged,"V28,V29",PASS
+R14,Original dirty worktree remains protected,V34,PASS
+R15,Final decision mechanically applies preregistration,V30,PASS
+R16,Supported surfaces mask extrapolation,V31,PASS
+R17,Teaching notebook fully executed,V32,PASS
+R18,At least 40 figures hash-verify,V33,PASS
