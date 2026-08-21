@@ -1,0 +1,46 @@
+{
+  "budget_snapshots": [
+    16,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80
+  ],
+  "common_budget_grid": [
+    16,
+    80
+  ],
+  "confidence_analysis_available": true,
+  "confidence_budgets": [
+    20,
+    30,
+    40,
+    60,
+    80
+  ],
+  "expensive_week1_7_experiments_rerun": false,
+  "figure_count": 10,
+  "new_acquisition": false,
+  "new_model_fit": false,
+  "new_simulator_runs": false,
+  "notebook_code_cells": 24,
+  "notebook_executed_code_cells": 24,
+  "notebook_stored_errors": 0,
+  "phase": "Week 8 Phase 1",
+  "phase1_figure_count": 10,
+  "prospective_manifest_rows": 44,
+  "python_executable": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Scripts\\python.exe",
+  "requirement_pass_count": 28,
+  "requirement_total_count": 28,
+  "saved_artifacts_only": true,
+  "source_outer_runs": 20,
+  "source_population": 405,
+  "timestamp_utc": "2026-08-17T22:20:10.665121+00:00",
+  "validation_pass_count": 34,
+  "validation_pending_independent_validator": false,
+  "validation_total_count": 34,
+  "wall_seconds_analysis_and_reporting": 16.078340899999603
+}

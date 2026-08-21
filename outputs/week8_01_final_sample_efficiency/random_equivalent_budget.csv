@@ -1,0 +1,6 @@
+boundary_definition,quantile,binary_budget,binary_mean_accuracy,random_equivalent_budget,random_equivalent_budget_display,status,query_saving,query_saving_lower_bound,query_saving_display,efficiency_multiplier,efficiency_multiplier_lower_bound,efficiency_multiplier_display,interpolation,extrapolation,random_curve_start_budget,random_curve_end_budget
+B1,20,20,0.776470588235,34,34.00,matched_within_observed_curve,14,,14.00,1.7,,1.70x,piecewise linear between adjacent observed integer-budget Random means,False,16,80
+B1,20,30,0.797058823529,70,70.00,matched_within_observed_curve,40,,40.00,2.33333333333,,2.33x,piecewise linear between adjacent observed integer-budget Random means,False,16,80
+B1,20,40,0.811764705882,,>80,not_matched_by_80,,40,>40,,2,>2.00x,piecewise linear between adjacent observed integer-budget Random means,False,16,80
+B1,20,50,0.829411764706,,>80,not_matched_by_80,,30,>30,,1.6,>1.60x,piecewise linear between adjacent observed integer-budget Random means,False,16,80
+B1,20,60,0.835294117647,,>80,not_matched_by_80,,20,>20,,1.33333333333,>1.33x,piecewise linear between adjacent observed integer-budget Random means,False,16,80

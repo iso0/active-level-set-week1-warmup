@@ -1,0 +1,7 @@
+boundary_definition,quantile,target_accuracy,target_accuracy_percent,matched_run_count,count_binary_earlier,count_tie,count_random_earlier,count_binary_reached_random_not_reached,count_random_reached_binary_not_reached,count_neither_reached,jointly_reached_count,paired_median_random_minus_binary_queries,paired_mean_random_minus_binary_queries,paired_q25_random_minus_binary_queries,paired_q75_random_minus_binary_queries,not_reached_not_imputed
+B1,20,0.75,75,20,9,8,2,0,0,1,19,0,9.10526315789,0,13.5,True
+B1,20,0.8,80,20,10,3,1,4,0,2,14,14,17.4285714286,0.5,21.75,True
+B1,20,0.85,85,20,6,2,0,7,0,5,8,11.5,16.5,6,27.25,True
+B1,30,0.75,75,20,5,15,0,0,0,0,20,0,2.3,0,0.25,True
+B1,30,0.8,80,20,9,9,2,0,0,0,20,0,6.05,0,9,True
+B1,30,0.85,85,20,12,2,0,4,0,2,14,16.5,19.1428571429,8,21.75,True

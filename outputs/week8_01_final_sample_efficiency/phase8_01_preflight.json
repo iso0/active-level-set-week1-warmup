@@ -1,0 +1,43 @@
+{
+  "ST_semantics": "substrate temperature",
+  "boundary_metrics_evaluation_only": true,
+  "common_budget_start": 16,
+  "exact_phase6_commit": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+  "exact_phase7_parent": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+  "expensive_experiment_rerun": false,
+  "final_budget": 80,
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "inputs": [
+    "P",
+    "VX",
+    "LS",
+    "ST"
+  ],
+  "keyhole_count": 73,
+  "manual_ground_truth": "has_keyhole",
+  "non_keyhole_count": 332,
+  "offline_retrospective_benchmark": true,
+  "outer_run_count": 20,
+  "phase": "Week 8 Phase 1",
+  "primary_method": "binary_uncertainty_repulsion",
+  "primary_population_count": 405,
+  "prospective_new_simulator_validation": false,
+  "random_baseline": "shared_random_binary_head",
+  "remote_phase7_verified": true,
+  "repeats": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "secondary_comparator": "max_depth_straddle",
+  "status": "PASS",
+  "timestamp_utc": "2026-08-17T22:19:56.464471+00:00",
+  "week8_branch": "codex/week8-final-sample-efficiency-thesis-consolidation"
+}

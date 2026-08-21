@@ -1,0 +1,29 @@
+requirement_id,requirement,status,evidence
+R01,Exact published Phase 7 provenance,PASS,phase8_01_preflight.json; phase7_source_audit.json
+R02,No new simulator run or expensive benchmark rerun,PASS,phase8_01_preflight.json
+R03,Frozen Binary/Random/Max-Depth methods,PASS,phase8_01_preflight.json
+R04,B1 primary with B2/B3 robustness,PASS,budget_snapshot_b1/b2/b3.csv
+R05,Budget snapshots 20/30/40/50/60/70/80,PASS,budget_snapshot_b1.csv
+R06,Concrete q20/q30 accuracy statements,PASS,headline_results.csv
+R07,70/75/80/85/90 first crossings,PASS,queries_to_accuracy_target.csv
+R08,Persistent crossing robustness,PASS,persistent_queries_to_accuracy_target.csv
+R09,Unsuccessful runs explicit,PASS,queries_to_accuracy_target.csv
+R10,Random-equivalent interpolation without extrapolation,PASS,random_equivalent_budget.csv
+R11,Query savings and lower bounds,PASS,query_savings_summary.csv
+R12,Matched-run censoring-aware evidence,PASS,matched_query_savings.csv
+R13,Ten sample-efficiency figures,PASS,figures/; figure_manifest.csv
+R14,Keyhole discovery and enrichment,PASS,keyhole_discovery_by_budget.csv
+R15,Predictive confidence from saved probabilities,PASS,predictive_confidence_summary.csv
+R16,Brier/ECE and reliability bins,PASS,predictive_calibration_summary.csv
+R17,Machine-traceable headline claims,PASS,headline_results.csv
+R18,Plain-language Turkish explanation,PASS,week8_phase1_plain_language_tr.md
+R19,Instructional executable notebook,PASS,notebooks/week_08/01_final_sample_efficiency.ipynb
+R20,Offline/retrospective limitation,PASS,phase8_01_preflight.json; headline_results.md
+R21,No physical-boundary certainty overclaim,PASS,headline_results.csv; claim ledger C13
+R22,ST means substrate temperature,PASS,phase8_01_preflight.json
+R23,No causal claim,PASS,claim ledger C08
+R24,Original dirty checkout preserved,PASS,original_worktree_baseline.json
+R25,Week 1-7 artifacts untouched,PASS,isolated worktree and scope checks
+R26,Runtime and provenance summaries,PASS,runtime_summary.json
+R27,Figure hashes,PASS,figure_manifest.csv
+R28,Output hashes,PASS,output_manifest.csv

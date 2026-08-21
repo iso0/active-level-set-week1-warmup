@@ -1,0 +1,5 @@
+partition,simulations,keyhole,non_keyhole,keyhole_prevalence
+new-data,164,63,101,0.384146341463
+old-data-local,178,8,170,0.0449438202247
+old-data-remote-clean,63,2,61,0.031746031746
+TOTAL primary common population,405,73,332,0.18024691358

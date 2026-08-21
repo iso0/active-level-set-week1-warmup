@@ -1,0 +1,26 @@
+check_id,check,status,detail
+P2V01,"Final scorecard contains exactly Binary, Random, and Max-Depth",PASS,"methods=['binary_uncertainty_repulsion', 'shared_random_binary_head', 'max_depth_straddle']; runs=[20, 20, 20]"
+P2V02,Final scorecard AULCs reproduce Phase 7 run-level artifacts,PASS,maximum_absolute_difference=4.705957845629882e-13
+P2V03,Final primary remains Binary uncertainty-repulsion,PASS,BINARY ACQUISITION PRIMARY
+P2V04,Max-Depth remains secondary and globally stronger on balanced accuracy,PASS,"[{""method_label"":""Binary"",""mean_balanced_accuracy_aulc"":0.9170896267,""primary_role"":""final primary acquisition""},{""method_label"":""Random"",""mean_balanced_accuracy_aulc"":0.8735132147,""primary_role"":""authoritative random baseline""},{""method_label"":""Max-Depth"",""mean_balanced_accuracy_aulc"":0.9432146454,""primary_role"":""secondary continuous physical comparator""}]"
+P2V05,Gate/Fusion remain negative supporting evidence,PASS,"[{""decision"":""BINARY ACQUISITION PRIMARY"",""reason"":""Neither Hybrid met the robust rule and Binary remained no worse on the preregistered boundary hierarchy under at least two definitions."",""hybrid_success_json"":""{\""hybrid_binary_gate20_max_depth_straddle\"": false, \""hybrid_equal_rank_fusion\"": false}""}]"
+P2V06,G3 is not promoted to ground truth,PASS,"[{""allowed_wording"":""G3 is a strong scalar companion with partition-shift caveats."",""forbidden_overclaim"":""G3 defines a universal morphology boundary.""}]"
+P2V07,No universal G3 or Max-Depth threshold claim,PASS,"[{""claim_id"":""C06"",""status"":""NOT SUPPORTED \/ PROHIBITED""},{""claim_id"":""C07"",""status"":""NOT SUPPORTED \/ PROHIBITED""}]"
+P2V08,No causal interpretation,PASS,claim C08 prohibited; Phase 7 causal_claim false
+P2V09,B1/B2/B3 are called empirical diagnostics rather than true physical boundary,PASS,"[{""allowed_wording"":""B1\/B2\/B3 are empirical near-boundary diagnostics for manual labels."",""forbidden_overclaim"":""They locate the continuous physical transition surface exactly.""}]"
+P2V10,Synthetic summary reproduces the three saved benchmark groups,PASS,"[{""benchmark"":""Branin"",""seed_count"":5,""best_q20_method"":""classifier_uncertainty_repulsion""},{""benchmark"":""Hartmann4"",""seed_count"":5,""best_q20_method"":""gpc_bernoulli_sur_refit_k25""},{""benchmark"":""Ackley4 (optional, 3 seeds)"",""seed_count"":3,""best_q20_method"":""classifier_entropy""}]"
+P2V11,Synthetic evidence does not assert a universal acquisition winner,PASS,"[{'benchmark': 'Branin', 'best_q20_method': 'classifier_uncertainty_repulsion'}, {'benchmark': 'Hartmann4', 'best_q20_method': 'gpc_bernoulli_sur_refit_k25'}, {'benchmark': 'Ackley4 (optional, 3 seeds)', 'best_q20_method': 'classifier_entropy'}]"
+P2V12,Claim ledger has all required columns and unique IDs,PASS,rows=13; unique=True
+P2V13,Supported-primary ledger contains no unsupported row,PASS,"[{""claim_id"":""C01"",""status"":""SUPPORTED""},{""claim_id"":""C02"",""status"":""SUPPORTED""},{""claim_id"":""C04"",""status"":""SUPPORTED""}]"
+P2V14,Every claim-ledger source artifact exists,PASS,missing=[]
+P2V15,Final narrative contains all twelve declared sections,PASS,section_count=12/12
+P2V16,Final Turkish summary answers all eleven declared questions,PASS,section_count=11/11
+P2V17,Offline retrospective and no-new-simulator limitation appears in final prose,PASS,limitation wording present in English narrative and Turkish summary
+P2V18,Final table set is exactly six CSV plus six Markdown tables,PASS,csv=6; md=6
+P2V19,Final figure set contains ten valid distinct PNGs,PASS,figures=10; unique_hashes=10
+P2V20,Phase 2 teaching notebook executes 14 code cells with zero stored errors,PASS,"{""cell_count"": 29, ""code_cell_count"": 14, ""executed_code_cell_count"": 14, ""stored_error_count"": 0, ""all_executed"": true}"
+P2V21,No expensive synthetic or Week 1-7 rerun is reported,PASS,runtime_summary expensive_week1_7_experiments_rerun=false
+P2V22,Repeated CV is not presented as independent physical trials,PASS,claim C11 prohibited and narrative limitation explicit
+P2V23,Prospective deployment is not claimed,PASS,claim C12 prohibited; future validation section present
+P2V24,"Week 8 scope remains isolated, uncommitted, and unpushed",PASS,status_entries=6; unexpected=[]; HEAD=167aad945b20822de712e891e901bd3ec6d5ffc6; remote_week8=''
+P2V25,Output manifest will be hash-verified after final construction,PASS,conditional PASS; validator raises if final verification fails

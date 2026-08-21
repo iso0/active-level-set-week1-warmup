@@ -1,0 +1,29 @@
+{
+  "claim_ledger_rows": 13,
+  "expensive_week1_7_experiments_rerun": false,
+  "figure_count": 10,
+  "final_figure_count": 10,
+  "final_table_csv_count": 6,
+  "new_acquisition": false,
+  "new_model_fit": false,
+  "new_simulator_runs": false,
+  "notebook_code_cells": 14,
+  "notebook_executed_code_cells": 14,
+  "notebook_stored_errors": 0,
+  "phase": "Week 8 Phase 2",
+  "prospective_manifest_rows": 35,
+  "python_executable": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Scripts\\python.exe",
+  "requirement_pass_count": 25,
+  "requirement_total_count": 25,
+  "saved_artifacts_only": true,
+  "synthetic_benchmarks_reused": [
+    "Branin",
+    "Hartmann4",
+    "Ackley4 optional"
+  ],
+  "timestamp_utc": "2026-08-17T22:20:10.665121+00:00",
+  "validation_pass_count": 25,
+  "validation_pending_independent_validator": false,
+  "validation_total_count": 25,
+  "wall_seconds_analysis_and_reporting": 16.078340899999603
+}

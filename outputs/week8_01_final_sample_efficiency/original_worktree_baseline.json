@@ -1,0 +1,16 @@
+{
+  "branch": "main",
+  "dirty_entries": 6,
+  "head": "6fd6be57e5341e083a7023a3ae29e65b7b326bbd",
+  "path": "C:\\Users\\ozgur\\Documents\\thesis",
+  "preservation_policy": "Read-only; all Week 8 writes occur in the isolated Week 8 worktree.",
+  "status_lines": [
+    "## main...origin/main [behind 15]",
+    " M outputs/week2_acquisition_comparison/week2_slide_notes.md",
+    "?? docs/",
+    "?? outputs/week1_active_level_set_progress.pptx",
+    "?? outputs/week2_active_level_set_progress_v2.pptx",
+    "?? outputs/week3_active_level_set_progress.pptx",
+    "?? outputs/week3_active_level_set_progress_v2.pptx"
+  ]
+}
