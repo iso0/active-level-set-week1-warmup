@@ -1,0 +1,212 @@
+{
+  "adaptive_horizon": {
+    "decision_metric": "random_continuation_level_finite_fraction_of_persistent_B1_q20_target_0.80_crossings",
+    "final_right_censoring": "H_plus",
+    "initial_horizon": 80,
+    "rule": [
+      {
+        "if_random_finite_fraction_lt": 0.95,
+        "inspect_at_horizon": 80,
+        "then_uniformly_extend_all_arms_and_random_continuations_to": 120
+      },
+      {
+        "if_random_finite_fraction_lt": 0.95,
+        "inspect_at_horizon": 120,
+        "then_uniformly_extend_all_arms_and_random_continuations_to": 160
+      }
+    ],
+    "stop_at": 160
+  },
+  "arms": {
+    "confirmatory_comparator": {
+      "name": "binary_uncertainty_repulsion",
+      "repulsion_bandwidth_h": 0.15,
+      "trajectories_per_outer_run": 1
+    },
+    "primary": {
+      "binary_margin": {
+        "trajectories_per_outer_run": 1
+      },
+      "binary_random": {
+        "minimum_independent_continuations_per_outer_run": 30
+      }
+    }
+  },
+  "claim_scope": {
+    "causality": "not_claimed",
+    "ground_truth": "manual_has_keyhole",
+    "physical_boundary_certainty": "not_claimed",
+    "population": "frozen_primary_common_405_rows",
+    "st_definition": "substrate_temperature"
+  },
+  "compute_fit": {
+    "formula": "100*(1_margin+30_random+1_repulsion)*(H-15)",
+    "gpc_fit_counts": {
+      "H_120": 336000,
+      "H_160": 464000,
+      "H_80": 208000
+    },
+    "pre_run_gate": "fixture_only_resource_and_determinism_smoke_estimate; fail_closed; never reduce frozen repetitions, continuations, or grid"
+  },
+  "crossings": {
+    "primary_target": 0.8,
+    "rule": "first_declared_checkpoint_at_or_above_target_with_next_two_declared_checkpoints_also_at_or_above_target",
+    "sensitivity_targets": [
+      0.75,
+      0.85
+    ]
+  },
+  "decision_criteria": {
+    "multiplier": {
+      "fail": "one_sided_95_percent_lower_bound_lte_1.00",
+      "pass": "random_finite_fraction_gte_0.95_and_one_sided_95_percent_lower_bound_gte_1.25",
+      "qualify": "one_sided_95_percent_lower_bound_gt_1.00_but_pass_not_met_or_random_is_censored"
+    },
+    "overall_primary_confirmation": "pass_only_if_performance_query_saving_and_multiplier_each_pass",
+    "performance": {
+      "estimand": "mean_repeat_fold(AULC16_80_binary_margin-mean_continuation_AULC16_80_binary_random)",
+      "fail": "point_estimate_lte_0.000",
+      "pass": "one_sided_95_percent_lower_bound_gte_0.020",
+      "qualify": "point_estimate_gt_0.000_but_pass_not_met"
+    },
+    "query_saving": {
+      "estimand": "mean(min(Q_random,H)-min(Q_margin,H))",
+      "fail": "one_sided_95_percent_lower_bound_lte_0_queries",
+      "pass": "random_finite_fraction_gte_0.95_and_one_sided_95_percent_lower_bound_gte_10_queries",
+      "qualify": "one_sided_95_percent_lower_bound_gt_0_queries_but_pass_not_met_or_random_is_censored"
+    },
+    "repulsion_h_0_15": {
+      "estimands": [
+        "AULC16_80_repulsion_minus_margin",
+        "AULC16_40_repulsion_minus_margin"
+      ],
+      "fail": "either_point_estimate_lte_0.000",
+      "pass": "one_sided_95_percent_lower_bound_of_bootstrap_minimum_of_both_estimands_gte_0.010",
+      "qualify": "both_point_estimates_gt_0.000_but_pass_not_met"
+    }
+  },
+  "evaluation": {
+    "primary": {
+      "boundary": "B1",
+      "metric": "untouched_test_fold_accuracy",
+      "quantile": "q20",
+      "summary": "normalized_integer_grid_trapezoid_AULC_16_80"
+    },
+    "secondary": {
+      "budget_40": [
+        "B1_q20_accuracy",
+        "B1_q30_accuracy",
+        "B1_q20_recall",
+        "B1_q20_balanced_accuracy",
+        "B1_q20_false_negatives",
+        "B1_q20_false_positives"
+      ],
+      "crossing_targets": [
+        0.8,
+        0.75,
+        0.85
+      ],
+      "terminal_horizon": [
+        "B1_q20_recall",
+        "B1_q20_balanced_accuracy",
+        "B1_q20_false_negatives",
+        "B1_q20_false_positives"
+      ],
+      "trend": "B1_q30_AULC_16_80"
+    }
+  },
+  "evaluation_grid": {
+    "historical_AULC_16_80": {
+      "end": 80,
+      "inclusive": true,
+      "start": 16,
+      "step": 1,
+      "trapezoid_denominator": 64
+    },
+    "post_80_declared_checkpoints": {
+      "to_120": {
+        "end": 120,
+        "start": 82,
+        "step": 2
+      },
+      "to_160": {
+        "end": 160,
+        "start": 124,
+        "step": 4
+      }
+    }
+  },
+  "expected_artifacts": [
+    "preregistered_protocol.json",
+    "protocol_sha256.txt",
+    "seed_registry.csv",
+    "grouped_split_manifest.csv",
+    "initial_design_manifest.csv",
+    "trajectory_per_budget.csv",
+    "checkpoint_metrics.csv",
+    "crossing_censoring.csv",
+    "random_continuation_summary.csv",
+    "hierarchical_bootstrap_summary.json",
+    "decision_ledger.csv",
+    "validation_report.json",
+    "runtime_compute_report.json"
+  ],
+  "inference": {
+    "bootstrap_draws": 20000,
+    "confidence_bound": "one_sided_95_percent_percentile_lower_bound_at_bootstrap_quantile_0.05",
+    "method": "hierarchical_repeat_block_bootstrap",
+    "nested_random_uncertainty": "within_selected_repeat_and_fold_resample_30_random_continuation_ids_with_replacement",
+    "pseudoreplication_safeguard": "resample_20_repeat_ids_as_blocks_and_retain_all_5_folds; do_not_treat_100_folds_or_3000_continuations_as_independent_physical_campaigns"
+  },
+  "information_flow": {
+    "acquisition_forbidden_inputs": [
+      "untouched_test_rows",
+      "hidden_pool_labels_before_query",
+      "hidden_pool_responses_before_query",
+      "B1_B2_B3_evaluation_scores"
+    ],
+    "allowed_query_inputs": [
+      "P",
+      "VX",
+      "LS",
+      "ST",
+      "revealed_outcomes_after_query"
+    ]
+  },
+  "initial_design": {
+    "arm_matched": true,
+    "minimum_queries": 16,
+    "requires_both_revealed_manual_classes": true,
+    "uses_hidden_labels_to_skip_candidates": false
+  },
+  "outer_design": {
+    "group_column": "input_tuple_sha256",
+    "new_repeats": 20,
+    "outer_runs": 100,
+    "splits_per_repeat": 5,
+    "splitter": "StratifiedGroupKFold"
+  },
+  "protocol_id": "week8_5_frozen_confirmation_protocol/v1.0.0",
+  "schema_version": "1.0.0",
+  "seed_contract": {
+    "derivation": "sha256_utf8_of_literal_pipe_joined_seed_key_first_8_digest_bytes_little_endian_modulo_2_to_32",
+    "forbidden_legacy_namespace_components": [
+      "6022026",
+      "primary_common",
+      "shared_pool_permutation"
+    ],
+    "key_templates": [
+      "week8_5_frozen_confirmation|v1|outer_split|repeat|NN",
+      "week8_5_frozen_confirmation|v1|run|RUN_ID|initial_design",
+      "week8_5_frozen_confirmation|v1|run|RUN_ID|arm|binary_margin|fit|budget|BBB",
+      "week8_5_frozen_confirmation|v1|run|RUN_ID|arm|binary_random|continuation|CC|order",
+      "week8_5_frozen_confirmation|v1|run|RUN_ID|arm|binary_random|continuation|CC|fit|budget|BBB",
+      "week8_5_frozen_confirmation|v1|run|RUN_ID|arm|binary_uncertainty_repulsion|h|0.15|fit|budget|BBB"
+    ],
+    "registry_rule": "store_complete_seed_key_and_seed_u32; complete_key_is_the_state_identifier"
+  },
+  "serialization": {
+    "canonicalization": "UTF_8_LF_2_space_indent_lexicographically_sorted_object_keys_ordered_arrays_trailing_LF",
+    "integrity": "sha256_of_exact_protocol_json_bytes_recorded_before_run"
+  }
+}

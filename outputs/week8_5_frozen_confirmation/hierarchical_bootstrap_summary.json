@@ -1,0 +1,57 @@
+{
+  "bootstrap_draws": 20000,
+  "protocol_id": "week8_5_frozen_confirmation_protocol/v1.0.0",
+  "protocol_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+  "rows": [
+    {
+      "bootstrap_draws": 20000,
+      "estimand": "delta_AULC",
+      "one_sided_95pct_lower_bound": 0.031270335477941176,
+      "point_estimate_bootstrap_mean": 0.03730959911151962,
+      "two_sided_95pct_lower": 0.030131843596813736,
+      "two_sided_95pct_upper": 0.04441595435049023
+    },
+    {
+      "bootstrap_draws": 20000,
+      "estimand": "delta_Q",
+      "one_sided_95pct_lower_bound": 13.909949999999995,
+      "point_estimate_bootstrap_mean": 20.087681333333336,
+      "two_sided_95pct_lower": 12.485116666666666,
+      "two_sided_95pct_upper": 26.710683333333336
+    },
+    {
+      "bootstrap_draws": 20000,
+      "estimand": "multiplier",
+      "one_sided_95pct_lower_bound": 1.3292101336681257,
+      "point_estimate_bootstrap_mean": 1.5210948307772694,
+      "two_sided_95pct_lower": 1.2927689129107154,
+      "two_sided_95pct_upper": 1.7604686532995661
+    },
+    {
+      "bootstrap_draws": 20000,
+      "estimand": "delta_repulsion_AULC16_80",
+      "one_sided_95pct_lower_bound": 0.0005144761029411688,
+      "point_estimate_bootstrap_mean": 0.001818285615808821,
+      "two_sided_95pct_lower": 0.00025735294117647185,
+      "two_sided_95pct_upper": 0.0034145220588235182
+    },
+    {
+      "bootstrap_draws": 20000,
+      "estimand": "delta_repulsion_AULC16_40",
+      "one_sided_95pct_lower_bound": -0.0006250000000000078,
+      "point_estimate_bootstrap_mean": 0.002589157475490191,
+      "two_sided_95pct_lower": -0.001188725490196084,
+      "two_sided_95pct_upper": 0.0066544117647058774
+    },
+    {
+      "bootstrap_draws": 20000,
+      "estimand": "delta_repulsion_min",
+      "one_sided_95pct_lower_bound": -0.0006250000000000078,
+      "point_estimate_bootstrap_mean": 0.0016019001225490157,
+      "two_sided_95pct_lower": -0.001188725490196084,
+      "two_sided_95pct_upper": 0.0034145220588235182
+    }
+  ],
+  "schema_version": "1.0.0",
+  "source_hashes_json": "{\"phase6_source.py\": \"23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479\", \"phase7_source.py\": \"d5a331c60bab373adfc63344cc5eb3b88e1ca7ce41e4ffd0717196edeb2c00df\", \"primary_common_population.csv\": \"c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7\", \"protocol.json\": \"bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66\"}"
+}

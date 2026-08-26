@@ -21,5 +21,13 @@ Thumbs.db
 *.tmp
 *.bak
 
+# Week 8.5 local restart cache and raw >100 MB exports.
+# Portable compressed copies are committed beside these files.
+outputs/week8_5_frozen_confirmation/checkpoints/
+outputs/week8_5_frozen_confirmation/learning_curves.csv
+outputs/week8_5_frozen_confirmation/trajectory_per_budget.csv
+outputs/week8_5_frozen_confirmation/seed_registry.csv
+outputs/week8_5_frozen_confirmation/random_seed_manifest.csv
+
 # Local raw research data
 /data/raw/

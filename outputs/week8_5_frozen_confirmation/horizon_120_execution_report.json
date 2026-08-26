@@ -1,0 +1,8 @@
+{
+  "complete_trajectories": 3200,
+  "created_at_utc": "2026-08-26T16:09:28+00:00",
+  "elapsed_seconds": 2376.377516699984,
+  "horizon": 120,
+  "trajectory_count": 3200,
+  "workers": 4
+}
