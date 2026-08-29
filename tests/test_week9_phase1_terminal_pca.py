@@ -5,6 +5,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from sklearn.preprocessing import RobustScaler, StandardScaler
 
 from src import week8_5_frozen_sample_efficiency_confirmation as w85
 from src import week9_phase1_terminal_pca as phase1
@@ -248,6 +249,49 @@ class PCATests(unittest.TestCase):
         self.assertTrue(np.allclose(standardized.mean(axis=0), 0.0, atol=1e-12))
         self.assertTrue(np.allclose(standardized.std(axis=0), 1.0, atol=1e-12))
 
+    def test_standard_is_primary_and_robust_is_diagnostic(self) -> None:
+        population = synthetic_population(120)
+        standard = phase1.fit_feature_only_pca(population, "standard")
+        robust = phase1.fit_feature_only_pca(population, "robust")
+        self.assertIsInstance(standard.scaler, StandardScaler)
+        self.assertIsInstance(robust.scaler, RobustScaler)
+        self.assertEqual(phase1.PCA_VARIANTS, ("standard", "robust"))
+
+    def test_all_preprocessing_variants_are_label_permutation_invariant(self) -> None:
+        population = synthetic_population(120)
+        permuted = population.copy()
+        permuted["has_keyhole"] = np.random.default_rng(17).permutation(permuted["has_keyhole"].to_numpy())
+        for variant in phase1.PCA_VARIANTS:
+            with self.subTest(variant=variant):
+                first = phase1.fit_feature_only_pca(population, variant)
+                second = phase1.fit_feature_only_pca(permuted, variant)
+                self.assertTrue(np.allclose(first.pca.components_, second.pca.components_))
+                self.assertTrue(np.allclose(first.pca.explained_variance_ratio_, second.pca.explained_variance_ratio_))
+
+    def test_component_interpretation_is_derived_from_coefficients(self) -> None:
+        loadings = pd.DataFrame(
+            {
+                "feature": ["P", "VX", "LS", "ST"],
+                "PC1": [-0.70, -0.10, 0.71, 0.08],
+            }
+        )
+        result = phase1.derive_loading_interpretation(loadings, "PC1", 0.32)
+        self.assertEqual(result["dominant_feature"], "LS")
+        self.assertEqual(set(result["high_magnitude_features"]), {"P", "LS"})
+        self.assertEqual(result["short_interpretation"], "LS versus P contrast")
+        swapped = loadings.copy()
+        swapped["PC1"] = [0.05, 0.96, 0.10, -0.08]
+        swapped_result = phase1.derive_loading_interpretation(swapped, "PC1", 0.32)
+        self.assertEqual(swapped_result["short_interpretation"], "primarily VX variation")
+
+    def test_pca_components_are_orthonormal_and_variance_closes(self) -> None:
+        result = phase1.fit_feature_only_pca(synthetic_population(120))
+        self.assertTrue(np.allclose(result.pca.components_ @ result.pca.components_.T, np.eye(4), atol=1e-12))
+        self.assertAlmostEqual(float(result.pca.explained_variance_ratio_.sum()), 1.0)
+        for row in result.pca.components_:
+            pivot = int(np.argmax(np.abs(row)))
+            self.assertGreaterEqual(float(row[pivot]), 0.0)
+
     def test_representative_fold_selection_is_deterministic_and_not_visual(self) -> None:
         population = synthetic_population()
         specs = []
@@ -267,12 +311,14 @@ class PCATests(unittest.TestCase):
             population,
             pca,
             chosen_one,
-            {"queried_indices": list(chosen_one.train_indices[:160])},
+            {"queried_indices": list(chosen_one.train_indices[:320])},
         )
         self.assertEqual(int((diagnostic.representative_test_role == "B1_q20").sum()), 17)
-        self.assertEqual(int(diagnostic.margin_query_number.notna().sum()), 160)
+        self.assertEqual(int(diagnostic.margin_query_number.notna().sum()), 320)
+        self.assertEqual(summary["margin_query_stage_counts"]["held_out_test"], 81)
+        self.assertEqual(summary["margin_query_stage_counts"]["unqueried_pool_by_h320"], 4)
+        self.assertEqual(summary["margin_query_stage_counts"]["acquired_161_320"], 160)
         self.assertEqual(summary["diagnostic_status"], "after-the-fact 2D projection interpretation only")
-
 
 if __name__ == "__main__":
     unittest.main()

@@ -10,18 +10,19 @@ prompt_section,requirement,status,evidence
 8,Matched pair guaranteed-minimum analysis,PASS,matched_pair_crossing_categories.csv
 9,Terminal full81/q30/q20 metrics at 40/80/160/320,PASS,terminal_metric_summary.csv; terminal_path_metrics.csv
 10,AULC versus terminal distinction,PASS,notebook Section 7; supervisor_summary.md
-11A,PCA full 405 population and loadings,PASS,figures/05_pca_full_population.png; pca_feature_loadings.csv
-11B,Fold-local boundary-like visualization,PASS,figures/06_pca_boundary_subsets_representative_fold.png
-11C,Active-learning trajectory through H320,PASS,figures/07_pca_active_learning_trajectory.png
-11D,PCA-plane GPC slice,PASS,figures/08_pca_plane_gpc_slice.png
-12,Scientific PCA interpretation and caveats,PASS,pca_summary.json; notebook Section 9
+11A,Primary StandardScaler PCA of all 405 rows plus coefficients,PASS,figures/05_pca_input_geometry_and_loadings.png; pca_feature_loadings.csv
+11B,Scaling robustness and PC1-PC3 loading structure,PASS,figures/06_pca_scaling_robustness.png; figures/07_pca_component_loading_structure.png
+11C,Fold-local boundary-like visualization,PASS,figures/08_pca_boundary_like_subset.png
+11D,Active-learning trajectory through H320,PASS,figures/09_pca_margin_query_trajectory.png
+11E,Secondary PCA-plane GPC slice diagnostic,PASS,figures/10_pca_gpc_slice_diagnostic.png
+12,Scientific PCA interpretation and RobustScaler sensitivity caveats,PASS,pca_summary.json; notebook Section 9
 13,No deep dive on old 9/100 failures,PASS,No failure-analysis artifact created
 14-15,Only question-driven required figures,PASS,figures/ and figure_manifest.csv
 16,Repeat-block/within-fold Random bootstrap,PASS,query_bootstrap_summary.json; terminal_metric_summary.csv
 17,Separated claim ledger,PASS,claim_ledger.csv and claim_ledger.md
 18,Explicit Q1-Q9 answers,PASS,final_q1_q9_answers.json and .md
 19,"Leakage, identity, crossing, PCA validations",PASS,validation_report.json and .md
-20,"Subagent evidence, extension, terminal/PCA, critic workflow",PASS,independent_critic_audit.md
+20,Existing independent critic workflow,PASS,independent_critic_audit.md
 21,Step-by-step teaching notebook,PASS,notebooks/week_09/01_week9_phase1_close_week8.ipynb
 22,5-8 supervisor-facing messages,PASS,supervisor_summary.md
 23,Ground truth/B1/q20/q30/ST terminology,PASS,notebook and supervisor summary

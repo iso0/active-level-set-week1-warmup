@@ -172,19 +172,85 @@ display(selected.pivot_table(index=['budget','subset','metric'], columns='estima
             claim="q20/q30 quantify held-out difficulty under the manual labels.",
             cannot="Their accuracies measure neither physical-boundary certainty nor causality.",
         ),
-        md("""## 9. PCA 2D visualization and interpretation
+        md("""## 9. PCA visualization and interpretation
 
-PCA was fit after standardizing only `P`, `VX`, `LS`, and `ST`; labels never entered the PCA fit. The representative fold was chosen deterministically by median static q20 difficulty, not by visual appearance."""),
+PCA answers a narrow question: **which directions contain the most variation in the sampled four-input design?** It does not search for the direction that best separates Keyhole from Conduction. A supervised projection such as LDA would answer a different, label-dependent question and is outside this visualization-only analysis.
+
+The primary PCA first standardizes `P`, `VX`, `LS`, and `ST`, because their physical units and numerical scales differ. Labels never enter the scaler or PCA fit. The global PCA coordinates also never enter GPC training or acquisition. Previously queried labels do train later GPC fits, as required by active learning."""),
         code("""pca = json.loads((OUT / 'pca_summary.json').read_text(encoding='utf-8'))
-display(pd.read_csv(OUT / 'pca_explained_variance.csv'))
-display(pd.read_csv(OUT / 'pca_feature_loadings.csv'))
-for name in ['05_pca_full_population.png','06_pca_boundary_subsets_representative_fold.png','07_pca_active_learning_trajectory.png','08_pca_plane_gpc_slice.png']:
-    display(Image(filename=str(OUT / 'figures' / name)))"""),
+variance = pd.read_csv(OUT / 'pca_explained_variance.csv')
+loadings = pd.read_csv(OUT / 'pca_feature_loadings.csv')
+interpretations = pd.read_csv(OUT / 'pca_component_interpretations.csv')
+display(variance)
+display(loadings)
+display(interpretations[['component','short_interpretation','explained_variance_ratio','scientific_scope']])
+display(Image(filename=str(OUT / 'figures' / '05_pca_input_geometry_and_loadings.png')))"""),
         interpretation(
-            see="PC1 and PC2 summarize part—not all—of the standardized 4D variation; q20 rows show greater projected class mixing and Margin queries concentrate around overlapping regions.",
-            matter="The plots make the 4D query behavior explainable without feeding the projection into the model.",
-            claim="The probability contour is a PC1–PC2 slice with PC3=PC4=0.",
-            cannot="The contour is not the full 4D empirical boundary and is not a physical boundary proof.",
+            see="PC1 is an almost balanced LS-versus-P contrast, while PC2 is mainly sampled ST variation. Together they retain 58.42% of standardized input variance.",
+            matter="The loading bars make the plotted axes physically readable and expose the 41.58% of variance omitted from the 2D view.",
+            claim="The Keyhole colors are an after-the-fact overlay on a label-free input-variance projection.",
+            cannot="A large loading is not physical importance, causal influence, or proof that a feature is the best Keyhole predictor.",
+        ),
+        md("""### 9.1 Preprocessing robustness
+
+StandardScaler is the declared primary view. RobustScaler is one sensitivity diagnostic, not a replacement. Each variant is shown in its own native explained-variance order; only the arbitrary sign is made deterministic by orienting the largest-magnitude coefficient positively."""),
+        code("""display(pd.read_csv(OUT / 'pca_scaling_explained_variance.csv'))
+display(Image(filename=str(OUT / 'figures' / '06_pca_scaling_robustness.png')))"""),
+        interpretation(
+            see="Standard and robust scaling agree that PC2 is strongly ST-related and PC3 is strongly VX-related, but they materially disagree on PC1.",
+            matter="The sensitivity check distinguishes stable component structure from conclusions that depend on preprocessing.",
+            claim="The ST/PC2 and VX/PC3 pattern is qualitatively robust; the exact PC1 interpretation is scaling-dependent.",
+            cannot="The sensitivity result turns either representation into physical importance or causal evidence.",
+        ),
+        md("""### 9.2 What the main 2D view leaves out
+
+PC3 explains 25.04%, nearly as much as PC2, and is overwhelmingly associated with `VX`. Therefore the PC1–PC2 scatter necessarily hides most scan-velocity variation."""),
+        code("""display(Image(filename=str(OUT / 'figures' / '07_pca_component_loading_structure.png')))"""),
+        interpretation(
+            see="PC1 is the P–LS contrast, PC2 is mainly ST, and PC3 is mainly VX in the primary StandardScaler PCA.",
+            matter="Showing PC3 prevents the 2D plot from silently erasing an input direction that carries one quarter of standardized variance.",
+            claim="The PC1–PC3 coefficient panel makes the omitted VX-heavy direction explicit.",
+            cannot="Component coefficients are causal or predictive feature importance.",
+        ),
+        md("""### 9.3 Boundary-like held-out subsets
+
+The representative fold is chosen deterministically from label-informed q20 difficulty summaries, not from visual appearance. This choice is visualization-only and does not affect PCA, model fitting, acquisition, or performance estimates. q20 is nested inside q30 and is defined using opposite-label proximity in standardized 4D input space."""),
+        code("""display(Image(filename=str(OUT / 'figures' / '08_pca_boundary_like_subset.png')))
+diagnostics = pd.read_csv(OUT / 'pca_interpretation_diagnostics.csv')
+display(diagnostics.groupby('representative_test_role')['opposite_label_fraction_10nn_in_pc1_pc2'].agg(['count','mean']))"""),
+        interpretation(
+            see="The q20 points show more class mixing in this PC1–PC2 projection than held-out points outside q30.",
+            matter="This gives an interpretable 2D picture of the evaluation subset used for the frozen near-boundary metric.",
+            claim="The projection is descriptively concordant with q20 being boundary-like in the frozen empirical definition.",
+            cannot="Because q20 itself uses labels and 4D opposite-class distance, this is not independent boundary validation or a physical-boundary proof.",
+        ),
+        md("""### 9.4 Where Margin spends queries
+
+The panels are mutually exclusive query stages. Color is an after-the-fact 10-nearest-neighbour class-mixing diagnostic in PC1–PC2. Held-out test rows and the four pool rows still unqueried at H320 are kept separate in the saved diagnostics."""),
+        code("""display(Image(filename=str(OUT / 'figures' / '09_pca_margin_query_trajectory.png')))
+stage = diagnostics.groupby('margin_query_stage')['opposite_label_fraction_10nn_in_pc1_pc2'].agg(['count','mean'])
+display(stage.loc[['initial_1_16','acquired_17_40','acquired_41_80','acquired_81_160','acquired_161_320','unqueried_pool_by_h320','held_out_test']])"""),
+        interpretation(
+            see="Queries 17–40 have mean projected class mixing 0.412, compared with 0.205 for 41–80, 0.083 for 81–160, and 0.017 for 161–320.",
+            matter="The exclusive stages show early concentration near 2D class overlap followed by broader coverage as the finite pool is exhausted.",
+            claim="This representative fold shows a descriptive association between early Margin queries and projected class mixing.",
+            cannot="The association is not causal, is not a performance estimate, and cannot establish that every early query lies on the true 4D boundary.",
+        ),
+        md("""### 9.5 Secondary model-slice diagnostic
+
+This final panel is deliberately secondary. It evaluates the representative-fold H320 GPC on a PC1–PC2 grid while fixing PC3=PC4=0. Only observed points with `|PC3| <= 0.5` and `|PC4| <= 0.5` are overlaid, so points far from the displayed slice are not presented as pointwise checks."""),
+        code("""display(Image(filename=str(OUT / 'figures' / '10_pca_gpc_slice_diagnostic.png')))
+display(pd.Series({
+    'role': pca['slice_role'],
+    'overlay tolerance': pca['slice_overlay_tolerance_absolute_pc3_pc4'],
+    'overlay point count': pca['slice_overlay_point_count'],
+    'caveat': pca['slice_caveat'],
+}))"""),
+        interpretation(
+            see="The dashed 0.5 contour belongs to one declared PC3=PC4=0 model slice inside the projected 2D hull.",
+            matter="It can help inspect one cross-section of the fitted 4D classifier while keeping the geometry limitation visible.",
+            claim="It is a model diagnostic for one representative fold and one slice at budget 320.",
+            cannot="The contour is not the full 4D empirical boundary, not verified support on the observed 4D manifold, and not a physical Keyhole boundary.",
         ),
         md("""## 10. Claim ledger
 
@@ -203,7 +269,8 @@ display(ledger[['category','claim','status','strongest_safe_wording','must_not_u
 - Results describe a fixed 405-simulation population plus split/acquisition randomness.
 - The manual label is ground truth for this benchmark, not an error-free physical oracle.
 - q20 contains 17 rows per fold, so a single classification changes accuracy by about 5.9 percentage points.
-- PCA PC1+PC2 discards remaining 4D variance.
+- PCA PC1+PC2 discards 41.58% of standardized 4D input variance, including most VX variation in PC3.
+- PCA maximizes sampled-input variance rather than Keyhole/Conduction separation; PC1 is also materially scaling-sensitive.
 - The persistent-Q start can be tail-indeterminate at the final horizon because two future checkpoints are needed.
 - No new simulator or prospective physical validation was performed."""),
         interpretation(

@@ -32,13 +32,14 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 from matplotlib.path import Path as MplPath
 import numpy as np
 import pandas as pd
 from joblib import Parallel, delayed
 from scipy.spatial import ConvexHull, distance
 from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import RobustScaler, StandardScaler
 
 from src import week7_phase6_real_data_boundary_active_level_set as p6
 from src import week8_5_frozen_sample_efficiency_confirmation as w85
@@ -73,11 +74,21 @@ PREDICTION_KEY = (
 )
 TRAJECTORY_KEY = ("run_id", "arm", "continuation_id")
 FIGURE_FILENAMES = {
-    "population": "05_pca_full_population.png",
-    "boundary": "06_pca_boundary_subsets_representative_fold.png",
-    "trajectory": "07_pca_active_learning_trajectory.png",
-    "slice": "08_pca_plane_gpc_slice.png",
+    "primary": "05_pca_input_geometry_and_loadings.png",
+    "scaling": "06_pca_scaling_robustness.png",
+    "components": "07_pca_component_loading_structure.png",
+    "boundary": "08_pca_boundary_like_subset.png",
+    "trajectory": "09_pca_margin_query_trajectory.png",
+    "slice": "10_pca_gpc_slice_diagnostic.png",
 }
+OBSOLETE_PCA_FIGURES = (
+    "05_pca_full_population.png",
+    "06_pca_boundary_subsets_representative_fold.png",
+    "07_pca_active_learning_trajectory.png",
+    "08_pca_plane_gpc_slice.png",
+)
+PCA_VARIANTS = ("standard", "robust")
+PCA_SLICE_OVERLAY_TOLERANCE = 0.5
 
 
 def require(condition: bool, message: str) -> None:
@@ -607,21 +618,34 @@ def hierarchical_terminal_summary(
 
 @dataclass
 class PCAResult:
-    scaler: StandardScaler
+    scaler: Any
     pca: PCA
     scores: pd.DataFrame
     loadings: pd.DataFrame
     explained_variance: pd.DataFrame
+    preprocessing: str
 
 
-def fit_feature_only_pca(population: pd.DataFrame) -> PCAResult:
-    """Fit standardized 4D PCA without consulting labels or evaluation fields."""
+def fit_feature_only_pca(
+    population: pd.DataFrame,
+    preprocessing: str = "standard",
+) -> PCAResult:
+    """Fit a label-free 4D PCA under a declared preprocessing variant.
+
+    ``standard`` is the primary analysis. ``robust`` is a sensitivity
+    diagnostic; neither representation enters model fitting or acquisition.
+    """
 
     require(set(FEATURES).issubset(population.columns), "Population lacks P/VX/LS/ST")
+    require(preprocessing in PCA_VARIANTS, f"Unknown PCA preprocessing: {preprocessing}")
     x = population.loc[:, FEATURES].to_numpy(float)
     require(np.isfinite(x).all(), "PCA features contain non-finite values")
-    scaler = StandardScaler().fit(x)
-    z = scaler.transform(x)
+    if preprocessing == "standard":
+        scaler: Any = StandardScaler().fit(x)
+        z = scaler.transform(x)
+    elif preprocessing == "robust":
+        scaler = RobustScaler(quantile_range=(25.0, 75.0)).fit(x)
+        z = scaler.transform(x)
     pca = PCA(n_components=4, svd_solver="full").fit(z)
     # Resolve arbitrary component signs deterministically for stable figures.
     for index in range(pca.components_.shape[0]):
@@ -642,9 +666,108 @@ def fit_feature_only_pca(population: pd.DataFrame) -> PCAResult:
             "cumulative_explained_variance_ratio": np.cumsum(pca.explained_variance_ratio_),
         }
     )
-    require(np.allclose(z.mean(axis=0), 0.0, atol=1e-12), "PCA scaling did not center features")
-    require(np.allclose(z.std(axis=0), 1.0, atol=1e-12), "PCA scaling did not unit-scale features")
-    return PCAResult(scaler=scaler, pca=pca, scores=scores, loadings=loadings, explained_variance=explained)
+    if preprocessing == "standard":
+        require(np.allclose(z.mean(axis=0), 0.0, atol=1e-12), "PCA scaling did not center features")
+        require(np.allclose(z.std(axis=0), 1.0, atol=1e-12), "PCA scaling did not unit-scale features")
+    return PCAResult(
+        scaler=scaler,
+        pca=pca,
+        scores=scores,
+        loadings=loadings,
+        explained_variance=explained,
+        preprocessing=preprocessing,
+    )
+
+
+def derive_loading_interpretation(
+    loadings: pd.DataFrame,
+    component: str,
+    explained_variance: float,
+    *,
+    relative_threshold: float = 0.65,
+) -> dict[str, Any]:
+    """Derive a component description from its measured loading vector."""
+
+    require(component in loadings.columns, f"Missing loading component {component}")
+    require(0.0 < relative_threshold <= 1.0, "Invalid relative loading threshold")
+    values = loadings.set_index("feature")[component].astype(float)
+    maximum = float(values.abs().max())
+    high = values[values.abs() >= relative_threshold * maximum]
+    positive = [str(feature) for feature, value in high.items() if value > 0]
+    negative = [str(feature) for feature, value in high.items() if value < 0]
+    if positive and negative:
+        short = f"{' + '.join(positive)} versus {' + '.join(negative)} contrast"
+        direction = (
+            f"Positive {component} corresponds to higher standardized {'/'.join(positive)} "
+            f"and lower standardized {'/'.join(negative)} in the chosen sign orientation."
+        )
+    elif len(high) == 1:
+        feature = str(high.index[0])
+        short = f"primarily {feature} variation"
+        direction = (
+            f"{component} follows the sampled input-design variation associated mainly with {feature}; "
+            "the component sign itself is arbitrary."
+        )
+    else:
+        features = [str(value) for value in high.index]
+        short = f"joint {' + '.join(features)} direction"
+        direction = (
+            f"{component} combines the sampled input-design variation in {'/'.join(features)}; "
+            "the component sign itself is arbitrary."
+        )
+    dominant = str(values.abs().idxmax())
+    return {
+        "component": component,
+        "explained_variance_ratio": float(explained_variance),
+        "dominant_feature": dominant,
+        "dominant_loading": float(values.loc[dominant]),
+        "relative_threshold": float(relative_threshold),
+        "high_magnitude_features": [str(value) for value in high.index],
+        "positive_high_magnitude_features": positive,
+        "negative_high_magnitude_features": negative,
+        "short_interpretation": short,
+        "direction_interpretation": direction,
+        "scientific_scope": "input-variance direction only; not physical importance, causality, or supervised Keyhole association",
+    }
+
+
+def component_interpretation_table(result: PCAResult) -> pd.DataFrame:
+    rows = []
+    for index, component in enumerate(("PC1", "PC2", "PC3", "PC4")):
+        item = derive_loading_interpretation(
+            result.loadings,
+            component,
+            float(result.pca.explained_variance_ratio_[index]),
+        )
+        item["preprocessing"] = result.preprocessing
+        item["high_magnitude_features"] = "|".join(item["high_magnitude_features"])
+        item["positive_high_magnitude_features"] = "|".join(item["positive_high_magnitude_features"])
+        item["negative_high_magnitude_features"] = "|".join(item["negative_high_magnitude_features"])
+        rows.append(item)
+    return pd.DataFrame(rows)
+
+
+def scaling_robustness_tables(
+    population: pd.DataFrame,
+) -> tuple[dict[str, PCAResult], pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    results = {variant: fit_feature_only_pca(population, variant) for variant in PCA_VARIANTS}
+    loading_rows = []
+    variance_rows = []
+    interpretation_rows = []
+    for variant, result in results.items():
+        frame = result.loadings.copy()
+        frame.insert(0, "preprocessing", variant)
+        loading_rows.append(frame)
+        frame = result.explained_variance.copy()
+        frame.insert(0, "preprocessing", variant)
+        variance_rows.append(frame)
+        interpretation_rows.append(component_interpretation_table(result))
+    return (
+        results,
+        pd.concat(loading_rows, ignore_index=True),
+        pd.concat(variance_rows, ignore_index=True),
+        pd.concat(interpretation_rows, ignore_index=True),
+    )
 
 
 def representative_fold_table(
@@ -699,43 +822,150 @@ def _pc_axis_label(result: PCAResult, component: int) -> str:
     return f"PC{component} ({ratio:.1%} variance)"
 
 
-def plot_full_population_pca(
+def plot_primary_pca(
     population: pd.DataFrame,
     result: PCAResult,
     output: Path,
 ) -> Path:
+    """Main supervisor-facing view of standardized input geometry and loadings."""
+
     output.parent.mkdir(parents=True, exist_ok=True)
     labels = population["has_keyhole"].astype(int).to_numpy()
     pc = result.scores
-    figure, axes = plt.subplots(1, 2, figsize=(12.0, 5.2), gridspec_kw={"width_ratios": [1.45, 1.0]})
+    figure, axes = plt.subplots(1, 2, figsize=(12.8, 5.4), gridspec_kw={"width_ratios": [1.45, 1.0]})
     colors = {0: "#2f6f9f", 1: "#c44e52"}
     names = {0: "Conduction", 1: "Keyhole"}
     for label in (0, 1):
         mask = labels == label
-        axes[0].scatter(pc.loc[mask, "PC1"], pc.loc[mask, "PC2"], s=28, alpha=0.72, c=colors[label], label=f"{names[label]} (n={int(mask.sum())})", edgecolors="none")
+        axes[0].scatter(
+            pc.loc[mask, "PC1"],
+            pc.loc[mask, "PC2"],
+            s=31,
+            alpha=0.74,
+            c=colors[label],
+            label=f"{names[label]} (n={int(mask.sum())})",
+            edgecolors="white",
+            linewidths=0.25,
+        )
     axes[0].axhline(0, color="#999999", lw=0.7, zorder=0)
     axes[0].axvline(0, color="#999999", lw=0.7, zorder=0)
     axes[0].set_xlabel(_pc_axis_label(result, 1))
     axes[0].set_ylabel(_pc_axis_label(result, 2))
-    axes[0].set_title("All 405 simulations; color is manual has_keyhole")
+    axes[0].set_title("All 405 simulations\nColor shows the manual label after the label-free fit")
     axes[0].legend(frameon=False)
+    axes[0].grid(alpha=0.12)
 
     loadings = result.loadings.set_index("feature")
-    for index, feature in enumerate(FEATURES):
-        x = float(loadings.loc[feature, "PC1"])
-        y = float(loadings.loc[feature, "PC2"])
-        axes[1].arrow(0, 0, x, y, width=0.008, head_width=0.055, length_includes_head=True, color=plt.cm.tab10(index))
-        axes[1].text(x * 1.10, y * 1.10, feature, fontsize=11, ha="center", va="center")
-    axes[1].axhline(0, color="#999999", lw=0.7)
-    axes[1].axvline(0, color="#999999", lw=0.7)
-    axes[1].set_xlim(-1.05, 1.05)
-    axes[1].set_ylim(-1.05, 1.05)
-    axes[1].set_aspect("equal", adjustable="box")
-    axes[1].set_xlabel("PC1 loading")
-    axes[1].set_ylabel("PC2 loading")
-    axes[1].set_title("Feature loadings (P, VX, LS, ST)")
-    figure.suptitle("Standardized four-feature PCA (labels never entered the fit)", fontsize=14)
-    figure.tight_layout()
+    positions = np.arange(len(FEATURES))
+    width = 0.36
+    axes[1].barh(positions + width / 2, loadings.loc[list(FEATURES), "PC1"], height=width, color="#31688e", label="PC1")
+    axes[1].barh(positions - width / 2, loadings.loc[list(FEATURES), "PC2"], height=width, color="#35b779", label="PC2")
+    axes[1].axvline(0, color="#777777", lw=0.8)
+    axes[1].set_yticks(positions, FEATURES)
+    axes[1].invert_yaxis()
+    axes[1].set_xlim(-1.0, 1.0)
+    axes[1].set_xlabel("Loading coefficient")
+    axes[1].set_title("What the plotted axes contain\nPC1: LS–P contrast; PC2: mainly sampled ST variation")
+    axes[1].legend(frameon=False, ncol=2, loc="lower right")
+    axes[1].grid(axis="x", alpha=0.18)
+    axes[1].text(
+        0.0,
+        -0.22,
+        "Large loading = contribution to input variance, not Keyhole importance or causality.",
+        transform=axes[1].transAxes,
+        ha="left",
+        va="top",
+        fontsize=9,
+        color="#444444",
+    )
+    figure.suptitle(
+        "2D PCA projection of the standardized 4D input space (P, VX, LS, ST)",
+        fontsize=14,
+    )
+    figure.tight_layout(rect=(0, 0.04, 1, 0.95))
+    figure.savefig(output, dpi=220, bbox_inches="tight")
+    plt.close(figure)
+    return output
+
+
+def _annotated_loading_heatmap(
+    axis: Any,
+    result: PCAResult,
+    components: Sequence[str],
+    title: str,
+) -> None:
+    values = result.loadings.set_index("feature").loc[list(FEATURES), list(components)].to_numpy(float)
+    image = axis.imshow(values, cmap="RdBu_r", vmin=-1.0, vmax=1.0, aspect="auto")
+    axis.set_xticks(range(len(components)), components)
+    axis.set_yticks(range(len(FEATURES)), FEATURES)
+    axis.set_title(title)
+    for row in range(values.shape[0]):
+        for column in range(values.shape[1]):
+            axis.text(column, row, f"{values[row, column]:+.2f}", ha="center", va="center", fontsize=9)
+    return image
+
+
+def plot_scaling_robustness(
+    results: Mapping[str, PCAResult],
+    output: Path,
+) -> Path:
+    output.parent.mkdir(parents=True, exist_ok=True)
+    figure, axes = plt.subplots(1, 2, figsize=(10.8, 4.9), sharey=True)
+    titles = {
+        "standard": "StandardScaler + PCA\nPRIMARY",
+        "robust": "RobustScaler + PCA\ndiagnostic",
+    }
+    image = None
+    for axis, variant in zip(axes, PCA_VARIANTS):
+        result = results[variant]
+        combined = float(result.pca.explained_variance_ratio_[:2].sum())
+        image = _annotated_loading_heatmap(
+            axis,
+            result,
+            ("PC1", "PC2", "PC3"),
+            f"{titles[variant]}\nPC1+PC2 = {combined:.1%}",
+        )
+        axis.set_xlabel("Component")
+    require(image is not None, "Scaling-robustness heatmap was not created")
+    colorbar_axis = figure.add_axes((0.925, 0.20, 0.015, 0.58))
+    figure.colorbar(image, cax=colorbar_axis, label="Loading coefficient")
+    figure.suptitle("PCA sensitivity check: StandardScaler versus RobustScaler", fontsize=14)
+    figure.text(
+        0.5,
+        0.015,
+        "StandardScaler remains primary; RobustScaler is one sensitivity diagnostic and does not replace it.",
+        ha="center",
+        fontsize=9,
+    )
+    figure.subplots_adjust(left=0.08, right=0.89, bottom=0.18, top=0.76, wspace=0.25)
+    figure.savefig(output, dpi=220, bbox_inches="tight")
+    plt.close(figure)
+    return output
+
+
+def plot_component_loading_structure(result: PCAResult, output: Path) -> Path:
+    output.parent.mkdir(parents=True, exist_ok=True)
+    figure, axis = plt.subplots(figsize=(7.8, 4.8))
+    image = _annotated_loading_heatmap(
+        axis,
+        result,
+        ("PC1", "PC2", "PC3"),
+        "StandardScaler PCA loading structure",
+    )
+    figure.colorbar(image, ax=axis, shrink=0.84, label="Loading coefficient")
+    interpretations = component_interpretation_table(result).set_index("component")
+    figure.text(
+        0.5,
+        0.03,
+        "  |  ".join(
+            f"{component}: {interpretations.loc[component, 'short_interpretation']}"
+            for component in ("PC1", "PC2", "PC3")
+        ),
+        ha="center",
+        fontsize=10,
+    )
+    figure.suptitle("PC1–PC3 interpretation: VX is mostly outside the main 2D view", fontsize=14)
+    figure.tight_layout(rect=(0, 0.09, 1, 0.92))
     figure.savefig(output, dpi=220, bbox_inches="tight")
     plt.close(figure)
     return output
@@ -747,6 +977,7 @@ def plot_boundary_subsets(
     representative: w85.SplitSpec,
     result: PCAResult,
     output: Path,
+    interpretation_frame: pd.DataFrame | None = None,
 ) -> Path:
     del specs  # representative carries the exact split; retained for a stable public signature.
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -755,26 +986,79 @@ def plot_boundary_subsets(
     test = np.asarray(representative.test_indices, dtype=int)
     labels = population["has_keyhole"].astype(int).to_numpy()[test]
     xy = result.scores.set_index("population_row_index").loc[test]
-    figure, axis = plt.subplots(figsize=(7.5, 6.2))
-    for label, color, name in ((0, "#2f6f9f", "Conduction"), (1, "#c44e52", "Keyhole")):
-        mask = labels == label
-        axis.scatter(
-            xy.loc[mask, "PC1"],
-            xy.loc[mask, "PC2"],
-            c=color,
-            s=28,
-            alpha=0.42,
-            edgecolors="none",
-            label=f"{name} held-out rows (n={int(mask.sum())})",
-        )
     q30 = flags["B1_q30"]
     q20 = flags["B1_q20"]
-    axis.scatter(xy.loc[q30, "PC1"], xy.loc[q30, "PC2"], facecolors="none", edgecolors="#f0a202", linewidths=1.5, s=88, label="Fold-B1-q30 (25 rows)")
-    axis.scatter(xy.loc[q20, "PC1"], xy.loc[q20, "PC2"], facecolors="none", edgecolors="#6a3d9a", linewidths=2.0, s=145, label="Fold-B1-q20 (17 rows)")
+    q30_only = q30 & ~q20
+    non_q30 = ~q30
+    figure, axis = plt.subplots(figsize=(8.2, 6.2))
+    class_colors = np.where(labels == 1, "#c44e52", "#2f6f9f")
+    axis.scatter(
+        xy.loc[non_q30, "PC1"],
+        xy.loc[non_q30, "PC2"],
+        c=class_colors[non_q30],
+        marker="o",
+        s=34,
+        alpha=0.52,
+        edgecolors="white",
+        linewidths=0.3,
+    )
+    axis.scatter(
+        xy.loc[q30_only, "PC1"],
+        xy.loc[q30_only, "PC2"],
+        c=class_colors[q30_only],
+        marker="D",
+        s=64,
+        alpha=0.86,
+        edgecolors="#f0a202",
+        linewidths=1.2,
+    )
+    axis.scatter(
+        xy.loc[q20, "PC1"],
+        xy.loc[q20, "PC2"],
+        c=class_colors[q20],
+        marker="*",
+        s=125,
+        alpha=0.95,
+        edgecolors="#5e3c99",
+        linewidths=1.0,
+    )
     axis.set_xlabel(_pc_axis_label(result, 1))
     axis.set_ylabel(_pc_axis_label(result, 2))
-    axis.set_title(f"Deterministic representative fold: {representative.run_id}\nRings are evaluation-only B1 subsets; colors are manual labels")
-    axis.legend(frameon=False, loc="best")
+    axis.set_title(
+        f"Boundary-like held-out subsets in the PCA projection: {representative.run_id}\n"
+        "Representative-fold choice is deterministic, label-informed, and visualization-only"
+    )
+    axis.grid(alpha=0.12)
+    legend_items = [
+        Line2D([0], [0], marker="o", color="none", markerfacecolor="#2f6f9f", markeredgecolor="none", markersize=8, label=f"Conduction (n={int((labels == 0).sum())})"),
+        Line2D([0], [0], marker="o", color="none", markerfacecolor="#c44e52", markeredgecolor="none", markersize=8, label=f"Keyhole (n={int((labels == 1).sum())})"),
+        Line2D([0], [0], marker="o", color="none", markerfacecolor="#bbbbbb", markeredgecolor="white", markersize=7, label=f"Outside q30 (n={int(non_q30.sum())})"),
+        Line2D([0], [0], marker="D", color="none", markerfacecolor="#bbbbbb", markeredgecolor="#f0a202", markersize=7, label=f"q30 only (n={int(q30_only.sum())})"),
+        Line2D([0], [0], marker="*", color="none", markerfacecolor="#bbbbbb", markeredgecolor="#5e3c99", markersize=11, label=f"q20 (n={int(q20.sum())})"),
+    ]
+    axis.legend(handles=legend_items, frameon=False, loc="best", ncol=2, fontsize=9)
+    if interpretation_frame is not None:
+        mixing_column = next(
+            (column for column in interpretation_frame if column.startswith("opposite_label_fraction_")),
+            None,
+        )
+        require(mixing_column is not None, "Missing 2D neighbour-mixing diagnostic")
+        representative_rows = interpretation_frame[
+            interpretation_frame.population_row_index.isin(test)
+        ]
+        role_means = representative_rows.groupby("representative_test_role")[mixing_column].mean()
+        axis.text(
+            0.98,
+            0.03,
+            "Mean opposite-label fraction among 10 nearest PC1-PC2 neighbours\n"
+            f"q20: {float(role_means['B1_q20']):.3f}   |   q30 only: {float(role_means['B1_q30_only']):.3f}   |   outside q30: {float(role_means['held_out_non_q30']):.3f}\n"
+            "Descriptive concordance with the label-defined B1 subsets",
+            transform=axis.transAxes,
+            ha="right",
+            va="bottom",
+            fontsize=8.2,
+            bbox={"facecolor": "white", "alpha": 0.86, "edgecolor": "#cccccc"},
+        )
     figure.tight_layout()
     figure.savefig(output, dpi=220, bbox_inches="tight")
     plt.close(figure)
@@ -796,34 +1080,70 @@ def plot_active_learning_trajectory(
     payload: Mapping[str, Any],
     result: PCAResult,
     output: Path,
-    snapshots: Sequence[int] = (16, 40, 80, 160, 320),
+    interpretation_frame: pd.DataFrame | None = None,
 ) -> Path:
     output.parent.mkdir(parents=True, exist_ok=True)
     queried = np.asarray(payload["queried_indices"], dtype=int)
-    available = [int(value) for value in snapshots if int(value) <= len(queried)]
-    require(available, "No requested trajectory snapshot is available")
+    require(len(queried) >= 320, "Representative trajectory does not reach H320")
     pool = np.asarray(representative.train_indices, dtype=int)
     pc = result.scores.set_index("population_row_index")
-    columns = len(available) if len(available) <= 4 else 3
-    rows = int(math.ceil(len(available) / columns))
-    figure, axes = plt.subplots(rows, columns, figsize=(5.0 * columns, 4.4 * rows), squeeze=False, sharex=True, sharey=True)
-    for axis, budget in zip(axes.ravel(), available):
-        axis.scatter(pc.loc[pool, "PC1"], pc.loc[pool, "PC2"], c="#d8d8d8", s=16, alpha=0.65, edgecolors="none", label="324-row query pool")
-        initial = queried[:16]
-        later = queried[16:budget]
-        axis.scatter(pc.loc[initial, "PC1"], pc.loc[initial, "PC2"], c="#111111", marker="s", s=40, label="Initial 16")
-        if len(later):
-            order = np.arange(17, budget + 1)
-            scatter = axis.scatter(pc.loc[later, "PC1"], pc.loc[later, "PC2"], c=order, cmap="viridis", s=35, alpha=0.88, edgecolors="white", linewidths=0.25, label="Margin acquisitions")
-            figure.colorbar(scatter, ax=axis, shrink=0.72, label="Query number")
-        axis.set_title(f"Budget {budget}")
+    require(interpretation_frame is not None, "Trajectory plot requires precomputed 2D mixing diagnostics")
+    mixing_column = next(
+        (column for column in interpretation_frame if column.startswith("opposite_label_fraction_")),
+        None,
+    )
+    require(mixing_column is not None, "Missing 2D neighbour-mixing diagnostic")
+    mixing = interpretation_frame.set_index("population_row_index")[mixing_column]
+    stages = ((17, 40), (41, 80), (81, 160), (161, 320))
+    figure, axes = plt.subplots(2, 2, figsize=(10.8, 8.5), squeeze=False, sharex=True, sharey=True)
+    scatter = None
+    for axis, (lower, upper) in zip(axes.ravel(), stages):
+        selected = queried[lower - 1 : upper]
+        axis.scatter(
+            pc.loc[pool, "PC1"],
+            pc.loc[pool, "PC2"],
+            c="#d8d8d8",
+            s=16,
+            alpha=0.5,
+            edgecolors="none",
+        )
+        scatter = axis.scatter(
+            pc.loc[selected, "PC1"],
+            pc.loc[selected, "PC2"],
+            c=mixing.loc[selected],
+            cmap="magma_r",
+            vmin=0.0,
+            vmax=1.0,
+            s=50,
+            alpha=0.92,
+            edgecolors="white",
+            linewidths=0.35,
+        )
+        mean_mixing = float(mixing.loc[selected].mean())
+        axis.set_title(f"Queries {lower}–{upper}\nmean projected class mixing = {mean_mixing:.3f}")
         axis.set_xlabel(_pc_axis_label(result, 1))
         axis.set_ylabel(_pc_axis_label(result, 2))
-    for axis in axes.ravel()[len(available):]:
-        axis.set_visible(False)
-    axes.ravel()[0].legend(frameon=False, fontsize=9)
-    figure.suptitle(f"Binary Margin query locations in PCA projection: {representative.run_id}\nPCA and labels did not enter acquisition", fontsize=14)
-    figure.tight_layout()
+        axis.grid(alpha=0.1)
+    require(scatter is not None, "Trajectory scatter was not created")
+    colorbar_axis = figure.add_axes((0.91, 0.18, 0.018, 0.58))
+    figure.colorbar(
+        scatter,
+        cax=colorbar_axis,
+        label="Opposite-label fraction among 10 nearest PC1–PC2 neighbours",
+    )
+    figure.suptitle(
+        f"Where Binary Margin spends its query budget in the PCA projection: {representative.run_id}\n"
+        "PCA coordinates and held-out/unrevealed labels did not enter acquisition; revealed queried labels trained later GPC fits",
+        fontsize=14,
+    )
+    figure.text(
+        0.5,
+        0.012,
+        "This representative-fold association describes 2D projected class mixing; it is not a causal mechanism or physical-boundary proof.",
+        ha="center",
+        fontsize=9,
+    )
+    figure.subplots_adjust(left=0.08, right=0.87, bottom=0.09, top=0.84, hspace=0.28, wspace=0.16)
     figure.savefig(output, dpi=220, bbox_inches="tight")
     plt.close(figure)
     return output
@@ -882,18 +1202,33 @@ def plot_pca_plane_slice(
     labels = population["has_keyhole"].astype(int).to_numpy()
     pc = result.scores
     figure, axis = plt.subplots(figsize=(8.0, 6.4))
-    levels = np.linspace(0.0, 1.0, 11)
-    surface = axis.contourf(xx, yy, probability, levels=levels, cmap="RdBu_r", alpha=0.72, extend="neither")
+    levels = np.linspace(0.0, 1.0, 9)
+    surface = axis.contourf(xx, yy, probability, levels=levels, cmap="RdBu_r", alpha=0.62, extend="neither")
     if np.nanmin(probability) <= 0.5 <= np.nanmax(probability):
-        contour = axis.contour(xx, yy, probability, levels=[0.5], colors="#111111", linewidths=2.0)
-        axis.clabel(contour, fmt={0.5: "P(Keyhole)=0.5"}, inline=True, fontsize=9)
+        contour = axis.contour(xx, yy, probability, levels=[0.5], colors="#111111", linewidths=1.8, linestyles="--")
+        axis.clabel(contour, fmt={0.5: "slice probability = 0.5"}, inline=True, fontsize=9)
+    near_slice = (
+        (pc["PC3"].abs().to_numpy(float) <= PCA_SLICE_OVERLAY_TOLERANCE)
+        & (pc["PC4"].abs().to_numpy(float) <= PCA_SLICE_OVERLAY_TOLERANCE)
+    )
     for label, color, name in ((0, "#2f6f9f", "Conduction"), (1, "#c44e52", "Keyhole")):
-        mask = labels == label
+        mask = (labels == label) & near_slice
         axis.scatter(pc.loc[mask, "PC1"], pc.loc[mask, "PC2"], c=color, s=22, alpha=0.64, edgecolors="white", linewidths=0.25, label=name)
-    figure.colorbar(surface, ax=axis, label="GPC P(Keyhole) on PC3=PC4=0 slice")
+    figure.colorbar(surface, ax=axis, label="GPC P(Keyhole) on this PC3=PC4=0 slice")
     axis.set_xlabel(_pc_axis_label(result, 1))
     axis.set_ylabel(_pc_axis_label(result, 2))
-    axis.set_title(f"PCA-plane slice of the 4D Binary Margin GPC at budget {budget}\nPC3=PC4=0; masked outside projected data hull; not the full physical boundary")
+    axis.set_title(
+        f"Diagnostic only: 2D slice of the 4D Binary Margin GPC at budget {budget}\n"
+        "PC3=PC4=0; only nearby observed points are overlaid; not a true or physical boundary"
+    )
+    axis.text(
+        0.02,
+        0.02,
+        f"Overlay: |PC3| and |PC4| <= {PCA_SLICE_OVERLAY_TOLERANCE:g} (n={int(near_slice.sum())})",
+        transform=axis.transAxes,
+        fontsize=8.5,
+        bbox={"facecolor": "white", "alpha": 0.78, "edgecolor": "none"},
+    )
     axis.legend(frameon=False)
     figure.tight_layout()
     figure.savefig(output, dpi=220, bbox_inches="tight")
@@ -918,9 +1253,10 @@ def pca_interpretation_diagnostics(
 ) -> tuple[pd.DataFrame, dict[str, Any]]:
     """Quantify class mixing and query placement in the 2D projection.
 
-    These are after-the-fact visualization diagnostics.  Manual labels and B1
-    enter this interpretation only; they did not enter scaling, PCA, model
-    fitting, or acquisition.
+    These are after-the-fact visualization diagnostics. Manual labels and B1
+    enter this interpretation but not the scaler or PCA fit. PCA coordinates
+    and held-out or unrevealed labels did not enter acquisition; labels of
+    already queried rows did train later GPC fits.
     """
 
     xy = result.scores[["PC1", "PC2"]].to_numpy(float)
@@ -942,10 +1278,9 @@ def pca_interpretation_diagnostics(
     frame.loc[test[flags["B1_q20"]], "representative_test_role"] = "B1_q20"
     query_number = {int(index): number for number, index in enumerate(payload["queried_indices"], start=1)}
     frame["margin_query_number"] = frame["population_row_index"].map(query_number)
+    query_pool = set(int(value) for value in representative.train_indices)
 
-    def stage(value: float) -> str:
-        if pd.isna(value):
-            return "not_queried_by_available_horizon"
+    def queried_stage(value: float) -> str:
         number = int(value)
         if number <= 16:
             return "initial_1_16"
@@ -954,7 +1289,11 @@ def pca_interpretation_diagnostics(
                 return f"acquired_{lower}_{upper}"
         return "acquired_after_320"
 
-    frame["margin_query_stage"] = frame["margin_query_number"].map(stage)
+    frame["margin_query_stage"] = "held_out_test"
+    pool_mask = frame["population_row_index"].isin(query_pool)
+    frame.loc[pool_mask & frame.margin_query_number.isna(), "margin_query_stage"] = "unqueried_pool_by_h320"
+    queried_mask = frame.margin_query_number.notna()
+    frame.loc[queried_mask, "margin_query_stage"] = frame.loc[queried_mask, "margin_query_number"].map(queried_stage)
     centroids = {
         name: {
             "PC1": float(xy[labels == label, 0].mean()),
@@ -984,6 +1323,11 @@ def pca_interpretation_diagnostics(
         "class_centroid_distance_pc1_pc2": centroid_distance,
         "mean_opposite_label_fraction_by_representative_test_role": mixing_by_role,
         "mean_opposite_label_fraction_by_margin_query_stage": mixing_by_query_stage,
+        "margin_query_stage_counts": {
+            str(stage_name): int(len(group))
+            for stage_name, group in frame.groupby("margin_query_stage", sort=True)
+        },
+        "query_stage_definition": "held-out test rows and the four unqueried H320 pool rows are separated; only revealed queried labels could influence later GPC acquisitions",
         "caveat": "2D neighbour mixing can hide separation or overlap along PC3/PC4 and is not a physical-boundary metric",
     }
     return frame, summary
@@ -1000,7 +1344,14 @@ def run_pca_suite(
     output_dir = Path(output_dir)
     figure_dir = output_dir / "figures"
     output_dir.mkdir(parents=True, exist_ok=True)
-    result = fit_feature_only_pca(population)
+    figure_dir.mkdir(parents=True, exist_ok=True)
+    for obsolete in OBSOLETE_PCA_FIGURES:
+        path = figure_dir / obsolete
+        if path.is_file():
+            path.unlink()
+    variants, scaling_loadings, scaling_variance, component_interpretations = scaling_robustness_tables(population)
+    result = variants["standard"]
+    require(isinstance(result.scaler, StandardScaler), "StandardScaler PCA must remain primary")
     fold_table, representative = representative_fold_table(population, specs)
     payload = _representative_margin_payload(payloads, representative)
     _validate_payload_against_split(payload, representative, population)
@@ -1010,34 +1361,105 @@ def run_pca_suite(
     slice_budget = max(value for value in BUDGETS if value <= int(payload["horizon"]))
     fit = fit_representative_gpc(population, representative, payload, slice_budget)
     figures = {
-        "population": str(plot_full_population_pca(population, result, figure_dir / FIGURE_FILENAMES["population"])),
-        "boundary": str(plot_boundary_subsets(population, specs, representative, result, figure_dir / FIGURE_FILENAMES["boundary"])),
-        "trajectory": str(plot_active_learning_trajectory(population, representative, payload, result, figure_dir / FIGURE_FILENAMES["trajectory"])),
+        "primary": str(plot_primary_pca(population, result, figure_dir / FIGURE_FILENAMES["primary"])),
+        "scaling": str(plot_scaling_robustness(variants, figure_dir / FIGURE_FILENAMES["scaling"])),
+        "components": str(plot_component_loading_structure(result, figure_dir / FIGURE_FILENAMES["components"])),
+        "boundary": str(plot_boundary_subsets(population, specs, representative, result, figure_dir / FIGURE_FILENAMES["boundary"], interpretation_frame)),
+        "trajectory": str(plot_active_learning_trajectory(population, representative, payload, result, figure_dir / FIGURE_FILENAMES["trajectory"], interpretation_frame)),
         "slice": str(plot_pca_plane_slice(population, result, fit, slice_budget, figure_dir / FIGURE_FILENAMES["slice"])),
     }
     result.scores.to_csv(output_dir / "pca_population_scores.csv", index=False, lineterminator="\n")
     result.loadings.to_csv(output_dir / "pca_feature_loadings.csv", index=False, lineterminator="\n")
     result.explained_variance.to_csv(output_dir / "pca_explained_variance.csv", index=False, lineterminator="\n")
+    scaling_loadings.to_csv(output_dir / "pca_scaling_loadings.csv", index=False, lineterminator="\n")
+    scaling_variance.to_csv(output_dir / "pca_scaling_explained_variance.csv", index=False, lineterminator="\n")
+    component_interpretations.to_csv(output_dir / "pca_component_interpretations.csv", index=False, lineterminator="\n")
     fold_table.to_csv(output_dir / "pca_representative_fold_selection.csv", index=False, lineterminator="\n")
     interpretation_frame.to_csv(output_dir / "pca_interpretation_diagnostics.csv", index=False, lineterminator="\n")
+    interpretations = {
+        component: derive_loading_interpretation(
+            result.loadings,
+            component,
+            float(result.pca.explained_variance_ratio_[index]),
+        )
+        for index, component in enumerate(("PC1", "PC2", "PC3", "PC4"))
+    }
+    robust_interpretations = {
+        component: derive_loading_interpretation(
+            variants["robust"].loadings,
+            component,
+            float(variants["robust"].pca.explained_variance_ratio_[index]),
+        )
+        for index, component in enumerate(("PC1", "PC2", "PC3", "PC4"))
+    }
+    standard_loadings = result.loadings.set_index("feature")
+    robust_loadings = variants["robust"].loadings.set_index("feature")
     summary = {
         "pca_fit_columns_only": list(FEATURES),
-        "standardization": "StandardScaler fitted on all 405 rows of P/VX/LS/ST for visualization only",
+        "primary_preprocessing": "StandardScaler + PCA",
+        "diagnostic_preprocessing": ["RobustScaler + PCA"],
+        "standardization": "StandardScaler fitted on all 405 rows of P/VX/LS/ST for the primary visualization only",
         "labels_used_in_pca_fit": False,
         "pca_used_in_model_training_or_acquisition": False,
+        "pca_objective": "maximize variance in the four input features, not maximize Keyhole/Conduction separation",
+        "large_loading_does_not_mean": [
+            "physical importance",
+            "causal influence on Keyhole",
+            "best Keyhole predictor",
+            "strongest supervised label association",
+        ],
         "pc1_explained_variance": float(result.pca.explained_variance_ratio_[0]),
         "pc2_explained_variance": float(result.pca.explained_variance_ratio_[1]),
         "pc1_plus_pc2_explained_variance": float(result.pca.explained_variance_ratio_[:2].sum()),
+        "variance_outside_pc1_pc2": float(1.0 - result.pca.explained_variance_ratio_[:2].sum()),
         "pc1_dominant_loading": _dominant_loading(result.loadings, "PC1"),
         "pc2_dominant_loading": _dominant_loading(result.loadings, "PC2"),
+        "component_interpretations": interpretations,
+        "scaling_robustness": {
+            "standard": {
+                "explained_variance_ratio": result.pca.explained_variance_ratio_.astype(float).tolist(),
+                "pc1_plus_pc2": float(result.pca.explained_variance_ratio_[:2].sum()),
+                "pc1_interpretation": interpretations["PC1"]["short_interpretation"],
+                "pc2_interpretation": interpretations["PC2"]["short_interpretation"],
+                "pc3_interpretation": interpretations["PC3"]["short_interpretation"],
+            },
+            "robust": {
+                "explained_variance_ratio": variants["robust"].pca.explained_variance_ratio_.astype(float).tolist(),
+                "pc1_plus_pc2": float(variants["robust"].pca.explained_variance_ratio_[:2].sum()),
+                "pc1_interpretation": robust_interpretations["PC1"]["short_interpretation"],
+                "pc2_interpretation": robust_interpretations["PC2"]["short_interpretation"],
+                "pc3_interpretation": robust_interpretations["PC3"]["short_interpretation"],
+            },
+            "qualitative_agreement": "StandardScaler and RobustScaler agree that ST is strongly represented on PC2 and VX mainly on PC3; they materially disagree on PC1, which is LS-versus-P under StandardScaler but primarily P under RobustScaler.",
+            "st_pc2_loadings": {
+                "standard": float(standard_loadings.loc["ST", "PC2"]),
+                "robust": float(robust_loadings.loc["ST", "PC2"]),
+            },
+            "vx_pc3_loadings": {
+                "standard": float(standard_loadings.loc["VX", "PC3"]),
+                "robust": float(robust_loadings.loc["VX", "PC3"]),
+            },
+            "standard_vx_loading_energy_pc1_pc2": float(
+                standard_loadings.loc["VX", "PC1"] ** 2 + standard_loadings.loc["VX", "PC2"] ** 2
+            ),
+            "standard_vx_loading_energy_pc3": float(standard_loadings.loc["VX", "PC3"] ** 2),
+        },
         "representative_run_id": representative.run_id,
         "representative_selection_rule": "minimum robust distance to median q20 mean-B1 and q20 Keyhole fraction; run_id tie-break",
         "representative_selection_is_label_informed": True,
-        "representative_selection_label_use_scope": "Manual labels enter only this deterministic evaluation/visualization choice; they do not enter PCA fitting or acquisition.",
+        "representative_selection_label_use_scope": "Manual labels enter this deterministic evaluation/visualization choice, which does not affect acquisition. Labels do not enter PCA fitting; PCA coordinates and held-out or unrevealed labels do not enter acquisition, while labels of already queried rows train later GPC fits.",
         "representative_selection_used_visual_appearance": False,
         "slice_budget": slice_budget,
+        "slice_role": "secondary diagnostic only",
         "slice_definition": "PC1-PC2 grid; PC3=PC4=0; inverse transformed to four physical features; masked outside projected data hull",
-        "slice_caveat": "Two-dimensional PCA-plane classifier slice masked only by the PC1-PC2 projected convex hull. Setting PC3=PC4=0 does not establish occupancy on the observed four-dimensional data manifold; this is not the true empirical or physical boundary.",
+        "slice_overlay_tolerance_absolute_pc3_pc4": PCA_SLICE_OVERLAY_TOLERANCE,
+        "slice_overlay_point_count": int(
+            (
+                (result.scores["PC3"].abs() <= PCA_SLICE_OVERLAY_TOLERANCE)
+                & (result.scores["PC4"].abs() <= PCA_SLICE_OVERLAY_TOLERANCE)
+            ).sum()
+        ),
+        "slice_caveat": "Two-dimensional PCA-plane classifier slice masked only by the PC1-PC2 projected convex hull. Setting PC3=PC4=0 does not establish occupancy on the observed four-dimensional data manifold; this is not the true empirical, Keyhole, or physical boundary.",
         "interpretation_diagnostics": interpretation,
         "figures": figures,
     }

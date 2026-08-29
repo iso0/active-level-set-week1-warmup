@@ -16,7 +16,7 @@ The restricted H=320 difference is descriptive. The mathematical lower-bound ana
 
 ## Terminal performance and PCA
 
-Terminal full81/q30/q20 results are in `terminal_metric_summary.csv`; their Fold-B1-q20 comparison has positive point estimates at 40, 80, 160, and 320, but the H320 contrast is practically zero and its design-conditional 95% interval [-0.0011, +0.0023] crosses zero. The positive frozen AULC contrast separately measures earlier learning speed. Feature-only standardized PCA explains 58.42% in PC1+PC2 and is used only for interpretation.
+Terminal full81/q30/q20 results are in `terminal_metric_summary.csv`; their Fold-B1-q20 comparison has positive point estimates at 40, 80, 160, and 320, but the H320 contrast is practically zero and its design-conditional 95% interval [-0.0011, +0.0023] crosses zero. The positive frozen AULC contrast separately measures earlier learning speed. Feature-only StandardScaler PCA is used only for interpretation: PC1 is an LS-versus-P contrast, PC2 is mainly sampled ST variation, and PC3 is mainly VX variation. PC1+PC2 explain 58.42% and omit 41.58% of standardized input variance. Robust scaling preserves the ST/PC2 and VX/PC3 pattern but changes PC1 materially, so no loading is interpreted as physical importance, causality, or supervised Keyhole importance.
 
 ## Scope
 

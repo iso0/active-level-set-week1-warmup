@@ -89,14 +89,21 @@ class Week9Phase1ClosingTests(unittest.TestCase):
                 "pc1_explained_variance": .3,
                 "pc2_explained_variance": .2,
                 "pc1_plus_pc2_explained_variance": .5,
+                "variance_outside_pc1_pc2": .5,
                 "pc1_dominant_loading": {"feature": "LS", "loading": .7},
                 "pc2_dominant_loading": {"feature": "ST", "loading": .9},
+                "component_interpretations": {
+                    "PC1": {"short_interpretation": "LS versus P contrast", "explained_variance_ratio": .3},
+                    "PC2": {"short_interpretation": "primarily ST variation", "explained_variance_ratio": .2},
+                    "PC3": {"short_interpretation": "primarily VX variation", "explained_variance_ratio": .15},
+                },
+                "scaling_robustness": {"qualitative_agreement": "demo"},
                 "representative_run_id": "demo",
                 "representative_selection_is_label_informed": True,
                 "slice_caveat": "projected hull only",
                 "interpretation_diagnostics": {
                     "mean_opposite_label_fraction_by_representative_test_role": {"B1_q20": .2, "held_out_non_q30": .1},
-                    "mean_opposite_label_fraction_by_margin_query_stage": {"acquired_17_40": .3, "not_queried_by_available_horizon": .05},
+                    "mean_opposite_label_fraction_by_margin_query_stage": {"acquired_17_40": .3, "acquired_161_320": .05},
                 },
             }
             (output / "pca_summary.json").write_text(json.dumps(pca), encoding="utf-8")

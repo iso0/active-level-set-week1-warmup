@@ -663,7 +663,7 @@ def build_claim_ledger(
             {"category": "posthoc_H320", "claim": "Persistent target attainment by H320", "numeric_result": f"Margin {int(h320_margin.finite_persistent_crossings)}/100; Random {int(h320_random.finite_persistent_crossings)}/3000", "status": "POSTHOC_DIAGNOSTIC", "strongest_safe_wording": "The longer horizon reduces unresolved trajectories; results are a post-hoc closing diagnostic.", "must_not_use": "H320 was preregistered or upgrades the old QUALIFY decision."},
             {"category": "posthoc_H320", "claim": "At least X average query saving", "numeric_result": json.dumps(dict(claim_decision), sort_keys=True), "status": claim_decision["status"], "strongest_safe_wording": claim_decision["supervisor_safe_sentence"], "must_not_use": "Every unresolved H320 Random path has Q>320."},
             {"category": "posthoc_terminal", "claim": "Terminal accuracy complements AULC", "numeric_result": "See terminal_metric_summary.csv", "status": "DESCRIPTIVE_POSTHOC", "strongest_safe_wording": "AULC answers how quickly learning improves; terminal metrics answer model quality at a fixed budget.", "must_not_use": "Terminal accuracy and AULC are the same estimand."},
-            {"category": "posthoc_visualization", "claim": "PCA clarifies 4D geometry", "numeric_result": (f"PC1+PC2 explain {100*float(pca_summary['pc1_plus_pc2_explained_variance']):.3f}% of standardized-feature variance" if pca_summary is not None else "See pca_summary.json"), "status": "VISUAL_DIAGNOSTIC", "strongest_safe_wording": "The 2D projection helps explain overlap, boundary-like points, and query locations.", "must_not_use": "The 2D PCA contour is the true 4D physical boundary."},
+            {"category": "posthoc_visualization", "claim": "PCA clarifies 4D sampled-input geometry", "numeric_result": (f"PC1+PC2 explain {100*float(pca_summary['pc1_plus_pc2_explained_variance']):.3f}% of standardized-feature variance; PC3 explains {100*float(pca_summary['component_interpretations']['PC3']['explained_variance_ratio']):.3f}%" if pca_summary is not None else "See pca_summary.json"), "status": "VISUAL_DIAGNOSTIC", "strongest_safe_wording": "Standardized PCA is a label-free view of sampled input variance: PC1 is an LS-versus-P contrast, PC2 is mainly ST variation, and PC3 carries most VX variation.", "must_not_use": "PCA maximizes Keyhole separation, proves feature importance, or identifies the true 4D physical boundary."},
         ]
     )
 
@@ -730,13 +730,13 @@ def write_final_reports(summary: Mapping[str, Any], validation: Mapping[str, Any
     q20_mixing = float(role_mixing["B1_q20"])
     non_q30_mixing = float(role_mixing["held_out_non_q30"])
     early_mixing = float(stage_mixing["acquired_17_40"])
-    comparison_stage = "not_queried_by_available_horizon"
+    comparison_stage = "acquired_161_320"
     late_reference_mixing = float(stage_mixing[comparison_stage])
     boundary_direction = "higher" if q20_mixing > non_q30_mixing else "not higher"
     query_direction = "higher" if early_mixing > late_reference_mixing else "not higher"
     pca_direction_sentence = (
         f"In the representative, label-informed visualization fold, mean 10-neighbour opposite-label mixing is {q20_mixing:.3f} for q20 versus {non_q30_mixing:.3f} outside q30 ({boundary_direction}); "
-        f"Margin queries 17–40 average {early_mixing:.3f} versus {late_reference_mixing:.3f} for rows {comparison_stage.replace('_', ' ')} ({query_direction})."
+        f"Margin queries 17–40 average {early_mixing:.3f} versus {late_reference_mixing:.3f} for queries 161–320 ({query_direction}); this is descriptive 2D association, not proof of a physical boundary."
     )
 
     q_answers = {
@@ -769,6 +769,9 @@ def write_final_reports(summary: Mapping[str, Any], validation: Mapping[str, Any
             "combined_variance": pca["pc1_plus_pc2_explained_variance"],
             "pc1_dominant_loading": pca["pc1_dominant_loading"],
             "pc2_dominant_loading": pca["pc2_dominant_loading"],
+            "component_interpretations": pca["component_interpretations"],
+            "variance_outside_pc1_pc2": pca["variance_outside_pc1_pc2"],
+            "scaling_robustness": pca["scaling_robustness"],
             "representative_run_id": pca["representative_run_id"],
             "representative_selection_is_label_informed": pca["representative_selection_is_label_informed"],
             "interpretation_diagnostics": pca["interpretation_diagnostics"],
@@ -791,9 +794,9 @@ def write_final_reports(summary: Mapping[str, Any], validation: Mapping[str, Any
 
 6. **AULC and terminal accuracy answer different questions.** The terminal Fold-B1-q20 accuracy comparison {terminal_direction}. The frozen AULC contrast remains positive and measures earlier learning speed; balanced accuracy and Keyhole recall are separate descriptive endpoints, and full81, q30, and q20 results remain separated in `terminal_metric_summary.csv`.
 
-7. **PCA makes the 4D geometry explainable, not physically certain.** PC1+PC2 explain {100*pca['pc1_plus_pc2_explained_variance']:.1f}% of standardized feature variance; PC1 is dominated by {pca['pc1_dominant_loading']['feature']} and PC2 by {pca['pc2_dominant_loading']['feature']}. {pca_direction_sentence} PCA fitting is label-free, but the representative-fold choice is explicitly label-informed and visualization-only.
+7. **PCA describes sampled-input variance, not Keyhole importance.** After standardizing `P`, `VX`, `LS`, and `ST`, PC1 is an LS-versus-P contrast, PC2 is mainly sampled ST variation, and PC3 is mainly VX variation. PC1+PC2 retain {100*pca['pc1_plus_pc2_explained_variance']:.1f}%, so the 2D view omits {100*pca['variance_outside_pc1_pc2']:.1f}% including most VX variation. The single RobustScaler sensitivity check preserves the ST/PC2 and VX/PC3 pattern but changes PC1 materially, so the interpretation is scaling-aware. {pca_direction_sentence} Labels do not enter PCA fitting; the representative-fold choice is explicitly label-informed and visualization-only. PCA coordinates and held-out or unrevealed labels did not enter acquisition, while labels of already queried rows trained later GPC fits.
 
-8. **Main limitations:** fixed 405-simulation population, manual labels, 17-row q20 subsets, post-hoc H=320 choice, unobservable persistent-Q tail near the final horizon, design-conditional bootstrap uncertainty, and a PCA slice masked only by the projected 2D hull—not verified support on the observed 4D manifold or a physical boundary.
+8. **Main limitations:** fixed 405-simulation population, manual labels, 17-row q20 subsets, post-hoc H=320 choice, unobservable persistent-Q tail near the final horizon, design-conditional bootstrap uncertainty, and PCA that optimizes input variance rather than class separation. The secondary GPC slice fixes PC3=PC4=0 and is masked only by the projected 2D hull—not verified support on the observed 4D manifold or a physical boundary.
 """
     (OUTPUT / "supervisor_summary.md").write_text(supervisor, encoding="utf-8", newline="\n")
 
@@ -836,18 +839,19 @@ def write_final_reports(summary: Mapping[str, Any], validation: Mapping[str, Any
         ("8", "Matched pair guaranteed-minimum analysis", "PASS", "matched_pair_crossing_categories.csv"),
         ("9", "Terminal full81/q30/q20 metrics at 40/80/160/320", "PASS", "terminal_metric_summary.csv; terminal_path_metrics.csv"),
         ("10", "AULC versus terminal distinction", "PASS", "notebook Section 7; supervisor_summary.md"),
-        ("11A", "PCA full 405 population and loadings", "PASS", "figures/05_pca_full_population.png; pca_feature_loadings.csv"),
-        ("11B", "Fold-local boundary-like visualization", "PASS", "figures/06_pca_boundary_subsets_representative_fold.png"),
-        ("11C", "Active-learning trajectory through H320", "PASS", "figures/07_pca_active_learning_trajectory.png"),
-        ("11D", "PCA-plane GPC slice", "PASS", "figures/08_pca_plane_gpc_slice.png"),
-        ("12", "Scientific PCA interpretation and caveats", "PASS", "pca_summary.json; notebook Section 9"),
+        ("11A", "Primary StandardScaler PCA of all 405 rows plus coefficients", "PASS", "figures/05_pca_input_geometry_and_loadings.png; pca_feature_loadings.csv"),
+        ("11B", "Scaling robustness and PC1-PC3 loading structure", "PASS", "figures/06_pca_scaling_robustness.png; figures/07_pca_component_loading_structure.png"),
+        ("11C", "Fold-local boundary-like visualization", "PASS", "figures/08_pca_boundary_like_subset.png"),
+        ("11D", "Active-learning trajectory through H320", "PASS", "figures/09_pca_margin_query_trajectory.png"),
+        ("11E", "Secondary PCA-plane GPC slice diagnostic", "PASS", "figures/10_pca_gpc_slice_diagnostic.png"),
+        ("12", "Scientific PCA interpretation and RobustScaler sensitivity caveats", "PASS", "pca_summary.json; notebook Section 9"),
         ("13", "No deep dive on old 9/100 failures", "PASS", "No failure-analysis artifact created"),
         ("14-15", "Only question-driven required figures", "PASS", "figures/ and figure_manifest.csv"),
         ("16", "Repeat-block/within-fold Random bootstrap", "PASS", "query_bootstrap_summary.json; terminal_metric_summary.csv"),
         ("17", "Separated claim ledger", "PASS", "claim_ledger.csv and claim_ledger.md"),
         ("18", "Explicit Q1-Q9 answers", "PASS", "final_q1_q9_answers.json and .md"),
         ("19", "Leakage, identity, crossing, PCA validations", "PASS", "validation_report.json and .md"),
-        ("20", "Subagent evidence, extension, terminal/PCA, critic workflow", "PASS" if critic_pass else "PENDING", "independent_critic_audit.md" if critic_pass else "Final independent critic audit not yet recorded"),
+        ("20", "Existing independent critic workflow", "PASS" if critic_pass else "PENDING", "independent_critic_audit.md" if critic_pass else "Existing independent critic audit not recorded"),
         ("21", "Step-by-step teaching notebook", "PASS", "notebooks/week_09/01_week9_phase1_close_week8.ipynb"),
         ("22", "5-8 supervisor-facing messages", "PASS", "supervisor_summary.md"),
         ("23", "Ground truth/B1/q20/q30/ST terminology", "PASS", "notebook and supervisor summary"),
@@ -887,7 +891,7 @@ The restricted H=320 difference is descriptive. The mathematical lower-bound ana
 
 ## Terminal performance and PCA
 
-Terminal full81/q30/q20 results are in `terminal_metric_summary.csv`; their Fold-B1-q20 comparison {terminal_direction}. The positive frozen AULC contrast separately measures earlier learning speed. Feature-only standardized PCA explains {100*pca['pc1_plus_pc2_explained_variance']:.2f}% in PC1+PC2 and is used only for interpretation.
+Terminal full81/q30/q20 results are in `terminal_metric_summary.csv`; their Fold-B1-q20 comparison {terminal_direction}. The positive frozen AULC contrast separately measures earlier learning speed. Feature-only StandardScaler PCA is used only for interpretation: PC1 is an LS-versus-P contrast, PC2 is mainly sampled ST variation, and PC3 is mainly VX variation. PC1+PC2 explain {100*pca['pc1_plus_pc2_explained_variance']:.2f}% and omit {100*pca['variance_outside_pc1_pc2']:.2f}% of standardized input variance. Robust scaling preserves the ST/PC2 and VX/PC3 pattern but changes PC1 materially, so no loading is interpreted as physical importance, causality, or supervised Keyhole importance.
 
 ## Scope
 
@@ -970,7 +974,7 @@ def run_analysis(*, bootstrap_draws: int = BOOTSTRAP_DRAWS, package: bool = True
         {"check_id": "random_averaged_within_fold", "status": "PASS", "evidence": "query and terminal estimands average 30 continuations inside repeat/fold"},
         {"check_id": "terminal_q20_q30_metrics_reproduce_saved_fits", "status": terminal_audit["status"], "evidence": terminal_audit},
         {"check_id": "bootstrap_hierarchy", "status": "PASS", "evidence": bootstrap["hierarchy"]},
-        {"check_id": "pca_visualization_only", "status": "PASS", "evidence": "PCA module fits standardized P/VX/LS/ST only and never enters acquisition"},
+        {"check_id": "pca_visualization_only", "status": "PASS", "evidence": "PCA fits P/VX/LS/ST without labels and its coordinates never enter model training or acquisition; revealed queried labels still train later GPC fits"},
         *historical_checks,
     ]
     validation = {"status": "PASS" if all(row["status"] == "PASS" for row in checks) else "FAIL", "checks": checks, "fit_seed_collision_audit": collisions}

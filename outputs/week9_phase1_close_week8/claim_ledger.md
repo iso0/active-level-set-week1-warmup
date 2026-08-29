@@ -34,10 +34,10 @@ Frozen confirmatory claims and post-hoc diagnostics are kept separate.
 - Strongest safe wording: AULC answers how quickly learning improves; terminal metrics answer model quality at a fixed budget.
 - Must not use: Terminal accuracy and AULC are the same estimand.
 
-## PCA clarifies 4D geometry
+## PCA clarifies 4D sampled-input geometry
 
 - Category: `posthoc_visualization`
 - Status: `VISUAL_DIAGNOSTIC`
-- Numeric result: PC1+PC2 explain 58.422% of standardized-feature variance
-- Strongest safe wording: The 2D projection helps explain overlap, boundary-like points, and query locations.
-- Must not use: The 2D PCA contour is the true 4D physical boundary.
+- Numeric result: PC1+PC2 explain 58.422% of standardized-feature variance; PC3 explains 25.037%
+- Strongest safe wording: Standardized PCA is a label-free view of sampled input variance: PC1 is an LS-versus-P contrast, PC2 is mainly ST variation, and PC3 carries most VX variation.
+- Must not use: PCA maximizes Keyhole separation, proves feature importance, or identifies the true 4D physical boundary.
