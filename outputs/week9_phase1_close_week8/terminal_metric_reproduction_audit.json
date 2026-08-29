@@ -1,0 +1,77 @@
+{
+  "checkpoint_rows_compared": 12400,
+  "comparisons": [
+    {
+      "max_abs_delta": 1.1102230246251565e-16,
+      "metric": "accuracy",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q20"
+    },
+    {
+      "max_abs_delta": 1.1102230246251565e-16,
+      "metric": "balanced_accuracy",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q20"
+    },
+    {
+      "max_abs_delta": 5.551115123125783e-17,
+      "metric": "keyhole_recall",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q20"
+    },
+    {
+      "max_abs_delta": 0.0,
+      "metric": "false_negative",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q20"
+    },
+    {
+      "max_abs_delta": 0.0,
+      "metric": "false_positive",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q20"
+    },
+    {
+      "max_abs_delta": 0.0,
+      "metric": "accuracy",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q30"
+    },
+    {
+      "max_abs_delta": 1.1102230246251565e-16,
+      "metric": "balanced_accuracy",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q30"
+    },
+    {
+      "max_abs_delta": 1.1102230246251565e-16,
+      "metric": "keyhole_recall",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q30"
+    },
+    {
+      "max_abs_delta": 0.0,
+      "metric": "false_negative",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q30"
+    },
+    {
+      "max_abs_delta": 0.0,
+      "metric": "false_positive",
+      "rows": 12400,
+      "status": "PASS",
+      "subset": "B1_q30"
+    }
+  ],
+  "path_metric_rows": 37200,
+  "status": "PASS"
+}

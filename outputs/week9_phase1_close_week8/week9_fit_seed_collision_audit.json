@@ -1,0 +1,14 @@
+{
+  "collision_group_count": 1,
+  "collisions": [
+    {
+      "distinct_keys": [
+        "week8_5_frozen_confirmation|v1|run|w85__r06_f02|arm|binary_margin|fit|budget|236",
+        "week8_5_frozen_confirmation|v1|run|w85__r14_f01|arm|binary_random|continuation|16|fit|budget|320"
+      ],
+      "fit_seed_u32": 3150972767
+    }
+  ],
+  "qualification": "Complete fit-seed keys are authoritative; uint32 collisions are disclosed, not repaired.",
+  "registry_rows": 33766
+}

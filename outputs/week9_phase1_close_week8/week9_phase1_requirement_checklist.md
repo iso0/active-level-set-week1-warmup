@@ -1,0 +1,32 @@
+# Week 9 Phase 1 requirement checklist
+
+| Prompt section | Requirement | Status | Evidence |
+|---|---|---|---|
+| 0 | Pinned scientific base and terminology | PASS | `summary.json; validation_report.json` |
+| 1 | Isolated Week 9 branch/output/source/notebook/tests | PASS | `branch plus src/, notebooks/week_09/, tests/, outputs/week9_phase1_close_week8/` |
+| 2 | Audit checkpoints, bundles, resume, replay | PASS | `validation_report.json; checkpoint package provenance` |
+| 3 | Extend Margin and 30 Random continuations to H320 | PASS | `week9_phase1_h320_checkpoint_bundle.tar.gz` |
+| 4 | Continue checkpoint cadence 164,168,...,320 | PASS | `crossing_path_evidence.csv` |
+| 5 | Label H320 as post-hoc | PASS | `summary.json; claim_ledger.csv` |
+| 6 | Report H80/120/160/200/240/280/320 | PASS | `crossing_by_horizon.csv` |
+| 7 | Mathematically correct query-saving claim | PASS | `query_saving_claim_decision.json` |
+| 8 | Matched pair guaranteed-minimum analysis | PASS | `matched_pair_crossing_categories.csv` |
+| 9 | Terminal full81/q30/q20 metrics at 40/80/160/320 | PASS | `terminal_metric_summary.csv; terminal_path_metrics.csv` |
+| 10 | AULC versus terminal distinction | PASS | `notebook Section 7; supervisor_summary.md` |
+| 11A | PCA full 405 population and loadings | PASS | `figures/05_pca_full_population.png; pca_feature_loadings.csv` |
+| 11B | Fold-local boundary-like visualization | PASS | `figures/06_pca_boundary_subsets_representative_fold.png` |
+| 11C | Active-learning trajectory through H320 | PASS | `figures/07_pca_active_learning_trajectory.png` |
+| 11D | PCA-plane GPC slice | PASS | `figures/08_pca_plane_gpc_slice.png` |
+| 12 | Scientific PCA interpretation and caveats | PASS | `pca_summary.json; notebook Section 9` |
+| 13 | No deep dive on old 9/100 failures | PASS | `No failure-analysis artifact created` |
+| 14-15 | Only question-driven required figures | PASS | `figures/ and figure_manifest.csv` |
+| 16 | Repeat-block/within-fold Random bootstrap | PASS | `query_bootstrap_summary.json; terminal_metric_summary.csv` |
+| 17 | Separated claim ledger | PASS | `claim_ledger.csv and claim_ledger.md` |
+| 18 | Explicit Q1-Q9 answers | PASS | `final_q1_q9_answers.json and .md` |
+| 19 | Leakage, identity, crossing, PCA validations | PASS | `validation_report.json and .md` |
+| 20 | Subagent evidence, extension, terminal/PCA, critic workflow | PASS | `independent_critic_audit.md` |
+| 21 | Step-by-step teaching notebook | PASS | `notebooks/week_09/01_week9_phase1_close_week8.ipynb` |
+| 22 | 5-8 supervisor-facing messages | PASS | `supervisor_summary.md` |
+| 23 | Ground truth/B1/q20/q30/ST terminology | PASS | `notebook and supervisor summary` |
+| 24 | Historical outputs untouched; large files packaged | PASS | `git diff scope; checkpoint tar.gz` |
+| 25 | Strongest defensible result only | PASS | `query_saving_claim_decision.json` |

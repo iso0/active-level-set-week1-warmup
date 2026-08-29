@@ -28,6 +28,11 @@ outputs/week8_5_frozen_confirmation/learning_curves.csv
 outputs/week8_5_frozen_confirmation/trajectory_per_budget.csv
 outputs/week8_5_frozen_confirmation/seed_registry.csv
 outputs/week8_5_frozen_confirmation/random_seed_manifest.csv
+outputs/week9_phase1_close_week8/dev_horizon/_frozen_h160/
+outputs/week9_phase1_close_week8/dev_horizon/checkpoints/
+outputs/week9_phase1_close_week8/dev_horizon/execution_report_first_*.json
+outputs/week9_phase1_close_week8/dev_terminal_pca/
+outputs/week9_phase1_close_week8/dev_terminal_historical/
 
 # Local raw research data
 /data/raw/

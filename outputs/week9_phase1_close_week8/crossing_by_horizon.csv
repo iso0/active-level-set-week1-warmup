@@ -1,0 +1,15 @@
+horizon,arm,trajectory_count,finite_persistent_crossings,finite_rate,unresolved,restricted_mean_query_burden,crossing_status_uses_confirmation_by_horizon
+80,binary_margin,100,90,0.9,10,31.85,True
+80,binary_random,3000,2201,0.7336666666666667,799,42.803333333333335,True
+120,binary_margin,100,91,0.91,9,35.47,True
+120,binary_random,3000,2394,0.798,606,51.91433333333333,True
+160,binary_margin,100,91,0.91,9,39.07,True
+160,binary_random,3000,2493,0.831,507,59.169,True
+200,binary_margin,100,91,0.91,9,42.67,True
+200,binary_random,3000,2577,0.859,423,65.17566666666667,True
+240,binary_margin,100,91,0.91,9,46.27,True
+240,binary_random,3000,2644,0.8813333333333333,356,70.281,True
+280,binary_margin,100,91,0.91,9,49.87,True
+280,binary_random,3000,2691,0.897,309,74.66766666666666,True
+320,binary_margin,100,91,0.91,9,53.47,True
+320,binary_random,3000,2727,0.909,273,78.46633333333334,True

@@ -957,3 +957,55 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
   unpushed for review; the next authorized work is thesis consolidation,
   figure selection, method/results writing, limitations, supervisor feedback,
   or a narrowly targeted correction if scientifically necessary.
+
+### Week 9 Phase 1: close the Week 8/8.5 sample-efficiency story (2026-08-29)
+
+- This work starts exactly from frozen Week 8.5 revision
+  `6487722fe5e60d951ab929d8539e0793f9bed366`. The 405-simulation population,
+  73 manual `has_keyhole` positives, 20 repeated five-fold splits, 16-query
+  initial designs, Binary Margin/Random acquisition definitions, Fold-B1-q20
+  primary metric, 0.80 persistent target, and three-consecutive-checkpoint
+  crossing rule are unchanged. The H=320 work is a separate post-hoc closing
+  diagnostic and does not alter the frozen Week 8.5 PASS/QUALIFY/FAIL ledger.
+- All 100 Binary Margin paths and all 3,000 matched Random continuations were
+  continued from the byte-pinned H=160 checkpoints to H=320 on the original
+  training pools. Full completed-payload validation passed for 3,100/3,100
+  trajectories, covering source hashes, exact prefixes, unique in-pool
+  queries, mechanism/query agreement, information-flow flags, seeded Random
+  orders, and 81-row terminal prediction identity/truth/probability.
+- Persistent Fold-B1-q20 target crossings at H=320 are 91/100 for Margin and
+  2,727/3,000 (90.9%) for Random. Margin remains unresolved in the same nine
+  outer runs; Random has 273 unresolved paths, of which 267 have H320 below
+  target and six have an indeterminate start-of-three tail. Restricted H=320
+  mean burdens are 53.470 queries for Margin and 78.466 for Random, a
+  descriptive difference of 24.996 queries and ratio 1.467. The
+  hierarchy-preserving 20,000-draw interval for the restricted difference is
+  `[10.317, 38.357]`, but it is design-conditional and not a population or
+  transfer guarantee.
+- The exact general answer to “at least how many average queries are saved?”
+  is **not identified/supported**: nine Margin crossings remain censored, and
+  the restricted difference is therefore not automatically a lower bound.
+  The analysis explicitly rejects the naive claim that every unresolved
+  Random path has `Q>320`; six paths can still receive Q=316 or Q=320 after a
+  future confirming checkpoint.
+- Frozen Week 8.5 retains the positive Fold-B1-q20 AULC contrast
+  `+0.037300` over budgets 16–80 with 20/20 positive repeat contrasts. Terminal
+  q20 accuracy differences (Margin minus matched Random) at budgets
+  40/80/160/320 are `+0.04255/+0.03708/+0.01955/+0.00059`; the H=320 interval
+  crosses zero. This supports faster early learning, not a durable claim that
+  the final H=320 model is materially better.
+- Feature-only standardized PCA uses `P`, `VX`, `LS`, and `ST` (substrate
+  temperature) solely for interpretation. PC1 and PC2 explain 31.97% and
+  26.46% of variance (58.42% combined); LS dominates PC1 and ST dominates
+  PC2. The representative visualization fold is selected deterministically
+  but label-informed, while PCA fitting and acquisition remain label-free.
+  q20 rows have greater 2D opposite-label neighbour mixing in that fold, and
+  early Margin queries occupy more mixed projected regions. The GPC contour is
+  only a PC3=PC4=0 slice masked by the projected PC1/PC2 hull, not verified
+  support on the observed 4D manifold or a physical boundary.
+- The executed teaching notebook is
+  `notebooks/week_09/01_week9_phase1_close_week8.ipynb`. Eight required figures
+  were rendered and visually inspected. Twenty-six focused unit tests pass,
+  all required analysis validations pass, and the deterministic 3,100-member
+  H=320 checkpoint bundle records per-member SHA-256 values plus its explicit
+  dependency on the pinned frozen H=160 archive.

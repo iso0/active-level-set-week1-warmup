@@ -1,0 +1,436 @@
+{
+  "analysis_status": "posthoc_horizon_extension_closing_diagnostic",
+  "checkpoint_package": {
+    "byte_reproducible_metadata": true,
+    "bytes": 57143605,
+    "checkpoint_members": 3100,
+    "dependency_manifest": "outputs\\week9_phase1_close_week8\\h320_checkpoint_bundle_dependencies.json",
+    "full_payloads_validated": 3100,
+    "member_manifest": "outputs\\week9_phase1_close_week8\\h320_checkpoint_member_manifest.csv",
+    "path": "outputs\\week9_phase1_close_week8\\week9_phase1_h320_checkpoint_bundle.tar.gz",
+    "sha256": "a3817dea9b8636f7318160a730584b343b00cf67913b1cdf545b0b08b9c24a93",
+    "total_archive_members": 3102
+  },
+  "figures": [
+    "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-close-week8\\outputs\\week9_phase1_close_week8\\figures\\01_margin_vs_matched_random_q20_learning_curve.png",
+    "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-close-week8\\outputs\\week9_phase1_close_week8\\figures\\02_persistent_target_attainment_vs_horizon.png",
+    "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-close-week8\\outputs\\week9_phase1_close_week8\\figures\\03_terminal_accuracy_full_q30_q20.png",
+    "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-close-week8\\outputs\\week9_phase1_close_week8\\figures\\04_aulc_vs_terminal_performance_summary.png"
+  ],
+  "frozen_AULC": {
+    "binary_margin": 0.813520220588,
+    "margin_minus_random": 0.037299785539,
+    "matched_binary_random": 0.776220435049,
+    "repeat_blocks_positive": 20,
+    "repeat_blocks_total": 20
+  },
+  "frozen_week8_5_decision_unchanged": true,
+  "horizon_results": [
+    {
+      "arm": "binary_margin",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 90,
+      "finite_rate": 0.9,
+      "horizon": 80,
+      "restricted_mean_query_burden": 31.85,
+      "trajectory_count": 100,
+      "unresolved": 10
+    },
+    {
+      "arm": "binary_random",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 2201,
+      "finite_rate": 0.7336666666666667,
+      "horizon": 80,
+      "restricted_mean_query_burden": 42.803333333333335,
+      "trajectory_count": 3000,
+      "unresolved": 799
+    },
+    {
+      "arm": "binary_margin",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 91,
+      "finite_rate": 0.91,
+      "horizon": 120,
+      "restricted_mean_query_burden": 35.47,
+      "trajectory_count": 100,
+      "unresolved": 9
+    },
+    {
+      "arm": "binary_random",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 2394,
+      "finite_rate": 0.798,
+      "horizon": 120,
+      "restricted_mean_query_burden": 51.91433333333333,
+      "trajectory_count": 3000,
+      "unresolved": 606
+    },
+    {
+      "arm": "binary_margin",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 91,
+      "finite_rate": 0.91,
+      "horizon": 160,
+      "restricted_mean_query_burden": 39.07,
+      "trajectory_count": 100,
+      "unresolved": 9
+    },
+    {
+      "arm": "binary_random",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 2493,
+      "finite_rate": 0.831,
+      "horizon": 160,
+      "restricted_mean_query_burden": 59.169,
+      "trajectory_count": 3000,
+      "unresolved": 507
+    },
+    {
+      "arm": "binary_margin",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 91,
+      "finite_rate": 0.91,
+      "horizon": 200,
+      "restricted_mean_query_burden": 42.67,
+      "trajectory_count": 100,
+      "unresolved": 9
+    },
+    {
+      "arm": "binary_random",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 2577,
+      "finite_rate": 0.859,
+      "horizon": 200,
+      "restricted_mean_query_burden": 65.17566666666667,
+      "trajectory_count": 3000,
+      "unresolved": 423
+    },
+    {
+      "arm": "binary_margin",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 91,
+      "finite_rate": 0.91,
+      "horizon": 240,
+      "restricted_mean_query_burden": 46.27,
+      "trajectory_count": 100,
+      "unresolved": 9
+    },
+    {
+      "arm": "binary_random",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 2644,
+      "finite_rate": 0.8813333333333333,
+      "horizon": 240,
+      "restricted_mean_query_burden": 70.281,
+      "trajectory_count": 3000,
+      "unresolved": 356
+    },
+    {
+      "arm": "binary_margin",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 91,
+      "finite_rate": 0.91,
+      "horizon": 280,
+      "restricted_mean_query_burden": 49.87,
+      "trajectory_count": 100,
+      "unresolved": 9
+    },
+    {
+      "arm": "binary_random",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 2691,
+      "finite_rate": 0.897,
+      "horizon": 280,
+      "restricted_mean_query_burden": 74.66766666666666,
+      "trajectory_count": 3000,
+      "unresolved": 309
+    },
+    {
+      "arm": "binary_margin",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 91,
+      "finite_rate": 0.91,
+      "horizon": 320,
+      "restricted_mean_query_burden": 53.47,
+      "trajectory_count": 100,
+      "unresolved": 9
+    },
+    {
+      "arm": "binary_random",
+      "crossing_status_uses_confirmation_by_horizon": true,
+      "finite_persistent_crossings": 2727,
+      "finite_rate": 0.909,
+      "horizon": 320,
+      "restricted_mean_query_burden": 78.46633333333334,
+      "trajectory_count": 3000,
+      "unresolved": 273
+    }
+  ],
+  "matched_pair_categories": {
+    "both_crossed": 2608,
+    "margin_crossed_random_unresolved": 122,
+    "neither_crossed": 151,
+    "random_crossed_margin_unresolved": 119
+  },
+  "query_bootstrap": {
+    "all_margin_crossings_observed_H320": false,
+    "bootstrap_draws": 20000,
+    "hierarchy": "20 repeat blocks resampled; all five folds retained; 30 Random continuations resampled within fold",
+    "mathematical_lower_bound_average_delta_Q": null,
+    "mathematical_lower_bound_delta_interval": {
+      "one_sided_95pct_lower": null,
+      "two_sided_95pct_lower": null,
+      "two_sided_95pct_upper": null
+    },
+    "restricted_delta_Q": 24.99633333333334,
+    "restricted_delta_interval": {
+      "one_sided_95pct_lower": 12.72920000000001,
+      "two_sided_95pct_lower": 10.317308333333324,
+      "two_sided_95pct_upper": 38.357008333333326
+    },
+    "restricted_margin_mean_Q": 53.47,
+    "restricted_random_mean_Q": 78.46633333333334,
+    "restricted_ratio": 1.4674833239822955,
+    "restricted_ratio_interval": {
+      "one_sided_95pct_lower": 1.209698065433856,
+      "two_sided_95pct_lower": 1.163974159848801,
+      "two_sided_95pct_upper": 1.884245645563897
+    }
+  },
+  "query_saving_claim": {
+    "bootstrap_scope": "Descriptive uncertainty under the frozen repeat/fold/continuation design; not a population or transfer guarantee.",
+    "design_conditional_bootstrap_lower_bound_positive": false,
+    "fixed_benchmark_lower_bound_positive": false,
+    "hierarchical_one_sided_95pct_lower_bound_queries": null,
+    "margin_all_100_observed": false,
+    "matched_category_counts": {
+      "both_crossed": 2608,
+      "margin_crossed_random_unresolved": 122,
+      "neither_crossed": 151,
+      "random_crossed_margin_unresolved": 119
+    },
+    "naive_Qrandom_gt_320_for_every_unresolved_is_valid": false,
+    "path_specific_average_saving_lower_bound_queries": null,
+    "random_unresolved": 273,
+    "random_unresolved_guaranteed_Q_gt_320": 267,
+    "random_unresolved_tail_indeterminate": 6,
+    "restricted_H320_delta_is_automatically_a_lower_bound": false,
+    "rounded_down_supervisor_X_queries": null,
+    "status": "NOT_SUPPORTED_MARGIN_TAIL_UNRESOLVED",
+    "supervisor_safe_sentence": "An 'at least X queries saved on average' claim is not identified because at least one Margin crossing remains unresolved at H=320.",
+    "why_naive_prompt_argument_fails": "Historical Q is the first of three passing checkpoints. An unresolved path passing at 316 and 320 may later receive Q=316 after a 324 pass."
+  },
+  "reporting": {
+    "q_answers": {
+      "Q1_margin_crossed_all_100_by_320": {
+        "answer": false,
+        "count": 91,
+        "unresolved": 9
+      },
+      "Q2_random_crossings_by_320": {
+        "count": 2727,
+        "percentage": 90.9,
+        "unresolved": 273
+      },
+      "Q3_restricted_mean_query_burden_H320": {
+        "binary_margin": 53.47,
+        "binary_random": 78.46633333333334
+      },
+      "Q4_restricted_H320_difference": 24.99633333333334,
+      "Q5_restricted_H320_ratio": 1.4674833239822955,
+      "Q6_at_least_X_average_queries": {
+        "bootstrap_scope": "Descriptive uncertainty under the frozen repeat/fold/continuation design; not a population or transfer guarantee.",
+        "design_conditional_bootstrap_lower_bound_positive": false,
+        "fixed_benchmark_lower_bound_positive": false,
+        "hierarchical_one_sided_95pct_lower_bound_queries": null,
+        "margin_all_100_observed": false,
+        "matched_category_counts": {
+          "both_crossed": 2608,
+          "margin_crossed_random_unresolved": 122,
+          "neither_crossed": 151,
+          "random_crossed_margin_unresolved": 119
+        },
+        "naive_Qrandom_gt_320_for_every_unresolved_is_valid": false,
+        "path_specific_average_saving_lower_bound_queries": null,
+        "random_unresolved": 273,
+        "random_unresolved_guaranteed_Q_gt_320": 267,
+        "random_unresolved_tail_indeterminate": 6,
+        "restricted_H320_delta_is_automatically_a_lower_bound": false,
+        "rounded_down_supervisor_X_queries": null,
+        "status": "NOT_SUPPORTED_MARGIN_TAIL_UNRESOLVED",
+        "supervisor_safe_sentence": "An 'at least X queries saved on average' claim is not identified because at least one Margin crossing remains unresolved at H=320.",
+        "why_naive_prompt_argument_fails": "Historical Q is the first of three passing checkpoints. An unresolved path passing at 316 and 320 may later receive Q=316 after a 324 pass."
+      },
+      "Q7_terminal_accuracies": [
+        {
+          "binary_margin_accuracy": 0.9579012345679008,
+          "budget": 40,
+          "margin_minus_random": 0.0138477366255137,
+          "matched_random_accuracy": 0.9440534979423872,
+          "subset": "full81"
+        },
+        {
+          "binary_margin_accuracy": 0.8708000000000005,
+          "budget": 40,
+          "margin_minus_random": 0.0420400000000007,
+          "matched_random_accuracy": 0.8287599999999997,
+          "subset": "B1_q30"
+        },
+        {
+          "binary_margin_accuracy": 0.8170588235294112,
+          "budget": 40,
+          "margin_minus_random": 0.0425490196078421,
+          "matched_random_accuracy": 0.774509803921569,
+          "subset": "B1_q20"
+        },
+        {
+          "binary_margin_accuracy": 0.962469135802469,
+          "budget": 80,
+          "margin_minus_random": 0.0109506172839497,
+          "matched_random_accuracy": 0.9515185185185192,
+          "subset": "full81"
+        },
+        {
+          "binary_margin_accuracy": 0.8792000000000004,
+          "budget": 80,
+          "margin_minus_random": 0.0300400000000005,
+          "matched_random_accuracy": 0.8491599999999999,
+          "subset": "B1_q30"
+        },
+        {
+          "binary_margin_accuracy": 0.8329411764705873,
+          "budget": 80,
+          "margin_minus_random": 0.0370784313725481,
+          "matched_random_accuracy": 0.7958627450980391,
+          "subset": "B1_q20"
+        },
+        {
+          "binary_margin_accuracy": 0.9625925925925924,
+          "budget": 160,
+          "margin_minus_random": 0.0051810699588477,
+          "matched_random_accuracy": 0.9574115226337446,
+          "subset": "full81"
+        },
+        {
+          "binary_margin_accuracy": 0.8796,
+          "budget": 160,
+          "margin_minus_random": 0.0142133333333333,
+          "matched_random_accuracy": 0.8653866666666667,
+          "subset": "B1_q30"
+        },
+        {
+          "binary_margin_accuracy": 0.8352941176470583,
+          "budget": 160,
+          "margin_minus_random": 0.0195490196078427,
+          "matched_random_accuracy": 0.8157450980392156,
+          "subset": "B1_q20"
+        },
+        {
+          "binary_margin_accuracy": 0.9625925925925924,
+          "budget": 320,
+          "margin_minus_random": 0.0001810699588475,
+          "matched_random_accuracy": 0.9624115226337449,
+          "subset": "full81"
+        },
+        {
+          "binary_margin_accuracy": 0.8796,
+          "budget": 320,
+          "margin_minus_random": 0.0004933333333333,
+          "matched_random_accuracy": 0.8791066666666667,
+          "subset": "B1_q30"
+        },
+        {
+          "binary_margin_accuracy": 0.8347058823529407,
+          "budget": 320,
+          "margin_minus_random": 0.0005882352941172,
+          "matched_random_accuracy": 0.8341176470588235,
+          "subset": "B1_q20"
+        }
+      ],
+      "Q8_terminal_vs_AULC": {
+        "frozen_AULC_delta_margin_minus_random": 0.037299785539,
+        "interpretation": "The terminal Fold-B1-q20 accuracy comparison has positive point estimates at 40, 80, 160, and 320, but the H320 contrast is practically zero and its design-conditional 95% interval [-0.0011, +0.0023] crosses zero. The frozen AULC contrast remains positive and measures earlier learning speed. Balanced accuracy and Keyhole recall are separate descriptive terminal endpoints; all of these remain different estimands.",
+        "terminal_q20_deltas": [
+          {
+            "binary_margin_accuracy": 0.8170588235294112,
+            "budget": 40,
+            "margin_minus_random": 0.0425490196078421,
+            "matched_random_accuracy": 0.774509803921569,
+            "subset": "B1_q20"
+          },
+          {
+            "binary_margin_accuracy": 0.8329411764705873,
+            "budget": 80,
+            "margin_minus_random": 0.0370784313725481,
+            "matched_random_accuracy": 0.7958627450980391,
+            "subset": "B1_q20"
+          },
+          {
+            "binary_margin_accuracy": 0.8352941176470583,
+            "budget": 160,
+            "margin_minus_random": 0.0195490196078427,
+            "matched_random_accuracy": 0.8157450980392156,
+            "subset": "B1_q20"
+          },
+          {
+            "binary_margin_accuracy": 0.8347058823529407,
+            "budget": 320,
+            "margin_minus_random": 0.0005882352941172,
+            "matched_random_accuracy": 0.8341176470588235,
+            "subset": "B1_q20"
+          }
+        ]
+      },
+      "Q9_PCA": {
+        "caveat": "Two-dimensional PCA-plane classifier slice masked only by the PC1-PC2 projected convex hull. Setting PC3=PC4=0 does not establish occupancy on the observed four-dimensional data manifold; this is not the true empirical or physical boundary.",
+        "combined_variance": 0.5842210622928455,
+        "interpretation_diagnostics": {
+          "caveat": "2D neighbour mixing can hide separation or overlap along PC3/PC4 and is not a physical-boundary metric",
+          "class_centroid_distance_pc1_pc2": 2.1894527548992078,
+          "class_centroids_pc1_pc2": {
+            "Conduction": {
+              "PC1": 0.3837136175156445,
+              "PC2": -0.09222932293837505
+            },
+            "Keyhole": {
+              "PC1": -1.7451085070574515,
+              "PC2": 0.41945390706219876
+            }
+          },
+          "diagnostic_status": "after-the-fact 2D projection interpretation only",
+          "mean_opposite_label_fraction_by_margin_query_stage": {
+            "acquired_161_320": 0.016875,
+            "acquired_17_40": 0.4124999999999999,
+            "acquired_41_80": 0.205,
+            "acquired_81_160": 0.08249999999999999,
+            "initial_1_16": 0.21875,
+            "not_queried_by_available_horizon": 0.07882352941176471
+          },
+          "mean_opposite_label_fraction_by_representative_test_role": {
+            "B1_q20": 0.2176470588235294,
+            "B1_q30_only": 0.075,
+            "held_out_non_q30": 0.042857142857142864,
+            "not_in_representative_test": 0.09537037037037037
+          },
+          "neighbours_for_mixing": 10
+        },
+        "pc1_dominant_loading": {
+          "feature": "LS",
+          "loading": 0.7102383569037456
+        },
+        "pc1_variance": 0.3196647110661834,
+        "pc2_dominant_loading": {
+          "feature": "ST",
+          "loading": 0.9084643327282307
+        },
+        "pc2_variance": 0.26455635122666216,
+        "representative_run_id": "w85__r19_f03",
+        "representative_selection_is_label_informed": true
+      }
+    },
+    "requirement_rows": 28,
+    "terminal_direction": "has positive point estimates at 40, 80, 160, and 320, but the H320 contrast is practically zero and its design-conditional 95% interval [-0.0011, +0.0023] crosses zero"
+  },
+  "validation_status": "PASS"
+}

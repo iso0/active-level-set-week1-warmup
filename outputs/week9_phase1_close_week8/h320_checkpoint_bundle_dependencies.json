@@ -1,0 +1,7 @@
+{
+  "extension_protocol_id": "week9_phase1_posthoc_horizon_extension/v1.0.0",
+  "frozen_h160_checkpoint_archive": "outputs\\week8_5_frozen_confirmation\\week8_5_checkpoint_bundle.tar.gz",
+  "frozen_h160_checkpoint_archive_sha256": "1004fc299e00db6f1b2b89e4407f5ac8b2c4815d1169bcaad43dacdebacf72a9",
+  "frozen_protocol_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+  "note": "The extension bundle contains H161-H320 continuation state and depends on the pinned frozen H160 archive for historical rows."
+}

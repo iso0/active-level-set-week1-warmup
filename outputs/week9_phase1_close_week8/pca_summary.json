@@ -1,0 +1,66 @@
+{
+  "figures": {
+    "boundary": "outputs\\week9_phase1_close_week8\\figures\\06_pca_boundary_subsets_representative_fold.png",
+    "population": "outputs\\week9_phase1_close_week8\\figures\\05_pca_full_population.png",
+    "slice": "outputs\\week9_phase1_close_week8\\figures\\08_pca_plane_gpc_slice.png",
+    "trajectory": "outputs\\week9_phase1_close_week8\\figures\\07_pca_active_learning_trajectory.png"
+  },
+  "interpretation_diagnostics": {
+    "caveat": "2D neighbour mixing can hide separation or overlap along PC3/PC4 and is not a physical-boundary metric",
+    "class_centroid_distance_pc1_pc2": 2.1894527548992078,
+    "class_centroids_pc1_pc2": {
+      "Conduction": {
+        "PC1": 0.3837136175156445,
+        "PC2": -0.09222932293837505
+      },
+      "Keyhole": {
+        "PC1": -1.7451085070574515,
+        "PC2": 0.41945390706219876
+      }
+    },
+    "diagnostic_status": "after-the-fact 2D projection interpretation only",
+    "mean_opposite_label_fraction_by_margin_query_stage": {
+      "acquired_161_320": 0.016875,
+      "acquired_17_40": 0.4124999999999999,
+      "acquired_41_80": 0.205,
+      "acquired_81_160": 0.08249999999999999,
+      "initial_1_16": 0.21875,
+      "not_queried_by_available_horizon": 0.07882352941176471
+    },
+    "mean_opposite_label_fraction_by_representative_test_role": {
+      "B1_q20": 0.2176470588235294,
+      "B1_q30_only": 0.075,
+      "held_out_non_q30": 0.042857142857142864,
+      "not_in_representative_test": 0.09537037037037037
+    },
+    "neighbours_for_mixing": 10
+  },
+  "labels_used_in_pca_fit": false,
+  "pc1_dominant_loading": {
+    "feature": "LS",
+    "loading": 0.7102383569037456
+  },
+  "pc1_explained_variance": 0.3196647110661834,
+  "pc1_plus_pc2_explained_variance": 0.5842210622928455,
+  "pc2_dominant_loading": {
+    "feature": "ST",
+    "loading": 0.9084643327282307
+  },
+  "pc2_explained_variance": 0.26455635122666216,
+  "pca_fit_columns_only": [
+    "P",
+    "VX",
+    "LS",
+    "ST"
+  ],
+  "pca_used_in_model_training_or_acquisition": false,
+  "representative_run_id": "w85__r19_f03",
+  "representative_selection_is_label_informed": true,
+  "representative_selection_label_use_scope": "Manual labels enter only this deterministic evaluation/visualization choice; they do not enter PCA fitting or acquisition.",
+  "representative_selection_rule": "minimum robust distance to median q20 mean-B1 and q20 Keyhole fraction; run_id tie-break",
+  "representative_selection_used_visual_appearance": false,
+  "slice_budget": 320,
+  "slice_caveat": "Two-dimensional PCA-plane classifier slice masked only by the PC1-PC2 projected convex hull. Setting PC3=PC4=0 does not establish occupancy on the observed four-dimensional data manifold; this is not the true empirical or physical boundary.",
+  "slice_definition": "PC1-PC2 grid; PC3=PC4=0; inverse transformed to four physical features; masked outside projected data hull",
+  "standardization": "StandardScaler fitted on all 405 rows of P/VX/LS/ST for visualization only"
+}
