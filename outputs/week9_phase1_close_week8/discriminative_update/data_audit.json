@@ -1,0 +1,16 @@
+{
+  "canonical_loader": "src.week8_5_frozen_sample_efficiency_confirmation.load_population",
+  "canonical_source": "outputs\\week7_06_real_data_boundary_active_level_set\\primary_common_population.csv",
+  "canonical_source_sha256": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7",
+  "conduction": 332,
+  "duplicate_feature_rows": 0,
+  "exact_experiment_name_match_to_primary_csv": true,
+  "full_audit_rows_not_used": 407,
+  "keyhole": 73,
+  "ls_definition": "Gaussian laser spot radius; stored in metres, displayed in micrometres",
+  "missing_required_values": 0,
+  "no_407_row_population_used": true,
+  "rows": 405,
+  "status": "PASS",
+  "unique_experiment_names": 405
+}

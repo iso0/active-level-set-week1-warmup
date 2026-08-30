@@ -1,0 +1,7 @@
+metric,comparison,point_estimate_repeat_mean_difference,repeat_block_bootstrap_ci_lower,repeat_block_bootstrap_ci_upper,outer_runs_early_closer,outer_runs_total,repeat_blocks_positive,repeat_blocks_total
+absolute_M3_logit,initial_1_16_minus_early_17_40,9.097195612443972,8.913571974748223,9.286550698069789,100,100,20,20
+absolute_M3_logit,late_81_160_minus_early_17_40,5.005072000906207,4.8865485978778995,5.119347454697806,100,100,20,20
+absolute_M3_logit,unqueried_at_H160_minus_early_17_40,12.590513376753233,12.463891753506633,12.714702840737374,100,100,20,20
+train_pool_B1,initial_1_16_minus_early_17_40,0.9352529872185762,0.9233881078410592,0.9463596002296663,100,100,20,20
+train_pool_B1,late_81_160_minus_early_17_40,0.4826025651166928,0.47186869578656215,0.4944328719515163,100,100,20,20
+train_pool_B1,unqueried_at_H160_minus_early_17_40,1.0697144540935974,1.0621511251108564,1.0768553270878816,100,100,20,20

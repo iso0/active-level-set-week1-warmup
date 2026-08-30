@@ -28,3 +28,9 @@ prompt_section,requirement,status,evidence
 23,Ground truth/B1/q20/q30/ST terminology,PASS,notebook and supervisor summary
 24,Historical outputs untouched; large files packaged,PASS,git diff scope; checkpoint tar.gz
 25,Strongest defensible result only,PASS,query_saving_claim_decision.json
+DU-A,Canonical 405-row data and physical units audited,PASS,discriminative_update/data_audit.json
+DU-B,Label-aware feature discrimination and honest fixed-direction bootstrap,PASS,discriminative_update/feature_discrimination.csv
+DU-C,PCA remains label-free; PLS is explicitly label-informed,PASS,notebook Sections 9 and 14; discriminative_update/pls_projection_loadings.csv
+DU-D-F,"Leak-free GLM hierarchy, physical scores, and all six operational planes",PASS,discriminative_update/glm_cv_summary.csv; physical_score_cv_summary.csv; pairwise_plane_cv_summary.csv
+DU-G,Exact saved Margin query order with 20-repeat-block inference,PASS,discriminative_update/active_geometry_comparison_summary.csv
+DU-H-K,"Eight figures, teaching notebook integration, claim ledger, and focused validation",PASS,discriminative_update/figure_manifest.csv; validation_report.json

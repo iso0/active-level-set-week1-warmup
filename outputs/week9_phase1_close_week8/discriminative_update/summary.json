@@ -1,0 +1,199 @@
+{
+  "active_comparisons": [
+    {
+      "comparison": "initial_1_16_minus_early_17_40",
+      "metric": "absolute_M3_logit",
+      "outer_runs_early_closer": 100,
+      "outer_runs_total": 100,
+      "point_estimate_repeat_mean_difference": 9.097195612443972,
+      "repeat_block_bootstrap_ci_lower": 8.913571974748223,
+      "repeat_block_bootstrap_ci_upper": 9.286550698069789,
+      "repeat_blocks_positive": 20,
+      "repeat_blocks_total": 20
+    },
+    {
+      "comparison": "late_81_160_minus_early_17_40",
+      "metric": "absolute_M3_logit",
+      "outer_runs_early_closer": 100,
+      "outer_runs_total": 100,
+      "point_estimate_repeat_mean_difference": 5.005072000906207,
+      "repeat_block_bootstrap_ci_lower": 4.8865485978778995,
+      "repeat_block_bootstrap_ci_upper": 5.119347454697806,
+      "repeat_blocks_positive": 20,
+      "repeat_blocks_total": 20
+    },
+    {
+      "comparison": "unqueried_at_H160_minus_early_17_40",
+      "metric": "absolute_M3_logit",
+      "outer_runs_early_closer": 100,
+      "outer_runs_total": 100,
+      "point_estimate_repeat_mean_difference": 12.590513376753233,
+      "repeat_block_bootstrap_ci_lower": 12.463891753506633,
+      "repeat_block_bootstrap_ci_upper": 12.714702840737374,
+      "repeat_blocks_positive": 20,
+      "repeat_blocks_total": 20
+    },
+    {
+      "comparison": "initial_1_16_minus_early_17_40",
+      "metric": "train_pool_B1",
+      "outer_runs_early_closer": 100,
+      "outer_runs_total": 100,
+      "point_estimate_repeat_mean_difference": 0.9352529872185762,
+      "repeat_block_bootstrap_ci_lower": 0.9233881078410592,
+      "repeat_block_bootstrap_ci_upper": 0.9463596002296663,
+      "repeat_blocks_positive": 20,
+      "repeat_blocks_total": 20
+    },
+    {
+      "comparison": "late_81_160_minus_early_17_40",
+      "metric": "train_pool_B1",
+      "outer_runs_early_closer": 100,
+      "outer_runs_total": 100,
+      "point_estimate_repeat_mean_difference": 0.4826025651166928,
+      "repeat_block_bootstrap_ci_lower": 0.47186869578656215,
+      "repeat_block_bootstrap_ci_upper": 0.4944328719515163,
+      "repeat_blocks_positive": 20,
+      "repeat_blocks_total": 20
+    },
+    {
+      "comparison": "unqueried_at_H160_minus_early_17_40",
+      "metric": "train_pool_B1",
+      "outer_runs_early_closer": 100,
+      "outer_runs_total": 100,
+      "point_estimate_repeat_mean_difference": 1.0697144540935974,
+      "repeat_block_bootstrap_ci_lower": 1.0621511251108564,
+      "repeat_block_bootstrap_ci_upper": 1.0768553270878816,
+      "repeat_blocks_positive": 20,
+      "repeat_blocks_total": 20
+    }
+  ],
+  "active_geometry": {
+    "B1_reference": "nearest opposite manual label inside each 324-row training pool after fold-local StandardScaler",
+    "inference_unit": "20 repeat blocks; all five folds kept together",
+    "model_reference": "absolute logit from M3 fitted post hoc to all 324 training-pool manual labels",
+    "query_prefix_used": 160,
+    "reference_used_by_acquisition": false,
+    "representative_run_id": "w85__r19_f03",
+    "saved_margin_trajectories": 100,
+    "stages": {
+      "early_17_40": [
+        17,
+        40
+      ],
+      "initial_1_16": [
+        1,
+        16
+      ],
+      "late_81_160": [
+        81,
+        160
+      ],
+      "mid_41_80": [
+        41,
+        80
+      ],
+      "unqueried_at_H160": 164
+    },
+    "status": "post-hoc descriptive evaluation only"
+  },
+  "analysis_scope": "existing Week 9 Phase 1 label-aware discriminative update",
+  "best_planes": [
+    "P\u2013LS",
+    "P\u2013VX"
+  ],
+  "cv": {
+    "L1_interactions": 0.990419211090939,
+    "M0": 0.4832686912031689,
+    "M1": 0.9901633932992242,
+    "M2": 0.990708037629972,
+    "M3": 0.9935797986466414
+  },
+  "external_hypotheses_are_independently_recomputed": true,
+  "feature_auc": {
+    "LS": 0.89713649117016,
+    "P": 0.9313005446443308,
+    "ST": 0.5283462617593663,
+    "VX": 0.6135500907740552
+  },
+  "h": {
+    "brier_score": 0.02926879149202674,
+    "log": {
+      "cv_repeats": 5,
+      "family": "physical_score",
+      "folds_per_repeat": 10,
+      "max_repeat_balanced_accuracy": 0.9239767288331409,
+      "max_repeat_brier_score": 0.0297483045563412,
+      "max_repeat_log_loss": 0.11209741949964629,
+      "max_repeat_pr_auc": 0.9547916779986615,
+      "max_repeat_roc_auc": 0.990303680475326,
+      "mean_balanced_accuracy": 0.9230731143753095,
+      "mean_brier_score": 0.02926879149202674,
+      "mean_log_loss": 0.10373010270093426,
+      "mean_pr_auc": 0.9510120621623738,
+      "mean_roc_auc": 0.9897590361445783,
+      "min_repeat_balanced_accuracy": 0.9224707047367553,
+      "min_repeat_brier_score": 0.02870567526010649,
+      "min_repeat_log_loss": 0.10048224327453845,
+      "min_repeat_pr_auc": 0.937460839201138,
+      "min_repeat_roc_auc": 0.9883644165703911,
+      "model": "keyhole_process_score_h__log",
+      "sd_across_repeats_balanced_accuracy": 0.0008248833697367062,
+      "sd_across_repeats_brier_score": 0.00045701514940880007,
+      "sd_across_repeats_log_loss": 0.00477759223008604,
+      "sd_across_repeats_pr_auc": 0.007583688694803515,
+      "sd_across_repeats_roc_auc": 0.000819733378515079
+    },
+    "log_loss": 0.10373010270093426,
+    "pr_auc": 0.9510120621623738,
+    "preferred_variant": "keyhole_process_score_h__log",
+    "raw": {
+      "cv_repeats": 5,
+      "family": "physical_score",
+      "folds_per_repeat": 10,
+      "max_repeat_balanced_accuracy": 0.9254827529295263,
+      "max_repeat_brier_score": 0.030345334118535218,
+      "max_repeat_log_loss": 0.12640067913226752,
+      "max_repeat_pr_auc": 0.9548996786729277,
+      "max_repeat_roc_auc": 0.990303680475326,
+      "mean_balanced_accuracy": 0.9209069153325631,
+      "mean_brier_score": 0.029763644001533158,
+      "mean_log_loss": 0.11450777221453026,
+      "mean_pr_auc": 0.9516856995044524,
+      "mean_roc_auc": 0.9897920448918963,
+      "min_repeat_balanced_accuracy": 0.9186334378610331,
+      "min_repeat_brier_score": 0.029236474292036026,
+      "min_repeat_log_loss": 0.1106349512527115,
+      "min_repeat_pr_auc": 0.9394728424283443,
+      "min_repeat_roc_auc": 0.9882818947020962,
+      "model": "keyhole_process_score_h__raw",
+      "sd_across_repeats_balanced_accuracy": 0.002639788986661527,
+      "sd_across_repeats_brier_score": 0.00043549457544693487,
+      "sd_across_repeats_log_loss": 0.0066863995417497345,
+      "sd_across_repeats_pr_auc": 0.006828619781107762,
+      "sd_across_repeats_roc_auc": 0.000864807919066254
+    },
+    "roc_auc": 0.9897590361445783,
+    "selection_rule": "among variants within 0.001 ROC-AUC of the best, prefer lower Brier score then lower log loss"
+  },
+  "literature_context": {
+    "relationship": "h has the published process-parameter exponents P\u00b7VX^-1/2\u00b7LS^-3/2 but omits absorptivity and material/thermal normalization needed for a dimensionless Keyhole number",
+    "source": "Gan et al., Nature Communications 2021, Universal scaling laws of keyhole stability and porosity in 3D printing of metals",
+    "url": "https://www.nature.com/articles/s41467-021-22704-0"
+  },
+  "population": {
+    "canonical_loader": "src.week8_5_frozen_sample_efficiency_confirmation.load_population",
+    "canonical_source": "outputs\\week7_06_real_data_boundary_active_level_set\\primary_common_population.csv",
+    "canonical_source_sha256": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7",
+    "conduction": 332,
+    "duplicate_feature_rows": 0,
+    "exact_experiment_name_match_to_primary_csv": true,
+    "full_audit_rows_not_used": 407,
+    "keyhole": 73,
+    "ls_definition": "Gaussian laser spot radius; stored in metres, displayed in micrometres",
+    "missing_required_values": 0,
+    "no_407_row_population_used": true,
+    "rows": 405,
+    "status": "PASS",
+    "unique_experiment_names": 405
+  }
+}

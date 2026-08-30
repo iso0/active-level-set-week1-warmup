@@ -1,0 +1,10 @@
+section,requirement,status,evidence
+A,Canonical data and units audited,PASS,data_audit.json; data_audit_table.csv
+B,Univariate label discrimination with fixed-direction bootstrap,PASS,feature_discrimination.csv
+C,PCA retained as secondary; PLS distinctly label-informed,PASS,pls_projection_summary.json
+D,M0/M1/M2/M3 hierarchy and L1 comparator,PASS,glm_hierarchy.csv; glm_cv_summary.csv
+E,"Fixed-form physics scores, raw/log, same leak-free CV",PASS,physical_score_cv_summary.csv
+F,All six operational planes ranked,PASS,pairwise_plane_cv_summary.csv
+G,Exact saved Margin geometry with repeat-block inference,PASS,active_geometry_comparison_summary.csv
+H,Eight high-value figures,PASS,figure_manifest.csv
+K,Focused validation,PASS,validation_report.json

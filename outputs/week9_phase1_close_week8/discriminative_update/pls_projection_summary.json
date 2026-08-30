@@ -1,0 +1,8 @@
+{
+  "coefficient_note": "weights define the score directions; loadings describe how standardized inputs reconstruct from those scores",
+  "interpretation": "supervised visualization, not PCA and not true physical geometry",
+  "labels_used": true,
+  "method": "two-component PLS regression used as a label-informed linear projection",
+  "preprocessing": "StandardScaler fitted on all 405 rows for visualization only",
+  "used_for_cv_or_acquisition": false
+}

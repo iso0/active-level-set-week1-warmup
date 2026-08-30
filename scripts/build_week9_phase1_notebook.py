@@ -284,6 +284,128 @@ display(ledger[['category','claim','status','strongest_safe_wording','must_not_u
 The concise 5–8-message version is stored in `supervisor_summary.md`."""),
         code("""display(Markdown((OUT / 'supervisor_summary.md').read_text(encoding='utf-8')))"""),
     ]
+    notebook["cells"].extend(
+        [
+            md("""# Label-aware discriminative upgrade
+
+The earlier PCA section remains useful for **label-free input geometry**. This addendum asks the different, supervised question: *which variables, combinations, and fixed-form physical quantities distinguish the manual Keyhole label from Conduction?* Nothing here changes the frozen Week 8.5 result, H320 extension, or terminal analysis."""),
+            code("""DU = OUT / 'discriminative_update'
+du = json.loads((DU / 'summary.json').read_text(encoding='utf-8'))
+audit = pd.read_csv(DU / 'data_audit_table.csv')
+display(audit)
+assert du['population']['rows'] == 405
+assert du['population']['keyhole'] == 73
+assert du['population']['conduction'] == 332"""),
+            interpretation(
+                see="The analysis uses exactly 405 canonical rows: 73 Keyhole and 332 Conduction. LS is stored as radius in metres and displayed in micrometres; the separate 407-row audit file is not modelling input.",
+                matter="A correct unit audit is essential because every LS-based physical score contains LS to the first, second, or three-halves power.",
+                claim="All new results use the same canonical manual labels and four physical inputs.",
+                cannot="The manual labels are not an error-free physical oracle, and the sampled ranges do not establish universal transfer.",
+            ),
+            md("""## 13. Which individual variables discriminate the label?
+
+**Question.** Does each variable rank Keyhole above Conduction by itself?
+
+**Method.** We compute raw and direction-adjusted ROC-AUC. The positive/negative direction is chosen once from the observed feature, then held fixed in 5,000 class-stratified bootstrap resamples. This avoids artificially folding every weak bootstrap result above 0.5. Correlations and one-variable standardized logistic odds ratios are saved in the same table."""),
+            code("""feature = pd.read_csv(DU / 'feature_discrimination.csv')
+display(feature[['feature','empirical_direction','raw_roc_auc','direction_adjusted_roc_auc',
+                 'direction_adjusted_auc_ci_lower','direction_adjusted_auc_ci_upper',
+                 'point_biserial_correlation','spearman_correlation','odds_ratio_per_1sd']])
+display(Image(filename=str(DU / 'figures' / '01_feature_discriminative_power.png')))"""),
+            interpretation(
+                see="P is strongly positive (AUC 0.931), LS strongly negative (0.897), VX moderately negative (0.614), and ST is near chance (0.528; interval includes 0.5).",
+                matter="This directly answers label discrimination, unlike PCA loadings, which only describe input variance.",
+                claim="Within the sampled data, higher P and smaller LS are the strongest individual label associations; VX is weaker and ST has no detectable univariate discrimination.",
+                cannot="ST is noise, or any single variable is causal or defines the true physical boundary.",
+            ),
+            md("""## 14. What does a label-informed 2D view add?
+
+**Question.** Can all four inputs be shown in a supervised two-dimensional linear view?
+
+**Method.** A two-component PLS regression is fitted after standardization solely for visualization. Unlike PCA, it uses `has_keyhole`. Projection weights define the score axes; loadings describe reconstruction of standardized inputs. This fit is not used for CV, acquisition, or a physical boundary claim."""),
+            code("""display(pd.read_csv(DU / 'pls_projection_loadings.csv'))
+display(Image(filename=str(DU / 'figures' / '02_label_informed_pls_projection.png')))"""),
+            interpretation(
+                see="PLS1 emphasizes high P and small LS, while PLS2 contrasts LS and VX. ST receives little weight in this supervised view.",
+                matter="The projection makes label separation visible while honestly declaring that the labels shaped the axes.",
+                claim="PLS is a useful label-informed visualization of this sample.",
+                cannot="PLS is PCA, independent validation, or true physical geometry.",
+            ),
+            md("""## 15. Do interactions materially improve the four-input model?
+
+**Question.** Is a parsimonious interaction useful beyond the four main effects?
+
+**Method.** M0 is intercept-only, M1 contains P+VX+LS+ST, M2 adds all six pairwise interactions, and M3 adds only P×VX while preserving all main effects. An L1 interaction model is kept as a separately named comparator. Scaling and model fitting occur inside each of 5×10 stratified CV folds."""),
+            code("""display(pd.read_csv(DU / 'glm_hierarchy.csv'))
+display(pd.read_csv(DU / 'glm_likelihood_ratio_tests.csv'))
+display(pd.read_csv(DU / 'glm_cv_summary.csv')[['model','mean_roc_auc','mean_pr_auc',
+                                                'mean_balanced_accuracy','mean_brier_score','mean_log_loss']])
+display(Image(filename=str(DU / 'figures' / '03_glm_hierarchy_cv.png')))"""),
+            interpretation(
+                see="M1 reaches ROC-AUC 0.990 and M3 reaches 0.994. P×VX is supported in the full-data likelihood-ratio test, but its CV ROC-AUC gain is only +0.0034.",
+                matter="The interaction changes fitted transition shape and improves calibration more clearly than ranking.",
+                claim="M3 is a useful parsimonious descriptive model; its predictive gain over M1 is small.",
+                cannot="P×VX is a major breakthrough, causal mechanism, or universally transferable law.",
+            ),
+            md("""## 16. Can one fixed-form physical score nearly match four inputs?
+
+**Question.** How does `h = P / sqrt(VX*LS^3)` compare with simpler fixed-form quantities?
+
+**Method.** Each scalar receives a fold-local scaler and fitted logistic calibration in the same repeated CV. Exponents are fixed before analysis. Raw and log forms are both evaluated. `h` has units W·s^0.5/m² here; it is not dimensionless without the omitted material and thermal normalization."""),
+            code("""physical = pd.read_csv(DU / 'physical_score_cv_summary.csv')
+display(physical.sort_values('mean_roc_auc', ascending=False)[['model','mean_roc_auc','mean_pr_auc',
+                                                               'mean_balanced_accuracy','mean_brier_score','mean_log_loss']])
+display(Image(filename=str(DU / 'figures' / '04_physics_score_benchmark.png')))
+display(Image(filename=str(DU / 'figures' / '05_h_score_transition.png')))"""),
+            interpretation(
+                see="Raw and log(h) have virtually identical ROC-AUC (0.98979 versus 0.98976). Log(h) has lower Brier score and log loss, so it is preferred for calibration.",
+                matter="A fixed-form one-dimensional score nearly matches M1 after fitting a logistic intercept and slope.",
+                claim="The process-parameter part of the keyhole scaling is highly discriminative on this benchmark after calibration.",
+                cannot="h is zero-parameter, dimensionless by itself, or proof that the true 4D boundary collapses to one dimension.",
+            ),
+            md("""## 17. Which physical 2D maps are operationally useful?
+
+**Question.** Which two-input planes best explain the manual label?
+
+**Method.** All six physical pairs are ranked with the same leak-free repeated CV. The two best planes are then fitted on all 405 rows only for visualization; dashed P(Keyhole)=0.5 curves are model-based transition contours."""),
+            code("""display(pd.read_csv(DU / 'pairwise_plane_cv_summary.csv')[['model','mean_roc_auc','mean_pr_auc','mean_brier_score']])
+display(Image(filename=str(DU / 'figures' / '06_operational_plane_ranking_and_maps.png')))
+display(Image(filename=str(DU / 'figures' / '07_fold_b1_q20_geometry.png')))"""),
+            interpretation(
+                see="P–LS ranks first (ROC-AUC 0.975), followed by P–VX (0.956). The representative Fold-B1 plot contains exactly 17 q20 and 25 q30 held-out rows.",
+                matter="These axes are physically readable and more useful for operational discussion than choosing axes by PCA variance.",
+                claim="P–LS and P–VX are the strongest tested two-input surrogate views.",
+                cannot="Their dashed contours are true physical boundaries, and the 2D q20 picture independently validates B1.",
+            ),
+            md("""## 18. Do early Margin queries concentrate near the transition?
+
+**Question.** Are saved queries 17–40 closer to post-hoc transition references than the initial, late, and unqueried stages?
+
+**Method.** The exact first 160 indices from every saved Binary Margin trajectory are used—no acquisition rerun and no synthetic order. Two separate references are computed inside each 324-row training pool: nearest opposite-manual-label distance (B1-like) and absolute logit from a post-hoc M3 fit using all pool labels. Inference first averages five folds inside each of 20 repeat blocks, then bootstraps repeat blocks."""),
+            code("""active = pd.read_csv(DU / 'active_geometry_comparison_summary.csv')
+display(active)
+display(Image(filename=str(DU / 'figures' / '08_margin_query_transition_geometry.png')))"""),
+            interpretation(
+                see="Every headline comparison is positive in 100/100 outer runs and 20/20 repeat blocks. Early queries are 0.935 standardized B1 units closer than the initial design and 1.070 closer than the H160-unqueried pool; the corresponding absolute-logit contrasts are 9.097 and 12.591.",
+                matter="This provides a stable descriptive mechanism for why uncertainty sampling learns the empirical transition efficiently.",
+                claim="Early Margin queries preferentially concentrate near two post-hoc empirical/model transition references in this benchmark.",
+                cannot="Those references entered acquisition, caused faster learning, or represent the true physical boundary.",
+            ),
+            md("""## 19. Upgrade claim ledger and validation
+
+The new claims are stored separately from the frozen Week 8.5 ledger. PASS means the tested statement is supported under its stated scope; QUALIFY means the effect exists but stronger wording would overstate it; REJECT records a hypothesis that the data do not support."""),
+            code("""display(pd.read_csv(DU / 'claim_ledger.csv'))
+du_validation = json.loads((DU / 'validation_report.json').read_text(encoding='utf-8'))
+display(pd.DataFrame(du_validation['checks']))
+assert du_validation['status'] == 'PASS'"""),
+            interpretation(
+                see="The upgrade validates units, fold-local preprocessing, exact saved query prefixes, repeat-block inference, formulas, wording, and figure count.",
+                matter="The claim ledger keeps strong numerical discrimination separate from causal or universal physical interpretation.",
+                claim="The upgrade is reproducible, label-aware, and scoped to the canonical benchmark.",
+                cannot="This retrospective analysis substitutes for prospective experiments or external validation.",
+            ),
+        ]
+    )
     NOTEBOOK.parent.mkdir(parents=True, exist_ok=True)
     nbf.write(notebook, NOTEBOOK)
     return NOTEBOOK
