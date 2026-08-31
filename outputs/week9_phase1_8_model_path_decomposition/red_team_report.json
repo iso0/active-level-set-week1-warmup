@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "all_four_arms_complete": true,
+    "aulc_orientation": true,
+    "future_label_prefix_guard": true,
+    "grouped_inference_20_repeats": true,
+    "no_acquisition_only_wording": true,
+    "no_checkpoint_dependency_in_manifest": true,
+    "off_by_one_prefix_guard": true,
+    "residual_kernel_excludes_logh": true,
+    "sensitivity_not_selection": true,
+    "symmetric_identity_outer_run": true
+  },
+  "conclusion": "No future-label leakage, prefix error, path mismatch, model drift, subset leakage, AULC reversal, fold-independence error, decomposition error, or tuning language survived the audit.",
+  "findings": [
+    {
+      "issue": "Generated gzip files initially embedded a changing temporary filename in their header.",
+      "resolution": "CSV gzip output now uses deterministic gzip.compress with mtime=0; repeated path audits preserve artifact hashes.",
+      "scientific_impact": "none; byte-level provenance only"
+    }
+  ],
+  "scope": "single focused adversarial audit",
+  "status": "PASS"
+}

@@ -44,5 +44,10 @@ outputs/week9_phase1_5_h_physics_confirmation/smoke/
 outputs/week9_phase1_7_physics_ridge_residual_gp/checkpoints/
 outputs/week9_phase1_7_physics_ridge_residual_gp/smoke/
 
+# Week 9 Phase 1.8 restart caches and engineering smoke outputs.
+outputs/week9_phase1_8_model_path_decomposition/checkpoints/
+outputs/week9_phase1_8_model_path_decomposition/sensitivity_checkpoints/
+outputs/week9_phase1_8_model_path_decomposition/smoke/
+
 # Local raw research data
 /data/raw/
