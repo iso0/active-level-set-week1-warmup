@@ -1,25 +1,34 @@
 # Supervisor Phase 2 — one page
 
-## What Ioan asked
-Whether temporal melt-pool width development, W(t) and dW/dt, distinguishes eventual Keyhole tracks and can add monitoring information beyond the pre-process physics score h.
+## Correction and question
+The authoritative extractor verifies **ΔX = longitudinal length** and **ΔY = transverse width**. The original Phase 2 accidentally answered the ΔX question. This correction answers Ioan using **W(t)=Ymax−Ymin=ΔY**.
 
-## Data and derivative
-350/405 simulations have technically usable pinned traces (70 Keyhole, 280 Conduction); 55 are missing/unusable and were reported rather than silently dropped. Following the explicit Phase 2 protocol, W is `x_max - x_min` in metres. Historical Week 6/7 code calls ΔX “length” and ΔY “width”; this nomenclature conflict is a central limitation. The primary derivative is a centered physical-time finite difference, displayed in **µm/ms**, over the active interval only. A fixed five-point local-linear slope is the non-tuned robustness version.
+## Corrected data and physical width
+350/405 traces are usable (70 Keyhole, 280 Conduction). Median transverse Wmax is 174.5 µm for Keyhole versus 174.8 µm for Conduction; WT0 is 158.7 versus 161.1 µm. This is a descriptive effect; standalone hard classification is reported separately.
 
-## Clearest temporal difference
-Static/profile width is clearly larger for eventual Keyhole tracks: median W_max is 552.5 versus 378.6 µm, and median W_T0 is 511.5 versus 370.0 µm.
+## Temporal feature and derivative robustness
+The strongest deterministic shape/robust-derivative feature is `robust_median_positive_dWdt_um_per_ms`: Conduction median 26.8, Keyhole median 19.5 µm/ms (Cliff's delta -0.266). Raw early-20% dW/dt medians (Conduction, Keyhole) are -205.4, -57.9 µm/ms; fixed robust medians are 382.6, 401.2. Early-20% derivative gate: **QUALIFIED**. No faster/slower physical claim is made unless direction survives denoising.
 
-The largest predeclared feature effect was `early_dWdt_20_um_per_ms`: Conduction median -424, Keyhole median 271.3, Cliff's delta +0.869 (median-difference 95% bootstrap interval [+574.5, +956.3]).
+## Does true width add beyond h?
+On q20, balanced accuracy is h-only 0.821, static width 0.510, width dynamics 0.505, and h+width 0.801. The h+width hard-decision contrasts are BA -0.020 [-0.029,-0.012] and Keyhole recall -0.063 [-0.078,-0.048]: **NOT SUPPORTED**.
 
-This raw finite-difference separation is **not robust to the fixed mild local-linear derivative**: the corresponding robust early-20% medians are 604.3 versus 474.9, Cliff's delta -0.190, with median-difference interval [-188.1, -46.07]. Raw pointwise dW/dt therefore must not be treated as a stable physical discriminator here.
+Ranking/probability contrasts are ROC-AUC +0.002 [-0.007,+0.010], PR-AUC +0.020 [+0.011,+0.029], and Brier -0.001 [-0.004,+0.002] (negative Brier is better): **SUPPORTED**.
 
-## Prediction beyond h
-On Fold-B1-q20, repeat-level balanced accuracy was h-only 0.821, static width 0.654, width dynamics 0.734, and h+width dynamics 0.790. The paired h+width minus h effect was -0.031 [-0.039, -0.024]. Keyhole recall changed from 0.731 to 0.675; paired difference -0.055 [-0.065, -0.044]. On q20 OOF occurrences, width corrected 5 h errors and worsened 45 h-correct cases.
+The fixed shape-only sensitivity preserves hard performance better: q20 BA contrast -0.001 [-0.009,+0.007], PR contrast +0.024 [+0.018,+0.031], Brier contrast -0.009 [-0.010,-0.008]. This diagnostic is not post-hoc tuning.
 
-## Early information and onset language
-The prefix models use only samples at or before each declared τ. At τ=0.20 the q20 balanced-accuracy contrast is -0.006 [-0.013, +0.001], so there is no statistically supported useful early prefix. Outcome: **NO INCREMENTAL SIGNAL**.
+## Earliest prefix and onset
+At τ=0.20, q20 BA changes +0.019 [+0.011,+0.025] and Keyhole recall +0.017 [+0.002,+0.029]; ROC/PR/Brier change +0.006/+0.019/-0.004. First-observed manual Keyhole timing exists for 70 traces. Robust peaks precede it in 100.0%, median descriptive lead 0.253 ms, but startup peaks are generic and no held-out warning rule exists. Verified pre-Keyhole warning: **NOT SUPPORTED**.
 
-First-observed manually labelled Keyhole timing is available for 70 usable Keyhole tracks. A raw dW/dt peak precedes the first observed Keyhole frame in 25.7%; the robustness-derivative peak does so in 97.1%, with median descriptive lead 0.248 ms among those cases. The robust peak is usually the generic startup-growth peak and is not Keyhole-specific. The onset result remains **QUALIFIED** because saved frames are sparse, peak timing is not a trained warning score, and continuous physical onset is unknown. No validated pre-onset warning is claimed.
+## What ΔX taught us
+The archived longitudinal diagnostic had q20 width-dynamics BA 0.734 and h+ΔX BA 0.790; it described longitudinal growth, not transverse monitoring width.
 
-## Recommendation
-Use the temporal profile, PCA, and leak-free model comparison as evidence about monitoring value. Do not call eventual-Keyhole prefix prediction a verified pre-onset warning. The next step, only if desired, is denser frame-level onset annotation or prospective top-view measurements.
+## Canonical numbers
+- Usable traces: 350/405; Keyhole: 70
+- Wmax medians (Conduction, Keyhole): 174.829, 174.535 µm
+- WT0 medians (Conduction, Keyhole): 161.118, 158.689 µm
+- Best robust/shape temporal feature: robust_median_positive_dWdt_um_per_ms; Cliff's delta -0.2656
+- q20 balanced accuracy (h, width dynamics, h+width): 0.8210, 0.5054, 0.8009
+- q20 Keyhole recall (h, h+width): 0.7305, 0.6676
+- q20 ROC/PR/Brier contrasts (h+width minus h): +0.0016, +0.0202, -0.0011
+- τ=0.20 q20 BA/ROC/PR/Brier contrasts: +0.0185, +0.0058, +0.0186, -0.0043
+- Final Phase 2 claim: INCREMENTAL / QUALIFIED SIGNAL; hard-decision NOT SUPPORTED; ranking/probability SUPPORTED

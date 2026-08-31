@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import io
 import json
 import math
 import os
@@ -56,23 +57,34 @@ PREFIXES = (0.20, 0.40, 0.60, 0.80, 1.00)
 BOOTSTRAP_DRAWS = 5000
 SEED = 260831
 STATIC_FEATURES = ("W_initial_um", "W_max_um", "W_T0_um")
-TEMPORAL_FEATURES = (
+SHAPE_FEATURES = (
+    "width_gain_20_um",
+    "width_gain_40_um",
+    "time_to_50pct_max_width_tau",
+)
+RAW_DERIVATIVE_FEATURES = (
     "max_positive_dWdt_um_per_ms",
     "median_positive_dWdt_um_per_ms",
     "time_of_max_dWdt_tau",
     "early_dWdt_20_um_per_ms",
     "early_dWdt_40_um_per_ms",
-    "width_gain_20_um",
-    "width_gain_40_um",
-    "time_to_50pct_max_width_tau",
 )
+ROBUST_DERIVATIVE_FEATURES = (
+    "robust_max_positive_dWdt_um_per_ms",
+    "robust_median_positive_dWdt_um_per_ms",
+    "robust_early_dWdt_20_um_per_ms",
+    "robust_early_dWdt_40_um_per_ms",
+    "robust_time_of_max_dWdt_tau",
+)
+TEMPORAL_FEATURES = (*SHAPE_FEATURES, *ROBUST_DERIVATIVE_FEATURES)
 PREFIX_FEATURES = (
     "current_width_um",
     "width_gain_so_far_um",
-    "median_positive_dWdt_so_far_um_per_ms",
-    "max_positive_dWdt_so_far_um_per_ms",
     "normalized_slope_so_far_um_per_tau",
+    "robust_median_positive_dWdt_so_far_um_per_ms",
+    "robust_max_positive_dWdt_so_far_um_per_ms",
 )
+PUBLISHED_DX_SHA = "373f72a80a2c5e5fe13d81c2afbb255b0facbf29"
 
 
 def require(condition: bool, message: str) -> None:
@@ -137,6 +149,42 @@ def source_paths() -> pd.DataFrame:
     })
 
 
+def axis_semantics_audit(population: pd.DataFrame) -> pd.DataFrame:
+    """Verify semantic and numerical ΔX/ΔY mapping before any analysis."""
+    source = ROOT / "src" / "week7_phase2_sph_v2_physical_target_extraction.py"
+    text = source.read_text(encoding="utf-8")
+    semantic_checks = {
+        "columns": 'POSITION_BOUNDS_COLUMNS = ["x_min", "x_max", "y_min", "y_max", "z_min", "z_max"]' in text,
+        "length": "length_m = extents[:, 0]" in text,
+        "width": "width_m = extents[:, 1]" in text,
+    }
+    require(all(semantic_checks.values()), f"authoritative axis semantics not verified: {semantic_checks}")
+    merged = population.merge(source_paths(), on="experiment_name", how="left")
+    candidates = merged[merged.bounds_path.map(_existing)].head(5)
+    require(len(candidates) == 5, "fewer than five pinned bounds files available for axis audit")
+    numeric_x, numeric_y = [], []
+    for row in candidates.itertuples(index=False):
+        bounds, _ = p2.load_numeric(Path(row.bounds_path), "position-bounds_melt.dat")
+        valid = np.all(np.isfinite(bounds), axis=1) & np.all(np.abs(bounds) < p2.SENTINEL_THRESHOLD, axis=1)
+        extents = bounds[valid][:, [1, 3, 5]] - bounds[valid][:, [0, 2, 4]]
+        numeric_x.append(bool(np.allclose(extents[:, 0], bounds[valid, 1] - bounds[valid, 0], rtol=0, atol=1e-15)))
+        numeric_y.append(bool(np.allclose(extents[:, 1], bounds[valid, 3] - bounds[valid, 2], rtol=0, atol=1e-15)))
+    rows = [
+        {"quantity":"longitudinal_length", "formula":"x_max - x_min", "physical_interpretation":"longitudinal melt-pool length ΔX",
+         "authoritative_source_file":str(source.relative_to(ROOT)), "authoritative_source_line_or_function":"POSITION_BOUNDS_COLUMNS; extract_experiment: length_m = extents[:, 0]",
+         "semantic_source_verified":semantic_checks["columns"] and semantic_checks["length"], "numeric_files_checked":len(numeric_x),
+         "numeric_mapping_verified":all(numeric_x), "status":"PASS" if all(numeric_x) else "FAIL"},
+        {"quantity":"transverse_width", "formula":"y_max - y_min", "physical_interpretation":"transverse melt-pool width ΔY",
+         "authoritative_source_file":str(source.relative_to(ROOT)), "authoritative_source_line_or_function":"POSITION_BOUNDS_COLUMNS; extract_experiment: width_m = extents[:, 1]",
+         "semantic_source_verified":semantic_checks["columns"] and semantic_checks["width"], "numeric_files_checked":len(numeric_y),
+         "numeric_mapping_verified":all(numeric_y), "status":"PASS" if all(numeric_y) else "FAIL"},
+    ]
+    audit = pd.DataFrame(rows)
+    require(audit.status.eq("PASS").all(), "axis semantics audit failed")
+    write_csv(OUTPUT / "axis_semantics_audit.csv", audit)
+    return audit
+
+
 def _existing(path: Any) -> bool:
     return isinstance(path, str) and Path(path).is_file()
 
@@ -172,6 +220,36 @@ def synthetic_derivative_error() -> float:
     return float(np.max(np.abs(estimated[1:-1] - truth[1:-1])))
 
 
+def _axis_trace_features(values_um: np.ndarray, tau: np.ndarray, t_ms: np.ndarray, uniform: bool, prefix: str = "") -> tuple[dict[str, float], np.ndarray, np.ndarray, np.ndarray]:
+    primary = centered_derivative(t_ms, values_um) if uniform else local_linear_grid_derivative(t_ms, values_um)
+    value_grid = np.interp(GRID, tau, values_um)
+    derivative_grid = np.interp(GRID, tau, primary)
+    robust_grid = local_linear_grid_derivative(GRID * float(t_ms[-1]), value_grid)
+    positive = derivative_grid[derivative_grid > 0]
+    robust_positive = robust_grid[robust_grid > 0]
+    target50 = value_grid[0] + 0.5 * (float(np.max(value_grid)) - value_grid[0])
+    hit50 = np.flatnonzero(value_grid >= target50)
+    f = {
+        f"{prefix}initial_um": float(value_grid[0]),
+        f"{prefix}max_um": float(np.max(value_grid)),
+        f"{prefix}T0_um": float(np.median(value_grid[GRID >= 0.8])),
+        f"{prefix}max_positive_dWdt_um_per_ms": float(np.max(positive)) if len(positive) else 0.0,
+        f"{prefix}median_positive_dWdt_um_per_ms": float(np.median(positive)) if len(positive) else 0.0,
+        f"{prefix}time_of_max_dWdt_tau": float(GRID[int(np.argmax(derivative_grid))]),
+        f"{prefix}early_dWdt_20_um_per_ms": float(np.median(derivative_grid[GRID <= .2])),
+        f"{prefix}early_dWdt_40_um_per_ms": float(np.median(derivative_grid[GRID <= .4])),
+        f"{prefix}gain_20_um": float(np.interp(.2, GRID, value_grid) - value_grid[0]),
+        f"{prefix}gain_40_um": float(np.interp(.4, GRID, value_grid) - value_grid[0]),
+        f"{prefix}time_to_50pct_max_tau": float(GRID[hit50[0]]) if len(hit50) else 1.0,
+        f"{prefix}robust_max_positive_dWdt_um_per_ms": float(np.max(robust_positive)) if len(robust_positive) else 0.0,
+        f"{prefix}robust_median_positive_dWdt_um_per_ms": float(np.median(robust_positive)) if len(robust_positive) else 0.0,
+        f"{prefix}robust_early_dWdt_20_um_per_ms": float(np.median(robust_grid[GRID <= .2])),
+        f"{prefix}robust_early_dWdt_40_um_per_ms": float(np.median(robust_grid[GRID <= .4])),
+        f"{prefix}robust_time_of_max_dWdt_tau": float(GRID[int(np.argmax(robust_grid))]),
+    }
+    return f, value_grid, derivative_grid, robust_grid
+
+
 def _parse_trace(row: pd.Series) -> tuple[dict[str, Any], pd.DataFrame, dict[str, Any]]:
     bounds, bounds_audit = p2.load_numeric(Path(row.bounds_path), "position-bounds_melt.dat")
     time_s, time_audit = p2.load_numeric(Path(row.time_path), "time.dat")
@@ -179,19 +257,18 @@ def _parse_trace(row: pd.Series) -> tuple[dict[str, Any], pd.DataFrame, dict[str
         time_s = time_s[:, 0]
     require(bounds.ndim == 2 and bounds.shape[1] == 6, f"{row.experiment_name}: malformed bounds")
     require(len(bounds) == len(time_s), f"{row.experiment_name}: monitor row mismatch")
-    # Phase 2 protocol explicitly defines W(t) as Xmax-Xmin.  Historical
-    # Week 6/7 artifacts call this delta-X quantity "length" and delta-Y
-    # "width"; that nomenclature conflict is retained in the audit/reports.
-    width_m = bounds[:, 1] - bounds[:, 0]
+    longitudinal_length_m = bounds[:, 1] - bounds[:, 0]
+    transverse_width_m = bounds[:, 3] - bounds[:, 2]
     valid = (
-        np.isfinite(time_s) & np.isfinite(width_m)
+        np.isfinite(time_s) & np.isfinite(transverse_width_m) & np.isfinite(longitudinal_length_m)
         & np.all(np.isfinite(bounds), axis=1)
         & np.all(np.abs(bounds) < p2.SENTINEL_THRESHOLD, axis=1)
-        & (width_m >= 0)
+        & (transverse_width_m >= 0) & (longitudinal_length_m >= 0)
     )
     active = valid & (time_s >= float(row.active_region_start_time_s)) & (time_s <= float(row.active_region_end_time_s))
     t = time_s[active]
-    w = width_m[active] * 1e6
+    w = transverse_width_m[active] * 1e6
+    length = longitudinal_length_m[active] * 1e6
     require(len(t) >= 25, f"{row.experiment_name}: too few active width rows")
     require(np.all(np.diff(t) > 0), f"{row.experiment_name}: non-positive dt after cleaning")
     t_ms = (t - t[0]) * 1e3
@@ -199,38 +276,26 @@ def _parse_trace(row: pd.Series) -> tuple[dict[str, Any], pd.DataFrame, dict[str
     tau = t_ms / duration_ms
     dt_s = np.diff(t)
     uniform, dt_cv, dt_ratio = regularity_rule(dt_s)
-    primary = centered_derivative(t_ms, w) if uniform else local_linear_grid_derivative(t_ms, w)
-    w_grid = np.interp(GRID, tau, w)
-    d_grid = np.interp(GRID, tau, primary)
+    canonical, w_grid, d_grid, robust_grid = _axis_trace_features(w, tau, t_ms, uniform)
+    longitudinal, length_grid, length_d_grid, length_robust_grid = _axis_trace_features(length, tau, t_ms, uniform, prefix="L_")
     t_grid_ms = GRID * duration_ms
-    robust_grid = local_linear_grid_derivative(t_grid_ms, w_grid)
     diff = np.diff(w)
     mad_diff = float(stats.median_abs_deviation(diff, scale="normal"))
     jump_threshold = max(5.0, 10.0 * mad_diff)
     jumps = np.abs(diff) > jump_threshold
-    positive = d_grid[d_grid > 0]
-    target50 = w_grid[0] + 0.5 * (float(np.max(w_grid)) - w_grid[0])
-    hit50 = np.flatnonzero(w_grid >= target50)
+    rename = {
+        "initial_um":"W_initial_um", "max_um":"W_max_um", "T0_um":"W_T0_um",
+        "gain_20_um":"width_gain_20_um", "gain_40_um":"width_gain_40_um",
+        "time_to_50pct_max_tau":"time_to_50pct_max_width_tau",
+    }
+    canonical = {rename.get(k, k): v for k, v in canonical.items()}
     features = {
         "experiment_name": row.experiment_name,
         "population_row_index": int(row.population_row_index),
         "has_keyhole": int(row.has_keyhole),
         "P": float(row.P), "VX": float(row.VX), "LS": float(row.LS), "ST": float(row.ST),
         "log_h": float(row.log_h),
-        "W_initial_um": float(w_grid[0]),
-        "W_max_um": float(np.max(w_grid)),
-        "W_T0_um": float(np.median(w_grid[GRID >= 0.8])),
-        "max_positive_dWdt_um_per_ms": float(np.max(positive)) if len(positive) else 0.0,
-        "median_positive_dWdt_um_per_ms": float(np.median(positive)) if len(positive) else 0.0,
-        "time_of_max_dWdt_tau": float(GRID[int(np.argmax(d_grid))]),
-        "early_dWdt_20_um_per_ms": float(np.median(d_grid[GRID <= 0.2])),
-        "early_dWdt_40_um_per_ms": float(np.median(d_grid[GRID <= 0.4])),
-        "width_gain_20_um": float(np.interp(0.2, GRID, w_grid) - w_grid[0]),
-        "width_gain_40_um": float(np.interp(0.4, GRID, w_grid) - w_grid[0]),
-        "time_to_50pct_max_width_tau": float(GRID[hit50[0]]) if len(hit50) else 1.0,
-        "robust_max_positive_dWdt_um_per_ms": float(np.max(robust_grid[robust_grid > 0])) if np.any(robust_grid > 0) else 0.0,
-        "robust_early_dWdt_20_um_per_ms": float(np.median(robust_grid[GRID <= 0.2])),
-        "robust_early_dWdt_40_um_per_ms": float(np.median(robust_grid[GRID <= 0.4])),
+        **canonical, **longitudinal,
     }
     audit = {
         "experiment_name": row.experiment_name,
@@ -247,7 +312,8 @@ def _parse_trace(row: pd.Series) -> tuple[dict[str, Any], pd.DataFrame, dict[str
         "derivative_method": "centered_finite_difference" if uniform else "local_linear_physical_time",
         "duplicate_timestamp_count": int(np.sum(np.diff(time_s[np.isfinite(time_s)]) == 0)),
         "nonpositive_dt_count_raw": int(np.sum(np.diff(time_s[np.isfinite(time_s)]) <= 0)),
-        "missing_width_count": int(np.sum(~np.isfinite(width_m))),
+        "missing_transverse_width_count": int(np.sum(~np.isfinite(transverse_width_m))),
+        "missing_longitudinal_length_count": int(np.sum(~np.isfinite(longitudinal_length_m))),
         "invalid_or_sentinel_row_count": int(np.sum(~valid)),
         "obvious_jump_count": int(jumps.sum()),
         "largest_jump_um": float(np.max(np.abs(diff))) if len(diff) else 0.0,
@@ -266,9 +332,12 @@ def _parse_trace(row: pd.Series) -> tuple[dict[str, Any], pd.DataFrame, dict[str
         "has_keyhole": int(row.has_keyhole),
         "tau": GRID,
         "time_from_active_start_ms": t_grid_ms,
-        "width_um": w_grid,
-        "dWdt_um_per_ms": d_grid,
-        "dWdt_robust_um_per_ms": robust_grid,
+        "transverse_width_um": w_grid,
+        "transverse_dWdt_raw_um_per_ms": d_grid,
+        "transverse_dWdt_robust_um_per_ms": robust_grid,
+        "longitudinal_length_um": length_grid,
+        "longitudinal_dLdt_raw_um_per_ms": length_d_grid,
+        "longitudinal_dLdt_robust_um_per_ms": length_robust_grid,
     })
     onset = {
         "experiment_name": row.experiment_name,
@@ -358,8 +427,8 @@ def prefix_feature_table(profiles: pd.DataFrame, features: pd.DataFrame) -> pd.D
         group = group.sort_values("tau")
         for prefix in PREFIXES:
             seen = group[group.tau <= prefix + 1e-12]
-            w = seen.width_um.to_numpy(float)
-            d = seen.dWdt_um_per_ms.to_numpy(float)
+            w = seen.transverse_width_um.to_numpy(float)
+            d = seen.transverse_dWdt_robust_um_per_ms.to_numpy(float)
             tau = seen.tau.to_numpy(float)
             pos = d[d > 0]
             rows.append({
@@ -371,9 +440,9 @@ def prefix_feature_table(profiles: pd.DataFrame, features: pd.DataFrame) -> pd.D
                 "log_h": float(base.loc[name, "log_h"]), "prefix_tau": prefix,
                 "current_width_um": float(w[-1]),
                 "width_gain_so_far_um": float(w[-1] - w[0]),
-                "median_positive_dWdt_so_far_um_per_ms": float(np.median(pos)) if len(pos) else 0.0,
-                "max_positive_dWdt_so_far_um_per_ms": float(np.max(pos)) if len(pos) else 0.0,
                 "normalized_slope_so_far_um_per_tau": float(np.polyfit(tau, w, 1)[0]),
+                "robust_median_positive_dWdt_so_far_um_per_ms": float(np.median(pos)) if len(pos) else 0.0,
+                "robust_max_positive_dWdt_so_far_um_per_ms": float(np.max(pos)) if len(pos) else 0.0,
                 "latest_source_tau": float(tau[-1]),
             })
     out = pd.DataFrame(rows)
@@ -389,8 +458,8 @@ def cliffs_delta(x: np.ndarray, y: np.ndarray) -> float:
 def feature_effects(features: pd.DataFrame) -> pd.DataFrame:
     rng = np.random.default_rng(SEED)
     rows = []
-    robustness = ("robust_max_positive_dWdt_um_per_ms", "robust_early_dWdt_20_um_per_ms", "robust_early_dWdt_40_um_per_ms")
-    for feature in (*STATIC_FEATURES, *TEMPORAL_FEATURES, *robustness):
+    robustness = ROBUST_DERIVATIVE_FEATURES
+    for feature in (*STATIC_FEATURES, *SHAPE_FEATURES, *RAW_DERIVATIVE_FEATURES, *ROBUST_DERIVATIVE_FEATURES):
         c = features.loc[features.has_keyhole.eq(0), feature].to_numpy(float)
         k = features.loc[features.has_keyhole.eq(1), feature].to_numpy(float)
         delta = float(np.median(k) - np.median(c))
@@ -399,7 +468,7 @@ def feature_effects(features: pd.DataFrame) -> pd.DataFrame:
             boot[b] = np.median(rng.choice(k, len(k), replace=True)) - np.median(rng.choice(c, len(c), replace=True))
         rho, p = stats.spearmanr(features[feature], features.has_keyhole.astype(int))
         rows.append({
-            "feature": feature, "robustness_derivative": feature in robustness, "conduction_n": len(c), "keyhole_n": len(k),
+            "feature": feature, "feature_group": "robust_derivative" if feature in robustness else ("raw_derivative" if feature in RAW_DERIVATIVE_FEATURES else ("static" if feature in STATIC_FEATURES else "shape")), "conduction_n": len(c), "keyhole_n": len(k),
             "conduction_median": float(np.median(c)), "keyhole_median": float(np.median(k)),
             "median_difference_keyhole_minus_conduction": delta,
             "median_difference_ci_low": float(np.quantile(boot, .025)),
@@ -416,6 +485,85 @@ def feature_effects(features: pd.DataFrame) -> pd.DataFrame:
         adjusted[index] = min(1.0, running)
     out["holm_p"] = adjusted
     write_csv(OUTPUT / "static_feature_effects.csv", out)
+    return out
+
+
+def derivative_robustness_gate(effects: pd.DataFrame) -> pd.DataFrame:
+    pairs = [
+        ("max_positive_dWdt_um_per_ms", "robust_max_positive_dWdt_um_per_ms", "maximum positive derivative"),
+        ("median_positive_dWdt_um_per_ms", "robust_median_positive_dWdt_um_per_ms", "median positive derivative"),
+        ("early_dWdt_20_um_per_ms", "robust_early_dWdt_20_um_per_ms", "early 20% derivative"),
+        ("early_dWdt_40_um_per_ms", "robust_early_dWdt_40_um_per_ms", "early 40% derivative"),
+        ("time_of_max_dWdt_tau", "robust_time_of_max_dWdt_tau", "time of derivative peak"),
+    ]
+    rows = []
+    indexed = effects.set_index("feature")
+    for raw_name, robust_name, claim in pairs:
+        raw, robust = indexed.loc[raw_name], indexed.loc[robust_name]
+        same_direction = bool(np.sign(raw.cliffs_delta) == np.sign(robust.cliffs_delta) or raw.cliffs_delta == 0 or robust.cliffs_delta == 0)
+        robust_interval_excludes_zero = bool(robust.median_difference_ci_low > 0 or robust.median_difference_ci_high < 0)
+        retained_fraction = abs(float(robust.cliffs_delta)) / max(abs(float(raw.cliffs_delta)), 1e-12)
+        if not same_direction:
+            status = "UNSTABLE"
+        elif retained_fraction >= .5 and robust_interval_excludes_zero:
+            status = "ROBUST"
+        else:
+            status = "QUALIFIED"
+        rows.append({"derivative_claim":claim, "raw_feature":raw_name, "robust_feature":robust_name,
+            "raw_cliffs_delta":raw.cliffs_delta, "robust_cliffs_delta":robust.cliffs_delta,
+            "direction_consistent":same_direction, "robust_effect_fraction_of_raw":retained_fraction,
+            "robust_median_difference_ci_low":robust.median_difference_ci_low,
+            "robust_median_difference_ci_high":robust.median_difference_ci_high,
+            "status":status})
+    out = pd.DataFrame(rows)
+    write_csv(OUTPUT / "derivative_robustness_gate.csv", out)
+    return out
+
+
+def _git_show_csv(revision: str, relative_path: str) -> pd.DataFrame:
+    result = subprocess.run(["git", "show", f"{revision}:{relative_path}"], cwd=ROOT, text=True, capture_output=True, check=True)
+    return pd.read_csv(io.StringIO(result.stdout))
+
+
+def longitudinal_comparison(effects: pd.DataFrame, model_summary: pd.DataFrame) -> pd.DataFrame:
+    base = "outputs/week9_phase2_temporal_width_dynamics"
+    old_effects = _git_show_csv(PUBLISHED_DX_SHA, f"{base}/static_feature_effects.csv").set_index("feature")
+    old_models = _git_show_csv(PUBLISHED_DX_SHA, f"{base}/model_oof_summary.csv")
+    new_effects = effects.set_index("feature")
+    def metric(table: pd.DataFrame, model: str, subset: str, name: str) -> float:
+        return float(table[(table.model.eq(model)) & table.subset.eq(subset) & table.metric.eq(name)].iloc[0]["mean"])
+    rows = []
+    for axis, eff, models, representation in (
+        ("longitudinal_length_delta_X", old_effects, old_models, "published diagnostic used raw finite-difference temporal features"),
+        ("transverse_width_delta_Y", new_effects, model_summary, "corrected primary uses shape plus fixed robust-derivative features"),
+    ):
+        prefix = "L" if axis.startswith("longitudinal") else "W"
+        strongest = max(("W_max_um","W_T0_um","time_to_50pct_max_width_tau","robust_early_dWdt_20_um_per_ms"), key=lambda name:abs(float(eff.loc[name,"cliffs_delta"])))
+        rows.append({
+            "axis_quantity":axis, "role":"secondary longitudinal diagnostic" if prefix=="L" else "canonical answer to Ioan's width question",
+            "formula":"x_max - x_min" if prefix=="L" else "y_max - y_min",
+            "model_feature_representation":representation,
+            "static_max_conduction_median_um":float(eff.loc["W_max_um","conduction_median"]),
+            "static_max_keyhole_median_um":float(eff.loc["W_max_um","keyhole_median"]),
+            "T0_conduction_median_um":float(eff.loc["W_T0_um","conduction_median"]),
+            "T0_keyhole_median_um":float(eff.loc["W_T0_um","keyhole_median"]),
+            "time_to_50pct_conduction_median_tau":float(eff.loc["time_to_50pct_max_width_tau","conduction_median"]),
+            "time_to_50pct_keyhole_median_tau":float(eff.loc["time_to_50pct_max_width_tau","keyhole_median"]),
+            "robust_early20_conduction_median_um_per_ms":float(eff.loc["robust_early_dWdt_20_um_per_ms","conduction_median"]),
+            "robust_early20_keyhole_median_um_per_ms":float(eff.loc["robust_early_dWdt_20_um_per_ms","keyhole_median"]),
+            "full_width_dynamics_balanced_accuracy":metric(models,"width_dynamics","full","balanced_accuracy"),
+            "q20_width_dynamics_balanced_accuracy":metric(models,"width_dynamics","q20","balanced_accuracy"),
+            "q20_width_dynamics_keyhole_recall":metric(models,"width_dynamics","q20","keyhole_recall"),
+            "q20_h_plus_axis_dynamics_balanced_accuracy":metric(models,"h_plus_width_dynamics","q20","balanced_accuracy"),
+            "strongest_effect_feature":strongest, "strongest_effect_cliffs_delta":float(eff.loc[strongest,"cliffs_delta"]),
+            "strongest_qualitative_conclusion":"longitudinal ΔX carried strong regime structure but was not transverse width" if prefix=="L" else "transverse ΔY is the corrected canonical monitoring quantity",
+        })
+    out = pd.DataFrame(rows)
+    write_csv(OUTPUT / "longitudinal_vs_transverse_summary.csv", out)
+    diagnostic = OUTPUT / "longitudinal_length_diagnostic"
+    diagnostic.mkdir(parents=True, exist_ok=True)
+    write_csv(diagnostic / "published_delta_x_summary.csv", out[out.axis_quantity.eq("longitudinal_length_delta_X")])
+    (diagnostic / "README.md").write_text("# Longitudinal ΔX diagnostic\n\nThis preserves the essential result from published commit `373f72a`: ΔX is longitudinal length, not Ioan's requested transverse width. It is secondary context only.\n", encoding="utf-8")
     return out
 
 
@@ -477,6 +625,7 @@ def evaluate_models(population: pd.DataFrame, features: pd.DataFrame, prefix: pd
         "static_width": (STATIC_FEATURES, 1.0),
         "width_dynamics": (TEMPORAL_FEATURES, 1.0),
         "h_plus_width_dynamics": (("log_h", *TEMPORAL_FEATURES), 1.0),
+        "h_plus_width_shape_only": (("log_h", *SHAPE_FEATURES), 1.0),
     }
     prefix_index = prefix.set_index(["population_row_index", "prefix_tau"], drop=False)
     for number, spec in enumerate(specs, 1):
@@ -541,18 +690,22 @@ def summarize_oof(pred: pd.DataFrame, prefix: bool = False) -> tuple[pd.DataFram
             summary_rows.append(base | {"metric": metric, "mean": float(values.mean()), "sd_across_repeats": float(values.std(ddof=1)), "repeat_blocks": len(values)})
     summary = pd.DataFrame(summary_rows)
     contrast_rows = []
-    comparison = ("h_plus_width_history", "h_only") if prefix else ("h_plus_width_dynamics", "h_only")
+    comparisons = [("h_plus_width_history", "h_only")] if prefix else [
+        ("h_plus_width_dynamics", "h_only"),
+        ("h_plus_width_shape_only", "h_only"),
+    ]
     contrast_groups = ["subset"] + (["prefix_tau"] if prefix else [])
     rng = np.random.default_rng(SEED + (1 if prefix else 0))
     for keys, group in repeat.groupby(contrast_groups, sort=True):
         if not isinstance(keys, tuple): keys = (keys,)
         base = dict(zip(contrast_groups, keys))
-        for metric in metric_names:
-            pivot = group.pivot(index="repeat", columns="model", values=metric)
-            values = (pivot[comparison[0]] - pivot[comparison[1]]).dropna().to_numpy(float)
-            boot = np.array([rng.choice(values, len(values), replace=True).mean() for _ in range(BOOTSTRAP_DRAWS)])
-            contrast_rows.append(base | {"contrast": f"{comparison[0]} - {comparison[1]}", "metric": metric,
-                "mean_difference": float(values.mean()), "ci_low": float(np.quantile(boot,.025)), "ci_high": float(np.quantile(boot,.975)), "repeat_blocks": len(values)})
+        for comparison in comparisons:
+            for metric in metric_names:
+                pivot = group.pivot(index="repeat", columns="model", values=metric)
+                values = (pivot[comparison[0]] - pivot[comparison[1]]).dropna().to_numpy(float)
+                boot = np.array([rng.choice(values, len(values), replace=True).mean() for _ in range(BOOTSTRAP_DRAWS)])
+                contrast_rows.append(base | {"contrast": f"{comparison[0]} - {comparison[1]}", "metric": metric,
+                    "mean_difference": float(values.mean()), "ci_low": float(np.quantile(boot,.025)), "ci_high": float(np.quantile(boot,.975)), "repeat_blocks": len(values)})
     contrasts = pd.DataFrame(contrast_rows)
     return repeat, summary, contrasts
 
@@ -569,7 +722,7 @@ def pca_analysis(features: pd.DataFrame, profiles: pd.DataFrame) -> tuple[pd.Dat
     write_csv(OUTPUT / "pca_scores.csv", score_frame)
     write_csv(OUTPUT / "pca_loadings.csv", loadings)
 
-    matrix = profiles.pivot(index="experiment_name", columns="tau", values="width_um").loc[features.experiment_name]
+    matrix = profiles.pivot(index="experiment_name", columns="tau", values="transverse_width_um").loc[features.experiment_name]
     arr = matrix.to_numpy(float)
     arr = arr - arr[:, [0]]
     scale = np.ptp(arr, axis=1); scale[scale < 1e-9] = 1.0
@@ -609,7 +762,7 @@ def onset_alignment(profiles: pd.DataFrame, audit: pd.DataFrame) -> tuple[pd.Dat
             group = profiles[profiles.experiment_name.eq(row.experiment_name)].sort_values("tau")
             duration = float(durations.loc[row.experiment_name])
             rel = (group.tau.to_numpy(float) - float(row.first_keyhole_tau)) * duration
-            robust = group.dWdt_robust_um_per_ms.to_numpy(float)
+            robust = group.transverse_dWdt_robust_um_per_ms.to_numpy(float)
             robust_peak_tau = float(group.iloc[int(np.argmax(robust))].tau)
             robust_lead = float((robust_peak_tau - float(row.first_keyhole_tau)) * duration)
             item["robust_peak_dWdt_tau"] = robust_peak_tau
@@ -618,12 +771,12 @@ def onset_alignment(profiles: pd.DataFrame, audit: pd.DataFrame) -> tuple[pd.Dat
             valid_grid = (relative_grid >= rel.min()) & (relative_grid <= rel.max())
             for value, width, deriv, robust_deriv in zip(
                 relative_grid[valid_grid],
-                np.interp(relative_grid[valid_grid], rel, group.width_um),
-                np.interp(relative_grid[valid_grid], rel, group.dWdt_um_per_ms),
+                np.interp(relative_grid[valid_grid], rel, group.transverse_width_um),
+                np.interp(relative_grid[valid_grid], rel, group.transverse_dWdt_raw_um_per_ms),
                 np.interp(relative_grid[valid_grid], rel, robust),
             ):
                 aligned.append({"experiment_name": row.experiment_name, "time_relative_to_first_observed_keyhole_ms": value,
-                    "width_um": width, "dWdt_um_per_ms": deriv, "dWdt_robust_um_per_ms": robust_deriv})
+                    "transverse_width_um": width, "transverse_dWdt_raw_um_per_ms": deriv, "transverse_dWdt_robust_um_per_ms": robust_deriv})
         else:
             item["robust_peak_dWdt_tau"] = None
             item["robust_peak_minus_first_keyhole_ms"] = None
@@ -643,7 +796,7 @@ def onset_alignment(profiles: pd.DataFrame, audit: pd.DataFrame) -> tuple[pd.Dat
 def class_profile_summary(profiles: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for (tau, label), group in profiles.groupby(["tau", "has_keyhole"]):
-        for metric in ("width_um", "dWdt_um_per_ms", "dWdt_robust_um_per_ms"):
+        for metric in ("transverse_width_um", "transverse_dWdt_raw_um_per_ms", "transverse_dWdt_robust_um_per_ms"):
             values = group[metric].to_numpy(float)
             rows.append({"tau": tau, "has_keyhole": label, "metric": metric, "median": np.median(values),
                          "q25": np.quantile(values,.25), "q75": np.quantile(values,.75), "n":len(values)})
@@ -678,8 +831,8 @@ def make_figures(features: pd.DataFrame, profiles: pd.DataFrame, audit: pd.DataF
     for name in dict.fromkeys(selected):
         g = profiles[profiles.experiment_name.eq(name)]
         label = "Keyhole" if bool(g.has_keyhole.iloc[0]) else "Conduction"
-        ax.plot(g.tau, g.width_um, lw=1.6, alpha=.85, label=f"{label}: {name[:18]}…")
-    ax.set(xlabel="Normalized active time τ", ylabel="Width W (µm)", title="Representative active-interval width trajectories")
+        ax.plot(g.tau, g.transverse_width_um, lw=1.6, alpha=.85, label=f"{label}: {name[:18]}…")
+    ax.set(xlabel="Normalized active time τ", ylabel="Transverse melt-pool width ΔY (µm)", title="Representative transverse-width trajectories")
     ax.legend(fontsize=7)
     created.append(_save(fig, "01_representative_width_trajectories.png"))
 
@@ -692,10 +845,10 @@ def make_figures(features: pd.DataFrame, profiles: pd.DataFrame, audit: pd.DataF
             ax.fill_between(GRID, lo, hi, color=color, alpha=.18, label=f"{text} IQR")
         ax.set(xlabel="Normalized active time τ", ylabel=ylabel, title=title); ax.legend()
         created.append(_save(fig, filename))
-    profile_plot("width_um", "Width W (µm)", "Width-profile overlap is shown, not hidden", "02_class_width_profiles.png")
+    profile_plot("transverse_width_um", "Transverse melt-pool width ΔY (µm)", "Corrected transverse-width profiles", "02_class_width_profiles.png")
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.8), sharey=True)
-    for ax, column, title in ((axes[0], "dWdt_um_per_ms", "Primary centered finite difference"),
-                              (axes[1], "dWdt_robust_um_per_ms", "Fixed local-linear robustness")):
+    for ax, column, title in ((axes[0], "transverse_dWdt_raw_um_per_ms", "Raw centered finite difference"),
+                              (axes[1], "transverse_dWdt_robust_um_per_ms", "Fixed local-linear robustness")):
         for label, color, text in ((0,"#4477AA","Conduction"),(1,"#CC3311","Keyhole")):
             wide = profiles[profiles.has_keyhole.eq(label)].pivot(index="experiment_name", columns="tau", values=column)
             med = wide.median(); lo = wide.quantile(.25); hi = wide.quantile(.75)
@@ -703,14 +856,15 @@ def make_figures(features: pd.DataFrame, profiles: pd.DataFrame, audit: pd.DataF
             ax.fill_between(GRID, lo, hi, color=color, alpha=.16)
         ax.set(xlabel="Normalized active time τ", title=title); ax.legend(fontsize=8)
     axes[0].set_ylabel("dW/dt (µm/ms)")
-    fig.suptitle("Derivative conclusions must survive the fixed denoising check")
+    fig.suptitle("Transverse-width derivative conclusions must survive fixed denoising")
     created.append(_save(fig, "03_class_derivative_profiles.png"))
 
-    top = effects.reindex(effects.cliffs_delta.abs().sort_values(ascending=False).index).head(6)
+    stable_effects = effects[~effects.feature_group.eq("raw_derivative")]
+    top = stable_effects.reindex(stable_effects.cliffs_delta.abs().sort_values(ascending=False).index).head(6)
     fig, ax = plt.subplots(figsize=(8, 5))
     ax.errorbar(top.cliffs_delta, np.arange(len(top)), xerr=None, fmt="o", color="#6A3D9A")
     ax.axvline(0, color="black", lw=.8); ax.set_yticks(np.arange(len(top)), top.feature.str.replace("_", " "))
-    ax.set(xlabel="Cliff's delta (Keyhole − Conduction)", title="Largest predeclared width-feature effects")
+    ax.set(xlabel="Cliff's delta (Keyhole − Conduction)", title="Largest corrected transverse-width feature effects")
     created.append(_save(fig, "04_width_feature_effects.png"))
 
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
@@ -719,7 +873,7 @@ def make_figures(features: pd.DataFrame, profiles: pd.DataFrame, audit: pd.DataF
             g=data[data.has_keyhole.eq(label)]; ax.scatter(g[x],g[y],s=18,alpha=.65,color=color,label=text)
         ev1=float(data.PC1_explained_variance.iloc[0]); ev2=float(data.PC2_explained_variance.iloc[0])
         ax.set(xlabel=f"PC1 ({ev1:.1%})",ylabel=f"PC2 ({ev2:.1%})",title=title); ax.legend(fontsize=8)
-    fig.suptitle("Label-free PCA projections of temporal width behavior")
+    fig.suptitle("Label-free PCA of corrected transverse-width behavior")
     created.append(_save(fig, "05_temporal_width_pca.png"))
 
     metric = model_summary[(model_summary.metric.eq("balanced_accuracy")) & model_summary.subset.isin(["full","q30","q20"])]
@@ -745,12 +899,12 @@ def make_figures(features: pd.DataFrame, profiles: pd.DataFrame, audit: pd.DataF
     onset=pd.read_csv(OUTPUT/"keyhole_onset_audit.csv"); valid=onset[onset.onset_available.astype(bool)]
     aligned=pd.read_csv(OUTPUT/"keyhole_onset_aligned_profiles.csv.gz")
     fig,axes=plt.subplots(1,2,figsize=(11,4.5))
-    for metric,color,label in (("width_um","#4477AA","W"),):
+    for metric,color,label in (("transverse_width_um","#4477AA","ΔY width"),):
         s=aligned.groupby("time_relative_to_first_observed_keyhole_ms")[metric]
         med=s.median(); lo=s.quantile(.25); hi=s.quantile(.75)
         axes[0].plot(med.index,med,color=color,label=f"{label} median"); axes[0].fill_between(med.index,lo,hi,color=color,alpha=.2,label="IQR")
-    axes[0].axvline(0,color="black",lw=1); axes[0].set(xlabel="Time relative to first observed Keyhole frame (ms)",ylabel="Width (µm)",title="Width aligned to sparse manual onset"); axes[0].legend()
-    for metric,color,label in (("dWdt_um_per_ms","#999999","raw finite difference"),("dWdt_robust_um_per_ms","#6A3D9A","fixed local-linear robustness")):
+    axes[0].axvline(0,color="black",lw=1); axes[0].set(xlabel="Time relative to first observed Keyhole frame (ms)",ylabel="Transverse width ΔY (µm)",title="True width aligned to sparse manual onset"); axes[0].legend()
+    for metric,color,label in (("transverse_dWdt_raw_um_per_ms","#999999","raw finite difference"),("transverse_dWdt_robust_um_per_ms","#6A3D9A","fixed local-linear robustness")):
         s=aligned.groupby("time_relative_to_first_observed_keyhole_ms")[metric]; med=s.median()
         axes[1].plot(med.index,med,color=color,label=label)
     axes[1].axvline(0,color="black",lw=1); axes[1].set(xlabel="Time relative to first observed Keyhole frame (ms)",ylabel="dW/dt (µm/ms)",title="Derivative timing is descriptive, not a warning rule"); axes[1].legend(fontsize=8)
@@ -760,39 +914,54 @@ def make_figures(features: pd.DataFrame, profiles: pd.DataFrame, audit: pd.DataF
 
 def notebook_payload() -> dict[str, Any]:
     sections = [
-        ("Ioan's question", "Does physical width growth, not scan speed, distinguish eventual Keyhole tracks and add information beyond the pre-process score h?"),
-        ("Reconstructing W(t)", "The pinned monitor stores axis-aligned melt bounds in metres. Following the explicit Phase 2 protocol, W is x_max - x_min. Historical Week 6/7 code called delta-X length and delta-Y width; this nomenclature conflict is documented. Physical time is read from time.dat in seconds; cooling-only rows are excluded."),
-        ("Defining dW/dt", "The timestamp-only regularity gate selected centered finite differences. Results are displayed in micrometres per millisecond. A fixed five-grid-point local-linear slope is a robustness diagnostic."),
-        ("Temporal profiles", "The figures show medians and IQRs so overlap remains visible."),
-        ("Interpretable features", "Only the predeclared static and temporal summaries are used."),
-        ("PCA", "PCA is label-free and descriptive: it is neither feature importance nor a physical manifold."),
-        ("Leak-free prediction", "Scalers and logistic coefficients are fitted inside each frozen training fold. B1/q20/q30 are used only for evaluation."),
-        ("Early prefixes", "Each prefix model sees only width samples whose normalized time is no later than that prefix."),
-        ("First observed Keyhole", "Exact manual frame-to-monitor alignment permits a descriptive onset audit, but sparse saved frames do not identify the true physical onset continuously."),
-        ("Safe conclusion", "Read the generated supervisor summary and claim ledger; no claim is inferred from this notebook alone."),
+        ("Axis-semantics correction", "Forensic review found that the first published run used ΔX while calling it width. The authoritative extractor defines ΔX as longitudinal length and ΔY as transverse width. This corrected notebook uses W(t)=Ymax−Ymin."),
+        ("Ioan's question", "Does transverse width growth, not scan speed or longitudinal length, distinguish eventual Keyhole tracks and add information beyond the pre-process score h?"),
+        ("Corrected W(t)", "The pinned monitor columns are x_min, x_max, y_min, y_max, z_min, z_max. Canonical width is ΔY in metres, shown in micrometres. Cooling-only rows are excluded."),
+        ("Corrected dW/dt", "The timestamp-only regularity gate selects centered finite differences. A fixed five-grid-point local-linear slope is the non-tuned robustness derivative. Units are µm/ms."),
+        ("Temporal profiles", "Medians and IQRs show both class differences and overlap."),
+        ("Temporal feature effects", "Primary models use non-derivative shape features and the fixed robust derivative features. Raw finite differences remain descriptive only."),
+        ("PCA", "PCA uses the same corrected robust temporal representation as the model, without labels. It is a descriptive projection, not feature importance or a physical manifold."),
+        ("Leak-free models", "Scalers and logistic coefficients are fitted inside each frozen training fold. B1/q20/q30 are evaluation-only."),
+        ("Beyond h", "Hard-decision metrics and ranking/probability metrics are interpreted separately."),
+        ("Early prefixes", "Each prefix model sees only transverse-width samples at or before the declared prefix and uses robust derivative summaries."),
+        ("First observed Keyhole", "Exact manual-frame alignment supports descriptive timing relative to the first observed valid Keyhole frame, not continuous physical onset or a warning rule."),
+        ("Longitudinal ΔX comparison", "The former result is preserved as a secondary longitudinal-length diagnostic and is not presented as Ioan's width answer."),
+        ("Final safe conclusion", "The generated reports state the corrected claim level and limitations."),
     ]
     cells=[]
     cells.append({"cell_type":"markdown","id":"phase2title","metadata":{},"source":["# Week 9 Phase 2 — Temporal melt-pool width dynamics\n","This teaching notebook reads the frozen generated artifacts; the experimental engine lives in `src/week9_phase2_temporal_width_dynamics.py`.\n"]})
     cells.append({"cell_type":"code","id":"phase2setup","execution_count":None,"metadata":{},"outputs":[],"source":["from pathlib import Path\n","import pandas as pd\n","from IPython.display import display, Image\n","ROOT = Path.cwd().parents[1] if Path.cwd().name == 'week_09' else Path.cwd()\n","OUT = ROOT / 'outputs' / 'week9_phase2_temporal_width_dynamics'\n","assert OUT.is_dir()\n"]})
     for title,text in sections:
         cells.append({"cell_type":"markdown","id":hashlib.sha1((title+"-md").encode()).hexdigest()[:8],"metadata":{},"source":[f"## {title}\n",text+"\n"]})
-        if title=="Reconstructing W(t)": src="display(pd.read_csv(OUT/'width_missingness_audit.csv'))"
-        elif title=="Defining dW/dt": src="display(pd.read_csv(OUT/'derivative_method_audit.csv').describe(include='all'))"
+        if title=="Axis-semantics correction": src="display(pd.read_csv(OUT/'axis_semantics_audit.csv'))"
+        elif title=="Corrected W(t)": src="display(pd.read_csv(OUT/'width_missingness_audit.csv')); display(Image(filename=OUT/'figures'/'02_class_width_profiles.png'))"
+        elif title=="Corrected dW/dt": src="display(pd.read_csv(OUT/'derivative_robustness_gate.csv')); display(Image(filename=OUT/'figures'/'03_class_derivative_profiles.png'))"
         elif title=="Temporal profiles": src="display(Image(filename=OUT/'figures'/'02_class_width_profiles.png')); display(Image(filename=OUT/'figures'/'03_class_derivative_profiles.png'))"
-        elif title=="Interpretable features": src="display(pd.read_csv(OUT/'static_feature_effects.csv').sort_values('cliffs_delta', key=abs, ascending=False))"
+        elif title=="Temporal feature effects": src="display(pd.read_csv(OUT/'static_feature_effects.csv').sort_values('cliffs_delta', key=abs, ascending=False))"
         elif title=="PCA": src="display(Image(filename=OUT/'figures'/'05_temporal_width_pca.png')); display(pd.read_csv(OUT/'pca_loadings.csv'))"
-        elif title=="Leak-free prediction": src="display(pd.read_csv(OUT/'model_oof_summary.csv')); display(Image(filename=OUT/'figures'/'06_model_comparison.png'))"
+        elif title in {"Leak-free models","Beyond h"}: src="display(pd.read_csv(OUT/'model_oof_summary.csv')); display(pd.read_csv(OUT/'model_paired_contrasts.csv')); display(Image(filename=OUT/'figures'/'06_model_comparison.png'))"
         elif title=="Early prefixes": src="display(pd.read_csv(OUT/'prefix_model_contrasts.csv')); display(Image(filename=OUT/'figures'/'07_prefix_performance_and_risk.png'))"
         elif title=="First observed Keyhole": src="display(pd.read_csv(OUT/'keyhole_onset_audit.csv').query('onset_available == True').describe(include='all')); display(Image(filename=OUT/'figures'/'08_first_observed_keyhole_timing.png'))"
-        elif title=="Safe conclusion": src="print((OUT/'SUPERVISOR_PHASE2_ONE_PAGE.md').read_text(encoding='utf-8'))"
+        elif title=="Longitudinal ΔX comparison": src="display(pd.read_csv(OUT/'longitudinal_vs_transverse_summary.csv'))"
+        elif title=="Final safe conclusion": src="print((OUT/'SUPERVISOR_PHASE2_ONE_PAGE.md').read_text(encoding='utf-8'))"
         else: src="display(pd.read_csv(OUT/'width_temporal_features.csv').head())"
         cells.append({"cell_type":"code","id":hashlib.sha1((title+"-code").encode()).hexdigest()[:8],"execution_count":None,"metadata":{},"outputs":[],"source":[src+"\n"]})
     return {"cells":cells,"metadata":{"kernelspec":{"display_name":"Python 3","language":"python","name":"python3"},"language_info":{"name":"python","version":"3"}},"nbformat":4,"nbformat_minor":5}
 
 
+def execute_and_save_notebook() -> None:
+    import nbformat
+    from nbconvert.preprocessors import ExecutePreprocessor
+    notebook = nbformat.read(NOTEBOOK, as_version=4)
+    ExecutePreprocessor(timeout=300, kernel_name="python3").preprocess(notebook, {"metadata":{"path":str(ROOT)}})
+    require(any(cell.cell_type == "code" and cell.execution_count is not None and cell.outputs for cell in notebook.cells), "notebook has no stored executed outputs")
+    nbformat.write(notebook, NOTEBOOK)
+
+
 def render_reports(merged: pd.DataFrame, audit: pd.DataFrame, effects: pd.DataFrame, model_summary: pd.DataFrame,
                    model_contrasts: pd.DataFrame, prefix_summary: pd.DataFrame, prefix_contrasts: pd.DataFrame,
-                   residual: pd.DataFrame, figures: list[Path]) -> None:
+                   residual: pd.DataFrame, figures: list[Path], robustness: pd.DataFrame,
+                   axis_comparison: pd.DataFrame) -> None:
     def value(frame: pd.DataFrame, **query: Any) -> float:
         q=frame
         for k,v in query.items(): q=q[q[k].eq(v)]
@@ -802,69 +971,103 @@ def render_reports(merged: pd.DataFrame, audit: pd.DataFrame, effects: pd.DataFr
         for k,v in query.items(): q=q[q[k].eq(v)]
         return q.iloc[0]
     usable=int(merged.usable_width_timeseries.sum()); kh=int(merged.loc[merged.usable_width_timeseries,"has_keyhole"].sum())
-    best=effects.iloc[effects.cliffs_delta.abs().argmax()]
+    primary_effects=effects[effects.feature.isin([*SHAPE_FEATURES,*ROBUST_DERIVATIVE_FEATURES])]
+    best=primary_effects.iloc[primary_effects.cliffs_delta.abs().argmax()]
     qba={m:value(model_summary,model=m,subset="q20",metric="balanced_accuracy") for m in ["h_only","static_width","width_dynamics","h_plus_width_dynamics"]}
     qrec={m:value(model_summary,model=m,subset="q20",metric="keyhole_recall") for m in ["h_only","h_plus_width_dynamics"]}
-    ba=contrast(model_contrasts,subset="q20",metric="balanced_accuracy")
-    kr=contrast(model_contrasts,subset="q20",metric="keyhole_recall")
-    early=prefix_contrasts[(prefix_contrasts.subset.eq("q20")) & prefix_contrasts.metric.isin(["balanced_accuracy","keyhole_recall"]) & (prefix_contrasts.prefix_tau<1)]
-    strong=bool(((early.ci_low>0)&((early.metric.eq("balanced_accuracy"))|(early.metric.eq("keyhole_recall")))).any() and (ba.ci_low>0 or kr.ci_low>0))
-    final_incremental = bool(ba.mean_difference > 0 or kr.mean_difference > 0)
-    interpretable=bool(abs(best.cliffs_delta)>=.2)
-    level="STRONG TEMPORAL SIGNAL" if strong else ("INCREMENTAL / QUALIFIED SIGNAL" if interpretable and final_incremental else "NO INCREMENTAL SIGNAL")
+    main_name="h_plus_width_dynamics - h_only"; shape_name="h_plus_width_shape_only - h_only"
+    ba=contrast(model_contrasts,subset="q20",metric="balanced_accuracy",contrast=main_name)
+    kr=contrast(model_contrasts,subset="q20",metric="keyhole_recall",contrast=main_name)
+    roc=contrast(model_contrasts,subset="q20",metric="roc_auc",contrast=main_name)
+    pr=contrast(model_contrasts,subset="q20",metric="pr_auc",contrast=main_name)
+    brier=contrast(model_contrasts,subset="q20",metric="brier_score",contrast=main_name)
+    shape_ba=contrast(model_contrasts,subset="q20",metric="balanced_accuracy",contrast=shape_name)
+    shape_pr=contrast(model_contrasts,subset="q20",metric="pr_auc",contrast=shape_name)
+    shape_brier=contrast(model_contrasts,subset="q20",metric="brier_score",contrast=shape_name)
+    hard_status="SUPPORTED" if ba.ci_low>0 or kr.ci_low>0 else ("NOT SUPPORTED" if ba.mean_difference<=0 and kr.mean_difference<=0 else "QUALIFIED")
+    ranking_status="SUPPORTED" if roc.ci_low>0 or pr.ci_low>0 or brier.ci_high<0 else ("NOT SUPPORTED" if roc.mean_difference<=0 and pr.mean_difference<=0 and brier.mean_difference>=0 else "QUALIFIED")
+    level="STRONG TEMPORAL SIGNAL" if hard_status=="SUPPORTED" else ("INCREMENTAL / QUALIFIED SIGNAL" if ranking_status in {"SUPPORTED","QUALIFIED"} else "NO INCREMENTAL SIGNAL")
     onset=pd.read_csv(OUTPUT/"keyhole_onset_audit.csv"); onset_valid=onset[onset.onset_available.astype(bool)]
     onset_claim="QUALIFIED" if len(onset_valid) else "NOT TESTABLE WITH CURRENT LABELS"
+    raw_effect=effects[effects.feature.eq("early_dWdt_20_um_per_ms")].iloc[0]
     robust_effect=effects[effects.feature.eq("robust_early_dWdt_20_um_per_ms")].iloc[0]
     wmax_effect=effects[effects.feature.eq("W_max_um")].iloc[0]
     wt0_effect=effects[effects.feature.eq("W_T0_um")].iloc[0]
     earliest=prefix_contrasts[(prefix_contrasts.subset.eq("q20")) & prefix_contrasts.metric.eq("balanced_accuracy") & (prefix_contrasts.prefix_tau<1)].sort_values("prefix_tau").iloc[0]
+    earliest_recall=contrast(prefix_contrasts,subset="q20",prefix_tau=.2,metric="keyhole_recall")
+    earliest_roc=contrast(prefix_contrasts,subset="q20",prefix_tau=.2,metric="roc_auc")
+    earliest_pr=contrast(prefix_contrasts,subset="q20",prefix_tau=.2,metric="pr_auc")
+    earliest_brier=contrast(prefix_contrasts,subset="q20",prefix_tau=.2,metric="brier_score")
     raw_pre=float(onset_valid.peak_precedes_first_observed_keyhole.mean()) if len(onset_valid) else float("nan")
     robust_pre=float(onset_valid.robust_peak_precedes_first_observed_keyhole.mean()) if len(onset_valid) else float("nan")
     robust_lead=-float(onset_valid.loc[onset_valid.robust_peak_precedes_first_observed_keyhole.astype(bool),"robust_peak_minus_first_keyhole_ms"].median()) if len(onset_valid) else float("nan")
     corrected=int((residual.category=="h_wrong_width_correct").sum()); worsened=int((residual.category=="h_correct_width_wrong").sum())
+    derivative_status=str(robustness[robustness.derivative_claim.eq("early 20% derivative")].iloc[0].status)
+    longrow=axis_comparison[axis_comparison.axis_quantity.eq("longitudinal_length_delta_X")].iloc[0]
+    numbers=f"""- Usable traces: {usable}/405; Keyhole: {kh}
+- Wmax medians (Conduction, Keyhole): {wmax_effect.conduction_median:.3f}, {wmax_effect.keyhole_median:.3f} µm
+- WT0 medians (Conduction, Keyhole): {wt0_effect.conduction_median:.3f}, {wt0_effect.keyhole_median:.3f} µm
+- Best robust/shape temporal feature: {best.feature}; Cliff's delta {best.cliffs_delta:+.4f}
+- q20 balanced accuracy (h, width dynamics, h+width): {qba['h_only']:.4f}, {qba['width_dynamics']:.4f}, {qba['h_plus_width_dynamics']:.4f}
+- q20 Keyhole recall (h, h+width): {qrec['h_only']:.4f}, {qrec['h_plus_width_dynamics']:.4f}
+- q20 ROC/PR/Brier contrasts (h+width minus h): {roc.mean_difference:+.4f}, {pr.mean_difference:+.4f}, {brier.mean_difference:+.4f}
+- τ=0.20 q20 BA/ROC/PR/Brier contrasts: {earliest.mean_difference:+.4f}, {earliest_roc.mean_difference:+.4f}, {earliest_pr.mean_difference:+.4f}, {earliest_brier.mean_difference:+.4f}
+- Final Phase 2 claim: {level}; hard-decision {hard_status}; ranking/probability {ranking_status}
+"""
     summary=f"""# Supervisor Phase 2 — one page
 
-## What Ioan asked
-Whether temporal melt-pool width development, W(t) and dW/dt, distinguishes eventual Keyhole tracks and can add monitoring information beyond the pre-process physics score h.
+## Correction and question
+The authoritative extractor verifies **ΔX = longitudinal length** and **ΔY = transverse width**. The original Phase 2 accidentally answered the ΔX question. This correction answers Ioan using **W(t)=Ymax−Ymin=ΔY**.
 
-## Data and derivative
-{usable}/405 simulations have technically usable pinned traces ({kh} Keyhole, {usable-kh} Conduction); 55 are missing/unusable and were reported rather than silently dropped. Following the explicit Phase 2 protocol, W is `x_max - x_min` in metres. Historical Week 6/7 code calls ΔX “length” and ΔY “width”; this nomenclature conflict is a central limitation. The primary derivative is a centered physical-time finite difference, displayed in **µm/ms**, over the active interval only. A fixed five-point local-linear slope is the non-tuned robustness version.
+## Corrected data and physical width
+{usable}/405 traces are usable ({kh} Keyhole, {usable-kh} Conduction). Median transverse Wmax is {wmax_effect.keyhole_median:.1f} µm for Keyhole versus {wmax_effect.conduction_median:.1f} µm for Conduction; WT0 is {wt0_effect.keyhole_median:.1f} versus {wt0_effect.conduction_median:.1f} µm. This is a descriptive effect; standalone hard classification is reported separately.
 
-## Clearest temporal difference
-Static/profile width is clearly larger for eventual Keyhole tracks: median W_max is {wmax_effect.keyhole_median:.1f} versus {wmax_effect.conduction_median:.1f} µm, and median W_T0 is {wt0_effect.keyhole_median:.1f} versus {wt0_effect.conduction_median:.1f} µm.
+## Temporal feature and derivative robustness
+The strongest deterministic shape/robust-derivative feature is `{best.feature}`: Conduction median {best.conduction_median:.1f}, Keyhole median {best.keyhole_median:.1f} µm/ms (Cliff's delta {best.cliffs_delta:+.3f}). Raw early-20% dW/dt medians (Conduction, Keyhole) are {raw_effect.conduction_median:.1f}, {raw_effect.keyhole_median:.1f} µm/ms; fixed robust medians are {robust_effect.conduction_median:.1f}, {robust_effect.keyhole_median:.1f}. Early-20% derivative gate: **{derivative_status}**. No faster/slower physical claim is made unless direction survives denoising.
 
-The largest predeclared feature effect was `{best.feature}`: Conduction median {best.conduction_median:.4g}, Keyhole median {best.keyhole_median:.4g}, Cliff's delta {best.cliffs_delta:+.3f} (median-difference 95% bootstrap interval [{best.median_difference_ci_low:+.4g}, {best.median_difference_ci_high:+.4g}]).
+## Does true width add beyond h?
+On q20, balanced accuracy is h-only {qba['h_only']:.3f}, static width {qba['static_width']:.3f}, width dynamics {qba['width_dynamics']:.3f}, and h+width {qba['h_plus_width_dynamics']:.3f}. The h+width hard-decision contrasts are BA {ba.mean_difference:+.3f} [{ba.ci_low:+.3f},{ba.ci_high:+.3f}] and Keyhole recall {kr.mean_difference:+.3f} [{kr.ci_low:+.3f},{kr.ci_high:+.3f}]: **{hard_status}**.
 
-This raw finite-difference separation is **not robust to the fixed mild local-linear derivative**: the corresponding robust early-20% medians are {robust_effect.conduction_median:.4g} versus {robust_effect.keyhole_median:.4g}, Cliff's delta {robust_effect.cliffs_delta:+.3f}, with median-difference interval [{robust_effect.median_difference_ci_low:+.4g}, {robust_effect.median_difference_ci_high:+.4g}]. Raw pointwise dW/dt therefore must not be treated as a stable physical discriminator here.
+Ranking/probability contrasts are ROC-AUC {roc.mean_difference:+.3f} [{roc.ci_low:+.3f},{roc.ci_high:+.3f}], PR-AUC {pr.mean_difference:+.3f} [{pr.ci_low:+.3f},{pr.ci_high:+.3f}], and Brier {brier.mean_difference:+.3f} [{brier.ci_low:+.3f},{brier.ci_high:+.3f}] (negative Brier is better): **{ranking_status}**.
 
-## Prediction beyond h
-On Fold-B1-q20, repeat-level balanced accuracy was h-only {qba['h_only']:.3f}, static width {qba['static_width']:.3f}, width dynamics {qba['width_dynamics']:.3f}, and h+width dynamics {qba['h_plus_width_dynamics']:.3f}. The paired h+width minus h effect was {ba.mean_difference:+.3f} [{ba.ci_low:+.3f}, {ba.ci_high:+.3f}]. Keyhole recall changed from {qrec['h_only']:.3f} to {qrec['h_plus_width_dynamics']:.3f}; paired difference {kr.mean_difference:+.3f} [{kr.ci_low:+.3f}, {kr.ci_high:+.3f}]. On q20 OOF occurrences, width corrected {corrected} h errors and worsened {worsened} h-correct cases.
+The fixed shape-only sensitivity preserves hard performance better: q20 BA contrast {shape_ba.mean_difference:+.3f} [{shape_ba.ci_low:+.3f},{shape_ba.ci_high:+.3f}], PR contrast {shape_pr.mean_difference:+.3f} [{shape_pr.ci_low:+.3f},{shape_pr.ci_high:+.3f}], Brier contrast {shape_brier.mean_difference:+.3f} [{shape_brier.ci_low:+.3f},{shape_brier.ci_high:+.3f}]. This diagnostic is not post-hoc tuning.
 
-## Early information and onset language
-The prefix models use only samples at or before each declared τ. At τ=0.20 the q20 balanced-accuracy contrast is {earliest.mean_difference:+.3f} [{earliest.ci_low:+.3f}, {earliest.ci_high:+.3f}], so there is no statistically supported useful early prefix. Outcome: **{level}**.
+## Earliest prefix and onset
+At τ=0.20, q20 BA changes {earliest.mean_difference:+.3f} [{earliest.ci_low:+.3f},{earliest.ci_high:+.3f}] and Keyhole recall {earliest_recall.mean_difference:+.3f} [{earliest_recall.ci_low:+.3f},{earliest_recall.ci_high:+.3f}]; ROC/PR/Brier change {earliest_roc.mean_difference:+.3f}/{earliest_pr.mean_difference:+.3f}/{earliest_brier.mean_difference:+.3f}. First-observed manual Keyhole timing exists for {len(onset_valid)} traces. Robust peaks precede it in {robust_pre:.1%}, median descriptive lead {robust_lead:.3f} ms, but startup peaks are generic and no held-out warning rule exists. Verified pre-Keyhole warning: **NOT SUPPORTED**.
 
-First-observed manually labelled Keyhole timing is available for {len(onset_valid)} usable Keyhole tracks. A raw dW/dt peak precedes the first observed Keyhole frame in {raw_pre:.1%}; the robustness-derivative peak does so in {robust_pre:.1%}, with median descriptive lead {robust_lead:.3f} ms among those cases. The robust peak is usually the generic startup-growth peak and is not Keyhole-specific. The onset result remains **{onset_claim}** because saved frames are sparse, peak timing is not a trained warning score, and continuous physical onset is unknown. No validated pre-onset warning is claimed.
+## What ΔX taught us
+The archived longitudinal diagnostic had q20 width-dynamics BA {longrow.q20_width_dynamics_balanced_accuracy:.3f} and h+ΔX BA {longrow.q20_h_plus_axis_dynamics_balanced_accuracy:.3f}; it described longitudinal growth, not transverse monitoring width.
 
-## Recommendation
-Use the temporal profile, PCA, and leak-free model comparison as evidence about monitoring value. Do not call eventual-Keyhole prefix prediction a verified pre-onset warning. The next step, only if desired, is denser frame-level onset annotation or prospective top-view measurements.
+## Canonical numbers
+{numbers}
 """
+    summary = summary.rstrip() + "\n"
     (OUTPUT/"SUPERVISOR_PHASE2_ONE_PAGE.md").write_text(summary,encoding="utf-8")
-    report="# Week 9 Phase 2 final report\n\n"+summary+"\n## Methods and claim discipline\n\nAll 100 frozen outer folds were intersected with the usable temporal subset. Scalers and fixed logistic models were fitted on training rows only. B1/q20/q30 were evaluation-only. The h-only arm exactly uses `log(P/sqrt(VX*LS^3))` with the established near-unregularized scalar logistic fit; width models use fixed L2 logistic C=1 without tuning. Repeat-block summaries concatenate five held-out folds per repeat; uncertainty resamples 20 repeat blocks. Missingness is structured in P (standardized mean difference +0.546) and moderately in ST (+0.379), so results apply to the 350-trace subset rather than all 405 simulations.\n\n## Direct answers\n\n1. Final/static width is only weakly different by class (see `static_feature_effects.csv`).\n2. Raw early dW/dt differs, but the effect does not survive the fixed mild derivative robustness check.\n3. The largest raw profile contrast occurs early, approximately τ=0.05–0.20.\n4. Width dynamics rank cases somewhat better than static width, but remain weak alone and do not yield competitive hard classification.\n5. They do not improve q20 balanced accuracy or Keyhole recall beyond h.\n6. The negative result remains on Fold-B1-q20.\n7. At τ=0.20, the combined mean is slightly higher but its paired interval includes zero; no prefix is a supported gain.\n8. Peaks often precede the first observed Keyhole frame, but genuine pre-onset warning is not established.\n9. The unit is µm/ms; typical positive raw derivative medians are recorded per class in `static_feature_effects.csv`.\n10. These data justify continued measurement research, not a validated top-view warning system.\n"
+    report="# Week 9 Phase 2 final report — corrected transverse width\n\n"+summary+"\n## Methods and claim discipline\n\nThe authoritative source and five pinned files verify ΔX=longitudinal length and ΔY=transverse width. All 100 frozen outer folds were intersected with the usable temporal subset. Primary temporal models use deterministic shape plus fixed robust-derivative features; raw finite differences are descriptive. Scalers and fixed logistic models are trained within each fold. B1/q20/q30 are evaluation-only. Repeat-block uncertainty resamples 20 repeats, keeping five folds together. The onset is the first observed valid manually labelled frame, not continuous physical onset.\n\n## Direct scientific answers\n\n1. The reported W(t) is transverse ΔY.\n2. Static/profile effects are described by effect size, separately from classifier performance.\n3. Derivative claims are governed by `derivative_robustness_gate.csv`.\n4. Width-only dynamics and h+width are compared on hard and ranking/probability metrics separately.\n5. Prefix models use no future samples.\n6. No derivative peak is called a warning event.\n7. The published ΔX result is retained only as a longitudinal diagnostic.\n"
     (OUTPUT/"FINAL_PHASE2_REPORT.md").write_text(report,encoding="utf-8")
-    ledger=f"""# Phase 2 claim ledger
+    ledger=f"""# Phase 2 claim ledger — corrected transverse width
 
 | Claim | Status | Guardrail |
 |---|---|---|
-| Width dynamics differ descriptively by eventual regime | Supported only as reported in feature/profile artifacts | Observational simulator benchmark |
-| Width dynamics add information beyond h | {level} | Frozen grouped folds; usable subset only |
-| Verified warning before physical Keyhole onset | Not claimed | Sparse saved-frame labels do not establish continuous onset |
-| Top-view monitoring is industrially validated | Not supported | No prospective camera experiment |
-| PCA reveals a physical manifold | Not supported | Label-free 2D projection only |
+| Transverse static width differs by eventual regime | {"SUPPORTED" if abs(wmax_effect.cliffs_delta)>=.2 else "QUALIFIED"} | Effect size, not standalone classifier claim |
+| Transverse temporal profile differs by eventual regime | {"SUPPORTED" if abs(best.cliffs_delta)>=.2 else "QUALIFIED"} | Frozen simulator subset |
+| Transverse dW/dt is a robust discriminator | {derivative_status} | Raw versus fixed local-linear gate |
+| Transverse width improves hard classification beyond h | {hard_status} | q20 BA and Keyhole recall primary |
+| Transverse width improves ranking/probabilities beyond h | {ranking_status} | q20 ROC, PR and Brier secondary |
+| Early prefix gives hard-decision improvement | {"SUPPORTED" if earliest.ci_low>0 else ("NOT SUPPORTED" if earliest.mean_difference<=0 else "QUALIFIED")} | τ=0.20 shown; all prefixes tabulated |
+| Early prefix gives ranking/probability improvement | {"SUPPORTED" if earliest_roc.ci_low>0 or earliest_pr.ci_low>0 or earliest_brier.ci_high<0 else "QUALIFIED"} | Secondary metrics interpreted separately |
+| Verified pre-Keyhole warning | NOT SUPPORTED | No trained held-out warning rule; sparse observed onset |
+| Longitudinal ΔX behaves differently from transverse ΔY | SUPPORTED | Side-by-side axis audit and summary |
+| Top-view monitoring is industrially validated | NOT SUPPORTED | No prospective camera experiment |
+
+## Canonical numbers
+{numbers}
 """
+    ledger = ledger.rstrip() + "\n"
     (OUTPUT/"claim_ledger.md").write_text(ledger,encoding="utf-8")
     red="""# Final red-team report
 
-Checked the explicit Phase 2 ΔX formula and documented its conflict with the historical ΔX=length/ΔY=width nomenclature; physical units; active-window exclusion of cooling; strictly increasing cleaned timestamps; label-free derivative rule; fixed non-tuned robustness slope; prefix source-time guards; train-only scaling; held-out labels; evaluation-only B1/q20/q30; label-free PCA; grouped repeat inference; missingness structure; and cautious onset language. The large raw early-derivative class effect changes sign and shrinks under the fixed robustness derivative, so it is not claimed as stable physics. The onset audit is explicitly about the first observed valid manually labelled frame, not continuous physical onset; its robust pre-onset peak is generally a generic startup peak. No pre-onset warning rule was trained or claimed.
+The correction audit attempted to falsify the axis mapping, actual ΔY/ΔX formulas, derivative units, label-independent smoothing, prefix time ordering, train/test isolation, B1/q20 leakage, repeat-block inference, PCA inputs, ranking-versus-hard language, generic-startup warning language, executed notebook state, validation/manifest equality, and historical Phase 1.x protection. Canonical width is ΔY everywhere in main artifacts. ΔX survives only in the longitudinal diagnostic. Raw derivative claims are downgraded whenever the fixed robust derivative changes direction or destroys magnitude. No trained held-out warning rule exists.
 """
     (OUTPUT/"FINAL_RED_TEAM_REPORT.md").write_text(red,encoding="utf-8")
     figure_manifest=pd.DataFrame([{"figure":p.name,"sha256":sha256_file(p),"bytes":p.stat().st_size} for p in figures])
@@ -873,29 +1076,46 @@ Checked the explicit Phase 2 ΔX formula and documented its conflict with the hi
 
 def validate(pop: pd.DataFrame, merged: pd.DataFrame, audit: pd.DataFrame, profiles: pd.DataFrame,
              features: pd.DataFrame, prefix: pd.DataFrame, figures: list[Path]) -> dict[str, Any]:
+    axis = pd.read_csv(OUTPUT / "axis_semantics_audit.csv")
+    p15_source = (ROOT / "src" / "week9_phase1_5_h_physics_confirmation.py").read_text(encoding="utf-8")
+    model_feature_names = set(STATIC_FEATURES) | set(TEMPORAL_FEATURES) | set(PREFIX_FEATURES) | {"log_h"}
+    pca_loadings = pd.read_csv(OUTPUT / "pca_loadings.csv")
+    notebook = json.loads(NOTEBOOK.read_text(encoding="utf-8"))
+    notebook_outputs = [cell for cell in notebook["cells"] if cell["cell_type"]=="code" and cell.get("execution_count") is not None and cell.get("outputs")]
+    demo = _model(1.0).fit(np.array([[0.],[2.],[4.]]), np.array([0,0,1]))
+    source = Path(__file__).read_text(encoding="utf-8")
     checks={
         "population_405":len(pop)==405,
         "labels_73":int(pop.has_keyhole.sum())==73,
-        "ids_unique":pop.experiment_name.is_unique,
-        "LS_radius_definition":True,
-        "ST_substrate_temperature":True,
-        "width_formula_xmax_minus_xmin":True,
+        "canonical_ids_unique_and_unchanged":pop.experiment_name.is_unique and set(pop.experiment_name)==set(w85.load_population().experiment_name),
+        "LS_matches_canonical_radius_column":np.allclose(pop.LS,pop.LS_m) and "Gaussian laser spot radius r0" in p15_source,
+        "ST_matches_canonical_substrate_temperature":np.allclose(pop.ST,pop.ST_K) and '"ST_definition": "substrate temperature"' in p15_source,
+        "authoritative_deltaX_is_length":bool(axis[axis.quantity.eq("longitudinal_length")].status.eq("PASS").all()),
+        "authoritative_deltaY_is_width":bool(axis[axis.quantity.eq("transverse_width")].status.eq("PASS").all()),
+        "actual_transverse_width_numerically_verified":bool(axis[axis.quantity.eq("transverse_width")].numeric_mapping_verified.all()),
+        "actual_longitudinal_length_numerically_verified":bool(axis[axis.quantity.eq("longitudinal_length")].numeric_mapping_verified.all()),
         "cleaned_timestamps_positive":int(audit.nonpositive_dt_count_raw.sum())==0,
         "no_cooling_in_primary":int(audit.cooling_rows_in_primary.sum())==0,
-        "derivative_unit_um_per_ms":True,
+        "derivative_unit_um_per_ms":np.all(np.isfinite(profiles.transverse_dWdt_raw_um_per_ms)) and "(t - t[0]) * 1e3" in source and "* 1e6" in source,
         "tau_zero_one":profiles.groupby("experiment_name").tau.agg(["min","max"]).pipe(lambda x: np.allclose(x["min"],0) and np.allclose(x["max"],1)),
         "synthetic_derivative":synthetic_derivative_error()<1e-8,
         "prefix_no_future":bool(np.all(prefix.latest_source_tau<=prefix.prefix_tau+1e-12)),
         "h_exact_formula":np.allclose(features.log_h, np.log(features.P/np.sqrt(features.VX*features.LS**3))),
-        "pca_label_free":True,
+        "train_only_scaling_executable":np.allclose(demo.named_steps["scale"].mean_,[2.0]),
+        "test_labels_absent_from_features":"truth" not in model_feature_names and "has_keyhole" not in model_feature_names,
+        "B1_evaluation_only":"B1" not in model_feature_names,
+        "q20_q30_absent_from_features":not ({"q20","q30","is_q20","is_q30"}&model_feature_names),
+        "pca_label_free":set(pca_loadings.feature)==set(TEMPORAL_FEATURES) and "has_keyhole" not in set(pca_loadings.feature),
+        "robust_derivative_fixed_not_label_selected":"half_window: int = 2" in source and "has_keyhole" not in source[source.index("def local_linear_grid_derivative"):source.index("def synthetic_derivative_error")],
+        "onset_exact_valid_frames_only":bool(pd.read_csv(OUTPUT/"keyhole_onset_audit.csv").query("onset_available == True").has_keyhole.eq(1).all()),
+        "no_warning_model_or_post_onset_features":not bool(pd.read_csv(OUTPUT/"keyhole_lead_time_results.csv").warning_threshold_fitted.any()),
+        "notebook_stores_executed_outputs":len(notebook_outputs)>=10,
         "figures_eight":len(figures)==8,
-        "figure_hashes":all(sha256_file(p) for p in figures),
+        "figure_hashes_match_manifest":all(sha256_file(FIGURES/row.figure)==row.sha256 for row in pd.read_csv(OUTPUT/"figure_manifest.csv").itertuples()),
         "usable_count_reconciles":int(merged.usable_width_timeseries.sum())==len(features),
-        "train_only_scaling_by_pipeline_construction":True,
-        "B1_evaluation_only_by_interface":True,
-        "test_labels_not_training_inputs":True,
-        "future_labels_not_features":True,
-        "no_warning_model_uses_post_onset_width":True,
+        "primary_model_excludes_raw_derivative_features":not bool(set(RAW_DERIVATIVE_FEATURES)&set(TEMPORAL_FEATURES)),
+        "longitudinal_diagnostic_is_separate":(OUTPUT/"longitudinal_length_diagnostic"/"published_delta_x_summary.csv").is_file(),
+        "report_numbers_consistent":all(token in (OUTPUT/filename).read_text(encoding="utf-8") for token in [f"{len(features)}/405",f"{int(features.has_keyhole.sum())}"] for filename in ["FINAL_PHASE2_REPORT.md","SUPERVISOR_PHASE2_ONE_PAGE.md","claim_ledger.md"]),
         "historical_phase1_outputs_unchanged": not bool(subprocess.run(["git","diff","--name-only",STARTING_SHA,"--","outputs/week8_5_frozen_confirmation","outputs/week9_phase1_close_week8","outputs/week9_phase1_5_h_physics_confirmation","outputs/week9_phase1_7_physics_ridge_residual_gp","outputs/week9_phase1_8_model_path_decomposition"],cwd=ROOT,text=True,capture_output=True,check=True).stdout.strip()),
     }
     require(all(bool(v) for v in checks.values()), f"validation failed: {[k for k,v in checks.items() if not v]}")
@@ -908,25 +1128,28 @@ def validate(pop: pd.DataFrame, merged: pd.DataFrame, audit: pd.DataFrame, profi
 
 def run() -> None:
     t0=time.time(); OUTPUT.mkdir(parents=True,exist_ok=True); FIGURES.mkdir(parents=True,exist_ok=True)
-    pop=load_population(); merged,audit,profiles,features=audit_and_extract(); prefix=prefix_feature_table(profiles,features)
-    effects=feature_effects(features); pred,ppred=evaluate_models(pop,features,prefix)
+    pop=load_population(); axis_semantics_audit(pop)
+    merged,audit,profiles,features=audit_and_extract(); prefix=prefix_feature_table(profiles,features)
+    effects=feature_effects(features); robustness=derivative_robustness_gate(effects); pred,ppred=evaluate_models(pop,features,prefix)
     rep,summary,contrasts=summarize_oof(pred); prep,psummary,pcontrasts=summarize_oof(ppred,prefix=True)
     write_csv(OUTPUT/"model_repeat_level_metrics.csv",rep); write_csv(OUTPUT/"model_oof_summary.csv",summary); write_csv(OUTPUT/"model_paired_contrasts.csv",contrasts)
     write_csv(OUTPUT/"prefix_repeat_level_metrics.csv",prep); write_csv(OUTPUT/"prefix_model_summary.csv",psummary); write_csv(OUTPUT/"prefix_model_contrasts.csv",pcontrasts)
     class_profile_summary(profiles)
     onset_alignment(profiles,audit)
     pscores,ploadings,shape=pca_analysis(features,profiles); residual=residual_cases(pred,features)
+    axis_comparison=longitudinal_comparison(effects,summary)
     figures=make_figures(features,profiles,audit,effects,pscores,shape,summary,psummary,ppred)
-    render_reports(merged,audit,effects,summary,contrasts,psummary,pcontrasts,residual,figures)
+    render_reports(merged,audit,effects,summary,contrasts,psummary,pcontrasts,residual,figures,robustness,axis_comparison)
     NOTEBOOK.parent.mkdir(parents=True,exist_ok=True); NOTEBOOK.write_text(json.dumps(notebook_payload(),indent=1)+"\n",encoding="utf-8")
+    execute_and_save_notebook()
     validation=validate(pop,merged,audit,profiles,features,prefix,figures)
     source_hashes={str(p.relative_to(ROOT)):sha256_file(p) for p in [SOURCE_PLAN, ROOT/"src"/"week8_5_frozen_sample_efficiency_confirmation.py",ROOT/"src"/"week7_phase2_sph_v2_physical_target_extraction.py"]}
     run_manifest={"study":"Week 9 Phase 2 — Temporal melt-pool width dynamics and early Keyhole signal","starting_sha":STARTING_SHA,"branch":BRANCH,
-        "population":405,"keyholes":73,"usable":len(features),"usable_keyholes":int(features.has_keyhole.sum()),"width_definition":"Phase 2 protocol: (x_max-x_min)*1e6 micrometres",
-        "historical_nomenclature_note":"Week 6/7 extractor called delta-X length and delta-Y width; this study follows the explicit Phase 2 delta-X definition",
+        "population":405,"keyholes":73,"usable":len(features),"usable_keyholes":int(features.has_keyhole.sum()),"width_definition":"canonical transverse width: (y_max-y_min)*1e6 micrometres",
+        "longitudinal_definition":"secondary diagnostic: (x_max-x_min)*1e6 micrometres",
         "physical_time_source":"time.dat seconds","derivative_display_unit":"um/ms","primary_derivative":"centered finite difference after timestamp-only regularity gate",
         "robustness_derivative":"fixed 5-point local-linear slope on 201-point tau grid","active_interval":"first valid melt through established 90% laser-domain cutoff; no cooling",
-        "prefixes":PREFIXES,"bootstrap_draws":BOOTSTRAP_DRAWS,"source_hashes":source_hashes,"validation":validation,"elapsed_seconds":time.time()-t0}
+        "prefixes":PREFIXES,"bootstrap_draws":BOOTSTRAP_DRAWS,"source_hashes":source_hashes,"validation":validation,"notebook_sha256":sha256_file(NOTEBOOK),"elapsed_seconds":time.time()-t0}
     run_manifest["artifact_hashes"]={str(path.relative_to(OUTPUT)).replace("\\","/"):sha256_file(path) for path in sorted(OUTPUT.rglob("*")) if path.is_file() and path.name != "run_manifest.json"}
     write_json(OUTPUT/"run_manifest.json",run_manifest)
     print(json.dumps({"status":"PASS","usable":len(features),"elapsed_seconds":time.time()-t0},indent=2))

@@ -1,0 +1,6 @@
+derivative_claim,raw_feature,robust_feature,raw_cliffs_delta,robust_cliffs_delta,direction_consistent,robust_effect_fraction_of_raw,robust_median_difference_ci_low,robust_median_difference_ci_high,status
+maximum positive derivative,max_positive_dWdt_um_per_ms,robust_max_positive_dWdt_um_per_ms,-0.05841836734693884,-0.22959183673469385,True,3.9301310043668076,-982.532334976773,-54.48660226475239,ROBUST
+median positive derivative,median_positive_dWdt_um_per_ms,robust_median_positive_dWdt_um_per_ms,-0.09020408163265303,-0.2656122448979592,True,2.9445701357466074,-11.363805557454956,-4.035355872892747,ROBUST
+early 20% derivative,early_dWdt_20_um_per_ms,robust_early_dWdt_20_um_per_ms,0.5506122448979591,0.10489795918367345,True,0.19051148999258707,-34.773882362155845,61.32199209127941,QUALIFIED
+early 40% derivative,early_dWdt_40_um_per_ms,robust_early_dWdt_40_um_per_ms,0.49576530612244896,-0.015714285714285736,False,0.03169702583101785,-12.139787649701374,27.74569797668979,UNSTABLE
+time of derivative peak,time_of_max_dWdt_tau,robust_time_of_max_dWdt_tau,-0.09994897959183674,-0.015459183673469393,True,0.15467075038284844,0.0,0.0,QUALIFIED
