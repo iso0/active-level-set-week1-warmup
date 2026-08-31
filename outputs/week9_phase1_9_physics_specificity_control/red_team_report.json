@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "claim_language_safe": true,
+    "fixed_A0_only": true,
+    "generic_has_no_h_input": true,
+    "no_theoretical_exponents_in_generic_matrix": true,
+    "predeclared_decision_applied": true,
+    "residual_settings_match": true
+  },
+  "status": "PASS"
+}

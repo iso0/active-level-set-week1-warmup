@@ -49,5 +49,9 @@ outputs/week9_phase1_8_model_path_decomposition/checkpoints/
 outputs/week9_phase1_8_model_path_decomposition/sensitivity_checkpoints/
 outputs/week9_phase1_8_model_path_decomposition/smoke/
 
+# Week 9 Phase 1.9 restart caches and engineering smoke outputs.
+outputs/week9_phase1_9_physics_specificity_control/checkpoints/
+outputs/week9_phase1_9_physics_specificity_control/smoke/
+
 # Local raw research data
 /data/raw/

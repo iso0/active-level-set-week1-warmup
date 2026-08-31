@@ -1,0 +1,244 @@
+{
+  "bootstrap_draws": 10000,
+  "branch": "codex/week9-phase1-9-physics-specificity-control",
+  "budgets": [
+    16,
+    80
+  ],
+  "files": [
+    {
+      "bytes": 492196,
+      "path": "notebooks/week_09/06_week9_phase1_9_physics_specificity_control.ipynb",
+      "sha256": "e80d0ba213251589ab92d66312d678c061ee3d7149b4a316200418f56861a1ca"
+    },
+    {
+      "bytes": 663,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/baseline_gate.json",
+      "sha256": "9bd640d8e0d41e351f981c19633cb2351aabab6b2fd3af91288fd9e8dac25d5a"
+    },
+    {
+      "bytes": 9914,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/budget_checkpoint_contrasts.csv",
+      "sha256": "33e262993e8aeed551b0fd48ddf9c0ec6ac04106fd2edd33b24519ff4e6cacc7"
+    },
+    {
+      "bytes": 15363,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/budget_checkpoint_summary.csv",
+      "sha256": "03c7fa8b408d169b6fec8cb7f89233500f9ac8f1daea168c55617beb528a3572"
+    },
+    {
+      "bytes": 641,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/claim_ledger.md",
+      "sha256": "afdad367dda083d4dd163ce7e57b6c4da640fbfb9685272993a01933cc46bb1d"
+    },
+    {
+      "bytes": 340,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/figure_manifest.csv",
+      "sha256": "e0359e858906b3ddec5d52a04594dbb141c28bac163246cfff660610fddd74b1"
+    },
+    {
+      "bytes": 192189,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/figures/01_q20_learning_curves_same_A0.png",
+      "sha256": "7c993626923aa57fddea50bab0effd796e2dfbdae344f2b2c397879d8106abde"
+    },
+    {
+      "bytes": 65153,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/figures/02_physics_minus_generic_repeat_contrast.png",
+      "sha256": "33c6fdbd5b587e23a75bfec6b12c5e033e1409017b16f98eafa15ad142e1ba1a"
+    },
+    {
+      "bytes": 79390,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/figures/03_budget16_40_80_q20.png",
+      "sha256": "77c33870d954b8a71ba3872395ade50c41bbd6dcf8225dc916ba415c4004c9e6"
+    },
+    {
+      "bytes": 1745,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/FINAL_PHASE1_9_REPORT.md",
+      "sha256": "eff6aa3fa4c86ce80bb59df62a7e672461db25277a90325052255538714eee32"
+    },
+    {
+      "bytes": 934,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/generic_execution_report.json",
+      "sha256": "fa9e3c7a3269823bb46fbfc8b8942ad0aecccbf76472459dd1ea5b9e66ea11d2"
+    },
+    {
+      "bytes": 1616,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/hyperparameter_diagnostics.csv",
+      "sha256": "aa1d6fc753399b6d2d74d27784bfc8ec796d09a176b700ca676bfa2a90b1a002"
+    },
+    {
+      "bytes": 17163,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/learning_curve_summary.csv",
+      "sha256": "1762fbf4e466c354160972f8a62c9a4372b4f13b223fa127642af83e55ba28a4"
+    },
+    {
+      "bytes": 642,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/primary_AULC_summary.csv",
+      "sha256": "25b4479aaadf8bbb63cbe1f46d32c520d930c9ae1f69faeb155353fdf57792b4"
+    },
+    {
+      "bytes": 283,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/red_team_report.json",
+      "sha256": "bd1b4a5e8037de1c9a78941a869b455b021ae06c040b3359faafd8c6742f82fd"
+    },
+    {
+      "bytes": 2695,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/repeat_level_AULC_contrasts.csv",
+      "sha256": "b592f095db1e3620ce8f319085fa94830b29733ebc69247608105121305b93fa"
+    },
+    {
+      "bytes": 1787,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/static_model_summary.csv",
+      "sha256": "bfc0c3ce7e45f62b7f501b5dd1ee0feec8449abd6070cf103259fde41d08bcfc"
+    },
+    {
+      "bytes": 1419,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/SUPERVISOR_PHASE1_9_ONE_PAGE.md",
+      "sha256": "c769b8a98313d14244d56acfb76165c302e3f5ccfa7923baf48fbf7b305fb0ef"
+    },
+    {
+      "bytes": 592638,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/tables/generic_fixed_path_metrics.csv.gz",
+      "sha256": "d588ccff7c89fc681191f7c645d0f5cff376547f5d3c36b10d6aa50533b5c3d5"
+    },
+    {
+      "bytes": 163025,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/tables/generic_static_fold_metrics.csv",
+      "sha256": "b4f08e55f3f07aacaf8454b7cdd74164de7a7a032a636cf9ec3d1ed49546babc"
+    },
+    {
+      "bytes": 110697,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/tables/generic_static_predictions.csv.gz",
+      "sha256": "4423cf9acb91a25c9a349a890f105437617ca77977caddabf2270dc16273301e"
+    },
+    {
+      "bytes": 4246,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/tables/outer_run_AULC.csv.gz",
+      "sha256": "90242cf0049b34199e4b1158729ea9a213ff8f14e3a6c11d55f0096058f04bfa"
+    },
+    {
+      "bytes": 1064431,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/tables/three_model_active_metrics.csv.gz",
+      "sha256": "9a24ea01ca6bbda37b0cbd79aae35ea23d1273f3972f56af933c2d9a243587f2"
+    },
+    {
+      "bytes": 1833,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/validation_report.json",
+      "sha256": "be73e3832fb3290b9f9b7c1e5fe3c4eb5aacd1836e604004ee94309150f8a573"
+    },
+    {
+      "bytes": 775,
+      "path": "outputs/week9_phase1_9_physics_specificity_control/validation_report.md",
+      "sha256": "24e660a5faa13a00acd9f1141d603d4d137a6455d2bfdd1d07cb9e31f06a3cdb"
+    },
+    {
+      "bytes": 54027,
+      "path": "src/week9_phase1_9_physics_specificity_control.py",
+      "sha256": "6612356bca68758c5757149ab8a622a2589226f1aa29101114bf2652ec9f4c9c"
+    },
+    {
+      "bytes": 6940,
+      "path": "tests/test_week9_phase1_9_physics_specificity_control.py",
+      "sha256": "1bea2b9b800d4fb2fdaeedac3c592cceb8a0edbebe0f838d722fd7ebae640950"
+    }
+  ],
+  "new_active_arm": "G10 generic log-linear trend plus unchanged Phase 1.7 residual GP on frozen A0",
+  "new_query_paths": 0,
+  "outer_runs": 100,
+  "starting_sha": "f74c6252bbb48d503f969ef5300f20894079301b",
+  "study": "Week 9 Phase 1.9 \u2014 Physics-specificity control for the physics-ridge GP",
+  "validation": {
+    "check_count": 22,
+    "checks": [
+      {
+        "name": "population_405",
+        "status": "PASS"
+      },
+      {
+        "name": "keyholes_73",
+        "status": "PASS"
+      },
+      {
+        "name": "outer_runs_100",
+        "status": "PASS"
+      },
+      {
+        "name": "initial_designs_100",
+        "status": "PASS"
+      },
+      {
+        "name": "exact_A0_paths_reused",
+        "status": "PASS"
+      },
+      {
+        "name": "no_new_query_path",
+        "status": "PASS"
+      },
+      {
+        "name": "no_test_query",
+        "status": "PASS"
+      },
+      {
+        "name": "current_prefix_only",
+        "status": "PASS"
+      },
+      {
+        "name": "B1_q20_q30_evaluation_only",
+        "status": "PASS"
+      },
+      {
+        "name": "generic_never_receives_h",
+        "status": "PASS"
+      },
+      {
+        "name": "no_fixed_theoretical_exponents",
+        "status": "PASS"
+      },
+      {
+        "name": "generic_features_exact",
+        "status": "PASS"
+      },
+      {
+        "name": "residual_kernel_original_4D_only",
+        "status": "PASS"
+      },
+      {
+        "name": "residual_hyperparameters_match_phase17",
+        "status": "PASS"
+      },
+      {
+        "name": "Y00_reproduced",
+        "status": "PASS"
+      },
+      {
+        "name": "Y10_reproduced",
+        "status": "PASS"
+      },
+      {
+        "name": "grouped_bootstrap_20_repeats",
+        "status": "PASS"
+      },
+      {
+        "name": "notebook_executes_and_stores_outputs",
+        "status": "PASS"
+      },
+      {
+        "name": "three_figure_hashes",
+        "status": "PASS"
+      },
+      {
+        "name": "historical_phase1_outputs_unchanged",
+        "status": "PASS"
+      },
+      {
+        "name": "hyperparameter_matrix_complete",
+        "status": "PASS"
+      },
+      {
+        "name": "red_team_pass",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS"
+  }
+}

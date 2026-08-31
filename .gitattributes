@@ -1,0 +1,6 @@
+src/week9_phase1_9_physics_specificity_control.py text eol=lf
+tests/test_week9_phase1_9_physics_specificity_control.py text eol=lf
+notebooks/week_09/06_week9_phase1_9_physics_specificity_control.ipynb text eol=lf
+outputs/week9_phase1_9_physics_specificity_control/** text eol=lf
+outputs/week9_phase1_9_physics_specificity_control/figures/*.png -text
+outputs/week9_phase1_9_physics_specificity_control/tables/*.gz -text

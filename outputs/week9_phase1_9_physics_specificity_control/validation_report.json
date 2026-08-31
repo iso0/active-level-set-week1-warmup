@@ -1,0 +1,94 @@
+{
+  "check_count": 22,
+  "checks": [
+    {
+      "name": "population_405",
+      "status": "PASS"
+    },
+    {
+      "name": "keyholes_73",
+      "status": "PASS"
+    },
+    {
+      "name": "outer_runs_100",
+      "status": "PASS"
+    },
+    {
+      "name": "initial_designs_100",
+      "status": "PASS"
+    },
+    {
+      "name": "exact_A0_paths_reused",
+      "status": "PASS"
+    },
+    {
+      "name": "no_new_query_path",
+      "status": "PASS"
+    },
+    {
+      "name": "no_test_query",
+      "status": "PASS"
+    },
+    {
+      "name": "current_prefix_only",
+      "status": "PASS"
+    },
+    {
+      "name": "B1_q20_q30_evaluation_only",
+      "status": "PASS"
+    },
+    {
+      "name": "generic_never_receives_h",
+      "status": "PASS"
+    },
+    {
+      "name": "no_fixed_theoretical_exponents",
+      "status": "PASS"
+    },
+    {
+      "name": "generic_features_exact",
+      "status": "PASS"
+    },
+    {
+      "name": "residual_kernel_original_4D_only",
+      "status": "PASS"
+    },
+    {
+      "name": "residual_hyperparameters_match_phase17",
+      "status": "PASS"
+    },
+    {
+      "name": "Y00_reproduced",
+      "status": "PASS"
+    },
+    {
+      "name": "Y10_reproduced",
+      "status": "PASS"
+    },
+    {
+      "name": "grouped_bootstrap_20_repeats",
+      "status": "PASS"
+    },
+    {
+      "name": "notebook_executes_and_stores_outputs",
+      "status": "PASS"
+    },
+    {
+      "name": "three_figure_hashes",
+      "status": "PASS"
+    },
+    {
+      "name": "historical_phase1_outputs_unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "hyperparameter_matrix_complete",
+      "status": "PASS"
+    },
+    {
+      "name": "red_team_pass",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

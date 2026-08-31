@@ -1,0 +1,18 @@
+{
+  "Y00_q20_AULC_16_80": 0.8135202205882353,
+  "Y10_q20_AULC_16_80": 0.8299724264705881,
+  "budgets_16_80_per_run": 65,
+  "duplicate_query_violations": 0,
+  "initial_design_exact_matches": 100,
+  "keyholes": 73,
+  "new_query_paths_generated": 0,
+  "outer_runs": 100,
+  "outside_training_pool_violations": 0,
+  "population": 405,
+  "queries_per_path": 80,
+  "source": "outputs/week9_phase1_8_model_path_decomposition/tables/query_paths.csv.gz",
+  "source_sha256": "bb685076d755066f8924446c9fd2884f9f76ca4da975c316cada08a2baf9f9d6",
+  "starting_sha": "f74c6252bbb48d503f969ef5300f20894079301b",
+  "status": "PASS",
+  "test_query_violations": 0
+}
