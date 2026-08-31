@@ -1,0 +1,32 @@
+{
+  "check_count": 23,
+  "checks": {
+    "B1_evaluation_only_by_interface": true,
+    "LS_radius_definition": true,
+    "ST_substrate_temperature": true,
+    "cleaned_timestamps_positive": true,
+    "derivative_unit_um_per_ms": true,
+    "figure_hashes": true,
+    "figures_eight": true,
+    "future_labels_not_features": true,
+    "h_exact_formula": true,
+    "historical_phase1_outputs_unchanged": true,
+    "ids_unique": true,
+    "labels_73": true,
+    "no_cooling_in_primary": true,
+    "no_warning_model_uses_post_onset_width": true,
+    "pca_label_free": true,
+    "population_405": true,
+    "prefix_no_future": true,
+    "synthetic_derivative": true,
+    "tau_zero_one": true,
+    "test_labels_not_training_inputs": true,
+    "train_only_scaling_by_pipeline_construction": true,
+    "usable_count_reconciles": true,
+    "width_formula_xmax_minus_xmin": true
+  },
+  "starting_sha": "f74c6252bbb48d503f969ef5300f20894079301b",
+  "status": "PASS",
+  "usable_keyholes": 70,
+  "usable_temporal_simulations": 350
+}
