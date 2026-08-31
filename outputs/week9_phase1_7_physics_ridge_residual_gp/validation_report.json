@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "check": "focused tests",
+      "evidence": ".......                                                                  [100%]\n7 passed in 14.90s",
+      "passed": true
+    },
+    {
+      "check": "notebook execution",
+      "evidence": "code cells=7; errors=0",
+      "passed": true
+    },
+    {
+      "check": "figure hashes",
+      "evidence": "figures=4; hashes recomputed",
+      "passed": true
+    },
+    {
+      "check": "baseline gate",
+      "evidence": "100 splits and initial designs exact",
+      "passed": true
+    },
+    {
+      "check": "information flow",
+      "evidence": "{\"B1_q20_q30_used\": false, \"external_h_threshold_used\": false, \"hidden_pool_labels_used\": false, \"test_rows_used\": false}",
+      "passed": true
+    },
+    {
+      "check": "historical artifacts unchanged",
+      "evidence": "no tracked diff",
+      "passed": true
+    },
+    {
+      "check": "primary decision rule",
+      "evidence": "PASS",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}

@@ -40,5 +40,9 @@ outputs/week9_phase1_5_h_physics_confirmation/checkpoints/
 outputs/week9_phase1_5_h_physics_confirmation/smoke/
 /tmp/
 
+# Week 9 Phase 1.7 restart caches and engineering smoke outputs.
+outputs/week9_phase1_7_physics_ridge_residual_gp/checkpoints/
+outputs/week9_phase1_7_physics_ridge_residual_gp/smoke/
+
 # Local raw research data
 /data/raw/

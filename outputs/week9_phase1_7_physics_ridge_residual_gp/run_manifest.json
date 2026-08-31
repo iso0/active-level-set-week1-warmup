@@ -1,0 +1,206 @@
+{
+  "files": [
+    {
+      "bytes": 921,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/active_aggregation_report.json",
+      "sha256": "737866c67e79344ad78bacc676900b5cf1a250fbd209546000eebb9b5ef4fac7"
+    },
+    {
+      "bytes": 340,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/active_execution_H80.json",
+      "sha256": "1c5ec7c678e09f136520ab7b2a27c8b5a604729bb33c30dc10b9078d4585b497"
+    },
+    {
+      "bytes": 383,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/baseline_gate.json",
+      "sha256": "0e19d0c23220b4ecab1f92d32f72b6461b4d6df4a79fa419c253d20f8c69a85d"
+    },
+    {
+      "bytes": 1420,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/claim_ledger.md",
+      "sha256": "feecbb91ba19cab5a074d7337ca3ed1b3df73a6d148b86cb4e73a0afa90aedb9"
+    },
+    {
+      "bytes": 414,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/figure_manifest.csv",
+      "sha256": "28b1dd4695475914576a5af3d7378ca1435b5c42756903916689f498bd5e41fd"
+    },
+    {
+      "bytes": 184889,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/figures/01_model_mechanism.png",
+      "sha256": "cb321a99b3ae7b3b944fa20ebd07a50c4874af792989285d1b4259f9b1fa22ed"
+    },
+    {
+      "bytes": 161919,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/figures/02_q20_learning_curves.png",
+      "sha256": "8ce9b7f3488dcea69e06238e24cf6c7d7c52233b9dec1ba0609598ccbdefc640"
+    },
+    {
+      "bytes": 75177,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/figures/03_primary_delta_AULC.png",
+      "sha256": "561aa34877a558fb802b4a544c71256447e9a19d73f3b34f309e3a5b89f2504c"
+    },
+    {
+      "bytes": 231833,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/figures/04_pca_residual_diagnostic.png",
+      "sha256": "5be94a6f164fdfc298e626e9ef145ca3693ea2cdf9f3b1051e7d62b845c7dccb"
+    },
+    {
+      "bytes": 5895,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/FINAL_PHASE1_7_REPORT.md",
+      "sha256": "798c818a9e80d2efb8d845c35c285be8098d0bf7be0b13d8fb506cfa3eba3a69"
+    },
+    {
+      "bytes": 2980,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "e161e74595c2f05c0ae3b04d72c0781068b37beb9b29ed2d011d78f666514bed"
+    },
+    {
+      "bytes": 382,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/primary_decision.json",
+      "sha256": "51a0e3f250cc7c3206febc011f58ee0f0aaa551773540f37aa6c9474482991bd"
+    },
+    {
+      "bytes": 346,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/static_execution_report.json",
+      "sha256": "7c043dadc1474d04f3a9ba87b9894f221fbb0c56f1f8414e2d9c26b9bfe62775"
+    },
+    {
+      "bytes": 2165,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/SUPERVISOR_PHASE1_7_ONE_PAGE.md",
+      "sha256": "85d182330fd92dfcd5b0ef2f20351753971e8d199daaa048909c6675c1b3e321"
+    },
+    {
+      "bytes": 1587565,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/active_case_diagnostics_budget40_80.csv.gz",
+      "sha256": "e45c1b4ad3f1e9bb5ea9dab15c2b900cc4ffad02a2af135a8537397e05da0bc5"
+    },
+    {
+      "bytes": 136110,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/active_information_flow.csv.gz",
+      "sha256": "7a1966488cb2bda47e8bcfc583ae7cab90ba2b6567f0e30794dac81413b0ff9a"
+    },
+    {
+      "bytes": 17653,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/active_learning_curve_summary.csv",
+      "sha256": "e04de6910a7f1513ed19a7837077d9752489f981509e2209fad65c224b204f71"
+    },
+    {
+      "bytes": 7544,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/active_path_metrics.csv",
+      "sha256": "b1777b6228fc946f1dea23c3138609cd67b9a62fef05ad0d5df6444e96b66acc"
+    },
+    {
+      "bytes": 175363,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/active_per_budget_metrics.csv.gz",
+      "sha256": "31d556fe0921d34a6dc6e305848c47333d8ba9da425d5a1d06984303040fa338"
+    },
+    {
+      "bytes": 648,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/historical_context_AULC.csv",
+      "sha256": "522f260ac2991cb3cb0fed3e664b1de720750b7eb9c5e329492c81d96b4fa746"
+    },
+    {
+      "bytes": 1427547,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/model_mechanism_diagnostics.csv.gz",
+      "sha256": "4d7286f92730ab725e29005faae9f551d007401b52a020444946a333cae3babc"
+    },
+    {
+      "bytes": 609,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/pca_metadata.json",
+      "sha256": "3292931b15db2c5dbb6d75ab54a57af87ac32c13e644cb66382a95b11e720eb1"
+    },
+    {
+      "bytes": 115435,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/pca_residual_diagnostic.csv",
+      "sha256": "11872438e378643e9fa527e6a11f477b70ca61c406040a3202acb1a3c07a5724"
+    },
+    {
+      "bytes": 480,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/primary_AULC_summary.csv",
+      "sha256": "3bb85259f94e453acf583b9e0233ed4d7be58b8db922342aa3776e82d19e8344"
+    },
+    {
+      "bytes": 1691,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/repeat_level_delta_AULC.csv",
+      "sha256": "9a5ada80097df358e18ba8bd510738ce62ae90d78990e498c56b00888dfefa4b"
+    },
+    {
+      "bytes": 40336,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/representative_residual_cases.csv",
+      "sha256": "691f3e549fe073dd50eacd8675ee8955da072ec518e5b9d88f971e556be7be28"
+    },
+    {
+      "bytes": 142988,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/static_fold_metrics.csv",
+      "sha256": "671d8f1ee5c7b06a996aba103b12b32340417ba57b24047d484882c67b77bd43"
+    },
+    {
+      "bytes": 3125,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/static_model_summary.csv",
+      "sha256": "78d1a1c342c81e68a39225a74bcfec9a1e848b99c17632a45da13af5e9cc446d"
+    },
+    {
+      "bytes": 1043991,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/static_oof_predictions.csv.gz",
+      "sha256": "84a9295438c20c7761b64ea3f82e4c4359e6c7e1224b1aeda0cea56eb3f0bd1e"
+    },
+    {
+      "bytes": 33665,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/static_repeat_metrics.csv",
+      "sha256": "d704ffab031ccc504b322f339fe275066870e3d875e7667b21a1784488105a43"
+    },
+    {
+      "bytes": 2664,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/terminal_budget_contrasts.csv",
+      "sha256": "19d65e4c92b4059492054cfd0fd65226b3c0095bafd127b3728cedc2e4360101"
+    },
+    {
+      "bytes": 136622,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/terminal_budget_metrics_per_run.csv",
+      "sha256": "d909dc930135cce4b89e96ce95b4f70dc81cfa8fac7d2e553f325b5a641fe6d3"
+    },
+    {
+      "bytes": 1478,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/tables/terminal_budget_summary.csv",
+      "sha256": "a1ec6c2fa9e783264d309bc8340098fc909498580579c15b2428405047efb546"
+    },
+    {
+      "bytes": 1063,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/validation_report.json",
+      "sha256": "be7552269d21a3d7a6139ddf16189a6266978e80638409f272493865476911c4"
+    },
+    {
+      "bytes": 965,
+      "path": "outputs/week9_phase1_7_physics_ridge_residual_gp/validation_report.md",
+      "sha256": "fa3a44471aae16e94c9c0ae9186b4f10179e3888a415978b49e8391813b32746"
+    },
+    {
+      "bytes": 27849,
+      "path": "notebooks/week_09/03_week9_phase1_7_physics_ridge_residual_gp.ipynb",
+      "sha256": "3b222982c976848108b911b31f58fe1d7b9236f8f0177b94fee49c8dcb88a289"
+    },
+    {
+      "bytes": 58406,
+      "path": "src/week9_phase1_7_physics_ridge_residual_gp.py",
+      "sha256": "348f7066944292d09558425a2b4a72f4b54cb3f306bfce9dd43e5df4a6fe3abb"
+    },
+    {
+      "bytes": 25930,
+      "path": "scripts/build_week9_phase1_7_artifacts.py",
+      "sha256": "b905d407e8adeaa902a8cc0c382a3a8a99b82f3ce0cdc4d79a4dea2a07bee7cc"
+    },
+    {
+      "bytes": 6433,
+      "path": "tests/test_week9_phase1_7_physics_ridge_residual_gp.py",
+      "sha256": "e93c6bbd4e6c7b3e784f53c1abf95819f45ae541f48213eb1483854681d561df"
+    }
+  ],
+  "final_sha_note": "The exact final commit SHA is reported after publication; embedding a commit's own SHA is self-referential.",
+  "head_before_publication_commit": "b36a815e12dfa872c20a050228e0545f18c443ef",
+  "historical_outputs_modified": false,
+  "new_expensive_runs": "one additive static 100-fold diagnostic and one additive H80 100-run active arm",
+  "starting_sha": "b36a815e12dfa872c20a050228e0545f18c443ef",
+  "study": "Week 9 Phase 1.7 physics-ridge residual GP",
+  "study_branch": "codex/week9-phase1-7-physics-ridge-residual-gp"
+}

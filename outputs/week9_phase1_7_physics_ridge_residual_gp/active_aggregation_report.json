@@ -1,0 +1,33 @@
+{
+  "decision": "PASS",
+  "inference_unit": "20 repeat blocks; all five folds retained",
+  "information_flow": {
+    "B1_q20_q30_used": false,
+    "external_h_threshold_used": false,
+    "hidden_pool_labels_used": false,
+    "test_rows_used": false
+  },
+  "new_runs": [
+    "physics_ridge_residual_gp_margin H80"
+  ],
+  "outer_runs": 100,
+  "primary": {
+    "baseline_mean": 0.8135202205882354,
+    "bootstrap_method": "20 repeat blocks resampled; all five folds retained",
+    "ci_lower": 0.014071346507352938,
+    "ci_upper": 0.026263901654411767,
+    "decision": "PASS",
+    "delta": 0.020018382352941174,
+    "endpoint": "B1_q20_AULC_16_80",
+    "new_mean": 0.8335386029411765,
+    "positive_repeat_blocks": 19,
+    "repeat_blocks": 20
+  },
+  "reused_comparators": [
+    "frozen_4d_margin",
+    "matched_random",
+    "Phase1.5 h-only",
+    "Phase1.5 5D GPC"
+  ],
+  "status": "PASS"
+}

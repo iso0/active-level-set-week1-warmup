@@ -1,0 +1,15 @@
+{
+  "elapsed_seconds": 102.04055333137512,
+  "historical_comparators_reused": [
+    "frozen_4d_margin",
+    "matched_random",
+    "phase1_5_h_only",
+    "phase1_5_5d_gpc"
+  ],
+  "horizon": 80,
+  "new_arm": "physics_ridge_residual_gp_margin",
+  "outer_runs": 100,
+  "smoke": false,
+  "status": "PASS",
+  "trajectories": 100
+}
