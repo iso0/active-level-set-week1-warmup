@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "check": "focused tests",
+      "evidence": "......                                                                   [100%]\n6 passed in 14.72s",
+      "passed": true
+    },
+    {
+      "check": "notebook execution",
+      "evidence": "6 code cells; errors=0",
+      "passed": true
+    },
+    {
+      "check": "figure count and hashes",
+      "evidence": "figures=8; hashes recomputed",
+      "passed": true
+    },
+    {
+      "check": "active information flow",
+      "evidence": "{\"B1_B2_B3_used\": false, \"full_pool_label_threshold_used\": false, \"hidden_pool_labels_used\": false, \"test_rows_used\": false}",
+      "passed": true
+    },
+    {
+      "check": "historical tracked outputs unchanged",
+      "evidence": "no tracked diff",
+      "passed": true
+    },
+    {
+      "check": "baseline reproduction",
+      "evidence": "numerical tolerance gate",
+      "passed": true
+    },
+    {
+      "check": "GPC fallbacks and bound diagnostics",
+      "evidence": "fallbacks=0; bound hits disclosed in gpc_kernel_bound_diagnostics.csv",
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}

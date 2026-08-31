@@ -1,0 +1,65 @@
+{
+  "data_audit": {
+    "B1_definition": "nearest opposite-manual-label distance in globally standardized 4D input space; evaluation only",
+    "LS_definition": "Gaussian laser spot radius r0; stored in metres",
+    "LS_range_um": [
+      40.0293473664,
+      89.7039861056
+    ],
+    "P_range_W": [
+      52.5445860993,
+      449.762375807
+    ],
+    "ST_definition": "substrate temperature",
+    "ST_range_K": [
+      300.0,
+      399.817710522
+    ],
+    "VX_range_m_per_s": [
+      0.201002332148,
+      0.998321353283
+    ],
+    "canonical_source": "outputs\\week7_06_real_data_boundary_active_level_set\\primary_common_population.csv",
+    "canonical_source_sha256": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7",
+    "conduction": 332,
+    "current_sha_before_phase1_5_commit": "bdb6eb3628ae5eafaa0e5bc94d454626a6cf550a",
+    "files_read": [
+      "outputs\\week7_06_real_data_boundary_active_level_set\\primary_common_population.csv",
+      "outputs/week8_5_frozen_confirmation/preregistered_protocol.json",
+      "outputs/week8_5_frozen_confirmation/run_level_metrics.csv",
+      "outputs/week8_5_frozen_confirmation/bootstrap_or_hierarchical_ci.csv",
+      "outputs/week9_phase1_close_week8/learning_curve_summary_16_80.csv"
+    ],
+    "frozen_outer_runs": 100,
+    "frozen_protocol_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+    "ground_truth": "manual experiment-level has_keyhole",
+    "keyhole": 73,
+    "rows": 405,
+    "starting_branch": "codex/week9-phase1-close-week8-sample-efficiency",
+    "starting_sha": "bdb6eb3628ae5eafaa0e5bc94d454626a6cf550a",
+    "status": "PASS",
+    "study_branch": "codex/week9-phase1-5-h-physics-confirmation"
+  },
+  "elapsed_seconds": 120.78054594993591,
+  "h_units": "W*s^0.5/m^2",
+  "log_reference": "ln(h / (1 W*s^0.5/m^2))",
+  "models": [
+    "log_h_logistic",
+    "log_h_st_logistic",
+    "logistic_M1",
+    "logistic_M3",
+    "gpc_1d_h",
+    "gpc_4d",
+    "gpc_5d_h_augmented",
+    "log_linear_energy",
+    "log_irradiance",
+    "log_areal_energy",
+    "log_volumetric_energy",
+    "log_king_style"
+  ],
+  "outer_runs": 100,
+  "prediction_rows": 97200,
+  "st_sensitivity": "log[h/(T_liquidus-ST)] with Gan et al. (2021) Supplementary Table 3 Ti-6Al-4V T_liquidus=1933 K; not a complete dimensionless Keyhole number",
+  "status": "PASS",
+  "workers": 8
+}

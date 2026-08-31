@@ -34,5 +34,11 @@ outputs/week9_phase1_close_week8/dev_horizon/execution_report_first_*.json
 outputs/week9_phase1_close_week8/dev_terminal_pca/
 outputs/week9_phase1_close_week8/dev_terminal_historical/
 
+# Week 9 Phase 1.5 restart caches and temporary literature downloads.
+# The portable compressed H160 checkpoint bundle is committed with the study.
+outputs/week9_phase1_5_h_physics_confirmation/checkpoints/
+outputs/week9_phase1_5_h_physics_confirmation/smoke/
+/tmp/
+
 # Local raw research data
 /data/raw/
