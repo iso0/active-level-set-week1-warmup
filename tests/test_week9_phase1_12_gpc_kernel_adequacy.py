@@ -78,6 +78,8 @@ def test_descriptive_best_and_oracle_claim_discipline() -> None:
     assert "not treated as predeclared winner inference" in report
     assert oracle.diagnostic_status.eq("NON_DEPLOYABLE_REPEATWISE_ORACLE").all()
     assert "equivalent to h" not in report.lower()
+    assert "{future}" not in report
+    assert "Recommendation: **YES**" in report
 
 
 def test_notebook_executed_and_figures_hashed() -> None:

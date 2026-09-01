@@ -1,7 +1,7 @@
 # Phase 1.12 validation
 
 Status: **PASS**
-Checks: **45 / 45 PASS**
+Checks: **46 / 46 PASS**
 
 | Check | Status | Detail |
 |---|---|---|
@@ -50,3 +50,4 @@ Checks: **45 / 45 PASS**
 | fit_diagnostic_count | PASS | 26000 |
 | fallback_disclosed | PASS | yes |
 | decision_declared | PASS | KERNEL_GAP_CLOSED |
+| no_report_template_placeholders | PASS | resolved recommendation |

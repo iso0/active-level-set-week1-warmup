@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "notebooks/week_09/10_week9_phase1_12_gpc_kernel_adequacy.ipynb",
-      "sha256": "c4b4277fbcd0b7cc11a7f8345505c5e82dc1040af508eb27b772f35a1334360d",
+      "sha256": "b6a824f86252f1218ea477585f3947b551f5d8c0cda2a8b33760ac1b9754c215",
       "size_bytes": 615474
     },
     {
@@ -79,8 +79,8 @@
     },
     {
       "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/FINAL_PHASE1_12_REPORT.md",
-      "sha256": "b4dfeae5648cae3f815f12b7f145b5a59e8ae8f2cc40bdac4bc20bf4962c584b",
-      "size_bytes": 1617
+      "sha256": "b99d423e9a88651b02979e20f14b0e29bb4bd8535ef2db5c7de3571704e3436d",
+      "size_bytes": 1612
     },
     {
       "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/FINAL_RED_TEAM_REPORT.md",
@@ -149,23 +149,23 @@
     },
     {
       "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/validation_report.json",
-      "sha256": "79e98943be1c4b25037818f3bae8424d41279fa9142226461871d66956c55399",
-      "size_bytes": 4820
+      "sha256": "5689a3992c086c37024a867c23852ff9c7d14a9f7d8693847d9f96c772d95f56",
+      "size_bytes": 4949
     },
     {
       "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/validation_report.md",
-      "sha256": "d5d9ecb2c68b39da04143937a35dce6c958db69a800cb93a474a96b1587f639c",
-      "size_bytes": 2152
+      "sha256": "641f75d8497d8274abebd96f1eb99bb0be2cbc66a69e6a7e428a661c57046be9",
+      "size_bytes": 2221
     },
     {
       "path": "src/week9_phase1_12_gpc_kernel_adequacy.py",
-      "sha256": "a968c465f44df2dcde522c805fe2135655998cba18dfe8f916fae0b709a3155a",
-      "size_bytes": 59356
+      "sha256": "1d0e4227c7ed7599b4a43a2fc5d1c86364f256f6c89b816455a343d740069da2",
+      "size_bytes": 59494
     },
     {
       "path": "tests/test_week9_phase1_12_gpc_kernel_adequacy.py",
-      "sha256": "e856c828dca16e53bb339e2117286c354375578d7cc1c5f97cbf916e4f0a40dd",
-      "size_bytes": 5399
+      "sha256": "c74d01bcad9b0b5b9fc994ca5de525f04bf366dd8aaeecf889f3d9d2c5a006b5",
+      "size_bytes": 5482
     }
   ],
   "historical_changes": [],
@@ -254,7 +254,7 @@
   "starting_sha": "5a21e5dce37fc6d4c58fa40bb7a6711920fec94e",
   "study": "Week 9 Phase 1.12 \u2014 GPC Kernel Adequacy / Anisotropy Control",
   "validation": {
-    "check_count": 45,
+    "check_count": 46,
     "checks": [
       {
         "check": "exact_start_sha",
@@ -480,9 +480,14 @@
         "check": "decision_declared",
         "detail": "KERNEL_GAP_CLOSED",
         "status": "PASS"
+      },
+      {
+        "check": "no_report_template_placeholders",
+        "detail": "resolved recommendation",
+        "status": "PASS"
       }
     ],
-    "passed": 45,
+    "passed": 46,
     "status": "PASS"
   }
 }

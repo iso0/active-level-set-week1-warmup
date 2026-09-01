@@ -1,5 +1,5 @@
 {
-  "check_count": 45,
+  "check_count": 46,
   "checks": [
     {
       "check": "exact_start_sha",
@@ -225,8 +225,13 @@
       "check": "decision_declared",
       "detail": "KERNEL_GAP_CLOSED",
       "status": "PASS"
+    },
+    {
+      "check": "no_report_template_placeholders",
+      "detail": "resolved recommendation",
+      "status": "PASS"
     }
   ],
-  "passed": 45,
+  "passed": 46,
   "status": "PASS"
 }

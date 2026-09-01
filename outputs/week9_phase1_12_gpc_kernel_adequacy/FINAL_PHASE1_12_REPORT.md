@@ -25,4 +25,4 @@ Lengthscales are standardized-space model-geometry diagnostics, not physical uni
 The result is a held-out surrogate comparison on one frozen simulator benchmark. It tests kernel adequacy, not acquisition, external validity, or physical causality.
 
 ## Future h + ARD discrepancy GP
-Recommendation: **{future}**. This is justified only when G3 materially improves standalone 4D GPC behavior.
+Recommendation: **YES**. This is justified only when G3 materially improves standalone 4D GPC behavior.
