@@ -1,0 +1,15 @@
+dataset,material,setting,contrast,metric,mean_difference,ci_lower,ci_upper,repeat_blocks,bootstrap_draws,interval_scope
+strict_C_vs_K,Ti64,R1_C1,H_minus_G,roc_auc,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,Ti64,R1_C1,H_minus_G,pr_auc,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,Ti64,R1_C1,H_minus_G,balanced_accuracy,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,Ti64,R1_C1,H_minus_G,keyhole_recall,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,Ti64,R1_C1,H_minus_G,conduction_recall,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,Ti64,R1_C1,H_minus_G,brier_score,0.00021018224588918738,-0.0008941954774894474,0.0012989960333597496,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,Ti64,R1_C1,H_minus_G,accuracy,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,316L,R1_C1,H_minus_G,roc_auc,5.551115123125783e-18,0.0,1.6653345369377347e-17,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,316L,R1_C1,H_minus_G,pr_auc,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,316L,R1_C1,H_minus_G,balanced_accuracy,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,316L,R1_C1,H_minus_G,keyhole_recall,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,316L,R1_C1,H_minus_G,conduction_recall,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,316L,R1_C1,H_minus_G,brier_score,-0.0016347522578245288,-0.002205381509506216,-0.001062391029820802,20,10000,split sensitivity over paired repeat blocks
+strict_C_vs_K,316L,R1_C1,H_minus_G,accuracy,0.0,0.0,0.0,20,10000,split sensitivity over paired repeat blocks

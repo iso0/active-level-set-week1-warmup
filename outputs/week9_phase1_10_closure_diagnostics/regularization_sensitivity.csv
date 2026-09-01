@@ -1,0 +1,7 @@
+dataset,material,setting,status,implementation,H_roc_auc,G_roc_auc,H_minus_G_roc_auc,H_minus_G_ci_lower,H_minus_G_ci_upper,alpha_mean,alpha_ci_lower,alpha_ci_upper,valid_coefficient_fits,invalid_coefficient_fits,converged_fraction,beta_P_positive_fraction,beta_VX_negative_fraction,beta_P_near_zero_count,alpha_extreme_count
+transition_inclusive,Ti64,R1_C1,AVAILABLE,lbfgs; train-only scaling; C=1.0,0.976470588235294,0.9920814479638009,-0.01561085972850681,-0.01662895927601813,-0.01453619909502265,-1.7130002444073646,-1.8952442393690978,-1.5185538152067934,100.0,0.0,1.0,0.99,1.0,0.0,0.0
+transition_inclusive,Ti64,R2_C1e6,AVAILABLE,lbfgs; train-only scaling; C=1000000.0,0.967760180995475,0.9531674208144796,0.014592760180995428,0.012471719457013563,0.016572398190045218,-2.3340190131245735,-2.5429836811535766,-2.095347098922345,99.0,1.0,1.0,1.0,1.0,0.0,1.0
+transition_inclusive,Ti64,R3_unpenalized,R3_UNAVAILABLE,R3_UNAVAILABLE: penalty=None emits a deprecation warning in sklearn 1.9.0,,,,,,,,,,,,,,,
+strict_C_vs_K,Ti64,R1_C1,AVAILABLE,lbfgs; train-only scaling; C=1.0,1.0,1.0,0.0,0.0,0.0,-1.6996457593250525,-1.909425632259154,-1.5041920168577567,96.0,4.0,1.0,1.0,1.0,0.0,4.0
+strict_C_vs_K,Ti64,R2_C1e6,AVAILABLE,lbfgs; train-only scaling; C=1000000.0,1.0,1.0,0.0,0.0,0.0,-1.3020436393196915,-1.3828232795401907,-1.2400549449142275,100.0,0.0,1.0,1.0,1.0,0.0,0.0
+strict_C_vs_K,Ti64,R3_unpenalized,R3_UNAVAILABLE,R3_UNAVAILABLE: penalty=None emits a deprecation warning in sklearn 1.9.0,,,,,,,,,,,,,,,

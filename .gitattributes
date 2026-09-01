@@ -10,3 +10,8 @@ notebooks/week_09/07_week9_phase1_10_external_experimental_validation.ipynb text
 outputs/week9_phase1_10_external_experimental_validation/** text eol=lf
 outputs/week9_phase1_10_external_experimental_validation/figures/*.png -text
 outputs/week9_phase1_10_external_experimental_validation/*.gz -text
+src/week9_phase1_10_closure_diagnostics.py text eol=lf
+tests/test_week9_phase1_10_closure_diagnostics.py text eol=lf
+notebooks/week_09/08_week9_phase1_10_closure_diagnostics.ipynb text eol=lf
+outputs/week9_phase1_10_closure_diagnostics/** text eol=lf
+outputs/week9_phase1_10_closure_diagnostics/figures/*.png -text

@@ -1,0 +1,3 @@
+figure,sha256,purpose
+01_recovered_alpha_by_repeat.png,51652c5f9e593350fe8c9931451b7b3d0e5560fcfd2d8efa822ec4032866c8ff,Compare repeat-level recovered external exponents with the predeclared theoretical alpha=-0.5.
+02_ti64_transition_vs_strict_ck.png,74d3e388d47ccdae9209da9c6f1f18969eef5a6dd3951ef509415997ccacf20a,Compare frozen transition-inclusive and strict C-vs-K Ti64 H/G ROC-AUC.

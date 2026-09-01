@@ -1,0 +1,319 @@
+{
+  "branch": "codex/week9-phase1-10-closure-diagnostics",
+  "files": [
+    {
+      "path": "notebooks/week_09/08_week9_phase1_10_closure_diagnostics.ipynb",
+      "sha256": "3ae6e9489cc9eced6a2b967a70231605c8eaf9250b585dc706c227f7c177dd00",
+      "size_bytes": 274155
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/claim_ledger.md",
+      "sha256": "423accbb18293acedf82bfd13147517e8d231016a0b281ecd920844ac085fe66",
+      "size_bytes": 1207
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/exponent_fold_estimates.csv",
+      "sha256": "e1773efed64893648734209bf2cb52beaee11329f512b0a522bdebd628f8d145",
+      "size_bytes": 46691
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/exponent_repeat_summary.csv",
+      "sha256": "5c5de8e08b45dbb79ab0d024c5dfb243a28356e1a15b14ffe41de45e9584fa99",
+      "size_bytes": 3700
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/exponent_summary.csv",
+      "sha256": "e886580cdb4adbec0e32d6cacdfd131660136ba618d13445037be07cdf448a96",
+      "size_bytes": 1394
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/figure_manifest.csv",
+      "sha256": "0dc966c2f0f849628724c6f34b10cea249c2e89dc42db86b1dc2bf411e38523e",
+      "size_bytes": 388
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/figures/01_recovered_alpha_by_repeat.png",
+      "sha256": "51652c5f9e593350fe8c9931451b7b3d0e5560fcfd2d8efa822ec4032866c8ff",
+      "size_bytes": 117295
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/figures/02_ti64_transition_vs_strict_ck.png",
+      "sha256": "74d3e388d47ccdae9209da9c6f1f18969eef5a6dd3951ef509415997ccacf20a",
+      "size_bytes": 59936
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/FINAL_PHASE1_10_CLOSURE_REPORT.md",
+      "sha256": "79c47440b012b617e0a2f08625d389dc106dd927ff71d8d053a1c0956d72bf88",
+      "size_bytes": 3609
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "d88734a536d4696fabe8747dd7881486b769f6514aaf6c7b40bded06e9944296",
+      "size_bytes": 1402
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/regularization_repeat_metrics.csv",
+      "sha256": "14b85c033c4af29b9dad371ed37f216cb53762ca70ca2e225efd1ac3ec1a6377",
+      "size_bytes": 32706
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/regularization_sensitivity.csv",
+      "sha256": "10220503a3f8ee68e76f2c36b8bde03ba6864eb906a1c39371bcdc2b2276f085",
+      "size_bytes": 1507
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/strict_ck_fold_manifest.csv",
+      "sha256": "a6fee895573bfbf8101a53f5ca5c6a089647c64c3be2809d87168feb2962322d",
+      "size_bytes": 109530
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/strict_ck_model_summary.csv",
+      "sha256": "7742f0b9cc1a72cec49c4b027924e12c3ad466357e644ec6cf1bb9650376e383",
+      "size_bytes": 2065
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/strict_ck_paired_contrasts.csv",
+      "sha256": "edeadfb259315a322dc06d9262203b6a6429aa131cf25ccedcea97c78fd28490",
+      "size_bytes": 1842
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/strict_ck_population_audit.csv",
+      "sha256": "e3a516fce1d28b711bf355a5e8ee23785f413de774f6436310783f275c96a728",
+      "size_bytes": 201
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/strict_ck_repeat_metrics.csv",
+      "sha256": "358c152a9195638f08394ebb1b686b20087ba9f59d318c63136c4dd5f7b534b9",
+      "size_bytes": 8720
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/SUPERVISOR_PHASE1_10_CLOSURE_ONE_PAGE.md",
+      "sha256": "5f04cebad9959c95f312a28dc6a32a4ee1bcf4cd8a01909ca8f7a67dfbfafb42",
+      "size_bytes": 1448
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/validation_report.json",
+      "sha256": "04e7ca95636f11707c0b9c3f416537b846cf73ae826be10f7864855891ab57f9",
+      "size_bytes": 3621
+    },
+    {
+      "path": "outputs/week9_phase1_10_closure_diagnostics/validation_report.md",
+      "sha256": "7fa437e4c899155046af2e371a8719c8941ae793c03199361a87a915c31894bc",
+      "size_bytes": 1998
+    },
+    {
+      "path": "src/week9_phase1_10_closure_diagnostics.py",
+      "sha256": "c17116fd054ba177073f4f13b1be885dd7d22df48fb57f2ef24baece0cde04df",
+      "size_bytes": 55280
+    },
+    {
+      "path": "tests/test_week9_phase1_10_closure_diagnostics.py",
+      "sha256": "13e53010d886aba6a9648c4536049e0bfe0c62498efd60ad17f9a28efb694acd",
+      "size_bytes": 6294
+    }
+  ],
+  "frozen_primary_verdict": "GENERIC_DIRECTION_SUPERIOR",
+  "historical_phase1_10_changes": [],
+  "protocol": {
+    "bootstrap_draws": 10000,
+    "maximum_folds": 5,
+    "regularization": {
+      "R1_C1": {
+        "C": 1.0,
+        "penalty": "default_l2",
+        "role": "frozen_main",
+        "status": "AVAILABLE"
+      },
+      "R2_C1e6": {
+        "C": 1000000.0,
+        "penalty": "default_l2",
+        "role": "weak_regularization",
+        "status": "AVAILABLE"
+      },
+      "R3_unpenalized": {
+        "C": null,
+        "penalty": null,
+        "reason": "R3_UNAVAILABLE: penalty=None emits a deprecation warning in sklearn 1.9.0",
+        "role": "unpenalized",
+        "status": "R3_UNAVAILABLE"
+      }
+    },
+    "repeats": 20
+  },
+  "raw_external_data_committed": false,
+  "starting_sha": "45e2677b7a57ed3aa5ad5154459100a9b5d2d436",
+  "strict_population": [
+    {
+      "both_classes_every_heldout_fold": true,
+      "bundles": 48,
+      "discordant_conditions": 0,
+      "folds": 5,
+      "material": "Ti64",
+      "mode_C": 26,
+      "mode_K": 22,
+      "repeated_conditions": 14,
+      "repeats": 20,
+      "unique_conditions": 32
+    },
+    {
+      "both_classes_every_heldout_fold": true,
+      "bundles": 48,
+      "discordant_conditions": 0,
+      "folds": 5,
+      "material": "316L",
+      "mode_C": 37,
+      "mode_K": 11,
+      "repeated_conditions": 14,
+      "repeats": 20,
+      "unique_conditions": 32
+    }
+  ],
+  "study": "Week 9 Phase 1.10 closure diagnostics",
+  "theory_alpha": -0.5,
+  "validation": {
+    "check_count": 28,
+    "checks": [
+      {
+        "check": "start_sha_correct",
+        "detail": "45e2677b7a57ed3aa5ad5154459100a9b5d2d436",
+        "status": "PASS"
+      },
+      {
+        "check": "original_phase1_10_artifacts_unchanged",
+        "detail": "[]",
+        "status": "PASS"
+      },
+      {
+        "check": "original_populations_reproduced",
+        "detail": "Ti64 60/34; 316L 60/23",
+        "status": "PASS"
+      },
+      {
+        "check": "raw_coefficient_conversion_algebra",
+        "detail": "(3.0, -1.0, -0.3333333333333333)",
+        "status": "PASS"
+      },
+      {
+        "check": "alpha_uses_raw_beta_ratio",
+        "detail": "verified every fit",
+        "status": "PASS"
+      },
+      {
+        "check": "standardized_ratio_not_used",
+        "detail": "synthetic guard distinguishes raw and standardized ratios",
+        "status": "PASS"
+      },
+      {
+        "check": "theory_reference_exact",
+        "detail": "-0.5",
+        "status": "PASS"
+      },
+      {
+        "check": "one_hundred_main_fits_per_alloy",
+        "detail": "{'316L': 100, 'Ti64': 100}",
+        "status": "PASS"
+      },
+      {
+        "check": "folds_averaged_within_repeat",
+        "detail": "20 repeat rows after five-fold averaging",
+        "status": "PASS"
+      },
+      {
+        "check": "exactly_twenty_repeat_blocks",
+        "detail": "repeat-block inference",
+        "status": "PASS"
+      },
+      {
+        "check": "bootstrap_at_least_10000",
+        "detail": "10000",
+        "status": "PASS"
+      },
+      {
+        "check": "beta_P_instability_checked",
+        "detail": "invalid=1",
+        "status": "PASS"
+      },
+      {
+        "check": "strict_dataset_only_C_K",
+        "detail": "['C', 'K']",
+        "status": "PASS"
+      },
+      {
+        "check": "no_transition_rows_survive",
+        "detail": "T/CT/TK absent",
+        "status": "PASS"
+      },
+      {
+        "check": "strict_counts_verified",
+        "detail": "{('316L', 'C'): 37, ('316L', 'K'): 11, ('Ti64', 'C'): 26, ('Ti64', 'K'): 22}",
+        "status": "PASS"
+      },
+      {
+        "check": "strict_exact_condition_grouping",
+        "detail": "condition lock",
+        "status": "PASS"
+      },
+      {
+        "check": "strict_no_replicate_leakage",
+        "detail": "one held-out fold per bundle",
+        "status": "PASS"
+      },
+      {
+        "check": "no_optical_predictors",
+        "detail": "log process inputs only",
+        "status": "PASS"
+      },
+      {
+        "check": "no_internal_boundary_inputs",
+        "detail": "external conventional metrics",
+        "status": "PASS"
+      },
+      {
+        "check": "R1_exact_C1",
+        "detail": "{'C': 1.0, 'penalty': 'default_l2', 'status': 'AVAILABLE', 'role': 'frozen_main'}",
+        "status": "PASS"
+      },
+      {
+        "check": "R2_exact_C1e6",
+        "detail": "{'C': 1000000.0, 'penalty': 'default_l2', 'status': 'AVAILABLE', 'role': 'weak_regularization'}",
+        "status": "PASS"
+      },
+      {
+        "check": "R3_only_if_clean_supported",
+        "detail": "R3_UNAVAILABLE",
+        "status": "PASS"
+      },
+      {
+        "check": "train_only_scaling",
+        "detail": "fit on training matrix",
+        "status": "PASS"
+      },
+      {
+        "check": "original_primary_verdict_not_overwritten",
+        "detail": "frozen verdict stated",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed",
+        "detail": "7 code cells",
+        "status": "PASS"
+      },
+      {
+        "check": "figures_hashed",
+        "detail": "2 figures",
+        "status": "PASS"
+      },
+      {
+        "check": "raw_external_data_not_committed",
+        "detail": "ignored cache only",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_phase1x_outputs_unchanged",
+        "detail": "[]",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS"
+  }
+}

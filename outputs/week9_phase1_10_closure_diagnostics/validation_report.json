@@ -1,0 +1,146 @@
+{
+  "check_count": 28,
+  "checks": [
+    {
+      "check": "start_sha_correct",
+      "detail": "45e2677b7a57ed3aa5ad5154459100a9b5d2d436",
+      "status": "PASS"
+    },
+    {
+      "check": "original_phase1_10_artifacts_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "original_populations_reproduced",
+      "detail": "Ti64 60/34; 316L 60/23",
+      "status": "PASS"
+    },
+    {
+      "check": "raw_coefficient_conversion_algebra",
+      "detail": "(3.0, -1.0, -0.3333333333333333)",
+      "status": "PASS"
+    },
+    {
+      "check": "alpha_uses_raw_beta_ratio",
+      "detail": "verified every fit",
+      "status": "PASS"
+    },
+    {
+      "check": "standardized_ratio_not_used",
+      "detail": "synthetic guard distinguishes raw and standardized ratios",
+      "status": "PASS"
+    },
+    {
+      "check": "theory_reference_exact",
+      "detail": "-0.5",
+      "status": "PASS"
+    },
+    {
+      "check": "one_hundred_main_fits_per_alloy",
+      "detail": "{'316L': 100, 'Ti64': 100}",
+      "status": "PASS"
+    },
+    {
+      "check": "folds_averaged_within_repeat",
+      "detail": "20 repeat rows after five-fold averaging",
+      "status": "PASS"
+    },
+    {
+      "check": "exactly_twenty_repeat_blocks",
+      "detail": "repeat-block inference",
+      "status": "PASS"
+    },
+    {
+      "check": "bootstrap_at_least_10000",
+      "detail": "10000",
+      "status": "PASS"
+    },
+    {
+      "check": "beta_P_instability_checked",
+      "detail": "invalid=1",
+      "status": "PASS"
+    },
+    {
+      "check": "strict_dataset_only_C_K",
+      "detail": "['C', 'K']",
+      "status": "PASS"
+    },
+    {
+      "check": "no_transition_rows_survive",
+      "detail": "T/CT/TK absent",
+      "status": "PASS"
+    },
+    {
+      "check": "strict_counts_verified",
+      "detail": "{('316L', 'C'): 37, ('316L', 'K'): 11, ('Ti64', 'C'): 26, ('Ti64', 'K'): 22}",
+      "status": "PASS"
+    },
+    {
+      "check": "strict_exact_condition_grouping",
+      "detail": "condition lock",
+      "status": "PASS"
+    },
+    {
+      "check": "strict_no_replicate_leakage",
+      "detail": "one held-out fold per bundle",
+      "status": "PASS"
+    },
+    {
+      "check": "no_optical_predictors",
+      "detail": "log process inputs only",
+      "status": "PASS"
+    },
+    {
+      "check": "no_internal_boundary_inputs",
+      "detail": "external conventional metrics",
+      "status": "PASS"
+    },
+    {
+      "check": "R1_exact_C1",
+      "detail": "{'C': 1.0, 'penalty': 'default_l2', 'status': 'AVAILABLE', 'role': 'frozen_main'}",
+      "status": "PASS"
+    },
+    {
+      "check": "R2_exact_C1e6",
+      "detail": "{'C': 1000000.0, 'penalty': 'default_l2', 'status': 'AVAILABLE', 'role': 'weak_regularization'}",
+      "status": "PASS"
+    },
+    {
+      "check": "R3_only_if_clean_supported",
+      "detail": "R3_UNAVAILABLE",
+      "status": "PASS"
+    },
+    {
+      "check": "train_only_scaling",
+      "detail": "fit on training matrix",
+      "status": "PASS"
+    },
+    {
+      "check": "original_primary_verdict_not_overwritten",
+      "detail": "frozen verdict stated",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "7 code cells",
+      "status": "PASS"
+    },
+    {
+      "check": "figures_hashed",
+      "detail": "2 figures",
+      "status": "PASS"
+    },
+    {
+      "check": "raw_external_data_not_committed",
+      "detail": "ignored cache only",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_phase1x_outputs_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}
