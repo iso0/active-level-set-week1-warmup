@@ -1,0 +1,10 @@
+material,contrast,metric,mean_difference,ci_lower,ci_upper,repeat_blocks,bootstrap_draws,interval_scope
+316L,H_minus_G,roc_auc,-0.004700352526439478,-0.007755581668625128,-0.0014673913043478357,20,10000,sensitivity to frozen grouped CV partitions; not 20 independent experiments
+316L,H_minus_G,pr_auc,-0.00746483214677926,-0.01210416793832441,-0.002564631492833313,20,10000,sensitivity to frozen grouped CV partitions; not 20 independent experiments
+316L,H_minus_G,balanced_accuracy,-0.01868390129259694,-0.04230317273795533,0.004935370152761453,20,10000,sensitivity to frozen grouped CV partitions; not 20 independent experiments
+316L,H_minus_G,keyhole_recall,-0.013043478260869556,-0.049999999999999975,0.02608695652173911,20,10000,sensitivity to frozen grouped CV partitions; not 20 independent experiments
+316L,H_minus_G,conduction_recall,-0.024324324324324326,-0.03783783783783784,-0.010810810810810811,20,10000,sensitivity to frozen grouped CV partitions; not 20 independent experiments
+316L,H_minus_G,brier_score,0.00010159382823139371,-0.0023062887579062196,0.002301137134243638,20,10000,sensitivity to frozen grouped CV partitions; not 20 independent experiments
+316L,H_minus_G,accuracy,-0.02,-0.04,0.0008333333333333304,20,10000,sensitivity to frozen grouped CV partitions; not 20 independent experiments
+316L,H_minus_G,false_negative,0.3,-0.55,1.2,20,10000,sensitivity to frozen grouped CV partitions; not 20 independent experiments
+316L,H_minus_G,false_positive,0.9,0.4,1.4,20,10000,sensitivity to frozen grouped CV partitions; not 20 independent experiments

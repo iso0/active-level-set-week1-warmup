@@ -1,0 +1,5 @@
+figure,sha256,purpose,status
+01_experimental_process_maps.png,fc90f9bde3647a6e44037e96f1e358395b7a61d7a4b79436c5e85956e8199d6b,"Show label organization, replicate multiplicity, and discordant Ti64 conditions in physical process space.",PASS
+02_grouped_oof_performance.png,af68c77a7971d938d39fbc9ba2f77cd6d1f9a2e4f8c11dc6a98fc6f8f5f94026,"Compare H, G, and the secondary GPC for Ti64 and 316L.",PASS
+03_ti64_H_minus_G_repeat_contrast.png,c8ab7d82fee22a99f6feb932257894d1d32d676df167293706bc5bbb3db62bb6,Display the predeclared primary Ti64 paired H-minus-G ROC-AUC contrast.,PASS
+04_label_free_process_pca.png,234bfd2182017064d8a519a4b213d588573b4e7938753e0d0b76c61266621c18,Provide the required label-free PCA backup diagnostic without using PCA in prediction.,PASS

@@ -1,0 +1,156 @@
+{
+  "check_count": 30,
+  "checks": [
+    {
+      "check": "exact_external_source_provenance",
+      "detail": "two pinned GitHub workbooks and original open-access paper match declared SHA256",
+      "status": "PASS"
+    },
+    {
+      "check": "ti64_row_count",
+      "detail": "observed 60",
+      "status": "PASS"
+    },
+    {
+      "check": "ti64_unique_condition_count",
+      "detail": "observed 38",
+      "status": "PASS"
+    },
+    {
+      "check": "ti64_class_counts",
+      "detail": "34 Keyhole / 26 Conduction",
+      "status": "PASS"
+    },
+    {
+      "check": "ss316_row_count",
+      "detail": "observed 60",
+      "status": "PASS"
+    },
+    {
+      "check": "ss316_unique_condition_count",
+      "detail": "observed 38",
+      "status": "PASS"
+    },
+    {
+      "check": "ss316_class_counts",
+      "detail": "23 Keyhole / 37 Conduction",
+      "status": "PASS"
+    },
+    {
+      "check": "spot_diameter_50_um",
+      "detail": "pinned paper semantics",
+      "status": "PASS"
+    },
+    {
+      "check": "thesis_radius_25_um",
+      "detail": "diameter divided by two",
+      "status": "PASS"
+    },
+    {
+      "check": "mm_s_to_m_s_conversion",
+      "detail": "numerically verified for all rows",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_h_formula",
+      "detail": "SI formula verified for all rows",
+      "status": "PASS"
+    },
+    {
+      "check": "ls_constant",
+      "detail": "constant radius; exponent not testable",
+      "status": "PASS"
+    },
+    {
+      "check": "no_optical_predictor",
+      "detail": "{'H': [3, 1], 'G': [3, 2], 'GPC': [3, 2]}",
+      "status": "PASS"
+    },
+    {
+      "check": "H_only_log_h",
+      "detail": "one predictor",
+      "status": "PASS"
+    },
+    {
+      "check": "G_only_logP_logVX",
+      "detail": "two free predictors",
+      "status": "PASS"
+    },
+    {
+      "check": "no_fixed_exponent_in_G",
+      "detail": "G receives raw log VX, not fixed scaled h",
+      "status": "PASS"
+    },
+    {
+      "check": "condition_groups_never_cross_folds",
+      "detail": "exact group lock",
+      "status": "PASS"
+    },
+    {
+      "check": "one_oof_prediction_per_bundle_repeat_model",
+      "detail": "complete unique OOF coverage",
+      "status": "PASS"
+    },
+    {
+      "check": "both_classes_in_each_complete_oof_repeat",
+      "detail": "all complete vectors contain both classes",
+      "status": "PASS"
+    },
+    {
+      "check": "no_internal_B1_q20_q30",
+      "detail": "external endpoint uses conventional full OOF metrics",
+      "status": "PASS"
+    },
+    {
+      "check": "twenty_repeat_blocks",
+      "detail": "20 repeats per alloy",
+      "status": "PASS"
+    },
+    {
+      "check": "paired_repeat_contrast",
+      "detail": "H-G paired within repeat",
+      "status": "PASS"
+    },
+    {
+      "check": "discordant_conditions_exact",
+      "detail": "Ti64=2; 316L=0",
+      "status": "PASS"
+    },
+    {
+      "check": "alloys_never_pooled_for_fitting",
+      "detail": "separate 60-row OOF vectors",
+      "status": "PASS"
+    },
+    {
+      "check": "PCA_fit_label_free",
+      "detail": "labels applied after PCA fit",
+      "status": "PASS"
+    },
+    {
+      "check": "external_raw_data_not_committed",
+      "detail": "cache ignored; raw ZIP absent",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_phase1x_outputs_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed_and_stored",
+      "detail": "11 executed code cells",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes_match",
+      "detail": "4 figures",
+      "status": "PASS"
+    },
+    {
+      "check": "claim_language_red_team",
+      "detail": "primary negative comparison is stated; proof claims rejected",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

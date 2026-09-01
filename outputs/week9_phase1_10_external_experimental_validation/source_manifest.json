@@ -1,0 +1,45 @@
+{
+  "critical_field_verification": {
+    "field": "laser spot definition",
+    "result": "50 micrometre diameter at the focal point, measured at 1/e^2, constant throughout experiments",
+    "source": "Masinelli_2025.pdf, Section 2.6 / Table 4",
+    "status": "VERIFIED_FROM_ORIGINAL_PUBLIC_SOURCE"
+  },
+  "date_accessed": "2026-09-01",
+  "doi": "10.1016/j.addma.2025.104677",
+  "downloaded_files": [
+    {
+      "filename": "Microscopy_1.xlsx",
+      "role": "pinned GitHub metadata workbook",
+      "sha256": "885ee69284e301eccd9d9f7c19b32f9553ffb043e8496d666df4d560153346a2",
+      "size_bytes": 10610
+    },
+    {
+      "filename": "experiment_parameters_ref.xlsx",
+      "role": "pinned GitHub metadata workbook",
+      "sha256": "4043e796c158364fa10c9edfd706d0f42450203d85b3f638b036a99c4a0c9a3f",
+      "size_bytes": 15178
+    },
+    {
+      "filename": "Masinelli_2025.pdf",
+      "role": "original open-access paper used to reverify spot semantics",
+      "sha256": "37c7e2d6984d36e9703373b675419971b4193b4b80288ad2be129e13ef9e2356",
+      "size_bytes": 3630055
+    }
+  ],
+  "github_commit": "50ccb1bab03c626cb9f83d9c4f44182f58dda439",
+  "github_url": "https://github.com/GiulioMa/LPBF-SmartAM-Optical-Data/tree/50ccb1bab03c626cb9f83d9c4f44182f58dda439",
+  "license": {
+    "github_repository": "no license file found at pinned commit",
+    "paper": "open-access article; cite DOI",
+    "zenodo_data": "CC-BY-4.0"
+  },
+  "note": "Only the two small pinned metadata workbooks were cached locally; no optical or raw signal was used.",
+  "raw_data_committed": false,
+  "study": "Masinelli et al. (2025), Additive Manufacturing 101, 104677",
+  "zenodo_doi": "10.5281/zenodo.13380755",
+  "zenodo_file": "Neuchatel data.zip",
+  "zenodo_file_size_bytes": 86809466,
+  "zenodo_md5": "7c45f40bef66bc2483eb1ef0959058cc",
+  "zenodo_record": "https://zenodo.org/records/13380755"
+}

@@ -1,0 +1,338 @@
+{
+  "branch": "codex/week9-phase1-10-external-experimental-validation",
+  "files": [
+    {
+      "path": "notebooks/week_09/07_week9_phase1_10_external_experimental_validation.ipynb",
+      "sha256": "3f68158de4b55cdd526966f8785b1fb9c20175b546f87679ae4dea4ff825b374",
+      "size_bytes": 634806
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/claim_ledger.md",
+      "sha256": "989835496a2a85565eb476d2d2a9fd05101f5b80015530c90f6f1040c6c8410d",
+      "size_bytes": 1383
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/condition_level_sensitivity.csv",
+      "sha256": "e9ae56feaf55b8814840c2e63a76a426f31177c4b551fe14f5b18d0e75a0dd14",
+      "size_bytes": 5122
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/external_population_audit.csv",
+      "sha256": "765598898d3d56eb915d8b3ebacd26868bf10fbbb637d9352ccd7dde75a7cd04",
+      "size_bytes": 139
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/figure_manifest.csv",
+      "sha256": "772ba87c9dfa9c5cd54fdbeafc3e69b96ea990a6fa2b1ab2a23beaf24be54ff9",
+      "size_bytes": 766
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/figures/01_experimental_process_maps.png",
+      "sha256": "fc90f9bde3647a6e44037e96f1e358395b7a61d7a4b79436c5e85956e8199d6b",
+      "size_bytes": 148354
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/figures/02_grouped_oof_performance.png",
+      "sha256": "af68c77a7971d938d39fbc9ba2f77cd6d1f9a2e4f8c11dc6a98fc6f8f5f94026",
+      "size_bytes": 129225
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/figures/03_ti64_H_minus_G_repeat_contrast.png",
+      "sha256": "c8ab7d82fee22a99f6feb932257894d1d32d676df167293706bc5bbb3db62bb6",
+      "size_bytes": 71545
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/figures/04_label_free_process_pca.png",
+      "sha256": "234bfd2182017064d8a519a4b213d588573b4e7938753e0d0b76c61266621c18",
+      "size_bytes": 89884
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/FINAL_PHASE1_10_REPORT.md",
+      "sha256": "4895fae8e08450c33c4953d8b2b6b6de2c04db85d5d4d75c1300296fbb14bf9a",
+      "size_bytes": 5215
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "08f30a2ceef42bfdd671254b4da5ab77a6523a7b882f65c9f35eee57f76f22d9",
+      "size_bytes": 2077
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/grouped_fold_manifest.csv",
+      "sha256": "41061c3ef023ef18e22192cf40945711b91bb67fffcc75fb2c8c1be724e3db7f",
+      "size_bytes": 131781
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/pca_loadings.csv",
+      "sha256": "dd9934674a32dffc6a4b2079c4ad715345bbae91050bc1369df14363832f5bf8",
+      "size_bytes": 676
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/pca_scores.csv",
+      "sha256": "1a4238444f5859a29fe16f4643999a79d371f5877a7adc051faa70531d4484ef",
+      "size_bytes": 9978
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/source_manifest.json",
+      "sha256": "89fd41a2a77feb5da9bd74353f62c9c972a8e691320c0b5c7b078bcd768be0ed",
+      "size_bytes": 1921
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/ss316_model_summary.csv",
+      "sha256": "2861ae9f0791b79eb0b114dc2b284dda83d785a47961f29adf87df2f25d4efa4",
+      "size_bytes": 2870
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/ss316_oof_predictions.csv.gz",
+      "sha256": "79e58c143eb37953822de794dffa6e911efeaa9c65fd26d2e88b110444416db2",
+      "size_bytes": 42586
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/ss316_paired_contrasts.csv",
+      "sha256": "5a0c4562da6508fedf1fc0899007aa20f12afface5bcf08898c15b6e61be0a51",
+      "size_bytes": 1571
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/ss316_repeat_metrics.csv",
+      "sha256": "cb84985cfb163ae144e4cd057f86e69bc68f9c310a4558d1e5b10ad787898247",
+      "size_bytes": 8221
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/SUPERVISOR_PHASE1_10_ONE_PAGE.md",
+      "sha256": "a15be93ff0f809f9536f268f4bad631467e71c9b737b86526ab63202507ba78a",
+      "size_bytes": 2036
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/ti64_model_summary.csv",
+      "sha256": "fc5ddddaf09472d6d9c9b3510faa92c63783dd579a593deef4b45d3ea0939fe7",
+      "size_bytes": 2870
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/ti64_oof_predictions.csv.gz",
+      "sha256": "6fd791fad1073e95d86a41e5a54fd07732015de0b634405a3695b0a2e8e7878d",
+      "size_bytes": 42679
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/ti64_paired_contrasts.csv",
+      "sha256": "1ff269092d2ac51501aa6193ea64114ee74d3468df478a1930bbf6323bce5536",
+      "size_bytes": 1599
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/ti64_repeat_metrics.csv",
+      "sha256": "520d8ba26ea648e5a3a813648265bdd46d33e96b66d5c0ae1dd67119887951d3",
+      "size_bytes": 9027
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/validation_report.json",
+      "sha256": "585aa3fa9dfb28d2ec9edc58bf77d42025b07099d5f904d99c2c70e156573cae",
+      "size_bytes": 3979
+    },
+    {
+      "path": "outputs/week9_phase1_10_external_experimental_validation/validation_report.md",
+      "sha256": "4f32d4bd951970b9c9be54a7a076da48273532343a889963999fbb08ed39f168",
+      "size_bytes": 2117
+    },
+    {
+      "path": "src/week9_phase1_10_external_experimental_validation.py",
+      "sha256": "3abb9603005061cd64ebbdf9db0cc708990f985ca4a9a98894867128634a843a",
+      "size_bytes": 68339
+    },
+    {
+      "path": "tests/test_week9_phase1_10_external_experimental_validation.py",
+      "sha256": "799d0d38d8c1c06ea14d1fda3eaa205e386747464f8dc2228ab89e63c890bd43",
+      "size_bytes": 7948
+    }
+  ],
+  "github_source_commit": "50ccb1bab03c626cb9f83d9c4f44182f58dda439",
+  "historical_phase1x_changes": [],
+  "model_definitions": {
+    "G": "StandardScaler(train only) + L2 logistic(C=1) on log(P),log(VX)",
+    "GPC": "StandardScaler(train only) + ConstantKernel*Matern(nu=1.5) GaussianProcessClassifier",
+    "H": "StandardScaler(train only) + L2 logistic(C=1) on log(h)"
+  },
+  "population": {
+    "316L": {
+      "conditions": 38,
+      "conduction": 37,
+      "keyhole": 23,
+      "rows": 60
+    },
+    "Ti64": {
+      "conditions": 38,
+      "conduction": 26,
+      "keyhole": 34,
+      "rows": 60
+    }
+  },
+  "protocol": {
+    "bootstrap_draws": 10000,
+    "grouped_folds": 5,
+    "models": [
+      "H",
+      "G",
+      "GPC"
+    ],
+    "primary_contrast": "H_minus_G",
+    "primary_endpoint": "complete-OOF ROC-AUC",
+    "primary_material": "Ti64",
+    "repeats": 20
+  },
+  "raw_external_data_committed": false,
+  "starting_sha": "8d99c1976890bbf4a12a7cfcd00e9bdd7ae924a8",
+  "study": "Week 9 Phase 1.10 \u2014 independent experimental validation of physics-aligned coordinate",
+  "validation": {
+    "check_count": 30,
+    "checks": [
+      {
+        "check": "exact_external_source_provenance",
+        "detail": "two pinned GitHub workbooks and original open-access paper match declared SHA256",
+        "status": "PASS"
+      },
+      {
+        "check": "ti64_row_count",
+        "detail": "observed 60",
+        "status": "PASS"
+      },
+      {
+        "check": "ti64_unique_condition_count",
+        "detail": "observed 38",
+        "status": "PASS"
+      },
+      {
+        "check": "ti64_class_counts",
+        "detail": "34 Keyhole / 26 Conduction",
+        "status": "PASS"
+      },
+      {
+        "check": "ss316_row_count",
+        "detail": "observed 60",
+        "status": "PASS"
+      },
+      {
+        "check": "ss316_unique_condition_count",
+        "detail": "observed 38",
+        "status": "PASS"
+      },
+      {
+        "check": "ss316_class_counts",
+        "detail": "23 Keyhole / 37 Conduction",
+        "status": "PASS"
+      },
+      {
+        "check": "spot_diameter_50_um",
+        "detail": "pinned paper semantics",
+        "status": "PASS"
+      },
+      {
+        "check": "thesis_radius_25_um",
+        "detail": "diameter divided by two",
+        "status": "PASS"
+      },
+      {
+        "check": "mm_s_to_m_s_conversion",
+        "detail": "numerically verified for all rows",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_h_formula",
+        "detail": "SI formula verified for all rows",
+        "status": "PASS"
+      },
+      {
+        "check": "ls_constant",
+        "detail": "constant radius; exponent not testable",
+        "status": "PASS"
+      },
+      {
+        "check": "no_optical_predictor",
+        "detail": "{'H': [3, 1], 'G': [3, 2], 'GPC': [3, 2]}",
+        "status": "PASS"
+      },
+      {
+        "check": "H_only_log_h",
+        "detail": "one predictor",
+        "status": "PASS"
+      },
+      {
+        "check": "G_only_logP_logVX",
+        "detail": "two free predictors",
+        "status": "PASS"
+      },
+      {
+        "check": "no_fixed_exponent_in_G",
+        "detail": "G receives raw log VX, not fixed scaled h",
+        "status": "PASS"
+      },
+      {
+        "check": "condition_groups_never_cross_folds",
+        "detail": "exact group lock",
+        "status": "PASS"
+      },
+      {
+        "check": "one_oof_prediction_per_bundle_repeat_model",
+        "detail": "complete unique OOF coverage",
+        "status": "PASS"
+      },
+      {
+        "check": "both_classes_in_each_complete_oof_repeat",
+        "detail": "all complete vectors contain both classes",
+        "status": "PASS"
+      },
+      {
+        "check": "no_internal_B1_q20_q30",
+        "detail": "external endpoint uses conventional full OOF metrics",
+        "status": "PASS"
+      },
+      {
+        "check": "twenty_repeat_blocks",
+        "detail": "20 repeats per alloy",
+        "status": "PASS"
+      },
+      {
+        "check": "paired_repeat_contrast",
+        "detail": "H-G paired within repeat",
+        "status": "PASS"
+      },
+      {
+        "check": "discordant_conditions_exact",
+        "detail": "Ti64=2; 316L=0",
+        "status": "PASS"
+      },
+      {
+        "check": "alloys_never_pooled_for_fitting",
+        "detail": "separate 60-row OOF vectors",
+        "status": "PASS"
+      },
+      {
+        "check": "PCA_fit_label_free",
+        "detail": "labels applied after PCA fit",
+        "status": "PASS"
+      },
+      {
+        "check": "external_raw_data_not_committed",
+        "detail": "cache ignored; raw ZIP absent",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_phase1x_outputs_unchanged",
+        "detail": "[]",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed_and_stored",
+        "detail": "11 executed code cells",
+        "status": "PASS"
+      },
+      {
+        "check": "figure_hashes_match",
+        "detail": "4 figures",
+        "status": "PASS"
+      },
+      {
+        "check": "claim_language_red_team",
+        "detail": "primary negative comparison is stated; proof claims rejected",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS"
+  }
+}
