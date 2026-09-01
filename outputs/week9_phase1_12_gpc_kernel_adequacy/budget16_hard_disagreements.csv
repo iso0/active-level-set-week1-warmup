@@ -1,0 +1,13 @@
+pair,category,count,scope
+H_vs_G0,same_decision,1399,100 matched outer-fold q20 test predictions at B16
+H_vs_G0,different_decision,301,100 matched outer-fold q20 test predictions at B16
+H_vs_G0,H_only_correct,197,100 matched outer-fold q20 test predictions at B16
+H_vs_G0,G0_only_correct,104,100 matched outer-fold q20 test predictions at B16
+H_vs_G0,both_correct,1140,100 matched outer-fold q20 test predictions at B16
+H_vs_G0,both_wrong,259,100 matched outer-fold q20 test predictions at B16
+H_vs_G3,same_decision,1303,100 matched outer-fold q20 test predictions at B16
+H_vs_G3,different_decision,397,100 matched outer-fold q20 test predictions at B16
+H_vs_G3,H_only_correct,252,100 matched outer-fold q20 test predictions at B16
+H_vs_G3,G3_only_correct,145,100 matched outer-fold q20 test predictions at B16
+H_vs_G3,both_correct,1085,100 matched outer-fold q20 test predictions at B16
+H_vs_G3,both_wrong,218,100 matched outer-fold q20 test predictions at B16

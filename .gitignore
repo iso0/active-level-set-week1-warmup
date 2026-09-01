@@ -56,6 +56,9 @@ outputs/week9_phase1_9_physics_specificity_control/smoke/
 # Week 9 Phase 1.11 restart checkpoints (derived published tables are tracked).
 outputs/week9_phase1_11_fixed_mean_discrepancy_gp/checkpoints/
 
+# Week 9 Phase 1.12 restart checkpoints (derived published tables are tracked).
+outputs/week9_phase1_12_gpc_kernel_adequacy/checkpoints/
+
 # Local raw research data
 /data/raw/
 /.cache/external_masinelli/

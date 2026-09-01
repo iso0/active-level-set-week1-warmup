@@ -1,0 +1,5 @@
+figure,sha256,size_bytes,purpose
+01_q20_learning_curves.png,aa01985be53a4152ca0be8de9930142cb40dab07338d4505667cac96f8088cf2,201266,Six-model q20 learning curves on the exact same A0 prefixes.
+02_q20_aulc_contrasts.png,a729d5b5769ab461bbb2e0803077945ebb61491dcc0900861eeade64c44edfc0,47588,Primary and secondary predeclared q20 AULC contrasts.
+03_ard_lengthscales.png,0363eddd2d954da296ac4f98b017adb972900d0470eb65ac6d41a92701ee2f4a,77981,ARD lengthscales at B16/B40/B80 in standardized input space.
+04_kernel_fit_diagnostics.png,c0cc88d561afca9483957f717de15497565df84db04a6f649f2daa589ae18ffd,47139,"Bound-hit, warning, and fallback rates for each new kernel."

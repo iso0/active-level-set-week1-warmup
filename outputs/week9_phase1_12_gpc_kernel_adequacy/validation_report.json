@@ -1,0 +1,232 @@
+{
+  "check_count": 45,
+  "checks": [
+    {
+      "check": "exact_start_sha",
+      "detail": "5a21e5dce37fc6d4c58fa40bb7a6711920fec94e",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_phase1x_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "population_405_73_332",
+      "detail": "405/73/332",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_100_A0_paths",
+      "detail": "100",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_initial_B16",
+      "detail": "100/100",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_budget_grid",
+      "detail": "16-80",
+      "status": "PASS"
+    },
+    {
+      "check": "frozen_H_reproduced",
+      "detail": "0.8308134191176471",
+      "status": "PASS"
+    },
+    {
+      "check": "frozen_G0_reproduced",
+      "detail": "0.8135202205882353",
+      "status": "PASS"
+    },
+    {
+      "check": "no_new_acquisition",
+      "detail": "A0 replay",
+      "status": "PASS"
+    },
+    {
+      "check": "same_revealed_prefix",
+      "detail": "exact prefix",
+      "status": "PASS"
+    },
+    {
+      "check": "test_labels_not_fit",
+      "detail": "revealed only",
+      "status": "PASS"
+    },
+    {
+      "check": "boundary_flags_evaluation_only",
+      "detail": "q flags added after prediction",
+      "status": "PASS"
+    },
+    {
+      "check": "GPC_inputs_exact",
+      "detail": "('P', 'VX', 'LS', 'ST')",
+      "status": "PASS"
+    },
+    {
+      "check": "scaler_outer_pool",
+      "detail": "label-free outer pool",
+      "status": "PASS"
+    },
+    {
+      "check": "G0_matern32",
+      "detail": "G0",
+      "status": "PASS"
+    },
+    {
+      "check": "G1_isotropic_RBF",
+      "detail": "G1",
+      "status": "PASS"
+    },
+    {
+      "check": "G2_ARD_RBF",
+      "detail": "four lengths",
+      "status": "PASS"
+    },
+    {
+      "check": "G3_ARD_matern32",
+      "detail": "G3",
+      "status": "PASS"
+    },
+    {
+      "check": "G4_isotropic_matern52",
+      "detail": "G4",
+      "status": "PASS"
+    },
+    {
+      "check": "common_amplitude_bounds",
+      "detail": "(0.001, 1000.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "common_length_bounds",
+      "detail": "(0.01, 100.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "same_optimizer_restarts",
+      "detail": "0 restarts",
+      "status": "PASS"
+    },
+    {
+      "check": "no_external_exponent",
+      "detail": "none",
+      "status": "PASS"
+    },
+    {
+      "check": "no_h_in_GPC_inputs",
+      "detail": "('P', 'VX', 'LS', 'ST')",
+      "status": "PASS"
+    },
+    {
+      "check": "no_week5_target",
+      "detail": "classification only",
+      "status": "PASS"
+    },
+    {
+      "check": "new_prediction_completeness",
+      "detail": "all G1-G4 predictions",
+      "status": "PASS"
+    },
+    {
+      "check": "twenty_repeat_blocks",
+      "detail": "20",
+      "status": "PASS"
+    },
+    {
+      "check": "bootstrap_10000",
+      "detail": "10000",
+      "status": "PASS"
+    },
+    {
+      "check": "primary_G3_G0",
+      "detail": "q20/q30",
+      "status": "PASS"
+    },
+    {
+      "check": "key_G3_H",
+      "detail": "q20/q30",
+      "status": "PASS"
+    },
+    {
+      "check": "secondary_contrasts",
+      "detail": "complete",
+      "status": "PASS"
+    },
+    {
+      "check": "ARD_fields_complete",
+      "detail": "four labeled lengths",
+      "status": "PASS"
+    },
+    {
+      "check": "ARD_labels_correct",
+      "detail": "P,VX,LS,ST",
+      "status": "PASS"
+    },
+    {
+      "check": "no_causal_ARD_wording",
+      "detail": "claim-safe",
+      "status": "PASS"
+    },
+    {
+      "check": "descriptive_best_not_inferred",
+      "detail": "explicit",
+      "status": "PASS"
+    },
+    {
+      "check": "oracle_non_deployable",
+      "detail": "explicit",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "6 code cells",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "4/4",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_outputs_unchanged_again",
+      "detail": "git diff gate",
+      "status": "PASS"
+    },
+    {
+      "check": "red_team_claim_language",
+      "detail": "safe",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_six_models",
+      "detail": "['G0', 'G1', 'G2', 'G3', 'G4', 'H']",
+      "status": "PASS"
+    },
+    {
+      "check": "G3_primary_frozen",
+      "detail": "G3",
+      "status": "PASS"
+    },
+    {
+      "check": "fit_diagnostic_count",
+      "detail": "26000",
+      "status": "PASS"
+    },
+    {
+      "check": "fallback_disclosed",
+      "detail": "yes",
+      "status": "PASS"
+    },
+    {
+      "check": "decision_declared",
+      "detail": "KERNEL_GAP_CLOSED",
+      "status": "PASS"
+    }
+  ],
+  "passed": 45,
+  "status": "PASS"
+}

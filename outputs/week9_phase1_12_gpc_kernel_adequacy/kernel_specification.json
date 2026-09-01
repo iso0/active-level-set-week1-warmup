@@ -1,0 +1,157 @@
+{
+  "fairness": "identical inputs, scaling, amplitude bounds, component length bounds, optimizer and restarts",
+  "models": {
+    "G0": {
+      "amplitude_bounds": [
+        0.001,
+        1000.0
+      ],
+      "amplitude_initial": 1.0,
+      "ard": false,
+      "family": "Matern",
+      "input_features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "input_scaling": "StandardScaler fit on outer training pool inputs",
+      "kernel_repr": "1**2 * Matern(length_scale=1, nu=1.5)",
+      "length_scale_bounds": [
+        0.01,
+        100.0
+      ],
+      "length_scale_initial": 1.0,
+      "likelihood": "Bernoulli-logistic Laplace GPC",
+      "n_restarts_optimizer": 0,
+      "name": "isotropic Matern-3/2",
+      "nu": 1.5,
+      "optimizer": "fmin_l_bfgs_b",
+      "primary": false
+    },
+    "G1": {
+      "amplitude_bounds": [
+        0.001,
+        1000.0
+      ],
+      "amplitude_initial": 1.0,
+      "ard": false,
+      "family": "RBF",
+      "input_features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "input_scaling": "StandardScaler fit on outer training pool inputs",
+      "kernel_repr": "1**2 * RBF(length_scale=1)",
+      "length_scale_bounds": [
+        0.01,
+        100.0
+      ],
+      "length_scale_initial": 1.0,
+      "likelihood": "Bernoulli-logistic Laplace GPC",
+      "n_restarts_optimizer": 0,
+      "name": "isotropic RBF",
+      "nu": null,
+      "optimizer": "fmin_l_bfgs_b",
+      "primary": false
+    },
+    "G2": {
+      "amplitude_bounds": [
+        0.001,
+        1000.0
+      ],
+      "amplitude_initial": 1.0,
+      "ard": true,
+      "family": "RBF",
+      "input_features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "input_scaling": "StandardScaler fit on outer training pool inputs",
+      "kernel_repr": "1**2 * RBF(length_scale=[1, 1, 1, 1])",
+      "length_scale_bounds": [
+        0.01,
+        100.0
+      ],
+      "length_scale_initial": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "likelihood": "Bernoulli-logistic Laplace GPC",
+      "n_restarts_optimizer": 0,
+      "name": "ARD RBF",
+      "nu": null,
+      "optimizer": "fmin_l_bfgs_b",
+      "primary": false
+    },
+    "G3": {
+      "amplitude_bounds": [
+        0.001,
+        1000.0
+      ],
+      "amplitude_initial": 1.0,
+      "ard": true,
+      "family": "Matern",
+      "input_features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "input_scaling": "StandardScaler fit on outer training pool inputs",
+      "kernel_repr": "1**2 * Matern(length_scale=[1, 1, 1, 1], nu=1.5)",
+      "length_scale_bounds": [
+        0.01,
+        100.0
+      ],
+      "length_scale_initial": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "likelihood": "Bernoulli-logistic Laplace GPC",
+      "n_restarts_optimizer": 0,
+      "name": "ARD Matern-3/2",
+      "nu": 1.5,
+      "optimizer": "fmin_l_bfgs_b",
+      "primary": true
+    },
+    "G4": {
+      "amplitude_bounds": [
+        0.001,
+        1000.0
+      ],
+      "amplitude_initial": 1.0,
+      "ard": false,
+      "family": "Matern",
+      "input_features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "input_scaling": "StandardScaler fit on outer training pool inputs",
+      "kernel_repr": "1**2 * Matern(length_scale=1, nu=2.5)",
+      "length_scale_bounds": [
+        0.01,
+        100.0
+      ],
+      "length_scale_initial": 1.0,
+      "likelihood": "Bernoulli-logistic Laplace GPC",
+      "n_restarts_optimizer": 0,
+      "name": "isotropic Matern-5/2",
+      "nu": 2.5,
+      "optimizer": "fmin_l_bfgs_b",
+      "primary": false
+    }
+  },
+  "status": "FROZEN",
+  "week5_reuse": "kernel families, ARD naming and neutral standardized-space initialization only; no GPR likelihood/noise behavior"
+}

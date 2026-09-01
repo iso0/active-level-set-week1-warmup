@@ -1,0 +1,488 @@
+{
+  "branch": "codex/week9-phase1-12-gpc-kernel-adequacy",
+  "decision": "KERNEL_GAP_CLOSED",
+  "files": [
+    {
+      "path": "notebooks/week_09/10_week9_phase1_12_gpc_kernel_adequacy.ipynb",
+      "sha256": "c4b4277fbcd0b7cc11a7f8345505c5e82dc1040af508eb27b772f35a1334360d",
+      "size_bytes": 615474
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/ard_lengthscale_summary.csv",
+      "sha256": "65f02e1ce777695a4a1d473d35dbe051fc61b4ace522e7710178071dcab085ce",
+      "size_bytes": 3292
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/baseline_gate.json",
+      "sha256": "8b0eee61543755ba8143058ee442481d35bf96cea30d24bf5cc8ecc960aa23ba",
+      "size_bytes": 891
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/bound_hit_summary.csv",
+      "sha256": "a033dcf49de5cc92e2504913c4ac98a81d9b3acde40b957aa9f465ee4bc1cd20",
+      "size_bytes": 2909
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/budget16_contrasts.csv",
+      "sha256": "f7d44c1943a5b3ec2550630ea76a35f21e2bd7a34721637d9f559d60adb2baef",
+      "size_bytes": 2667
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/budget16_hard_disagreements.csv",
+      "sha256": "8efc9b2d5345a2ca0e1f6bf64f5494585312dad47c91bd85d4eecdc2138d021d",
+      "size_bytes": 962
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/budget16_summary.csv",
+      "sha256": "700fa3d05a61fb6bfdc1b38daf929809b1db855881e5da14d2b1c89ec47428e9",
+      "size_bytes": 2752
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/checkpoint40_80_summary.csv",
+      "sha256": "6df018d1810e31fde197a976ff633f432a6e54d74c523ab88819d3c7fcc97f44",
+      "size_bytes": 4077
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/claim_ledger.md",
+      "sha256": "efd1d52841e61edc4480223cad1f0a3fba00f58b7db680e88bcace7c751d886e",
+      "size_bytes": 1178
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/execution_report.json",
+      "sha256": "bb0b8b9ba33900852404d152ae4464eeba0d9f83abfe1a653af246378106826d",
+      "size_bytes": 129
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/figure_manifest.csv",
+      "sha256": "350b71fa1cdee068c8adcccbf22b853f2626d6b70e1fb3d1bd7392d772c2c611",
+      "size_bytes": 663
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/figures/01_q20_learning_curves.png",
+      "sha256": "aa01985be53a4152ca0be8de9930142cb40dab07338d4505667cac96f8088cf2",
+      "size_bytes": 201266
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/figures/02_q20_aulc_contrasts.png",
+      "sha256": "a729d5b5769ab461bbb2e0803077945ebb61491dcc0900861eeade64c44edfc0",
+      "size_bytes": 47588
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/figures/03_ard_lengthscales.png",
+      "sha256": "0363eddd2d954da296ac4f98b017adb972900d0470eb65ac6d41a92701ee2f4a",
+      "size_bytes": 77981
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/figures/04_kernel_fit_diagnostics.png",
+      "sha256": "c0cc88d561afca9483957f717de15497565df84db04a6f649f2daa589ae18ffd",
+      "size_bytes": 47139
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/FINAL_PHASE1_12_REPORT.md",
+      "sha256": "b4dfeae5648cae3f815f12b7f145b5a59e8ae8f2cc40bdac4bc20bf4962c584b",
+      "size_bytes": 1617
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "ac60b3b4dfc2ff34d3b4ccabae68ec02cd525aba216913fe237049397cb53e4c",
+      "size_bytes": 1015
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/full81_checkpoint_summary.csv",
+      "sha256": "ec73fc57f0714e7fa204e227f46081960a3bb6441b3cd77e31c8a0085344b170",
+      "size_bytes": 7355
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/g0_checkpoint_metrics.csv",
+      "sha256": "9d7b4e7f3eb361fdd709fa218aeacb51b7a52a40e36bb6be88b95512482836ad",
+      "size_bytes": 138549
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/g0_checkpoint_predictions.csv.gz",
+      "sha256": "eefb1f33fdcca2ad9fcaf0f5013ee084bf4c4dadcdae4cff34f370eea9e07c00",
+      "size_bytes": 330336
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/kernel_fit_diagnostics.csv.gz",
+      "sha256": "965b86f041372795c18a099b5f8bfe50f3ad199df831708f5093022eb72f6a42",
+      "size_bytes": 1559153
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/kernel_specification.json",
+      "sha256": "ff7d615621ced5c229176d5e2f2370b06d9d8db54570d6671335b34e5cd081f5",
+      "size_bytes": 3837
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/model_summary.csv",
+      "sha256": "f798362964c03c95b132c8a3e75652ca278eb3021d2461492965a51f6496967f",
+      "size_bytes": 771
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/new_kernel_predictions.csv.gz",
+      "sha256": "364f4cec01ba12eb3f761528a4b81184cb22de330b375209d92b2c19407ebdc2",
+      "size_bytes": 27510771
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/oracle_gpc_diagnostic.csv",
+      "sha256": "694209db0b07cbf49468ca7b28dcbaa1096678202c34b1500c3f3d1cba016ad3",
+      "size_bytes": 2009
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/outer_run_metrics.csv.gz",
+      "sha256": "e6c679f0cd792921ab9de257269c6f811a649f610e864a1388216b26fef37420",
+      "size_bytes": 7705
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/paired_contrasts.csv",
+      "sha256": "074e73d9c0c16a6e6c737c1bef76f52eb443c97f78af6b248b2a8b328255e714",
+      "size_bytes": 1584
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/repeat_metrics.csv",
+      "sha256": "a4506b67061cb579702767ec6b87766f643a9cd9ed5ae5924cf925c8c88b8c9c",
+      "size_bytes": 6967
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/SUPERVISOR_PHASE1_12_ONE_PAGE.md",
+      "sha256": "a12f1f3fb4adf8f432499f48f07113485c9bfff4a9797723d13e776f67990f64",
+      "size_bytes": 742
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/validation_report.json",
+      "sha256": "79e98943be1c4b25037818f3bae8424d41279fa9142226461871d66956c55399",
+      "size_bytes": 4820
+    },
+    {
+      "path": "outputs/week9_phase1_12_gpc_kernel_adequacy/validation_report.md",
+      "sha256": "d5d9ecb2c68b39da04143937a35dce6c958db69a800cb93a474a96b1587f639c",
+      "size_bytes": 2152
+    },
+    {
+      "path": "src/week9_phase1_12_gpc_kernel_adequacy.py",
+      "sha256": "a968c465f44df2dcde522c805fe2135655998cba18dfe8f916fae0b709a3155a",
+      "size_bytes": 59356
+    },
+    {
+      "path": "tests/test_week9_phase1_12_gpc_kernel_adequacy.py",
+      "sha256": "e856c828dca16e53bb339e2117286c354375578d7cc1c5f97cbf916e4f0a40dd",
+      "size_bytes": 5399
+    }
+  ],
+  "historical_changes": [],
+  "protocol": {
+    "bootstrap_draws": 10000,
+    "budgets": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "folds_per_repeat": 5,
+    "models": [
+      "H",
+      "G0",
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "outer_runs": 100,
+    "path": "frozen A0",
+    "repeat_blocks": 20
+  },
+  "starting_sha": "5a21e5dce37fc6d4c58fa40bb7a6711920fec94e",
+  "study": "Week 9 Phase 1.12 \u2014 GPC Kernel Adequacy / Anisotropy Control",
+  "validation": {
+    "check_count": 45,
+    "checks": [
+      {
+        "check": "exact_start_sha",
+        "detail": "5a21e5dce37fc6d4c58fa40bb7a6711920fec94e",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_phase1x_unchanged",
+        "detail": "[]",
+        "status": "PASS"
+      },
+      {
+        "check": "population_405_73_332",
+        "detail": "405/73/332",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_100_A0_paths",
+        "detail": "100",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_initial_B16",
+        "detail": "100/100",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_budget_grid",
+        "detail": "16-80",
+        "status": "PASS"
+      },
+      {
+        "check": "frozen_H_reproduced",
+        "detail": "0.8308134191176471",
+        "status": "PASS"
+      },
+      {
+        "check": "frozen_G0_reproduced",
+        "detail": "0.8135202205882353",
+        "status": "PASS"
+      },
+      {
+        "check": "no_new_acquisition",
+        "detail": "A0 replay",
+        "status": "PASS"
+      },
+      {
+        "check": "same_revealed_prefix",
+        "detail": "exact prefix",
+        "status": "PASS"
+      },
+      {
+        "check": "test_labels_not_fit",
+        "detail": "revealed only",
+        "status": "PASS"
+      },
+      {
+        "check": "boundary_flags_evaluation_only",
+        "detail": "q flags added after prediction",
+        "status": "PASS"
+      },
+      {
+        "check": "GPC_inputs_exact",
+        "detail": "('P', 'VX', 'LS', 'ST')",
+        "status": "PASS"
+      },
+      {
+        "check": "scaler_outer_pool",
+        "detail": "label-free outer pool",
+        "status": "PASS"
+      },
+      {
+        "check": "G0_matern32",
+        "detail": "G0",
+        "status": "PASS"
+      },
+      {
+        "check": "G1_isotropic_RBF",
+        "detail": "G1",
+        "status": "PASS"
+      },
+      {
+        "check": "G2_ARD_RBF",
+        "detail": "four lengths",
+        "status": "PASS"
+      },
+      {
+        "check": "G3_ARD_matern32",
+        "detail": "G3",
+        "status": "PASS"
+      },
+      {
+        "check": "G4_isotropic_matern52",
+        "detail": "G4",
+        "status": "PASS"
+      },
+      {
+        "check": "common_amplitude_bounds",
+        "detail": "(0.001, 1000.0)",
+        "status": "PASS"
+      },
+      {
+        "check": "common_length_bounds",
+        "detail": "(0.01, 100.0)",
+        "status": "PASS"
+      },
+      {
+        "check": "same_optimizer_restarts",
+        "detail": "0 restarts",
+        "status": "PASS"
+      },
+      {
+        "check": "no_external_exponent",
+        "detail": "none",
+        "status": "PASS"
+      },
+      {
+        "check": "no_h_in_GPC_inputs",
+        "detail": "('P', 'VX', 'LS', 'ST')",
+        "status": "PASS"
+      },
+      {
+        "check": "no_week5_target",
+        "detail": "classification only",
+        "status": "PASS"
+      },
+      {
+        "check": "new_prediction_completeness",
+        "detail": "all G1-G4 predictions",
+        "status": "PASS"
+      },
+      {
+        "check": "twenty_repeat_blocks",
+        "detail": "20",
+        "status": "PASS"
+      },
+      {
+        "check": "bootstrap_10000",
+        "detail": "10000",
+        "status": "PASS"
+      },
+      {
+        "check": "primary_G3_G0",
+        "detail": "q20/q30",
+        "status": "PASS"
+      },
+      {
+        "check": "key_G3_H",
+        "detail": "q20/q30",
+        "status": "PASS"
+      },
+      {
+        "check": "secondary_contrasts",
+        "detail": "complete",
+        "status": "PASS"
+      },
+      {
+        "check": "ARD_fields_complete",
+        "detail": "four labeled lengths",
+        "status": "PASS"
+      },
+      {
+        "check": "ARD_labels_correct",
+        "detail": "P,VX,LS,ST",
+        "status": "PASS"
+      },
+      {
+        "check": "no_causal_ARD_wording",
+        "detail": "claim-safe",
+        "status": "PASS"
+      },
+      {
+        "check": "descriptive_best_not_inferred",
+        "detail": "explicit",
+        "status": "PASS"
+      },
+      {
+        "check": "oracle_non_deployable",
+        "detail": "explicit",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed",
+        "detail": "6 code cells",
+        "status": "PASS"
+      },
+      {
+        "check": "figure_hashes",
+        "detail": "4/4",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_outputs_unchanged_again",
+        "detail": "git diff gate",
+        "status": "PASS"
+      },
+      {
+        "check": "red_team_claim_language",
+        "detail": "safe",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_six_models",
+        "detail": "['G0', 'G1', 'G2', 'G3', 'G4', 'H']",
+        "status": "PASS"
+      },
+      {
+        "check": "G3_primary_frozen",
+        "detail": "G3",
+        "status": "PASS"
+      },
+      {
+        "check": "fit_diagnostic_count",
+        "detail": "26000",
+        "status": "PASS"
+      },
+      {
+        "check": "fallback_disclosed",
+        "detail": "yes",
+        "status": "PASS"
+      },
+      {
+        "check": "decision_declared",
+        "detail": "KERNEL_GAP_CLOSED",
+        "status": "PASS"
+      }
+    ],
+    "passed": 45,
+    "status": "PASS"
+  }
+}

@@ -21,3 +21,9 @@ notebooks/week_09/09_week9_phase1_11_fixed_mean_discrepancy_gp.ipynb text eol=lf
 outputs/week9_phase1_11_fixed_mean_discrepancy_gp/** text eol=lf
 outputs/week9_phase1_11_fixed_mean_discrepancy_gp/figures/*.png -text
 outputs/week9_phase1_11_fixed_mean_discrepancy_gp/*.gz -text
+src/week9_phase1_12_gpc_kernel_adequacy.py text eol=lf
+tests/test_week9_phase1_12_gpc_kernel_adequacy.py text eol=lf
+notebooks/week_09/10_week9_phase1_12_gpc_kernel_adequacy.ipynb text eol=lf
+outputs/week9_phase1_12_gpc_kernel_adequacy/** text eol=lf
+outputs/week9_phase1_12_gpc_kernel_adequacy/figures/*.png -text
+outputs/week9_phase1_12_gpc_kernel_adequacy/*.gz -text
