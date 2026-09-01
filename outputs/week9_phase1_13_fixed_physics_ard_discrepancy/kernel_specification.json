@@ -1,0 +1,45 @@
+{
+  "fixed_physics_mean": "Phase 1.11 training-fitted log(h) latent logit, frozen before Stage 2",
+  "initial_residual_variance": 0.09,
+  "models": {
+    "M2W": {
+      "ard": false,
+      "kernel": "0.3**2 * Matern(length_scale=1, nu=1.5)",
+      "role": "mechanistic_bound-matched_control"
+    },
+    "M3": {
+      "ard": true,
+      "kernel": "0.3**2 * Matern(length_scale=[1, 1, 1, 1], nu=1.5)",
+      "role": "primary_new_model"
+    },
+    "M3_L1000": {
+      "ard": true,
+      "kernel": "0.3**2 * Matern(length_scale=[1, 1, 1, 1], nu=1.5)",
+      "role": "fixed-path checkpoint sensitivity only"
+    }
+  },
+  "residual_sd_bounds": [
+    0.05,
+    1.0
+  ],
+  "shared": {
+    "amplitude_bounds_identical": true,
+    "initial_lengthscale": 1.0,
+    "input_scaling": "StandardScaler fit on outer training-pool inputs",
+    "inputs": [
+      "P",
+      "VX",
+      "LS",
+      "ST"
+    ],
+    "log_h_excluded_from_residual": true,
+    "matern_nu": 1.5,
+    "optimizer": "L-BFGS-B",
+    "primary_length_bounds": [
+      0.01,
+      100.0
+    ],
+    "restarts": 0
+  },
+  "status": "FROZEN"
+}

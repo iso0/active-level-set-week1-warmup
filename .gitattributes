@@ -27,3 +27,9 @@ notebooks/week_09/10_week9_phase1_12_gpc_kernel_adequacy.ipynb text eol=lf
 outputs/week9_phase1_12_gpc_kernel_adequacy/** text eol=lf
 outputs/week9_phase1_12_gpc_kernel_adequacy/figures/*.png -text
 outputs/week9_phase1_12_gpc_kernel_adequacy/*.gz -text
+src/week9_phase1_13_fixed_physics_ard_discrepancy.py text eol=lf
+tests/test_week9_phase1_13_fixed_physics_ard_discrepancy.py text eol=lf
+notebooks/week_09/11_week9_phase1_13_fixed_physics_ard_discrepancy.ipynb text eol=lf
+outputs/week9_phase1_13_fixed_physics_ard_discrepancy/** text eol=lf
+outputs/week9_phase1_13_fixed_physics_ard_discrepancy/figures/*.png -text
+outputs/week9_phase1_13_fixed_physics_ard_discrepancy/*.gz -text

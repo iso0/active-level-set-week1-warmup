@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "case": "toy_4d",
+      "max_absolute_probability_difference": 0.0,
+      "mean_absolute_probability_difference": 0.0,
+      "rows": 25
+    },
+    {
+      "case": "w85__r01_f01_B16",
+      "max_absolute_probability_difference": 0.0,
+      "mean_absolute_probability_difference": 0.0,
+      "rows": 81
+    },
+    {
+      "case": "w85__r10_f05_B40",
+      "max_absolute_probability_difference": 0.0,
+      "mean_absolute_probability_difference": 0.0,
+      "rows": 81
+    },
+    {
+      "case": "w85__r20_f05_B80",
+      "max_absolute_probability_difference": 0.0,
+      "mean_absolute_probability_difference": 0.0,
+      "rows": 81
+    }
+  ],
+  "fixed_ARD_parameters": {
+    "lengthscales": [
+      0.8,
+      1.1,
+      1.4,
+      1.8
+    ],
+    "nu": 1.5,
+    "variance": 0.27
+  },
+  "maximum_probability_difference": 0.0,
+  "reference": "sklearn GaussianProcessClassifier, identical fixed ARD kernel, zero mean",
+  "status": "PASS",
+  "tolerance": 1e-05
+}

@@ -1,0 +1,6 @@
+figure,sha256,size_bytes,purpose
+01_q20_learning_curves.png,31c50c5676bf2c5baa66a94021da4b63e095cd82c0240578a774fcd672cb7bcb,172747,Headline q20 learning curves on identical A0 prefixes.
+02_q20_contrasts.png,b13163e9b62bc8be03d3b754c29d608ace6822016dc80a0537db3a6b521bb7bb,42683,Primary and mechanistic q20 AULC contrasts.
+03_early_late_aulc.png,5167b93117923b0f05a1b372baf2fb6633dde6d680fa91acbbe75ae61ba43e5d,49086,"Early and late q20 AULC for H, G3, and M3."
+04_residual_role.png,517ebd992673309a934d3d8d68c576dff5e865bff293413cebf4c5ca0f4dd949,99105,Physics/residual magnitude and changed-decision fraction.
+05_ard_bound_sensitivity.png,acabc01b33e98e30a3a9aa5ecd82305336bccca7e52cbfe8eea56e29a87c179c,74393,M3 lengthscale distributions under upper bounds 100 and 1000.

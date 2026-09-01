@@ -1,0 +1,307 @@
+{
+  "check_count": 60,
+  "checks": [
+    {
+      "check": "phase112_parent_sha",
+      "detail": "161453983996b763824f2d262b5ce9d63332da16",
+      "status": "PASS"
+    },
+    {
+      "check": "phase112_placeholder_gone",
+      "detail": "{future} absent",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_phase1x_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "population_405_73_332",
+      "detail": "405/73/332",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_A0_paths",
+      "detail": "100",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_budget_grid",
+      "detail": "B16-80",
+      "status": "PASS"
+    },
+    {
+      "check": "frozen_H",
+      "detail": "0.8308134191176471",
+      "status": "PASS"
+    },
+    {
+      "check": "frozen_G0",
+      "detail": "0.8135202205882353",
+      "status": "PASS"
+    },
+    {
+      "check": "frozen_G3",
+      "detail": "0.826594669117647",
+      "status": "PASS"
+    },
+    {
+      "check": "frozen_M2",
+      "detail": "0.8302297794117648",
+      "status": "PASS"
+    },
+    {
+      "check": "no_new_acquisition",
+      "detail": "A0 replay",
+      "status": "PASS"
+    },
+    {
+      "check": "identical_revealed_prefixes",
+      "detail": "one physics fit per budget",
+      "status": "PASS"
+    },
+    {
+      "check": "stage1_only_log_h",
+      "detail": "Phase 1.11 implementation",
+      "status": "PASS"
+    },
+    {
+      "check": "stage1_revealed_labels_only",
+      "detail": "prefix only",
+      "status": "PASS"
+    },
+    {
+      "check": "stage1_mean_frozen",
+      "detail": "fixed values",
+      "status": "PASS"
+    },
+    {
+      "check": "latent_logit_mean",
+      "detail": "latent logit values passed as GP mean",
+      "status": "PASS"
+    },
+    {
+      "check": "M3_inputs_exact",
+      "detail": "('P', 'VX', 'LS', 'ST')",
+      "status": "PASS"
+    },
+    {
+      "check": "logh_excluded_residual",
+      "detail": "4D kernel only",
+      "status": "PASS"
+    },
+    {
+      "check": "no_external_exponent",
+      "detail": "none",
+      "status": "PASS"
+    },
+    {
+      "check": "no_masinelli_data",
+      "detail": "simulator only",
+      "status": "PASS"
+    },
+    {
+      "check": "boundary_evaluation_only",
+      "detail": "fit path clean",
+      "status": "PASS"
+    },
+    {
+      "check": "matern_nu_1_5",
+      "detail": "1.5",
+      "status": "PASS"
+    },
+    {
+      "check": "M3_four_lengths",
+      "detail": "4",
+      "status": "PASS"
+    },
+    {
+      "check": "residual_sd_bounds",
+      "detail": "(0.05, 1.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "M3_primary_bounds",
+      "detail": "(0.01, 100.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "M2W_same_bounds",
+      "detail": "same",
+      "status": "PASS"
+    },
+    {
+      "check": "M2W_isotropic",
+      "detail": "scalar",
+      "status": "PASS"
+    },
+    {
+      "check": "M3_ARD",
+      "detail": "four",
+      "status": "PASS"
+    },
+    {
+      "check": "same_amplitude_bounds",
+      "detail": "(0.05, 1.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "same_optimizer_restarts",
+      "detail": "zero restarts",
+      "status": "PASS"
+    },
+    {
+      "check": "ARD_zero_mean_parity",
+      "detail": "0.0",
+      "status": "PASS"
+    },
+    {
+      "check": "M2W_predictions_complete",
+      "detail": "526500",
+      "status": "PASS"
+    },
+    {
+      "check": "M3_predictions_complete",
+      "detail": "526500",
+      "status": "PASS"
+    },
+    {
+      "check": "L1000_only_checkpoints",
+      "detail": "B16/B40/B80",
+      "status": "PASS"
+    },
+    {
+      "check": "twenty_repeat_blocks",
+      "detail": "20",
+      "status": "PASS"
+    },
+    {
+      "check": "bootstrap_draws",
+      "detail": "10000",
+      "status": "PASS"
+    },
+    {
+      "check": "primary_M3_H",
+      "detail": "q20",
+      "status": "PASS"
+    },
+    {
+      "check": "mechanistic_M3_M2W",
+      "detail": "q20",
+      "status": "PASS"
+    },
+    {
+      "check": "M3_M2",
+      "detail": "q20",
+      "status": "PASS"
+    },
+    {
+      "check": "M3_G3",
+      "detail": "q20",
+      "status": "PASS"
+    },
+    {
+      "check": "early_exact",
+      "detail": "16-40",
+      "status": "PASS"
+    },
+    {
+      "check": "late_exact",
+      "detail": "41-80",
+      "status": "PASS"
+    },
+    {
+      "check": "q30_secondary",
+      "detail": "complete",
+      "status": "PASS"
+    },
+    {
+      "check": "full81_checkpoints",
+      "detail": "5x3x7",
+      "status": "PASS"
+    },
+    {
+      "check": "ARD_dimension_labels",
+      "detail": "P/VX/LS/ST",
+      "status": "PASS"
+    },
+    {
+      "check": "bound_hits_deterministic",
+      "detail": "fixed atol",
+      "status": "PASS"
+    },
+    {
+      "check": "residual_role_complete",
+      "detail": "checkpoints/subsets",
+      "status": "PASS"
+    },
+    {
+      "check": "changed_decision_fractions_coherent",
+      "detail": "beneficial + harmful = 1",
+      "status": "PASS"
+    },
+    {
+      "check": "no_orthogonality_claim",
+      "detail": "safe",
+      "status": "PASS"
+    },
+    {
+      "check": "no_causal_ARD_claim",
+      "detail": "safe",
+      "status": "PASS"
+    },
+    {
+      "check": "no_acquisition_superiority",
+      "detail": "safe",
+      "status": "PASS"
+    },
+    {
+      "check": "upper_sensitivity_complete",
+      "detail": "3 budgets",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "10 code cells",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "5",
+      "status": "PASS"
+    },
+    {
+      "check": "no_unresolved_templates",
+      "detail": "none",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_outputs_unchanged_again",
+      "detail": "git diff",
+      "status": "PASS"
+    },
+    {
+      "check": "red_team_language",
+      "detail": "explicit",
+      "status": "PASS"
+    },
+    {
+      "check": "M2W_M3_diagnostic_counts",
+      "detail": "6500 each",
+      "status": "PASS"
+    },
+    {
+      "check": "physics_shared_complete",
+      "detail": "one per prefix",
+      "status": "PASS"
+    },
+    {
+      "check": "decision_declared",
+      "detail": "HYBRID_GAIN_SUPPORTED",
+      "status": "PASS"
+    }
+  ],
+  "passed": 60,
+  "status": "PASS"
+}

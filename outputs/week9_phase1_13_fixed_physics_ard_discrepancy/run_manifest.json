@@ -1,0 +1,1163 @@
+{
+  "branch": "codex/week9-phase1-13-fixed-physics-ard-discrepancy",
+  "decision": "HYBRID_GAIN_SUPPORTED",
+  "files": [
+    {
+      "path": "notebooks/week_09/11_week9_phase1_13_fixed_physics_ard_discrepancy.ipynb",
+      "sha256": "e1e3da7a4f189c35e6ecf6d26f8a20ec067eaa904e0c927b24c1de4ad4daa0e3",
+      "size_bytes": 688548
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/ard_lengthscale_summary.csv",
+      "sha256": "23fba0624f2c3d2a21a6ba71dccb4367151a2e8868be9e16b50d6a019d2c3cb3",
+      "size_bytes": 5469
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/ard_parity_report.json",
+      "sha256": "d59ed1782986234970a5295356d76701c555ba6628a97b84c7f22034726cdf19",
+      "size_bytes": 985
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/ard_zero_mean_parity_predictions.csv",
+      "sha256": "6c78e2f26eb5dd09614588359c555a67a4b6f2d119a00a25bad3329bbb138aa7",
+      "size_bytes": 16542
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/baseline_gate.json",
+      "sha256": "0db8e13faaa5c792ccc617e304f53b3390c724c0e04560fe3e78c55af5000bcc",
+      "size_bytes": 1084
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/checkpoint16_40_80_summary.csv",
+      "sha256": "7fc6bf2c268c079bae1a7a17ba3c0096c1cd38ea9e355d941c25f6e932f66f37",
+      "size_bytes": 7030
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/checkpoint_hard_disagreements.csv",
+      "sha256": "4c9b84e53488c265afcf05ed4e6bcd00be0a223b494836075e7b8eaca311d8e3",
+      "size_bytes": 3799
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/claim_ledger.md",
+      "sha256": "3ffef137ebde361d5102f9d62022b91cc7f8dc8b94751d718221676d1ec56c6f",
+      "size_bytes": 1048
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/early_late_aulc_summary.csv",
+      "sha256": "11901b711a7189e757ec3a6817ade110b07a6e25e433ee94761eca8623ad1ab9",
+      "size_bytes": 755
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/early_late_contrasts.csv",
+      "sha256": "36d82515195436470e81e0a3a2d3320b379ba6273a35d9df2cc64218bd9ba67f",
+      "size_bytes": 508
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/execution_report.json",
+      "sha256": "b92bff3c4869115a878c07ab0c5f3d469a8ee6967cb5eca830bad409cea4b17e",
+      "size_bytes": 144
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/figure_manifest.csv",
+      "sha256": "f08da5557c173c2b4a011a1494d961778a5c5158b066357eb75d6208d01be879",
+      "size_bytes": 774
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/figures/01_q20_learning_curves.png",
+      "sha256": "31c50c5676bf2c5baa66a94021da4b63e095cd82c0240578a774fcd672cb7bcb",
+      "size_bytes": 172747
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/figures/02_q20_contrasts.png",
+      "sha256": "b13163e9b62bc8be03d3b754c29d608ace6822016dc80a0537db3a6b521bb7bb",
+      "size_bytes": 42683
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/figures/03_early_late_aulc.png",
+      "sha256": "5167b93117923b0f05a1b372baf2fb6633dde6d680fa91acbbe75ae61ba43e5d",
+      "size_bytes": 49086
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/figures/04_residual_role.png",
+      "sha256": "517ebd992673309a934d3d8d68c576dff5e865bff293413cebf4c5ca0f4dd949",
+      "size_bytes": 99105
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/figures/05_ard_bound_sensitivity.png",
+      "sha256": "acabc01b33e98e30a3a9aa5ecd82305336bccca7e52cbfe8eea56e29a87c179c",
+      "size_bytes": 74393
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/FINAL_PHASE1_13_REPORT.md",
+      "sha256": "7c62e3da5ce349d45bbca0451ef39fafb66f6ab666f99f502f74676aacb5e95b",
+      "size_bytes": 2280
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "5ad01c83d4351c6c0706ab034710148933effc99cc6d361cf5fea13b50caff08",
+      "size_bytes": 1147
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/full81_checkpoint_summary.csv",
+      "sha256": "d04fbe87f45b660daccd31f2fde238b85a26c2bfe32c7b1a5707b9077cc97b18",
+      "size_bytes": 8715
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/kernel_specification.json",
+      "sha256": "8ffd19c4238cdd0838fca231c0f13d4f2fa4b821960485ce186e52b599e768ed",
+      "size_bytes": 1092
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/m2w_fit_diagnostics.csv.gz",
+      "sha256": "fab5cb7f2d928fc526ad0ff1c484abe087fa6b81fac09f273fe7f258cebc1b71",
+      "size_bytes": 270211
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/m3_fit_diagnostics.csv.gz",
+      "sha256": "7761313cbb996e50a5a4e5803e65950f9b82d35e64b670007942a1cba8239854",
+      "size_bytes": 428816
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/model_summary.csv",
+      "sha256": "cdf64d322a6cd70516aabea9cd9f144d1d76f01c841ea16c1aa8574654c0dbac",
+      "size_bytes": 738
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/new_predictions.csv.gz",
+      "sha256": "1f700b3a0bdc86dc393326d362dd50d904a4506119c586e4ac9374d8b7fcc92e",
+      "size_bytes": 38692445
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/outer_run_metrics.csv.gz",
+      "sha256": "9b551eb8a3b55799d470f9084a1c49bfefbb90754d74767499890e94ee7cc71f",
+      "size_bytes": 7278
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/paired_contrasts.csv",
+      "sha256": "d66d479b8cdd780db62a357223840fea1f3cd2f3d8c3dba99fe470dd9bdb8cbd",
+      "size_bytes": 1126
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/physics_mean_fit_diagnostics.csv.gz",
+      "sha256": "2466b35237a90b9dcc353a6170eeab2211bada7f4990b7880fbe0e76ea563eeb",
+      "size_bytes": 280968
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/repeat_metrics.csv",
+      "sha256": "2680cf791cac6633ab06db806364f3063157cbdcfd0f985c49c7812b8288ec39",
+      "size_bytes": 6951
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/residual_amplitude_summary.csv",
+      "sha256": "c17704d794661b587241ec1e7af01cef34c44ca34b9454fa04afa17457a35d13",
+      "size_bytes": 3629
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/residual_role_detail.csv.gz",
+      "sha256": "adc2c5f9b955c1b8f875e9de4f481c40d51aa4128af8c2ab12fbb6c26a772268",
+      "size_bytes": 25279
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/residual_role_summary.csv",
+      "sha256": "99788ca67d61ef1436fa70c7abcdd428740a9e8e20fedfbae30e71ade4735b7f",
+      "size_bytes": 3857
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r01_f01.json.gz",
+      "sha256": "3964d5d9f796843370dbeebfd90c5486eee205e75d4f2d1901ee641eba8af35e",
+      "size_bytes": 5049
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r01_f02.json.gz",
+      "sha256": "1b35fbe313af3c4cb485314c262ac20d80aa02b5cef41ed83e7fb3a9cbf049ee",
+      "size_bytes": 4548
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r01_f03.json.gz",
+      "sha256": "93c49e887561d7f9f979fcfe9cb3b3418675c29bdf80e5f7d56efb09b97de61d",
+      "size_bytes": 4287
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r01_f04.json.gz",
+      "sha256": "b85f9d2376300a218ebec52e02b60a28f07db1bf4f72a87a1da4660c8bad1a03",
+      "size_bytes": 4437
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r01_f05.json.gz",
+      "sha256": "e385b5ff49fa765b19f3791f7ff7aa36c88916066ab4645b0567f5de3e024288",
+      "size_bytes": 4303
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r02_f01.json.gz",
+      "sha256": "c762bc5747a98a0144c1fdae01e39a4c5e1d6bad8b76869b12f68a27bffbba1d",
+      "size_bytes": 4623
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r02_f02.json.gz",
+      "sha256": "240f57c89fc80fca07e3e6eef64447dc64d60b8b9b95eb7501ddd041df5aba8b",
+      "size_bytes": 4437
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r02_f03.json.gz",
+      "sha256": "88d2b94a314d893a5a430b2ece43831372188436d618410a3c29da7366f2e3ca",
+      "size_bytes": 5049
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r02_f04.json.gz",
+      "sha256": "df997ae2743f5a6f8e449d8045335c640727bede1267476fbf674359d0c8ba62",
+      "size_bytes": 4207
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r02_f05.json.gz",
+      "sha256": "87b8a19c783f402e2d4809086137015ca6e37c5fa413483407215789017227dd",
+      "size_bytes": 5175
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r03_f01.json.gz",
+      "sha256": "42989d8fd9c2e58825ed3d919d5acba6a5d012f05e9987fecb45b6520d6714c8",
+      "size_bytes": 5058
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r03_f02.json.gz",
+      "sha256": "b2a88a2d78471b0b920a11bd44e68e0476cd453b66c400672ea0f28543f21ab9",
+      "size_bytes": 4779
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r03_f03.json.gz",
+      "sha256": "08be0783bbf77bc1d34660214d7ee924f4c687b0a88289707aa3655e2acb1802",
+      "size_bytes": 5208
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r03_f04.json.gz",
+      "sha256": "f554d2277087c575255e9c0a9d3d0ae1e163805520ddf59f6247d186383790aa",
+      "size_bytes": 4770
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r03_f05.json.gz",
+      "sha256": "da268cd60f8d5884680a0cef3a70d056df6d139891e5ff1be5fb4d750fb29cca",
+      "size_bytes": 5082
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r04_f01.json.gz",
+      "sha256": "402d87763f3269ee614b482c467469d17074a5e893b47d603146fc08fdab89d7",
+      "size_bytes": 4857
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r04_f02.json.gz",
+      "sha256": "638b18fd5276405baf27f6d5463f839f1fa1f31777a21fdd0d9ad8a08d36d9b7",
+      "size_bytes": 4341
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r04_f03.json.gz",
+      "sha256": "b6afffdfc815a7f3822178331f75b21dba7f2471bfbd4d73242cc0c0aad07a5b",
+      "size_bytes": 4884
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r04_f04.json.gz",
+      "sha256": "fc4d2f31a66941ced12f419f87b7b6d67b48cf8cb08c24f420685a9994fee0f4",
+      "size_bytes": 5098
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r04_f05.json.gz",
+      "sha256": "0c36c49cf9d6b9d452f03f61624746936fb2a4c3dff5d766bbad8b52cfd34a1f",
+      "size_bytes": 5129
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r05_f01.json.gz",
+      "sha256": "9a19c864cce5a87b6052aaf44c4d06da681f572c527b95d492c87b607c86842e",
+      "size_bytes": 4309
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r05_f02.json.gz",
+      "sha256": "9b7e0a5eee395cf2a849c2537cc3c8a52b630a0ed98f3314379e8eebd6a63e3e",
+      "size_bytes": 5087
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r05_f03.json.gz",
+      "sha256": "d2a4a83d60df04ee08d3ac3dbcaa18f142288045f124b99eb20f976378bef2b4",
+      "size_bytes": 4733
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r05_f04.json.gz",
+      "sha256": "caaf85b6a552d96ee576bfdeff536282c536b2657294ca163febd36b1e53cc95",
+      "size_bytes": 4353
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r05_f05.json.gz",
+      "sha256": "16a3999850c3aac219b06c8222a86c07ced3e2dc7b72cfbc3db6e857ce3279a2",
+      "size_bytes": 4312
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r06_f01.json.gz",
+      "sha256": "13f3101b5497764b6f4a05d969c0246daebaa3ab08b96301524f0fd88c86d7cb",
+      "size_bytes": 4200
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r06_f02.json.gz",
+      "sha256": "6addebaf86de3abda8853506542d74b61b44015cb66ef356c810e1e1473f9ab3",
+      "size_bytes": 4503
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r06_f03.json.gz",
+      "sha256": "f5ac66436f866bf691a6b3f85c63fdefde7ec2dd0e7ea01dc02f2931bfc8e1e4",
+      "size_bytes": 4517
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r06_f04.json.gz",
+      "sha256": "e6bd658812c52501fbbe09404baf0bfe2f637d03724ecb3a69fe823dcf5b7f9a",
+      "size_bytes": 5240
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r06_f05.json.gz",
+      "sha256": "706800b9b8f0476bc2301911ed9220d38e0791b0d882bc2285c119a9e70b3184",
+      "size_bytes": 4359
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r07_f01.json.gz",
+      "sha256": "f6159c98221c08c9dbbff80fd724b28d64b4334fb0ef8b469820a86d6ba1cb25",
+      "size_bytes": 4335
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r07_f02.json.gz",
+      "sha256": "618fd719fab2821ccb5d6261be70a8841d492c48d106be2210ac285f8dfd901d",
+      "size_bytes": 4685
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r07_f03.json.gz",
+      "sha256": "47d91972b884837e5f8581cc92daf18324ba2700a159c666f659ba444320d766",
+      "size_bytes": 4942
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r07_f04.json.gz",
+      "sha256": "3c1a6a1321906f98ee89782052c51cd72af237288d25a78bdc8e6b6301d13a2d",
+      "size_bytes": 5027
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r07_f05.json.gz",
+      "sha256": "1c72d3fd8caf1b722708e889515409800b99716dcfeec7f0141331a546493b33",
+      "size_bytes": 5064
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r08_f01.json.gz",
+      "sha256": "cf3a62ffa13f1ad70a926f75d141ad18dea670b57353336c2f9a0c9c7661fc7e",
+      "size_bytes": 4662
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r08_f02.json.gz",
+      "sha256": "0e757243d134d00e12a3ab61fd5a5a2375d5e383d3aa65f3ce943f0eb49a2675",
+      "size_bytes": 5245
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r08_f03.json.gz",
+      "sha256": "b4a4f1c1ed763e056e848498d63ac44437af042a78f7fb3b065ca86888c4bc9c",
+      "size_bytes": 4553
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r08_f04.json.gz",
+      "sha256": "5980b0a72b7121d44ed7b926171a14aa182c4b98334ec985e4547fb672670fd2",
+      "size_bytes": 4415
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r08_f05.json.gz",
+      "sha256": "1f46d8b4bb608e6f9251d73321d82126e507b50431e3245eb6dc7c329fe6f817",
+      "size_bytes": 5104
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r09_f01.json.gz",
+      "sha256": "9469cb4271d614b3d038a5181d04628eefc11ad00e605ac7e5b2d29d103e9cc0",
+      "size_bytes": 4296
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r09_f02.json.gz",
+      "sha256": "2ada09d381c0a3808b86d49047321b8b1f2394c62627bf3c284853ff3b228d0f",
+      "size_bytes": 3915
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r09_f03.json.gz",
+      "sha256": "659107677a11257e5bc5264382fa8e50f63e88c8652ff3f8b4dce3a50965eadc",
+      "size_bytes": 4620
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r09_f04.json.gz",
+      "sha256": "2b0189ccc948acb254206a586f70c2bc9d80f6d5af17ca98dbbe27cb3c341e97",
+      "size_bytes": 4660
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r09_f05.json.gz",
+      "sha256": "9c2ecd07369db1b3e80803e43f15650f0f4761bfdfc4c3054710996f3275ee66",
+      "size_bytes": 4786
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r10_f01.json.gz",
+      "sha256": "586afc59416f919f090c38e2ccd394d5b610e69f2918295e8045f9cfccd29b66",
+      "size_bytes": 5072
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r10_f02.json.gz",
+      "sha256": "e7b3a3258dc6085163f161836821fd61c2cbbc27fb112342a8bf68830cfa637d",
+      "size_bytes": 4526
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r10_f03.json.gz",
+      "sha256": "10aad35957bfcae881268f8cef6017dc4327944222eccc78f9ece9eb426f07b8",
+      "size_bytes": 5126
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r10_f04.json.gz",
+      "sha256": "0aa9833045c50156075626c95f8fe025ceb79c5d945ef0dd5a304313d8082dfd",
+      "size_bytes": 4735
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r10_f05.json.gz",
+      "sha256": "c9a55916fcfc764f4dc6803bfca979f67026a4a48a58a63399d027f249fd9910",
+      "size_bytes": 4472
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r11_f01.json.gz",
+      "sha256": "23823329ef54af8216e145d00f3810efeff7a76cde3de57f6417d44b485a6912",
+      "size_bytes": 4452
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r11_f02.json.gz",
+      "sha256": "cedabc73ec9979a98c90ff8c52a38d727dbd28a42e272a5e1ee7e5b2f3a2a71b",
+      "size_bytes": 5113
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r11_f03.json.gz",
+      "sha256": "dc5e4a8c84e8e2609c4f8acaa686079bbf62bf627a98821dc2dd3a58197e43f7",
+      "size_bytes": 5179
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r11_f04.json.gz",
+      "sha256": "308e9e8bb6b03de445cdd4817b5df4e82cb169d26cfd5af030b133231d05d299",
+      "size_bytes": 5109
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r11_f05.json.gz",
+      "sha256": "27b436ff2efb0c18e0b2a8bd4a3f29e0cb6498ee4ac47e4e4dcbae5adff68ff4",
+      "size_bytes": 4486
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r12_f01.json.gz",
+      "sha256": "840fbabfccdfe9f31a9155fe90508558458190a885fe76014f70115aed075cd3",
+      "size_bytes": 4383
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r12_f02.json.gz",
+      "sha256": "18a593bb45eb37cdcd4d958c8ad85654c0ec7041d0c3986a1400058423b30088",
+      "size_bytes": 4356
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r12_f03.json.gz",
+      "sha256": "1e71aa55938699399a8c4e7b0a1efc1af527772ef26fa7e70d47e1b041f00209",
+      "size_bytes": 4990
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r12_f04.json.gz",
+      "sha256": "6965436efe4b376917b733c1ca034032b7974925f754d79ab8bd0ae3a4a74dc4",
+      "size_bytes": 4852
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r12_f05.json.gz",
+      "sha256": "2a67e08633ff600f9c58042b2b2921e2930f1862fc589a8c6ab716e139564e8f",
+      "size_bytes": 4603
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r13_f01.json.gz",
+      "sha256": "e020222752f826a99460a81ce764a1ccdfd85aac62947e3e692333530eb309e4",
+      "size_bytes": 4474
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r13_f02.json.gz",
+      "sha256": "d896aa28209186f056d61587d55e03feb6b9d9490ef3824c5ca77638b40a8e89",
+      "size_bytes": 4649
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r13_f03.json.gz",
+      "sha256": "7a1a4ee174c69ddda0f587e316af6f0be68fe71336fc00b51858b5108f03ca27",
+      "size_bytes": 5072
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r13_f04.json.gz",
+      "sha256": "1414f9dd994331082a41516f7845297cda03240ef94af7bd6755d0b9205aaee1",
+      "size_bytes": 5233
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r13_f05.json.gz",
+      "sha256": "8fb7af2c053d38ac905a0172045dd8ac34627e4ad0f61331e737d3cb44dcaab5",
+      "size_bytes": 4581
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r14_f01.json.gz",
+      "sha256": "379922171185f07054691bdd75470117c338d0094aee994ee67597a59ce30ee5",
+      "size_bytes": 4366
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r14_f02.json.gz",
+      "sha256": "e57d7a35b25b005e0645100b1883d675de1376bc40f693e7e4fe35f9a799a83e",
+      "size_bytes": 4557
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r14_f03.json.gz",
+      "sha256": "429f9e99aea44868bde237f024e3b2644c80b6a99636b12a0b03f51d08125a63",
+      "size_bytes": 4569
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r14_f04.json.gz",
+      "sha256": "c56d8c1f7b08f3abb18e7fcee3e56277a6db609bf0324227f291b8f3304e427e",
+      "size_bytes": 5023
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r14_f05.json.gz",
+      "sha256": "e979a99ec85fab45fdfaab700287ff31cef423889b6272fedc965eca041832c7",
+      "size_bytes": 5095
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r15_f01.json.gz",
+      "sha256": "da6580edece3b57417d5fcc0af3f7d2de467445829b586666cff6b6b8ef84507",
+      "size_bytes": 5144
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r15_f02.json.gz",
+      "sha256": "af001b35c56ef16846948215759872c6dd8e65bc3c02607cfee13e39b8a6f707",
+      "size_bytes": 5171
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r15_f03.json.gz",
+      "sha256": "7a523f0382569ddc802a88d1ef7448a9f18d848803031fbc7b28e56a397873ee",
+      "size_bytes": 4524
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r15_f04.json.gz",
+      "sha256": "d8997237e9206485f55a3a37d97e2db91de77f4e357174c7d67530b0857e9d65",
+      "size_bytes": 5203
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r15_f05.json.gz",
+      "sha256": "4bcccf444c225c417e47a38c151cf35bab2eea49867bd8e0b3f544f293f6e12a",
+      "size_bytes": 5172
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r16_f01.json.gz",
+      "sha256": "ab6d5ea7bd753f7f6fac088c7d419a2502cae770a2f822a2331c01df4df65e8d",
+      "size_bytes": 4367
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r16_f02.json.gz",
+      "sha256": "f9ee433bb4aa7f471675e4b64fc813c691d997adb3c00f14b6b7518e0d925300",
+      "size_bytes": 5122
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r16_f03.json.gz",
+      "sha256": "c90a12194bbbfa463a5378dce8261f2ed3d9c1d7e3aaeb247789ba1c7d7442b7",
+      "size_bytes": 4570
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r16_f04.json.gz",
+      "sha256": "c0ed7c8ff247d448264eefc5bd662eb0a336025aaec40028c12c8298aefcf9f9",
+      "size_bytes": 5095
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r16_f05.json.gz",
+      "sha256": "53afc3c1bc61d963fbdb6f45ce80996d42373d31a95723bc460543210c5c9c82",
+      "size_bytes": 4608
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r17_f01.json.gz",
+      "sha256": "a9a1ca89fae7b8d69acbdd9c994ba28f5465cfcdc6123f2eab2048439c145807",
+      "size_bytes": 4791
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r17_f02.json.gz",
+      "sha256": "dfb8738b21a93dc6d82888758864c808d2f4a193a58c2aa84f22bb990a6c8e2b",
+      "size_bytes": 5132
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r17_f03.json.gz",
+      "sha256": "35199ffc61488ae53985a67f138f8f5b33cf644ff8bc442e9b2bffbbee15693b",
+      "size_bytes": 4933
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r17_f04.json.gz",
+      "sha256": "32a547e55527a260a0527b1e901585a272f060422a8e774c172705352f3c2120",
+      "size_bytes": 5242
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r17_f05.json.gz",
+      "sha256": "13c3444dd515e8b8313a11429f07027215e757a8b8b73aa78aee6ecdacdbc5c9",
+      "size_bytes": 5185
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r18_f01.json.gz",
+      "sha256": "c41081d8c25654e799e79f283aeee2a8a261c7e0601b139fc3b1c53de9c53847",
+      "size_bytes": 5074
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r18_f02.json.gz",
+      "sha256": "c2bfa95b05329f8e425010f9987b0c1acdeb079e6c95c8f5dc2447fef8217206",
+      "size_bytes": 5195
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r18_f03.json.gz",
+      "sha256": "60fbc5d853cdd94b0a1f461881c965b5a05f2e37070af69253efadfc8c88220e",
+      "size_bytes": 5184
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r18_f04.json.gz",
+      "sha256": "71acf8ffeda2fa9d99f51e98cc0a7e2f7b4ac0c162c444e1ba4e2c4dd465b933",
+      "size_bytes": 5030
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r18_f05.json.gz",
+      "sha256": "90ea3387700282aa20f678c4a3f0507c1ad33320a63450327718d99dc375e49c",
+      "size_bytes": 5026
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r19_f01.json.gz",
+      "sha256": "1f1a8815ef6f6ee3caf20237c2d23c7e2468f3337c3d9b2af56318673331889c",
+      "size_bytes": 5077
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r19_f02.json.gz",
+      "sha256": "3a737901928039093470854e05c83d0d4719f18a4248168f0288e87407e0ee79",
+      "size_bytes": 4569
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r19_f03.json.gz",
+      "sha256": "43164b7dba007e6fa5dd6b9b11c67bc32149f264332b992e79b0738be9d73286",
+      "size_bytes": 5050
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r19_f04.json.gz",
+      "sha256": "7650456ec63181dd410cad982c2a706d0e0a547cc1adc2bdfa88d0bf51852f20",
+      "size_bytes": 5084
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r19_f05.json.gz",
+      "sha256": "e7a4a2a8554e24b63e9bdf4fd69b84960b45dc054d85b436ca8a3cedb3a15d52",
+      "size_bytes": 4148
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r20_f01.json.gz",
+      "sha256": "a8024c93f1abbed888deb278dbb32a351a01c67ad5957c7e24e6e7543a356e2a",
+      "size_bytes": 5183
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r20_f02.json.gz",
+      "sha256": "5334cc94e68532230c46047f7b9a4540f253efffa9f9d0ebdd0d4d3e0c5229a2",
+      "size_bytes": 4240
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r20_f03.json.gz",
+      "sha256": "eb313895f391ceb01901476f7ce1f854b9c940ca48e1be27c9aed8fc35bfb401",
+      "size_bytes": 5092
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r20_f04.json.gz",
+      "sha256": "e8a866f57b2e21953b9bc23a075c84a56cbbfd2ac251b681fd346c85e4b0aaa3",
+      "size_bytes": 5045
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r20_f05.json.gz",
+      "sha256": "5e16d7e43e63b4a90fbdee679e0c7ebc6d5513504689c83ef195545ceeae5a68",
+      "size_bytes": 4750
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_execution_report.json",
+      "sha256": "3605998413f16de80b9bf2321fd863f374f269ae296a1d51aaae8d0e3d46bb51",
+      "size_bytes": 145
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/SUPERVISOR_PHASE1_13_ONE_PAGE.md",
+      "sha256": "2c29291ca16a128d9428b72d9bc6ee59d3e8cde6b3a691f3e1f5b8d414612805",
+      "size_bytes": 882
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/upper_bound_sensitivity.csv",
+      "sha256": "fba3d649b2bddd2d9e90c40c56f905d66b89546f869ac3d99c13b4620671034d",
+      "size_bytes": 3474
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/validation_report.json",
+      "sha256": "58b476357c1d8426b085d0c5c0563ea3938650adcbe8113bd7840bd96b870c43",
+      "size_bytes": 6310
+    },
+    {
+      "path": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/validation_report.md",
+      "sha256": "b4d46dab629df646be68413966c61e0adfba20697595a34963b0d65be5abdaea",
+      "size_bytes": 2742
+    },
+    {
+      "path": "src/week9_phase1_13_fixed_physics_ard_discrepancy.py",
+      "sha256": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba",
+      "size_bytes": 77123
+    },
+    {
+      "path": "tests/test_week9_phase1_13_fixed_physics_ard_discrepancy.py",
+      "sha256": "f47bee16007b5780d154cd3a97158b4b9d917e1bc6fab4bc60a1934f002abd06",
+      "size_bytes": 5828
+    }
+  ],
+  "historical_changes": [],
+  "phase112_parent_sha": "161453983996b763824f2d262b5ce9d63332da16",
+  "protocol": {
+    "bootstrap_draws": 10000,
+    "budgets": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "early_budgets": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "folds_per_repeat": 5,
+    "late_budgets": [
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "new_full_models": [
+      "M2W",
+      "M3"
+    ],
+    "outer_runs": 100,
+    "path": "frozen A0",
+    "repeat_blocks": 20,
+    "sensitivity_budgets": [
+      16,
+      40,
+      80
+    ]
+  },
+  "study": "Week 9 Phase 1.13 \u2014 Fixed Physics Mean + ARD GP Discrepancy",
+  "validation": {
+    "check_count": 60,
+    "checks": [
+      {
+        "check": "phase112_parent_sha",
+        "detail": "161453983996b763824f2d262b5ce9d63332da16",
+        "status": "PASS"
+      },
+      {
+        "check": "phase112_placeholder_gone",
+        "detail": "{future} absent",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_phase1x_unchanged",
+        "detail": "[]",
+        "status": "PASS"
+      },
+      {
+        "check": "population_405_73_332",
+        "detail": "405/73/332",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_A0_paths",
+        "detail": "100",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_budget_grid",
+        "detail": "B16-80",
+        "status": "PASS"
+      },
+      {
+        "check": "frozen_H",
+        "detail": "0.8308134191176471",
+        "status": "PASS"
+      },
+      {
+        "check": "frozen_G0",
+        "detail": "0.8135202205882353",
+        "status": "PASS"
+      },
+      {
+        "check": "frozen_G3",
+        "detail": "0.826594669117647",
+        "status": "PASS"
+      },
+      {
+        "check": "frozen_M2",
+        "detail": "0.8302297794117648",
+        "status": "PASS"
+      },
+      {
+        "check": "no_new_acquisition",
+        "detail": "A0 replay",
+        "status": "PASS"
+      },
+      {
+        "check": "identical_revealed_prefixes",
+        "detail": "one physics fit per budget",
+        "status": "PASS"
+      },
+      {
+        "check": "stage1_only_log_h",
+        "detail": "Phase 1.11 implementation",
+        "status": "PASS"
+      },
+      {
+        "check": "stage1_revealed_labels_only",
+        "detail": "prefix only",
+        "status": "PASS"
+      },
+      {
+        "check": "stage1_mean_frozen",
+        "detail": "fixed values",
+        "status": "PASS"
+      },
+      {
+        "check": "latent_logit_mean",
+        "detail": "latent logit values passed as GP mean",
+        "status": "PASS"
+      },
+      {
+        "check": "M3_inputs_exact",
+        "detail": "('P', 'VX', 'LS', 'ST')",
+        "status": "PASS"
+      },
+      {
+        "check": "logh_excluded_residual",
+        "detail": "4D kernel only",
+        "status": "PASS"
+      },
+      {
+        "check": "no_external_exponent",
+        "detail": "none",
+        "status": "PASS"
+      },
+      {
+        "check": "no_masinelli_data",
+        "detail": "simulator only",
+        "status": "PASS"
+      },
+      {
+        "check": "boundary_evaluation_only",
+        "detail": "fit path clean",
+        "status": "PASS"
+      },
+      {
+        "check": "matern_nu_1_5",
+        "detail": "1.5",
+        "status": "PASS"
+      },
+      {
+        "check": "M3_four_lengths",
+        "detail": "4",
+        "status": "PASS"
+      },
+      {
+        "check": "residual_sd_bounds",
+        "detail": "(0.05, 1.0)",
+        "status": "PASS"
+      },
+      {
+        "check": "M3_primary_bounds",
+        "detail": "(0.01, 100.0)",
+        "status": "PASS"
+      },
+      {
+        "check": "M2W_same_bounds",
+        "detail": "same",
+        "status": "PASS"
+      },
+      {
+        "check": "M2W_isotropic",
+        "detail": "scalar",
+        "status": "PASS"
+      },
+      {
+        "check": "M3_ARD",
+        "detail": "four",
+        "status": "PASS"
+      },
+      {
+        "check": "same_amplitude_bounds",
+        "detail": "(0.05, 1.0)",
+        "status": "PASS"
+      },
+      {
+        "check": "same_optimizer_restarts",
+        "detail": "zero restarts",
+        "status": "PASS"
+      },
+      {
+        "check": "ARD_zero_mean_parity",
+        "detail": "0.0",
+        "status": "PASS"
+      },
+      {
+        "check": "M2W_predictions_complete",
+        "detail": "526500",
+        "status": "PASS"
+      },
+      {
+        "check": "M3_predictions_complete",
+        "detail": "526500",
+        "status": "PASS"
+      },
+      {
+        "check": "L1000_only_checkpoints",
+        "detail": "B16/B40/B80",
+        "status": "PASS"
+      },
+      {
+        "check": "twenty_repeat_blocks",
+        "detail": "20",
+        "status": "PASS"
+      },
+      {
+        "check": "bootstrap_draws",
+        "detail": "10000",
+        "status": "PASS"
+      },
+      {
+        "check": "primary_M3_H",
+        "detail": "q20",
+        "status": "PASS"
+      },
+      {
+        "check": "mechanistic_M3_M2W",
+        "detail": "q20",
+        "status": "PASS"
+      },
+      {
+        "check": "M3_M2",
+        "detail": "q20",
+        "status": "PASS"
+      },
+      {
+        "check": "M3_G3",
+        "detail": "q20",
+        "status": "PASS"
+      },
+      {
+        "check": "early_exact",
+        "detail": "16-40",
+        "status": "PASS"
+      },
+      {
+        "check": "late_exact",
+        "detail": "41-80",
+        "status": "PASS"
+      },
+      {
+        "check": "q30_secondary",
+        "detail": "complete",
+        "status": "PASS"
+      },
+      {
+        "check": "full81_checkpoints",
+        "detail": "5x3x7",
+        "status": "PASS"
+      },
+      {
+        "check": "ARD_dimension_labels",
+        "detail": "P/VX/LS/ST",
+        "status": "PASS"
+      },
+      {
+        "check": "bound_hits_deterministic",
+        "detail": "fixed atol",
+        "status": "PASS"
+      },
+      {
+        "check": "residual_role_complete",
+        "detail": "checkpoints/subsets",
+        "status": "PASS"
+      },
+      {
+        "check": "changed_decision_fractions_coherent",
+        "detail": "beneficial + harmful = 1",
+        "status": "PASS"
+      },
+      {
+        "check": "no_orthogonality_claim",
+        "detail": "safe",
+        "status": "PASS"
+      },
+      {
+        "check": "no_causal_ARD_claim",
+        "detail": "safe",
+        "status": "PASS"
+      },
+      {
+        "check": "no_acquisition_superiority",
+        "detail": "safe",
+        "status": "PASS"
+      },
+      {
+        "check": "upper_sensitivity_complete",
+        "detail": "3 budgets",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed",
+        "detail": "10 code cells",
+        "status": "PASS"
+      },
+      {
+        "check": "figure_hashes",
+        "detail": "5",
+        "status": "PASS"
+      },
+      {
+        "check": "no_unresolved_templates",
+        "detail": "none",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_outputs_unchanged_again",
+        "detail": "git diff",
+        "status": "PASS"
+      },
+      {
+        "check": "red_team_language",
+        "detail": "explicit",
+        "status": "PASS"
+      },
+      {
+        "check": "M2W_M3_diagnostic_counts",
+        "detail": "6500 each",
+        "status": "PASS"
+      },
+      {
+        "check": "physics_shared_complete",
+        "detail": "one per prefix",
+        "status": "PASS"
+      },
+      {
+        "check": "decision_declared",
+        "detail": "HYBRID_GAIN_SUPPORTED",
+        "status": "PASS"
+      }
+    ],
+    "passed": 60,
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,63 @@
+setting,budget,parameter,median,q1,q3,space
+L100,16,l_P,0.999936664671528,0.9989054751425697,1.503178270127218,standardized outer-training-pool inputs
+L100,16,l_VX,0.9994387584334479,0.6140166965015741,0.9999320246655552,standardized outer-training-pool inputs
+L100,16,l_LS,0.9998687843872149,0.999209021585605,1.815020605656155,standardized outer-training-pool inputs
+L100,16,l_ST,0.9997906049701171,0.6931428844470622,0.9999918089569654,standardized outer-training-pool inputs
+L100,16,anisotropy_ratio,1.0025290511704705,1.0005112719040552,105.68246933144066,standardized outer-training-pool inputs
+L100,16,any_length_lower_bound_hit,0.0,,,fit-rate diagnostic
+L100,16,any_length_upper_bound_hit,0.25,,,fit-rate diagnostic
+L100,16,any_length_bound_hit,0.25,,,fit-rate diagnostic
+L100,16,optimizer_converged,0.95,,,fit-rate diagnostic
+L100,40,l_P,2.424867024801795,0.6863880934258857,100.00000000000004,standardized outer-training-pool inputs
+L100,40,l_VX,0.4218185944837105,0.3204899679289568,0.5681754281022449,standardized outer-training-pool inputs
+L100,40,l_LS,15.713550028541356,0.4369089566947157,100.00000000000004,standardized outer-training-pool inputs
+L100,40,l_ST,100.00000000000004,77.2170386706948,100.00000000000004,standardized outer-training-pool inputs
+L100,40,anisotropy_ratio,261.7641598080619,215.77487463231614,402.02179859575864,standardized outer-training-pool inputs
+L100,40,any_length_lower_bound_hit,0.05,,,fit-rate diagnostic
+L100,40,any_length_upper_bound_hit,0.83,,,fit-rate diagnostic
+L100,40,any_length_bound_hit,0.86,,,fit-rate diagnostic
+L100,40,optimizer_converged,0.98,,,fit-rate diagnostic
+L100,80,l_P,1.5988186690920911,0.9264638672697074,32.80307248585238,standardized outer-training-pool inputs
+L100,80,l_VX,0.4970201434933612,0.4294571789244502,0.5662104554776328,standardized outer-training-pool inputs
+L100,80,l_LS,60.729306165242335,3.645999315546774,100.00000000000004,standardized outer-training-pool inputs
+L100,80,l_ST,94.43234099931348,5.65188661689431,100.00000000000004,standardized outer-training-pool inputs
+L100,80,anisotropy_ratio,175.9787277562381,128.64418248432744,219.59568077334936,standardized outer-training-pool inputs
+L100,80,any_length_lower_bound_hit,0.0,,,fit-rate diagnostic
+L100,80,any_length_upper_bound_hit,0.66,,,fit-rate diagnostic
+L100,80,any_length_bound_hit,0.66,,,fit-rate diagnostic
+L100,80,optimizer_converged,0.87,,,fit-rate diagnostic
+L1000,16,l_P,0.999936664671528,0.9989054751425697,1.5034584582869548,standardized outer-training-pool inputs
+L1000,16,l_VX,0.9994387584334479,0.6141266644364411,0.9999320246655552,standardized outer-training-pool inputs
+L1000,16,l_LS,0.9998687843872149,0.999209021585605,1.291097469428947,standardized outer-training-pool inputs
+L1000,16,l_ST,0.9997906049701171,0.6933123875268499,0.9999918089569654,standardized outer-training-pool inputs
+L1000,16,anisotropy_ratio,1.0025290511704705,1.0005112719040552,144.57494738204312,standardized outer-training-pool inputs
+L1000,16,any_length_lower_bound_hit,0.0,,,fit-rate diagnostic
+L1000,16,any_length_upper_bound_hit,0.2,,,fit-rate diagnostic
+L1000,16,any_length_bound_hit,0.2,,,fit-rate diagnostic
+L1000,16,optimizer_converged,0.96,,,fit-rate diagnostic
+L1000,40,l_P,2.574640146606874,0.7875169306501971,999.9999999999998,standardized outer-training-pool inputs
+L1000,40,l_VX,0.4239589005441913,0.3205564607661246,0.5600038573781307,standardized outer-training-pool inputs
+L1000,40,l_LS,27.396548882437564,0.49341152606202116,999.9999999999998,standardized outer-training-pool inputs
+L1000,40,l_ST,999.9999999999998,125.44281005432013,999.9999999999998,standardized outer-training-pool inputs
+L1000,40,anisotropy_ratio,2381.7793135098536,1495.9603443641206,3662.900642267788,standardized outer-training-pool inputs
+L1000,40,any_length_lower_bound_hit,0.04,,,fit-rate diagnostic
+L1000,40,any_length_upper_bound_hit,0.67,,,fit-rate diagnostic
+L1000,40,any_length_bound_hit,0.7,,,fit-rate diagnostic
+L1000,40,optimizer_converged,0.98,,,fit-rate diagnostic
+L1000,80,l_P,1.6617067895171078,0.9265921082878886,54.044833257135934,standardized outer-training-pool inputs
+L1000,80,l_VX,0.5083251526454945,0.43206708980624287,0.5693261530692759,standardized outer-training-pool inputs
+L1000,80,l_LS,51.47632802624281,4.345740665485977,999.9999999999998,standardized outer-training-pool inputs
+L1000,80,l_ST,121.13612416294455,6.439544548660944,999.9999999999998,standardized outer-training-pool inputs
+L1000,80,anisotropy_ratio,1147.0807803142745,138.82209049815074,2065.808465619947,standardized outer-training-pool inputs
+L1000,80,any_length_lower_bound_hit,0.0,,,fit-rate diagnostic
+L1000,80,any_length_upper_bound_hit,0.45,,,fit-rate diagnostic
+L1000,80,any_length_bound_hit,0.45,,,fit-rate diagnostic
+L1000,80,optimizer_converged,0.86,,,fit-rate diagnostic
+L100_all_B16_80,-1,l_P_lower_bound_hit,0.011692307692307693,,,fit-rate diagnostic
+L100_all_B16_80,-1,l_P_upper_bound_hit,0.2541538461538462,,,fit-rate diagnostic
+L100_all_B16_80,-1,l_VX_lower_bound_hit,0.027230769230769232,,,fit-rate diagnostic
+L100_all_B16_80,-1,l_VX_upper_bound_hit,0.08461538461538462,,,fit-rate diagnostic
+L100_all_B16_80,-1,l_LS_lower_bound_hit,0.006615384615384615,,,fit-rate diagnostic
+L100_all_B16_80,-1,l_LS_upper_bound_hit,0.33353846153846156,,,fit-rate diagnostic
+L100_all_B16_80,-1,l_ST_lower_bound_hit,0.008769230769230769,,,fit-rate diagnostic
+L100_all_B16_80,-1,l_ST_upper_bound_hit,0.5287692307692308,,,fit-rate diagnostic
