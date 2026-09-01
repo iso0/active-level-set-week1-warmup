@@ -1,0 +1,5 @@
+figure,sha256,size_bytes,purpose
+01_model_mechanism.png,b7c5da24af406f6b3734b2007cceea0eb3e848291007fc2e799d90822e4642c0,64311,Training-fitted physics mean is frozen before the 4D GP discrepancy fit.
+02_q20_learning_curves.png,c67991a171013a358fe5f3c9b5b70dce65a1bdded7060881cac552548cc5bef4,134257,q20 learning curves for all four models on identical A0 prefixes.
+03_q20_aulc_contrasts.png,497845f6eb60ecd17c04bc601570618554f4e22a8f5c8fd0e25b1b78a5085d69,33190,Matched repeat-block q20 AULC contrasts with 95% bootstrap intervals.
+04_residual_sd_bound_hits.png,5f311b33390b966148e33a255bd487ed2afab00f8916468559a66748d4f2290e,45667,Matched M1/M2 residual-SD lower and upper bound-hit rates.

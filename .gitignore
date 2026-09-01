@@ -53,6 +53,9 @@ outputs/week9_phase1_8_model_path_decomposition/smoke/
 outputs/week9_phase1_9_physics_specificity_control/checkpoints/
 outputs/week9_phase1_9_physics_specificity_control/smoke/
 
+# Week 9 Phase 1.11 restart checkpoints (derived published tables are tracked).
+outputs/week9_phase1_11_fixed_mean_discrepancy_gp/checkpoints/
+
 # Local raw research data
 /data/raw/
 /.cache/external_masinelli/

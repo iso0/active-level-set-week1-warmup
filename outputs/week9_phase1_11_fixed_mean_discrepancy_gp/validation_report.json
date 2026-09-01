@@ -1,0 +1,187 @@
+{
+  "check_count": 36,
+  "checks": [
+    {
+      "check": "correct_start_sha",
+      "detail": "e33cca4f81b865d330577ef9a8140c4bbe306e5a",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_phase1x_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "canonical_h_formula",
+      "detail": "numeric P/sqrt(VX*LS^3) verification",
+      "status": "PASS"
+    },
+    {
+      "check": "stage1_only_log_h",
+      "detail": "log(h) only",
+      "status": "PASS"
+    },
+    {
+      "check": "stage1_scaler_revealed_only",
+      "detail": "revealed indices",
+      "status": "PASS"
+    },
+    {
+      "check": "stage1_labels_prefix_only",
+      "detail": "current A0 prefix",
+      "status": "PASS"
+    },
+    {
+      "check": "physics_mean_is_latent_logit",
+      "detail": "latent passed to GP",
+      "status": "PASS"
+    },
+    {
+      "check": "physics_mean_frozen_stage2",
+      "detail": "fixed mean values",
+      "status": "PASS"
+    },
+    {
+      "check": "residual_only_four_inputs",
+      "detail": "('P', 'VX', 'LS', 'ST')",
+      "status": "PASS"
+    },
+    {
+      "check": "residual_excludes_log_h",
+      "detail": "kernel gets standardized x4",
+      "status": "PASS"
+    },
+    {
+      "check": "no_external_exponent",
+      "detail": "canonical h only",
+      "status": "PASS"
+    },
+    {
+      "check": "no_masinelli_labels",
+      "detail": "SPH only",
+      "status": "PASS"
+    },
+    {
+      "check": "no_boundary_inputs_in_fit",
+      "detail": "evaluation flags only",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_A0_path",
+      "detail": "Phase 1.8 tracked query_paths.csv.gz",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_initial16",
+      "detail": "load_inputs executable equality against frozen manifest and initial_design",
+      "status": "PASS"
+    },
+    {
+      "check": "M0_baseline",
+      "detail": "0.8135202205882353",
+      "status": "PASS"
+    },
+    {
+      "check": "M1_A0_baseline",
+      "detail": "0.8299724264705881",
+      "status": "PASS"
+    },
+    {
+      "check": "no_new_acquisition",
+      "detail": "A0 replay only",
+      "status": "PASS"
+    },
+    {
+      "check": "zero_mean_parity",
+      "detail": "0.0",
+      "status": "PASS"
+    },
+    {
+      "check": "same_inference_equations",
+      "detail": "one class, m=0 or supplied m",
+      "status": "PASS"
+    },
+    {
+      "check": "matern_nu_exact",
+      "detail": "1.5",
+      "status": "PASS"
+    },
+    {
+      "check": "residual_sd_bounds_exact",
+      "detail": "(0.05, 1.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "length_scale_bounds_exact",
+      "detail": "(0.25, 4.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "train_only_4d_scaling",
+      "detail": "outer training pool feature-only",
+      "status": "PASS"
+    },
+    {
+      "check": "prediction_completeness",
+      "detail": "all new split/budget/subsets",
+      "status": "PASS"
+    },
+    {
+      "check": "twenty_repeat_blocks",
+      "detail": "20",
+      "status": "PASS"
+    },
+    {
+      "check": "bootstrap_draws",
+      "detail": "10000",
+      "status": "PASS"
+    },
+    {
+      "check": "M2_M0_contrast",
+      "detail": "q20/q30",
+      "status": "PASS"
+    },
+    {
+      "check": "M2_M1_contrast",
+      "detail": "q20/q30",
+      "status": "PASS"
+    },
+    {
+      "check": "M2_MH_contrast",
+      "detail": "q20/q30",
+      "status": "PASS"
+    },
+    {
+      "check": "bound_hits_deterministic",
+      "detail": "np.isclose fixed tolerance",
+      "status": "PASS"
+    },
+    {
+      "check": "matched_A0_diagnostics",
+      "detail": "M2 6500; M1 reused matched Y10",
+      "status": "PASS"
+    },
+    {
+      "check": "no_fold_independence_claim",
+      "detail": "repeat-block inference",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "7 code cells",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "4",
+      "status": "PASS"
+    },
+    {
+      "check": "claim_language_red_team",
+      "detail": "safe",
+      "status": "PASS"
+    }
+  ],
+  "passed": 36,
+  "status": "PASS"
+}

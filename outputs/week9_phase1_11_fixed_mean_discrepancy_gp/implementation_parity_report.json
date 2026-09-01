@@ -1,0 +1,71 @@
+{
+  "equations": "independent GPML logistic Laplace Algorithms 3.1/3.2/5.1; fixed mean enters latent f=m+g; zero-mean uses m=0",
+  "fixed_kernel_cases": [
+    {
+      "case": "toy",
+      "max_absolute_probability_difference": 0.0,
+      "mean_absolute_probability_difference": 0.0,
+      "rows": 25
+    },
+    {
+      "case": "w85__r01_f01_B16",
+      "max_absolute_probability_difference": 0.0,
+      "mean_absolute_probability_difference": 0.0,
+      "rows": 81
+    },
+    {
+      "case": "w85__r10_f05_B40",
+      "max_absolute_probability_difference": 0.0,
+      "mean_absolute_probability_difference": 0.0,
+      "rows": 81
+    },
+    {
+      "case": "w85__r20_f05_B80",
+      "max_absolute_probability_difference": 0.0,
+      "mean_absolute_probability_difference": 0.0,
+      "rows": 81
+    }
+  ],
+  "maximum_fixed_kernel_probability_difference": 0.0,
+  "optimization_parity": [
+    {
+      "case": "w85__r01_f01_B16",
+      "custom_converged": true,
+      "custom_iterations": 3,
+      "custom_length_scale": 4.0,
+      "custom_log_marginal_likelihood": -9.076359647212723,
+      "custom_residual_sd": 1.0,
+      "max_probability_difference": 0.0,
+      "sklearn_length_scale": 4.0,
+      "sklearn_log_marginal_likelihood": -9.076359647212723,
+      "sklearn_residual_sd": 1.0
+    },
+    {
+      "case": "w85__r10_f05_B40",
+      "custom_converged": true,
+      "custom_iterations": 5,
+      "custom_length_scale": 3.1683386645049487,
+      "custom_log_marginal_likelihood": -26.667201747882853,
+      "custom_residual_sd": 1.0,
+      "max_probability_difference": 4.445388412932516e-08,
+      "sklearn_length_scale": 3.168336697290939,
+      "sklearn_log_marginal_likelihood": -26.667201747883293,
+      "sklearn_residual_sd": 1.0
+    },
+    {
+      "case": "w85__r20_f05_B80",
+      "custom_converged": true,
+      "custom_iterations": 8,
+      "custom_length_scale": 2.7285889315674074,
+      "custom_log_marginal_likelihood": -46.64531301846527,
+      "custom_residual_sd": 1.0,
+      "max_probability_difference": 1.7091437598537595e-08,
+      "sklearn_length_scale": 2.7285885710938924,
+      "sklearn_log_marginal_likelihood": -46.645313018465316,
+      "sklearn_residual_sd": 1.0
+    }
+  ],
+  "sklearn_private_estimator_subclassed": false,
+  "status": "PASS",
+  "tolerance": 1e-05
+}
