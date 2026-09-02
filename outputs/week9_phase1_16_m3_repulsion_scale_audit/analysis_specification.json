@@ -1,0 +1,88 @@
+{
+  "arms": {
+    "M3_MARGIN": {
+      "c": 0.0,
+      "role": "historical exact Phase 1.14 baseline"
+    },
+    "REP_C025": {
+      "c": 0.25,
+      "role": "prospective repulsion arm"
+    },
+    "REP_C050": {
+      "c": 0.5,
+      "role": "prospective repulsion arm"
+    },
+    "REP_C100": {
+      "c": 1.0,
+      "role": "prospective repulsion arm"
+    },
+    "REP_C200": {
+      "c": 2.0,
+      "role": "prospective repulsion arm"
+    },
+    "REP_C400": {
+      "c": 4.0,
+      "role": "prospective repulsion arm"
+    }
+  },
+  "c_grid": [
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "decision_categories": [
+    "REPULSION_GAIN_ROBUST",
+    "REPULSION_MECHANISM_ONLY",
+    "REPULSION_SCALE_SENSITIVE",
+    "REPULSION_NO_GAIN",
+    "REPULSION_HARMS_BOUNDARY_LEARNING",
+    "REPULSION_NUMERICALLY_UNRELIABLE"
+  ],
+  "inference": {
+    "bootstrap_draws": 10000,
+    "multiplicity": "Holm across five overall q20 contrasts",
+    "unit": "20 repeat blocks with five folds retained"
+  },
+  "model": {
+    "kernel": "ARD Matern-3/2",
+    "length_bounds": [
+      0.01,
+      100.0
+    ],
+    "log_h_in_residual": false,
+    "name": "M3",
+    "physics_mean": "training-fitted log(h), frozen before discrepancy fit",
+    "residual_inputs": [
+      "P",
+      "VX",
+      "LS",
+      "ST"
+    ],
+    "residual_sd_bounds": [
+      0.05,
+      1.0
+    ]
+  },
+  "no_posthoc_scales": true,
+  "primary": "Fold-B1-q20 accuracy normalized trapezoidal AULC B16-80",
+  "regions": {
+    "early": "B16-40",
+    "late": "B41-80"
+  },
+  "repulsion": {
+    "d_min": "minimum Euclidean distance in outer-pool StandardScaler coordinates",
+    "factor": "1-exp(-d_min^2/(2*lambda_B^2))",
+    "lambda_B": "c*s_B",
+    "recomputed_each_budget": true,
+    "s_B": "median current candidate d_min",
+    "score": "M3 margin uncertainty * factor"
+  },
+  "status": "FROZEN_BEFORE_REPULSION_RESULTS",
+  "thresholds": [
+    0.8,
+    0.82,
+    0.84
+  ]
+}

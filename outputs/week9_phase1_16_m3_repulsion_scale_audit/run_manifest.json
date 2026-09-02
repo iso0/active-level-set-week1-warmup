@@ -1,0 +1,443 @@
+{
+  "branch": "codex/week9-phase1-16-m3-repulsion-scale-audit",
+  "decision": "REPULSION_MECHANISM_ONLY",
+  "files": [
+    {
+      "path": "notebooks/week_09/14_week9_phase1_16_m3_repulsion_scale_audit.ipynb",
+      "sha256": "59667e8708d8b78d999291da21c26e561b19928abb98b99ca127cef3d10f08da",
+      "size_bytes": 467286
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/analysis_specification.json",
+      "sha256": "88486057b2694666c5b2bb73a59df35c72bdd33449594496c4e1fbdfd57a50da",
+      "size_bytes": 1929
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/baseline_gate.json",
+      "sha256": "c3be88093e5db89b54a9ca4ea67ec17738e5949ccdd6a92a6446c27549ab47a5",
+      "size_bytes": 710
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/checkpoint_contrasts.csv",
+      "sha256": "2d585d085370735423a64f418a425bc655ae447b92624ae0a743f7986eac28bd",
+      "size_bytes": 25455
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/claim_ledger.md",
+      "sha256": "a519257e135a80a415dce7dd817270b5c690d6e8ff2f5abe818344ee8e2ed436",
+      "size_bytes": 1095
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/diversity_diagnostics.csv",
+      "sha256": "8f404407a6f010f5768b32f86cf4daaed9befded53a7ddb9d985e57dcf43b860",
+      "size_bytes": 55140
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/early_late_summary.csv",
+      "sha256": "8bf70f4420d513be2b60c63dedb4a62fee8ca177c54f0422ceb235414f5ffa39",
+      "size_bytes": 1602
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/execution_report.json",
+      "sha256": "79d273aed32b5dc5c5de05eb40dd93a1d304659014881455aada4a460d552ce9",
+      "size_bytes": 240
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/figure_manifest.csv",
+      "sha256": "05bfb0d4d14111cfa2a434ccb021dcbbc211042151330a4ff600b7849eda46bd",
+      "size_bytes": 633
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/figures/01_q20_aulc_scale_response.png",
+      "sha256": "09d964c3b62832d8f390da74833cc93c50746b2973ff034b26cb1c769afa3235",
+      "size_bytes": 43746
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/figures/02_early_late_scale_response.png",
+      "sha256": "06ffc79981f4bad9d5bd3276dc99e92900bfdf23afa06f424acc3d441cba4cf1",
+      "size_bytes": 53368
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/figures/03_b40_keyhole_recall.png",
+      "sha256": "39e339b5e2e7bfbd0e0d15b74565a3846dcfcc08e91221dd15eb0caf7554e102",
+      "size_bytes": 38820
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/figures/04_diversity_scale_response.png",
+      "sha256": "a6bb8090cc74a2f647e3069892ba9ebb55fd515c709064ab4d06d73153a694b9",
+      "size_bytes": 51519
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/figures/05_sample_efficiency_scale_response.png",
+      "sha256": "5aa1c6a5be56ae1f07d7adaade89d23baf4e35317091ab3d9321262635c49e2d",
+      "size_bytes": 57647
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/figures/06_path_overlap.png",
+      "sha256": "70311ee019aa3053d9e107c0f6c82302525a9dbd5c6cc91a2539380d08cc3b51",
+      "size_bytes": 48736
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/FINAL_PHASE1_16_REPORT.md",
+      "sha256": "6f7d173ecfbf02502b430d8c18748b08ed4eebabf0923dc45e077335cbf9f028",
+      "size_bytes": 4443
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "ed1801f8429fbc90050e088956935b6113314a48d250ed84d72022e27f80bfe8",
+      "size_bytes": 860
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/fit_diagnostics.csv.gz",
+      "sha256": "ba0d6bf974b02dff51dbf6fa86e33e3bd1a45ec4f3c3fcaf6bbcdcc2ccb922c4",
+      "size_bytes": 2354504
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/fit_diagnostics_summary.csv",
+      "sha256": "25a925f751d5bf6655c004783f1bd29e757857dd1f6f8bba8293fe810f89ad8a",
+      "size_bytes": 1324
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/full81_metrics.csv",
+      "sha256": "6033bbb7c257016ae86ecb9a4da7bc2badeab0b0b34058d132fa8e97fa6b99f7",
+      "size_bytes": 9807
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/historical_repulsion_audit.md",
+      "sha256": "3c75f190a55f09964c5935e9ce8ebe20fa0737d446f57560f5b8e4378e194720",
+      "size_bytes": 1286
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/multiplicity_summary.csv",
+      "sha256": "b5e4d96d7256c64ace0b8888baef0f7766d48610914901de9d8b51b9037be45b",
+      "size_bytes": 783
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/outer_run_metrics.csv.gz",
+      "sha256": "7632d084bd2e7c1d9c034ec374ad2048a862e09a8a36f177a80b38199bc64f8f",
+      "size_bytes": 23149
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/path_overlap_summary.csv",
+      "sha256": "25445f8d09e604aaf1db840903c2db3975b45fb4c4a7c104f938e8e94eb6f656",
+      "size_bytes": 1372
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/q20_checkpoint_metrics.csv",
+      "sha256": "668fe3e004fa951333386c17d16ae41d322e25e60718427fc4fc574c80b7cefe",
+      "size_bytes": 14570
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/q30_robustness.csv",
+      "sha256": "095fc64a3c9aac0cb2eede963ac19759bfe50fc283c8b505e2f5947f803c0208",
+      "size_bytes": 860
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/query_characteristics.csv",
+      "sha256": "a8879248560a7005c990769f7e86941e908253238a9466b4776a4846cc32d6d0",
+      "size_bytes": 1342
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/query_paths.csv.gz",
+      "sha256": "16fff534294ada9bf99a917fd00f7b79ad07a0b248ad49cff40ce921e18dd5c8",
+      "size_bytes": 211756
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/repeat_block_inference.csv",
+      "sha256": "88c3aa3cd3a6c80eab54e223448b22e73cecbb52c9d662e6ba3c47f359d84335",
+      "size_bytes": 4510
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/repulsion_scale_definition.md",
+      "sha256": "6828f1b4ec73dc0da12768ccb786615489d9155c60ff3dc948f819c8f2af73a6",
+      "size_bytes": 414
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/repulsion_scale_response.csv",
+      "sha256": "836be6ffd34622f206c2807d05e41758f0dbd4e06fd88de25b2f045f1275f34d",
+      "size_bytes": 1356
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/sample_efficiency_thresholds.csv",
+      "sha256": "c0572b26af9bbfe6a363980df6f299537249df1a30a051f134337e3f2c43f425",
+      "size_bytes": 1083
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/SUPERVISOR_PHASE1_16_ONE_PAGE.md",
+      "sha256": "a85facf04e69466b752e44fdf40ae38f4d8d61c7279f42720ca8841645b72f3f",
+      "size_bytes": 1142
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/validation_report.json",
+      "sha256": "a40db4fbafada47fbf6b017da4b247f155720531896c8ab84c81928dbada8121",
+      "size_bytes": 3344
+    },
+    {
+      "path": "outputs/week9_phase1_16_m3_repulsion_scale_audit/validation_report.md",
+      "sha256": "51753e27f5edcd4e26897a36925f26a2a523850e8b761173157ad888a8d21e12",
+      "size_bytes": 1516
+    },
+    {
+      "path": "src/week9_phase1_16_m3_repulsion_scale_audit.py",
+      "sha256": "a2cf968f177924bbc160b5709f7815d633162a105850e997b2ef8f7211758612",
+      "size_bytes": 65805
+    },
+    {
+      "path": "tests/test_week9_phase1_16_m3_repulsion_scale_audit.py",
+      "sha256": "9ab5c0fa3a8ec3e3a8ff12ca631eb5f08463890bbdcea4f8949073b31d7d434d",
+      "size_bytes": 5134
+    }
+  ],
+  "historical_changes": [],
+  "parent_sha": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+  "protocol": {
+    "arms": [
+      "M3_MARGIN",
+      "REP_C025",
+      "REP_C050",
+      "REP_C100",
+      "REP_C200",
+      "REP_C400"
+    ],
+    "bootstrap_draws": 10000,
+    "budgets": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "c_grid": [
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "outer_runs": 100,
+    "repeat_blocks": 20
+  },
+  "study": "Week 9 Phase 1.16 \u2014 M3 Margin + Repulsion Scale Audit",
+  "validation": {
+    "check_count": 31,
+    "checks": [
+      {
+        "check": "exact_parent_sha",
+        "detail": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+        "status": "PASS"
+      },
+      {
+        "check": "population_405_73_332",
+        "detail": "405/73/332",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_100_outer_runs",
+        "detail": "100",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_initial_designs",
+        "detail": "100x6",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_M3_margin_reproduced",
+        "detail": "exact",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_M3_architecture",
+        "detail": "frozen",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_h_formula",
+        "detail": "inherited",
+        "status": "PASS"
+      },
+      {
+        "check": "residual_inputs_exact",
+        "detail": "('P', 'VX', 'LS', 'ST')",
+        "status": "PASS"
+      },
+      {
+        "check": "logh_absent_residual",
+        "detail": "4D residual",
+        "status": "PASS"
+      },
+      {
+        "check": "scores_pre_reveal",
+        "detail": "ordered",
+        "status": "PASS"
+      },
+      {
+        "check": "labels_absent_selector",
+        "detail": "geometry+probability only",
+        "status": "PASS"
+      },
+      {
+        "check": "B1_q_absent_selector",
+        "detail": "absent",
+        "status": "PASS"
+      },
+      {
+        "check": "geometry_only_distance",
+        "detail": "feature geometry",
+        "status": "PASS"
+      },
+      {
+        "check": "scaler_information_flow",
+        "detail": "outer train features",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_c_grid",
+        "detail": "(0.25, 0.5, 1.0, 2.0, 4.0)",
+        "status": "PASS"
+      },
+      {
+        "check": "no_posthoc_scales",
+        "detail": "frozen",
+        "status": "PASS"
+      },
+      {
+        "check": "deterministic_tie_break",
+        "detail": "exact",
+        "status": "PASS"
+      },
+      {
+        "check": "one_query_per_step",
+        "detail": "64",
+        "status": "PASS"
+      },
+      {
+        "check": "no_train_test_overlap",
+        "detail": "all",
+        "status": "PASS"
+      },
+      {
+        "check": "no_duplicate_query",
+        "detail": "all",
+        "status": "PASS"
+      },
+      {
+        "check": "B16_equal_all_arms",
+        "detail": "1.1102230246251565e-16",
+        "status": "PASS"
+      },
+      {
+        "check": "all_paths_length_80",
+        "detail": "600x80",
+        "status": "PASS"
+      },
+      {
+        "check": "repeat_block_inference",
+        "detail": "20 blocks",
+        "status": "PASS"
+      },
+      {
+        "check": "bootstrap_10000",
+        "detail": "10000",
+        "status": "PASS"
+      },
+      {
+        "check": "multiplicity_present",
+        "detail": "Holm",
+        "status": "PASS"
+      },
+      {
+        "check": "q20_q30_unchanged",
+        "detail": "['B1_q20', 'B1_q30', 'full81']",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_outputs_unchanged",
+        "detail": "[]",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed",
+        "detail": "7",
+        "status": "PASS"
+      },
+      {
+        "check": "figure_hashes",
+        "detail": "6",
+        "status": "PASS"
+      },
+      {
+        "check": "no_placeholders",
+        "detail": "none",
+        "status": "PASS"
+      },
+      {
+        "check": "decision_rule_exact",
+        "detail": "REPULSION_MECHANISM_ONLY",
+        "status": "PASS"
+      }
+    ],
+    "passed": 31,
+    "status": "PASS"
+  }
+}

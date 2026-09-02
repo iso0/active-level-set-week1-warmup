@@ -1,0 +1,15 @@
+{
+  "arms": [
+    "REP_C025",
+    "REP_C050",
+    "REP_C100",
+    "REP_C200",
+    "REP_C400"
+  ],
+  "complete": true,
+  "completed_jobs": 500,
+  "elapsed_seconds": 856.6262054443359,
+  "reused_jobs": 5,
+  "status": "PASS",
+  "workers": 8
+}

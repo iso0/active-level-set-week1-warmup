@@ -1,0 +1,162 @@
+{
+  "check_count": 31,
+  "checks": [
+    {
+      "check": "exact_parent_sha",
+      "detail": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+      "status": "PASS"
+    },
+    {
+      "check": "population_405_73_332",
+      "detail": "405/73/332",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_100_outer_runs",
+      "detail": "100",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_initial_designs",
+      "detail": "100x6",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_M3_margin_reproduced",
+      "detail": "exact",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_M3_architecture",
+      "detail": "frozen",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_h_formula",
+      "detail": "inherited",
+      "status": "PASS"
+    },
+    {
+      "check": "residual_inputs_exact",
+      "detail": "('P', 'VX', 'LS', 'ST')",
+      "status": "PASS"
+    },
+    {
+      "check": "logh_absent_residual",
+      "detail": "4D residual",
+      "status": "PASS"
+    },
+    {
+      "check": "scores_pre_reveal",
+      "detail": "ordered",
+      "status": "PASS"
+    },
+    {
+      "check": "labels_absent_selector",
+      "detail": "geometry+probability only",
+      "status": "PASS"
+    },
+    {
+      "check": "B1_q_absent_selector",
+      "detail": "absent",
+      "status": "PASS"
+    },
+    {
+      "check": "geometry_only_distance",
+      "detail": "feature geometry",
+      "status": "PASS"
+    },
+    {
+      "check": "scaler_information_flow",
+      "detail": "outer train features",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_c_grid",
+      "detail": "(0.25, 0.5, 1.0, 2.0, 4.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "no_posthoc_scales",
+      "detail": "frozen",
+      "status": "PASS"
+    },
+    {
+      "check": "deterministic_tie_break",
+      "detail": "exact",
+      "status": "PASS"
+    },
+    {
+      "check": "one_query_per_step",
+      "detail": "64",
+      "status": "PASS"
+    },
+    {
+      "check": "no_train_test_overlap",
+      "detail": "all",
+      "status": "PASS"
+    },
+    {
+      "check": "no_duplicate_query",
+      "detail": "all",
+      "status": "PASS"
+    },
+    {
+      "check": "B16_equal_all_arms",
+      "detail": "1.1102230246251565e-16",
+      "status": "PASS"
+    },
+    {
+      "check": "all_paths_length_80",
+      "detail": "600x80",
+      "status": "PASS"
+    },
+    {
+      "check": "repeat_block_inference",
+      "detail": "20 blocks",
+      "status": "PASS"
+    },
+    {
+      "check": "bootstrap_10000",
+      "detail": "10000",
+      "status": "PASS"
+    },
+    {
+      "check": "multiplicity_present",
+      "detail": "Holm",
+      "status": "PASS"
+    },
+    {
+      "check": "q20_q30_unchanged",
+      "detail": "['B1_q20', 'B1_q30', 'full81']",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_outputs_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "7",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "6",
+      "status": "PASS"
+    },
+    {
+      "check": "no_placeholders",
+      "detail": "none",
+      "status": "PASS"
+    },
+    {
+      "check": "decision_rule_exact",
+      "detail": "REPULSION_MECHANISM_ONLY",
+      "status": "PASS"
+    }
+  ],
+  "passed": 31,
+  "status": "PASS"
+}

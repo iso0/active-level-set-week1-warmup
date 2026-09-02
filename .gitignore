@@ -70,6 +70,9 @@ outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/
 # Week 9 Phase 1.15A restart checkpoints (published audit tables are tracked).
 outputs/week9_phase1_15a_physics_residual_signal_audit/checkpoints/
 
+# Week 9 Phase 1.16 restart checkpoints (derived published tables are tracked).
+outputs/week9_phase1_16_m3_repulsion_scale_audit/checkpoints/
+
 # Local raw research data
 /data/raw/
 /.cache/external_masinelli/

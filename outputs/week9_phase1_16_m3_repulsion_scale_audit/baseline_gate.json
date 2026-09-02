@@ -1,0 +1,20 @@
+{
+  "conduction": 332,
+  "current_head": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+  "exact_branch_base": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+  "historical_M3_margin_q20_AULC": 0.844623161764706,
+  "historical_P1_paths": 100,
+  "historical_changes": [],
+  "initial_design_matches": 100,
+  "keyholes": 73,
+  "outer_runs": 100,
+  "phase14_decision": "LATE_ACQUISITION_GAIN_ONLY",
+  "phase14_sha": "5a7a6c05ae5bf3191b74766156407211ad414360",
+  "phase15a_all_selection_matches": true,
+  "phase15a_max_probability_difference": 0.0,
+  "phase15a_reconstruction_rows": 900,
+  "population": 405,
+  "repeat_blocks": 20,
+  "required_parent_sha": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+  "status": "PASS"
+}
