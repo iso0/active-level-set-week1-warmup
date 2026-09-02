@@ -1,0 +1,167 @@
+{
+  "check_count": 32,
+  "checks": [
+    {
+      "check": "exact_phase114_parent",
+      "detail": "5a7a6c05ae5bf3191b74766156407211ad414360",
+      "status": "PASS"
+    },
+    {
+      "check": "population_405",
+      "detail": "405",
+      "status": "PASS"
+    },
+    {
+      "check": "labels_73_332",
+      "detail": "73/332",
+      "status": "PASS"
+    },
+    {
+      "check": "h_formula_unchanged",
+      "detail": "Phase 1.11 canonical function",
+      "status": "PASS"
+    },
+    {
+      "check": "M3_architecture",
+      "detail": "ARD Matern 3/2",
+      "status": "PASS"
+    },
+    {
+      "check": "P1_historical_path_exact",
+      "detail": "100x80",
+      "status": "PASS"
+    },
+    {
+      "check": "no_historical_path_mutation",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "component_prefix_only",
+      "detail": "exact prefixes",
+      "status": "PASS"
+    },
+    {
+      "check": "pre_reveal_schema_exact",
+      "detail": "285600",
+      "status": "PASS"
+    },
+    {
+      "check": "unrevealed_labels_absent_scores",
+      "detail": "absent",
+      "status": "PASS"
+    },
+    {
+      "check": "q20_q30_B1_absent_scores",
+      "detail": "absent",
+      "status": "PASS"
+    },
+    {
+      "check": "freeze_before_join_call",
+      "detail": "actual finalize order",
+      "status": "PASS"
+    },
+    {
+      "check": "freeze_hash_valid",
+      "detail": "frozen",
+      "status": "PASS"
+    },
+    {
+      "check": "physics_M3_probabilities_valid",
+      "detail": "[0,1]",
+      "status": "PASS"
+    },
+    {
+      "check": "probability_correction_identity",
+      "detail": "exact",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_component_reconstruction",
+      "detail": "0.0",
+      "status": "PASS"
+    },
+    {
+      "check": "residual_inputs_exact",
+      "detail": "('P', 'VX', 'LS', 'ST')",
+      "status": "PASS"
+    },
+    {
+      "check": "logh_absent_residual",
+      "detail": "4D only",
+      "status": "PASS"
+    },
+    {
+      "check": "budget_prefixes_exact",
+      "detail": "(16, 20, 24, 28, 32, 36, 40, 48, 60, 80)",
+      "status": "PASS"
+    },
+    {
+      "check": "no_duplicate_future_labels",
+      "detail": "all prefixes",
+      "status": "PASS"
+    },
+    {
+      "check": "repeat_block_inference",
+      "detail": "20/10000",
+      "status": "PASS"
+    },
+    {
+      "check": "literature_citations",
+      "detail": "7",
+      "status": "PASS"
+    },
+    {
+      "check": "no_unsupported_novelty",
+      "detail": "safe",
+      "status": "PASS"
+    },
+    {
+      "check": "no_new_trajectory",
+      "detail": "true",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "9",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "5",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_outputs_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "no_placeholders",
+      "detail": "none",
+      "status": "PASS"
+    },
+    {
+      "check": "decision_exact",
+      "detail": "CORRECTION_SIGNAL_PARTIAL",
+      "status": "PASS"
+    },
+    {
+      "check": "component_rows_complete",
+      "detail": "285600",
+      "status": "PASS"
+    },
+    {
+      "check": "mechanism_rows_complete",
+      "detail": "1000",
+      "status": "PASS"
+    },
+    {
+      "check": "fit_diagnostics_complete",
+      "detail": "1500",
+      "status": "PASS"
+    }
+  ],
+  "passed": 32,
+  "status": "PASS"
+}

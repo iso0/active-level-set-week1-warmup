@@ -1,0 +1,18 @@
+{
+  "P0_q20_AULC": 0.8424908088235294,
+  "P1_minus_P0_q20_AULC": 0.0021323529411765296,
+  "P1_path_rows": 8000,
+  "P1_paths": 100,
+  "P1_q20_AULC": 0.844623161764706,
+  "conduction": 332,
+  "current_head": "5a7a6c05ae5bf3191b74766156407211ad414360",
+  "exact_branch_base": "5a7a6c05ae5bf3191b74766156407211ad414360",
+  "historical_changes": [],
+  "keyholes": 73,
+  "outer_runs": 100,
+  "phase114_decision": "LATE_ACQUISITION_GAIN_ONLY",
+  "phase114_parent_sha": "5a7a6c05ae5bf3191b74766156407211ad414360",
+  "population": 405,
+  "repeat_blocks": 20,
+  "status": "PASS"
+}

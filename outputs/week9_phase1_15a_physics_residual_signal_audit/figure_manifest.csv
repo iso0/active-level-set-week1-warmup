@@ -1,0 +1,6 @@
+figure,sha256,size_bytes,purpose
+01_correction_usefulness.png,882acc38476f598a077a979657e58521bd3e191c07f505ee3ec048ce189681dc,39773,Retrospective correction usefulness by frozen correction quintile.
+02_boundary_enrichment.png,53f3a695af493082dbce8e79f3d440221a1bbbc084b0ed8648f5a5fa7856cd24,83555,Retrospective B1 boundary enrichment.
+03_class_budget_asymmetry.png,7787c143df947f254cb2d580ae57465f0895430bc99ebbc85d8e51091a7c409f,40058,Keyhole/Conduction correction asymmetry over budget.
+04_budget_evolution.png,7d4dab796854bcfdc3d46ab73fe574ef7f29f640f4105c0fcedc67d4c1f8fe80,82333,"Correction magnitude, flips, and utility by budget region."
+05_b40_mechanism.png,7467de6c3c448e9dd1b318cb5410bc2799fd10bc9ed7df8e7f24f887f37c324a,54426,Paired B40 path-mechanism contrasts.

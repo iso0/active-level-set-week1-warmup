@@ -1,0 +1,10 @@
+metric,value,role
+candidate_occurrences,285600.0,descriptive
+spearman_abs_correction_vs_M3_margin,-0.95064268309219,descriptive; tests redundancy
+spearman_A0_margin_score_vs_A1_product_score,0.9834544675256103,descriptive; tests acquisition duplication
+A0_A1_same_top_candidate_fraction,0.374,descriptive; no sequential replay
+spearman_abs_correction_vs_physics_margin,-0.9366251257350462,descriptive
+overall_fix_rate,0.0009943977591036414,descriptive
+overall_harm_rate,0.0011589635854341736,descriptive
+overall_net_fix_rate,-0.00016456582633053222,descriptive
+overall_class_flip_frequency,0.0021533613445378153,descriptive

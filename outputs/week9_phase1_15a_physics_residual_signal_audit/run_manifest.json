@@ -1,0 +1,369 @@
+{
+  "branch": "codex/week9-phase1-15a-physics-residual-signal-audit",
+  "decision": "CORRECTION_SIGNAL_PARTIAL",
+  "files": [
+    {
+      "path": "notebooks/week_09/13_week9_phase1_15a_physics_residual_signal_audit.ipynb",
+      "sha256": "149054aad1bbdc719c86669d9c3ca1ec1f137306916f92f41076bb8154d30a5f",
+      "size_bytes": 471278
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/analysis_specification.json",
+      "sha256": "f5bfe2abc77c9c1e3d60c2a1893034259da46e53389c0dd071134049481ca9df",
+      "size_bytes": 1945
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/b40_recall_mechanism_audit.csv",
+      "sha256": "2f233f5f4a6df0f39e6d731c26f9729b8c5f5beaa5b73d1c22e30d44a6b89104",
+      "size_bytes": 7355
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/b40_recall_mechanism_detail.csv.gz",
+      "sha256": "c5410814c9a893b5a71788c97931023a1d6a1f246319b2bc71b5f9dd0a57cbf9",
+      "size_bytes": 127528
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/baseline_gate.json",
+      "sha256": "e31109e9ec824ef137c658c9a1924dc1f976c357afce9cf7f1ae0f2213ab043d",
+      "size_bytes": 571
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/boundary_enrichment_analysis.csv",
+      "sha256": "44fa1cd4cdeeca1d4cf5026ba1238592dee6a5b18e579b1a161125b1a57f188b",
+      "size_bytes": 859
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/budget_evolution_summary.csv",
+      "sha256": "2fb9b2b3ad77184c4f4c7b3298581076560030369b2583ca46497ab24b64afa5",
+      "size_bytes": 828
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/candidate_acquisition_designs.md",
+      "sha256": "f1b5ec8ed839b656e6a7768e381aeb8f043dbbd5badd109dc4c8a499ac9a798d",
+      "size_bytes": 2022
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/claim_ledger.md",
+      "sha256": "8cebc956ffdcf39d4608382f05cc290a5f18a39ac5b4fbbcb490c700c1f2d182",
+      "size_bytes": 1273
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/component_candidate_retrospective.csv.gz",
+      "sha256": "e2f73d97f2ba0244cefb628fac2823ae811871ce55ac2dd66ac352b95f3d5157",
+      "size_bytes": 32866193
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/component_candidate_table.csv.gz",
+      "sha256": "7ba079ccbb157e60522e836b9e286f7bfbb233a610bb647108441a92262408cb",
+      "size_bytes": 29663305
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/component_fit_diagnostics.csv.gz",
+      "sha256": "32ecd5612a509c327e38e30ce284bc8c5215cc213dd827c6ae28a97edce7978a",
+      "size_bytes": 97139
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/component_fit_diagnostics_summary.csv",
+      "sha256": "cf56b9514b71e8c236f3b6e8f84ccec8523737f4be16787b9766359c6ea73efa",
+      "size_bytes": 2040
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/component_reconstruction_audit.csv",
+      "sha256": "3a945109dc8e15e74f3a6664918aea94016a5a36e7278c863ac6f5b1c34abc78",
+      "size_bytes": 66732
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/correction_quantile_analysis.csv",
+      "sha256": "c3e0aa7640455f5dda927ba775782ebed19387e12b4dc0464c59ae26ee334dfb",
+      "size_bytes": 1074
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/correction_signal_summary.csv",
+      "sha256": "52ed21c275be8f973345bf20e1f5c02ef6752fa76f45b3be143ea7d3c7a5dc77",
+      "size_bytes": 624
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/execution_report.json",
+      "sha256": "6e02a7749cca42e0f83b49e97e7b8b1f4e6c41a4114b7084a116589eba567d01",
+      "size_bytes": 173
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/figure_manifest.csv",
+      "sha256": "55e87e1e4029025b9944c9770451f276f036b044ca931bab52996d78e208e75a",
+      "size_bytes": 775
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/figures/01_correction_usefulness.png",
+      "sha256": "882acc38476f598a077a979657e58521bd3e191c07f505ee3ec048ce189681dc",
+      "size_bytes": 39773
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/figures/02_boundary_enrichment.png",
+      "sha256": "53f3a695af493082dbce8e79f3d440221a1bbbc084b0ed8648f5a5fa7856cd24",
+      "size_bytes": 83555
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/figures/03_class_budget_asymmetry.png",
+      "sha256": "7787c143df947f254cb2d580ae57465f0895430bc99ebbc85d8e51091a7c409f",
+      "size_bytes": 40058
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/figures/04_budget_evolution.png",
+      "sha256": "7d4dab796854bcfdc3d46ab73fe574ef7f29f640f4105c0fcedc67d4c1f8fe80",
+      "size_bytes": 82333
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/figures/05_b40_mechanism.png",
+      "sha256": "7467de6c3c448e9dd1b318cb5410bc2799fd10bc9ed7df8e7f24f887f37c324a",
+      "size_bytes": 54426
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/FINAL_PHASE1_15A_REPORT.md",
+      "sha256": "c57f0062b271e6535eafba72894715248223b84ad85260fbbbcf55eee79c8e9c",
+      "size_bytes": 2537
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "c6eb8322000aacb940e04a609d3caabc0a3c963b565e67890cd3fa2aa56d24cd",
+      "size_bytes": 1054
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/keyhole_conduction_asymmetry.csv",
+      "sha256": "a2042427e61c7c52803e2305508faffd634cc8067bed4caf14aa5363ba4ef553",
+      "size_bytes": 1278
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/literature_audit.md",
+      "sha256": "2f1a7e5b444eeeba4857630c2a4dc785a62eeeeaa629248edc5e1771949df11a",
+      "size_bytes": 4150
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/literature_comparison.csv",
+      "sha256": "10f4906905fef3f19932ec8432575d9bd53e6796bc92d10051ed050f72453ce6",
+      "size_bytes": 2749
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/pre_reveal_freeze.json",
+      "sha256": "b2f389a4a6fc1a9f1b96ba740cf01e43a8dfc2c32866f758707f8eb9eb867040",
+      "size_bytes": 730
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/repeat_block_inference.csv",
+      "sha256": "1d3b5a283f3deb88dac7d203513e487506f880208d0d0e13d0dd124a1988a837",
+      "size_bytes": 445
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/SUPERVISOR_PHASE1_15A_ONE_PAGE.md",
+      "sha256": "db0bb35fb8a498145740060d8a3a464665cefd03810b0f6260dad0661d7c9fdf",
+      "size_bytes": 1071
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/validation_report.json",
+      "sha256": "e63749870f70aeeb5b934831c755e09115e3dd6a897e789b34da025d31bc71f2",
+      "size_bytes": 3490
+    },
+    {
+      "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/validation_report.md",
+      "sha256": "11d248289c1cc5f7064daba04aa7b350c676ab44a4266bd2143e4a5fbfd62d72",
+      "size_bytes": 1603
+    },
+    {
+      "path": "src/week9_phase1_15a_physics_residual_signal_audit.py",
+      "sha256": "577d441d9c2ea6b469c000ea92a04c1cf0c647a1f9b2ff532a87f43f30213093",
+      "size_bytes": 66497
+    },
+    {
+      "path": "tests/test_week9_phase1_15a_physics_residual_signal_audit.py",
+      "sha256": "c93cd435124ee99ebc54a467033a7ad02d67d8c858a05e73113b90c18e41053f",
+      "size_bytes": 4703
+    }
+  ],
+  "historical_changes": [],
+  "phase114_parent_sha": "5a7a6c05ae5bf3191b74766156407211ad414360",
+  "protocol": {
+    "bootstrap_draws": 10000,
+    "budgets": [
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      48,
+      60,
+      80
+    ],
+    "new_acquisition_trajectory": false,
+    "outer_runs": 100,
+    "repeat_blocks": 20
+  },
+  "study": "Week 9 Phase 1.15A \u2014 Physics\u2013Residual Signal Audit and Acquisition Design",
+  "validation": {
+    "check_count": 32,
+    "checks": [
+      {
+        "check": "exact_phase114_parent",
+        "detail": "5a7a6c05ae5bf3191b74766156407211ad414360",
+        "status": "PASS"
+      },
+      {
+        "check": "population_405",
+        "detail": "405",
+        "status": "PASS"
+      },
+      {
+        "check": "labels_73_332",
+        "detail": "73/332",
+        "status": "PASS"
+      },
+      {
+        "check": "h_formula_unchanged",
+        "detail": "Phase 1.11 canonical function",
+        "status": "PASS"
+      },
+      {
+        "check": "M3_architecture",
+        "detail": "ARD Matern 3/2",
+        "status": "PASS"
+      },
+      {
+        "check": "P1_historical_path_exact",
+        "detail": "100x80",
+        "status": "PASS"
+      },
+      {
+        "check": "no_historical_path_mutation",
+        "detail": "[]",
+        "status": "PASS"
+      },
+      {
+        "check": "component_prefix_only",
+        "detail": "exact prefixes",
+        "status": "PASS"
+      },
+      {
+        "check": "pre_reveal_schema_exact",
+        "detail": "285600",
+        "status": "PASS"
+      },
+      {
+        "check": "unrevealed_labels_absent_scores",
+        "detail": "absent",
+        "status": "PASS"
+      },
+      {
+        "check": "q20_q30_B1_absent_scores",
+        "detail": "absent",
+        "status": "PASS"
+      },
+      {
+        "check": "freeze_before_join_call",
+        "detail": "actual finalize order",
+        "status": "PASS"
+      },
+      {
+        "check": "freeze_hash_valid",
+        "detail": "frozen",
+        "status": "PASS"
+      },
+      {
+        "check": "physics_M3_probabilities_valid",
+        "detail": "[0,1]",
+        "status": "PASS"
+      },
+      {
+        "check": "probability_correction_identity",
+        "detail": "exact",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_component_reconstruction",
+        "detail": "0.0",
+        "status": "PASS"
+      },
+      {
+        "check": "residual_inputs_exact",
+        "detail": "('P', 'VX', 'LS', 'ST')",
+        "status": "PASS"
+      },
+      {
+        "check": "logh_absent_residual",
+        "detail": "4D only",
+        "status": "PASS"
+      },
+      {
+        "check": "budget_prefixes_exact",
+        "detail": "(16, 20, 24, 28, 32, 36, 40, 48, 60, 80)",
+        "status": "PASS"
+      },
+      {
+        "check": "no_duplicate_future_labels",
+        "detail": "all prefixes",
+        "status": "PASS"
+      },
+      {
+        "check": "repeat_block_inference",
+        "detail": "20/10000",
+        "status": "PASS"
+      },
+      {
+        "check": "literature_citations",
+        "detail": "7",
+        "status": "PASS"
+      },
+      {
+        "check": "no_unsupported_novelty",
+        "detail": "safe",
+        "status": "PASS"
+      },
+      {
+        "check": "no_new_trajectory",
+        "detail": "true",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed",
+        "detail": "9",
+        "status": "PASS"
+      },
+      {
+        "check": "figure_hashes",
+        "detail": "5",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_outputs_unchanged",
+        "detail": "[]",
+        "status": "PASS"
+      },
+      {
+        "check": "no_placeholders",
+        "detail": "none",
+        "status": "PASS"
+      },
+      {
+        "check": "decision_exact",
+        "detail": "CORRECTION_SIGNAL_PARTIAL",
+        "status": "PASS"
+      },
+      {
+        "check": "component_rows_complete",
+        "detail": "285600",
+        "status": "PASS"
+      },
+      {
+        "check": "mechanism_rows_complete",
+        "detail": "1000",
+        "status": "PASS"
+      },
+      {
+        "check": "fit_diagnostics_complete",
+        "detail": "1500",
+        "status": "PASS"
+      }
+    ],
+    "passed": 32,
+    "status": "PASS"
+  }
+}

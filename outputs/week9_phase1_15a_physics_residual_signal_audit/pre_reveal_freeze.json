@@ -1,0 +1,32 @@
+{
+  "columns": [
+    "run_id",
+    "repeat",
+    "fold",
+    "budget",
+    "population_row_index",
+    "P",
+    "VX",
+    "LS",
+    "ST",
+    "h",
+    "p_H",
+    "p_M3",
+    "delta_p",
+    "abs_delta_p",
+    "physics_margin",
+    "m3_margin",
+    "residual_mean",
+    "residual_std",
+    "class_flip_H_to_M3",
+    "correction_toward_keyhole",
+    "correction_toward_conduction",
+    "candidate_count",
+    "score_inputs_are_pre_reveal_only"
+  ],
+  "forbidden_columns_absent": true,
+  "path": "outputs/week9_phase1_15a_physics_residual_signal_audit/component_candidate_table.csv.gz",
+  "rows": 285600,
+  "sha256": "7ba079ccbb157e60522e836b9e286f7bfbb233a610bb647108441a92262408cb",
+  "status": "FROZEN_BEFORE_RETROSPECTIVE_JOIN"
+}

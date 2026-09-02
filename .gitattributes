@@ -39,3 +39,9 @@ notebooks/week_09/12_week9_phase1_14_m3_margin_acquisition.ipynb text eol=lf
 outputs/week9_phase1_14_m3_margin_acquisition/** text eol=lf
 outputs/week9_phase1_14_m3_margin_acquisition/figures/*.png -text
 outputs/week9_phase1_14_m3_margin_acquisition/*.gz -text
+src/week9_phase1_15a_physics_residual_signal_audit.py text eol=lf
+tests/test_week9_phase1_15a_physics_residual_signal_audit.py text eol=lf
+notebooks/week_09/13_week9_phase1_15a_physics_residual_signal_audit.ipynb text eol=lf
+outputs/week9_phase1_15a_physics_residual_signal_audit/** text eol=lf
+outputs/week9_phase1_15a_physics_residual_signal_audit/figures/*.png -text
+outputs/week9_phase1_15a_physics_residual_signal_audit/*.gz -text

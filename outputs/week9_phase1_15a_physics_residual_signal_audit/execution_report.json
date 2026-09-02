@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "completed_runs": 100,
+  "elapsed_seconds": 140.0077142715454,
+  "no_new_trajectory": true,
+  "reused_runs": 1,
+  "status": "PASS",
+  "workers": 4
+}

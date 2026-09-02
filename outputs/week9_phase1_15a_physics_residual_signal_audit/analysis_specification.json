@@ -1,0 +1,71 @@
+{
+  "budgets": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    48,
+    60,
+    80
+  ],
+  "candidate_acquisition_families": [
+    "M3 margin baseline",
+    "M3 boundary x correction magnitude",
+    "M3 boundary x positive correction toward Keyhole"
+  ],
+  "decision": {
+    "CORRECTION_SIGNAL_NOT_SUPPORTED": "otherwise",
+    "CORRECTION_SIGNAL_NUMERICALLY_UNRELIABLE": "Phase 1.14 sensitivity convergence <0.80, or median B80 L100/L1000 path Jaccard <0.25 together with abs AULC change >=0.01",
+    "CORRECTION_SIGNAL_PARTIAL": "not numerically unreliable and at least two of: top net-fix CI >0; q20-like enrichment CI >1; early net-fix CI >0; Keyhole net-fix CI >0",
+    "CORRECTION_SIGNAL_SUPPORTED": "top-correction net fix rate CI >0, top-correction q20-like enrichment CI >1, and early B16-24 net fix rate CI >0"
+  },
+  "inference": {
+    "bootstrap_draws": 10000,
+    "candidate_rows": "descriptive; repeated candidates are not independent",
+    "unit": "20 repeat blocks"
+  },
+  "mechanism_budgets": [
+    24,
+    28,
+    32,
+    36,
+    40
+  ],
+  "novelty_rule": "No broad novelty claim; only a narrow application/formulation possibility after comparison with discrepancy BED, physics-residual acquisition, physics-prior GPC, BALD, and level-set acquisition.",
+  "pre_reveal_columns": [
+    "run_id",
+    "repeat",
+    "fold",
+    "budget",
+    "population_row_index",
+    "P",
+    "VX",
+    "LS",
+    "ST",
+    "h",
+    "p_H",
+    "p_M3",
+    "delta_p",
+    "abs_delta_p",
+    "physics_margin",
+    "m3_margin",
+    "residual_mean",
+    "residual_std",
+    "class_flip_H_to_M3",
+    "correction_toward_keyhole",
+    "correction_toward_conduction",
+    "candidate_count",
+    "score_inputs_are_pre_reveal_only"
+  ],
+  "retrospective_only": [
+    "truth",
+    "B1_distance",
+    "fold_q20_like",
+    "fold_q30_like"
+  ],
+  "role": "diagnostic/design only; no new trajectory",
+  "status": "FROZEN_BEFORE_COMPONENT_RESULTS"
+}
