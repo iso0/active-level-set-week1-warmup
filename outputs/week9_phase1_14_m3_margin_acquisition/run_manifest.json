@@ -1,0 +1,698 @@
+{
+  "branch": "codex/week9-phase1-14-m3-margin-acquisition",
+  "decision": "LATE_ACQUISITION_GAIN_ONLY",
+  "files": [
+    {
+      "path": "notebooks/week_09/12_week9_phase1_14_m3_margin_acquisition.ipynb",
+      "sha256": "8fa10d0661c25ad3c2e4dd9bd30f9345c61dec0cd86e7a65af429d8f65b32f6b",
+      "size_bytes": 681494
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/acquisition_bound_sensitivity.csv",
+      "sha256": "f6e632b1d110031f6ae13690208de7810d56fb1a04a3cc1e384b1fb53f970b4e",
+      "size_bytes": 11253
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/acquisition_bound_sensitivity_summary.csv",
+      "sha256": "d4d8dffdc30cc1953dda345accc0e09f69ce868e47933a4d4c86a4ef922b848d",
+      "size_bytes": 1085
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/acquisition_specification.json",
+      "sha256": "e6741ab392884ebfcdb7f43fc01f4ba1e1e7420d5ca8ac3f626fd3ead393ffb3",
+      "size_bytes": 2377
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/baseline_gate.json",
+      "sha256": "29edb9e2e9fe7117acf99ee5515d985e9aa9e3b0fe26d2be45fb38aaf31cf659",
+      "size_bytes": 515
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/checkpoint16_40_80_summary.csv",
+      "sha256": "f501a39eb5e79b939977e63354f60c3a7126db745a4879b9147629202690c10b",
+      "size_bytes": 4583
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/claim_ledger.md",
+      "sha256": "243ae9c6faf68d2e8330fe1f05f7960bc919f89b1670a7e43da34ef2cf171ac5",
+      "size_bytes": 903
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/early_late_contrasts.csv",
+      "sha256": "3b48c22ec812a830f0677feb5f4db5e6e165f9fb678fc9523f0a121433f54524",
+      "size_bytes": 325
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/early_late_summary.csv",
+      "sha256": "b0f81e78401c05255b43b8ef0f014ccf4314cac9984ecf9be9ba823b6f906ad1",
+      "size_bytes": 329
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/execution_report.json",
+      "sha256": "09e89d68dbc0e6b65e40ffb336de807e64958d2da1887024d246d1e95291ed8a",
+      "size_bytes": 145
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/figure_manifest.csv",
+      "sha256": "aa50ac00481b1aa77a765a9883040bb5d3d484c51fddb3c3a15e8f00106711ec",
+      "size_bytes": 765
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/figures/01_q20_learning_curves.png",
+      "sha256": "9a0bf94b3cb9b8c553b55afd98bb717342157ce39f94ed40bf6294ea79c81d34",
+      "size_bytes": 172605
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/figures/02_primary_early_late_contrasts.png",
+      "sha256": "725e2c6dd4203c8bb64c95c5e567f0929c518b2247a720bc93671fbfb3255302",
+      "size_bytes": 41864
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/figures/03_sample_efficiency_thresholds.png",
+      "sha256": "72152a59db251dcbb71e4fdca560c064b16ded92004411f74edb280f0a398224",
+      "size_bytes": 102464
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/figures/04_path_overlap.png",
+      "sha256": "49b92c10a0c46c3edfd1a729676020f6ea6ae0df1e745c8f7c8c2b58534fda42",
+      "size_bytes": 59048
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/figures/05_acquisition_numeric_robustness.png",
+      "sha256": "6d2b2cab346e13b2769ca7f4c513727fc1205da75087466fd6e1e36b7f33af10",
+      "size_bytes": 55499
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/FINAL_PHASE1_14_REPORT.md",
+      "sha256": "98fc6e96cf3d8b6889b12082bef6820267681f26772bcd33d3f710876fb28835",
+      "size_bytes": 2270
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "dcddb8f948ebafa54fe8d0b8cd1e3a0fa3c3f502c7667df8c9c1b583207b12a7",
+      "size_bytes": 1028
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/full81_checkpoint_summary.csv",
+      "sha256": "19f5e3f443f5fda9f97c50dc7847fe2fc2ef1c3cac7ba2b00e178f51aebec570",
+      "size_bytes": 5632
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/learning_curve_summary.csv",
+      "sha256": "5daa1870d248bebed3c1da368fd6c60737758a6a64cc11901d4e54efedc7a3f1",
+      "size_bytes": 16933
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/m3_active_fit_diagnostics.csv.gz",
+      "sha256": "8937b25aa0572626ae56b5a77c3b3cda38e316ec91b568cddb048979e1460aba",
+      "size_bytes": 412490
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/m3_fit_bound_summary.csv",
+      "sha256": "de96d86b6da53bb5c9dcbf9e76e6e475bdbe7c46a51f2d363f0c52e02ae22662",
+      "size_bytes": 7673
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/m3_margin_paths.csv.gz",
+      "sha256": "af2d87523c2f5f6179572cf58c68b1304ef051ba70170de059032747d777f068",
+      "size_bytes": 34243
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/m3_margin_queries.csv.gz",
+      "sha256": "44632695943202e19a655323718352e81d30e5dc5621005c17c1362c7cb6bef8",
+      "size_bytes": 526164
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/new_predictions.csv.gz",
+      "sha256": "ce80675aef2a34dc344e8b54eda55c9093d0cc4e4f572ad50cbad58d1898c510",
+      "size_bytes": 6499454
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/outer_run_metrics.csv.gz",
+      "sha256": "e29d577e754f1333b2a710acc61c74702b2065ee1db945346043ed30a54e847e",
+      "size_bytes": 3033
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/paired_contrasts.csv",
+      "sha256": "8e9604b287d5d207f75f507b5c9bf03d31d2eba4dac82c62f56652e00d866073",
+      "size_bytes": 380
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/path_overlap_curve.csv.gz",
+      "sha256": "fb18f99eb8931f05b5c20cc9c7050c1d69d8042fe03a1192fad56cdd3ce1cab7",
+      "size_bytes": 33582
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/path_overlap_detail.csv",
+      "sha256": "3d1161dcae49c49e2372eb260a2f9fbe9d5249373a6a7be71f778270bf5305a1",
+      "size_bytes": 7947
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/path_overlap_summary.csv",
+      "sha256": "2355d59a14449d9fd38774ea0c5c195bab7fcd8e4cad301e65c58948cdd888ff",
+      "size_bytes": 630
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/protocol_reconstruction.json",
+      "sha256": "bf2ab0efb69ae2c36c1c0767676373891c9d2a2ba7c4b31b2d2950ebe9921590",
+      "size_bytes": 2742
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/query_characteristics.csv",
+      "sha256": "ff0339f7866fc439e4ab609b2a4faabf73b77ed28ebbfe4217b273c65b53f84b",
+      "size_bytes": 1459
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/repeat_metrics.csv",
+      "sha256": "9ea9ef7a329c8c2647dc4450f90e75df6a3d8a872efdae3f789dec3fa7d8d6f0",
+      "size_bytes": 2309
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sample_efficiency_threshold_details.csv.gz",
+      "sha256": "f530155b4e8151b07232ab4cd8ba14d1a916f9ad94b7a2a7228bef015dbda29b",
+      "size_bytes": 2792
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sample_efficiency_thresholds.csv",
+      "sha256": "2b61a991c7762180c9169a9ccf7fe27ee86ebf9d5a4a5746f372b84357edfbf1",
+      "size_bytes": 803
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r01_f01.json.gz",
+      "sha256": "e72edd8fde53654973193da396a4b5b6f809b10a98ee5b61991cb26f6b5b09ac",
+      "size_bytes": 94981
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r02_f02.json.gz",
+      "sha256": "8b366d9b14180188a9bad1b50acf638bd6392ea2bedaafc8a258f82c7386ce99",
+      "size_bytes": 85000
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r03_f03.json.gz",
+      "sha256": "1e3d8c26cc64f3df906fe33a71fa5d236b1e7513592914b492e42830fd02b082",
+      "size_bytes": 96526
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r04_f04.json.gz",
+      "sha256": "bc9a9d26227aafe3fe0d626a5fbeb54e7fb144b1a1322e89e066e16cdfd99006",
+      "size_bytes": 94815
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r05_f05.json.gz",
+      "sha256": "47305e18e8a527722716f3df711b01cf2988b3269d00494f27f702758bf82bb8",
+      "size_bytes": 82807
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r06_f01.json.gz",
+      "sha256": "fbde6d7755c7dcb8d019d1609851be52c955281961fed0eca465ed3c9f275a37",
+      "size_bytes": 78659
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r07_f02.json.gz",
+      "sha256": "51feb3e464c00cbbc114c2f94a6250dd027205ddbe14afc62accce78076d58af",
+      "size_bytes": 86289
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r08_f03.json.gz",
+      "sha256": "7b01403fddcf7d5ae09fec4e441737173f67d98c2471cfcb6e2265291c8b3007",
+      "size_bytes": 86662
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r09_f04.json.gz",
+      "sha256": "02791d54c0ce7c12164d33d32a5faff01c8b5ca096f08d61828ff175a581f87a",
+      "size_bytes": 84251
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r10_f05.json.gz",
+      "sha256": "4b07889b6f9191092db316b1adcca9035e9416a5ccc39d64680bb9b2c025b0c5",
+      "size_bytes": 86014
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r11_f01.json.gz",
+      "sha256": "2c0e00b2c0275e1d5f93bd1291f4716ad7f878d40cb8d0706de5e80143743f20",
+      "size_bytes": 77355
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r12_f02.json.gz",
+      "sha256": "204a245581c924a0f0e38b42d15131652a2002597e79f79ae048f77aea4c541d",
+      "size_bytes": 77927
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r13_f03.json.gz",
+      "sha256": "3477ee3f3c05de16692edac7cd3dedf8728a082309c65d553c856e013e611d48",
+      "size_bytes": 94025
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r14_f04.json.gz",
+      "sha256": "5e1850076004a3f4d299c8fa93781002a7a56801cf5bddedc6b6e4531fd8f1a5",
+      "size_bytes": 95667
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r15_f05.json.gz",
+      "sha256": "b218cd6e52177d20fa75622aa74d51461ac6bf64017a6e39de10ed85cd055b2f",
+      "size_bytes": 95216
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r16_f01.json.gz",
+      "sha256": "c4eac79c0c55dfd339395e1904efb2877c3c202ff4264ccb18ed550202202423",
+      "size_bytes": 91966
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r17_f02.json.gz",
+      "sha256": "3f49062346d9f67f3ba7737038ec735e841f03083a17cb354784f9b7d7bc3235",
+      "size_bytes": 95685
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r18_f03.json.gz",
+      "sha256": "0fb39ef278191c58780716ce4f8c7a6e54eaaeb40a770489662c35b23cbb89d3",
+      "size_bytes": 95493
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r19_f04.json.gz",
+      "sha256": "864e1648fc7d3468bc0a8e872f7e03a1b10df3fabfbd17bdc769e72d271e1bd7",
+      "size_bytes": 94817
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r20_f05.json.gz",
+      "sha256": "5ab2a6944fcc782d71709f621022565a1709ebc540fed072dbf5d0096afeeecf",
+      "size_bytes": 57209
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_execution_report.json",
+      "sha256": "517f37703f6c04de261d64275190ae3be39967055c6e366971bd693d7e294a28",
+      "size_bytes": 574
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/SUPERVISOR_PHASE1_14_ONE_PAGE.md",
+      "sha256": "92a43b61d630e2f295959047f8c2dacac22d53c742a064b469e3a59483fdbd6d",
+      "size_bytes": 730
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/validation_report.json",
+      "sha256": "ea3e9dedf6b13358c51fb385b8095ff9c56c8fa92e144cb0bc52065a68a89bed",
+      "size_bytes": 6116
+    },
+    {
+      "path": "outputs/week9_phase1_14_m3_margin_acquisition/validation_report.md",
+      "sha256": "09cab11fb3519487a63bc2ce6be9b53dba65233938b740f166b424748af9e50d",
+      "size_bytes": 2788
+    },
+    {
+      "path": "src/week9_phase1_14_m3_margin_acquisition.py",
+      "sha256": "e767622d3efa89948774263779d7025e90419666cba933010a30d655d8a757fa",
+      "size_bytes": 67982
+    },
+    {
+      "path": "tests/test_week9_phase1_14_m3_margin_acquisition.py",
+      "sha256": "51dab3bd9328da1671f959febbe30ba11db1c17fcd3f824e34e5ec41176a0848",
+      "size_bytes": 6689
+    }
+  ],
+  "historical_changes": [],
+  "phase113_parent_sha": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+  "protocol": {
+    "P0": "frozen M3/A0",
+    "P1": "M3/M3-margin",
+    "bootstrap_draws": 10000,
+    "budgets": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "folds_per_repeat": 5,
+    "outer_runs": 100,
+    "repeat_blocks": 20,
+    "sensitivity_run_ids": [
+      "w85__r01_f01",
+      "w85__r02_f02",
+      "w85__r03_f03",
+      "w85__r04_f04",
+      "w85__r05_f05",
+      "w85__r06_f01",
+      "w85__r07_f02",
+      "w85__r08_f03",
+      "w85__r09_f04",
+      "w85__r10_f05",
+      "w85__r11_f01",
+      "w85__r12_f02",
+      "w85__r13_f03",
+      "w85__r14_f04",
+      "w85__r15_f05",
+      "w85__r16_f01",
+      "w85__r17_f02",
+      "w85__r18_f03",
+      "w85__r19_f04",
+      "w85__r20_f05"
+    ]
+  },
+  "study": "Week 9 Phase 1.14 \u2014 M3-margin active acquisition",
+  "validation": {
+    "check_count": 56,
+    "checks": [
+      {
+        "check": "exact_phase113_parent_base",
+        "detail": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+        "status": "PASS"
+      },
+      {
+        "check": "phase113_decision",
+        "detail": "HYBRID_GAIN_SUPPORTED",
+        "status": "PASS"
+      },
+      {
+        "check": "population_405_73_332",
+        "detail": "405/73/332",
+        "status": "PASS"
+      },
+      {
+        "check": "h_formula_unchanged",
+        "detail": "P/sqrt(VX*LS^3) inherited",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_100_outer_runs",
+        "detail": "100",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_20x5",
+        "detail": "20x5",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_B16_80",
+        "detail": "65 budgets",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_initial_designs",
+        "detail": "100/100",
+        "status": "PASS"
+      },
+      {
+        "check": "P0_frozen_AULC",
+        "detail": "0.8424908088235293",
+        "status": "PASS"
+      },
+      {
+        "check": "evaluation_fold_never_queried",
+        "detail": "all paths",
+        "status": "PASS"
+      },
+      {
+        "check": "q20_absent_acquisition",
+        "detail": "selection clean",
+        "status": "PASS"
+      },
+      {
+        "check": "q30_absent_acquisition",
+        "detail": "selection clean",
+        "status": "PASS"
+      },
+      {
+        "check": "B1_absent_acquisition",
+        "detail": "selector clean",
+        "status": "PASS"
+      },
+      {
+        "check": "unrevealed_labels_absent_selector",
+        "detail": "probabilities only",
+        "status": "PASS"
+      },
+      {
+        "check": "one_query_per_step",
+        "detail": "64 after B16",
+        "status": "PASS"
+      },
+      {
+        "check": "no_duplicate_query",
+        "detail": "100 paths",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_margin_semantics",
+        "detail": "exact",
+        "status": "PASS"
+      },
+      {
+        "check": "deterministic_tie_break",
+        "detail": "exact",
+        "status": "PASS"
+      },
+      {
+        "check": "stage1_logh_only",
+        "detail": "exact Phase 1.13",
+        "status": "PASS"
+      },
+      {
+        "check": "stage1_revealed_only",
+        "detail": "prefix",
+        "status": "PASS"
+      },
+      {
+        "check": "stage1_frozen_before_residual",
+        "detail": "ordered",
+        "status": "PASS"
+      },
+      {
+        "check": "M3_residual_inputs_exact",
+        "detail": "('P', 'VX', 'LS', 'ST')",
+        "status": "PASS"
+      },
+      {
+        "check": "logh_absent_residual_coordinate",
+        "detail": "4D only",
+        "status": "PASS"
+      },
+      {
+        "check": "ARD_matern_nu_1_5",
+        "detail": "1.5",
+        "status": "PASS"
+      },
+      {
+        "check": "four_ARD_lengths",
+        "detail": "4",
+        "status": "PASS"
+      },
+      {
+        "check": "amplitude_bounds_unchanged",
+        "detail": "(0.05, 1.0)",
+        "status": "PASS"
+      },
+      {
+        "check": "primary_length_bounds",
+        "detail": "(0.01, 100.0)",
+        "status": "PASS"
+      },
+      {
+        "check": "optimizer_restarts_unchanged",
+        "detail": "frozen",
+        "status": "PASS"
+      },
+      {
+        "check": "P1_trajectories_complete",
+        "detail": "100x80",
+        "status": "PASS"
+      },
+      {
+        "check": "P1_predictions_complete",
+        "detail": "526500",
+        "status": "PASS"
+      },
+      {
+        "check": "same_M3_evaluator",
+        "detail": "path only",
+        "status": "PASS"
+      },
+      {
+        "check": "paired_20_repeat_blocks",
+        "detail": "20",
+        "status": "PASS"
+      },
+      {
+        "check": "bootstrap_10000",
+        "detail": "10000",
+        "status": "PASS"
+      },
+      {
+        "check": "early_exact",
+        "detail": "B16-40",
+        "status": "PASS"
+      },
+      {
+        "check": "late_exact",
+        "detail": "B41-80",
+        "status": "PASS"
+      },
+      {
+        "check": "q30_complete",
+        "detail": "secondary",
+        "status": "PASS"
+      },
+      {
+        "check": "full81_complete",
+        "detail": "P0/P1/delta x budgets x metrics",
+        "status": "PASS"
+      },
+      {
+        "check": "thresholds_predeclared",
+        "detail": "(0.8, 0.82, 0.84)",
+        "status": "PASS"
+      },
+      {
+        "check": "path_overlap_retrospective",
+        "detail": "post hoc only",
+        "status": "PASS"
+      },
+      {
+        "check": "sensitivity_subset_predeclared",
+        "detail": "one per repeat",
+        "status": "PASS"
+      },
+      {
+        "check": "no_causal_ARD_claim",
+        "detail": "safe",
+        "status": "PASS"
+      },
+      {
+        "check": "no_universal_acquisition_claim",
+        "detail": "safe",
+        "status": "PASS"
+      },
+      {
+        "check": "no_theoretical_sample_complexity_claim",
+        "detail": "safe",
+        "status": "PASS"
+      },
+      {
+        "check": "B16_predictions_identical",
+        "detail": "1.1102230246251565e-16",
+        "status": "PASS"
+      },
+      {
+        "check": "selection_after_current_evaluation",
+        "detail": "evaluate then select",
+        "status": "PASS"
+      },
+      {
+        "check": "current_prefix_budget_exact",
+        "detail": "no off-by-one",
+        "status": "PASS"
+      },
+      {
+        "check": "candidate_pool_training_only",
+        "detail": "outer train",
+        "status": "PASS"
+      },
+      {
+        "check": "query_labels_marked_after_selection",
+        "detail": "explicit",
+        "status": "PASS"
+      },
+      {
+        "check": "fit_diagnostics_complete",
+        "detail": "6500",
+        "status": "PASS"
+      },
+      {
+        "check": "sensitivity_diagnostics_complete",
+        "detail": "1300",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed",
+        "detail": "9 cells",
+        "status": "PASS"
+      },
+      {
+        "check": "figure_hashes",
+        "detail": "5",
+        "status": "PASS"
+      },
+      {
+        "check": "no_unresolved_placeholders",
+        "detail": "none",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_outputs_unchanged",
+        "detail": "[]",
+        "status": "PASS"
+      },
+      {
+        "check": "red_team_language",
+        "detail": "explicit",
+        "status": "PASS"
+      },
+      {
+        "check": "decision_declared",
+        "detail": "LATE_ACQUISITION_GAIN_ONLY",
+        "status": "PASS"
+      }
+    ],
+    "passed": 56,
+    "status": "PASS"
+  }
+}

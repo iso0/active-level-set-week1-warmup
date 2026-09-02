@@ -1,0 +1,6 @@
+figure,sha256,size_bytes,purpose
+01_q20_learning_curves.png,9a0bf94b3cb9b8c553b55afd98bb717342157ce39f94ed40bf6294ea79c81d34,172605,Primary same-model path comparison.
+02_primary_early_late_contrasts.png,725e2c6dd4203c8bb64c95c5e567f0929c518b2247a720bc93671fbfb3255302,41864,"Overall, early, and late path contrasts."
+03_sample_efficiency_thresholds.png,72152a59db251dcbb71e4fdca560c064b16ded92004411f74edb280f0a398224,102464,Predeclared threshold reachability and censored first hits.
+04_path_overlap.png,49b92c10a0c46c3edfd1a729676020f6ea6ae0df1e745c8f7c8c2b58534fda42,59048,Cumulative P1/A0 set overlap.
+05_acquisition_numeric_robustness.png,6d2b2cab346e13b2769ca7f4c513727fc1205da75087466fd6e1e36b7f33af10,55499,L100/L1000 path sensitivity and fit diagnostics.

@@ -1,0 +1,13 @@
+unit,model,threshold,n_units,reached_count,reached_fraction,censored_count,median_first_hit_budget_reached_only,q1_first_hit_budget_reached_only,q3_first_hit_budget_reached_only,missing_crossings_not_imputed
+outer_run,P0,0.8,100,94,0.94,6,16.0,16.0,20.0,True
+outer_run,P0,0.82,100,94,0.94,6,16.0,16.0,20.0,True
+outer_run,P0,0.84,100,77,0.77,23,18.0,16.0,26.0,True
+outer_run,P1,0.8,100,95,0.95,5,16.0,16.0,18.0,True
+outer_run,P1,0.82,100,95,0.95,5,16.0,16.0,18.0,True
+outer_run,P1,0.84,100,79,0.79,21,18.0,16.0,25.0,True
+repeat,P0,0.8,20,20,1.0,0,17.0,16.0,18.0,True
+repeat,P0,0.82,20,20,1.0,0,18.0,17.0,20.25,True
+repeat,P0,0.84,20,20,1.0,0,23.5,20.0,26.0,True
+repeat,P1,0.8,20,20,1.0,0,17.0,16.0,18.0,True
+repeat,P1,0.82,20,20,1.0,0,17.5,17.0,20.25,True
+repeat,P1,0.84,20,20,1.0,0,25.5,18.0,31.25,True

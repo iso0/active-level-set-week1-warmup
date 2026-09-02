@@ -1,0 +1,287 @@
+{
+  "check_count": 56,
+  "checks": [
+    {
+      "check": "exact_phase113_parent_base",
+      "detail": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+      "status": "PASS"
+    },
+    {
+      "check": "phase113_decision",
+      "detail": "HYBRID_GAIN_SUPPORTED",
+      "status": "PASS"
+    },
+    {
+      "check": "population_405_73_332",
+      "detail": "405/73/332",
+      "status": "PASS"
+    },
+    {
+      "check": "h_formula_unchanged",
+      "detail": "P/sqrt(VX*LS^3) inherited",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_100_outer_runs",
+      "detail": "100",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_20x5",
+      "detail": "20x5",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_B16_80",
+      "detail": "65 budgets",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_initial_designs",
+      "detail": "100/100",
+      "status": "PASS"
+    },
+    {
+      "check": "P0_frozen_AULC",
+      "detail": "0.8424908088235293",
+      "status": "PASS"
+    },
+    {
+      "check": "evaluation_fold_never_queried",
+      "detail": "all paths",
+      "status": "PASS"
+    },
+    {
+      "check": "q20_absent_acquisition",
+      "detail": "selection clean",
+      "status": "PASS"
+    },
+    {
+      "check": "q30_absent_acquisition",
+      "detail": "selection clean",
+      "status": "PASS"
+    },
+    {
+      "check": "B1_absent_acquisition",
+      "detail": "selector clean",
+      "status": "PASS"
+    },
+    {
+      "check": "unrevealed_labels_absent_selector",
+      "detail": "probabilities only",
+      "status": "PASS"
+    },
+    {
+      "check": "one_query_per_step",
+      "detail": "64 after B16",
+      "status": "PASS"
+    },
+    {
+      "check": "no_duplicate_query",
+      "detail": "100 paths",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_margin_semantics",
+      "detail": "exact",
+      "status": "PASS"
+    },
+    {
+      "check": "deterministic_tie_break",
+      "detail": "exact",
+      "status": "PASS"
+    },
+    {
+      "check": "stage1_logh_only",
+      "detail": "exact Phase 1.13",
+      "status": "PASS"
+    },
+    {
+      "check": "stage1_revealed_only",
+      "detail": "prefix",
+      "status": "PASS"
+    },
+    {
+      "check": "stage1_frozen_before_residual",
+      "detail": "ordered",
+      "status": "PASS"
+    },
+    {
+      "check": "M3_residual_inputs_exact",
+      "detail": "('P', 'VX', 'LS', 'ST')",
+      "status": "PASS"
+    },
+    {
+      "check": "logh_absent_residual_coordinate",
+      "detail": "4D only",
+      "status": "PASS"
+    },
+    {
+      "check": "ARD_matern_nu_1_5",
+      "detail": "1.5",
+      "status": "PASS"
+    },
+    {
+      "check": "four_ARD_lengths",
+      "detail": "4",
+      "status": "PASS"
+    },
+    {
+      "check": "amplitude_bounds_unchanged",
+      "detail": "(0.05, 1.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "primary_length_bounds",
+      "detail": "(0.01, 100.0)",
+      "status": "PASS"
+    },
+    {
+      "check": "optimizer_restarts_unchanged",
+      "detail": "frozen",
+      "status": "PASS"
+    },
+    {
+      "check": "P1_trajectories_complete",
+      "detail": "100x80",
+      "status": "PASS"
+    },
+    {
+      "check": "P1_predictions_complete",
+      "detail": "526500",
+      "status": "PASS"
+    },
+    {
+      "check": "same_M3_evaluator",
+      "detail": "path only",
+      "status": "PASS"
+    },
+    {
+      "check": "paired_20_repeat_blocks",
+      "detail": "20",
+      "status": "PASS"
+    },
+    {
+      "check": "bootstrap_10000",
+      "detail": "10000",
+      "status": "PASS"
+    },
+    {
+      "check": "early_exact",
+      "detail": "B16-40",
+      "status": "PASS"
+    },
+    {
+      "check": "late_exact",
+      "detail": "B41-80",
+      "status": "PASS"
+    },
+    {
+      "check": "q30_complete",
+      "detail": "secondary",
+      "status": "PASS"
+    },
+    {
+      "check": "full81_complete",
+      "detail": "P0/P1/delta x budgets x metrics",
+      "status": "PASS"
+    },
+    {
+      "check": "thresholds_predeclared",
+      "detail": "(0.8, 0.82, 0.84)",
+      "status": "PASS"
+    },
+    {
+      "check": "path_overlap_retrospective",
+      "detail": "post hoc only",
+      "status": "PASS"
+    },
+    {
+      "check": "sensitivity_subset_predeclared",
+      "detail": "one per repeat",
+      "status": "PASS"
+    },
+    {
+      "check": "no_causal_ARD_claim",
+      "detail": "safe",
+      "status": "PASS"
+    },
+    {
+      "check": "no_universal_acquisition_claim",
+      "detail": "safe",
+      "status": "PASS"
+    },
+    {
+      "check": "no_theoretical_sample_complexity_claim",
+      "detail": "safe",
+      "status": "PASS"
+    },
+    {
+      "check": "B16_predictions_identical",
+      "detail": "1.1102230246251565e-16",
+      "status": "PASS"
+    },
+    {
+      "check": "selection_after_current_evaluation",
+      "detail": "evaluate then select",
+      "status": "PASS"
+    },
+    {
+      "check": "current_prefix_budget_exact",
+      "detail": "no off-by-one",
+      "status": "PASS"
+    },
+    {
+      "check": "candidate_pool_training_only",
+      "detail": "outer train",
+      "status": "PASS"
+    },
+    {
+      "check": "query_labels_marked_after_selection",
+      "detail": "explicit",
+      "status": "PASS"
+    },
+    {
+      "check": "fit_diagnostics_complete",
+      "detail": "6500",
+      "status": "PASS"
+    },
+    {
+      "check": "sensitivity_diagnostics_complete",
+      "detail": "1300",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "9 cells",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "5",
+      "status": "PASS"
+    },
+    {
+      "check": "no_unresolved_placeholders",
+      "detail": "none",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_outputs_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "red_team_language",
+      "detail": "explicit",
+      "status": "PASS"
+    },
+    {
+      "check": "decision_declared",
+      "detail": "LATE_ACQUISITION_GAIN_ONLY",
+      "status": "PASS"
+    }
+  ],
+  "passed": 56,
+  "status": "PASS"
+}

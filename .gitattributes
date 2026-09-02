@@ -33,3 +33,9 @@ notebooks/week_09/11_week9_phase1_13_fixed_physics_ard_discrepancy.ipynb text eo
 outputs/week9_phase1_13_fixed_physics_ard_discrepancy/** text eol=lf
 outputs/week9_phase1_13_fixed_physics_ard_discrepancy/figures/*.png -text
 outputs/week9_phase1_13_fixed_physics_ard_discrepancy/*.gz -text
+src/week9_phase1_14_m3_margin_acquisition.py text eol=lf
+tests/test_week9_phase1_14_m3_margin_acquisition.py text eol=lf
+notebooks/week_09/12_week9_phase1_14_m3_margin_acquisition.ipynb text eol=lf
+outputs/week9_phase1_14_m3_margin_acquisition/** text eol=lf
+outputs/week9_phase1_14_m3_margin_acquisition/figures/*.png -text
+outputs/week9_phase1_14_m3_margin_acquisition/*.gz -text

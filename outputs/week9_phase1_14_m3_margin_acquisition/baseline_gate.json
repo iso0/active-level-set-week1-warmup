@@ -1,0 +1,17 @@
+{
+  "A0_paths": 100,
+  "P0_q20_AULC": 0.8424908088235293,
+  "conduction": 332,
+  "current_head": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+  "exact_branch_base": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+  "folds_per_repeat": 5,
+  "historical_changes": [],
+  "initial_design_matches": 100,
+  "keyholes": 73,
+  "outer_runs": 100,
+  "phase113_decision": "HYBRID_GAIN_SUPPORTED",
+  "phase113_parent_sha": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+  "population": 405,
+  "repeat_blocks": 20,
+  "status": "PASS"
+}

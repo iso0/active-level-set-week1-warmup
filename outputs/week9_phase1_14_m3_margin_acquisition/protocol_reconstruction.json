@@ -1,0 +1,129 @@
+{
+  "A0_complete_paths": 100,
+  "A0_source": "Phase 1.8 exact query_paths.csv.gz reconstructed from Week 8.5 checkpoints",
+  "budget_semantics": {
+    "grid": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "one_query_per_step": true,
+    "order": "fit and evaluate at budget B; if B<80, select the point revealed for B+1"
+  },
+  "candidate_eligibility": "outer training pool minus currently queried indices",
+  "differences_from_prompt": [],
+  "evaluation_only": [
+    "B1",
+    "q20",
+    "q30",
+    "held-out labels"
+  ],
+  "fit_seed": "Phase 1.13 shared_physics seed keyed by run_id and budget",
+  "initial_design": {
+    "matched_A0": 100,
+    "method": "seeded feature-only maximin in outer-training-pool standardized P,VX,LS,ST",
+    "size": 16,
+    "source": "w85.initial_design"
+  },
+  "margin": {
+    "orientation": "maximize uncertainty, equivalently minimize abs(p-0.5)",
+    "source": "p6.choose_binary_candidate(method ending in margin)",
+    "tie_break": "np.lexsort by descending score then ascending population row index",
+    "uncertainty": "1 - 2*abs(p-0.5)"
+  },
+  "outer_protocol": {
+    "folds": 5,
+    "group": "input_tuple_sha256",
+    "held_out_test": 81,
+    "outer_training_pool": 324,
+    "repeats": 20,
+    "runs": 100,
+    "splitter": "StratifiedGroupKFold(n_splits=5, shuffle=True)"
+  },
+  "population": {
+    "conduction": 332,
+    "keyhole": 73,
+    "rows": 405
+  },
+  "scaling": {
+    "physics_log_h": "StandardScaler fit on currently revealed log(h)",
+    "residual_4d": "StandardScaler fit on the complete outer training pool features only"
+  },
+  "source_files": [
+    {
+      "path": "src/week8_5_frozen_sample_efficiency_confirmation.py",
+      "sha256": "cb63cd474817a91a755d779d8a0f4ad5337ab51a0778f3bc1788c3f6d943b60c"
+    },
+    {
+      "path": "src/week7_phase6_real_data_boundary_active_level_set.py",
+      "sha256": "23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479"
+    },
+    {
+      "path": "src/week9_phase1_13_fixed_physics_ard_discrepancy.py",
+      "sha256": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba"
+    }
+  ],
+  "status": "PASS"
+}

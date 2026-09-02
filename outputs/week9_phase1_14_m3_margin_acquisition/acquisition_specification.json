@@ -1,0 +1,84 @@
+{
+  "acquisition": {
+    "batch_size": 1,
+    "lookahead": false,
+    "orientation": "maximum",
+    "score": "1 - 2*abs(p-0.5)",
+    "tie_break": "smallest population row index"
+  },
+  "decision_safeguards": {
+    "acquisition_numeric_instability": "sensitivity median B80 Jaccard <0.25 together with absolute mean q20 AULC change >=0.01, or sensitivity optimizer convergence <0.80",
+    "clear_gain": "paired 95% interval strictly above zero",
+    "early_or_late_gain": "region interval above zero while the other region is not clearly below zero",
+    "severe_global_degradation": "at B40 or B80, mean P1-P0 full81 accuracy <= -0.02 or Keyhole recall <= -0.05"
+  },
+  "endpoints": {
+    "early": "B16-B40",
+    "late": "B41-B80",
+    "primary": "Fold-B1-q20 accuracy normalized trapezoidal AULC B16-B80",
+    "secondary_q30": "Fold-B1-q30 accuracy AULC B16-B80",
+    "thresholds": [
+      0.8,
+      0.82,
+      0.84
+    ]
+  },
+  "inference": {
+    "bootstrap_draws": 10000,
+    "unit": "20 paired repeat blocks; five folds retained together"
+  },
+  "model": {
+    "length_bounds": [
+      0.01,
+      100.0
+    ],
+    "log_h_residual_coordinate": false,
+    "optimizer": "L-BFGS-B",
+    "residual_kernel": "ConstantKernel x ARD Matern-3/2",
+    "residual_sd_bounds": [
+      0.05,
+      1.0
+    ],
+    "restarts": 0,
+    "stage1": "training-fitted log(h) latent logistic mean, revealed labels only, then frozen",
+    "stage2_inputs": [
+      "P",
+      "VX",
+      "LS",
+      "ST"
+    ]
+  },
+  "primary_comparison": {
+    "P0": "M3 evaluator on frozen A0 path",
+    "P1": "same M3 evaluator on sequential M3-margin path",
+    "only_changed_factor": "revealed-label trajectory"
+  },
+  "sensitivity": {
+    "role": "descriptive robustness only",
+    "run_ids": [
+      "w85__r01_f01",
+      "w85__r02_f02",
+      "w85__r03_f03",
+      "w85__r04_f04",
+      "w85__r05_f05",
+      "w85__r06_f01",
+      "w85__r07_f02",
+      "w85__r08_f03",
+      "w85__r09_f04",
+      "w85__r10_f05",
+      "w85__r11_f01",
+      "w85__r12_f02",
+      "w85__r13_f03",
+      "w85__r14_f04",
+      "w85__r15_f05",
+      "w85__r16_f01",
+      "w85__r17_f02",
+      "w85__r18_f03",
+      "w85__r19_f04",
+      "w85__r20_f05"
+    ],
+    "selection_rule": "one deterministic cycling fold per repeat: fold=((repeat-1) mod 5)+1",
+    "upper_bound": 1000.0
+  },
+  "status": "FROZEN_BEFORE_P1_RESULTS"
+}

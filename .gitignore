@@ -63,6 +63,10 @@ outputs/week9_phase1_12_gpc_kernel_adequacy/checkpoints/
 outputs/week9_phase1_13_fixed_physics_ard_discrepancy/checkpoints/
 outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/
 
+# Week 9 Phase 1.14 restart checkpoints (derived published tables are tracked).
+outputs/week9_phase1_14_m3_margin_acquisition/checkpoints/
+outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/
+
 # Local raw research data
 /data/raw/
 /.cache/external_masinelli/

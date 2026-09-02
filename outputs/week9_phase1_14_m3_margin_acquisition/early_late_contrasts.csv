@@ -1,0 +1,3 @@
+contrast,region,mean_difference,ci_lower,ci_upper,positive_repeat_blocks,zero_repeat_blocks,negative_repeat_blocks,bootstrap_draws
+P1-P0,EARLY_B16_40,-0.0015563725490195857,-0.007524509803921565,0.004105698529411795,11,0,9,10000
+P1-P0,LATE_B41_80,0.004509803921568617,0.00012047511312217183,0.009019607843137234,11,0,9,10000
