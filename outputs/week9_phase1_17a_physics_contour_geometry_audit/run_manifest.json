@@ -1,0 +1,315 @@
+{
+  "branch": "codex/week9-phase1-17a-physics-contour-geometry-audit",
+  "decision": "MIXED_GEOMETRIC_MECHANISM",
+  "files": [
+    {
+      "path": "notebooks/week_09/15_week9_phase1_17a_physics_contour_geometry_audit.ipynb",
+      "sha256": "013ce542e9552e97615fea5798141f26166aeb948f01bcfece177fefca2f271d",
+      "size_bytes": 542980
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/analysis_specification.json",
+      "sha256": "8ddde8d9d94ab429325a1424edb99f731d591223f47ca5ddbefe1c7fe4145f5f",
+      "size_bytes": 3141
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/b1_component_associations.csv",
+      "sha256": "6d70cf7d3b47466446371f05aa0315f96e0b0dca35039e77b99bbd3c4adc53de",
+      "size_bytes": 18185
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/baseline_gate.json",
+      "sha256": "90615e91b4931f99369ad06a55ec408ece7b923f883063048db1f7b7a67841b2",
+      "size_bytes": 623
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/budget_region_geometry.csv",
+      "sha256": "1f0bba6bf3a6a5eab41ec9e352f97aeda56cb5611afec271511d92af44c7f43d",
+      "size_bytes": 3765
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/checkpoint_geometry.csv",
+      "sha256": "d6de3832ea7d4c2e126e7d8bc5e912a3f9c78acd9148f83b2a4290089b9d721b",
+      "size_bytes": 3907
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/claim_ledger.md",
+      "sha256": "45f364e1f154d8f0e560b1e99ef2d9fb9b45a1d7e3710528783d02ca55912c99",
+      "size_bytes": 730
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/class_geometry_comparison.csv",
+      "sha256": "aff54b6cab45f0a28c9fb6b367ae518fd9a33148bf239ce0d5cd90e5d6448c5e",
+      "size_bytes": 2456
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/figure_manifest.csv",
+      "sha256": "dcb6575846e77ca05f637f02834306644ca4e1301fab86227f5e2152004ca1f7",
+      "size_bytes": 548
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/figures/01_component_fractions_vs_scale.png",
+      "sha256": "4879b737263bf7d9e172d9ecbe7bd72cf41980fdd0f942b71fe82c11f73e4513",
+      "size_bytes": 44667
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/figures/02_components_by_budget_region.png",
+      "sha256": "dcdd1983836f605b83019b200ad75c60edaa79787a85555aa6800772666b9d95",
+      "size_bytes": 65830
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/figures/03_q20_component_comparison.png",
+      "sha256": "763d0914ba0a39ec60a7ad3c9012519fa834b632df4b1adfb2d5d976b863ab31",
+      "size_bytes": 85065
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/figures/04_B1_component_associations.png",
+      "sha256": "dc281b9299df5c0bc6599c9c0d012b738aeef7b594c460b9eeafa9404af79dc7",
+      "size_bytes": 55439
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/figures/05_extra_distance_mechanism.png",
+      "sha256": "22f7c251f2f9534638d90dda5e7e65579f2d04fdfa25b641411af0d38fb47eb4",
+      "size_bytes": 72015
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/FINAL_PHASE1_17A_REPORT.md",
+      "sha256": "20a889ee41a8ecd1879ac7525a2efa421ca836d794d81adccd65a068413be3d4",
+      "size_bytes": 3427
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "589363e065457115607021515a91c03796e30da0262e67f3a98a14102189bd23",
+      "size_bytes": 2461
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/geometry_component_summary.csv",
+      "sha256": "d274bdb28361a157d0df53cb5b4d3c83ec6bea26c0c91bdb06cd315d7875e4e6",
+      "size_bytes": 3369
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/geometry_freeze.json",
+      "sha256": "763727df9f977df550b4404cfe653ec880d1bddae762fbdea0b6046c793ce330",
+      "size_bytes": 1323
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/mechanism_decision.json",
+      "sha256": "6a4d54abff0d74f73667aa6da55f8b7402e1c445567fc926e1cea95338ecfef0",
+      "size_bytes": 839
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/q20_geometry_comparison.csv",
+      "sha256": "a9998fb58b3097a67b06194d22136148747cac6c1790bb096a04b88e10a24a55",
+      "size_bytes": 2427
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/q30_geometry_comparison.csv",
+      "sha256": "1ff9ed7c75256ee81d380cd305081137ce5e46efa9efa61b19be4d7f3fdcb748",
+      "size_bytes": 2468
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/query_geometry_components.csv.gz",
+      "sha256": "8bfa7b3332fb3204c395de8f1ac75d1a45788094c811bb17667e11ee16557695",
+      "size_bytes": 9478861
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/repeat_block_inference.csv",
+      "sha256": "222f0b9fbc16564f1706559f17dec02e51c8f68e34c8a553800ed54e406acfc1",
+      "size_bytes": 15526
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/scale_response_geometry.csv",
+      "sha256": "6313847e474ff1dec504ce7610f0f29c1efd5da87d037852400170265e56f6d5",
+      "size_bytes": 1352
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/scaler_recovery_audit.csv",
+      "sha256": "d0fc6e5fcc830b2d8dfa5a9f89b71c69ab2450fe5d34671f973fa8a0a3b75328",
+      "size_bytes": 24240
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/SUPERVISOR_PHASE1_17A_ONE_PAGE.md",
+      "sha256": "76bfd635439cb1c50b29754a8576810ef50b9e262f348bb403636a3da11882c7",
+      "size_bytes": 982
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/validation_report.json",
+      "sha256": "f99d072f69f3938227e9ffcc7bd65b9be32d4c6d6760cb25e1d91cf9b15ddd76",
+      "size_bytes": 2986
+    },
+    {
+      "path": "outputs/week9_phase1_17a_physics_contour_geometry_audit/validation_report.md",
+      "sha256": "11fcd7e2ec2b6b01c0bbc3b758e2c64bd08b8908ecbb4cb74a7f521f52b1d2f2",
+      "size_bytes": 1399
+    },
+    {
+      "path": "src/week9_phase1_17a_physics_contour_geometry_audit.py",
+      "sha256": "b85b46107815e1c5bc2b5eb3f102fd51f9d6ca3b00863bf1e16f8aaba3277eeb",
+      "size_bytes": 49050
+    },
+    {
+      "path": "tests/test_week9_phase1_17a_physics_contour_geometry_audit.py",
+      "sha256": "15f3af7ba6c8d3ca6ec4c24da9faaddb02cd7977e5a5ea735c6c379e75b213f3",
+      "size_bytes": 4766
+    }
+  ],
+  "historical_changes": [],
+  "parent_sha": "746b19153f377bb0b7219d1c113bab672e306b19",
+  "protocol": {
+    "active_queries": 38400,
+    "arms": [
+      "M3_MARGIN",
+      "REP_C025",
+      "REP_C050",
+      "REP_C100",
+      "REP_C200",
+      "REP_C400"
+    ],
+    "bootstrap_draws": 10000,
+    "new_trajectory": false,
+    "repeat_blocks": 20
+  },
+  "study": "Week 9 Phase 1.17A \u2014 Physics-Contour Geometry Audit",
+  "validation": {
+    "check_count": 27,
+    "checks": [
+      {
+        "check": "exact_parent_sha",
+        "detail": "746b19153f377bb0b7219d1c113bab672e306b19",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_phase16_paths",
+        "detail": "600x80",
+        "status": "PASS"
+      },
+      {
+        "check": "no_new_trajectory",
+        "detail": "diagnostic only",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_scaler_recovery",
+        "detail": "4.440892098500626e-16",
+        "status": "PASS"
+      },
+      {
+        "check": "standardized_gradient_formula",
+        "detail": "chain rule",
+        "status": "PASS"
+      },
+      {
+        "check": "gradient_at_selected_candidate",
+        "detail": "local",
+        "status": "PASS"
+      },
+      {
+        "check": "ST_gradient_zero",
+        "detail": "exact zero",
+        "status": "PASS"
+      },
+      {
+        "check": "nearest_original_euclidean",
+        "detail": "standardized Euclidean",
+        "status": "PASS"
+      },
+      {
+        "check": "orthogonal_decomposition",
+        "detail": "9.992007221626409e-16",
+        "status": "PASS"
+      },
+      {
+        "check": "reconstruction_identity",
+        "detail": "2.3551386880256624e-16",
+        "status": "PASS"
+      },
+      {
+        "check": "energy_identity",
+        "detail": "2.275957200481571e-15",
+        "status": "PASS"
+      },
+      {
+        "check": "fraction_sum",
+        "detail": "8.881784197001252e-16",
+        "status": "PASS"
+      },
+      {
+        "check": "zero_distance_reported",
+        "detail": "0",
+        "status": "PASS"
+      },
+      {
+        "check": "no_ARD_metric",
+        "detail": "none",
+        "status": "PASS"
+      },
+      {
+        "check": "labels_absent_geometry",
+        "detail": "absent",
+        "status": "PASS"
+      },
+      {
+        "check": "B1_q_absent_geometry",
+        "detail": "absent",
+        "status": "PASS"
+      },
+      {
+        "check": "freeze_before_join",
+        "detail": "frozen",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_arms",
+        "detail": "['M3_MARGIN', 'REP_C025', 'REP_C050', 'REP_C100', 'REP_C200', 'REP_C400']",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_budgets_lengths",
+        "detail": "38400",
+        "status": "PASS"
+      },
+      {
+        "check": "train_test_integrity",
+        "detail": "all",
+        "status": "PASS"
+      },
+      {
+        "check": "repeat_block_inference",
+        "detail": "20 blocks",
+        "status": "PASS"
+      },
+      {
+        "check": "bootstrap_10000",
+        "detail": "10000",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed",
+        "detail": "7",
+        "status": "PASS"
+      },
+      {
+        "check": "figure_hashes",
+        "detail": "5",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_outputs_unchanged",
+        "detail": "[]",
+        "status": "PASS"
+      },
+      {
+        "check": "no_placeholders",
+        "detail": "none",
+        "status": "PASS"
+      },
+      {
+        "check": "decision_valid",
+        "detail": "MIXED_GEOMETRIC_MECHANISM",
+        "status": "PASS"
+      }
+    ],
+    "passed": 27,
+    "status": "PASS"
+  }
+}

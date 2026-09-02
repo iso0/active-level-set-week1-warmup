@@ -1,0 +1,31 @@
+{
+  "decision": "MIXED_GEOMETRIC_MECHANISM",
+  "flags": {
+    "B1_distance_delta_c4": 0.05565885672954185,
+    "c4_energy_delta": {
+      "normal": 0.06534145455576637,
+      "st": 0.05838554607497806,
+      "tangent": 0.09301290870310996
+    },
+    "c4_positive_extra_energy_share": {
+      "normal": 0.30147403289312047,
+      "st": 0.26938068883771715,
+      "tangent": 0.4291452782691624
+    },
+    "keyhole_fraction_delta_c4": -0.023281249999999976,
+    "q20_fraction_delta_c4": -0.06578125000000001,
+    "supported_share_increases": {
+      "r_N": 4,
+      "r_ST": 3,
+      "r_T": 0
+    },
+    "total_distance_delta_c4": 0.12988877733845805
+  },
+  "predeclared_categories": [
+    "NORMAL_ESCAPE",
+    "ST_NULLSPACE_ESCAPE",
+    "TRUE_PHYSICS_TANGENT_SPREAD",
+    "MIXED_GEOMETRIC_MECHANISM",
+    "NO_CLEAR_GEOMETRIC_MECHANISM"
+  ]
+}

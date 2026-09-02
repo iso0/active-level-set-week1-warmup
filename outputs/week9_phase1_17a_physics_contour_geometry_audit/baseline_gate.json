@@ -1,0 +1,25 @@
+{
+  "all_paths_length_80": true,
+  "all_paths_unique": true,
+  "arms": [
+    "M3_MARGIN",
+    "REP_C025",
+    "REP_C050",
+    "REP_C100",
+    "REP_C200",
+    "REP_C400"
+  ],
+  "conduction": 332,
+  "current_head": "746b19153f377bb0b7219d1c113bab672e306b19",
+  "exact_branch_base": "746b19153f377bb0b7219d1c113bab672e306b19",
+  "historical_changes": [],
+  "keyholes": 73,
+  "outer_runs": 100,
+  "path_rows": 48000,
+  "paths": 600,
+  "phase16_decision": "REPULSION_MECHANISM_ONLY",
+  "population": 405,
+  "required_parent_sha": "746b19153f377bb0b7219d1c113bab672e306b19",
+  "shared_initial_designs": 100,
+  "status": "PASS"
+}
