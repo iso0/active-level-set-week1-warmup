@@ -1,0 +1,227 @@
+{
+  "check_count": 44,
+  "checks": [
+    {
+      "check": "exact_parent_sha",
+      "detail": "1e34b4759037d5f3d107781791524853a406a526",
+      "status": "PASS"
+    },
+    {
+      "check": "population_405_73_332",
+      "detail": "405/73/332",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_100_outer_runs",
+      "detail": "100",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_20x5",
+      "detail": "20x5",
+      "status": "PASS"
+    },
+    {
+      "check": "same_folds_all_arms",
+      "detail": "100 each",
+      "status": "PASS"
+    },
+    {
+      "check": "same_B16_initialization",
+      "detail": "300/300",
+      "status": "PASS"
+    },
+    {
+      "check": "P0_path_exact",
+      "detail": "100/100",
+      "status": "PASS"
+    },
+    {
+      "check": "P0_metric_exact",
+      "detail": "published q20",
+      "status": "PASS"
+    },
+    {
+      "check": "no_duplicate_queries",
+      "detail": "300 paths",
+      "status": "PASS"
+    },
+    {
+      "check": "training_pool_only",
+      "detail": "all",
+      "status": "PASS"
+    },
+    {
+      "check": "heldout_never_queried",
+      "detail": "all",
+      "status": "PASS"
+    },
+    {
+      "check": "no_q20_q30_B1_acquisition",
+      "detail": "flags evaluation-only",
+      "status": "PASS"
+    },
+    {
+      "check": "hypothetical_both_labels",
+      "detail": "y0/y1",
+      "status": "PASS"
+    },
+    {
+      "check": "current_posterior_weighting",
+      "detail": "exact",
+      "status": "PASS"
+    },
+    {
+      "check": "current_U_uses_complete_Rn",
+      "detail": "complete current pool",
+      "status": "PASS"
+    },
+    {
+      "check": "future_U_excludes_candidate",
+      "detail": "remaining pool",
+      "status": "PASS"
+    },
+    {
+      "check": "common_current_U_n",
+      "detail": "common over R_n",
+      "status": "PASS"
+    },
+    {
+      "check": "P1_physics_fixed",
+      "detail": "exact-fixed",
+      "status": "PASS"
+    },
+    {
+      "check": "P1_physics_numeric_freeze",
+      "detail": "all candidates/outcomes",
+      "status": "PASS"
+    },
+    {
+      "check": "P1_scaler_fixed",
+      "detail": "fixed",
+      "status": "PASS"
+    },
+    {
+      "check": "P1_P2_kernel_fixed",
+      "detail": "fixed current kernel",
+      "status": "PASS"
+    },
+    {
+      "check": "P2_physics_refit",
+      "detail": "revealed+hypothetical",
+      "status": "PASS"
+    },
+    {
+      "check": "P2_physics_numeric_change",
+      "detail": "observed",
+      "status": "PASS"
+    },
+    {
+      "check": "normal_actual_next_fit",
+      "detail": "normal M3",
+      "status": "PASS"
+    },
+    {
+      "check": "FAST_never_used",
+      "detail": "absent from execution engine",
+      "status": "PASS"
+    },
+    {
+      "check": "PA_TVR_never_used",
+      "detail": "absent from execution engine",
+      "status": "PASS"
+    },
+    {
+      "check": "no_acquisition_tuning",
+      "detail": "frozen",
+      "status": "PASS"
+    },
+    {
+      "check": "deterministic_tie_break",
+      "detail": "smallest index",
+      "status": "PASS"
+    },
+    {
+      "check": "primary_q20_unchanged",
+      "detail": "q20",
+      "status": "PASS"
+    },
+    {
+      "check": "repeat_block_inference",
+      "detail": "20 blocks",
+      "status": "PASS"
+    },
+    {
+      "check": "bootstrap_at_least_10000",
+      "detail": "20000",
+      "status": "PASS"
+    },
+    {
+      "check": "Holm_two_primary",
+      "detail": "2",
+      "status": "PASS"
+    },
+    {
+      "check": "q30_secondary",
+      "detail": "secondary contrasts",
+      "status": "PASS"
+    },
+    {
+      "check": "threshold_sign_explicit",
+      "detail": "explicit",
+      "status": "PASS"
+    },
+    {
+      "check": "fallback_disclosed",
+      "detail": "0",
+      "status": "PASS"
+    },
+    {
+      "check": "all_scores_finite",
+      "detail": "3539200",
+      "status": "PASS"
+    },
+    {
+      "check": "selected_truth_revealed_after",
+      "detail": "explicit",
+      "status": "PASS"
+    },
+    {
+      "check": "P0_B16_probability_equal",
+      "detail": "P0=P1",
+      "status": "PASS"
+    },
+    {
+      "check": "P1_P2_B16_probability_equal",
+      "detail": "P1=P2",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "7",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "7",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_outputs_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "no_novelty_claim",
+      "detail": "safe",
+      "status": "PASS"
+    },
+    {
+      "check": "label_saving_claim_guarded",
+      "detail": "LABEL_SAVING_NOT_SUPPORTED",
+      "status": "PASS"
+    }
+  ],
+  "passed": 44,
+  "status": "PASS"
+}

@@ -82,3 +82,5 @@ outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/checkpoints/
 # Local raw research data
 /data/raw/
 /.cache/external_masinelli/
+# Phase 1.18B prospective SUR checkpoints
+outputs/week9_phase1_18b_prospective_global_gpc_sur_benchmark/checkpoints/
