@@ -1,0 +1,5 @@
+case,max_mean_change,max_variance_change,status
+zero_cross_covariance,0.0,0.0,PASS
+same_point_variance,,0.0,PASS
+low_curvature_limit_expected_update,1.3877787807814457e-17,4.440892098500626e-16,PASS
+near_zero_variance,4.801714581503802e-15,9.9e-13,PASS

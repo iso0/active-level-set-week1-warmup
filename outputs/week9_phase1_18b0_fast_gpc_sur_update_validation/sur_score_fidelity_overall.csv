@@ -1,0 +1,2 @@
+snapshots,median_spearman,q10_spearman,median_kendall_tau,median_pearson,top1_agreement,mean_top3_jaccard,mean_top5_jaccard,mean_top10_jaccard,median_fast_top_rank_under_exact,sign_reversal_fraction,late_median_spearman
+25,0.4813186813186813,-0.2106195558827138,0.3846153846153845,0.432297612199182,0.44,0.43999999999999995,0.5238095238095238,0.7252214452214453,2.0,0.28664495114006516,0.47492507492507496

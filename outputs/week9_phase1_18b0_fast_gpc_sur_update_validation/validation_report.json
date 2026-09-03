@@ -1,0 +1,146 @@
+{
+  "check_count": 28,
+  "checks": [
+    {
+      "check": "exact_parent",
+      "detail": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+      "status": "PASS"
+    },
+    {
+      "check": "population",
+      "detail": "405/73/332",
+      "status": "PASS"
+    },
+    {
+      "check": "m3_architecture",
+      "detail": "frozen Phase1.13 implementation",
+      "status": "PASS"
+    },
+    {
+      "check": "no_new_trajectory",
+      "detail": "validation only",
+      "status": "PASS"
+    },
+    {
+      "check": "frozen_phase14_prefixes",
+      "detail": "100/100",
+      "status": "PASS"
+    },
+    {
+      "check": "snapshot_design_frozen",
+      "detail": "25 checkpoint identities",
+      "status": "PASS"
+    },
+    {
+      "check": "candidate_design_hash",
+      "detail": "334ffa83d241ffbbba726f7100ea9b55a4c654dc0348e1e4ec881d3f7261d296",
+      "status": "PASS"
+    },
+    {
+      "check": "candidate_design_matches_scored",
+      "detail": "exact identities",
+      "status": "PASS"
+    },
+    {
+      "check": "candidate_design_no_leakage",
+      "detail": "clean",
+      "status": "PASS"
+    },
+    {
+      "check": "both_labels",
+      "detail": "all",
+      "status": "PASS"
+    },
+    {
+      "check": "fast_reproduces_phase18a",
+      "detail": "exact score parity",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_fixed_kernel_frozen",
+      "detail": "bitwise theta/scaler",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_fixed_physics_frozen",
+      "detail": "unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "physics_refit_kernel_frozen",
+      "detail": "unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "physics_refit_stage1_changes",
+      "detail": "all hypothetical updates",
+      "status": "PASS"
+    },
+    {
+      "check": "full_refit_normal_pipeline",
+      "detail": "normal M3",
+      "status": "PASS"
+    },
+    {
+      "check": "special_cases",
+      "detail": "all pass",
+      "status": "PASS"
+    },
+    {
+      "check": "probability_integration",
+      "detail": "max 0.000406",
+      "status": "PASS"
+    },
+    {
+      "check": "posterior_finite",
+      "detail": "finite",
+      "status": "PASS"
+    },
+    {
+      "check": "thresholds_frozen",
+      "detail": "exact",
+      "status": "PASS"
+    },
+    {
+      "check": "all_budgets",
+      "detail": "[np.int64(16), np.int64(24), np.int64(40), np.int64(60), np.int64(80)]",
+      "status": "PASS"
+    },
+    {
+      "check": "multiple_repeats_folds",
+      "detail": "14/5",
+      "status": "PASS"
+    },
+    {
+      "check": "ranking_snapshotwise",
+      "detail": "25",
+      "status": "PASS"
+    },
+    {
+      "check": "no_sample_efficiency_claim",
+      "detail": "guardrail",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "stored outputs",
+      "status": "PASS"
+    },
+    {
+      "check": "figures",
+      "detail": "6",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "all",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_unchanged",
+      "detail": "none",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

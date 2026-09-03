@@ -1,0 +1,24 @@
+{
+  "decision": "PHYSICS_REFIT_MATTERS",
+  "predeclared_matters_rule": "median Spearman <0.90 or top-1 agreement <0.60",
+  "summary": [
+    {
+      "effect": "hyperparameter_refit_effect",
+      "mean_top5_jaccard": 0.7765079365079365,
+      "median_spearman": 0.9860139860139862,
+      "top1_agreement": 0.64
+    },
+    {
+      "effect": "physics_refit_effect",
+      "mean_top5_jaccard": 0.4122222222222222,
+      "median_spearman": 0.26269742562687987,
+      "top1_agreement": 0.08
+    },
+    {
+      "effect": "rank_one_error",
+      "mean_top5_jaccard": 0.5238095238095238,
+      "median_spearman": 0.4813186813186813,
+      "top1_agreement": 0.44
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "budgets": [
+    16,
+    24,
+    40,
+    60,
+    80
+  ],
+  "candidate_selection_forbidden": [
+    "truth",
+    "B1",
+    "q20",
+    "q30",
+    "held-out labels"
+  ],
+  "full_refit_role": "secondary model-refit sensitivity, not primary update truth",
+  "gate": {
+    "late_median_spearman": 0.85,
+    "mean_top5_jaccard": 0.7,
+    "median_fast_top_rank_under_exact": 2.0,
+    "median_posterior_probability_mae": 0.02,
+    "median_spearman": 0.95,
+    "q10_spearman": 0.8,
+    "q90_snapshot_probability_mae": 0.05,
+    "sign_reversal_fraction": 0.05,
+    "top1_agreement": 0.7
+  },
+  "hypothetical_label_weights": "current p_n(x)",
+  "minimum_candidates_per_snapshot": 12,
+  "new_trajectory": false,
+  "no_sample_efficiency_test": true,
+  "partial_gate": {
+    "mean_top5_jaccard": 0.5,
+    "median_posterior_probability_mae": 0.05,
+    "median_spearman": 0.8,
+    "top1_agreement": 0.4
+  },
+  "primary_comparison": "FAST_RANK1 vs EXACT_LAPLACE_FIXED_MODEL",
+  "reference_pool": "all currently unqueried outer-training candidates",
+  "refit_effect_gate": {
+    "matters_if_median_spearman_below": 0.9,
+    "or_top1_agreement_below": 0.6
+  },
+  "secondary_levels": [
+    "EXACT_LAPLACE_REFIT_PHYSICS",
+    "FULL_M3_REFIT"
+  ],
+  "status": "FROZEN_BEFORE_EXACT_RESULTS",
+  "target_snapshots": 25,
+  "uncertainty_functional": "mean p(u)(1-p(u))"
+}

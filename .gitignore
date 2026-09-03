@@ -76,6 +76,9 @@ outputs/week9_phase1_16_m3_repulsion_scale_audit/checkpoints/
 # Week 9 Phase 1.18A restart checkpoints (derived frozen-prefix tables are tracked).
 outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/checkpoints/
 
+# Week 9 Phase 1.18B0 restart checkpoints (derived validation tables are tracked).
+outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/checkpoints/
+
 # Local raw research data
 /data/raw/
 /.cache/external_masinelli/
