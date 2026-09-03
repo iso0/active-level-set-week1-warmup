@@ -1,0 +1,3 @@
+# M3 posterior semantics
+
+M3 fits `f(x)=m_h(x)+r(x)`. Stage 1 learns an h-only logistic latent mean using revealed labels, then freezes it. Stage 2 is a zero-mean ARD Matérn-3/2 discrepancy classifier over standardized `[P,VX,LS,ST]` with Laplace inference; `log(h)` is not a residual coordinate. The stored `residual_latent_variance` is therefore also the represented final Stage-2 latent variance. Uncertainty from estimating `m_h` is not propagated. `predict_proba` integrates the latent Gaussian approximation, so probability margin depends on both latent mean and variance but has no explicit global uncertainty-reduction objective.

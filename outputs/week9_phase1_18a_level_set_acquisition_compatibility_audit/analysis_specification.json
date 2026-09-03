@@ -1,0 +1,51 @@
+{
+  "approximation": "SMOCU/SUR use a disclosed logistic-Laplace rank-one moment update and are never called exact",
+  "budgets": [
+    16,
+    24,
+    32,
+    40,
+    60,
+    80
+  ],
+  "diagnostic_only": true,
+  "expected_curvature_quadrature_nodes": 24,
+  "forbidden": [
+    "new acquisition trajectory",
+    "candidate truth in scoring",
+    "B1/q20/q30 in scoring",
+    "sample-efficiency claim",
+    "unsupported novelty claim"
+  ],
+  "lookahead_reference_pool": "all currently unqueried outer-training candidates",
+  "m3": {
+    "length_upper_primary": 100.0,
+    "length_upper_sensitivity": 1000.0,
+    "log_h_in_residual": false,
+    "stage1": "revealed-label log(h) logistic latent mean, then frozen",
+    "stage2": "ARD Matern-3/2 Laplace GPC on standardized P,VX,LS,ST"
+  },
+  "methods": [
+    "M3_MARGIN",
+    "M3_STRADDLE",
+    "M3_EMI",
+    "M3_SMOCU_APPROX",
+    "M3_SUR_APPROX",
+    "M3_TMES_GSUR",
+    "PA_TVR_CANDIDATE"
+  ],
+  "new_trajectory": false,
+  "pa_tvr_decision_precommit": "reject if its geometry factor lacks a Mat\u00e9rn-3/2 tangent-integral derivation, irrespective of retrospective behavior",
+  "prefix_source": "exact published Phase 1.14 M3-margin path",
+  "ranking_collapse_interpretation": "all four thresholds must pass over the 600 snapshot distribution",
+  "ranking_collapse_rule": {
+    "mean_top10_jaccard": 0.9,
+    "median_spearman": 0.995,
+    "q05_spearman": 0.98,
+    "top1_agreement": 0.9
+  },
+  "retrospective_join": "only after candidate_scores_pre_reveal.csv.gz is written and hashed",
+  "smocu_softness_k": 10.0,
+  "snapshots": 600,
+  "status": "FROZEN_BEFORE_FULL_600_SNAPSHOT_SUMMARY"
+}

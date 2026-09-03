@@ -1,0 +1,24 @@
+{
+  "budgets": [
+    16,
+    24,
+    32,
+    40,
+    60,
+    80
+  ],
+  "conduction": 332,
+  "current_head": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+  "exact_branch_base": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+  "folds": 5,
+  "historical_changes": [],
+  "initial_design_matches": 100,
+  "keyholes": 73,
+  "outer_runs": 100,
+  "paths": 100,
+  "phase14_decision": "LATE_ACQUISITION_GAIN_ONLY",
+  "population": 405,
+  "repeat_blocks": 20,
+  "required_parent_sha": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+  "status": "PASS"
+}

@@ -1,0 +1,166 @@
+{
+  "check_count": 32,
+  "checks": [
+    {
+      "check": "exact_parent",
+      "detail": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+      "status": "PASS"
+    },
+    {
+      "check": "population_405",
+      "detail": "405",
+      "status": "PASS"
+    },
+    {
+      "check": "labels_73_332",
+      "detail": "73/332",
+      "status": "PASS"
+    },
+    {
+      "check": "m3_architecture",
+      "detail": "fixed physics + ARD Matern-3/2",
+      "status": "PASS"
+    },
+    {
+      "check": "outer_runs_100",
+      "detail": "100",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_frozen_prefixes",
+      "detail": "100/100",
+      "status": "PASS"
+    },
+    {
+      "check": "no_new_trajectory",
+      "detail": "score-only",
+      "status": "PASS"
+    },
+    {
+      "check": "candidate_scores_no_labels",
+      "detail": "clean",
+      "status": "PASS"
+    },
+    {
+      "check": "candidate_scores_no_boundary",
+      "detail": "clean",
+      "status": "PASS"
+    },
+    {
+      "check": "score_hash_valid",
+      "detail": "a139295715dc7ba515c1317e113d5124185328bdb00c7eda0a2d68d9747fb3f1",
+      "status": "PASS"
+    },
+    {
+      "check": "retrospective_after_hash",
+      "detail": "mtime order",
+      "status": "PASS"
+    },
+    {
+      "check": "six_budgets",
+      "detail": "[np.int64(16), np.int64(24), np.int64(32), np.int64(40), np.int64(60), np.int64(80)]",
+      "status": "PASS"
+    },
+    {
+      "check": "snapshots_600",
+      "detail": "600",
+      "status": "PASS"
+    },
+    {
+      "check": "candidate_occurrences_169200",
+      "detail": "169200",
+      "status": "PASS"
+    },
+    {
+      "check": "scores_finite",
+      "detail": "all numeric finite",
+      "status": "PASS"
+    },
+    {
+      "check": "margin_semantics",
+      "detail": "exact",
+      "status": "PASS"
+    },
+    {
+      "check": "latent_variance_semantics",
+      "detail": "frozen mean",
+      "status": "PASS"
+    },
+    {
+      "check": "emi_mc",
+      "detail": "max error 0.00106534",
+      "status": "PASS"
+    },
+    {
+      "check": "smocu_marked_approx",
+      "detail": "name explicit",
+      "status": "PASS"
+    },
+    {
+      "check": "sur_functional_documented",
+      "detail": "documented",
+      "status": "PASS"
+    },
+    {
+      "check": "fast_update_small_exact_check",
+      "detail": "3 predeclared candidates",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_approx_not_conflated",
+      "detail": "explicit",
+      "status": "PASS"
+    },
+    {
+      "check": "pa_formula_terms",
+      "detail": "complete",
+      "status": "PASS"
+    },
+    {
+      "check": "pa_scratch_not_ground_truth",
+      "detail": "independent",
+      "status": "PASS"
+    },
+    {
+      "check": "pa_bound_sensitivity",
+      "detail": "600 snapshots",
+      "status": "PASS"
+    },
+    {
+      "check": "no_ard_causal_claim",
+      "detail": "guardrail",
+      "status": "PASS"
+    },
+    {
+      "check": "no_unsupported_novelty",
+      "detail": "guardrail",
+      "status": "PASS"
+    },
+    {
+      "check": "no_sample_efficiency_claim",
+      "detail": "guardrail",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "stored outputs",
+      "status": "PASS"
+    },
+    {
+      "check": "figures_six",
+      "detail": "6",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "all match",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_unchanged",
+      "detail": "none",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}
