@@ -1,0 +1,22 @@
+{
+  "branch": "codex/week9-phase1-19a-integrity-posterior-monotonicity-audit",
+  "conduction": 332,
+  "folds_per_repeat": 5,
+  "historical_references": {
+    "canonical_population": "outputs/week7_02_sph_v2_target_extraction/sph_v2_simulation_level_targets.csv",
+    "configuration_parser": "src/week7_sph_v2_common.py::parse_experiment_name",
+    "domain_mapping": "src/week7_phase2_sph_v2_physical_target_extraction.py::verify_domain_compatibility/extract_one",
+    "published_m3_fit_diagnostics": "outputs/week9_phase1_14_m3_margin_acquisition/m3_active_fit_diagnostics.csv.gz",
+    "published_m3_predictions": "outputs/week9_phase1_14_m3_margin_acquisition/new_predictions.csv.gz",
+    "published_path": "outputs/week9_phase1_14_m3_margin_acquisition/m3_margin_paths.csv.gz"
+  },
+  "initial_design_matches": 100,
+  "keyholes": 73,
+  "merge_base": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+  "outer_runs": 100,
+  "parent_sha": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+  "population": 405,
+  "published_paths": 100,
+  "repeat_blocks": 20,
+  "status": "PASS"
+}

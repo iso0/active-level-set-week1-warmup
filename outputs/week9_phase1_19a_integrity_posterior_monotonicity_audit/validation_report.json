@@ -1,0 +1,33 @@
+{
+  "check_count": 27,
+  "checks": {
+    "all_violations_listed": true,
+    "binary_label_unchanged": true,
+    "censor_rule_documented": true,
+    "configuration_metadata_derived": true,
+    "correct_branch": true,
+    "directed_unordered_unambiguous": true,
+    "exact_parent_merge_base": true,
+    "figure_hashes_valid": true,
+    "full_and_main_monotonicity": true,
+    "historical_outputs_unmodified": true,
+    "no_heldout_fit": true,
+    "no_historical_artifact_copies": true,
+    "no_letham_trajectory": true,
+    "no_new_acquisition_output": true,
+    "no_prior_outputs_inside_phase_folder": true,
+    "no_pseudo_label_artifact": true,
+    "no_q20_artifact": true,
+    "notebook_executed_stored": true,
+    "population_405_73_332": true,
+    "published_path_prefixes_100": true,
+    "q20_not_redefined": true,
+    "regularization_diagnostic_only": true,
+    "required_artifacts_exist": true,
+    "six_figures_only": true,
+    "stage1_revealed_only": true,
+    "temporary_cache_absent": true,
+    "units_documented": true
+  },
+  "status": "PASS"
+}

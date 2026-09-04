@@ -1,0 +1,5 @@
+{
+  "decision": "MONOTONIC_STRUCTURE_STRONG",
+  "guardrail": "Exact hard propagation is unsafe wherever the frozen labels violate the order; a future method must be soft/robust.",
+  "reason": "Full: 3/22050 violations (0.013605%) with 27.0% pair comparability. Main configuration: 3/19491."
+}

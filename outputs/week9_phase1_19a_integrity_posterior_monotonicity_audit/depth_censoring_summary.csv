@@ -1,0 +1,5 @@
+configuration_group,depth_censoring_class,N,keyholes,conduction,min_depth_um,median_depth_um,max_depth_um,threshold_um,lower_nonpile_um,upper_pile_um
+CFG_MAIN,likely_domain_floor_censored,39,39,0,300.7084,302.8148,311.9999,294.18005,287.6517,300.7084
+CFG_MAIN,uncensored,325,31,294,19.03058,62.834109999999995,287.6517,294.18005,287.6517,300.7084
+CFG_NEGATIVE_XI_SHORT,uncensored,27,3,24,23.18574,47.46592,182.7274,294.18005,287.6517,300.7084
+CFG_POSITIVE_XI_SHORT,uncensored,14,0,14,27.19738,62.372025,71.39363,294.18005,287.6517,300.7084

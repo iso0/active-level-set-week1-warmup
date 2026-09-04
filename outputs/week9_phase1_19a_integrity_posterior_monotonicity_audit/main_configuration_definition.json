@@ -1,0 +1,15 @@
+{
+  "N": 364,
+  "conduction": 294,
+  "configuration_group": "CFG_MAIN",
+  "definition": {
+    "TE_s": 0.0021,
+    "XF_m": 0.0014,
+    "XI_m": 0.0002,
+    "XL_m": 0.0012
+  },
+  "domain_semantics": "min(XF,XL)+12 um is the verified x-domain maximum; no stronger undocumented interpretation is imposed",
+  "keyholes": 70,
+  "source": "semantic experiment-folder fields parsed by src/week7_sph_v2_common.py",
+  "status": "FROZEN_FROM_DOMINANT_EXACT_CONFIGURATION"
+}

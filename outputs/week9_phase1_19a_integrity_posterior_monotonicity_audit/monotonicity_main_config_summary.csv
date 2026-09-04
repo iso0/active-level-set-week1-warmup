@@ -1,0 +1,2 @@
+population,N,keyholes,conduction,comparable_directed_pairs,comparable_unique_unordered_pairs,all_unique_unordered_pairs,comparable_pair_fraction,violations,violation_rate_directed,definition
+main_configuration_only,364,70,294,19491,19491,66066,0.2950231586595223,3,0.00015391719255040788,"j more Keyhole-favouring iff P_j>=P_i, VX_j<=VX_i, LS_j<=LS_i, at least one strict; ST ignored"

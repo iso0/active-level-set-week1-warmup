@@ -1,0 +1,10 @@
+scenario,regime,N_mean,MAE_um,RMSE_um,median_absolute_relative_error,repeat_blocks,model
+D0_original,Conduction,332.0,21.715181035077546,28.133067571611104,0.3101958041885576,20,"fixed Ridge(alpha=1) on standardized P,VX,LS,ST; diagnostic only"
+D0_original,Keyhole,73.0,59.60158321138057,68.22937187578398,0.23110978730637605,20,"fixed Ridge(alpha=1) on standardized P,VX,LS,ST; diagnostic only"
+D0_original,all,405.0,28.544088094016114,38.57370210427443,0.28219054882680583,20,"fixed Ridge(alpha=1) on standardized P,VX,LS,ST; diagnostic only"
+D1_uncensored_evaluation,Conduction,332.0,21.715181035077546,28.133067571611104,0.3101958041885576,20,"fixed Ridge(alpha=1) on standardized P,VX,LS,ST; diagnostic only"
+D1_uncensored_evaluation,Keyhole,34.0,51.39107165102799,61.00015453029933,0.26129026119635934,20,"fixed Ridge(alpha=1) on standardized P,VX,LS,ST; diagnostic only"
+D1_uncensored_evaluation,all,366.0,24.47195775896365,32.61378795313024,0.3038639154764918,20,"fixed Ridge(alpha=1) on standardized P,VX,LS,ST; diagnostic only"
+D2_uncensored_train_and_evaluate,Conduction,332.0,9.22592420431559,12.593803232663255,0.11679454919924508,20,"fixed Ridge(alpha=1) on standardized P,VX,LS,ST; diagnostic only"
+D2_uncensored_train_and_evaluate,Keyhole,34.0,57.35597402137663,70.63112858721738,0.32662395499837704,20,"fixed Ridge(alpha=1) on standardized P,VX,LS,ST; diagnostic only"
+D2_uncensored_train_and_evaluate,all,366.0,13.697021728304867,24.643978446056135,0.12590225036156355,20,"fixed Ridge(alpha=1) on standardized P,VX,LS,ST; diagnostic only"

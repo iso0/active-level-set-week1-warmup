@@ -1,0 +1,5 @@
+{
+  "decision": "CONFIGURATION_SENSITIVITY_REQUIRED",
+  "guardrail": "No relabeling and no causal confound claim; configuration was not randomized.",
+  "reason": "Three exact configurations are present (364 main, 41 non-main), and 167 observations end before 90% domain traversal; the main-configuration model-only sensitivity is therefore reported rather than treating configuration as negligible."
+}

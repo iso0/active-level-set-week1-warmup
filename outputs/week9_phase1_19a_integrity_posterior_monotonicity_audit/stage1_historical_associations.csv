@@ -1,0 +1,13 @@
+source_diagnostic,historical_quantity,spearman_rho,p_value_descriptive,N_snapshots,interpretation
+physics_coefficient,residual_sd,-0.3339186402648036,1.0778695860685012e-19,700,association only; no causal attribution
+physics_coefficient,residual_sd_upper_bound_hit,-0.18662043953027205,6.611684630571105e-07,700,association only; no causal attribution
+physics_coefficient,any_length_upper_bound_hit,-0.3424620394836896,1.0786147447755086e-20,700,association only; no causal attribution
+physics_coefficient,margin_abs_probability_minus_half,0.40799414262495953,1.8043905847124442e-25,600,association only; no causal attribution
+max_abs_pool_logit,residual_sd,-0.28937671615340393,5.70914771437984e-15,700,association only; no causal attribution
+max_abs_pool_logit,residual_sd_upper_bound_hit,-0.15242636887108393,5.1371137439773e-05,700,association only; no causal attribution
+max_abs_pool_logit,any_length_upper_bound_hit,-0.3483775227692468,2.1002168905488267e-21,700,association only; no causal attribution
+max_abs_pool_logit,margin_abs_probability_minus_half,0.5656819216502987,4.788864705536479e-52,600,association only; no causal attribution
+fraction_pool_abs_gt10,residual_sd,-0.276673711052872,9.125257294655522e-14,700,association only; no causal attribution
+fraction_pool_abs_gt10,residual_sd_upper_bound_hit,-0.14266084654678837,0.00015242044500234555,700,association only; no causal attribution
+fraction_pool_abs_gt10,any_length_upper_bound_hit,-0.33962995522854755,2.3319488706170408e-20,700,association only; no causal attribution
+fraction_pool_abs_gt10,margin_abs_probability_minus_half,0.5840255493649374,3.761938470458882e-56,600,association only; no causal attribution

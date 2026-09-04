@@ -1,0 +1,2 @@
+diagnostic,source_labels,implication_edges,unique_target_label_assignments,wrong_implication_edges,unique_wrong_target_label_assignments,contradictory_target_points,active_learning_or_label_saving_claim,warning
+oracle_retrospective_hard_propagation,405,10462,341,6,5,0,False,uses all known labels retrospectively; not a prospective algorithm

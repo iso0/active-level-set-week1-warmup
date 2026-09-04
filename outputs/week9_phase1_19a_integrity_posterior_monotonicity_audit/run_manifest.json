@@ -1,0 +1,258 @@
+{
+  "artifacts": [
+    {
+      "bytes": 931815,
+      "path": "notebooks/week_09/19_week9_phase1_19a_integrity_posterior_monotonicity_audit.ipynb",
+      "sha256": "ee3c6b8286cd7528f40781652a479b5e9b27de30783f46067b4dacb80133d1be"
+    },
+    {
+      "bytes": 1606,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/analysis_specification.json",
+      "sha256": "95c9af418a7acdb8e2b2fc7976975bd4408cdc0e320941790110eae2fdcde4a4"
+    },
+    {
+      "bytes": 1089,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/baseline_gate.json",
+      "sha256": "fb4ac95e17b720e81d6cbffe7a192f1c3a75ae11638d1fe25094bb22884f9ce6"
+    },
+    {
+      "bytes": 1777,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/claim_ledger.md",
+      "sha256": "a2f124a5c5fc0b44d65c9d0bd183c63dabff83d938b75adde6e6f51e7c6f734c"
+    },
+    {
+      "bytes": 407,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/configuration_decision.json",
+      "sha256": "b38d09d1711bc5176d8430a5b3f0890deed87208bd5dab0d627d5b581e630ede"
+    },
+    {
+      "bytes": 1087,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/configuration_summary.csv",
+      "sha256": "b90a9dfcfe9858c3feed55a11d6b8357ee76de2e43f787cdfe4dfe8b5fcf8e86"
+    },
+    {
+      "bytes": 540,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/depth_censoring_summary.csv",
+      "sha256": "840493119ec58f4792b658acac02506f44cf204d5cc8c49587f0db20e3ff1c4b"
+    },
+    {
+      "bytes": 130972,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/depth_censoring_table.csv",
+      "sha256": "34e6011ea46378e50a9e90463fd3103d8e042fe9514d318a3a9b1ca6fa10b16d"
+    },
+    {
+      "bytes": 384,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/depth_decision.json",
+      "sha256": "a10d34a0bf3104e81611de4b362ffcb1b38085bcf721e4949448ca7cfda1afc7"
+    },
+    {
+      "bytes": 1557,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/depth_sensitivity.csv",
+      "sha256": "e32fb0d039bd92cd7d88e03a8fdef24fb07ae1c19e43104b7221a6fc54faec6d"
+    },
+    {
+      "bytes": 868,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/figure_manifest.csv",
+      "sha256": "e64fa4b642f48200be12dd741e12db7e929122c051e064306c06c5227de30975"
+    },
+    {
+      "bytes": 123912,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/figures/01_configuration_observation_window.png",
+      "sha256": "41ca32a80933d0ea772d4b82d9cecadb4eb7a11e1214aa00b3a249adc8e9c81c"
+    },
+    {
+      "bytes": 48816,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/figures/02_depth_censoring.png",
+      "sha256": "e873a55716b24bbadd71e0398b711c73339daadea44230c814eb46bccbb3326b"
+    },
+    {
+      "bytes": 93114,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/figures/03_stage1_separation.png",
+      "sha256": "7fa0137010e72c66a9401a122da9c87b4027b2bf5eb24358b9fcbdff4705547b"
+    },
+    {
+      "bytes": 154606,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/figures/04_h_m3_calibration.png",
+      "sha256": "70e94c1d6889fec592f0bd67a9d4d4926e299fa841325ba9023842ce01f44627"
+    },
+    {
+      "bytes": 192001,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/figures/05_monotonicity_violations.png",
+      "sha256": "9399c11c324b901c7c0208c4cc763268c096d7fd202a48ec1d4c78def527d192"
+    },
+    {
+      "bytes": 40852,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/figures/06_poset_structure.png",
+      "sha256": "b14c8efc1a11f1af5c9814cc993afecb19da449914717cebf1269f0a7fdc0d8e"
+    },
+    {
+      "bytes": 3740,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/FINAL_PHASE1_19A_REPORT.md",
+      "sha256": "02d0c2f7a95062e651fbe291712cd033c7ecc08ee5a6501391eba422d972fde3"
+    },
+    {
+      "bytes": 1517,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "02b767879f7b28398541889788836af9b2596db45f6009256cff9361372ca990"
+    },
+    {
+      "bytes": 587,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/hypothesis_verification_table.csv",
+      "sha256": "52a4fad948524594ca4fbb7e5691ac92322fc31be5b01b702d05b5e4bdc1000c"
+    },
+    {
+      "bytes": 3401,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/letham_2022_applicability_memo.md",
+      "sha256": "b32f2bedca536192514152f7860be749143e33206fb7c0afa1188e06a9366820"
+    },
+    {
+      "bytes": 477,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/main_configuration_definition.json",
+      "sha256": "1eaf6c73725b0bf740122deae5a7ec4767b65208ac131b3c253e8d6b6a64e95d"
+    },
+    {
+      "bytes": 1987,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/main_configuration_model_sensitivity.csv",
+      "sha256": "141e25a2b1156cf58ed80345d254dbe5d6df94b1e3323d7e65f7558932b466c2"
+    },
+    {
+      "bytes": 298,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/monotonicity_decision.json",
+      "sha256": "aeca743bd36932d9e9bf1f2929f1685bab4c9b87463b9c04e8c2a941392c2311"
+    },
+    {
+      "bytes": 385,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/monotonicity_main_config_summary.csv",
+      "sha256": "f4147f51c7cf72f45dcfce7ffc449d586279619df6e5862f9e2274c0b1047204"
+    },
+    {
+      "bytes": 371,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/monotonicity_pair_summary.csv",
+      "sha256": "2bee94d2f03ff15ebaf6cb4bccafc7249f81159b030802bcc94cc9dee63a9b5e"
+    },
+    {
+      "bytes": 342,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/monotonicity_retrospective_safety.csv",
+      "sha256": "626018fd0b14824de39ea9675968e1f9cb7fc7a1c4e18b58f138cdb23458f982"
+    },
+    {
+      "bytes": 2239,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/monotonicity_violations.csv",
+      "sha256": "802f4b2900b6a01fb9640687008490f7e14a1c1bcfcd40ea58477b3dd290e7b8"
+    },
+    {
+      "bytes": 269,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/next_method_gate.json",
+      "sha256": "cf024016ba61c6bacd577da1e601f9dfcd5a4124b5165898cf8667ad0a797e53"
+    },
+    {
+      "bytes": 118732,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/observation_window_audit.csv",
+      "sha256": "3d50c558abd986f8e9188d4da1c52d420c290de1b209250674d11016d2b9772f"
+    },
+    {
+      "bytes": 408,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/poset_geometry_summary.csv",
+      "sha256": "27f7c6dfc9beee23a6d6c7d3b8059eec0b119a2fbe3f0aec1adc854d51efd535"
+    },
+    {
+      "bytes": 165942,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/simulation_configuration_table.csv",
+      "sha256": "c0dcf57c02f435bb057567052fe2ac02add9b20c4aa60043c4006ac583bcf876"
+    },
+    {
+      "bytes": 16623,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/stage1_calibration_summary.csv",
+      "sha256": "4ed71a77820a41d73d1d24069f63498a74d193936a4fd8b170ba7993a75bc23b"
+    },
+    {
+      "bytes": 357,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/stage1_decision.json",
+      "sha256": "23ca054556cc0c4c3afc324a825612685a6516fa9a508401030472b0aa213621"
+    },
+    {
+      "bytes": 1686,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/stage1_historical_associations.csv",
+      "sha256": "876b9350915ee822decc77e808556e9ac362e2cb5d75606276b7d7a89028bb96"
+    },
+    {
+      "bytes": 398086,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/stage1_regularization_diagnostic.csv",
+      "sha256": "bbb4738ec02ba8a51f3687b229f1aa895e0966f5ac3d3a22e9a20a802c4b5392"
+    },
+    {
+      "bytes": 1265,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/stage1_separation_summary.csv",
+      "sha256": "aa24eb9293769d7fea998561b6978e355ffd8922ba102a7b8d5ada51b26cb9d4"
+    },
+    {
+      "bytes": 69234,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/stage1_snapshot_diagnostics.csv.gz",
+      "sha256": "164c098f4361f8c94946ff2b4501aff4a137992575409b7f95a4f3ff41325cc6"
+    },
+    {
+      "bytes": 1238,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/SUPERVISOR_PHASE1_19A_ONE_PAGE.md",
+      "sha256": "1fa12f39998dae2666eab77d96b412b16a236a68a904effca7afa07642d859eb"
+    },
+    {
+      "bytes": 1089,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/validation_report.json",
+      "sha256": "c74d9a0b8c098f95d60dc1ee4a86d791566815a5082eda5b0a4c7ccbc34612d3"
+    },
+    {
+      "bytes": 1080,
+      "path": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/validation_report.md",
+      "sha256": "8d275cf3ddb286efa37901e3c44905447cf525dd0fab1682c2db00bdb8bd3b49"
+    }
+  ],
+  "branch": "codex/week9-phase1-19a-integrity-posterior-monotonicity-audit",
+  "created_utc": "2026-09-04T01:19:21.282981+00:00",
+  "finalized_from_existing_scientific_artifacts": true,
+  "historical_inputs": {
+    "canonical_population": "outputs/week7_02_sph_v2_target_extraction/sph_v2_simulation_level_targets.csv",
+    "configuration_parser": "src/week7_sph_v2_common.py::parse_experiment_name",
+    "domain_mapping": "src/week7_phase2_sph_v2_physical_target_extraction.py::verify_domain_compatibility/extract_one",
+    "published_m3_fit_diagnostics": "outputs/week9_phase1_14_m3_margin_acquisition/m3_active_fit_diagnostics.csv.gz",
+    "published_m3_predictions": "outputs/week9_phase1_14_m3_margin_acquisition/new_predictions.csv.gz",
+    "published_path": "outputs/week9_phase1_14_m3_margin_acquisition/m3_margin_paths.csv.gz"
+  },
+  "new_active_learning_trajectory": false,
+  "new_artifact_count": 41,
+  "no_historical_artifacts_copied": true,
+  "parent_sha": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+  "phase": "Week 9 Phase 1.19A",
+  "validation": {
+    "check_count": 27,
+    "checks": {
+      "all_violations_listed": true,
+      "binary_label_unchanged": true,
+      "censor_rule_documented": true,
+      "configuration_metadata_derived": true,
+      "correct_branch": true,
+      "directed_unordered_unambiguous": true,
+      "exact_parent_merge_base": true,
+      "figure_hashes_valid": true,
+      "full_and_main_monotonicity": true,
+      "historical_outputs_unmodified": true,
+      "no_heldout_fit": true,
+      "no_historical_artifact_copies": true,
+      "no_letham_trajectory": true,
+      "no_new_acquisition_output": true,
+      "no_prior_outputs_inside_phase_folder": true,
+      "no_pseudo_label_artifact": true,
+      "no_q20_artifact": true,
+      "notebook_executed_stored": true,
+      "population_405_73_332": true,
+      "published_path_prefixes_100": true,
+      "q20_not_redefined": true,
+      "regularization_diagnostic_only": true,
+      "required_artifacts_exist": true,
+      "six_figures_only": true,
+      "stage1_revealed_only": true,
+      "temporary_cache_absent": true,
+      "units_documented": true
+    },
+    "status": "PASS"
+  }
+}

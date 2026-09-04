@@ -1,0 +1,2 @@
+population,N,predecessors_median,predecessors_q10,predecessors_q90,successors_median,successors_q10,successors_q90,minimal_elements,maximal_elements,exact_antichain_width_via_Dilworth,KH_reveal_implied_unknown_median,C_reveal_implied_unknown_median,KH_reveal_implied_unknown_q90,C_reveal_implied_unknown_q90
+full_405,405,27.0,2.0,154.0,39.0,4.0,128.20000000000005,22,11,93,39.0,27.0,128.20000000000005,154.0

@@ -1,0 +1,7 @@
+hypothesis,independently_measured_value,adjudication,evidence_file
+39/73 KH depths are censored,39/73 KH in label-free terminal depth pile,SUPPORTED,depth_censoring_summary.csv
+population splits as 364/27/14,364/27/14,SUPPORTED,configuration_summary.csv
+B16 physics coefficient median approximately 21,20.977568,SUPPORTED,stage1_separation_summary.csv
+maximum Stage-1 coefficient approximately 746,745.050275,SUPPORTED,stage1_separation_summary.csv
+"22,050 comparable pairs",22050,SUPPORTED,monotonicity_pair_summary.csv
+3 monotonicity violations,3,SUPPORTED,monotonicity_violations.csv
