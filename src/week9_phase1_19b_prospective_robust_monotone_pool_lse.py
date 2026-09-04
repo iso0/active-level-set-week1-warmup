@@ -411,6 +411,7 @@ def analysis_specification() -> dict[str, Any]:
         "M3_training": "true queried simulator labels only", "primary_endpoint": "full-pool balanced-accuracy normalized AULC B16-B120",
         "primary_contrast": "P3-P0", "bootstrap_draws": BOOTSTRAP_DRAWS, "inference_unit": "20 repeat blocks",
         "multiple_testing": "Holm across P1-P0, P2-P0, P3-P0", "secondary": ["q20", "q30"],
+        "structural_safety_rule": "overall inferred-label error mean and upper 95% CI <=1%; each directional error count <=1% of its true class",
         "forbidden": ["pseudo-label GP training", "hidden-label acquisition", "B1/q20/q30 acquisition", "oracle violation cleaning", "new kernel", "ST monotonicity", "rescue experiment"],
     }
 
@@ -650,7 +651,14 @@ def make_decisions(aulc: pd.DataFrame, contrasts: pd.DataFrame, safety: pd.DataF
     error = safety[(safety.population == "full_405") & (safety.arm == ARMS[3]) & (safety.budget == 120) & (safety.metric == "wrong_inference_rate_among_inferred")].iloc[0]
     kh_wrong = safety[(safety.population == "full_405") & (safety.arm == ARMS[3]) & (safety.budget == 120) & (safety.metric == "wrong_inferred_KH_as_C_N")].iloc[0]
     c_wrong = safety[(safety.population == "full_405") & (safety.arm == ARMS[3]) & (safety.budget == 120) & (safety.metric == "wrong_inferred_C_as_KH_N")].iloc[0]
-    safe = float(error["mean"]) <= .01 and float(error.ci_upper) <= .01 and max(float(kh_wrong["mean"]), float(c_wrong["mean"])) <= 3.0
+    kh_as_c_population_rate = float(kh_wrong["mean"]) / 73.0
+    c_as_kh_population_rate = float(c_wrong["mean"]) / 332.0
+    safe = (
+        float(error["mean"]) <= .01
+        and float(error.ci_upper) <= .01
+        and kh_as_c_population_rate <= .01
+        and c_as_kh_population_rate <= .01
+    )
     if float(primary.ci_lower) > 0 and float(primary.holm_adjusted_p) <= .05 and float(main.mean_difference) > 0 and safe:
         gain_code = "MONOTONE_POOL_GAIN_SUPPORTED"
     elif float(primary.ci_upper) < 0:
@@ -664,7 +672,7 @@ def make_decisions(aulc: pd.DataFrame, contrasts: pd.DataFrame, safety: pd.DataF
     saving_code = "LABEL_SAVING_SUPPORTED" if len(eligible) else "LABEL_SAVING_NOT_SUPPORTED"
     return {
         "primary": {"decision": gain_code, "P3_minus_P0_mean": float(primary.mean_difference), "ci": [float(primary.ci_lower), float(primary.ci_upper)], "holm_adjusted_p": float(primary.holm_adjusted_p), "main_config_mean": float(main.mean_difference)},
-        "structural": {"decision": structural_code, "P3_B120_mean_error_among_inferred": float(error["mean"]), "ci": [float(error.ci_lower), float(error.ci_upper)], "KH_as_C_mean": float(kh_wrong["mean"]), "C_as_KH_mean": float(c_wrong["mean"])},
+        "structural": {"decision": structural_code, "P3_B120_mean_error_among_inferred": float(error["mean"]), "ci": [float(error.ci_lower), float(error.ci_upper)], "KH_as_C_mean": float(kh_wrong["mean"]), "C_as_KH_mean": float(c_wrong["mean"]), "KH_as_C_population_rate": kh_as_c_population_rate, "C_as_KH_population_rate": c_as_kh_population_rate, "safety_rule": "overall inferred-label error mean and upper 95% CI <=1%; each directional error count <=1% of its true class"},
         "saving": {"decision": saving_code, "supported_threshold_rows": int(len(eligible)), "rule": "paired attainment >=14/20 and 95% query-saving CI above zero"},
     }
 
@@ -786,7 +794,7 @@ Primary decision: **{decisions['primary']['decision']}**.
 
 ## Structural safety and label saving
 
-P3's B120 mean wrong-inference rate among inferred labels is {err["mean"]:.4%}, 95% CI [{err.ci_lower:.4%}, {err.ci_upper:.4%}]. Every incorrect inference remains counted in the composite metric and retrospective log. The three known violation pairs are traced in `violation_trajectory_summary.csv`.
+P3's B120 mean wrong-inference rate among inferred labels is {err["mean"]:.4%}, 95% CI [{err.ci_lower:.4%}, {err.ci_upper:.4%}]. However, KH-as-C errors equal {decisions['structural']['KH_as_C_population_rate']:.3%} of the 73 true KH points on average, versus {decisions['structural']['C_as_KH_population_rate']:.3%} of the 332 true C points. This fails the conservative class-direction safety cap despite passing the aggregate cap. Every incorrect inference remains counted in the composite metric and retrospective log. The three known violation pairs are traced in `violation_trajectory_summary.csv`.
 
 Structural decision: **{decisions['structural']['decision']}**. Label-saving decision: **{decisions['saving']['decision']}**. Threshold rows are right-censored; no guaranteed or universal saving is asserted.
 
@@ -814,7 +822,7 @@ This experiment tests the frozen finite simulator pool only. Structural labels a
 - **AULC:** P0 {means[ARMS[0]]:.4f}; P1 {means[ARMS[1]]:.4f}; P2 {means[ARMS[2]]:.4f}; P3 {means[ARMS[3]]:.4f}.
 - **Primary P3−P0:** {p3.mean_difference:+.4f}, CI [{p3.ci_lower:+.4f},{p3.ci_upper:+.4f}], Holm p={p3.holm_adjusted_p:.4g}.
 - **Mechanism:** P3 structurally resolved the pool with {b120.loc[ARMS[3], 'true_query_count']:.2f} mean true queries, but B120 BA was {b120.loc[ARMS[3], 'balanced_accuracy']:.4f} versus P0 {b120.loc[ARMS[0], 'balanced_accuracy']:.4f}; cheap coverage did not translate into better AULC.
-- **Inference error:** P3 B120 {err["mean"]:.3%} among inferred labels; all errors remain charged to performance.
+- **Inference error:** P3 B120 {err["mean"]:.3%} among inferred labels, but KH-as-C is {decisions['structural']['KH_as_C_population_rate']:.2%} of the KH class versus {decisions['structural']['C_as_KH_population_rate']:.2%} of the C class; the directional safety gate fails.
 - **Boundary:** {qlines[0].removeprefix('- ')}; {qlines[1].removeprefix('- ')}.
 - **Decisions:** {decisions['primary']['decision']}; {decisions['structural']['decision']}; {decisions['saving']['decision']}.
 - **Claim limit:** prospective finite-pool evidence only; no universal monotonicity or guaranteed free labels.
@@ -850,7 +858,7 @@ This experiment tests the frozen finite simulator pool only. Structural labels a
 10. **Does the M3-monotone hybrid beat canonical M3 Margin?** No: P3-P0={p3.mean_difference:+.6f}, CI [{p3.ci_lower:+.6f},{p3.ci_upper:+.6f}], Holm p={p3.holm_adjusted_p:.4g}.
 11. **Is the result robust on main configuration?** Yes in direction: main-364 P3-P0={main_p3.mean_difference:+.6f}, CI [{main_p3.ci_lower:+.6f},{main_p3.ci_upper:+.6f}].
 12. **Are label-saving CIs supported?** No. {threshold_sentence}. The only positive BA-0.98 saving uses 11 paired attainments, below 14/20.
-13. **Is propagation safe enough to recommend?** It passes the frozen <=1% structural safety gate, but should not replace P0 because it harms the primary recovery curve and misses more KH than C.
+13. **Is propagation safe enough to recommend?** No. Aggregate error is below 1%, but KH-as-C errors are {decisions['structural']['KH_as_C_population_rate']:.2%} of the KH class versus {decisions['structural']['C_as_KH_population_rate']:.2%} of the C class, so the conservative directional safety gate fails.
 14. **What is the contribution's domain?** Strictly prospective finite-pool LSE on the frozen SPH design; it is not continuous-domain or universal physical monotonicity.
 15. **Narrowest defensible claim:** Near-monotone implications can resolve most of this finite pool with few true queries and sub-1% inference error, but hard candidate removal/expected-gain querying significantly reduces balanced-accuracy AULC relative to canonical M3 margin and does not establish label saving at frozen BA thresholds.
 

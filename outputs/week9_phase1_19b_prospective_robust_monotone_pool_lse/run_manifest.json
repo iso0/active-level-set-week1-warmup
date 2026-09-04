@@ -1,9 +1,9 @@
 {
   "artifacts": [
     {
-      "bytes": 879303,
+      "bytes": 879554,
       "path": "notebooks/week_09/20_week9_phase1_19b_prospective_robust_monotone_pool_lse.ipynb",
-      "sha256": "08a9e647018c798ab2dbc516c74111e7df95a7e2bb291eb1ccfaf078354a49b5"
+      "sha256": "c8a68ee8806643e71c43070fa0e488c1d61223539e94c985d75b73af8f8b9430"
     },
     {
       "bytes": 460840,
@@ -11,9 +11,9 @@
       "sha256": "fa59f0f8fbb8524fcaff1ba717b8ced8b48dc6c878595f9946af22d7c8d62c97"
     },
     {
-      "bytes": 1347,
+      "bytes": 1488,
       "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/analysis_specification.json",
-      "sha256": "31a65980e63b47aa95bd56b0e2c90cd5af503159bd3d9223e6a74234df4e4cec"
+      "sha256": "ebc31415e0ebe0699bbb2d5fbec0a3697fd730ff3abef8a45b217fa749b0f2f4"
     },
     {
       "bytes": 709,
@@ -26,9 +26,9 @@
       "sha256": "5314ef8c306976ae931ee29d136661963074b9532dce32674a828a7d7412cb50"
     },
     {
-      "bytes": 959,
+      "bytes": 957,
       "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/claim_ledger.md",
-      "sha256": "a302c12faf84bf32ca721690dfb5f36ac7d4f9aa1038f9a1b95e24a1effaedfd"
+      "sha256": "c3bda94f6f3ef5b6865ca6f4954d3dda37e2eee8fd760918d3f924d856a97cb1"
     },
     {
       "bytes": 146,
@@ -76,14 +76,14 @@
       "sha256": "f3bd6c8bf9a00e39d823681296a9aa254ffcd4fd94033918d9ff7bc8634c1315"
     },
     {
-      "bytes": 2663,
+      "bytes": 2865,
       "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/FINAL_PHASE1_19B_REPORT.md",
-      "sha256": "6987532d6c2fbad375ca42ae52ef018f9cfd4840ae337ee3bad5f3462dade43f"
+      "sha256": "24d344ba507840f4606e2a2787cc4d548952a36bb376cce30583a447b2560a86"
     },
     {
-      "bytes": 3279,
+      "bytes": 3288,
       "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/FINAL_RED_TEAM_REPORT.md",
-      "sha256": "869dae3bf892c685c893e36b4939bcebae8f37ca28482197a0e72a05beb0f3c0"
+      "sha256": "014c8f59bb87c3329ba8910357aa107b117706adc8872aaa79a0c0ff6cfbb053"
     },
     {
       "bytes": 32987,
@@ -116,9 +116,9 @@
       "sha256": "7eb0ad252eb861c2108144426dddf8c3097fb5deb1ed8aefcea76578e49a01ec"
     },
     {
-      "bytes": 234,
+      "bytes": 225,
       "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/primary_decision.json",
-      "sha256": "76f42cee1360c525979453fcd4930a1a2f15590229627f6e480255ac3a1fb53d"
+      "sha256": "1a62bcca17ac847dd7f0c63e3457afaf16b424f8734d306e26d5e957fd37202c"
     },
     {
       "bytes": 1875421,
@@ -161,14 +161,14 @@
       "sha256": "05c78360d1eb99fc7b2ff3287a8a7482dfd17e06ed3474624fda970125227096"
     },
     {
-      "bytes": 237,
+      "bytes": 463,
       "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/structural_safety_decision.json",
-      "sha256": "8970a427aaebf47561b655feed00382378be9a18d87733cc04cf521601733ddf"
+      "sha256": "7ef20f0d447e87cb157d1e1e3107bad9dcd18d94332634a090be918d3e979169"
     },
     {
-      "bytes": 1010,
+      "bytes": 1067,
       "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/SUPERVISOR_PHASE1_19B_ONE_PAGE.md",
-      "sha256": "b1b139824553d125fc5e94556a8102ef380e66b63bd57bdacd1f7d184ed5c594"
+      "sha256": "1768c365a7e8b4cb6099281254ad06edd8f10fa0d8c670923631d95ac071ac2e"
     },
     {
       "bytes": 24565,
@@ -193,7 +193,7 @@
     {
       "bytes": 1126,
       "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/validation_report.md",
-      "sha256": "999f04be3d66bd2b1e35b3e2ac3d9b8c4ffdbd46a5e9de5562d105d8bc989084"
+      "sha256": "de7c5c5a347f94ffd90373dc08e6df5c8309428b1ad1b19a5d74c20e24e41b2b"
     },
     {
       "bytes": 5558,
@@ -202,7 +202,7 @@
     }
   ],
   "branch": "codex/week9-phase1-19b-prospective-robust-monotone-pool-lse",
-  "created_utc": "2026-09-04T09:16:59.794519+00:00",
+  "created_utc": "2026-09-04T09:19:48.267922+00:00",
   "historical_artifacts_copied": false,
   "historical_inputs": {
     "phase19a": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit"

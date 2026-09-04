@@ -12,10 +12,10 @@
 10. **Does the M3-monotone hybrid beat canonical M3 Margin?** No: P3-P0=-0.008525, CI [-0.011908,-0.005265], Holm p=0.
 11. **Is the result robust on main configuration?** Yes in direction: main-364 P3-P0=-0.011109, CI [-0.014682,-0.007587].
 12. **Are label-saving CIs supported?** No. BA 0.95: P0-P3=-1.80 queries, paired N=20, CI [-4.35,+0.50]; BA 0.97: P0-P3=-3.20 queries, paired N=20, CI [-6.55,-0.05]; BA 0.98: P0-P3=+3.00 queries, paired N=11, CI [+1.00,+4.91]. The only positive BA-0.98 saving uses 11 paired attainments, below 14/20.
-13. **Is propagation safe enough to recommend?** It passes the frozen <=1% structural safety gate, but should not replace P0 because it harms the primary recovery curve and misses more KH than C.
+13. **Is propagation safe enough to recommend?** No. Aggregate error is below 1%, but KH-as-C errors are 2.47% of the KH class versus 0.20% of the C class, so the conservative directional safety gate fails.
 14. **What is the contribution's domain?** Strictly prospective finite-pool LSE on the frozen SPH design; it is not continuous-domain or universal physical monotonicity.
 15. **Narrowest defensible claim:** Near-monotone implications can resolve most of this finite pool with few true queries and sub-1% inference error, but hard candidate removal/expected-gain querying significantly reduces balanced-accuracy AULC relative to canonical M3 margin and does not establish label saving at frozen BA thresholds.
 
 Leakage audit: acquisition receives features, M3 probabilities, queried-label-derived state, and dominance geometry—but no unrevealed truth or q20/q30/B1. The pre-truth event table was hashed before target truth was joined. Inferred labels never enter M3. Holm covers all three monotone-vs-P0 tests. No rescue arm or tuning was added.
 
-Final decisions: **MONOTONE_POOL_HARM**, **MONOTONE_PROPAGATION_SAFE_ENOUGH**, **LABEL_SAVING_NOT_SUPPORTED**.
+Final decisions: **MONOTONE_POOL_HARM**, **MONOTONE_PROPAGATION_TOO_RISKY**, **LABEL_SAVING_NOT_SUPPORTED**.

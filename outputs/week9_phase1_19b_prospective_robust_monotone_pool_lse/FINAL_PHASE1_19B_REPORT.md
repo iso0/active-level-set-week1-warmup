@@ -23,9 +23,9 @@ Primary decision: **MONOTONE_POOL_HARM**.
 
 ## Structural safety and label saving
 
-P3's B120 mean wrong-inference rate among inferred labels is 0.7689%, 95% CI [0.7051%, 0.8331%]. Every incorrect inference remains counted in the composite metric and retrospective log. The three known violation pairs are traced in `violation_trajectory_summary.csv`.
+P3's B120 mean wrong-inference rate among inferred labels is 0.7689%, 95% CI [0.7051%, 0.8331%]. However, KH-as-C errors equal 2.466% of the 73 true KH points on average, versus 0.196% of the 332 true C points. This fails the conservative class-direction safety cap despite passing the aggregate cap. Every incorrect inference remains counted in the composite metric and retrospective log. The three known violation pairs are traced in `violation_trajectory_summary.csv`.
 
-Structural decision: **MONOTONE_PROPAGATION_SAFE_ENOUGH**. Label-saving decision: **LABEL_SAVING_NOT_SUPPORTED**. Threshold rows are right-censored; no guaranteed or universal saving is asserted.
+Structural decision: **MONOTONE_PROPAGATION_TOO_RISKY**. Label-saving decision: **LABEL_SAVING_NOT_SUPPORTED**. Threshold rows are right-censored; no guaranteed or universal saving is asserted.
 
 ## Why the monotone arms lost
 

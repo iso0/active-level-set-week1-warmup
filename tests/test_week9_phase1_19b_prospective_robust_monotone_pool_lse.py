@@ -105,6 +105,14 @@ def test_P0_replays_standard_M3_margin_rule():
     assert p0[["G_KH", "G_C"]].eq(0).all().all()
 
 
+def test_structural_safety_decision_respects_directional_class_cap():
+    decision = json.loads((OUT / "structural_safety_decision.json").read_text())
+    assert decision["P3_B120_mean_error_among_inferred"] <= 0.01
+    assert decision["ci"][1] <= 0.01
+    assert decision["KH_as_C_population_rate"] > 0.01
+    assert decision["decision"] == "MONOTONE_PROPAGATION_TOO_RISKY"
+
+
 def test_pretruth_freeze_and_retrospective_join():
     pre_path = OUT / "query_event_log_pretruth.csv.gz"
     pre = pd.read_csv(pre_path)

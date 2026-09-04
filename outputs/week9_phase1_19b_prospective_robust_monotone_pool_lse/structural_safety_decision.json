@@ -1,10 +1,13 @@
 {
   "C_as_KH_mean": 0.65,
+  "C_as_KH_population_rate": 0.001957831325301205,
   "KH_as_C_mean": 1.8,
-  "P3_B120_mean_error_among_inferred": 0.007688910400424455,
+  "KH_as_C_population_rate": 0.024657534246575342,
+  "P3_B120_mean_error_among_inferred": 0.0076889104004244,
   "ci": [
-    0.007051130424678163,
-    0.008331067448987943
+    0.0070511304246781,
+    0.0083310674489879
   ],
-  "decision": "MONOTONE_PROPAGATION_SAFE_ENOUGH"
+  "decision": "MONOTONE_PROPAGATION_TOO_RISKY",
+  "safety_rule": "overall inferred-label error mean and upper 95% CI <=1%; each directional error count <=1% of its true class"
 }

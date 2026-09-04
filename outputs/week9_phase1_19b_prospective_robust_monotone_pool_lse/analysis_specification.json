@@ -38,5 +38,6 @@
   "secondary": [
     "q20",
     "q30"
-  ]
+  ],
+  "structural_safety_rule": "overall inferred-label error mean and upper 95% CI <=1%; each directional error count <=1% of its true class"
 }

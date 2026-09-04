@@ -4,6 +4,7 @@ Status: **PASS**
 Checks: **27**
 
 - PASS — `B16_M3_fit_identical_across_arms`
+- PASS — `P0_is_standard_M3_margin`
 - PASS — `all_160_trajectories`
 - PASS — `all_arms_share_B16`
 - PASS — `conflict_logic_present`
@@ -29,4 +30,3 @@ Checks: **27**
 - PASS — `temporary_checkpoints_removed`
 - PASS — `trajectory_paths_complete_and_unique`
 - PASS — `unrevealed_labels_inaccessible`
-- PASS — `P0_is_standard_M3_margin`
