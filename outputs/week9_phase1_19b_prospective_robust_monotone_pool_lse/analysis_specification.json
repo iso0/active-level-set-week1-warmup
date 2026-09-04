@@ -1,0 +1,42 @@
+{
+  "M3_training": "true queried simulator labels only",
+  "arms": [
+    "P0_M3_MARGIN_STANDARD",
+    "P1_M3_MARGIN_MONO",
+    "P2_MONO_BISECTION_M3",
+    "P3_MONO_EXPECTED_GAIN_M3"
+  ],
+  "bootstrap_draws": 10000,
+  "budgets": [
+    16,
+    120
+  ],
+  "extension_predeclared": "B120 for all arms because structural completion before B80 was plausible from Phase 1.19A geometry",
+  "forbidden": [
+    "pseudo-label GP training",
+    "hidden-label acquisition",
+    "B1/q20/q30 acquisition",
+    "oracle violation cleaning",
+    "new kernel",
+    "ST monotonicity",
+    "rescue experiment"
+  ],
+  "inference_unit": "20 repeat blocks",
+  "initial_design": "feature-only seeded maximin on standardized P,VX,LS,ST; identical across arms within population/repeat",
+  "kind": "prospective_finite_pool_level_set_benchmark",
+  "model": "frozen M3: training-fitted log(h) logistic mean plus zero-mean 4D ARD Matern-3/2 discrepancy",
+  "multiple_testing": "Holm across P1-P0, P2-P0, P3-P0",
+  "parent_sha": "2975e72326f1680e81f16e0a29fc003bcaaf2aae",
+  "phase": "Week 9 Phase 1.19B",
+  "populations": [
+    "full_405",
+    "main_364"
+  ],
+  "primary_contrast": "P3-P0",
+  "primary_endpoint": "full-pool balanced-accuracy normalized AULC B16-B120",
+  "repeat_blocks": 20,
+  "secondary": [
+    "q20",
+    "q30"
+  ]
+}

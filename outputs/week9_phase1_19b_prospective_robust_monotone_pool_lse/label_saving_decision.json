@@ -1,0 +1,5 @@
+{
+  "decision": "LABEL_SAVING_NOT_SUPPORTED",
+  "rule": "paired attainment >=14/20 and 95% query-saving CI above zero",
+  "supported_threshold_rows": 0
+}

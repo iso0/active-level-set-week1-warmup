@@ -1,0 +1,10 @@
+{
+  "canonical_main_checkout_preserved_because_dirty": true,
+  "checkpoint_policy": "temporary per-trajectory checkpoints deleted after collection",
+  "current_physical_checkout": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit",
+  "historical_outputs_copied": false,
+  "new_phase19b_worktree_created": false,
+  "status": "PASS",
+  "strategy": "reused existing clean Phase 1.19A worktree and switched branch in place",
+  "worktree_count_registered": 35
+}

@@ -1,0 +1,248 @@
+{
+  "artifacts": [
+    {
+      "bytes": 879303,
+      "path": "notebooks/week_09/20_week9_phase1_19b_prospective_robust_monotone_pool_lse.ipynb",
+      "sha256": "08a9e647018c798ab2dbc516c74111e7df95a7e2bb291eb1ccfaf078354a49b5"
+    },
+    {
+      "bytes": 460840,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/acquisition_diagnostics.csv.gz",
+      "sha256": "fa59f0f8fbb8524fcaff1ba717b8ced8b48dc6c878595f9946af22d7c8d62c97"
+    },
+    {
+      "bytes": 1347,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/analysis_specification.json",
+      "sha256": "31a65980e63b47aa95bd56b0e2c90cd5af503159bd3d9223e6a74234df4e4cec"
+    },
+    {
+      "bytes": 709,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/baseline_gate.json",
+      "sha256": "4344961b5ceb4730af177be0c962c4d037d98b33e9d78950e8b74cdbd80369e8"
+    },
+    {
+      "bytes": 854702,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/budget_metrics.csv.gz",
+      "sha256": "5314ef8c306976ae931ee29d136661963074b9532dce32674a828a7d7412cb50"
+    },
+    {
+      "bytes": 959,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/claim_ledger.md",
+      "sha256": "a302c12faf84bf32ca721690dfb5f36ac7d4f9aa1038f9a1b95e24a1effaedfd"
+    },
+    {
+      "bytes": 146,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/execution_report.json",
+      "sha256": "6b3e7dd2f8bb5d7a7c5ab60e91bf7600137692a84553297090b109a80a378073"
+    },
+    {
+      "bytes": 968,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/figure_manifest.csv",
+      "sha256": "761cc8dafd12c16ad6aa4de5105153e6e4cd9aefd2b8e06f452b30e4ec539573"
+    },
+    {
+      "bytes": 164245,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/figures/01_full_pool_learning_curves.png",
+      "sha256": "82e9051eae949790e186365a82eeda156058b4baa19a597789f22ef1d766581e"
+    },
+    {
+      "bytes": 44262,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/figures/02_paired_aulc_contrasts.png",
+      "sha256": "1eafac57eca071697414150ac2b0f41834880ca866164c647779ace7ef13b9e6"
+    },
+    {
+      "bytes": 116730,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/figures/03_structural_resolution_curves.png",
+      "sha256": "b0f691157cb757350c39d911440211eb06ba66beead6e203e693c8b2c6974f5a"
+    },
+    {
+      "bytes": 54452,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/figures/04_structural_threshold_queries.png",
+      "sha256": "331b6a0eb6277e870b55a9669c6c79b6c4e085d83d2c008595e3c5cd6bce1b2d"
+    },
+    {
+      "bytes": 91006,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/figures/05_inference_error.png",
+      "sha256": "f6d59da92154e3f99ad0f6edbdcf6d20b8c94f5f6120b6d9635bc336c34d5f73"
+    },
+    {
+      "bytes": 154274,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/figures/06_path_implication_mechanism.png",
+      "sha256": "51f6bf032b49632283617dfb4f4126ded6a333eb2083399043eb66344605daa5"
+    },
+    {
+      "bytes": 36040,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/figures/07_main_configuration_sensitivity.png",
+      "sha256": "f3bd6c8bf9a00e39d823681296a9aa254ffcd4fd94033918d9ff7bc8634c1315"
+    },
+    {
+      "bytes": 2663,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/FINAL_PHASE1_19B_REPORT.md",
+      "sha256": "6987532d6c2fbad375ca42ae52ef018f9cfd4840ae337ee3bad5f3462dade43f"
+    },
+    {
+      "bytes": 3279,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "869dae3bf892c685c893e36b4939bcebae8f37ca28482197a0e72a05beb0f3c0"
+    },
+    {
+      "bytes": 32987,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/inference_safety_summary.csv",
+      "sha256": "82ff0140cf7a7b9553106904d8d36baa7e86b25c8c847c581a4975dfb203e9d6"
+    },
+    {
+      "bytes": 159,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/label_saving_decision.json",
+      "sha256": "c73cbdb880ac4e12a13daf8cf0de35a86da07efe88d6f2050c12b4434d231e4d"
+    },
+    {
+      "bytes": 808,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/main_configuration_sensitivity.csv",
+      "sha256": "20a2aa4f97eade6d464c9a1a3b0d1dc33d7f42baae124d37b81fed87259e17e8"
+    },
+    {
+      "bytes": 1018,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/paired_contrasts.csv",
+      "sha256": "8297836073d11089f37ac8bd2cc5deb2231d946c316a1f501f9c52ed64c76375"
+    },
+    {
+      "bytes": 27467,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/path_mechanism_summary.csv",
+      "sha256": "539994e4b6482d470f9f0a72bc2707629bf9686f6688a6d90248a517fe147371"
+    },
+    {
+      "bytes": 28935,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/path_overlap.csv",
+      "sha256": "7eb0ad252eb861c2108144426dddf8c3097fb5deb1ed8aefcea76578e49a01ec"
+    },
+    {
+      "bytes": 234,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/primary_decision.json",
+      "sha256": "76f42cee1360c525979453fcd4930a1a2f15590229627f6e480255ac3a1fb53d"
+    },
+    {
+      "bytes": 1875421,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/query_event_log_pretruth.csv.gz",
+      "sha256": "7f6f8d46302a7237c4416b5386ef5c82ea1be94d96e39572aec90ce51ac538a4"
+    },
+    {
+      "bytes": 99,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/query_event_log_pretruth.sha256",
+      "sha256": "426e5a3a3e2737e6bb1d817a91eb7dcc8a2b0bc5eecf17881d1975746e0238f0"
+    },
+    {
+      "bytes": 1879425,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/query_event_log_retrospective.csv.gz",
+      "sha256": "d82f0c214ff666d2af43e2a65316fbbb5d263774067c2c778c7f1dcf6ddd8e53"
+    },
+    {
+      "bytes": 11399,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/repeat_block_aulc.csv",
+      "sha256": "8e0d624922d539c00b53c736da4a5acb5125be44c122ef7e1ad71be1ac963213"
+    },
+    {
+      "bytes": 16962,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/run_specification.csv",
+      "sha256": "4f2196525f0424d0264d9636882d43d41c5311b151f0af1df51c44b089a81b00"
+    },
+    {
+      "bytes": 67140,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/secondary_q20_q30_aulc.csv",
+      "sha256": "38ab8067111bf87a349e60f49d5bb0c3172832740e77567c7a84d0f64e55c5e8"
+    },
+    {
+      "bytes": 510,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/storage_duplication_audit.json",
+      "sha256": "0bf87febbc1b3e3ccaa1f7aba98e9bef7b4d2c701c8eaadd9e1284f121b401b1"
+    },
+    {
+      "bytes": 30520,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/structural_resolution_thresholds.csv",
+      "sha256": "05c78360d1eb99fc7b2ff3287a8a7482dfd17e06ed3474624fda970125227096"
+    },
+    {
+      "bytes": 237,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/structural_safety_decision.json",
+      "sha256": "8970a427aaebf47561b655feed00382378be9a18d87733cc04cf521601733ddf"
+    },
+    {
+      "bytes": 1010,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/SUPERVISOR_PHASE1_19B_ONE_PAGE.md",
+      "sha256": "b1b139824553d125fc5e94556a8102ef380e66b63bd57bdacd1f7d184ed5c594"
+    },
+    {
+      "bytes": 24565,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/threshold_attainment.csv",
+      "sha256": "ea545d9becf2ff06c3dd1e1431aa83dafbd6a40674df51b94b4e8b6d04d20d83"
+    },
+    {
+      "bytes": 762,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/threshold_attainment_contrasts.csv",
+      "sha256": "142190829adbf488b2c6f641bc34e3eb32c9f9c9e34f5d8a11d5c1c023590605"
+    },
+    {
+      "bytes": 72479,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/trajectory_summary.csv.gz",
+      "sha256": "b1ee28dea41a286e4f93cdeac43551bf2f8af105b6d49990886425d49425fb21"
+    },
+    {
+      "bytes": 1135,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/validation_report.json",
+      "sha256": "a5fd60be8a42d9992c0e885264624a3c4e3be9455ad7e10754b727d8e6e36ace"
+    },
+    {
+      "bytes": 1126,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/validation_report.md",
+      "sha256": "999f04be3d66bd2b1e35b3e2ac3d9b8c4ffdbd46a5e9de5562d105d8bc989084"
+    },
+    {
+      "bytes": 5558,
+      "path": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/violation_trajectory_summary.csv",
+      "sha256": "d7696797e61c0eb31cf648b59aebc7e0d620002a2589ec5d80af8b06cd482605"
+    }
+  ],
+  "branch": "codex/week9-phase1-19b-prospective-robust-monotone-pool-lse",
+  "created_utc": "2026-09-04T09:16:59.794519+00:00",
+  "historical_artifacts_copied": false,
+  "historical_inputs": {
+    "phase19a": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit"
+  },
+  "new_artifact_count": 40,
+  "new_worktree_created": false,
+  "parent_sha": "2975e72326f1680e81f16e0a29fc003bcaaf2aae",
+  "phase": "Week 9 Phase 1.19B",
+  "pretruth_event_sha256": "7f6f8d46302a7237c4416b5386ef5c82ea1be94d96e39572aec90ce51ac538a4",
+  "validation": {
+    "check_count": 27,
+    "checks": {
+      "B16_M3_fit_identical_across_arms": true,
+      "P0_is_standard_M3_margin": true,
+      "all_160_trajectories": true,
+      "all_arms_share_B16": true,
+      "conflict_logic_present": true,
+      "exact_parent_merge_base": true,
+      "figure_hashes_valid": true,
+      "full_budget_grid": true,
+      "historical_outputs_unmodified": true,
+      "holm_correction_present": true,
+      "inferred_labels_never_train_M3": true,
+      "initial_design_label_independent": true,
+      "main_config_no_retuning": true,
+      "no_binary_or_q_redefinition": true,
+      "no_new_full_worktree": true,
+      "no_old_artifacts_copied": true,
+      "no_pseudo_label_or_extra_arm": true,
+      "notebook_executed": true,
+      "phase19a_pairs_violations_reproduced": true,
+      "population_405_73_332": true,
+      "pretruth_has_no_target_truth": true,
+      "pretruth_hash_frozen": true,
+      "q20_q30_B1_inaccessible": true,
+      "seven_figures": true,
+      "temporary_checkpoints_removed": true,
+      "trajectory_paths_complete_and_unique": true,
+      "unrevealed_labels_inaccessible": true
+    },
+    "status": "PASS"
+  }
+}

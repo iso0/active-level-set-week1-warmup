@@ -1,0 +1,7 @@
+population,threshold,contrast,paired_attainment_N,P0_attainment_N,P3_attainment_N,mean_query_saving_paired,ci_lower,ci_upper,bootstrap_p,substantial_fraction_rule
+full_405,0.95,P0_budget-P3_budget,20,20,20,-1.8,-4.35,0.5,0.148,paired attainment >=14/20
+full_405,0.97,P0_budget-P3_budget,20,20,20,-3.2,-6.55,-0.05,0.0474,paired attainment >=14/20
+full_405,0.98,P0_budget-P3_budget,11,20,11,3.0,1.0,4.909090909090909,0.006,paired attainment >=14/20
+main_364,0.95,P0_budget-P3_budget,20,20,20,0.15,-2.0,2.25,0.9062,paired attainment >=14/20
+main_364,0.97,P0_budget-P3_budget,20,20,20,-6.05,-11.1,-1.2,0.0144,paired attainment >=14/20
+main_364,0.98,P0_budget-P3_budget,11,20,11,3.272727272727273,0.18181818181818182,6.363636363636363,0.044,paired attainment >=14/20

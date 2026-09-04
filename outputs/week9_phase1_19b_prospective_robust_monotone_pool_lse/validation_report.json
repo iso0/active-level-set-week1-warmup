@@ -1,0 +1,33 @@
+{
+  "check_count": 27,
+  "checks": {
+    "B16_M3_fit_identical_across_arms": true,
+    "P0_is_standard_M3_margin": true,
+    "all_160_trajectories": true,
+    "all_arms_share_B16": true,
+    "conflict_logic_present": true,
+    "exact_parent_merge_base": true,
+    "figure_hashes_valid": true,
+    "full_budget_grid": true,
+    "historical_outputs_unmodified": true,
+    "holm_correction_present": true,
+    "inferred_labels_never_train_M3": true,
+    "initial_design_label_independent": true,
+    "main_config_no_retuning": true,
+    "no_binary_or_q_redefinition": true,
+    "no_new_full_worktree": true,
+    "no_old_artifacts_copied": true,
+    "no_pseudo_label_or_extra_arm": true,
+    "notebook_executed": true,
+    "phase19a_pairs_violations_reproduced": true,
+    "population_405_73_332": true,
+    "pretruth_has_no_target_truth": true,
+    "pretruth_hash_frozen": true,
+    "q20_q30_B1_inaccessible": true,
+    "seven_figures": true,
+    "temporary_checkpoints_removed": true,
+    "trajectory_paths_complete_and_unique": true,
+    "unrevealed_labels_inaccessible": true
+  },
+  "status": "PASS"
+}

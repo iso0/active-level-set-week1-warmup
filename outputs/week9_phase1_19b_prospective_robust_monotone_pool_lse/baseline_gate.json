@@ -1,0 +1,29 @@
+{
+  "branch": "codex/week9-phase1-19b-prospective-robust-monotone-pool-lse",
+  "conduction": 332,
+  "independent_reproduction": [
+    {
+      "N": 405,
+      "directed_pairs": 22050,
+      "population": "full_405",
+      "violations": 3
+    },
+    {
+      "N": 364,
+      "directed_pairs": 19491,
+      "population": "main_364",
+      "violations": 3
+    }
+  ],
+  "keyholes": 73,
+  "merge_base": "2975e72326f1680e81f16e0a29fc003bcaaf2aae",
+  "parent_sha": "2975e72326f1680e81f16e0a29fc003bcaaf2aae",
+  "phase19a_artifact_values": {
+    "full_pairs": 22050,
+    "full_violations": 3,
+    "main_pairs": 19491,
+    "main_violations": 3
+  },
+  "population": 405,
+  "status": "PASS"
+}

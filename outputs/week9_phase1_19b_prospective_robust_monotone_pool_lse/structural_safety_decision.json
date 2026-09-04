@@ -1,0 +1,10 @@
+{
+  "C_as_KH_mean": 0.65,
+  "KH_as_C_mean": 1.8,
+  "P3_B120_mean_error_among_inferred": 0.007688910400424455,
+  "ci": [
+    0.007051130424678163,
+    0.008331067448987943
+  ],
+  "decision": "MONOTONE_PROPAGATION_SAFE_ENOUGH"
+}
