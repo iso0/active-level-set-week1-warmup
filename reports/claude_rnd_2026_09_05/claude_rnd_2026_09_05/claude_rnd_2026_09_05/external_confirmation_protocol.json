@@ -1,0 +1,233 @@
+{
+  "protocol_id": "melt-pool-external-confirmation-2026-09",
+  "schema_version": "1.0",
+  "status": "DRAFT_UNTIL_FREEZE_BLOCK_FILLED",
+  "freeze": {
+    "git_commit_sha": null,
+    "protocol_json_sha256": null,
+    "new_pool_audit_json_sha256": null,
+    "label_file_sha256": null,
+    "frozen_utc": null,
+    "note": "Fill by a second commit after committing this file, code/, and new_pool_audit.json; never edit other blocks afterwards."
+  },
+  "question": "Does M3 + threshold-variance-reduction acquisition (frozen auxiliary T posterior) select labels more efficiently than M3 + probability margin on the independently generated unseen pool?",
+  "population": {
+    "source": "new SPH simulations at fixed locations; inputs manifest only available to method code",
+    "features": [
+      "P",
+      "VX",
+      "LS",
+      "ST"
+    ],
+    "units": {
+      "P": "W",
+      "VX": "m/s",
+      "LS": "m (spot radius)",
+      "ST": "K"
+    },
+    "physics_coordinate": "logh = log(P / sqrt(VX * LS^3))",
+    "context": "z = (log VX, log LS, ST) standardised on each outer training pool",
+    "physical_band_frozen_from_old_labels": [
+      20.3621,
+      21.2533
+    ],
+    "exclusions": "none; rows with unparseable inputs are reported, not silently removed"
+  },
+  "feasibility_gate": {
+    "script": "code/new_pool_audit.py",
+    "fold_rule": "largest K in {5,4,3,2} with N/K >= 85 else K=2",
+    "horizon_rule": "H = min(80, floor(0.8 * n_train)); acquisition study infeasible if H < 40",
+    "too_weak_if": {
+      "H_lt": 40,
+      "band_rows_per_training_pool_lt": 24,
+      "old_model_uncertain_rows_per_training_pool_lt": 12
+    },
+    "small_benchmark_if": {
+      "band_rows_per_training_pool_lt": 45,
+      "N_lt": 200,
+      "fraction_beyond_old_95pct_nn_gt": 0.5
+    },
+    "full_protocol_otherwise": true,
+    "minimum_practically_meaningful_effect_aulc_16_40": 0.01,
+    "power_table": "results/feasibility_power_by_N.csv"
+  },
+  "partitions": {
+    "grouping": "exact input tuple (label-free)",
+    "splitter": "seeded K-fold over groups, no label stratification",
+    "repeats": 20,
+    "seed_key_format": "rnd2026|v1|new|outer_split|repeat|{repeat:02d}",
+    "seed_hash": "sha256 -> first 8 bytes little-endian mod 2^32"
+  },
+  "initial_design": {
+    "size": 16,
+    "method": "feature-only maximin in standardised (P,VX,LS,ST) of the outer training pool, repository w85.initial_design logic",
+    "seed_key_format": "rnd2026|v1|new|run|{run_id}|initial_design",
+    "one_class_startup": "continue predetermined feature-only maximin sequence for all arms until both classes appear; charged to budget; smoothed-prevalence prediction during startup; if none by H, run kept as non-diverging"
+  },
+  "models": {
+    "M3": {
+      "definition": "Phase 1.13/1.14 repository implementation: Stage-1 logistic (C=1e6) on standardised log h of revealed rows, frozen; Stage-2 Laplace logistic GPC with ARD Matern-3/2 discrepancy on standardised (P,VX,LS,ST), residual sd in [0.05,1], length scales in [0.01,100], L-BFGS-B, no restarts",
+      "seed_key_format": "week9_phase1_13_fixed_physics_ard_discrepancy|v1|shared_physics|{run_id}|{budget}",
+      "code": "src/week9_phase1_11_fixed_mean_discrepancy_gp.py, src/week9_phase1_13_fixed_physics_ard_discrepancy.py at commit bf4782881bc27fe1ec5256dc3ba0516478a1ed13"
+    },
+    "T_auxiliary_posterior": {
+      "definition": "probit GPC on g = c (logh - tau(z)); tau ~ N(mu0, s_mu^2) + N(0, s_beta^2) z + GP(0, s_u^2 Matern32_ARD(z; ls)); Laplace inference; used only to score candidates",
+      "frozen_hyperparameters": {
+        "c": 7.0,
+        "s_u": 0.41,
+        "ls": [
+          1.7,
+          30.0,
+          30.0
+        ],
+        "s_mu": 3.0,
+        "s_beta": 1.0,
+        "mu0": "mean revealed log h"
+      },
+      "code": "code/challenger.py, rnd/tmodel.py"
+    }
+  },
+  "arms": {
+    "A": {
+      "model": "M3",
+      "acquisition": "M3 probability margin 1-2|p-0.5|",
+      "role": "incumbent"
+    },
+    "Bprime": {
+      "model": "M3",
+      "acquisition": "probability margin of the frozen T posterior",
+      "role": "secondary control"
+    },
+    "C": {
+      "model": "M3",
+      "acquisition": "expected threshold-variance reduction phi(t)^2/(Phi(t)(1-Phi(t))(1+v))*sum_ref Cov^2 under frozen T; reference set = whole outer training pool; candidates = unrevealed training rows",
+      "role": "challenger"
+    },
+    "D": {
+      "model": "M3",
+      "acquisition": "matched Random continuation, 10 seeded continuations per run",
+      "role": "baseline"
+    },
+    "selection_rule": "argmax; tie-break smallest population row index; batch size 1"
+  },
+  "budgets": {
+    "start": 16,
+    "end": "H",
+    "step": 1
+  },
+  "endpoints": {
+    "primary": {
+      "metric": "Fold-B1-q20 accuracy",
+      "aggregate": "normalised trapezoid AULC over budgets 16-40",
+      "contrast": "C - A"
+    },
+    "secondary": [
+      {
+        "metric": "Fold-B1-q20 accuracy AULC 16-32",
+        "contrast": "C - A"
+      },
+      {
+        "metric": "Fold-B1-q20 accuracy AULC 16-H",
+        "contrast": "C - A"
+      },
+      {
+        "metric": "Fold-B1-q20 accuracy AULC 16-40",
+        "contrast": "C - Bprime"
+      },
+      {
+        "metric": "Fold-B1-q20 accuracy AULC 16-40",
+        "contrast": "Bprime - A"
+      },
+      {
+        "metric": "Fold-B1-q30 accuracy AULC 16-40",
+        "contrast": "C - A"
+      },
+      {
+        "metric": "Fold-B1-q20 KH-recall AULC 16-40",
+        "contrast": "C - A",
+        "role": "non-inferiority guard",
+        "margin": -0.02
+      },
+      {
+        "metric": "full-fold accuracy at B40 and BH",
+        "contrast": "C - A"
+      },
+      {
+        "metric": "budget to sustained q20 accuracy >= 0.80/0.82/0.84 over three consecutive checkpoints",
+        "contrast": "C - A",
+        "censoring": "reported"
+      },
+      {
+        "metric": "Fold-B1-q20 accuracy AULC 16-40 and 16-H",
+        "contrast": "A - D and C - D"
+      }
+    ],
+    "evaluation_subset_definition": "B1 = nearest opposite-label distance in population-standardised (P,VX,LS,ST) using all new-pool labels inside the isolated evaluator; q20/q30 = smallest ceil(0.2/0.3 * n_test) B1 distances per fold; evaluation-only",
+    "primary_window_justification": "old-pool headroom to full-label ceiling 0.031 over B16-40 vs 0.0005 over B41-80; power 0.82 vs 0.42 for an early-decaying effect of amplitude 0.02 (results/window_power.csv)"
+  },
+  "success_criteria": {
+    "success": "paired repeat-block 95% interval lower bound > 0 AND point estimate >= +0.010 on the primary contrast AND KH-recall guard not violated",
+    "practical_futility": "upper bound < +0.010",
+    "harm": "upper bound < 0",
+    "unresolved": "otherwise",
+    "no_secondary_promotion": true,
+    "old_data_expectation_development_only": {
+      "C_minus_A_vs_committed_margin": "+0.0025 [-0.0032, +0.0080]",
+      "C_minus_Bprime": "+0.0058 [+0.0002, +0.0117]",
+      "C_minus_A_tight_prior_sensitivity": "-0.0037 [-0.0101, +0.0028]",
+      "C_minus_Bprime_tight_prior_sensitivity": "+0.0041 [-0.0016, +0.0103]"
+    }
+  },
+  "analysis": {
+    "unit": "repeat block (K folds together)",
+    "bootstrap_draws": 10000,
+    "bootstrap_seed_key_format": "rnd2026|v1|new|bootstrap|{contrast}",
+    "interval": "two-sided 95% percentile",
+    "multiplicity": "Holm over {C-A 16-32, C-A 16-H, C-Bprime 16-40}",
+    "random_arm": "average of 10 continuations per run before pairing",
+    "dropping_rules": "none"
+  },
+  "blinding": {
+    "oracle_module": "code/label_oracle.py",
+    "label_file_sha256_recorded_at_first_open": true,
+    "access_log": "append-only JSONL: timestamp, seq, run_id, ids",
+    "reveal_scope": "only ids in the requesting run's training pool",
+    "evaluator_isolation": "held-out labels and B1/q flags never returned to method code",
+    "auxiliary_outputs_used_by_methods": false,
+    "preregistered_label_applies_only_if": "freeze block filled before any new label is read by method-side personnel"
+  },
+  "predictions": {
+    "P1_full_label_q20_ceiling_interval": [
+      0.85,
+      0.93
+    ],
+    "P1_point": 0.89,
+    "P1_falsified_if": "ceiling > 0.95 or < 0.83",
+    "P2_exception_share_label_definition": 0.6,
+    "P3_gap_le_0.010_at_band_queried_fraction": [
+      0.3,
+      0.5
+    ],
+    "P4_uncertain_lt_2_at_band_queried_fraction": [
+      0.55,
+      0.75
+    ],
+    "P4_band_remaining_ge": 0.25,
+    "P5_late_window_band_policies_within": 0.01,
+    "P6_late_difference_within": 0.006,
+    "P7_straddle_margin_spearman_gt": 0.99,
+    "P8_flexible_minus_M3_le": 0.03,
+    "text": "SATURATION_PREDICTIONS.md",
+    "P9_oracle_gain_clustered_ge": 0.05,
+    "P9_oracle_gain_isolated_le": 0.02,
+    "P9_point": 0.03
+  },
+  "code": {
+    "challenger": "code/challenger.py",
+    "oracle_and_evaluator": "code/label_oracle.py",
+    "audit": "code/new_pool_audit.py",
+    "runner": "code/run_external.py",
+    "tests": "code/tests/test_challenger.py",
+    "dependencies": "repository commit bf4782881bc27fe1ec5256dc3ba0516478a1ed13 src/ modules; numpy, scipy, scikit-learn, pandas"
+  }
+}

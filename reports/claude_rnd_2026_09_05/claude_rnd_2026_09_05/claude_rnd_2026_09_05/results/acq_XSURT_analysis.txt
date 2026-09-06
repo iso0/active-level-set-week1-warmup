@@ -1,0 +1,10 @@
+                  A16_32  A16_40  A16_48  A16_80
+arm                                             
+M3@M3_MARGIN(P1)  0.8196  0.8260  0.8314  0.8446
+M3@T_XSUR         0.8112  0.8150  0.8199  0.8354
+T@T_XSUR          0.7860  0.7971  0.8052  0.8257
+M3@XSUR(tight prior) - M3@P1 A16_32: -0.0085 [-0.0152,-0.0016] (5/14)
+M3@XSUR(tight prior) - M3@P1 A16_40: -0.0111 [-0.0172,-0.0046] (3/17)
+M3@XSUR(tight prior) - M3@P1 A16_48: -0.0115 [-0.0176,-0.0051] (4/16)
+M3@XSUR(tight prior) - M3@P1 A16_80: -0.0093 [-0.0127,-0.0059] (2/18)
+{'same_as_margin': 0.185, 'rho_vs_margin': 0.925, 'top5_overlap': 0.435, 'chosen_band': 0.885, 'chosen_kh': 0.423, 'flips_chosen': 11.516, 'flips_margin_choice': 6.851, 'chosen_p': 0.45}

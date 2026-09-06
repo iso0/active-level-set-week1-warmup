@@ -1,0 +1,76 @@
+{
+ "P1": {
+  "quantity": "all-training-label K-fold M3 q20 accuracy",
+  "interval": [
+   0.85,
+   0.93
+  ],
+  "point": 0.89,
+  "falsified_if": "> 0.95 or < 0.83",
+  "wording_change": "level, not ceiling"
+ },
+ "P1b": {
+  "quantity": "band-restricted (~100-row) K-fold M3 minus all-label fit, q20",
+  "point": 0.01,
+  "interval": [
+   -0.005,
+   0.03
+  ],
+  "falsified_if": "all-label fit better by > 0.01"
+ },
+ "P2": {
+  "quantity": "share of persistent prediction exceptions that are late/transient-onset KH or depth-marginal C",
+  "threshold": 0.6,
+  "falsified_if": "< 0.40"
+ },
+ "P3": {
+  "quantity": "band-queried fraction at which |M3-margin q20 - all-label level| <= 0.010",
+  "interval": [
+   0.3,
+   0.5
+  ],
+  "falsified_if": "gap > 0.02 at 60%"
+ },
+ "P4": {
+  "quantity": "band-queried fraction at which candidates with 0.2<p<0.8 fall below 2",
+  "interval": [
+   0.55,
+   0.75
+  ],
+  "band_remaining_ge": 0.25,
+  "falsified_if": "> 5 uncertain at 75% or < 2 at 40%"
+ },
+ "P5": {
+  "quantity": "max |q20 difference| over B60-80 between band-seeking policies",
+  "threshold": 0.01,
+  "falsified_if": "> 0.02"
+ },
+ "P6": {
+  "quantity": "M3+TV minus margin, mean over B48-80",
+  "threshold_abs": 0.006,
+  "falsified_if": "|late| > 0.012 with same sign as early"
+ },
+ "P7": {
+  "quantity": "median Spearman(M3 margin, M3 straddle) B16-40; pi-uncertain/p-uncertain",
+  "threshold": 0.99,
+  "ratio_le": 0.4,
+  "falsified_if": "rho < 0.95"
+ },
+ "P8": {
+  "quantity": "M3 rank among nine full-label model classes; wide-ARD GPC minus M3",
+  "rank_le": 2,
+  "spread_le": 0.03,
+  "falsified_if": "flexible model beats M3 by > 0.03"
+ },
+ "P9": {
+  "quantity": "q20-greedy test-label oracle (B16-39, then margin; evaluation-only, after unblinding) minus M3-margin, q20 AULC 16-40",
+  "threshold_ge": 0.05,
+  "point": 0.07,
+  "full_fold_gain_interval": [
+   0.01,
+   0.04
+  ],
+  "falsified_if": "< 0.02",
+  "note": "selection-sensitivity measure; no clustering inference"
+ }
+}

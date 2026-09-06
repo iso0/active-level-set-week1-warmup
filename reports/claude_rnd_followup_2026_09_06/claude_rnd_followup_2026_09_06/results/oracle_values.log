@@ -1,0 +1,10 @@
+[Parallel(n_jobs=2)]: Using backend MultiprocessingBackend with 2 concurrent workers.
+/home/claude/rnd/followup/oracle_values.py:52: RuntimeWarning: overflow encountered in exp
+  physics = m3.fit_.physics; h_lat = physics.latent(lh[cand]); p_h = 1 / (1 + np.exp(-h_lat))
+/home/claude/rnd/followup/oracle_values.py:52: RuntimeWarning: overflow encountered in exp
+  physics = m3.fit_.physics; h_lat = physics.latent(lh[cand]); p_h = 1 / (1 + np.exp(-h_lat))
+[Parallel(n_jobs=2)]: Done  14 tasks      | elapsed: 49.8min
+/home/claude/rnd/followup/oracle_values.py:52: RuntimeWarning: overflow encountered in exp
+  physics = m3.fit_.physics; h_lat = physics.latent(lh[cand]); p_h = 1 / (1 + np.exp(-h_lat))
+[Parallel(n_jobs=2)]: Done  20 out of  20 | elapsed: 86.7min finished
+elapsed 5204.324040651321 (23680, 62)

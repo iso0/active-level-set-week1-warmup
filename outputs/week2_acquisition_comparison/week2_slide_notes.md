@@ -56,9 +56,3 @@ should use a proper GP classifier or a more suitable surrogate. Smallest |mu|,
 straddle, randomized straddle, and expected feasibility are heuristic rules in
 this plumbing stage. The tolerance check above is based on test
 misclassification error, not a separate geometric contour-distance metric.
-
-## Suggested next step
-
-Discuss with Ioan whether the current Branin comparison is enough for Week 2 or
-whether the same comparison should be repeated over more initial designs, larger
-budgets, or a controlled boundary-width sweep.
