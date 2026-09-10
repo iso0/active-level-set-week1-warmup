@@ -1,0 +1,9 @@
+quantity,value,note
+population_with_usable_width,350.0,"of 405; the other 55 are treated as a failed monitor, not hidden"
+population_without_usable_width,55.0,
+keyhole_rate_with_width,0.2,"missingness is structured, so all results are conditional on it"
+keyhole_rate_without_width,0.05454545454545454,
+min_width_observed_in_initial_design,11.0,over the 100 frozen 16-point designs; >0 means the predictor is always fittable
+mean_width_observed_in_initial_design,14.24,
+min_train_pool_width_fraction,0.8487654320987654,
+mean_train_pool_width_fraction,0.8641975308641976,
