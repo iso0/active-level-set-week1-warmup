@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase 2.1R — interactive 3D process-space views</title>
+<style>
+  body { margin:0; font:14px/1.6 "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+         color:#1c1c1c; background:#f6f6f4; }
+  header { padding:26px 32px 20px; background:#fff; border-bottom:1px solid #d8d8d8; }
+  h1 { margin:0 0 6px; font-size:21px; font-weight:650; letter-spacing:-0.01em; }
+  header p { margin:0; color:#5d5d5d; max-width:100ch; }
+  main { padding:26px 32px; display:grid; gap:18px;
+          grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); max-width:1200px; }
+  .card { display:block; background:#fff; border:1px solid #d8d8d8; border-radius:9px;
+           padding:18px 20px; text-decoration:none; color:inherit; transition:.14s; }
+  .card:hover { border-color:#4477AA; box-shadow:0 5px 16px rgba(0,0,0,.09); transform:translateY(-2px); }
+  .axes { font-size:19px; font-weight:650; letter-spacing:.01em; }
+  .drop { display:inline-block; margin:7px 0 9px; font-size:11.5px; text-transform:uppercase;
+           letter-spacing:.06em; color:#8a5a12; background:#FFF6E6; border:1px solid #F0D9A8;
+           border-radius:4px; padding:2px 8px; }
+  .card p { margin:0; font-size:12.5px; color:#5d5d5d; }
+  footer { padding:8px 32px 32px; color:#5d5d5d; font-size:12.5px; max-width:1200px; }
+  code { font-size:11.5px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Week 9 Phase 2.1R — interactive 3D process-space views</h1>
+  <p>The process space has four inputs, so no single 3D picture can show it. These four views each drop
+     one input from the axes and keep it as a colour mode and hover field, so every input gets a turn
+     being the hidden one. All 405 frozen simulations appear in every view
+     (73 Keyhole), coloured by the manual <code>has_keyhole</code> label
+     by default.</p>
+</header>
+<main>
+    <a class="card" href="interactive/view1_drop_ST.html">
+      <div class="axes">P · VX · LS</div>
+      <div class="drop">ST dropped</div>
+      <p>Positions come from P, VX and LS. ST (substrate temperature)
+         stays available as a colour mode and in the hover card.</p>
+    </a>
+    <a class="card" href="interactive/view2_drop_LS.html">
+      <div class="axes">P · VX · ST</div>
+      <div class="drop">LS dropped</div>
+      <p>Positions come from P, VX and ST. LS (laser spot radius)
+         stays available as a colour mode and in the hover card.</p>
+    </a>
+    <a class="card" href="interactive/view3_drop_VX.html">
+      <div class="axes">P · LS · ST</div>
+      <div class="drop">VX dropped</div>
+      <p>Positions come from P, LS and ST. VX (scan speed)
+         stays available as a colour mode and in the hover card.</p>
+    </a>
+    <a class="card" href="interactive/view4_drop_P.html">
+      <div class="axes">VX · LS · ST</div>
+      <div class="drop">P dropped</div>
+      <p>Positions come from VX, LS and ST. P (laser power)
+         stays available as a colour mode and in the hover card.</p>
+    </a>
+</main>
+<footer>
+  Each view is self-contained: no libraries, no network, works offline. Colour by label, by
+  <code>log h</code>, or by the dropped input; filter to Keyhole only, Conduction only, or to the
+  simulations with a usable width trace; drag to rotate and scroll to zoom.
+</footer>
+</body>
+</html>

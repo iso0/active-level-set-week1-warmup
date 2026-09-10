@@ -1,0 +1,5 @@
+quantity,phase_2_1r_builder,frozen_reference,reference_source,match
+baseline_gpc_kernel,"1**2 * Matern(length_scale=[1, 1, 1, 1], nu=1.5)","1**2 * Matern(length_scale=[1, 1, 1, 1], nu=1.5)",outputs/week9_phase1_12_gpc_kernel_adequacy/kernel_specification.json (G3),True
+m3_residual_kernel,"0.3**2 * Matern(length_scale=[1, 1, 1, 1], nu=1.5)","0.3**2 * Matern(length_scale=[1, 1, 1, 1], nu=1.5)",src/week9_phase1_13_fixed_physics_ard_discrepancy.residual_kernel('M3'),True
+gpc_optimizer_settings,"fmin_l_bfgs_b, n_restarts_optimizer=0, max_iter_predict=100","fmin_l_bfgs_b, n_restarts_optimizer=0, max_iter_predict=100",Phase 1.12 kernel_specification.json,True
+gpc_ard_and_family,ARD Matern nu=1.5 on StandardScaler-scaled inputs,"ard=True, family=Matern, nu=1.5, scaling=StandardScaler fit on outer training pool inputs",Phase 1.12 kernel_specification.json (G3 is the supported winner),True
