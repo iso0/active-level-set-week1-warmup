@@ -1,0 +1,9 @@
+quantity,check,max_abs_difference,status
+P,phase 2 stored value equals canonical population value,0.0,PASS
+VX,phase 2 stored value equals canonical population value,0.0,PASS
+LS,phase 2 stored value equals canonical population value,0.0,PASS
+ST,phase 2 stored value equals canonical population value,0.0,PASS
+log_h,phase 2 stored value equals canonical population value,3.552713678800501e-15,PASS
+has_keyhole,phase 2 stored label equals canonical manual label,0.0,PASS
+model_feature_columns,no label-derived or evaluation-mask column enters any model,0.0,PASS
+longitudinal_columns_dropped,no dX (longitudinal length) column survives into Phase 2.1,0.0,PASS

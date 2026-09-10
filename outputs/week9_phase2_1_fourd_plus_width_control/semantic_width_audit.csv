@@ -1,0 +1,3 @@
+quantity,formula,physical_interpretation,used_in_phase2_1,authoritative_source_file,semantic_source_reverified_now,numeric_mapping_verdict_inherited_from,numeric_files_checked_in_phase2,numeric_mapping_verified_in_phase2,status
+longitudinal_length,x_max - x_min,longitudinal melt-pool length dX,False,src/week7_phase2_sph_v2_physical_target_extraction.py,True,da913797d14b171bec55d3708f96aa87f09a4f94,5,True,PASS
+transverse_width,y_max - y_min,transverse melt-pool width dY,True,src/week7_phase2_sph_v2_physical_target_extraction.py,True,da913797d14b171bec55d3708f96aa87f09a4f94,5,True,PASS

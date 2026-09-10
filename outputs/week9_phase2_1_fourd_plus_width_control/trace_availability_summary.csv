@@ -1,0 +1,8 @@
+category,count,keyhole_count,conduction_count,keyhole_fraction,P_mean,VX_mean,LS_mean,ST_mean,standardized_mean_difference_usable_minus_missing
+usable_transverse_width_trace,350,70.0,280.0,0.2,213.63536403706314,0.6221555658221742,6.238285147485198e-05,350.5644394871371,
+missing_or_unusable_trace,55,3.0,52.0,0.05454545454545454,161.90656752639273,0.6286402080344,6.429166662234727e-05,338.65108247707275,
+structured_missingness_P,405,,,,,,,,0.5455156693452193
+structured_missingness_VX,405,,,,,,,,-0.027695415551605245
+structured_missingness_LS,405,,,,,,,,-0.1321721772693152
+structured_missingness_ST,405,,,,,,,,0.3794578605697728
+structured_missingness_log_h,405,,,,,,,,0.43628374932570385

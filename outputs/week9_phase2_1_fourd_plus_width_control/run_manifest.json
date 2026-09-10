@@ -1,0 +1,252 @@
+{
+  "artifact_hashes": {
+    "FINAL_PHASE2_1_REPORT.md": "8677ae57c4919b00de141c5c29301923228fbe918a8626ed7c9b282ab1392e66",
+    "SUPERVISOR_PHASE2_1_ONE_PAGE.md": "073eee8186f8361a3347945f08bc361462072e8813eda6c157744cb1a76bb698",
+    "claim_ledger.md": "a4aaccfc29bf5179e597d41ba43d8c8acecd63e38880e7e58755688a2c7161d8",
+    "claim_status.csv": "8daa32a7994f2088b7a88a71b3dad00aadfcece00a5cf77a1169b800d6512365",
+    "feature_integrity_audit.csv": "f4c5e2817662b28111f028f00374a4fc98b459ee13b2c6133b39b57bfb6d4fff",
+    "figure_manifest.csv": "84c86953194e5ef77c0294cd52683dc39fe168741efdb760fea32dfb46e7642d",
+    "figures/01_trace_availability.png": "eec88bb1e0ad667ee0d3a820904580b28c063ce58756612874b0d31faed21569",
+    "figures/02_representative_width_traces.png": "1f0d5665d66e62f84c098e35cf2c95c69cf507deaeb5689ab20785184c54a7a3",
+    "figures/03_width_feature_summary.png": "f1059ccd8ec65e496c1aae9ba66c3ba200e19ca76d9fab33b59e7f7336ab957f",
+    "figures/04_model_comparison.png": "81a44c35c4eda4920e5cc51a9266ddd34e52747e7a248d060baa68c01a4b8dbb",
+    "figures/05_primary_contrast.png": "5b7e4e23fe9429231217f4d67b1ae2109ea05cde3365d1903d35c6e78edd363a",
+    "figures/06_infold_coefficients.png": "329b7d1eba8e66df950604b8435847d34d489ee81ecf73509216fe4e26b45cf2",
+    "figures/07_does_width_add_beyond_4d.png": "0a07c0a77e38defbd77add2c910961458483b803d4750dca028caac2bef9a82c",
+    "figures/08_claim_status.png": "127580efffb7c07e59dab1fe07cd51f3b965bca52238092567f67f36c8bdb233",
+    "infold_coefficient_summary.csv": "4c1f76d4c89eeae7ed97db8cabe7bf1080688c230003dfb91a789c48ca1b5ea3",
+    "infold_coefficients.csv": "31b1b814ad2e101704ebb42a40c7c3f5c38f80e70d5d1f0666723fd816bb07c3",
+    "interactive_3d_process_space.html": "68ba6e5f3bd668853222a89389381b7514595b4dfe354d5f34a6ea3564159894",
+    "model_oof_predictions.csv.gz": "3e61c1b966c3a4ef4ba77c4b9b51a007956877b29a0bfabe49d5b0b2ea566511",
+    "model_oof_summary.csv": "2ae55e35d7839c771b0655a137ba4ba15d4fc64db67ba448297230dfc4a9d948",
+    "model_paired_contrasts.csv": "d33979893247a898b6271dc856233c947cbc182c3b891624486489f0f322358d",
+    "model_repeat_level_metrics.csv": "e20d645d6202c53e52c51bd84d560eaefe2b37ba5ed9fd3f86747d247a668d58",
+    "phase2_reproduction_gate.csv": "e2030685ded4fa810da47f0dcf640eebecec975c88c0ecf09cd37c8c397d08f8",
+    "primary_contrast_inference.csv": "14996074f2275d9f1487273ab07f8a8fec89ee50e2afdc0ccf847912e0c7a620",
+    "semantic_width_audit.csv": "ca498e2b3b61197cd7da507604ffdb33a71e02a4383ee3cc482f775691e9938b",
+    "shape_subset_contrast_inference.csv": "62b1159b15b1b7996cf2998eb103b7c2b97290c82fbede42c033d4858c60edaa",
+    "trace_availability_summary.csv": "8f87157dbc07e060454bf0e878d9284096a4da9cee8f65589187595d3b502ed6",
+    "validation_report.json": "e11b7001e0f2dce41408df29ce8b35052728e36ec508e26ae6706f174c19f2ef",
+    "validation_report.md": "5f467af40276bebadd33d6e51eaae25495cd7d5ef82e54237e5681d1fa9059fa",
+    "width_feature_effects.csv": "16f561a33cd7dc9ed85e221054ee7ed34d175ae381246ef54192e0ae71abbcbb",
+    "width_vs_4d_collinearity.csv": "02616b4dd47b00bbb21638920516655c933dd6595c60121da31a709b8fbb9495"
+  },
+  "bootstrap_draws": 5000,
+  "elapsed_seconds": 53.58203387260437,
+  "folds": "frozen Week 8.5 grouped outer folds, 20 repeats x 5 folds",
+  "local_only": true,
+  "model_family": "StandardScaler + LogisticRegression(lbfgs), C=1.0 (h_only keeps Phase 2's C=1e6)",
+  "models": {
+    "4d_only": {
+      "C": 1.0,
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "role": "primary"
+    },
+    "4d_plus_static_width": {
+      "C": 1.0,
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "W_initial_um",
+        "W_max_um",
+        "W_T0_um"
+      ],
+      "role": "secondary"
+    },
+    "4d_plus_width_dynamics": {
+      "C": 1.0,
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_max_positive_dWdt_um_per_ms",
+        "robust_median_positive_dWdt_um_per_ms",
+        "robust_early_dWdt_20_um_per_ms",
+        "robust_early_dWdt_40_um_per_ms",
+        "robust_time_of_max_dWdt_tau"
+      ],
+      "role": "primary"
+    },
+    "4d_plus_width_shape_only": {
+      "C": 1.0,
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau"
+      ],
+      "role": "secondary"
+    },
+    "h_only": {
+      "C": 1000000.0,
+      "features": [
+        "log_h"
+      ],
+      "role": "phase2_reproduction"
+    },
+    "h_plus_width_dynamics": {
+      "C": 1.0,
+      "features": [
+        "log_h",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_max_positive_dWdt_um_per_ms",
+        "robust_median_positive_dWdt_um_per_ms",
+        "robust_early_dWdt_20_um_per_ms",
+        "robust_early_dWdt_40_um_per_ms",
+        "robust_time_of_max_dWdt_tau"
+      ],
+      "role": "phase2_reproduction"
+    },
+    "h_plus_width_shape_only": {
+      "C": 1.0,
+      "features": [
+        "log_h",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau"
+      ],
+      "role": "phase2_reproduction"
+    },
+    "static_width": {
+      "C": 1.0,
+      "features": [
+        "W_initial_um",
+        "W_max_um",
+        "W_T0_um"
+      ],
+      "role": "phase2_reproduction"
+    },
+    "width_dynamics": {
+      "C": 1.0,
+      "features": [
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_max_positive_dWdt_um_per_ms",
+        "robust_median_positive_dWdt_um_per_ms",
+        "robust_early_dWdt_20_um_per_ms",
+        "robust_early_dWdt_40_um_per_ms",
+        "robust_time_of_max_dWdt_tau"
+      ],
+      "role": "phase2_reproduction"
+    },
+    "width_dynamics_only": {
+      "C": 1.0,
+      "features": [
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_max_positive_dWdt_um_per_ms",
+        "robust_median_positive_dWdt_um_per_ms",
+        "robust_early_dWdt_20_um_per_ms",
+        "robust_early_dWdt_40_um_per_ms",
+        "robust_time_of_max_dWdt_tau"
+      ],
+      "role": "primary"
+    }
+  },
+  "network_access_used": false,
+  "new_artifact_bytes": 4706912,
+  "new_worktree_or_clone_created": false,
+  "notebook_kernel": "thesis",
+  "notebook_sha256": "da53a4fd939f3147305f569577c301afa337aec46a90807cb86c675e53cce174",
+  "population": 405,
+  "population_keyholes": 73,
+  "primary_contrast": "4d_plus_width_dynamics - 4d_only",
+  "primary_question": "Does [P, VX, LS, ST] + width dynamics beat [P, VX, LS, ST] alone at predicting has_keyhole?",
+  "seed": 260907,
+  "signflip_draws": 20000,
+  "study": "Week 9 Phase 2.1 \u2014 4D process inputs plus temporal width dynamics",
+  "usable_keyholes": 70,
+  "usable_traces": 350,
+  "validation": {
+    "check_count": 45,
+    "checks": {
+      "LS_is_laser_spot_radius": true,
+      "ST_is_substrate_temperature": true,
+      "baseline_and_challenger_share_regularisation": true,
+      "canonical_ids_unique": true,
+      "eight_figures": true,
+      "evaluation_masks_absent_from_features": true,
+      "feature_integrity_all_pass": true,
+      "figure_hashes_match_manifest": true,
+      "figures_exist": true,
+      "folds_cover_full_population": true,
+      "frozen_fold_count_100": true,
+      "h_exact_formula": true,
+      "interactive_html_exists": true,
+      "interactive_html_has_full_population": true,
+      "interactive_html_hover_fields": true,
+      "interactive_html_is_offline": true,
+      "labels_73": true,
+      "longitudinal_delta_x_not_used": true,
+      "no_historical_file_touched": true,
+      "no_label_column_in_any_model": true,
+      "no_new_random_split_declared": true,
+      "no_remote_operation_in_source": true,
+      "notebook_has_no_execution_errors": true,
+      "notebook_reports_a_real_verdict": true,
+      "notebook_stores_executed_outputs": true,
+      "phase2_feature_table_shape": true,
+      "phase2_read_is_readonly_git_show": true,
+      "phase2_reproduction_exact": true,
+      "phase2_reproduction_gate_nonempty": true,
+      "population_405": true,
+      "primary_contrast_declared": true,
+      "primary_contrast_holm_adjusted": true,
+      "raw_derivatives_excluded_from_models": true,
+      "reports_exist": true,
+      "reports_quote_canonical_counts": true,
+      "reports_state_a_verdict": true,
+      "row_index_absent_from_features": true,
+      "scaler_inside_pipeline": true,
+      "secondary_sensitivity_predeclared_in_registry": true,
+      "shape_sensitivity_reported_separately": true,
+      "train_only_scaling_executable": true,
+      "usable_subset_consistent": true,
+      "verdicts_are_interval_based": true,
+      "width_extraction_inherited_not_reinvented": true,
+      "width_is_transverse_delta_y": true
+    },
+    "notebook_bytes": 1585994,
+    "notebook_checks_included": true,
+    "output_bytes": 3120651,
+    "phase": "Week 9 Phase 2.1",
+    "phase2_source_commit": "da913797d14b171bec55d3708f96aa87f09a4f94",
+    "population": 405,
+    "population_keyholes": 73,
+    "preexisting_dirty_paths_outside_this_phase": 52,
+    "status": "PASS",
+    "usable_keyholes": 70,
+    "usable_traces": 350
+  },
+  "verdict_hard_decision": "NOT SUPPORTED",
+  "verdict_overall": "NO ADDED VALUE BEYOND THE 4D PROCESS INPUTS",
+  "verdict_ranking_probability": "NOT SUPPORTED",
+  "verdict_secondary_shape_subset": "SUPPORTED",
+  "width_definition": "transverse width dY = (y_max - y_min) * 1e6 micrometres",
+  "width_source_artifacts": {
+    "axis_semantics_audit.csv": "0cce4989ccd5357c0aa17802f50f0490b70503873dd262d9ffc7ca837739e94a",
+    "model_oof_summary.csv": "53c727f3f0de5d06ab407d19b167bfe6e35335e2c29e33b4914eb2aa645bc1ee",
+    "temporal_profiles.csv.gz": "eebdba2f284274db05dee753d95032287c9ccce9f45478e21bfb913c1c07f3d1",
+    "width_temporal_features.csv": "4e431671284f6e9e7d7ba26abcbb8e6f831fc425d82fe379f03b1f32c94558ae"
+  },
+  "width_source_branch": "codex/week9-phase2-temporal-width-dynamics",
+  "width_source_commit": "da913797d14b171bec55d3708f96aa87f09a4f94"
+}
