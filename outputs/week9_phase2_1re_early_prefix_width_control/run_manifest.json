@@ -1,0 +1,196 @@
+{
+  "artifact_hashes": {
+    "FINAL_PHASE2_1RE_REPORT.md": "0b79cd710b49dbf45dfc213ad38f738f709a5c0106eba75e02c056fce88b0cf6",
+    "SUPERVISOR_PHASE2_1RE_ONE_PAGE.md": "b10e3f7cde260e107149a70e3a494e65b5821098c812debf0447eaf0c26829a1",
+    "claim_ledger.md": "9a2c7932b0cb04a4b28b9d4c13954e72726676831f4a5c6d74ad91fa579787a1",
+    "claim_status.csv": "094a06b0512f8d466b29b268e25ac484b10063d9a28aa34b2e56a7bc2a4cefe9",
+    "contrast_inference.csv": "9c13afb6386cc79e4a8d693e3005784e2bc6a7b6ada1fe162a11a54c7c738d3c",
+    "early_vs_full_equivalence.csv": "de2acd850a4574c4c93ba812187ff1748e37c03457433343c7c77c7376b1e4f2",
+    "figure_manifest.csv": "ebb03926824a7579c2fb80664de3d2112a44f9a107978dd2650f6d8d164ef303",
+    "figures/01_what_a_prefix_means.png": "4eb8d48ddd2a772332c7ae78dfb8adee835d1b75751651ddca03599bed265fe4",
+    "figures/02_prefix_vs_full_feature.png": "6160bd47d7c1c7177724348ce1850e4160fa420590c02b0a8f2d681aff0d8bf5",
+    "figures/03_separation_vs_prefix.png": "4e4324fca37bfdaa6485b1fbb7334125d6113e53f88a23a4e6460354a7099c6e",
+    "figures/04_threshold_vs_prefix.png": "bbbc5665efa2dfb3f9ea12ce2caa6fbd0211d6739f60d2ba392995b45d7f609e",
+    "figures/05_gpc_gain_vs_prefix.png": "1fe19c93a2168a046dfd3ed229f4625874433e20923b6c7911104e5db2bf10b9",
+    "figures/06_early_vs_full_equivalence.png": "42ea8644460372c6ce57d68bd258031b6452498cbde6a48e8249dc2fe50dcb9b",
+    "figures/07_claim_status.png": "348f980178583a20dd0ea46ad41dd9a8d62d47bba655e3cf467cdcb3972b353b",
+    "model_oof_predictions.csv.gz": "afd97d3e94561d1b35777b7d4b72ae52b42fdd1c1f90fec1fac33013cea5b80d",
+    "model_oof_summary.csv": "25baf9e7d3dfffbf81a25140f82889a7a27cf2d92fae0976e5d93e45f9e66cc8",
+    "model_paired_contrasts.csv": "9ae45472b9e6121091847d4e5cedbd696df88a88ab240ac102eedf2e32b0ae09",
+    "model_repeat_level_metrics.csv": "72dce09dc7df7b8da9d383c3148b251293b19c2b7b7c6fe5f0f2db6b6c0c0fec",
+    "phase2_1r_reproduction_gate.csv": "6675146d34a4f43b8a2bb21e3743fe7cffc5982e159d9ad755cc9c909de15dcd",
+    "prefix_features.csv": "748ab96d5f1c9e51c0eeb78f37f893735ed4e297b93972257c8f72bdccb98c68",
+    "prefix_no_future_audit.csv": "6cef248aab8203e970b22e02899155eea253ae730ead2bb7a1fcb6979ec03f5f",
+    "prefix_saturation_profile.csv": "44ed2a654b97ae10f9ee124e6ea22b90e9ffbfb77ff244ffad1ca3702e80470f",
+    "prefix_threshold_fold_results.csv": "b319ffa432f93846f2bf2d8ad8c1ae86d99a14b6e6acd2252bb6fa49c1b2c405",
+    "prefix_threshold_summary.csv": "bff0d949cbe5753dd5ccf1b35c21d6e6b4eb6e686426233f08bcaa0ad66f7c73",
+    "prefix_univariate_separation.csv": "2bc249aab22508b1f5a32b6a384fdbc4af5c659e6c0f49dbb6c082153537147d",
+    "validation_report.json": "7e0d92c34b25db014924b52e26237fb419fbbde3dacf8d1c6df2cb1ecadf99cc",
+    "validation_report.md": "f2a9ed91e3d10994769e531bbe91741fe2dae432901999d97983cdbd9775dba8"
+  },
+  "bootstrap_draws": 5000,
+  "elapsed_seconds": 408.05723547935486,
+  "equivalence_margin": 0.005,
+  "inherited_from": "src/week9_phase2_1r_simple_width_change_control.py",
+  "local_only": true,
+  "median_observed_window_us_at_primary_prefix": 68.41421,
+  "models": {
+    "gpc_4d": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "kind": "gpc",
+      "role": "baseline"
+    },
+    "gpc_4d_plus_early_p02": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W_p02"
+      ],
+      "kind": "gpc",
+      "role": "early_prefix"
+    },
+    "gpc_4d_plus_early_p05": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W_p05"
+      ],
+      "kind": "gpc",
+      "role": "early_prefix"
+    },
+    "gpc_4d_plus_early_p10": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W_p10"
+      ],
+      "kind": "gpc",
+      "role": "early_prefix"
+    },
+    "gpc_4d_plus_early_p100": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W_p100"
+      ],
+      "kind": "gpc",
+      "role": "full_trace_reference"
+    },
+    "gpc_4d_plus_early_p20": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W_p20"
+      ],
+      "kind": "gpc",
+      "role": "early_prefix"
+    },
+    "gpc_4d_plus_early_p40": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W_p40"
+      ],
+      "kind": "gpc",
+      "role": "early_prefix"
+    }
+  },
+  "new_artifact_bytes": 3661996,
+  "new_worktree_or_clone_created": false,
+  "notebook_kernel": "thesis",
+  "notebook_sha256": "d24449e082268c98082d325ba9e51a88564bce4d9780616eae3a370e25320729",
+  "prefixes": [
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.4,
+    1.0
+  ],
+  "primary_contrast": "gpc_4d_plus_early_p05 - gpc_4d",
+  "primary_prefix": 0.05,
+  "primary_question": "If the width signal is all at the start of the trace, is an opening prefix enough?",
+  "raw_monitor_bytes_downloaded": 0,
+  "raw_solver_timesteps_used": false,
+  "rest_of_trace_equivalent_metrics": 5,
+  "seed": 260907,
+  "signflip_draws": 20000,
+  "study": "Week 9 Phase 2.1R-E - early-prefix width control",
+  "validation": {
+    "check_count": 35,
+    "checks": {
+      "LS_is_laser_spot_radius": true,
+      "ST_is_substrate_temperature": true,
+      "equivalence_margin_predeclared": true,
+      "equivalence_uses_interval_not_pvalue": true,
+      "figure_manifest_hashes_match": true,
+      "figures_exist": true,
+      "frozen_fold_count_100": true,
+      "full_prefix_equals_phase2_1r_feature": true,
+      "gpc_family_inherited_not_reinvented": true,
+      "holm_applied_to_every_contrast": true,
+      "labels_73": true,
+      "no_evaluation_mask_in_any_model": true,
+      "no_historical_file_touched": true,
+      "no_label_column_in_any_model": true,
+      "no_new_random_split_declared": true,
+      "no_raw_monitor_download": true,
+      "no_remote_operation_in_source": true,
+      "notebook_has_no_execution_errors": true,
+      "notebook_stores_executed_outputs": true,
+      "phase2_1r_outputs_untouched": true,
+      "phase2_1r_reproduction_exact": true,
+      "population_405": true,
+      "prefix_audit_covers_all_prefixes": true,
+      "prefix_no_future_audit_pass": true,
+      "prefix_windows_are_increasing": true,
+      "reports_define_analysis_point": true,
+      "reports_exist": true,
+      "reports_open_with_what_did_we_ask": true,
+      "reports_state_not_monitoring": true,
+      "reproduction_gate_covers_both_shared_models": true,
+      "seven_figures": true,
+      "shared_seed_string_with_phase2_1r": true,
+      "terminology_resampled_analysis_points": true,
+      "threshold_direction_learned_on_training": true,
+      "usable_subset_350_70": true
+    },
+    "equivalence_margin": 0.005,
+    "models_evaluated": 7,
+    "notebook_checks_included": true,
+    "output_bytes": 2395124,
+    "phase": "Week 9 Phase 2.1R-E",
+    "preexisting_dirty_paths_outside_this_phase": 129,
+    "prefixes_tested": [
+      0.02,
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      1.0
+    ],
+    "primary_prefix": 0.05,
+    "status": "PASS",
+    "usable_keyholes": 70,
+    "usable_traces": 350
+  },
+  "verdict_primary_hard": "NOT SUPPORTED",
+  "verdict_primary_ranking": "SUPPORTED"
+}

@@ -1,0 +1,7 @@
+prefix_fraction,transitions_allowed,latest_analysis_point_used,no_future_point_used,max_abs_difference_vs_independent_recompute,median_observed_window_ms,median_observed_window_us,status
+0.02,4,4,True,0.0,0.027365684,27.365684,PASS
+0.05,10,10,True,0.0,0.06841421,68.41421,PASS
+0.1,20,20,True,0.0,0.13682842,136.82842,PASS
+0.2,40,40,True,0.0,0.27365684,273.65684,PASS
+0.4,80,80,True,0.0,0.54731368,547.31368,PASS
+1.0,200,200,True,0.0,1.3682842,1368.2842,PASS

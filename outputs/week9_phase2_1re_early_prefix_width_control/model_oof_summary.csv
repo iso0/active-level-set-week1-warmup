@@ -1,0 +1,190 @@
+model,subset,role,features,metric,mean,sd_across_repeats,repeat_blocks
+gpc_4d,full,baseline,P + VX + LS + ST,roc_auc,0.9912193877551021,0.0019517276109298125,20
+gpc_4d,full,baseline,P + VX + LS + ST,pr_auc,0.9713558882560884,0.004396388096969287,20
+gpc_4d,full,baseline,P + VX + LS + ST,accuracy,0.9729999999999999,0.005969849055408424,20
+gpc_4d,full,baseline,P + VX + LS + ST,balanced_accuracy,0.953125,0.011066804151847033,20
+gpc_4d,full,baseline,P + VX + LS + ST,keyhole_recall,0.9199999999999999,0.02093414563042992,20
+gpc_4d,full,baseline,P + VX + LS + ST,conduction_recall,0.9862499999999998,0.004528671045606297,20
+gpc_4d,full,baseline,P + VX + LS + ST,false_negative,5.6,1.465390194130093,20
+gpc_4d,full,baseline,P + VX + LS + ST,false_positive,3.85,1.2680278927697548,20
+gpc_4d,full,baseline,P + VX + LS + ST,brier_score,0.025195895039826978,0.0017553877215465215,20
+gpc_4d,q20,baseline,P + VX + LS + ST,roc_auc,0.9244208695234087,0.010634693923471819,20
+gpc_4d,q20,baseline,P + VX + LS + ST,pr_auc,0.8768877539689344,0.018830764966704574,20
+gpc_4d,q20,baseline,P + VX + LS + ST,accuracy,0.8836368764000342,0.025073678706299864,20
+gpc_4d,q20,baseline,P + VX + LS + ST,balanced_accuracy,0.8739049712137683,0.02714396861861649,20
+gpc_4d,q20,baseline,P + VX + LS + ST,keyhole_recall,0.8288040613909636,0.041334196539549235,20
+gpc_4d,q20,baseline,P + VX + LS + ST,conduction_recall,0.9190058810365735,0.02460469618381097,20
+gpc_4d,q20,baseline,P + VX + LS + ST,false_negative,5.15,1.2258187382102497,20
+gpc_4d,q20,baseline,P + VX + LS + ST,false_positive,3.75,1.118033988749895,20
+gpc_4d,q20,baseline,P + VX + LS + ST,brier_score,0.10087624734584873,0.0069966781473993645,20
+gpc_4d,q30,baseline,P + VX + LS + ST,roc_auc,0.95385112985122,0.007084291989920838,20
+gpc_4d,q30,baseline,P + VX + LS + ST,pr_auc,0.908482595577726,0.012402822727004168,20
+gpc_4d,q30,baseline,P + VX + LS + ST,accuracy,0.916145706179298,0.01746464343476103,20
+gpc_4d,q30,baseline,P + VX + LS + ST,balanced_accuracy,0.9003298435352327,0.0216956071638496,20
+gpc_4d,q30,baseline,P + VX + LS + ST,keyhole_recall,0.8525490571543205,0.0377223149125149,20
+gpc_4d,q30,baseline,P + VX + LS + ST,conduction_recall,0.9481106299161455,0.016646078465784697,20
+gpc_4d,q30,baseline,P + VX + LS + ST,false_negative,5.5,1.3178930553209385,20
+gpc_4d,q30,baseline,P + VX + LS + ST,false_positive,3.85,1.2680278927697548,20
+gpc_4d,q30,baseline,P + VX + LS + ST,brier_score,0.07502758887380992,0.004909337680044985,20
+gpc_4d_plus_early_p02,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,roc_auc,0.990625,0.0025010067790192585,20
+gpc_4d_plus_early_p02,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,pr_auc,0.9707601911557822,0.005138072556425019,20
+gpc_4d_plus_early_p02,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,accuracy,0.9732857142857142,0.005882852067027931,20
+gpc_4d_plus_early_p02,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,balanced_accuracy,0.9551785714285712,0.01068134032550701,20
+gpc_4d_plus_early_p02,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,keyhole_recall,0.925,0.020136483820815166,20
+gpc_4d_plus_early_p02,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,conduction_recall,0.9853571428571429,0.004620390988798083,20
+gpc_4d_plus_early_p02,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,false_negative,5.25,1.4095538674570611,20
+gpc_4d_plus_early_p02,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,false_positive,4.1,1.2937094768634556,20
+gpc_4d_plus_early_p02,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,brier_score,0.026751043758718934,0.0022472353240776907,20
+gpc_4d_plus_early_p02,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,roc_auc,0.9283203891799238,0.011212322182662693,20
+gpc_4d_plus_early_p02,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,pr_auc,0.8853634101986483,0.024168743341208884,20
+gpc_4d_plus_early_p02,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,accuracy,0.8869704560494036,0.025308981263089777,20
+gpc_4d_plus_early_p02,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,balanced_accuracy,0.8795641190206425,0.027663272592683738,20
+gpc_4d_plus_early_p02,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,keyhole_recall,0.8454463292547276,0.044723812754837215,20
+gpc_4d_plus_early_p02,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,conduction_recall,0.9136819087865573,0.02543381501888904,20
+gpc_4d_plus_early_p02,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,false_negative,4.65,1.348488432516786,20
+gpc_4d_plus_early_p02,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,false_positive,4.0,1.1697953037312037,20
+gpc_4d_plus_early_p02,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,brier_score,0.10153802003104503,0.007430063700840686,20
+gpc_4d_plus_early_p02,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,roc_auc,0.9556612600760042,0.007322528672210571,20
+gpc_4d_plus_early_p02,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,pr_auc,0.91329389515071,0.013486843913738398,20
+gpc_4d_plus_early_p02,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,accuracy,0.9170025068369837,0.018044504336950252,20
+gpc_4d_plus_early_p02,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,balanced_accuracy,0.9033834896748558,0.021947780541681873,20
+gpc_4d_plus_early_p02,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,keyhole_recall,0.8620817680028207,0.03785989608324294,20
+gpc_4d_plus_early_p02,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,conduction_recall,0.9446852113468912,0.01710528889984466,20
+gpc_4d_plus_early_p02,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,false_negative,5.15,1.3484884325167863,20
+gpc_4d_plus_early_p02,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,false_positive,4.1,1.2937094768634556,20
+gpc_4d_plus_early_p02,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p02,brier_score,0.07621321175269831,0.005580357609120429,20
+gpc_4d_plus_early_p05,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,roc_auc,0.9912678571428574,0.0022218494440675463,20
+gpc_4d_plus_early_p05,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,pr_auc,0.9725354120266985,0.00465305017439416,20
+gpc_4d_plus_early_p05,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,accuracy,0.9737142857142859,0.006462317442214736,20
+gpc_4d_plus_early_p05,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,balanced_accuracy,0.9567857142857144,0.01086362094034737,20
+gpc_4d_plus_early_p05,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,keyhole_recall,0.9285714285714286,0.019110172973141118,20
+gpc_4d_plus_early_p05,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,conduction_recall,0.9850000000000001,0.0045765948251228,20
+gpc_4d_plus_early_p05,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,false_negative,5.0,1.3377121081198773,20
+gpc_4d_plus_early_p05,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,false_positive,4.2,1.2814465510343749,20
+gpc_4d_plus_early_p05,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,brier_score,0.026127370443823066,0.002198481468675136,20
+gpc_4d_plus_early_p05,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,roc_auc,0.9325344889481018,0.011762699023845864,20
+gpc_4d_plus_early_p05,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,pr_auc,0.8922266378390274,0.02311108609930792,20
+gpc_4d_plus_early_p05,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,accuracy,0.8889353415669206,0.026288797674408445,20
+gpc_4d_plus_early_p05,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,balanced_accuracy,0.8824279719923899,0.028279254029528664,20
+gpc_4d_plus_early_p05,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,keyhole_recall,0.8522398564542615,0.042001714712426357,20
+gpc_4d_plus_early_p05,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,conduction_recall,0.9126160875305187,0.02485770129401816,20
+gpc_4d_plus_early_p05,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,false_negative,4.45,1.2763022245616642,20
+gpc_4d_plus_early_p05,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,false_positive,4.05,1.145931016569864,20
+gpc_4d_plus_early_p05,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,brier_score,0.09891076712969221,0.007708439382564148,20
+gpc_4d_plus_early_p05,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,roc_auc,0.9582941295380012,0.007143654246433949,20
+gpc_4d_plus_early_p05,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,pr_auc,0.9187466813125607,0.012137796556385118,20
+gpc_4d_plus_early_p05,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,accuracy,0.917911744067464,0.020240209202059413,20
+gpc_4d_plus_early_p05,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,balanced_accuracy,0.9054759654418991,0.023861240418799348,20
+gpc_4d_plus_early_p05,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,keyhole_recall,0.8675642241431716,0.03705829642005939,20
+gpc_4d_plus_early_p05,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,conduction_recall,0.9433877067406268,0.016836241314092025,20
+gpc_4d_plus_early_p05,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,false_negative,4.95,1.3562719801759993,20
+gpc_4d_plus_early_p05,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,false_positive,4.2,1.2814465510343749,20
+gpc_4d_plus_early_p05,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p05,brier_score,0.07436192733435525,0.00553980657518713,20
+gpc_4d_plus_early_p10,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,roc_auc,0.9912321428571428,0.0022514353474293986,20
+gpc_4d_plus_early_p10,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,pr_auc,0.9724524544210288,0.004739422425681136,20
+gpc_4d_plus_early_p10,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,accuracy,0.9737142857142856,0.006528463663742626,20
+gpc_4d_plus_early_p10,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,balanced_accuracy,0.9567857142857144,0.011508764698110635,20
+gpc_4d_plus_early_p10,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,keyhole_recall,0.9285714285714285,0.020727892860286052,20
+gpc_4d_plus_early_p10,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,conduction_recall,0.9850000000000001,0.004427479855770646,20
+gpc_4d_plus_early_p10,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,false_negative,5.0,1.4509525002200232,20
+gpc_4d_plus_early_p10,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,false_positive,4.2,1.2396943596157717,20
+gpc_4d_plus_early_p10,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,brier_score,0.02611831527803018,0.002202331389886237,20
+gpc_4d_plus_early_p10,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,roc_auc,0.9325018250407296,0.011875765988723516,20
+gpc_4d_plus_early_p10,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,pr_auc,0.8914222077988395,0.023984202709245554,20
+gpc_4d_plus_early_p10,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,accuracy,0.8889270165585955,0.028620930590848977,20
+gpc_4d_plus_early_p10,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,balanced_accuracy,0.882585422821594,0.03148612347389446,20
+gpc_4d_plus_early_p10,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,keyhole_recall,0.8536911217490333,0.049149671278376265,20
+gpc_4d_plus_early_p10,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,conduction_recall,0.911479723894155,0.02553752535283536,20
+gpc_4d_plus_early_p10,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,false_negative,4.4,1.465390194130093,20
+gpc_4d_plus_early_p10,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,false_positive,4.1,1.1652874052533586,20
+gpc_4d_plus_early_p10,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,brier_score,0.09889172299512872,0.007647362434463045,20
+gpc_4d_plus_early_p10,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,roc_auc,0.9582958945302131,0.007180008698978187,20
+gpc_4d_plus_early_p10,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,pr_auc,0.9182261703034417,0.012631829564762085,20
+gpc_4d_plus_early_p10,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,accuracy,0.9178995321802519,0.02052136704497217,20
+gpc_4d_plus_early_p10,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,balanced_accuracy,0.9055125151495014,0.024732542279292093,20
+gpc_4d_plus_early_p10,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,keyhole_recall,0.8676373235583762,0.03983172141407219,20
+gpc_4d_plus_early_p10,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,conduction_recall,0.9433877067406268,0.016239031075063283,20
+gpc_4d_plus_early_p10,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,false_negative,4.95,1.4680814547887788,20
+gpc_4d_plus_early_p10,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,false_positive,4.2,1.2396943596157717,20
+gpc_4d_plus_early_p10,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p10,brier_score,0.07435386265832429,0.005536936479000976,20
+gpc_4d_plus_early_p100,full,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,roc_auc,0.9912117346938777,0.002270317646248329,20
+gpc_4d_plus_early_p100,full,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,pr_auc,0.9724363954057452,0.004734951246143782,20
+gpc_4d_plus_early_p100,full,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,accuracy,0.9737142857142859,0.006593946382377006,20
+gpc_4d_plus_early_p100,full,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,balanced_accuracy,0.9570535714285715,0.01185181679003226,20
+gpc_4d_plus_early_p100,full,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,keyhole_recall,0.9292857142857143,0.02147863825249463,20
+gpc_4d_plus_early_p100,full,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,conduction_recall,0.9848214285714288,0.004316151316994406,20
+gpc_4d_plus_early_p100,full,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,false_negative,4.95,1.5035046776746235,20
+gpc_4d_plus_early_p100,full,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,false_positive,4.25,1.2085223687584246,20
+gpc_4d_plus_early_p100,full,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,brier_score,0.026119000161862072,0.0021750296450838784,20
+gpc_4d_plus_early_p100,q20,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,roc_auc,0.9324980074465643,0.011782423973522043,20
+gpc_4d_plus_early_p100,q20,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,pr_auc,0.8914268736912548,0.02388971180897456,20
+gpc_4d_plus_early_p100,q20,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,accuracy,0.8889355606460869,0.029224593449296097,20
+gpc_4d_plus_early_p100,q20,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,balanced_accuracy,0.8829574466311179,0.03249816771435029,20
+gpc_4d_plus_early_p100,q20,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,keyhole_recall,0.8554768360347476,0.05125140366696391,20
+gpc_4d_plus_early_p100,q20,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,conduction_recall,0.9104380572274884,0.024835550749511305,20
+gpc_4d_plus_early_p100,q20,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,false_negative,4.35,1.5312533566021214,20
+gpc_4d_plus_early_p100,q20,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,false_positive,4.15,1.1367080817685318,20
+gpc_4d_plus_early_p100,q20,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,brier_score,0.09887828843884634,0.007582999913238865,20
+gpc_4d_plus_early_p100,q30,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,roc_auc,0.9582973312797574,0.007144143327484565,20
+gpc_4d_plus_early_p100,q30,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,pr_auc,0.918228034946222,0.012577799679345142,20
+gpc_4d_plus_early_p100,q30,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,accuracy,0.9178915596059076,0.02074223153172823,20
+gpc_4d_plus_early_p100,q30,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,balanced_accuracy,0.9058279441329189,0.025260321759230285,20
+gpc_4d_plus_early_p100,q30,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,keyhole_recall,0.8689531130320605,0.041185676976369455,20
+gpc_4d_plus_early_p100,q30,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,conduction_recall,0.9427027752337775,0.01583397312206487,20
+gpc_4d_plus_early_p100,q30,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,false_negative,4.9,1.5183093090324964,20
+gpc_4d_plus_early_p100,q30,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,false_positive,4.25,1.2085223687584246,20
+gpc_4d_plus_early_p100,q30,full_trace_reference,P + VX + LS + ST + max_positive_delta_W_p100,brier_score,0.07434445691463144,0.005479522386005902,20
+gpc_4d_plus_early_p20,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,roc_auc,0.9912193877551022,0.0022700777586980277,20
+gpc_4d_plus_early_p20,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,pr_auc,0.9724486062608845,0.0047379040440407826,20
+gpc_4d_plus_early_p20,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,accuracy,0.9737142857142859,0.006593946382377006,20
+gpc_4d_plus_early_p20,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,balanced_accuracy,0.9570535714285715,0.01185181679003226,20
+gpc_4d_plus_early_p20,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,keyhole_recall,0.9292857142857143,0.02147863825249463,20
+gpc_4d_plus_early_p20,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,conduction_recall,0.9848214285714288,0.004316151316994406,20
+gpc_4d_plus_early_p20,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,false_negative,4.95,1.5035046776746235,20
+gpc_4d_plus_early_p20,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,false_positive,4.25,1.2085223687584246,20
+gpc_4d_plus_early_p20,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,brier_score,0.026117974560188356,0.002178691818066882,20
+gpc_4d_plus_early_p20,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,roc_auc,0.9325714417115746,0.011753790759610774,20
+gpc_4d_plus_early_p20,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,pr_auc,0.8914746761154759,0.02388689482556963,20
+gpc_4d_plus_early_p20,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,accuracy,0.8889355606460869,0.029224593449296097,20
+gpc_4d_plus_early_p20,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,balanced_accuracy,0.8829574466311179,0.03249816771435029,20
+gpc_4d_plus_early_p20,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,keyhole_recall,0.8554768360347476,0.05125140366696391,20
+gpc_4d_plus_early_p20,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,conduction_recall,0.9104380572274884,0.024835550749511305,20
+gpc_4d_plus_early_p20,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,false_negative,4.35,1.5312533566021214,20
+gpc_4d_plus_early_p20,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,false_positive,4.15,1.1367080817685318,20
+gpc_4d_plus_early_p20,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,brier_score,0.09887445138372553,0.007590192776861221,20
+gpc_4d_plus_early_p20,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,roc_auc,0.9583336307371095,0.007141448300912068,20
+gpc_4d_plus_early_p20,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,pr_auc,0.918260893562414,0.012580437062768044,20
+gpc_4d_plus_early_p20,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,accuracy,0.9178915596059076,0.02074223153172823,20
+gpc_4d_plus_early_p20,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,balanced_accuracy,0.9058279441329189,0.025260321759230285,20
+gpc_4d_plus_early_p20,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,keyhole_recall,0.8689531130320605,0.041185676976369455,20
+gpc_4d_plus_early_p20,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,conduction_recall,0.9427027752337775,0.01583397312206487,20
+gpc_4d_plus_early_p20,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,false_negative,4.9,1.5183093090324964,20
+gpc_4d_plus_early_p20,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,false_positive,4.25,1.2085223687584246,20
+gpc_4d_plus_early_p20,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p20,brier_score,0.07434221055809287,0.005486300607656545,20
+gpc_4d_plus_early_p40,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,roc_auc,0.9912117346938777,0.002270317646248329,20
+gpc_4d_plus_early_p40,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,pr_auc,0.9724363954057452,0.004734951246143782,20
+gpc_4d_plus_early_p40,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,accuracy,0.9737142857142859,0.006593946382377006,20
+gpc_4d_plus_early_p40,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,balanced_accuracy,0.9570535714285715,0.01185181679003226,20
+gpc_4d_plus_early_p40,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,keyhole_recall,0.9292857142857143,0.02147863825249463,20
+gpc_4d_plus_early_p40,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,conduction_recall,0.9848214285714288,0.004316151316994406,20
+gpc_4d_plus_early_p40,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,false_negative,4.95,1.5035046776746235,20
+gpc_4d_plus_early_p40,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,false_positive,4.25,1.2085223687584246,20
+gpc_4d_plus_early_p40,full,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,brier_score,0.026119000161862072,0.0021750296450838784,20
+gpc_4d_plus_early_p40,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,roc_auc,0.9324980074465643,0.011782423973522043,20
+gpc_4d_plus_early_p40,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,pr_auc,0.8914268736912548,0.02388971180897456,20
+gpc_4d_plus_early_p40,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,accuracy,0.8889355606460869,0.029224593449296097,20
+gpc_4d_plus_early_p40,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,balanced_accuracy,0.8829574466311179,0.03249816771435029,20
+gpc_4d_plus_early_p40,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,keyhole_recall,0.8554768360347476,0.05125140366696391,20
+gpc_4d_plus_early_p40,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,conduction_recall,0.9104380572274884,0.024835550749511305,20
+gpc_4d_plus_early_p40,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,false_negative,4.35,1.5312533566021214,20
+gpc_4d_plus_early_p40,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,false_positive,4.15,1.1367080817685318,20
+gpc_4d_plus_early_p40,q20,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,brier_score,0.09887828843884634,0.007582999913238865,20
+gpc_4d_plus_early_p40,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,roc_auc,0.9582973312797574,0.007144143327484565,20
+gpc_4d_plus_early_p40,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,pr_auc,0.918228034946222,0.012577799679345142,20
+gpc_4d_plus_early_p40,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,accuracy,0.9178915596059076,0.02074223153172823,20
+gpc_4d_plus_early_p40,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,balanced_accuracy,0.9058279441329189,0.025260321759230285,20
+gpc_4d_plus_early_p40,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,keyhole_recall,0.8689531130320605,0.041185676976369455,20
+gpc_4d_plus_early_p40,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,conduction_recall,0.9427027752337775,0.01583397312206487,20
+gpc_4d_plus_early_p40,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,false_negative,4.9,1.5183093090324964,20
+gpc_4d_plus_early_p40,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,false_positive,4.25,1.2085223687584246,20
+gpc_4d_plus_early_p40,q30,early_prefix,P + VX + LS + ST + max_positive_delta_W_p40,brier_score,0.07434445691463144,0.005479522386005902,20

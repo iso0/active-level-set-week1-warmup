@@ -1,0 +1,13 @@
+claim,status,guardrail
+"PRIMARY — watching only the opening 5% of the trace improves ranking over [P, VX, LS, ST]",SUPPORTED,q20 PR-AUC 0.8769 -> 0.8922; median observed window 68 µs; Holm over six metrics
+PRIMARY — the same 5% prefix improves hard classification on q20,NOT SUPPORTED,"q20 balanced accuracy / accuracy / Keyhole recall, read separately from the ranking metrics"
+The rest of the trace adds nothing beyond the opening 5% (equivalence within ±0.005),QUALIFIED,"5/6 q20 metrics have their whole 95% interval inside ±0.005; predeclared margin, about a third of the Phase 2.1R gain"
+An even shorter look (2% of the trace) is already enough for the ranking gain,SUPPORTED,median observed window 27 µs; q20 PR-AUC gain +0.0085
+Watching longer keeps improving the model,NOT SUPPORTED,q20 PR-AUC gain across prefixes: +0.0085 / +0.0153 / +0.0145 / +0.0146 / +0.0145 / +0.0145
+The opening prefix already contains the full-trace value of the feature,SUPPORTED,"at the 5% prefix, 95.4% of simulations already have exactly the full-trace maximum"
+A simple leak-free threshold on the early feature beats chance on q20,SUPPORTED,q20 balanced accuracy 0.564 ± 0.025; on the full held-out set 0.624
+Phase 2.1R's shared models are reproduced exactly by this pipeline,SUPPORTED,phase2_1r_reproduction_gate.csv: the 4D baseline and the 100% prefix both match Phase 2.1R to <1e-9 on every metric and region
+No prefix feature uses a later analysis point,SUPPORTED,prefix_no_future_audit.csv independently recomputes every prefix feature and checks the latest analysis point consulted
+This is an in-process monitoring result,NOT SUPPORTED,"retrospective prefix analysis of SPH monitor traces; no camera, no sensor model, no prospective experiment, and the window is tens of microseconds"
+This changes the active-learning acquisition rule,NOT SUPPORTED,predictive feature-value study on the frozen folds; the A0 path is untouched
+Results generalise to simulations with no usable width trace,NOT SUPPORTED,every model is trained and scored only on the 350 usable simulations
