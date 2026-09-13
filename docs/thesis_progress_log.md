@@ -1009,3 +1009,12 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
   all required analysis validations pass, and the deterministic 3,100-member
   H=320 checkpoint bundle records per-member SHA-256 values plus its explicit
   dependency on the pinned frozen H=160 archive.
+
+## Week 9 Phase 1.20 — M3 evaluation with sequential G3-margin acquisition (2026-09-14)
+
+- Reused exact Phase 1.12 G3 and Phase 1.13/1.14 M3, original A0/P1 paths, all 100 frozen grouped splits and shared B16 designs. Verified isotropic Week 8.5 selector differs from ARD G3.
+- Completed 100 live P2 trajectories through B80. All 24 validation gates and five focused tests pass; audited 6,400 choices against 1,769,600 candidate probabilities. All 100 complete checkpoints resume without refitting.
+- Primary q20 balanced-accuracy AULC B16–B40: P2−P1 = −0.002560; 95% repeat-block interval [−0.010570, +0.005446]; 9/20 positive repeats. Full B16–B80: −0.007014 [−0.011681, −0.002494]. Early P2−P0: −0.005724 [−0.012324, +0.000581].
+- Decision: G3_SELECTOR_SMALL_OR_UNRESOLVED. Retain M3-margin; the early result does not support replacement. This is an offline finite-pool acquisition comparison, not prospective savings or G3 predictive superiority. Historical headline AULCs used accuracy; this phase's primary endpoint uses balanced accuracy.
+- No model fallbacks occurred; 525/6,500 M3 fits did not declare optimizer convergence, recorded as a numerical limitation of the unchanged evaluator.
+- Four figures visually inspected and the ten-code-cell teaching notebook executed. Reports, compact tables, candidate audit and exact source/input provenance are under outputs/week9_phase1_20_m3_g3_margin_acquisition.

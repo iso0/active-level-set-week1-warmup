@@ -1,0 +1,21 @@
+{
+  "G3_budget": 16,
+  "G3_max_probability_error": 1.1368683772161603e-13,
+  "M3_budget": 24,
+  "M3_max_probability_error": 5.685243942288309e-13,
+  "checks": {
+    "gate10_G3_prediction_parity": true,
+    "gate11_M3_prediction_and_path_parity": true,
+    "gate1_population": true,
+    "gate2_splits": true,
+    "gate3_A0": true,
+    "gate4_P1": true,
+    "gate5_initial": true,
+    "split_sizes_and_group_protection": true,
+    "stored_validation_week9_phase1_12_gpc_kernel_adequacy": true,
+    "stored_validation_week9_phase1_13_fixed_physics_ard_discrepancy": true,
+    "stored_validation_week9_phase1_14_m3_margin_acquisition": true
+  },
+  "parity_run": "w85__r01_f01",
+  "status": "PASS"
+}

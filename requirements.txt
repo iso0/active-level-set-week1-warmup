@@ -10,3 +10,4 @@ pillow>=11,<13
 pyarrow>=25,<26
 scipy>=1.17,<2
 scikit-learn>=1.7,<2
+tabulate>=0.9,<1

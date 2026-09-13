@@ -1,0 +1,3 @@
+model,fit_count,fallback_count,optimizer_converged_fraction,optimized_primary_fraction,any_length_bound_fraction
+G3,6400,0,,1.0,0.85171875
+M3,6500,0,0.9192307692307692,,0.6452307692307693

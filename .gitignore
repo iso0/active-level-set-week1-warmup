@@ -70,3 +70,7 @@ outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/
 # Local raw research data
 /data/raw/
 /.cache/external_masinelli/
+
+# Phase 1.20 restart caches; compact audited tables are published.
+outputs/week9_phase1_20_m3_g3_margin_acquisition/checkpoints/
+outputs/week9_phase1_20_m3_g3_margin_acquisition/smoke/

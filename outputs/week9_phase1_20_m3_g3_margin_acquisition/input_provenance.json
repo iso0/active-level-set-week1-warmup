@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "frozen_split_manifest_exact": true,
+    "gate3_P0_exact_original_Week85": true,
+    "gate4_P1_all_training_only": true
+  },
+  "environment": {
+    "executable": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Scripts\\python.exe",
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0"
+  },
+  "inputs": [
+    {
+      "path": "outputs\\week8_5_frozen_confirmation\\split_manifest.csv",
+      "sha256": "72d6e9d94058143c2a98d2e7c1370102780492d4d9d97c2037d57a891465c549"
+    },
+    {
+      "path": "outputs\\week8_5_frozen_confirmation\\initial_design_manifest.csv",
+      "sha256": "ff2a7f60b1b8a09fae2fe68ca137786c10cd02d995c6a0838ce2d3ae9c5d560c"
+    },
+    {
+      "path": "outputs\\week8_5_frozen_confirmation\\week8_5_checkpoint_bundle.tar.gz",
+      "sha256": "1004fc299e00db6f1b2b89e4407f5ac8b2c4815d1169bcaad43dacdebacf72a9"
+    },
+    {
+      "path": "outputs\\week9_phase1_8_model_path_decomposition\\tables\\query_paths.csv.gz",
+      "sha256": "bb685076d755066f8924446c9fd2884f9f76ca4da975c316cada08a2baf9f9d6"
+    },
+    {
+      "path": "outputs\\week9_phase1_14_m3_margin_acquisition\\m3_margin_paths.csv.gz",
+      "sha256": "af2d87523c2f5f6179572cf58c68b1304ef051ba70170de059032747d777f068"
+    },
+    {
+      "path": "outputs\\week9_phase1_14_m3_margin_acquisition\\new_predictions.csv.gz",
+      "sha256": "ce80675aef2a34dc344e8b54eda55c9093d0cc4e4f572ad50cbad58d1898c510"
+    },
+    {
+      "path": "outputs\\week9_phase1_13_fixed_physics_ard_discrepancy\\new_predictions.csv.gz",
+      "sha256": "1f700b3a0bdc86dc393326d362dd50d904a4506119c586e4ac9374d8b7fcc92e"
+    }
+  ],
+  "status": "PASS"
+}
