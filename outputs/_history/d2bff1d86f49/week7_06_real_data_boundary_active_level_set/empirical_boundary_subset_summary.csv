@@ -1,0 +1,4 @@
+population,subset,requested_percent,row_count,keyhole_count,non_keyhole_count,maximum_distance,median_distance
+primary_common,global_q10,10,41,19,22,0.7520507368006173,0.609832824844942
+primary_common,global_q20,20,81,33,48,0.9084295906084319,0.7520507368006173
+primary_common,global_q30,30,122,40,82,1.1467127605430085,0.8284612492045177

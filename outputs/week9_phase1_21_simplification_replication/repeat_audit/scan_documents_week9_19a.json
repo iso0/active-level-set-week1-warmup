@@ -1,0 +1,33 @@
+{
+  "root": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit",
+  "tag": "documents_week9_19a",
+  "files_scanned": 5073,
+  "files_with_run_ids": 776,
+  "repeats_found": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "max_repeat": 20,
+  "files_with_repeat_above_20": [],
+  "files_with_repeat_above_60": [],
+  "errors": [],
+  "seconds": 307.0
+}

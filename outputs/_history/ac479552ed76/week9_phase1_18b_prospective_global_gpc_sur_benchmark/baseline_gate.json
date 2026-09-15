@@ -1,0 +1,14 @@
+{
+  "conduction": 332,
+  "historical_changes": [],
+  "initial_design_matches": 100,
+  "keyholes": 73,
+  "outer_runs": 100,
+  "p0_complete_paths": 100,
+  "p0_paths_length_80": 100,
+  "population": 405,
+  "published_P0_q20_AULC": 0.844623161764706,
+  "repeat_blocks": 20,
+  "start_sha": "1e34b4759037d5f3d107781791524853a406a526",
+  "status": "PASS"
+}

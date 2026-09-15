@@ -1,0 +1,215 @@
+{
+  "label_rows": 65472,
+  "label_counts": {
+    "Initial Emptiness": 3275,
+    "Forming Phase": 10326,
+    "Conduction": 43881,
+    "Screenshot Bug": 7469,
+    "Keyhole": 521
+  },
+  "keyhole_positive_simulations": 9,
+  "keyhole_negative_simulations": 232,
+  "mixed_conduction_keyhole_simulations": 8,
+  "label_alignment": {
+    "exact_frames": 65472,
+    "ambiguous_frames": 0
+  },
+  "coverage": {
+    "reaches_85pct": 136,
+    "reaches_90pct": 130,
+    "reaches_95pct": 121,
+    "reaches_100pct": 113
+  },
+  "event_positions": {
+    "global_max_depth_position_s": {
+      "median": 0.5108259745136448,
+      "q25": 0.3974449434653235,
+      "q75": 0.6477089365073516
+    },
+    "persistent_max_depth_position_s": {
+      "median": 0.5339761622760526,
+      "q25": 0.4300933990111131,
+      "q75": 0.6635303421161417
+    },
+    "global_max_ratio_position_s": {
+      "median": 0.5062961809571401,
+      "q25": 0.35656372488975896,
+      "q75": 0.6763010112387028
+    },
+    "persistent_max_ratio_position_s": {
+      "median": 0.5050139914352958,
+      "q25": 0.3584147985062458,
+      "q75": 0.6346570634111044
+    }
+  },
+  "simulation_metrics": {
+    "G0": {
+      "roc_auc": 0.9674329501915708,
+      "roc_auc_ci_low": 0.921855921855922,
+      "roc_auc_ci_high": 0.9957810339325606,
+      "pr_auc": 0.6775510204081634,
+      "pr_auc_ci_low": 0.365077922077922,
+      "pr_auc_ci_high": 0.9166666666666666
+    },
+    "G1": {
+      "roc_auc": 1.0,
+      "roc_auc_ci_low": 1.0,
+      "roc_auc_ci_high": 1.0,
+      "pr_auc": 1.0,
+      "pr_auc_ci_low": 1.0,
+      "pr_auc_ci_high": 1.0
+    },
+    "G2": {
+      "roc_auc": 0.9754689754689756,
+      "roc_auc_ci_low": 0.9444444444444444,
+      "roc_auc_ci_high": 1.0,
+      "pr_auc": 0.7627740751473002,
+      "pr_auc_ci_low": 0.466599537037037,
+      "pr_auc_ci_high": 1.0
+    },
+    "G3": {
+      "roc_auc": 0.9711399711399712,
+      "roc_auc_ci_low": 0.9350649350649352,
+      "roc_auc_ci_high": 1.0,
+      "pr_auc": 0.761702041395528,
+      "pr_auc_ci_low": 0.4642787729126739,
+      "pr_auc_ci_high": 1.0
+    },
+    "R0": {
+      "roc_auc": 0.986111111111111,
+      "roc_auc_ci_low": 0.967911877394636,
+      "roc_auc_ci_high": 0.997872340425532,
+      "pr_auc": 0.7703010497128144,
+      "pr_auc_ci_low": 0.4876991283173348,
+      "pr_auc_ci_high": 0.9558271961956172
+    },
+    "R1": {
+      "roc_auc": 1.0,
+      "roc_auc_ci_low": 1.0,
+      "roc_auc_ci_high": 1.0,
+      "pr_auc": 1.0,
+      "pr_auc_ci_low": 1.0,
+      "pr_auc_ci_high": 1.0
+    },
+    "R2": {
+      "roc_auc": 0.977873977873978,
+      "roc_auc_ci_low": 0.942885648012858,
+      "roc_auc_ci_high": 1.0,
+      "pr_auc": 0.7971218896915491,
+      "pr_auc_ci_low": 0.5112343922870238,
+      "pr_auc_ci_high": 1.0
+    },
+    "R3": {
+      "roc_auc": 0.9692159692159692,
+      "roc_auc_ci_low": 0.9254314577631056,
+      "roc_auc_ci_high": 1.0,
+      "pr_auc": 0.7710018774534904,
+      "pr_auc_ci_low": 0.477917796489225,
+      "pr_auc_ci_high": 1.0
+    }
+  },
+  "frame_metrics": {
+    "instantaneous_depth": {
+      "roc_auc": 0.9824179291866102,
+      "roc_auc_ci_low": 0.9696014046669006,
+      "roc_auc_ci_high": 0.99947652220726,
+      "pr_auc": 0.7628669968439529,
+      "pr_auc_ci_low": 0.6223317325115204,
+      "pr_auc_ci_high": 0.900135993957519,
+      "prevalence": 0.0117342342342342
+    },
+    "instantaneous_width_inverse": {
+      "roc_auc": 0.2715398334776769,
+      "roc_auc_ci_low": 0.1268767155706882,
+      "roc_auc_ci_high": 0.3540183171629905,
+      "pr_auc": 0.0075975185041171,
+      "pr_auc_ci_low": 0.0016821547935251,
+      "pr_auc_ci_high": 0.0164492711424827,
+      "prevalence": 0.0117342342342342
+    },
+    "instantaneous_aspect_ratio": {
+      "roc_auc": 0.983113619842998,
+      "roc_auc_ci_low": 0.96259064078331,
+      "roc_auc_ci_high": 0.9991118222475052,
+      "pr_auc": 0.7624419650864768,
+      "pr_auc_ci_low": 0.5297313958406449,
+      "pr_auc_ci_high": 0.9183498501777648,
+      "prevalence": 0.0118014814143656
+    },
+    "instantaneous_depth_over_LS": {
+      "roc_auc": 0.9945108164535004,
+      "roc_auc_ci_low": 0.9879978895187378,
+      "roc_auc_ci_high": 0.9995245575904846,
+      "pr_auc": 0.8059187571229659,
+      "pr_auc_ci_low": 0.5827539056539536,
+      "pr_auc_ci_high": 0.9317681193351744,
+      "prevalence": 0.0117342342342342
+    },
+    "local_rolling_depth_50um": {
+      "roc_auc": 0.9847096766853743,
+      "roc_auc_ci_low": 0.9741401344537736,
+      "roc_auc_ci_high": 0.9954692885279656,
+      "pr_auc": 0.6926909551850383,
+      "pr_auc_ci_low": 0.4238357342779636,
+      "pr_auc_ci_high": 0.8130804866552352,
+      "prevalence": 0.011873290793072
+    },
+    "local_rolling_aspect_ratio_50um": {
+      "roc_auc": 0.9849535673665724,
+      "roc_auc_ci_low": 0.9677645981311798,
+      "roc_auc_ci_high": 0.9946883499622344,
+      "pr_auc": 0.7094632906523842,
+      "pr_auc_ci_low": 0.3295155152678489,
+      "pr_auc_ci_high": 0.8564083606004714,
+      "prevalence": 0.011873290793072
+    }
+  },
+  "recommendation": {
+    "geometry_target": "retain T0",
+    "regime_target": "provisional R3 persistent 50 um depth/width",
+    "companion": "G3 persistent 50 um depth",
+    "output_design": "two outputs until independent relabelling"
+  },
+  "presentation_ready_figure_count": 18,
+  "representative_simulations": [
+    {
+      "case_id": "C1",
+      "simulation_id": "sim_00157"
+    },
+    {
+      "case_id": "C2",
+      "simulation_id": "sim_00137"
+    },
+    {
+      "case_id": "C3",
+      "simulation_id": "sim_00222"
+    },
+    {
+      "case_id": "C4",
+      "simulation_id": "sim_00036"
+    },
+    {
+      "case_id": "C5",
+      "simulation_id": "sim_00214"
+    },
+    {
+      "case_id": "C6",
+      "simulation_id": "sim_00038"
+    }
+  ],
+  "actual_frame_files": [
+    "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\data\\raw\\huggingface\\sph_dataset\\final_data_processed\\sim_00222\\frames\\side\\frame_00155.png",
+    "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\data\\raw\\huggingface\\sph_dataset\\final_data_processed\\sim_00222\\frames\\side\\frame_00165.png",
+    "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\data\\raw\\huggingface\\sph_dataset\\final_data_processed\\sim_00222\\frames\\side\\frame_00166.png"
+  ],
+  "validation": {
+    "pass_count": 59,
+    "total_count": 59
+  },
+  "requirement_checklist": {
+    "pass_count": 150,
+    "total_count": 150
+  },
+  "runtime_wall_seconds": 32.72756299993489,
+  "exploratory_full_data_ratio_threshold": 0.4562141579230759
+}

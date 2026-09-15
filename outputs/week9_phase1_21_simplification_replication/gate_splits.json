@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "frozen_100_runs_bit_identical": true,
+  "phase1_20_repeats_1_60_bit_identical": true,
+  "generator": "w85.build_splits(population, repeats=120, folds=5)",
+  "replication_repeats": [
+    61,
+    120
+  ],
+  "replication_runs": 300,
+  "runs_whose_frozen_seed_lacks_both_classes": [],
+  "note": "the seed-validity check reads only the labels of the 16 frozen seed points, which every policy queries anyway; no model is fitted and no held-out label is read"
+}

@@ -1,0 +1,2 @@
+decision,reason,preregistered_rule_applied_mechanically,decision_rule_sha256,manual_has_keyhole_remains_ground_truth,maximum_depth_remains_physical_side_information,causal_claim,universal_physical_threshold_claim,hybrid_success_json
+BINARY ACQUISITION PRIMARY,Neither Hybrid met the robust rule and Binary remained no worse on the preregistered boundary hierarchy under at least two definitions.,True,a3581cb61c4b2f95aa71838fc9c199ca8f992fef7de67104970767db0af9643f,True,True,False,False,"{""hybrid_binary_gate20_max_depth_straddle"": false, ""hybrid_equal_rank_fusion"": false}"

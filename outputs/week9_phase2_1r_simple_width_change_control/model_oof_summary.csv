@@ -1,0 +1,433 @@
+model,subset,role,feature_count,features,metric,mean,sd_across_repeats,repeat_blocks
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,roc_auc,0.9909897959183673,0.003168302700537927,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,pr_auc,0.9713138484933417,0.006364694088223614,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,accuracy,0.9725714285714286,0.006036053511844614,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,balanced_accuracy,0.9539285714285717,0.01119833883645365,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,keyhole_recall,0.9228571428571428,0.020934145630429897,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,conduction_recall,0.9850000000000001,0.004273164582972305,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,false_negative,5.4,1.465390194130093,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,false_positive,4.2,1.1964860832322377,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,brier_score,0.027520030577843024,0.0026124983157891878,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,roc_auc,0.9299431437120222,0.014204284619409997,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,pr_auc,0.8922615707856858,0.024275898064372796,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,accuracy,0.8849938172306594,0.025452876330059798,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,balanced_accuracy,0.8777207475745834,0.027512761619230244,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,keyhole_recall,0.8440763712325866,0.0444320968310754,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,conduction_recall,0.911365123916581,0.02416746984150994,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,false_negative,4.7,1.3803127029389886,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,false_positive,4.1,1.0711528467275955,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,brier_score,0.10200729740080147,0.009276157603095721,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,roc_auc,0.9552481738435235,0.009557890009104274,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,pr_auc,0.9152299482233449,0.01693675271830642,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,accuracy,0.9138897958745021,0.018980344031865902,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,balanced_accuracy,0.8994866407087025,0.02361880332586276,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,keyhole_recall,0.8555405101457734,0.040192869294172505,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,conduction_recall,0.9434327712716323,0.01540802625133304,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,false_negative,5.4,1.465390194130093,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,false_positive,4.2,1.1964860832322377,20
+abl_shape3_plus_robust_early_dWdt_20_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_20_um_per_ms,brier_score,0.0777633183299576,0.0063936325393151635,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,roc_auc,0.9925841836734695,0.002127024201505744,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,pr_auc,0.9745109349207013,0.004555346702653597,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,accuracy,0.9721428571428572,0.006140146280668955,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,balanced_accuracy,0.9528571428571428,0.012803773946867856,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,keyhole_recall,0.9207142857142857,0.02473272813563335,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,conduction_recall,0.9850000000000001,0.003590176356785998,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,false_negative,5.55,1.7312909694943341,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,false_positive,4.2,1.0052493799000692,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,brier_score,0.026162401219584526,0.0021453493386510403,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,roc_auc,0.9319037046697357,0.01147707162174787,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,pr_auc,0.8976951575332588,0.016584639060521662,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,accuracy,0.8817043435464488,0.02484690267356945,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,balanced_accuracy,0.8740693135214264,0.027133435166581846,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,keyhole_recall,0.8377255647809736,0.04419325581721635,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,conduction_recall,0.9104130622618796,0.02047409479340367,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,false_negative,4.9,1.4104870379448817,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,false_positive,4.15,0.9333020044867297,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,brier_score,0.1007995431534104,0.007986890083790147,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,roc_auc,0.9589465105252775,0.007350460306560979,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,pr_auc,0.9219402918073587,0.012687594152616135,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,accuracy,0.9134149156830208,0.018390561833447873,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,balanced_accuracy,0.8986344261459618,0.023946097428852103,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,keyhole_recall,0.8539004085056717,0.04222603132324593,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,conduction_recall,0.9433684437862521,0.013029281390978725,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,false_negative,5.45,1.5035046776746235,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,false_positive,4.2,1.0052493799000692,20
+abl_shape3_plus_robust_early_dWdt_40_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_early_dWdt_40_um_per_ms,brier_score,0.07545660832637925,0.005230106218361877,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,roc_auc,0.9908826530612245,0.002400049366714997,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,pr_auc,0.9729435302998939,0.004988384958217895,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,accuracy,0.9727142857142859,0.006966237436176411,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,balanced_accuracy,0.9561607142857144,0.012159362400428855,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,keyhole_recall,0.9285714285714286,0.021739597435790934,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,conduction_recall,0.98375,0.004703193832218267,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,false_negative,5.0,1.5217718205053643,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,false_positive,4.55,1.3168942730211068,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,brier_score,0.02625321179586204,0.00238949831952214,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,roc_auc,0.9309214427960233,0.012933633602859344,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,pr_auc,0.8968009165663849,0.020298310761966767,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,accuracy,0.8843874416242837,0.030526919881104175,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,balanced_accuracy,0.8788314471108425,0.03345882117514443,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,keyhole_recall,0.8537493378886593,0.05243224634276973,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,conduction_recall,0.9039135563330258,0.025316145640959672,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,false_negative,4.4,1.6026294183720637,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,false_positive,4.45,1.145931016569864,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,brier_score,0.10043791610871822,0.008789903226778799,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,roc_auc,0.9573247265275926,0.008217679440396086,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,pr_auc,0.9211689164654955,0.01391402981140095,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,accuracy,0.914368403360853,0.021748012899753415,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,balanced_accuracy,0.9023981767386596,0.026427435040453577,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,keyhole_recall,0.8660684976474451,0.04224029449379322,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,conduction_recall,0.9387278558298746,0.016883949776262622,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,false_negative,5.0,1.5217718205053643,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,false_positive,4.55,1.3168942730211068,20
+abl_shape3_plus_robust_max_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms,brier_score,0.07525228604633685,0.006203609139010517,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,roc_auc,0.9925076530612247,0.0023344290779767746,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,pr_auc,0.974596018453405,0.004932858409132845,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,accuracy,0.9732857142857142,0.005734925132277212,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,balanced_accuracy,0.9565178571428572,0.010889466993709547,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,keyhole_recall,0.9285714285714285,0.020203050891044207,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,conduction_recall,0.9844642857142857,0.003528881907743194,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,false_negative,5.0,1.4142135623730951,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,false_positive,4.35,0.9880869341680844,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,brier_score,0.025949819135336748,0.0022916124339453577,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,roc_auc,0.9331881428248158,0.012542247052789439,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,pr_auc,0.8987398166888578,0.019178291485797635,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,accuracy,0.8856440797230271,0.024186472425274243,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,balanced_accuracy,0.8793884780559027,0.026442990558651985,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,keyhole_recall,0.8506314059272209,0.04325406784599262,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,conduction_recall,0.9081455501845849,0.019410908111241437,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,false_negative,4.5,1.3572417850765923,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,false_positive,4.25,0.8506963092234007,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,brier_score,0.09958674288535319,0.008624868921017556,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,roc_auc,0.9594850149633855,0.008010009207691487,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,pr_auc,0.9226004533557131,0.013225934357098524,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,accuracy,0.9161421943769007,0.018005582109079057,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,balanced_accuracy,0.903737120946025,0.022924854638460456,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,keyhole_recall,0.8661060351849826,0.039136565823895596,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,conduction_recall,0.9413682067070676,0.01269101014583339,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,false_negative,5.0,1.4142135623730951,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,false_positive,4.35,0.9880869341680844,20
+abl_shape3_plus_robust_median_positive_dWdt_um_per_ms,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_median_positive_dWdt_um_per_ms,brier_score,0.0746546709430393,0.005849010001372498,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,roc_auc,0.9919744897959182,0.002890092156831989,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,pr_auc,0.973289834062222,0.005660125108608589,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,accuracy,0.9715714285714286,0.006112092924201231,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,balanced_accuracy,0.9551785714285714,0.011956497858116722,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,keyhole_recall,0.9278571428571428,0.022456545937082024,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,conduction_recall,0.9824999999999999,0.0036458413252431795,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,false_negative,5.05,1.5719582155957414,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,false_positive,4.9,1.020835571068081,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,full,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,brier_score,0.026897106697173073,0.0023412387759758862,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,roc_auc,0.9325784276294063,0.01264222972898192,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,pr_auc,0.8976273973623006,0.021099814576279137,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,accuracy,0.877817476501687,0.025361238618323314,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,balanced_accuracy,0.8728492803110901,0.02845143902846125,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,keyhole_recall,0.8492417169871287,0.048719349450609684,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,conduction_recall,0.8964568436350516,0.019482683612984875,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,false_negative,4.55,1.538112308540638,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,false_positive,4.8,0.8944271909999159,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q20,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,brier_score,0.10072244015613332,0.008389343210679894,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,roc_auc,0.9588767488927005,0.008477890125955272,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,pr_auc,0.9217648433740064,0.014121247141625153,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,accuracy,0.9107686773274987,0.01916270518858058,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,balanced_accuracy,0.8994011818443143,0.024638931140605252,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,keyhole_recall,0.8648239839029314,0.04281817780902857,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,conduction_recall,0.933978379785698,0.012895341888290663,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,false_negative,5.05,1.5719582155957414,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,false_positive,4.9,1.020835571068081,20
+abl_shape3_plus_robust_time_of_max_dWdt_tau,q30,ablation,8,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_time_of_max_dWdt_tau,brier_score,0.07576956962213355,0.0057910675642246995,20
+gpc_4d,full,primary_baseline,4,P + VX + LS + ST,roc_auc,0.9912193877551021,0.0019517276109298125,20
+gpc_4d,full,primary_baseline,4,P + VX + LS + ST,pr_auc,0.9713558882560884,0.004396388096969287,20
+gpc_4d,full,primary_baseline,4,P + VX + LS + ST,accuracy,0.9729999999999999,0.005969849055408424,20
+gpc_4d,full,primary_baseline,4,P + VX + LS + ST,balanced_accuracy,0.953125,0.011066804151847033,20
+gpc_4d,full,primary_baseline,4,P + VX + LS + ST,keyhole_recall,0.9199999999999999,0.02093414563042992,20
+gpc_4d,full,primary_baseline,4,P + VX + LS + ST,conduction_recall,0.9862499999999998,0.004528671045606297,20
+gpc_4d,full,primary_baseline,4,P + VX + LS + ST,false_negative,5.6,1.465390194130093,20
+gpc_4d,full,primary_baseline,4,P + VX + LS + ST,false_positive,3.85,1.2680278927697548,20
+gpc_4d,full,primary_baseline,4,P + VX + LS + ST,brier_score,0.025195895039826978,0.0017553877215465215,20
+gpc_4d,q20,primary_baseline,4,P + VX + LS + ST,roc_auc,0.9244208695234087,0.010634693923471819,20
+gpc_4d,q20,primary_baseline,4,P + VX + LS + ST,pr_auc,0.8768877539689344,0.018830764966704574,20
+gpc_4d,q20,primary_baseline,4,P + VX + LS + ST,accuracy,0.8836368764000342,0.025073678706299864,20
+gpc_4d,q20,primary_baseline,4,P + VX + LS + ST,balanced_accuracy,0.8739049712137683,0.02714396861861649,20
+gpc_4d,q20,primary_baseline,4,P + VX + LS + ST,keyhole_recall,0.8288040613909636,0.041334196539549235,20
+gpc_4d,q20,primary_baseline,4,P + VX + LS + ST,conduction_recall,0.9190058810365735,0.02460469618381097,20
+gpc_4d,q20,primary_baseline,4,P + VX + LS + ST,false_negative,5.15,1.2258187382102497,20
+gpc_4d,q20,primary_baseline,4,P + VX + LS + ST,false_positive,3.75,1.118033988749895,20
+gpc_4d,q20,primary_baseline,4,P + VX + LS + ST,brier_score,0.10087624734584873,0.0069966781473993645,20
+gpc_4d,q30,primary_baseline,4,P + VX + LS + ST,roc_auc,0.95385112985122,0.007084291989920838,20
+gpc_4d,q30,primary_baseline,4,P + VX + LS + ST,pr_auc,0.908482595577726,0.012402822727004168,20
+gpc_4d,q30,primary_baseline,4,P + VX + LS + ST,accuracy,0.916145706179298,0.01746464343476103,20
+gpc_4d,q30,primary_baseline,4,P + VX + LS + ST,balanced_accuracy,0.9003298435352327,0.0216956071638496,20
+gpc_4d,q30,primary_baseline,4,P + VX + LS + ST,keyhole_recall,0.8525490571543205,0.0377223149125149,20
+gpc_4d,q30,primary_baseline,4,P + VX + LS + ST,conduction_recall,0.9481106299161455,0.016646078465784697,20
+gpc_4d,q30,primary_baseline,4,P + VX + LS + ST,false_negative,5.5,1.3178930553209385,20
+gpc_4d,q30,primary_baseline,4,P + VX + LS + ST,false_positive,3.85,1.2680278927697548,20
+gpc_4d,q30,primary_baseline,4,P + VX + LS + ST,brier_score,0.07502758887380992,0.004909337680044985,20
+gpc_4d_plus_max_delta_W,full,primary,5,P + VX + LS + ST + max_positive_delta_W,roc_auc,0.9912117346938777,0.002270317646248329,20
+gpc_4d_plus_max_delta_W,full,primary,5,P + VX + LS + ST + max_positive_delta_W,pr_auc,0.9724363954057452,0.004734951246143782,20
+gpc_4d_plus_max_delta_W,full,primary,5,P + VX + LS + ST + max_positive_delta_W,accuracy,0.9737142857142859,0.006593946382377006,20
+gpc_4d_plus_max_delta_W,full,primary,5,P + VX + LS + ST + max_positive_delta_W,balanced_accuracy,0.9570535714285715,0.01185181679003226,20
+gpc_4d_plus_max_delta_W,full,primary,5,P + VX + LS + ST + max_positive_delta_W,keyhole_recall,0.9292857142857143,0.02147863825249463,20
+gpc_4d_plus_max_delta_W,full,primary,5,P + VX + LS + ST + max_positive_delta_W,conduction_recall,0.9848214285714288,0.004316151316994406,20
+gpc_4d_plus_max_delta_W,full,primary,5,P + VX + LS + ST + max_positive_delta_W,false_negative,4.95,1.5035046776746235,20
+gpc_4d_plus_max_delta_W,full,primary,5,P + VX + LS + ST + max_positive_delta_W,false_positive,4.25,1.2085223687584246,20
+gpc_4d_plus_max_delta_W,full,primary,5,P + VX + LS + ST + max_positive_delta_W,brier_score,0.026119000161862072,0.0021750296450838784,20
+gpc_4d_plus_max_delta_W,q20,primary,5,P + VX + LS + ST + max_positive_delta_W,roc_auc,0.9324980074465643,0.011782423973522043,20
+gpc_4d_plus_max_delta_W,q20,primary,5,P + VX + LS + ST + max_positive_delta_W,pr_auc,0.8914268736912548,0.02388971180897456,20
+gpc_4d_plus_max_delta_W,q20,primary,5,P + VX + LS + ST + max_positive_delta_W,accuracy,0.8889355606460869,0.029224593449296097,20
+gpc_4d_plus_max_delta_W,q20,primary,5,P + VX + LS + ST + max_positive_delta_W,balanced_accuracy,0.8829574466311179,0.03249816771435029,20
+gpc_4d_plus_max_delta_W,q20,primary,5,P + VX + LS + ST + max_positive_delta_W,keyhole_recall,0.8554768360347476,0.05125140366696391,20
+gpc_4d_plus_max_delta_W,q20,primary,5,P + VX + LS + ST + max_positive_delta_W,conduction_recall,0.9104380572274884,0.024835550749511305,20
+gpc_4d_plus_max_delta_W,q20,primary,5,P + VX + LS + ST + max_positive_delta_W,false_negative,4.35,1.5312533566021214,20
+gpc_4d_plus_max_delta_W,q20,primary,5,P + VX + LS + ST + max_positive_delta_W,false_positive,4.15,1.1367080817685318,20
+gpc_4d_plus_max_delta_W,q20,primary,5,P + VX + LS + ST + max_positive_delta_W,brier_score,0.09887828843884634,0.007582999913238865,20
+gpc_4d_plus_max_delta_W,q30,primary,5,P + VX + LS + ST + max_positive_delta_W,roc_auc,0.9582973312797574,0.007144143327484565,20
+gpc_4d_plus_max_delta_W,q30,primary,5,P + VX + LS + ST + max_positive_delta_W,pr_auc,0.918228034946222,0.012577799679345142,20
+gpc_4d_plus_max_delta_W,q30,primary,5,P + VX + LS + ST + max_positive_delta_W,accuracy,0.9178915596059076,0.02074223153172823,20
+gpc_4d_plus_max_delta_W,q30,primary,5,P + VX + LS + ST + max_positive_delta_W,balanced_accuracy,0.9058279441329189,0.025260321759230285,20
+gpc_4d_plus_max_delta_W,q30,primary,5,P + VX + LS + ST + max_positive_delta_W,keyhole_recall,0.8689531130320605,0.041185676976369455,20
+gpc_4d_plus_max_delta_W,q30,primary,5,P + VX + LS + ST + max_positive_delta_W,conduction_recall,0.9427027752337775,0.01583397312206487,20
+gpc_4d_plus_max_delta_W,q30,primary,5,P + VX + LS + ST + max_positive_delta_W,false_negative,4.9,1.5183093090324964,20
+gpc_4d_plus_max_delta_W,q30,primary,5,P + VX + LS + ST + max_positive_delta_W,false_positive,4.25,1.2085223687584246,20
+gpc_4d_plus_max_delta_W,q30,primary,5,P + VX + LS + ST + max_positive_delta_W,brier_score,0.07434445691463144,0.005479522386005902,20
+gpc_4d_plus_max_delta_W_res101,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,roc_auc,0.9921530612244898,0.001993654855102323,20
+gpc_4d_plus_max_delta_W_res101,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,pr_auc,0.9746329504364188,0.004661794827423684,20
+gpc_4d_plus_max_delta_W_res101,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,accuracy,0.973857142857143,0.006305846093242746,20
+gpc_4d_plus_max_delta_W_res101,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,balanced_accuracy,0.9579464285714285,0.012445841320112297,20
+gpc_4d_plus_max_delta_W_res101,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,keyhole_recall,0.9314285714285713,0.023450933761946385,20
+gpc_4d_plus_max_delta_W_res101,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,conduction_recall,0.9844642857142858,0.0037142495660473823,20
+gpc_4d_plus_max_delta_W_res101,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,false_negative,4.8,1.6415653633362466,20
+gpc_4d_plus_max_delta_W_res101,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,false_positive,4.35,1.0399898784932575,20
+gpc_4d_plus_max_delta_W_res101,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,brier_score,0.024836677578051806,0.0022416795013018138,20
+gpc_4d_plus_max_delta_W_res101,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,roc_auc,0.9340427765618392,0.012582136907215822,20
+gpc_4d_plus_max_delta_W_res101,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,pr_auc,0.8975525246179347,0.01933511712792889,20
+gpc_4d_plus_max_delta_W_res101,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,accuracy,0.890181866497656,0.027334751744171357,20
+gpc_4d_plus_max_delta_W_res101,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,balanced_accuracy,0.8852357241951874,0.03063018184365559,20
+gpc_4d_plus_max_delta_W_res101,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,keyhole_recall,0.8620501118968166,0.05017649001487195,20
+gpc_4d_plus_max_delta_W_res101,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,conduction_recall,0.908421336493558,0.021529462684646946,20
+gpc_4d_plus_max_delta_W_res101,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,false_negative,4.15,1.5312533566021211,20
+gpc_4d_plus_max_delta_W_res101,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,false_positive,4.25,1.019545822516343,20
+gpc_4d_plus_max_delta_W_res101,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,brier_score,0.09710489199641098,0.009243648209425519,20
+gpc_4d_plus_max_delta_W_res101,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,roc_auc,0.9599565736914331,0.007399371785790303,20
+gpc_4d_plus_max_delta_W_res101,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,pr_auc,0.9229131578060292,0.011603822213785609,20
+gpc_4d_plus_max_delta_W_res101,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,accuracy,0.9188086230893429,0.018584942976659174,20
+gpc_4d_plus_max_delta_W_res101,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,balanced_accuracy,0.9077395351857319,0.023867511117691392,20
+gpc_4d_plus_max_delta_W_res101,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,keyhole_recall,0.8741749340433552,0.04243840894927387,20
+gpc_4d_plus_max_delta_W_res101,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,conduction_recall,0.9413041363281088,0.013669153873841279,20
+gpc_4d_plus_max_delta_W_res101,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,false_negative,4.7,1.5593520921743174,20
+gpc_4d_plus_max_delta_W_res101,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,false_positive,4.35,1.0399898784932575,20
+gpc_4d_plus_max_delta_W_res101,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res101,brier_score,0.07248664815975671,0.006222643206352908,20
+gpc_4d_plus_max_delta_W_res51,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,roc_auc,0.9920867346938775,0.0018582328808542526,20
+gpc_4d_plus_max_delta_W_res51,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,pr_auc,0.973333965740065,0.004333977249480044,20
+gpc_4d_plus_max_delta_W_res51,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,accuracy,0.9708571428571429,0.006190668977140729,20
+gpc_4d_plus_max_delta_W_res51,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,balanced_accuracy,0.9483035714285715,0.012673010535219272,20
+gpc_4d_plus_max_delta_W_res51,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,keyhole_recall,0.9107142857142856,0.02490583770684494,20
+gpc_4d_plus_max_delta_W_res51,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,conduction_recall,0.9858928571428572,0.004558222230577398,20
+gpc_4d_plus_max_delta_W_res51,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,false_negative,6.25,1.7434086394791457,20
+gpc_4d_plus_max_delta_W_res51,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,false_positive,3.95,1.2763022245616642,20
+gpc_4d_plus_max_delta_W_res51,full,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,brier_score,0.02587104408198928,0.002108419762408958,20
+gpc_4d_plus_max_delta_W_res51,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,roc_auc,0.9307712056299291,0.011259690842499202,20
+gpc_4d_plus_max_delta_W_res51,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,pr_auc,0.888745691902314,0.021681739527120953,20
+gpc_4d_plus_max_delta_W_res51,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,accuracy,0.8764240619503777,0.02534398928202922,20
+gpc_4d_plus_max_delta_W_res51,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,balanced_accuracy,0.8657791044231506,0.02829691345795075,20
+gpc_4d_plus_max_delta_W_res51,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,keyhole_recall,0.8157940535780497,0.05093382877312783,20
+gpc_4d_plus_max_delta_W_res51,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,conduction_recall,0.9157641552682521,0.02578370012897623,20
+gpc_4d_plus_max_delta_W_res51,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,false_negative,5.55,1.5719582155957412,20
+gpc_4d_plus_max_delta_W_res51,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,false_positive,3.9,1.1652874052533586,20
+gpc_4d_plus_max_delta_W_res51,q20,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,brier_score,0.10162174949127323,0.008186668903706592,20
+gpc_4d_plus_max_delta_W_res51,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,roc_auc,0.9581963415706207,0.006695434346467583,20
+gpc_4d_plus_max_delta_W_res51,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,pr_auc,0.9169921034398161,0.012282222273621983,20
+gpc_4d_plus_max_delta_W_res51,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,accuracy,0.9103138353474269,0.01786559753108469,20
+gpc_4d_plus_max_delta_W_res51,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,balanced_accuracy,0.8924563903166101,0.02388684703740385,20
+gpc_4d_plus_max_delta_W_res51,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,keyhole_recall,0.8381449769607663,0.04642816580565564,20
+gpc_4d_plus_max_delta_W_res51,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,conduction_recall,0.946767803672454,0.01669153001918581,20
+gpc_4d_plus_max_delta_W_res51,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,false_negative,6.05,1.700619082322051,20
+gpc_4d_plus_max_delta_W_res51,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,false_positive,3.95,1.2763022245616642,20
+gpc_4d_plus_max_delta_W_res51,q30,resolution,5,P + VX + LS + ST + max_positive_delta_W_res51,brier_score,0.07562777685129884,0.005584459316495393,20
+gpc_4d_plus_max_width_rate,full,primary,5,P + VX + LS + ST + max_positive_width_rate,roc_auc,0.9896836734693876,0.0020852835447015905,20
+gpc_4d_plus_max_width_rate,full,primary,5,P + VX + LS + ST + max_positive_width_rate,pr_auc,0.9686206221204288,0.005203647513940523,20
+gpc_4d_plus_max_width_rate,full,primary,5,P + VX + LS + ST + max_positive_width_rate,accuracy,0.9694285714285714,0.004825638651989009,20
+gpc_4d_plus_max_width_rate,full,primary,5,P + VX + LS + ST + max_positive_width_rate,balanced_accuracy,0.9522321428571429,0.010231526933659496,20
+gpc_4d_plus_max_width_rate,full,primary,5,P + VX + LS + ST + max_positive_width_rate,keyhole_recall,0.9235714285714286,0.02086991060440548,20
+gpc_4d_plus_max_width_rate,full,primary,5,P + VX + LS + ST + max_positive_width_rate,conduction_recall,0.9808928571428572,0.004221797815995082,20
+gpc_4d_plus_max_width_rate,full,primary,5,P + VX + LS + ST + max_positive_width_rate,false_negative,5.35,1.460893742308382,20
+gpc_4d_plus_max_width_rate,full,primary,5,P + VX + LS + ST + max_positive_width_rate,false_positive,5.35,1.1821033884786183,20
+gpc_4d_plus_max_width_rate,full,primary,5,P + VX + LS + ST + max_positive_width_rate,brier_score,0.02765938827330981,0.002595695328377046,20
+gpc_4d_plus_max_width_rate,q20,primary,5,P + VX + LS + ST + max_positive_width_rate,roc_auc,0.9240474415507544,0.011402022967655157,20
+gpc_4d_plus_max_width_rate,q20,primary,5,P + VX + LS + ST + max_positive_width_rate,pr_auc,0.8789363126606121,0.02761143838383935,20
+gpc_4d_plus_max_width_rate,q20,primary,5,P + VX + LS + ST + max_positive_width_rate,accuracy,0.869204527099264,0.025473849922262443,20
+gpc_4d_plus_max_width_rate,q20,primary,5,P + VX + LS + ST + max_positive_width_rate,balanced_accuracy,0.864594093880874,0.02858133018909133,20
+gpc_4d_plus_max_width_rate,q20,primary,5,P + VX + LS + ST + max_positive_width_rate,keyhole_recall,0.8424826195773081,0.04878278066354492,20
+gpc_4d_plus_max_width_rate,q20,primary,5,P + VX + LS + ST + max_positive_width_rate,conduction_recall,0.8867055681844402,0.02597323789026637,20
+gpc_4d_plus_max_width_rate,q20,primary,5,P + VX + LS + ST + max_positive_width_rate,false_negative,4.75,1.4823523268955432,20
+gpc_4d_plus_max_width_rate,q20,primary,5,P + VX + LS + ST + max_positive_width_rate,false_positive,5.25,1.164157703189193,20
+gpc_4d_plus_max_width_rate,q20,primary,5,P + VX + LS + ST + max_positive_width_rate,brier_score,0.10394359110694792,0.007170132104184465,20
+gpc_4d_plus_max_width_rate,q30,primary,5,P + VX + LS + ST + max_positive_width_rate,roc_auc,0.9529161379573241,0.006302280980388322,20
+gpc_4d_plus_max_width_rate,q30,primary,5,P + VX + LS + ST + max_positive_width_rate,pr_auc,0.908271806525064,0.013886236979356615,20
+gpc_4d_plus_max_width_rate,q30,primary,5,P + VX + LS + ST + max_positive_width_rate,accuracy,0.9044122720819054,0.015097179378883907,20
+gpc_4d_plus_max_width_rate,q30,primary,5,P + VX + LS + ST + max_positive_width_rate,balanced_accuracy,0.8928045656437869,0.01962099391069282,20
+gpc_4d_plus_max_width_rate,q30,primary,5,P + VX + LS + ST + max_positive_width_rate,keyhole_recall,0.857920876341929,0.039117111794954244,20
+gpc_4d_plus_max_width_rate,q30,primary,5,P + VX + LS + ST + max_positive_width_rate,conduction_recall,0.9276882549456449,0.015979524526690776,20
+gpc_4d_plus_max_width_rate,q30,primary,5,P + VX + LS + ST + max_positive_width_rate,false_negative,5.3,1.3803127029389888,20
+gpc_4d_plus_max_width_rate,q30,primary,5,P + VX + LS + ST + max_positive_width_rate,false_positive,5.35,1.1821033884786183,20
+gpc_4d_plus_max_width_rate,q30,primary,5,P + VX + LS + ST + max_positive_width_rate,brier_score,0.07758345012369842,0.004380888954688397,20
+gpc_4d_plus_old_full8,full,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,roc_auc,0.9901964285714288,0.002552914173552828,20
+gpc_4d_plus_old_full8,full,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,pr_auc,0.9692315529159776,0.006840183152990299,20
+gpc_4d_plus_old_full8,full,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,accuracy,0.969,0.007015404256710352,20
+gpc_4d_plus_old_full8,full,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,balanced_accuracy,0.9482142857142856,0.014072659386650215,20
+gpc_4d_plus_old_full8,full,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,keyhole_recall,0.9135714285714285,0.026816398465081468,20
+gpc_4d_plus_old_full8,full,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,conduction_recall,0.9828571428571429,0.004273164582972309,20
+gpc_4d_plus_old_full8,full,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,false_negative,6.05,1.8771478925557026,20
+gpc_4d_plus_old_full8,full,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,false_positive,4.8,1.1964860832322377,20
+gpc_4d_plus_old_full8,full,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,brier_score,0.02992583258154675,0.0025910057254575143,20
+gpc_4d_plus_old_full8,q20,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,roc_auc,0.9268217565598368,0.013045817194178912,20
+gpc_4d_plus_old_full8,q20,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,pr_auc,0.8921208870525226,0.02104942268253712,20
+gpc_4d_plus_old_full8,q20,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,accuracy,0.8699899614373298,0.027624966481987374,20
+gpc_4d_plus_old_full8,q20,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,balanced_accuracy,0.8625666819564881,0.030040308763783136,20
+gpc_4d_plus_old_full8,q20,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,keyhole_recall,0.8276338789130782,0.04987873921974517,20
+gpc_4d_plus_old_full8,q20,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,conduction_recall,0.8974994849998981,0.026358023020891578,20
+gpc_4d_plus_old_full8,q20,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,false_negative,5.2,1.5761378513048245,20
+gpc_4d_plus_old_full8,q20,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,false_positive,4.75,1.2085223687584246,20
+gpc_4d_plus_old_full8,q20,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,brier_score,0.1058581178251811,0.009120335772673278,20
+gpc_4d_plus_old_full8,q30,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,roc_auc,0.9533227649894916,0.008572333871771299,20
+gpc_4d_plus_old_full8,q30,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,pr_auc,0.914643098387903,0.015845431175856538,20
+gpc_4d_plus_old_full8,q30,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,accuracy,0.904047615313295,0.019721304220359354,20
+gpc_4d_plus_old_full8,q30,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,balanced_accuracy,0.8888252471802398,0.02476445693915975,20
+gpc_4d_plus_old_full8,q30,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,keyhole_recall,0.8423377831272569,0.043278647337899635,20
+gpc_4d_plus_old_full8,q30,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,conduction_recall,0.9353127112332233,0.015570232480576826,20
+gpc_4d_plus_old_full8,q30,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,false_negative,5.9,1.618966531951463,20
+gpc_4d_plus_old_full8,q30,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,false_positive,4.8,1.1964860832322377,20
+gpc_4d_plus_old_full8,q30,historical,12,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau + robust_max_positive_dWdt_um_per_ms + robust_median_positive_dWdt_um_per_ms + robust_early_dWdt_20_um_per_ms + robust_early_dWdt_40_um_per_ms + robust_time_of_max_dWdt_tau,brier_score,0.08107135137310223,0.005946036228226657,20
+gpc_4d_plus_old_shape3,full,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,roc_auc,0.9925739795918366,0.0023438705835322864,20
+gpc_4d_plus_old_shape3,full,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,pr_auc,0.9747054866488567,0.004990025379251774,20
+gpc_4d_plus_old_shape3,full,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,accuracy,0.9735714285714285,0.005704879476280178,20
+gpc_4d_plus_old_shape3,full,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,balanced_accuracy,0.9569642857142858,0.011187842968598165,20
+gpc_4d_plus_old_shape3,full,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,keyhole_recall,0.9292857142857143,0.020972592211268265,20
+gpc_4d_plus_old_shape3,full,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,conduction_recall,0.9846428571428572,0.0032977875602737457,20
+gpc_4d_plus_old_shape3,full,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,false_negative,4.95,1.4680814547887788,20
+gpc_4d_plus_old_shape3,full,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,false_positive,4.3,0.9233805168766387,20
+gpc_4d_plus_old_shape3,full,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,brier_score,0.025826482340014435,0.0022886878746884807,20
+gpc_4d_plus_old_shape3,q20,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,roc_auc,0.9334034734403239,0.012487239777882122,20
+gpc_4d_plus_old_shape3,q20,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,pr_auc,0.8985913692846473,0.019643421022683214,20
+gpc_4d_plus_old_shape3,q20,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,accuracy,0.8869430001008949,0.024779491076048373,20
+gpc_4d_plus_old_shape3,q20,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,balanced_accuracy,0.8808248134596294,0.027493402390133804,20
+gpc_4d_plus_old_shape3,q20,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,keyhole_recall,0.852417120212935,0.04575405192271844,20
+gpc_4d_plus_old_shape3,q20,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,conduction_recall,0.909232506706324,0.019023002465596434,20
+gpc_4d_plus_old_shape3,q20,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,false_negative,4.45,1.4317821063276353,20
+gpc_4d_plus_old_shape3,q20,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,false_positive,4.2,0.8335087534664907,20
+gpc_4d_plus_old_shape3,q20,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,brier_score,0.09940209721514806,0.008644007575786258,20
+gpc_4d_plus_old_shape3,q30,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,roc_auc,0.959647056018361,0.008087405156503228,20
+gpc_4d_plus_old_shape3,q30,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,pr_auc,0.9226217184539778,0.013498767102432016,20
+gpc_4d_plus_old_shape3,q30,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,accuracy,0.9170311008244353,0.017939386310450087,20
+gpc_4d_plus_old_shape3,q30,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,balanced_accuracy,0.9047239630512882,0.023251744291917117,20
+gpc_4d_plus_old_shape3,q30,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,keyhole_recall,0.8674218246586669,0.040566076193414215,20
+gpc_4d_plus_old_shape3,q30,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,conduction_recall,0.9420261014439097,0.011898753402227465,20
+gpc_4d_plus_old_shape3,q30,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,false_negative,4.95,1.4680814547887788,20
+gpc_4d_plus_old_shape3,q30,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,false_positive,4.3,0.9233805168766387,20
+gpc_4d_plus_old_shape3,q30,historical,7,P + VX + LS + ST + width_gain_20_um + width_gain_40_um + time_to_50pct_max_width_tau,brier_score,0.07448790830025627,0.005869860746584093,20
+gpc_4d_plus_simple_delta_block,full,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,roc_auc,0.9910076530612246,0.002203496946258361,20
+gpc_4d_plus_simple_delta_block,full,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,pr_auc,0.972299558533828,0.004586106058575533,20
+gpc_4d_plus_simple_delta_block,full,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,accuracy,0.9727142857142859,0.0068417747586043635,20
+gpc_4d_plus_simple_delta_block,full,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,balanced_accuracy,0.9548214285714286,0.012043211225718954,20
+gpc_4d_plus_simple_delta_block,full,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,keyhole_recall,0.925,0.021677749238103,20
+gpc_4d_plus_simple_delta_block,full,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,conduction_recall,0.9846428571428572,0.004649359241162566,20
+gpc_4d_plus_simple_delta_block,full,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,false_negative,5.25,1.51744244666721,20
+gpc_4d_plus_simple_delta_block,full,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,false_positive,4.3,1.3018205875255098,20
+gpc_4d_plus_simple_delta_block,full,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,brier_score,0.026500464450600992,0.0022124273752512336,20
+gpc_4d_plus_simple_delta_block,q20,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,roc_auc,0.9313472239130279,0.012000820003892148,20
+gpc_4d_plus_simple_delta_block,q20,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,pr_auc,0.8926080041916542,0.023218805114038926,20
+gpc_4d_plus_simple_delta_block,q20,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,accuracy,0.8843725797673165,0.029448938478697357,20
+gpc_4d_plus_simple_delta_block,q20,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,balanced_accuracy,0.8773108279761598,0.03236730263287579,20
+gpc_4d_plus_simple_delta_block,q20,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,keyhole_recall,0.8452705552465704,0.05033557466894373,20
+gpc_4d_plus_simple_delta_block,q20,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,conduction_recall,0.9093511007057492,0.02615756683398508,20
+gpc_4d_plus_simple_delta_block,q20,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,false_negative,4.65,1.496487114615601,20
+gpc_4d_plus_simple_delta_block,q20,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,false_positive,4.2,1.1964860832322377,20
+gpc_4d_plus_simple_delta_block,q20,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,brier_score,0.1000231739034025,0.007766465334233136,20
+gpc_4d_plus_simple_delta_block,q30,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,roc_auc,0.9576409238948893,0.0070155175246447,20
+gpc_4d_plus_simple_delta_block,q30,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,pr_auc,0.9189768999190168,0.012058592240682512,20
+gpc_4d_plus_simple_delta_block,q30,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,accuracy,0.9147783405081753,0.02107829123710103,20
+gpc_4d_plus_simple_delta_block,q30,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,balanced_accuracy,0.9014751307932635,0.025240698035043408,20
+gpc_4d_plus_simple_delta_block,q30,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,keyhole_recall,0.8609141530194162,0.040126204790487854,20
+gpc_4d_plus_simple_delta_block,q30,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,conduction_recall,0.942036108567111,0.017072408673263408,20
+gpc_4d_plus_simple_delta_block,q30,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,false_negative,5.2,1.4725559590832462,20
+gpc_4d_plus_simple_delta_block,q30,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,false_positive,4.3,1.3018205875255098,20
+gpc_4d_plus_simple_delta_block,q30,primary,7,P + VX + LS + ST + max_positive_delta_W + median_positive_delta_W + fraction_positive_delta_W,brier_score,0.0751756239412447,0.005482016541867413,20
+gpc_4d_plus_simple_rate_block,full,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,roc_auc,0.9894183673469387,0.00204084317920034,20
+gpc_4d_plus_simple_rate_block,full,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,pr_auc,0.9683619253612248,0.005267879462919421,20
+gpc_4d_plus_simple_rate_block,full,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,accuracy,0.9690000000000001,0.0049291434777530094,20
+gpc_4d_plus_simple_rate_block,full,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,balanced_accuracy,0.9516964285714284,0.009510632723498938,20
+gpc_4d_plus_simple_rate_block,full,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,keyhole_recall,0.9228571428571428,0.018769905295193918,20
+gpc_4d_plus_simple_rate_block,full,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,conduction_recall,0.9805357142857142,0.004253481546117015,20
+gpc_4d_plus_simple_rate_block,full,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,false_negative,5.4,1.3138933706635725,20
+gpc_4d_plus_simple_rate_block,full,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,false_positive,5.45,1.190974832912761,20
+gpc_4d_plus_simple_rate_block,full,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,brier_score,0.02818743963488357,0.0027083674746000244,20
+gpc_4d_plus_simple_rate_block,q20,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,roc_auc,0.9222673914610073,0.011231206296549048,20
+gpc_4d_plus_simple_rate_block,q20,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,pr_auc,0.881843098777867,0.024444509758096783,20
+gpc_4d_plus_simple_rate_block,q20,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,accuracy,0.8659150534150536,0.025526347986970833,20
+gpc_4d_plus_simple_rate_block,q20,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,balanced_accuracy,0.8611231159476711,0.02799182760168597,20
+gpc_4d_plus_simple_rate_block,q20,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,keyhole_recall,0.838918259044441,0.045658582241010194,20
+gpc_4d_plus_simple_rate_block,q20,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,conduction_recall,0.8833279728509013,0.025061515176543297,20
+gpc_4d_plus_simple_rate_block,q20,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,false_negative,4.85,1.3869694338832113,20
+gpc_4d_plus_simple_rate_block,q20,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,false_positive,5.4,1.0954451150103321,20
+gpc_4d_plus_simple_rate_block,q20,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,brier_score,0.1056515565348027,0.007659822767780116,20
+gpc_4d_plus_simple_rate_block,q30,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,roc_auc,0.9518701132708882,0.00624376206912104,20
+gpc_4d_plus_simple_rate_block,q30,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,pr_auc,0.9092472219918475,0.012728201336569558,20
+gpc_4d_plus_simple_rate_block,q30,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,accuracy,0.903072917125294,0.015455080043323015,20
+gpc_4d_plus_simple_rate_block,q30,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,balanced_accuracy,0.8915005234353648,0.01888537417667862,20
+gpc_4d_plus_simple_rate_block,q30,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,keyhole_recall,0.8566743869375448,0.03491074802607235,20
+gpc_4d_plus_simple_rate_block,q30,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,conduction_recall,0.9263266599331846,0.01615175710277972,20
+gpc_4d_plus_simple_rate_block,q30,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,false_negative,5.35,1.2258187382102494,20
+gpc_4d_plus_simple_rate_block,q30,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,false_positive,5.45,1.190974832912761,20
+gpc_4d_plus_simple_rate_block,q30,primary,7,P + VX + LS + ST + max_positive_width_rate + median_positive_width_rate + fraction_positive_width_rate,brier_score,0.07885461352416578,0.0047640235802690785,20
+m3,full,m3_reference,4,P + VX + LS + ST,roc_auc,0.9915943877551019,0.0011444330616493278,20
+m3,full,m3_reference,4,P + VX + LS + ST,pr_auc,0.9637485377176995,0.007349674527041441,20
+m3,full,m3_reference,4,P + VX + LS + ST,accuracy,0.9672857142857143,0.0038750628005028544,20
+m3,full,m3_reference,4,P + VX + LS + ST,balanced_accuracy,0.9361607142857142,0.007941173179797525,20
+m3,full,m3_reference,4,P + VX + LS + ST,keyhole_recall,0.8842857142857141,0.015302183524679932,20
+m3,full,m3_reference,4,P + VX + LS + ST,conduction_recall,0.9880357142857144,0.002395787118749795,20
+m3,full,m3_reference,4,P + VX + LS + ST,false_negative,8.1,1.0711528467275955,20
+m3,full,m3_reference,4,P + VX + LS + ST,false_positive,3.35,0.6708203932499369,20
+m3,full,m3_reference,4,P + VX + LS + ST,brier_score,0.027074279543840302,0.0013036630875252378,20
+m3,q20,m3_reference,4,P + VX + LS + ST,roc_auc,0.9157437166518241,0.009372210283155734,20
+m3,q20,m3_reference,4,P + VX + LS + ST,pr_auc,0.824690716442473,0.021154294772360832,20
+m3,q20,m3_reference,4,P + VX + LS + ST,accuracy,0.8647256726204094,0.014539445067668072,20
+m3,q20,m3_reference,4,P + VX + LS + ST,balanced_accuracy,0.8463986612834583,0.017454392607805912,20
+m3,q20,m3_reference,4,P + VX + LS + ST,keyhole_recall,0.7618237360294507,0.03258148999688785,20
+m3,q20,m3_reference,4,P + VX + LS + ST,conduction_recall,0.9309735865374659,0.01335170003452403,20
+m3,q20,m3_reference,4,P + VX + LS + ST,false_negative,7.15,0.8750939799154207,20
+m3,q20,m3_reference,4,P + VX + LS + ST,false_positive,3.2,0.6155870112510925,20
+m3,q20,m3_reference,4,P + VX + LS + ST,brier_score,0.10950347844741751,0.0049702883427825955,20
+m3,q30,m3_reference,4,P + VX + LS + ST,roc_auc,0.9478769266743312,0.00587330907980529,20
+m3,q30,m3_reference,4,P + VX + LS + ST,pr_auc,0.8594554652286277,0.0221539917798108,20
+m3,q30,m3_reference,4,P + VX + LS + ST,accuracy,0.9036171239825743,0.01128440324073986,20
+m3,q30,m3_reference,4,P + VX + LS + ST,balanced_accuracy,0.8786032651599524,0.014669836830431972,20
+m3,q30,m3_reference,4,P + VX + LS + ST,keyhole_recall,0.802392220155378,0.02619878393836954,20
+m3,q30,m3_reference,4,P + VX + LS + ST,conduction_recall,0.9548143101645266,0.008608792539062942,20
+m3,q30,m3_reference,4,P + VX + LS + ST,false_negative,7.4,0.99472291830968,20
+m3,q30,m3_reference,4,P + VX + LS + ST,false_positive,3.35,0.6708203932499369,20
+m3,q30,m3_reference,4,P + VX + LS + ST,brier_score,0.0808410861106825,0.004003093509321981,20
+m3_plus_max_delta_W,full,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,roc_auc,0.9930000000000001,0.001149178848435286,20
+m3_plus_max_delta_W,full,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,pr_auc,0.9678580912264068,0.007663220593080883,20
+m3_plus_max_delta_W,full,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,accuracy,0.9705714285714286,0.0038332593899996444,20
+m3_plus_max_delta_W,full,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,balanced_accuracy,0.9435714285714283,0.00769483764063864,20
+m3_plus_max_delta_W,full,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,keyhole_recall,0.8985714285714284,0.01458336530097259,20
+m3_plus_max_delta_W,full,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,conduction_recall,0.9885714285714287,0.0021985250401824995,20
+m3_plus_max_delta_W,full,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,false_negative,7.1,1.020835571068081,20
+m3_plus_max_delta_W,full,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,false_positive,3.2,0.6155870112510925,20
+m3_plus_max_delta_W,full,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,brier_score,0.02485773818203858,0.0014302878744725538,20
+m3_plus_max_delta_W,q20,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,roc_auc,0.9294550129200159,0.007589655518601437,20
+m3_plus_max_delta_W,q20,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,pr_auc,0.8367163240207306,0.01558757975008341,20
+m3_plus_max_delta_W,q20,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,accuracy,0.8797660021344231,0.015286357556600252,20
+m3_plus_max_delta_W,q20,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,balanced_accuracy,0.8655507858015259,0.01679718141012086,20
+m3_plus_max_delta_W,q20,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,keyhole_recall,0.7990641552783516,0.029257183836398342,20
+m3_plus_max_delta_W,q20,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,conduction_recall,0.9320374163246999,0.01082761517615239,20
+m3_plus_max_delta_W,q20,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,false_negative,6.05,0.9445132413883326,20
+m3_plus_max_delta_W,q20,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,false_positive,3.15,0.4893604849295929,20
+m3_plus_max_delta_W,q20,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,brier_score,0.10025026148705474,0.005716711515986755,20
+m3_plus_max_delta_W,q30,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,roc_auc,0.9568258850956219,0.005268066682212946,20
+m3_plus_max_delta_W,q30,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,pr_auc,0.8703159706458747,0.02016078838839701,20
+m3_plus_max_delta_W,q30,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,accuracy,0.9156832593341079,0.011838014946564496,20
+m3_plus_max_delta_W,q30,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,balanced_accuracy,0.8955835632718292,0.015334471469277978,20
+m3_plus_max_delta_W,q30,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,keyhole_recall,0.8343438073701233,0.027045557860335,20
+m3_plus_max_delta_W,q30,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,conduction_recall,0.9568233191735356,0.007918454872299247,20
+m3_plus_max_delta_W,q30,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,false_negative,6.2,1.0052493799000692,20
+m3_plus_max_delta_W,q30,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,false_positive,3.2,0.6155870112510925,20
+m3_plus_max_delta_W,q30,m3_reference,5,P + VX + LS + ST + max_positive_delta_W,brier_score,0.07353166554596648,0.004470601111881392,20

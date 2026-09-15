@@ -1,0 +1,83 @@
+{
+  "status": "FAIL",
+  "cases": [
+    {
+      "phase1_21_policy": "margin",
+      "phase1_20_checkpoint": "margin",
+      "run_id": "w85__r01_f01",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "margin",
+      "phase1_20_checkpoint": "margin",
+      "run_id": "w85__r05_f03",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "margin",
+      "phase1_20_checkpoint": "margin",
+      "run_id": "w85__r09_f05",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "coverage_then_margin_B40",
+      "phase1_20_checkpoint": "sched_bmm_B40",
+      "run_id": "w85__r01_f01",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "coverage_then_margin_B40",
+      "phase1_20_checkpoint": "sched_bmm_B40",
+      "run_id": "w85__r05_f03",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "coverage_then_margin_B40",
+      "phase1_20_checkpoint": "sched_bmm_B40",
+      "run_id": "w85__r09_f05",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "cov_then_misfit_B40",
+      "phase1_20_checkpoint": "cov_then_misfit_B40",
+      "run_id": "w85__r02_f02",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "cov_then_misfit_B40",
+      "phase1_20_checkpoint": "cov_then_misfit_B40",
+      "run_id": "w85__r07_f04",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "early8__cov_then_misfit_B40",
+      "phase1_20_checkpoint": "early8__cov_then_misfit_B40",
+      "run_id": "w85__r03_f01",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "early8__cov_then_misfit_B40",
+      "phase1_20_checkpoint": "early8__cov_then_misfit_B40",
+      "run_id": "w85__r08_f02",
+      "queried_identical": true,
+      "metrics_identical": true
+    },
+    {
+      "phase1_21_policy": "early8__coverage_then_margin_B40",
+      "phase1_20_checkpoint": "early8__sched_bmm_B40",
+      "run_id": "w85__r01_f01",
+      "queried_identical": false,
+      "metrics_identical": false
+    }
+  ],
+  "meaning": "the Phase 1.21 runner and policy objects reproduce Phase 1.20 trajectories and every recorded metric bit-identically on development runs"
+}

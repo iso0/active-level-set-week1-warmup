@@ -1,0 +1,28 @@
+{
+  "boundary_definitions": [
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "boundary_metrics_are_evaluation_only": true,
+  "exact_phase6_parent": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+  "exact_run_reuse_pass_count": 20,
+  "final_budget": 80,
+  "hard_stop_after_phase7": true,
+  "hf_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "hf_revision_matches_phase6": true,
+  "keyhole_count": 73,
+  "manual_labels_modified": false,
+  "maximum_depth_redefined": false,
+  "maximum_effective_warm_start": 16,
+  "new_kernel_introduced": false,
+  "non_keyhole_count": 332,
+  "outer_run_count": 20,
+  "phase": "Week 7 Phase 7",
+  "phase6_publication_verified": true,
+  "phase7_branch": "codex/week7-phase7-final-boundary-hybrid-benchmark",
+  "preregistered_before_result_files": true,
+  "preregistered_decision_rule_sha256": "a3581cb61c4b2f95aa71838fc9c199ca8f992fef7de67104970767db0af9643f",
+  "primary_population_count": 405,
+  "status": "PASS"
+}

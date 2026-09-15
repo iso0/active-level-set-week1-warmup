@@ -1,0 +1,7 @@
+{
+  "decision": "DEPTH_CENSORING_CONFIRMED",
+  "guardrail": "This affects continuous-depth interpretation, not the frozen binary regime label.",
+  "likely_censored_Keyhole": 39,
+  "likely_censored_N": 39,
+  "reason": "A label-free upper-tail gap isolates 39 main-configuration depths in a dense terminal pile. Fixed Ridge RMSE changes from 38.574 um (D0) to 24.644 um (D2)."
+}

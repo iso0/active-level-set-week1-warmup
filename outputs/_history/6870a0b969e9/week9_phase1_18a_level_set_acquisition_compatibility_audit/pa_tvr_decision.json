@@ -1,0 +1,13 @@
+{
+  "classification": "physics-gradient-scaled local variance-reduction proxy",
+  "decision": "PA_TVR_REJECTED",
+  "global_or_nonmyopic": false,
+  "mathematics": "geometry factor lacks a Mat\u00e9rn-3/2 tangent-integral derivation",
+  "mean_top10_jaccard": 0.9656814944314944,
+  "mean_top1_agreement": 0.9633333333333334,
+  "median_L100_L1000_spearman": 0.9999986956153109,
+  "numerically_fragile_L100_L1000": false,
+  "prospective_recommendation": "FAST_GPC_SUR",
+  "recommendation_caveat": "direct level-set/random-set prior art; implement and validate a literature-faithful classifier update before a single prospective trajectory",
+  "truly_tangent": false
+}

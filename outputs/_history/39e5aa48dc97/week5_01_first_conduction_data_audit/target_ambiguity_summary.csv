@@ -1,0 +1,19 @@
+metric,scope,value,unit_or_note
+exact_clean_observed_target_flag,target-bearing simulations,91.0,simulations
+interval_ambiguous_due_to_pretransition_bug,target-bearing simulations,147.0,simulations
+unavailable_valid_lower_bound,all target-bearing simulations,0.0,simulations
+unavailable_valid_lower_bound,interval-ambiguous simulations,0.0,simulations
+interval_width_count,interval-ambiguous simulations with valid lower bound,147.0,simulations
+interval_width_mean,interval-ambiguous simulations with valid lower bound,513.2312925170068,stored timestep units
+interval_width_std,interval-ambiguous simulations with valid lower bound,249.0238220443543,stored timestep units
+interval_width_min,interval-ambiguous simulations with valid lower bound,267.0,stored timestep units
+interval_width_q25,interval-ambiguous simulations with valid lower bound,314.5,stored timestep units
+interval_width_median,interval-ambiguous simulations with valid lower bound,418.0,stored timestep units
+interval_width_q75,interval-ambiguous simulations with valid lower bound,630.0,stored timestep units
+interval_width_max,interval-ambiguous simulations with valid lower bound,1287.0,stored timestep units
+width_vs_first_observed_pearson,interval-ambiguous simulations with valid lower bound,0.795460722597694,correlation
+width_vs_first_observed_spearman,interval-ambiguous simulations with valid lower bound,0.7833541127156465,rank correlation
+primary_category::right_censored_no_conduction,all simulations,3.0,simulations
+primary_category::interval_ambiguous_due_to_pretransition_bug,all simulations,147.0,simulations
+primary_category::other_transition_ambiguity,all simulations,22.0,simulations
+primary_category::exact_clean_observed_target,all simulations,69.0,simulations

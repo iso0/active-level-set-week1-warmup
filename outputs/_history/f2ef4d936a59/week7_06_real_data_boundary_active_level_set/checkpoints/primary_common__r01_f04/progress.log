@@ -1,0 +1,36 @@
+2026-08-11T20:00:24+00:00 START methods=max_depth_random,max_depth_boundary_proximity,max_depth_straddle,max_depth_randomized_straddle,max_depth_expected_feasibility,binary_random,binary_margin,binary_uncertainty_repulsion final_budget=80
+2026-08-11T20:00:24+00:00 METHOD_START max_depth_random
+2026-08-11T20:00:48+00:00 METHOD_DONE max_depth_random runtime_seconds=23.706
+2026-08-11T20:00:48+00:00 METHOD_START max_depth_boundary_proximity
+2026-08-11T20:01:19+00:00 METHOD_DONE max_depth_boundary_proximity runtime_seconds=31.336
+2026-08-11T20:01:19+00:00 METHOD_START max_depth_straddle
+2026-08-11T20:01:37+00:00 START methods=max_depth_random,max_depth_boundary_proximity,max_depth_straddle,max_depth_randomized_straddle,max_depth_expected_feasibility,binary_random,binary_margin,binary_uncertainty_repulsion final_budget=80
+2026-08-11T20:01:37+00:00 METHOD_START max_depth_random
+2026-08-11T20:01:37+00:00 METHOD_DONE max_depth_random runtime_seconds=23.706
+2026-08-11T20:01:37+00:00 METHOD_START max_depth_boundary_proximity
+2026-08-11T20:01:38+00:00 METHOD_DONE max_depth_boundary_proximity runtime_seconds=31.336
+2026-08-11T20:01:38+00:00 METHOD_START max_depth_straddle
+2026-08-11T20:01:46+00:00 METHOD_DONE max_depth_straddle runtime_seconds=26.546
+2026-08-11T20:01:46+00:00 METHOD_START max_depth_randomized_straddle
+2026-08-11T20:02:02+00:00 METHOD_DONE max_depth_straddle runtime_seconds=24.816
+2026-08-11T20:02:02+00:00 METHOD_START max_depth_randomized_straddle
+2026-08-11T20:02:11+00:00 METHOD_DONE max_depth_randomized_straddle runtime_seconds=24.876
+2026-08-11T20:02:11+00:00 METHOD_START max_depth_expected_feasibility
+2026-08-11T20:02:27+00:00 METHOD_DONE max_depth_randomized_straddle runtime_seconds=24.600
+2026-08-11T20:02:27+00:00 METHOD_START max_depth_expected_feasibility
+2026-08-11T20:02:40+00:00 METHOD_DONE max_depth_expected_feasibility runtime_seconds=28.751
+2026-08-11T20:02:40+00:00 METHOD_START binary_random
+2026-08-11T20:02:48+00:00 METHOD_DONE binary_random runtime_seconds=8.088
+2026-08-11T20:02:48+00:00 METHOD_START binary_margin
+2026-08-11T20:02:53+00:00 METHOD_DONE max_depth_expected_feasibility runtime_seconds=26.004
+2026-08-11T20:02:53+00:00 METHOD_START binary_random
+2026-08-11T20:02:53+00:00 METHOD_DONE binary_random runtime_seconds=8.088
+2026-08-11T20:02:53+00:00 METHOD_START binary_margin
+2026-08-11T20:02:56+00:00 METHOD_DONE binary_margin runtime_seconds=8.107
+2026-08-11T20:02:56+00:00 METHOD_START binary_uncertainty_repulsion
+2026-08-11T20:03:00+00:00 METHOD_DONE binary_margin runtime_seconds=6.472
+2026-08-11T20:03:00+00:00 METHOD_START binary_uncertainty_repulsion
+2026-08-11T20:03:03+00:00 METHOD_DONE binary_uncertainty_repulsion runtime_seconds=7.025
+2026-08-11T20:03:03+00:00 DONE
+2026-08-11T20:03:07+00:00 METHOD_DONE binary_uncertainty_repulsion runtime_seconds=6.880
+2026-08-11T20:03:07+00:00 DONE

@@ -1,0 +1,207 @@
+{
+  "created_at_utc": "2026-08-26T19:42:14+00:00",
+  "files": {
+    "ARTIFACT_PACKAGING.md": {
+      "bytes": 1234,
+      "sha256": "8c2890d2c54a80e9d21558f516bb8dd264edd47908b203ece33ef4a433287ce0"
+    },
+    "adaptive_horizon_decision.json": {
+      "bytes": 1080,
+      "sha256": "0a75a397632c492e36f7a9eb9f40863c26b8b255fc1be4192e18b08c9fe4705c"
+    },
+    "agent_handoffs\\01_research_evidence_map.md": {
+      "bytes": 10713,
+      "sha256": "5184c8bba5dc4c3553cc9dd1e60260739e6f759e5d5f0dc17188fa8e0942a77f"
+    },
+    "agent_handoffs\\02_preregistered_claim_contract.md": {
+      "bytes": 8009,
+      "sha256": "60d9206893a4ef71065d2381c8b605fbdfea9b46f9b4d16f49f0147d319ab4c5"
+    },
+    "agent_handoffs\\04_critic_audit.md": {
+      "bytes": 17622,
+      "sha256": "131ec9319f0bf094dbaa6cf7cbb0812ddb690262ce07619ae037bc0fbdc0b102"
+    },
+    "agent_handoffs\\05_supervisor_decision.md": {
+      "bytes": 8017,
+      "sha256": "4cc3f35be2fba8a8b0d388c2d4ee0b6b00a264d805fcff22101a0639944f7390"
+    },
+    "bootstrap_or_hierarchical_ci.csv": {
+      "bytes": 3802,
+      "sha256": "48c8d1d74a786ea7c146ce0e398ef56e66f141c0644f19b5de0b93fd389ce26c"
+    },
+    "checkpoint_metrics.csv": {
+      "bytes": 5223799,
+      "sha256": "bd2e3ffacb341d6fa1405061a3ec7317ad5a5c22183a884c9a1df966563ec900"
+    },
+    "claim_decisions.csv": {
+      "bytes": 2989,
+      "sha256": "b9298e05828f5abf248d16d1ebcc8e2c1ed360f5ee35ea4c5d5a44eda7350582"
+    },
+    "compute_fit_gate.json": {
+      "bytes": 887,
+      "sha256": "1ae27ca74492085da353372a616c772cfec1162034185a21d61aef9fbb291bc7"
+    },
+    "crossing_censoring.csv": {
+      "bytes": 5394161,
+      "sha256": "fa67d1f3f9b8cbc1a222e20d28b39cadd63bc920d53e0b2b148f0e8bfbe7fdb3"
+    },
+    "decision_ledger.csv": {
+      "bytes": 2989,
+      "sha256": "b9298e05828f5abf248d16d1ebcc8e2c1ed360f5ee35ea4c5d5a44eda7350582"
+    },
+    "figures\\01_B1_q20_learning_curves.png": {
+      "bytes": 100291,
+      "sha256": "9759753767e997a839b74c816dc784ee5fb5e9f8d7717f24aea76f250e794017"
+    },
+    "figures\\02_B1_q20_learning_curves_with_repulsion.png": {
+      "bytes": 108630,
+      "sha256": "43563b7da726ff181d0bd00583fca391bc83ddb39242f8250e8261bdbbe14304"
+    },
+    "figures\\03_crossing_censoring_ecdf.png": {
+      "bytes": 63881,
+      "sha256": "112a39ab04ff016a6b057806f680e3ad16967376256f87794b4a1127171a8bb6"
+    },
+    "figures\\04_budget40_boundary_accuracy.png": {
+      "bytes": 57155,
+      "sha256": "8cb98e20c01a322dbd10319dc394cb17232411f13b29de39c65f0f87d9f7f798"
+    },
+    "figures\\05_repulsion_dual_endpoint.png": {
+      "bytes": 67302,
+      "sha256": "bebaaada798e703d8b3745a6bf6b7e945072be2c37fc6710eed457f5af840e88"
+    },
+    "figures\\06_selected_query_nearest_distance.png": {
+      "bytes": 199524,
+      "sha256": "aa0acfb702b51f1ea24afc6757b8338fc39643b87ec58273acd95ce59dc0059f"
+    },
+    "figures\\07_primary_AULC_contrast.png": {
+      "bytes": 31041,
+      "sha256": "1e398f229b2a7a78f89d25020be2db0e74b635a02afe456be36a9d269848cb79"
+    },
+    "final_results_narrative.md": {
+      "bytes": 7505,
+      "sha256": "ddc629db283609e8ee7634c4945ddc3eb8002a7090f1c43fdefba43e289e6c53"
+    },
+    "grouped_split_manifest.csv": {
+      "bytes": 30366140,
+      "sha256": "1c13548950edd9d9c08b106c28539dfd82c8399689231ed856de870fcbaba1d8"
+    },
+    "hierarchical_bootstrap_draws.csv": {
+      "bytes": 12448827,
+      "sha256": "a5660303bec90a2314698d84e26ed24047645330fb73cec8b43b02835413a56c"
+    },
+    "hierarchical_bootstrap_summary.json": {
+      "bytes": 2535,
+      "sha256": "d11dbc70dff867755b46e89b1a9e0766fe9a108f359b78bcb3fb2be45e9f4eb5"
+    },
+    "horizon_120_execution_report.json": {
+      "bytes": 195,
+      "sha256": "ac9208cab64bf6a87206254bab03510d79d1f3fd04f36b16b108dac99cf6833b"
+    },
+    "horizon_160_execution_report.json": {
+      "bytes": 196,
+      "sha256": "f581cbef92671cf151ba17c80a3acc6c89b9bea9b7b3c8b3bf843370768afb38"
+    },
+    "horizon_80_execution_report.json": {
+      "bytes": 193,
+      "sha256": "83a2b83c62679e84170ce5ccdc2fcbe92e6e217fbc71f168657e91e999d65c43"
+    },
+    "initial_design_manifest.csv": {
+      "bytes": 1142988,
+      "sha256": "0b4b48d37ded84869d4cdf020182a41de10c161758d0b0a56370dbedc06589f2"
+    },
+    "learning_curves.csv": {
+      "bytes": 247869563,
+      "sha256": "a2cd743cdd8597094497dd1602f5f0b1ead75646dc027abbdb7232dd74112d62"
+    },
+    "postrun_provenance_addendum.json": {
+      "bytes": 6966,
+      "sha256": "363605c2e65eb1266e685b6523d6e68aee9d8faa321cbf4c0faa1e899eeeec62"
+    },
+    "preregistered_protocol.json": {
+      "bytes": 7172,
+      "sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66"
+    },
+    "protocol_sha256.txt": {
+      "bytes": 94,
+      "sha256": "d74d31062b55fe9dd96809a10ac5e328f2014e9c3d02e05b29e08b63cfbfaefb"
+    },
+    "query_crossings.csv": {
+      "bytes": 5394161,
+      "sha256": "fa67d1f3f9b8cbc1a222e20d28b39cadd63bc920d53e0b2b148f0e8bfbe7fdb3"
+    },
+    "query_savings_summary.csv": {
+      "bytes": 799,
+      "sha256": "ccdb8ea630a133a3759106009639ecf351baa65e2b29c6541c57b009cd33ecd4"
+    },
+    "random_continuation_summary.csv": {
+      "bytes": 54718,
+      "sha256": "9f8e358dc96aaa12579da1c21b4ebfe5f7c0ec6fb98919551a15a1c7f883ab49"
+    },
+    "random_seed_manifest.csv": {
+      "bytes": 185814703,
+      "sha256": "80566813635dec9375f35fd43e48a74c27019ab502a1ccd32b163fbc45b5072a"
+    },
+    "repeat_level_metrics.csv": {
+      "bytes": 66273,
+      "sha256": "8aa32e29f0615c01f04d0316bfb5cb39884d0aa324b6fb009dca32b7a7ad0fe8"
+    },
+    "repulsion_ablation_summary.csv": {
+      "bytes": 735,
+      "sha256": "457011b884460ea2ca91bdf657ad796d964649fdbf86955198695b90f5580f0b"
+    },
+    "repulsion_mechanism_diagnostics.csv": {
+      "bytes": 23861194,
+      "sha256": "7f0f9d5b8c8d2f7a35abf4fb499b2e51f038b776895f33838a15af0c1599639a"
+    },
+    "repulsion_mechanism_summary.csv": {
+      "bytes": 3313,
+      "sha256": "ccaa7326ebd9387a7c856abdef97f4701632f4d4219fecff08562d0a3d3ef2ba"
+    },
+    "run_level_metrics.csv": {
+      "bytes": 2662817,
+      "sha256": "14360aa853bbe3053cf92fa15431a0f9e1b989402c0d2bb2bd8b20b9bffd4096"
+    },
+    "runtime_compute_report.json": {
+      "bytes": 2916,
+      "sha256": "de8613228d335c1990b6ea3b35a172821192cb0f83e119bdef1a358bc8b54b06"
+    },
+    "seed_registry.csv": {
+      "bytes": 204655960,
+      "sha256": "03db991f9d6a16b7965d021453672832fa6aaaaed8b719a2993b9e83d1350c93"
+    },
+    "smoke\\smoke_runtime_report.json": {
+      "bytes": 1258,
+      "sha256": "a7e7c08f259e99683556afe70a7e7e743fdc097101d03714bdcc70b5595aab6f"
+    },
+    "split_manifest.csv": {
+      "bytes": 30366140,
+      "sha256": "1c13548950edd9d9c08b106c28539dfd82c8399689231ed856de870fcbaba1d8"
+    },
+    "trajectory_per_budget.csv": {
+      "bytes": 247869563,
+      "sha256": "a2cd743cdd8597094497dd1602f5f0b1ead75646dc027abbdb7232dd74112d62"
+    },
+    "validation_report.json": {
+      "bytes": 8757,
+      "sha256": "6c633e2ffab3b586e911ae7755507487993abc45ac842a22d80ef464a759c33b"
+    },
+    "week8_5_checkpoint_bundle.tar.gz": {
+      "bytes": 44546401,
+      "sha256": "1004fc299e00db6f1b2b89e4407f5ac8b2c4815d1169bcaad43dacdebacf72a9"
+    },
+    "week8_5_large_machine_readable_artifacts.tar.gz": {
+      "bytes": 25907280,
+      "sha256": "c2e82faf7bb54c6f943a30529ab03950701d5f7037d9ced0dfc26cbd7036ec59"
+    },
+    "week8_5_requirement_checklist.md": {
+      "bytes": 4225,
+      "sha256": "a3042c48570cd649fd036d7de9b4f815f4260e2f654467a1142e3d67639aaa97"
+    }
+  },
+  "final_horizon": 160,
+  "protocol_id": "week8_5_frozen_confirmation_protocol/v1.0.0",
+  "protocol_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+  "schema_version": "1.0.0",
+  "source_hashes_json": "{\"phase6_source.py\": \"23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479\", \"phase7_source.py\": \"d5a331c60bab373adfc63344cc5eb3b88e1ca7ce41e4ffd0717196edeb2c00df\", \"primary_common_population.csv\": \"c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7\", \"protocol.json\": \"bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66\"}",
+  "status": "COMPLETE"
+}

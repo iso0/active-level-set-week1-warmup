@@ -1,0 +1,4 @@
+metric,definition,boundary_like_direction,primary_scaling,uses_only_inputs_and_manual_labels,evaluation_only,enters_acquisition,tuned
+B1,nearest standardized Euclidean distance to an opposite manual label,smaller,"full-population z-score of P,VX,LS,ST",True,True,False,False
+B2,fraction of k=5 nearest neighbours excluding self with a different manual label,larger,"full-population z-score of P,VX,LS,ST",True,True,False,False
+B3,"d_opp/(d_opp+d_same), nearest same excludes self",smaller,"full-population z-score of P,VX,LS,ST",True,True,False,False

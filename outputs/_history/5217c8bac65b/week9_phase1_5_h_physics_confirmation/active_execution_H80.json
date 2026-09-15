@@ -1,0 +1,26 @@
+{
+  "arms": [
+    "h_margin",
+    "gpc5_margin",
+    "assisted_product"
+  ],
+  "baseline_gate": {
+    "absolute_difference": 9.813572303896123e-06,
+    "frozen_protocol_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+    "initial_design_exact_matches": 100,
+    "margin_mean_AULC16_80": 0.8135202205882354,
+    "matched_random_mean_AULC16_80": 0.7762204350490195,
+    "outer_runs": 100,
+    "recorded_bootstrap_mean_margin_minus_random": 0.0373095991115196,
+    "reproduced_margin_minus_random": 0.0372997855392157,
+    "saved_learning_curve_grid": "16..80 inclusive for both arms",
+    "status": "PASS"
+  },
+  "elapsed_seconds": 632.9341199398041,
+  "horizon": 80,
+  "outer_runs": 100,
+  "smoke": false,
+  "status": "PASS",
+  "trajectories": 300,
+  "workers": 8
+}

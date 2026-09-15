@@ -1,0 +1,22 @@
+phase2_5_requirement,notebook_section,output_file,validation_status
+Phase 1/2 source provenance and hashes,§2,phase2_5_configuration.json,PASS
+Exact 230 stable subset,§3,stable_depth_input_table.csv,PASS
+Matched B/C mathematical definitions,§4,phase2_5_configuration.json,PASS
+Identical exact LOO protocol,§5–6,stable_depth_B_loo_predictions.csv,PASS
+230 Method B predictions,§6,stable_depth_B_loo_predictions.csv,PASS
+230 Method C predictions,§6,stable_depth_C_loo_predictions.csv,PASS
+Point-prediction metrics,§7,stable_depth_model_metrics.csv,PASS
+Uncertainty metrics and calibration,§8,stable_depth_model_metrics.csv,PASS
+Per-simulation paired errors,§9,stable_depth_paired_comparison.csv,PASS
+"10,000 paired-bootstrap resamples",§9,stable_depth_paired_bootstrap_summary.csv,PASS
+Stable-refit versus full-trained comparison,§10,stable_vs_full_population_comparison.csv,PASS
+Learned B effective nugget,§11,stable_depth_hyperparameter_diagnostics.csv,PASS
+C heteroskedastic uncertainty,§11,stable_depth_input_table.csv,PASS
+"Warnings, failures, and bound hits",§12,stable_depth_hyperparameter_diagnostics.csv,PASS
+Depth decision,§13/§16,depth_model_decision.md,PASS
+Runtime metadata correction,§14,runtime_metadata_correction.md,PASS
+Machine-readable runtime provenance,§14,runtime_provenance.json,PASS
+Thirty automated validations,§15,validation_results.csv,PASS
+Focused six-figure audit,§7–12,stable_depth_observed_vs_loo_predicted.png,PASS
+Phase 2.5 scientific summary,§16,results_summary.md,PASS
+Strictly no Phase 3 work,§1/§16,phase2_5_requirement_checklist.csv,PASS

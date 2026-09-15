@@ -1,0 +1,5 @@
+{
+  "decision": "STAGE1_OVERCONFIDENCE_MIXED",
+  "guardrail": "This decision concerns probability uncertainty, not invalidation of M3 hard prediction quality.",
+  "reason": "At B16, 55.0% of revealed sets are perfectly separable and the median coefficient is 20.978; at B24 the separable fraction is 9.0%. Held-out B16 Brier is H=0.0483, M3=0.0489."
+}

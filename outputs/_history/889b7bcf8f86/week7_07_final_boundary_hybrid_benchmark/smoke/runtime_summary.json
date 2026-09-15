@@ -1,0 +1,19 @@
+{
+  "checkpoint_reuse_enabled": true,
+  "executed_methods": [
+    "binary_uncertainty_repulsion",
+    "hybrid_binary_gate20_max_depth_straddle",
+    "hybrid_equal_rank_fusion"
+  ],
+  "executed_outer_runs": 2,
+  "final_budget": 30,
+  "mean_hybrid_fusion_overhead_vs_binary": 1.4131938139882654,
+  "mean_hybrid_gate_overhead_vs_binary": 1.3394336318743698,
+  "method_run_count": 6,
+  "simulator_sample_efficiency_distinct_from_computational_efficiency": true,
+  "smoke": true,
+  "total_method_run_runtime_seconds": 8.178789599973243,
+  "wall_seconds": 5.933125099982135,
+  "workers": 2,
+  "workers_reported_separately": true
+}

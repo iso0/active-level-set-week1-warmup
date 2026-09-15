@@ -1,0 +1,5 @@
+check_id,check,status,detail
+EB01,Only physical inputs and manual labels used,PASS,"P,VX,LS,ST standardized once on the full common evaluation population; opposite manual-label distance only"
+EB02,Self excluded,PASS,n=405
+EB03,"No max-depth, G3, or model prediction enters score",PASS,"Function signature consumes the population identifier, partition, manual label, and four inputs only"
+EB04,Evaluation-only prohibition recorded,PASS,The score is joined only after acquisition selection and is never passed to model/acquisition functions

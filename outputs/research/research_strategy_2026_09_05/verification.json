@@ -1,0 +1,22 @@
+{
+  "words": 11767,
+  "lines": 774,
+  "reference_definitions": 51,
+  "unresolved_references": [],
+  "bad_git_source_links": [],
+  "display_math_open": 35,
+  "display_math_close": 35,
+  "control_characters": [],
+  "has_all_A_J_decisions": true,
+  "user_correction_incorporated": true,
+  "unimplemented_proposal_disclosed": true,
+  "format": "Markdown with LaTex math; structural review; no PDF rendering claimed",
+  "table_separator_issues": [],
+  "final_artifact": "C:\\Users\\ozgur\\Documents\\thesis\\reports\\research_strategy_2026_09_05\\research_strategy_memo.md",
+  "sha256": "b539d1e7ef6b0cb88b1c3d1b47e77cd34dd05b0bb0dc1b4fa45cf5d759409e87",
+  "independent_math_review": "completed; hard-label endpoint and capped startup fixes incorporated",
+  "source_hashes": {
+    "candidate_states": "a139295715dc7ba515c1317e113d5124185328bdb00c7eda0a2d68d9747fb3f1",
+    "configuration_table": "c0dcf57c02f435bb057567052fe2ac02add9b20c4aa60043c4006ac583bcf876"
+  }
+}

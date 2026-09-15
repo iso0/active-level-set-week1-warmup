@@ -1,0 +1,25 @@
+validation_number,validation_check,status,passed,details
+1,exactly 241 unique simulation rows,PASS,True,"rows=241, unique=241"
+2,"X contains exactly P, VX, LS, ST",PASS,True,"[""P"",""VX"",""LS"",""ST""]"
+3,no target-derived feature leakage,PASS,True,every fold records the four allowed feature names only
+4,three finite positive targets in micrometres,PASS,True,target cells checked=723
+5,fold-local X scaling,PASS,True,2859 fold scalers independently recomputed
+6,fold-local y scaling,PASS,True,2859 fold scalers independently recomputed
+7,held-out target never used for scaling or optimization,PASS,True,2859 fold scalers independently recomputed
+8,exactly 241 predictions per target and method,PASS,True,"nine primary groups, each with 241 rows"
+9,no duplicate held-out predictions,PASS,True,unique simulation ID within every target-method group
+10,finite predictive means,PASS,True,primary and stable-only predictions checked
+11,finite positive predictive standard deviations,PASS,True,latent standard deviations plus defined total deviations checked
+12,non-negative observation-specific alpha values,PASS,True,uncertainty rows=723
+13,bootstrap uncertainty traceability,PASS,True,three target rows per simulation with raw-window hashes
+14,fitted nugget traceability,PASS,True,learned-nugget folds=723
+15,metrics independently recomputed from prediction rows,PASS,True,12 metric rows independently recomputed
+16,NLPD uses the correct variance definition,PASS,True,2859 prediction NLPDs independently recomputed
+17,interval bounds ordered correctly,PASS,True,"latent, learned-nugget total, and oracle intervals checked"
+18,optimizer failures and warnings recorded,PASS,True,warning folds=9; failed folds=0
+19,paired comparisons align simulation IDs,PASS,True,paired detail rows=2169
+20,stable-subset analysis contains exactly 230 simulations,PASS,True,stable prediction rows=690
+21,Phase 1 files unchanged,PASS,True,protected_files=34; aggregate_sha256=21FF34AD767C8D4D6C536D66AFD147B8C700884321415078231B7A24D4C7D198
+22,original dirty worktree unchanged,PASS,True,status and all dirty-file SHA-256 values match
+23,notebook has zero error outputs,PASS,True,"code_cells=16, executed=True, error_outputs=0"
+24,git diff --check passes,PASS,True,"warning: in the working copy of 'requirements.txt', LF will be replaced by CRLF the next time Git touches it"

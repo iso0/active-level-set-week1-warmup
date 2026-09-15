@@ -1,0 +1,15 @@
+record_type,label,label_type,frame_count,frame_fraction,simulation_count,value,note
+label,Initial Emptiness,technical_or_annotation,3275.0,0.050021383186705765,116.0,,
+label,Forming Phase,physical_transition,10326.0,0.15771627565982405,177.0,,
+label,Conduction,physical,43881.0,0.6702254398826979,238.0,,
+label,Screenshot Bug,technical_or_annotation,7469.0,0.11407930107526881,150.0,,
+label,Keyhole,physical,521.0,0.007957600195503421,9.0,,
+population_summary,total_label_rows,,,,,65472,
+population_summary,unique_simulations,,,,,241,
+population_summary,any_keyhole_simulations,,,,,9,
+population_summary,both_conduction_and_keyhole_simulations,,,,,8,
+population_summary,conduction_only_simulations,,,,,230,
+population_summary,no_usable_physical_label_simulations,,,,,0,
+population_summary,automatic_only_provenance_simulations,,,,,64,
+population_summary,human_verified_provenance_simulations,,,,,177,
+population_summary,depth_seeded_provenance_simulations,,,,,241,Depth-seeded provenance creates possible circular validation.

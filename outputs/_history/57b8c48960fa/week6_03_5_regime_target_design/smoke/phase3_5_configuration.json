@@ -1,0 +1,150 @@
+{
+  "phase": "Week 6 Phase 3.5",
+  "mode": "smoke",
+  "scientific_question": "Which scalar summary of depth/width time evolution best represents persistent conduction-like versus keyhole-like behaviour?",
+  "repository_root": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit",
+  "branch": "codex/week6-phase3-5-regime-target-design",
+  "head": "b112f6b22898976f77410190614cb4fb218d38f9",
+  "huggingface": {
+    "repo_id": "ioandanielc/sph_dataset",
+    "revision": "0e859b748fdbc8454f66e58e101e333ac0479d42"
+  },
+  "inputs": {
+    "phase1_ledger": "outputs\\week6_01_melt_pool_data_audit\\week6_phase1_simulation_level_responses.csv",
+    "phase1_ledger_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF",
+    "label_file": "data\\raw\\huggingface\\sph_dataset\\final-labels_all.csv",
+    "label_file_sha256": "964A12D86435E9F0879E2E43384D997E1CC2FAA7B9E4C3AEB49CF0E73E3FB154",
+    "features_if_used": [
+      "P",
+      "VX",
+      "LS",
+      "ST"
+    ],
+    "expected_simulations": 241
+  },
+  "geometry": {
+    "width_definition": "y_max - y_min",
+    "length_definition": "x_max - x_min; instantaneous extent, not total track length",
+    "depth_definition": "max(0, -z_min) relative to surface z=0",
+    "vertical_extent_definition": "z_max - z_min; diagnostic context only",
+    "aspect_ratio_definition": "penetration_depth / transverse_width",
+    "aspect_ratio_unit": "dimensionless",
+    "minimum_width_guard_m": 1.2e-05,
+    "minimum_width_guard_basis": "three 4 um SPH particle spacings",
+    "width_guard_sensitivity_um": [
+      8.0,
+      12.0,
+      20.0
+    ],
+    "analytical_clipping": false
+  },
+  "scan_alignment": {
+    "laser_x_definition": "x_start + VX * elapsed_time_s",
+    "normalized_position_definition": "(x_laser - x_start) / (x_domain_end - x_start)",
+    "x_start_source": "laser motion center X in experiment_details.json",
+    "x_domain_end_source": "domain.domain_max[0] in experiment_details.json",
+    "label_alignment": "exact frame timestep to monitor iter.dat match",
+    "alignment_tolerance_iterations": 0,
+    "interpolation_method": "none; aggregate profiles bin original observations",
+    "maximum_interpolation_gap": null
+  },
+  "analysis_domains": {
+    "common_interior": {
+      "start_s": 0.1,
+      "end_s": 0.55,
+      "support_count_at_end": 197,
+      "support_fraction_at_end": 0.8174273858921162,
+      "selection_rule": "Start at s=0.10 to exclude startup; end at the largest 0.05-grid position not above 0.80 reached by at least 80% of simulations.",
+      "candidate_interval_support": [
+        {
+          "start_s": 0.1,
+          "end_s": 0.7,
+          "support_count_at_end": 165,
+          "support_fraction_at_end": 0.6846473029045643
+        },
+        {
+          "start_s": 0.15,
+          "end_s": 0.75,
+          "support_count_at_end": 155,
+          "support_fraction_at_end": 0.6431535269709544
+        },
+        {
+          "start_s": 0.2,
+          "end_s": 0.8,
+          "support_count_at_end": 148,
+          "support_fraction_at_end": 0.6141078838174274
+        }
+      ]
+    },
+    "adaptive_active_interior": {
+      "start": "melt onset plus 50 um physical startup margin",
+      "end": "minimum(last active melt, domain exit) minus 50 um physical end margin",
+      "startup_margin_um": 50.0,
+      "end_margin_um": 50.0
+    }
+  },
+  "persistence": {
+    "primary_basis": "physical scan distance",
+    "physical_windows_um": [
+      20.0,
+      50.0,
+      100.0
+    ],
+    "normalized_track_windows": [
+      0.01,
+      0.025,
+      0.05
+    ],
+    "primary_window_um": 50.0,
+    "minimum_observations": 5,
+    "minimum_physical_span_fraction": 0.8,
+    "rolling_direction": "trailing; event position is window end",
+    "window_search_policy": "all predeclared windows reported; no post-hoc best-window selection"
+  },
+  "label_policy": {
+    "physical_labels": [
+      "Conduction",
+      "Forming Phase",
+      "Keyhole"
+    ],
+    "binary_metric_labels": [
+      "Conduction",
+      "Keyhole"
+    ],
+    "technical_labels": [
+      "Initial Emptiness",
+      "Screenshot Bug"
+    ],
+    "screenshot_bug_used_as_negative": false,
+    "ground_truth_claim": false,
+    "known_circularity": "All labeling_provenance.json files record automatic_method='per-experiment-median-zmin, threshold = 1.5x median'; depth-derived agreement is descriptive, not independent validation."
+  },
+  "threshold_policy": {
+    "external_universal_threshold": false,
+    "exploratory_geometry_threshold_rule": "q90 of simulation-level R2; recomputed on outer-training simulations for leakage-safe R4 evaluation",
+    "classification_threshold_rule": "maximum outer-training balanced accuracy; F1 then higher-threshold tie break",
+    "outer_heldout_label_used": false
+  },
+  "bootstrap": {
+    "simulation_resamples": 200,
+    "frame_cluster_resamples": 200,
+    "cluster_unit": "simulation",
+    "paired_candidate_comparisons": true,
+    "seed": 35062026
+  },
+  "runtime": {
+    "workers": 4,
+    "deterministic": true
+  },
+  "scope_exclusions": [
+    "active-learning loop",
+    "level-set estimation",
+    "GP classifier",
+    "acquisition functions",
+    "kinetic-energy modelling",
+    "total-height Phase 4 modelling",
+    "Phase 3 kernel comparison",
+    "feature-effect or causal analysis",
+    "ARD"
+  ]
+}

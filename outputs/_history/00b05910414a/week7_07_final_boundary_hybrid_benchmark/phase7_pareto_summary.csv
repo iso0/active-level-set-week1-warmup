@@ -1,0 +1,31 @@
+boundary_definition,quantile,method,mean_boundary_error_aulc,mean_balanced_accuracy_aulc,pareto_dominated,dominated_by_json,on_pareto_frontier,arbitrary_weighted_score_used
+B1,20,shared_random_binary_head,0.22892922794117648,0.8735132146693481,True,"[""binary_uncertainty_repulsion"", ""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion"", ""max_depth_straddle""]",False,False
+B1,20,binary_uncertainty_repulsion,0.18623621323529413,0.917089626694046,False,[],True,False
+B1,20,max_depth_straddle,0.20528492647058827,0.9432146453709537,False,[],True,False
+B1,20,hybrid_binary_gate20_max_depth_straddle,0.1943014705882353,0.8982978800195452,True,"[""binary_uncertainty_repulsion"", ""hybrid_equal_rank_fusion""]",False,False
+B1,20,hybrid_equal_rank_fusion,0.18715533088235298,0.9075947853064225,True,"[""binary_uncertainty_repulsion""]",False,False
+B1,30,shared_random_binary_head,0.1686875,0.8735132146693481,True,"[""binary_uncertainty_repulsion"", ""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion"", ""max_depth_straddle""]",False,False
+B1,30,binary_uncertainty_repulsion,0.133203125,0.917089626694046,False,[],True,False
+B1,30,max_depth_straddle,0.150625,0.9432146453709537,False,[],True,False
+B1,30,hybrid_binary_gate20_max_depth_straddle,0.14378125,0.8982978800195452,True,"[""binary_uncertainty_repulsion"", ""hybrid_equal_rank_fusion""]",False,False
+B1,30,hybrid_equal_rank_fusion,0.134015625,0.9075947853064225,True,"[""binary_uncertainty_repulsion""]",False,False
+B2,20,shared_random_binary_head,0.24724264705882354,0.8735132146693481,True,"[""binary_uncertainty_repulsion"", ""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion"", ""max_depth_straddle""]",False,False
+B2,20,binary_uncertainty_repulsion,0.19237132352941178,0.917089626694046,False,[],True,False
+B2,20,max_depth_straddle,0.20181525735294117,0.9432146453709537,False,[],True,False
+B2,20,hybrid_binary_gate20_max_depth_straddle,0.2109604779411765,0.8982978800195452,True,"[""binary_uncertainty_repulsion"", ""hybrid_equal_rank_fusion"", ""max_depth_straddle""]",False,False
+B2,20,hybrid_equal_rank_fusion,0.19609375,0.9075947853064225,True,"[""binary_uncertainty_repulsion""]",False,False
+B2,30,shared_random_binary_head,0.1691875,0.8735132146693481,True,"[""binary_uncertainty_repulsion"", ""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion"", ""max_depth_straddle""]",False,False
+B2,30,binary_uncertainty_repulsion,0.132375,0.917089626694046,False,[],True,False
+B2,30,max_depth_straddle,0.141140625,0.9432146453709537,False,[],True,False
+B2,30,hybrid_binary_gate20_max_depth_straddle,0.1454375,0.8982978800195452,True,"[""binary_uncertainty_repulsion"", ""hybrid_equal_rank_fusion"", ""max_depth_straddle""]",False,False
+B2,30,hybrid_equal_rank_fusion,0.135109375,0.9075947853064225,True,"[""binary_uncertainty_repulsion""]",False,False
+B3,20,shared_random_binary_head,0.22663143382352943,0.8735132146693481,True,"[""binary_uncertainty_repulsion"", ""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion"", ""max_depth_straddle""]",False,False
+B3,20,binary_uncertainty_repulsion,0.17741268382352943,0.917089626694046,False,[],True,False
+B3,20,max_depth_straddle,0.221875,0.9432146453709537,False,[],True,False
+B3,20,hybrid_binary_gate20_max_depth_straddle,0.19586397058823532,0.8982978800195452,True,"[""binary_uncertainty_repulsion"", ""hybrid_equal_rank_fusion""]",False,False
+B3,20,hybrid_equal_rank_fusion,0.1834558823529412,0.9075947853064225,True,"[""binary_uncertainty_repulsion""]",False,False
+B3,30,shared_random_binary_head,0.17506249999999998,0.8735132146693481,True,"[""binary_uncertainty_repulsion"", ""hybrid_binary_gate20_max_depth_straddle"", ""hybrid_equal_rank_fusion"", ""max_depth_straddle""]",False,False
+B3,30,binary_uncertainty_repulsion,0.13404687499999998,0.917089626694046,False,[],True,False
+B3,30,max_depth_straddle,0.163984375,0.9432146453709537,False,[],True,False
+B3,30,hybrid_binary_gate20_max_depth_straddle,0.14606249999999998,0.8982978800195452,True,"[""binary_uncertainty_repulsion"", ""hybrid_equal_rank_fusion""]",False,False
+B3,30,hybrid_equal_rank_fusion,0.136234375,0.9075947853064225,True,"[""binary_uncertainty_repulsion""]",False,False

@@ -1,0 +1,44 @@
+requirement_id,requirement,notebook_section,evidence_files,status
+P3-01,Repository isolation and immutable-history preflight,Notebook §0 — provenance and scope,phase3_preflight_snapshot.json; phase3_runtime_provenance.json,PASS
+P3-02,Requested Phase 3 branch and unchanged starting HEAD,Notebook §0 — provenance and scope,phase3_preflight_snapshot.json; validation_results.csv,PASS
+P3-03,"Exact Phase 1 revision, ledger hash, rows, and decisions",Notebook §0 — provenance and scope,phase3_configuration.json; validation_results.csv,PASS
+P3-04,"Phase 1, Phase 2, and Phase 2.5 artifacts unchanged",Notebook §0 — provenance and scope,phase3_runtime_provenance.json; validation_results.csv,PASS
+P3-05,"Features exactly P, VX, LS, ST; metre-to-micrometre conversion only",Notebook §0 — common protocol,phase3_configuration.json; phase3_input_population_summary.csv,PASS
+P3-06,"Width 241, length 241, exact stable depth 230",Notebook §0 — populations,phase3_input_population_summary.csv; validation_results.csv,PASS
+P3-07,"Exact outer LOO, common fold order, fold-local preprocessing",Notebook §0 — common protocol,all three LOO prediction files; validation_results.csv,PASS
+P3-08,Phase 3A training-mean sanity baseline,Notebook Part 1 — Phase 3A,simple_baseline_loo_predictions.csv; simple_baseline_metrics.csv,PASS
+P3-09,Phase 3A Linear Ridge with nested 5-fold tuning,Notebook Part 1 — Phase 3A,simple_baseline_selected_hyperparameters.csv,PASS
+P3-10,"Phase 3A degree-2 Polynomial Ridge, no higher degree",Notebook Part 1 — Phase 3A,phase3_configuration.json; simple_baseline_selected_hyperparameters.csv,PASS
+P3-11,Phase 3A logarithmic alpha grid 1e-6 through 1e6,Notebook Part 1 — nested CV,phase3_configuration.json; simple_baseline_selected_hyperparameters.csv,PASS
+P3-12,"Phase 3A MAE, median AE, RMSE, R², nRMSE, runtime",Notebook Part 1 — results,simple_baseline_metrics.csv,PASS
+P3-13,"Phase 3A aligned 10,000-resample GP-versus-Ridge bootstraps",Notebook Part 1 — paired evidence,simple_baseline_paired_comparisons.csv; simple_baseline_paired_bootstrap_summary.csv,PASS
+P3-14,Six isotropic Phase 3B kernel/noise GP configurations,Notebook Part 2 — Phase 3B,phase3_configuration.json; gp_kernel_noise_loo_predictions.csv,PASS
+P3-15,"Common ConstantKernel, lengthscale, WhiteKernel bounds and one restart",Notebook Part 2 — configuration,phase3_configuration.json,PASS
+P3-16,No ARD; comparison isolates smoothness and nugget,Notebook Part 2 — configuration,phase3_configuration.json; validation_results.csv,PASS
+P3-17,ConstantKernel interpretation is explicit,Notebook Part 2 — technical terms,phase3_configuration.json; decision_log.md,PASS
+P3-18,"Phase 3B point, uncertainty, calibration, and runtime metrics",Notebook Part 2 — results,gp_kernel_noise_metrics.csv,PASS
+P3-19,"Fold-level signal variance, lengthscale, nugget, warnings, and bounds",Notebook Part 2 — diagnostics,gp_kernel_noise_hyperparameter_diagnostics.csv,PASS
+P3-20,Within-family nugget-minus-no-nugget paired comparisons,Notebook Part 2 — paired evidence,within_kernel_nugget_comparisons.csv; gp_kernel_paired_bootstrap_summary.csv,PASS
+P3-21,Every candidate compared with Matérn 3/2 + learned nugget,Notebook Part 2 — paired evidence,gp_candidate_vs_current_comparisons.csv; gp_kernel_paired_bootstrap_summary.csv,PASS
+P3-22,Target-specific provisional GP decision rule,Notebook Part 2 — decisions,provisional_kernel_decision.csv,PASS
+P3-23,Six exact raw-monitor definitions T0–T5,Notebook Part 3 — Phase 3C,target_definition_simulation_level_table.csv,PASS
+P3-24,"Raw source paths, hashes, aligned rows, and window traceability",Notebook Part 3 — traceability,target_definition_traceability.csv,PASS
+P3-25,Sentinels excluded and T0–T4 domain cutoffs applied,Notebook Part 3 — traceability,target_definition_traceability.csv; validation_results.csv,PASS
+P3-26,"T5 final 50 valid rows, with fewer-than-50 flag",Notebook Part 3 — T5 reference,target_definition_traceability.csv; validation_results.csv,PASS
+P3-27,"Availability, distribution, window CV/trend, and instability",Notebook Part 3 — target statistics,target_definition_distribution_summary.csv,PASS
+P3-28,"Pearson, Spearman, differences, relative shifts, and thresholds",Notebook Part 3 — target statistics,target_definition_difference_summary.csv,PASS
+P3-29,Nugget-versus-target-shift comparison explicitly descriptive,Notebook Part 3 — interpretation,target_definition_difference_summary.csv; decision_log.md,PASS
+P3-30,One provisional GP held fixed per response across T0–T5,Notebook Part 3 — fixed-model test,target_definition_loo_predictions.csv; validation_results.csv,PASS
+P3-31,"Phase 3C point, NLPD, coverage, width, nugget, optimizer metrics",Notebook Part 3 — fixed-model results,target_definition_model_metrics.csv; target_definition_nugget_summary.csv,PASS
+P3-32,Target-definition decision applies physical/stability/availability rule,Notebook Part 3 — target decisions,target_definition_decision.csv; phase3_final_target_decision.csv,PASS
+P3-33,All eleven focused figure requirements,Notebook Parts 1–3 and final scorecard,figures/,PASS
+P3-34,Notebook experiment tree and three visible parts,Notebook title and Parts 1–3,04_phase3_model_target_robustness.ipynb,PASS
+P3-35,Technical terms defined at first use without textbook expansion,Notebook Parts 1–3 — term boxes,04_phase3_model_target_robustness.ipynb,PASS
+P3-36,Markdown explanation follows every major code cell,Entire notebook,04_phase3_model_target_robustness.ipynb; validation_results.csv,PASS
+P3-37,"Reusable source has smoke, full, force, workers, checkpoints",Notebook §0 — rebuild command,src/week6_phase3_model_target_robustness.py,PASS
+P3-38,Machine-readable configuration and measured runtime provenance,Notebook §0 and final section,phase3_configuration.json; phase3_runtime_provenance.json,PASS
+P3-39,Automated validation covers all 34 minimum checks,Notebook final validation section,validation_results.csv,PASS
+P3-40,Decision log records all requested scientific reasons and limits,Notebook final decisions,decision_log.md,PASS
+P3-41,Final model and target decisions are response-specific,Notebook final scorecard,phase3_final_model_decision.csv; phase3_final_target_decision.csv,PASS
+P3-42,Strict Phase 3 scope; no Phase 4 or feature-effect work,Notebook §0 and limitations,phase3_configuration.json; validation_results.csv,PASS
+P3-43,"No commit, no push, original dirty worktree unchanged",Notebook final repository check,phase3_runtime_provenance.json; validation_results.csv,PASS

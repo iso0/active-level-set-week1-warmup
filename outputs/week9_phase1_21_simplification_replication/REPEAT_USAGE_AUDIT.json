@@ -1,0 +1,230 @@
+{
+  "question": "which outer-split repeat blocks of w85.build_splits were ever used by any design, screening, tuning, confirmation, diagnostic or plot, anywhere on this machine",
+  "method": "pattern match of run ids w85__rNN_fNN and seed keys outer_split|repeat|NN in file names, text, gzip/zip/tar members, parquet string columns and raw bytes; git refs and stash via git grep",
+  "roots": {
+    "thesis_1": {
+      "root": "C:\\Users\\ozgur\\OneDrive\\Masa\u00fcst\u00fc\\thesis_works\\thesis_1",
+      "files_scanned": 9920,
+      "files_with_run_ids": 5481,
+      "repeats_found": [
+        1,
+        60
+      ],
+      "files_with_repeat_above_20": 600,
+      "files_with_repeat_above_60": 0,
+      "read_errors": [
+        {
+          "path": "C:\\Users\\ozgur\\OneDrive\\Masa\u00fcst\u00fc\\thesis_works\\thesis_1\\week9_presentation\\~$Week9_Final_Presentation.pptx",
+          "error": "PermissionError: [Errno 13] Permission denied: 'C:\\\\Users\\\\ozgur\\\\OneDrive\\\\Masa\u00fcst\u00fc\\\\thesis_works\\\\thesis_1\\\\week9_presentation\\\\~$Week9_Final_Presentation.pptx'"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\OneDrive\\Masa\u00fcst\u00fc\\thesis_works\\thesis_1\\week9_presentation_revised\\~$Week9_Revised_Presentation.pptx",
+          "error": "PermissionError: [Errno 13] Permission denied: 'C:\\\\Users\\\\ozgur\\\\OneDrive\\\\Masa\u00fcst\u00fc\\\\thesis_works\\\\thesis_1\\\\week9_presentation_revised\\\\~$Week9_Revised_Presentation.pptx'"
+        }
+      ]
+    },
+    "thesis_work_chatgpt": {
+      "root": "C:\\Users\\ozgur\\OneDrive\\Masa\u00fcst\u00fc\\thesis_works\\thesis_work_chatgpt",
+      "files_scanned": 5103,
+      "files_with_run_ids": 912,
+      "repeats_found": [
+        1,
+        20
+      ],
+      "files_with_repeat_above_20": 0,
+      "files_with_repeat_above_60": 0,
+      "read_errors": []
+    },
+    "lean_thesis": {
+      "root": "C:\\Users\\ozgur\\OneDrive\\Masa\u00fcst\u00fc\\thesis_works\\thesis",
+      "files_scanned": 126,
+      "files_with_run_ids": 13,
+      "repeats_found": [
+        1,
+        20
+      ],
+      "files_with_repeat_above_20": 0,
+      "files_with_repeat_above_60": 0,
+      "read_errors": []
+    },
+    "documents_main_repo_worktree": {
+      "root": "C:\\Users\\ozgur\\Documents\\thesis",
+      "files_scanned": 23113,
+      "files_with_run_ids": 226,
+      "repeats_found": [
+        1,
+        20
+      ],
+      "files_with_repeat_above_20": 0,
+      "files_with_repeat_above_60": 0,
+      "read_errors": [
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py27_np17.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'x^')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py33_np18.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'x^')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py34_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'x^')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py35_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'x^')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.8.4_compressed_pickle_py27_np17.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py27_np16.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py27_np17.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py34_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py35_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.4.dev0_compressed_cache_size_pickle_py35_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        }
+      ]
+    },
+    "documents_week4": {
+      "root": "C:\\Users\\ozgur\\Documents\\thesis-week4-chronology-restructure",
+      "files_scanned": 561,
+      "files_with_run_ids": 0,
+      "repeats_found": null,
+      "files_with_repeat_above_20": 0,
+      "files_with_repeat_above_60": 0,
+      "read_errors": []
+    },
+    "documents_week5": {
+      "root": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp",
+      "files_scanned": 41028,
+      "files_with_run_ids": 0,
+      "repeats_found": null,
+      "files_with_repeat_above_20": 0,
+      "files_with_repeat_above_60": 0,
+      "read_errors": [
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py27_np17.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'x^')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py33_np18.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'x^')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py34_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'x^')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py35_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'x^')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.8.4_compressed_pickle_py27_np17.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py27_np16.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py27_np17.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py34_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py35_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        },
+        {
+          "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.4.dev0_compressed_cache_size_pickle_py35_np19.gz",
+          "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+        }
+      ]
+    },
+    "documents_week9_18b": {
+      "root": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-18b-prospective-global-gpc-sur-benchmark",
+      "files_scanned": 4432,
+      "files_with_run_ids": 353,
+      "repeats_found": [
+        1,
+        20
+      ],
+      "files_with_repeat_above_20": 0,
+      "files_with_repeat_above_60": 0,
+      "read_errors": []
+    },
+    "documents_week9_19a": {
+      "root": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit",
+      "files_scanned": 5073,
+      "files_with_run_ids": 776,
+      "repeats_found": [
+        1,
+        20
+      ],
+      "files_with_repeat_above_20": 0,
+      "files_with_repeat_above_60": 0,
+      "read_errors": []
+    },
+    "gemini_antigravity": {
+      "root": "C:\\Users\\ozgur\\.gemini\\antigravity",
+      "files_scanned": 14611,
+      "files_with_run_ids": 506,
+      "repeats_found": [
+        1,
+        20
+      ],
+      "files_with_repeat_above_20": 0,
+      "files_with_repeat_above_60": 0,
+      "read_errors": []
+    },
+    "session_scratchpad": {
+      "root": "C:\\Users\\ozgur\\AppData\\Local\\Temp\\claude\\C--Users-ozgur-OneDrive-Masa-st--thesis-works\\5ec9a2a7-600a-4d1d-9a37-7cf7723cc0a7\\scratchpad",
+      "files_scanned": 198,
+      "files_with_run_ids": 1,
+      "repeats_found": [
+        1,
+        10
+      ],
+      "files_with_repeat_above_20": 0,
+      "files_with_repeat_above_60": 0,
+      "read_errors": []
+    }
+  },
+  "git": {
+    "repository": "C:\\Users\\ozgur\\Documents\\thesis",
+    "refs_audited": 83,
+    "stash_commits_audited": 4,
+    "file_names_with_repeat_ge_21": [],
+    "text_files_with_repeat_ge_21": [],
+    "build_splits_calls_with_explicit_repeats": [
+      "src/week8_5_frozen_sample_efficiency_confirmation.py:763:    specs = build_splits(frame, repeats=2, folds=2)"
+    ],
+    "limitation": "git grep -I skips binary (compressed) blobs; compressed checkpoints are covered by file names and by the working-tree scans"
+  },
+  "repeats_used_anywhere": [
+    1,
+    60
+  ],
+  "repeats_1_20": "frozen Week 8.5 splits: every phase from Week 8.5 through 1.19B, the R&D packages, Phases 1.10B and 1.20",
+  "repeats_21_60": "Phase 1.20 confirmation only (margin, cov_then_misfit_B40, early8__cov_then_misfit_B40)",
+  "repeats_61_120_found": [],
+  "verdict": "repeats 61-120 are untouched internal replication partitions"
+}

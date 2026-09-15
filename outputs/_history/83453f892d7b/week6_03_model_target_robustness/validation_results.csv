@@ -1,0 +1,52 @@
+check_id,requirement,status,detail,evidence
+V01,exact Phase 1 provenance,PASS,revision={'0e859b748fdbc8454f66e58e101e333ac0479d42'}; rows=241,Phase 1 ledger; phase3_runtime_provenance.json
+V02,unchanged Phase 1 ledger hash,PASS,sha256=10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF,week6_phase1_simulation_level_responses.csv
+V03,unchanged Phase 1 protected aggregate,PASS,aggregate=21FF34AD767C8D4D6C536D66AFD147B8C700884321415078231B7A24D4C7D198; files=34,Phase 1 protected files
+V04,Phase 2 source and artifacts unchanged,PASS,checked_paths=8,"Phase 2 source, notebook, configurations, predictions, summary"
+V05,Phase 2.5 source and artifacts unchanged,PASS,checked_paths=6,"Phase 2.5 source, notebook, configurations, predictions, summary"
+V06,"features exactly P, VX, LS, ST",PASS,"features=['P', 'VX', 'LS', 'ST']",configuration and prediction rows
+V07,width population exactly 241,PASS,rows=241,phase3_input_population_summary.csv
+V08,length population exactly 241,PASS,rows=241,phase3_input_population_summary.csv
+V09,depth population exactly 230,PASS,rows=230,phase3_input_population_summary.csv
+V10,exact expected depth exclusions,PASS,"excluded=['sim_00002', 'sim_00006', 'sim_00018', 'sim_00029', 'sim_00036', 'sim_00038', 'sim_00095', 'sim_00105', 'sim_00124', 'sim_00154', 'sim_00222']",phase3_input_population_summary.csv
+V11,identical Phase 3A outer fold IDs,PASS,mismatched_groups=[],simple_baseline_loo_predictions.csv
+V12,identical Phase 3B outer fold IDs,PASS,mismatched_groups=[],gp_kernel_noise_loo_predictions.csv
+V13,identical Phase 3C outer fold IDs,PASS,mismatched_groups=[],target_definition_loo_predictions.csv
+V14,no duplicate held-out predictions,PASS,duplicate_outputs=[],all LOO prediction files
+V15,fold-local X preprocessing,PASS,checked_fold_scalers=9256; mismatches=[],stored and independently recomputed fold scaler means/scales
+V16,fold-local y scaling,PASS,checked_fold_scalers=9256; mismatches=[],stored and independently recomputed training y mean/std
+V17,nested Ridge tuning uses outer-training data only,PASS,checked=1424; failures=[],simple_baseline_selected_hyperparameters.csv
+V18,held-out targets never used for Ridge tuning/fitting/scaling,PASS,ridge_rows=1424,simple_baseline_loo_predictions.csv
+V19,exact Ridge alpha grid and one selection per outer fold,PASS,"grid=(1e-06, 1e-05, 0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0); rows=1424",simple_baseline_selected_hyperparameters.csv
+V20,exactly one Phase 3A prediction per model/target/simulation,PASS,expected=2848; observed=2848,simple_baseline_loo_predictions.csv
+V21,exactly one Phase 3B prediction per configuration/target/simulation,PASS,expected=4272; observed=4272,gp_kernel_noise_loo_predictions.csv
+V22,exactly one Phase 3C prediction per definition/target/simulation,PASS,expected=4272; observed=4272,target_definition_loo_predictions.csv
+V23,all predictions are finite,PASS,rows_checked=11392,all LOO prediction files
+V24,valid positive GP predictive standard deviations,PASS,gp_rows=8544,GP prediction files
+V25,correct nugget and no-nugget variance calculations,PASS,learned_rows=6408; no_nugget_rows=2136; max_total_minus_latent_error_um2=1.8189894035458565e-11,GP prediction rows
+V26,target candidates trace to raw aligned monitor files,PASS,trace_rows=1446; raw_hashes_checked=723; failures=[],target_definition_traceability.csv
+V27,T0 exactly reproduces Phase 1 target definition,PASS,trace_rows=1446; raw_hashes_checked=723; failures=[],target_definition_simulation_level_table.csv; Phase 1 ledger
+V28,all T0–T5 definitions present for all responses,PASS,"rows=4338; definitions=['T0', 'T1', 'T2', 'T3', 'T4', 'T5']",target_definition_simulation_level_table.csv
+V29,target candidate availability recorded,PASS,unavailable_rows=0,target tables and distribution summary
+V30,sentinel rows excluded,PASS,trace_sentinel_rows=29033412,target_definition_traceability.csv
+V31,T0–T4 domain cutoffs correctly applied,PASS,controlled_rows=1205,target_definition_traceability.csv
+V32,T5 uses final 50 valid rows and flags short series,PASS,T5_rows=241; short_series=0,target_definition_traceability.csv
+V33,paired comparisons aligned by simulation ID,PASS,paired_detail_rows=7120,paired comparison files
+V34,"paired bootstrap preserves pairing and uses 10,000 resamples",PASS,summary_rows=45,paired bootstrap summary files
+V35,metrics independently recomputed from prediction rows,PASS,3A=mismatches=[]; 3B=mismatches=[]; 3C=mismatches=[],all metrics and prediction files
+V36,confidence intervals are deterministic and reproducible,PASS,comparisons_checked=30; failures=[],paired bootstrap summaries and predictions
+V37,"optimizer failures, warnings, and bound hits recorded",PASS,diagnostic_rows=4272,gp_kernel_noise_hyperparameter_diagnostics.csv
+V38,notebook has zero error outputs,PASS,code_cells=9; executed=True; errors=0,04_phase3_model_target_robustness.ipynb
+V39,all major notebook code cells followed by explanatory Markdown,PASS,code_cells_without_following_markdown=[],04_phase3_model_target_robustness.ipynb
+V40,original dirty worktree unchanged,PASS,branch=main; head=6fd6be57e5341e083a7023a3ae29e65b7b326bbd; status_lines=6; protected_hash_mismatches=[],"protected branch, HEAD, status, and six SHA-256 fingerprints"
+V41,git diff --check passes,PASS,no errors,git diff --check
+V42,no Phase 4 or feature-effect work introduced,PASS,prohibited_implementation_matches=[],Phase 3 source inspection
+V43,no commit occurred during Phase 3,PASS,head=b112f6b22898976f77410190614cb4fb218d38f9; starting_head=b112f6b22898976f77410190614cb4fb218d38f9,git rev-parse HEAD
+V44,no Phase 3 push occurred,PASS,remote_output=''; returncode=0,git ls-remote --heads origin
+V45,all required output files exist,PASS,missing=[],outputs/week6_03_model_target_robustness/
+V46,all focused figures exist and are non-empty,PASS,"figure_count=13; files=['01_phase3_experiment_tree.png', '02_simple_model_performance_comparison.png', '03_gp_kernel_noise_rmse_comparison.png', '04_nugget_vs_no_nugget_paired_confidence_intervals.png', '05_provisional_models_observed_vs_loo_predicted.png', '06_learned_nugget_std_by_kernel_and_target.png', '07_target_definition_scatter_depth.png', '07_target_definition_scatter_length.png', '07_target_definition_scatter_width.png', '08_target_definition_absolute_difference_distributions.png', '09_target_stability_vs_predictability.png', '10_learned_nugget_vs_target_definition_shift.png', '11_phase3_final_decision_scorecard.png']",figures/
+V47,target definitions use unchanged target-specific populations,PASS,all 18 target/definition populations checked,target_definition_simulation_level_table.csv
+V48,one provisional GP configuration held fixed across T0–T5,PASS,"configurations={'width': ['matern32_learned_nugget'], 'length': ['matern52_learned_nugget'], 'depth': ['matern32_learned_nugget']}",target_definition_loo_predictions.csv
+V49,final model decisions are target-specific and complete,PASS,"rows=3; targets=['depth', 'length', 'width']",phase3_final_model_decision.csv
+V50,final target decisions are target-specific and complete,PASS,"rows=3; targets=['depth', 'length', 'width']",phase3_final_target_decision.csv
+V51,GP interval flags and aggregate coverage are independently recomputed,PASS,3B=groups_checked=18; failures=[]; 3C=groups_checked=18; failures=[],GP prediction and metrics files

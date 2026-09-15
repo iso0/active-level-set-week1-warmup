@@ -1,0 +1,5 @@
+# Literature-faithful SUR update contract
+
+[Bect et al. (2012)](https://doi.org/10.1007/s11222-011-9241-4) formulate stepwise uncertainty reduction as minimizing expected future uncertainty of an excursion-set quantity under the current posterior predictive distribution. [Menz, Muñoz Zuniga, and Sinoquet (2025)](https://doi.org/10.1016/j.strusafe.2025.102607) extend random-set uncertainty reduction to Gaussian-process classification.
+
+This validation retains Phase 1.18A's finite-pool functional `U=mean_u p(u)(1-p(u))`. It is a probability-uncertainty surrogate, not asserted to be algebraically identical to every random-set functional in Menz et al. Both hypothetical labels are weighted by current `p_n(x)`. The literature-defined one-step posterior update is closest to `EXACT_LAPLACE_FIXED_MODEL`: current mean/scaler/kernel hyperparameters are held fixed while the enlarged-data Laplace posterior is solved. Refitting physics or kernel hyperparameters is a secondary empirical-Bayes model-refit effect, not automatically the theoretical acquisition definition.

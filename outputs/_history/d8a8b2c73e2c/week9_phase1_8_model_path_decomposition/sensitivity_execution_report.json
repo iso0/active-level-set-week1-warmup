@@ -1,0 +1,21 @@
+{
+  "bounds": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "budgets": [
+    16,
+    40,
+    80
+  ],
+  "elapsed_seconds": 4.646607160568237,
+  "fits": 1800,
+  "new_query_trajectories": 0,
+  "paths": [
+    "A0",
+    "A1"
+  ],
+  "post_hoc_selection": false,
+  "status": "PASS"
+}

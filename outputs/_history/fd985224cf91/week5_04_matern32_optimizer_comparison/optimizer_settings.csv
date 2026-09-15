@@ -1,0 +1,5 @@
+optimizer,gradient,maxiter,objective_ftol,parameter_tolerance,initial_starts
+lbfgsb,analytic,200,1e-09,1e-06,2
+slsqp,analytic,200,1e-09,,2
+powell,not used,200,1e-09,1e-06,2
+none,not applicable,0,,,1

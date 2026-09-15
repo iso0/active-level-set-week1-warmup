@@ -1,0 +1,8 @@
+method,decision,scope,reason
+M3_MARGIN,COMPATIBLE_MARGIN_EQUIVALENT,point-local,reference local probability-margin rule
+M3_STRADDLE,COMPATIBLE_DISTINCT,point-local,valid latent-local criterion; no GPC look-ahead guarantee
+M3_EMI,COMPATIBLE_DISTINCT,point-local,valid latent-local criterion; no GPC look-ahead guarantee
+M3_SMOCU_APPROX,REQUIRES_APPROXIMATION,one-step-look-ahead approximate,principled global one-step objective; current full audit uses disclosed approximation
+M3_SUR_APPROX,REQUIRES_APPROXIMATION,one-step-look-ahead approximate,principled global one-step objective; current full audit uses disclosed approximation
+M3_TMES_GSUR,COMPATIBLE_DISTINCT,geometry-local,local targeted variance-reduction proxy
+PA_TVR_CANDIDATE,NOT_COMPATIBLE,geometry-local,supplied Matérn/tangent geometry factor lacks derivation

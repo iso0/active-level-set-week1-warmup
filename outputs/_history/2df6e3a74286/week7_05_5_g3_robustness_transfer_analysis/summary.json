@@ -1,0 +1,194 @@
+{
+  "analysis_populations": [
+    "new-data",
+    "old-data-local",
+    "old-data-remote-clean",
+    "all-old",
+    "all-combined"
+  ],
+  "analysis_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "bootstrap_resamples": 5000,
+  "dataset_repository": "ioandanielc/sph_v2",
+  "g3_scorecard": {
+    "aggregate_rank_sum": 15.0,
+    "candidate_id": "G3",
+    "descriptive_direction_agreement_fraction": 1.0,
+    "mean_cross_population_transfer_balanced_accuracy": 0.886635955262193,
+    "mean_direction_adjusted_roc_auc": 0.988542683731016,
+    "mean_transfer_sensitivity": 0.8689814814814815,
+    "mean_transfer_specificity": 0.9042904290429042,
+    "mean_within_population_loo_balanced_accuracy": 0.9305289496777105,
+    "median_normalized_loo_threshold_iqr": 0.0,
+    "minimum_candidate_availability_fraction": 0.9888268156424581,
+    "minimum_cross_population_transfer_balanced_accuracy": 0.8125,
+    "minimum_direction_adjusted_roc_auc": 0.9733727810650887,
+    "minimum_within_population_loo_balanced_accuracy": 0.75,
+    "rank__descriptive_direction_agreement_fraction": 1.0,
+    "rank__mean_cross_population_transfer_balanced_accuracy": 2.0,
+    "rank__mean_direction_adjusted_roc_auc": 2.0,
+    "rank__mean_within_population_loo_balanced_accuracy": 3.0,
+    "rank__minimum_candidate_availability_fraction": 7.0,
+    "subgroup_rows_evaluated": 7
+  },
+  "hf_change_audit": {
+    "audit_method": "Git tree name-status diff plus current blob IDs and byte sizes",
+    "change_record_count": 110,
+    "changed_experiment_count": 55,
+    "current_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "filename_counts": {
+      "kinetic-energy_melt.dat": 55,
+      "time.dat": 55
+    },
+    "geometry_paths_changed": false,
+    "iteration_paths_changed": false,
+    "label_paths_changed": false,
+    "live_main_matches_current": true,
+    "live_main_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "modified_or_deleted_paths": 0,
+    "new_data_paths_changed": false,
+    "only_expected_monitor_additions": true,
+    "partition_experiment_counts": {
+      "old-data-local": 55
+    },
+    "pinned_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+    "repository": "ioandanielc/sph_v2",
+    "status_counts": {
+      "A": 110
+    }
+  },
+  "mode": "full",
+  "notebook": {
+    "code_cell_count": 20,
+    "execution_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "section_headings": [
+      "## 1. Scope and relationship to Phase 5",
+      "## 2. Provenance: Phase 5 commit and merged HF restoration",
+      "## 3. Verification of what changed in HF since the pinned snapshot",
+      "## 4. Rebuilt full-population readiness table",
+      "## 5. Partition label composition",
+      "## 6. Reminder: what G3, R3, max depth, and T0 depth mean",
+      "## 7. Candidate distributions by partition and label",
+      "## 8. Within-population LOO threshold performance",
+      "## 9. Cross-population threshold transfer",
+      "## 10. Threshold stability",
+      "## 11. Threshold margin and gap diagnostics",
+      "## 12. Bootstrap uncertainty",
+      "## 13. Transient vs persistent robustness",
+      "## 14. T0-overlap timing robustness",
+      "## 15. Old vs new domain and process-map context",
+      "## 16. Hard-case linkage",
+      "## 17. Boundary-formulation interpretation",
+      "## 18. Final Phase 5.5 recommendation",
+      "## 19. Validation",
+      "## 20. Hard stop"
+    ],
+    "stored_errors": []
+  },
+  "phase": "Week 7 Phase 5.5",
+  "phase55_branch": "codex/week7-phase5-5-g3-robustness-transfer",
+  "phase5_parent": "3367f4c9b5af2def802f72a65258f5cc01896bac",
+  "pinned_revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "readiness": {
+    "all-combined": {
+      "experiment_count": 407,
+      "label_ready_count": 407,
+      "physical_target_ineligible_count": 2,
+      "physical_target_ready_count": 405,
+      "physical_target_ready_fraction": 0.995085995085995,
+      "retained_row_count": 407,
+      "simulations_removed": 0
+    },
+    "all-old": {
+      "experiment_count": 242,
+      "label_ready_count": 242,
+      "physical_target_ineligible_count": 1,
+      "physical_target_ready_count": 241,
+      "physical_target_ready_fraction": 0.9958677685950413,
+      "retained_row_count": 242,
+      "simulations_removed": 0
+    },
+    "new-data": {
+      "experiment_count": 165,
+      "label_ready_count": 165,
+      "physical_target_ineligible_count": 1,
+      "physical_target_ready_count": 164,
+      "physical_target_ready_fraction": 0.9939393939393939,
+      "retained_row_count": 165,
+      "simulations_removed": 0
+    },
+    "old-data-local": {
+      "experiment_count": 179,
+      "label_ready_count": 179,
+      "physical_target_ineligible_count": 1,
+      "physical_target_ready_count": 178,
+      "physical_target_ready_fraction": 0.994413407821229,
+      "retained_row_count": 179,
+      "simulations_removed": 0
+    },
+    "old-data-remote-clean": {
+      "experiment_count": 63,
+      "label_ready_count": 63,
+      "physical_target_ineligible_count": 0,
+      "physical_target_ready_count": 63,
+      "physical_target_ready_fraction": 1.0,
+      "retained_row_count": 63,
+      "simulations_removed": 0
+    }
+  },
+  "recommendation": {
+    "hard_stop": "No predictive modelling, active learning, acquisition, level-set estimation, or relabelling in Phase 5.5.",
+    "labels_modified": false,
+    "new_target_declared": false,
+    "phase6_candidate": "compare unchanged binary Keyhole boundary with continuous G3 and max-depth benchmarks under a separately approved protocol",
+    "reason": "G3 worst held-out transfer balanced accuracy=0.8125, worst transfer sensitivity=0.6250, and direction agreement=1.000; the scalar association transfers, but its threshold location shifts materially by partition.",
+    "recommended_boundary_formulation": "retain binary has_keyhole reference; do not universalize the new-data G3 threshold; carry G3 with max-depth as a comparator only under a separately approved Phase 6 protocol",
+    "universal_fixed_G3_threshold_recommended": false
+  },
+  "requirements": {
+    "PASS": 12
+  },
+  "runtime_seconds": 2233.854487899982,
+  "scope": {
+    "active_learning_run": false,
+    "classifiers_fitted": false,
+    "labels_modified": false,
+    "level_set_estimated": false,
+    "phase55_commit_or_push_authorized": false,
+    "predictive_models_fitted": false,
+    "simulations_removed": false
+  },
+  "top_scorecard_candidate": "max_depth",
+  "transfer_routes": [
+    "new_to_old_local",
+    "new_to_old_remote",
+    "new_to_all_old",
+    "all_old_to_new",
+    "old_local_to_new",
+    "old_remote_to_new",
+    "pooled_descriptive"
+  ],
+  "validation": {
+    "PASS": 24
+  }
+}

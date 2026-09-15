@@ -1,0 +1,110 @@
+{
+  "phase": "Week 9 Phase 1.21 - simplification and clean replication",
+  "frozen_at_utc": "2026-09-13T19:03:29.780115+00:00",
+  "hypothesis": "The replicated Phase 1.20 gain is an early boundary-coverage effect: coverage inside the queried-label log-h band until B40 followed by plain M3 margin (Candidate A) improves on M3 margin as CCM did, and does so again on partitions never used before; the same holds with an earlier active start (Candidate B). The late misfit-avoidance component is not needed.",
+  "no_search": "exactly one control and two candidates; no parameter is tuned; two descriptive references",
+  "control": {
+    "name": "margin",
+    "definition": "M3 probability margin, frozen 16-point maximin seed"
+  },
+  "candidates": {
+    "coverage_then_margin_B40": {
+      "seed": "frozen 16-point maximin design (w85.initial_design)",
+      "B16_to_B39": "estimated log-h band from queried labels only ([lowest queried Keyhole, highest queried Conduction], or the bracket while separable), padded by max(0.05, 0.25 x width); inside the band choose argmax rank(1 - 2|p - 0.5|) + rank(standardised-x distance to nearest queried point); plain margin if the band is empty",
+      "B40_to_B79": "plain M3 probability margin (no misfit avoidance)",
+      "object": "week9_phase1_20_acquisition_search.make_band_coverage('x', weight_unc=1.0, pad_fraction=0.25, switch_budget=40)",
+      "parameters": {
+        "pad_fraction": 0.25,
+        "pad_floor": 0.05,
+        "switch_budget": 40,
+        "uncertainty_weight": 1.0,
+        "coordinates": "standardised original 4D x (P, VX, LS, ST), scaler fit on the outer training pool"
+      },
+      "provenance": "identical to Phase 1.20 CCM before B40 (50/50 development runs share the first 40 queries); screened in Phase 1.20 development as sched_bmm_B40 (dev +0.0022 on 16-80, +0.0067 on 16-40); never run on any confirmation repeat"
+    },
+    "early8__coverage_then_margin_B40": {
+      "seed": "first 8 points of the frozen maximin order; if they lack a class, extend along the SAME frozen order until both classes are queried (week9_phase1_20_early_start.seed_prefix)",
+      "then": "Candidate A's rule from the end of the seed (coverage below B40, plain margin from B40)",
+      "metrics_from": "B16, identical budget grid to the control"
+    }
+  },
+  "descriptive_references_not_candidates": {
+    "cov_then_misfit_B40": "Phase 1.20 family-A finalist (CCM)",
+    "early8__cov_then_misfit_B40": "Phase 1.20 family-B finalist",
+    "role": "answer whether the late misfit component is needed; never selected, never Holm-counted"
+  },
+  "evaluator": "M3 exactly as Phase 1.13/1.14, refit on the queried prefix at every budget",
+  "replication_data": {
+    "repeats": [
+      61,
+      120
+    ],
+    "repeat_blocks": 60,
+    "outer_cv_runs_per_policy": 300,
+    "generator": "w85.build_splits(population, repeats=120, folds=5); first 100 specs bit-identical to the frozen splits and first 300 to those used in Phase 1.20 (gate_splits.json)",
+    "status": "untouched internal replication partitions: further outer cross-validation partitions of the same 405-simulation population, not new simulations and not external data",
+    "audit": "REPEAT_USAGE_AUDIT.json",
+    "power": "from Phase 1.20 confirmation variances only: 60 blocks give ~0.90 power for Candidate A on 16-40, ~0.72 on 16-80, ~1.00 for Candidate B (two-sided alpha 0.025)"
+  },
+  "endpoints": {
+    "primary": "Fold-B1-q20 accuracy AULC 16-80",
+    "early_sample_efficiency": "Fold-B1-q20 accuracy AULC 16-40",
+    "secondary": [
+      "AULC 41-80",
+      "q30 accuracy AULC 16-80",
+      "q20 balanced accuracy AULC 16-80",
+      "q20 Keyhole recall (AULC 16-80 and at B40)",
+      "full81 accuracy (AULC 16-80 and at B80)",
+      "simulations saved at margin's accuracy at B24/B32/B40/B60 (mean curves, descriptive)"
+    ]
+  },
+  "inference": {
+    "unit": "repeat block (mean of its 5 outer runs), paired against the control",
+    "bootstrap": "10,000 repeat-block draws, percentile 95% CI",
+    "permutation": "10,000 sign flips of repeat-block differences",
+    "multiplicity": "Holm over {A, B} x {16-80, 16-40} = 4 tests",
+    "consistency": "identical estimators to Phase 1.20 confirmation; new seed namespace phase1_21"
+  },
+  "decision": {
+    "alpha": 0.05,
+    "REPLICATED_if": [
+      "Holm-adjusted p < 0.05 and 95% CI > 0 on at least one of the two main windows",
+      "the other main window has a non-negative point estimate",
+      "guardrails pass"
+    ],
+    "guardrails": {
+      "B40_q20_KH_recall_change_min": -0.03,
+      "B80_full81_accuracy_change_min": -0.01
+    },
+    "noninferiority_margin": {
+      "16-80": 0.001,
+      "16-40": 0.0025
+    },
+    "misfit_question_rule": {
+      "COVERAGE_SUFFICIENT": "candidate REPLICATED and (candidate - its CCM reference) 95% CI lower bound > -margin on both main windows",
+      "COVERAGE_WORKS_BUT_CCM_MEASURABLY_BETTER": "candidate REPLICATED, non-inferiority fails, and the CCM reference is better with a CI excluding zero in a main window",
+      "COVERAGE_WORKS_NONINFERIORITY_INCONCLUSIVE": "candidate REPLICATED, non-inferiority fails, no significant CCM advantage",
+      "NOT_REPLICATED": "candidate not REPLICATED",
+      "margin_rationale": "about half of the Phase 1.20 confirmed CCM effects (+0.0023 on 16-80, +0.0055 on 16-40), rounded down (stricter)",
+      "by_construction": "each candidate and its CCM reference share every query up to B40, so the 16-40 comparison is expected to be ~0; the informative misfit comparison is 16-80 (driven by 41-80)"
+    }
+  },
+  "information_guard": "policies receive masked label and depth arrays (-1 / NaN for unqueried rows); test labels, unqueried labels, depths and B1 distances are unreachable; audited in invariance_audit.json",
+  "numerical_environment": "OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=1 for every run of every policy (gate_runner_equivalence_addendum.json)",
+  "gates": {
+    "splits": "PASS",
+    "runner_equivalence": "PASS - runner logic identical; results depend on BLAS thread count only through rare near-ties"
+  },
+  "code_sha256": {
+    "week9_phase1_21_simplification_replication.py": "b7c436e88c15cb569c4c5f8cf2f26f3c2742f436da403c8c4b6fce85386d19c9",
+    "week9_phase1_21_analysis.py": "5c9992371f180bfbe8b36cd284d7e0cb2a5dd62219280517de7f8c04af0ea836",
+    "week9_phase1_20_acquisition_search.py": "a47a4c2a872bda39da0ef1415360447d9fafb570c603cf3e6687ead5681a26b2",
+    "week9_phase1_20_early_start.py": "5a515d6c89d2a4c547f005fd58067d7385b2343795d136ac26b23bf8501b9a43",
+    "week9_phase1_13_fixed_physics_ard_discrepancy.py": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba",
+    "week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5",
+    "week9_phase1_7_physics_ridge_residual_gp.py": "74ca6376daa3da00d6578d7d48078fb60c7e017dae2bf209e79a3a018704ba92",
+    "week8_5_frozen_sample_efficiency_confirmation.py": "cb63cd474817a91a755d779d8a0f4ad5337ab51a0778f3bc1788c3f6d943b60c"
+  },
+  "confirmation_checkpoints_existing_at_freeze": [],
+  "external_blind_pool": "not opened, not read, not computed on; to be proposed only after Phase 1.21 is complete"
+}

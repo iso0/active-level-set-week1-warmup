@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\ozgur\Documents\thesis-week6-melt-pool-audit\src\week6_phase3_5_regime_target_design.py", line 5439, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ozgur\Documents\thesis-week6-melt-pool-audit\src\week6_phase3_5_regime_target_design.py", line 5435, in main
+    full_run(args)
+    ~~~~~~~~^^^^^^
+  File "C:\Users\ozgur\Documents\thesis-week6-melt-pool-audit\src\week6_phase3_5_regime_target_design.py", line 5154, in full_run
+    nested_predictions, nested_metrics, selected_thresholds = nested_threshold_loo(
+                                                              ~~~~~~~~~~~~~~~~~~~~^
+        score_table
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ozgur\Documents\thesis-week6-melt-pool-audit\src\week6_phase3_5_regime_target_design.py", line 2116, in nested_threshold_loo
+    require(np.isfinite(heldout_score), f"{candidate}: held-out score missing")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ozgur\Documents\thesis-week6-melt-pool-audit\src\week6_phase3_5_regime_target_design.py", line 229, in require
+    raise RuntimeError(message)
+RuntimeError: G2: held-out score missing

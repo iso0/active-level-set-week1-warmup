@@ -1,0 +1,3 @@
+# Frozen SUR protocol
+
+For each unqueried outer-training candidate, both hypothetical labels are integrated with its current M3 probability. The current U_n is the common mean p(1-p) over the complete unqueried pool R_n. Each hypothetical future uncertainty is the mean over the remaining pool R_n minus the candidate. P1 freezes the physics mean, outer-pool scaler, and Stage-2 kernel. P2 refits only the revealed-label-fitted physics mean under each hypothetical outcome and freezes the Stage-2 kernel. The actual next-budget M3 model is normally refit. Ties are resolved by smallest population-row index. No hidden label, held-out label, B1, q20, or q30 enters selection.

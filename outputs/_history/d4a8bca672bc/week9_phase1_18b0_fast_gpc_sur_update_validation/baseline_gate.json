@@ -1,0 +1,13 @@
+{
+  "conduction": 332,
+  "current_head": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+  "frozen_paths": 100,
+  "historical_changes": [],
+  "keyholes": 73,
+  "merge_base": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+  "outer_runs": 100,
+  "parent_sha": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+  "phase18a_candidate_rows": 169200,
+  "population": 405,
+  "status": "PASS"
+}

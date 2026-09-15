@@ -1,0 +1,35 @@
+{
+  "frozen_at_utc": "2026-09-13T16:11:50.042259+00:00",
+  "rule": "PREREGISTERED_PROTOCOL + AMENDMENT_2: family A finalist = eligible policy with the largest development delta AULC 16-80",
+  "family_A_candidates_screened": 31,
+  "family_A_finalist": "cov_then_misfit_B40",
+  "family_A_finalist_development": {
+    "d_16_80": 0.004889705882352947,
+    "ci_16_80": "[+0.0016, +0.0085]",
+    "d_16_40": 0.006715686274509805,
+    "ci_16_40": "[-0.0012, +0.0152]",
+    "d_41_80": 0.0038612368024132796,
+    "ci_41_80": "[+0.0021, +0.0054]",
+    "B40_q20_KH_recall": 0.7399126984126984
+  },
+  "runner_up": "cov_pad50_then_misfit_B40",
+  "family_B_finalist": "early8__cov_then_misfit_B40",
+  "confirmation_checkpoints_existing_at_freeze": [],
+  "family_B_frozen_at_utc": "2026-09-13T16:22:47.517452+00:00",
+  "family_B_candidates_screened": [
+    "early8__cov_then_misfit_B40",
+    "early12__cov_then_misfit_B40",
+    "early4__cov_then_misfit_B40",
+    "early8__margin"
+  ],
+  "family_B_finalist_development": {
+    "d_16_80": 0.008924632352941195,
+    "ci_16_80": "[+0.0041, +0.0134]",
+    "d_16_40": 0.021078431372549004,
+    "ci_16_40": "[+0.0137, +0.0282]",
+    "d_41_80": 0.0016289592760181028,
+    "ci_41_80": "[-0.0028, +0.0058]",
+    "B40_q20_KH_recall": 0.7552698412698412
+  },
+  "family_B_confirmation_checkpoints_existing_at_freeze": []
+}

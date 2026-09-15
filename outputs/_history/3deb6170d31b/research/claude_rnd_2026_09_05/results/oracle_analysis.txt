@@ -1,0 +1,6 @@
+Test-label greedy oracle (B16-39, then margin) minus committed M3-margin, 8 runs:
+  A16_32: oracle 0.9203 margin 0.8199 diff +0.1004 [+0.0786,+0.1227]
+  A16_40: oracle 0.9249 margin 0.8298 diff +0.0951 [+0.0778,+0.1137]
+  A16_48: oracle 0.9192 margin 0.8342 diff +0.0850 [+0.0679,+0.1043]
+  A16_80: oracle 0.8932 margin 0.8483 diff +0.0449 [+0.0300,+0.0620]
+checkpoints (oracle, margin): {16: (np.float64(0.779), np.float64(0.779)), 20: (np.float64(0.919), np.float64(0.809)), 24: (np.float64(0.934), np.float64(0.816)), 28: (np.float64(0.934), np.float64(0.846)), 32: (np.float64(0.934), np.float64(0.838)), 36: (np.float64(0.934), np.float64(0.868)), 40: (np.float64(0.941), np.float64(0.846)), 48: (np.float64(0.875), np.float64(0.846)), 60: (np.float64(0.853), np.float64(0.86)), 80: (np.float64(0.875), np.float64(0.875))}

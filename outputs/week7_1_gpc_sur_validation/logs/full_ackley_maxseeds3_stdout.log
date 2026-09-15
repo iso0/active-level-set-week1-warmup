@@ -1,0 +1,22 @@
+Running Thresholded 4D Ackley: 3 seed(s), 6 method(s).
+  seed=0 method=random_classifier
+  seed=0 method=classifier_margin
+  seed=0 method=classifier_entropy
+  seed=0 method=classifier_uncertainty_repulsion
+  seed=0 method=gpc_bernoulli_sur_refit_k15
+  seed=0 method=gpc_bernoulli_sur_refit_k25
+  seed=1 method=random_classifier
+  seed=1 method=classifier_margin
+  seed=1 method=classifier_entropy
+  seed=1 method=classifier_uncertainty_repulsion
+  seed=1 method=gpc_bernoulli_sur_refit_k15
+  seed=1 method=gpc_bernoulli_sur_refit_k25
+  seed=2 method=random_classifier
+  seed=2 method=classifier_margin
+  seed=2 method=classifier_entropy
+  seed=2 method=classifier_uncertainty_repulsion
+  seed=2 method=gpc_bernoulli_sur_refit_k15
+  seed=2 method=gpc_bernoulli_sur_refit_k25
+Week 7.1 GPC SUR validation complete in 535.0s (full mode).
+Thresholded 4D Ackley: best q20=classifier_entropy (0.4212), best q30=classifier_entropy (0.3797)
+Saved outputs to C:\Users\ozgur\Documents\thesis\outputs\week7_1_gpc_sur_validation

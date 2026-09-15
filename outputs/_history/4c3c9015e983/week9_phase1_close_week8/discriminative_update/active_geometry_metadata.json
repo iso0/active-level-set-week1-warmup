@@ -1,0 +1,29 @@
+{
+  "B1_reference": "nearest opposite manual label inside each 324-row training pool after fold-local StandardScaler",
+  "inference_unit": "20 repeat blocks; all five folds kept together",
+  "model_reference": "absolute logit from M3 fitted post hoc to all 324 training-pool manual labels",
+  "query_prefix_used": 160,
+  "reference_used_by_acquisition": false,
+  "representative_run_id": "w85__r19_f03",
+  "saved_margin_trajectories": 100,
+  "stages": {
+    "early_17_40": [
+      17,
+      40
+    ],
+    "initial_1_16": [
+      1,
+      16
+    ],
+    "late_81_160": [
+      81,
+      160
+    ],
+    "mid_41_80": [
+      41,
+      80
+    ],
+    "unqueried_at_H160": 164
+  },
+  "status": "post-hoc descriptive evaluation only"
+}

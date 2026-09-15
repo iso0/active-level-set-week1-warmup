@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alse"
+version = "0.1.0"
+description = "Sample-efficient active level-set estimation for melt-pool regime boundaries (thesis code)"
+requires-python = ">=3.12"
+dependencies = [
+    # Pinned to the versions that produced the frozen thesis numbers
+    # (see docs/archive.md). Newer versions may change float-exact results.
+    "numpy>=2.5,<3",
+    "scipy>=1.18,<2",
+    "scikit-learn>=1.9,<2",
+    "pandas>=2.3,<4",
+    "matplotlib>=3.10,<4",
+    "pyarrow>=25,<26",
+    "huggingface_hub>=1,<2",
+    "joblib>=1.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["alse*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "archive: needs the archived ChatGPT worktree (ALSE_ARCHIVE); skipped if absent",
+    "slow: takes more than ~30 s",
+]
+addopts = "-p no:cacheprovider"

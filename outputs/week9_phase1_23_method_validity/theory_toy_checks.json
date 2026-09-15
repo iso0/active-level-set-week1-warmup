@@ -1,0 +1,95 @@
+{
+  "logistic_midpoint": {
+    "cases": 297,
+    "threshold_offset_from_midpoint_in_gap_widths": {
+      "median": 0.014833485326145554,
+      "q90": 0.042465519360398246,
+      "max": 0.08249251472232481
+    },
+    "logit_change_across_gap": {
+      "min": 0.22583450987203477,
+      "median": 10.316654908509866,
+      "max": 15.918079567248464
+    },
+    "probability_at_gap_edges_if_threshold_at_midpoint": 0.0057184225500738605
+  },
+  "margin_ordering": {
+    "increasing_in_mu_for_every_v": true,
+    "decreasing_in_v_for_every_mu": true
+  },
+  "coupon_collector": {
+    "K=8": {
+      "queries": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "expected_distinct_cells_uniform": [
+        5.25,
+        7.06,
+        7.68,
+        7.89
+      ],
+      "covering_design": [
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    "K=16": {
+      "queries": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "expected_distinct_cells_uniform": [
+        6.45,
+        10.3,
+        12.6,
+        13.97
+      ],
+      "covering_design": [
+        8,
+        16,
+        16,
+        16
+      ]
+    },
+    "K=27": {
+      "queries": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "expected_distinct_cells_uniform": [
+        7.04,
+        12.24,
+        16.09,
+        18.93
+      ],
+      "covering_design": [
+        8,
+        16,
+        24,
+        27
+      ]
+    }
+  },
+  "toy_2d_wavy_boundary": {
+    "setup": "400 uniform points in [0,1]^2, h = x1, y = 1[x1 > 0.55 + 0.12 sin(2 pi x2)], 8-point maximin seed, 2D analogue of M3, 40 toy seeds; illustration only",
+    "margin": {
+      "first_budget_with_non_separable_labels_median": 15.0,
+      "share_still_separable_at_B24": 0.05,
+      "distinct_x2_octants_among_first_16_active_queries_mean": 7.175
+    },
+    "coverage_then_margin_B40": {
+      "first_budget_with_non_separable_labels_median": 14.0,
+      "share_still_separable_at_B24": 0.0,
+      "distinct_x2_octants_among_first_16_active_queries_mean": 7.7
+    }
+  }
+}

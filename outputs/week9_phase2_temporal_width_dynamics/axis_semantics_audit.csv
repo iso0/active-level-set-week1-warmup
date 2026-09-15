@@ -1,0 +1,3 @@
+quantity,formula,physical_interpretation,authoritative_source_file,authoritative_source_line_or_function,semantic_source_verified,numeric_files_checked,numeric_mapping_verified,status
+longitudinal_length,x_max - x_min,longitudinal melt-pool length ΔX,src\week7_phase2_sph_v2_physical_target_extraction.py,"POSITION_BOUNDS_COLUMNS; extract_experiment: length_m = extents[:, 0]",True,5,True,PASS
+transverse_width,y_max - y_min,transverse melt-pool width ΔY,src\week7_phase2_sph_v2_physical_target_extraction.py,"POSITION_BOUNDS_COLUMNS; extract_experiment: width_m = extents[:, 1]",True,5,True,PASS

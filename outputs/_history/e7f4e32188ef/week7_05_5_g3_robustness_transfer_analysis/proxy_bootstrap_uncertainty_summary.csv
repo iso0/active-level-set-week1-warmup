@@ -1,0 +1,173 @@
+analysis_type,population_or_route,train_population,test_population,candidate_id,metric,estimate,ci_low,ci_high,bootstrap_resamples,bootstrap_unit,bootstrap_scheme
+within_population,new-data,new-data,new-data,G3,roc_auc,1.0,0.9999999999999999,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,G3,average_precision,0.9999999999999998,0.9999999999999998,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,G3,loo_balanced_accuracy,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,G3,loo_sensitivity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,G3,loo_specificity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,R3,roc_auc,0.9985855728429985,0.9952852428099953,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,R3,average_precision,0.9977350794651101,0.9927614516976825,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,R3,loo_balanced_accuracy,0.9900990099009901,0.9752475247524752,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,R3,loo_sensitivity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,R3,loo_specificity,0.9801980198019802,0.9504950495049505,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,max_depth,roc_auc,0.9998428414269999,0.9990570485619991,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,max_depth,average_precision,0.999751984126984,0.9985569985569984,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,max_depth,loo_balanced_accuracy,0.9871129970139871,0.9662894860914663,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,max_depth,loo_sensitivity,0.9841269841269841,0.9523809523809523,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,max_depth,loo_specificity,0.9900990099009901,0.9702970297029703,1.0,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,T0_depth,roc_auc,0.9577243438629577,0.9292786421499293,0.98004086122898,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,T0_depth,average_precision,0.9434314745521312,0.9072859080626652,0.9724240940128515,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,T0_depth,loo_balanced_accuracy,0.778956467075279,0.709470768505422,0.8433914820053434,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,T0_depth,loo_sensitivity,0.746031746031746,0.6349206349206349,0.8571428571428571,5000,simulation,stratified by Keyhole label
+within_population,new-data,new-data,new-data,T0_depth,loo_specificity,0.8118811881188119,0.7326732673267327,0.8910891089108911,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,G3,roc_auc,0.9733727810650887,0.9408284023668638,0.9955621301775148,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,G3,average_precision,0.762719298245614,0.5206247347757103,0.9464285714285714,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,G3,loo_balanced_accuracy,0.9644970414201184,0.9437869822485208,0.9822485207100592,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,G3,loo_sensitivity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,G3,loo_specificity,0.9289940828402367,0.8875739644970414,0.9644970414201184,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,R3,roc_auc,0.9630177514792899,0.913443047337278,0.9985207100591716,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,R3,average_precision,0.7567532467532468,0.5098426573426573,0.975,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,R3,loo_balanced_accuracy,0.8546597633136095,0.7177514792899408,0.9378698224852071,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,R3,loo_sensitivity,0.875,0.625,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,R3,loo_specificity,0.834319526627219,0.7751479289940828,0.8875739644970414,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,max_depth,roc_auc,1.0,0.9999999999999999,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,max_depth,average_precision,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,max_depth,loo_balanced_accuracy,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,max_depth,loo_sensitivity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,max_depth,loo_specificity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,T0_depth,roc_auc,0.9669117647058824,0.9264705882352942,0.9941176470588236,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,T0_depth,average_precision,0.6816628264208909,0.43315001539408865,0.9202741702741704,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,T0_depth,loo_balanced_accuracy,0.8698529411764706,0.7360294117647059,0.95,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,T0_depth,loo_sensitivity,0.875,0.625,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-local,old-data-local,old-data-local,T0_depth,loo_specificity,0.8647058823529412,0.8117647058823529,0.9117647058823529,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,G3,roc_auc,1.0,0.9999999999999999,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,G3,average_precision,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,G3,loo_balanced_accuracy,0.75,0.5,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,G3,loo_sensitivity,0.5,0.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,G3,loo_specificity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,R3,roc_auc,1.0,0.9999999999999999,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,R3,average_precision,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,R3,loo_balanced_accuracy,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,R3,loo_sensitivity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,R3,loo_specificity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,max_depth,roc_auc,1.0,0.9999999999999999,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,max_depth,average_precision,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,max_depth,loo_balanced_accuracy,0.75,0.5,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,max_depth,loo_sensitivity,0.5,0.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,max_depth,loo_specificity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,T0_depth,roc_auc,0.9836065573770492,0.9344262295081966,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,T0_depth,average_precision,0.75,0.3333333333333333,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,T0_depth,loo_balanced_accuracy,0.7336065573770492,0.4672131147540984,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,T0_depth,loo_sensitivity,0.5,0.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,old-data-remote-clean,old-data-remote-clean,old-data-remote-clean,T0_depth,loo_specificity,0.9672131147540983,0.9180327868852459,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,G3,roc_auc,0.9752173913043478,0.9452173913043478,0.9960869565217392,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,G3,average_precision,0.7962552453931764,0.5789057402846196,0.9526315789473684,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,G3,loo_balanced_accuracy,0.9586956521739131,0.941304347826087,0.9760869565217392,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,G3,loo_sensitivity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,G3,loo_specificity,0.9173913043478261,0.8826086956521739,0.9521739130434783,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,R3,roc_auc,0.9734782608695652,0.9382608695652175,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,R3,average_precision,0.8061751152073733,0.592164317389927,0.9999999999999999,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,R3,loo_balanced_accuracy,0.8804347826086957,0.7739130434782608,0.9478260869565218,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,R3,loo_sensitivity,0.9,0.7,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,R3,loo_specificity,0.8608695652173913,0.8173913043478261,0.9043478260869565,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,max_depth,roc_auc,1.0,0.9999999999999999,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,max_depth,average_precision,0.9999999999999999,0.9999999999999999,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,max_depth,loo_balanced_accuracy,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,max_depth,loo_sensitivity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,max_depth,loo_specificity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,T0_depth,roc_auc,0.9658008658008659,0.9285714285714286,0.9922077922077922,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,T0_depth,average_precision,0.6546938775510204,0.4182466163529324,0.8868951978254302,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,T0_depth,loo_balanced_accuracy,0.9218614718614719,0.8175324675324676,0.9826839826839826,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,T0_depth,loo_sensitivity,0.9,0.7,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-old,all-old,all-old,T0_depth,loo_specificity,0.9437229437229437,0.9134199134199135,0.9696969696969697,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,G3,roc_auc,0.9941232462856433,0.9866738401688532,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,G3,average_precision,0.9836992153039033,0.9640566390809159,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,G3,loo_balanced_accuracy,0.9794520547945205,0.952054794520548,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,G3,loo_sensitivity,0.958904109589041,0.9041095890410958,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,G3,loo_specificity,1.0,1.0,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,R3,roc_auc,0.9944543310019451,0.9872522037826429,0.9995044075652858,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,R3,average_precision,0.9832856889644069,0.963077276270984,0.9978370490360396,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,R3,loo_balanced_accuracy,0.9695815916897736,0.94146060091876,0.9931506849315068,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,R3,loo_sensitivity,0.9452054794520548,0.8904109589041096,0.9863013698630136,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,R3,loo_specificity,0.9939577039274925,0.9848942598187311,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,max_depth,roc_auc,0.9999587390658524,0.9997524343951147,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,max_depth,average_precision,0.9998148833765275,0.9989185291997116,1.0000000000000002,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,max_depth,loo_balanced_accuracy,0.9916446608351213,0.9749339825053639,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,max_depth,loo_sensitivity,0.9863013698630136,0.958904109589041,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,max_depth,loo_specificity,0.9969879518072289,0.9909638554216867,1.0,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,T0_depth,roc_auc,0.9730153490675029,0.9584079468559167,0.9854348902459151,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,T0_depth,average_precision,0.9093122633781147,0.8654436683635212,0.9485173482805327,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,T0_depth,loo_balanced_accuracy,0.8608681300544645,0.81826621554712,0.8996497978214225,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,T0_depth,loo_sensitivity,0.8904109589041096,0.821917808219178,0.958904109589041,5000,simulation,stratified by Keyhole label
+within_population,all-combined,all-combined,all-combined,T0_depth,loo_specificity,0.8313253012048193,0.7891566265060241,0.8704819277108434,5000,simulation,stratified by Keyhole label
+cross_population_transfer,new_to_old_local,new-data,old-data-local,T0_depth,transfer_balanced_accuracy,0.7352941176470589,0.5507352941176471,0.9227941176470589,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,T0_depth,transfer_sensitivity,0.5,0.125,0.875,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,T0_depth,transfer_specificity,0.9705882352941176,0.9411764705882353,0.9941176470588236,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,max_depth,transfer_balanced_accuracy,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,max_depth,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,max_depth,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,G3,transfer_balanced_accuracy,0.8125,0.625,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,G3,transfer_sensitivity,0.625,0.25,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,G3,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,R3,transfer_balanced_accuracy,0.75,0.5625,0.9375,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,R3,transfer_sensitivity,0.5,0.125,0.875,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_local,new-data,old-data-local,R3,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,T0_depth,transfer_balanced_accuracy,0.9836065573770492,0.959016393442623,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,T0_depth,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,T0_depth,transfer_specificity,0.9672131147540983,0.9180327868852459,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,max_depth,transfer_balanced_accuracy,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,max_depth,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,max_depth,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,G3,transfer_balanced_accuracy,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,G3,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,G3,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,R3,transfer_balanced_accuracy,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,R3,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_old_remote,new-data,old-data-remote-clean,R3,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,T0_depth,transfer_balanced_accuracy,0.7848484848484849,0.6305194805194805,0.9348484848484848,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,T0_depth,transfer_sensitivity,0.6,0.3,0.9,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,T0_depth,transfer_specificity,0.9696969696969697,0.9437229437229437,0.9913419913419913,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,max_depth,transfer_balanced_accuracy,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,max_depth,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,max_depth,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,G3,transfer_balanced_accuracy,0.85,0.7,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,G3,transfer_sensitivity,0.7,0.4,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,G3,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,R3,transfer_balanced_accuracy,0.8,0.65,0.95,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,R3,transfer_sensitivity,0.6,0.3,0.9,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,new_to_all_old,new-data,all-old,R3,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,T0_depth,transfer_balanced_accuracy,0.8652365236523651,0.8087380166588087,0.9148200534339148,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,T0_depth,transfer_sensitivity,0.8888888888888888,0.8095238095238095,0.9523809523809523,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,T0_depth,transfer_specificity,0.8415841584158416,0.7720297029702972,0.9108910891089109,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,max_depth,transfer_balanced_accuracy,0.995049504950495,0.9851485148514851,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,max_depth,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,max_depth,transfer_specificity,0.9900990099009901,0.9702970297029703,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,G3,transfer_balanced_accuracy,0.8564356435643564,0.8118811881188119,0.900990099009901,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,G3,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,G3,transfer_specificity,0.7128712871287128,0.6237623762376238,0.801980198019802,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,R3,transfer_balanced_accuracy,0.8613861386138614,0.8118811881188119,0.900990099009901,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,R3,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,all_old_to_new,all-old,new-data,R3,transfer_specificity,0.7227722772277227,0.6237623762376238,0.801980198019802,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,T0_depth,transfer_balanced_accuracy,0.7920792079207921,0.7425742574257426,0.8415841584158417,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,T0_depth,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,T0_depth,transfer_specificity,0.5841584158415841,0.48514851485148514,0.6831683168316832,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,max_depth,transfer_balanced_accuracy,0.995049504950495,0.9851485148514851,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,max_depth,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,max_depth,transfer_specificity,0.9900990099009901,0.9702970297029703,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,G3,transfer_balanced_accuracy,0.8564356435643564,0.8118811881188119,0.900990099009901,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,G3,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,G3,transfer_specificity,0.7128712871287128,0.6237623762376238,0.801980198019802,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,R3,transfer_balanced_accuracy,0.8613861386138614,0.8168316831683169,0.900990099009901,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,R3,transfer_sensitivity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_local_to_new,old-data-local,new-data,R3,transfer_specificity,0.7227722772277227,0.6336633663366337,0.801980198019802,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,T0_depth,transfer_balanced_accuracy,0.8592644978783592,0.8018210749646393,0.9118340405469119,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,T0_depth,transfer_sensitivity,0.8571428571428571,0.7619047619047619,0.9365079365079365,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,T0_depth,transfer_specificity,0.8613861386138614,0.7920792079207921,0.9207920792079208,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,max_depth,transfer_balanced_accuracy,0.9444444444444444,0.9047619047619048,0.9761904761904762,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,max_depth,transfer_sensitivity,0.8888888888888888,0.8095238095238095,0.9523809523809523,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,max_depth,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,G3,transfer_balanced_accuracy,0.9444444444444444,0.9047619047619048,0.9761904761904762,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,G3,transfer_sensitivity,0.8888888888888888,0.8095238095238095,0.9523809523809523,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,G3,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,R3,transfer_balanced_accuracy,0.9285714285714286,0.8809523809523809,0.9682539682539683,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,R3,transfer_sensitivity,0.8571428571428571,0.7619047619047619,0.9365079365079365,5000,simulation,stratified test-population resampling; training threshold fixed
+cross_population_transfer,old_remote_to_new,old-data-remote-clean,new-data,R3,transfer_specificity,1.0,1.0,1.0,5000,simulation,stratified test-population resampling; training threshold fixed

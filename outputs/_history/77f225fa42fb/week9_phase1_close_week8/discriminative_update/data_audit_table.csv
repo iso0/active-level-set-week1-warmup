@@ -1,0 +1,5 @@
+feature,meaning,storage_units,reported_units,minimum,maximum,missing
+P,Laser power P,W,W,52.5445860993,449.762375807,0
+VX,Scan velocity VX,m/s,m/s,0.201002332148,0.998321353283,0
+LS,Spot radius LS,m (displayed as µm),µm,40.0293473664,89.7039861056,0
+ST,Substrate temperature ST,K,K,300.0,399.817710522,0

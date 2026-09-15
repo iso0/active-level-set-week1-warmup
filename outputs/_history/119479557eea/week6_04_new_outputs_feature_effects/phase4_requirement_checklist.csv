@@ -1,0 +1,107 @@
+requirement_id,category,requirement,status,notebook_section,evidence_files
+1,safety,Isolated Phase 4 branch and protected preflight,PASS,A,phase4_preflight_snapshot.json; phase4_runtime_provenance.json
+2,provenance,"Pinned Phase 1 revision, ledger hash, 241 simulations, exact P/VX/LS/ST",PASS,A,phase4_configuration.json; validation_results.csv
+3,semantic audit,"Exact kinetic monitor, units, meaning, row/time alignment, missing/sentinel rules, coverage and plausibility",PASS,A,kinetic_energy_monitor_audit.csv
+4,semantic audit,Total height audited as z_max-z_min under validated bounds convention,PASS,A,total_height_monitor_audit.csv
+5,targets,T0 kinetic energy and total height plus one adaptive-interior sensitivity,PASS,B,phase4_simulation_level_targets.csv; phase4_target_definition_sensitivity.csv
+6,targets,Three reproducibly selected examples per new response,PASS,B,representative_simulation_selection.csv
+7,models,"Mean, Linear Ridge, degree-2 Polynomial Ridge, three learned-nugget GPs, selected-kernel no-nugget",PASS,C,phase4_loo_predictions.csv; phase4_model_metrics.csv
+8,models,"Exact LOO, nested Ridge tuning, fold-local scaling, deterministic GP optimizer and paired bootstrap",PASS,C,phase4_loo_predictions.csv; phase4_paired_bootstrap_comparisons.csv
+9,models,"Optimization warnings, failures, bound hits, and learned nugget recorded",PASS,C,phase4_optimization_diagnostics.csv
+10,models,"Response-specific kernel, nugget and simple-model decisions",PASS,C,phase4_selected_model_decisions.csv
+11,relationships,All 16 raw input-output scatter/Spearman associations with bootstrap intervals,PASS,D,phase4_spearman_correlations.csv; phase4_spearman_bootstrap_intervals.csv; figure 15
+12,relationships,Standardized multivariable Ridge coefficients,PASS,D,phase4_standardized_ridge_coefficients.csv; figure 16
+13,relationships,Support-masked controlled GP curves for four outputs,PASS,D,phase4_controlled_effect_curves.csv; phase4_observed_support_summary.csv
+14,relationships,Only P x VX and P x LS interaction surfaces,PASS,D,phase4_interaction_surface_values.csv
+15,normalized diagnostics,"T0 depth, T0 depth/LS, G3, G3/LS, R0 and R3 comparison",PASS,E,phase4_beam_normalized_penetration.csv; phase4_normalized_diagnostic_correlations.csv
+16,normalized diagnostics,"Exact G3/LS identity, unstable-11 sensitivity and denominator coupling warning",PASS,E,phase4_normalized_diagnostic_unstable_sensitivity.csv; decision_log.md
+17,documentation,"Direct results summary, decision log, summary JSON and runtime provenance",PASS,F,results_summary.md; decision_log.md; summary.json; phase4_runtime_provenance.json
+18,scope,"No normalized first-Conduction, revision update check, old response model rerun, classifier, active learning, ARD or causality",PASS,A/F,phase4_configuration.json; validation_results.csv
+19,figure,Required figure 1: Phase 4 analysis tree,PASS,A,outputs/week6_04_new_outputs_feature_effects/figures/01_phase4_analysis_tree.png
+20,figure,Required figure 2: Kinetic-energy monitor semantic audit,PASS,A,outputs/week6_04_new_outputs_feature_effects/figures/02_kinetic_energy_semantic_audit.png
+21,figure,Required figure 3: Example kinetic-energy time series,PASS,B,outputs/week6_04_new_outputs_feature_effects/figures/03_example_kinetic_energy_time_series.png
+22,figure,Required figure 4: Example total-height time series beside penetration depth,PASS,B,outputs/week6_04_new_outputs_feature_effects/figures/04_example_height_beside_depth.png
+23,figure,Required figure 5: Population distribution of the two new targets,PASS,B,outputs/week6_04_new_outputs_feature_effects/figures/05_new_target_distributions.png
+24,figure,Required figure 6: Primary-versus-adaptive target comparison,PASS,B,outputs/week6_04_new_outputs_feature_effects/figures/06_primary_vs_adaptive_targets.png
+25,figure,Required figure 7: Representative kinetic-energy examples,PASS,B,outputs/week6_04_new_outputs_feature_effects/figures/07_representative_kinetic_energy_examples.png
+26,figure,Required figure 8: Representative total-height examples,PASS,B,outputs/week6_04_new_outputs_feature_effects/figures/08_representative_total_height_examples.png
+27,figure,Required figure 9: Baseline-versus-GP metric comparison for kinetic_energy,PASS,C,outputs/week6_04_new_outputs_feature_effects/figures/09_kinetic_energy_model_comparison.png
+28,figure,Required figure 10: Baseline-versus-GP metric comparison for total_height,PASS,C,outputs/week6_04_new_outputs_feature_effects/figures/10_total_height_model_comparison.png
+29,figure,Required figure 11: Observed versus LOO-predicted kinetic_energy,PASS,C,outputs/week6_04_new_outputs_feature_effects/figures/11_kinetic_energy_observed_vs_loo.png
+30,figure,Required figure 12: Observed versus LOO-predicted total_height,PASS,C,outputs/week6_04_new_outputs_feature_effects/figures/12_total_height_observed_vs_loo.png
+31,figure,Required figure 13: Residual distributions,PASS,C,outputs/week6_04_new_outputs_feature_effects/figures/13_loo_residual_distributions.png
+32,figure,Required figure 14: Predictive interval diagnostics,PASS,C,outputs/week6_04_new_outputs_feature_effects/figures/14_predictive_interval_diagnostics.png
+33,figure,Required figure 15: Spearman input-output association overview,PASS,D,outputs/week6_04_new_outputs_feature_effects/figures/15_spearman_input_output_overview.png
+34,figure,Required figure 16: Standardized Ridge coefficient comparison,PASS,D,outputs/week6_04_new_outputs_feature_effects/figures/16_standardized_ridge_coefficients.png
+35,figure,Required figure 17: Width versus LS controlled-effect curve,PASS,D,outputs/week6_04_new_outputs_feature_effects/figures/17_width_vs_ls_controlled_curve.png
+36,figure,Required figure 18: Kinetic energy versus LS at low/median/high P,PASS,D,outputs/week6_04_new_outputs_feature_effects/figures/18_kinetic_energy_vs_ls_power_profiles.png
+37,figure,Required figure 19: depth P x VX controlled surface,PASS,D,outputs/week6_04_new_outputs_feature_effects/figures/19_depth_P_VX_surface.png
+38,figure,Required figure 20: total_height P x VX controlled surface,PASS,D,outputs/week6_04_new_outputs_feature_effects/figures/20_total_height_P_VX_surface.png
+39,figure,Required figure 21: T0 depth (µm) versus T0 depth / LS (dimensionless),PASS,E,outputs/week6_04_new_outputs_feature_effects/figures/21_t0_depth_vs_depth_over_ls.png
+40,figure,Required figure 22: Persistent depth G3 (µm) versus G3 / LS (dimensionless),PASS,E,outputs/week6_04_new_outputs_feature_effects/figures/22_g3_vs_g3_over_ls.png
+41,figure,Required figure 23: Persistent depth/width R3 (dimensionless) versus Persistent depth/LS G3/LS (dimensionless),PASS,E,outputs/week6_04_new_outputs_feature_effects/figures/23_r3_vs_g3_over_ls.png
+42,figure,Required figure 24: Final physical-response summary,PASS,F,outputs/week6_04_new_outputs_feature_effects/figures/24_final_physical_response_summary.png
+43,figure,Required figure 25: Final Phase 4 decision tree,PASS,F,outputs/week6_04_new_outputs_feature_effects/figures/25_phase4_final_decision_tree.png
+44,required output,Required output exists: phase4_configuration.json,PASS,A-F,phase4_configuration.json
+45,required output,Required output exists: phase4_preflight_snapshot.json,PASS,A-F,phase4_preflight_snapshot.json
+46,required output,Required output exists: phase4_runtime_provenance.json,PASS,A-F,phase4_runtime_provenance.json
+47,required output,Required output exists: kinetic_energy_monitor_audit.csv,PASS,A-F,kinetic_energy_monitor_audit.csv
+48,required output,Required output exists: total_height_monitor_audit.csv,PASS,A-F,total_height_monitor_audit.csv
+49,required output,Required output exists: phase4_simulation_level_targets.csv,PASS,A-F,phase4_simulation_level_targets.csv
+50,required output,Required output exists: phase4_target_definition_sensitivity.csv,PASS,A-F,phase4_target_definition_sensitivity.csv
+51,required output,Required output exists: representative_simulation_selection.csv,PASS,A-F,representative_simulation_selection.csv
+52,required output,Required output exists: phase4_model_metrics.csv,PASS,A-F,phase4_model_metrics.csv
+53,required output,Required output exists: phase4_loo_predictions.csv,PASS,A-F,phase4_loo_predictions.csv
+54,required output,Required output exists: phase4_paired_bootstrap_comparisons.csv,PASS,A-F,phase4_paired_bootstrap_comparisons.csv
+55,required output,Required output exists: phase4_optimization_diagnostics.csv,PASS,A-F,phase4_optimization_diagnostics.csv
+56,required output,Required output exists: phase4_selected_model_decisions.csv,PASS,A-F,phase4_selected_model_decisions.csv
+57,required output,Required output exists: phase4_spearman_correlations.csv,PASS,A-F,phase4_spearman_correlations.csv
+58,required output,Required output exists: phase4_spearman_bootstrap_intervals.csv,PASS,A-F,phase4_spearman_bootstrap_intervals.csv
+59,required output,Required output exists: phase4_standardized_ridge_coefficients.csv,PASS,A-F,phase4_standardized_ridge_coefficients.csv
+60,required output,Required output exists: phase4_controlled_effect_curves.csv,PASS,A-F,phase4_controlled_effect_curves.csv
+61,required output,Required output exists: phase4_interaction_surface_values.csv,PASS,A-F,phase4_interaction_surface_values.csv
+62,required output,Required output exists: phase4_observed_support_summary.csv,PASS,A-F,phase4_observed_support_summary.csv
+63,required output,Required output exists: phase4_beam_normalized_penetration.csv,PASS,A-F,phase4_beam_normalized_penetration.csv
+64,required output,Required output exists: phase4_normalized_diagnostic_correlations.csv,PASS,A-F,phase4_normalized_diagnostic_correlations.csv
+65,required output,Required output exists: phase4_normalized_diagnostic_unstable_sensitivity.csv,PASS,A-F,phase4_normalized_diagnostic_unstable_sensitivity.csv
+66,required output,Required output exists: results_summary.md,PASS,A-F,results_summary.md
+67,required output,Required output exists: decision_log.md,PASS,A-F,decision_log.md
+68,required output,Required output exists: summary.json,PASS,A-F,summary.json
+69,required output,Required output exists: validation_results.csv,PASS,A-F,validation_results.csv
+70,required output,Required output exists: phase4_requirement_checklist.csv,PASS,A-F,phase4_requirement_checklist.csv
+71,required output,Required output exists: figure_manifest.csv,PASS,A-F,figure_manifest.csv
+72,automated validation,Validation requirement 1 is explicitly checked,PASS,F,validation_results.csv
+73,automated validation,Validation requirement 2 is explicitly checked,PASS,F,validation_results.csv
+74,automated validation,Validation requirement 3 is explicitly checked,PASS,F,validation_results.csv
+75,automated validation,Validation requirement 4 is explicitly checked,PASS,F,validation_results.csv
+76,automated validation,Validation requirement 5 is explicitly checked,PASS,F,validation_results.csv
+77,automated validation,Validation requirement 6 is explicitly checked,PASS,F,validation_results.csv
+78,automated validation,Validation requirement 7 is explicitly checked,PASS,F,validation_results.csv
+79,automated validation,Validation requirement 8 is explicitly checked,PASS,F,validation_results.csv
+80,automated validation,Validation requirement 9 is explicitly checked,PASS,F,validation_results.csv
+81,automated validation,Validation requirement 10 is explicitly checked,PASS,F,validation_results.csv
+82,automated validation,Validation requirement 11 is explicitly checked,PASS,F,validation_results.csv
+83,automated validation,Validation requirement 12 is explicitly checked,PASS,F,validation_results.csv
+84,automated validation,Validation requirement 13 is explicitly checked,PASS,F,validation_results.csv
+85,automated validation,Validation requirement 14 is explicitly checked,PASS,F,validation_results.csv
+86,automated validation,Validation requirement 15 is explicitly checked,PASS,F,validation_results.csv
+87,automated validation,Validation requirement 16 is explicitly checked,PASS,F,validation_results.csv
+88,automated validation,Validation requirement 17 is explicitly checked,PASS,F,validation_results.csv
+89,automated validation,Validation requirement 18 is explicitly checked,PASS,F,validation_results.csv
+90,automated validation,Validation requirement 19 is explicitly checked,PASS,F,validation_results.csv
+91,automated validation,Validation requirement 20 is explicitly checked,PASS,F,validation_results.csv
+92,automated validation,Validation requirement 21 is explicitly checked,PASS,F,validation_results.csv
+93,automated validation,Validation requirement 22 is explicitly checked,PASS,F,validation_results.csv
+94,automated validation,Validation requirement 23 is explicitly checked,PASS,F,validation_results.csv
+95,automated validation,Validation requirement 24 is explicitly checked,PASS,F,validation_results.csv
+96,automated validation,Validation requirement 25 is explicitly checked,PASS,F,validation_results.csv
+97,automated validation,Validation requirement 26 is explicitly checked,PASS,F,validation_results.csv
+98,automated validation,Validation requirement 27 is explicitly checked,PASS,F,validation_results.csv
+99,automated validation,Validation requirement 28 is explicitly checked,PASS,F,validation_results.csv
+100,automated validation,Validation requirement 29 is explicitly checked,PASS,F,validation_results.csv
+101,automated validation,Validation requirement 30 is explicitly checked,PASS,F,validation_results.csv
+102,automated validation,Validation requirement 31 is explicitly checked,PASS,F,validation_results.csv
+103,automated validation,Validation requirement 32 is explicitly checked,PASS,F,validation_results.csv
+104,automated validation,Validation requirement 33 is explicitly checked,PASS,F,validation_results.csv
+105,automated validation,Validation requirement 34 is explicitly checked,PASS,F,validation_results.csv
+106,automated validation,Validation requirement 35 is explicitly checked,PASS,F,validation_results.csv

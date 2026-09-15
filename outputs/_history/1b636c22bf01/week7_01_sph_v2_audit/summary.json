@@ -1,0 +1,49 @@
+{
+  "anomaly_experiment_count": 387,
+  "anomaly_record_count": 477,
+  "conduction_experiment_count": 373,
+  "conduction_frame_count": 52080,
+  "experiment_count": 407,
+  "ioan_reference_pass_count": 20,
+  "ioan_reference_total": 20,
+  "keyhole_experiment_count": 73,
+  "keyhole_frame_count": 6700,
+  "labelled_frame_count": 110804,
+  "missing_required_monitor_record_count": 114,
+  "mode": "full",
+  "monitor_incomplete_experiment_count": 57,
+  "new_data_outside_any_week6_axis_range": 95,
+  "new_data_outside_week6_4d_convex_hull": 118,
+  "partition_counts": {
+    "new-data": {
+      "experiments": 165,
+      "labelled_frames": 45156
+    },
+    "old-data-local": {
+      "experiments": 179,
+      "labelled_frames": 49304
+    },
+    "old-data-remote-clean": {
+      "experiments": 63,
+      "labelled_frames": 16344
+    }
+  },
+  "phase": "Week 7 Phase 1",
+  "repository": "ioandanielc/sph_v2",
+  "results_summary_markdown_sha256": "abca7de1bb674be83263b0105a6c4cc0a2819f1f3704092a4dd537a22301249b",
+  "revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "runtime_seconds": 765.081791500008,
+  "scope": {
+    "active_learning": false,
+    "labels_modified": false,
+    "level_set_estimation": false,
+    "predictive_models_fitted": false,
+    "simulations_removed": false
+  },
+  "validation": {
+    "FAIL": 1,
+    "PASS": 21
+  },
+  "validation_refreshed_at_utc": "2026-08-08T16:37:42+00:00",
+  "working_student_subset_identifiable": false
+}

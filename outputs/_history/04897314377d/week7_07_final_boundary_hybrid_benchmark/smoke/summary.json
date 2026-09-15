@@ -1,0 +1,14 @@
+{
+  "fairness_passed": true,
+  "final_budget": 30,
+  "methods": [
+    "binary_uncertainty_repulsion",
+    "hybrid_binary_gate20_max_depth_straddle",
+    "hybrid_equal_rank_fusion"
+  ],
+  "outer_runs": 2,
+  "phase": "Week 7 Phase 7 smoke",
+  "reproduction_passed": true,
+  "scientific_result": false,
+  "wall_seconds": 5.933125099982135
+}

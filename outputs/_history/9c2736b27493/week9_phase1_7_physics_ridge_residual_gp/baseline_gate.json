@@ -1,0 +1,10 @@
+{
+  "frozen_protocol_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+  "initial_design_exact_matches": 100,
+  "margin_q20_AULC_16_80": 0.8135202205882354,
+  "matched_random_q20_AULC_16_80": 0.7762204350490195,
+  "outer_runs": 100,
+  "split_exact_matches": 100,
+  "starting_sha": "b36a815e12dfa872c20a050228e0545f18c443ef",
+  "status": "PASS"
+}

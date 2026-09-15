@@ -1,0 +1,35 @@
+check_id,check,status,detail
+P1V01,Exact Week 8 branch and uncommitted Phase 7 parent,PASS,HEAD=167aad945b20822de712e891e901bd3ec6d5ffc6; branch=codex/week8-final-sample-efficiency-thesis-consolidation
+P1V02,Published remote Phase 7 head is exact parent,PASS,167aad945b20822de712e891e901bd3ec6d5ffc6	refs/heads/codex/week7-phase7-final-boundary-hybrid-benchmark
+P1V03,Phase 7 source validation and requirements intact,PASS,validation=34/34; requirements=18/18
+P1V04,Exact 405 population with 73/332 manual labels,PASS,n=405; keyhole=73
+P1V05,"Exact 20 matched outer runs, four repeats, five folds",PASS,"runs=20; repeats=[np.int64(1), np.int64(2), np.int64(3), np.int64(4)]; folds=[np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)]"
+P1V06,Exact complete common integer budget grid 16-80,PASS,groups=195; min=20; max=20
+P1V07,Exact Phase 6 split/warm-start hashes reused,PASS,pass=20/20
+P1V08,Saved query histories cover all three methods and 20 runs through 80,PASS,rows=4800
+P1V09,Saved Binary prediction checkpoints include all required confidence budgets,PASS,"[np.int64(12), np.int64(15), np.int64(16), np.int64(20), np.int64(25), np.int64(30), np.int64(40), np.int64(50), np.int64(60), np.int64(70), np.int64(80)]"
+P1V10,"No rerandomization, new acquisition, model, label, or target",PASS,"{""expensive_experiment_rerun"": false, ""primary_method"": ""binary_uncertainty_repulsion"", ""manual_ground_truth"": ""has_keyhole""}"
+P1V11,B1/B2/B3 and hidden outcomes never entered acquisition,PASS,all three Phase 7 leakage flags are false
+P1V12,q20/q30 accuracy exactly equals one minus error,PASS,max=0.0
+P1V13,All B1/B2/B3 budget snapshots reproduce raw curves,PASS,maximum_absolute_difference=4.707345624410664e-13
+P1V14,First crossings independently recompute from raw trajectories,PASS,rows=1800; equal=True
+P1V15,Persistent crossings require current plus next two checkpoints,PASS,rows=1800; equal=True
+P1V16,Every target summary keeps successful and censored runs explicit,PASS,rows=90; success_range=2-20
+P1V17,Random-equivalent interpolation recomputes with no extrapolation,PASS,rows=5; mismatches=0
+P1V18,All >80 savings and multipliers are strict lower bounds,PASS,"[{""binary_budget"":40,""query_saving_display"":"">40"",""efficiency_multiplier_display"":"">2.00x""},{""binary_budget"":50,""query_saving_display"":"">30"",""efficiency_multiplier_display"":"">1.60x""},{""binary_budget"":60,""query_saving_display"":"">20"",""efficiency_multiplier_display"":"">1.33x""}]"
+P1V19,Matched-run outcome categories preserve censoring and sum to 20,PASS,"rows=6; category_sums=[20, 20, 20, 20, 20, 20]"
+P1V20,Predictive-confidence rows recompute from actual saved probabilities,PASS,maximum_absolute_difference=4.939382236557321e-13
+P1V21,Calibration uses finite fixed-bin Brier/ECE diagnostics,PASS,summary_rows=35; calibration_rows=700
+P1V22,No headline calls empirical accuracy physical-boundary certainty,PASS,headline_rows=10
+P1V23,Every headline statement names an existing machine-readable source,PASS,missing=[]
+P1V24,ST remains substrate temperature,PASS,"inputs=['P', 'VX', 'LS', 'ST']; ST=substrate temperature"
+P1V25,No causal claim is promoted,PASS,"[{""status"":""NOT SUPPORTED \/ PROHIBITED"",""forbidden_overclaim"":""Changing an input causes the reported response change by the fitted amount.""}]"
+P1V26,Phase 1 teaching notebook executes 24 code cells with zero stored errors,PASS,"{""cell_count"": 49, ""code_cell_count"": 24, ""executed_code_cell_count"": 24, ""stored_error_count"": 0, ""all_executed"": true}"
+P1V27,All required Phase 1 artifacts exist,PASS,present=19/19
+P1V28,Exactly ten Phase 1 figures are valid nonempty PNGs,PASS,figures=10; min_bytes=69702
+P1V29,Original dirty checkout remains byte/status untouched by Week 8,PASS,original checkout status matches recorded pre-Week-8 baseline
+P1V30,Published Phase 7 worktree remains clean,PASS,Phase 7 status porcelain is empty
+P1V31,Week 8 remains uncommitted and unpushed,PASS,HEAD=167aad945b20822de712e891e901bd3ec6d5ffc6; remote_week8=''
+P1V32,Week 8 scope contains only declared new paths,PASS,status_entries=6; unexpected=[]
+P1V33,"Source, notebook-builder, and validator Python compile",PASS,week8_final_sample_efficiency_thesis_consolidation.py; build_week8_notebooks.py; validate_week8.py
+P1V34,Output manifest will be hash-verified after final construction,PASS,conditional PASS; validator raises if final verification fails

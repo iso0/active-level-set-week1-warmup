@@ -1,0 +1,45 @@
+file_name,column_index,column_name,inferred_meaning,unit,evidence,confidence_level,caveat
+average-temperature_gas.dat,0,average_temperature_gas,average temperature_gas,K,file name and SI simulation configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+average-temperature_melt.dat,0,average_temperature_melt,average temperature_melt,K,file name and SI simulation configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+average-temperature_substrate.dat,0,average_temperature_substrate,average temperature_substrate,K,file name and SI simulation configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+dt.dat,0,dt,dt,s,sim_control time values and column behavior,high,Headerless; unit is inferred from SI context unless confidence is high.
+iter.dat,0,iter,solver iteration index,iteration,strict integer sequence,high,Headerless; unit is inferred from SI context unless confidence is high.
+kinetic-energy_gas.dat,0,kinetic_energy_gas,kinetic energy_gas,J,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+kinetic-energy_melt.dat,0,kinetic_energy_melt,kinetic energy_melt,J,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-temperature_gas.dat,0,maximum_temperature_gas,maximum temperature_gas,K,file name and SI simulation configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-temperature_melt.dat,0,maximum_temperature_melt,maximum temperature_melt,K,file name and SI simulation configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-temperature_substrate.dat,0,maximum_temperature_substrate,maximum temperature_substrate,K,file name and SI simulation configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-thermal-conductivity_gas.dat,0,maximum_thermal_conductivity_gas,maximum thermal conductivity_gas,W m^-1 K^-1,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-thermal-conductivity_melt.dat,0,maximum_thermal_conductivity_melt,maximum thermal conductivity_melt,W m^-1 K^-1,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-thermal-conductivity_substrate.dat,0,maximum_thermal_conductivity_substrate,maximum thermal conductivity_substrate,W m^-1 K^-1,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-velocity_gas.dat,0,maximum_velocity_gas,maximum velocity_gas,m s^-1,file name and SI velocity configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-velocity_melt.dat,0,maximum_velocity_melt,maximum velocity_melt,m s^-1,file name and SI velocity configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-viscosity_gas.dat,0,maximum_viscosity_gas,maximum viscosity_gas,Pa s,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+maximum-viscosity_melt.dat,0,maximum_viscosity_melt,maximum viscosity_melt,Pa s,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+minimum-heat-capacity_gas.dat,0,minimum_heat_capacity_gas,minimum heat capacity_gas,J kg^-1 K^-1,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+minimum-heat-capacity_melt.dat,0,minimum_heat_capacity_melt,minimum heat capacity_melt,J kg^-1 K^-1,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+minimum-heat-capacity_substrate.dat,0,minimum_heat_capacity_substrate,minimum heat capacity_substrate,J kg^-1 K^-1,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+minimum-temperature_gas.dat,0,minimum_temperature_gas,minimum temperature_gas,K,file name and SI simulation configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+minimum-temperature_melt.dat,0,minimum_temperature_melt,minimum temperature_melt,K,file name and SI simulation configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+minimum-temperature_substrate.dat,0,minimum_temperature_substrate,minimum temperature_substrate,K,file name and SI simulation configuration,medium,Headerless; unit is inferred from SI context unless confidence is high.
+particle-number_gas.dat,0,particle_number_gas,particle number_gas,count,integer-valued behavior and file name,high,Headerless; unit is inferred from SI context unless confidence is high.
+particle-number_melt.dat,0,particle_number_melt,particle number_melt,count,integer-valued behavior and file name,high,Headerless; unit is inferred from SI context unless confidence is high.
+particle-number_substrate.dat,0,particle_number_substrate,particle number_substrate,count,integer-valued behavior and file name,high,Headerless; unit is inferred from SI context unless confidence is high.
+position-bounds_gas.dat,0,x_min,minimum X coordinate of gas particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_gas.dat,1,x_max,maximum X coordinate of gas particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_gas.dat,2,y_min,minimum Y coordinate of gas particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_gas.dat,3,y_max,maximum Y coordinate of gas particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_gas.dat,4,z_min,minimum Z coordinate of gas particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_gas.dat,5,z_max,maximum Z coordinate of gas particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_melt.dat,0,x_min,minimum X coordinate of melt particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_melt.dat,1,x_max,maximum X coordinate of melt particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_melt.dat,2,y_min,minimum Y coordinate of melt particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_melt.dat,3,y_max,maximum Y coordinate of melt particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_melt.dat,4,z_min,minimum Z coordinate of melt particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+position-bounds_melt.dat,5,z_max,maximum Z coordinate of melt particles,m,configured SI domain coordinates and paired-bound behavior,high,Headerless; empty phase uses alternating +/-3.402823e38 sentinels.
+time.dat,0,time,time,s,sim_control time values and column behavior,high,Headerless; unit is inferred from SI context unless confidence is high.
+total-energy_gas.dat,0,total_energy_gas,total energy_gas,J,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+total-energy_melt.dat,0,total_energy_melt,total energy_melt,J,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+total-energy_substrate.dat,0,total_energy_substrate,total energy_substrate,J,file name; SI solver context,medium,Headerless; unit is inferred from SI context unless confidence is high.
+transferred-laser-power_melt.dat,0,transferred_laser_power_melt,transferred laser power_melt,W,file name and configured laser power,medium,Headerless; unit is inferred from SI context unless confidence is high.
+transferred-laser-power_substrate.dat,0,transferred_laser_power_substrate,transferred laser power_substrate,W,file name and configured laser power,medium,Headerless; unit is inferred from SI context unless confidence is high.

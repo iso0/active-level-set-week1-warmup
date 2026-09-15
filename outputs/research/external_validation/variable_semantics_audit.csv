@@ -1,0 +1,37 @@
+section,field_or_variable,value,status,unit,scope,source_location,interpretation_or_consequence
+paper_evidence,title,Autonomous exploration of the PBF-LB parameter space: An uncertainty-driven algorithm for automated processing map generation,VERIFIED,,paper,Paper page 1 and DOI record,Exact target study
+paper_evidence,authors,"Giulio Masinelli; Lucas Schlenger; Kilian Wasmer; Toni Ivas; Jamasp Jhabvala; Chang Rajani; Amirmohammad Jamili; Roland Loge; Patrik Hoffmann; David Atienza",VERIFIED,,paper,Paper page 1,Author list transcribed from primary source
+paper_evidence,year,2025,VERIFIED,,paper,Additive Manufacturing 101 (2025) 104677,Publication year
+paper_evidence,journal,Additive Manufacturing,VERIFIED,,paper,Paper page 1,Journal identity
+paper_evidence,doi,10.1016/j.addma.2025.104677,VERIFIED,,paper,Paper page 1 DOI line,Article identifier
+paper_evidence,alloys,Ti-6Al-4V Grade 23 and 316L stainless steel,VERIFIED,,all experiments,Paper Sections 2.6 and Tables 2-3,Analyze alloys separately before any normalized transfer
+paper_evidence,machine_and_setup,Laboratory PBF-LB machine with SPI 500 W fiber laser and Raylase AXIALSCAN FIBER-30; dual reflection/emission photodiodes at 200 kS/s,VERIFIED,,all experiments,Paper Section 2.1,Independent physical machine and monitoring setup
+paper_evidence,laser_wavelength,1070 nm reflection channel centered on the reflected laser light; laser output wavelength not separately specified,AMBIGUOUS,nm,all experiments,Paper Section 2.1,Do not convert the sensor filter specification into an unqualified laser-source specification
+paper_evidence,spot_size_definition,50 um diameter at focal point measured at 1/e^2 and constant,VERIFIED,um,all experiments,Paper Section 2.6 lines describing focal-point diameter,Unambiguous conversion to thesis radius LS=25 um
+paper_evidence,power_domain,90 to 120,VERIFIED,W,all experiments,Paper Table 4 and Tables 15-16,Narrow interval inside thesis P range
+paper_evidence,scan_speed_domain,300 to 1800,VERIFIED,mm/s,all experiments,Paper Table 4 and Tables 15-16,Convert to 0.3-1.8 m/s before h
+paper_evidence,substrate_temperature,Room temperature approximately 25 C,VERIFIED,C,all experiments,Paper Table 4,Use 298.15 K as declared approximation; paper gives no per-build measurement
+paper_evidence,other_process_parameters,"100 um hatch; 80 um deposited powder layer stated equivalent to steady-state 40 um; same-material substrate; argon 1.5 m/s; O2 <=0.01%",VERIFIED,,all experiments,Paper Table 4,Fixed external conditions and part of domain shift
+paper_evidence,regime_classes,"Raw codes C,T,CT,TK,K; paper endpoint Conduction versus Transition/Keyhole",VERIFIED,,labelled bundles,Microscopy_1.xlsx; Save_feat cell mapping; Paper Section 2.3,All non-C raw codes map to Keyhole for published binary comparison
+paper_evidence,ground_truth_method,"Multiple etched cross-sections every 500 um; final track of each bundle; predominant regime; MAR<0.5 Conduction; MAR>=0.5 plus curvature change Keyhole",VERIFIED,,labelled bundles,Paper Sections 2.7 and 3,Post-mortem metallographic target differs from thesis any-frame target
+paper_evidence,experiments_and_tracks,120 labelled bundle experiments across both alloys; 10 parallel lines per bundle; 1200 analyzed lines,VERIFIED,count,paper subset,Paper Sections 2.6-2.7,Do not treat ten lines as ten independent labels
+paper_evidence,unique_conditions,38 unique P-V pairs per alloy among 60 labelled bundles,VERIFIED,count,per alloy,Forensic join of Microscopy_1.xlsx and experiment_parameters_ref.xlsx,Effective design smaller than row count
+paper_evidence,repeated_measurements,"Ten lines within each bundle; the 20-condition A/B grid is repeated in C/D with different print order; E/F adds a 20-speed 105 W design with two overlaps",VERIFIED,,per alloy,Paper Section 2.6 and pinned workbooks,Group identical P-V conditions in predictive splits
+paper_evidence,public_code,GitHub repository pinned at 50ccb1bab03c626cb9f83d9c4f44182f58dda439,VERIFIED,,repository,GitHub API and repository tree,Code is public but has no stated license
+paper_evidence,public_data,Zenodo 10.5281/zenodo.13380755 with one 86.8 MB ZIP,VERIFIED,,dataset,Zenodo API record,Raw signals public under CC-BY-4.0
+external_variable,P,Laser power,VERIFIED,W,both alloys,experiment_parameters_ref.xlsx and Paper Table 4,Direct semantic match to thesis P
+external_variable,VX,Scanning speed,VERIFIED,mm/s,both alloys,experiment_parameters_ref.xlsx and Paper Table 4,Convert to m/s; direct semantic match to thesis VX
+external_variable,LS,Gaussian 1/e^2 spot radius recovered as half the reported diameter,VERIFIED,m,both alloys,Paper Section 2.6,"LS=25e-6 m; fixed, so spot-size exponent is not externally testable"
+external_variable,ST,Bed preheat at room temperature approximately 25 C,VERIFIED,K,both alloys,Paper Table 4,Closest external analogue to substrate temperature; fixed rather than varied
+external_variable,h,P/sqrt(VX*LS^3),VERIFIED,"W s^0.5 m^-2",both alloys,Thesis definition plus verified external P/VX/LS,Computable in SI but dimensional and not a universal threshold
+external_variable,h_fixed_LS_equivalence,"h=(25e-6 m)^(-3/2) P/sqrt(VX)",VERIFIED,,both alloys,Algebraic consequence of constant spot radius,Ranking equals P/sqrt(VX); validates no LS dependence
+domain_comparison,P,"thesis 52.5446-449.7624; external 90-120",VERIFIED,W,Ti64 and 316L,Phase 1.5 data_and_protocol_audit.json; Paper Table 4,External power is inside thesis range
+domain_comparison,VX,"thesis 0.2010-0.9983; external 0.3-1.8",VERIFIED,m/s,Ti64 and 316L,Phase 1.5 data_and_protocol_audit.json; Paper Table 4,Partial overlap only; external high-speed tail is outside simulator range
+domain_comparison,LS,"thesis 40.0293-89.7040; external fixed 25",VERIFIED,um,Ti64 and 316L,Phase 1.5 data_and_protocol_audit.json; Paper Section 2.6,No overlap and external LS is fixed
+domain_comparison,ST,"thesis 300-399.8177; external approximately 298.15",VERIFIED,K,Ti64 and 316L,Phase 1.5 data_and_protocol_audit.json; Paper Table 4,Near but just outside thesis range; external value is approximate
+domain_comparison,material,"thesis Ti-6Al-4V simulator; external Ti-6Al-4V Grade 23 and 316L",VERIFIED,,study,Phase 1.5 audit; Paper Section 2.6,Ti64 is same alloy family; 316L is cross-alloy transfer
+domain_comparison,machine,"SPH simulation versus laboratory PBF-LB machine",VERIFIED,,study,Phase 1.5 audit; Paper Section 2.1,Strong simulator-to-experiment shift
+domain_comparison,track_geometry,"simulator single-track benchmark versus bundles of ten parallel top tracks",VERIFIED,,study,Thesis population provenance; Paper Section 2.6,Geometry and thermal-history shift
+domain_comparison,powder_and_build_condition,"external 80 um deposited powder on same-material substrate; simulator powder representation not established by the canonical four-input audit",AMBIGUOUS,,study,Paper Table 4; Phase 1.5 audit,Do not claim an exact powder/build match
+domain_comparison,label_method,"manual any-valid-frame Keyhole versus predominant post-mortem cross-section regime",VERIFIED,,study,Thesis protocol; Paper Section 3,Close but non-identical target
+domain_comparison,overall_shift,strong domain shift,VERIFIED,,study,Combined domain audit,External evidence would test transfer rather than interpolation

@@ -1,0 +1,6 @@
+method,mean_initial_error,mean_final_error,absolute_improvement,relative_improvement_percent,final_error_std,rank_by_mean_final_error
+random,0.351900,0.119400,0.232500,66.07,0.029243,5
+smallest_abs_mu,0.351900,0.065900,0.286000,81.27,0.010975,3
+straddle,0.351900,0.062000,0.289900,82.38,0.008296,2
+randomized_straddle,0.351900,0.060200,0.291700,82.89,0.004279,1
+expected_feasibility,0.351900,0.066350,0.285550,81.15,0.010226,4

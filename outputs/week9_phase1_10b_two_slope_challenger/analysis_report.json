@@ -1,0 +1,27 @@
+{
+  "cells": 20,
+  "gate": {
+    "G0_matches": true,
+    "G0_reference": 0.8135202205882353,
+    "G3_matches": true,
+    "G3_reference": 0.826594669117647,
+    "H_abs_error": 0.0,
+    "H_recomputed": 0.8308134191176471,
+    "H_target": 0.8308134191176471,
+    "M3_abs_error": 9.191176470579876e-06,
+    "M3_divergent_runs": [
+      "w85__r19_f03"
+    ],
+    "M3_max_per_run_error": 0.0009191176470588758,
+    "M3_recomputed": 0.8424816176470588,
+    "M3_runs_bit_identical": 99,
+    "M3_runs_compared": 100,
+    "M3_target": 0.8424908088235293,
+    "status": "PASS"
+  },
+  "runs": 100,
+  "verdicts": {
+    "M3_T2": "MODEL_DOMINANT",
+    "M3_T3": "MODEL_DOMINANT"
+  }
+}

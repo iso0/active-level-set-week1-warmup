@@ -1,0 +1,245 @@
+{
+  "checks": [
+    {
+      "check_id": "frozen_population_405",
+      "evidence": {
+        "rows": 405
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "manual_has_keyhole_unchanged",
+      "evidence": {
+        "conduction": 332,
+        "keyhole": 73
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "frozen_source_hashes",
+      "evidence": {
+        "phase6_source.py": "23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479",
+        "phase7_source.py": "d5a331c60bab373adfc63344cc5eb3b88e1ca7ce41e4ffd0717196edeb2c00df",
+        "primary_common_population.csv": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7",
+        "protocol.json": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "split_and_initial_design_exact",
+      "evidence": "validated for every frozen checkpoint before extension",
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_query_prefixes_exact",
+      "evidence": {
+        "paths": 3100
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_random_orders_exact",
+      "evidence": {
+        "paths": 3000
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_H320_trajectories_complete",
+      "evidence": {
+        "paths": 3100,
+        "queried_each": 320
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_completed_payloads_fully_validated",
+      "evidence": {
+        "coverage": "identity, pool, mechanism, leakage flags, random sequence, terminal truth/probability",
+        "paths": 3100
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_test_B1_or_hidden_label_acquisition",
+      "evidence": "source and extension mechanism records fail closed on information-flow fields",
+      "status": "PASS"
+    },
+    {
+      "check_id": "crossing_start_and_confirmation_distinguished",
+      "evidence": "all horizon counts require confirmation_budget <= horizon",
+      "status": "PASS"
+    },
+    {
+      "check_id": "random_averaged_within_fold",
+      "evidence": "query and terminal estimands average 30 continuations inside repeat/fold",
+      "status": "PASS"
+    },
+    {
+      "check_id": "terminal_q20_q30_metrics_reproduce_saved_fits",
+      "evidence": {
+        "checkpoint_rows_compared": 12400,
+        "comparisons": [
+          {
+            "max_abs_delta": 1.1102230246251565e-16,
+            "metric": "accuracy",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q20"
+          },
+          {
+            "max_abs_delta": 1.1102230246251565e-16,
+            "metric": "balanced_accuracy",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q20"
+          },
+          {
+            "max_abs_delta": 5.551115123125783e-17,
+            "metric": "keyhole_recall",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q20"
+          },
+          {
+            "max_abs_delta": 0.0,
+            "metric": "false_negative",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q20"
+          },
+          {
+            "max_abs_delta": 0.0,
+            "metric": "false_positive",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q20"
+          },
+          {
+            "max_abs_delta": 0.0,
+            "metric": "accuracy",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q30"
+          },
+          {
+            "max_abs_delta": 1.1102230246251565e-16,
+            "metric": "balanced_accuracy",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q30"
+          },
+          {
+            "max_abs_delta": 1.1102230246251565e-16,
+            "metric": "keyhole_recall",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q30"
+          },
+          {
+            "max_abs_delta": 0.0,
+            "metric": "false_negative",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q30"
+          },
+          {
+            "max_abs_delta": 0.0,
+            "metric": "false_positive",
+            "rows": 12400,
+            "status": "PASS",
+            "subset": "B1_q30"
+          }
+        ],
+        "path_metric_rows": 37200,
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "bootstrap_hierarchy",
+      "evidence": "20 repeat blocks resampled; all five folds retained; 30 Random continuations resampled within fold",
+      "status": "PASS"
+    },
+    {
+      "check_id": "pca_visualization_only",
+      "evidence": "PCA module fits standardized P/VX/LS/ST only and never enters acquisition",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "delta_Q": 10.953333333333333,
+        "margin": 90,
+        "margin_Q": 31.85,
+        "random": 2201,
+        "random_Q": 42.803333333333335,
+        "ratio": 1.3439037153322868
+      },
+      "check_id": "historical_H80_exact_reproduction",
+      "expected": {
+        "delta_Q": 10.953333333333,
+        "margin": 90,
+        "margin_Q": 31.85,
+        "random": 2201,
+        "random_Q": 42.803333333333,
+        "ratio": 1.343904
+      },
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "delta_Q": 16.444333333333333,
+        "margin": 91,
+        "margin_Q": 35.47,
+        "random": 2394,
+        "random_Q": 51.91433333333333,
+        "ratio": 1.4636124424396204
+      },
+      "check_id": "historical_H120_exact_reproduction",
+      "expected": {
+        "delta_Q": 16.444333333333,
+        "margin": 91,
+        "margin_Q": 35.47,
+        "random": 2394,
+        "random_Q": 51.914333333333,
+        "ratio": 1.463612
+      },
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "delta_Q": 20.098999999999997,
+        "margin": 91,
+        "margin_Q": 39.07,
+        "random": 2493,
+        "random_Q": 59.169,
+        "ratio": 1.514435628359355
+      },
+      "check_id": "historical_H160_exact_reproduction",
+      "expected": {
+        "delta_Q": 20.099,
+        "margin": 91,
+        "margin_Q": 39.07,
+        "random": 2493,
+        "random_Q": 59.169,
+        "ratio": 1.5144356283593552
+      },
+      "status": "PASS"
+    }
+  ],
+  "fit_seed_collision_audit": {
+    "collision_group_count": 1,
+    "collisions": [
+      {
+        "distinct_keys": [
+          "week8_5_frozen_confirmation|v1|run|w85__r06_f02|arm|binary_margin|fit|budget|236",
+          "week8_5_frozen_confirmation|v1|run|w85__r14_f01|arm|binary_random|continuation|16|fit|budget|320"
+        ],
+        "fit_seed_u32": 3150972767
+      }
+    ],
+    "qualification": "Complete fit-seed keys are authoritative; uint32 collisions are disclosed, not repaired.",
+    "registry_rows": 33766
+  },
+  "status": "PASS"
+}

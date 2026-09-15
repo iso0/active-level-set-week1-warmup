@@ -1,0 +1,1545 @@
+[
+  {
+    "id": "branin_week1",
+    "week": "1",
+    "title": "branin_week1",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/branin_week1",
+    "files": 4,
+    "code": [
+      "src/branin_week1.py"
+    ],
+    "notebooks": [
+      "notebooks/02_branin_week1_loop.ipynb"
+    ],
+    "reports": [
+      "outputs/branin_week1/summary.json"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "make_moons",
+    "week": "1",
+    "title": "make_moons",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/make_moons",
+    "files": 3,
+    "code": [
+      "src/make_moons_sanity_check.py"
+    ],
+    "notebooks": [
+      "notebooks/01_make_moons_sanity_check.ipynb"
+    ],
+    "reports": [
+      "outputs/make_moons/summary.json"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week2_acquisition_comparison",
+    "week": "2",
+    "title": "week2_acquisition_comparison",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week2_acquisition_comparison",
+    "files": 9,
+    "code": [
+      "src/week2_acquisition_comparison.py"
+    ],
+    "notebooks": [
+      "notebooks/03_week2_acquisition_comparison.ipynb"
+    ],
+    "reports": [
+      "outputs/week2_acquisition_comparison/week2_slide_notes.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week3_4d_benchmark_comparison",
+    "week": "3",
+    "title": "week3_4d_benchmark_comparison",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week3_4d_benchmark_comparison",
+    "files": 6,
+    "code": [
+      "src/week3_4d_benchmark_comparison.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week3_4d_benchmark_comparison/week3_slide_notes.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week3_4d_benchmark_search",
+    "week": "3",
+    "title": "week3_4d_benchmark_search",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week3_4d_benchmark_search",
+    "files": 1,
+    "code": [],
+    "notebooks": [],
+    "reports": [
+      "outputs/week3_4d_benchmark_search/week3_4d_benchmark_candidates.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week3_4d_named_benchmark_comparison",
+    "week": "3",
+    "title": "week3_4d_named_benchmark_comparison",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week3_4d_named_benchmark_comparison",
+    "files": 14,
+    "code": [
+      "src/week3_4d_named_benchmark_comparison.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week3_4d_named_benchmark_comparison/tolerance_reach_table.md",
+      "outputs/week3_4d_named_benchmark_comparison/week3_slide_notes.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_01_boundary_metrics",
+    "week": "4",
+    "title": "week4_01_boundary_metrics",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week4_01_boundary_metrics",
+    "files": 38,
+    "code": [
+      "src/week4_01_boundary_metrics.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_01_boundary_metrics/ackley/boundary_metric_notes.md",
+      "outputs/week4_01_boundary_metrics/branin/boundary_metric_notes.md",
+      "outputs/week4_01_boundary_metrics/combined/boundary_metric_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_02_diversified_straddle",
+    "week": "4",
+    "title": "week4_02_diversified_straddle",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week4_02_diversified_straddle",
+    "files": 33,
+    "code": [
+      "src/week4_02_diversified_straddle.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_02_diversified_straddle/ackley/diversified_straddle_notes.md",
+      "outputs/week4_02_diversified_straddle/branin/diversified_straddle_notes.md",
+      "outputs/week4_02_diversified_straddle/combined/diversified_straddle_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_03_boundary_gated_diversified_straddle",
+    "week": "4",
+    "title": "week4_03_boundary_gated_diversified_straddle",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week4_03_boundary_gated_diversified_straddle",
+    "files": 33,
+    "code": [
+      "src/week4_03_boundary_gated_diversified_straddle.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_03_boundary_gated_diversified_straddle/ackley/boundary_gated_diversified_straddle_notes.md",
+      "outputs/week4_03_boundary_gated_diversified_straddle/branin/boundary_gated_diversified_straddle_notes.md",
+      "outputs/week4_03_boundary_gated_diversified_straddle/combined/boundary_gated_diversified_straddle_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_04_lookahead_boundary_uncertainty",
+    "week": "4",
+    "title": "week4_04_lookahead_boundary_uncertainty",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week4_04_lookahead_boundary_uncertainty",
+    "files": 35,
+    "code": [
+      "src/week4_04_lookahead_boundary_uncertainty.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_04_lookahead_boundary_uncertainty/ackley/lookahead_boundary_uncertainty_notes.md",
+      "outputs/week4_04_lookahead_boundary_uncertainty/branin/lookahead_boundary_uncertainty_notes.md",
+      "outputs/week4_04_lookahead_boundary_uncertainty/combined/lookahead_boundary_uncertainty_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_05_gated_geometric_boundary_contraction",
+    "week": "4",
+    "title": "week4_05_gated_geometric_boundary_contraction",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week4_05_gated_geometric_boundary_contraction",
+    "files": 37,
+    "code": [
+      "src/week4_05_gated_geometric_boundary_contraction.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_05_gated_geometric_boundary_contraction/ackley/gated_geometric_boundary_contraction_notes.md",
+      "outputs/week4_05_gated_geometric_boundary_contraction/branin/gated_geometric_boundary_contraction_notes.md",
+      "outputs/week4_05_gated_geometric_boundary_contraction/combined/gated_geometric_boundary_contraction_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_06_gp_classifier_surrogate",
+    "week": "4",
+    "title": "week4_06_gp_classifier_surrogate",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week4_06_gp_classifier_surrogate",
+    "files": 35,
+    "code": [
+      "src/week4_06_gp_classifier_surrogate.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_06_gp_classifier_surrogate/ackley/gp_classifier_surrogate_notes.md",
+      "outputs/week4_06_gp_classifier_surrogate/branin/gp_classifier_surrogate_notes.md",
+      "outputs/week4_06_gp_classifier_surrogate/combined/gp_classifier_surrogate_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_07_optimized_gp_classifier_surrogate",
+    "week": "4",
+    "title": "week4_07_optimized_gp_classifier_surrogate",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week4_07_optimized_gp_classifier_surrogate",
+    "files": 63,
+    "code": [
+      "src/week4_07_optimized_gp_classifier_surrogate.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_07_optimized_gp_classifier_surrogate/combined/optimized_gp_classifier_surrogate_interpretation.md",
+      "outputs/week4_07_optimized_gp_classifier_surrogate/combined/optimized_gp_classifier_surrogate_slide_notes.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_08_boundary_weighted_sur",
+    "week": "4",
+    "title": "week4_08_boundary_weighted_sur",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week4_08_boundary_weighted_sur",
+    "files": 116,
+    "code": [
+      "src/week4_08_boundary_weighted_sur.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_08_boundary_weighted_sur/ackley/boundary_weighted_sur_notes.md",
+      "outputs/week4_08_boundary_weighted_sur/branin/boundary_weighted_sur_notes.md",
+      "outputs/week4_08_boundary_weighted_sur/combined/boundary_weighted_sur_slide_notes.md",
+      "outputs/week4_08_boundary_weighted_sur/combined/boundary_weighted_sur_summary.md",
+      "outputs/week4_08_boundary_weighted_sur/combined/codex_run_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_09_gpc_bernoulli_sur_validation",
+    "week": "4",
+    "title": "week4_09_gpc_bernoulli_sur_validation",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week4_09_gpc_bernoulli_sur_validation",
+    "files": 102,
+    "code": [
+      "src/week4_09_gpc_bernoulli_sur_validation.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_09_gpc_bernoulli_sur_validation/ackley_optional/gpc_bernoulli_sur_validation_notes.md",
+      "outputs/week4_09_gpc_bernoulli_sur_validation/branin/gpc_bernoulli_sur_validation_notes.md",
+      "outputs/week4_09_gpc_bernoulli_sur_validation/combined/codex_run_report.md",
+      "outputs/week4_09_gpc_bernoulli_sur_validation/combined/gpc_bernoulli_sur_validation_slide_notes.md",
+      "outputs/week4_09_gpc_bernoulli_sur_validation/combined/gpc_bernoulli_sur_validation_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week4_boundary_metrics",
+    "week": "4",
+    "title": "week4_boundary_metrics",
+    "status": "Tarihsel ad; kronoloji eşlemesi: week4_01_boundary_metrics. Her iki kayıt korundu.",
+    "output": "outputs/week4_boundary_metrics",
+    "files": 38,
+    "code": [
+      "src/week4_boundary_metrics.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week4_boundary_metrics/ackley/week4_boundary_metric_notes.md",
+      "outputs/week4_boundary_metrics/branin/week4_boundary_metric_notes.md",
+      "outputs/week4_boundary_metrics/combined/week4_boundary_metric_summary.md"
+    ],
+    "historical_alias_of": "week4_01_boundary_metrics"
+  },
+  {
+    "id": "week5_01_first_conduction_data_audit",
+    "week": "5",
+    "title": "week5_01_first_conduction_data_audit",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week5_01_first_conduction_data_audit",
+    "files": 17,
+    "code": [],
+    "notebooks": [
+      "notebooks/week_05/01_first_conduction_data_audit.ipynb"
+    ],
+    "reports": [],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week5_02_first_conduction_gp_kernel_comparison",
+    "week": "5",
+    "title": "week5_02_first_conduction_gp_kernel_comparison",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week5_02_first_conduction_gp_kernel_comparison",
+    "files": 32,
+    "code": [],
+    "notebooks": [
+      "notebooks/week_05/02_first_conduction_gp_kernel_comparison.ipynb"
+    ],
+    "reports": [
+      "outputs/week5_02_first_conduction_gp_kernel_comparison/combined/week5_02_results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week5_2_lookahead_boundary_uncertainty",
+    "week": "5",
+    "title": "week5_2_lookahead_boundary_uncertainty",
+    "status": "Tarihsel ad; kronoloji eşlemesi: week4_04_lookahead_boundary_uncertainty. Her iki kayıt korundu.",
+    "output": "outputs/week5_2_lookahead_boundary_uncertainty",
+    "files": 35,
+    "code": [
+      "src/week5_2_lookahead_boundary_uncertainty.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week5_2_lookahead_boundary_uncertainty/ackley/week5_2_lookahead_notes.md",
+      "outputs/week5_2_lookahead_boundary_uncertainty/branin/week5_2_lookahead_notes.md",
+      "outputs/week5_2_lookahead_boundary_uncertainty/combined/week5_2_lookahead_summary.md"
+    ],
+    "historical_alias_of": "week4_04_lookahead_boundary_uncertainty"
+  },
+  {
+    "id": "week5_03_bug_initial_emptiness_ls_analysis",
+    "week": "5",
+    "title": "week5_03_bug_initial_emptiness_ls_analysis",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week5_03_bug_initial_emptiness_ls_analysis",
+    "files": 20,
+    "code": [],
+    "notebooks": [
+      "notebooks/week_05/03_bug_initial_emptiness_ls_analysis.ipynb"
+    ],
+    "reports": [
+      "outputs/week5_03_bug_initial_emptiness_ls_analysis/week5_03_results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week5_3_gated_geometric_boundary_contraction",
+    "week": "5",
+    "title": "week5_3_gated_geometric_boundary_contraction",
+    "status": "Tarihsel ad; kronoloji eşlemesi: week4_05_gated_geometric_boundary_contraction. Her iki kayıt korundu.",
+    "output": "outputs/week5_3_gated_geometric_boundary_contraction",
+    "files": 37,
+    "code": [
+      "src/week5_3_gated_geometric_boundary_contraction.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week5_3_gated_geometric_boundary_contraction/ackley/week5_3_gbc_notes.md",
+      "outputs/week5_3_gated_geometric_boundary_contraction/branin/week5_3_gbc_notes.md",
+      "outputs/week5_3_gated_geometric_boundary_contraction/combined/week5_3_gbc_summary.md"
+    ],
+    "historical_alias_of": "week4_05_gated_geometric_boundary_contraction"
+  },
+  {
+    "id": "week5_04_matern32_optimizer_comparison",
+    "week": "5",
+    "title": "week5_04_matern32_optimizer_comparison",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week5_04_matern32_optimizer_comparison",
+    "files": 18,
+    "code": [],
+    "notebooks": [
+      "notebooks/week_05/04_matern32_optimizer_comparison.ipynb"
+    ],
+    "reports": [
+      "outputs/week5_04_matern32_optimizer_comparison/week5_04_results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week5_05_ard_matern32_extension",
+    "week": "5",
+    "title": "week5_05_ard_matern32_extension",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week5_05_ard_matern32_extension",
+    "files": 21,
+    "code": [],
+    "notebooks": [
+      "notebooks/week_05/05_ard_matern32_extension.ipynb"
+    ],
+    "reports": [
+      "outputs/week5_05_ard_matern32_extension/week5_05_results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week5_boundary_gated_diversified_straddle_comparison",
+    "week": "5",
+    "title": "week5_boundary_gated_diversified_straddle_comparison",
+    "status": "Tarihsel ad; kronoloji eşlemesi: week4_03_boundary_gated_diversified_straddle. Her iki kayıt korundu.",
+    "output": "outputs/week5_boundary_gated_diversified_straddle_comparison",
+    "files": 33,
+    "code": [
+      "src/week5_boundary_gated_straddle_comparison.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week5_boundary_gated_diversified_straddle_comparison/ackley/week5_boundary_gated_notes.md",
+      "outputs/week5_boundary_gated_diversified_straddle_comparison/branin/week5_boundary_gated_notes.md",
+      "outputs/week5_boundary_gated_diversified_straddle_comparison/combined/week5_boundary_gated_summary.md"
+    ],
+    "historical_alias_of": "week4_03_boundary_gated_diversified_straddle"
+  },
+  {
+    "id": "week5_diversified_straddle_comparison",
+    "week": "5",
+    "title": "week5_diversified_straddle_comparison",
+    "status": "Tarihsel ad; kronoloji eşlemesi: week4_02_diversified_straddle. Her iki kayıt korundu.",
+    "output": "outputs/week5_diversified_straddle_comparison",
+    "files": 33,
+    "code": [
+      "src/week5_diversified_straddle_comparison.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week5_diversified_straddle_comparison/ackley/week5_notes.md",
+      "outputs/week5_diversified_straddle_comparison/branin/week5_notes.md",
+      "outputs/week5_diversified_straddle_comparison/combined/week5_summary.md"
+    ],
+    "historical_alias_of": "week4_02_diversified_straddle"
+  },
+  {
+    "id": "week6_01_melt_pool_data_audit",
+    "week": "6",
+    "title": "week6_01_melt_pool_data_audit",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week6_01_melt_pool_data_audit",
+    "files": 30,
+    "code": [
+      "src/week6_phase1_melt_pool_data_audit.py"
+    ],
+    "notebooks": [
+      "notebooks/week_06/01_melt_pool_monitor_data_audit.ipynb"
+    ],
+    "reports": [
+      "outputs/week6_01_melt_pool_data_audit/listing_failure_root_cause.md",
+      "outputs/week6_01_melt_pool_data_audit/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week6_1_optimized_gp_classifier_surrogate_comparison",
+    "week": "6",
+    "title": "week6_1_optimized_gp_classifier_surrogate_comparison",
+    "status": "Tarihsel ad; kronoloji eşlemesi: week4_07_optimized_gp_classifier_surrogate. Her iki kayıt korundu.",
+    "output": "outputs/week6_1_optimized_gp_classifier_surrogate_comparison",
+    "files": 63,
+    "code": [
+      "src/week6_1_optimized_gp_classifier_surrogate.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week6_1_optimized_gp_classifier_surrogate_comparison/combined/week6_1_interpretation.md",
+      "outputs/week6_1_optimized_gp_classifier_surrogate_comparison/combined/week6_1_slide_notes.md"
+    ],
+    "historical_alias_of": "week4_07_optimized_gp_classifier_surrogate"
+  },
+  {
+    "id": "week6_02_5_depth_model_closure",
+    "week": "6",
+    "title": "week6_02_5_depth_model_closure",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week6_02_5_depth_model_closure",
+    "files": 26,
+    "code": [
+      "src/week6_phase2_5_depth_model_closure.py"
+    ],
+    "notebooks": [
+      "notebooks/week_06/03_phase2_5_depth_model_closure.ipynb"
+    ],
+    "reports": [
+      "outputs/week6_02_5_depth_model_closure/depth_model_decision.md",
+      "outputs/week6_02_5_depth_model_closure/results_summary.md",
+      "outputs/week6_02_5_depth_model_closure/runtime_metadata_correction.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week6_02_gp_response_noise_comparison",
+    "week": "6",
+    "title": "week6_02_gp_response_noise_comparison",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week6_02_gp_response_noise_comparison",
+    "files": 58,
+    "code": [
+      "src/week6_phase2_gp_response_noise_comparison.py"
+    ],
+    "notebooks": [
+      "notebooks/week_06/01_melt_pool_monitor_data_audit.ipynb",
+      "notebooks/week_06/02_gp_response_noise_comparison.ipynb"
+    ],
+    "reports": [
+      "outputs/week6_02_gp_response_noise_comparison/phase2_decision_log.md",
+      "outputs/week6_02_gp_response_noise_comparison/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week6_03_5_regime_target_design",
+    "week": "6",
+    "title": "week6_03_5_regime_target_design",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week6_03_5_regime_target_design",
+    "files": 865,
+    "code": [
+      "src/week6_phase3_5_regime_target_design.py"
+    ],
+    "notebooks": [
+      "notebooks/week_06/01_melt_pool_monitor_data_audit.ipynb",
+      "notebooks/week_06/02_gp_response_noise_comparison.ipynb",
+      "notebooks/week_06/03_phase2_5_depth_model_closure.ipynb",
+      "notebooks/week_06/04_phase3_model_target_robustness.ipynb",
+      "notebooks/week_06/05_phase3_5_regime_target_design.ipynb"
+    ],
+    "reports": [
+      "outputs/week6_03_5_regime_target_design/decision_log.md",
+      "outputs/week6_03_5_regime_target_design/ioan_requirement_mapping.md",
+      "outputs/week6_03_5_regime_target_design/phase3_5_active_learning_implications.md",
+      "outputs/week6_03_5_regime_target_design/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week6_03_model_target_robustness",
+    "week": "6",
+    "title": "week6_03_model_target_robustness",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week6_03_model_target_robustness",
+    "files": 102,
+    "code": [
+      "src/week6_phase3_model_target_robustness.py"
+    ],
+    "notebooks": [
+      "notebooks/week_06/01_melt_pool_monitor_data_audit.ipynb",
+      "notebooks/week_06/02_gp_response_noise_comparison.ipynb",
+      "notebooks/week_06/03_phase2_5_depth_model_closure.ipynb",
+      "notebooks/week_06/04_phase3_model_target_robustness.ipynb"
+    ],
+    "reports": [
+      "outputs/week6_03_model_target_robustness/decision_log.md",
+      "outputs/week6_03_model_target_robustness/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week6_04_new_outputs_feature_effects",
+    "week": "6",
+    "title": "week6_04_new_outputs_feature_effects",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week6_04_new_outputs_feature_effects",
+    "files": 99,
+    "code": [
+      "src/week6_phase4_new_outputs_feature_effects.py"
+    ],
+    "notebooks": [
+      "notebooks/week_06/06_phase4_new_outputs_feature_effects.ipynb"
+    ],
+    "reports": [
+      "outputs/week6_04_new_outputs_feature_effects/decision_log.md",
+      "outputs/week6_04_new_outputs_feature_effects/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week6_gp_classifier_surrogate_comparison",
+    "week": "6",
+    "title": "week6_gp_classifier_surrogate_comparison",
+    "status": "Tarihsel ad; kronoloji eşlemesi: week4_06_gp_classifier_surrogate. Her iki kayıt korundu.",
+    "output": "outputs/week6_gp_classifier_surrogate_comparison",
+    "files": 35,
+    "code": [
+      "src/week6_gp_classifier_surrogate_comparison.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week6_gp_classifier_surrogate_comparison/ackley/week6_gp_classifier_notes.md",
+      "outputs/week6_gp_classifier_surrogate_comparison/branin/week6_gp_classifier_notes.md",
+      "outputs/week6_gp_classifier_surrogate_comparison/combined/week6_gp_classifier_summary.md"
+    ],
+    "historical_alias_of": "week4_06_gp_classifier_surrogate"
+  },
+  {
+    "id": "week7_1_gpc_sur_validation",
+    "week": "7",
+    "title": "week7_1_gpc_sur_validation",
+    "status": "Tarihsel ad; kronoloji eşlemesi: week4_09_gpc_bernoulli_sur_validation. Her iki kayıt korundu.",
+    "output": "outputs/week7_1_gpc_sur_validation",
+    "files": 102,
+    "code": [
+      "src/week7_1_gpc_sur_validation.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week7_1_gpc_sur_validation/ackley_optional/week7_1_notes.md",
+      "outputs/week7_1_gpc_sur_validation/branin/week7_1_notes.md",
+      "outputs/week7_1_gpc_sur_validation/combined/codex_run_report.md",
+      "outputs/week7_1_gpc_sur_validation/combined/week7_1_slide_notes.md",
+      "outputs/week7_1_gpc_sur_validation/combined/week7_1_summary.md"
+    ],
+    "historical_alias_of": "week4_09_gpc_bernoulli_sur_validation"
+  },
+  {
+    "id": "week7_01_sph_v2_audit",
+    "week": "7",
+    "title": "week7_01_sph_v2_audit",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week7_01_sph_v2_audit",
+    "files": 84,
+    "code": [
+      "src/week7_phase1_sph_v2_dataset_shift_audit.py",
+      "src/week7_phase2_sph_v2_physical_target_extraction.py",
+      "src/week7_phase4_new_data_feature_effects_depth_diagnostics.py",
+      "src/week7_phase5_5_g3_robustness_transfer_analysis.py",
+      "src/week7_phase5_keyhole_physical_proxy_analysis.py",
+      "src/week7_sph_v2_common.py"
+    ],
+    "notebooks": [
+      "notebooks/week_07/01_sph_v2_dataset_shift_audit.ipynb",
+      "notebooks/week_07/02_sph_v2_physical_target_extraction.ipynb",
+      "notebooks/week_07/04_new_data_feature_effects_depth_diagnostics.ipynb",
+      "notebooks/week_07/05_5_g3_robustness_transfer_analysis.ipynb",
+      "notebooks/week_07/05_keyhole_physical_proxy_analysis.ipynb"
+    ],
+    "reports": [
+      "outputs/week7_01_sph_v2_audit/phase1_results_summary.md",
+      "outputs/week7_01_sph_v2_audit/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week7_02_sph_v2_target_extraction",
+    "week": "7",
+    "title": "week7_02_sph_v2_target_extraction",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week7_02_sph_v2_target_extraction",
+    "files": 106,
+    "code": [
+      "src/week7_phase2_sph_v2_physical_target_extraction.py",
+      "src/week7_phase3_new_data_model_stability.py",
+      "src/week7_phase4_new_data_feature_effects_depth_diagnostics.py",
+      "src/week7_phase5_5_g3_robustness_transfer_analysis.py",
+      "src/week7_phase5_keyhole_physical_proxy_analysis.py",
+      "src/week7_sph_v2_common.py"
+    ],
+    "notebooks": [
+      "notebooks/week_07/02_sph_v2_physical_target_extraction.ipynb",
+      "notebooks/week_07/03_new_data_physical_model_stability.ipynb",
+      "notebooks/week_07/04_new_data_feature_effects_depth_diagnostics.ipynb",
+      "notebooks/week_07/05_5_g3_robustness_transfer_analysis.ipynb",
+      "notebooks/week_07/05_keyhole_physical_proxy_analysis.ipynb"
+    ],
+    "reports": [
+      "outputs/week7_02_sph_v2_target_extraction/phase2_results_summary.md",
+      "outputs/week7_02_sph_v2_target_extraction/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week7_03_new_data_physical_model_stability",
+    "week": "7",
+    "title": "week7_03_new_data_physical_model_stability",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week7_03_new_data_physical_model_stability",
+    "files": 178,
+    "code": [
+      "src/week7_phase3_new_data_model_stability.py",
+      "src/week7_sph_v2_common.py"
+    ],
+    "notebooks": [
+      "notebooks/week_07/03_new_data_physical_model_stability.ipynb"
+    ],
+    "reports": [
+      "outputs/week7_03_new_data_physical_model_stability/phase3_results_summary.md",
+      "outputs/week7_03_new_data_physical_model_stability/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week7_04_new_data_feature_effects_depth_diagnostics",
+    "week": "7",
+    "title": "week7_04_new_data_feature_effects_depth_diagnostics",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week7_04_new_data_feature_effects_depth_diagnostics",
+    "files": 103,
+    "code": [
+      "src/week7_phase4_new_data_feature_effects_depth_diagnostics.py",
+      "src/week7_sph_v2_common.py"
+    ],
+    "notebooks": [
+      "notebooks/week_07/04_new_data_feature_effects_depth_diagnostics.ipynb"
+    ],
+    "reports": [
+      "outputs/week7_04_new_data_feature_effects_depth_diagnostics/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week7_05_5_g3_robustness_transfer_analysis",
+    "week": "7",
+    "title": "week7_05_5_g3_robustness_transfer_analysis",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week7_05_5_g3_robustness_transfer_analysis",
+    "files": 108,
+    "code": [
+      "src/week7_phase5_5_g3_robustness_transfer_analysis.py",
+      "src/week7_sph_v2_common.py"
+    ],
+    "notebooks": [
+      "notebooks/week_07/05_5_g3_robustness_transfer_analysis.ipynb"
+    ],
+    "reports": [
+      "outputs/week7_05_5_g3_robustness_transfer_analysis/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week7_05_keyhole_physical_proxy_analysis",
+    "week": "7",
+    "title": "week7_05_keyhole_physical_proxy_analysis",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week7_05_keyhole_physical_proxy_analysis",
+    "files": 89,
+    "code": [
+      "src/week7_phase5_keyhole_physical_proxy_analysis.py",
+      "src/week7_sph_v2_common.py"
+    ],
+    "notebooks": [
+      "notebooks/week_07/05_keyhole_physical_proxy_analysis.ipynb"
+    ],
+    "reports": [
+      "outputs/week7_05_keyhole_physical_proxy_analysis/label_provenance.md",
+      "outputs/week7_05_keyhole_physical_proxy_analysis/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week7_06_real_data_boundary_active_level_set",
+    "week": "7",
+    "title": "week7_06_real_data_boundary_active_level_set",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week7_06_real_data_boundary_active_level_set",
+    "files": 507,
+    "code": [
+      "src/week7_phase6_real_data_boundary_active_level_set.py",
+      "src/week7_phase6_reporting.py",
+      "src/week7_sph_v2_common.py"
+    ],
+    "notebooks": [
+      "notebooks/week_07/06_real_data_boundary_active_level_set.ipynb"
+    ],
+    "reports": [
+      "outputs/week7_06_real_data_boundary_active_level_set/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week7_07_final_boundary_hybrid_benchmark",
+    "week": "7",
+    "title": "week7_07_final_boundary_hybrid_benchmark",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week7_07_final_boundary_hybrid_benchmark",
+    "files": 286,
+    "code": [
+      "src/week7_phase7_final_boundary_hybrid_benchmark.py",
+      "src/week7_phase7_reporting.py",
+      "src/week7_sph_v2_common.py"
+    ],
+    "notebooks": [
+      "notebooks/week_07/07_final_boundary_hybrid_benchmark.ipynb"
+    ],
+    "reports": [
+      "outputs/week7_07_final_boundary_hybrid_benchmark/results_summary.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week7_boundary_weighted_sur",
+    "week": "7",
+    "title": "week7_boundary_weighted_sur",
+    "status": "Tarihsel ad; kronoloji eşlemesi: week4_08_boundary_weighted_sur. Her iki kayıt korundu.",
+    "output": "outputs/week7_boundary_weighted_sur",
+    "files": 116,
+    "code": [
+      "src/week7_boundary_weighted_sur.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week7_boundary_weighted_sur/ackley/week7_notes.md",
+      "outputs/week7_boundary_weighted_sur/branin/week7_notes.md",
+      "outputs/week7_boundary_weighted_sur/combined/codex_run_report.md",
+      "outputs/week7_boundary_weighted_sur/combined/hartmann4_benchmark_notes.md",
+      "outputs/week7_boundary_weighted_sur/combined/week7_slide_notes.md"
+    ],
+    "historical_alias_of": "week4_08_boundary_weighted_sur"
+  },
+  {
+    "id": "week8_01_final_sample_efficiency",
+    "week": "8",
+    "title": "week8_01_final_sample_efficiency",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week8_01_final_sample_efficiency",
+    "files": 41,
+    "code": [
+      "src/week8_final_sample_efficiency_thesis_consolidation.py"
+    ],
+    "notebooks": [
+      "notebooks/week_08/01_final_sample_efficiency.ipynb"
+    ],
+    "reports": [
+      "outputs/week8_01_final_sample_efficiency/headline_results.md",
+      "outputs/week8_01_final_sample_efficiency/week8_phase1_plain_language_tr.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week8_02_thesis_consolidation",
+    "week": "8",
+    "title": "week8_02_thesis_consolidation",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week8_02_thesis_consolidation",
+    "files": 32,
+    "code": [
+      "src/week8_final_sample_efficiency_thesis_consolidation.py"
+    ],
+    "notebooks": [
+      "notebooks/week_08/02_thesis_evidence_consolidation.ipynb"
+    ],
+    "reports": [
+      "outputs/week8_02_thesis_consolidation/final_results_narrative.md",
+      "outputs/week8_02_thesis_consolidation/week8_final_plain_language_tr.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week8_5_frozen_confirmation",
+    "week": "8.5",
+    "title": "week8_5_frozen_confirmation",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week8_5_frozen_confirmation",
+    "files": 58,
+    "code": [
+      "src/week8_5_frozen_sample_efficiency_confirmation.py"
+    ],
+    "notebooks": [
+      "notebooks/week_08_5/01_frozen_sample_efficiency_confirmation.ipynb"
+    ],
+    "reports": [
+      "outputs/week8_5_frozen_confirmation/ARTIFACT_PACKAGING.md",
+      "outputs/week8_5_frozen_confirmation/final_results_narrative.md",
+      "outputs/week8_5_frozen_confirmation/week8_5_requirement_checklist.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_5_h_physics_confirmation",
+    "week": "9",
+    "title": "week9_phase1_5_h_physics_confirmation",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_5_h_physics_confirmation",
+    "files": 44,
+    "code": [
+      "src/week9_phase1_5_h_physics_confirmation.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/02_week9_phase1_5_h_physics_confirmation.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_5_h_physics_confirmation/FINAL_PHASE1_5_REPORT.md",
+      "outputs/week9_phase1_5_h_physics_confirmation/SUPERVISOR_PHASE1_5_ONE_PAGE.md",
+      "outputs/week9_phase1_5_h_physics_confirmation/claim_ledger.md",
+      "outputs/week9_phase1_5_h_physics_confirmation/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_7_physics_ridge_residual_gp",
+    "week": "9",
+    "title": "week9_phase1_7_physics_ridge_residual_gp",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_7_physics_ridge_residual_gp",
+    "files": 36,
+    "code": [
+      "src/week9_phase1_7_physics_ridge_residual_gp.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/03_week9_phase1_7_physics_ridge_residual_gp.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_7_physics_ridge_residual_gp/FINAL_PHASE1_7_REPORT.md",
+      "outputs/week9_phase1_7_physics_ridge_residual_gp/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_7_physics_ridge_residual_gp/SUPERVISOR_PHASE1_7_ONE_PAGE.md",
+      "outputs/week9_phase1_7_physics_ridge_residual_gp/claim_ledger.md",
+      "outputs/week9_phase1_7_physics_ridge_residual_gp/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_8_model_path_decomposition",
+    "week": "9",
+    "title": "week9_phase1_8_model_path_decomposition",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_8_model_path_decomposition",
+    "files": 31,
+    "code": [
+      "src/week9_phase1_8_model_path_decomposition.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/03_week9_phase1_7_physics_ridge_residual_gp.ipynb",
+      "notebooks/week_09/04_week9_phase1_8_model_path_decomposition.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_8_model_path_decomposition/FINAL_PHASE1_8_REPORT.md",
+      "outputs/week9_phase1_8_model_path_decomposition/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_8_model_path_decomposition/SUPERVISOR_PHASE1_8_ONE_PAGE.md",
+      "outputs/week9_phase1_8_model_path_decomposition/claim_ledger.md",
+      "outputs/week9_phase1_8_model_path_decomposition/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_9_physics_specificity_control",
+    "week": "9",
+    "title": "week9_phase1_9_physics_specificity_control",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_9_physics_specificity_control",
+    "files": 25,
+    "code": [
+      "src/week9_phase1_9_physics_specificity_control.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/03_week9_phase1_7_physics_ridge_residual_gp.ipynb",
+      "notebooks/week_09/04_week9_phase1_8_model_path_decomposition.ipynb",
+      "notebooks/week_09/06_week9_phase1_9_physics_specificity_control.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_9_physics_specificity_control/FINAL_PHASE1_9_REPORT.md",
+      "outputs/week9_phase1_9_physics_specificity_control/SUPERVISOR_PHASE1_9_ONE_PAGE.md",
+      "outputs/week9_phase1_9_physics_specificity_control/claim_ledger.md",
+      "outputs/week9_phase1_9_physics_specificity_control/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_10_closure_diagnostics",
+    "week": "9",
+    "title": "week9_phase1_10_closure_diagnostics",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_10_closure_diagnostics",
+    "files": 20,
+    "code": [
+      "src/week9_phase1_10_closure_diagnostics.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/08_week9_phase1_10_closure_diagnostics.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_10_closure_diagnostics/FINAL_PHASE1_10_CLOSURE_REPORT.md",
+      "outputs/week9_phase1_10_closure_diagnostics/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_10_closure_diagnostics/SUPERVISOR_PHASE1_10_CLOSURE_ONE_PAGE.md",
+      "outputs/week9_phase1_10_closure_diagnostics/claim_ledger.md",
+      "outputs/week9_phase1_10_closure_diagnostics/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_10_external_experimental_validation",
+    "week": "9",
+    "title": "week9_phase1_10_external_experimental_validation",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_10_external_experimental_validation",
+    "files": 26,
+    "code": [
+      "src/week9_phase1_10_external_experimental_validation.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/07_week9_phase1_10_external_experimental_validation.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_10_external_experimental_validation/FINAL_PHASE1_10_REPORT.md",
+      "outputs/week9_phase1_10_external_experimental_validation/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_10_external_experimental_validation/SUPERVISOR_PHASE1_10_ONE_PAGE.md",
+      "outputs/week9_phase1_10_external_experimental_validation/claim_ledger.md",
+      "outputs/week9_phase1_10_external_experimental_validation/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_10b_two_slope_challenger",
+    "week": "9",
+    "title": "week9_phase1_10b_two_slope_challenger",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_10b_two_slope_challenger",
+    "files": 2020,
+    "code": [
+      "src/week9_phase1_10b_two_slope_challenger.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week9_phase1_10b_two_slope_challenger/FINAL_PHASE1_10B_REPORT.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_11_fixed_mean_discrepancy_gp",
+    "week": "9",
+    "title": "week9_phase1_11_fixed_mean_discrepancy_gp",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_11_fixed_mean_discrepancy_gp",
+    "files": 29,
+    "code": [
+      "src/week9_phase1_11_fixed_mean_discrepancy_gp.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/09_week9_phase1_11_fixed_mean_discrepancy_gp.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_11_fixed_mean_discrepancy_gp/FINAL_PHASE1_11_REPORT.md",
+      "outputs/week9_phase1_11_fixed_mean_discrepancy_gp/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_11_fixed_mean_discrepancy_gp/SUPERVISOR_PHASE1_11_ONE_PAGE.md",
+      "outputs/week9_phase1_11_fixed_mean_discrepancy_gp/claim_ledger.md",
+      "outputs/week9_phase1_11_fixed_mean_discrepancy_gp/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_12_gpc_kernel_adequacy",
+    "week": "9",
+    "title": "week9_phase1_12_gpc_kernel_adequacy",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_12_gpc_kernel_adequacy",
+    "files": 31,
+    "code": [
+      "src/week9_phase1_12_gpc_kernel_adequacy.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/10_week9_phase1_12_gpc_kernel_adequacy.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_12_gpc_kernel_adequacy/FINAL_PHASE1_12_REPORT.md",
+      "outputs/week9_phase1_12_gpc_kernel_adequacy/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_12_gpc_kernel_adequacy/SUPERVISOR_PHASE1_12_ONE_PAGE.md",
+      "outputs/week9_phase1_12_gpc_kernel_adequacy/claim_ledger.md",
+      "outputs/week9_phase1_12_gpc_kernel_adequacy/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_13_fixed_physics_ard_discrepancy",
+    "week": "9",
+    "title": "week9_phase1_13_fixed_physics_ard_discrepancy",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_13_fixed_physics_ard_discrepancy",
+    "files": 37,
+    "code": [
+      "src/week9_phase1_13_fixed_physics_ard_discrepancy.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/11_week9_phase1_13_fixed_physics_ard_discrepancy.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/FINAL_PHASE1_13_REPORT.md",
+      "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/SUPERVISOR_PHASE1_13_ONE_PAGE.md",
+      "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/claim_ledger.md",
+      "outputs/week9_phase1_13_fixed_physics_ard_discrepancy/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_14_m3_margin_acquisition",
+    "week": "9",
+    "title": "week9_phase1_14_m3_margin_acquisition",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_14_m3_margin_acquisition",
+    "files": 39,
+    "code": [
+      "src/week9_phase1_14_m3_margin_acquisition.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/12_week9_phase1_14_m3_margin_acquisition.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_14_m3_margin_acquisition/FINAL_PHASE1_14_REPORT.md",
+      "outputs/week9_phase1_14_m3_margin_acquisition/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_14_m3_margin_acquisition/SUPERVISOR_PHASE1_14_ONE_PAGE.md",
+      "outputs/week9_phase1_14_m3_margin_acquisition/claim_ledger.md",
+      "outputs/week9_phase1_14_m3_margin_acquisition/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_15a_physics_residual_signal_audit",
+    "week": "9",
+    "title": "week9_phase1_15a_physics_residual_signal_audit",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_15a_physics_residual_signal_audit",
+    "files": 33,
+    "code": [
+      "src/week9_phase1_15a_physics_residual_signal_audit.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/13_week9_phase1_15a_physics_residual_signal_audit.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_15a_physics_residual_signal_audit/FINAL_PHASE1_15A_REPORT.md",
+      "outputs/week9_phase1_15a_physics_residual_signal_audit/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_15a_physics_residual_signal_audit/SUPERVISOR_PHASE1_15A_ONE_PAGE.md",
+      "outputs/week9_phase1_15a_physics_residual_signal_audit/candidate_acquisition_designs.md",
+      "outputs/week9_phase1_15a_physics_residual_signal_audit/claim_ledger.md",
+      "outputs/week9_phase1_15a_physics_residual_signal_audit/literature_audit.md",
+      "outputs/week9_phase1_15a_physics_residual_signal_audit/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_16_m3_repulsion_scale_audit",
+    "week": "9",
+    "title": "week9_phase1_16_m3_repulsion_scale_audit",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_16_m3_repulsion_scale_audit",
+    "files": 35,
+    "code": [
+      "src/week9_phase1_16_m3_repulsion_scale_audit.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/14_week9_phase1_16_m3_repulsion_scale_audit.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_16_m3_repulsion_scale_audit/FINAL_PHASE1_16_REPORT.md",
+      "outputs/week9_phase1_16_m3_repulsion_scale_audit/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_16_m3_repulsion_scale_audit/SUPERVISOR_PHASE1_16_ONE_PAGE.md",
+      "outputs/week9_phase1_16_m3_repulsion_scale_audit/claim_ledger.md",
+      "outputs/week9_phase1_16_m3_repulsion_scale_audit/historical_repulsion_audit.md",
+      "outputs/week9_phase1_16_m3_repulsion_scale_audit/repulsion_scale_definition.md",
+      "outputs/week9_phase1_16_m3_repulsion_scale_audit/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_17a_physics_contour_geometry_audit",
+    "week": "9",
+    "title": "week9_phase1_17a_physics_contour_geometry_audit",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_17a_physics_contour_geometry_audit",
+    "files": 28,
+    "code": [
+      "src/week9_phase1_17a_physics_contour_geometry_audit.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/15_week9_phase1_17a_physics_contour_geometry_audit.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_17a_physics_contour_geometry_audit/FINAL_PHASE1_17A_REPORT.md",
+      "outputs/week9_phase1_17a_physics_contour_geometry_audit/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_17a_physics_contour_geometry_audit/SUPERVISOR_PHASE1_17A_ONE_PAGE.md",
+      "outputs/week9_phase1_17a_physics_contour_geometry_audit/claim_ledger.md",
+      "outputs/week9_phase1_17a_physics_contour_geometry_audit/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_18a_level_set_acquisition_compatibility_audit",
+    "week": "9",
+    "title": "week9_phase1_18a_level_set_acquisition_compatibility_audit",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit",
+    "files": 47,
+    "code": [
+      "src/week9_phase1_18a_level_set_acquisition_compatibility_audit.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/16_week9_phase1_18a_level_set_acquisition_compatibility_audit.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/FINAL_PHASE1_18A_REPORT.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/SUPERVISOR_PHASE1_18A_ONE_PAGE.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/acquisition_definitions.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/claim_ledger.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/emi_derivation.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/literature_audit.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/m3_posterior_semantics.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_derivation_audit.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_kernel_compatibility.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_original_proposal.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_prior_art_comparison.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/smocu_compatibility.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/straddle_compatibility.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/sur_compatibility.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/tmse_gsur_comparison.md",
+      "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_18b0_fast_gpc_sur_update_validation",
+    "week": "9",
+    "title": "week9_phase1_18b0_fast_gpc_sur_update_validation",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation",
+    "files": 41,
+    "code": [
+      "src/week9_phase1_18b0_fast_gpc_sur_update_validation.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/17_week9_phase1_18b0_fast_gpc_sur_update_validation.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/FINAL_PHASE1_18B0_REPORT.md",
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/SUPERVISOR_PHASE1_18B0_ONE_PAGE.md",
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/claim_ledger.md",
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/exact_fixed_model_definition.md",
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/fast_rank1_definition.md",
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/full_refit_definition.md",
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/physics_refit_definition.md",
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/sur_literature_update_contract.md",
+      "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_18b_prospective_global_gpc_sur_benchmark",
+    "week": "9",
+    "title": "week9_phase1_18b_prospective_global_gpc_sur_benchmark",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_18b_prospective_global_gpc_sur_benchmark",
+    "files": 201,
+    "code": [
+      "src/week9_phase1_18b_finalize.py",
+      "src/week9_phase1_18b_prospective_global_gpc_sur_benchmark.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/18_week9_phase1_18b_prospective_global_gpc_sur_benchmark.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_18b_prospective_global_gpc_sur_benchmark/FINAL_PHASE1_18B_REPORT.md",
+      "outputs/week9_phase1_18b_prospective_global_gpc_sur_benchmark/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_18b_prospective_global_gpc_sur_benchmark/SUPERVISOR_PHASE1_18B_ONE_PAGE.md",
+      "outputs/week9_phase1_18b_prospective_global_gpc_sur_benchmark/claim_ledger.md",
+      "outputs/week9_phase1_18b_prospective_global_gpc_sur_benchmark/sur_protocol.md",
+      "outputs/week9_phase1_18b_prospective_global_gpc_sur_benchmark/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_19a_integrity_posterior_monotonicity_audit",
+    "week": "9",
+    "title": "week9_phase1_19a_integrity_posterior_monotonicity_audit",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit",
+    "files": 41,
+    "code": [
+      "src/week9_phase1_19a_integrity_posterior_monotonicity_audit.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/19_week9_phase1_19a_integrity_posterior_monotonicity_audit.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/FINAL_PHASE1_19A_REPORT.md",
+      "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/SUPERVISOR_PHASE1_19A_ONE_PAGE.md",
+      "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/claim_ledger.md",
+      "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/letham_2022_applicability_memo.md",
+      "outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_19b_prospective_robust_monotone_pool_lse",
+    "week": "9",
+    "title": "week9_phase1_19b_prospective_robust_monotone_pool_lse",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse",
+    "files": 40,
+    "code": [
+      "src/week9_phase1_19b_prospective_robust_monotone_pool_lse.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/20_week9_phase1_19b_prospective_robust_monotone_pool_lse.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/FINAL_PHASE1_19B_REPORT.md",
+      "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/SUPERVISOR_PHASE1_19B_ONE_PAGE.md",
+      "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/claim_ledger.md",
+      "outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_20_acquisition_search",
+    "week": "9",
+    "title": "W09-P1.20-ACQUISITION-SEARCH — Claude / CCM araması",
+    "status": "Geliştirme ve confirmation çıktıları mevcut. İddialar Phase 1.21 PHASE1_20_WORDING_ERRATA.md ile birlikte okunmalı.",
+    "output": "outputs/week9_phase1_20_acquisition_search",
+    "files": 2667,
+    "code": [
+      "src/week9_phase1_20_acquisition_search.py",
+      "src/week9_phase1_20_confirmation.py",
+      "src/week9_phase1_20_early_start.py",
+      "src/week9_phase1_20_figures.py",
+      "src/week9_phase1_20_report.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week9_phase1_20_acquisition_search/FINAL_PHASE1_20_REPORT.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_20_m3_g3_margin_acquisition",
+    "week": "9",
+    "title": "W09-P1.20-G3-MARGIN — M3 değerlendirici + G3 margin seçimi",
+    "status": "Çıktı seti mevcut; 41 kayıtlı manifest dosyası ve 5 odaklı test bu birleştirmede geçti. CCM çalışmasından ayrı deney.",
+    "output": "outputs/week9_phase1_20_m3_g3_margin_acquisition",
+    "files": 139,
+    "code": [
+      "src/week9_phase1_20_analysis.py",
+      "src/week9_phase1_20_m3_g3_margin_acquisition.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/18_week9_phase1_20_m3_g3_margin_acquisition.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_20_m3_g3_margin_acquisition/FINAL_PHASE1_20_REPORT.md",
+      "outputs/week9_phase1_20_m3_g3_margin_acquisition/REPRODUCIBILITY.md",
+      "outputs/week9_phase1_20_m3_g3_margin_acquisition/SUPERVISOR_SUMMARY.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_21_simplification_replication",
+    "week": "9",
+    "title": "W09-P1.21 — Sadeleştirme ve tekrar",
+    "status": "Rapor, replication ve audit çıktıları mevcut; aynı 405 örnekli havuz içindeki tekrar, bağımsız dış test değil.",
+    "output": "outputs/week9_phase1_21_simplification_replication",
+    "files": 1542,
+    "code": [
+      "src/week9_phase1_21_all_label_reference.py",
+      "src/week9_phase1_21_analysis.py",
+      "src/week9_phase1_21_figures.py",
+      "src/week9_phase1_21_freeze.py",
+      "src/week9_phase1_21_invariance_audit.py",
+      "src/week9_phase1_21_repeat_audit.py",
+      "src/week9_phase1_21_repeat_audit_driver.py",
+      "src/week9_phase1_21_report.py",
+      "src/week9_phase1_21_simplification_replication.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week9_phase1_21_simplification_replication/FINAL_PHASE1_21_REPORT.md",
+      "outputs/week9_phase1_21_simplification_replication/PHASE1_20_WORDING_ERRATA.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_22_external_blind_test",
+    "week": "9",
+    "title": "W09-P1.22 — Dış kör havuz uygunluk denetimi",
+    "status": "Denetim tamamlandı; EXTERNAL_BLIND_POOL_VALID=false. Step 2 öncesinde durdu; dış kör deney yapılmadı.",
+    "output": "outputs/week9_phase1_22_external_blind_test",
+    "files": 1,
+    "code": [
+      "src/week9_phase1_22_external_pool_audit.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week9_phase1_22_external_blind_test/EXTERNAL_POOL_AUDIT.json"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_23_method_validity",
+    "week": "9",
+    "title": "W09-P1.23 — Yöntem geçerliliği alt çalışmaları",
+    "status": "Protokol, teori/toy çıktıları ve binlerce sentetik ara kayıt mevcut. Nihai birleşik rapor/sonuç bulunmadı; tam çalışma tamamlandı olarak işaretlenmedi.",
+    "output": "outputs/week9_phase1_23_method_validity",
+    "files": 4995,
+    "code": [
+      "src/week9_phase1_23_analysis.py",
+      "src/week9_phase1_23_figures.py",
+      "src/week9_phase1_23_freeze.py",
+      "src/week9_phase1_23_grid.py",
+      "src/week9_phase1_23_sph_ablation.py",
+      "src/week9_phase1_23_synthetic.py",
+      "src/week9_phase1_23_toy.py"
+    ],
+    "notebooks": [],
+    "reports": [
+      "outputs/week9_phase1_23_method_validity/LITERATURE_NOVELTY_AUDIT.md",
+      "outputs/week9_phase1_23_method_validity/METHOD_THEORY_NOTE.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase1_close_week8",
+    "week": "9",
+    "title": "week9_phase1_close_week8",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase1_close_week8",
+    "files": 87,
+    "code": [
+      "src/week9_phase1_close_week8.py",
+      "src/week9_phase1_discriminative_update.py",
+      "src/week9_phase1_horizon_extension.py",
+      "src/week9_phase1_terminal_pca.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/01_week9_phase1_close_week8.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase1_close_week8/claim_ledger.md",
+      "outputs/week9_phase1_close_week8/final_q1_q9_answers.md",
+      "outputs/week9_phase1_close_week8/final_results_narrative.md",
+      "outputs/week9_phase1_close_week8/independent_critic_audit.md",
+      "outputs/week9_phase1_close_week8/supervisor_summary.md",
+      "outputs/week9_phase1_close_week8/validation_report.md",
+      "outputs/week9_phase1_close_week8/week9_phase1_requirement_checklist.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase2_1_fourd_plus_width_control",
+    "week": "9",
+    "title": "week9_phase2_1_fourd_plus_width_control",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase2_1_fourd_plus_width_control",
+    "files": 31,
+    "code": [
+      "src/week9_phase2_1_fourd_plus_width_control.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/06_week9_phase2_1_fourd_plus_width_control.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase2_1_fourd_plus_width_control/FINAL_PHASE2_1_REPORT.md",
+      "outputs/week9_phase2_1_fourd_plus_width_control/SUPERVISOR_PHASE2_1_ONE_PAGE.md",
+      "outputs/week9_phase2_1_fourd_plus_width_control/claim_ledger.md",
+      "outputs/week9_phase2_1_fourd_plus_width_control/interactive_3d_process_space.html",
+      "outputs/week9_phase2_1_fourd_plus_width_control/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase2_1r_simple_width_change_control",
+    "week": "9",
+    "title": "week9_phase2_1r_simple_width_change_control",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase2_1r_simple_width_change_control",
+    "files": 42,
+    "code": [
+      "src/week9_phase2_1r_simple_width_change_control.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/07_week9_phase2_1r_simple_width_change_control.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase2_1r_simple_width_change_control/FINAL_PHASE2_1R_REPORT.md",
+      "outputs/week9_phase2_1r_simple_width_change_control/SUPERVISOR_PHASE2_1R_ONE_PAGE.md",
+      "outputs/week9_phase2_1r_simple_width_change_control/claim_ledger.md",
+      "outputs/week9_phase2_1r_simple_width_change_control/interactive_3d_index.html",
+      "outputs/week9_phase2_1r_simple_width_change_control/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase2_1re_early_prefix_width_control",
+    "week": "9",
+    "title": "week9_phase2_1re_early_prefix_width_control",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase2_1re_early_prefix_width_control",
+    "files": 28,
+    "code": [
+      "src/week9_phase2_1re_early_prefix_width_control.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/08_week9_phase2_1re_early_prefix_width_control.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase2_1re_early_prefix_width_control/FINAL_PHASE2_1RE_REPORT.md",
+      "outputs/week9_phase2_1re_early_prefix_width_control/SUPERVISOR_PHASE2_1RE_ONE_PAGE.md",
+      "outputs/week9_phase2_1re_early_prefix_width_control/claim_ledger.md",
+      "outputs/week9_phase2_1re_early_prefix_width_control/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase2_2_width_informed_active_learning",
+    "week": "9",
+    "title": "week9_phase2_2_width_informed_active_learning",
+    "status": "Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz.",
+    "output": "outputs/week9_phase2_2_width_informed_active_learning",
+    "files": 636,
+    "code": [
+      "src/week9_phase2_2_width_informed_active_learning.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/09_week9_phase2_2_width_informed_active_learning.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase2_2_width_informed_active_learning/FINAL_PHASE2_2_REPORT.md",
+      "outputs/week9_phase2_2_width_informed_active_learning/SUPERVISOR_PHASE2_2_ONE_PAGE.md",
+      "outputs/week9_phase2_2_width_informed_active_learning/claim_ledger.md",
+      "outputs/week9_phase2_2_width_informed_active_learning/validation_report.md"
+    ],
+    "historical_alias_of": null
+  },
+  {
+    "id": "week9_phase2_temporal_width_dynamics",
+    "week": "9",
+    "title": "W09-P2 — Zamana bağlı genişlik dinamiği",
+    "status": "Ayrı Git dalından geri alındı. 13 seçili test geçti; iki mevcut raporun eski manifest hashleri uyuşmuyor. Ayrıntı: outputs/project_consolidation/KNOWN_LEGACY_ISSUES.md.",
+    "output": "outputs/week9_phase2_temporal_width_dynamics",
+    "files": 44,
+    "code": [
+      "src/week9_phase2_temporal_width_dynamics.py"
+    ],
+    "notebooks": [
+      "notebooks/week_09/05_week9_phase2_temporal_width_dynamics.ipynb"
+    ],
+    "reports": [
+      "outputs/week9_phase2_temporal_width_dynamics/FINAL_PHASE2_REPORT.md",
+      "outputs/week9_phase2_temporal_width_dynamics/FINAL_RED_TEAM_REPORT.md",
+      "outputs/week9_phase2_temporal_width_dynamics/SUPERVISOR_PHASE2_ONE_PAGE.md",
+      "outputs/week9_phase2_temporal_width_dynamics/claim_ledger.md",
+      "outputs/week9_phase2_temporal_width_dynamics/validation_report.md"
+    ],
+    "historical_alias_of": null
+  }
+]

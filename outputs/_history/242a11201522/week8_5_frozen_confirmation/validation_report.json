@@ -1,0 +1,232 @@
+{
+  "checks": [
+    {
+      "check_id": "protocol_hash_locked",
+      "evidence": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+      "status": "PASS"
+    },
+    {
+      "check_id": "population_membership",
+      "evidence": {
+        "keyhole": 73,
+        "rows": 405
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "outer_run_count",
+      "evidence": 100,
+      "status": "PASS"
+    },
+    {
+      "check_id": "split_membership_counts",
+      "evidence": "100 x (324 train + 81 test)",
+      "status": "PASS"
+    },
+    {
+      "check_id": "group_disjointness",
+      "evidence": "exact input_tuple_sha256",
+      "status": "PASS"
+    },
+    {
+      "check_id": "initial_design_16_both_classes",
+      "evidence": "feature-only seeded maximin; labels revealed after selection",
+      "status": "PASS"
+    },
+    {
+      "check_id": "unseen_old_seed_namespace",
+      "evidence": {
+        "forbidden": [
+          "6022026",
+          "primary_common",
+          "shared_pool_permutation"
+        ],
+        "root": "week8_5_frozen_confirmation|v1"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "seed_key_uniqueness",
+      "evidence": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "historical_AULC_orientation",
+      "evidence": 48.0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "information_flow_saved_artifact_and_source",
+      "evidence": {
+        "candidate_and_query_indices_training_only": true,
+        "checkpoint_count": 3200,
+        "forbidden_B1_B2_B3_hidden_label_chooser_fields": [],
+        "persisted_split_manifest_runs": 100,
+        "saved_mechanism_record_count": 460800,
+        "source_chooser_audit": {
+          "chooser_call_count": 1,
+          "chooser_keyword_arguments": [
+            "candidate_indices",
+            "method",
+            "pool_scaled",
+            "probabilities",
+            "queried_indices"
+          ],
+          "forbidden_input_tokens": [
+            "b1",
+            "b2",
+            "b3",
+            "hidden",
+            "label"
+          ]
+        },
+        "test_rows_hidden_labels_B1_unavailable": true,
+        "violations": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "repulsion_mechanism_derivative_schema_and_counts",
+      "evidence": {
+        "diagnostic_row_count": 28800,
+        "nearest_distance_non_missing": true,
+        "required_columns_present": [
+          "arm",
+          "continuation_id",
+          "fold",
+          "matched_arm_same_selected_row",
+          "queried_keyhole_after_reveal",
+          "repeat",
+          "repulsion_bandwidth_h",
+          "run_id",
+          "selected_final_acquisition_score",
+          "selected_nearest_standardized_distance",
+          "selected_population_row_index",
+          "selected_probability",
+          "selected_repulsion_score",
+          "selected_uncertainty_score",
+          "selection_budget",
+          "selection_order_after_warm_start",
+          "shortlist_size"
+        ],
+        "rows_by_arm": {
+          "binary_margin": 14400,
+          "binary_uncertainty_repulsion": 14400
+        },
+        "summary_row_count": 4
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "random_order_seed_and_key_uniqueness",
+      "evidence": {
+        "random_order_keys_unique": true,
+        "random_order_seed_count": 3000,
+        "random_order_seed_u32_unique": true
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "fit_seed_u32_collisions",
+      "evidence": {
+        "fit_seed_collision_group_count": 12,
+        "fit_seed_collisions": [
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r02_f04|arm|binary_margin|fit|budget|082",
+              "week8_5_frozen_confirmation|v1|run|w85__r06_f04|arm|binary_random|continuation|22|fit|budget|080"
+            ],
+            "seed_u32": 176719086
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r07_f03|arm|binary_uncertainty_repulsion|h|0.15|fit|budget|116",
+              "week8_5_frozen_confirmation|v1|run|w85__r09_f02|arm|binary_random|continuation|12|fit|budget|078"
+            ],
+            "seed_u32": 445620808
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r14_f02|arm|binary_random|continuation|15|fit|budget|088",
+              "week8_5_frozen_confirmation|v1|run|w85__r20_f01|arm|binary_random|continuation|16|fit|budget|064"
+            ],
+            "seed_u32": 745061156
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r14_f02|arm|binary_uncertainty_repulsion|h|0.15|fit|budget|018",
+              "week8_5_frozen_confirmation|v1|run|w85__r19_f02|arm|binary_random|continuation|12|fit|budget|136"
+            ],
+            "seed_u32": 978829813
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r02_f02|arm|binary_random|continuation|09|fit|budget|077",
+              "week8_5_frozen_confirmation|v1|run|w85__r09_f03|arm|binary_random|continuation|19|fit|budget|043"
+            ],
+            "seed_u32": 1070099376
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r15_f03|arm|binary_random|continuation|01|fit|budget|039",
+              "week8_5_frozen_confirmation|v1|run|w85__r18_f04|arm|binary_random|continuation|02|fit|budget|128"
+            ],
+            "seed_u32": 1866423789
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r04_f03|arm|binary_random|continuation|10|fit|budget|152",
+              "week8_5_frozen_confirmation|v1|run|w85__r06_f01|arm|binary_random|continuation|20|fit|budget|084"
+            ],
+            "seed_u32": 2494195312
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r20_f01|arm|binary_random|continuation|20|fit|budget|106",
+              "week8_5_frozen_confirmation|v1|run|w85__r20_f02|arm|binary_random|continuation|05|fit|budget|092"
+            ],
+            "seed_u32": 2848386932
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r03_f02|arm|binary_random|continuation|20|fit|budget|132",
+              "week8_5_frozen_confirmation|v1|run|w85__r08_f03|arm|binary_random|continuation|30|fit|budget|144"
+            ],
+            "seed_u32": 2995255352
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r02_f03|arm|binary_random|continuation|08|fit|budget|080",
+              "week8_5_frozen_confirmation|v1|run|w85__r05_f02|arm|binary_random|continuation|01|fit|budget|017"
+            ],
+            "seed_u32": 3316481507
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r11_f03|arm|binary_random|continuation|04|fit|budget|017",
+              "week8_5_frozen_confirmation|v1|run|w85__r18_f01|arm|binary_random|continuation|20|fit|budget|079"
+            ],
+            "seed_u32": 3455770665
+          },
+          {
+            "distinct_seed_keys": [
+              "week8_5_frozen_confirmation|v1|run|w85__r03_f04|arm|binary_random|continuation|05|fit|budget|104",
+              "week8_5_frozen_confirmation|v1|run|w85__r11_f01|arm|binary_random|continuation|11|fit|budget|080"
+            ],
+            "seed_u32": 4256792567
+          }
+        ],
+        "random_order_keys_unique": true,
+        "random_order_seed_count": 3000,
+        "random_order_seed_u32_unique": true
+      },
+      "status": "QUALIFY"
+    }
+  ],
+  "created_at_utc": "2026-08-26T19:36:31+00:00",
+  "protocol_id": "week8_5_frozen_confirmation_protocol/v1.0.0",
+  "protocol_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+  "schema_version": "1.0.0",
+  "source_hashes_json": "{\"phase6_source.py\": \"23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479\", \"phase7_source.py\": \"d5a331c60bab373adfc63344cc5eb3b88e1ca7ce41e4ffd0717196edeb2c00df\", \"primary_common_population.csv\": \"c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7\", \"protocol.json\": \"bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66\"}",
+  "status": "PASS_WITH_QUALIFICATIONS"
+}

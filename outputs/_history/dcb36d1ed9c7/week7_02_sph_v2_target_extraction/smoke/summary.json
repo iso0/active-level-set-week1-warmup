@@ -1,0 +1,82 @@
+{
+  "comparable_exact_week6_match_count": 11,
+  "correction_status_changed_experiment_count": 0,
+  "correction_status_changed_experiments": [],
+  "depth_ambiguity_candidate_count": 2,
+  "exact_match_material_change_count": 0,
+  "exact_week6_match_count": 12,
+  "failed_extraction_by_partition": {
+    "old-data-local": 1
+  },
+  "failed_extraction_count": 1,
+  "keyhole_positive_successful_count": 4,
+  "keyhole_positive_without_T0_overlap_count": 2,
+  "known_malformed_no_melt_sentinel_rule": "Recognize only the exact complete field s3.402823e+38 as the ordinary +3.402823e+38 no-melt sentinel, then exclude its row with the unchanged abs(value)<1e30 rule; no generic malformed-number repair.",
+  "label_context_change_count": 0,
+  "label_timestep_unmatched_count": 0,
+  "max_depth_after_T0_count": 1,
+  "max_depth_before_T0_count": 12,
+  "max_depth_inside_T0_count": 4,
+  "missing_required_monitor_record_count": 2,
+  "mode": "smoke",
+  "monitor_incomplete_experiment_count": 1,
+  "new_data_experiment_count": 6,
+  "new_data_successful_extraction_count": 6,
+  "old_data_local_missing_monitor_maintenance_decision": "Keep missing rows explicit; Ioan confirmed files may be restored later through a separate Hugging Face pull request. No backfill was performed here.",
+  "phase": "Week 7 Phase 2",
+  "present_schema_incompatible_monitor_record_count": 0,
+  "previous_valid_target_unexpected_change_count": 0,
+  "recording_ends_before_90pct_domain_count": 9,
+  "remaining_new_data_failure_count": 0,
+  "remaining_new_data_failures": [],
+  "repository": "ioandanielc/sph_v2",
+  "revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "runtime_seconds": 19.4327753999969,
+  "scope": {
+    "active_learning": false,
+    "labels_modified": false,
+    "level_set_estimation": false,
+    "models_fitted": false,
+    "simulations_removed": false
+  },
+  "sentinel_variants": [
+    {
+      "count": 1209000,
+      "experiment_count": 18,
+      "file_count": 18,
+      "token": "3.402823e+38"
+    },
+    {
+      "count": 1209000,
+      "experiment_count": 18,
+      "file_count": 18,
+      "token": "-3.402823e+38"
+    },
+    {
+      "count": 0,
+      "experiment_count": 0,
+      "file_count": 0,
+      "token": "s3.402823e+38"
+    },
+    {
+      "count": 0,
+      "experiment_count": 0,
+      "file_count": 0,
+      "token": "other numeric/textual variants near 1e38"
+    }
+  ],
+  "successful_extraction_by_partition": {
+    "new-data": 6,
+    "old-data-local": 5,
+    "old-data-remote-clean": 6
+  },
+  "successful_extraction_count": 17,
+  "target_row_count": 18,
+  "validation": {
+    "PASS": 28,
+    "WARNING": 2
+  },
+  "warning_extraction_count": 0,
+  "week6_T0_window_instability_count": 3,
+  "week6_base_commit": "cba151880fc670d1b8a20ff2f7f25295f9bcb892"
+}

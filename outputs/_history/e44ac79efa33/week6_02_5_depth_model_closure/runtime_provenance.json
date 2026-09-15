@@ -1,0 +1,124 @@
+{
+  "generated_at_utc": "2026-07-26T17:45:34.464061+00:00",
+  "phase2_runtime_metadata_correction": {
+    "original_field_name": "full_pipeline_runtime_seconds",
+    "original_value_seconds": 11.208154400024796,
+    "status": "deprecated_ambiguous_name",
+    "corrected_authoritative_field_name": "cached_artifact_assembly_figure_and_validation_runtime_seconds",
+    "corrected_authoritative_value_seconds": 11.208154400024796,
+    "classification": "measured cached Phase 2 pre-report invocation, not the original end-to-end experiment",
+    "timer_trace": {
+      "function": "run_full_pipeline",
+      "source_file": "src\\week6_phase2_gp_response_noise_comparison.py",
+      "function_start_line": 3368,
+      "timer_start": "at function entry before configuration, Phase 1 checks, and cache/checkpoint loading",
+      "timer_end": "after figure generation and validation, immediately before write_reporting_outputs",
+      "included_stages": [
+        "Phase 1 verification",
+        "loading/re-writing cached target-summary uncertainty",
+        "loading all 9 primary and 3 stable LOO checkpoints",
+        "metric, paired, preference, and stable-sensitivity assembly",
+        "figure generation",
+        "automated validation"
+      ],
+      "excluded_stages": [
+        "original moving-block bootstrap computation",
+        "original 241-simulation GP fits",
+        "original stable-only GP fits",
+        "report/checklist/summary writes after the timer stop",
+        "notebook execution"
+      ]
+    },
+    "cache_evidence": {
+      "phase2_configuration_created_at_utc": "2026-07-25T16:36:17.116164+00:00",
+      "latest_checkpoint_mtime_utc": "2026-07-25T16:34:14.470772+00:00",
+      "all_checkpoints_predate_timed_invocation": true,
+      "checkpoint_count": 12
+    },
+    "available_separately_measured_phase2_durations": {
+      "smoke_test_runtime_seconds": 4.719590299995616,
+      "target_summary_bootstrap_invocation_runtime_seconds": 131.8021499000024,
+      "full_241_loo_aggregate_fold_runtime_seconds": 1832.2206838000275,
+      "stable_only_aggregate_fold_runtime_seconds": 555.9576061992557,
+      "aggregate_fold_runtime_warning": "fold durations overlap under parallel execution and are not end-to-end wall-clock durations"
+    },
+    "not_available_as_measured_values": [
+      "original full Phase 2 end-to-end wall-clock runtime",
+      "original full 241-LOO wall-clock runtime",
+      "original Phase 2 notebook execution runtime"
+    ],
+    "correction_policy": "The historical value is preserved but deprecated. The corrected name above is authoritative; no guessed end-to-end sum is added."
+  },
+  "phase2_5_measured_durations": {
+    "latest_full_or_cached_invocation": {
+      "timer_start_utc": "2026-07-26T17:33:37.963715+00:00",
+      "timer_end_utc": "2026-07-26T17:40:45.233530+00:00",
+      "measured_wall_runtime_seconds": 427.26977020001505,
+      "included_stages": [
+        "source validation",
+        "stable subset construction",
+        "B/C LOO fit or validated cache loading",
+        "metrics and paired bootstrap",
+        "stable-vs-full comparison",
+        "figures",
+        "initial validation and reports"
+      ],
+      "excluded_stages": [
+        "notebook build/execution",
+        "later final validation invocation"
+      ],
+      "cached_stages": [],
+      "parallel_worker_count": 4
+    },
+    "method_loo_invocations": [
+      {
+        "method": "B_learned_nugget",
+        "cache_reused": false,
+        "measured_wall_runtime_seconds": 231.09184200002346,
+        "timer_start_utc": "2026-07-26T17:33:38.405306+00:00",
+        "timer_end_utc": "2026-07-26T17:37:29.497192+00:00",
+        "included": [
+          "230 exact LOO folds",
+          "fold-local X/y scaling",
+          "one initial L-BFGS-B optimization plus one deterministic restart",
+          "prediction and fold diagnostics",
+          "CSV serialization after the timer"
+        ],
+        "excluded": [
+          "Phase 2 target-summary bootstrap",
+          "notebook execution",
+          "Phase 2.5 reporting and validation"
+        ]
+      },
+      {
+        "method": "C_heteroskedastic",
+        "cache_reused": false,
+        "measured_wall_runtime_seconds": 185.09602270001778,
+        "timer_start_utc": "2026-07-26T17:37:29.581549+00:00",
+        "timer_end_utc": "2026-07-26T17:40:34.677837+00:00",
+        "included": [
+          "230 exact LOO folds",
+          "fold-local X/y scaling",
+          "one initial L-BFGS-B optimization plus one deterministic restart",
+          "prediction and fold diagnostics",
+          "CSV serialization after the timer"
+        ],
+        "excluded": [
+          "Phase 2 target-summary bootstrap",
+          "notebook execution",
+          "Phase 2.5 reporting and validation"
+        ]
+      }
+    ],
+    "artifact_generation_runtime_seconds": 10.46523289999459,
+    "notebook_execution_runtime_seconds": 18.5624255,
+    "last_validation_runtime_seconds": 0.93106530001387,
+    "end_to_end_wall_clock_runtime_seconds": null,
+    "end_to_end_note": "No end-to-end value is reported because notebook execution and final validation occur in separate measured invocations."
+  },
+  "timing_principles": {
+    "measured_only": true,
+    "no_inferred_duration_reported_as_measured": true,
+    "parallel_fold_sums_not_treated_as_wall_clock": true
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "exact_phase7_parent": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+  "expensive_benchmark_rerun": false,
+  "manual_labels_modified": false,
+  "new_acquisition": false,
+  "new_model": false,
+  "new_simulator_runs": false,
+  "new_splits": false,
+  "phase": "Week 8 Phase 1 source audit",
+  "phase7_remote_branch": "codex/week7-phase7-final-boundary-hybrid-benchmark",
+  "phase7_remote_head": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+  "phase7_requirement_pass": 18,
+  "phase7_requirement_total": 18,
+  "phase7_validation_pass": 34,
+  "phase7_validation_total": 34,
+  "remote_parent_verified": true,
+  "source_inventory": [
+    {
+      "bytes": 5063141,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/phase7_learning_curve_summary.csv",
+      "role": "learning_curves",
+      "sha256": "d9df919e8fac9d55fee2b6505ec1d76ba4aee3ff7b3de53363a2fccb1d6deb18"
+    },
+    {
+      "bytes": 7860490,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/phase7_boundary_metric_learning_curves.csv",
+      "role": "boundary_curves",
+      "sha256": "9622654a28da7720b9340d9a2720c8bb88490838f6eb97195413d41fc80244b8"
+    },
+    {
+      "bytes": 35393377,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/phase7_all_method_prediction_checkpoints.csv",
+      "role": "predictions",
+      "sha256": "58ecffa9a8460b28fdbb9993e2f7226e9fdf7e792293e1f72e41f29b6b8afed4"
+    },
+    {
+      "bytes": 10101869,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/phase7_all_method_query_history.csv",
+      "role": "queries",
+      "sha256": "f076c5d6151e0ce6f98da303e7b44e52cb2466ded05cd63af7e6a731d26dbbc9"
+    },
+    {
+      "bytes": 812202,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/phase7_keyhole_discovery_summary.csv",
+      "role": "discoveries",
+      "sha256": "2a8149bb1b225358b41c866288a56a9335628940cb7ca6b7a96b3812255e5a05"
+    },
+    {
+      "bytes": 30672,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/phase7_aulc_summary.csv",
+      "role": "aulc",
+      "sha256": "e6edce57afb3546191a8e81d51191c3cf85142b8c0c45833e4caa3ee6f362021"
+    },
+    {
+      "bytes": 1384,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/phase7_runtime_comparison.csv",
+      "role": "runtime",
+      "sha256": "0262eda1de2262743b72d9ca4b700b0c16d35f304ed641f56e3d06bdbb29738d"
+    },
+    {
+      "bytes": 582,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/phase7_final_decision.csv",
+      "role": "phase7_decision",
+      "sha256": "3d99d28760bb420645fff24f17dfb63c285e19d2bd7d7df8cabd4a56ec2871e7"
+    },
+    {
+      "bytes": 4356,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/validation_results.csv",
+      "role": "phase7_validation",
+      "sha256": "ddc111072e6ac1c946175b6c5f253ed93736799622044a217d4f5c90f0a8a88e"
+    },
+    {
+      "bytes": 1132,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/requirement_checklist.csv",
+      "role": "phase7_requirements",
+      "sha256": "53a2f163f2e8565c2fea14e14029e8708d8f81553810df6a608392b4d1a3c53e"
+    },
+    {
+      "bytes": 11787,
+      "relative_path": "outputs/week7_07_final_boundary_hybrid_benchmark/phase6_run_reuse_audit.csv",
+      "role": "phase7_reuse",
+      "sha256": "c89b0f9f2516050c692e094c66c13dc9b9b25e663ebea62b782ea6c6f517705b"
+    },
+    {
+      "bytes": 1097989,
+      "relative_path": "outputs/week7_06_real_data_boundary_active_level_set/primary_common_population.csv",
+      "role": "population",
+      "sha256": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7"
+    },
+    {
+      "bytes": 4897740,
+      "relative_path": "outputs/week7_06_real_data_boundary_active_level_set/outer_split_manifest.csv",
+      "role": "splits",
+      "sha256": "637badaee28d3cd4ebe13851b686ec9266327cad25d1e76460d5e75ce47af73d"
+    },
+    {
+      "bytes": 548,
+      "relative_path": "outputs/week7_06_real_data_boundary_active_level_set/phase6_formulation_scorecard.csv",
+      "role": "phase6_scorecard",
+      "sha256": "7fda92920d2aa14d81ebba2cc67dd7b589cc7591879f749dc0308ff8315798ba"
+    },
+    {
+      "bytes": 781,
+      "relative_path": "outputs/week7_06_real_data_boundary_active_level_set/phase6_final_decision.csv",
+      "role": "phase6_decision",
+      "sha256": "cc5839e34e6ff1aeade6ddf50d13f8eeeae9826aa35d44cfc1fe81a7ee530f2f"
+    },
+    {
+      "bytes": 7031,
+      "relative_path": "outputs/week7_05_5_g3_robustness_transfer_analysis/summary.json",
+      "role": "phase55_summary",
+      "sha256": "a55c4d095f44840564966d87ac02557e49d60fa1cdac51a377194096be2b3685"
+    },
+    {
+      "bytes": 4762,
+      "relative_path": "outputs/week7_05_keyhole_physical_proxy_analysis/summary.json",
+      "role": "phase5_summary",
+      "sha256": "bfb30fbcd4b86e4ef7182d4b87bd9df7f002525caa91b4d400c7ce9b2ffe2e69"
+    },
+    {
+      "bytes": 5726,
+      "relative_path": "outputs/week4_09_gpc_bernoulli_sur_validation/combined/gpc_bernoulli_sur_validation_summary.csv",
+      "role": "synthetic_summary",
+      "sha256": "39d95c859d5a108ebbb96fad721b3ff6f7701562a6a834632eb7faa1b8047b68"
+    }
+  ],
+  "timestamp_utc": "2026-08-17T22:19:55.680865+00:00",
+  "week8_branch": "codex/week8-final-sample-efficiency-thesis-consolidation",
+  "week8_head_before_commit": "167aad945b20822de712e891e901bd3ec6d5ffc6"
+}

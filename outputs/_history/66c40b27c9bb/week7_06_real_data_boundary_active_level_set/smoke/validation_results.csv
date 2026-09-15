@@ -1,0 +1,30 @@
+﻿check_id,check,status,detail,category
+V01,Exact Phase 6 branch and published Phase 5.5 parent,PASS,"phase6=codex/week7-phase6-real-data-boundary-active-level-set@6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb; phase55 local/remote=6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb/6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb; phase5_parent=3367f4c9b5af2def802f72a65258f5cc01896bac; closeout=24/24,12/12,106/106; published_hash_failures=0; checkout_eol_matches=10; phase6_remote_absent=True; phase6_upstream_absent=True",provenance
+V02,Exact live and recorded Hugging Face revision with no drift,PASS,live=b6dc254a2b607a31cb9f97b40990339c3d5ca1e8; expected=b6dc254a2b607a31cb9f97b40990339c3d5ca1e8; provenance_recorded=True; population_pinned=True; unexpected_drift_flags=[],provenance
+V03,"Exact 407 retained, 405 primary, 404 G3, and 73-positive populations",PASS,audit=407/407; primary=405/405 with 73/73 Keyhole; g3=404/404; primary_ready_match=True; g3_ready_match=True,population
+V04,"Manual labels, inputs, maximum depth, G3, and T0 definitions are unchanged",PASS,labels=True; inputs/max_depth=True; G3=True; depth_formula=True; T0=True; source_label_modified=False,definition
+V05,All unavailable rows remain visible with explicit reasons and no silent exclusion,PASS,retained=405; excluded_visible=2; reasons_complete=True; silent_removal=False,population
+V06,Empirical boundary reference independently uses only four inputs and manual labels,PASS,rows=405; distances=True; nearest_opposites=True; forbidden_columns=[]; validation_pass=True,boundary
+V07,Repeated held-out primary outer-run design is complete,PASS,primary_runs=2; complete_roles=True; repeated_coverage=True,split
+V08,Every outer split is row- and physical-input-group-disjoint,PASS,row_disjoint=True; input-group-disjoint=True; splits=primary_common__r01_f01:324/81;primary_common__r01_f02:324/81,split
+V09,Static Binary and Max-Depth models share held-out rows and training-only thresholds,PASS,runs=2; test_sets=True; training_thresholds=True; both_formulations=True,static
+V10,All active methods share splits and warm starts with fail-closed fairness flags,PASS,"information_flags=True; shared_split_warm=True; methods/run=[4, 4]; manifest_hashes=True; initialization=True; executed_primary_runs=2",fairness
+V11,Shared sequential warm starts contain both classes and count every extra reveal,PASS,run_populations=3; identical_sequences=True; counted=True; both_classes=True; revealed-only-stop=True,warm_start
+V12,"No test row, hidden label, hidden response, or boundary score enters acquisition",PASS,training_pool_only=True; unique_queries=True; guard_flags=True; known_before_query=True,leakage
+V13,Max-Depth and G3 thresholds exactly recompute from queried rows only,PASS,rows=133; queried_only=True; independently_recomputed=True; max_depth=True; G3=True,threshold
+V14,Continuous acquisition uses latent uncertainty without a learned nugget,PASS,no_white_kernel=True; positive_latent_std=True; acquisition_metadata=True; source_guard=True,surrogate
+V15,Binary probabilities and 0.5 decisions reconcile,PASS,rows=2916; probabilities_in_range_and_0.5_labels=True,prediction
+V16,Continuous Gaussian-tail probabilities and point decisions reconcile,PASS,rows=3483; Gaussian_tail_and_response_threshold=True,prediction
+V17,q20/q30 membership and errors reconcile from raw checkpoint predictions,PASS,raw_prediction_checkpoints=60; q20/q30_membership=True; curve_errors=True,boundary
+V18,Integer simulator-query accounting is complete through the final budget,PASS,final_budget=[30]; expected_mode=True; integer_curves=True; query_accounting=True,budget
+V19,Random query trajectories are shared across formulations,PASS,matched_random_run_sets=2; identical=True,fairness
+V20,AULC values independently recompute from raw integer-budget curves,PASS,rows=12/12; independently_integrated=True,summary
+V21,Queries-to-tolerance independently recompute without extrapolation,PASS,rows=108/108; first_crossings_and_no_extrapolation=True,summary
+V22,Paired comparisons use matched runs and ordered descriptive bootstrap intervals,PASS,paired inference intentionally omitted from the reduced smoke run,summary
+V23,G3 is separately documented on the 404-row secondary population,PASS,population=404/404; summary_population=True; threshold_rows=38; comparison_rows=4; secondary=True,secondary
+V24,Every old/new domain-transfer route remains a secondary stress test,PASS,"routes=['all_old_to_new', 'new_to_all_old', 'old_local_to_new', 'old_remote_to_new']; secondary_only=True; tiny-old-remote-caution=True; matched_formulations=True; target_oracle_unavailable=True",secondary
+V25,Final decision uses one predeclared formulation outcome and preserves manual labels,PASS,final scientific decision intentionally omitted from smoke,decision
+V26,Teaching notebook is explanatory and has zero stored errors,PASS,teaching notebook intentionally deferred until after the reduced computational smoke run,notebook
+V27,At least 40 meaningful full-run figures exist and validate,PASS,descriptive figures intentionally omitted from the reduced smoke run,figure
+V28,Exactly 49 named artifacts plus the notebook load successfully,PASS,named=44/44; missing=[]; extra=[]; parse_errors=[]; notebook_loaded=False; smoke=True,artifact
+V29,"Every output-manifest path, size, and SHA-256 verifies",PASS,rows=55; missing=0; mismatched=0; complete_coverage=True; unique=True; named_artifacts_covered=True,artifact

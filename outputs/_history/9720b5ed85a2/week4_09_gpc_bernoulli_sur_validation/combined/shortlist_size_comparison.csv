@@ -1,0 +1,13 @@
+benchmark,metric,best_sur_method,best_sur_value,k15_value,k25_value,k25_beats_k15,difference_k25_minus_k15
+branin,global_error,gpc_bernoulli_sur_refit_k15,0.073300,0.073300,0.077950,False,0.004650
+branin,near_boundary_error_q20,gpc_bernoulli_sur_refit_k15,0.265500,0.265500,0.286250,False,0.020750
+branin,near_boundary_error_q30,gpc_bernoulli_sur_refit_k15,0.201500,0.201500,0.216833,False,0.015333
+branin,integrated_bernoulli_uncertainty,gpc_bernoulli_sur_refit_k25,0.223481,0.223641,0.223481,True,-0.000160
+hartmann4,global_error,gpc_bernoulli_sur_refit_k15,0.116020,0.116020,0.121040,False,0.005020
+hartmann4,near_boundary_error_q20,gpc_bernoulli_sur_refit_k25,0.373000,0.375300,0.373000,True,-0.002300
+hartmann4,near_boundary_error_q30,gpc_bernoulli_sur_refit_k25,0.315467,0.315867,0.315467,True,-0.000400
+hartmann4,integrated_bernoulli_uncertainty,gpc_bernoulli_sur_refit_k25,0.243712,0.244163,0.243712,True,-0.000451
+ackley,global_error,gpc_bernoulli_sur_refit_k15,0.188800,0.188800,0.204667,False,0.015867
+ackley,near_boundary_error_q20,gpc_bernoulli_sur_refit_k25,0.425667,0.428167,0.425667,True,-0.002500
+ackley,near_boundary_error_q30,gpc_bernoulli_sur_refit_k15,0.384556,0.384556,0.394556,False,0.010000
+ackley,integrated_bernoulli_uncertainty,gpc_bernoulli_sur_refit_k25,0.244768,0.245406,0.244768,True,-0.000638

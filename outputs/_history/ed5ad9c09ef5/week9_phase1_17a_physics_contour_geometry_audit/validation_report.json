@@ -1,0 +1,142 @@
+{
+  "check_count": 27,
+  "checks": [
+    {
+      "check": "exact_parent_sha",
+      "detail": "746b19153f377bb0b7219d1c113bab672e306b19",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_phase16_paths",
+      "detail": "600x80",
+      "status": "PASS"
+    },
+    {
+      "check": "no_new_trajectory",
+      "detail": "diagnostic only",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_scaler_recovery",
+      "detail": "4.440892098500626e-16",
+      "status": "PASS"
+    },
+    {
+      "check": "standardized_gradient_formula",
+      "detail": "chain rule",
+      "status": "PASS"
+    },
+    {
+      "check": "gradient_at_selected_candidate",
+      "detail": "local",
+      "status": "PASS"
+    },
+    {
+      "check": "ST_gradient_zero",
+      "detail": "exact zero",
+      "status": "PASS"
+    },
+    {
+      "check": "nearest_original_euclidean",
+      "detail": "standardized Euclidean",
+      "status": "PASS"
+    },
+    {
+      "check": "orthogonal_decomposition",
+      "detail": "9.992007221626409e-16",
+      "status": "PASS"
+    },
+    {
+      "check": "reconstruction_identity",
+      "detail": "2.3551386880256624e-16",
+      "status": "PASS"
+    },
+    {
+      "check": "energy_identity",
+      "detail": "2.275957200481571e-15",
+      "status": "PASS"
+    },
+    {
+      "check": "fraction_sum",
+      "detail": "8.881784197001252e-16",
+      "status": "PASS"
+    },
+    {
+      "check": "zero_distance_reported",
+      "detail": "0",
+      "status": "PASS"
+    },
+    {
+      "check": "no_ARD_metric",
+      "detail": "none",
+      "status": "PASS"
+    },
+    {
+      "check": "labels_absent_geometry",
+      "detail": "absent",
+      "status": "PASS"
+    },
+    {
+      "check": "B1_q_absent_geometry",
+      "detail": "absent",
+      "status": "PASS"
+    },
+    {
+      "check": "freeze_before_join",
+      "detail": "frozen",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_arms",
+      "detail": "['M3_MARGIN', 'REP_C025', 'REP_C050', 'REP_C100', 'REP_C200', 'REP_C400']",
+      "status": "PASS"
+    },
+    {
+      "check": "exact_budgets_lengths",
+      "detail": "38400",
+      "status": "PASS"
+    },
+    {
+      "check": "train_test_integrity",
+      "detail": "all",
+      "status": "PASS"
+    },
+    {
+      "check": "repeat_block_inference",
+      "detail": "20 blocks",
+      "status": "PASS"
+    },
+    {
+      "check": "bootstrap_10000",
+      "detail": "10000",
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed",
+      "detail": "7",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_hashes",
+      "detail": "5",
+      "status": "PASS"
+    },
+    {
+      "check": "historical_outputs_unchanged",
+      "detail": "[]",
+      "status": "PASS"
+    },
+    {
+      "check": "no_placeholders",
+      "detail": "none",
+      "status": "PASS"
+    },
+    {
+      "check": "decision_valid",
+      "detail": "MIXED_GEOMETRIC_MECHANISM",
+      "status": "PASS"
+    }
+  ],
+  "passed": 27,
+  "status": "PASS"
+}

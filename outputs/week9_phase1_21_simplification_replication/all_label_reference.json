@@ -1,0 +1,35 @@
+{
+  "what": "empirical all-label M3 reference (M3 fitted on all training labels of each outer run)",
+  "repeats": [
+    61,
+    120
+  ],
+  "runs": 300,
+  "train_labels_per_run": [
+    324
+  ],
+  "by_subset": {
+    "B1_q20": {
+      "accuracy": 0.8550980392156862,
+      "balanced_accuracy": 0.8308495902245903,
+      "keyhole_recall": 0.72430291005291,
+      "false_positive": 0.6466666666666666,
+      "false_negative": 1.8166666666666667
+    },
+    "B1_q30": {
+      "accuracy": 0.8998666666666668,
+      "balanced_accuracy": 0.8672050500668922,
+      "keyhole_recall": 0.7740520683020683,
+      "false_positive": 0.67,
+      "false_negative": 1.8333333333333333
+    },
+    "full81": {
+      "accuracy": 0.9683127572016459,
+      "balanced_accuracy": 0.9300420731838642,
+      "keyhole_recall": 0.8701746031746033,
+      "false_positive": 0.67,
+      "false_negative": 1.8966666666666667
+    }
+  },
+  "not": "not a theoretical ceiling or a maximum possible accuracy"
+}

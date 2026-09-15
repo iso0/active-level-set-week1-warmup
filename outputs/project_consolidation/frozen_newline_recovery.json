@@ -1,0 +1,44 @@
+[
+  {
+    "path": "outputs/week9_phase2_temporal_width_dynamics/FINAL_PHASE2_REPORT.md",
+    "sha256": "617c162b932bea833260bd4a17b487fee48e2c7b0847f6207838282c8e2b8cde",
+    "operation": "recovered journal for exact newline restoration"
+  },
+  {
+    "path": "outputs/week9_phase2_temporal_width_dynamics/FINAL_RED_TEAM_REPORT.md",
+    "sha256": "eef74799e70030a3ba52e6e4c85565a99695427257dbcee73d24871a0cd6d815",
+    "operation": "recovered journal for exact newline restoration"
+  },
+  {
+    "path": "outputs/week9_phase2_temporal_width_dynamics/SUPERVISOR_PHASE2_ONE_PAGE.md",
+    "expected_sha256": "3a1a21ccb75f64967add17385120b9436a9ec35ec2d7ae4a24dd31eeb802b013",
+    "actual_sha256": "0e76ee771ad78dd22ac78650e125b0efe3d81ce7a567e2fcb7d44d45c67728b3",
+    "operation": "UNRESOLVED_PREEXISTING_FROZEN_MANIFEST_MISMATCH; retained available Git bytes"
+  },
+  {
+    "path": "outputs/week9_phase2_temporal_width_dynamics/claim_ledger.md",
+    "expected_sha256": "de592b0e1a886180873d4f4eac80070df45bb426b5ac7cd77acc1aeeca3d7f22",
+    "actual_sha256": "4aa396207675afad55728f085ee1669d00ac666c2177d55ed418aac46a87fcbf",
+    "operation": "UNRESOLVED_PREEXISTING_FROZEN_MANIFEST_MISMATCH; retained available Git bytes"
+  },
+  {
+    "path": "outputs/week9_phase2_temporal_width_dynamics/longitudinal_length_diagnostic/README.md",
+    "sha256": "444d43d94283462f06bf2b60b6aef835155723eb5e2f4abf7e8fc98c43d5e63c",
+    "operation": "newline representation only; accepted only on exact frozen SHA-256 match"
+  },
+  {
+    "path": "outputs/week9_phase2_temporal_width_dynamics/validation_report.json",
+    "sha256": "b491b56c14f0bb56a5adb607d5aa4132b1dbf305351d505871ac872d3813e595",
+    "operation": "newline representation only; accepted only on exact frozen SHA-256 match"
+  },
+  {
+    "path": "outputs/week9_phase2_temporal_width_dynamics/validation_report.md",
+    "sha256": "5dd23651e736d511f5731208648e74572871dbb8e1fed520d1b33633b0463954",
+    "operation": "newline representation only; accepted only on exact frozen SHA-256 match"
+  },
+  {
+    "path": "notebooks/week_09/05_week9_phase2_temporal_width_dynamics.ipynb",
+    "sha256": "66ca51a06f8506f48e47526d5ae266e22b673839da7749f84cf1be4b331b18aa",
+    "operation": "newline representation only; accepted only on exact frozen SHA-256 match"
+  }
+]

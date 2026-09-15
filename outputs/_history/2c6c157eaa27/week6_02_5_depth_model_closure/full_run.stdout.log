@@ -1,0 +1,270 @@
+stable_only_refit_loo depth B_learned_nugget: 10/230 folds (15.0s)
+stable_only_refit_loo depth B_learned_nugget: 20/230 folds (25.3s)
+stable_only_refit_loo depth B_learned_nugget: 30/230 folds (35.3s)
+stable_only_refit_loo depth B_learned_nugget: 40/230 folds (46.1s)
+stable_only_refit_loo depth B_learned_nugget: 50/230 folds (55.0s)
+stable_only_refit_loo depth B_learned_nugget: 60/230 folds (65.4s)
+stable_only_refit_loo depth B_learned_nugget: 70/230 folds (76.3s)
+stable_only_refit_loo depth B_learned_nugget: 80/230 folds (88.2s)
+stable_only_refit_loo depth B_learned_nugget: 90/230 folds (100.1s)
+stable_only_refit_loo depth B_learned_nugget: 100/230 folds (108.8s)
+stable_only_refit_loo depth B_learned_nugget: 110/230 folds (120.3s)
+stable_only_refit_loo depth B_learned_nugget: 120/230 folds (129.9s)
+stable_only_refit_loo depth B_learned_nugget: 130/230 folds (138.2s)
+stable_only_refit_loo depth B_learned_nugget: 140/230 folds (149.1s)
+stable_only_refit_loo depth B_learned_nugget: 150/230 folds (157.8s)
+stable_only_refit_loo depth B_learned_nugget: 160/230 folds (167.5s)
+stable_only_refit_loo depth B_learned_nugget: 170/230 folds (178.3s)
+stable_only_refit_loo depth B_learned_nugget: 180/230 folds (187.1s)
+stable_only_refit_loo depth B_learned_nugget: 190/230 folds (195.3s)
+stable_only_refit_loo depth B_learned_nugget: 200/230 folds (204.4s)
+stable_only_refit_loo depth B_learned_nugget: 210/230 folds (212.6s)
+stable_only_refit_loo depth B_learned_nugget: 220/230 folds (221.6s)
+stable_only_refit_loo depth B_learned_nugget: 230/230 folds (231.1s)
+stable_only_refit_loo depth C_heteroskedastic: 10/230 folds (10.9s)
+stable_only_refit_loo depth C_heteroskedastic: 20/230 folds (17.7s)
+stable_only_refit_loo depth C_heteroskedastic: 30/230 folds (26.6s)
+stable_only_refit_loo depth C_heteroskedastic: 40/230 folds (33.9s)
+stable_only_refit_loo depth C_heteroskedastic: 50/230 folds (44.5s)
+stable_only_refit_loo depth C_heteroskedastic: 60/230 folds (52.2s)
+stable_only_refit_loo depth C_heteroskedastic: 70/230 folds (60.1s)
+stable_only_refit_loo depth C_heteroskedastic: 80/230 folds (68.6s)
+stable_only_refit_loo depth C_heteroskedastic: 90/230 folds (76.1s)
+stable_only_refit_loo depth C_heteroskedastic: 100/230 folds (84.3s)
+stable_only_refit_loo depth C_heteroskedastic: 110/230 folds (93.4s)
+stable_only_refit_loo depth C_heteroskedastic: 120/230 folds (101.6s)
+stable_only_refit_loo depth C_heteroskedastic: 130/230 folds (107.8s)
+stable_only_refit_loo depth C_heteroskedastic: 140/230 folds (117.3s)
+stable_only_refit_loo depth C_heteroskedastic: 150/230 folds (124.2s)
+stable_only_refit_loo depth C_heteroskedastic: 160/230 folds (131.3s)
+stable_only_refit_loo depth C_heteroskedastic: 170/230 folds (139.5s)
+stable_only_refit_loo depth C_heteroskedastic: 180/230 folds (148.2s)
+stable_only_refit_loo depth C_heteroskedastic: 190/230 folds (156.3s)
+stable_only_refit_loo depth C_heteroskedastic: 200/230 folds (163.8s)
+stable_only_refit_loo depth C_heteroskedastic: 210/230 folds (172.1s)
+stable_only_refit_loo depth C_heteroskedastic: 220/230 folds (176.6s)
+stable_only_refit_loo depth C_heteroskedastic: 230/230 folds (185.1s)
+{
+  "status": "phase2_5_full_complete",
+  "figures": [
+    "stable_depth_observed_vs_loo_predicted.png",
+    "stable_depth_paired_absolute_errors.png",
+    "stable_depth_paired_bootstrap_intervals.png",
+    "stable_depth_predictive_interval_calibration.png",
+    "stable_depth_stable_vs_full_training.png",
+    "stable_depth_nugget_vs_target_summary_uncertainty.png"
+  ],
+  "validation": "29/30",
+  "decision": "B is preferred for stable-window penetration depth.",
+  "summary": {
+    "generated_at_utc": "2026-07-26T17:40:49.962739+00:00",
+    "phase": "Week 6 Phase 2.5",
+    "stable_subset_size": 230,
+    "removed_unstable_simulation_ids": [
+      "sim_00002",
+      "sim_00006",
+      "sim_00018",
+      "sim_00029",
+      "sim_00036",
+      "sim_00038",
+      "sim_00095",
+      "sim_00105",
+      "sim_00124",
+      "sim_00154",
+      "sim_00222"
+    ],
+    "features": [
+      "P",
+      "VX",
+      "LS",
+      "ST"
+    ],
+    "target": "melt_pool_depth_below_surface_selected_primary_scalar_target_m",
+    "methods": [
+      "B_learned_nugget",
+      "C_heteroskedastic"
+    ],
+    "new_prediction_count": 460,
+    "metrics": [
+      {
+        "analysis_label": "phase2_5_matched_stable_depth_loo",
+        "phase2_5_protocol_fingerprint": "22C91E1C60AD977D52565416E744CCFD885D1AB630651280A3C9A7771A54F465",
+        "target": "depth",
+        "target_label": "Penetration depth below original surface",
+        "method": "B_learned_nugget",
+        "n_predictions": 230,
+        "mae_um": 1.8022708399891896,
+        "median_absolute_error_um": 1.3398088271903887,
+        "rmse_um": 2.7289428268687326,
+        "r2": 0.9688730292735509,
+        "nrmse": 0.03610358634754079,
+        "mean_nlpd": 2.4404252296264897,
+        "median_nlpd": 2.0342430686576343,
+        "nlpd_variance_definition": "total predictive variance including learned WhiteKernel nugget",
+        "latent_95_coverage": 0.8782608695652174,
+        "observation_95_coverage": 0.9521739130434783,
+        "observation_coverage_kind": "learned-nugget total interval",
+        "mean_latent_interval_width_um": 7.5364750136866245,
+        "mean_observation_interval_width_um": 10.342027997551716,
+        "total_runtime_seconds": 916.4397031999542,
+        "mean_fold_runtime_seconds": 3.984520448695453,
+        "optimizer_warning_folds": 0,
+        "convergence_warning_folds": 0,
+        "failed_folds": 0,
+        "any_bound_hit_folds": 0,
+        "constant_bound_hit_folds": 0,
+        "length_scale_bound_hit_folds": 0,
+        "noise_bound_hit_folds": 0,
+        "length_scale_min": 6.234637235564269,
+        "length_scale_q25": 6.6195688201462435,
+        "length_scale_median": 6.644820212337624,
+        "length_scale_q75": 6.66846734389922,
+        "length_scale_max": 8.842737794993084,
+        "signal_variance_min": 5.081311164428481,
+        "signal_variance_median": 5.997089235758337,
+        "signal_variance_max": 8.944256469327522,
+        "learned_noise_variance_median_normalized": 0.013180093056253922,
+        "learned_noise_std_median_um": 1.7767499999166914,
+        "learned_noise_fraction_training_std_median": 0.11480458639032631
+      },
+      {
+        "analysis_label": "phase2_5_matched_stable_depth_loo",
+        "phase2_5_protocol_fingerprint": "22C91E1C60AD977D52565416E744CCFD885D1AB630651280A3C9A7771A54F465",
+        "target": "depth",
+        "target_label": "Penetration depth below original surface",
+        "method": "C_heteroskedastic",
+        "n_predictions": 230,
+        "mae_um": 2.076666935338183,
+        "median_absolute_error_um": 1.5516981517392132,
+        "rmse_um": 3.0137977501380315,
+        "r2": 0.9620356304793878,
+        "nrmse": 0.03987218282289301,
+        "mean_nlpd": 2.703816760990351,
+        "median_nlpd": 2.2433166110248965,
+        "nlpd_variance_definition": "oracle retrospective latent variance plus held-out target-summary variance",
+        "latent_95_coverage": 0.9130434782608695,
+        "observation_95_coverage": 0.9130434782608695,
+        "observation_coverage_kind": "oracle retrospective interval",
+        "mean_latent_interval_width_um": 11.187058010879738,
+        "mean_observation_interval_width_um": 11.215180155546474,
+        "total_runtime_seconds": 732.734243099927,
+        "mean_fold_runtime_seconds": 3.1858010569562043,
+        "optimizer_warning_folds": 1,
+        "convergence_warning_folds": 1,
+        "failed_folds": 0,
+        "any_bound_hit_folds": 0,
+        "constant_bound_hit_folds": 0,
+        "length_scale_bound_hit_folds": 0,
+        "noise_bound_hit_folds": 0,
+        "length_scale_min": 2.282334059004432,
+        "length_scale_q25": 2.356537669039264,
+        "length_scale_median": 2.3614235095171674,
+        "length_scale_q75": 2.3688512119727774,
+        "length_scale_max": 2.566600207803883,
+        "signal_variance_min": 1.139736982929294,
+        "signal_variance_median": 1.2399956505097882,
+        "signal_variance_max": 1.3934136402513468,
+        "learned_noise_variance_median_normalized": NaN,
+        "learned_noise_std_median_um": NaN,
+        "learned_noise_fraction_training_std_median": NaN
+      }
+    ],
+    "paired_comparison": {
+      "target": "depth",
+      "method_B": "B_learned_nugget",
+      "method_C": "C_heteroskedastic",
+      "n_aligned_simulations": 230,
+      "B_improved_count": 134,
+      "C_improved_count": 96,
+      "tie_count": 0,
+      "observed_MAE_C_minus_B_um": 0.27439609534899323,
+      "MAE_C_minus_B_ci95_low_um": 0.1349408886477089,
+      "MAE_C_minus_B_ci95_high_um": 0.4220905654404221,
+      "MAE_ci_includes_zero": false,
+      "observed_RMSE_C_minus_B_um": 0.28485492326929895,
+      "RMSE_C_minus_B_ci95_low_um": 0.04830639358093567,
+      "RMSE_C_minus_B_ci95_high_um": 0.5490113578817879,
+      "RMSE_ci_includes_zero": false,
+      "paired_bootstrap_resamples": 10000,
+      "paired_bootstrap_seed": 2288952941,
+      "paired_resampling_unit": "stable simulation ID",
+      "difference_sign_interpretation": "negative favors C; positive favors B",
+      "superiority_rule": "superiority is not robust when the relevant CI includes zero"
+    },
+    "method_summaries": {
+      "learned_B_effective_nugget": {
+        "normalized_variance_min": 0.01043286551822281,
+        "normalized_variance_q25": 0.013105701877651364,
+        "normalized_variance_median": 0.013180093056253922,
+        "normalized_variance_q75": 0.013256495139038824,
+        "normalized_variance_q95": 0.013412165008217233,
+        "normalized_variance_max": 0.01478790796270734,
+        "std_um_min": 1.5831683374353136,
+        "std_um_q25": 1.7725559316314805,
+        "std_um_median": 1.7767499999166914,
+        "std_um_q75": 1.7805488140020953,
+        "std_um_q95": 1.786979486635072,
+        "std_um_max": 1.8564377127416904,
+        "fraction_training_target_std_min": 0.10214139962925321,
+        "fraction_training_target_std_q25": 0.11448013746871873,
+        "fraction_training_target_std_median": 0.11480458639032631,
+        "fraction_training_target_std_q75": 0.1151368538951919,
+        "fraction_training_target_std_q95": 0.11581089887744582,
+        "fraction_training_target_std_max": 0.12160554248350418,
+        "coefficient_of_variation_std_um": 0.012679745392616081,
+        "noise_bound_hit_folds": 0,
+        "interpretation": "learned common effective discrepancy; it can absorb unresolved inputs and fixed-kernel/model mismatch and is not simulator noise"
+      },
+      "C_target_summary_uncertainty": {
+        "variance_um2_min": 2.2436859619237115e-06,
+        "variance_um2_q25": 1.9519365340678317e-05,
+        "variance_um2_median": 5.3559315219987394e-05,
+        "variance_um2_q75": 0.0018971036585341502,
+        "variance_um2_q95": 0.2251301868107539,
+        "variance_um2_max": 1.3213568205896191,
+        "std_um_min": 0.0014978938420074,
+        "std_um_q25": 0.004418070886136475,
+        "std_um_median": 0.00731692567949555,
+        "std_um_q75": 0.043302116932829704,
+        "std_um_q95": 0.47444100001085443,
+        "std_um_max": 1.14950285801716,
+        "zero_variance_count": 0,
+        "interpretation": "existing moving-block-bootstrap variance of each selected-window median; not measurement or stochastic simulator noise"
+      }
+    },
+    "decision": {
+      "decision_code": "B_preferred_for_depth",
+      "headline": "B is preferred for stable-window penetration depth.",
+      "paired_MAE_C_minus_B_ci95_um": [
+        0.1349408886477089,
+        0.4220905654404221
+      ],
+      "paired_RMSE_C_minus_B_ci95_um": [
+        0.04830639358093567,
+        0.5490113578817879
+      ],
+      "paired_superiority_is_robust": true,
+      "B_mean_nlpd_is_lower": true,
+      "B_observation_coverage_is_closer_to_95_percent": true,
+      "B_observation_interval_is_deployable_for_new_inputs": true,
+      "C_oracle_interval_is_deployable_for_new_inputs": false,
+      "unstable_training_rows_materially_change_RMSE_by_method": {
+        "B_learned_nugget": true,
+        "C_heteroskedastic": true
+      },
+      "evidence_order": [
+        "paired point prediction",
+        "calibration and NLPD",
+        "robustness to removing unstable simulations",
+        "optimizer and hyperparameter stability",
+        "deployability and scientific interpretation",
+        "runtime"
+      ],
+      "scientific_limit": "This matched comparison resolves only the observation treatment for depth under the fixed Matérn 3/2 model. It does not establish causal feature effects or validate C's oracle interval for unseen runs."
+    },
+    "validation_pass_count": 29,
+    "validation_total_count": 30,
+    "runtime_metadata_status": "historical Phase 2 11.2-second field deprecated and accurately renamed with machine-readable provenance",
+    "scope_status": "Depth B/C closure only; no Phase 3, width/length rerun, Method A experiment, new kernel/target, feature effect, active learning, level-set estimation, or classification."
+  }
+}

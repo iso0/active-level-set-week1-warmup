@@ -1,0 +1,82 @@
+{
+  "H@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 53.0
+  },
+  "H@own": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 48.0
+  },
+  "H_C1@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 53.7
+  },
+  "M3@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 163.5
+  },
+  "M3@own": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 156.9
+  },
+  "M3_T2@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 138.6
+  },
+  "M3_T2@own": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 137.3
+  },
+  "M3_T3@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 152.2
+  },
+  "M3_T3@own": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 152.6
+  },
+  "T2@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 50.7
+  },
+  "T2@own": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 54.4
+  },
+  "T2_C1@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 52.4
+  },
+  "T3@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 51.8
+  },
+  "T3@own": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 51.0
+  },
+  "T3_C1@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 55.3
+  },
+  "T4@A0": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 50.3
+  }
+}

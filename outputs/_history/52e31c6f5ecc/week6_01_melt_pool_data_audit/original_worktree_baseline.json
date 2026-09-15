@@ -1,0 +1,46 @@
+{
+  "captured_at_utc": "2026-07-24T23:15:00Z",
+  "original_worktree": "C:\\Users\\ozgur\\Documents\\thesis",
+  "branch": "main",
+  "head": "6fd6be57e5341e083a7023a3ae29e65b7b326bbd",
+  "status_short": [
+    " M outputs/week2_acquisition_comparison/week2_slide_notes.md",
+    "?? docs/",
+    "?? outputs/week1_active_level_set_progress.pptx",
+    "?? outputs/week2_active_level_set_progress_v2.pptx",
+    "?? outputs/week3_active_level_set_progress.pptx",
+    "?? outputs/week3_active_level_set_progress_v2.pptx"
+  ],
+  "dirty_files": [
+    {
+      "path": "docs/deep-research-report.md",
+      "sha256": "A714E0C2249A134287B76A86FC8D660A075C69184A5CAB851A3C1F52412E321C",
+      "size_bytes": 38794
+    },
+    {
+      "path": "outputs/week1_active_level_set_progress.pptx",
+      "sha256": "BDD1F515EAAB313E5371CBE5E2C0B7FB3E87713037A21337DD7D078406C23577",
+      "size_bytes": 1804694
+    },
+    {
+      "path": "outputs/week2_acquisition_comparison/week2_slide_notes.md",
+      "sha256": "9F00ECE946170F936E5EFFFA019CDB4C3B2DBCC93037155CDFCCFCA716E2E99C",
+      "size_bytes": 2591
+    },
+    {
+      "path": "outputs/week2_active_level_set_progress_v2.pptx",
+      "sha256": "92A760D21A1C9B9E07F15724D2CEDD225A19B05439AF8ECA6273AC4212B913AB",
+      "size_bytes": 1925440
+    },
+    {
+      "path": "outputs/week3_active_level_set_progress.pptx",
+      "sha256": "F129A4F5310B808D23F810B1E4CBFB8BE2039A5DDFE408D9B26DE55E7C9CFCBD",
+      "size_bytes": 1313521
+    },
+    {
+      "path": "outputs/week3_active_level_set_progress_v2.pptx",
+      "sha256": "AEC8EFE32B358D2F6BBD3C3610FC9D76FF8B45D74CDDBDD0074C261E127AE09E",
+      "size_bytes": 910574
+    }
+  ]
+}

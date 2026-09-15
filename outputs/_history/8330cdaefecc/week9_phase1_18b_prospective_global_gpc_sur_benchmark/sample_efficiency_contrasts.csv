@@ -1,0 +1,7 @@
+threshold,contrast,sign_convention,common_attained_runs,mean_label_difference,median_label_difference,ci_lower,ci_upper
+0.8,P1_EXACT_FIXED_SUR-P0_M3_MARGIN,SUR minus Margin; negative means fewer labels,95,-0.135,0.0,-0.4050000000000001,0.045000000000000005
+0.8,P2_PHYSICS_REFIT_SUR-P0_M3_MARGIN,SUR minus Margin; negative means fewer labels,93,1.35,0.45,0.007500000000000028,2.7674999999999996
+0.82,P1_EXACT_FIXED_SUR-P0_M3_MARGIN,SUR minus Margin; negative means fewer labels,95,-0.135,0.0,-0.4,0.045000000000000005
+0.82,P2_PHYSICS_REFIT_SUR-P0_M3_MARGIN,SUR minus Margin; negative means fewer labels,93,1.35,0.45,0.010000000000000023,2.77
+0.84,P1_EXACT_FIXED_SUR-P0_M3_MARGIN,SUR minus Margin; negative means fewer labels,77,0.9833333333333334,0.0,-0.11000000000000001,2.3575
+0.84,P2_PHYSICS_REFIT_SUR-P0_M3_MARGIN,SUR minus Margin; negative means fewer labels,74,5.144166666666666,4.791666666666666,2.374979166666667,8.002541666666664

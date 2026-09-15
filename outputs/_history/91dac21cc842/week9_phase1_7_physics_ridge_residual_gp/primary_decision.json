@@ -1,0 +1,12 @@
+{
+  "baseline_mean": 0.8135202205882354,
+  "bootstrap_method": "20 repeat blocks resampled; all five folds retained",
+  "ci_lower": 0.014071346507352938,
+  "ci_upper": 0.026263901654411767,
+  "decision": "PASS",
+  "delta": 0.020018382352941174,
+  "endpoint": "B1_q20_AULC_16_80",
+  "new_mean": 0.8335386029411765,
+  "positive_repeat_blocks": 19,
+  "repeat_blocks": 20
+}

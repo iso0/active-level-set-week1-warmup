@@ -1,0 +1,40 @@
+{
+  "same_initial_indices_per_seed": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "same_threshold_per_seed": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "same_pool_per_seed": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "same_test_per_seed": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "same_budget_grid_per_seed": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "same_fixed_gpc_surrogate": true,
+  "only_acquisition_rule_changes": true,
+  "all_checks_passed": true
+}

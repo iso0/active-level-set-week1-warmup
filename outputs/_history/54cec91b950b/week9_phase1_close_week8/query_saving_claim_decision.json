@@ -1,0 +1,23 @@
+{
+  "bootstrap_scope": "Descriptive uncertainty under the frozen repeat/fold/continuation design; not a population or transfer guarantee.",
+  "design_conditional_bootstrap_lower_bound_positive": false,
+  "fixed_benchmark_lower_bound_positive": false,
+  "hierarchical_one_sided_95pct_lower_bound_queries": null,
+  "margin_all_100_observed": false,
+  "matched_category_counts": {
+    "both_crossed": 2608,
+    "margin_crossed_random_unresolved": 122,
+    "neither_crossed": 151,
+    "random_crossed_margin_unresolved": 119
+  },
+  "naive_Qrandom_gt_320_for_every_unresolved_is_valid": false,
+  "path_specific_average_saving_lower_bound_queries": null,
+  "random_unresolved": 273,
+  "random_unresolved_guaranteed_Q_gt_320": 267,
+  "random_unresolved_tail_indeterminate": 6,
+  "restricted_H320_delta_is_automatically_a_lower_bound": false,
+  "rounded_down_supervisor_X_queries": null,
+  "status": "NOT_SUPPORTED_MARGIN_TAIL_UNRESOLVED",
+  "supervisor_safe_sentence": "An 'at least X queries saved on average' claim is not identified because at least one Margin crossing remains unresolved at H=320.",
+  "why_naive_prompt_argument_fails": "Historical Q is the first of three passing checkpoints. An unresolved path passing at 316 and 320 may later receive Q=316 after a 324 pass."
+}

@@ -1,0 +1,7 @@
+response,role,simulation_id,selection_rule,primary_value,alternative_value,absolute_target_shift,unit
+kinetic_energy,typical_population_median,sim_00009,minimum absolute distance to the population median; ties use numeric ID,0.9881444,0.8190567000000001,0.16908769999999995,nJ
+kinetic_energy,high_response,sim_00007,largest primary response; ties use numeric ID,1.1239715,0.7938661,0.3301053999999999,nJ
+kinetic_energy,largest_primary_adaptive_disagreement,sim_00004,largest absolute primary-versus-adaptive shift after excluding already selected examples; ties use numeric ID,0.9966778000000001,0.6835112,0.3131666000000001,nJ
+total_height,typical_population_median,sim_00004,minimum absolute distance to the population median; ties use numeric ID,72.460095,59.58322071819566,12.876874281804334,um
+total_height,high_response,sim_00002,largest primary response; ties use numeric ID,92.05557,47.76539935846813,44.29017064153187,um
+total_height,largest_primary_adaptive_disagreement,sim_00007,largest absolute primary-versus-adaptive shift after excluding already selected examples; ties use numeric ID,69.703175,56.94721949112136,12.755955508878642,um

@@ -1,0 +1,3 @@
+benchmark,display_name,best_global_error_method,best_near_boundary_q10_method,best_near_boundary_q20_method,best_near_boundary_q30_method,closest_median_query_distance_method,global_and_boundary_conclusion_consistent,interpretation
+branin,Thresholded Branin,randomized_straddle,straddle,smallest_abs_mu,randomized_straddle,smallest_abs_mu,False,At least one near-boundary ranking differs from the global-error ranking.
+ackley,Thresholded 4D Ackley,straddle,randomized_straddle,randomized_straddle,randomized_straddle,smallest_abs_mu,False,At least one near-boundary ranking differs from the global-error ranking.

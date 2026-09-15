@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "check": "canonical_405_only",
+      "evidence": 405,
+      "status": "PASS"
+    },
+    {
+      "check": "manual_labels_73_332",
+      "evidence": {
+        "conduction": 332,
+        "keyhole": 73
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "LS_metres_radius_display_micrometres",
+      "evidence": "Gaussian laser spot radius; stored in metres, displayed in micrometres",
+      "status": "PASS"
+    },
+    {
+      "check": "fold_local_preprocessing_in_cv",
+      "evidence": "StandardScaler fitted separately inside every training fold",
+      "status": "PASS"
+    },
+    {
+      "check": "fold_B1_unchanged",
+      "evidence": "w85.b1_distance and w85.boundary_flags reused",
+      "status": "PASS"
+    },
+    {
+      "check": "saved_queries_only",
+      "evidence": "100 binary_margin members read from existing H320 bundle; first 160 used",
+      "status": "PASS"
+    },
+    {
+      "check": "repeat_block_inference",
+      "evidence": "five folds averaged inside each of 20 repeat blocks before bootstrap",
+      "status": "PASS"
+    },
+    {
+      "check": "h_formula_consistent",
+      "evidence": "P / sqrt(VX * LS**3), LS in metres",
+      "status": "PASS"
+    },
+    {
+      "check": "no_zero_parameter_or_true_boundary_claim",
+      "evidence": "claim ledger prohibited wording",
+      "status": "PASS"
+    },
+    {
+      "check": "figure_count",
+      "evidence": 8,
+      "status": "PASS"
+    },
+    {
+      "check": "representative_fold_exact_q20_q30_counts",
+      "evidence": {
+        "full": 81,
+        "q20": 17,
+        "q30": 25
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "notebook_executed_without_error",
+      "evidence": {
+        "code_cells": 25,
+        "errors": 0,
+        "executed": 25
+      },
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

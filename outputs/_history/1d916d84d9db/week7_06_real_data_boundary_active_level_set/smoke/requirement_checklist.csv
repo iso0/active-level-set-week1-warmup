@@ -1,0 +1,16 @@
+﻿requirement_id,requirement,status,validation_checks
+R01,"Exact Phase 5.5 parent, publication, and HF snapshot",PASS,V01;V02
+R02,Exact common populations with unchanged labels and targets,PASS,V03;V04;V05
+R03,Model-independent empirical boundary reference,PASS,V06
+R04,Twenty group-disjoint matched outer runs,PASS,V07;V08;V09
+R05,Shared fair initialization and hidden-information isolation,PASS,V10;V11;V12
+R06,Queried-only physical thresholds,PASS,V13
+R07,Latent GP uncertainty and probability reconciliation,PASS,V14;V15;V16
+R08,Raw q20/q30 and integer-budget reconciliation,PASS,V17;V18
+R09,Shared random trajectories,PASS,V19
+R10,"AULC, tolerance, and matched paired summaries",PASS,V20;V21;V22
+R11,G3 is secondary and separately documented,PASS,V23
+R12,Old/new transfer remains secondary,PASS,V24
+R13,Conservative predeclared final decision,PASS,V25
+R14,Executed explanatory notebook and valid figures,PASS,V26;V27
+R15,Exact artifacts and cryptographic integrity,PASS,V28;V29

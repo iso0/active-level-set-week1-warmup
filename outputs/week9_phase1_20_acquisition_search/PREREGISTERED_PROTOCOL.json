@@ -1,0 +1,66 @@
+{
+  "frozen_at_utc": "2026-09-13T14:55:59.356915+00:00",
+  "frozen_before_any_screening_result_was_inspected": true,
+  "screened_before_freeze": [
+    "margin (control)",
+    "random (dynamic-range reference)"
+  ],
+  "evaluator": "M3 exactly as Phase 1.14 (refit on revealed prefix at every budget, L=100)",
+  "control": "M3 probability margin (Phase 1.14 P1); harness gate: 50/50 dev runs bit-identical q20 AULC",
+  "information_guard": "policies receive masked label/depth arrays; unqueried/test labels, depths and B1 are never reachable",
+  "splits": {
+    "development_repeats": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "confirmation_repeats": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "endpoints": {
+    "primary": "Fold-B1-q20 accuracy AULC 16-80",
+    "co_primary": "Fold-B1-q20 accuracy AULC 16-40",
+    "secondary": [
+      "AULC 41-80",
+      "B40 q20 Keyhole recall",
+      "q30 AULC 16-80",
+      "full81 accuracy at B80"
+    ]
+  },
+  "development_selection_rule": {
+    "scope": "any number of policies and refinements may be screened, on development repeats only",
+    "finalists": "at most 2, ranked by development paired delta q20 AULC 16-80 vs margin",
+    "eligibility": [
+      "development delta AULC 16-40 >= 0",
+      "B40 q20 KH recall not below margin by more than 0.03"
+    ]
+  },
+  "confirmation_rule": {
+    "data": "confirmation repeats 11-20 (50 runs), untouched until finalists are frozen",
+    "inference": "10 paired repeat blocks; 10,000-draw repeat-block bootstrap; sign-flip permutation; Holm over finalists x {16-80, 16-40}",
+    "CONFIRMED_if": [
+      "Holm-adjusted p < 0.05 and bootstrap 95% CI > 0 on at least one of the two windows",
+      "the other window has a non-negative point estimate",
+      "guardrails: B40 q20 KH recall drop <= 0.03 and B80 full81 accuracy drop <= 0.01"
+    ],
+    "otherwise": "NOT_CONFIRMED - reported as such, development numbers labelled as development"
+  },
+  "reporting": "after confirmation, finalists are also run on all 100 runs for thesis-comparable numbers, labelled as including development repeats"
+}

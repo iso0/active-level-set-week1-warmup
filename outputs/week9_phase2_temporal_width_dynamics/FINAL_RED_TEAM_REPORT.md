@@ -1,0 +1,3 @@
+# Final red-team report
+
+The correction audit attempted to falsify the axis mapping, actual ΔY/ΔX formulas, derivative units, label-independent smoothing, prefix time ordering, train/test isolation, B1/q20 leakage, repeat-block inference, PCA inputs, ranking-versus-hard language, generic-startup warning language, executed notebook state, validation/manifest equality, and historical Phase 1.x protection. Canonical width is ΔY everywhere in main artifacts. ΔX survives only in the longitudinal diagnostic. Raw derivative claims are downgraded whenever the fixed robust derivative changes direction or destroys magnitude. No trained held-out warning rule exists.

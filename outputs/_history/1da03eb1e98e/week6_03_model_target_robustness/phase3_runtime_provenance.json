@@ -1,0 +1,3731 @@
+{
+  "generated_at_utc": "2026-07-27T15:28:26.273768+00:00",
+  "invocation_start_utc": "2026-07-27T15:25:49.925633+00:00",
+  "invocation_complete": true,
+  "mode": "full",
+  "exact_command_line": [
+    "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Scripts\\python.exe",
+    "src\\week6_phase3_model_target_robustness.py",
+    "--full",
+    "--workers",
+    "4"
+  ],
+  "deterministic_full_rebuild_command": ".\\.venv\\Scripts\\python.exe src\\week6_phase3_model_target_robustness.py --full --force --workers 4",
+  "workers": 4,
+  "force_recompute": false,
+  "full_invocation_wall_runtime_seconds": 156.34798940003384,
+  "runtime_environment": {
+    "python_executable": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Scripts\\python.exe",
+    "python_version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.0",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.1",
+    "threadpoolctl": "3.6.0",
+    "nbformat": "5.10.4",
+    "nbclient": "0.11.0"
+  },
+  "input_provenance": {
+    "verified_at_utc": "2026-07-27T15:25:50.354005+00:00",
+    "repository": {
+      "repo_root": "C:/Users/ozgur/Documents/thesis-week6-melt-pool-audit",
+      "branch": "codex/week6-phase3-model-target-robustness",
+      "head": "b112f6b22898976f77410190614cb4fb218d38f9",
+      "status_short": [
+        "?? notebooks/week_06/04_phase3_model_target_robustness.ipynb",
+        "?? outputs/week6_03_model_target_robustness/",
+        "?? scripts/build_week6_04_notebook.py",
+        "?? src/week6_phase3_model_target_robustness.py"
+      ]
+    },
+    "historical_artifacts": [
+      {
+        "path": "outputs/week6_01_melt_pool_data_audit/week6_phase1_simulation_level_responses.csv",
+        "expected_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF",
+        "observed_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF",
+        "bytes": 762410
+      },
+      {
+        "path": "outputs/week6_01_melt_pool_data_audit/summary.json",
+        "expected_sha256": "A18BC9A688792268F5514BCAA9758BEE327DC6F71AA15A14123C47B177357F96",
+        "observed_sha256": "A18BC9A688792268F5514BCAA9758BEE327DC6F71AA15A14123C47B177357F96",
+        "bytes": 2542
+      },
+      {
+        "path": "notebooks/week_06/01_melt_pool_monitor_data_audit.ipynb",
+        "expected_sha256": "BB4897432224C9A16ADAE084FBE5004DD7987DA43BA9B6195C5DABD65D9DF65F",
+        "observed_sha256": "BB4897432224C9A16ADAE084FBE5004DD7987DA43BA9B6195C5DABD65D9DF65F",
+        "bytes": 1258348
+      },
+      {
+        "path": "src/week6_phase1_melt_pool_data_audit.py",
+        "expected_sha256": "64A5E3998D411961CBFBC3AD0A761F9B9D8F2C876550548B835C3EBF0E1C63A4",
+        "observed_sha256": "64A5E3998D411961CBFBC3AD0A761F9B9D8F2C876550548B835C3EBF0E1C63A4",
+        "bytes": 129420
+      },
+      {
+        "path": "notebooks/week_06/02_gp_response_noise_comparison.ipynb",
+        "expected_sha256": "DF04ADF427DA98D238488C0BE6D15807ACBDE07478F35F22D187CDD707FBA359",
+        "observed_sha256": "DF04ADF427DA98D238488C0BE6D15807ACBDE07478F35F22D187CDD707FBA359",
+        "bytes": 614055
+      },
+      {
+        "path": "src/week6_phase2_gp_response_noise_comparison.py",
+        "expected_sha256": "4228223095EA40A4F05DC6084C565E99FA0E0747AB2B8C0891C2C534B6BA9701",
+        "observed_sha256": "4228223095EA40A4F05DC6084C565E99FA0E0747AB2B8C0891C2C534B6BA9701",
+        "bytes": 131985
+      },
+      {
+        "path": "outputs/week6_02_gp_response_noise_comparison/phase2_model_configuration.json",
+        "expected_sha256": "CBBA81F86E9B2B9FF46838B793733D9C7DE2982D1A398A67578A8AAE6C3647A6",
+        "observed_sha256": "CBBA81F86E9B2B9FF46838B793733D9C7DE2982D1A398A67578A8AAE6C3647A6",
+        "bytes": 3366
+      },
+      {
+        "path": "outputs/week6_02_gp_response_noise_comparison/width_loo_predictions.csv",
+        "expected_sha256": "32FF3A2DB237D1A13CE35903F6B95E66EB614D9FD3028F4E9D429FA915A68F75",
+        "observed_sha256": "32FF3A2DB237D1A13CE35903F6B95E66EB614D9FD3028F4E9D429FA915A68F75",
+        "bytes": 877413
+      },
+      {
+        "path": "outputs/week6_02_gp_response_noise_comparison/length_loo_predictions.csv",
+        "expected_sha256": "50531D5BC00DC5C9FBAC897A2568929C344BB371FBF181339808B6EB8F44E1D0",
+        "observed_sha256": "50531D5BC00DC5C9FBAC897A2568929C344BB371FBF181339808B6EB8F44E1D0",
+        "bytes": 877502
+      },
+      {
+        "path": "outputs/week6_02_gp_response_noise_comparison/depth_loo_predictions.csv",
+        "expected_sha256": "B511702EAD9A91BBC407E2F9D447E62998470F3FD4214CE020520418B589DC00",
+        "observed_sha256": "B511702EAD9A91BBC407E2F9D447E62998470F3FD4214CE020520418B589DC00",
+        "bytes": 894333
+      },
+      {
+        "path": "outputs/week6_02_gp_response_noise_comparison/stable_subset_loo_predictions.csv",
+        "expected_sha256": "26C6A6E78B441B22DCCCE8B1573028F539ACD66FC962796ADE43344302E44525",
+        "observed_sha256": "26C6A6E78B441B22DCCCE8B1573028F539ACD66FC962796ADE43344302E44525",
+        "bytes": 904923
+      },
+      {
+        "path": "outputs/week6_02_gp_response_noise_comparison/summary.json",
+        "expected_sha256": "E95161972078503BF67926D549A1140274DC91F8F12BF899BD882FF9F84C75EF",
+        "observed_sha256": "E95161972078503BF67926D549A1140274DC91F8F12BF899BD882FF9F84C75EF",
+        "bytes": 41621
+      },
+      {
+        "path": "notebooks/week_06/03_phase2_5_depth_model_closure.ipynb",
+        "expected_sha256": "FDA44EF49D15EB72789003F8D9218FC945A1F8D5752098F4CF3C7D2B6FD54454",
+        "observed_sha256": "FDA44EF49D15EB72789003F8D9218FC945A1F8D5752098F4CF3C7D2B6FD54454",
+        "bytes": 717802
+      },
+      {
+        "path": "src/week6_phase2_5_depth_model_closure.py",
+        "expected_sha256": "2766ED6D8551151B29582C6B7D83C88D39367153A70B4DCFDE249410481204B3",
+        "observed_sha256": "2766ED6D8551151B29582C6B7D83C88D39367153A70B4DCFDE249410481204B3",
+        "bytes": 101288
+      },
+      {
+        "path": "outputs/week6_02_5_depth_model_closure/phase2_5_configuration.json",
+        "expected_sha256": "CCCB6E47279AE2D6A6DBEF9906450F5404AD80207DD0E7C84DCC82C4E8BE7AED",
+        "observed_sha256": "CCCB6E47279AE2D6A6DBEF9906450F5404AD80207DD0E7C84DCC82C4E8BE7AED",
+        "bytes": 12081
+      },
+      {
+        "path": "outputs/week6_02_5_depth_model_closure/stable_depth_B_loo_predictions.csv",
+        "expected_sha256": "398A5C355E12B0B9FFE276578E9242DC5655CFC01D529DE6FF5FC0130BC0B59A",
+        "observed_sha256": "398A5C355E12B0B9FFE276578E9242DC5655CFC01D529DE6FF5FC0130BC0B59A",
+        "bytes": 340235
+      },
+      {
+        "path": "outputs/week6_02_5_depth_model_closure/stable_depth_C_loo_predictions.csv",
+        "expected_sha256": "62D55CC6EE844354E7A62C29358DAC68EC9EAD74D6A768810382752C8FB6272B",
+        "observed_sha256": "62D55CC6EE844354E7A62C29358DAC68EC9EAD74D6A768810382752C8FB6272B",
+        "bytes": 333573
+      },
+      {
+        "path": "outputs/week6_02_5_depth_model_closure/summary.json",
+        "expected_sha256": "3093361B89745ACF7F62271B0576DAEAD17A91E0225B3A4C4B55B9DF059D678F",
+        "observed_sha256": "3093361B89745ACF7F62271B0576DAEAD17A91E0225B3A4C4B55B9DF059D678F",
+        "bytes": 9209
+      }
+    ],
+    "phase1_aggregate_sha256": "21FF34AD767C8D4D6C536D66AFD147B8C700884321415078231B7A24D4C7D198",
+    "phase1_aggregate_file_count": 34,
+    "phase1_rows": 241,
+    "phase1_unique_simulation_ids": 241,
+    "phase1_revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+    "phase2_width_decision": "B_learned_nugget",
+    "phase2_length_decision": "B_learned_nugget",
+    "phase2_5_depth_decision": "B_preferred_for_depth",
+    "phase2_5_validation": "30/30 PASS",
+    "original_worktree_unchanged": true,
+    "original_worktree_detail": "branch=main; head=6fd6be57e5341e083a7023a3ae29e65b7b326bbd; status_lines=6; protected_hash_mismatches=[]"
+  },
+  "repository": {
+    "repo_root": "C:/Users/ozgur/Documents/thesis-week6-melt-pool-audit",
+    "branch": "codex/week6-phase3-model-target-robustness",
+    "head": "b112f6b22898976f77410190614cb4fb218d38f9",
+    "status_short": [
+      "?? notebooks/week_06/04_phase3_model_target_robustness.ipynb",
+      "?? outputs/week6_03_model_target_robustness/",
+      "?? scripts/build_week6_04_notebook.py",
+      "?? src/week6_phase3_model_target_robustness.py"
+    ]
+  },
+  "original_worktree_unchanged": true,
+  "original_worktree_detail": "branch=main; head=6fd6be57e5341e083a7023a3ae29e65b7b326bbd; status_lines=6; protected_hash_mismatches=[]",
+  "events": [
+    {
+      "stage": "preserve_prior_complete_force_rebuild_provenance",
+      "cache_reused": true,
+      "source_force_recompute": true,
+      "source_wall_runtime_seconds": 2722.916236800025,
+      "reason": "independent closeout audit corrected parsing of numeric 1.0/0.0 interval-coverage flags"
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 469.73178209987236,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "length",
+      "target_definition": "T0",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 257.3598016000469,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 216.58335170010105,
+      "fold_count": 230
+    },
+    {
+      "stage": "mean_predictor_loo",
+      "target": "width",
+      "cache_reused": false,
+      "wall_runtime_seconds": 0.1494980999850668,
+      "fold_count": 241
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "width",
+      "model": "linear_ridge",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__width__linear_ridge.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 223.09075830038637,
+      "fold_count": 241
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "width",
+      "model": "polynomial_ridge_degree2",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__width__polynomial_ridge_degree2.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 351.86069729947485,
+      "fold_count": 241
+    },
+    {
+      "stage": "mean_predictor_loo",
+      "target": "length",
+      "cache_reused": false,
+      "wall_runtime_seconds": 0.1474032000405714,
+      "fold_count": 241
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "length",
+      "model": "linear_ridge",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__length__linear_ridge.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 225.76950350002153,
+      "fold_count": 241
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "length",
+      "model": "polynomial_ridge_degree2",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__length__polynomial_ridge_degree2.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 351.2880148999975,
+      "fold_count": 241
+    },
+    {
+      "stage": "mean_predictor_loo",
+      "target": "depth",
+      "cache_reused": false,
+      "wall_runtime_seconds": 0.13426260004052892,
+      "fold_count": 230
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "depth",
+      "model": "linear_ridge",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__depth__linear_ridge.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 214.75240599998506,
+      "fold_count": 230
+    },
+    {
+      "stage": "ridge_loo",
+      "target": "depth",
+      "model": "polynomial_ridge_degree2",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__depth__polynomial_ridge_degree2.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 344.3157848995761,
+      "fold_count": 230
+    },
+    {
+      "stage": "phase3a_assembly",
+      "cache_reused": false,
+      "wall_runtime_seconds": 0.854175100044813,
+      "prediction_rows": 2848
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "rbf_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__rbf_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 160.4089708008105,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "rbf_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__rbf_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 154.21418889961205,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "matern32_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern32_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 183.48346490017138,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "matern52_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern52_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 223.86277929967036,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 300.7972935997532,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "length",
+      "target_definition": "T0",
+      "configuration": "rbf_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__rbf_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 257.2670465997071,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "length",
+      "target_definition": "T0",
+      "configuration": "rbf_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__rbf_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 156.0971191995195,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "length",
+      "target_definition": "T0",
+      "configuration": "matern32_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern32_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 161.9676254001679,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "length",
+      "target_definition": "T0",
+      "configuration": "matern52_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern52_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 247.42091270023957,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "length",
+      "target_definition": "T0",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 251.25356500042835,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "rbf_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__rbf_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 285.1619901994127,
+      "fold_count": 230
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "rbf_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__rbf_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 183.0189566006884,
+      "fold_count": 230
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "matern32_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern32_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 208.93959230009932,
+      "fold_count": 230
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "matern52_no_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern52_no_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 253.49455440003658,
+      "fold_count": 230
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3b_kernel_noise",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 346.00113539985614,
+      "fold_count": 230
+    },
+    {
+      "stage": "phase3b_assembly",
+      "cache_reused": false,
+      "wall_runtime_seconds": 1.2832270999788307,
+      "prediction_rows": 4272
+    },
+    {
+      "stage": "target_definition_reconstruction",
+      "cache_reused": false,
+      "wall_runtime_seconds": 60.07162379997317,
+      "simulation_count": 241,
+      "target_value_rows": 4338,
+      "traceability_rows": 1446
+    },
+    {
+      "stage": "phase3c_t0_reuse",
+      "target": "width",
+      "target_definition": "T0",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "source": "Phase 3B exact T0 LOO rows",
+      "wall_runtime_seconds": 0.0,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "width",
+      "target_definition": "T1",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T1__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 294.423574199609,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "width",
+      "target_definition": "T2",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T2__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 259.4436849002959,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "width",
+      "target_definition": "T3",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T3__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 265.3104838997242,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "width",
+      "target_definition": "T4",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T4__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 282.8356064991676,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "width",
+      "target_definition": "T5",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T5__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 257.9958050994901,
+      "fold_count": 241
+    },
+    {
+      "stage": "phase3c_t0_reuse",
+      "target": "length",
+      "target_definition": "T0",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "source": "Phase 3B exact T0 LOO rows",
+      "wall_runtime_seconds": 0.0,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "length",
+      "target_definition": "T1",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T1__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 363.99930380051956,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "length",
+      "target_definition": "T2",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T2__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 395.47945130011067,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "length",
+      "target_definition": "T3",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T3__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 372.14120940025896,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "length",
+      "target_definition": "T4",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T4__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 384.23795459984103,
+      "fold_count": 241
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "length",
+      "target_definition": "T5",
+      "configuration": "matern52_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T5__matern52_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 501.52238130004844,
+      "fold_count": 241
+    },
+    {
+      "stage": "phase3c_t0_reuse",
+      "target": "depth",
+      "target_definition": "T0",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "source": "Phase 3B exact T0 LOO rows",
+      "wall_runtime_seconds": 0.0,
+      "fold_count": 230
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "depth",
+      "target_definition": "T1",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T1__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 257.40558669989696,
+      "fold_count": 230
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "depth",
+      "target_definition": "T2",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T2__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 211.03443020035047,
+      "fold_count": 230
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "depth",
+      "target_definition": "T3",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T3__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 221.6488240994513,
+      "fold_count": 230
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "depth",
+      "target_definition": "T4",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T4__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 265.94070899969665,
+      "fold_count": 230
+    },
+    {
+      "stage": "gp_loo",
+      "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+      "target": "depth",
+      "target_definition": "T5",
+      "configuration": "matern32_learned_nugget",
+      "cache_reused": true,
+      "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T5__matern32_learned_nugget.csv",
+      "wall_runtime_seconds": 0.0,
+      "aggregate_fold_runtime_seconds": 269.0307915006997,
+      "fold_count": 230
+    },
+    {
+      "stage": "phase3c_assembly",
+      "cache_reused": false,
+      "wall_runtime_seconds": 1.3969670999795198,
+      "prediction_rows": 4272
+    },
+    {
+      "stage": "figure_generation",
+      "cache_reused": false,
+      "wall_runtime_seconds": 9.216769399994519,
+      "figure_count": 13,
+      "figures": [
+        "outputs\\week6_03_model_target_robustness\\figures\\01_phase3_experiment_tree.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\02_simple_model_performance_comparison.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\03_gp_kernel_noise_rmse_comparison.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\04_nugget_vs_no_nugget_paired_confidence_intervals.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\05_provisional_models_observed_vs_loo_predicted.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\06_learned_nugget_std_by_kernel_and_target.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\07_target_definition_scatter_width.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\07_target_definition_scatter_length.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\07_target_definition_scatter_depth.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\08_target_definition_absolute_difference_distributions.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\09_target_stability_vs_predictability.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\10_learned_nugget_vs_target_definition_shift.png",
+        "outputs\\week6_03_model_target_robustness\\figures\\11_phase3_final_decision_scorecard.png"
+      ]
+    },
+    {
+      "stage": "notebook_build_and_first_execution",
+      "cache_reused": false,
+      "wall_runtime_seconds": 3.2566671000095084,
+      "notebook": "notebooks\\week_06\\04_phase3_model_target_robustness.ipynb"
+    },
+    {
+      "stage": "notebook_final_execution",
+      "cache_reused": false,
+      "wall_runtime_seconds": 3.0216202000156045,
+      "notebook": "notebooks\\week_06\\04_phase3_model_target_robustness.ipynb"
+    }
+  ],
+  "cache_reused_event_count": 43,
+  "computed_event_count": 10,
+  "timing_principles": {
+    "wall_runtime_is_measured": true,
+    "aggregate_fold_runtime_is_not_treated_as_wall_clock": true,
+    "checkpoint_reuse_is_labelled": true,
+    "Phase3A_and_Phase3C_T0_reuse_exact_Phase3B_rows": true
+  },
+  "output_artifacts_excluding_this_file": [
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern32_learned_nugget.csv",
+      "bytes": 356503,
+      "sha256": "6A3B5BD9A25452718D429A41D8B2595FFED42F86161938DE47C9DAA68FB6246D"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern32_no_nugget.csv",
+      "bytes": 298863,
+      "sha256": "47F1C4A9F0A839BC27084DD76B3D2D55282D8AC1F9B64652C8DD7797A4B79EB5"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern52_learned_nugget.csv",
+      "bytes": 356224,
+      "sha256": "6BE199598D5444EE92ABD7F4EC7124F75D1C7CADCB57510B2C3888CAFDA8438F"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern52_no_nugget.csv",
+      "bytes": 298609,
+      "sha256": "AED0993C7F9772B7345607EAAEE84987C853F7830B3F60FA7F5E4306C7AB54E5"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__rbf_learned_nugget.csv",
+      "bytes": 349073,
+      "sha256": "E9488922C4E601ECCEB027BA41B769E9D54F1687BC1FBF33604C998EA200FC77"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__rbf_no_nugget.csv",
+      "bytes": 291270,
+      "sha256": "689A7FCEF3058EBF600184C682828B1324E74C51C449F8625F5A1E99A9A7110F"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern32_learned_nugget.csv",
+      "bytes": 365480,
+      "sha256": "9676E98C2DE4966000CD5EE8795D6791BA28CE173BA23077E8C3BA0B896A0C2E"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern32_no_nugget.csv",
+      "bytes": 304761,
+      "sha256": "DA48B1518F03E6B20C53B6D8662DA06E0BA003088725A2EBD9251FF0A94F0735"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern52_learned_nugget.csv",
+      "bytes": 365358,
+      "sha256": "425015EDF9F465B636897D4548C59CC68DF443078683690E39D03EF12AB05304"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern52_no_nugget.csv",
+      "bytes": 304942,
+      "sha256": "755A72E1513996ECA5262410846F17D227E3B3FDF21D2A1A944D860DF3A8239B"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__rbf_learned_nugget.csv",
+      "bytes": 358073,
+      "sha256": "5FB3AEBE6518D7FBFB21BF23912CEBC55BDF4BFF150DB880F76311418CDBE2C2"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__rbf_no_nugget.csv",
+      "bytes": 297169,
+      "sha256": "A38C157001665C32E22907BAAFD2C5E94479DC45BFBE7BF7E770CC71B6EC462F"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern32_learned_nugget.csv",
+      "bytes": 365917,
+      "sha256": "C63317081B8FE3F317F22DE2E527EFD31EEA0E82DEF9CBDB2B6DB7CBA3374E3F"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern32_no_nugget.csv",
+      "bytes": 304812,
+      "sha256": "7F230E0958BEE8918800F9099A1263A3F19F99B6C8968425D2B72D21E84A9D4B"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern52_learned_nugget.csv",
+      "bytes": 365577,
+      "sha256": "BAEA03AB1C096645188C60A88DF20A909443DC24270165E3D7A1CF2FD279ED4B"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern52_no_nugget.csv",
+      "bytes": 304928,
+      "sha256": "ECB30F7B3CAA26EB022D7AFBB92B3ED8201F873B31EF1A356C2B57581B1F1F2B"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__rbf_learned_nugget.csv",
+      "bytes": 357428,
+      "sha256": "0394A61738356426D8DB051AE3EBCDF5F884481207F0BBD4E6B6CAA489B78C40"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__rbf_no_nugget.csv",
+      "bytes": 297535,
+      "sha256": "301B7DBF65BE5F20C84C415E63CE6E0CA62EADEB1DEBD603C76FA139D5C9C795"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T1__matern32_learned_nugget.csv",
+      "bytes": 360539,
+      "sha256": "17C2F6EC26FF34D96AF440D47830BE82D4720018F4BB6BE0B7332F82768F485B"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T2__matern32_learned_nugget.csv",
+      "bytes": 360434,
+      "sha256": "69DDCC770F6FE8A7F0BB4C8017BA1C3E78551C60646D376B5B9DD0B62AED2292"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T3__matern32_learned_nugget.csv",
+      "bytes": 363066,
+      "sha256": "03873ADD8797EA2CAA93C33B80AC326BDBB1AF2498F434500948C0FB21FB3088"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T4__matern32_learned_nugget.csv",
+      "bytes": 360365,
+      "sha256": "673CEAA93E591A9402D543075DA113D675C730577598A47B20AB183ACA19C5A2"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T5__matern32_learned_nugget.csv",
+      "bytes": 362058,
+      "sha256": "05BBD826BCA4FE80FC36351836A80D1FA2E94011927ACCA69648F97C032B6346"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T1__matern32_learned_nugget.csv",
+      "bytes": 374261,
+      "sha256": "37D01F208D045728A149F8B345B7A215EDD54B90F429B598309646B464AD6EC6"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T1__matern52_learned_nugget.csv",
+      "bytes": 373901,
+      "sha256": "0F0E31BB22B2B634039AFC0CF85DAC8FD901E83516289EA6153164D626B57A16"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T2__matern32_learned_nugget.csv",
+      "bytes": 372055,
+      "sha256": "BDA163B435F35C8A4E8DB301834939CD1015E14C7527730DD52241C4DD0D9653"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T2__matern52_learned_nugget.csv",
+      "bytes": 371936,
+      "sha256": "9B63CA5731FC06B5A648203EA953CBC6E7DB2E98F059E8B53F29D0824A5F3345"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T3__matern32_learned_nugget.csv",
+      "bytes": 374699,
+      "sha256": "067E0EEA7564265EEE387AEC0061CC9EDAF3804042C2F9099171E9385B37FDC5"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T3__matern52_learned_nugget.csv",
+      "bytes": 374194,
+      "sha256": "E62D89F5D233A5ABDA224105A396CF11FDF4BF78BA7CFCA637E3AFA734A73941"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T4__matern32_learned_nugget.csv",
+      "bytes": 372123,
+      "sha256": "BF8F900217CFAEEE49C4D8F2E9AF875A92640298AEFD0B80EA08334556C3EE6F"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T4__matern52_learned_nugget.csv",
+      "bytes": 371892,
+      "sha256": "AEE831CA195C51D3A7AB3BD6DF8428656496E5D4D80934AFE82A29EAB5744F32"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T5__matern32_learned_nugget.csv",
+      "bytes": 373655,
+      "sha256": "A23B4A6AAF683E395296767E18CAAFF320082338BF3D250BFA349740E1759A38"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T5__matern52_learned_nugget.csv",
+      "bytes": 373891,
+      "sha256": "6DF66B5065E399CACC8D3BA867271332C3B2CE0612B97D829070CDB42B0FE3B7"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T1__matern32_learned_nugget.csv",
+      "bytes": 371150,
+      "sha256": "9DF7F128DA066B1FA9CA0D6726D5094EADA026C9DEF3A4D4526CFB917E57EA36"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T2__matern32_learned_nugget.csv",
+      "bytes": 371675,
+      "sha256": "93B0B050DC1738C47526E52E4EB6A11748D3576E6EC312EB30ECEFD9302B50D8"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T3__matern32_learned_nugget.csv",
+      "bytes": 374340,
+      "sha256": "3CEF268F82FAADA99A90EC6CCBFE6D0459B5D68F8857CCAAFFA342B2C8FB76D8"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T4__matern32_learned_nugget.csv",
+      "bytes": 371789,
+      "sha256": "FD25235CD03FC276319B5E7B7B9F2B3575F54337D03074E0571992DDF438AEC3"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T5__matern32_learned_nugget.csv",
+      "bytes": 373875,
+      "sha256": "2F2B1FEA2D7DB726240FD6B8502569008DFA5506159598C9E9874C2A9F406F31"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__depth__linear_ridge.csv",
+      "bytes": 1525306,
+      "sha256": "13F6AF57EA5E91D9D60350B67ED3C5C766388782011C387EE913C3450A6DEA9D"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__depth__polynomial_ridge_degree2.csv",
+      "bytes": 1548590,
+      "sha256": "4905C27876FDD94790B370F726B018F78B891F43003D6656270FDF1B8FDF06E7"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__length__linear_ridge.csv",
+      "bytes": 1627446,
+      "sha256": "C98FEC6B983AADD3B185BBA3A80705BEC32629067264F718933292A32DF02E94"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__length__polynomial_ridge_degree2.csv",
+      "bytes": 1651040,
+      "sha256": "B5EBDEACEA6B278ED8F3DC75187B34EB72D0CB0ABE2C7030EA3B14493D55C15B"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__width__linear_ridge.csv",
+      "bytes": 1627082,
+      "sha256": "804041D64D6429CAB6E12265F8FD46D0E34262BDA6A5B6E69D9602A477C57262"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__width__polynomial_ridge_degree2.csv",
+      "bytes": 1650395,
+      "sha256": "32B60D96580A9F5C84CA05D8BC16F9DEE464D0C666A9A6D4C46A3F2E7D9E34AE"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/decision_log.md",
+      "bytes": 7286,
+      "sha256": "6EA6AEF2F86427873E7DDD079A1D53FB0E07CD34361C0C85E63A697352FF1265"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/01_phase3_experiment_tree.png",
+      "bytes": 116718,
+      "sha256": "DBF17325D1C48D39D649A6B8FB4410D3C642259A37B5D569C45F1DE00A86BD4B"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/02_simple_model_performance_comparison.png",
+      "bytes": 167073,
+      "sha256": "8FF985828688D5471D2D82273CFE295DC9532163220039A62646053A09F85846"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/03_gp_kernel_noise_rmse_comparison.png",
+      "bytes": 127495,
+      "sha256": "82250D5F0EA4E43149AEDAE29A6F92C88E9B14AE81C9F95DE02F0353EEFD1258"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/04_nugget_vs_no_nugget_paired_confidence_intervals.png",
+      "bytes": 100641,
+      "sha256": "57FFFA91F13F1C542D762FE15EAFE54AFF2C4D7634915E97E1775038501C7227"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/05_provisional_models_observed_vs_loo_predicted.png",
+      "bytes": 304713,
+      "sha256": "063316E625E602AB467999AA5C0A05D50A80D530D3D0DDF4D2534DD7D2E6E67E"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/06_learned_nugget_std_by_kernel_and_target.png",
+      "bytes": 111940,
+      "sha256": "232668193C32BDB987F69ED5B4EE639F8D5671CCD4399228700396620D2EE964"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/07_target_definition_scatter_depth.png",
+      "bytes": 306071,
+      "sha256": "90903B3C54A7E3840CEB3DF561ACEA13824BF5F93A91212D460F3E40B07C5AFB"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/07_target_definition_scatter_length.png",
+      "bytes": 311996,
+      "sha256": "37A175A42C14746D5CD73344CC89E223F3196E5606251C50000E22EBA751C25D"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/07_target_definition_scatter_width.png",
+      "bytes": 314349,
+      "sha256": "D477A7CCE122F201F17B0C4BBBB779BAEFBFC5BDB018386EA7FDE030B1BDE1EA"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/08_target_definition_absolute_difference_distributions.png",
+      "bytes": 106554,
+      "sha256": "2A6C419AE955E48DECDBD21FB4DA862F157EBF9E641AE2D1D85205103A8ED477"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/09_target_stability_vs_predictability.png",
+      "bytes": 106002,
+      "sha256": "84E2E645F9F628E85B8CF7E3F762C05B7F99F8CB207DD6DFB69C7143EA5ED1E7"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/10_learned_nugget_vs_target_definition_shift.png",
+      "bytes": 105093,
+      "sha256": "E417966F2F4747F9112B075531F4E96C814BAAD2FDBD278F3120A944EB6AA93F"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/figures/11_phase3_final_decision_scorecard.png",
+      "bytes": 84035,
+      "sha256": "F7535A558B7FC44483BF1C737F5B57E564BE7416248C3472D44FF9798DD1CDEB"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/gp_candidate_vs_current_comparisons.csv",
+      "bytes": 932840,
+      "sha256": "17878BB9C2894C45D5D201A6C3B0B61AA650EB68C9E1A9D9F29FDC4719AB449C"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/gp_kernel_noise_hyperparameter_diagnostics.csv",
+      "bytes": 1794661,
+      "sha256": "9BCD2E5A2352F4F8245D143D36206D99143FE33703443E634DACC48B63E43D72"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/gp_kernel_noise_loo_predictions.csv",
+      "bytes": 5869670,
+      "sha256": "CAB1217825C7087C2CA78ACAFEE623123DBBC1CCBE33D714953B6EECBCD8E426"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/gp_kernel_noise_metrics.csv",
+      "bytes": 19251,
+      "sha256": "ECD9EA53B78FCDD9968E165AAE2D05DED518F014712CDBDA101C1CB68FF63F6C"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/gp_kernel_paired_bootstrap_summary.csv",
+      "bytes": 9168,
+      "sha256": "F0153FF762202D436B378F667C39D1C9D122E161670E4328FF19FFEE3601FB81"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/learned_nugget_by_kernel_summary.csv",
+      "bytes": 7043,
+      "sha256": "4A6CB262ADA99DBBEC104FAE1AEF70429586F3703EB4BFFCBBD5073058BDB596"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/phase3_configuration.json",
+      "bytes": 7945,
+      "sha256": "CE413E31738F96CE7384DA625F22EE9BEAFE1585ECD9F63FE124EE9B799C4149"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/phase3_final_model_decision.csv",
+      "bytes": 2079,
+      "sha256": "D32B6B98FFD8B760C4BEB9C055903A153D1E9355EAF61B48DA76BAB72DFE91DA"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/phase3_final_model_paired_bootstrap_summary.csv",
+      "bytes": 2643,
+      "sha256": "6F7B93CAE71B6DAFBE155518817FA329078824955FBCA84058310ECF71265077"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/phase3_final_target_decision.csv",
+      "bytes": 8836,
+      "sha256": "132B2DC22B82A9AC2640E3CBAF9344A63B791205033CA784E91E545AB60DA676"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/phase3_input_population_summary.csv",
+      "bytes": 1079,
+      "sha256": "E8F8122ADFEDC9699FF35A3C043C68305AB54F00809554C43F39629A1260B302"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/phase3_preflight_snapshot.json",
+      "bytes": 8248,
+      "sha256": "4BAF1460D88F14EB4D58D092917B4657D0B39B1BD5B4505E01EEE612A86D031A"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/phase3_requirement_checklist.csv",
+      "bytes": 6599,
+      "sha256": "BBE1BBBE8ED9312E8298737C09B8BC2013AC426A6A24B7E45B88E1FFF5F14F3E"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/provisional_kernel_decision.csv",
+      "bytes": 3802,
+      "sha256": "5C27DE3D5DFACA8A8F552526A998C2F7929CF640B2B123561CF90B5619B4498A"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/simple_baseline_loo_predictions.csv",
+      "bytes": 11207320,
+      "sha256": "1102801B8495D0ED120311ED1050D5600BE8F9DCAE1F80AA0E1EA8A96F059141"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/simple_baseline_metrics.csv",
+      "bytes": 2952,
+      "sha256": "E57A4BFF4AAF3B9FF4BFC78F00F5A6A33A89811AFA4401F54801E578EF671515"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/simple_baseline_paired_bootstrap_summary.csv",
+      "bytes": 2666,
+      "sha256": "FA2D71064ABF4236AB617603D41AFD27D7A2E96E0FE3B76A6E433420B4730064"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/simple_baseline_paired_comparisons.csv",
+      "bytes": 351463,
+      "sha256": "18240184761901485FD3A9F45C5CCCC32A4607E696E0876B3EBB3BF3D019071D"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/simple_baseline_selected_hyperparameters.csv",
+      "bytes": 8617496,
+      "sha256": "6E6151D1E37DD47E978C4E6BF2289B4659888A0CBDE3CB25D7CF209FB40E3001"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/smoke/smoke_prediction_rows.csv",
+      "bytes": 197220,
+      "sha256": "7E1297B8E16C86BD1B6859DDEE18DF3B857F9FE67B701E1543A5C1C8E43257CC"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/smoke/smoke_target_definition_rows.csv",
+      "bytes": 64944,
+      "sha256": "E0829D6BB156507BAA3464850085DF4AB8AF52E887675C64319465B80E3B9B4F"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/smoke_test_summary.json",
+      "bytes": 7680,
+      "sha256": "8E9FE99B6F4CEDB9B6E4123AC3E2A2B6246667C817E84D63B7D3DA6A6D7B4DC3"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/target_definition_decision.csv",
+      "bytes": 8726,
+      "sha256": "A856CA09196E0D7DAC81A3949E040BDD0C7999189540BF95F047A2BA3C214054"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/target_definition_difference_summary.csv",
+      "bytes": 8324,
+      "sha256": "D04ED5B759A1052D911335CFDDFC783837BC7AF07423E346B9BD3D3DBD967B13"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/target_definition_distribution_summary.csv",
+      "bytes": 12127,
+      "sha256": "648417925FF13964EE65A83B080FA1CF9F27CA2C1C1017EFF65029F0256BFC91"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/target_definition_loo_predictions.csv",
+      "bytes": 6590403,
+      "sha256": "04762CE261BAD18BDDEE29764A612CEA326A4DD7E5AFBCFD2C4FD8D5BBE0492E"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/target_definition_model_metrics.csv",
+      "bytes": 23949,
+      "sha256": "63DC388C63CC069DE7BA0AD9DE265C034A047B916B31B1EFC1AD9A86CEF18E68"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/target_definition_model_paired_bootstrap_summary.csv",
+      "bytes": 5471,
+      "sha256": "98C5102C043E10CA6484EA681CABED5044866A858D2924CB808DAFBF5B76B971"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/target_definition_nugget_summary.csv",
+      "bytes": 13531,
+      "sha256": "919782187E3F8B4FE94BAE9712E3A283D50574663ECC9EEC67A74620CDB1B43F"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/target_definition_simulation_level_table.csv",
+      "bytes": 1305825,
+      "sha256": "EFDCDF1C0F7C9C815D97864C9919A6E63ABCA878083B854849E8DE2D31DDEC95"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/target_definition_traceability.csv",
+      "bytes": 1383274,
+      "sha256": "C6DC3B2C98E407CBFBE502CF887343D12227711555EBA6EA028EA1113CA062A1"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/validation_results.csv",
+      "bytes": 7394,
+      "sha256": "2B0CDE041C3478E0606E57CCBD54B076EECE2CC2B657B4FFE7611CC3673A33C8"
+    },
+    {
+      "path": "outputs/week6_03_model_target_robustness/within_kernel_nugget_comparisons.csv",
+      "bytes": 553445,
+      "sha256": "B22123478873A6EEEF3CC405264A8D2C322CDDBCA7B2EA1B71E5F95245EB57A8"
+    }
+  ],
+  "output_hash_snapshot_exclusions": {
+    "files": [
+      "phase3_runtime_provenance.json",
+      "results_summary.md",
+      "summary.json"
+    ],
+    "patterns": [
+      "*.stdout.log",
+      "*.stderr.log"
+    ],
+    "reason": "These files are written from, or continue changing after, the runtime snapshot; excluding them avoids stale recursive or active-log hashes."
+  },
+  "prior_complete_force_rebuild_provenance": {
+    "generated_at_utc": "2026-07-27T14:55:18.700589+00:00",
+    "invocation_start_utc": "2026-07-27T14:09:55.776586+00:00",
+    "invocation_complete": true,
+    "mode": "full",
+    "exact_command_line": [
+      "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Scripts\\python.exe",
+      "src\\week6_phase3_model_target_robustness.py",
+      "--full",
+      "--force",
+      "--workers",
+      "4"
+    ],
+    "deterministic_full_rebuild_command": ".\\.venv\\Scripts\\python.exe src\\week6_phase3_model_target_robustness.py --full --force --workers 4",
+    "workers": 4,
+    "force_recompute": true,
+    "full_invocation_wall_runtime_seconds": 2722.916236800025,
+    "runtime_environment": {
+      "python_executable": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+      "numpy": "2.5.1",
+      "pandas": "2.3.3",
+      "scikit_learn": "1.9.0",
+      "scipy": "1.18.0",
+      "matplotlib": "3.11.1",
+      "threadpoolctl": "3.6.0",
+      "nbformat": "5.10.4",
+      "nbclient": "0.11.0"
+    },
+    "input_provenance": {
+      "verified_at_utc": "2026-07-27T14:09:56.424791+00:00",
+      "repository": {
+        "repo_root": "C:/Users/ozgur/Documents/thesis-week6-melt-pool-audit",
+        "branch": "codex/week6-phase3-model-target-robustness",
+        "head": "b112f6b22898976f77410190614cb4fb218d38f9",
+        "status_short": [
+          "?? outputs/week6_03_model_target_robustness/",
+          "?? scripts/build_week6_04_notebook.py",
+          "?? src/week6_phase3_model_target_robustness.py"
+        ]
+      },
+      "historical_artifacts": [
+        {
+          "path": "outputs/week6_01_melt_pool_data_audit/week6_phase1_simulation_level_responses.csv",
+          "expected_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF",
+          "observed_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF",
+          "bytes": 762410
+        },
+        {
+          "path": "outputs/week6_01_melt_pool_data_audit/summary.json",
+          "expected_sha256": "A18BC9A688792268F5514BCAA9758BEE327DC6F71AA15A14123C47B177357F96",
+          "observed_sha256": "A18BC9A688792268F5514BCAA9758BEE327DC6F71AA15A14123C47B177357F96",
+          "bytes": 2542
+        },
+        {
+          "path": "notebooks/week_06/01_melt_pool_monitor_data_audit.ipynb",
+          "expected_sha256": "BB4897432224C9A16ADAE084FBE5004DD7987DA43BA9B6195C5DABD65D9DF65F",
+          "observed_sha256": "BB4897432224C9A16ADAE084FBE5004DD7987DA43BA9B6195C5DABD65D9DF65F",
+          "bytes": 1258348
+        },
+        {
+          "path": "src/week6_phase1_melt_pool_data_audit.py",
+          "expected_sha256": "64A5E3998D411961CBFBC3AD0A761F9B9D8F2C876550548B835C3EBF0E1C63A4",
+          "observed_sha256": "64A5E3998D411961CBFBC3AD0A761F9B9D8F2C876550548B835C3EBF0E1C63A4",
+          "bytes": 129420
+        },
+        {
+          "path": "notebooks/week_06/02_gp_response_noise_comparison.ipynb",
+          "expected_sha256": "DF04ADF427DA98D238488C0BE6D15807ACBDE07478F35F22D187CDD707FBA359",
+          "observed_sha256": "DF04ADF427DA98D238488C0BE6D15807ACBDE07478F35F22D187CDD707FBA359",
+          "bytes": 614055
+        },
+        {
+          "path": "src/week6_phase2_gp_response_noise_comparison.py",
+          "expected_sha256": "4228223095EA40A4F05DC6084C565E99FA0E0747AB2B8C0891C2C534B6BA9701",
+          "observed_sha256": "4228223095EA40A4F05DC6084C565E99FA0E0747AB2B8C0891C2C534B6BA9701",
+          "bytes": 131985
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/phase2_model_configuration.json",
+          "expected_sha256": "CBBA81F86E9B2B9FF46838B793733D9C7DE2982D1A398A67578A8AAE6C3647A6",
+          "observed_sha256": "CBBA81F86E9B2B9FF46838B793733D9C7DE2982D1A398A67578A8AAE6C3647A6",
+          "bytes": 3366
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/width_loo_predictions.csv",
+          "expected_sha256": "32FF3A2DB237D1A13CE35903F6B95E66EB614D9FD3028F4E9D429FA915A68F75",
+          "observed_sha256": "32FF3A2DB237D1A13CE35903F6B95E66EB614D9FD3028F4E9D429FA915A68F75",
+          "bytes": 877413
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/length_loo_predictions.csv",
+          "expected_sha256": "50531D5BC00DC5C9FBAC897A2568929C344BB371FBF181339808B6EB8F44E1D0",
+          "observed_sha256": "50531D5BC00DC5C9FBAC897A2568929C344BB371FBF181339808B6EB8F44E1D0",
+          "bytes": 877502
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/depth_loo_predictions.csv",
+          "expected_sha256": "B511702EAD9A91BBC407E2F9D447E62998470F3FD4214CE020520418B589DC00",
+          "observed_sha256": "B511702EAD9A91BBC407E2F9D447E62998470F3FD4214CE020520418B589DC00",
+          "bytes": 894333
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/stable_subset_loo_predictions.csv",
+          "expected_sha256": "26C6A6E78B441B22DCCCE8B1573028F539ACD66FC962796ADE43344302E44525",
+          "observed_sha256": "26C6A6E78B441B22DCCCE8B1573028F539ACD66FC962796ADE43344302E44525",
+          "bytes": 904923
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/summary.json",
+          "expected_sha256": "E95161972078503BF67926D549A1140274DC91F8F12BF899BD882FF9F84C75EF",
+          "observed_sha256": "E95161972078503BF67926D549A1140274DC91F8F12BF899BD882FF9F84C75EF",
+          "bytes": 41621
+        },
+        {
+          "path": "notebooks/week_06/03_phase2_5_depth_model_closure.ipynb",
+          "expected_sha256": "FDA44EF49D15EB72789003F8D9218FC945A1F8D5752098F4CF3C7D2B6FD54454",
+          "observed_sha256": "FDA44EF49D15EB72789003F8D9218FC945A1F8D5752098F4CF3C7D2B6FD54454",
+          "bytes": 717802
+        },
+        {
+          "path": "src/week6_phase2_5_depth_model_closure.py",
+          "expected_sha256": "2766ED6D8551151B29582C6B7D83C88D39367153A70B4DCFDE249410481204B3",
+          "observed_sha256": "2766ED6D8551151B29582C6B7D83C88D39367153A70B4DCFDE249410481204B3",
+          "bytes": 101288
+        },
+        {
+          "path": "outputs/week6_02_5_depth_model_closure/phase2_5_configuration.json",
+          "expected_sha256": "CCCB6E47279AE2D6A6DBEF9906450F5404AD80207DD0E7C84DCC82C4E8BE7AED",
+          "observed_sha256": "CCCB6E47279AE2D6A6DBEF9906450F5404AD80207DD0E7C84DCC82C4E8BE7AED",
+          "bytes": 12081
+        },
+        {
+          "path": "outputs/week6_02_5_depth_model_closure/stable_depth_B_loo_predictions.csv",
+          "expected_sha256": "398A5C355E12B0B9FFE276578E9242DC5655CFC01D529DE6FF5FC0130BC0B59A",
+          "observed_sha256": "398A5C355E12B0B9FFE276578E9242DC5655CFC01D529DE6FF5FC0130BC0B59A",
+          "bytes": 340235
+        },
+        {
+          "path": "outputs/week6_02_5_depth_model_closure/stable_depth_C_loo_predictions.csv",
+          "expected_sha256": "62D55CC6EE844354E7A62C29358DAC68EC9EAD74D6A768810382752C8FB6272B",
+          "observed_sha256": "62D55CC6EE844354E7A62C29358DAC68EC9EAD74D6A768810382752C8FB6272B",
+          "bytes": 333573
+        },
+        {
+          "path": "outputs/week6_02_5_depth_model_closure/summary.json",
+          "expected_sha256": "3093361B89745ACF7F62271B0576DAEAD17A91E0225B3A4C4B55B9DF059D678F",
+          "observed_sha256": "3093361B89745ACF7F62271B0576DAEAD17A91E0225B3A4C4B55B9DF059D678F",
+          "bytes": 9209
+        }
+      ],
+      "phase1_aggregate_sha256": "21FF34AD767C8D4D6C536D66AFD147B8C700884321415078231B7A24D4C7D198",
+      "phase1_aggregate_file_count": 34,
+      "phase1_rows": 241,
+      "phase1_unique_simulation_ids": 241,
+      "phase1_revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+      "phase2_width_decision": "B_learned_nugget",
+      "phase2_length_decision": "B_learned_nugget",
+      "phase2_5_depth_decision": "B_preferred_for_depth",
+      "phase2_5_validation": "30/30 PASS",
+      "original_worktree_unchanged": true,
+      "original_worktree_detail": "branch=main; head=6fd6be57e5341e083a7023a3ae29e65b7b326bbd; status_lines=6; protected_hash_mismatches=[]"
+    },
+    "repository": {
+      "repo_root": "C:/Users/ozgur/Documents/thesis-week6-melt-pool-audit",
+      "branch": "codex/week6-phase3-model-target-robustness",
+      "head": "b112f6b22898976f77410190614cb4fb218d38f9",
+      "status_short": [
+        "?? notebooks/week_06/04_phase3_model_target_robustness.ipynb",
+        "?? outputs/week6_03_model_target_robustness/",
+        "?? scripts/build_week6_04_notebook.py",
+        "?? src/week6_phase3_model_target_robustness.py"
+      ]
+    },
+    "original_worktree_unchanged": true,
+    "original_worktree_detail": "branch=main; head=6fd6be57e5341e083a7023a3ae29e65b7b326bbd; status_lines=6; protected_hash_mismatches=[]",
+    "events": [
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 118.1219640999916,
+        "aggregate_fold_runtime_seconds": 469.73178209987236,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 64.74232580000535,
+        "aggregate_fold_runtime_seconds": 257.3598016000469,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 54.55744250002317,
+        "aggregate_fold_runtime_seconds": 216.58335170010105,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "mean_predictor_loo",
+        "target": "width",
+        "cache_reused": false,
+        "wall_runtime_seconds": 0.15473079995717853,
+        "fold_count": 241
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "width",
+        "model": "linear_ridge",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__width__linear_ridge.csv",
+        "wall_runtime_seconds": 57.08453599998029,
+        "aggregate_fold_runtime_seconds": 223.09075830038637,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "width",
+        "model": "polynomial_ridge_degree2",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__width__polynomial_ridge_degree2.csv",
+        "wall_runtime_seconds": 88.6326256999746,
+        "aggregate_fold_runtime_seconds": 351.86069729947485,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "mean_predictor_loo",
+        "target": "length",
+        "cache_reused": false,
+        "wall_runtime_seconds": 0.12008670001523569,
+        "fold_count": 241
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "length",
+        "model": "linear_ridge",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__length__linear_ridge.csv",
+        "wall_runtime_seconds": 57.54041919996962,
+        "aggregate_fold_runtime_seconds": 225.76950350002153,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "length",
+        "model": "polynomial_ridge_degree2",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__length__polynomial_ridge_degree2.csv",
+        "wall_runtime_seconds": 88.43073280004319,
+        "aggregate_fold_runtime_seconds": 351.2880148999975,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "mean_predictor_loo",
+        "target": "depth",
+        "cache_reused": false,
+        "wall_runtime_seconds": 0.11860119999619201,
+        "fold_count": 230
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "depth",
+        "model": "linear_ridge",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__depth__linear_ridge.csv",
+        "wall_runtime_seconds": 54.77270020003198,
+        "aggregate_fold_runtime_seconds": 214.75240599998506,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "depth",
+        "model": "polynomial_ridge_degree2",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__depth__polynomial_ridge_degree2.csv",
+        "wall_runtime_seconds": 86.66461680002976,
+        "aggregate_fold_runtime_seconds": 344.3157848995761,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "phase3a_assembly",
+        "cache_reused": false,
+        "wall_runtime_seconds": 433.95375950000016,
+        "prediction_rows": 2848
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "rbf_no_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__rbf_no_nugget.csv",
+        "wall_runtime_seconds": 40.48998210002901,
+        "aggregate_fold_runtime_seconds": 160.4089708008105,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "rbf_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__rbf_learned_nugget.csv",
+        "wall_runtime_seconds": 38.841950899979565,
+        "aggregate_fold_runtime_seconds": 154.21418889961205,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern32_no_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern32_no_nugget.csv",
+        "wall_runtime_seconds": 46.191705300007015,
+        "aggregate_fold_runtime_seconds": 183.48346490017138,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern52_no_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern52_no_nugget.csv",
+        "wall_runtime_seconds": 56.302407500043046,
+        "aggregate_fold_runtime_seconds": 223.86277929967036,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 75.58432700001867,
+        "aggregate_fold_runtime_seconds": 300.7972935997532,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "rbf_no_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__rbf_no_nugget.csv",
+        "wall_runtime_seconds": 64.87247519998346,
+        "aggregate_fold_runtime_seconds": 257.2670465997071,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "rbf_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__rbf_learned_nugget.csv",
+        "wall_runtime_seconds": 39.34040210000239,
+        "aggregate_fold_runtime_seconds": 156.0971191995195,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern32_no_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern32_no_nugget.csv",
+        "wall_runtime_seconds": 40.765456399996765,
+        "aggregate_fold_runtime_seconds": 161.9676254001679,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern52_no_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern52_no_nugget.csv",
+        "wall_runtime_seconds": 62.3229761000257,
+        "aggregate_fold_runtime_seconds": 247.42091270023957,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 63.12877070001559,
+        "aggregate_fold_runtime_seconds": 251.25356500042835,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "rbf_no_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__rbf_no_nugget.csv",
+        "wall_runtime_seconds": 71.83951350004645,
+        "aggregate_fold_runtime_seconds": 285.1619901994127,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "rbf_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__rbf_learned_nugget.csv",
+        "wall_runtime_seconds": 46.15605180000421,
+        "aggregate_fold_runtime_seconds": 183.0189566006884,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern32_no_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern32_no_nugget.csv",
+        "wall_runtime_seconds": 52.61206069996115,
+        "aggregate_fold_runtime_seconds": 208.93959230009932,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern52_no_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern52_no_nugget.csv",
+        "wall_runtime_seconds": 63.762065700022504,
+        "aggregate_fold_runtime_seconds": 253.49455440003658,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 87.08596579998266,
+        "aggregate_fold_runtime_seconds": 346.00113539985614,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "phase3b_assembly",
+        "cache_reused": false,
+        "wall_runtime_seconds": 851.6297733999672,
+        "prediction_rows": 4272
+      },
+      {
+        "stage": "target_definition_reconstruction",
+        "cache_reused": false,
+        "wall_runtime_seconds": 71.81361450004624,
+        "simulation_count": 241,
+        "target_value_rows": 4338,
+        "traceability_rows": 1446
+      },
+      {
+        "stage": "phase3c_t0_reuse",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "source": "Phase 3B exact T0 LOO rows",
+        "wall_runtime_seconds": 0.0,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T1",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T1__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 73.91783719998784,
+        "aggregate_fold_runtime_seconds": 294.423574199609,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T2",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T2__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 65.34906659997068,
+        "aggregate_fold_runtime_seconds": 259.4436849002959,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T3",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T3__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 66.698351500032,
+        "aggregate_fold_runtime_seconds": 265.3104838997242,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T4",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T4__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 71.24083239998436,
+        "aggregate_fold_runtime_seconds": 282.8356064991676,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T5",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T5__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 65.0378575999639,
+        "aggregate_fold_runtime_seconds": 257.9958050994901,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "phase3c_t0_reuse",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "source": "Phase 3B exact T0 LOO rows",
+        "wall_runtime_seconds": 0.0,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T1",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T1__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 63.21473329997389,
+        "aggregate_fold_runtime_seconds": 251.59095940052066,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T2",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T2__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 66.220611799974,
+        "aggregate_fold_runtime_seconds": 262.5003792003263,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T3",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T3__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 76.04209000000264,
+        "aggregate_fold_runtime_seconds": 302.94479509972734,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T4",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T4__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 78.01489689998562,
+        "aggregate_fold_runtime_seconds": 310.07780649943743,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T5",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T5__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 95.03706419997616,
+        "aggregate_fold_runtime_seconds": 377.8193366000196,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "phase3c_t0_reuse",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "source": "Phase 3B exact T0 LOO rows",
+        "wall_runtime_seconds": 0.0,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T1",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T1__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 64.67768309998792,
+        "aggregate_fold_runtime_seconds": 257.40558669989696,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T2",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T2__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 53.092784699983895,
+        "aggregate_fold_runtime_seconds": 211.03443020035047,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T3",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T3__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 55.761611599999014,
+        "aggregate_fold_runtime_seconds": 221.6488240994513,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T4",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T4__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 66.77309929998592,
+        "aggregate_fold_runtime_seconds": 265.94070899969665,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T5",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T5__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 67.68789879995165,
+        "aggregate_fold_runtime_seconds": 269.0307915006997,
+        "fold_count": 230,
+        "workers": 4
+      },
+      {
+        "stage": "phase3c_assembly",
+        "cache_reused": false,
+        "wall_runtime_seconds": 1030.1807007000316,
+        "prediction_rows": 4272
+      },
+      {
+        "stage": "figure_generation",
+        "cache_reused": false,
+        "wall_runtime_seconds": 9.354121499985922,
+        "figure_count": 13,
+        "figures": [
+          "outputs\\week6_03_model_target_robustness\\figures\\01_phase3_experiment_tree.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\02_simple_model_performance_comparison.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\03_gp_kernel_noise_rmse_comparison.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\04_nugget_vs_no_nugget_paired_confidence_intervals.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\05_provisional_models_observed_vs_loo_predicted.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\06_learned_nugget_std_by_kernel_and_target.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\07_target_definition_scatter_width.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\07_target_definition_scatter_length.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\07_target_definition_scatter_depth.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\08_target_definition_absolute_difference_distributions.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\09_target_stability_vs_predictability.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\10_learned_nugget_vs_target_definition_shift.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\11_phase3_final_decision_scorecard.png"
+        ]
+      },
+      {
+        "stage": "notebook_build_and_first_execution",
+        "cache_reused": false,
+        "wall_runtime_seconds": 3.8797286999761127,
+        "notebook": "notebooks\\week_06\\04_phase3_model_target_robustness.ipynb"
+      },
+      {
+        "stage": "notebook_final_execution",
+        "cache_reused": false,
+        "wall_runtime_seconds": 3.459243700024672,
+        "notebook": "notebooks\\week_06\\04_phase3_model_target_robustness.ipynb"
+      }
+    ],
+    "cache_reused_event_count": 3,
+    "computed_event_count": 49,
+    "timing_principles": {
+      "wall_runtime_is_measured": true,
+      "aggregate_fold_runtime_is_not_treated_as_wall_clock": true,
+      "checkpoint_reuse_is_labelled": true,
+      "Phase3A_and_Phase3C_T0_reuse_exact_Phase3B_rows": true
+    },
+    "output_artifacts_excluding_this_file": [
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern32_learned_nugget.csv",
+        "bytes": 356503,
+        "sha256": "6A3B5BD9A25452718D429A41D8B2595FFED42F86161938DE47C9DAA68FB6246D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern32_no_nugget.csv",
+        "bytes": 298863,
+        "sha256": "47F1C4A9F0A839BC27084DD76B3D2D55282D8AC1F9B64652C8DD7797A4B79EB5"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern52_learned_nugget.csv",
+        "bytes": 356224,
+        "sha256": "6BE199598D5444EE92ABD7F4EC7124F75D1C7CADCB57510B2C3888CAFDA8438F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern52_no_nugget.csv",
+        "bytes": 298609,
+        "sha256": "AED0993C7F9772B7345607EAAEE84987C853F7830B3F60FA7F5E4306C7AB54E5"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__rbf_learned_nugget.csv",
+        "bytes": 349073,
+        "sha256": "E9488922C4E601ECCEB027BA41B769E9D54F1687BC1FBF33604C998EA200FC77"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__rbf_no_nugget.csv",
+        "bytes": 291270,
+        "sha256": "689A7FCEF3058EBF600184C682828B1324E74C51C449F8625F5A1E99A9A7110F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern32_learned_nugget.csv",
+        "bytes": 365480,
+        "sha256": "9676E98C2DE4966000CD5EE8795D6791BA28CE173BA23077E8C3BA0B896A0C2E"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern32_no_nugget.csv",
+        "bytes": 304761,
+        "sha256": "DA48B1518F03E6B20C53B6D8662DA06E0BA003088725A2EBD9251FF0A94F0735"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern52_learned_nugget.csv",
+        "bytes": 365358,
+        "sha256": "425015EDF9F465B636897D4548C59CC68DF443078683690E39D03EF12AB05304"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern52_no_nugget.csv",
+        "bytes": 304942,
+        "sha256": "755A72E1513996ECA5262410846F17D227E3B3FDF21D2A1A944D860DF3A8239B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__rbf_learned_nugget.csv",
+        "bytes": 358073,
+        "sha256": "5FB3AEBE6518D7FBFB21BF23912CEBC55BDF4BFF150DB880F76311418CDBE2C2"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__rbf_no_nugget.csv",
+        "bytes": 297169,
+        "sha256": "A38C157001665C32E22907BAAFD2C5E94479DC45BFBE7BF7E770CC71B6EC462F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern32_learned_nugget.csv",
+        "bytes": 365917,
+        "sha256": "C63317081B8FE3F317F22DE2E527EFD31EEA0E82DEF9CBDB2B6DB7CBA3374E3F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern32_no_nugget.csv",
+        "bytes": 304812,
+        "sha256": "7F230E0958BEE8918800F9099A1263A3F19F99B6C8968425D2B72D21E84A9D4B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern52_learned_nugget.csv",
+        "bytes": 365577,
+        "sha256": "BAEA03AB1C096645188C60A88DF20A909443DC24270165E3D7A1CF2FD279ED4B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern52_no_nugget.csv",
+        "bytes": 304928,
+        "sha256": "ECB30F7B3CAA26EB022D7AFBB92B3ED8201F873B31EF1A356C2B57581B1F1F2B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__rbf_learned_nugget.csv",
+        "bytes": 357428,
+        "sha256": "0394A61738356426D8DB051AE3EBCDF5F884481207F0BBD4E6B6CAA489B78C40"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__rbf_no_nugget.csv",
+        "bytes": 297535,
+        "sha256": "301B7DBF65BE5F20C84C415E63CE6E0CA62EADEB1DEBD603C76FA139D5C9C795"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T1__matern32_learned_nugget.csv",
+        "bytes": 360539,
+        "sha256": "17C2F6EC26FF34D96AF440D47830BE82D4720018F4BB6BE0B7332F82768F485B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T2__matern32_learned_nugget.csv",
+        "bytes": 360434,
+        "sha256": "69DDCC770F6FE8A7F0BB4C8017BA1C3E78551C60646D376B5B9DD0B62AED2292"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T3__matern32_learned_nugget.csv",
+        "bytes": 363066,
+        "sha256": "03873ADD8797EA2CAA93C33B80AC326BDBB1AF2498F434500948C0FB21FB3088"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T4__matern32_learned_nugget.csv",
+        "bytes": 360365,
+        "sha256": "673CEAA93E591A9402D543075DA113D675C730577598A47B20AB183ACA19C5A2"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T5__matern32_learned_nugget.csv",
+        "bytes": 362058,
+        "sha256": "05BBD826BCA4FE80FC36351836A80D1FA2E94011927ACCA69648F97C032B6346"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T1__matern32_learned_nugget.csv",
+        "bytes": 374261,
+        "sha256": "37D01F208D045728A149F8B345B7A215EDD54B90F429B598309646B464AD6EC6"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T2__matern32_learned_nugget.csv",
+        "bytes": 372055,
+        "sha256": "BDA163B435F35C8A4E8DB301834939CD1015E14C7527730DD52241C4DD0D9653"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T3__matern32_learned_nugget.csv",
+        "bytes": 374699,
+        "sha256": "067E0EEA7564265EEE387AEC0061CC9EDAF3804042C2F9099171E9385B37FDC5"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T4__matern32_learned_nugget.csv",
+        "bytes": 372123,
+        "sha256": "BF8F900217CFAEEE49C4D8F2E9AF875A92640298AEFD0B80EA08334556C3EE6F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T5__matern32_learned_nugget.csv",
+        "bytes": 373655,
+        "sha256": "A23B4A6AAF683E395296767E18CAAFF320082338BF3D250BFA349740E1759A38"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T1__matern32_learned_nugget.csv",
+        "bytes": 371150,
+        "sha256": "9DF7F128DA066B1FA9CA0D6726D5094EADA026C9DEF3A4D4526CFB917E57EA36"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T2__matern32_learned_nugget.csv",
+        "bytes": 371675,
+        "sha256": "93B0B050DC1738C47526E52E4EB6A11748D3576E6EC312EB30ECEFD9302B50D8"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T3__matern32_learned_nugget.csv",
+        "bytes": 374340,
+        "sha256": "3CEF268F82FAADA99A90EC6CCBFE6D0459B5D68F8857CCAAFFA342B2C8FB76D8"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T4__matern32_learned_nugget.csv",
+        "bytes": 371789,
+        "sha256": "FD25235CD03FC276319B5E7B7B9F2B3575F54337D03074E0571992DDF438AEC3"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T5__matern32_learned_nugget.csv",
+        "bytes": 373875,
+        "sha256": "2F2B1FEA2D7DB726240FD6B8502569008DFA5506159598C9E9874C2A9F406F31"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__depth__linear_ridge.csv",
+        "bytes": 1525306,
+        "sha256": "13F6AF57EA5E91D9D60350B67ED3C5C766388782011C387EE913C3450A6DEA9D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__depth__polynomial_ridge_degree2.csv",
+        "bytes": 1548590,
+        "sha256": "4905C27876FDD94790B370F726B018F78B891F43003D6656270FDF1B8FDF06E7"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__length__linear_ridge.csv",
+        "bytes": 1627446,
+        "sha256": "C98FEC6B983AADD3B185BBA3A80705BEC32629067264F718933292A32DF02E94"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__length__polynomial_ridge_degree2.csv",
+        "bytes": 1651040,
+        "sha256": "B5EBDEACEA6B278ED8F3DC75187B34EB72D0CB0ABE2C7030EA3B14493D55C15B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__width__linear_ridge.csv",
+        "bytes": 1627082,
+        "sha256": "804041D64D6429CAB6E12265F8FD46D0E34262BDA6A5B6E69D9602A477C57262"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__width__polynomial_ridge_degree2.csv",
+        "bytes": 1650395,
+        "sha256": "32B60D96580A9F5C84CA05D8BC16F9DEE464D0C666A9A6D4C46A3F2E7D9E34AE"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/decision_log.md",
+        "bytes": 7332,
+        "sha256": "A18531C0BA332FF2D40DBA463701649DB838D8258B33A224FAE1D094A9D8228D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/01_phase3_experiment_tree.png",
+        "bytes": 116718,
+        "sha256": "DBF17325D1C48D39D649A6B8FB4410D3C642259A37B5D569C45F1DE00A86BD4B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/02_simple_model_performance_comparison.png",
+        "bytes": 167073,
+        "sha256": "8FF985828688D5471D2D82273CFE295DC9532163220039A62646053A09F85846"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/03_gp_kernel_noise_rmse_comparison.png",
+        "bytes": 127495,
+        "sha256": "82250D5F0EA4E43149AEDAE29A6F92C88E9B14AE81C9F95DE02F0353EEFD1258"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/04_nugget_vs_no_nugget_paired_confidence_intervals.png",
+        "bytes": 100641,
+        "sha256": "57FFFA91F13F1C542D762FE15EAFE54AFF2C4D7634915E97E1775038501C7227"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/05_provisional_models_observed_vs_loo_predicted.png",
+        "bytes": 290316,
+        "sha256": "ECF5DD662988EAC2FFC311ED873CEB30465635B5E231FD7B0D43FC1F8D59932A"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/06_learned_nugget_std_by_kernel_and_target.png",
+        "bytes": 111940,
+        "sha256": "232668193C32BDB987F69ED5B4EE639F8D5671CCD4399228700396620D2EE964"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/07_target_definition_scatter_depth.png",
+        "bytes": 306071,
+        "sha256": "90903B3C54A7E3840CEB3DF561ACEA13824BF5F93A91212D460F3E40B07C5AFB"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/07_target_definition_scatter_length.png",
+        "bytes": 311996,
+        "sha256": "37A175A42C14746D5CD73344CC89E223F3196E5606251C50000E22EBA751C25D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/07_target_definition_scatter_width.png",
+        "bytes": 314349,
+        "sha256": "D477A7CCE122F201F17B0C4BBBB779BAEFBFC5BDB018386EA7FDE030B1BDE1EA"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/08_target_definition_absolute_difference_distributions.png",
+        "bytes": 106554,
+        "sha256": "2A6C419AE955E48DECDBD21FB4DA862F157EBF9E641AE2D1D85205103A8ED477"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/09_target_stability_vs_predictability.png",
+        "bytes": 106176,
+        "sha256": "BEE00BD9A75A6C73BD96D44FEB0278E7FC81388214D6A69E6B3BF23FF46E9732"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/10_learned_nugget_vs_target_definition_shift.png",
+        "bytes": 105093,
+        "sha256": "E417966F2F4747F9112B075531F4E96C814BAAD2FDBD278F3120A944EB6AA93F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/11_phase3_final_decision_scorecard.png",
+        "bytes": 83954,
+        "sha256": "65C03C479040C8C9EBAFE641A25AA801DC92914BF756CE2B68FAC58C2C18B58C"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/full_run.stderr.log",
+        "bytes": 568,
+        "sha256": "259E020EBE9DAC2848A927E4766ADE2A1E1703289C81115D01499366CA24CF52"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/full_run.stdout.log",
+        "bytes": 41920,
+        "sha256": "AF80C8A294C0F78D0463949A79858706B2676FC098909F9A20E9C51ECA3E096A"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_candidate_vs_current_comparisons.csv",
+        "bytes": 940610,
+        "sha256": "8800ADAA1276246A6703093BF7A1A52650DD4E02AA9507C761BD4A12CC7BCDE4"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_kernel_noise_hyperparameter_diagnostics.csv",
+        "bytes": 1806576,
+        "sha256": "88ADDC1F94BEF00E0FA33DBC5C68407D1AC579ADC8D2314BA63521456827CDCA"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_kernel_noise_loo_predictions.csv",
+        "bytes": 5909267,
+        "sha256": "937C5899F0F248B1D68526D935122A4D0A0FFEDD7706667A9C55CBD2725E53A0"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_kernel_noise_metrics.csv",
+        "bytes": 19057,
+        "sha256": "4177C960D136207A80850F9661487A35E63E78CCB843CFC9C451B4DAB489102D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_kernel_paired_bootstrap_summary.csv",
+        "bytes": 9167,
+        "sha256": "A392A06870408316FF27D5A4612CB15E094648DE0D5AC97B5B354685DEB9C843"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/learned_nugget_by_kernel_summary.csv",
+        "bytes": 7193,
+        "sha256": "6D6C3FFAE7C41F59D12A5C4E7AF5D6EF44B041B528B8E433A8A4B64F7A13DFAA"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_configuration.json",
+        "bytes": 7945,
+        "sha256": "3AE16374E18BE72D385D866F2A2B51F31B622F83FD39B692CC88DB49F031B7CC"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_final_model_decision.csv",
+        "bytes": 2078,
+        "sha256": "A25834EEB4551646A06C45FDA6D8331EE2D7314F0B37A871FBD5F1A74FA9C68D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_final_model_paired_bootstrap_summary.csv",
+        "bytes": 2647,
+        "sha256": "16B66EF62D203575EE842FC2FF5F5F6DF61F0B4E81C034590D40042A6CEDA961"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_final_target_decision.csv",
+        "bytes": 8837,
+        "sha256": "724306CC996FF68A19C3BB84015FE6D820F9B19250890D7DDF4B6338F3C4D3D1"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_input_population_summary.csv",
+        "bytes": 1079,
+        "sha256": "E8F8122ADFEDC9699FF35A3C043C68305AB54F00809554C43F39629A1260B302"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_preflight_snapshot.json",
+        "bytes": 8248,
+        "sha256": "4BAF1460D88F14EB4D58D092917B4657D0B39B1BD5B4505E01EEE612A86D031A"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_requirement_checklist.csv",
+        "bytes": 6599,
+        "sha256": "BBE1BBBE8ED9312E8298737C09B8BC2013AC426A6A24B7E45B88E1FFF5F14F3E"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/provisional_kernel_decision.csv",
+        "bytes": 3785,
+        "sha256": "770E4AFFDF9A892A6A8D6E13C892441A33754142CA03CCD3F22F2040D99230D1"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/results_summary.md",
+        "bytes": 10459,
+        "sha256": "AB3F579119B1E67873E5A5B4B7B9285BA040D2A76ECC05ED8C1EF2A9D9F642EB"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_loo_predictions.csv",
+        "bytes": 11219228,
+        "sha256": "0BB2C5572C97C8D0C6A2FC1DCC1119372EDF7B9DFAA1D6BD0037753E7AD4AD7D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_metrics.csv",
+        "bytes": 2977,
+        "sha256": "7EB3EB78EC60E0633CAE41D5D67ED038983B044D7C2CCB4E1E2179C8EDF910F6"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_paired_bootstrap_summary.csv",
+        "bytes": 2668,
+        "sha256": "187E0A5DCC06C16C4BC34C1AA82C48E9EE8136A7DC78264431C1A687855593D4"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_paired_comparisons.csv",
+        "bytes": 354482,
+        "sha256": "11F4C13D68FCC6DFA5AD1B5060C365FBB40D798D1A8C544FA60D4811ED6B6635"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_selected_hyperparameters.csv",
+        "bytes": 8617738,
+        "sha256": "8092603E227BD7A0D469A63448D896A2FCC7B10F60AEF0A8530C6D3427D5BB84"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/smoke/smoke_prediction_rows.csv",
+        "bytes": 197220,
+        "sha256": "7E1297B8E16C86BD1B6859DDEE18DF3B857F9FE67B701E1543A5C1C8E43257CC"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/smoke/smoke_target_definition_rows.csv",
+        "bytes": 64944,
+        "sha256": "E0829D6BB156507BAA3464850085DF4AB8AF52E887675C64319465B80E3B9B4F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/smoke_test_summary.json",
+        "bytes": 7680,
+        "sha256": "8E9FE99B6F4CEDB9B6E4123AC3E2A2B6246667C817E84D63B7D3DA6A6D7B4DC3"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/summary.json",
+        "bytes": 418282,
+        "sha256": "6C7614AF515EADD8C30B7CA533A825422FDC625358EA3FB6C0A41748FBE5D582"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_decision.csv",
+        "bytes": 8727,
+        "sha256": "02C9ADF35479BE1D1B15017F5EEB6963A518DBBF00A288655D552A3F6B67882E"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_difference_summary.csv",
+        "bytes": 8324,
+        "sha256": "D04ED5B759A1052D911335CFDDFC783837BC7AF07423E346B9BD3D3DBD967B13"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_distribution_summary.csv",
+        "bytes": 12127,
+        "sha256": "648417925FF13964EE65A83B080FA1CF9F27CA2C1C1017EFF65029F0256BFC91"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_loo_predictions.csv",
+        "bytes": 6637169,
+        "sha256": "FD0DE3306DF0DDAD43B8B5A27EB08CA776588C9DBE6BAE34A99EC7C049095660"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_model_metrics.csv",
+        "bytes": 24391,
+        "sha256": "B722A5953BA3354CE314D1B69943BC80A837B2CBFA749845EF07E808BE2958EC"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_model_paired_bootstrap_summary.csv",
+        "bytes": 5466,
+        "sha256": "91979D894D98138E403CB7C376FC7CEFE7C4A8C98018586CF4C451FA1995E3B4"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_nugget_summary.csv",
+        "bytes": 13859,
+        "sha256": "BBAE9BCA37E5DDB126EA88CEBAF5214E9B74E17F68B0A5AC9FC29D41AC8C5B3E"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_simulation_level_table.csv",
+        "bytes": 1305825,
+        "sha256": "EFDCDF1C0F7C9C815D97864C9919A6E63ABCA878083B854849E8DE2D31DDEC95"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_traceability.csv",
+        "bytes": 1383274,
+        "sha256": "C6DC3B2C98E407CBFBE502CF887343D12227711555EBA6EA028EA1113CA062A1"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/validation_results.csv",
+        "bytes": 7214,
+        "sha256": "64C1BB9FAFF95984E30BE8FF017F3F209F8E2EBA9C20BA2204ED3797C372C48A"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/within_kernel_nugget_comparisons.csv",
+        "bytes": 558083,
+        "sha256": "817D53AF8D2B7511C963975E4853A03A59E4C14411DAAD0F632B220E18F55268"
+      }
+    ]
+  },
+  "prior_complete_coverage_repair_provenance": {
+    "generated_at_utc": "2026-07-27T15:12:03.248971+00:00",
+    "invocation_start_utc": "2026-07-27T15:00:16.822316+00:00",
+    "invocation_complete": true,
+    "mode": "full",
+    "exact_command_line": [
+      "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Scripts\\python.exe",
+      "src\\week6_phase3_model_target_robustness.py",
+      "--full",
+      "--workers",
+      "4"
+    ],
+    "deterministic_full_rebuild_command": ".\\.venv\\Scripts\\python.exe src\\week6_phase3_model_target_robustness.py --full --force --workers 4",
+    "workers": 4,
+    "force_recompute": false,
+    "full_invocation_wall_runtime_seconds": 706.4256905000075,
+    "runtime_environment": {
+      "python_executable": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Scripts\\python.exe",
+      "python_version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+      "numpy": "2.5.1",
+      "pandas": "2.3.3",
+      "scikit_learn": "1.9.0",
+      "scipy": "1.18.0",
+      "matplotlib": "3.11.1",
+      "threadpoolctl": "3.6.0",
+      "nbformat": "5.10.4",
+      "nbclient": "0.11.0"
+    },
+    "input_provenance": {
+      "verified_at_utc": "2026-07-27T15:00:17.319091+00:00",
+      "repository": {
+        "repo_root": "C:/Users/ozgur/Documents/thesis-week6-melt-pool-audit",
+        "branch": "codex/week6-phase3-model-target-robustness",
+        "head": "b112f6b22898976f77410190614cb4fb218d38f9",
+        "status_short": [
+          "?? notebooks/week_06/04_phase3_model_target_robustness.ipynb",
+          "?? outputs/week6_03_model_target_robustness/",
+          "?? scripts/build_week6_04_notebook.py",
+          "?? src/week6_phase3_model_target_robustness.py"
+        ]
+      },
+      "historical_artifacts": [
+        {
+          "path": "outputs/week6_01_melt_pool_data_audit/week6_phase1_simulation_level_responses.csv",
+          "expected_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF",
+          "observed_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF",
+          "bytes": 762410
+        },
+        {
+          "path": "outputs/week6_01_melt_pool_data_audit/summary.json",
+          "expected_sha256": "A18BC9A688792268F5514BCAA9758BEE327DC6F71AA15A14123C47B177357F96",
+          "observed_sha256": "A18BC9A688792268F5514BCAA9758BEE327DC6F71AA15A14123C47B177357F96",
+          "bytes": 2542
+        },
+        {
+          "path": "notebooks/week_06/01_melt_pool_monitor_data_audit.ipynb",
+          "expected_sha256": "BB4897432224C9A16ADAE084FBE5004DD7987DA43BA9B6195C5DABD65D9DF65F",
+          "observed_sha256": "BB4897432224C9A16ADAE084FBE5004DD7987DA43BA9B6195C5DABD65D9DF65F",
+          "bytes": 1258348
+        },
+        {
+          "path": "src/week6_phase1_melt_pool_data_audit.py",
+          "expected_sha256": "64A5E3998D411961CBFBC3AD0A761F9B9D8F2C876550548B835C3EBF0E1C63A4",
+          "observed_sha256": "64A5E3998D411961CBFBC3AD0A761F9B9D8F2C876550548B835C3EBF0E1C63A4",
+          "bytes": 129420
+        },
+        {
+          "path": "notebooks/week_06/02_gp_response_noise_comparison.ipynb",
+          "expected_sha256": "DF04ADF427DA98D238488C0BE6D15807ACBDE07478F35F22D187CDD707FBA359",
+          "observed_sha256": "DF04ADF427DA98D238488C0BE6D15807ACBDE07478F35F22D187CDD707FBA359",
+          "bytes": 614055
+        },
+        {
+          "path": "src/week6_phase2_gp_response_noise_comparison.py",
+          "expected_sha256": "4228223095EA40A4F05DC6084C565E99FA0E0747AB2B8C0891C2C534B6BA9701",
+          "observed_sha256": "4228223095EA40A4F05DC6084C565E99FA0E0747AB2B8C0891C2C534B6BA9701",
+          "bytes": 131985
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/phase2_model_configuration.json",
+          "expected_sha256": "CBBA81F86E9B2B9FF46838B793733D9C7DE2982D1A398A67578A8AAE6C3647A6",
+          "observed_sha256": "CBBA81F86E9B2B9FF46838B793733D9C7DE2982D1A398A67578A8AAE6C3647A6",
+          "bytes": 3366
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/width_loo_predictions.csv",
+          "expected_sha256": "32FF3A2DB237D1A13CE35903F6B95E66EB614D9FD3028F4E9D429FA915A68F75",
+          "observed_sha256": "32FF3A2DB237D1A13CE35903F6B95E66EB614D9FD3028F4E9D429FA915A68F75",
+          "bytes": 877413
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/length_loo_predictions.csv",
+          "expected_sha256": "50531D5BC00DC5C9FBAC897A2568929C344BB371FBF181339808B6EB8F44E1D0",
+          "observed_sha256": "50531D5BC00DC5C9FBAC897A2568929C344BB371FBF181339808B6EB8F44E1D0",
+          "bytes": 877502
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/depth_loo_predictions.csv",
+          "expected_sha256": "B511702EAD9A91BBC407E2F9D447E62998470F3FD4214CE020520418B589DC00",
+          "observed_sha256": "B511702EAD9A91BBC407E2F9D447E62998470F3FD4214CE020520418B589DC00",
+          "bytes": 894333
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/stable_subset_loo_predictions.csv",
+          "expected_sha256": "26C6A6E78B441B22DCCCE8B1573028F539ACD66FC962796ADE43344302E44525",
+          "observed_sha256": "26C6A6E78B441B22DCCCE8B1573028F539ACD66FC962796ADE43344302E44525",
+          "bytes": 904923
+        },
+        {
+          "path": "outputs/week6_02_gp_response_noise_comparison/summary.json",
+          "expected_sha256": "E95161972078503BF67926D549A1140274DC91F8F12BF899BD882FF9F84C75EF",
+          "observed_sha256": "E95161972078503BF67926D549A1140274DC91F8F12BF899BD882FF9F84C75EF",
+          "bytes": 41621
+        },
+        {
+          "path": "notebooks/week_06/03_phase2_5_depth_model_closure.ipynb",
+          "expected_sha256": "FDA44EF49D15EB72789003F8D9218FC945A1F8D5752098F4CF3C7D2B6FD54454",
+          "observed_sha256": "FDA44EF49D15EB72789003F8D9218FC945A1F8D5752098F4CF3C7D2B6FD54454",
+          "bytes": 717802
+        },
+        {
+          "path": "src/week6_phase2_5_depth_model_closure.py",
+          "expected_sha256": "2766ED6D8551151B29582C6B7D83C88D39367153A70B4DCFDE249410481204B3",
+          "observed_sha256": "2766ED6D8551151B29582C6B7D83C88D39367153A70B4DCFDE249410481204B3",
+          "bytes": 101288
+        },
+        {
+          "path": "outputs/week6_02_5_depth_model_closure/phase2_5_configuration.json",
+          "expected_sha256": "CCCB6E47279AE2D6A6DBEF9906450F5404AD80207DD0E7C84DCC82C4E8BE7AED",
+          "observed_sha256": "CCCB6E47279AE2D6A6DBEF9906450F5404AD80207DD0E7C84DCC82C4E8BE7AED",
+          "bytes": 12081
+        },
+        {
+          "path": "outputs/week6_02_5_depth_model_closure/stable_depth_B_loo_predictions.csv",
+          "expected_sha256": "398A5C355E12B0B9FFE276578E9242DC5655CFC01D529DE6FF5FC0130BC0B59A",
+          "observed_sha256": "398A5C355E12B0B9FFE276578E9242DC5655CFC01D529DE6FF5FC0130BC0B59A",
+          "bytes": 340235
+        },
+        {
+          "path": "outputs/week6_02_5_depth_model_closure/stable_depth_C_loo_predictions.csv",
+          "expected_sha256": "62D55CC6EE844354E7A62C29358DAC68EC9EAD74D6A768810382752C8FB6272B",
+          "observed_sha256": "62D55CC6EE844354E7A62C29358DAC68EC9EAD74D6A768810382752C8FB6272B",
+          "bytes": 333573
+        },
+        {
+          "path": "outputs/week6_02_5_depth_model_closure/summary.json",
+          "expected_sha256": "3093361B89745ACF7F62271B0576DAEAD17A91E0225B3A4C4B55B9DF059D678F",
+          "observed_sha256": "3093361B89745ACF7F62271B0576DAEAD17A91E0225B3A4C4B55B9DF059D678F",
+          "bytes": 9209
+        }
+      ],
+      "phase1_aggregate_sha256": "21FF34AD767C8D4D6C536D66AFD147B8C700884321415078231B7A24D4C7D198",
+      "phase1_aggregate_file_count": 34,
+      "phase1_rows": 241,
+      "phase1_unique_simulation_ids": 241,
+      "phase1_revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+      "phase2_width_decision": "B_learned_nugget",
+      "phase2_length_decision": "B_learned_nugget",
+      "phase2_5_depth_decision": "B_preferred_for_depth",
+      "phase2_5_validation": "30/30 PASS",
+      "original_worktree_unchanged": true,
+      "original_worktree_detail": "branch=main; head=6fd6be57e5341e083a7023a3ae29e65b7b326bbd; status_lines=6; protected_hash_mismatches=[]"
+    },
+    "repository": {
+      "repo_root": "C:/Users/ozgur/Documents/thesis-week6-melt-pool-audit",
+      "branch": "codex/week6-phase3-model-target-robustness",
+      "head": "b112f6b22898976f77410190614cb4fb218d38f9",
+      "status_short": [
+        "?? notebooks/week_06/04_phase3_model_target_robustness.ipynb",
+        "?? outputs/week6_03_model_target_robustness/",
+        "?? scripts/build_week6_04_notebook.py",
+        "?? src/week6_phase3_model_target_robustness.py"
+      ]
+    },
+    "original_worktree_unchanged": true,
+    "original_worktree_detail": "branch=main; head=6fd6be57e5341e083a7023a3ae29e65b7b326bbd; status_lines=6; protected_hash_mismatches=[]",
+    "events": [
+      {
+        "stage": "preserve_prior_complete_force_rebuild_provenance",
+        "cache_reused": true,
+        "source_force_recompute": true,
+        "source_wall_runtime_seconds": 2722.916236800025,
+        "reason": "independent closeout audit corrected parsing of numeric 1.0/0.0 interval-coverage flags"
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 469.73178209987236,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 257.3598016000469,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 216.58335170010105,
+        "fold_count": 230
+      },
+      {
+        "stage": "mean_predictor_loo",
+        "target": "width",
+        "cache_reused": false,
+        "wall_runtime_seconds": 0.1925636000232771,
+        "fold_count": 241
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "width",
+        "model": "linear_ridge",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__width__linear_ridge.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 223.09075830038637,
+        "fold_count": 241
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "width",
+        "model": "polynomial_ridge_degree2",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__width__polynomial_ridge_degree2.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 351.86069729947485,
+        "fold_count": 241
+      },
+      {
+        "stage": "mean_predictor_loo",
+        "target": "length",
+        "cache_reused": false,
+        "wall_runtime_seconds": 0.22395590000087395,
+        "fold_count": 241
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "length",
+        "model": "linear_ridge",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__length__linear_ridge.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 225.76950350002153,
+        "fold_count": 241
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "length",
+        "model": "polynomial_ridge_degree2",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__length__polynomial_ridge_degree2.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 351.2880148999975,
+        "fold_count": 241
+      },
+      {
+        "stage": "mean_predictor_loo",
+        "target": "depth",
+        "cache_reused": false,
+        "wall_runtime_seconds": 0.19741640001302585,
+        "fold_count": 230
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "depth",
+        "model": "linear_ridge",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__depth__linear_ridge.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 214.75240599998506,
+        "fold_count": 230
+      },
+      {
+        "stage": "ridge_loo",
+        "target": "depth",
+        "model": "polynomial_ridge_degree2",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\ridge__depth__polynomial_ridge_degree2.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 344.3157848995761,
+        "fold_count": 230
+      },
+      {
+        "stage": "phase3a_assembly",
+        "cache_reused": false,
+        "wall_runtime_seconds": 1.2316332000191323,
+        "prediction_rows": 2848
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "rbf_no_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__rbf_no_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 160.4089708008105,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "rbf_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__rbf_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 154.21418889961205,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern32_no_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern32_no_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 183.48346490017138,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern52_no_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern52_no_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 223.86277929967036,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__width__T0__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 300.7972935997532,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "rbf_no_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__rbf_no_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 257.2670465997071,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "rbf_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__rbf_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 156.0971191995195,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern32_no_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern32_no_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 161.9676254001679,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern52_no_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern52_no_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 247.42091270023957,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__length__T0__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 251.25356500042835,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "rbf_no_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__rbf_no_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 285.1619901994127,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "rbf_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__rbf_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 183.0189566006884,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern32_no_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern32_no_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 208.93959230009932,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern52_no_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern52_no_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 253.49455440003658,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3b_kernel_noise",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3b_kernel_noise__depth__T0__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 346.00113539985614,
+        "fold_count": 230
+      },
+      {
+        "stage": "phase3b_assembly",
+        "cache_reused": false,
+        "wall_runtime_seconds": 1.62139450001996,
+        "prediction_rows": 4272
+      },
+      {
+        "stage": "target_definition_reconstruction",
+        "cache_reused": false,
+        "wall_runtime_seconds": 71.35705079999752,
+        "simulation_count": 241,
+        "target_value_rows": 4338,
+        "traceability_rows": 1446
+      },
+      {
+        "stage": "phase3c_t0_reuse",
+        "target": "width",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "source": "Phase 3B exact T0 LOO rows",
+        "wall_runtime_seconds": 0.0,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T1",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T1__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 294.423574199609,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T2",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T2__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 259.4436849002959,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T3",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T3__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 265.3104838997242,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T4",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T4__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 282.8356064991676,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "width",
+        "target_definition": "T5",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__width__T5__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 257.9958050994901,
+        "fold_count": 241
+      },
+      {
+        "stage": "phase3c_t0_reuse",
+        "target": "length",
+        "target_definition": "T0",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": true,
+        "source": "Phase 3B exact T0 LOO rows",
+        "wall_runtime_seconds": 0.0,
+        "fold_count": 241
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T1",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T1__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 91.50840919994516,
+        "aggregate_fold_runtime_seconds": 363.99930380051956,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T2",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T2__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 99.68058200000087,
+        "aggregate_fold_runtime_seconds": 395.47945130011067,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T3",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T3__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 93.68498269998236,
+        "aggregate_fold_runtime_seconds": 372.14120940025896,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T4",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T4__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 96.5673456999939,
+        "aggregate_fold_runtime_seconds": 384.23795459984103,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "length",
+        "target_definition": "T5",
+        "configuration": "matern52_learned_nugget",
+        "cache_reused": false,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__length__T5__matern52_learned_nugget.csv",
+        "wall_runtime_seconds": 126.0972516000038,
+        "aggregate_fold_runtime_seconds": 501.52238130004844,
+        "fold_count": 241,
+        "workers": 4
+      },
+      {
+        "stage": "phase3c_t0_reuse",
+        "target": "depth",
+        "target_definition": "T0",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "source": "Phase 3B exact T0 LOO rows",
+        "wall_runtime_seconds": 0.0,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T1",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T1__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 257.40558669989696,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T2",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T2__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 211.03443020035047,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T3",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T3__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 221.6488240994513,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T4",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T4__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 265.94070899969665,
+        "fold_count": 230
+      },
+      {
+        "stage": "gp_loo",
+        "analysis_label": "phase3c_fixed_gp_target_definition_sensitivity",
+        "target": "depth",
+        "target_definition": "T5",
+        "configuration": "matern32_learned_nugget",
+        "cache_reused": true,
+        "checkpoint": "outputs\\week6_03_model_target_robustness\\checkpoints\\gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T5__matern32_learned_nugget.csv",
+        "wall_runtime_seconds": 0.0,
+        "aggregate_fold_runtime_seconds": 269.0307915006997,
+        "fold_count": 230
+      },
+      {
+        "stage": "phase3c_assembly",
+        "cache_reused": false,
+        "wall_runtime_seconds": 509.26016419997904,
+        "prediction_rows": 4272
+      },
+      {
+        "stage": "figure_generation",
+        "cache_reused": false,
+        "wall_runtime_seconds": 13.974761200021021,
+        "figure_count": 13,
+        "figures": [
+          "outputs\\week6_03_model_target_robustness\\figures\\01_phase3_experiment_tree.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\02_simple_model_performance_comparison.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\03_gp_kernel_noise_rmse_comparison.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\04_nugget_vs_no_nugget_paired_confidence_intervals.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\05_provisional_models_observed_vs_loo_predicted.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\06_learned_nugget_std_by_kernel_and_target.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\07_target_definition_scatter_width.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\07_target_definition_scatter_length.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\07_target_definition_scatter_depth.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\08_target_definition_absolute_difference_distributions.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\09_target_stability_vs_predictability.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\10_learned_nugget_vs_target_definition_shift.png",
+          "outputs\\week6_03_model_target_robustness\\figures\\11_phase3_final_decision_scorecard.png"
+        ]
+      },
+      {
+        "stage": "notebook_build_and_first_execution",
+        "cache_reused": false,
+        "wall_runtime_seconds": 4.354323800012935,
+        "notebook": "notebooks\\week_06\\04_phase3_model_target_robustness.ipynb"
+      },
+      {
+        "stage": "notebook_final_execution",
+        "cache_reused": false,
+        "wall_runtime_seconds": 3.6818491999874823,
+        "notebook": "notebooks\\week_06\\04_phase3_model_target_robustness.ipynb"
+      }
+    ],
+    "cache_reused_event_count": 38,
+    "computed_event_count": 15,
+    "timing_principles": {
+      "wall_runtime_is_measured": true,
+      "aggregate_fold_runtime_is_not_treated_as_wall_clock": true,
+      "checkpoint_reuse_is_labelled": true,
+      "Phase3A_and_Phase3C_T0_reuse_exact_Phase3B_rows": true
+    },
+    "output_artifacts_excluding_this_file": [
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern32_learned_nugget.csv",
+        "bytes": 356503,
+        "sha256": "6A3B5BD9A25452718D429A41D8B2595FFED42F86161938DE47C9DAA68FB6246D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern32_no_nugget.csv",
+        "bytes": 298863,
+        "sha256": "47F1C4A9F0A839BC27084DD76B3D2D55282D8AC1F9B64652C8DD7797A4B79EB5"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern52_learned_nugget.csv",
+        "bytes": 356224,
+        "sha256": "6BE199598D5444EE92ABD7F4EC7124F75D1C7CADCB57510B2C3888CAFDA8438F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__matern52_no_nugget.csv",
+        "bytes": 298609,
+        "sha256": "AED0993C7F9772B7345607EAAEE84987C853F7830B3F60FA7F5E4306C7AB54E5"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__rbf_learned_nugget.csv",
+        "bytes": 349073,
+        "sha256": "E9488922C4E601ECCEB027BA41B769E9D54F1687BC1FBF33604C998EA200FC77"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__depth__T0__rbf_no_nugget.csv",
+        "bytes": 291270,
+        "sha256": "689A7FCEF3058EBF600184C682828B1324E74C51C449F8625F5A1E99A9A7110F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern32_learned_nugget.csv",
+        "bytes": 365480,
+        "sha256": "9676E98C2DE4966000CD5EE8795D6791BA28CE173BA23077E8C3BA0B896A0C2E"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern32_no_nugget.csv",
+        "bytes": 304761,
+        "sha256": "DA48B1518F03E6B20C53B6D8662DA06E0BA003088725A2EBD9251FF0A94F0735"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern52_learned_nugget.csv",
+        "bytes": 365358,
+        "sha256": "425015EDF9F465B636897D4548C59CC68DF443078683690E39D03EF12AB05304"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__matern52_no_nugget.csv",
+        "bytes": 304942,
+        "sha256": "755A72E1513996ECA5262410846F17D227E3B3FDF21D2A1A944D860DF3A8239B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__rbf_learned_nugget.csv",
+        "bytes": 358073,
+        "sha256": "5FB3AEBE6518D7FBFB21BF23912CEBC55BDF4BFF150DB880F76311418CDBE2C2"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__length__T0__rbf_no_nugget.csv",
+        "bytes": 297169,
+        "sha256": "A38C157001665C32E22907BAAFD2C5E94479DC45BFBE7BF7E770CC71B6EC462F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern32_learned_nugget.csv",
+        "bytes": 365917,
+        "sha256": "C63317081B8FE3F317F22DE2E527EFD31EEA0E82DEF9CBDB2B6DB7CBA3374E3F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern32_no_nugget.csv",
+        "bytes": 304812,
+        "sha256": "7F230E0958BEE8918800F9099A1263A3F19F99B6C8968425D2B72D21E84A9D4B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern52_learned_nugget.csv",
+        "bytes": 365577,
+        "sha256": "BAEA03AB1C096645188C60A88DF20A909443DC24270165E3D7A1CF2FD279ED4B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__matern52_no_nugget.csv",
+        "bytes": 304928,
+        "sha256": "ECB30F7B3CAA26EB022D7AFBB92B3ED8201F873B31EF1A356C2B57581B1F1F2B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__rbf_learned_nugget.csv",
+        "bytes": 357428,
+        "sha256": "0394A61738356426D8DB051AE3EBCDF5F884481207F0BBD4E6B6CAA489B78C40"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3b_kernel_noise__width__T0__rbf_no_nugget.csv",
+        "bytes": 297535,
+        "sha256": "301B7DBF65BE5F20C84C415E63CE6E0CA62EADEB1DEBD603C76FA139D5C9C795"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T1__matern32_learned_nugget.csv",
+        "bytes": 360539,
+        "sha256": "17C2F6EC26FF34D96AF440D47830BE82D4720018F4BB6BE0B7332F82768F485B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T2__matern32_learned_nugget.csv",
+        "bytes": 360434,
+        "sha256": "69DDCC770F6FE8A7F0BB4C8017BA1C3E78551C60646D376B5B9DD0B62AED2292"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T3__matern32_learned_nugget.csv",
+        "bytes": 363066,
+        "sha256": "03873ADD8797EA2CAA93C33B80AC326BDBB1AF2498F434500948C0FB21FB3088"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T4__matern32_learned_nugget.csv",
+        "bytes": 360365,
+        "sha256": "673CEAA93E591A9402D543075DA113D675C730577598A47B20AB183ACA19C5A2"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__depth__T5__matern32_learned_nugget.csv",
+        "bytes": 362058,
+        "sha256": "05BBD826BCA4FE80FC36351836A80D1FA2E94011927ACCA69648F97C032B6346"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T1__matern32_learned_nugget.csv",
+        "bytes": 374261,
+        "sha256": "37D01F208D045728A149F8B345B7A215EDD54B90F429B598309646B464AD6EC6"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T1__matern52_learned_nugget.csv",
+        "bytes": 373901,
+        "sha256": "0F0E31BB22B2B634039AFC0CF85DAC8FD901E83516289EA6153164D626B57A16"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T2__matern32_learned_nugget.csv",
+        "bytes": 372055,
+        "sha256": "BDA163B435F35C8A4E8DB301834939CD1015E14C7527730DD52241C4DD0D9653"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T2__matern52_learned_nugget.csv",
+        "bytes": 371936,
+        "sha256": "9B63CA5731FC06B5A648203EA953CBC6E7DB2E98F059E8B53F29D0824A5F3345"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T3__matern32_learned_nugget.csv",
+        "bytes": 374699,
+        "sha256": "067E0EEA7564265EEE387AEC0061CC9EDAF3804042C2F9099171E9385B37FDC5"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T3__matern52_learned_nugget.csv",
+        "bytes": 374194,
+        "sha256": "E62D89F5D233A5ABDA224105A396CF11FDF4BF78BA7CFCA637E3AFA734A73941"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T4__matern32_learned_nugget.csv",
+        "bytes": 372123,
+        "sha256": "BF8F900217CFAEEE49C4D8F2E9AF875A92640298AEFD0B80EA08334556C3EE6F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T4__matern52_learned_nugget.csv",
+        "bytes": 371892,
+        "sha256": "AEE831CA195C51D3A7AB3BD6DF8428656496E5D4D80934AFE82A29EAB5744F32"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T5__matern32_learned_nugget.csv",
+        "bytes": 373655,
+        "sha256": "A23B4A6AAF683E395296767E18CAAFF320082338BF3D250BFA349740E1759A38"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__length__T5__matern52_learned_nugget.csv",
+        "bytes": 373891,
+        "sha256": "6DF66B5065E399CACC8D3BA867271332C3B2CE0612B97D829070CDB42B0FE3B7"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T1__matern32_learned_nugget.csv",
+        "bytes": 371150,
+        "sha256": "9DF7F128DA066B1FA9CA0D6726D5094EADA026C9DEF3A4D4526CFB917E57EA36"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T2__matern32_learned_nugget.csv",
+        "bytes": 371675,
+        "sha256": "93B0B050DC1738C47526E52E4EB6A11748D3576E6EC312EB30ECEFD9302B50D8"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T3__matern32_learned_nugget.csv",
+        "bytes": 374340,
+        "sha256": "3CEF268F82FAADA99A90EC6CCBFE6D0459B5D68F8857CCAAFFA342B2C8FB76D8"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T4__matern32_learned_nugget.csv",
+        "bytes": 371789,
+        "sha256": "FD25235CD03FC276319B5E7B7B9F2B3575F54337D03074E0571992DDF438AEC3"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/gp__phase3c_fixed_gp_target_definition_sensitivity__width__T5__matern32_learned_nugget.csv",
+        "bytes": 373875,
+        "sha256": "2F2B1FEA2D7DB726240FD6B8502569008DFA5506159598C9E9874C2A9F406F31"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__depth__linear_ridge.csv",
+        "bytes": 1525306,
+        "sha256": "13F6AF57EA5E91D9D60350B67ED3C5C766388782011C387EE913C3450A6DEA9D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__depth__polynomial_ridge_degree2.csv",
+        "bytes": 1548590,
+        "sha256": "4905C27876FDD94790B370F726B018F78B891F43003D6656270FDF1B8FDF06E7"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__length__linear_ridge.csv",
+        "bytes": 1627446,
+        "sha256": "C98FEC6B983AADD3B185BBA3A80705BEC32629067264F718933292A32DF02E94"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__length__polynomial_ridge_degree2.csv",
+        "bytes": 1651040,
+        "sha256": "B5EBDEACEA6B278ED8F3DC75187B34EB72D0CB0ABE2C7030EA3B14493D55C15B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__width__linear_ridge.csv",
+        "bytes": 1627082,
+        "sha256": "804041D64D6429CAB6E12265F8FD46D0E34262BDA6A5B6E69D9602A477C57262"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/checkpoints/ridge__width__polynomial_ridge_degree2.csv",
+        "bytes": 1650395,
+        "sha256": "32B60D96580A9F5C84CA05D8BC16F9DEE464D0C666A9A6D4C46A3F2E7D9E34AE"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/decision_log.md",
+        "bytes": 7286,
+        "sha256": "6EA6AEF2F86427873E7DDD079A1D53FB0E07CD34361C0C85E63A697352FF1265"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/01_phase3_experiment_tree.png",
+        "bytes": 116718,
+        "sha256": "DBF17325D1C48D39D649A6B8FB4410D3C642259A37B5D569C45F1DE00A86BD4B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/02_simple_model_performance_comparison.png",
+        "bytes": 167073,
+        "sha256": "8FF985828688D5471D2D82273CFE295DC9532163220039A62646053A09F85846"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/03_gp_kernel_noise_rmse_comparison.png",
+        "bytes": 127495,
+        "sha256": "82250D5F0EA4E43149AEDAE29A6F92C88E9B14AE81C9F95DE02F0353EEFD1258"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/04_nugget_vs_no_nugget_paired_confidence_intervals.png",
+        "bytes": 100641,
+        "sha256": "57FFFA91F13F1C542D762FE15EAFE54AFF2C4D7634915E97E1775038501C7227"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/05_provisional_models_observed_vs_loo_predicted.png",
+        "bytes": 304713,
+        "sha256": "063316E625E602AB467999AA5C0A05D50A80D530D3D0DDF4D2534DD7D2E6E67E"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/06_learned_nugget_std_by_kernel_and_target.png",
+        "bytes": 111940,
+        "sha256": "232668193C32BDB987F69ED5B4EE639F8D5671CCD4399228700396620D2EE964"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/07_target_definition_scatter_depth.png",
+        "bytes": 306071,
+        "sha256": "90903B3C54A7E3840CEB3DF561ACEA13824BF5F93A91212D460F3E40B07C5AFB"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/07_target_definition_scatter_length.png",
+        "bytes": 311996,
+        "sha256": "37A175A42C14746D5CD73344CC89E223F3196E5606251C50000E22EBA751C25D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/07_target_definition_scatter_width.png",
+        "bytes": 314349,
+        "sha256": "D477A7CCE122F201F17B0C4BBBB779BAEFBFC5BDB018386EA7FDE030B1BDE1EA"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/08_target_definition_absolute_difference_distributions.png",
+        "bytes": 106554,
+        "sha256": "2A6C419AE955E48DECDBD21FB4DA862F157EBF9E641AE2D1D85205103A8ED477"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/09_target_stability_vs_predictability.png",
+        "bytes": 106002,
+        "sha256": "84E2E645F9F628E85B8CF7E3F762C05B7F99F8CB207DD6DFB69C7143EA5ED1E7"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/10_learned_nugget_vs_target_definition_shift.png",
+        "bytes": 105093,
+        "sha256": "E417966F2F4747F9112B075531F4E96C814BAAD2FDBD278F3120A944EB6AA93F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/figures/11_phase3_final_decision_scorecard.png",
+        "bytes": 84035,
+        "sha256": "F7535A558B7FC44483BF1C737F5B57E564BE7416248C3472D44FF9798DD1CDEB"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/full_run.stderr.log",
+        "bytes": 568,
+        "sha256": "259E020EBE9DAC2848A927E4766ADE2A1E1703289C81115D01499366CA24CF52"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/full_run.stdout.log",
+        "bytes": 41968,
+        "sha256": "69D77E5AB3E382DA6DD56F930E648B897FEBACA85E55E1D3AE0A16838EF3BEF9"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_candidate_vs_current_comparisons.csv",
+        "bytes": 932840,
+        "sha256": "17878BB9C2894C45D5D201A6C3B0B61AA650EB68C9E1A9D9F29FDC4719AB449C"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_kernel_noise_hyperparameter_diagnostics.csv",
+        "bytes": 1794661,
+        "sha256": "9BCD2E5A2352F4F8245D143D36206D99143FE33703443E634DACC48B63E43D72"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_kernel_noise_loo_predictions.csv",
+        "bytes": 5869670,
+        "sha256": "CAB1217825C7087C2CA78ACAFEE623123DBBC1CCBE33D714953B6EECBCD8E426"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_kernel_noise_metrics.csv",
+        "bytes": 19251,
+        "sha256": "ECD9EA53B78FCDD9968E165AAE2D05DED518F014712CDBDA101C1CB68FF63F6C"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/gp_kernel_paired_bootstrap_summary.csv",
+        "bytes": 9168,
+        "sha256": "F0153FF762202D436B378F667C39D1C9D122E161670E4328FF19FFEE3601FB81"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/learned_nugget_by_kernel_summary.csv",
+        "bytes": 7043,
+        "sha256": "4A6CB262ADA99DBBEC104FAE1AEF70429586F3703EB4BFFCBBD5073058BDB596"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_configuration.json",
+        "bytes": 7945,
+        "sha256": "15382BBC6C5FDE16117F5F180BEE1F6BEF7C013FA845902999E3B48BA15981C2"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_coverage_repair.stderr.log",
+        "bytes": 568,
+        "sha256": "259E020EBE9DAC2848A927E4766ADE2A1E1703289C81115D01499366CA24CF52"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_coverage_repair.stdout.log",
+        "bytes": 10673,
+        "sha256": "66EE6799F209861252561B02B98471EA39B359B26CCB4CDF03329C2B46D0D83A"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_final_model_decision.csv",
+        "bytes": 2079,
+        "sha256": "D32B6B98FFD8B760C4BEB9C055903A153D1E9355EAF61B48DA76BAB72DFE91DA"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_final_model_paired_bootstrap_summary.csv",
+        "bytes": 2643,
+        "sha256": "6F7B93CAE71B6DAFBE155518817FA329078824955FBCA84058310ECF71265077"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_final_target_decision.csv",
+        "bytes": 8835,
+        "sha256": "B46F94A3B62211887D49AE5BDC7B6DE968B81A969EB7DF8E2CB86B768FD5B0C2"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_input_population_summary.csv",
+        "bytes": 1079,
+        "sha256": "E8F8122ADFEDC9699FF35A3C043C68305AB54F00809554C43F39629A1260B302"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_preflight_snapshot.json",
+        "bytes": 8248,
+        "sha256": "4BAF1460D88F14EB4D58D092917B4657D0B39B1BD5B4505E01EEE612A86D031A"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/phase3_requirement_checklist.csv",
+        "bytes": 6599,
+        "sha256": "BBE1BBBE8ED9312E8298737C09B8BC2013AC426A6A24B7E45B88E1FFF5F14F3E"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/provisional_kernel_decision.csv",
+        "bytes": 3805,
+        "sha256": "D74874B1F9E849788F1835EBFAE199E37480BDB5B51831BF0F0D9296BAFFF9DE"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/results_summary.md",
+        "bytes": 10457,
+        "sha256": "EC6B8CEA17C795A7B50944817D51B97644DD5E4284E1FC9E81669C0231C166D0"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_loo_predictions.csv",
+        "bytes": 11207320,
+        "sha256": "1102801B8495D0ED120311ED1050D5600BE8F9DCAE1F80AA0E1EA8A96F059141"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_metrics.csv",
+        "bytes": 2952,
+        "sha256": "E57A4BFF4AAF3B9FF4BFC78F00F5A6A33A89811AFA4401F54801E578EF671515"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_paired_bootstrap_summary.csv",
+        "bytes": 2666,
+        "sha256": "FA2D71064ABF4236AB617603D41AFD27D7A2E96E0FE3B76A6E433420B4730064"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_paired_comparisons.csv",
+        "bytes": 351463,
+        "sha256": "18240184761901485FD3A9F45C5CCCC32A4607E696E0876B3EBB3BF3D019071D"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/simple_baseline_selected_hyperparameters.csv",
+        "bytes": 8617496,
+        "sha256": "6E6151D1E37DD47E978C4E6BF2289B4659888A0CBDE3CB25D7CF209FB40E3001"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/smoke/smoke_prediction_rows.csv",
+        "bytes": 197220,
+        "sha256": "7E1297B8E16C86BD1B6859DDEE18DF3B857F9FE67B701E1543A5C1C8E43257CC"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/smoke/smoke_target_definition_rows.csv",
+        "bytes": 64944,
+        "sha256": "E0829D6BB156507BAA3464850085DF4AB8AF52E887675C64319465B80E3B9B4F"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/smoke_test_summary.json",
+        "bytes": 7680,
+        "sha256": "8E9FE99B6F4CEDB9B6E4123AC3E2A2B6246667C817E84D63B7D3DA6A6D7B4DC3"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/summary.json",
+        "bytes": 479564,
+        "sha256": "F462E0519E7004C368247DA5D7A08DDB06F9E405625CFF9684D9821624480A5E"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_decision.csv",
+        "bytes": 8725,
+        "sha256": "E601FFAB3FF64D1A0DC146065DD1118D999E4462CD258921D8D2F7D0D055B190"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_difference_summary.csv",
+        "bytes": 8324,
+        "sha256": "D04ED5B759A1052D911335CFDDFC783837BC7AF07423E346B9BD3D3DBD967B13"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_distribution_summary.csv",
+        "bytes": 12127,
+        "sha256": "648417925FF13964EE65A83B080FA1CF9F27CA2C1C1017EFF65029F0256BFC91"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_loo_predictions.csv",
+        "bytes": 6602650,
+        "sha256": "7F18F7EC474AD37AA90D6FCAB20B32382AFC98C244968867367CE9230C27D3B7"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_model_metrics.csv",
+        "bytes": 24087,
+        "sha256": "E3A3F90CA6430CE041893263E1766C337FA54FC5088ADE867614F0A0DED2B2A4"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_model_paired_bootstrap_summary.csv",
+        "bytes": 5465,
+        "sha256": "57763A66350CBC03EDA02E91FEFF90F91E934C8C8FC8B18BFE357E6518AC8C2C"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_nugget_summary.csv",
+        "bytes": 13637,
+        "sha256": "A8A3E2D1A6A374C9D4FFF4124C09F5EF7CECCC95EA8DC6F10CB8B5F0CE7DC7C0"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_simulation_level_table.csv",
+        "bytes": 1305825,
+        "sha256": "EFDCDF1C0F7C9C815D97864C9919A6E63ABCA878083B854849E8DE2D31DDEC95"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/target_definition_traceability.csv",
+        "bytes": 1383274,
+        "sha256": "C6DC3B2C98E407CBFBE502CF887343D12227711555EBA6EA028EA1113CA062A1"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/validation_results.csv",
+        "bytes": 7394,
+        "sha256": "8D67281DEC52B567C6790066BD1412EE8065EAE61F79CB3ABF37B47C70400A2B"
+      },
+      {
+        "path": "outputs/week6_03_model_target_robustness/within_kernel_nugget_comparisons.csv",
+        "bytes": 553445,
+        "sha256": "B22123478873A6EEEF3CC405264A8D2C322CDDBCA7B2EA1B71E5F95245EB57A8"
+      }
+    ]
+  }
+}

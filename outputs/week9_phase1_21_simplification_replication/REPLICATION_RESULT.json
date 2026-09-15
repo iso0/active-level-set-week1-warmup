@@ -1,0 +1,545 @@
+{
+  "primary_tests": [
+    {
+      "mean": 0.0031709558823529087,
+      "ci_low": 0.0016712622549019446,
+      "ci_high": 0.004759497549019562,
+      "signflip_p": 9.999000099990002e-05,
+      "positive_blocks": 42,
+      "blocks": 60,
+      "policy": "coverage_then_margin_B40",
+      "window": "16-80",
+      "candidate_AULC": 0.8442432598039216,
+      "margin_AULC": 0.8410723039215686,
+      "holm_p": 0.00039996000399960006
+    },
+    {
+      "mean": 0.0070547385620914945,
+      "ci_low": 0.0037620506535947593,
+      "ci_high": 0.010596405228758161,
+      "signflip_p": 0.00019998000199980003,
+      "positive_blocks": 43,
+      "blocks": 60,
+      "policy": "coverage_then_margin_B40",
+      "window": "16-40",
+      "candidate_AULC": 0.830923202614379,
+      "margin_AULC": 0.8238684640522875,
+      "holm_p": 0.00039996000399960006
+    },
+    {
+      "mean": 0.0067080269607842965,
+      "ci_low": 0.004774777879901932,
+      "ci_high": 0.008632084865196085,
+      "signflip_p": 9.999000099990002e-05,
+      "positive_blocks": 54,
+      "blocks": 60,
+      "policy": "early8__coverage_then_margin_B40",
+      "window": "16-80",
+      "candidate_AULC": 0.8477803308823529,
+      "margin_AULC": 0.8410723039215686,
+      "holm_p": 0.00039996000399960006
+    },
+    {
+      "mean": 0.01380310457516337,
+      "ci_low": 0.009860804738562058,
+      "ci_high": 0.01779003267973852,
+      "signflip_p": 9.999000099990002e-05,
+      "positive_blocks": 53,
+      "blocks": 60,
+      "policy": "early8__coverage_then_margin_B40",
+      "window": "16-40",
+      "candidate_AULC": 0.837671568627451,
+      "margin_AULC": 0.8238684640522875,
+      "holm_p": 0.00039996000399960006
+    }
+  ],
+  "verdicts": {
+    "coverage_then_margin_B40": {
+      "REPLICATED": true,
+      "window_passing": [
+        "16-80",
+        "16-40"
+      ],
+      "other_window_nonnegative": true,
+      "guardrails": {
+        "B40_q20_KH_recall_change": -0.00343650793650796,
+        "B80_full81_accuracy_change": 8.230452674895528e-05,
+        "pass": true
+      }
+    },
+    "early8__coverage_then_margin_B40": {
+      "REPLICATED": true,
+      "window_passing": [
+        "16-80",
+        "16-40"
+      ],
+      "other_window_nonnegative": true,
+      "guardrails": {
+        "B40_q20_KH_recall_change": 0.010051587301587395,
+        "B80_full81_accuracy_change": 0.00045267489711930953,
+        "pass": true
+      }
+    }
+  },
+  "misfit_question": [
+    {
+      "mean": -0.000588235294117669,
+      "ci_low": -0.0011887254901961134,
+      "ci_high": 3.0637254901712264e-06,
+      "signflip_p": 0.05799420057994201,
+      "positive_blocks": 26,
+      "blocks": 60,
+      "candidate": "coverage_then_margin_B40",
+      "reference": "cov_then_misfit_B40",
+      "window": "16-80",
+      "noninferiority_margin": 0.001,
+      "noninferior": false,
+      "reference_better_ci_excludes_zero": false
+    },
+    {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "signflip_p": 1.0,
+      "positive_blocks": 0,
+      "blocks": 60,
+      "candidate": "coverage_then_margin_B40",
+      "reference": "cov_then_misfit_B40",
+      "window": "16-40",
+      "noninferiority_margin": 0.0025,
+      "noninferior": true,
+      "reference_better_ci_excludes_zero": false
+    },
+    {
+      "mean": -0.0009451985922574143,
+      "ci_low": -0.0019256535947712403,
+      "ci_high": 3.519356460532553e-05,
+      "signflip_p": 0.0634936506349365,
+      "positive_blocks": 26,
+      "blocks": 60,
+      "candidate": "coverage_then_margin_B40",
+      "reference": "cov_then_misfit_B40",
+      "window": "41-80",
+      "noninferiority_margin": null,
+      "noninferior": null,
+      "reference_better_ci_excludes_zero": false
+    },
+    {
+      "mean": -0.000326286764705902,
+      "ci_low": -0.0009084329044117968,
+      "ci_high": 0.000220588235294093,
+      "signflip_p": 0.25647435256474355,
+      "positive_blocks": 27,
+      "blocks": 60,
+      "candidate": "early8__coverage_then_margin_B40",
+      "reference": "early8__cov_then_misfit_B40",
+      "window": "16-80",
+      "noninferiority_margin": 0.001,
+      "noninferior": true,
+      "reference_better_ci_excludes_zero": false
+    },
+    {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "signflip_p": 1.0,
+      "positive_blocks": 0,
+      "blocks": 60,
+      "candidate": "early8__coverage_then_margin_B40",
+      "reference": "early8__cov_then_misfit_B40",
+      "window": "16-40",
+      "noninferiority_margin": 0.0025,
+      "noninferior": true,
+      "reference_better_ci_excludes_zero": false
+    },
+    {
+      "mean": -0.0005178481649069773,
+      "ci_low": -0.001447963800904952,
+      "ci_high": 0.0003770739064856793,
+      "signflip_p": 0.287971202879712,
+      "positive_blocks": 28,
+      "blocks": 60,
+      "candidate": "early8__coverage_then_margin_B40",
+      "reference": "early8__cov_then_misfit_B40",
+      "window": "41-80",
+      "noninferiority_margin": null,
+      "noninferior": null,
+      "reference_better_ci_excludes_zero": false
+    }
+  ],
+  "misfit_verdict": {
+    "coverage_then_margin_B40": "COVERAGE_WORKS_NONINFERIORITY_INCONCLUSIVE",
+    "early8__coverage_then_margin_B40": "COVERAGE_SUFFICIENT"
+  },
+  "secondary": {
+    "coverage_then_margin_B40": {
+      "AULC 41-80 q20 accuracy": {
+        "mean": 0.0006058320764203041,
+        "ci_low": -0.00037707390648567733,
+        "ci_high": 0.00157371794871794,
+        "signflip_p": 0.22857714228577142,
+        "positive_blocks": 34,
+        "blocks": 60
+      },
+      "q30 accuracy AULC 16-80": {
+        "mean": 0.002432291666666671,
+        "ci_low": 0.0012801822916666625,
+        "ci_high": 0.0036625260416666703,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 45,
+        "blocks": 60
+      },
+      "q20 balanced accuracy AULC 16-80": {
+        "mean": 0.00249870738347302,
+        "ci_low": 0.000853589341431153,
+        "ci_high": 0.004295657897513393,
+        "signflip_p": 0.0044995500449955,
+        "positive_blocks": 37,
+        "blocks": 60
+      },
+      "q20 Keyhole recall AULC 16-80": {
+        "mean": 0.0002395006613756671,
+        "ci_low": -0.0032903157552083206,
+        "ci_high": 0.0038905183015046454,
+        "signflip_p": 0.8917108289171083,
+        "positive_blocks": 29,
+        "blocks": 60
+      },
+      "full81 accuracy AULC 16-80": {
+        "mean": 0.0007986111111111101,
+        "ci_low": 0.0004092721193415728,
+        "ci_high": 0.0012069267618312794,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 47,
+        "blocks": 60
+      },
+      "B40 q20 Keyhole recall change": -0.00343650793650796,
+      "B80 full81 accuracy change": 8.230452674895528e-05,
+      "simulations_saved": [
+        {
+          "margin_budget": 24,
+          "margin_q20_accuracy": 0.8201960784313725,
+          "candidate_first_budget": 22,
+          "simulations_saved": 2,
+          "percent_fewer": 8.3
+        },
+        {
+          "margin_budget": 32,
+          "margin_q20_accuracy": 0.8298039215686275,
+          "candidate_first_budget": 24,
+          "simulations_saved": 8,
+          "percent_fewer": 25.0
+        },
+        {
+          "margin_budget": 40,
+          "margin_q20_accuracy": 0.8384313725490196,
+          "candidate_first_budget": 28,
+          "simulations_saved": 12,
+          "percent_fewer": 30.0
+        },
+        {
+          "margin_budget": 60,
+          "margin_q20_accuracy": 0.8529411764705882,
+          "candidate_first_budget": 59,
+          "simulations_saved": 1,
+          "percent_fewer": 1.7
+        }
+      ],
+      "vs margin AULC 16-80": {
+        "mean": 0.0031709558823529087,
+        "ci_low": 0.00164365042892155,
+        "ci_high": 0.004776386335784279,
+        "signflip_p": 0.00039996000399960006,
+        "positive_blocks": 42,
+        "blocks": 60
+      },
+      "vs margin AULC 16-40": {
+        "mean": 0.0070547385620914945,
+        "ci_low": 0.0036804534313725342,
+        "ci_high": 0.010482128267973827,
+        "signflip_p": 0.00019998000199980003,
+        "positive_blocks": 43,
+        "blocks": 60
+      }
+    },
+    "early8__coverage_then_margin_B40": {
+      "AULC 41-80 q20 accuracy": {
+        "mean": 0.0022096530920060215,
+        "ci_low": 0.0007264957264957271,
+        "ci_high": 0.003710470085470066,
+        "signflip_p": 0.0053994600539946005,
+        "positive_blocks": 38,
+        "blocks": 60
+      },
+      "q30 accuracy AULC 16-80": {
+        "mean": 0.005853125,
+        "ci_low": 0.004385390624999998,
+        "ci_high": 0.0072927343749999984,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 53,
+        "blocks": 60
+      },
+      "q20 balanced accuracy AULC 16-80": {
+        "mean": 0.006059496746020197,
+        "ci_low": 0.003899424718077066,
+        "ci_high": 0.008247937001330564,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 48,
+        "blocks": 60
+      },
+      "q20 Keyhole recall AULC 16-80": {
+        "mean": 0.00325481564153439,
+        "ci_low": -0.0012905009920634997,
+        "ci_high": 0.007706458229993374,
+        "signflip_p": 0.16578342165783422,
+        "positive_blocks": 36,
+        "blocks": 60
+      },
+      "full81 accuracy AULC 16-80": {
+        "mean": 0.0021058384773662434,
+        "ci_low": 0.0015978571887859975,
+        "ci_high": 0.0026044962062756944,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 54,
+        "blocks": 60
+      },
+      "B40 q20 Keyhole recall change": 0.010051587301587395,
+      "B80 full81 accuracy change": 0.00045267489711930953,
+      "simulations_saved": [
+        {
+          "margin_budget": 24,
+          "margin_q20_accuracy": 0.8201960784313725,
+          "candidate_first_budget": 17,
+          "simulations_saved": 7,
+          "percent_fewer": 29.2
+        },
+        {
+          "margin_budget": 32,
+          "margin_q20_accuracy": 0.8298039215686275,
+          "candidate_first_budget": 23,
+          "simulations_saved": 9,
+          "percent_fewer": 28.1
+        },
+        {
+          "margin_budget": 40,
+          "margin_q20_accuracy": 0.8384313725490196,
+          "candidate_first_budget": 26,
+          "simulations_saved": 14,
+          "percent_fewer": 35.0
+        },
+        {
+          "margin_budget": 60,
+          "margin_q20_accuracy": 0.8529411764705882,
+          "candidate_first_budget": 52,
+          "simulations_saved": 8,
+          "percent_fewer": 13.3
+        }
+      ],
+      "vs margin AULC 16-80": {
+        "mean": 0.0067080269607842965,
+        "ci_low": 0.0047043121936274305,
+        "ci_high": 0.008708716299019599,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 54,
+        "blocks": 60
+      },
+      "vs margin AULC 16-40": {
+        "mean": 0.01380310457516337,
+        "ci_low": 0.00989379084967318,
+        "ci_high": 0.017765624999999983,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 53,
+        "blocks": 60
+      }
+    },
+    "cov_then_misfit_B40": {
+      "AULC 41-80 q20 accuracy": {
+        "mean": 0.0015510306686777183,
+        "ci_low": 0.00027149321266969125,
+        "ci_high": 0.00288342131724483,
+        "signflip_p": 0.025897410258974102,
+        "positive_blocks": 35,
+        "blocks": 60
+      },
+      "q30 accuracy AULC 16-80": {
+        "mean": 0.003082291666666685,
+        "ci_low": 0.0018927083333333539,
+        "ci_high": 0.0043083333333333316,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 45,
+        "blocks": 60
+      },
+      "q20 balanced accuracy AULC 16-80": {
+        "mean": 0.0026135009738525467,
+        "ci_low": 0.0007324359893939886,
+        "ci_high": 0.004575501131897648,
+        "signflip_p": 0.007399260073992601,
+        "positive_blocks": 38,
+        "blocks": 60
+      },
+      "q20 Keyhole recall AULC 16-80": {
+        "mean": -0.0012924417162698395,
+        "ci_low": -0.005301333860367069,
+        "ci_high": 0.0026523235987103207,
+        "signflip_p": 0.5235476452354765,
+        "positive_blocks": 27,
+        "blocks": 60
+      },
+      "full81 accuracy AULC 16-80": {
+        "mean": 0.0009375000000000004,
+        "ci_low": 0.0005121447402263433,
+        "ci_high": 0.0013715358153292283,
+        "signflip_p": 0.00019998000199980003,
+        "positive_blocks": 42,
+        "blocks": 60
+      },
+      "B40 q20 Keyhole recall change": -0.00343650793650796,
+      "B80 full81 accuracy change": 0.0004115226337449984,
+      "simulations_saved": [
+        {
+          "margin_budget": 24,
+          "margin_q20_accuracy": 0.8201960784313725,
+          "candidate_first_budget": 22,
+          "simulations_saved": 2,
+          "percent_fewer": 8.3
+        },
+        {
+          "margin_budget": 32,
+          "margin_q20_accuracy": 0.8298039215686275,
+          "candidate_first_budget": 24,
+          "simulations_saved": 8,
+          "percent_fewer": 25.0
+        },
+        {
+          "margin_budget": 40,
+          "margin_q20_accuracy": 0.8384313725490196,
+          "candidate_first_budget": 28,
+          "simulations_saved": 12,
+          "percent_fewer": 30.0
+        },
+        {
+          "margin_budget": 60,
+          "margin_q20_accuracy": 0.8529411764705882,
+          "candidate_first_budget": 57,
+          "simulations_saved": 3,
+          "percent_fewer": 5.0
+        }
+      ],
+      "vs margin AULC 16-80": {
+        "mean": 0.0037591911764705776,
+        "ci_low": 0.002138442095588208,
+        "ci_high": 0.005444316789215687,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 45,
+        "blocks": 60
+      },
+      "vs margin AULC 16-40": {
+        "mean": 0.0070547385620914945,
+        "ci_low": 0.003717320261437908,
+        "ci_high": 0.01057189542483659,
+        "signflip_p": 0.0004999500049995,
+        "positive_blocks": 43,
+        "blocks": 60
+      }
+    },
+    "early8__cov_then_misfit_B40": {
+      "AULC 41-80 q20 accuracy": {
+        "mean": 0.002727501256912999,
+        "ci_low": 0.0010331825037707203,
+        "ci_high": 0.004434451985922542,
+        "signflip_p": 0.0026997300269973002,
+        "positive_blocks": 39,
+        "blocks": 60
+      },
+      "q30 accuracy AULC 16-80": {
+        "mean": 0.006260416666666672,
+        "ci_low": 0.00480830729166667,
+        "ci_high": 0.007737526041666679,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 54,
+        "blocks": 60
+      },
+      "q20 balanced accuracy AULC 16-80": {
+        "mean": 0.0061392265864922265,
+        "ci_low": 0.0038127947582293643,
+        "ci_high": 0.008463436188558295,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 44,
+        "blocks": 60
+      },
+      "q20 Keyhole recall AULC 16-80": {
+        "mean": 0.0027148954199735396,
+        "ci_low": -0.001839454933449079,
+        "ci_high": 0.007341866112764552,
+        "signflip_p": 0.25997400259974,
+        "positive_blocks": 34,
+        "blocks": 60
+      },
+      "full81 accuracy AULC 16-80": {
+        "mean": 0.0022112911522633636,
+        "ci_low": 0.0016981658307613009,
+        "ci_high": 0.0027266669881686966,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 53,
+        "blocks": 60
+      },
+      "B40 q20 Keyhole recall change": 0.010051587301587395,
+      "B80 full81 accuracy change": 0.0006172839506172201,
+      "simulations_saved": [
+        {
+          "margin_budget": 24,
+          "margin_q20_accuracy": 0.8201960784313725,
+          "candidate_first_budget": 17,
+          "simulations_saved": 7,
+          "percent_fewer": 29.2
+        },
+        {
+          "margin_budget": 32,
+          "margin_q20_accuracy": 0.8298039215686275,
+          "candidate_first_budget": 23,
+          "simulations_saved": 9,
+          "percent_fewer": 28.1
+        },
+        {
+          "margin_budget": 40,
+          "margin_q20_accuracy": 0.8384313725490196,
+          "candidate_first_budget": 26,
+          "simulations_saved": 14,
+          "percent_fewer": 35.0
+        },
+        {
+          "margin_budget": 60,
+          "margin_q20_accuracy": 0.8529411764705882,
+          "candidate_first_budget": 42,
+          "simulations_saved": 18,
+          "percent_fewer": 30.0
+        }
+      ],
+      "vs margin AULC 16-80": {
+        "mean": 0.007034313725490199,
+        "ci_low": 0.005009191176470622,
+        "ci_high": 0.009109987745098027,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 51,
+        "blocks": 60
+      },
+      "vs margin AULC 16-40": {
+        "mean": 0.01380310457516337,
+        "ci_low": 0.009836601307189524,
+        "ci_high": 0.017827512254901923,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 53,
+        "blocks": 60
+      }
+    }
+  },
+  "replication": {
+    "repeats": [
+      61,
+      120
+    ],
+    "repeat_blocks": 60,
+    "outer_cv_runs_per_policy": 300,
+    "what_a_run_is": "one outer cross-validation run over the same 405 simulations; not an independent simulation"
+  }
+}

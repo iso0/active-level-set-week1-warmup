@@ -1,0 +1,25 @@
+{
+  "all_margin_crossings_observed_H320": false,
+  "bootstrap_draws": 20000,
+  "hierarchy": "20 repeat blocks resampled; all five folds retained; 30 Random continuations resampled within fold",
+  "mathematical_lower_bound_average_delta_Q": null,
+  "mathematical_lower_bound_delta_interval": {
+    "one_sided_95pct_lower": null,
+    "two_sided_95pct_lower": null,
+    "two_sided_95pct_upper": null
+  },
+  "restricted_delta_Q": 24.99633333333334,
+  "restricted_delta_interval": {
+    "one_sided_95pct_lower": 12.72920000000001,
+    "two_sided_95pct_lower": 10.317308333333324,
+    "two_sided_95pct_upper": 38.357008333333326
+  },
+  "restricted_margin_mean_Q": 53.47,
+  "restricted_random_mean_Q": 78.46633333333334,
+  "restricted_ratio": 1.4674833239822955,
+  "restricted_ratio_interval": {
+    "one_sided_95pct_lower": 1.209698065433856,
+    "two_sided_95pct_lower": 1.163974159848801,
+    "two_sided_95pct_upper": 1.884245645563897
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "0": {
+    "snapshot_uncertain_fractions": {
+      "6": 0.82078125,
+      "20": 0.5638671875,
+      "50": 0.3091796875
+    },
+    "contracts_from_6_to_50": true
+  },
+  "1": {
+    "snapshot_uncertain_fractions": {
+      "6": 0.50453125,
+      "20": 0.5186328125,
+      "50": 0.3899609375
+    },
+    "contracts_from_6_to_50": true
+  },
+  "2": {
+    "snapshot_uncertain_fractions": {
+      "6": 0.9025390625,
+      "20": 0.6666015625,
+      "50": 0.388671875
+    },
+    "contracts_from_6_to_50": true
+  }
+}

@@ -1009,3 +1009,96 @@ Experiments 06 and 08, not statements of the corrected thesis chronology.
   all required analysis validations pass, and the deterministic 3,100-member
   H=320 checkpoint bundle records per-member SHA-256 values plus its explicit
   dependency on the pinned frozen H=160 archive.
+
+
+## 2026-09-14 — Tüm tez çalışmalarının tek depoda birleştirilmesi
+
+Ana çalışma yeri `C:\Users\ozgur\Documents\thesis`; GitHub `main` aynı birleşik ağacı gösterecek şekilde güncellenir. Önceki günlük içeriği değiştirilmeden bu kayıt eklendi. Farklı kaynak günlüklerinin tamamı kaynak manifesti ve `docs/_history/` içinde korunur.
+
+Week 1–9 ve Week 8.5 dahil aşağıdaki bütün mevcut çıktı aileleri kataloglandı; Python `src`, notebook `notebooks`, çıktı ve araştırma raporları `outputs` altında toplandı. Kaynak klasörler silinmedi.
+
+- [branin_week1](phases/branin_week1.md)
+- [make_moons](phases/make_moons.md)
+- [week2_acquisition_comparison](phases/week2_acquisition_comparison.md)
+- [week3_4d_benchmark_comparison](phases/week3_4d_benchmark_comparison.md)
+- [week3_4d_benchmark_search](phases/week3_4d_benchmark_search.md)
+- [week3_4d_named_benchmark_comparison](phases/week3_4d_named_benchmark_comparison.md)
+- [week4_01_boundary_metrics](phases/week4_01_boundary_metrics.md)
+- [week4_02_diversified_straddle](phases/week4_02_diversified_straddle.md)
+- [week4_03_boundary_gated_diversified_straddle](phases/week4_03_boundary_gated_diversified_straddle.md)
+- [week4_04_lookahead_boundary_uncertainty](phases/week4_04_lookahead_boundary_uncertainty.md)
+- [week4_05_gated_geometric_boundary_contraction](phases/week4_05_gated_geometric_boundary_contraction.md)
+- [week4_06_gp_classifier_surrogate](phases/week4_06_gp_classifier_surrogate.md)
+- [week4_07_optimized_gp_classifier_surrogate](phases/week4_07_optimized_gp_classifier_surrogate.md)
+- [week4_08_boundary_weighted_sur](phases/week4_08_boundary_weighted_sur.md)
+- [week4_09_gpc_bernoulli_sur_validation](phases/week4_09_gpc_bernoulli_sur_validation.md)
+- [week4_boundary_metrics](phases/week4_boundary_metrics.md)
+- [week5_01_first_conduction_data_audit](phases/week5_01_first_conduction_data_audit.md)
+- [week5_02_first_conduction_gp_kernel_comparison](phases/week5_02_first_conduction_gp_kernel_comparison.md)
+- [week5_03_bug_initial_emptiness_ls_analysis](phases/week5_03_bug_initial_emptiness_ls_analysis.md)
+- [week5_04_matern32_optimizer_comparison](phases/week5_04_matern32_optimizer_comparison.md)
+- [week5_05_ard_matern32_extension](phases/week5_05_ard_matern32_extension.md)
+- [week5_2_lookahead_boundary_uncertainty](phases/week5_2_lookahead_boundary_uncertainty.md)
+- [week5_3_gated_geometric_boundary_contraction](phases/week5_3_gated_geometric_boundary_contraction.md)
+- [week5_boundary_gated_diversified_straddle_comparison](phases/week5_boundary_gated_diversified_straddle_comparison.md)
+- [week5_diversified_straddle_comparison](phases/week5_diversified_straddle_comparison.md)
+- [week6_01_melt_pool_data_audit](phases/week6_01_melt_pool_data_audit.md)
+- [week6_02_5_depth_model_closure](phases/week6_02_5_depth_model_closure.md)
+- [week6_02_gp_response_noise_comparison](phases/week6_02_gp_response_noise_comparison.md)
+- [week6_03_5_regime_target_design](phases/week6_03_5_regime_target_design.md)
+- [week6_03_model_target_robustness](phases/week6_03_model_target_robustness.md)
+- [week6_04_new_outputs_feature_effects](phases/week6_04_new_outputs_feature_effects.md)
+- [week6_1_optimized_gp_classifier_surrogate_comparison](phases/week6_1_optimized_gp_classifier_surrogate_comparison.md)
+- [week6_gp_classifier_surrogate_comparison](phases/week6_gp_classifier_surrogate_comparison.md)
+- [week7_01_sph_v2_audit](phases/week7_01_sph_v2_audit.md)
+- [week7_02_sph_v2_target_extraction](phases/week7_02_sph_v2_target_extraction.md)
+- [week7_03_new_data_physical_model_stability](phases/week7_03_new_data_physical_model_stability.md)
+- [week7_04_new_data_feature_effects_depth_diagnostics](phases/week7_04_new_data_feature_effects_depth_diagnostics.md)
+- [week7_05_5_g3_robustness_transfer_analysis](phases/week7_05_5_g3_robustness_transfer_analysis.md)
+- [week7_05_keyhole_physical_proxy_analysis](phases/week7_05_keyhole_physical_proxy_analysis.md)
+- [week7_06_real_data_boundary_active_level_set](phases/week7_06_real_data_boundary_active_level_set.md)
+- [week7_07_final_boundary_hybrid_benchmark](phases/week7_07_final_boundary_hybrid_benchmark.md)
+- [week7_1_gpc_sur_validation](phases/week7_1_gpc_sur_validation.md)
+- [week7_boundary_weighted_sur](phases/week7_boundary_weighted_sur.md)
+- [week8_01_final_sample_efficiency](phases/week8_01_final_sample_efficiency.md)
+- [week8_02_thesis_consolidation](phases/week8_02_thesis_consolidation.md)
+- [week8_5_frozen_confirmation](phases/week8_5_frozen_confirmation.md)
+- [week9_phase1_10_closure_diagnostics](phases/week9_phase1_10_closure_diagnostics.md)
+- [week9_phase1_10_external_experimental_validation](phases/week9_phase1_10_external_experimental_validation.md)
+- [week9_phase1_10b_two_slope_challenger](phases/week9_phase1_10b_two_slope_challenger.md)
+- [week9_phase1_11_fixed_mean_discrepancy_gp](phases/week9_phase1_11_fixed_mean_discrepancy_gp.md)
+- [week9_phase1_12_gpc_kernel_adequacy](phases/week9_phase1_12_gpc_kernel_adequacy.md)
+- [week9_phase1_13_fixed_physics_ard_discrepancy](phases/week9_phase1_13_fixed_physics_ard_discrepancy.md)
+- [week9_phase1_14_m3_margin_acquisition](phases/week9_phase1_14_m3_margin_acquisition.md)
+- [week9_phase1_15a_physics_residual_signal_audit](phases/week9_phase1_15a_physics_residual_signal_audit.md)
+- [week9_phase1_16_m3_repulsion_scale_audit](phases/week9_phase1_16_m3_repulsion_scale_audit.md)
+- [week9_phase1_17a_physics_contour_geometry_audit](phases/week9_phase1_17a_physics_contour_geometry_audit.md)
+- [week9_phase1_18a_level_set_acquisition_compatibility_audit](phases/week9_phase1_18a_level_set_acquisition_compatibility_audit.md)
+- [week9_phase1_18b0_fast_gpc_sur_update_validation](phases/week9_phase1_18b0_fast_gpc_sur_update_validation.md)
+- [week9_phase1_18b_prospective_global_gpc_sur_benchmark](phases/week9_phase1_18b_prospective_global_gpc_sur_benchmark.md)
+- [week9_phase1_19a_integrity_posterior_monotonicity_audit](phases/week9_phase1_19a_integrity_posterior_monotonicity_audit.md)
+- [week9_phase1_19b_prospective_robust_monotone_pool_lse](phases/week9_phase1_19b_prospective_robust_monotone_pool_lse.md)
+- [W09-P1.20-ACQUISITION-SEARCH — Claude / CCM araması](phases/week9_phase1_20_acquisition_search.md)
+- [W09-P1.20-G3-MARGIN — M3 değerlendirici + G3 margin seçimi](phases/week9_phase1_20_m3_g3_margin_acquisition.md)
+- [W09-P1.21 — Sadeleştirme ve tekrar](phases/week9_phase1_21_simplification_replication.md)
+- [W09-P1.22 — Dış kör havuz uygunluk denetimi](phases/week9_phase1_22_external_blind_test.md)
+- [W09-P1.23 — Yöntem geçerliliği alt çalışmaları](phases/week9_phase1_23_method_validity.md)
+- [week9_phase1_5_h_physics_confirmation](phases/week9_phase1_5_h_physics_confirmation.md)
+- [week9_phase1_7_physics_ridge_residual_gp](phases/week9_phase1_7_physics_ridge_residual_gp.md)
+- [week9_phase1_8_model_path_decomposition](phases/week9_phase1_8_model_path_decomposition.md)
+- [week9_phase1_9_physics_specificity_control](phases/week9_phase1_9_physics_specificity_control.md)
+- [week9_phase1_close_week8](phases/week9_phase1_close_week8.md)
+- [week9_phase2_1_fourd_plus_width_control](phases/week9_phase2_1_fourd_plus_width_control.md)
+- [week9_phase2_1r_simple_width_change_control](phases/week9_phase2_1r_simple_width_change_control.md)
+- [week9_phase2_1re_early_prefix_width_control](phases/week9_phase2_1re_early_prefix_width_control.md)
+- [week9_phase2_2_width_informed_active_learning](phases/week9_phase2_2_width_informed_active_learning.md)
+- [W09-P2 — Zamana bağlı genişlik dinamiği](phases/week9_phase2_temporal_width_dynamics.md)
+
+Phase 1.20-G3-MARGIN ile Phase 1.20-ACQUISITION-SEARCH ayrı çalışmalardır. G3 erken q20 balanced-accuracy AULC farkı −0.002560 [−0.010570,+0.005446]; kazanç desteklenmedi. CCM yorumları Phase 1.21 errata ile okunmalıdır. Phase 1.22 uygun dış kör havuz bulunmadığı için Step 2 öncesinde durmuştur. Phase 1.23 protokol, teori/toy ve sentetik ara kayıtları içerir; nihai rapor bulunmadığından tamamlandı sayılmaz. Week 9 Phase 2, 2.1, 2.1R, 2.1RE ve 2.2 aynı dizinde yer alır.
+
+Kaynak eşlemesi, dosya hashleri, gerçekleştirilen kontroller ve kapsam sınırları: [proje dizini](PROJECT_INDEX.md), [birleştirme kanıtları](../outputs/project_consolidation/). Eski iddialar bu taşıma işlemiyle daha güçlü hale getirilmedi.
+
+
+### 2026-09-15 — Birleştirme son kontrolü
+
+76 çıktı ailesi; 18.559 farklı kaynak içeriği ve 148.839 kaynak konum/sürüm kaydı eşleştirildi. Yeni ana Python ortamında 62 test geçti; Phase 2 seçili kontrollerinde 13 geçti, 1 eski manifest kontrolü başarısız. İki raporun kaynakta mevcut hash tutarsızlığı [ayrıntılı kayıtta](../outputs/project_consolidation/KNOWN_LEGACY_ISSUES.md) korunur. Dış kaynak klasörlerinin 15 Eylül tekrar taramasında donmuş envantere göre yeni/değişmiş dosya bulunmadı.

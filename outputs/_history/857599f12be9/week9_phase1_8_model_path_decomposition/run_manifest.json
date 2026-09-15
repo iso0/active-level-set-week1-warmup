@@ -1,0 +1,165 @@
+{
+  "bootstrap_draws": 10000,
+  "branch": "codex/week9-phase1-8-model-path-decomposition",
+  "files": [
+    {
+      "bytes": 663,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/baseline_gate.json",
+      "sha256": "1fc366ab1ea205a3779cf8af3d1d4f178842be0c2ca4b469a6bf700177ce5dc9"
+    },
+    {
+      "bytes": 55347,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/budget_checkpoint_contrasts.csv",
+      "sha256": "a9acccecf744442ed14a1ceec8621f8861f74e27880c51eee7c08463bd05ee9b"
+    },
+    {
+      "bytes": 21052,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/budget_checkpoint_summary.csv",
+      "sha256": "a2e19b5b9dde422c65c03a61ee8d1fc9f185e8308cdc6311f0f47127f5df039d"
+    },
+    {
+      "bytes": 883,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/claim_ledger.md",
+      "sha256": "d5206db5db32fb1736132034625498514c2b08f9cd03d1c555deba1fa0475f1f"
+    },
+    {
+      "bytes": 214,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/cross_execution_report.json",
+      "sha256": "58eaf546951eba7ea3bcb665b425ac6d9572d588c79a2bd73f3923ada63ac616"
+    },
+    {
+      "bytes": 434,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/figure_manifest.csv",
+      "sha256": "aeead3ab532235f4693f7ad10f92a3dd20c4eaf956702a7057a82c8fac09d920"
+    },
+    {
+      "bytes": 152995,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/figures/01_four_way_q20_learning_curves.png",
+      "sha256": "6eca27839492698a1a855089820d1b0e6c974db5f854439468aba5f64c0ca7d5"
+    },
+    {
+      "bytes": 45817,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/figures/02_AULC_decomposition.png",
+      "sha256": "c50837ae4e7ee36417e01de9760d4335ede8c003d1aa1d6de600f589ddf406e8"
+    },
+    {
+      "bytes": 50730,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/figures/03_budget_model_path_effects.png",
+      "sha256": "aee14b1ce0c8d2061b6a6141ba9fdd351f1ee23335cd13612a74f6540dfadcdb"
+    },
+    {
+      "bytes": 88002,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/figures/04_residual_bound_sensitivity.png",
+      "sha256": "5fa6c56340c714fca56b45a703582330b25a07be10a463a66ead1d928766e92e"
+    },
+    {
+      "bytes": 3501,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/FINAL_PHASE1_8_REPORT.md",
+      "sha256": "d07b20a58693551bcf75e63d4750fd76640516af3840cb99fe5fea3339627851"
+    },
+    {
+      "bytes": 801,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "fe771ac7ab4304e34dabcc75a6a28c67a8e654391299b8950c801181181ffb6d"
+    },
+    {
+      "bytes": 913,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/four_way_AULC_summary.csv",
+      "sha256": "da73cef285e2435b97935250f1c59087d0558390d7ea0b87f23b6df304a366bb"
+    },
+    {
+      "bytes": 8112,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/learning_curve_four_way.csv",
+      "sha256": "3b5fbf49c7eb9169e8a04908f37f526bbd9c826f4e6fa04bdc748965ca1760e2"
+    },
+    {
+      "bytes": 711,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/path_audit.json",
+      "sha256": "006ef5c31d335d34fc802a9789042a8d03b401d8070a8c370c94fae3bc9093da"
+    },
+    {
+      "bytes": 880,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/primary_decomposition.csv",
+      "sha256": "a3980f1b9b05be27b9cbc22f605b9de1bcb205dd767eaac39294f9013bbfa89e"
+    },
+    {
+      "bytes": 1050,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/red_team_report.json",
+      "sha256": "aa9256275306eb8f64f5adeb6b174bd2aee4f91019ae9de95d74bd8bec3b380d"
+    },
+    {
+      "bytes": 3288,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/regularization_sensitivity.csv",
+      "sha256": "dc9504ec353bfe8e77e8c976b0d312326fa8eb3cb897bbcc49739b9713e96e86"
+    },
+    {
+      "bytes": 5490,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/repeat_level_decomposition.csv",
+      "sha256": "0ee19d4e1684239276561c1448edb8f27e2f121322e1e5aaec7efb7619694504"
+    },
+    {
+      "bytes": 287,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/sensitivity_execution_report.json",
+      "sha256": "b41c8c7807aeb40458a3fd0f0b9b3c54b1069f9999b2f7c708c9ebfd7538263a"
+    },
+    {
+      "bytes": 1434,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/SUPERVISOR_PHASE1_8_ONE_PAGE.md",
+      "sha256": "5983dc58be4f56c86e4d5d2abcda4b296cce8121d370fd96efdf19524c522f85"
+    },
+    {
+      "bytes": 1007369,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/tables/four_way_metrics_per_budget.csv.gz",
+      "sha256": "4f9045b571308d0a5fd0884f33c7efdad666875432ef5ebdaa2d070ca3441300"
+    },
+    {
+      "bytes": 6066,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/tables/outer_run_four_way_AULC.csv.gz",
+      "sha256": "5852828090f487a6c6c96b36dc0a28d6341b31550640a0854f4500705421d8c4"
+    },
+    {
+      "bytes": 8514,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/tables/path_audit_detail.csv",
+      "sha256": "cd79cd2687736633725799ca4636bfa46fa26341803ca83516872e38a53fc1b4"
+    },
+    {
+      "bytes": 68536,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/tables/query_paths.csv.gz",
+      "sha256": "bb685076d755066f8924446c9fd2884f9f76ca4da975c316cada08a2baf9f9d6"
+    },
+    {
+      "bytes": 40784,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/tables/regularization_sensitivity_detail.csv.gz",
+      "sha256": "f517da4950906e7e8f312b0008c89af85cb4a7f58f4aee56f6b79ed2131cb3f4"
+    },
+    {
+      "bytes": 44210,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/tables/y00_checkpoint_refit.csv.gz",
+      "sha256": "53f368865e1461f7db88a925a1677cf4e0ab842012f78d1aa71511f765c99b99"
+    },
+    {
+      "bytes": 2676,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/validation_report.json",
+      "sha256": "a20c6bfb34638b4fd763743e18535805751422937750c489948b5cc2f83bdeb6"
+    },
+    {
+      "bytes": 1767,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/validation_report.md",
+      "sha256": "b8fb51f19d83681f76090b8454d0d2899516dc9e5d7c13158afe5d5324b7f07a"
+    },
+    {
+      "bytes": 84,
+      "path": "outputs/week9_phase1_8_model_path_decomposition/y00_checkpoint_execution_report.json",
+      "sha256": "25bf708c0e167780e55450cf514609272f5149da3782618197c58c0a53946ce3"
+    },
+    {
+      "bytes": 318584,
+      "path": "notebooks/week_09/04_week9_phase1_8_model_path_decomposition.ipynb",
+      "sha256": "c3702fd50c5bca54c6f44c85ab1548687fbc2e5dd480c018bf5f1b1dea496996"
+    }
+  ],
+  "new_query_trajectories": 0,
+  "primary_models_frozen": true,
+  "starting_sha": "2f750c8c270baebc7e013ebe83fc429f9df14d51",
+  "study": "Week 9 Phase 1.8 \u2014 Model-vs-query-path decomposition of the physics-informed active learner"
+}

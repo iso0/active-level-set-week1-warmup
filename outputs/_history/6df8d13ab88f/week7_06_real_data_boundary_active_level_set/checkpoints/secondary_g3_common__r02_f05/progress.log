@@ -1,0 +1,14 @@
+2026-08-11T20:11:12+00:00 START methods=g3_random,g3_straddle,max_depth_g3_common_random,max_depth_g3_common_straddle,binary_g3_common_random,binary_g3_common_margin final_budget=80
+2026-08-11T20:11:12+00:00 METHOD_START g3_random
+2026-08-11T20:11:28+00:00 METHOD_DONE g3_random runtime_seconds=16.480
+2026-08-11T20:11:28+00:00 METHOD_START g3_straddle
+2026-08-11T20:11:45+00:00 METHOD_DONE g3_straddle runtime_seconds=16.939
+2026-08-11T20:11:45+00:00 METHOD_START max_depth_g3_common_random
+2026-08-11T20:12:02+00:00 METHOD_DONE max_depth_g3_common_random runtime_seconds=16.311
+2026-08-11T20:12:02+00:00 METHOD_START max_depth_g3_common_straddle
+2026-08-11T20:12:17+00:00 METHOD_DONE max_depth_g3_common_straddle runtime_seconds=15.436
+2026-08-11T20:12:17+00:00 METHOD_START binary_g3_common_random
+2026-08-11T20:12:22+00:00 METHOD_DONE binary_g3_common_random runtime_seconds=4.473
+2026-08-11T20:12:22+00:00 METHOD_START binary_g3_common_margin
+2026-08-11T20:12:26+00:00 METHOD_DONE binary_g3_common_margin runtime_seconds=4.150
+2026-08-11T20:12:26+00:00 DONE

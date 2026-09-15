@@ -1,0 +1,413 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1235,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/acquisition_definitions.md",
+      "sha256": "0ee5ae244027c729e8646e14a06f4d3b25a434584825d86fcebf2194c1943d16"
+    },
+    {
+      "bytes": 1692,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/analysis_specification.json",
+      "sha256": "8dbafcbb8cb8724cb39d9849d22b9cab7eed598fb049ca69f4f65f7f11bde06e"
+    },
+    {
+      "bytes": 559,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/baseline_gate.json",
+      "sha256": "6581d99e892dfd8391d64e5ec6ebbacba072523dd93605d19df0fed9cc5e9820"
+    },
+    {
+      "bytes": 43826907,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/candidate_scores_pre_reveal.csv.gz",
+      "sha256": "a139295715dc7ba515c1317e113d5124185328bdb00c7eda0a2d68d9747fb3f1"
+    },
+    {
+      "bytes": 1052,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/candidate_scores_sha256.json",
+      "sha256": "fc7cc62ba3dcf0dada0fa86ed4b791b20fa0c67c28c695f522f252d83260dfaa"
+    },
+    {
+      "bytes": 1321,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/claim_ledger.md",
+      "sha256": "7966299a6cef308739077aee951c71509ccd1eee2f42b8b6fc95f197e9e0f173"
+    },
+    {
+      "bytes": 528,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/emi_derivation.md",
+      "sha256": "4ba6b3136679d7190c42cd458dd7b6e98c3af0084d63ca9557ca69afd64f93b0"
+    },
+    {
+      "bytes": 1181,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/emi_monte_carlo_validation.csv",
+      "sha256": "404a9cd20ccaa9766288f5553a695cf0d97da7a226a5ac30e8f42132860ae838"
+    },
+    {
+      "bytes": 1007,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/exact_approx_small_validation.csv",
+      "sha256": "645cbcbd86c254459a29bfc40f62aa8c247f6bbd03dff78f860292216c5a9be4"
+    },
+    {
+      "bytes": 152,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/execution_report.json",
+      "sha256": "fcfe5fe33fb201b05e003cff8e6deb35bd7ed39ca386309e66fdd51c3bc614e5"
+    },
+    {
+      "bytes": 932,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/figure_manifest.csv",
+      "sha256": "e8ba3d38babf40153782917fe9c48c8ff05ea3951ce61eb6b29d1698629ef7a3"
+    },
+    {
+      "bytes": 89807,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/figures/01_rank_correlation_vs_margin.png",
+      "sha256": "3000f6e87d5946f62cd41a152f3ead7132e68e0a766381ab019d843697902e16"
+    },
+    {
+      "bytes": 146828,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/figures/02_top10_overlap_by_budget.png",
+      "sha256": "3c677bbd608251ce74bce22e78a89e87d18873a9eca1b49cf6bcccd695ed3047"
+    },
+    {
+      "bytes": 95550,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/figures/03_latent_mean_variance_selected_candidates.png",
+      "sha256": "fb71d6798286dfded45c41938bd17481516a211bd3e86c9e8a0feb1bdcd01eb0"
+    },
+    {
+      "bytes": 106361,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/figures/04_pa_tvr_decomposition.png",
+      "sha256": "34c0f667dc3882c97610cd48f81a2fe66e291c0e543792711cd8600341300c90"
+    },
+    {
+      "bytes": 36381,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/figures/05_pa_tvr_bound_sensitivity.png",
+      "sha256": "51c972c35c2c494ccd1b0f91913593b49273072d98002ecfffba5ff583864122"
+    },
+    {
+      "bytes": 43567,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/figures/06_local_global_runtime.png",
+      "sha256": "f34593fae510feafd4219840ee3fd66179fc3036e1d59abdea9735ce4ffcbd3a"
+    },
+    {
+      "bytes": 3239,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/FINAL_PHASE1_18A_REPORT.md",
+      "sha256": "8371fcea6d2f1896653fc96843acf1d4b893601101b114de3308620387dd23d8"
+    },
+    {
+      "bytes": 1490,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "f99cfa8549615089796cc3d37a11900a66b3093e59360d022096910ab759ea9d"
+    },
+    {
+      "bytes": 77217,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/frozen_prefix_manifest.csv",
+      "sha256": "f72731408d9b94e87159f363df8330cd632377b350b87cf4dc406542a51c5ee8"
+    },
+    {
+      "bytes": 1374,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/literature_audit.md",
+      "sha256": "a0db6de4cc931d59678c216ccf7f312eab51c7f03d8fbdb8360f30d394438da7"
+    },
+    {
+      "bytes": 642,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/m3_posterior_semantics.md",
+      "sha256": "919f3078b8733ccc6f957f50cec0c3a793f7e39fdf9dcab994328623e36c2c20"
+    },
+    {
+      "bytes": 769,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/margin_collapse_decisions.csv",
+      "sha256": "37a993dbf32a40cd349b54ba1c0ad8a50a7e728127b76b4673638b32f2aed3c6"
+    },
+    {
+      "bytes": 824,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/method_decisions.csv",
+      "sha256": "13d5771cf5d0af946ca310de0b1d07eda6791856ccdc07eda036cd704ed700fb"
+    },
+    {
+      "bytes": 54508,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_bound_sensitivity.csv",
+      "sha256": "e1c684a2fb54f90c59c532dd7e82e458fd4c95c4387a83529372daf0fac0e9b1"
+    },
+    {
+      "bytes": 676,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_decision.json",
+      "sha256": "08b735f857402d33a46d8ad0d79ab2f1e001a25993b4cb15d7b5232c0268cba9"
+    },
+    {
+      "bytes": 930,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_derivation_audit.md",
+      "sha256": "9d01ffa5197e72bbe43eebe7755e1ca20052f66ecf23f0c7ef544693777ccc0c"
+    },
+    {
+      "bytes": 496,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_kernel_compatibility.md",
+      "sha256": "e1ab6a5f429a941fc13a80e21c1133591a9908de3818a8bbe0173d2f3b90e792"
+    },
+    {
+      "bytes": 498,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_laplace_curvature_audit.csv",
+      "sha256": "7282d8f8aa9b8e5fb8145a2341edea2f7a59f5c7c471b1d60db191a4ef7b0415"
+    },
+    {
+      "bytes": 461,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_original_proposal.md",
+      "sha256": "e58c7ac2e4a751042d1f5c231f2cc8482006df6d35c53399b7bad65e936be4b8"
+    },
+    {
+      "bytes": 567,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_prior_art_comparison.md",
+      "sha256": "d36b4186d21e7c2ef1a3d1ac69b47cdb8f0f511b8316a162a507228c25ac0605"
+    },
+    {
+      "bytes": 1108,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/pa_tvr_ranking_distinctness.csv",
+      "sha256": "fd98a33576b17bcab46a89a7d5a30d052fd798c43a4f213e10a2e544beaf8bc6"
+    },
+    {
+      "bytes": 2450,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/prior_art_matrix.csv",
+      "sha256": "bf0ee35e7850a1495b9867a6de3d28c317abef10035fae0334762eae20e26a36"
+    },
+    {
+      "bytes": 1548717,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/ranking_budget_summary.csv",
+      "sha256": "89edad6a1d60b8f15d14eb5ab261dec039cff43ee7ac2184f827c4dfc9ae415f"
+    },
+    {
+      "bytes": 3303,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/ranking_pairwise_summary.csv",
+      "sha256": "99c62289e52959f8e7d545f7ab3e0a672185879d7d15340074bb423ae2b74669"
+    },
+    {
+      "bytes": 102469,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/retrospective_candidate_details.csv.gz",
+      "sha256": "99d078b20232001527796c51d87a7fdd0587cda46b60c21e6770920e9b80c777"
+    },
+    {
+      "bytes": 6689,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/retrospective_candidate_diagnostics.csv",
+      "sha256": "12534c331d4d316971ee14ef5f35b66280a4f718021190b539174dafad13fa3e"
+    },
+    {
+      "bytes": 437840,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/runtime_benchmark.csv",
+      "sha256": "db4e68f34e9b3dc74553a4e23969c1b2a809d8de625b9a0139194fe77bf99821"
+    },
+    {
+      "bytes": 540,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/smocu_compatibility.md",
+      "sha256": "ca2bc3c76a4dcfba1cfa62e9063a3d06e7336e5bd35a663abee1acde061f787c"
+    },
+    {
+      "bytes": 441,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/straddle_compatibility.md",
+      "sha256": "ccb2d9b1188d8dbbd05dcecec28cb78c58a51d5554561be3e4a7ff9069daa765"
+    },
+    {
+      "bytes": 943,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/SUPERVISOR_PHASE1_18A_ONE_PAGE.md",
+      "sha256": "23a07c20dea15d9f7464ac99509544f370129b1e8d98c1cfea641208c675cba8"
+    },
+    {
+      "bytes": 424,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/sur_compatibility.md",
+      "sha256": "b69e0d8e6d844b777b2cb1ff50228e6a44524b30942e61c0684f55199edecd43"
+    },
+    {
+      "bytes": 465,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/tmse_gsur_comparison.md",
+      "sha256": "0365d0c14296c860ba287ab9361a3b487e612f497e3786357b7f0a659a3b8ee1"
+    },
+    {
+      "bytes": 9114,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/topk_overlap_summary.csv",
+      "sha256": "2ce9c3612ab170214121b2210a5f160d9214dc255f5127d3d3bb867e202eb6e3"
+    },
+    {
+      "bytes": 3703,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/validation_report.json",
+      "sha256": "1ca1ac7ebe024f2c3c168a3f50b5266d73d3aa6e8deb0e2e6296971764dcac72"
+    },
+    {
+      "bytes": 1696,
+      "path": "outputs/week9_phase1_18a_level_set_acquisition_compatibility_audit/validation_report.md",
+      "sha256": "87f48f6820cf16e52b36357ccf437bdb6b84cc199e28e95dfa9f4e211720c6ec"
+    },
+    {
+      "bytes": 400351,
+      "path": "notebooks/week_09/16_week9_phase1_18a_level_set_acquisition_compatibility_audit.ipynb",
+      "sha256": "2ecd2ed5543992aa5feb709c06a41a5a6b5420be211c0f1888d48eca1d9cb8c8"
+    }
+  ],
+  "branch": "codex/week9-phase1-18a-level-set-acquisition-compatibility-audit",
+  "candidate_occurrences": 169200,
+  "decision": "PA_TVR_REJECTED",
+  "future_candidate": "FAST_GPC_SUR",
+  "new_trajectory": false,
+  "parent_sha": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+  "phase": "Week 9 Phase 1.18A",
+  "snapshot_count": 600,
+  "validation": {
+    "check_count": 32,
+    "checks": [
+      {
+        "check": "exact_parent",
+        "detail": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+        "status": "PASS"
+      },
+      {
+        "check": "population_405",
+        "detail": "405",
+        "status": "PASS"
+      },
+      {
+        "check": "labels_73_332",
+        "detail": "73/332",
+        "status": "PASS"
+      },
+      {
+        "check": "m3_architecture",
+        "detail": "fixed physics + ARD Matern-3/2",
+        "status": "PASS"
+      },
+      {
+        "check": "outer_runs_100",
+        "detail": "100",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_frozen_prefixes",
+        "detail": "100/100",
+        "status": "PASS"
+      },
+      {
+        "check": "no_new_trajectory",
+        "detail": "score-only",
+        "status": "PASS"
+      },
+      {
+        "check": "candidate_scores_no_labels",
+        "detail": "clean",
+        "status": "PASS"
+      },
+      {
+        "check": "candidate_scores_no_boundary",
+        "detail": "clean",
+        "status": "PASS"
+      },
+      {
+        "check": "score_hash_valid",
+        "detail": "a139295715dc7ba515c1317e113d5124185328bdb00c7eda0a2d68d9747fb3f1",
+        "status": "PASS"
+      },
+      {
+        "check": "retrospective_after_hash",
+        "detail": "mtime order",
+        "status": "PASS"
+      },
+      {
+        "check": "six_budgets",
+        "detail": "[np.int64(16), np.int64(24), np.int64(32), np.int64(40), np.int64(60), np.int64(80)]",
+        "status": "PASS"
+      },
+      {
+        "check": "snapshots_600",
+        "detail": "600",
+        "status": "PASS"
+      },
+      {
+        "check": "candidate_occurrences_169200",
+        "detail": "169200",
+        "status": "PASS"
+      },
+      {
+        "check": "scores_finite",
+        "detail": "all numeric finite",
+        "status": "PASS"
+      },
+      {
+        "check": "margin_semantics",
+        "detail": "exact",
+        "status": "PASS"
+      },
+      {
+        "check": "latent_variance_semantics",
+        "detail": "frozen mean",
+        "status": "PASS"
+      },
+      {
+        "check": "emi_mc",
+        "detail": "max error 0.00106534",
+        "status": "PASS"
+      },
+      {
+        "check": "smocu_marked_approx",
+        "detail": "name explicit",
+        "status": "PASS"
+      },
+      {
+        "check": "sur_functional_documented",
+        "detail": "documented",
+        "status": "PASS"
+      },
+      {
+        "check": "fast_update_small_exact_check",
+        "detail": "3 predeclared candidates",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_approx_not_conflated",
+        "detail": "explicit",
+        "status": "PASS"
+      },
+      {
+        "check": "pa_formula_terms",
+        "detail": "complete",
+        "status": "PASS"
+      },
+      {
+        "check": "pa_scratch_not_ground_truth",
+        "detail": "independent",
+        "status": "PASS"
+      },
+      {
+        "check": "pa_bound_sensitivity",
+        "detail": "600 snapshots",
+        "status": "PASS"
+      },
+      {
+        "check": "no_ard_causal_claim",
+        "detail": "guardrail",
+        "status": "PASS"
+      },
+      {
+        "check": "no_unsupported_novelty",
+        "detail": "guardrail",
+        "status": "PASS"
+      },
+      {
+        "check": "no_sample_efficiency_claim",
+        "detail": "guardrail",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed",
+        "detail": "stored outputs",
+        "status": "PASS"
+      },
+      {
+        "check": "figures_six",
+        "detail": "6",
+        "status": "PASS"
+      },
+      {
+        "check": "figure_hashes",
+        "detail": "all match",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_unchanged",
+        "detail": "none",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS"
+  }
+}

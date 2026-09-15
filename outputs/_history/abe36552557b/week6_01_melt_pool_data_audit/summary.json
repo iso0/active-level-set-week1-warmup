@@ -1,0 +1,70 @@
+{
+  "repo_id": "ioandanielc/sph_dataset",
+  "old_revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+  "current_main_sha_at_inspection": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+  "chosen_revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+  "enumerated_at_utc": "2026-07-25T00:53:02.942847+00:00",
+  "enumeration": {
+    "primary_method": "HfApi.list_repo_tree(path_in_repo='final_data_processed', recursive=False), iterator consumed completely",
+    "independent_http_pages": 5,
+    "per_simulation_explicit_http_pages": 318,
+    "per_simulation_hfapi_fallback_iterators": 12,
+    "per_simulation_page_equivalents": 338,
+    "faulty_sibling_file_count": 98552,
+    "faulty_last_path": "final_data_processed/sim_00117/frames/side/frame_00222.png"
+  },
+  "actual_simulation_folder_count": 241,
+  "minimum_numeric_simulation_id": 1,
+  "maximum_numeric_simulation_id": 242,
+  "numeric_id_gaps": [
+    136
+  ],
+  "experiments_csv_only_records": [],
+  "folder_only_records": [],
+  "monitor_complete_simulations": 241,
+  "target_complete_simulations": 241,
+  "incomplete_simulations": [],
+  "axis_mapping": {
+    "X": "scan direction and melt-pool length",
+    "Y": "transverse direction and melt-pool width",
+    "Z": "vertical direction",
+    "penetration_depth": "max(0,-z_min)",
+    "confidence": "high — confirmed on complete population"
+  },
+  "selected_responses": [
+    {
+      "response": "Melt-pool width",
+      "selected_primary_scalar_definition": "median over final 20% of melt-present time before laser reaches 90% of +X domain"
+    },
+    {
+      "response": "Melt-pool length",
+      "selected_primary_scalar_definition": "median over final 20% of melt-present time before laser reaches 90% of +X domain"
+    },
+    {
+      "response": "Penetration depth below original surface",
+      "selected_primary_scalar_definition": "median over final 20% of melt-present time before laser reaches 90% of +X domain"
+    }
+  ],
+  "final_dataset_shape": [
+    241,
+    199
+  ],
+  "final_valid_melt_count": 171,
+  "laser_exit_before_recording_end_count": 113,
+  "unstable_selected_window_simulations": [
+    "sim_00002",
+    "sim_00006",
+    "sim_00018",
+    "sim_00029",
+    "sim_00036",
+    "sim_00038",
+    "sim_00095",
+    "sim_00105",
+    "sim_00124",
+    "sim_00154",
+    "sim_00222"
+  ],
+  "validation_pass_count": 22,
+  "validation_total_count": 22,
+  "phase2_readiness": "Phase 1 table is complete and traceable; no Phase 2 modelling was performed."
+}

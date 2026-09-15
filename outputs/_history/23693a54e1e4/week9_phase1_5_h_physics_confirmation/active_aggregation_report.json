@@ -1,0 +1,26 @@
+{
+  "contrast_bootstrap": "repeat blocks resampled with all five folds retained; Random continuations resampled within fold",
+  "inference_unit": "20 repeat blocks with all five folds retained together",
+  "information_flow": {
+    "B1_B2_B3_used": false,
+    "full_pool_label_threshold_used": false,
+    "hidden_pool_labels_used": false,
+    "test_rows_used": false
+  },
+  "mechanism_rows": 27200,
+  "model_horizons": {
+    "gpc4_assisted_product": 80,
+    "gpc4_h_acquisition": 160,
+    "gpc5_margin": 80,
+    "h_model_h_acquisition": 160
+  },
+  "models": [
+    "gpc4_assisted_product",
+    "gpc4_h_acquisition",
+    "gpc5_margin",
+    "h_model_h_acquisition"
+  ],
+  "outer_runs": 100,
+  "random_treatment": "30 saved Random continuations averaged only after per-path AULC; no synthetic mean crossing trajectory",
+  "status": "PASS"
+}

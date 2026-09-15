@@ -1,0 +1,2 @@
+kernel_key,kernel_label,clean_evaluation_points,clean_trained_MAE,clean_trained_RMSE,broad_trained_MAE,broad_trained_RMSE,mean_paired_improvement_clean_minus_broad,median_paired_improvement_clean_minus_broad,clean_points_improved_by_broad_training,clean_points_worsened_by_broad_training,clean_points_tied
+ard_matern_3_2,ARD Matérn 3/2,91,1559.990322812291,2808.2957570143353,13676.417056124386,18051.78454401303,-12116.426733312097,-9415.963745260622,15,76,0

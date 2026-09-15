@@ -1,0 +1,3 @@
+exponent,theory,estimate,ci_lower,ci_upper,theory_inside_ci
+VX relative to P,-0.5,-0.5177980435654538,-0.6591982515696269,-0.3811266162343096,True
+LS relative to P,-1.5,-1.444156702879247,-1.994968756895727,-1.0742094770014539,True

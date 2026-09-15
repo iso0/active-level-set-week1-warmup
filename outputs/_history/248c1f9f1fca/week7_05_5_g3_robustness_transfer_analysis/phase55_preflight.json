@@ -1,0 +1,68 @@
+{
+  "captured_at_utc": "2026-08-11T15:46:34+00:00",
+  "original_worktree": {
+    "branch": "main",
+    "git_status_short": [
+      "M outputs/week2_acquisition_comparison/week2_slide_notes.md",
+      "?? docs/",
+      "?? outputs/week1_active_level_set_progress.pptx",
+      "?? outputs/week2_active_level_set_progress_v2.pptx",
+      "?? outputs/week3_active_level_set_progress.pptx",
+      "?? outputs/week3_active_level_set_progress_v2.pptx"
+    ],
+    "head": "6fd6be57e5341e083a7023a3ae29e65b7b326bbd",
+    "path": "C:\\Users\\ozgur\\Documents\\thesis",
+    "protected_dirty_files": [
+      {
+        "actual_sha256": "a714e0c2249a134287b76a86fc8d660a075c69184a5cab851a3c1f52412e321c",
+        "expected_sha256": "a714e0c2249a134287b76a86fc8d660a075c69184a5cab851a3c1f52412e321c",
+        "matches": true,
+        "path": "docs/deep-research-report.md"
+      },
+      {
+        "actual_sha256": "bdd1f515eaab313e5371cbe5e2c0b7fb3e87713037a21337dd7d078406c23577",
+        "expected_sha256": "bdd1f515eaab313e5371cbe5e2c0b7fb3e87713037a21337dd7d078406c23577",
+        "matches": true,
+        "path": "outputs/week1_active_level_set_progress.pptx"
+      },
+      {
+        "actual_sha256": "9f00ece946170f936e5efffa019cdb4c3b2dbcc93037155cdfccfca716e2e99c",
+        "expected_sha256": "9f00ece946170f936e5efffa019cdb4c3b2dbcc93037155cdfccfca716e2e99c",
+        "matches": true,
+        "path": "outputs/week2_acquisition_comparison/week2_slide_notes.md"
+      },
+      {
+        "actual_sha256": "92a760d21a1c9b9e07f15724d2cedd225a19b05439af8eca6273ac4212b913ab",
+        "expected_sha256": "92a760d21a1c9b9e07f15724d2cedd225a19b05439af8eca6273ac4212b913ab",
+        "matches": true,
+        "path": "outputs/week2_active_level_set_progress_v2.pptx"
+      },
+      {
+        "actual_sha256": "f129a4f5310b808d23f810b1e4cbfb8be2039a5ddfe408d9b26de55e7c9cfcbd",
+        "expected_sha256": "f129a4f5310b808d23f810b1e4cbfb8be2039a5ddfe408d9b26de55e7c9cfcbd",
+        "matches": true,
+        "path": "outputs/week3_active_level_set_progress.pptx"
+      },
+      {
+        "actual_sha256": "aec8efe32b358d2f6bbd3c3610fc9d76ff8b45d74cddbdd0074c261e127ae09e",
+        "expected_sha256": "aec8efe32b358d2f6bbd3c3610fc9d76ff8b45d74cddbdd0074c261e127ae09e",
+        "matches": true,
+        "path": "outputs/week3_active_level_set_progress_v2.pptx"
+      }
+    ],
+    "protected_hashes_match": true
+  },
+  "phase55_branch": "codex/week7-phase5-5-g3-robustness-transfer",
+  "phase55_parent": "3367f4c9b5af2def802f72a65258f5cc01896bac",
+  "phase5_remote_sha": "3367f4c9b5af2def802f72a65258f5cc01896bac",
+  "phase5_remote_verified": true,
+  "scope": {
+    "active_learning_run": false,
+    "classifiers_fitted": false,
+    "labels_modified": false,
+    "level_set_estimated": false,
+    "phase55_commit_or_push_authorized": false,
+    "predictive_models_fitted": false,
+    "simulations_removed": false
+  }
+}

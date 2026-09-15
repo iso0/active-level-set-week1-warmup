@@ -1,0 +1,66 @@
+Running Thresholded Branin: 5 seed(s), 6 method(s).
+  seed=0 method=random_classifier
+  seed=0 method=classifier_margin
+  seed=0 method=classifier_entropy
+  seed=0 method=classifier_uncertainty_repulsion
+  seed=0 method=gpc_bernoulli_sur_refit_k15
+  seed=0 method=gpc_bernoulli_sur_refit_k25
+  seed=1 method=random_classifier
+  seed=1 method=classifier_margin
+  seed=1 method=classifier_entropy
+  seed=1 method=classifier_uncertainty_repulsion
+  seed=1 method=gpc_bernoulli_sur_refit_k15
+  seed=1 method=gpc_bernoulli_sur_refit_k25
+  seed=2 method=random_classifier
+  seed=2 method=classifier_margin
+  seed=2 method=classifier_entropy
+  seed=2 method=classifier_uncertainty_repulsion
+  seed=2 method=gpc_bernoulli_sur_refit_k15
+  seed=2 method=gpc_bernoulli_sur_refit_k25
+  seed=3 method=random_classifier
+  seed=3 method=classifier_margin
+  seed=3 method=classifier_entropy
+  seed=3 method=classifier_uncertainty_repulsion
+  seed=3 method=gpc_bernoulli_sur_refit_k15
+  seed=3 method=gpc_bernoulli_sur_refit_k25
+  seed=4 method=random_classifier
+  seed=4 method=classifier_margin
+  seed=4 method=classifier_entropy
+  seed=4 method=classifier_uncertainty_repulsion
+  seed=4 method=gpc_bernoulli_sur_refit_k15
+  seed=4 method=gpc_bernoulli_sur_refit_k25
+Running Thresholded 4D Hartmann: 5 seed(s), 6 method(s).
+  seed=0 method=random_classifier
+  seed=0 method=classifier_margin
+  seed=0 method=classifier_entropy
+  seed=0 method=classifier_uncertainty_repulsion
+  seed=0 method=gpc_bernoulli_sur_refit_k15
+  seed=0 method=gpc_bernoulli_sur_refit_k25
+  seed=1 method=random_classifier
+  seed=1 method=classifier_margin
+  seed=1 method=classifier_entropy
+  seed=1 method=classifier_uncertainty_repulsion
+  seed=1 method=gpc_bernoulli_sur_refit_k15
+  seed=1 method=gpc_bernoulli_sur_refit_k25
+  seed=2 method=random_classifier
+  seed=2 method=classifier_margin
+  seed=2 method=classifier_entropy
+  seed=2 method=classifier_uncertainty_repulsion
+  seed=2 method=gpc_bernoulli_sur_refit_k15
+  seed=2 method=gpc_bernoulli_sur_refit_k25
+  seed=3 method=random_classifier
+  seed=3 method=classifier_margin
+  seed=3 method=classifier_entropy
+  seed=3 method=classifier_uncertainty_repulsion
+  seed=3 method=gpc_bernoulli_sur_refit_k15
+  seed=3 method=gpc_bernoulli_sur_refit_k25
+  seed=4 method=random_classifier
+  seed=4 method=classifier_margin
+  seed=4 method=classifier_entropy
+  seed=4 method=classifier_uncertainty_repulsion
+  seed=4 method=gpc_bernoulli_sur_refit_k15
+  seed=4 method=gpc_bernoulli_sur_refit_k25
+Week 7.1 GPC SUR validation complete in 1230.1s (full mode).
+Thresholded Branin: best q20=classifier_uncertainty_repulsion (0.2560), best q30=classifier_uncertainty_repulsion (0.1897)
+Thresholded 4D Hartmann: best q20=gpc_bernoulli_sur_refit_k25 (0.3730), best q30=gpc_bernoulli_sur_refit_k25 (0.3155)
+Saved outputs to C:\Users\ozgur\Documents\thesis\outputs\week7_1_gpc_sur_validation

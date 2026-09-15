@@ -1,0 +1,152 @@
+{
+  "primary": {
+    "label": "pooled_repeats_11_60",
+    "tests": [
+      {
+        "mean": 0.0022867647058823558,
+        "ci_low": 0.0007150735294117689,
+        "ci_high": 0.0039062499999999744,
+        "signflip_p": 0.007399260073992601,
+        "positive_blocks": 31,
+        "blocks": 50,
+        "policy": "cov_then_misfit_B40",
+        "window": "16-80",
+        "finalist_AULC": 0.8451433823529412,
+        "margin_AULC": 0.8428566176470588,
+        "holm_p": 0.007399260073992601
+      },
+      {
+        "mean": 0.005490196078431367,
+        "ci_low": 0.0021763480392157112,
+        "ci_high": 0.008818749999999985,
+        "signflip_p": 0.0015998400159984002,
+        "positive_blocks": 33,
+        "blocks": 50,
+        "policy": "cov_then_misfit_B40",
+        "window": "16-40",
+        "finalist_AULC": 0.8299215686274509,
+        "margin_AULC": 0.8244313725490197,
+        "holm_p": 0.0031996800319968005
+      },
+      {
+        "mean": 0.004117647058823517,
+        "ci_low": 0.00209365808823529,
+        "ci_high": 0.005989016544117656,
+        "signflip_p": 0.0004999500049995,
+        "positive_blocks": 41,
+        "blocks": 50,
+        "policy": "early8__cov_then_misfit_B40",
+        "window": "16-80",
+        "finalist_AULC": 0.8469742647058824,
+        "margin_AULC": 0.8428566176470588,
+        "holm_p": 0.0014998500149985001
+      },
+      {
+        "mean": 0.011642156862745097,
+        "ci_low": 0.007210784313725503,
+        "ci_high": 0.015749999999999972,
+        "signflip_p": 9.999000099990002e-05,
+        "positive_blocks": 39,
+        "blocks": 50,
+        "policy": "early8__cov_then_misfit_B40",
+        "window": "16-40",
+        "finalist_AULC": 0.8360735294117646,
+        "margin_AULC": 0.8244313725490197,
+        "holm_p": 0.00039996000399960006
+      }
+    ],
+    "verdicts": {
+      "cov_then_misfit_B40": {
+        "CONFIRMED": true,
+        "guardrails": {
+          "B40_q20_KH_recall_change": -0.013600000000000056,
+          "B80_full81_accuracy_change": 1.1102230246251565e-16,
+          "pass": true
+        }
+      },
+      "early8__cov_then_misfit_B40": {
+        "CONFIRMED": true,
+        "guardrails": {
+          "B40_q20_KH_recall_change": -0.0023031746031746403,
+          "B80_full81_accuracy_change": -0.00019753086419738164,
+          "pass": true
+        }
+      }
+    }
+  },
+  "secondary": {
+    "label": "repeats_11_20_only",
+    "tests": [
+      {
+        "mean": 0.004099264705882411,
+        "ci_low": 1.8152573529428215e-05,
+        "ci_high": 0.008419117647058915,
+        "signflip_p": 0.11528847115288471,
+        "positive_blocks": 6,
+        "blocks": 10,
+        "policy": "cov_then_misfit_B40",
+        "window": "16-80",
+        "finalist_AULC": 0.8469117647058824,
+        "margin_AULC": 0.8428125,
+        "holm_p": 0.23057694230576942
+      },
+      {
+        "mean": 0.00700980392156858,
+        "ci_low": -0.0017653186274510506,
+        "ci_high": 0.01610294117647053,
+        "signflip_p": 0.18738126187381263,
+        "positive_blocks": 6,
+        "blocks": 10,
+        "policy": "cov_then_misfit_B40",
+        "window": "16-40",
+        "finalist_AULC": 0.8337990196078431,
+        "margin_AULC": 0.8267892156862745,
+        "holm_p": 0.23057694230576942
+      },
+      {
+        "mean": 0.004319852941176494,
+        "ci_low": 0.0015714613970588178,
+        "ci_high": 0.007279641544117705,
+        "signflip_p": 0.021597840215978402,
+        "positive_blocks": 8,
+        "blocks": 10,
+        "policy": "early8__cov_then_misfit_B40",
+        "window": "16-80",
+        "finalist_AULC": 0.8471323529411766,
+        "margin_AULC": 0.8428125,
+        "holm_p": 0.08639136086391361
+      },
+      {
+        "mean": 0.012034313725490164,
+        "ci_low": 0.004534313725490124,
+        "ci_high": 0.018578431372548977,
+        "signflip_p": 0.023297670232976703,
+        "positive_blocks": 8,
+        "blocks": 10,
+        "policy": "early8__cov_then_misfit_B40",
+        "window": "16-40",
+        "finalist_AULC": 0.8388235294117647,
+        "margin_AULC": 0.8267892156862745,
+        "holm_p": 0.08639136086391361
+      }
+    ],
+    "verdicts": {
+      "cov_then_misfit_B40": {
+        "CONFIRMED": false,
+        "guardrails": {
+          "B40_q20_KH_recall_change": -0.008587301587301699,
+          "B80_full81_accuracy_change": 0.0007407407407405975,
+          "pass": true
+        }
+      },
+      "early8__cov_then_misfit_B40": {
+        "CONFIRMED": false,
+        "guardrails": {
+          "B40_q20_KH_recall_change": -0.0003095238095238706,
+          "B80_full81_accuracy_change": 0.0,
+          "pass": true
+        }
+      }
+    }
+  }
+}

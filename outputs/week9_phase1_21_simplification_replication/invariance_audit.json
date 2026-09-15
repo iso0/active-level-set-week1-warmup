@@ -1,0 +1,973 @@
+{
+  "status": "PASS",
+  "states_audited": 120,
+  "mismatches": 0,
+  "static_check_no_unmasked_access_in_policy_code": true,
+  "by_phase": {
+    "coverage (16-39)": 48,
+    "early-start seed/active (<16)": 32,
+    "margin (40-79)": 40
+  },
+  "records": [
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 16,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 389,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 20,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 385,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 25,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 380,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 30,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 375,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 35,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 370,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 39,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 366,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 40,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 365,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 45,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 360,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 55,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 350,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 65,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 340,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 79,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 326,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 16,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 389,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 20,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 385,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 25,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 380,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 30,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 375,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 35,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 370,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 39,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 366,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 40,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 365,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 45,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 360,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 55,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 350,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 65,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 340,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 79,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 326,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 16,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 389,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 20,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 385,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 25,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 380,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 30,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 375,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 35,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 370,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 39,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 366,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 40,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 365,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 45,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 360,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 55,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 350,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 65,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 340,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 79,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 326,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 16,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 389,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 20,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 385,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 25,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 380,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 30,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 375,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 35,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 370,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 39,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 366,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 40,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 365,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 45,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 360,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 55,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 350,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 65,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 340,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 79,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 326,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 8,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 397,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 9,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 396,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 10,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 395,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 11,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 394,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 12,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 393,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 13,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 392,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 14,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 391,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 15,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 390,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 16,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 389,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 20,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 385,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 25,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 380,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 30,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 375,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 35,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 370,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 39,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 366,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 40,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 365,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 45,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 360,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 55,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 350,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 65,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 340,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r01_f02",
+      "budget": 79,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 326,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 8,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 397,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 9,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 396,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 10,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 395,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 11,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 394,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 12,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 393,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 13,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 392,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 14,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 391,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 15,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 390,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 16,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 389,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 20,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 385,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 25,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 380,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 30,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 375,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 35,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 370,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 39,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 366,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 40,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 365,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 45,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 360,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 55,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 350,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 65,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 340,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r04_f05",
+      "budget": 79,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 326,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 8,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 397,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 9,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 396,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 10,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 395,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 11,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 394,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 12,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 393,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 13,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 392,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 14,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 391,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 15,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 390,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 16,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 389,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 20,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 385,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 25,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 380,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 30,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 375,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 35,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 370,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 39,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 366,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 40,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 365,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 45,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 360,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 55,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 350,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 65,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 340,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r07_f03",
+      "budget": 79,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 326,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 8,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 397,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 9,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 396,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 10,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 395,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 11,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 394,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 12,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 393,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 13,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 392,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 14,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 391,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 15,
+      "phase": "early-start seed/active (<16)",
+      "hidden_rows_scrambled": 390,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 16,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 389,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 20,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 385,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 25,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 380,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 30,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 375,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 35,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 370,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 39,
+      "phase": "coverage (16-39)",
+      "hidden_rows_scrambled": 366,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 40,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 365,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 45,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 360,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 55,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 350,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 65,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 340,
+      "same_choice_and_probabilities": true
+    },
+    {
+      "policy": "early8__coverage_then_margin_B40",
+      "run_id": "w85__r10_f01",
+      "budget": 79,
+      "phase": "margin (40-79)",
+      "hidden_rows_scrambled": 326,
+      "same_choice_and_probabilities": true
+    }
+  ]
+}

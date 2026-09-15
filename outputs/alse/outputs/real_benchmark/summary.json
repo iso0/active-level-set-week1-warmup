@@ -1,0 +1,31 @@
+{
+  "alse_version": "0.1.0",
+  "arms": {
+    "binary_margin": {
+      "mean_B1_q20_accuracy_AULC": 0.7775735294117647,
+      "runs": 2
+    },
+    "binary_random": {
+      "mean_B1_q20_accuracy_AULC": 0.7591911764705883,
+      "runs": 2
+    }
+  },
+  "aulc_range": [
+    16,
+    24
+  ],
+  "data_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "protocol": "week8_5_frozen_confirmation_protocol/v1.0.0",
+  "runtime_seconds": 1.1830999851226807,
+  "settings": {
+    "arms": [
+      "binary_margin",
+      "binary_random"
+    ],
+    "budget": 24,
+    "name": "real_benchmark",
+    "runs": 2,
+    "smoke": true,
+    "workers": 1
+  }
+}

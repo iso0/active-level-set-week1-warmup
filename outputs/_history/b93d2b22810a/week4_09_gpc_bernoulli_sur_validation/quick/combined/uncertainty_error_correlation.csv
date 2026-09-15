@@ -1,0 +1,5 @@
+benchmark,metric,pearson_corr_integrated_uncertainty_vs_error_over_all_curves,row_count
+branin,near_boundary_error_q20,0.308629,30
+branin,near_boundary_error_q30,0.380228,30
+hartmann4,near_boundary_error_q20,-0.235349,30
+hartmann4,near_boundary_error_q30,-0.207418,30

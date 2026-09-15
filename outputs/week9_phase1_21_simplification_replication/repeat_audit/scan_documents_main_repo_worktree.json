@@ -1,0 +1,74 @@
+{
+  "root": "C:\\Users\\ozgur\\Documents\\thesis",
+  "tag": "documents_main_repo_worktree",
+  "files_scanned": 23113,
+  "files_with_run_ids": 226,
+  "repeats_found": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "max_repeat": 20,
+  "files_with_repeat_above_20": [],
+  "files_with_repeat_above_60": [],
+  "errors": [
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py27_np17.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'x^')"
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py33_np18.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'x^')"
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py34_np19.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'x^')"
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.10.0_compressed_pickle_py35_np19.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'x^')"
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.8.4_compressed_pickle_py27_np17.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py27_np16.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py27_np17.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py34_np19.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.2_compressed_pickle_py35_np19.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\joblib\\test\\data\\joblib_0.9.4.dev0_compressed_cache_size_pickle_py35_np19.gz",
+      "error": "BadGzipFile: Not a gzipped file (b'ZF')"
+    }
+  ],
+  "seconds": 803.2
+}

@@ -1,0 +1,344 @@
+{
+  "phase": "Week 9 Phase 1.22 - external blind test, Steps 0-1",
+  "audited_at_utc": "2026-09-13T22:57:02.829621+00:00",
+  "label_access": "none: only names, repository metadata, identifier columns and P/VX/LS/ST were read",
+  "original_pool": {
+    "source": "ioandanielc/sph_v2 @ b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+    "experiments": 407,
+    "primary_population": 405
+  },
+  "huggingface_metadata": {
+    "authenticated_user": "OzturkBurak",
+    "datasets_by_ioandanielc": [
+      {
+        "id": "ioandanielc/sph_dataset",
+        "last_modified": "2026-07-20 16:10:05+00:00"
+      },
+      {
+        "id": "ioandanielc/sph_dataset_sample",
+        "last_modified": "2026-05-07 09:57:01+00:00"
+      },
+      {
+        "id": "ioandanielc/sph_v2",
+        "last_modified": "2026-08-10 07:25:58+00:00"
+      }
+    ],
+    "datasets_by_user": [],
+    "repos": {
+      "ioandanielc/sph_dataset": {
+        "commit_count": 437,
+        "head": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+        "head_date": "2026-07-20 16:10:05+00:00",
+        "head_title": "Update README.md",
+        "branches": {
+          "main": "0e859b748fdbc8454f66e58e101e333ac0479d42"
+        },
+        "tags": {},
+        "top_level_files": [
+          ".DS_Store",
+          ".gitattributes",
+          "README.md",
+          "build_master_csvs.py",
+          "croissant_rai_sph_dataset.json",
+          "final-labels_all.csv",
+          "parameter_heatmaps.png",
+          "parameter_heatmaps.py",
+          "parameter_list.json",
+          "process_frames.py",
+          "refactor_and_label.py"
+        ],
+        "top_level_folders": "2 folders"
+      },
+      "ioandanielc/sph_dataset_sample": {
+        "commit_count": 7,
+        "head": "3442f5ff6f372931b52dfe20811b77a6eee70886",
+        "head_date": "2026-05-07 09:57:01+00:00",
+        "head_title": "Upload folder using huggingface_hub",
+        "branches": {
+          "main": "3442f5ff6f372931b52dfe20811b77a6eee70886"
+        },
+        "tags": {},
+        "top_level_files": [
+          ".gitattributes",
+          "README.md"
+        ],
+        "top_level_folders": "5 folders"
+      },
+      "ioandanielc/sph_v2": {
+        "commit_count": 414,
+        "head": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+        "head_date": "2026-08-10 07:25:58+00:00",
+        "head_title": "Restore missing old-data monitor streams (#1)",
+        "branches": {
+          "main": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8"
+        },
+        "tags": {},
+        "top_level_files": [
+          ".gitattributes",
+          "labels_partition_1_new-data.csv",
+          "labels_partition_2_old-data-local.csv",
+          "labels_partition_3_old-data-remote-clean.csv"
+        ],
+        "top_level_folders": "407 folders"
+      }
+    }
+  },
+  "disk_name_scan": {
+    "roots": [
+      "C:\\Users\\ozgur",
+      "C:\\Users\\ozgur\\AppData\\Local\\Temp",
+      "C:\\Users\\ozgur\\.cache\\huggingface"
+    ],
+    "drives_present": [
+      "C:\\"
+    ],
+    "simulation_folder_parents": {
+      "C:\\Users\\ozgur\\.cache\\huggingface\\hub\\datasets--ioandanielc--sph_dataset\\snapshots\\0e859b748fdbc8454f66e58e101e333ac0479d42\\final_data_processed": 55,
+      "C:\\Users\\ozgur\\Documents\\hf-sph-v2-old-data-monitor-restoration\\payload": 55,
+      "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit\\data\\raw\\sph_v2\\d69dac5bda8b622bc0de316b112815c6056c06ec": 1,
+      "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit\\data\\raw\\sph_v2\\d69dac5bda8b622bc0de316b112815c6056c06ec\\.cache\\huggingface\\download": 1
+    },
+    "label_or_manifest_like_files": [
+      "C:\\Users\\ozgur\\.cache\\huggingface\\hub\\datasets--ioandanielc--sph_v2\\snapshots\\d69dac5bda8b622bc0de316b112815c6056c06ec\\labels_partition_2_old-data-local.csv",
+      "C:\\Users\\ozgur\\Documents\\hf-sph-v2-old-data-monitor-restoration\\inputs\\labels_partition_2_old-data-local.csv",
+      "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\data\\raw\\sph_dataset\\.cache\\huggingface\\download\\final-labels_all.csv.metadata",
+      "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\data\\raw\\sph_dataset\\final-labels_all.csv",
+      "C:\\Users\\ozgur\\Documents\\thesis\\reports\\claude_rnd_2026_09_05\\claude_rnd_2026_09_05\\claude_rnd_2026_09_05\\code\\new_pool_audit.py",
+      "C:\\Users\\ozgur\\Downloads\\final-labels_all (1).csv",
+      "C:\\Users\\ozgur\\Downloads\\final-labels_all.csv",
+      "C:\\Users\\ozgur\\Downloads\\labels_partition_2_old-data-local.csv",
+      "C:\\Users\\ozgur\\Downloads\\labels_partition_3_old-data-remote-clean.csv",
+      "C:\\Users\\ozgur\\OneDrive\\Masa\u00fcst\u00fc\\thesis_works\\thesis_1\\reports\\claude_rnd_2026_09_05\\claude_rnd_2026_09_05\\claude_rnd_2026_09_05\\code\\new_pool_audit.py"
+    ],
+    "simulation_folder_parents_outside_known_hf_cache": [
+      "C:\\Users\\ozgur\\Documents\\hf-sph-v2-old-data-monitor-restoration\\payload",
+      "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit\\data\\raw\\sph_v2\\d69dac5bda8b622bc0de316b112815c6056c06ec",
+      "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit\\data\\raw\\sph_v2\\d69dac5bda8b622bc0de316b112815c6056c06ec\\.cache\\huggingface\\download"
+    ]
+  },
+  "candidates": [
+    {
+      "candidate": "ioandanielc/sph_v2 @ main",
+      "version": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+      "rows": 407,
+      "disjoint_from_original": false,
+      "evidence": {
+        "folders_equal_original_407_experiment_names": true,
+        "original_405_subset": true,
+        "new_folders_not_in_original": 0,
+        "head_is_analysis_revision_of_405": true,
+        "last_commit": [
+          "2026-08-10 07:25:58+00:00",
+          "Restore missing old-data monitor streams (#1)"
+        ]
+      },
+      "previously_used": "yes: it is the source of the 405-simulation population used by every phase from Week 7 to 1.21",
+      "labels_previously_inspected": true,
+      "valid": false,
+      "reason": "identical to the original pool; no simulation is new"
+    },
+    {
+      "candidate": "ioandanielc/sph_v2 @ d69dac5b (pinned Week 7 revision)",
+      "version": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+      "rows": 407,
+      "disjoint_from_original": false,
+      "evidence": {
+        "week7_01_audit": "407 experiments in 3 partitions (new-data 165, old-data-local 179, old-data-remote-clean 63)",
+        "later_revision_only_restored_monitor_streams": true
+      },
+      "previously_used": "yes: Week 7 phases 1-5",
+      "labels_previously_inspected": true,
+      "valid": false,
+      "reason": "same 407 experiments as the original pool"
+    },
+    {
+      "candidate": "ioandanielc/sph_dataset @ 0e859b74 (Weeks 5-6)",
+      "version": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+      "rows": 241,
+      "disjoint_from_original": false,
+      "evidence": {
+        "input_tuples": 241,
+        "input_tuples_also_in_405": 241,
+        "input_tuples_not_in_405": 0
+      },
+      "previously_used": "yes: Weeks 5-6 modelling, then re-released as the old-data partitions of sph_v2",
+      "labels_previously_inspected": true,
+      "valid": false,
+      "reason": "every simulation is already in the 405-simulation population"
+    },
+    {
+      "candidate": "ioandanielc/sph_dataset_sample",
+      "version": "3442f5ff6f372931b52dfe20811b77a6eee70886",
+      "rows": 5,
+      "disjoint_from_original": false,
+      "evidence": {
+        "folders": [
+          "sim_00001",
+          "sim_00002",
+          "sim_00003",
+          "sim_00004",
+          "sim_00005"
+        ],
+        "ids_present_in_week6_ledger": [
+          "sim_00001",
+          "sim_00002",
+          "sim_00003",
+          "sim_00004",
+          "sim_00005"
+        ]
+      },
+      "previously_used": "sample of sph_dataset (Weeks 5-6)",
+      "labels_previously_inspected": true,
+      "valid": false,
+      "reason": "5 simulations from the Week 6 campaign, all inside the original pool; far below the frozen design size"
+    },
+    {
+      "candidate": "2 rows of the 407 excluded from the 405 population",
+      "version": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+      "rows": 2,
+      "disjoint_from_original": false,
+      "evidence": {
+        "source": "Phase 5.5 retention audit"
+      },
+      "previously_used": "audited and excluded in Phase 5.5",
+      "labels_previously_inspected": true,
+      "valid": false,
+      "reason": "same campaign, labels read during the exclusion audit, 2 rows"
+    },
+    {
+      "candidate": "local copies found on disk (Downloads ledgers, Week 5 raw data, HF cache, monitor-restoration payload)",
+      "version": "file names and name/input columns only",
+      "rows": 1323,
+      "disjoint_from_original": false,
+      "evidence": {
+        "ledgers": [
+          {
+            "file": "C:\\Users\\ozgur\\.cache\\huggingface\\hub\\datasets--ioandanielc--sph_v2\\snapshots\\d69dac5bda8b622bc0de316b112815c6056c06ec\\labels_partition_2_old-data-local.csv",
+            "checked": true,
+            "simulations": 179,
+            "names_in_original_407": 179,
+            "input_tuples_in_original_407": 179,
+            "input_tuples_not_in_original_407": 0
+          },
+          {
+            "file": "C:\\Users\\ozgur\\Documents\\hf-sph-v2-old-data-monitor-restoration\\inputs\\labels_partition_2_old-data-local.csv",
+            "checked": true,
+            "simulations": 179,
+            "names_in_original_407": 179,
+            "input_tuples_in_original_407": 179,
+            "input_tuples_not_in_original_407": 0
+          },
+          {
+            "file": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp\\data\\raw\\sph_dataset\\final-labels_all.csv",
+            "checked": true,
+            "simulations": 241,
+            "names_in_original_407": 241,
+            "input_tuples_in_original_407": 241,
+            "input_tuples_not_in_original_407": 0
+          },
+          {
+            "file": "C:\\Users\\ozgur\\Downloads\\final-labels_all (1).csv",
+            "checked": true,
+            "simulations": 241,
+            "names_in_original_407": 241,
+            "input_tuples_in_original_407": 241,
+            "input_tuples_not_in_original_407": 0
+          },
+          {
+            "file": "C:\\Users\\ozgur\\Downloads\\final-labels_all.csv",
+            "checked": true,
+            "simulations": 241,
+            "names_in_original_407": 241,
+            "input_tuples_in_original_407": 241,
+            "input_tuples_not_in_original_407": 0
+          },
+          {
+            "file": "C:\\Users\\ozgur\\Downloads\\labels_partition_2_old-data-local.csv",
+            "checked": true,
+            "simulations": 179,
+            "names_in_original_407": 179,
+            "input_tuples_in_original_407": 179,
+            "input_tuples_not_in_original_407": 0
+          },
+          {
+            "file": "C:\\Users\\ozgur\\Downloads\\labels_partition_3_old-data-remote-clean.csv",
+            "checked": true,
+            "simulations": 63,
+            "names_in_original_407": 63,
+            "input_tuples_in_original_407": 63,
+            "input_tuples_not_in_original_407": 0
+          }
+        ],
+        "simulation_folders": [
+          {
+            "parent": "C:\\Users\\ozgur\\.cache\\huggingface\\hub\\datasets--ioandanielc--sph_dataset\\snapshots\\0e859b748fdbc8454f66e58e101e333ac0479d42\\final_data_processed",
+            "simulation_folders": 55,
+            "in_original_campaign": 55,
+            "not_in_original_campaign": []
+          },
+          {
+            "parent": "C:\\Users\\ozgur\\Documents\\hf-sph-v2-old-data-monitor-restoration\\payload",
+            "simulation_folders": 55,
+            "in_original_campaign": 55,
+            "not_in_original_campaign": []
+          },
+          {
+            "parent": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit\\data\\raw\\sph_v2\\d69dac5bda8b622bc0de316b112815c6056c06ec",
+            "simulation_folders": 1,
+            "in_original_campaign": 1,
+            "not_in_original_campaign": []
+          },
+          {
+            "parent": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit\\data\\raw\\sph_v2\\d69dac5bda8b622bc0de316b112815c6056c06ec\\.cache\\huggingface\\download",
+            "simulation_folders": 1,
+            "in_original_campaign": 1,
+            "not_in_original_campaign": []
+          }
+        ],
+        "anything_outside_original_campaign": false
+      },
+      "previously_used": "copies of the original campaign's ledgers and folders",
+      "labels_previously_inspected": true,
+      "valid": false,
+      "reason": "every ledger row and simulation folder is one of the original 407 experiments"
+    },
+    {
+      "candidate": "Masinelli et al. experimental LPBF process maps (Phase 1.10 / 1.10B)",
+      "version": "pinned GitHub workbooks (outputs/week9_phase1_10_external_experimental_validation/source_manifest.json)",
+      "rows": "38 unique conditions per alloy",
+      "disjoint_from_original": true,
+      "evidence": {
+        "inputs": "P and VX only (fixed spot size, no substrate temperature)",
+        "target": "post-mortem metallographic regime, not the simulator label"
+      },
+      "previously_used": "yes: M3 / physics-direction / two-slope model comparisons in Phases 1.10 and 1.10B",
+      "labels_previously_inspected": true,
+      "valid": false,
+      "reason": "not a simulation pool; labels already used for model comparison; the frozen 4D policy and the 16-to-80 budget design cannot be applied to 38 two-dimensional conditions"
+    },
+    {
+      "candidate": "supervisor's new simulation pool (research_strategy_memo 2026-09-05; NEW_POOL_FEASIBILITY_SPEC)",
+      "version": null,
+      "rows": null,
+      "disjoint_from_original": "unknown",
+      "evidence": {
+        "memo": "new simulations reported as already run and being labelled by the supervisor; labels not observed by the method side",
+        "huggingface": "no new commit in sph_v2 since 2026-08-10, no new dataset by ioandanielc or the user",
+        "local_disk": "no simulation folder, label ledger or input manifest outside the known pools (see disk_name_scan)",
+        "prepared_audit_never_run": true
+      },
+      "previously_used": "no evidence of any use",
+      "labels_previously_inspected": "no evidence",
+      "valid": false,
+      "reason": "not available: no manifest, inputs or labels of this pool exist in any location accessible here, so it can be neither audited nor tested"
+    }
+  ],
+  "EXTERNAL_BLIND_POOL_VALID": false,
+  "verdict": "No genuinely external blind simulation pool is available. Every accessible simulation - on Hugging Face and in every local ledger, cache and folder - belongs to the original 407-experiment campaign; the only independent data set (Masinelli) is experimental, 2D, small and already used; and the supervisor's new pool has not been delivered to any accessible location.",
+  "consequence": "STOP before Step 2: no external label was read, no protocol was frozen, no external run was made.",
+  "needed_to_proceed": [
+    "the new pool from the data owner as an immutable manifest (folder names / parameters.json with P, VX, LS, ST, configuration tokens) delivered WITHOUT labels, plus a separate sealed label file",
+    "confirmation that nobody on the method side has seen those labels",
+    "then: rerun this audit, run the label-free Step 2 feasibility check, and freeze the protocol before unsealing"
+  ]
+}

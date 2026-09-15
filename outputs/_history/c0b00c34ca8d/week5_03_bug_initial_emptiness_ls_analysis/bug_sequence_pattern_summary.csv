@@ -1,0 +1,11 @@
+metric,count,denominator,percentage,denominator_definition,sequence_pattern_category,simulations,representative_name,representative_sequence,percentage_of_bug_simulations
+Bug-containing simulations,150,241,0.6224066390041494,all simulations,,,,,
+Bug simulations beginning with Initial Emptiness,0,150,0.0,Bug-containing simulations,,,,,
+Strict Initial Emptiness then immediate Bug,0,150,0.0,Bug-containing simulations,,,,,
+All pre-Conduction Bugs in initial empty-like block,147,147,1.0,simulations with pre-Conduction Bug,,,,,
+Bug frames outside initial empty-like block,51,150,0.34,Bug-containing simulations,,,,,
+Bug after a physical regime appeared,51,150,0.34,Bug-containing simulations,,,,,
+One contiguous Bug block,99,150,0.66,Bug-containing simulations,,,,,
+Multiple separated Bug blocks,51,150,0.34,Bug-containing simulations,,,,,
+pattern_category,99,150,0.66,Bug-containing simulations,initial_empty_like_block_bug_only,99.0,P-105p276295276_VX-0p639039009111_LS-7p6636834293e-05_ST-367p44858305_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p00125_DT-1p00822530836e-05_H-bf889bf790,Screenshot Bug × 24 → Forming Phase × 26 → Conduction × 71,0.66
+pattern_category,51,150,0.34,Bug-containing simulations,multiple_separated_bug_blocks,51.0,P-104p101541641_VX-0p916529700054_LS-8p82882842693e-05_ST-394p968412652_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p2634634783e-06_H-6014a1f9c3,Screenshot Bug × 36 → Initial Emptiness × 1 → Forming Phase × 206 → Conduction × 61 → Screenshot Bug × 86,0.34

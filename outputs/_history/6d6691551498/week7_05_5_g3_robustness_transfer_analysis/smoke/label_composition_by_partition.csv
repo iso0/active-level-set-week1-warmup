@@ -1,0 +1,6 @@
+population,experiment_count,keyhole_positive_count,keyhole_negative_count,keyhole_positive_fraction,conduction_positive_count,target_ready_keyhole_positive_count,target_ready_keyhole_negative_count
+new-data,165,63,102,0.38181818181818183,133,63,101
+old-data-local,179,8,171,0.0446927374301676,178,8,170
+old-data-remote-clean,63,2,61,0.031746031746031744,62,2,61
+all-old,242,10,232,0.04132231404958678,240,10,231
+all-combined,407,73,334,0.17936117936117937,373,73,332

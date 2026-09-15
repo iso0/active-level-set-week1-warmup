@@ -1,0 +1,27 @@
+check,status,evidence
+clean sample size,PASS,observed=91
+broad sample size,PASS,observed=238
+never-Conduction exclusion,PASS,excluded=3
+one row per simulation,PASS,name is unique in both modelling frames
+raw target reconciliation,PASS,mismatches=0
+clean prediction row count,PASS,"observed=364, expected=364"
+clean unique simulation-kernel rows,PASS,duplicates=0
+clean finite positive predictive std,PASS,minimum_std=308.58955
+clean scaler fitted on training rows only,PASS,training/scaler rows=90; heldout flags=0
+clean matching optimization settings,PASS,"alpha=1e-06, optimizer=fmin_l_bfgs_b, restarts=1, seed=20260721"
+clean no fit failures,PASS,failures=0
+broad prediction row count,PASS,"observed=952, expected=952"
+broad unique simulation-kernel rows,PASS,duplicates=0
+broad finite positive predictive std,PASS,minimum_std=378.19238
+broad scaler fitted on training rows only,PASS,training/scaler rows=237; heldout flags=0
+broad matching optimization settings,PASS,"alpha=1e-06, optimizer=fmin_l_bfgs_b, restarts=1, seed=20260721"
+broad no fit failures,PASS,failures=0
+same-clean paired rows,PASS,rows=364
+ARD fold lengthscale dimensionality,PASS,rows=1316; four dimensions per ARD fold
+saved metric tables agree,PASS,CSV round-trip equals notebook dataframes
+raw CSV SHA-256 unchanged,PASS,964a12d86435e9f0879e2e43384d997e1cc2faa7b9e4c3aeb49cf0e73e3fb154
+raw CSV remains ignored,PASS,git check-ignore exit=0
+Phase 1 artifacts remain available,PASS,present=5/5
+no fitted model pickle files,PASS,pickle_files=0
+thesis log contains actual results,PASS,clean_best=Matérn 3/2; broad_best=Matérn 3/2
+out-of-scope methods remain not started,PASS,decision log preserves the Phase 2 stop condition

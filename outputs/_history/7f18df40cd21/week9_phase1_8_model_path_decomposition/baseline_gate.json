@@ -1,0 +1,16 @@
+{
+  "Y00_Y01_budget16_max_accuracy_error": 1.1102230246251565e-16,
+  "Y00_budget16_q20_accuracy": 0.7317647058823529,
+  "Y00_checkpoint_refit_max_accuracy_error": 1.1102230246251565e-16,
+  "Y00_checkpoint_refit_max_error_all_metrics": 1.1102230246251565e-16,
+  "Y00_q20_AULC": 0.8135202205882353,
+  "Y10_Y11_budget16_max_accuracy_error": 1.1102230246251565e-16,
+  "Y11_budget16_q20_accuracy": 0.7847058823529411,
+  "Y11_q20_AULC": 0.8335386029411765,
+  "budget16_same_model_max_error_all_metrics": 1.1102230246251565e-16,
+  "initial_design_exact_matches": 100,
+  "keyholes": 73,
+  "outer_runs": 100,
+  "population_rows": 405,
+  "status": "PASS"
+}

@@ -1,0 +1,20 @@
+{
+  "coverage_then_margin_B40": {
+    "runs": 300,
+    "first40_identical_to_reference": 300,
+    "all80_identical": 0,
+    "seed_size_counts": {
+      "16": 300
+    }
+  },
+  "early8__coverage_then_margin_B40": {
+    "runs": 300,
+    "first40_identical_to_reference": 300,
+    "all80_identical": 0,
+    "seed_size_counts": {
+      "8": 300
+    }
+  },
+  "A_vs_margin_first16_identical": 300,
+  "A_final80_set_identical_to_margin": 211
+}

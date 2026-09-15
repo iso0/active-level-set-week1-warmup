@@ -1,0 +1,4 @@
+definition,role,mean,median,q05,q95,primary_for_PA_TVR
+W_A=p_M3(1-p_M3),predictive-label variance proxy,0.02754045957784797,0.0022041365945362082,9.99999999999e-13,0.16075717388403843,False
+W_B=sigmoid(mu)(1-sigmoid(mu)),site curvature at posterior mean,0.023706091898412,0.0014024304515176794,6.965277961816309e-40,0.14444675245709862,False
+W_C=E[sigmoid(F)(1-sigmoid(F))],posterior-expected site curvature,0.025448817343331574,0.0019935150612043367,1.4801116191096365e-38,0.1458405828323021,True

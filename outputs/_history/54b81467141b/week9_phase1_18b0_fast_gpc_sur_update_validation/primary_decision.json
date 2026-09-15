@@ -1,0 +1,43 @@
+{
+  "criteria": {
+    "late_median_spearman": false,
+    "mean_top5_jaccard": false,
+    "median_fast_top_rank_under_exact": true,
+    "median_probability_mae": true,
+    "median_spearman": false,
+    "q10_spearman": false,
+    "q90_snapshot_probability_mae": true,
+    "sign_reversal_fraction": false,
+    "top1_agreement": false
+  },
+  "decision": "FAST_SUR_REJECTED",
+  "gate": {
+    "late_median_spearman": 0.85,
+    "mean_top5_jaccard": 0.7,
+    "median_fast_top_rank_under_exact": 2.0,
+    "median_posterior_probability_mae": 0.02,
+    "median_spearman": 0.95,
+    "q10_spearman": 0.8,
+    "q90_snapshot_probability_mae": 0.05,
+    "sign_reversal_fraction": 0.05,
+    "top1_agreement": 0.7
+  },
+  "guarded_prospective_possible": false,
+  "observed": {
+    "late_median_spearman": 0.47492507492507496,
+    "mean_top10_jaccard": 0.7252214452214453,
+    "mean_top3_jaccard": 0.43999999999999995,
+    "mean_top5_jaccard": 0.5238095238095238,
+    "median_fast_top_rank_under_exact": 2.0,
+    "median_kendall_tau": 0.3846153846153845,
+    "median_pearson": 0.432297612199182,
+    "median_posterior_probability_mae": 1.0622692894884067e-05,
+    "median_spearman": 0.4813186813186813,
+    "q10_spearman": -0.2106195558827138,
+    "q90_snapshot_probability_mae": 0.00010541159136501311,
+    "sign_reversal_fraction": 0.28664495114006516,
+    "snapshots": 25.0,
+    "top1_agreement": 0.44
+  },
+  "prospective_fast_sur_justified": false
+}

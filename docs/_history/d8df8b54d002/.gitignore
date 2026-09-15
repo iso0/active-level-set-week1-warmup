@@ -1,0 +1,22 @@
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter runtime files
+.ipynb_checkpoints/
+
+# Generated notebook exports
+notebooks/*.html
+notebooks/*.pdf
+
+# Local editor and OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak

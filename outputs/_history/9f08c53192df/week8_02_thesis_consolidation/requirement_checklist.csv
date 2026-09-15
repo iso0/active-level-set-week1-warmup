@@ -1,0 +1,26 @@
+requirement_id,requirement,status,evidence
+R01,Final Binary/Random/Max-Depth scorecard,PASS,final_real_data_scorecard.csv
+R02,B1/B2/B3 and balanced-accuracy AULCs,PASS,final_real_data_scorecard.csv
+R03,Queries to 80/85% q20 and 80% q30,PASS,final_real_data_scorecard.csv
+R04,"Keyhole discovery, savings, and runtime",PASS,final_real_data_scorecard.csv
+R05,Synthetic Branin/Hartmann4/Ackley4 consolidation,PASS,synthetic_to_real_summary.csv
+R06,No universal synthetic winner,PASS,synthetic_to_real_summary.csv; claim C10
+R07,Final primary remains Binary,PASS,scorecard; Phase 7 decision
+R08,Max-Depth remains secondary,PASS,scorecard
+R09,Gate/Fusion remain negative evidence,PASS,Phase 7 decision
+R10,G3 not promoted to ground truth,PASS,claims C05-C06
+R11,No universal scalar threshold,PASS,claims C06-C07
+R12,No causal interpretation,PASS,claim C08
+R13,B1/B2/B3 empirical diagnostics,PASS,claim C09
+R14,Repeated CV limitation,PASS,claim C11; narrative
+R15,No prospective validation claim,PASS,claim C12; narrative
+R16,Full 13-row claim ledger,PASS,final_thesis_claim_ledger.csv
+R17,Ten final thesis figures,PASS,final_thesis_figures/
+R18,Six final thesis tables,PASS,final_thesis_tables/
+R19,Academic English results narrative,PASS,final_results_narrative.md
+R20,Complete plain-language Turkish summary,PASS,week8_final_plain_language_tr.md
+R21,Concise executable evidence notebook,PASS,notebooks/week_08/02_thesis_evidence_consolidation.ipynb
+R22,Runtime and provenance closeout,PASS,runtime_summary.json
+R23,Figure hashes,PASS,figure_manifest.csv
+R24,Output hashes,PASS,output_manifest.csv
+R25,Hard stop after Phase 2,PASS,uncommitted/unpushed scope check

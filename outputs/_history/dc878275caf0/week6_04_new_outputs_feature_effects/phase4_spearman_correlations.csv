@@ -1,0 +1,17 @@
+response,response_label,response_unit,feature,feature_unit,spearman_rho,sample_size,analysis_type,causal_claim
+width,T0 melt-pool width,um,P,W,0.503091457768938,241,raw descriptive association,False
+width,T0 melt-pool width,um,VX,m/s,-0.6886744229080755,241,raw descriptive association,False
+width,T0 melt-pool width,um,LS,um,0.4691680529025124,241,raw descriptive association,False
+width,T0 melt-pool width,um,ST,K,0.1997853997857262,241,raw descriptive association,False
+depth,T0 penetration depth,um,P,W,0.7888421178971916,241,raw descriptive association,False
+depth,T0 penetration depth,um,VX,m/s,-0.43783538291615715,241,raw descriptive association,False
+depth,T0 penetration depth,um,LS,um,-0.019215513043107844,241,raw descriptive association,False
+depth,T0 penetration depth,um,ST,K,0.051460993587721264,241,raw descriptive association,False
+kinetic_energy,T0 melt-pool kinetic energy,nJ,P,W,0.9680952299303868,241,raw descriptive association,False
+kinetic_energy,T0 melt-pool kinetic energy,nJ,VX,m/s,-0.015502762793326647,241,raw descriptive association,False
+kinetic_energy,T0 melt-pool kinetic energy,nJ,LS,um,0.22327331460375488,241,raw descriptive association,False
+kinetic_energy,T0 melt-pool kinetic energy,nJ,ST,K,0.13277303531969367,241,raw descriptive association,False
+total_height,T0 total vertical height,um,P,W,0.8010673502280444,241,raw descriptive association,False
+total_height,T0 total vertical height,um,VX,m/s,-0.3096583206692034,241,raw descriptive association,False
+total_height,T0 total vertical height,um,LS,um,0.13333754141766516,241,raw descriptive association,False
+total_height,T0 total vertical height,um,ST,K,0.07990678187106472,241,raw descriptive association,False

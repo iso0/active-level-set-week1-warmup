@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "python": "3.14.4",
+  "manifest_files_verified": 19327,
+  "unique_input_blobs": 18559,
+  "source_records": 148839,
+  "source_coverage_digest_matches": true,
+  "phase_families": 76,
+  "python_files_parsed": 359,
+  "notebooks_parsed": 86,
+  "canonical_notebook_stored_errors": [],
+  "phase120_frozen_manifest_files": 41,
+  "phase120_missing_frozen_files": [],
+  "scientific_experiments_rerun": false,
+  "legacy_phase2_manifest_issues": [
+    {
+      "path": "outputs/week9_phase2_temporal_width_dynamics/SUPERVISOR_PHASE2_ONE_PAGE.md",
+      "expected_sha256": "3a1a21ccb75f64967add17385120b9436a9ec35ec2d7ae4a24dd31eeb802b013",
+      "actual_sha256": "0e76ee771ad78dd22ac78650e125b0efe3d81ce7a567e2fcb7d44d45c67728b3",
+      "operation": "UNRESOLVED_PREEXISTING_FROZEN_MANIFEST_MISMATCH; retained available Git bytes"
+    },
+    {
+      "path": "outputs/week9_phase2_temporal_width_dynamics/claim_ledger.md",
+      "expected_sha256": "de592b0e1a886180873d4f4eac80070df45bb426b5ac7cd77acc1aeeca3d7f22",
+      "actual_sha256": "4aa396207675afad55728f085ee1669d00ac666c2177d55ed418aac46a87fcbf",
+      "operation": "UNRESOLVED_PREEXISTING_FROZEN_MANIFEST_MISMATCH; retained available Git bytes"
+    }
+  ],
+  "status_scope": "Consolidation integrity only; legacy Phase 2 manifest exceptions are not cleared by this PASS.",
+  "errors": []
+}

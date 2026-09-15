@@ -1,0 +1,35 @@
+file_name,simulation_count,remote_total_size_bytes,remote_total_size_MiB,all_discovered_simulations_have_file,schema_audit_simulation_count,download_policy
+average-temperature_gas.dat,241,336493226,320.9049472808838,True,13,13-simulation schema sample spanning IDs and parameter extremes
+average-temperature_melt.dat,241,336493226,320.9049472808838,True,13,13-simulation schema sample spanning IDs and parameter extremes
+average-temperature_substrate.dat,241,336495080,320.9067153930664,True,13,13-simulation schema sample spanning IDs and parameter extremes
+dt.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+iter.dat,241,155748032,148.53289794921875,True,13,all simulations
+kinetic-energy_gas.dat,241,336493217,320.90493869781494,True,13,13-simulation schema sample spanning IDs and parameter extremes
+kinetic-energy_melt.dat,241,336268369,320.69050693511963,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-temperature_gas.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-temperature_melt.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-temperature_substrate.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-thermal-conductivity_gas.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-thermal-conductivity_melt.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-thermal-conductivity_substrate.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-velocity_gas.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-velocity_melt.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-viscosity_gas.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+maximum-viscosity_melt.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+minimum-heat-capacity_gas.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+minimum-heat-capacity_melt.dat,241,336825037,321.22138690948486,True,13,13-simulation schema sample spanning IDs and parameter extremes
+minimum-heat-capacity_substrate.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes
+minimum-temperature_gas.dat,241,336495316,320.9069404602051,True,13,13-simulation schema sample spanning IDs and parameter extremes
+minimum-temperature_melt.dat,241,336495170,320.9068012237549,True,13,13-simulation schema sample spanning IDs and parameter extremes
+minimum-temperature_substrate.dat,241,336518761,320.9292993545532,True,13,13-simulation schema sample spanning IDs and parameter extremes
+particle-number_gas.dat,241,181189799,172.79605770111084,True,13,13-simulation schema sample spanning IDs and parameter extremes
+particle-number_melt.dat,241,126740432,120.86909484863281,True,13,13-simulation schema sample spanning IDs and parameter extremes
+particle-number_substrate.dat,241,207074056,197.48120880126953,True,13,13-simulation schema sample spanning IDs and parameter extremes
+position-bounds_gas.dat,241,2096561683,1999.437029838562,True,13,13-simulation schema sample spanning IDs and parameter extremes
+position-bounds_melt.dat,241,2075599769,1979.4461908340454,True,13,all simulations
+time.dat,241,336495341,320.906964302063,True,13,all simulations
+total-energy_gas.dat,241,336493226,320.9049472808838,True,13,13-simulation schema sample spanning IDs and parameter extremes
+total-energy_melt.dat,241,336493226,320.9049472808838,True,13,13-simulation schema sample spanning IDs and parameter extremes
+total-energy_substrate.dat,241,336495080,320.9067153930664,True,13,13-simulation schema sample spanning IDs and parameter extremes
+transferred-laser-power_melt.dat,241,336495314,320.90693855285645,True,13,13-simulation schema sample spanning IDs and parameter extremes
+transferred-laser-power_substrate.dat,241,336495341,320.906964302063,True,13,13-simulation schema sample spanning IDs and parameter extremes

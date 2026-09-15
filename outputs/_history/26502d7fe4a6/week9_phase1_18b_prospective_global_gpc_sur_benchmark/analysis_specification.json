@@ -1,0 +1,51 @@
+{
+  "arms": {
+    "P0": "published Phase 1.14 M3 probability-margin",
+    "P1": "exact enlarged-data Laplace with physics/scaler/kernel fixed",
+    "P2": "physics mean refit per outcome; scaler and current Stage-2 kernel fixed"
+  },
+  "bootstrap_draws": 20000,
+  "candidate_reference_rule": "literal predeclared formula: common current U_n for every candidate; future uncertainty uses the remaining pool after x is queried",
+  "catastrophic_fullheldout_guardrail": "at B40 or B80, mean P1-P0 full81 accuracy or Keyhole recall <= -0.05",
+  "evaluation_only": [
+    "B1",
+    "q20",
+    "q30",
+    "held-out labels"
+  ],
+  "failure_fallback": "retry identical fixed-kernel Laplace solve with max_iter_predict=300; never FAST_RANK1",
+  "label_saving_guardrail": "a paired first-hit CI must be entirely below zero and P1 attainment fraction must not be below P0",
+  "near_tie_tolerance": "max(1e-14, 1e-6 * max(max_abs_score, score_range))",
+  "primary_endpoint": "Fold-B1-q20 accuracy normalized trapezoidal AULC B16-B80",
+  "primary_family": [
+    "P1-P0",
+    "P2-P0"
+  ],
+  "regions": {
+    "BROAD_EARLY": [
+      16,
+      40
+    ],
+    "EARLY": [
+      16,
+      24
+    ],
+    "LATE": [
+      41,
+      80
+    ],
+    "MID": [
+      25,
+      40
+    ]
+  },
+  "retrospective_query_diagnostics": "q20-like/q30-like mean global 20th/30th percentile of label-free B1 distance; never used for selection",
+  "status": "FROZEN_BEFORE_NEW_RESULTS",
+  "thresholds": [
+    0.8,
+    0.82,
+    0.84
+  ],
+  "tie_break": "maximum SUR score, then smallest population-row index",
+  "uncertainty": "U_n is mean p(1-p) over the complete current unqueried pool R_n; hypothetical U_(n+1) is over R_n minus candidate x"
+}

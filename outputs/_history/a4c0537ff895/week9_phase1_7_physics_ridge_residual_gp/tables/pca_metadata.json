@@ -1,0 +1,31 @@
+{
+  "explained_variance_ratio": [
+    0.3196647110661834,
+    0.26455635122666216
+  ],
+  "features": [
+    "P",
+    "VX",
+    "LS",
+    "ST"
+  ],
+  "fit": "label-free PCA on globally standardized P,VX,LS,ST; labels and residuals used only after projection for display",
+  "loadings": {
+    "LS": [
+      0.7102383569037456,
+      0.17755152690701498
+    ],
+    "P": [
+      -0.6914886872167897,
+      0.32071335652760286
+    ],
+    "ST": [
+      0.08256374508211053,
+      0.9084643327282307
+    ],
+    "VX": [
+      -0.10289849285526287,
+      -0.20077588101770766
+    ]
+  }
+}

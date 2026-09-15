@@ -1,0 +1,23 @@
+{
+  "written_at_utc": "2026-09-13T17:56:01.907119+00:00",
+  "original_gate_status": "FAIL",
+  "cases_identical_under_single_thread_blas": 10,
+  "cases_total": 11,
+  "failing_case": [
+    {
+      "phase1_21_policy": "early8__coverage_then_margin_B40",
+      "phase1_20_checkpoint": "early8__sched_bmm_B40",
+      "run_id": "w85__r01_f01",
+      "queried_identical": false,
+      "metrics_identical": false
+    }
+  ],
+  "diagnosis": [
+    "The failing reference (Phase 1.20 early8__sched_bmm_B40, w85__r01_f01) was a single smoke-test run produced with multi-threaded BLAS; the gate ran with OMP_NUM_THREADS=1.",
+    "Against Phase 1.20 early8__cov_then_misfit_B40 on the same run (produced with OMP_NUM_THREADS=1), the Phase 1.21 Candidate-B trajectory is identical up to query index 40, exactly where the two rules are designed to differ; the early-start seed rule and the B8-B39 coverage phase are therefore reproduced exactly.",
+    "Against the smoke reference the first difference is at query index 44, where BOTH rules are plain margin: a near-tie resolved differently by floating-point noise.",
+    "Re-running the Phase 1.21 runner for that case with multi-threaded BLAS (the smoke test's environment) reproduces the smoke checkpoint bit-identically: queried indices identical = True, metrics identical = True."
+  ],
+  "resolution_status": "PASS - runner logic identical; results depend on BLAS thread count only through rare near-ties",
+  "consequence_for_phase_1_21": "every replication run of every policy uses OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=1; this environment is frozen in the protocol"
+}

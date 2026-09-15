@@ -1,0 +1,4 @@
+zone,count,keyhole,conduction,false_negative_if_low_zone_screened_conduction,false_positive_if_high_zone_screened_keyhole,negative_predictive_value,positive_predictive_value
+low_p_lt_0.05,295,1,294,1,0,0.9966101694915255,
+ambiguous_0.05_to_0.95,62,26,36,0,0,,
+high_p_gt_0.95,48,46,2,0,2,,0.9583333333333334

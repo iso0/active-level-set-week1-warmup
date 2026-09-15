@@ -1,0 +1,271 @@
+{
+  "files": [
+    {
+      "bytes": 863,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_aggregation_report.json",
+      "sha256": "bfc6e17847f6bda9824044ae806eccd6fa9e9cedbcf4ce18df250010a2405469"
+    },
+    {
+      "bytes": 3952,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_AULC_contrasts.csv",
+      "sha256": "91eb1cc732a483c20c41f8d84359f7024ec8667047c6c8ec57449383db3354fe"
+    },
+    {
+      "bytes": 6377158,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_checkpoints_H160.tar.gz",
+      "sha256": "30e768a9cd2b5781e953f755e59dbfeef17dacd7d7b400fe1b28619a89c09fea"
+    },
+    {
+      "bytes": 777,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_execution_H160.json",
+      "sha256": "d7816acc6229ec112a1b46e27c8208a6783ce70f6cf03548b122c77f1a7101ad"
+    },
+    {
+      "bytes": 820,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_execution_H80.json",
+      "sha256": "02bc308771414cf41ef05a12931589de7ad2c249d95b08fc5c1a84c327f4004d"
+    },
+    {
+      "bytes": 940990,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_information_flow.csv.gz",
+      "sha256": "1cf2272627a02a0cd1b65e1bdc7cc1fc9c93a334dbb34a52fa4d76fc568b622c"
+    },
+    {
+      "bytes": 16345,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_learning_curve_summary.csv",
+      "sha256": "c8c27d3f8a5df67b8ba52a734616f277132652ef041362f79b888be4e472e322"
+    },
+    {
+      "bytes": 109810,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_path_metrics.csv",
+      "sha256": "d55f9c1a2b81856ba8bf71bfaa76f626acf79696393ba317118ca9427a3535b7"
+    },
+    {
+      "bytes": 3392472,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_per_budget_metrics.csv.gz",
+      "sha256": "4d0b9c05e812294b88b3518ad32c14d77680bd0ff9c7747f0ebc80a1e1c4d81f"
+    },
+    {
+      "bytes": 6816,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/active_repeat_metrics_with_frozen_baselines.csv",
+      "sha256": "0ef898513244ad49de775268aa17a03a29ce3ec8646862607ae1cd14a2a9e5da"
+    },
+    {
+      "bytes": 531,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/baseline_reproduction_gate.json",
+      "sha256": "306c36ebe0c4b12212f97f8b87290699b9e8ac43f0bafa44e06dfeb7eb4b8b79"
+    },
+    {
+      "bytes": 2614,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/budget40_model_comparison.csv",
+      "sha256": "38aec7fca9a6f843bf48615cece257b5d4a001e44282b9387a57cb2a3618f716"
+    },
+    {
+      "bytes": 2867,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/calibration_summary.json",
+      "sha256": "00b7a0ca4d6dc6ff0ca2da6945ac39dd551bf4248e509c5264b3a7541f813b9c"
+    },
+    {
+      "bytes": 1801,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/claim_ledger.md",
+      "sha256": "2875d39a114dc223b00c325eb3cefec629ffae6ad12dbc184a12a391757aa3b4"
+    },
+    {
+      "bytes": 1660,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/data_and_protocol_audit.json",
+      "sha256": "4809a0a63f2df0f9fb961dc919a1fd1ec74169c84c08f854b3b97c27ca906cc6"
+    },
+    {
+      "bytes": 18618,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/empirical_exponent_bootstrap_draws.csv.gz",
+      "sha256": "6e33b5a441c5e74c7881f36dd56e047f683e4b5064bfe08ab0a9479077ef1ff6"
+    },
+    {
+      "bytes": 11476,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/empirical_exponent_fold_stability.csv",
+      "sha256": "4722e1095854c77aff1f88efeb17fe757dacbe33aa3afcc20f90071d58de92bd"
+    },
+    {
+      "bytes": 232,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/empirical_exponent_summary.csv",
+      "sha256": "672cf12cff6d32bc51aa7cfc15e888b49c29f1fcdf8b7aecf3112d427625ed75"
+    },
+    {
+      "bytes": 851,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/figure_manifest.csv",
+      "sha256": "b600b9c49cce9b7ff3993757b2d087132c3a522e900a9298a187d336cb567057"
+    },
+    {
+      "bytes": 48521,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/figures/01_theory_vs_empirical_exponents.png",
+      "sha256": "97323d02ad1fe896163dc3ef4bb0a6b75209b6792292f07ff77768745e3f2d24"
+    },
+    {
+      "bytes": 114549,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/figures/02_logh_distribution_and_oof_calibration.png",
+      "sha256": "c55503d3e4fd9f78e281a90a40f58157bfee0284a74e927de18187c6bc002be4"
+    },
+    {
+      "bytes": 94894,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/figures/03_static_model_comparison.png",
+      "sha256": "20a7c25fc4c833a9a8c2cf337ae1f762e6da8735d77761d89d40407cb5d94e84"
+    },
+    {
+      "bytes": 112624,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/figures/04_boundary_difficulty.png",
+      "sha256": "d01b5246e9136a9947c1cc358eaea279b9e5b268df1008d609665b24b5101b65"
+    },
+    {
+      "bytes": 253011,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/figures/05_residual_failure_map.png",
+      "sha256": "5cdbefb35826ebdf3150468d7ad25b89f271149832ffd71f86889be702631899"
+    },
+    {
+      "bytes": 140077,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/figures/06_active_q20_learning_curves.png",
+      "sha256": "2cc02a61221e6d9459cc127cafc6fcb863a116a054527c15bf962122a3d82e29"
+    },
+    {
+      "bytes": 123995,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/figures/07_active_q20_early_zoom.png",
+      "sha256": "b5445871c579cf205c0139cbf7dfc33b14eeb8e8378ac357e3bbe78facbf3d8c"
+    },
+    {
+      "bytes": 84308,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/figures/08_budget40_comparison.png",
+      "sha256": "6b19301d043499107d790329dc1ae11438d678675c20c9fd42151dbfd074f741"
+    },
+    {
+      "bytes": 4126,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/FINAL_PHASE1_5_REPORT.md",
+      "sha256": "263bc9b86699a0e64a999e4cb71cc9ec280b57a79348ca21cf390c227297d7ed"
+    },
+    {
+      "bytes": 424,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/gpc_kernel_bound_diagnostics.csv",
+      "sha256": "55f5c36a19677b3cb5815f701d8bdd974b62ec059de73419c3b21b5919a16b3f"
+    },
+    {
+      "bytes": 99768,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/h_coordinates.csv",
+      "sha256": "b965cff523eaa546cab388e4d880a162c489ad6c225458aedc1b979b0c096842"
+    },
+    {
+      "bytes": 122053,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/residual_case_analysis.csv",
+      "sha256": "ad345b6dbfb1264f1d12adce917686573bdd131c8efd01878da95eeb78e683be"
+    },
+    {
+      "bytes": 79282,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/screening_oof_unique_predictions.csv",
+      "sha256": "d3568f427dda227a7816c3ea565de0f4eff0828995e7b5bb88b8d04f4633063d"
+    },
+    {
+      "bytes": 307,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/screening_zone_summary.csv",
+      "sha256": "8727981e3faa8da82a7767b20204ce6b6c6fa8c586262ec24db96d3831568f3c"
+    },
+    {
+      "bytes": 3944,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/split_integrity.csv",
+      "sha256": "6c7bba015c08b43cadf88539e45078364e7ff50fed1c39ff450a4ceba9096f09"
+    },
+    {
+      "bytes": 2429,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/static_execution_report.json",
+      "sha256": "02875d70e7f18db210d22160bf7bfa41bc72e6c730f1dac4314f6a763798b085"
+    },
+    {
+      "bytes": 661545,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/static_fold_metrics.csv",
+      "sha256": "3789af57a329ff43c64c040a88119000d284b9133e92ac5695c775bebf828535"
+    },
+    {
+      "bytes": 17702,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/static_model_summary.csv",
+      "sha256": "03a4c7b3ec70f031c36122ce7498a59c52b6d0b92506f58dc963f211e10f77a7"
+    },
+    {
+      "bytes": 1879508,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/static_oof_predictions.csv.gz",
+      "sha256": "89d78c14e1ea515b534638f6935e0ffd0dc1d576fdeb75f80eadca71d20cb705"
+    },
+    {
+      "bytes": 11208,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/static_paired_contrasts.csv",
+      "sha256": "06138dc6727188c83d5f9a9becc5dae25fbd2cd98adae85594e86eb9ce6ad7f9"
+    },
+    {
+      "bytes": 132438,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/static_repeat_metrics.csv",
+      "sha256": "1e4feb06eae2e16d779878e0ae4a65fb598911746868b04868c9a1faaafa4db8"
+    },
+    {
+      "bytes": 2033,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/SUPERVISOR_PHASE1_5_ONE_PAGE.md",
+      "sha256": "4d400b58bdc504c568e6ec5f2d9f057ea9f5435b86b5287b6f2f41cedf75f6b2"
+    },
+    {
+      "bytes": 1164,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/validation_report.json",
+      "sha256": "1a9efd451a943223058596dbc60494e3a88a59e53f50174d10b1cb3d7d93ffab"
+    },
+    {
+      "bytes": 1142,
+      "path": "outputs/week9_phase1_5_h_physics_confirmation/validation_report.md",
+      "sha256": "29ad14c6f71fdc195e13c8ccb44c47e3703b92bd503301c6c27313841fb9c5c2"
+    },
+    {
+      "bytes": 5240,
+      "path": "reports/01_primary_literature_equation_audit.md",
+      "sha256": "8c2fa2f049598e669c141d0579b9a5527b81a1594bc36b7fe8dcd1833730b426"
+    },
+    {
+      "bytes": 4047,
+      "path": "reports/02_data_unit_statistical_reproduction_audit.md",
+      "sha256": "cea0d6be25cd7dcd75540cc09f82267406f9e09111048e31fed98b3ddaa819a7"
+    },
+    {
+      "bytes": 7008,
+      "path": "reports/03_static_model_calibration_audit.md",
+      "sha256": "44073c56f94bf71dd565965ef6ea30f187498a61838eed941e131117eeda8f3d"
+    },
+    {
+      "bytes": 2381,
+      "path": "reports/04_active_learning_audit.md",
+      "sha256": "ba2a30c3e47f837094671020d528ec8d12f79aaad33bbf4ddb8989cebf51764f"
+    },
+    {
+      "bytes": 6558,
+      "path": "reports/05_final_red_team_report.md",
+      "sha256": "364ae2ca0a9211eaa8bb25f656caf8af888faf8e6e12e44006b9835376ec8bbe"
+    },
+    {
+      "bytes": 28685,
+      "path": "notebooks/week_09/02_week9_phase1_5_h_physics_confirmation.ipynb",
+      "sha256": "1c1b97e7e4ad58cf1f8cc6284b5a2de48203a5169c6d4500bbafda97feca60c1"
+    },
+    {
+      "bytes": 68121,
+      "path": "src/week9_phase1_5_h_physics_confirmation.py",
+      "sha256": "f9f60bcb0b3f7c3bfc0afb65a51456a57a5590ac8d5b9819c9fd0af6da9413c7"
+    },
+    {
+      "bytes": 26178,
+      "path": "scripts/build_week9_phase1_5_artifacts.py",
+      "sha256": "f42c4c09d49e009b209736df2663678f9517adfad5297ae3c4fb0c471fb73e58"
+    },
+    {
+      "bytes": 4598,
+      "path": "tests/test_week9_phase1_5_h_physics_confirmation.py",
+      "sha256": "fc8320fd413c299d39b596bb96fe192b375e23b8cb946c70f48b54e5f5fe5587"
+    }
+  ],
+  "final_sha_note": "The exact final commit SHA is reported after publication; embedding a commit's own SHA in that commit is self-referential.",
+  "head_before_publication_commit": "bdb6eb3628ae5eafaa0e5bc94d454626a6cf550a",
+  "historical_outputs_modified": false,
+  "starting_branch": "codex/week9-phase1-close-week8-sample-efficiency",
+  "starting_sha": "bdb6eb3628ae5eafaa0e5bc94d454626a6cf550a",
+  "study": "Week 9 Phase 1.5 h physics confirmation",
+  "study_branch": "codex/week9-phase1-5-h-physics-confirmation"
+}

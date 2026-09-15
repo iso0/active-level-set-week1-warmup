@@ -1,0 +1,23 @@
+{
+  "declared_at_utc": "2026-09-14T00:18:15.613202+00:00",
+  "status": "post-hoc adversarial ablation, declared before running; descriptive only",
+  "data": "Phase 1.21 replication repeats 61-120 (300 outer CV runs of the same 405 simulations); already used once",
+  "policies": {
+    "early8__margin": "first 8 frozen maximin points (extended along the frozen order until both classes), then plain M3 margin",
+    "global_unc_div_then_margin_B40": "frozen rank(uncertainty) + rank(distance) over ALL candidates until B40 (no band), then margin; same weights/switch as frozen"
+  },
+  "comparisons": {
+    "B - early8__margin": "acquisition value under the early start",
+    "early8__margin - margin": "initial-design value",
+    "A - global_unc_div": "value of the label-estimated band on SPH",
+    "global_unc_div - margin": "global uncertainty+diversity vs margin"
+  },
+  "endpoints": "q20 accuracy AULC 16-80 and 16-40; repeat-block bootstrap (10,000) and sign-flip as Phase 1.21",
+  "no_decision_rule": "reported with CIs; no success criterion; cannot change any frozen Phase 1.21 conclusion",
+  "code_sha256": {
+    "week9_phase1_23_sph_ablation.py": "05395dc74711afe2846f519f90312794c77e9243f3288e2fb708579547174e6f",
+    "week9_phase1_21_simplification_replication.py": "b7c436e88c15cb569c4c5f8cf2f26f3c2742f436da403c8c4b6fce85386d19c9",
+    "week9_phase1_23_synthetic.py": "37be737678f314c528d6677978bcdd6b0f49d775bedf6baf2d7c916d43585e10",
+    "week9_phase1_20_acquisition_search.py": "a47a4c2a872bda39da0ef1415360447d9fafb570c603cf3e6687ead5681a26b2"
+  }
+}

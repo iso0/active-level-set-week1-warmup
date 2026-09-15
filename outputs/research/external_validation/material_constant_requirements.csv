@@ -1,0 +1,12 @@
+parameter,symbol,required_unit,Ti64_availability,Ti64_candidate_value_or_rule,316L_availability,316L_candidate_value_or_rule,source,temperature_dependence,uncertainty_and_use
+Laser power,P,W,READY,90-120,READY,90-120,Masinelli process table,None within a condition,Measured process input
+Scan speed,Vs,m/s,READY,0.3-1.8,READY,0.3-1.8,Masinelli process table,None within a condition,Measured process input
+Laser radius,r0,m,READY,25e-6,READY,25e-6,Masinelli Section 2.6,Constant across study,Recovered unambiguously from 50 um 1/e^2 diameter
+Initial temperature,T0,K,APPROXIMATE,298.15,APPROXIMATE,298.15,Masinelli Table 4,No per-build measurement reported,Paper says approximately 25 C
+Liquidus temperature,Tl,K,LITERATURE,1933,LITERATURE,1723,Gan et al. Supplementary Table 1,Material-specific,SS value is SS316 rather than batch-specific 316L
+Density,rho,kg/m^3,LITERATURE,3920 at T>=1933 K,LITERATURE,6881 at T>=1723 K,Gan et al. Supplementary Table 1,Piecewise phase/temperature dependent,Phase convention must be frozen before analysis
+Heat capacity,Cp,J/(kg K),LITERATURE,830 at T>=1933 K,LITERATURE,790 at T>=1723 K,Gan et al. Supplementary Table 1,Piecewise temperature dependent,Not measured on Masinelli powders
+Thermal conductivity,k,W/(m K),LITERATURE,33.4 at T>=1933 K,LITERATURE,26.9 at T>=1723 K,Gan et al. Supplementary Table 1,Piecewise temperature dependent,Needed only to derive alpha consistently
+Thermal diffusivity,alpha,m^2/s,DERIVABLE,1.02656e-5 from k/(rho Cp),DERIVABLE,4.94850e-6 from k/(rho Cp),Gan et al. Supplementary Table 1,Inherits k/rho/Cp dependence,Use matched liquidus-phase constants and propagate uncertainty
+Effective absorptivity,eta,dimensionless,NOT MEASURED,No build-specific value,NOT MEASURED,No build-specific value,Gan Eq. 1; Masinelli does not report eta,Strong wavelength/surface/morphology dependence,Critical blocker to calling a computed value the exact full Keyhole number
+Minimum absorptivity sensitivity,eta_m,dimensionless,LITERATURE SENSITIVITY,0.26,LITERATURE SENSITIVITY,0.33,Gan et al. Supplementary Table 1,Material and optical-state dependent,May support a predeclared sensitivity only; eta_m is not interchangeable with dynamic effective eta without qualification

@@ -1,0 +1,21 @@
+phase1_requirement,notebook_section,relevant_cells,output_file,validation_status
+Diagnose the previous listing failure,§3,cell tagged root-cause,listing_failure_root_cause.md,PASS
+Pagination-safe top-level enumeration,§4,cell tagged repository-enumeration,repository_tree_audit.csv,PASS
+Direct revision/path existence checks,§4,cell tagged path-checks,revision_path_existence_checks.csv,PASS
+Master-table/folder reconciliation,§5,cell tagged reconciliation,experiments_folder_reconciliation.csv,PASS
+Numeric ID gaps reported,§5,cell tagged reconciliation,numeric_simulation_id_gaps.csv,PASS
+One row per actual simulation folder inventory,§5,cell tagged folder-inventory,simulation_folder_inventory.csv,PASS
+Complete simulation file inventory,§6,cell tagged file-inventory,simulation_file_inventory.csv,PASS
+All distinct monitor types inventoried,§6,cell tagged monitor-audit,dat_file_type_inventory.csv,PASS
+Monitor schema audited across full-range sample,§6,cell tagged monitor-audit,monitor_schema_audit.csv,PASS
+Monitor data dictionary documented,§6,cell tagged data-dictionary,monitor_data_dictionary.csv,PASS
+Every bounds/time/iteration stream parsed,§7,cell tagged bounds-manifest,melt_bounds_manifest.csv,PASS
+X/Y/Z mapping revalidated,§8,cells tagged axis-evidence and axis-figures,axis_evidence_summary.csv,PASS
+Frames sampled from corrected full population,§8,cell tagged axis-figures,frame_axis_evidence.csv,PASS
+Three physical responses re-evaluated,§9,cell tagged response-selection,selected_response_summary.csv,PASS
+Seven scalar target candidates compared,§9,cell tagged target-comparison,scalar_target_candidate_comparison.csv,PASS
+One row per folder response dataset,§10,cell tagged final-dataset,week6_phase1_simulation_level_responses.csv,PASS
+Incomplete simulations retained and flagged,§11,cell tagged quality-issues,missing_file_report.csv,PASS
+Anti-truncation and scientific validations,§12,cell tagged validations,validation_results.csv,PASS
+Direct answers and Phase 1 readiness,§13,cell tagged conclusions,results_summary.md,PASS
+Strictly no GP or Phase 2 work,§1/§13,cells tagged scope and conclusions,results_summary.md,PASS

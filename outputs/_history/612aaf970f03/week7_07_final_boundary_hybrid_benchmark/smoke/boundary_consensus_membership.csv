@@ -1,0 +1,3 @@
+subset,rule,row_count,keyhole_count,non_keyhole_count,new_data_count,old_local_count,old_remote_count,secondary_not_replacement
+consensus_q20,membership in at least two of B1/B2/B3 q20,78,38,40,47,20,11,True
+consensus_q30,membership in at least two of B1/B2/B3 q30,112,41,71,64,35,13,True

@@ -1,0 +1,6 @@
+stored_label,normalized_label,label_type,included_in_regime_analysis,exclusion_or_usage_note,provenance
+Conduction,Conduction,physical,True,,final-labels_all.csv and per-simulation frames.csv
+Keyhole,Keyhole,physical,True,,final-labels_all.csv and per-simulation frames.csv
+Forming Phase,Forming Phase,physical_transition,True,Excluded from binary Conduction-versus-Keyhole metrics but retained in profiles.,final-labels_all.csv and per-simulation frames.csv
+Initial Emptiness,Initial Emptiness,technical_or_annotation,False,No melt-regime claim; excluded from regime metrics.,final-labels_all.csv and per-simulation frames.csv
+Screenshot Bug,Screenshot Bug,technical_or_annotation,False,Never used as a Keyhole-negative physical class.,final-labels_all.csv and per-simulation frames.csv

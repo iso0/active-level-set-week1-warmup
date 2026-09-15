@@ -1,0 +1,30 @@
+{
+  "amendment": 2,
+  "frozen_at_utc": "2026-09-13T16:00:25.767688+00:00",
+  "amends": {
+    "protocol_sha256": "b5d06b0384b5529b6381b61e033368404dd6b819f26dc367ff9404fdcd187e8a",
+    "amendment_1_sha256": "ca85b476a86575e551d81b3e3c20c6acd0120f4f4abb531147512bf3ce96321c"
+  },
+  "made_before_inspecting_any_early_start_result": true,
+  "early_start_policies_complete_at_freeze": [],
+  "confirmation_data_inspected_or_computed": false,
+  "reason": "The original screening scope assumed the frozen 16-point maximin seed. An 'earlier active start' strategy (first k points of the same frozen maximin order, then active; identical total label budget; metrics from B16) changes the seed and therefore is a different comparison family. It is kept separate so that neither family can crowd out the other and the protocol-compatible acquisition result is always confirmed on its own.",
+  "change": {
+    "families": {
+      "A_post_B16_acquisition": "frozen 16-point seed, active from B16 (all week9_phase1_20_acquisition_search policies)",
+      "B_earlier_active_start": "policies named early{k}__{inner} (week9_phase1_20_early_start)"
+    },
+    "finalists": "at most 1 per family (so at most 2 in total, as before), each the eligible policy with the largest development paired delta q20 AULC 16-80 vs margin within its family",
+    "eligibility": "unchanged (dev delta 16-40 >= 0; B40 q20 KH recall not below margin by more than 0.03)",
+    "multiplicity": "Holm over the finalists x {16-80, 16-40}, as before",
+    "family_B_extra_disclosure": "family B changes how the first 16 labels are chosen; it is reported as an acquisition-strategy result, never as a like-for-like post-B16 acquisition result",
+    "unchanged": [
+      "endpoints",
+      "control",
+      "evaluator",
+      "confirmation set (Amendment 1)",
+      "decision rule",
+      "guardrails"
+    ]
+  }
+}

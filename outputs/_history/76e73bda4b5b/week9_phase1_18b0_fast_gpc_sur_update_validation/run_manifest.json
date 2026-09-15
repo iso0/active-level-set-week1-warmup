@@ -1,0 +1,364 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1398,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/analysis_specification.json",
+      "sha256": "22e2fa0c425300dba8f437a0b57609bff3d8f5ff4da3f22b9747af7c13a031b3"
+    },
+    {
+      "bytes": 387,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/baseline_gate.json",
+      "sha256": "f769c9733d176b3a60fd949f37b2d1a4b4ef430dc01bb2eaf27ba5751e642334"
+    },
+    {
+      "bytes": 38220811,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/candidate_level_update_results.csv.gz",
+      "sha256": "f5189c1c6f155ce88b206a85a7f6ee23cbe84ddcfb5a43c3649b0296b5a3e94b"
+    },
+    {
+      "bytes": 993,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/candidate_regime_fidelity.csv",
+      "sha256": "e79b75921bc9109160db95bf115d998577cf2309e965b805790fe6738e3b6452"
+    },
+    {
+      "bytes": 34830,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/candidate_sur_scores.csv.gz",
+      "sha256": "ba30889908c259fff9a2d90631472edcb53836d0b1b8e9336a6ad9375f8994f7"
+    },
+    {
+      "bytes": 43965,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/candidate_validation_design.csv",
+      "sha256": "334ffa83d241ffbbba726f7100ea9b55a4c654dc0348e1e4ec881d3f7261d296"
+    },
+    {
+      "bytes": 149,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/candidate_validation_design_sha256.json",
+      "sha256": "4bd47a917465056a7b15e41ed9040cb1f0159797a6a9ae7da9bfdd0bcdef864d"
+    },
+    {
+      "bytes": 821,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/claim_ledger.md",
+      "sha256": "81a67a8b4c558c4c3302b13659f176655a4d1546bfaa63dfeb8c070eaa9bf830"
+    },
+    {
+      "bytes": 368,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/exact_fixed_model_definition.md",
+      "sha256": "ca3da413de1a5e078c3736dff87eaa5dd5bf20e854ae417aec9a6d769355cf04"
+    },
+    {
+      "bytes": 125,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/execution_report.json",
+      "sha256": "59cae3bb462ca5e0fbe24887dc63b5413502fd7fce833708da6653bf2fac6c21"
+    },
+    {
+      "bytes": 451,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/fast_rank1_definition.md",
+      "sha256": "c135ee4ecc6900c02df8bde39b2bf60085b8f695ea9e38e5bc34654059cd835f"
+    },
+    {
+      "bytes": 893,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/figure_manifest.csv",
+      "sha256": "62950e6605dac161b8bb8c4d4b34f89e594b808a5eeaf60a0f3f9a3b01626f87"
+    },
+    {
+      "bytes": 82924,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/figures/01_fast_vs_exact_sur_scatter.png",
+      "sha256": "2aed80e8a8d719c05aa0c9b6c5a8100980340a9f7b9489ed412d80b095eab7e9"
+    },
+    {
+      "bytes": 41289,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/figures/02_snapshot_spearman_by_budget.png",
+      "sha256": "acdf704571c3b8b37f7a3a092f3766466f2758335dbba93824c1d1068755a7da"
+    },
+    {
+      "bytes": 87910,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/figures/03_selection_fidelity_by_budget.png",
+      "sha256": "a95e07bbe9eca8e8a32b7223cc37b75a8c0b99323876031a524706e49db45935"
+    },
+    {
+      "bytes": 31817,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/figures/04_probability_error_by_label.png",
+      "sha256": "d582019c3c3961575508789ede66dd9b13f8e85b30d9cb3c870293f656ebe4dd"
+    },
+    {
+      "bytes": 36856,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/figures/05_refit_effect_decomposition.png",
+      "sha256": "bb5e10bf05e3ce1c910639f35ecd6c0bb87cb02ed494751ee04770c1ae25027d"
+    },
+    {
+      "bytes": 49322,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/figures/06_runtime_comparison.png",
+      "sha256": "cdbad76524f12e8bd7a28a41e5c3dc395d69ce21c944d20fd0a5c3e605debfa7"
+    },
+    {
+      "bytes": 2596,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/FINAL_PHASE1_18B0_REPORT.md",
+      "sha256": "9c70bfcde75daf80048f129903bbf7bc40fd7082e3411244cdae24ff1becd94c"
+    },
+    {
+      "bytes": 1062,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/FINAL_RED_TEAM_REPORT.md",
+      "sha256": "a8b7ead292390625f01a5e4d07436ab79324493088f9c48a4943b844e2f57a2e"
+    },
+    {
+      "bytes": 280,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/full_refit_definition.md",
+      "sha256": "e9fd4bc1fae2cfdc9376b03f0727abe2b28e856a5de6047b826f5c58de2bdab5"
+    },
+    {
+      "bytes": 208,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/label_conditional_fidelity.csv",
+      "sha256": "4eb0efe22a584c07f338881c37b7f9b952494cfb0943da574f2daf8ef53dd2e1"
+    },
+    {
+      "bytes": 9567,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/numerical_regime_fidelity.csv",
+      "sha256": "ca2005ca4cb579a019fd3386b43065654c520d48a04c762f35fd96b8ded0c08c"
+    },
+    {
+      "bytes": 28605,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/parameter_freeze_audit.csv.gz",
+      "sha256": "22a6ee9ac984fb81518e0ec0590ddebfbe8640d4945ba482509d22e86a8c7227"
+    },
+    {
+      "bytes": 317,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/physics_refit_definition.md",
+      "sha256": "2ec59f852a0bb4dc91b901e4191953e5a011813c16841e00b46abbddd3cc7a28"
+    },
+    {
+      "bytes": 3296,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/posterior_fidelity_summary.csv",
+      "sha256": "04e21cf1d0c9b391c22dbbbccf5389008d6ac7487ffd79ee64e77892170f4eba"
+    },
+    {
+      "bytes": 1477,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/primary_decision.json",
+      "sha256": "c4d35d5193f60b5db32f5b23dc52e3ed416cfb37ca5cafa815a038a7c0ad92d2"
+    },
+    {
+      "bytes": 2972,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/probability_integration_validation.csv",
+      "sha256": "e833c5c93de4aae472a0a9dab1765b67bf2489100bfc7f4dc822073d907df2f9"
+    },
+    {
+      "bytes": 689,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/refit_effect_decision.json",
+      "sha256": "64954ad9a40cfacd7f36ddbddf6affd541f104cc7400bfcd4b0569daa9c7ea41"
+    },
+    {
+      "bytes": 7371,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/refit_effect_decomposition.csv",
+      "sha256": "d6a9e74e91e6750e49562070940d1c118886843ea3a20d626df1ad9190dd3d5c"
+    },
+    {
+      "bytes": 153102,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/runtime_benchmark.csv",
+      "sha256": "855bfe9823212658365bb6d83420fc29c1ea1c185721372d35c9e75f19873443"
+    },
+    {
+      "bytes": 1823,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/selection_fidelity_summary.csv",
+      "sha256": "d6798e732bd4434ec3d6941cd62bd1603ee645295078556d0780dc9bc735b4a8"
+    },
+    {
+      "bytes": 2596,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/snapshot_validation_design.csv",
+      "sha256": "b10fcaf7b0206e8acfdd29c72e2d09fecd25fd47ba5661f7d606d60d52237eaf"
+    },
+    {
+      "bytes": 253,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/special_case_validation.csv",
+      "sha256": "8f120377a30d9220cf21c3990f1c3d254e2c0a34b67b77d1b25130de991d6fc8"
+    },
+    {
+      "bytes": 829,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/SUPERVISOR_PHASE1_18B0_ONE_PAGE.md",
+      "sha256": "a11b655a25315f52c58fa2ee9c2e42e64fb8d8a675469d3eb428902db11b32a7"
+    },
+    {
+      "bytes": 1078,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/sur_literature_update_contract.md",
+      "sha256": "d8497ded6732ad13a9ce65be080cce2ea648ca1f3155d317cf35db6a5cbb6662"
+    },
+    {
+      "bytes": 5217,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/sur_score_fidelity_by_snapshot.csv",
+      "sha256": "7cee0705ad4bb96331cb4ec80ec0e782db834039209b106188c803dc03449845"
+    },
+    {
+      "bytes": 406,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/sur_score_fidelity_overall.csv",
+      "sha256": "c0e0f6bd7164c0ec3a74535f757d3376b696118978b28de3c2e038ea57ba0c9b"
+    },
+    {
+      "bytes": 3300,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/validation_report.json",
+      "sha256": "91f4bbd0805e7e8f85a2b5dc8c71c95839ef9843c929650cfa95cbe1e336b2d0"
+    },
+    {
+      "bytes": 1539,
+      "path": "outputs/week9_phase1_18b0_fast_gpc_sur_update_validation/validation_report.md",
+      "sha256": "f739ba9cf0e570859830069424bfc8421c4c7be938c6c309da6b91ff5bea6acc"
+    },
+    {
+      "bytes": 332942,
+      "path": "notebooks/week_09/17_week9_phase1_18b0_fast_gpc_sur_update_validation.ipynb",
+      "sha256": "81901fb9b4340154bf25d0b9e3f67c562547ac446b016467509ece03d1a3bdda"
+    }
+  ],
+  "branch": "codex/week9-phase1-18b0-fast-gpc-sur-update-validation",
+  "candidates": 307,
+  "hypothetical_label_update_levels": 2456,
+  "new_trajectory": false,
+  "parent_sha": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+  "phase": "Week 9 Phase 1.18B0",
+  "primary_decision": "FAST_SUR_REJECTED",
+  "refit_effect_decision": "PHYSICS_REFIT_MATTERS",
+  "snapshots": 25,
+  "validation": {
+    "check_count": 28,
+    "checks": [
+      {
+        "check": "exact_parent",
+        "detail": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+        "status": "PASS"
+      },
+      {
+        "check": "population",
+        "detail": "405/73/332",
+        "status": "PASS"
+      },
+      {
+        "check": "m3_architecture",
+        "detail": "frozen Phase1.13 implementation",
+        "status": "PASS"
+      },
+      {
+        "check": "no_new_trajectory",
+        "detail": "validation only",
+        "status": "PASS"
+      },
+      {
+        "check": "frozen_phase14_prefixes",
+        "detail": "100/100",
+        "status": "PASS"
+      },
+      {
+        "check": "snapshot_design_frozen",
+        "detail": "25 checkpoint identities",
+        "status": "PASS"
+      },
+      {
+        "check": "candidate_design_hash",
+        "detail": "334ffa83d241ffbbba726f7100ea9b55a4c654dc0348e1e4ec881d3f7261d296",
+        "status": "PASS"
+      },
+      {
+        "check": "candidate_design_matches_scored",
+        "detail": "exact identities",
+        "status": "PASS"
+      },
+      {
+        "check": "candidate_design_no_leakage",
+        "detail": "clean",
+        "status": "PASS"
+      },
+      {
+        "check": "both_labels",
+        "detail": "all",
+        "status": "PASS"
+      },
+      {
+        "check": "fast_reproduces_phase18a",
+        "detail": "exact score parity",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_fixed_kernel_frozen",
+        "detail": "bitwise theta/scaler",
+        "status": "PASS"
+      },
+      {
+        "check": "exact_fixed_physics_frozen",
+        "detail": "unchanged",
+        "status": "PASS"
+      },
+      {
+        "check": "physics_refit_kernel_frozen",
+        "detail": "unchanged",
+        "status": "PASS"
+      },
+      {
+        "check": "physics_refit_stage1_changes",
+        "detail": "all hypothetical updates",
+        "status": "PASS"
+      },
+      {
+        "check": "full_refit_normal_pipeline",
+        "detail": "normal M3",
+        "status": "PASS"
+      },
+      {
+        "check": "special_cases",
+        "detail": "all pass",
+        "status": "PASS"
+      },
+      {
+        "check": "probability_integration",
+        "detail": "max 0.000406",
+        "status": "PASS"
+      },
+      {
+        "check": "posterior_finite",
+        "detail": "finite",
+        "status": "PASS"
+      },
+      {
+        "check": "thresholds_frozen",
+        "detail": "exact",
+        "status": "PASS"
+      },
+      {
+        "check": "all_budgets",
+        "detail": "[np.int64(16), np.int64(24), np.int64(40), np.int64(60), np.int64(80)]",
+        "status": "PASS"
+      },
+      {
+        "check": "multiple_repeats_folds",
+        "detail": "14/5",
+        "status": "PASS"
+      },
+      {
+        "check": "ranking_snapshotwise",
+        "detail": "25",
+        "status": "PASS"
+      },
+      {
+        "check": "no_sample_efficiency_claim",
+        "detail": "guardrail",
+        "status": "PASS"
+      },
+      {
+        "check": "notebook_executed",
+        "detail": "stored outputs",
+        "status": "PASS"
+      },
+      {
+        "check": "figures",
+        "detail": "6",
+        "status": "PASS"
+      },
+      {
+        "check": "figure_hashes",
+        "detail": "all",
+        "status": "PASS"
+      },
+      {
+        "check": "historical_unchanged",
+        "detail": "none",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS"
+  }
+}

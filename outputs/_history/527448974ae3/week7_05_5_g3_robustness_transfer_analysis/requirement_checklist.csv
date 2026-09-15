@@ -1,0 +1,13 @@
+requirement_id,requirement,status,validation_checks
+R01,Exact Phase 5 parent and safe Phase 5 publication,PASS,V01;V02
+R02,Exact merged HF snapshot and bounded restoration diff,PASS,V03;V04;V05
+R03,Current target refresh and full-row retention,PASS,V06;V07;V08;V09
+R04,Five population composition and candidate availability,PASS,V10
+R05,Leakage-free within-population LOO thresholds,PASS,V11;V12
+R06,Disjoint cross-population transfer,PASS,V13;V14
+R07,"5,000-resample simulation-level uncertainty",PASS,V15;V16
+R08,Threshold gaps and conservative G3 decision,PASS,V17;V18
+R09,Twenty explanatory figures,PASS,V19
+R10,Twenty-section executed teaching notebook,PASS,V20
+R11,Minimum outputs and integrity manifest,PASS,V21
+R12,Hard stop and protected original checkout,PASS,V22;V23;V24

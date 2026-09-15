@@ -1,0 +1,7 @@
+score,formula,si_units,dimensionless,raw_minimum,raw_maximum,log_definition,exponents_tuned_to_data
+linear_energy_P_over_VX,P / VX,J/m,False,72.25541537959478,1921.7307077923185,log(score / 1 J/m),False
+irradiance_P_over_LS2,P / LS²,W/m²,False,10013181363.15455,277001048457.7326,log(score / 1 W/m²),False
+areal_P_over_VX_LS,P / (VX·LS),J/m²,False,932919.201252795,45200540.63435049,log(score / 1 J/m²),False
+volumetric_P_over_VX_LS2,P / (VX·LS²),J/m³,False,10867359422.500069,1063150453574.5632,log(score / 1 J/m³),False
+king_style_P_over_LS_sqrtVX,P / (LS·√VX),W·s^0.5/m^1.5,False,915598.8383454937,21528413.948294926,log(score / 1 W·s^0.5/m^1.5),False
+keyhole_process_score_h,P / √(VX·LS³),W·s^0.5/m²,False,98820087.1580799,3379638472.4728007,log(score / 1 W·s^0.5/m²),False

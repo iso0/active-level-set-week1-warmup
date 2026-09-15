@@ -1,0 +1,342 @@
+{
+  "artifact_hashes": {
+    "FINAL_PHASE2_1R_REPORT.md": "381b8d0d5295c80256472694a54b4cc5018aa9d9567c8dc56a15828a95adf2e0",
+    "SUPERVISOR_PHASE2_1R_ONE_PAGE.md": "5a1e550f3852db30513255992289f8d8170b7994ac07d8b673207a3561169a7f",
+    "ard_lengthscale_summary.csv": "350636bab106ad87f7f43a0e713002b44c0ae484485c37a84cc7d0a56b966ab7",
+    "ard_lengthscales.csv.gz": "302ddcf3767546ea7f81b01ade9eee5239ccfee8e60fa210aba8509246886bb6",
+    "claim_ledger.md": "25ee192943905f097b05064810708bbb69d5931f23d0b3af89bdcafc2de3d4b3",
+    "claim_status.csv": "c2281f488d31eba9a8d39c946eb83ac6a00208ea57660636df59b73ed93ec91d",
+    "contrast_inference.csv": "d99f5c2eb3a66aa523cb84b7afaf88c6ec206ce0f1066979c7fb80bc3be376fa",
+    "figure_manifest.csv": "760acfe71b1b67e127dbface1d149d394a55d5114f01f753767892b2fdc5e3aa",
+    "figures/01_delta_W_construction.png": "1bd14eba65261a507efd2a2ae3abfe4fce4b5981374ba319bfd303e18d45c322",
+    "figures/02_example_trace_and_delta.png": "60e42bf6c001a48786b26961fbde0e66bbb2f563bf3a045b84c5118f729a61ab",
+    "figures/03_max_positive_delta_W_distribution.png": "db8f2e7d77f422bc73797ac2eefd975ee5b300a71e1c7ed78c4b630fa22882ec",
+    "figures/04_max_positive_width_rate_distribution.png": "35d5b41641ea463f780484adaed74600b750ce10bea15de31abbeb668f35f01d",
+    "figures/05_threshold_classifier.png": "a910d368f999fa387c97c1deeb352ed10d2f08cd584bfd59fa9911a226fad112",
+    "figures/06_model_comparison_gpc_m3.png": "0e0b65ee61e0afd8b8f69865d3d6da0612844bb35735ba63907d346bce2a3cc0",
+    "figures/07_q20_paired_contrasts.png": "d56cc1a560265a1d7b0a9c04d5b2dcc36138419dfdf552f66217fa3bb77c285e",
+    "figures/08_derivative_ablation.png": "f3e4fb679d7cdf48e2a158c0a0860d16d0ad226159b2332126cc00495304570e",
+    "figures/09_claim_status.png": "5833679fe52f2f2cd4da47866c2253df03c12abc3f860d302682386ab4efc5ae",
+    "figures/10_resolution_sweep.png": "8dc445beb796f78cca14bc350599b4223368a068267417e13e94725aea84d258",
+    "interactive/view1_drop_ST.html": "f7d1316fba2fb1a77b702095b68942c9bf65af1015e5d3d2fdeff9e9cbb257d7",
+    "interactive/view2_drop_LS.html": "1eee2090d788eddc169c9c6ec81f90fbe6ad2c29a276a829ec2a0de9a5449725",
+    "interactive/view3_drop_VX.html": "2b17b6fb744c48a2d92ab493ad7079423726bd610e15dae69d5597e34ca79157",
+    "interactive/view4_drop_P.html": "f08b99645a3cd498f3792e9665e3e52da9663d09a82587eb64220741460d32fa",
+    "interactive_3d_index.html": "0d0d41ba51cd6c14ff0d11a4225b94b5e73b546708faf488f96fda3c3c89dd48",
+    "kernel_parity_audit.csv": "50396f5a9f1474d92415be46523fdb5dc8afc5f4d1a90a029febbfcc96dd46d0",
+    "model_oof_predictions.csv.gz": "0fb9c3256052c723c46621cefcd2ac97d8795bd4901328e3a8b35603e0d0f9ee",
+    "model_oof_summary.csv": "7dbe0d82789671aa9bdcbd971cd8358fdb945d5fcf56a7393b7c4f99cc5bbb35",
+    "model_paired_contrasts.csv": "abde9e996a9aaba01acea3054f82e8e163e5879c916630e981f8ed57f5596355",
+    "model_repeat_level_metrics.csv": "9aab50c075edd59acd78246df1e233afc248d2edca3ced1f1ecbda951caca64b",
+    "phase2_1_corrections.csv": "39a26052a46acc610845ba0cc2b3c95080f5d407879dcb0713f318088463e064",
+    "resolution_robustness_verdict.csv": "1865383596070370250bca7ec9c13d22c71ca881f5fdd182745795020f4c3f8c",
+    "resolution_sweep_features.csv": "012461874bde724f98db7d12d3dd3b2ada86d9cad7136a1fc14a8c6568265ddf",
+    "resolution_sweep_separation.csv": "aede3275f67b434fa8cd11f77f34590b97e84aed6dd0352cdaaa766eb130cce5",
+    "simulation_level_features.csv": "57fa5a096ff582afe9272681dee3ed5c2f0d4dab6a749687c5335ac0b97d7c91",
+    "threshold_fold_results.csv": "61e3b9b596d93f26aff4c6ba2dc78e1bc8aa7df95ce429ebe9c77ecdc6cf4847",
+    "threshold_repeat_level.csv": "6f0b823db303dfa7fdb0496d2aa6b178e9368a20b3129b3e05ce6a389bc340a7",
+    "threshold_summary.csv": "0eb53739d062663e794a60559915b3b57b765f4d4f105d6345c1f5aa16ff849f",
+    "threshold_sweep_curves.csv": "27edfd81b53e5f37d8293cc1418dee3796bc4dd50a26132497c913a6504e7617",
+    "transition_table_201.csv.gz": "63fcf7700bf48845e208326eec59edb524aa77c169f6085c92ec850ea61b0c89",
+    "univariate_separation.csv": "6638a90ab3a0ec17744fa10f8876fa30bdd6c7bab0c1d24fe1567f0ec1a4c4f4",
+    "validation_report.json": "bfc8bd072ec0d0ed86974e3fabe8424536b2034c8574481a3467d69cd945b782",
+    "validation_report.md": "b782e1accf7fe0d9c79c0763245d425c0c47f93e53219edb64b6695b2c0bba77"
+  },
+  "bootstrap_draws": 5000,
+  "classifier_family": "ARD Matern-3/2 GPC (Phase 1.12 G3) plus M3 (Phase 1.13)",
+  "elapsed_seconds": 7604.848485469818,
+  "local_only": true,
+  "models": {
+    "abl_shape3_plus_robust_early_dWdt_20_um_per_ms": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_early_dWdt_20_um_per_ms"
+      ],
+      "kind": "gpc",
+      "role": "ablation"
+    },
+    "abl_shape3_plus_robust_early_dWdt_40_um_per_ms": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_early_dWdt_40_um_per_ms"
+      ],
+      "kind": "gpc",
+      "role": "ablation"
+    },
+    "abl_shape3_plus_robust_max_positive_dWdt_um_per_ms": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_max_positive_dWdt_um_per_ms"
+      ],
+      "kind": "gpc",
+      "role": "ablation"
+    },
+    "abl_shape3_plus_robust_median_positive_dWdt_um_per_ms": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_median_positive_dWdt_um_per_ms"
+      ],
+      "kind": "gpc",
+      "role": "ablation"
+    },
+    "abl_shape3_plus_robust_time_of_max_dWdt_tau": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_time_of_max_dWdt_tau"
+      ],
+      "kind": "gpc",
+      "role": "ablation"
+    },
+    "gpc_4d": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "kind": "gpc",
+      "role": "primary_baseline"
+    },
+    "gpc_4d_plus_max_delta_W": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W"
+      ],
+      "kind": "gpc",
+      "role": "primary"
+    },
+    "gpc_4d_plus_max_delta_W_res101": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W_res101"
+      ],
+      "kind": "gpc",
+      "role": "resolution"
+    },
+    "gpc_4d_plus_max_delta_W_res51": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W_res51"
+      ],
+      "kind": "gpc",
+      "role": "resolution"
+    },
+    "gpc_4d_plus_max_width_rate": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_width_rate"
+      ],
+      "kind": "gpc",
+      "role": "primary"
+    },
+    "gpc_4d_plus_old_full8": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau",
+        "robust_max_positive_dWdt_um_per_ms",
+        "robust_median_positive_dWdt_um_per_ms",
+        "robust_early_dWdt_20_um_per_ms",
+        "robust_early_dWdt_40_um_per_ms",
+        "robust_time_of_max_dWdt_tau"
+      ],
+      "kind": "gpc",
+      "role": "historical"
+    },
+    "gpc_4d_plus_old_shape3": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "width_gain_20_um",
+        "width_gain_40_um",
+        "time_to_50pct_max_width_tau"
+      ],
+      "kind": "gpc",
+      "role": "historical"
+    },
+    "gpc_4d_plus_simple_delta_block": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W",
+        "median_positive_delta_W",
+        "fraction_positive_delta_W"
+      ],
+      "kind": "gpc",
+      "role": "primary"
+    },
+    "gpc_4d_plus_simple_rate_block": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_width_rate",
+        "median_positive_width_rate",
+        "fraction_positive_width_rate"
+      ],
+      "kind": "gpc",
+      "role": "primary"
+    },
+    "m3": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST"
+      ],
+      "kind": "m3",
+      "role": "m3_reference"
+    },
+    "m3_plus_max_delta_W": {
+      "features": [
+        "P",
+        "VX",
+        "LS",
+        "ST",
+        "max_positive_delta_W"
+      ],
+      "kind": "m3",
+      "role": "m3_reference"
+    }
+  },
+  "new_artifact_bytes": 11094653,
+  "new_worktree_or_clone_created": false,
+  "notebook_kernel": "thesis",
+  "notebook_sha256": "3ef05d059e8b63b4b7fba5bca7c35a1f41192a6f7475c9f3f2b4f92e3c8c465c",
+  "population": 405,
+  "population_keyholes": 73,
+  "primary_contrast": "gpc_4d_plus_max_delta_W - gpc_4d",
+  "primary_question": "Does the simple width change between consecutive resampled analysis points add predictive value beyond [P, VX, LS, ST]?",
+  "raw_monitor_bytes_downloaded": 0,
+  "raw_solver_timesteps_used": false,
+  "seed": 260907,
+  "signflip_draws": 20000,
+  "study": "Week 9 Phase 2.1R - the simple width-change control",
+  "timestep_basis": "consecutive resampled analysis points on the Phase 2 tau grid; primary 201 points, robustness at (51, 101, 201)",
+  "usable_keyholes": 70,
+  "usable_traces": 350,
+  "validation": {
+    "check_count": 47,
+    "checks": {
+      "LS_is_laser_spot_radius": true,
+      "ST_is_substrate_temperature": true,
+      "all_time_gaps_positive": true,
+      "corrections_fix_holm_claim": true,
+      "corrections_table_written": true,
+      "delta_W_equals_next_minus_current": true,
+      "figure_manifest_hashes_match": true,
+      "figures_exist": true,
+      "four_interactive_views_plus_index": true,
+      "fraction_identity_documented": true,
+      "frozen_fold_count_100": true,
+      "gpc_is_headline_family": true,
+      "grouped_at_simulation_level": true,
+      "h_exact_formula": true,
+      "holm_applied_to_every_contrast": true,
+      "interactive_index_links_all_views": true,
+      "interactive_views_drop_each_input": true,
+      "interactive_views_full_population": true,
+      "interactive_views_hover_fields": true,
+      "interactive_views_offline": true,
+      "kernel_parity_all_pass": true,
+      "labels_73": true,
+      "m3_physics_mean_untouched": true,
+      "m3_present_in_comparison": true,
+      "no_evaluation_mask_in_any_model": true,
+      "no_historical_file_touched": true,
+      "no_label_column_in_any_model": true,
+      "no_longitudinal_delta_x_in_models": true,
+      "no_new_random_split_declared": true,
+      "no_raw_monitor_download": true,
+      "no_remote_operation_in_source": true,
+      "notebook_has_no_execution_errors": true,
+      "notebook_stores_executed_outputs": true,
+      "population_405": true,
+      "reports_define_analysis_point": true,
+      "reports_exist": true,
+      "reports_open_with_what_did_we_ask": true,
+      "reports_quote_usable_counts": true,
+      "resolution_sweep_ran": true,
+      "ten_figures": true,
+      "terminology_resampled_analysis_points": true,
+      "threshold_learned_on_training_only": true,
+      "transition_count_matches_grid": true,
+      "usable_subset_350_70": true,
+      "verdicts_interval_based": true,
+      "width_inherited_from_pinned_phase2": true,
+      "width_rate_equals_delta_over_gap": true
+    },
+    "models_evaluated": 16,
+    "notebook_checks_included": true,
+    "output_bytes": 8839706,
+    "phase": "Week 9 Phase 2.1R",
+    "phase2_source_commit": "da913797d14b171bec55d3708f96aa87f09a4f94",
+    "preexisting_dirty_paths_outside_this_phase": 85,
+    "primary_resolution_points": 201,
+    "resolutions_tested": [
+      51,
+      101,
+      201
+    ],
+    "status": "PASS",
+    "transition_rows": 70000,
+    "usable_keyholes": 70,
+    "usable_traces": 350
+  },
+  "verdict_primary_hard": "NOT SUPPORTED",
+  "verdict_primary_ranking": "SUPPORTED",
+  "verdict_threshold_rule_q20_balanced_accuracy": 0.5642698273948275,
+  "width_definition": "transverse width dY = Ymax - Ymin, micrometres",
+  "width_source_commit": "da913797d14b171bec55d3708f96aa87f09a4f94"
+}

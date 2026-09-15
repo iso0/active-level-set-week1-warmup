@@ -1,0 +1,5 @@
+{
+  "decision": "NEXT_MONOTONE_POOL_LSE",
+  "no_new_method_run_in_phase1_19a": true,
+  "reason": "The partial order is directly and strongly supported. Letham's closed form is not directly applicable to logistic M3 and would first require a probit-model audit."
+}

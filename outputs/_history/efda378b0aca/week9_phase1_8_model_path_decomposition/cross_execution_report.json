@@ -1,0 +1,12 @@
+{
+  "checkpoint_reuses": 200,
+  "elapsed_seconds": 4.233449220657349,
+  "fits": 13000,
+  "new_arms": [
+    "Y10",
+    "Y01"
+  ],
+  "new_query_trajectories": 0,
+  "outer_runs": 100,
+  "status": "PASS"
+}

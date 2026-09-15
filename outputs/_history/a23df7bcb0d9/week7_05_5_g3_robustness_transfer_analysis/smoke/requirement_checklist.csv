@@ -1,0 +1,10 @@
+requirement_id,requirement,status,validation_checks
+R01,Exact Phase 5 parent and isolated Phase 5.5 branch,PASS,V01
+R02,Merged Hugging Face revision and exact change audit,PASS,V02;V03;V04
+R03,Current-revision target population rebuilt without row loss,PASS,V05;V06;V07
+R04,Five within-population LOO threshold analyses,PASS,V08
+R05,Disjoint cross-population transfer tests,PASS,V09
+R06,Simulation-level bootstrap uncertainty,PASS,V10
+R07,At least twenty explanatory figures,PASS,V11
+R08,Original dirty checkout protected,PASS,V12
+R09,"No modelling, relabelling, acquisition, or level-set expansion",PASS,V13

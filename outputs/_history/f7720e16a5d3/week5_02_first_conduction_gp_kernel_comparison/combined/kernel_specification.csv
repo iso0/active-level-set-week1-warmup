@@ -1,0 +1,5 @@
+kernel_key,kernel_label,kernel_initial_expression,signal_variance_initial,signal_variance_bounds,lengthscale_initial,lengthscale_bounds,optimizer,extra_optimizer_restarts,normalize_y,alpha_jitter,white_kernel,random_seed
+isotropic_rbf,Isotropic RBF,1**2 * RBF(length_scale=1),1.0,"(0.001, 1000.0)",1.0,"(0.01, 100.0)",fmin_l_bfgs_b,1,True,1e-06,False,20260721
+ard_rbf,ARD RBF — Automatic Relevance Determination RBF,"1**2 * RBF(length_scale=[1, 1, 1, 1])",1.0,"(0.001, 1000.0)","[1, 1, 1, 1]","(0.01, 100.0)",fmin_l_bfgs_b,1,True,1e-06,False,20260721
+matern_3_2,Matérn 3/2,"1**2 * Matern(length_scale=1, nu=1.5)",1.0,"(0.001, 1000.0)",1.0,"(0.01, 100.0)",fmin_l_bfgs_b,1,True,1e-06,False,20260721
+matern_5_2,Matérn 5/2,"1**2 * Matern(length_scale=1, nu=2.5)",1.0,"(0.001, 1000.0)",1.0,"(0.01, 100.0)",fmin_l_bfgs_b,1,True,1e-06,False,20260721

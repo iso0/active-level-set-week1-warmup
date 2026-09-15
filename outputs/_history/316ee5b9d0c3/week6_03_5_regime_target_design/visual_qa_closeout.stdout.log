@@ -1,0 +1,21 @@
+C:\Users\ozgur\Documents\thesis-week6-melt-pool-audit\notebooks\week_06\05_phase3_5_regime_target_design.ipynb
+Processed 20/241 simulations
+Processed 40/241 simulations
+Processed 60/241 simulations
+Processed 80/241 simulations
+Processed 100/241 simulations
+Processed 120/241 simulations
+Processed 140/241 simulations
+Processed 160/241 simulations
+Processed 180/241 simulations
+Processed 200/241 simulations
+Processed 220/241 simulations
+Processed 240/241 simulations
+Processed 241/241 simulations
+{
+  "status": "PASS",
+  "validation": "59/59",
+  "checklist": "150/150",
+  "runtime_seconds": 32.72756299993489,
+  "output_dir": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\outputs\\week6_03_5_regime_target_design"
+}

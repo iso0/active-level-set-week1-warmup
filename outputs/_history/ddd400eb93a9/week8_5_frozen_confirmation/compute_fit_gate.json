@@ -1,0 +1,15 @@
+{
+  "created_at_utc": "2026-08-26T14:10:56+00:00",
+  "max_wall_hours": 6.0,
+  "memory_gate": "PASS",
+  "no_design_reduction": true,
+  "projected_H80_wall_hours": 0.5267474012442916,
+  "protocol_id": "week8_5_frozen_confirmation_protocol/v1.0.0",
+  "protocol_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+  "schema_version": "1.0.0",
+  "seconds_per_fit": 0.03646712777845096,
+  "source_hashes_json": "{\"phase6_source.py\": \"23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479\", \"phase7_source.py\": \"d5a331c60bab373adfc63344cc5eb3b88e1ca7ce41e4ffd0717196edeb2c00df\", \"primary_common_population.csv\": \"c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7\", \"protocol.json\": \"bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66\"}",
+  "status": "PASS",
+  "time_gate": "PASS",
+  "workers": 4
+}

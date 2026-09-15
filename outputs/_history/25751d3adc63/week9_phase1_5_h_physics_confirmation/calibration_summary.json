@@ -1,0 +1,102 @@
+{
+  "ECE": 0.018661745045046543,
+  "ECE_definition": "sum_b (n_b/N)*abs(observed_rate_b-mean_probability_b)",
+  "MCE": 0.35895216537573194,
+  "MCE_definition": "maximum non-empty-bin absolute calibration gap",
+  "OOF_Brier": 0.029425123358329402,
+  "binning": "10 equal-width probability bins on [0,1]",
+  "oof_unit": "mean of 20 out-of-fold probabilities for each of 405 unique simulations",
+  "reliability": [
+    {
+      "absolute_gap": 0.0031852939804522737,
+      "bin": 1,
+      "count": 304,
+      "lower": 0.0,
+      "mean_probability": 0.0064747676646628,
+      "observed_keyhole_rate": 0.003289473684210526,
+      "upper": 0.1
+    },
+    {
+      "absolute_gap": 0.11619215073518363,
+      "bin": 2,
+      "count": 15,
+      "lower": 0.1,
+      "mean_probability": 0.15047451593148303,
+      "observed_keyhole_rate": 0.26666666666666666,
+      "upper": 0.2
+    },
+    {
+      "absolute_gap": 0.0973170691867972,
+      "bin": 3,
+      "count": 6,
+      "lower": 0.2,
+      "mean_probability": 0.26398373585346385,
+      "observed_keyhole_rate": 0.16666666666666666,
+      "upper": 0.30000000000000004
+    },
+    {
+      "absolute_gap": 0.01235689159956499,
+      "bin": 4,
+      "count": 9,
+      "lower": 0.30000000000000004,
+      "mean_probability": 0.3456902249328983,
+      "observed_keyhole_rate": 0.3333333333333333,
+      "upper": 0.4
+    },
+    {
+      "absolute_gap": 0.0611382938107633,
+      "bin": 5,
+      "count": 2,
+      "lower": 0.4,
+      "mean_probability": 0.4388617061892367,
+      "observed_keyhole_rate": 0.5,
+      "upper": 0.5
+    },
+    {
+      "absolute_gap": 0.15102379989945025,
+      "bin": 6,
+      "count": 5,
+      "lower": 0.5,
+      "mean_probability": 0.5510237998994503,
+      "observed_keyhole_rate": 0.4,
+      "upper": 0.6000000000000001
+    },
+    {
+      "absolute_gap": 0.35895216537573194,
+      "bin": 7,
+      "count": 3,
+      "lower": 0.6000000000000001,
+      "mean_probability": 0.6410478346242681,
+      "observed_keyhole_rate": 1.0,
+      "upper": 0.7000000000000001
+    },
+    {
+      "absolute_gap": 0.27435314642285513,
+      "bin": 8,
+      "count": 3,
+      "lower": 0.7000000000000001,
+      "mean_probability": 0.7256468535771449,
+      "observed_keyhole_rate": 1.0,
+      "upper": 0.8
+    },
+    {
+      "absolute_gap": 0.05140444615307194,
+      "bin": 9,
+      "count": 5,
+      "lower": 0.8,
+      "mean_probability": 0.851404446153072,
+      "observed_keyhole_rate": 0.8,
+      "upper": 0.9
+    },
+    {
+      "absolute_gap": 0.021082017346449766,
+      "bin": 10,
+      "count": 53,
+      "lower": 0.9,
+      "mean_probability": 0.983346168289846,
+      "observed_keyhole_rate": 0.9622641509433962,
+      "upper": 1.0
+    }
+  ],
+  "status": "retrospective simulator-domain screening rule"
+}

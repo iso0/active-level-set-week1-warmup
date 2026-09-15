@@ -1,0 +1,25 @@
+check_id,check,status,detail,category
+V01,Phase 5.5 branch and exact Phase 5 parent,PASS,codex/week7-phase5-5-g3-robustness-transfer @ 3367f4c9b5af2def802f72a65258f5cc01896bac,provenance
+V02,Committed Phase 5 local/upstream/remote equality,PASS,local=3367f4c9b5af2def802f72a65258f5cc01896bac; upstream=3367f4c9b5af2def802f72a65258f5cc01896bac; remote=3367f4c9b5af2def802f72a65258f5cc01896bac,provenance
+V03,Live HF main is the analysed revision,PASS,b6dc254a2b607a31cb9f97b40990339c3d5ca1e8,dataset
+V04,HF diff is exactly 110 approved additions,PASS,"{'kinetic-energy_melt.dat': 55, 'time.dat': 55}",dataset
+V05,"Labels, new-data, geometry, and iteration paths unchanged",PASS,all protected path classes unchanged,dataset
+V06,Exactly 55 pinned failures changed to current PASS,PASS,status_changed=55,target_refresh
+V07,No unchanged-input target status changed,PASS,unexpected=0,target_refresh
+V08,All 407 simulations retained with 405 usable,PASS,rows=407; usable=405,target_refresh
+V09,Partition readiness counts are exact,PASS,164/165; 178/179; 63/63; 241/242; 405/407,target_refresh
+V10,Candidate availability is explicit for all five populations,PASS,rows=40,population
+V11,Five-population LOO summary is complete,PASS,summary_rows=40; folds=8402,threshold
+V12,LOO threshold selection excludes held-out simulation,PASS,all fold guards present and training_n=fold_n-1,threshold
+V13,Six disjoint transfer routes plus pooled descriptive reference,PASS,held_out_routes=6; all_routes=7,transfer
+V14,Transfer detail guards and fixed training thresholds recorded,PASS,detail_rows=11026,transfer
+V15,Full simulation-level bootstrap table complete,PASS,rows=172; expected=172; resamples=5000,uncertainty
+V16,All bootstrap intervals are finite and ordered,PASS,all estimates inside 95% intervals within 1e-12 floating tolerance,uncertainty
+V17,Threshold margin diagnostics cover all main candidates,PASS,rows=60,threshold
+V18,G3 recommendation is conservative,PASS,TRANSFERABLE WITH PARTITION-SHIFT CAVEAT,decision
+V19,At least 20 valid explanatory figures,PASS,figures=20,artifact
+V20,Teaching notebook has 20 sequential error-free code cells,PASS,code_cells=20; headings=20; errors=0,notebook
+V21,Minimum artifact set is complete,PASS,required=26; missing=[],artifact
+V22,Source contains no modelling namespace or forbidden operation,PASS,model_imports=[]; forbidden=[],scope
+V23,Original dirty checkout is byte-for-byte unchanged,PASS,status_lines=6; protected=6,protection
+V24,Phase 5.5 remains uncommitted and unpushed,PASS,HEAD remains Phase 5; no upstream; remote branch absent,scope

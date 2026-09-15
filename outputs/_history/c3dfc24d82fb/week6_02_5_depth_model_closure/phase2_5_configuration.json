@@ -1,0 +1,219 @@
+{
+  "created_at_utc": "2026-07-26T17:33:38.373445+00:00",
+  "purpose": "matched 230-stable-simulation depth-only comparison of Phase 2 Methods B and C",
+  "branch": "codex/week6-phase2-5-depth-closure",
+  "worktree_safety_baseline_before_phase2_5_changes": {
+    "working_directory_and_repository_root": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit",
+    "branch": "codex/week6-phase2-gp-response-models",
+    "head": "1751286bb0da617d8c8c57a5440d187ca288e720",
+    "status_short": [
+      " M requirements.txt",
+      "?? notebooks/week_06/",
+      "?? outputs/week6_01_melt_pool_data_audit/",
+      "?? outputs/week6_02_gp_response_noise_comparison/",
+      "?? scripts/",
+      "?? src/week6_phase1_melt_pool_data_audit.py",
+      "?? src/week6_phase2_gp_response_noise_comparison.py"
+    ],
+    "phase2_uncommitted_file_inventory": [
+      "outputs/week6_02_gp_response_noise_comparison/absolute_error_comparison.png",
+      "outputs/week6_02_gp_response_noise_comparison/all_model_metrics.csv",
+      "outputs/week6_02_gp_response_noise_comparison/block_bootstrap_sensitivity.csv",
+      "outputs/week6_02_gp_response_noise_comparison/bootstrap_run.stderr.log",
+      "outputs/week6_02_gp_response_noise_comparison/bootstrap_run.stdout.log",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/full_population_loo__depth__A_tiny_jitter.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/full_population_loo__depth__B_learned_nugget.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/full_population_loo__depth__C_heteroskedastic.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/full_population_loo__length__A_tiny_jitter.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/full_population_loo__length__B_learned_nugget.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/full_population_loo__length__C_heteroskedastic.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/full_population_loo__width__A_tiny_jitter.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/full_population_loo__width__B_learned_nugget.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/full_population_loo__width__C_heteroskedastic.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/stable_only_refit_loo__depth__C_heteroskedastic.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/stable_only_refit_loo__length__B_learned_nugget.csv",
+      "outputs/week6_02_gp_response_noise_comparison/checkpoints/stable_only_refit_loo__width__B_learned_nugget.csv",
+      "outputs/week6_02_gp_response_noise_comparison/depth_loo_predictions.csv",
+      "outputs/week6_02_gp_response_noise_comparison/final_validation_run.log",
+      "outputs/week6_02_gp_response_noise_comparison/full_run.stdout.log",
+      "outputs/week6_02_gp_response_noise_comparison/heteroskedastic_alpha_summary.csv",
+      "outputs/week6_02_gp_response_noise_comparison/hyperparameter_fold_diagnostics.csv",
+      "outputs/week6_02_gp_response_noise_comparison/learned_nugget_distributions.png",
+      "outputs/week6_02_gp_response_noise_comparison/learned_nugget_summary.csv",
+      "outputs/week6_02_gp_response_noise_comparison/length_loo_predictions.csv",
+      "outputs/week6_02_gp_response_noise_comparison/nlpd_and_coverage_comparison.png",
+      "outputs/week6_02_gp_response_noise_comparison/observation_specific_uncertainty_distributions.png",
+      "outputs/week6_02_gp_response_noise_comparison/observed_vs_loo_depth.png",
+      "outputs/week6_02_gp_response_noise_comparison/observed_vs_loo_length.png",
+      "outputs/week6_02_gp_response_noise_comparison/observed_vs_loo_width.png",
+      "outputs/week6_02_gp_response_noise_comparison/paired_bootstrap_summary.csv",
+      "outputs/week6_02_gp_response_noise_comparison/paired_error_differences_depth.png",
+      "outputs/week6_02_gp_response_noise_comparison/paired_error_differences_length.png",
+      "outputs/week6_02_gp_response_noise_comparison/paired_error_differences_width.png",
+      "outputs/week6_02_gp_response_noise_comparison/paired_method_comparisons.csv",
+      "outputs/week6_02_gp_response_noise_comparison/phase2_decision_log.md",
+      "outputs/week6_02_gp_response_noise_comparison/phase2_input_target_table.csv",
+      "outputs/week6_02_gp_response_noise_comparison/phase2_model_configuration.json",
+      "outputs/week6_02_gp_response_noise_comparison/phase2_model_ready_summary.csv",
+      "outputs/week6_02_gp_response_noise_comparison/phase2_requirement_checklist.csv",
+      "outputs/week6_02_gp_response_noise_comparison/point_metric_comparison.png",
+      "outputs/week6_02_gp_response_noise_comparison/predictive_interval_diagnostics_depth.png",
+      "outputs/week6_02_gp_response_noise_comparison/predictive_interval_diagnostics_length.png",
+      "outputs/week6_02_gp_response_noise_comparison/predictive_interval_diagnostics_width.png",
+      "outputs/week6_02_gp_response_noise_comparison/preferred_method_selection.csv",
+      "outputs/week6_02_gp_response_noise_comparison/residual_distribution_depth.png",
+      "outputs/week6_02_gp_response_noise_comparison/residual_distribution_length.png",
+      "outputs/week6_02_gp_response_noise_comparison/residual_distribution_width.png",
+      "outputs/week6_02_gp_response_noise_comparison/results_summary.md",
+      "outputs/week6_02_gp_response_noise_comparison/smoke_test_summary.json",
+      "outputs/week6_02_gp_response_noise_comparison/stable_subset_loo_predictions.csv",
+      "outputs/week6_02_gp_response_noise_comparison/stable_subset_sensitivity.csv",
+      "outputs/week6_02_gp_response_noise_comparison/stable_subset_sensitivity.png",
+      "outputs/week6_02_gp_response_noise_comparison/summary.json",
+      "outputs/week6_02_gp_response_noise_comparison/target_summary_uncertainty_estimates.csv",
+      "outputs/week6_02_gp_response_noise_comparison/target_uncertainty_vs_unstable_flag.png",
+      "outputs/week6_02_gp_response_noise_comparison/validation_results.csv",
+      "outputs/week6_02_gp_response_noise_comparison/width_loo_predictions.csv"
+    ]
+  },
+  "original_dirty_worktree_baseline": {
+    "captured_at_utc": "2026-07-24T23:15:00Z",
+    "original_worktree": "C:\\Users\\ozgur\\Documents\\thesis",
+    "branch": "main",
+    "head": "6fd6be57e5341e083a7023a3ae29e65b7b326bbd",
+    "status_short": [
+      " M outputs/week2_acquisition_comparison/week2_slide_notes.md",
+      "?? docs/",
+      "?? outputs/week1_active_level_set_progress.pptx",
+      "?? outputs/week2_active_level_set_progress_v2.pptx",
+      "?? outputs/week3_active_level_set_progress.pptx",
+      "?? outputs/week3_active_level_set_progress_v2.pptx"
+    ],
+    "dirty_files": [
+      {
+        "path": "docs/deep-research-report.md",
+        "sha256": "A714E0C2249A134287B76A86FC8D660A075C69184A5CAB851A3C1F52412E321C",
+        "size_bytes": 38794
+      },
+      {
+        "path": "outputs/week1_active_level_set_progress.pptx",
+        "sha256": "BDD1F515EAAB313E5371CBE5E2C0B7FB3E87713037A21337DD7D078406C23577",
+        "size_bytes": 1804694
+      },
+      {
+        "path": "outputs/week2_acquisition_comparison/week2_slide_notes.md",
+        "sha256": "9F00ECE946170F936E5EFFFA019CDB4C3B2DBCC93037155CDFCCFCA716E2E99C",
+        "size_bytes": 2591
+      },
+      {
+        "path": "outputs/week2_active_level_set_progress_v2.pptx",
+        "sha256": "92A760D21A1C9B9E07F15724D2CEDD225A19B05439AF8ECA6273AC4212B913AB",
+        "size_bytes": 1925440
+      },
+      {
+        "path": "outputs/week3_active_level_set_progress.pptx",
+        "sha256": "F129A4F5310B808D23F810B1E4CBFB8BE2039A5DDFE408D9B26DE55E7C9CFCBD",
+        "size_bytes": 1313521
+      },
+      {
+        "path": "outputs/week3_active_level_set_progress_v2.pptx",
+        "sha256": "AEC8EFE32B358D2F6BBD3C3610FC9D76FF8B45D74CDDBDD0074C261E127AE09E",
+        "size_bytes": 910574
+      }
+    ]
+  },
+  "phase1_input": "outputs\\week6_01_melt_pool_data_audit\\week6_phase1_simulation_level_responses.csv",
+  "phase1_revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+  "phase1_ledger_sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF",
+  "phase1_protected_aggregate_sha256": "21FF34AD767C8D4D6C536D66AFD147B8C700884321415078231B7A24D4C7D198",
+  "phase2_source_hashes": {
+    "width_loo_predictions.csv": "32FF3A2DB237D1A13CE35903F6B95E66EB614D9FD3028F4E9D429FA915A68F75",
+    "length_loo_predictions.csv": "50531D5BC00DC5C9FBAC897A2568929C344BB371FBF181339808B6EB8F44E1D0",
+    "depth_loo_predictions.csv": "B511702EAD9A91BBC407E2F9D447E62998470F3FD4214CE020520418B589DC00",
+    "stable_subset_loo_predictions.csv": "26C6A6E78B441B22DCCCE8B1573028F539ACD66FC962796ADE43344302E44525"
+  },
+  "phase2_configuration_sha256": "CBBA81F86E9B2B9FF46838B793733D9C7DE2982D1A398A67578A8AAE6C3647A6",
+  "phase2_uncertainty_sha256": "2CE2F5D7984D4A8483166434DD5A0FD7C6DFD700718ED93E7050517412E034FD",
+  "protocol_fingerprint": "22C91E1C60AD977D52565416E744CCFD885D1AB630651280A3C9A7771A54F465",
+  "stable_subset": {
+    "row_count": 230,
+    "removed_count": 11,
+    "removed_simulation_ids": [
+      "sim_00002",
+      "sim_00006",
+      "sim_00018",
+      "sim_00029",
+      "sim_00036",
+      "sim_00038",
+      "sim_00095",
+      "sim_00105",
+      "sim_00124",
+      "sim_00154",
+      "sim_00222"
+    ],
+    "construction": "Phase 1 flag_primary_window_unstable independently matched against the expected 11-ID set",
+    "fold_order": "ascending numeric_simulation_id",
+    "first_simulation_id": "sim_00001",
+    "last_simulation_id": "sim_00242"
+  },
+  "features": [
+    "P",
+    "VX",
+    "LS",
+    "ST"
+  ],
+  "target_source_m": "melt_pool_depth_below_surface_selected_primary_scalar_target_m",
+  "target_model_unit": "micrometres",
+  "unit_conversion": "depth_um = depth_m * 1e6",
+  "common_settings": {
+    "base_kernel": "ConstantKernel(1.0, (1e-3, 1e3)) * Matern(length_scale=1.0, bounds=(1e-2, 1e2), nu=1.5)",
+    "optimizer": "fmin_l_bfgs_b (L-BFGS-B)",
+    "n_restarts_optimizer": 1,
+    "normalize_y": false,
+    "x_scaling": "fold-local StandardScaler on 229 training rows",
+    "y_scaling": "fold-local population mean/std on 229 training targets",
+    "seed_policy": "Phase 2 deterministic_seed('loo-fold', 'stable_only_refit_loo', 'depth', fold_index); identical B/C"
+  },
+  "methods": {
+    "B_learned_nugget": {
+      "kernel": "base kernel + WhiteKernel(0.01, (1e-8, 1e1))",
+      "alpha_normalized": 1e-08,
+      "interpretation": "learned common effective discrepancy; not stochastic simulator noise",
+      "evaluation_variance": "total variance including optimized WhiteKernel nugget"
+    },
+    "C_heteroskedastic": {
+      "kernel": "base kernel without WhiteKernel",
+      "alpha_formula": "depth_bootstrap_variance_um2 / training_y_standard_deviation_um**2 + 1e-6",
+      "interpretation": "observation-specific target-summary uncertainty proxy; not measurement noise",
+      "evaluation_variance": "oracle retrospective latent variance plus held-out target-summary variance; not deployable for unseen runs"
+    }
+  },
+  "cross_validation": {
+    "kind": "exact simulation-level leave-one-out",
+    "training_rows_per_fold": 229,
+    "predictions_per_method": 230,
+    "new_predictions_total": 460,
+    "identical_fold_order_and_seed_for_B_and_C": true
+  },
+  "paired_bootstrap": {
+    "resamples": 10000,
+    "joint_resampling_unit": "stable simulation ID",
+    "differences": [
+      "MAE_C_minus_B_um",
+      "RMSE_C_minus_B_um"
+    ]
+  },
+  "scope_exclusions": [
+    "width reruns",
+    "length reruns",
+    "Method A scientific rerun",
+    "new kernels",
+    "ARD",
+    "new targets/windows",
+    "feature-effect or Sobol analysis",
+    "active learning",
+    "level-set estimation",
+    "classification",
+    "new labels"
+  ]
+}

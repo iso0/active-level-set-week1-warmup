@@ -1,0 +1,21 @@
+# Environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Experiment outputs are regenerable; curated evidence lives in results/
+outputs/
+
+# Raw data downloads (Hugging Face pins are recorded in alse/data.py)
+data/raw/
+data/cache/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+*.tmp
+*.bak

@@ -1,0 +1,331 @@
+{
+  "phase": "Week 6 Phase 4",
+  "run_started_utc": "2026-07-30T20:41:39.364807+00:00",
+  "run_finished_utc": "2026-07-30T20:41:57.954593+00:00",
+  "branch": "codex/week6-phase4-new-outputs-feature-effects",
+  "head": "b112f6b22898976f77410190614cb4fb218d38f9",
+  "git_status_short": [
+    " M requirements.txt",
+    "?? notebooks/week_06/04_phase3_model_target_robustness.ipynb",
+    "?? notebooks/week_06/05_phase3_5_regime_target_design.ipynb",
+    "?? notebooks/week_06/06_phase4_new_outputs_feature_effects.ipynb",
+    "?? outputs/week6_03_5_regime_target_design/",
+    "?? outputs/week6_03_model_target_robustness/",
+    "?? outputs/week6_04_new_outputs_feature_effects/",
+    "?? scripts/build_week6_04_notebook.py",
+    "?? scripts/build_week6_05_notebook.py",
+    "?? scripts/build_week6_06_notebook.py",
+    "?? src/week6_phase3_5_regime_target_design.py",
+    "?? src/week6_phase3_model_target_robustness.py",
+    "?? src/week6_phase4_new_outputs_feature_effects.py"
+  ],
+  "command_options": {
+    "full": true,
+    "force": false,
+    "workers": 4,
+    "stage": "all"
+  },
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "executable": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Scripts\\python.exe",
+  "workers": 4,
+  "events": [
+    {
+      "stage": "target_extraction",
+      "smoke": false,
+      "cache_reused": true,
+      "row_count": 241,
+      "wall_runtime_seconds": 0.0
+    },
+    {
+      "stage": "compact_model_comparison",
+      "smoke": false,
+      "cache_reused": true,
+      "prediction_rows": 3374,
+      "wall_runtime_seconds": 0.0
+    },
+    {
+      "stage": "physical_input_output_relationships",
+      "cache_reused": true,
+      "wall_runtime_seconds": 0.0
+    },
+    {
+      "stage": "beam_normalized_penetration",
+      "cache_reused": true,
+      "wall_runtime_seconds": 0.0
+    },
+    {
+      "stage": "figures",
+      "figure_count": 25,
+      "presentation_ready_count": 10,
+      "wall_runtime_seconds": 11.612509900005534
+    },
+    {
+      "stage": "notebook_build_and_execution",
+      "builder": "scripts/build_week6_06_notebook.py",
+      "stdout": "wrote and executed C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\notebooks\\week_06\\06_phase4_new_outputs_feature_effects.ipynb\n",
+      "stderr": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit\\.venv\\Lib\\site-packages\\zmq\\_future.py:718: RuntimeWarning: Proactor event loop does not implement add_reader family of methods required for zmq. Registering an additional selector thread for add_reader support via tornado. Use `asyncio.set_event_loop_policy(WindowsSelectorEventLoopPolicy())` to avoid this warning.\n  self._get_loop()\n[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.\n",
+      "wall_runtime_seconds": 5.553479700000025
+    }
+  ],
+  "successful_stage_runtime_history": {
+    "measurement_source": "Codex shell-command wall-time records for this Phase 4 execution",
+    "successful_runs": [
+      {
+        "stage": "smoke_targets_and_models",
+        "population": 12,
+        "wall_runtime_seconds": 27.2,
+        "scientific_results": false
+      },
+      {
+        "stage": "full_target_extraction",
+        "population": 241,
+        "wall_runtime_seconds": 30.5,
+        "scientific_results": true
+      },
+      {
+        "stage": "full_exact_loo_compact_model_comparison",
+        "population": 241,
+        "wall_runtime_seconds": 981.8,
+        "scientific_results": true
+      },
+      {
+        "stage": "full_relationship_analysis_initial",
+        "population": 241,
+        "wall_runtime_seconds": 99.6,
+        "scientific_results": true,
+        "note": "Relationship outputs completed before a downstream normalized-diagnostic availability guard stopped the process."
+      },
+      {
+        "stage": "normalized_diagnostics",
+        "population": 241,
+        "persistent_population": 240,
+        "wall_runtime_seconds": 4.2,
+        "scientific_results": true
+      },
+      {
+        "stage": "relationship_analysis_exact_stable_depth_population_rebuild",
+        "population": 241,
+        "depth_controlled_gp_population": 230,
+        "wall_runtime_seconds": 98.2,
+        "scientific_results": true
+      },
+      {
+        "stage": "cached_finalization_before_caption_qa",
+        "wall_runtime_seconds": 22.4,
+        "scientific_results": true,
+        "note": "Figures, notebook execution, documentation, and 35 validations."
+      }
+    ]
+  },
+  "scientific_aggregate_fold_runtime_seconds": [
+    {
+      "response": "kinetic_energy",
+      "model": "matern32_learned_nugget",
+      "aggregate_fold_runtime_seconds": 373.6977538005449,
+      "mean_fold_runtime_seconds": 1.5506130863093148
+    },
+    {
+      "response": "kinetic_energy",
+      "model": "matern52_learned_nugget",
+      "aggregate_fold_runtime_seconds": 422.7996312995674,
+      "mean_fold_runtime_seconds": 1.7543553165957153
+    },
+    {
+      "response": "kinetic_energy",
+      "model": "rbf_learned_nugget",
+      "aggregate_fold_runtime_seconds": 231.49246710003356,
+      "mean_fold_runtime_seconds": 0.9605496560167368
+    },
+    {
+      "response": "kinetic_energy",
+      "model": "polynomial_ridge_degree2",
+      "aggregate_fold_runtime_seconds": 445.6348145015072,
+      "mean_fold_runtime_seconds": 1.8491071141141375
+    },
+    {
+      "response": "kinetic_energy",
+      "model": "linear_ridge",
+      "aggregate_fold_runtime_seconds": 298.76219860103447,
+      "mean_fold_runtime_seconds": 1.2396771726184004
+    },
+    {
+      "response": "kinetic_energy",
+      "model": "matern32_no_nugget",
+      "aggregate_fold_runtime_seconds": 206.0083390987711,
+      "mean_fold_runtime_seconds": 0.8548063863019548
+    },
+    {
+      "response": "kinetic_energy",
+      "model": "training_mean",
+      "aggregate_fold_runtime_seconds": 0.0,
+      "mean_fold_runtime_seconds": 0.0
+    },
+    {
+      "response": "total_height",
+      "model": "matern32_learned_nugget",
+      "aggregate_fold_runtime_seconds": 315.04150620126165,
+      "mean_fold_runtime_seconds": 1.3072261668102143
+    },
+    {
+      "response": "total_height",
+      "model": "matern52_learned_nugget",
+      "aggregate_fold_runtime_seconds": 356.32453020033427,
+      "mean_fold_runtime_seconds": 1.4785250215781505
+    },
+    {
+      "response": "total_height",
+      "model": "rbf_learned_nugget",
+      "aggregate_fold_runtime_seconds": 217.2172908000648,
+      "mean_fold_runtime_seconds": 0.9013165593363685
+    },
+    {
+      "response": "total_height",
+      "model": "matern32_no_nugget",
+      "aggregate_fold_runtime_seconds": 247.19487899949308,
+      "mean_fold_runtime_seconds": 1.0257048921140792
+    },
+    {
+      "response": "total_height",
+      "model": "polynomial_ridge_degree2",
+      "aggregate_fold_runtime_seconds": 405.9740757002728,
+      "mean_fold_runtime_seconds": 1.684539733196153
+    },
+    {
+      "response": "total_height",
+      "model": "linear_ridge",
+      "aggregate_fold_runtime_seconds": 339.34671330137644,
+      "mean_fold_runtime_seconds": 1.4080776485534292
+    },
+    {
+      "response": "total_height",
+      "model": "training_mean",
+      "aggregate_fold_runtime_seconds": 0.0,
+      "mean_fold_runtime_seconds": 0.0
+    }
+  ],
+  "model_checkpoints": [
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/gp__phase4_new_response_compact__kinetic_energy__T0__matern32_learned_nugget.csv",
+      "bytes": 375102,
+      "sha256": "6A0F05F1B46C8D5CEF0F3BFA4B82BDBA42F83CC51C0F5A8D6048B7BD5DC8E05D",
+      "modified_utc": "2026-07-30T20:09:58.726910+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/gp__phase4_new_response_compact__kinetic_energy__T0__matern52_learned_nugget.csv",
+      "bytes": 374299,
+      "sha256": "15245BE915F068F199D64A54F64A792070829DB17EFEB4D65D47286C3BC75E79",
+      "modified_utc": "2026-07-30T20:12:43.443691+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/gp__phase4_new_response_compact__kinetic_energy__T0__rbf_learned_nugget.csv",
+      "bytes": 366292,
+      "sha256": "D0B465AD08358FAE48CFA0360AD449969359CD163FD113565404C8C878E6C226",
+      "modified_utc": "2026-07-30T20:10:57.067344+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/gp__phase4_new_response_compact__total_height__T0__matern32_learned_nugget.csv",
+      "bytes": 368610,
+      "sha256": "C1E2D7BFD7D6981C5D3FCC7E20A5FEAF41B65F5D26EB351F48C45A75438BB8D4",
+      "modified_utc": "2026-07-30T20:17:12.447228+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/gp__phase4_new_response_compact__total_height__T0__matern52_learned_nugget.csv",
+      "bytes": 368820,
+      "sha256": "8C04892C3CB15734FD1D784E6C56AA99426D9734FFD26CB0877678AF1DF1EED8",
+      "modified_utc": "2026-07-30T20:19:36.975301+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/gp__phase4_new_response_compact__total_height__T0__rbf_learned_nugget.csv",
+      "bytes": 361047,
+      "sha256": "A9355A0B3EFA7114567A9886F134182D8EC1B71A52804B05BA88B729A2A7D5B8",
+      "modified_utc": "2026-07-30T20:18:07.199921+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/gp__phase4_selected_kernel_nugget_sensitivity__kinetic_energy__T0__matern32_no_nugget.csv",
+      "bytes": 314506,
+      "sha256": "F9DE8EDD7E5538F80AE8DFA451D5F903025D15DBF09956F868212A5313352695",
+      "modified_utc": "2026-07-30T20:20:29.127768+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/gp__phase4_selected_kernel_nugget_sensitivity__total_height__T0__matern32_no_nugget.csv",
+      "bytes": 312988,
+      "sha256": "7C535229C9DC6B352E6DD36353E334A4A5C00C8BB0B2D20B27C74A3B433DD7CB",
+      "modified_utc": "2026-07-30T20:21:31.643220+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/ridge__kinetic_energy__linear_ridge.csv",
+      "bytes": 1653486,
+      "sha256": "A72D64232259C84D7DD2CEC2A4413EE687D52D8B3BED98FDBB0220FEEE8E77B6",
+      "modified_utc": "2026-07-30T20:06:32.582285+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/ridge__kinetic_energy__polynomial_ridge_degree2.csv",
+      "bytes": 1675120,
+      "sha256": "D192E4434FDA6C14CD1E5B840AAE704859E32F110EE017B22600865545755B57",
+      "modified_utc": "2026-07-30T20:08:24.810024+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/ridge__total_height__linear_ridge.csv",
+      "bytes": 1633760,
+      "sha256": "AC440A6A7D8B68793CC4BC01CC5D38A14556034F7B7C6933283ED52D774034D2",
+      "modified_utc": "2026-07-30T20:14:10.768730+00:00"
+    },
+    {
+      "file": "outputs/week6_04_new_outputs_feature_effects/checkpoints/ridge__total_height__polynomial_ridge_degree2.csv",
+      "bytes": 1652387,
+      "sha256": "15B7E93183206975ECD3CF9A38F94616D338D2D104638DF6CA42712D03700253",
+      "modified_utc": "2026-07-30T20:15:53.056587+00:00"
+    }
+  ],
+  "cache_event_count": 4,
+  "pinned_revision_requests_only": true,
+  "revision_discovery_performed": false,
+  "dataset_update_check_performed": false,
+  "protected_preflight_sha256": "5DA308D28DD28C53211F0EE0FABB9B82514121C4065EE9A20F6A92BF153B1F58",
+  "validation_pass_count": 35,
+  "validation_total_count": 35,
+  "output_sha256": {
+    "outputs/week6_04_new_outputs_feature_effects/decision_log.md": "DF02C67D6A78C906D79FB1C33756EBF25F6F90EA7915C147C81D921CD7DCDCB6",
+    "outputs/week6_04_new_outputs_feature_effects/figure_manifest.csv": "70FD83CA3C5B266B5D6E4C6326C5D1665FC1B4414858C5A4BA9CA8BDAB0EB8DF",
+    "outputs/week6_04_new_outputs_feature_effects/kinetic_energy_monitor_audit.csv": "BEE4770AFB1A88D7BE716F35665645E80CA8F896F32CEE9950932403023FD7E7",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_beam_normalized_penetration.csv": "E5C6B4C41532FFFB299B87DB6A2C994DAF458F3E3B71C2825159A89BEFEBE514",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_configuration.json": "B25707A3835DA24555A4C1E55FCB3B5D5D7B59772A74FE001A870A47451D49D6",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_controlled_effect_curves.csv": "4BB2308F87A41C986E8A310D59D2AA9536223982921C1835F5605E5F8E89EF40",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_interaction_surface_values.csv": "A86BDDE258CCDA91D155123B007AFCE452331EF0997C6A788B2B6D59737C6EF5",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_loo_predictions.csv": "29C187006E06FFE6A55B19FA0B4A0ADEE9297180CF0FF3762DEA0DBFA10EA587",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_model_metrics.csv": "7D28045A2A86F9096AD90B701F16A6E59AD423A1A028D042CB7A5366A4D6FA09",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_normalized_diagnostic_correlations.csv": "FE2D45408BB47312C3CBDB0624BF4406BF82BD2E0AAF0FC2E9EBAD69AC64A7A9",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_normalized_diagnostic_unstable_sensitivity.csv": "11AA786D7F9FD5BB7316C05B345739708CE64940359DF36F72869915EEA8D7D8",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_observed_support_summary.csv": "2EF408BD5EBBF24E30050B542B8592171115EA2A30ADA36E4EFB2D386FCCA6AD",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_optimization_diagnostics.csv": "80C0741C9C947AF666CDD25C65147874C64C5B876DA42E99AC208FF03A85981F",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_paired_bootstrap_comparisons.csv": "BBF22FEA73F4ABBC24350B8B2097C5616C103C429DD126AE70F066D503218F3B",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_preflight_snapshot.json": "5DA308D28DD28C53211F0EE0FABB9B82514121C4065EE9A20F6A92BF153B1F58",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_requirement_checklist.csv": "E53389EB57A69F1FDD8F1B392111C305E8FC5B05D6DB73D172526A5FA00E61A5",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_selected_model_decisions.csv": "E25D06CF217B58DE972D006974A10B510F33C90D5341F08823A45D51C96545C7",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_simulation_level_targets.csv": "8CFAB54B6846F0324171B1BCA0B5FB988F0C51040F36173234A062419154C76E",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_spearman_bootstrap_intervals.csv": "AEA403C2846833B08FD016F27DE775EDFF8C21BC19671FD862A3C574E3D659C9",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_spearman_correlations.csv": "5EC46209AB6B916D01889ECB40D0C2936FB548CF2721CE1DC7E705439E9D11A1",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_stage_runtime_history.json": "736BBE274FADCEE245A947FCBCB2EFA1EDE94B04854C9D2858B5F96F0EC3DD48",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_standardized_ridge_coefficients.csv": "2CE1C5FF55FE68CFF2E56EFF96B4B6AD1C7B80A1E76484C8C1AD981BDE5D3027",
+    "outputs/week6_04_new_outputs_feature_effects/phase4_target_definition_sensitivity.csv": "AFF26E4E64B6610381A1276D48945615CDFAB01D579014AD158777FB75BBA608",
+    "outputs/week6_04_new_outputs_feature_effects/representative_simulation_selection.csv": "CBB66CE1327D28DAEC23661676FB3FCD36F1FCF30036AEC9D267FA060D46C58B",
+    "outputs/week6_04_new_outputs_feature_effects/results_summary.md": "5E4BA1FA291050343283EF355EC8A8E70F805BDDC649C7F2264AFCC5DA7EB31F",
+    "outputs/week6_04_new_outputs_feature_effects/summary.json": "8105EFD8D2DD6827C12A0A151DC3535E5647F37986D96A36A2F221E7123E9D4B",
+    "outputs/week6_04_new_outputs_feature_effects/total_height_monitor_audit.csv": "A7659CF83E87512E36A03055F9CEAA7DCCBC1DF4F0F2D567CEEE4A95B5DA14A1",
+    "outputs/week6_04_new_outputs_feature_effects/validation_results.csv": "00F1EF00FA0CCC32A1BAEDAA9553A0067EA7E101DDECCA4A84465CE3B9D9B4BC",
+    "notebooks/week_06/06_phase4_new_outputs_feature_effects.ipynb": "7697901B0322F7BCE159E6941DFD49269168CCAC6437153AE8485341EEC56F7D",
+    "src/week6_phase4_new_outputs_feature_effects.py": "419924DA96DE2A0D2B4DEBD8F650398853FEEA7892FF5DD9284714C2C9020F49",
+    "scripts/build_week6_06_notebook.py": "83C021551F4DDCE014D8CAE95DD1A2267D48A36E769D8BBC53D9B73F3A1B0139"
+  },
+  "safety": {
+    "starting_head_unchanged": true,
+    "staged_files": [],
+    "commit_performed": false,
+    "push_performed": false,
+    "reset_performed": false,
+    "clean_performed": false,
+    "stash_performed": false,
+    "original_worktree_unchanged_validation": true
+  }
+}

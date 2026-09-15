@@ -1,0 +1,7 @@
+{
+  "all_arms_identical": true,
+  "feature_only": true,
+  "runs": 100,
+  "size": 16,
+  "status": "PASS"
+}

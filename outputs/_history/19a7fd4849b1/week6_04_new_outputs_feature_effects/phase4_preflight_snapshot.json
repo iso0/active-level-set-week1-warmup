@@ -1,0 +1,232 @@
+{
+  "recorded_at_utc": "2026-07-30T19:23:26.7608258Z",
+  "request_specification": {
+    "path": "C:\\Users\\ozgur\\.codex\\attachments\\b5e1afb8-5f9b-43fd-9753-91d5b77697ae\\pasted-text.txt",
+    "sha256": "7FCE14E1CFF315D7193270C5ED7EC0604CED132F56AD5044DA97E0C62A10297F",
+    "line_count": 841
+  },
+  "invocation_current_working_directory": "C:\\Users\\ozgur\\Documents\\thesis",
+  "isolated_worktree": {
+    "repository_root": "C:/Users/ozgur/Documents/thesis-week6-melt-pool-audit",
+    "branch_before_phase4_switch": "codex/week6-phase3-5-regime-target-design",
+    "branch_after_phase4_switch": "codex/week6-phase4-new-outputs-feature-effects",
+    "head": "b112f6b22898976f77410190614cb4fb218d38f9",
+    "git_status_short": [
+      " M requirements.txt",
+      "?? notebooks/week_06/04_phase3_model_target_robustness.ipynb",
+      "?? notebooks/week_06/05_phase3_5_regime_target_design.ipynb",
+      "?? outputs/week6_03_5_regime_target_design/",
+      "?? outputs/week6_03_model_target_robustness/",
+      "?? scripts/build_week6_04_notebook.py",
+      "?? scripts/build_week6_05_notebook.py",
+      "?? src/week6_phase3_5_regime_target_design.py",
+      "?? src/week6_phase3_model_target_robustness.py"
+    ],
+    "local_week6_branches_before_switch": [
+      "codex/week6-1-optimized-gpc",
+      "codex/week6-phase1-melt-pool-data-audit",
+      "codex/week6-phase2-5-depth-closure",
+      "codex/week6-phase2-gp-response-models",
+      "codex/week6-phase3-5-regime-target-design",
+      "codex/week6-phase3-model-target-robustness"
+    ],
+    "remote_week6_branches": [
+      "origin/codex/week6-phase2-5-depth-closure"
+    ]
+  },
+  "verified_dataset_provenance": {
+    "repository_id": "ioandanielc/sph_dataset",
+    "pinned_revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+    "expected_simulation_count": 241,
+    "expected_features": [
+      "P",
+      "VX",
+      "LS",
+      "ST"
+    ],
+    "ls_semantics": "laser spot radius",
+    "ls_unit": "micrometre",
+    "dataset_update_check_performed": false,
+    "new_label_check_performed": false
+  },
+  "protected_phase_artifacts": [
+    {
+      "phase": "Phase 1",
+      "path": "notebooks/week_06/01_melt_pool_monitor_data_audit.ipynb",
+      "bytes": 1258348,
+      "sha256": "BB4897432224C9A16ADAE084FBE5004DD7987DA43BA9B6195C5DABD65D9DF65F"
+    },
+    {
+      "phase": "Phase 1",
+      "path": "src/week6_phase1_melt_pool_data_audit.py",
+      "bytes": 129420,
+      "sha256": "64A5E3998D411961CBFBC3AD0A761F9B9D8F2C876550548B835C3EBF0E1C63A4"
+    },
+    {
+      "phase": "Phase 1",
+      "path": "outputs/week6_01_melt_pool_data_audit/summary.json",
+      "bytes": 2542,
+      "sha256": "A18BC9A688792268F5514BCAA9758BEE327DC6F71AA15A14123C47B177357F96"
+    },
+    {
+      "phase": "Phase 1",
+      "path": "outputs/week6_01_melt_pool_data_audit/validation_results.csv",
+      "bytes": 1995,
+      "sha256": "A5ACBFC1DAADBE58EB271F6389D5008012D556EA27205A26DF426429CF51B8A6"
+    },
+    {
+      "phase": "Phase 1",
+      "path": "outputs/week6_01_melt_pool_data_audit/week6_phase1_simulation_level_responses.csv",
+      "bytes": 762410,
+      "sha256": "10DEF11AB64D62444AC14FED506266BEB748EEB5BF892ACDC12E7F0F6DDCF4FF"
+    },
+    {
+      "phase": "Phase 2",
+      "path": "notebooks/week_06/02_gp_response_noise_comparison.ipynb",
+      "bytes": 614055,
+      "sha256": "DF04ADF427DA98D238488C0BE6D15807ACBDE07478F35F22D187CDD707FBA359"
+    },
+    {
+      "phase": "Phase 2",
+      "path": "src/week6_phase2_gp_response_noise_comparison.py",
+      "bytes": 131985,
+      "sha256": "4228223095EA40A4F05DC6084C565E99FA0E0747AB2B8C0891C2C534B6BA9701"
+    },
+    {
+      "phase": "Phase 2",
+      "path": "outputs/week6_02_gp_response_noise_comparison/summary.json",
+      "bytes": 41621,
+      "sha256": "E95161972078503BF67926D549A1140274DC91F8F12BF899BD882FF9F84C75EF"
+    },
+    {
+      "phase": "Phase 2",
+      "path": "outputs/week6_02_gp_response_noise_comparison/validation_results.csv",
+      "bytes": 2356,
+      "sha256": "3A6644EC0524F99B47B98D7870201571D41D198F96BE5C139FF59EAD667BBC86"
+    },
+    {
+      "phase": "Phase 2.5",
+      "path": "notebooks/week_06/03_phase2_5_depth_model_closure.ipynb",
+      "bytes": 717802,
+      "sha256": "FDA44EF49D15EB72789003F8D9218FC945A1F8D5752098F4CF3C7D2B6FD54454"
+    },
+    {
+      "phase": "Phase 2.5",
+      "path": "src/week6_phase2_5_depth_model_closure.py",
+      "bytes": 101288,
+      "sha256": "2766ED6D8551151B29582C6B7D83C88D39367153A70B4DCFDE249410481204B3"
+    },
+    {
+      "phase": "Phase 2.5",
+      "path": "outputs/week6_02_5_depth_model_closure/summary.json",
+      "bytes": 9209,
+      "sha256": "3093361B89745ACF7F62271B0576DAEAD17A91E0225B3A4C4B55B9DF059D678F"
+    },
+    {
+      "phase": "Phase 2.5",
+      "path": "outputs/week6_02_5_depth_model_closure/validation_results.csv",
+      "bytes": 3413,
+      "sha256": "9FE2461BB8A86D9B6929F13A2FAAE834A13C6657349130A0B46B78CB78A0DC91"
+    },
+    {
+      "phase": "Phase 3",
+      "path": "notebooks/week_06/04_phase3_model_target_robustness.ipynb",
+      "bytes": 3194647,
+      "sha256": "9833395E2D1B78A4613B29B9790E3F3488CDFF379404E65557E4253575C92D5A"
+    },
+    {
+      "phase": "Phase 3",
+      "path": "src/week6_phase3_model_target_robustness.py",
+      "bytes": 284856,
+      "sha256": "D9FE981C637B63D6F3384249374209DB73B03A5BA853F47C5576EE4E8454A914"
+    },
+    {
+      "phase": "Phase 3",
+      "path": "outputs/week6_03_model_target_robustness/summary.json",
+      "bytes": 540215,
+      "sha256": "E0F9851F37747516C6757C64350B233A8CC0DB06A9CCCDB6B71A9D350E6C09D9"
+    },
+    {
+      "phase": "Phase 3",
+      "path": "outputs/week6_03_model_target_robustness/validation_results.csv",
+      "bytes": 7394,
+      "sha256": "2B0CDE041C3478E0606E57CCBD54B076EECE2CC2B657B4FFE7611CC3673A33C8"
+    },
+    {
+      "phase": "Phase 3.5",
+      "path": "notebooks/week_06/05_phase3_5_regime_target_design.ipynb",
+      "bytes": 2713444,
+      "sha256": "87835B969C869ABD78545535939DE460A0F7BA682463BD0CC646A2ED8D2C7CB1"
+    },
+    {
+      "phase": "Phase 3.5",
+      "path": "src/week6_phase3_5_regime_target_design.py",
+      "bytes": 233260,
+      "sha256": "887CA526E2F67C43CF9829B6BDDD6A14E0B28940A0E7232F906282C07DE11668"
+    },
+    {
+      "phase": "Phase 3.5",
+      "path": "outputs/week6_03_5_regime_target_design/summary.json",
+      "bytes": 6727,
+      "sha256": "20B7060D1B04204B844D2DB32C28A874ADE4561DA3413B33D9E62201002B7F94"
+    },
+    {
+      "phase": "Phase 3.5",
+      "path": "outputs/week6_03_5_regime_target_design/validation_results.csv",
+      "bytes": 4973,
+      "sha256": "7C3CE86D426B58B75C783905178591A0846C84A03B84B8F029B3D02B5351FEB2"
+    },
+    {
+      "phase": "Phase 3.5",
+      "path": "outputs/week6_03_5_regime_target_design/phase3_5_requirement_checklist.csv",
+      "bytes": 17012,
+      "sha256": "230E1960E87FE81BF144925E5EEC54E1B31CA90DBA76C5B4E62B6C8414584C2F"
+    }
+  ],
+  "original_dirty_worktree": {
+    "repository_root": "C:/Users/ozgur/Documents/thesis",
+    "branch": "main",
+    "head": "6fd6be57e5341e083a7023a3ae29e65b7b326bbd",
+    "git_status_short": [
+      " M outputs/week2_acquisition_comparison/week2_slide_notes.md",
+      "?? docs/",
+      "?? outputs/week1_active_level_set_progress.pptx",
+      "?? outputs/week2_active_level_set_progress_v2.pptx",
+      "?? outputs/week3_active_level_set_progress.pptx",
+      "?? outputs/week3_active_level_set_progress_v2.pptx"
+    ],
+    "protected_dirty_files": [
+      {
+        "path": "docs/deep-research-report.md",
+        "bytes": 38794,
+        "sha256": "A714E0C2249A134287B76A86FC8D660A075C69184A5CAB851A3C1F52412E321C"
+      },
+      {
+        "path": "outputs/week1_active_level_set_progress.pptx",
+        "bytes": 1804694,
+        "sha256": "BDD1F515EAAB313E5371CBE5E2C0B7FB3E87713037A21337DD7D078406C23577"
+      },
+      {
+        "path": "outputs/week2_acquisition_comparison/week2_slide_notes.md",
+        "bytes": 2591,
+        "sha256": "9F00ECE946170F936E5EFFFA019CDB4C3B2DBCC93037155CDFCCFCA716E2E99C"
+      },
+      {
+        "path": "outputs/week2_active_level_set_progress_v2.pptx",
+        "bytes": 1925440,
+        "sha256": "92A760D21A1C9B9E07F15724D2CEDD225A19B05439AF8ECA6273AC4212B913AB"
+      },
+      {
+        "path": "outputs/week3_active_level_set_progress.pptx",
+        "bytes": 1313521,
+        "sha256": "F129A4F5310B808D23F810B1E4CBFB8BE2039A5DDFE408D9B26DE55E7C9CFCBD"
+      },
+      {
+        "path": "outputs/week3_active_level_set_progress_v2.pptx",
+        "bytes": 910574,
+        "sha256": "AEC8EFE32B358D2F6BBD3C3610FC9D76FF8B45D74CDDBDD0074C261E127AE09E"
+      }
+    ]
+  },
+  "safety_statement": "This is the first Phase 4 artifact. All subsequent writes are restricted to the isolated Week 6 worktree. No stage, commit, push, reset, restore, clean, stash, deletion, or history rewrite was performed."
+}

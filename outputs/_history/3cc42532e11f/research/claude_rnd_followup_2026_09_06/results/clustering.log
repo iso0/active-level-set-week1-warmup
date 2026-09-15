@@ -1,0 +1,91 @@
+all_exceptions std4_loginputs done
+all_exceptions logh_tangent done
+all_exceptions logh_only done
+late_onset_KH std4_loginputs done
+late_onset_KH logh_tangent done
+late_onset_KH logh_only done
+transient_KH std4_loginputs done
+transient_KH logh_tangent done
+transient_KH logh_only done
+altcfg_KH std4_loginputs done
+altcfg_KH logh_tangent done
+altcfg_KH logh_only done
+depth_marginal_C std4_loginputs done
+depth_marginal_C logh_tangent done
+depth_marginal_C logh_only done
+other std4_loginputs done
+other logh_tangent done
+other logh_only done
+               group   n           space                 null  T1_nn_exception_dist  T1_null_mean  T1_p_smaller  T2_exceptions_in_10nn  T2_null_mean  T2_p_larger  T2_enrichment
+0     all_exceptions  13  std4_loginputs        unconditioned                 1.093         1.297         0.117                  1.077         0.300        0.003          3.588
+1     all_exceptions  13  std4_loginputs                class                 1.093         1.194         0.268                  1.077         0.751        0.178          1.433
+2     all_exceptions  13  std4_loginputs      class_partition                 1.093         1.139         0.385                  1.077         0.608        0.051          1.770
+3     all_exceptions  13  std4_loginputs  class_partition_cfg                 1.093         1.063         0.591                  1.077         0.816        0.139          1.320
+4     all_exceptions  13    logh_tangent        unconditioned                 1.024         1.218         0.108                  1.000         0.299        0.008          3.348
+5     all_exceptions  13    logh_tangent                class                 1.024         1.143         0.227                  1.000         0.767        0.255          1.303
+6     all_exceptions  13    logh_tangent      class_partition                 1.024         1.107         0.282                  1.000         0.634        0.097          1.578
+7     all_exceptions  13    logh_tangent  class_partition_cfg                 1.024         1.047         0.434                  1.000         0.830        0.234          1.205
+8     all_exceptions  13       logh_only        unconditioned                 0.066         0.122         0.071                  1.154         0.296        0.001          3.894
+9     all_exceptions  13       logh_only                class                 0.066         0.121         0.053                  1.154         0.825        0.173          1.399
+10    all_exceptions  13       logh_only      class_partition                 0.066         0.121         0.056                  1.154         0.679        0.074          1.700
+11    all_exceptions  13       logh_only  class_partition_cfg                 0.066         0.121         0.065                  1.154         0.672        0.072          1.718
+12     late_onset_KH   7  std4_loginputs        unconditioned                 0.632         1.596         0.000                  1.286         0.151        0.000          8.512
+13     late_onset_KH   7  std4_loginputs                class                 0.632         1.235         0.006                  1.286         0.608        0.066          2.114
+14     late_onset_KH   7  std4_loginputs      class_partition                 0.632         1.098         0.001                  1.286         0.628        0.032          2.047
+15     late_onset_KH   7  std4_loginputs  class_partition_cfg                 0.632         0.932         0.013                  1.286         1.052        0.167          1.222
+16     late_onset_KH   7    logh_tangent        unconditioned                 0.642         1.515         0.000                  1.286         0.142        0.000          9.030
+17     late_onset_KH   7    logh_tangent                class                 0.642         1.202         0.009                  1.286         0.631        0.081          2.039
+18     late_onset_KH   7    logh_tangent      class_partition                 0.642         1.075         0.008                  1.286         0.640        0.044          2.010
+19     late_onset_KH   7    logh_tangent  class_partition_cfg                 0.642         0.916         0.020                  1.286         1.067        0.191          1.205
+20     late_onset_KH   7       logh_only        unconditioned                 0.051         0.215         0.014                  0.429         0.145        0.094          2.949
+21     late_onset_KH   7       logh_only                class                 0.051         0.114         0.059                  0.429         0.706        0.800          0.607
+22     late_onset_KH   7       logh_only      class_partition                 0.051         0.117         0.062                  0.429         0.643        0.716          0.666
+23     late_onset_KH   7       logh_only  class_partition_cfg                 0.051         0.114         0.085                  0.429         0.644        0.843          0.665
+24      transient_KH   3  std4_loginputs        unconditioned                 1.636         2.188         0.194                  0.000         0.047        1.000          0.000
+25      transient_KH   3  std4_loginputs                class                 1.636         1.792         0.408                  0.000         0.209        1.000          0.000
+26      transient_KH   3  std4_loginputs      class_partition                 1.636         1.680         0.496                  0.000         0.250        1.000          0.000
+27      transient_KH   3  std4_loginputs  class_partition_cfg                 1.636         1.701         0.481                  0.000         0.239        1.000          0.000
+28      transient_KH   3    logh_tangent        unconditioned                 1.565         2.150         0.185                  0.000         0.046        1.000          0.000
+29      transient_KH   3    logh_tangent                class                 1.565         1.786         0.361                  0.000         0.193        1.000          0.000
+30      transient_KH   3    logh_tangent      class_partition                 1.565         1.691         0.441                  0.000         0.258        1.000          0.000
+31      transient_KH   3    logh_tangent  class_partition_cfg                 1.565         1.705         0.422                  0.000         0.239        1.000          0.000
+32      transient_KH   3       logh_only        unconditioned                 0.060         0.465         0.013                  0.667         0.053        0.069         12.526
+33      transient_KH   3       logh_only                class                 0.060         0.260         0.038                  0.667         0.239        0.266          2.788
+34      transient_KH   3       logh_only      class_partition                 0.060         0.228         0.060                  0.667         0.280        0.310          2.382
+35      transient_KH   3       logh_only  class_partition_cfg                 0.060         0.229         0.057                  0.667         0.291        0.320          2.294
+36         altcfg_KH   3  std4_loginputs        unconditioned                 0.325         2.182         0.000                  2.000         0.053        0.000         37.736
+37         altcfg_KH   3  std4_loginputs                class                 0.325         1.788         0.000                  2.000         0.207        0.003          9.677
+38         altcfg_KH   3  std4_loginputs      class_partition                 0.325         1.694         0.014                  2.000         0.261        0.020          7.663
+39         altcfg_KH   3  std4_loginputs  class_partition_cfg                 0.325         0.325         0.671                  2.000         2.000        1.000          1.000
+40         altcfg_KH   3    logh_tangent        unconditioned                 0.345         2.135         0.000                  2.000         0.046        0.000         43.373
+41         altcfg_KH   3    logh_tangent                class                 0.345         1.757         0.001                  2.000         0.216        0.003          9.240
+42         altcfg_KH   3    logh_tangent      class_partition                 0.345         1.650         0.015                  2.000         0.249        0.015          8.032
+43         altcfg_KH   3    logh_tangent  class_partition_cfg                 0.345         0.345         1.000                  2.000         2.000        1.000          1.000
+44         altcfg_KH   3       logh_only        unconditioned                 0.081         0.473         0.027                  0.333         0.045        0.077          7.407
+45         altcfg_KH   3       logh_only                class                 0.081         0.263         0.065                  0.333         0.221        0.362          1.508
+46         altcfg_KH   3       logh_only      class_partition                 0.081         0.102         0.369                  0.333         0.295        0.456          1.130
+47         altcfg_KH   3       logh_only  class_partition_cfg                 0.081         0.081         1.000                  0.333         0.333        1.000          1.000
+48  depth_marginal_C   2  std4_loginputs        unconditioned                 2.150         2.637         0.315                  0.000         0.029        1.000          0.000
+49  depth_marginal_C   2  std4_loginputs                class                 2.150         2.430         0.398                  0.000         0.032        1.000          0.000
+50  depth_marginal_C   2  std4_loginputs      class_partition                 2.150         2.220         0.478                  0.000         0.037        1.000          0.000
+51  depth_marginal_C   2  std4_loginputs  class_partition_cfg                 2.150         2.217         0.478                  0.000         0.034        1.000          0.000
+52  depth_marginal_C   2    logh_tangent        unconditioned                 2.140         2.649         0.333                  0.000         0.024        1.000          0.000
+53  depth_marginal_C   2    logh_tangent                class                 2.140         2.371         0.421                  0.000         0.032        1.000          0.000
+54  depth_marginal_C   2    logh_tangent      class_partition                 2.140         2.204         0.498                  0.000         0.032        1.000          0.000
+55  depth_marginal_C   2    logh_tangent  class_partition_cfg                 2.140         2.189         0.498                  0.000         0.034        1.000          0.000
+56  depth_marginal_C   2       logh_only        unconditioned                 0.235         0.764         0.201                  0.000         0.024        1.000          0.000
+57  depth_marginal_C   2       logh_only                class                 0.235         0.509         0.287                  0.000         0.029        1.000          0.000
+58  depth_marginal_C   2       logh_only      class_partition                 0.235         0.471         0.317                  0.000         0.032        1.000          0.000
+59  depth_marginal_C   2       logh_only  class_partition_cfg                 0.235         0.486         0.290                  0.000         0.032        1.000          0.000
+60             other   2  std4_loginputs        unconditioned                 2.983         2.652         0.637                  0.000         0.022        1.000          0.000
+61             other   2  std4_loginputs                class                 2.983         3.191         0.401                  0.000         0.006        1.000          0.000
+62             other   2  std4_loginputs      class_partition                 2.983         3.318         0.330                  0.000         0.007        1.000          0.000
+63             other   2  std4_loginputs  class_partition_cfg                 2.983         3.353         0.311                  0.000         0.005        1.000          0.000
+64             other   2    logh_tangent        unconditioned                 2.605         2.670         0.480                  0.000         0.022        1.000          0.000
+65             other   2    logh_tangent                class                 2.605         3.305         0.255                  0.000         0.006        1.000          0.000
+66             other   2    logh_tangent      class_partition                 2.605         3.548         0.157                  0.000         0.006        1.000          0.000
+67             other   2    logh_tangent  class_partition_cfg                 2.605         3.554         0.165                  0.000         0.006        1.000          0.000
+68             other   2       logh_only        unconditioned                 0.085         0.751         0.077                  0.500         0.025        0.029         20.000
+69             other   2       logh_only                class                 0.085         1.299         0.011                  0.500         0.007        0.007         75.000
+70             other   2       logh_only      class_partition                 0.085         1.481         0.007                  0.500         0.005        0.005        100.000
+71             other   2       logh_only  class_partition_cfg                 0.085         1.479         0.003                  0.500         0.002        0.003        200.000

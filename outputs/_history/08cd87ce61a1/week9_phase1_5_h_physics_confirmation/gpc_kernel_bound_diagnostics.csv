@@ -1,0 +1,7 @@
+analysis,model,unique_fits,bound_hits,bound_hit_rate,fallback_fits
+static,gpc_1d_h,100,0,0.0,0
+static,gpc_4d,100,38,0.38,0
+static,gpc_5d_h_augmented,100,1,0.01,0
+active_declared_checkpoint_evaluations,gpc4_assisted_product,6500,912,0.1403076923076923,0
+active_declared_checkpoint_evaluations,gpc4_h_acquisition,9500,1474,0.1551578947368421,0
+active_declared_checkpoint_evaluations,gpc5_margin,6500,482,0.07415384615384615,0

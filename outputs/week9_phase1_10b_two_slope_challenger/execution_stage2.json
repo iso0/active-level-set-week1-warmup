@@ -1,0 +1,22 @@
+{
+  "M3@P:M3_T2": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 152.4
+  },
+  "M3@P:M3_T3": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 144.8
+  },
+  "M3_T2@P:M3": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 127.2
+  },
+  "M3_T3@P:M3": {
+    "reused": 2,
+    "runs": 100,
+    "seconds": 153.1
+  }
+}

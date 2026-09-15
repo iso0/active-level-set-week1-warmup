@@ -1,0 +1,47 @@
+{
+  "anomaly_experiment_count": 17,
+  "anomaly_record_count": 22,
+  "conduction_experiment_count": 18,
+  "conduction_frame_count": 2231,
+  "experiment_count": 18,
+  "ioan_reference_pass_count": 20,
+  "ioan_reference_total": 20,
+  "keyhole_experiment_count": 4,
+  "keyhole_frame_count": 238,
+  "labelled_frame_count": 4286,
+  "mode": "smoke",
+  "new_data_outside_any_week6_axis_range": 1,
+  "new_data_outside_week6_4d_convex_hull": 3,
+  "partition_counts": {
+    "new-data": {
+      "experiments": 6,
+      "labelled_frames": 1573
+    },
+    "old-data-local": {
+      "experiments": 6,
+      "labelled_frames": 1345
+    },
+    "old-data-remote-clean": {
+      "experiments": 6,
+      "labelled_frames": 1368
+    }
+  },
+  "phase": "Week 7 Phase 1",
+  "repository": "ioandanielc/sph_v2",
+  "results_summary_markdown_sha256": "f37b3bddc4bf8a863bc43f4c7d211e14630feca481565e4bb94944b5b99ae324",
+  "revision": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "runtime_seconds": 179.54268819998833,
+  "scope": {
+    "active_learning": false,
+    "labels_modified": false,
+    "level_set_estimation": false,
+    "predictive_models_fitted": false,
+    "simulations_removed": false
+  },
+  "validation": {
+    "FAIL": 1,
+    "PASS": 20,
+    "WARNING": 1
+  },
+  "working_student_subset_identifiable": false
+}

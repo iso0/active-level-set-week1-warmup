@@ -1,0 +1,59 @@
+{
+  "frozen_at_utc": "2026-09-13T20:30:49.090434+00:00",
+  "basis": "Phase 1.21 pre-registered replication on repeats 61-120 (REPLICATION_RESULT.json); no further tuning",
+  "final_policy": {
+    "name": "early8__coverage_then_margin_B40",
+    "role": "recommended protocol (largest replicated effect; the simplest rule, non-inferior to its CCM version)",
+    "seed": "first 8 points of the frozen seeded maximin order, extended along that order only until both classes are queried",
+    "until_B40": "inside the log-h band estimated from queried labels only, padded by max(0.05, 0.25 x width): argmax rank(1 - 2|p - 0.5|) + rank(standardised-x distance to the nearest queried point); plain margin if the band is empty",
+    "from_B40": "plain M3 probability margin",
+    "parameters": {
+      "k_seed": 8,
+      "pad_fraction": 0.25,
+      "pad_floor": 0.05,
+      "switch_budget": 40,
+      "uncertainty_weight": 1.0,
+      "coordinates": "standardised original 4D x (scaler fit on the training pool)"
+    }
+  },
+  "pure_acquisition_companion": {
+    "name": "coverage_then_margin_B40",
+    "role": "same rule with the frozen 16-point seed; isolates the acquisition effect from the change of initial design"
+  },
+  "control": "M3 probability margin with the frozen 16-point seed",
+  "evaluator": "M3 (frozen physics logistic mean on log h + ARD Matern-3/2 GP discrepancy), refit at every budget",
+  "replicated_effects_vs_margin": {
+    "coverage_then_margin_B40": {
+      "16-80": [
+        0.0031709558823529087,
+        0.0016712622549019446,
+        0.004759497549019562
+      ],
+      "16-40": [
+        0.0070547385620914945,
+        0.0037620506535947593,
+        0.010596405228758161
+      ]
+    },
+    "early8__coverage_then_margin_B40": {
+      "16-80": [
+        0.0067080269607842965,
+        0.004774777879901932,
+        0.008632084865196085
+      ],
+      "16-40": [
+        0.01380310457516337,
+        0.009860804738562058,
+        0.01779003267973852
+      ]
+    }
+  },
+  "code_sha256": {
+    "week9_phase1_20_acquisition_search.py": "a47a4c2a872bda39da0ef1415360447d9fafb570c603cf3e6687ead5681a26b2",
+    "week9_phase1_20_early_start.py": "5a515d6c89d2a4c547f005fd58067d7385b2343795d136ac26b23bf8501b9a43",
+    "week9_phase1_21_simplification_replication.py": "b7c436e88c15cb569c4c5f8cf2f26f3c2742f436da403c8c4b6fce85386d19c9",
+    "week9_phase1_13_fixed_physics_ard_discrepancy.py": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba",
+    "week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5"
+  },
+  "external_blind_test": "possible from now on; requires the user's explicit approval; the external pool has not been opened, read or computed on, and its own protocol (endpoints, adaptation of B1 subsets to that pool) must be pre-registered before any label of it is read"
+}

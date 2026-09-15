@@ -1,0 +1,58 @@
+{
+  "bootstrap": {
+    "draws": 10000,
+    "interval": "two-sided percentile 95%",
+    "unit": "20 repeat blocks"
+  },
+  "configuration_grouping": "exact equality of verified folder fields XI,XF,XL,TE",
+  "depth_censor_rule": "label-free largest terminal suffix with N>=10, span<=15 um, preceding gap>=5 um; midpoint threshold",
+  "frozen_parent": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+  "inputs": [
+    "P",
+    "VX",
+    "LS",
+    "ST"
+  ],
+  "kind": "falsification_and_integrity_audit",
+  "main_configuration": "largest exact XI/XF/XL/TE group, frozen before outcome sensitivity",
+  "monotonic_order": "P up, VX down, LS down, at least one strict; ST ignored",
+  "observation_window_rule": "authoritative time.dat flag; TE < 0.9*(min(XF,XL)+12e-6)/VX retained as a transparent metadata cross-check",
+  "phase": "Week 9 Phase 1.19A",
+  "physics_coordinate": "h=P/sqrt(VX*LS^3)",
+  "population": {
+    "Conduction": 332,
+    "Keyhole": 73,
+    "N": 405
+  },
+  "prohibited": [
+    "new acquisition trajectory",
+    "pseudo-label training",
+    "binary-label change",
+    "q20/q30 change",
+    "Letham implementation",
+    "sample-efficiency claim"
+  ],
+  "regularization_diagnostic_C": [
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0,
+    1000000.0
+  ],
+  "stage1": {
+    "C": 1000000.0,
+    "budgets": [
+      16,
+      20,
+      24,
+      32,
+      40,
+      60,
+      80
+    ],
+    "feature": "standardized log(h)",
+    "model": "logistic",
+    "paths": "outputs/week9_phase1_14_m3_margin_acquisition/m3_margin_paths.csv.gz"
+  }
+}

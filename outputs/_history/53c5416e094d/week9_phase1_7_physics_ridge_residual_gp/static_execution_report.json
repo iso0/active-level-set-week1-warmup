@@ -1,0 +1,11 @@
+{
+  "convergence_warning_fits": 87,
+  "elapsed_seconds": 28.93459963798523,
+  "fallback_fits": 0,
+  "length_scale_bound_fits": 0,
+  "model": "exact additive Laplace GPC with linear physics kernel and constrained 4D Matern-3/2 residual",
+  "outer_runs": 100,
+  "residual_sd_upper_bound_fits": 87,
+  "smoke": false,
+  "status": "PASS"
+}

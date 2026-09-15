@@ -1,0 +1,11 @@
+{
+  "canonical_files": 17390,
+  "preserved_variants": 1937,
+  "manifest_files": 19327,
+  "bytes": 4207048731,
+  "local_input_records": 26843,
+  "git_snapshots": 44,
+  "unique_input_blobs": 18559,
+  "source_read_errors": 0,
+  "removed_verified_old_locations": 68
+}

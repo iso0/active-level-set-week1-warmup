@@ -1,0 +1,30 @@
+{
+ "addendum_to": "claude_rnd_2026_09_05/external_confirmation_protocol.json",
+ "date": "2026-09-06",
+ "protocol_changes": "none to arms, endpoints, success rule, gates, blinding",
+ "prediction_study_changes": {
+  "P1": "wording: all-label level, not ceiling",
+  "P1b": "added",
+  "P9": "rewritten as selection-sensitivity prediction"
+ },
+ "terminology": {
+  "XSUR": "coherent one-step reduction of posterior 0-1 set risk under Gaussian-Laplace posterior with semantics S2/S3; not an arm"
+ },
+ "challenger": "M3+TV retained (Case C)",
+ "closed_lines": [
+  "oracle-value proxies",
+  "XSUR S1/S2/S3 wide and tight priors",
+  "moment-matched GlobalSUR",
+  "BALD/GlobalMI/entropy for noiseless boundary targets",
+  "Brier/log-loss SUR under T",
+  "M3R any eps",
+  "local/nonstationary/campaign-aware discrepancy",
+  "T and CDL predictors"
+ ],
+ "before_unblinding": [
+  "commit both packages; fill freeze block by second commit incl. this file's sha256",
+  "run code/new_pool_audit.py on input-only manifest",
+  "run run_external.py --prepare and commit",
+  "label file to oracle location only; record sha256; written confirmation of non-inspection"
+ ]
+}

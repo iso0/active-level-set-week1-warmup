@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "mode": "smoke",
+  "scientific_results_reported": false,
+  "simulation_count": 12,
+  "simulation_ids": [
+    "sim_00001",
+    "sim_00002",
+    "sim_00003",
+    "sim_00004",
+    "sim_00005",
+    "sim_00006",
+    "sim_00007",
+    "sim_00008",
+    "sim_00029",
+    "sim_00036",
+    "sim_00038",
+    "sim_00095"
+  ],
+  "keyhole_positive_simulations": 4,
+  "monitor_rows": 1106376,
+  "valid_melt_rows": 927300,
+  "label_rows": 2730,
+  "exact_alignment_rows": 2730,
+  "candidate_ids": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "R0",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5"
+  ],
+  "exploratory_ratio_threshold": 0.47022542321264926,
+  "computed_simulations": 12,
+  "reused_simulations": 0
+}

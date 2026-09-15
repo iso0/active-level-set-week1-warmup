@@ -1,0 +1,15 @@
+{
+  "status": "scientific smoke test only",
+  "simulation_count": 12,
+  "prediction_rows": 168,
+  "models": [
+    "linear_ridge",
+    "matern32_learned_nugget",
+    "matern32_no_nugget",
+    "matern52_learned_nugget",
+    "polynomial_ridge_degree2",
+    "rbf_learned_nugget",
+    "training_mean"
+  ],
+  "note": "Do not report these reduced-population values as results."
+}

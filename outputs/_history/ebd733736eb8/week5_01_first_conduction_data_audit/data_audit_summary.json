@@ -1,0 +1,363 @@
+{
+  "source": {
+    "repository_id": "ioandanielc/sph_dataset",
+    "filename": "final-labels_all.csv",
+    "revision": "0e859b748fdbc8454f66e58e101e333ac0479d42",
+    "local_size_bytes": 17421654,
+    "sha256": "964a12d86435e9f0879e2e43384d997e1cc2faa7b9e4c3aeb49cf0e73e3fb154",
+    "audit_date": "2026-07-21"
+  },
+  "raw_shape": {
+    "rows": 65472,
+    "columns": 12
+  },
+  "columns": [
+    "name",
+    "hash",
+    "P",
+    "VX",
+    "LS",
+    "ST",
+    "bug_free",
+    "correctly_finished",
+    "timestep",
+    "label_1",
+    "label_2",
+    "label_final"
+  ],
+  "provisional_grouping_key": "name",
+  "simulation_count": 241,
+  "reaching_conduction": 238,
+  "never_reaching_conduction": 3,
+  "screenshot_bug_any": 150,
+  "screenshot_bug_before_first_conduction": 147,
+  "candidate_sizes": {
+    "A — Broad": 238,
+    "B — Strict clean": 91,
+    "C — Pre-transition clean": 91
+  },
+  "target_ambiguity": {
+    "historical_name": "first_conduction_timestep",
+    "preferred_name": "first_observed_conduction_timestep",
+    "interpretation": "first stored row labelled Conduction; not proven physical transition time",
+    "interval_type": "observational ambiguity interval; not a probabilistic confidence interval",
+    "exact_clean_observed_target_flag": 91,
+    "interval_ambiguous_due_to_pretransition_bug": 147,
+    "unavailable_valid_lower_bound_all_target_bearing": 0,
+    "interval_width_statistics": {
+      "count": 147,
+      "mean": 513.2312925170068,
+      "std": 249.0238220443543,
+      "min": 267.0,
+      "q25": 314.5,
+      "median": 418.0,
+      "q75": 630.0,
+      "max": 1287.0
+    },
+    "width_vs_first_observed_target": {
+      "pearson": 0.795460722597694,
+      "spearman": 0.7833541127156465,
+      "interpretation": "descriptive association only"
+    },
+    "primary_category_priority": [
+      "right_censored_no_conduction",
+      "interval_ambiguous_due_to_pretransition_bug",
+      "other_transition_ambiguity",
+      "exact_clean_observed_target"
+    ],
+    "primary_category_counts": {
+      "right_censored_no_conduction": 3,
+      "interval_ambiguous_due_to_pretransition_bug": 147,
+      "other_transition_ambiguity": 22,
+      "exact_clean_observed_target": 69
+    },
+    "midpoint_used_as_target": false
+  },
+  "right_censoring": {
+    "count": 3,
+    "interpretation": "transition, if any, occurs later than the final observation",
+    "standard_gpr_direct_support": false,
+    "survival_or_censored_gp_implemented": false,
+    "simulations": [
+      {
+        "name": "P-208p39901443_VX-0p201684842681_LS-6p50424237325e-05_ST-372p154003234_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p00125_DT-3p19456481434e-05_H-bf889bf790",
+        "final_observed_timestep": 68795,
+        "final_stored_frame_index_0based": 40,
+        "final_observed_label": "Forming Phase",
+        "final_valid_non_bug_timestep": 68795,
+        "final_valid_label": "Forming Phase",
+        "screenshot_bug_any": true,
+        "keyhole_any": false,
+        "P": 208.39901443,
+        "VX": 0.2016848427,
+        "LS": 6.50424e-05,
+        "ST": 372.154003234,
+        "right_censored_no_conduction": true
+      },
+      {
+        "name": "P-211p816522505_VX-0p520710876808_LS-4p80782604054e-05_ST-318p660442183_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-9p26448979247e-06_H-5a4acb0e81",
+        "final_observed_timestep": 115599,
+        "final_stored_frame_index_0based": 227,
+        "final_observed_label": "Keyhole",
+        "final_valid_non_bug_timestep": 115599,
+        "final_valid_label": "Keyhole",
+        "screenshot_bug_any": true,
+        "keyhole_any": true,
+        "P": 211.816522505,
+        "VX": 0.5207108768,
+        "LS": 4.80783e-05,
+        "ST": 318.660442183,
+        "right_censored_no_conduction": true
+      },
+      {
+        "name": "P-98p5137427197_VX-0p87794698955_LS-7p93698578539e-05_ST-325p506902574_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p00125_DT-7p33865836642e-06_H-bf889bf790",
+        "final_observed_timestep": 68795,
+        "final_stored_frame_index_0based": 170,
+        "final_observed_label": "Forming Phase",
+        "final_valid_non_bug_timestep": 68795,
+        "final_valid_label": "Forming Phase",
+        "screenshot_bug_any": true,
+        "keyhole_any": false,
+        "P": 98.5137427197,
+        "VX": 0.8779469896,
+        "LS": 7.93699e-05,
+        "ST": 325.506902574,
+        "right_censored_no_conduction": true
+      }
+    ]
+  },
+  "persistent_onset_diagnostic": {
+    "definition": "earliest Conduction after which no later Forming Phase or Initial Emptiness appears",
+    "later_screenshot_bug_invalidates": false,
+    "later_keyhole_invalidates": false,
+    "direct_keyhole_implies_conduction": false,
+    "target_bearing_simulations": 238,
+    "persistent_onset_exists": 220,
+    "persistent_onset_unavailable": 18,
+    "differs_from_first_observed": 2,
+    "requires_ioan_confirmation": true
+  },
+  "target_policy_comparison": [
+    {
+      "policy_id": 1,
+      "policy": "Policy 1 — Clean first observed onset",
+      "target_column": "first_observed_conduction_timestep",
+      "interpretation": "Exact observed target under current labels; reduced input-space coverage",
+      "sample_size": 91,
+      "target_min": 4840.0,
+      "target_q25": 10285.5,
+      "target_median": 13933.0,
+      "target_q75": 23643.5,
+      "target_max": 42436.0,
+      "suspicious_transition_simulations": 22,
+      "screenshot_bug_affected_simulations": 0,
+      "pretransition_bug_affected_simulations": 0,
+      "persistent_comparison_available": 73,
+      "persistent_differs_from_first_observed": 1,
+      "P_unique": 91,
+      "P_min": 52.5445860993,
+      "P_max": 246.882256304,
+      "VX_unique": 91,
+      "VX_min": 0.2010023321,
+      "VX_max": 0.9983213533,
+      "LS_unique": 65,
+      "LS_min": 4.5e-05,
+      "LS_max": 8.9704e-05,
+      "ST_unique": 65,
+      "ST_min": 300.0,
+      "ST_max": 399.457924021
+    },
+    {
+      "policy_id": 2,
+      "policy": "Policy 2 — Broad first observed onset",
+      "target_column": "first_observed_conduction_timestep",
+      "interpretation": "Bug-affected values retained as first observed / possible upper bounds",
+      "sample_size": 238,
+      "target_min": 4840.0,
+      "target_q25": 19420.75,
+      "target_median": 29019.0,
+      "target_q75": 44656.75,
+      "target_max": 95798.0,
+      "suspicious_transition_simulations": 169,
+      "screenshot_bug_affected_simulations": 147,
+      "pretransition_bug_affected_simulations": 147,
+      "persistent_comparison_available": 220,
+      "persistent_differs_from_first_observed": 2,
+      "P_unique": 238,
+      "P_min": 52.5445860993,
+      "P_max": 248.695097131,
+      "VX_unique": 229,
+      "VX_min": 0.2010023321,
+      "VX_max": 0.9983213533,
+      "LS_unique": 212,
+      "LS_min": 4.5e-05,
+      "LS_max": 8.9704e-05,
+      "ST_unique": 212,
+      "ST_min": 300.0,
+      "ST_max": 399.457924021
+    },
+    {
+      "policy_id": 3,
+      "policy": "Policy 3 — Clean persistent onset",
+      "target_column": "first_persistent_conduction_timestep",
+      "interpretation": "More conservative diagnostic; excludes clean runs without a persistent onset",
+      "sample_size": 73,
+      "target_min": 4840.0,
+      "target_q25": 11568.0,
+      "target_median": 16402.0,
+      "target_q75": 26532.0,
+      "target_max": 42436.0,
+      "suspicious_transition_simulations": 4,
+      "screenshot_bug_affected_simulations": 0,
+      "pretransition_bug_affected_simulations": 0,
+      "persistent_comparison_available": 73,
+      "persistent_differs_from_first_observed": 1,
+      "P_unique": 73,
+      "P_min": 52.5445860993,
+      "P_max": 246.882256304,
+      "VX_unique": 73,
+      "VX_min": 0.2010023321,
+      "VX_max": 0.9862283808,
+      "LS_unique": 47,
+      "LS_min": 4.5e-05,
+      "LS_max": 8.9704e-05,
+      "ST_unique": 47,
+      "ST_min": 300.0,
+      "ST_max": 398.693210886
+    },
+    {
+      "policy_id": 4,
+      "policy": "Policy 4 — Broad persistent onset diagnostic",
+      "target_column": "first_persistent_conduction_timestep",
+      "interpretation": "All persistent onsets retained; Screenshot Bug ambiguity remains",
+      "sample_size": 220,
+      "target_min": 4840.0,
+      "target_q25": 23396.0,
+      "target_median": 30279.5,
+      "target_q75": 48447.75,
+      "target_max": 95798.0,
+      "suspicious_transition_simulations": 151,
+      "screenshot_bug_affected_simulations": 147,
+      "pretransition_bug_affected_simulations": 147,
+      "persistent_comparison_available": 220,
+      "persistent_differs_from_first_observed": 2,
+      "P_unique": 220,
+      "P_min": 52.5445860993,
+      "P_max": 248.695097131,
+      "VX_unique": 211,
+      "VX_min": 0.2010023321,
+      "VX_max": 0.9955098597,
+      "LS_unique": 194,
+      "LS_min": 4.5e-05,
+      "LS_max": 8.9704e-05,
+      "ST_unique": 194,
+      "ST_min": 300.0,
+      "ST_max": 399.182507166
+    }
+  ],
+  "timestep_findings": {
+    "unsorted_schedules": 0,
+    "duplicate_timestep_schedules": 0,
+    "exactly_constant_integer_gap_schedules": 0,
+    "unique_complete_schedules": 241,
+    "nonzero_start_schedules": 2,
+    "physical_time_interpretation": "unresolved"
+  },
+  "important_quality_flags": [
+    "hash merges distinct simulation names and is not a valid grouping key",
+    "bug_free is always 1 despite Screenshot Bug labels",
+    "label_1, label_2, and label_final are identical on every row",
+    "some process values fall below current dataset-card lower bounds",
+    "timestep schedules and integer gaps vary across simulations",
+    "bug-affected first-observed targets have observational ambiguity intervals",
+    "three never-Conduction simulations are right-censored",
+    "persistent onset is a diagnostic definition requiring supervisor confirmation"
+  ],
+  "ioan_requirement_status": [
+    {
+      "requirement": "Real dataset accessed",
+      "status": "completed",
+      "notebook_location": "Sections 2–3",
+      "evidence_or_reason": "Pinned CSV downloaded/cached and audited"
+    },
+    {
+      "requirement": "Four process inputs identified",
+      "status": "completed",
+      "notebook_location": "Sections 3, 6–7",
+      "evidence_or_reason": "P, VX, LS, ST present and constant within name groups"
+    },
+    {
+      "requirement": "Simulation-level grouping identified",
+      "status": "completed",
+      "notebook_location": "Section 6",
+      "evidence_or_reason": "name justified provisionally; hash rejected"
+    },
+    {
+      "requirement": "First-observed Conduction target investigated",
+      "status": "partially completed",
+      "notebook_location": "Sections 9–11 + refinement",
+      "evidence_or_reason": "Extractable for 238/241; ambiguity and policy unresolved"
+    },
+    {
+      "requirement": "Target ambiguity and right-censoring audited",
+      "status": "completed",
+      "notebook_location": "Target ambiguity refinement",
+      "evidence_or_reason": "91 clean, 147 interval-ambiguous, 3 right-censored"
+    },
+    {
+      "requirement": "Persistent onset diagnostic",
+      "status": "completed",
+      "notebook_location": "Target ambiguity refinement",
+      "evidence_or_reason": "Computed as a diagnostic only; Ioan confirmation required"
+    },
+    {
+      "requirement": "Physical-time interpretation",
+      "status": "blocked by data ambiguity",
+      "notebook_location": "Sections 8, 13",
+      "evidence_or_reason": "DT/TE semantics are not documented here"
+    },
+    {
+      "requirement": "GP regression",
+      "status": "not started",
+      "notebook_location": "Sections 1, 13",
+      "evidence_or_reason": "Intentionally outside Phase 1"
+    },
+    {
+      "requirement": "RBF kernel comparison",
+      "status": "not started",
+      "notebook_location": "Sections 1, 13",
+      "evidence_or_reason": "Intentionally outside Phase 1"
+    },
+    {
+      "requirement": "Matérn 3/2 comparison",
+      "status": "not started",
+      "notebook_location": "Sections 1, 13",
+      "evidence_or_reason": "Intentionally outside Phase 1"
+    },
+    {
+      "requirement": "Matérn 5/2 comparison",
+      "status": "not started",
+      "notebook_location": "Sections 1, 13",
+      "evidence_or_reason": "Intentionally outside Phase 1"
+    },
+    {
+      "requirement": "Hyperparameter optimization",
+      "status": "not started",
+      "notebook_location": "Sections 1, 13",
+      "evidence_or_reason": "Intentionally outside Phase 1"
+    },
+    {
+      "requirement": "Optimizer comparison",
+      "status": "not started",
+      "notebook_location": "Sections 1, 13",
+      "evidence_or_reason": "Intentionally outside Phase 1"
+    },
+    {
+      "requirement": "Leave-one-out evaluation",
+      "status": "not started",
+      "notebook_location": "Sections 1, 13",
+      "evidence_or_reason": "Intentionally outside Phase 1"
+    }
+  ],
+  "phase_scope": "data audit only; no Gaussian Process was fitted"
+}
