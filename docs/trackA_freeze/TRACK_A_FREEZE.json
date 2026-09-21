@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-09-21T00:00:00Z",
+  "status": "TRACK_A_METHOD_DEVELOPMENT_CLOSED_EXTERNAL_VALIDATION_PENDING",
+  "new_ioan_data_accessed": false,
+  "population_scope": "OLD-405 internal development and replication only",
+  "target": "has_keyhole manual ground truth",
+  "features": ["P", "VX", "LS", "ST"],
+  "physics_coordinate": "log_h = log(P) - 0.5*log(VX) - 1.5*log(LS)",
+  "predictive_model": "M3 physics logistic latent mean on log_h plus 4D ARD Matern-3/2 GP discrepancy",
+  "live_control": "M3_margin_incumbent with frozen B16 maximin initialization",
+  "external_challenger": "early8__coverage_then_margin_B40",
+  "attribution_control": "coverage_then_margin_B40",
+  "historical_control_not_live": "historical_binary_A0_live",
+  "challenger_parameters": {
+    "k_seed": 8,
+    "extend_in_frozen_maximin_order_until_both_revealed_classes": true,
+    "pad_fraction": 0.25,
+    "pad_floor": 0.05,
+    "uncertainty_weight": 1.0,
+    "coverage_weight": 1.0,
+    "coverage_coordinates": ["P", "VX", "LS", "ST"],
+    "switch_budget": 40,
+    "post_switch": "plain M3 probability margin"
+  },
+  "primary_endpoint": "Fold-B1-q20 accuracy normalized trapezoidal AULC B16-B80",
+  "replacement_threshold_mean_AULC": 0.01,
+  "internal_results": {
+    "candidate_A_minus_M3_margin": {"mean": 0.0031709558823529087, "ci95": [0.0016712622549019446, 0.004759497549019562]},
+    "candidate_B_minus_M3_margin": {"mean": 0.0067080269607842965, "ci95": [0.004774777879901932, 0.008632084865196085]},
+    "candidate_B_minus_early8_margin": {"mean": 0.001939, "ci95": [0.000458, 0.003402]},
+    "candidate_A_minus_historical_binary_A0_live": {"mean": 0.002990, "ci95": [0.000590, 0.005434]}
+  },
+  "external_protocol": {
+    "status": "FROZEN_CORE_DATASET_SPECIFIC_INSTANTIATION_PENDING_LABEL_FREE_INTAKE",
+    "confirmation_requires_primary_ci_above_zero": true,
+    "replacement_requires_mean_at_least": 0.01,
+    "B40_q20_keyhole_recall_change_min": -0.03,
+    "B80_full_test_accuracy_change_min": -0.01
+  },
+  "prohibitions": [
+    "no new acquisition function",
+    "no OLD-405 method-development search",
+    "no new-Ioan-batch access before the label-free intake protocol",
+    "no outcome-based tuning",
+    "no external-validation claim before the locked test"
+  ],
+  "pinned_sha256": {
+    "src/week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5",
+    "src/week9_phase1_13_fixed_physics_ard_discrepancy.py": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba",
+    "src/week9_phase1_20_acquisition_search.py": "a47a4c2a872bda39da0ef1415360447d9fafb570c603cf3e6687ead5681a26b2",
+    "src/week9_phase1_20_early_start.py": "5a515d6c89d2a4c547f005fd58067d7385b2343795d136ac26b23bf8501b9a43",
+    "src/week9_phase1_21_simplification_replication.py": "b7c436e88c15cb569c4c5f8cf2f26f3c2742f436da403c8c4b6fce85386d19c9",
+    "outputs/week9_phase1_21_simplification_replication/FINAL_POLICY_FREEZE.json": "84be2a270aaba453321c4a20a1603ec7834fb4de41afd5d48347bf78070be631",
+    "outputs/week9_phase1_21_simplification_replication/PHASE1_21_PREREGISTERED_PROTOCOL.json": "3fe51aa103213c890c4d8da593387e6cd937707147f6ae703a7c1eb2e6a9c6ae"
+  }
+}
