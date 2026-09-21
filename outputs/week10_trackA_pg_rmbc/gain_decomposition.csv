@@ -1,0 +1,2 @@
+endpoint,total_P4_minus_P1,initialization_P2_minus_P1,monotone_acquisition_P3_minus_P1,remaining_adaptive_interaction,causal_percentage,note
+q20_accuracy_AULC_B16_B40,-0.002602124183006525,-0.011564542483660133,-0.0028880718954248227,0.011850490196078433,False,algebraic decomposition only; adaptive switching is not separately identified

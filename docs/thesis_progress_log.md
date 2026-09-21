@@ -1102,3 +1102,10 @@ Kaynak eşlemesi, dosya hashleri, gerçekleştirilen kontroller ve kapsam sını
 ### 2026-09-15 — Birleştirme son kontrolü
 
 76 çıktı ailesi; 18.559 farklı kaynak içeriği ve 148.839 kaynak konum/sürüm kaydı eşleştirildi. Yeni ana Python ortamında 62 test geçti; Phase 2 seçili kontrollerinde 13 geçti, 1 eski manifest kontrolü başarısız. İki raporun kaynakta mevcut hash tutarsızlığı [ayrıntılı kayıtta](../outputs/project_consolidation/KNOWN_LEGACY_ISSUES.md) korunur. Dış kaynak klasörlerinin 15 Eylül tekrar taramasında donmuş envantere göre yeni/değişmiş dosya bulunmadı.
+
+
+### 2026-09-21 — Week 10 Track A PG-RMBC iç tekrar çalışması
+
+`week10-pg-rmbc-internal-replication` projesi, eski 405 simülasyonda daha önce kullanılmamış 121–180 gruplanmış CV tekrarları üzerinde önceden dondurulmuş beş politika ile tamamlandı. Tarihsel kapılar geçti; protokol tam yörüngelerden önce SHA-256 `7f7f7c07b182e6423ab9be0f36e6c05be9dde09df530444c987578b00f5d9f27` ile donduruldu. Ioan'ın yeni veri setine erişilmedi.
+
+Ana q20 doğruluk AULC B16–B40 sonucu P4−P1 `−0.002602 [-0.006295,+0.001074]` oldu. h-tohumu ablatasyonu açıkça daha kötüydü (`−0.011565 [-0.016307,−0.006773]`); yumuşak monoton kaldıraç ablatasyonu çözümsüz ve sayısal olarak negatifti (`−0.002888 [-0.006156,+0.000392]`). B40 Keyhole recall ve B80 full81 doğruluk güvenlik sınırları geçti; tüm sızıntı/çıkarımsal-etiket kontrolleri geçti. Nihai karar: `KEEP_PHASE121_CANDIDATE_B`; yeni Ioan verisi için Phase 1.21 Candidate B korunur ve bu deneyden sonra ek ayar yapılmaz.
