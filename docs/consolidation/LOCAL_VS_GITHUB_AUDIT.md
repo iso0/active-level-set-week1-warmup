@@ -8,8 +8,8 @@ Current branch fully pushed: **True**.
 ## File/status counts
 
 - `generated_cache_or_temp`: 9
-- `local_branch_content_preserved`: 50
-- `local_branch_with_unique_science`: 1
+- `local_branch_content_preserved`: 49
+- `local_branch_with_unique_science`: 2
 - `tracked_and_pushed`: 19,466
 - `tracked_and_pushed_branch_only`: 1,532
 - `untracked_scientifically_relevant`: 2,361
@@ -24,7 +24,7 @@ Every one of the 3,893 scientific branch-only or untracked records has a destina
 |---|---:|:---:|:---:|---:|---|
 | `codex/archive-week3-named-benchmark` | `27035c84625d` | false | false | 0 | CONTENT_ALREADY_PRESERVED |
 | `codex/external-masinelli-feasibility-audit` | `8d99c1976890` | true | true | 0 | CONTENT_ALREADY_PRESERVED |
-| `codex/thesis-complete-consolidation` | `5b7d030413ed` | false | false | 0 | CONTENT_ALREADY_PRESERVED |
+| `codex/thesis-complete-consolidation` | `e02e15c4903c` | false | false | 3915 | IMPORT |
 | `codex/thesis-unified-project` | `5b7d030413ed` | true | true | 0 | CONTENT_ALREADY_PRESERVED |
 | `codex/week10-pg-rmbc-internal-replication` | `a380aeb07f63` | true | true | 1530 | IMPORT |
 | `codex/week3-4d-benchmark` | `50293d32f819` | false | false | 0 | CONTENT_ALREADY_PRESERVED |

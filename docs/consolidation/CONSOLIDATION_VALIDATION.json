@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "candidate_commit": "e02e15c4903c4bebe5da0ccbf3033ba358a1c6fb",
+  "initial_remote_branches": 38,
+  "branch_union_paths": 21030,
+  "local_inventory_records": 23419,
+  "local_only_scientific_artifacts_imported": 2361,
+  "remote_branch_tips_reachable": 38,
+  "new_ioan_data_accessed": false,
+  "scientific_experiments_rerun": false,
+  "trackB_analysis_executed": false,
+  "focused_test_evidence": {
+    "week10": "30 passed",
+    "M3_and_live_control_selected": "16 passed, 4 historical/manifest tests deselected",
+    "whole_historical_suite": "474 passed, 36 failed; failures classified in TEST_VALIDATION_LOG.md"
+  },
+  "legacy_exceptions": [
+    "Two pre-existing Week 9 Phase 2 manifest mismatches remain documented in outputs/project_consolidation/KNOWN_LEGACY_ISSUES.md.",
+    "Historical branch-era tests that require an unchanged branch tip or intentionally untracked checkpoints are not canonical-tree acceptance tests."
+  ],
+  "failures": []
+}

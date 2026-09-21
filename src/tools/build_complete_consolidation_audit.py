@@ -704,6 +704,140 @@ def build_forensic_report(
     (out / "REPOSITORY_FORENSIC_AUDIT.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 
 
+def build_branch_provenance(
+    root: Path,
+    local_root: Path,
+    out: Path,
+    remote_rows: list[dict[str, object]],
+) -> None:
+    """Record every remote/local branch before remote deletion.
+
+    The current consolidation HEAD is the candidate canonical tree.  A branch
+    is eligible only when its tip ancestry and every scientific blob are
+    reachable/present in that candidate tree and no open PR was found.
+    """
+
+    candidate_tree = ls_tree(root, "HEAD")
+    candidate_blobs = set(candidate_tree.values())
+    old_main_tree = ls_tree(root, "origin/main")
+    old_main_blobs = set(old_main_tree.values())
+    remote_by_name = {str(row["branch"]): row for row in remote_rows}
+    remote_tips = {name: str(row["tip_sha"]) for name, row in remote_by_name.items()}
+    local_tips = {}
+    for record in git(local_root, "for-each-ref", "--format=%(refname:short)%00%(objectname)", "refs/heads").splitlines():
+        name, tip = record.split("\x00", 1)
+        local_tips[name] = tip
+    local_tips[git(root, "branch", "--show-current").strip()] = git(root, "rev-parse", "HEAD").strip()
+
+    rows: list[dict[str, object]] = []
+    for name in sorted(set(remote_tips) | set(local_tips)):
+        remote_tip = remote_tips.get(name, "")
+        local_tip = local_tips.get(name, "")
+        audit_tip = remote_tip or local_tip
+        ref = f"origin/{name}" if remote_tip else name
+        branch_tree = ls_tree(root, ref)
+        science = {p: b for p, b in branch_tree.items() if relevant(p)}
+        initially_unique = sorted(p for p, b in science.items() if b not in old_main_blobs)
+        tree_absent_now = sorted(p for p, b in science.items() if b not in candidate_blobs)
+        merge_base = git(root, "merge-base", "origin/main", ref).strip()
+        unique_commits = git(root, "rev-list", f"origin/main..{ref}").splitlines()
+        reachable_proc = subprocess.run(
+            ["git", "-C", str(root), "merge-base", "--is-ancestor", audit_tip, "HEAD"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        reachable = reachable_proc.returncode == 0
+        # A superseded file version remains recoverable when the audited tip is
+        # an ancestor of the candidate.  Do not misclassify a deliberately
+        # updated README/index as stranded scientific content merely because
+        # the old blob is no longer in the candidate *tip* tree.
+        missing_now = [] if reachable else tree_absent_now
+        remote_row = remote_by_name.get(name, {})
+        open_pr = str(remote_row.get("open_pr", "false")) == "true"
+        if name == "main":
+            disposition = "RETAIN_CANONICAL"
+            eligible = False
+            reason = "Canonical default branch; never delete."
+        elif name == "codex/thesis-complete-consolidation":
+            disposition = "RETAIN_UNTIL_MAIN_VERIFIED_THEN_DELETE"
+            eligible = False
+            reason = "Current integration branch; deletion is allowed only after verified remote main publication."
+        elif remote_tip and reachable and not missing_now and not open_pr:
+            disposition = "DELETE_AFTER_REMOTE_MAIN_PASS"
+            eligible = True
+            reason = "Tip history is reachable from the candidate canonical history, every scientific blob is present, and no open PR uses the branch."
+        elif not remote_tip:
+            disposition = "LOCAL_ONLY_NO_REMOTE_DELETION"
+            eligible = False
+            reason = "No remote branch exists; content/history is already reachable from the candidate history."
+        else:
+            disposition = "RETAIN_REVIEW_REQUIRED"
+            eligible = False
+            reason = "One or more ancestry/content/PR gates failed."
+
+        if initially_unique:
+            canonical_paths = ";".join(initially_unique)
+            content_state = "IMPORTED_AT_IDENTICAL_PATHS" if not missing_now else "MISSING_RECONCILIATION_REQUIRED"
+        else:
+            canonical_paths = "main content-addressed union; exact destinations in BRANCH_FILE_UNION.csv/source_manifest.json.gz"
+            content_state = "IDENTICAL_OR_PREVIOUSLY_CONSOLIDATED"
+        scope = (
+            "remote_and_local" if remote_tip and local_tip else
+            "remote_only" if remote_tip else
+            "local_only"
+        )
+        rows.append(
+            {
+                "branch": name,
+                "scope": scope,
+                "remote_tip_sha": remote_tip,
+                "local_tip_sha": local_tip,
+                "audited_tip_sha": audit_tip,
+                "merge_base_with_old_main": merge_base,
+                "unique_commit_count_vs_old_main": len(unique_commits),
+                "unique_commits_vs_old_main": ";".join(unique_commits),
+                "scientifically_unique_paths_vs_old_main": len(initially_unique),
+                "unique_file_paths": ";".join(initially_unique),
+                "canonical_replacement_paths": canonical_paths,
+                "content_state": content_state,
+                "tip_reachable_from_candidate_main": str(reachable).lower(),
+                "scientific_paths_missing_from_candidate": len(missing_now),
+                "missing_paths": ";".join(missing_now),
+                "superseded_tip_tree_paths_reachable_by_ancestry": ";".join(tree_absent_now) if reachable else "",
+                "associated_pr": remote_row.get("associated_pr", "NONE"),
+                "open_pr": str(open_pr).lower(),
+                "disposition": disposition,
+                "remote_deletion_eligible_after_main_pass": str(eligible).lower(),
+                "reason": reason,
+            }
+        )
+
+    write_csv(out / "BRANCH_PROVENANCE.csv", rows, list(rows[0].keys()))
+    md = [
+        "# Branch provenance and deletion eligibility",
+        "",
+        f"Candidate canonical commit: `{git(root, 'rev-parse', 'HEAD').strip()}`.",
+        "",
+        "A `true` eligibility value is conditional on the final validation PASS and verified publication of this exact candidate or its descendant to remote `main`.",
+        "",
+        "| Branch | Scope | Remote tip | Unique paths before import | Reachable now | Missing now | Disposition | Eligible after PASS |",
+        "|---|---|---:|---:|:---:|---:|---|:---:|",
+    ]
+    for row in rows:
+        md.append(
+            f"| `{row['branch']}` | {row['scope']} | `{str(row['remote_tip_sha'])[:12] or '-'} ` | "
+            f"{row['scientifically_unique_paths_vs_old_main']} | {row['tip_reachable_from_candidate_main']} | "
+            f"{row['scientific_paths_missing_from_candidate']} | {row['disposition']} | {row['remote_deletion_eligible_after_main_pass']} |"
+        )
+    md.extend(
+        [
+            "",
+            "Exact commit lists, unique paths, canonical destinations, PR state, and reasons are in `BRANCH_PROVENANCE.csv`. Historical branches with zero initially unique paths were already preserved by the previous content-addressed union and ancestry merge. PG-RMBC's initially unique paths were imported at their original paths and its actual branch ancestry was merged.",
+        ]
+    )
+    (out / "BRANCH_PROVENANCE.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo", type=Path, default=Path.cwd())
@@ -716,6 +850,7 @@ def main() -> None:
     branch_rows, union_rows, _trees = build_remote_audit(root, out)
     local_rows, local_branch_rows = build_local_audit(root, local_root, out, branch_rows)
     build_forensic_report(root, out, branch_rows, union_rows, local_rows, local_branch_rows)
+    build_branch_provenance(root, local_root, out, branch_rows)
     print(json.dumps({
         "remote_branches": len(branch_rows),
         "union_paths": len(union_rows),

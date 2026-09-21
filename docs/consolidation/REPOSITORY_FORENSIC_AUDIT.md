@@ -19,7 +19,8 @@ Remote branches with scientific blobs absent from old main: **1**.
 ## Local findings before import
 
 Untracked scientific artifacts requiring import: **2,361**.
-Local branch tips with scientific blobs absent from old main: **1**.
+Local branch tips with scientific blobs absent from old main: **2**.
+- `codex/thesis-complete-consolidation`: 3915 unique blobs.
 - `codex/week10-pg-rmbc-internal-replication`: 1530 unique blobs.
 
 The known local-only sets are the Phase 1.20-1.22 comparator audit and boundary-displacement Gate 1, with their code, tests, reports, manifests, diagnostics, figures, and checkpoints. Their explicit path-level destinations and SHA-256 values are in `LOCAL_VS_GITHUB_AUDIT.csv`.
