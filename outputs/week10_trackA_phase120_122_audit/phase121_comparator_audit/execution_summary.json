@@ -1,0 +1,14 @@
+{
+  "early8_margin": {
+    "elapsed_seconds": 2313.0090703964233,
+    "reused": 0,
+    "runs": 300
+  },
+  "historical_binary_A0_live": {
+    "elapsed_seconds": 3714.449993133545,
+    "reused": 0,
+    "runs": 300
+  },
+  "status": "PASS",
+  "workers": 8
+}

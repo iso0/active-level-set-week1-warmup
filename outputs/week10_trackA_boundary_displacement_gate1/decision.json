@@ -1,0 +1,17 @@
+{
+  "boundary_SUR_gate_justified": false,
+  "confirmation_run": false,
+  "decision": "D_UNSTABLE_BOUNDARY_FORMULATION",
+  "last_answer": "NO_STOP_ACQUISITION_WORK",
+  "primary_pass": false,
+  "primary_stability": {
+    "covariance_threshold": 0.1,
+    "fallback_rate": 0.0,
+    "max_alternate_start_probability_difference": 2.2737367544323206e-13,
+    "max_alternate_start_relative_covariance_difference": 0.7073794549757965,
+    "pass": false,
+    "probability_threshold": 0.02,
+    "representative_cases": 18
+  },
+  "protocol_sha256": "b9f3965b01be2b2f1a8c866122229b915948d89a6bc21cb33b070f3d4bc3f8cf"
+}

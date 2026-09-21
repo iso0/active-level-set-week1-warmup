@@ -1,0 +1,23 @@
+{
+  "audit_bootstrap_interval_not_substituted_for_pinned_interval": [
+    0.0016727558210783819,
+    0.00475494025735291
+  ],
+  "pinned": {
+    "blocks": 60,
+    "candidate_AULC": 0.8442432598039216,
+    "ci_high": 0.004759497549019562,
+    "ci_low": 0.0016712622549019446,
+    "holm_p": 0.00039996000399960006,
+    "margin_AULC": 0.8410723039215686,
+    "mean": 0.0031709558823529087,
+    "policy": "coverage_then_margin_B40",
+    "positive_blocks": 42,
+    "signflip_p": 9.999000099990002e-05,
+    "window": "16-80"
+  },
+  "recomputed_mean": 0.0031709558823529087,
+  "recomputed_positive_repeats": 42,
+  "source_sha256": "e39f53616612c52e52a62e76aa1425a0c5b7c0277f11166ec4d1fc66414bc229",
+  "status": "PASS"
+}

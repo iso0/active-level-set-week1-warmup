@@ -1,0 +1,14 @@
+{
+  "binding": {
+    "execution_freeze_sha256": "a58cc1bba987490a7a1eea27d1f12671a5b9572be36a1737d79a48bfcc0eba8e",
+    "fold": 4,
+    "policy": "early8__margin",
+    "population_sha256": "c115cb37d6116239d5aff6d3064d79d1301218e4c0a83e64819aa5baf83c8646",
+    "protocol_sha256": "512f470c0611ba38bc68d1c36d0d3e77ef926ed9e1d639933f8180fd5600709e",
+    "repeat": 83,
+    "run_id": "w85__r83_f04",
+    "test_sha256": "d8d6208ded367c7c5f0133ecd98832e2a6b148f650f33e5b856278249b287c8b",
+    "train_sha256": "43a065cf48e5c5d06ead40b279b1076145c2a044bd5c1bf7f7a5a2b1ae4b3911"
+  },
+  "checkpoint_sha256": "8b62247d9ea42dc429136b65e36cc25dbe764a5de9b1519ee13663af887f1c06"
+}

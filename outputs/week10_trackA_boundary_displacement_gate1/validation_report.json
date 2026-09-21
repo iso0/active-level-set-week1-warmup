@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "check": "protocol_hash_integrity",
+      "detail": "b9f3965b01be2b2f1a8c866122229b915948d89a6bc21cb33b070f3d4bc3f8cf",
+      "pass": true
+    },
+    {
+      "check": "primary_runs",
+      "detail": "300",
+      "pass": true
+    },
+    {
+      "check": "models_exact",
+      "detail": "['M0', 'M1', 'M2']",
+      "pass": true
+    },
+    {
+      "check": "budget_grid",
+      "detail": "B16-B40",
+      "pass": true
+    },
+    {
+      "check": "repeat_blocks",
+      "detail": "60",
+      "pass": true
+    },
+    {
+      "check": "historical_paths_unchanged",
+      "detail": "read-only source paths",
+      "pass": true
+    },
+    {
+      "check": "gate2_not_executed",
+      "detail": "plan only when eligible",
+      "pass": true
+    }
+  ],
+  "status": "PASS"
+}

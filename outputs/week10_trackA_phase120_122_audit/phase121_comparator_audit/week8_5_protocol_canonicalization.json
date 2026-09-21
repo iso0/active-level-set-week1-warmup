@@ -1,0 +1,9 @@
+{
+  "canonical_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+  "historical_source_modified": false,
+  "original_checkout_sha256": "f888d49b5e5b37f6180fe8bf8c79f5718d3eacfd975f841e739748bc8bd037c4",
+  "reason": "Windows checkout has CRLF bytes; audit-local copy restores recorded LF canonical serialization",
+  "recorded_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+  "semantic_json_equal": true,
+  "status": "PASS"
+}

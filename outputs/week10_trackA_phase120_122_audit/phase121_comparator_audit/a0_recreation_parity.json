@@ -1,0 +1,6 @@
+{
+  "canonical_runs": 100,
+  "exact_full_path_matches": 100,
+  "policy": "historical Week 8.5 isotropic Binary-GPC binary_margin",
+  "status": "PASS"
+}

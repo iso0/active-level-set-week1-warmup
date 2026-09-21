@@ -1,0 +1,3 @@
+path_family,contrast,treatment,control,mean_difference,ci_lower,ci_upper,simultaneous_familywise_coverage,method,draws,repeat_blocks,positive_blocks
+early8__coverage_then_margin_B40,Delta10,M1,M0,4.084967320265124e-06,-0.00026552287581697956,0.00023692810457515885,0.95,Bonferroni paired percentile bootstrap,20000,60,26
+early8__coverage_then_margin_B40,Delta12,M1,M2,7.401486830834377e-18,-0.0002328431372548919,0.0002001633986928153,0.95,Bonferroni paired percentile bootstrap,20000,60,21

@@ -1,0 +1,138 @@
+{
+  "a0_parity": {
+    "canonical_runs": 100,
+    "exact_full_path_matches": 100,
+    "policy": "historical Week 8.5 isotropic Binary-GPC binary_margin",
+    "status": "PASS"
+  },
+  "elapsed_seconds": 618.9937977790833,
+  "execution_freeze_sha256": "a58cc1bba987490a7a1eea27d1f12671a5b9572be36a1737d79a48bfcc0eba8e",
+  "leakage": {
+    "early_seed_extension": "reads labels only along the already selected frozen maximin prefix",
+    "held_out_rows_available_to_selector": false,
+    "hidden_candidate_labels_available_to_selector": false,
+    "live_hidden_label_counterfactual": {
+      "cases": [
+        {
+          "binary_A0_choice_after_hidden_label_flip": 77,
+          "binary_A0_choice_original": 77,
+          "binary_A0_max_probability_change": 0.0,
+          "m3_margin_choice_after_hidden_label_flip": 93,
+          "m3_margin_choice_original": 93,
+          "m3_margin_max_probability_change": 0.0,
+          "pass": true,
+          "run_id": "w85__r61_f01"
+        },
+        {
+          "binary_A0_choice_after_hidden_label_flip": 296,
+          "binary_A0_choice_original": 296,
+          "binary_A0_max_probability_change": 0.0,
+          "m3_margin_choice_after_hidden_label_flip": 96,
+          "m3_margin_choice_original": 96,
+          "m3_margin_max_probability_change": 0.0,
+          "pass": true,
+          "run_id": "w85__r91_f01"
+        },
+        {
+          "binary_A0_choice_after_hidden_label_flip": 152,
+          "binary_A0_choice_original": 152,
+          "binary_A0_max_probability_change": 0.0,
+          "m3_margin_choice_after_hidden_label_flip": 365,
+          "m3_margin_choice_original": 365,
+          "m3_margin_max_probability_change": 0.0,
+          "pass": true,
+          "run_id": "w85__r120_f05"
+        }
+      ],
+      "method": "flip every unrevealed label and repeat one live acquisition step",
+      "status": "PASS"
+    },
+    "q20_q30_or_B1_available_to_selector": false,
+    "selector_contracts": {
+      "early8__margin": "search.pol_margin receives State built from training-pool candidates, M3 candidate probabilities, queried-only labels/depths and training-pool scaling",
+      "historical_binary_A0_live": "w85.run_trajectory chooser receives method, candidate_indices, probabilities, pool_scaled and queried_indices only"
+    },
+    "status": "PASS",
+    "stored_phase121_invariance": {
+      "mismatches": 0,
+      "sha256": "6fb127d0b841a680ec49271c87e50e0f52865bf94a2aee4058262d22a670afa4",
+      "static_check_no_unmasked_access_in_policy_code": true,
+      "status": "PASS"
+    },
+    "stored_week85_information_flow": {
+      "evidence": {
+        "candidate_and_query_indices_training_only": true,
+        "checkpoint_count": 3200,
+        "forbidden_B1_B2_B3_hidden_label_chooser_fields": [],
+        "persisted_split_manifest_runs": 100,
+        "saved_mechanism_record_count": 460800,
+        "source_chooser_audit": {
+          "chooser_call_count": 1,
+          "chooser_keyword_arguments": [
+            "candidate_indices",
+            "method",
+            "pool_scaled",
+            "probabilities",
+            "queried_indices"
+          ],
+          "forbidden_input_tokens": [
+            "b1",
+            "b2",
+            "b3",
+            "hidden",
+            "label"
+          ]
+        },
+        "test_rows_hidden_labels_B1_unavailable": true,
+        "violations": []
+      },
+      "sha256": "6c633e2ffab3b586e911ae7755507487993abc45ac842a22d80ef464a759c33b",
+      "status": "PASS"
+    }
+  },
+  "population_sha256": "c115cb37d6116239d5aff6d3064d79d1301218e4c0a83e64819aa5baf83c8646",
+  "protocol_sha256": "512f470c0611ba38bc68d1c36d0d3e77ef926ed9e1d639933f8180fd5600709e",
+  "runner_gate": {
+    "cases": [
+      {
+        "metric_match": true,
+        "path_match": true,
+        "run_id": "w85__r61_f01"
+      },
+      {
+        "metric_match": true,
+        "path_match": true,
+        "run_id": "w85__r90_f03"
+      },
+      {
+        "metric_match": true,
+        "path_match": true,
+        "run_id": "w85__r120_f05"
+      }
+    ],
+    "status": "PASS",
+    "thread_environment": "single-thread BLAS"
+  },
+  "status": "PASS",
+  "stored_arms": {
+    "candidate_B_early_seed_valid": true,
+    "policies": [
+      "margin",
+      "coverage_then_margin_B40",
+      "early8__coverage_then_margin_B40"
+    ],
+    "runs_per_policy": 300,
+    "same_B16_A_vs_margin": true,
+    "status": "PASS",
+    "stored_checkpoint_count": 900
+  },
+  "week85_protocol_compatibility": {
+    "canonical_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+    "historical_source_modified": false,
+    "original_checkout_sha256": "f888d49b5e5b37f6180fe8bf8c79f5718d3eacfd975f841e739748bc8bd037c4",
+    "reason": "Windows checkout has CRLF bytes; audit-local copy restores recorded LF canonical serialization",
+    "recorded_sha256": "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66",
+    "semantic_json_equal": true,
+    "status": "PASS"
+  }
+}

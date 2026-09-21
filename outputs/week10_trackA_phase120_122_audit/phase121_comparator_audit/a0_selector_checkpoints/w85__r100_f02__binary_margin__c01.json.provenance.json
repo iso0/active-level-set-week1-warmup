@@ -1,0 +1,28 @@
+{
+  "binding": {
+    "fold": 2,
+    "pinned_sources": {
+      "outputs/week9_phase1_21_simplification_replication/FINAL_POLICY_FREEZE.json": "84be2a270aaba453321c4a20a1603ec7834fb4de41afd5d48347bf78070be631",
+      "outputs/week9_phase1_21_simplification_replication/PHASE1_21_PREREGISTERED_PROTOCOL.json": "3fe51aa103213c890c4d8da593387e6cd937707147f6ae703a7c1eb2e6a9c6ae",
+      "outputs/week9_phase1_21_simplification_replication/REPLICATION_RESULT.json": "e39f53616612c52e52a62e76aa1425a0c5b7c0277f11166ec4d1fc66414bc229",
+      "src/week7_phase6_real_data_boundary_active_level_set.py": "23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479",
+      "src/week8_5_frozen_sample_efficiency_confirmation.py": "cb63cd474817a91a755d779d8a0f4ad5337ab51a0778f3bc1788c3f6d943b60c",
+      "src/week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5",
+      "src/week9_phase1_13_fixed_physics_ard_discrepancy.py": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba",
+      "src/week9_phase1_20_acquisition_search.py": "a47a4c2a872bda39da0ef1415360447d9fafb570c603cf3e6687ead5681a26b2",
+      "src/week9_phase1_20_early_start.py": "5a515d6c89d2a4c547f005fd58067d7385b2343795d136ac26b23bf8501b9a43",
+      "src/week9_phase1_21_analysis.py": "5c9992371f180bfbe8b36cd284d7e0cb2a5dd62219280517de7f8c04af0ea836",
+      "src/week9_phase1_21_simplification_replication.py": "b7c436e88c15cb569c4c5f8cf2f26f3c2742f436da403c8c4b6fce85386d19c9",
+      "src/week9_phase1_8_model_path_decomposition.py": "632b2cac4294b20e9b6362088c6a6b700461dcce8e189b198909efb9de0f5a10"
+    },
+    "population_sha256": "c115cb37d6116239d5aff6d3064d79d1301218e4c0a83e64819aa5baf83c8646",
+    "protocol_sha256": "512f470c0611ba38bc68d1c36d0d3e77ef926ed9e1d639933f8180fd5600709e",
+    "purpose": "live_A0_selector/a58cc1bba987490a7a1eea27d1f12671a5b9572be36a1737d79a48bfcc0eba8e",
+    "repeat": 100,
+    "run_id": "w85__r100_f02",
+    "runner_sha256": "240f04e81a78bbc7f106092fb567c193475442368ba188e9686334d97aa7fde0",
+    "test_sha256": "f2ca96cbda11d90c8342c9500091e4ee7100ad73d0872907b2b26d3a804208ef",
+    "train_sha256": "d7c6bad0bc9ade270f4b226187dab493c7fec79b59e3fdc907392b73573e60b0"
+  },
+  "checkpoint_sha256": "8ef3ddca97c5fe5922f55fab168c444ef1e52dd8d2db2b21f0bfc7f978029351"
+}

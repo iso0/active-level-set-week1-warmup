@@ -1,0 +1,12 @@
+{
+  "candidate_B_early_seed_valid": true,
+  "policies": [
+    "margin",
+    "coverage_then_margin_B40",
+    "early8__coverage_then_margin_B40"
+  ],
+  "runs_per_policy": 300,
+  "same_B16_A_vs_margin": true,
+  "status": "PASS",
+  "stored_checkpoint_count": 900
+}

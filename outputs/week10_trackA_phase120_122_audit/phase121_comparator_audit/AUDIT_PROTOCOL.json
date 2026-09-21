@@ -1,0 +1,114 @@
+{
+  "protocol_id": "week10_trackA_phase121_comparator_audit/v1.0.0",
+  "frozen_at": "2026-09-20T16:37:13.5057264+02:00",
+  "status": "post-result locked attribution audit; not a new independent replication",
+  "scientific_question": "Does the frozen Phase 1.21 acquisition rule add value beyond both M3 probability margin and the historical Week 8.5 Binary-GPC margin policy when query paths are evaluated by the identical frozen M3 evaluator?",
+  "naming_guard": {
+    "M3_margin_incumbent": "The policy called A0_m3_margin in Phase 2.2; M3 probability-margin selection with the frozen B16 design.",
+    "historical_binary_A0": "The original Week 8.5 isotropic Binary-GPC binary_margin policy/path; distinct from M3 margin.",
+    "historical_binary_A0_live": "A live sequential recreation of the frozen historical Binary-GPC margin policy on repeats 61-120; it must not be described as the stored A0 path."
+  },
+  "population": {
+    "rows": 405,
+    "keyhole": 73,
+    "conduction": 332,
+    "features": ["P", "VX", "LS", "ST"],
+    "ST_definition": "substrate temperature",
+    "label": "has_keyhole; manual any-observed-frame Keyhole ground truth"
+  },
+  "splits": {
+    "repeats": [61, 120],
+    "repeat_count": 60,
+    "folds_per_repeat": 5,
+    "outer_run_count": 300,
+    "training_pool": 324,
+    "held_out_test": 81,
+    "inference_unit": "paired repeat mean after averaging the five folds",
+    "interpretation": "same-population internal attribution; not external validation and not a second independent confirmation"
+  },
+  "existing_arms_read_only": {
+    "margin": "M3 probability margin, frozen B16 seed",
+    "coverage_then_margin_B40": "Candidate A, frozen B16 seed; pure acquisition contrast against margin",
+    "early8__coverage_then_margin_B40": "Candidate B, early-8 seed; composite contrast against margin"
+  },
+  "new_arms": {
+    "early8__margin": "same early-8 seed and sequential both-class extension as Candidate B, followed by plain M3 probability margin",
+    "historical_binary_A0_live": "same frozen B16 seed; old isotropic Binary-GPC probability-margin selector run live; every prefix evaluated by frozen M3"
+  },
+  "locked_new_primary_contrasts": [
+    {
+      "id": "coverage_effect_given_early8",
+      "contrast": "early8__coverage_then_margin_B40 - early8__margin",
+      "question": "Does coverage add acquisition value after holding the early start fixed?"
+    },
+    {
+      "id": "phase121_vs_historical_binary_A0",
+      "contrast": "coverage_then_margin_B40 - historical_binary_A0_live",
+      "question": "With the same B16 start and M3 evaluator, is Candidate A's path better than the historical Binary-GPC margin policy?"
+    }
+  ],
+  "known_result_not_retested": {
+    "contrast": "coverage_then_margin_B40 - margin",
+    "role": "existing Phase 1.21 preregistered pure-acquisition result; numbers and artifacts will be parity-checked but not treated as a new discovery"
+  },
+  "endpoint_hierarchy": {
+    "new_primary": "Fold-B1-q20 accuracy AULC B16-B80 for each of the two locked new contrasts",
+    "secondary": [
+      "Fold-B1-q20 accuracy AULC B16-B40",
+      "Fold-B1-q20 balanced-accuracy AULC B16-B40",
+      "Fold-B1-q20 balanced-accuracy AULC B16-B80",
+      "Fold-B1-q30 accuracy and balanced-accuracy AULC B16-B40 and B16-B80",
+      "Fold-B1-q20 Keyhole recall at B40",
+      "full81 accuracy at B80",
+      "positive repeat count and query-path overlap"
+    ],
+    "metric_guard": "accuracy and balanced-accuracy AULCs are reported separately and never compared numerically as the same endpoint",
+    "q_guard": "q20 remains primary; q30 is secondary"
+  },
+  "inference": {
+    "bootstrap": "paired percentile bootstrap of 60 repeat means, 20000 deterministic draws",
+    "test": "paired two-sided exact/Monte-Carlo sign-flip test on repeat means",
+    "multiplicity": "Holm correction across the two new primary contrasts only",
+    "statistical_superiority": "Holm-adjusted p < 0.05, paired 95% interval lower bound > 0, and both guardrails pass",
+    "practical_replacement": "statistical superiority plus mean primary AULC gain >= 0.01",
+    "guardrails": {
+      "B40_q20_keyhole_recall_difference_min": -0.03,
+      "B80_full81_accuracy_difference_min": -0.01
+    }
+  },
+  "mandatory_preexecution_gates": [
+    "all pinned source/protocol hashes match",
+    "stored Phase 1.21 margin/A/B checkpoints pass schema, split, path and metric completeness checks",
+    "the historical Binary-GPC implementation reproduces all 100 canonical stored A0 paths byte-for-byte or by exact full query sequence",
+    "an early16 M3-margin gate reproduces stored Phase 1.21 margin paths and metrics under the matching single-thread numerical environment",
+    "selector interfaces exclude held-out labels, hidden candidate labels and q20/q30/B1 membership",
+    "checkpoint reuse is fail-closed on protocol, source, population, split and payload hashes"
+  ],
+  "execution_environment": {
+    "workers": 8,
+    "blas_threads_per_worker": 1,
+    "budgets": [16, 80],
+    "no_tuning": true,
+    "no_new_method": true
+  },
+  "pinned_sha256": {
+    "src/week9_phase1_21_simplification_replication.py": "b7c436e88c15cb569c4c5f8cf2f26f3c2742f436da403c8c4b6fce85386d19c9",
+    "src/week9_phase1_21_analysis.py": "5c9992371f180bfbe8b36cd284d7e0cb2a5dd62219280517de7f8c04af0ea836",
+    "src/week9_phase1_20_acquisition_search.py": "a47a4c2a872bda39da0ef1415360447d9fafb570c603cf3e6687ead5681a26b2",
+    "src/week9_phase1_20_early_start.py": "5a515d6c89d2a4c547f005fd58067d7385b2343795d136ac26b23bf8501b9a43",
+    "src/week8_5_frozen_sample_efficiency_confirmation.py": "cb63cd474817a91a755d779d8a0f4ad5337ab51a0778f3bc1788c3f6d943b60c",
+    "src/week7_phase6_real_data_boundary_active_level_set.py": "23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479",
+    "src/week9_phase1_8_model_path_decomposition.py": "632b2cac4294b20e9b6362088c6a6b700461dcce8e189b198909efb9de0f5a10",
+    "src/week9_phase1_13_fixed_physics_ard_discrepancy.py": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba",
+    "src/week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5",
+    "outputs/week9_phase1_21_simplification_replication/PHASE1_21_PREREGISTERED_PROTOCOL.json": "3fe51aa103213c890c4d8da593387e6cd937707147f6ae703a7c1eb2e6a9c6ae",
+    "outputs/week9_phase1_21_simplification_replication/FINAL_POLICY_FREEZE.json": "84be2a270aaba453321c4a20a1603ec7834fb4de41afd5d48347bf78070be631",
+    "outputs/week9_phase1_21_simplification_replication/REPLICATION_RESULT.json": "e39f53616612c52e52a62e76aa1425a0c5b7c0277f11166ec4d1fc66414bc229"
+  },
+  "stop_rules": [
+    "stop on any source/protocol/hash/parity/leakage gate failure",
+    "do not repair or tune a policy after observing a new comparator result",
+    "do not run another acquisition search",
+    "do not call this external validation"
+  ]
+}

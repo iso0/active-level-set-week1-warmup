@@ -1,0 +1,17 @@
+left,right,budget,mean_prefix_jaccard,different_sequence_fraction
+coverage_then_margin_B40,margin,16,1.0,0.0
+coverage_then_margin_B40,margin,24,0.6831131833271988,1.0
+coverage_then_margin_B40,margin,40,0.7030023394422972,1.0
+coverage_then_margin_B40,margin,80,0.9817116570254747,1.0
+early8__coverage_then_margin_B40,early8__margin,16,0.5045689827140897,1.0
+early8__coverage_then_margin_B40,early8__margin,24,0.5289992189997708,1.0
+early8__coverage_then_margin_B40,early8__margin,40,0.6896471770105258,1.0
+early8__coverage_then_margin_B40,early8__margin,80,0.9646488094456686,1.0
+early8__margin,margin,16,0.3490909090909091,1.0
+early8__margin,margin,24,0.3761466329365061,1.0
+early8__margin,margin,40,0.6062203966503656,1.0
+early8__margin,margin,80,0.8522165300130615,1.0
+coverage_then_margin_B40,historical_binary_A0_live,16,1.0,0.0
+coverage_then_margin_B40,historical_binary_A0_live,24,0.577222681286085,1.0
+coverage_then_margin_B40,historical_binary_A0_live,40,0.5689669427417126,1.0
+coverage_then_margin_B40,historical_binary_A0_live,80,0.7067172663805007,1.0

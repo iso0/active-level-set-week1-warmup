@@ -1,0 +1,126 @@
+{
+  "decision": "D_UNSTABLE_BOUNDARY_FORMULATION",
+  "files": [
+    {
+      "bytes": 314416,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/cross_covariance_diagnostics.csv",
+      "sha256": "c96270c3577d21cd74d6751679a448b93c062f01a01aea8248a8f8af4b090d55"
+    },
+    {
+      "bytes": 623,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/decision.json",
+      "sha256": "f1bf91be075658d48a12d7249852b844013097c1534d00e220864e6185ecc749"
+    },
+    {
+      "bytes": 149,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/execution_early8__coverage_then_margin_B40.json",
+      "sha256": "778d1fd05a1501d4966fc26ab515cc9666dc4f84935ded469f1fe06e69b2892f"
+    },
+    {
+      "bytes": 302,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/figure_manifest.csv",
+      "sha256": "ca5e33f01bf35bdc0979a92a6806ed54bd6d2f17ae75bbc6df805cb7e0ed0b54"
+    },
+    {
+      "bytes": 75106,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/figures/01_q20_accuracy_learning_curves.png",
+      "sha256": "4915144d918a9ef1883055d38dc14d1f25c1851ffc911e9563300447c52e7910"
+    },
+    {
+      "bytes": 27288,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/figures/02_primary_contrasts.png",
+      "sha256": "e6d629aff3c6098b362d4ab9343cf97b9844ce4b0da1373138878a9e879de85e"
+    },
+    {
+      "bytes": 39712,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/figures/03_hyperparameter_stability.png",
+      "sha256": "1a51cd7538b75e1101067ecc666ec219bd9bbce05af07c44765a91d0723550b4"
+    },
+    {
+      "bytes": 1145,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/FINAL_GATE1_REPORT.md",
+      "sha256": "8d62bafe7709a79f8ba807a60c9808d6daba67b9e3e827604259ef66344ba5e8"
+    },
+    {
+      "bytes": 674,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/fit_failures.csv",
+      "sha256": "69743ab26ea52ee247f2c28e0b25bbc3a77da12b3bfa0fba362792077d019a59"
+    },
+    {
+      "bytes": 2709,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/HISTORICAL_GATES.md",
+      "sha256": "f28262d47578aac8ec5b8dd64734af501e970f4f4faa0902ca3e094b6b18b562"
+    },
+    {
+      "bytes": 7985093,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/hyperparameter_diagnostics.csv",
+      "sha256": "76d489290e984983889500629d738033f2d7ce5781099cea5c1c1ddfb1c62a54"
+    },
+    {
+      "bytes": 754,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/IMPLEMENTATION_REPAIR.md",
+      "sha256": "705830a7395667998b89031ec452b7cc9fa1f7e3f7774070d0b7ccc3665289a2"
+    },
+    {
+      "bytes": 162,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/keyhole_recall_guardrails.csv",
+      "sha256": "de2625fea41bddc63e23cc1ebd75f623b65943186d67bde36dfbb190a2dfc7d5"
+    },
+    {
+      "bytes": 160,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/logscore_guardrails.csv",
+      "sha256": "6ae89e34c1c47f60661c67d0b8c329a546483bca83f464e6a183eea1a9828ad9"
+    },
+    {
+      "bytes": 3580,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/METHOD_PROTOCOL_FREEZE.md",
+      "sha256": "b9f3965b01be2b2f1a8c866122229b915948d89a6bc21cb33b070f3d4bc3f8cf"
+    },
+    {
+      "bytes": 92,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/METHOD_PROTOCOL_FREEZE.sha256",
+      "sha256": "7b6f6514f5492fecd4f1fe6df0c370f4cf23a7a38165f1e5936a13bb8e638c58"
+    },
+    {
+      "bytes": 1090,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/model_summary.csv",
+      "sha256": "893d3e715921ef55ef08213bff2a2cb46b7f852ef4282b0e3fbd2261cb3393b0"
+    },
+    {
+      "bytes": 491,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/paired_primary_contrasts.csv",
+      "sha256": "239236ff27b981bf0708c7a3ebe60bd2668132d0e64930634297ad87443c1d0a"
+    },
+    {
+      "bytes": 3066,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/smoke/one_run_B16.json.gz",
+      "sha256": "7e2467594938bba99b2a1df0636511709c494aa6c07b5a826723190fc9e9edeb"
+    },
+    {
+      "bytes": 123,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/smoke_test.json",
+      "sha256": "99d63029e0b59e7eb23119359b1ca508c8126a0209f71853c1621afa5a1e0e4b"
+    },
+    {
+      "bytes": 1734,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/stability_diagnostics.csv",
+      "sha256": "8574485f41627c69e283616a08f5bdfd5937324703b6ecb637b45b08e4917c53"
+    },
+    {
+      "bytes": 832,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/validation_report.json",
+      "sha256": "d4b7c314e9a0447290760dd605f75098095e7f74784b4f8d98340de40c474b30"
+    },
+    {
+      "bytes": 373,
+      "path": "outputs/week10_trackA_boundary_displacement_gate1/validation_report.md",
+      "sha256": "4eadaf6d366c3b8a1bab650acfe2a8050100155d643aa1830b2eac08ef29a13d"
+    }
+  ],
+  "path_families": [
+    "early8__coverage_then_margin_B40"
+  ],
+  "protocol_sha256": "b9f3965b01be2b2f1a8c866122229b915948d89a6bc21cb33b070f3d4bc3f8cf",
+  "repository_head": "a380aeb07f6328d8365273835c09a452b4e33d8b",
+  "study": "Boundary-displacement Gate 1"
+}
