@@ -1,0 +1,73 @@
+{
+  "Ioan_dataset_accessed": false,
+  "artifacts": {
+    "outputs/week10_trackA_pg_rmbc/FINAL_METHOD_REPORT.md": "dd0ef32fc0a42b1ded1e21cb433149ea3f212e59508b18d0fc94d085a4b1de36",
+    "outputs/week10_trackA_pg_rmbc/HISTORICAL_GATES.md": "ef738b9e2132a5e4e143ad28420b734d0b062783d7d1b8e00a802c0b582c6161",
+    "outputs/week10_trackA_pg_rmbc/METHOD_PROTOCOL_FREEZE.md": "7f7f7c07b182e6423ab9be0f36e6c05be9dde09df530444c987578b00f5d9f27",
+    "outputs/week10_trackA_pg_rmbc/METHOD_PROTOCOL_FREEZE.sha256": "fbcbd3f38499b8d0f3517ccfe2a6348727976e83c26b5ffaf014a415b2eaea54",
+    "outputs/week10_trackA_pg_rmbc/decision.json": "c4219756158e66c4530fa3bef3d697bd8051a8a2480765dd06629d617c3bcb34",
+    "outputs/week10_trackA_pg_rmbc/error_decomposition.csv": "ac5af74774be44bb5b6d8611941a0d9911612e080cbf69ea7a4bc13e6a5c42cd",
+    "outputs/week10_trackA_pg_rmbc/figures/01_q20_B16_B40_learning_curves.png": "72e7653742c293c792c3599068f14cea2417c51239dc06d3f7f7c3c2b20fbf17",
+    "outputs/week10_trackA_pg_rmbc/figures/02_paired_early_AULC_contrasts.png": "03aa67f007dde5d99c0fef8e819fdb7c5880014941a6a6050fd2bb478f9b296a",
+    "outputs/week10_trackA_pg_rmbc/figures/03_pg_rmbc_mechanism.png": "d340c22bc6d6eafde487498995d5b6bbebca8cd3c8975bc7180fbb54d1975199",
+    "outputs/week10_trackA_pg_rmbc/figures/04_q20_FP_FN_evolution.png": "3e21309d0daa83f2bd9432da5153cf80bef8366ce4b145c3827b526f2543270f",
+    "outputs/week10_trackA_pg_rmbc/gain_decomposition.csv": "c99459cb780004d13ceb65ed2b82b5ce1080c0f00db26737bfc7706f92542af5",
+    "outputs/week10_trackA_pg_rmbc/hidden_label_scrambling_test.json": "1e53d11211a26f1f0a8b414c09c9290da4e0cc871d7a532feb5ba93789947829",
+    "outputs/week10_trackA_pg_rmbc/monotone_leverage_diagnostics.csv": "86d1ac47a10e5d1879d06a273fade5780ea538a6d0b4360016262eedd5c52631",
+    "outputs/week10_trackA_pg_rmbc/paired_contrasts.csv": "fdbba52eacae9a819920abfced369a9709a3496f88f496d25c3c5b680f28fce7",
+    "outputs/week10_trackA_pg_rmbc/policy_summary.csv": "cf2922201919a5f6eb9307f030ffbe8a4bcde7b11f86691ee61810d91e1d2569",
+    "outputs/week10_trackA_pg_rmbc/preflight_validation.json": "9226aa440be992897b106b422a9506948277fdc4fca26b10c5a1d34f3d458cb2",
+    "outputs/week10_trackA_pg_rmbc/query_path_overlap.csv": "634b61b8232e7b99e8277dd6525345e91249b1d96aa4ca4b9d6ed9dbdcdeb7a2",
+    "outputs/week10_trackA_pg_rmbc/query_paths.csv.gz": "8d24dd6e6661e42651269d19b60a52e52204766635afebba033f41818ccbb801",
+    "outputs/week10_trackA_pg_rmbc/sample_efficiency.csv": "ea87eb68930d809ef83664a500decda6c7db017ff9ec05df3f01ec9e689dff7f",
+    "outputs/week10_trackA_pg_rmbc/seed_diagnostics.csv": "ab773b5718bdf7e6ed15019081fb1c3a0407dc605805e4a37dd1dce6e2c48fa7",
+    "outputs/week10_trackA_pg_rmbc/smoke_checkpoints/P3_EARLY8_RMBC_B40/w85__r121_f01.json.gz": "b20cd2776d5da3baa2df6e3b73a6b3cac47920f2374f29bf7402d98e57e9b46e",
+    "outputs/week10_trackA_pg_rmbc/smoke_checkpoints/P4_PG_RMBC_ADAPTIVE/w85__r121_f01.json.gz": "26c7045b6d66ffb90e17e3ec3c653550c7d68980bb49bce3efac685941ada010",
+    "outputs/week10_trackA_pg_rmbc/smoke_report.json": "b43a4b9c98e92ab3c913906e5998688bbf50f258101a47dec2a16186dfeefe3c",
+    "outputs/week10_trackA_pg_rmbc/switch_diagnostics.csv": "5bf1508b6639483360f016120d6550f9d9eb29d8ec5201dad7b052740faee04f",
+    "outputs/week10_trackA_pg_rmbc/validation_report.json": "6218bf75d8793282407c6d3761b0cf29850eb167501f23bd3c6119354f85c7c0",
+    "outputs/week10_trackA_pg_rmbc/validation_report.md": "b95034afd6a57f4bdd0a8aa468dd8de7450fd005764ae1af0b830d6d5eaa2a94"
+  },
+  "bootstrap_draws": 20000,
+  "created_at_utc": "2026-09-21T07:52:24.286112+00:00",
+  "git_branch": "codex/week10-pg-rmbc-internal-replication",
+  "git_head_at_analysis": "5b7d030413ed2aa24e6e4c8f124dd5145f735618",
+  "historical_outputs_modified": false,
+  "outer_runs_per_policy": 300,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "policies": [
+    "P0_M3_MARGIN_B16",
+    "P1_PHASE121_CANDIDATE_B",
+    "P2_H_SEED_COVERAGE_B40",
+    "P3_EARLY8_RMBC_B40",
+    "P4_PG_RMBC_ADAPTIVE"
+  ],
+  "population": 405,
+  "project_name": "week10-pg-rmbc-internal-replication",
+  "protocol_id": "week10_trackA_pg_rmbc/v1.0.0",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "repeats": [
+    121,
+    180
+  ],
+  "signflip_draws": 100000,
+  "source_hashes": {
+    "outputs/week7_06_real_data_boundary_active_level_set/primary_common_population.csv": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7",
+    "outputs/week9_phase1_21_simplification_replication/FINAL_POLICY_FREEZE.json": "84be2a270aaba453321c4a20a1603ec7834fb4de41afd5d48347bf78070be631",
+    "src/tests/test_week10_trackA_pg_rmbc.py": "ce2b100d756eb4b2b0c7f9329b54a083360ff6cbf6789d57bc460c39c1334fd8",
+    "src/week10_trackA_pg_rmbc.py": "f2ef592cc17b60c0c175fc553f723ce9e17eac3a1b99ee3fbf95908801b9f93e",
+    "src/week8_5_frozen_sample_efficiency_confirmation.py": "cb63cd474817a91a755d779d8a0f4ad5337ab51a0778f3bc1788c3f6d943b60c",
+    "src/week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5",
+    "src/week9_phase1_13_fixed_physics_ard_discrepancy.py": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba",
+    "src/week9_phase1_20_acquisition_search.py": "a47a4c2a872bda39da0ef1415360447d9fafb570c603cf3e6687ead5681a26b2",
+    "src/week9_phase1_20_early_start.py": "5a515d6c89d2a4c547f005fd58067d7385b2343795d136ac26b23bf8501b9a43",
+    "src/week9_phase1_21_simplification_replication.py": "b7c436e88c15cb569c4c5f8cf2f26f3c2742f436da403c8c4b6fce85386d19c9",
+    "src/week9_phase1_7_physics_ridge_residual_gp.py": "74ca6376daa3da00d6578d7d48078fb60c7e017dae2bf209e79a3a018704ba92"
+  },
+  "versions": {
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0"
+  }
+}

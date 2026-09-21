@@ -1,0 +1,16 @@
+reference_policy,reference_budget,reference_mean_q20_accuracy,policy,first_budget_reaching_target,descriptive_queries_difference,interpretation
+P1_PHASE121_CANDIDATE_B,24,0.8325490196078431,P0_M3_MARGIN_B16,32,-8,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,24,0.8325490196078431,P1_PHASE121_CANDIDATE_B,24,0,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,24,0.8325490196078431,P2_H_SEED_COVERAGE_B40,31,-7,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,24,0.8325490196078431,P3_EARLY8_RMBC_B40,27,-3,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,24,0.8325490196078431,P4_PG_RMBC_ADAPTIVE,26,-2,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,32,0.8445098039215686,P0_M3_MARGIN_B16,44,-12,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,32,0.8445098039215686,P1_PHASE121_CANDIDATE_B,31,1,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,32,0.8445098039215686,P2_H_SEED_COVERAGE_B40,39,-7,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,32,0.8445098039215686,P3_EARLY8_RMBC_B40,31,1,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,32,0.8445098039215686,P4_PG_RMBC_ADAPTIVE,34,-2,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,40,0.8496078431372549,P0_M3_MARGIN_B16,51,-11,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,40,0.8496078431372549,P1_PHASE121_CANDIDATE_B,37,3,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,40,0.8496078431372549,P2_H_SEED_COVERAGE_B40,49,-9,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,40,0.8496078431372549,P3_EARLY8_RMBC_B40,39,1,descriptive mean-curve crossing; not a universal saving claim
+P1_PHASE121_CANDIDATE_B,40,0.8496078431372549,P4_PG_RMBC_ADAPTIVE,39,1,descriptive mean-curve crossing; not a universal saving claim

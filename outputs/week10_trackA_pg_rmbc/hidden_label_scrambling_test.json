@@ -1,0 +1,48 @@
+{
+  "cases": [
+    {
+      "choice_identical": true,
+      "choice_original": 296,
+      "choice_scrambled": 296,
+      "policy": "P3_EARLY8_RMBC_B40",
+      "revealed_budget": 12,
+      "run_id": "w85__r121_f01",
+      "scores_exactly_identical": true,
+      "selected_details_identical": true
+    },
+    {
+      "choice_identical": true,
+      "choice_original": 123,
+      "choice_scrambled": 123,
+      "policy": "P4_PG_RMBC_ADAPTIVE",
+      "revealed_budget": 12,
+      "run_id": "w85__r121_f01",
+      "scores_exactly_identical": true,
+      "selected_details_identical": true
+    },
+    {
+      "choice_identical": true,
+      "choice_original": 370,
+      "choice_scrambled": 370,
+      "policy": "P3_EARLY8_RMBC_B40",
+      "revealed_budget": 12,
+      "run_id": "w85__r148_f03",
+      "scores_exactly_identical": true,
+      "selected_details_identical": true
+    },
+    {
+      "choice_identical": true,
+      "choice_original": 77,
+      "choice_scrambled": 77,
+      "policy": "P4_PG_RMBC_ADAPTIVE",
+      "revealed_budget": 12,
+      "run_id": "w85__r148_f03",
+      "scores_exactly_identical": true,
+      "selected_details_identical": true
+    }
+  ],
+  "meaning": "all unqueried labels were scrambled while revealed labels were preserved; next row and every candidate RMBC score remained exactly unchanged",
+  "q20_q30_membership_available": false,
+  "status": "PASS",
+  "test_labels_available": false
+}

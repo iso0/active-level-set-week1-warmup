@@ -1,0 +1,22 @@
+{
+  "classification": "NO_CLEAR_IMPROVEMENT",
+  "figures": [
+    "01_q20_B16_B40_learning_curves.png",
+    "02_paired_early_AULC_contrasts.png",
+    "03_pg_rmbc_mechanism.png",
+    "04_q20_FP_FN_evolution.png"
+  ],
+  "final_decision": "KEEP_PHASE121_CANDIDATE_B",
+  "final_policy": "P1_PHASE121_CANDIDATE_B",
+  "safety_checks": {
+    "all_seed_sizes_at_most_B16": true,
+    "five_policy_checkpoint_completeness": true,
+    "hidden_label_scrambling_PASS": true,
+    "no_inferred_training_labels": true,
+    "no_monotone_candidate_removal": true,
+    "no_monotone_resolution": true,
+    "no_q_membership_available": true,
+    "no_test_labels_available": true,
+    "no_unqueried_labels_available": true
+  }
+}

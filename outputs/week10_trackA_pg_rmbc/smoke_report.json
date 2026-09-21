@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "metric_grid_complete": true,
+    "no_inferred_labels": true,
+    "path_80_unique": true,
+    "two_smoke_runs_complete": true
+  },
+  "runs": [
+    {
+      "reused": false,
+      "run_id": "w85__r121_f01",
+      "seconds": 6.573319911956787
+    },
+    {
+      "reused": false,
+      "run_id": "w85__r121_f01",
+      "seconds": 5.833476305007935
+    }
+  ],
+  "status": "PASS"
+}

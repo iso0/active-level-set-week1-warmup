@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "five_policies_only": true,
+    "full_order_pairs_22050": true,
+    "future_repeats_have_no_checkpoints": true,
+    "h_order_deterministic_w85__r121_f01": true,
+    "h_order_deterministic_w85__r180_f05": true,
+    "h_order_extremes_w85__r121_f01": true,
+    "h_order_extremes_w85__r180_f05": true,
+    "h_order_train_only_w85__r121_f01": true,
+    "h_order_train_only_w85__r180_f05": true,
+    "historical_gate_pass": true,
+    "order_excludes_ST": true,
+    "population_405": true,
+    "population_labels_73_332": true,
+    "repeat_block_121_180": true,
+    "split_sizes_324_81": true,
+    "tie_break_is_row_index": true
+  },
+  "source_hashes": {
+    "outputs/week7_06_real_data_boundary_active_level_set/primary_common_population.csv": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7",
+    "outputs/week9_phase1_21_simplification_replication/FINAL_POLICY_FREEZE.json": "84be2a270aaba453321c4a20a1603ec7834fb4de41afd5d48347bf78070be631",
+    "src/tests/test_week10_trackA_pg_rmbc.py": "ce2b100d756eb4b2b0c7f9329b54a083360ff6cbf6789d57bc460c39c1334fd8",
+    "src/week10_trackA_pg_rmbc.py": "f2ef592cc17b60c0c175fc553f723ce9e17eac3a1b99ee3fbf95908801b9f93e",
+    "src/week8_5_frozen_sample_efficiency_confirmation.py": "cb63cd474817a91a755d779d8a0f4ad5337ab51a0778f3bc1788c3f6d943b60c",
+    "src/week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5",
+    "src/week9_phase1_13_fixed_physics_ard_discrepancy.py": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba",
+    "src/week9_phase1_20_acquisition_search.py": "a47a4c2a872bda39da0ef1415360447d9fafb570c603cf3e6687ead5681a26b2",
+    "src/week9_phase1_20_early_start.py": "5a515d6c89d2a4c547f005fd58067d7385b2343795d136ac26b23bf8501b9a43",
+    "src/week9_phase1_21_simplification_replication.py": "b7c436e88c15cb569c4c5f8cf2f26f3c2742f436da403c8c4b6fce85386d19c9",
+    "src/week9_phase1_7_physics_ridge_residual_gp.py": "74ca6376daa3da00d6578d7d48078fb60c7e017dae2bf209e79a3a018704ba92"
+  },
+  "status": "PASS"
+}

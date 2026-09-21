@@ -97,6 +97,7 @@ Eski hafta adları kronoloji düzenlemesinden kalan adlar olabilir; eşlemeleri 
 | 9 | [week9_phase2_1re_early_prefix_width_control](phases/week9_phase2_1re_early_prefix_width_control.md) | 28 | Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz. |
 | 9 | [week9_phase2_2_width_informed_active_learning](phases/week9_phase2_2_width_informed_active_learning.md) | 636 | Mevcut dosyalar birleştirildi; bu işlem deneyin bilimsel sonuçlarını yeniden doğrulamaz. |
 | 9 | [W09-P2 — Zamana bağlı genişlik dinamiği](phases/week9_phase2_temporal_width_dynamics.md) | 44 | Ayrı Git dalından geri getirilen kod, notebook ve mevcut çıktı seti. |
+| 10 | [Week 10 Track A — PG-RMBC internal replication](phases/week10_trackA_pg_rmbc.md) | yeni | Tek ön-kayıtlı fizik-yönlendirmeli yumuşak monoton edinim çalışması; sonuç `KEEP_PHASE121_CANDIDATE_B`, dış doğrulama değildir. |
 
 ## Ek projeler, sunumlar ve geçmiş
 
