@@ -1109,3 +1109,10 @@ Kaynak eşlemesi, dosya hashleri, gerçekleştirilen kontroller ve kapsam sını
 `week10-pg-rmbc-internal-replication` projesi, eski 405 simülasyonda daha önce kullanılmamış 121–180 gruplanmış CV tekrarları üzerinde önceden dondurulmuş beş politika ile tamamlandı. Tarihsel kapılar geçti; protokol tam yörüngelerden önce SHA-256 `7f7f7c07b182e6423ab9be0f36e6c05be9dde09df530444c987578b00f5d9f27` ile donduruldu. Ioan'ın yeni veri setine erişilmedi.
 
 Ana q20 doğruluk AULC B16–B40 sonucu P4−P1 `−0.002602 [-0.006295,+0.001074]` oldu. h-tohumu ablatasyonu açıkça daha kötüydü (`−0.011565 [-0.016307,−0.006773]`); yumuşak monoton kaldıraç ablatasyonu çözümsüz ve sayısal olarak negatifti (`−0.002888 [-0.006156,+0.000392]`). B40 Keyhole recall ve B80 full81 doğruluk güvenlik sınırları geçti; tüm sızıntı/çıkarımsal-etiket kontrolleri geçti. Nihai karar: `KEEP_PHASE121_CANDIDATE_B`; yeni Ioan verisi için Phase 1.21 Candidate B korunur ve bu deneyden sonra ek ayar yapılmaz.
+
+
+### 2026-09-21 — Tam depo konsolidasyonu ve Track A dondurma
+
+Başlangıçtaki 38 uzak dal ve 51 yerel dal uçtan uca denetlendi. Eski `main` üzerinde bilimsel içeriği eksik olan tek uzak dal `codex/week10-pg-rmbc-internal-replication` idi; gerçek Git atası korunarak birleştirildi. Yerel çalışma ağacında GitHub `main` üzerinde bulunmayan 2.361 bilimsel Week 10 dosyası bulundu, SHA-256 ile doğrulandı ve aynı kanonik yollarına aktarıldı. Bunlar Phase 1.20–1.22 karşılaştırma denetimini ve boundary-displacement Gate 1 kaynak, test, protokol, rapor, CSV ve şekillerini kapsar.
+
+Track A; M3 tahmin modeli, B16 M3-margin canlı kontrolü, `early8__coverage_then_margin_B40` dondurulmuş dış doğrulama adayı ve `coverage_then_margin_B40` aynı-B16 atıf kontrolü ile kapatıldı. Candidate B iç tekrarda pozitif fakat `+0.01` değiştirme eşiğinin altında kaldı. PG-RMBC kazanmadı; boundary-displacement M1, M0'a karşı yaklaşık `+0.000004` sağladı ve genel M2'yi geçmedi. Büyük alternatif-başlangıç kovaryans kararsızlığı M2'deydi, M1'de değil. Gate 2 çalıştırılmadı. Yeni Ioan verisine erişilmedi.

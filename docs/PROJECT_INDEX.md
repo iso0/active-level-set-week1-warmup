@@ -1,5 +1,10 @@
 # Tez proje dizini
 
+Güncel kararlar için önce [beş dakikalık proje haritasını](THESIS_PROJECT_MAP.md),
+[otoritatif sonuç dizinini](AUTHORITATIVE_RESULTS_INDEX.md) ve
+[Track A dondurma paketini](trackA_freeze/TRACK_A_FINAL_STATE.md) okuyun.
+Bu sayfa bütün tarihsel hafta/aşama ailelerini koruyan ayrıntılı dizindir.
+
 Aktif ve birleşik çalışma klasörü: `C:\Users\ozgur\Documents\thesis`.
 GitHub varsayılan dalı `main` bu birleşik yapıyı gösterecek şekilde güncellenir.
 
