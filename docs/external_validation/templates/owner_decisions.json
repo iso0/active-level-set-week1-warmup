@@ -1,0 +1,59 @@
+{
+  "exact_feasible_budgets": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80],
+  "failure_fallback_rules": {
+    "b16_lacks_both_classes": "STOP_AND_RECORD",
+    "insufficient_train_for_b80": "STOP_AND_RECORD",
+    "model_fit_failure": "STOP_AND_RECORD",
+    "optimizer_nonfinite": "USE_FROZEN_INITIAL_KERNEL_FALLBACK_AND_RECORD",
+    "q20_no_opposite_class": "STOP_AND_RECORD",
+    "single_class_training": "STOP_AND_RECORD"
+  },
+  "fold_count": 5,
+  "grouping": "group_token",
+  "included_ids": ["REPLACE_WITH_EVERY_INCLUDED_SIM_ID"],
+  "output_locations": {
+    "checkpoints": "analysis/checkpoints.csv",
+    "claim_ledger": "analysis/CLAIM_LEDGER.json",
+    "descriptive_first_crossings": "analysis/descriptive_first_crossings.csv",
+    "endpoints": "analysis/endpoints.csv",
+    "failure_events": "run/failure_events.json",
+    "fallback_events": "run/fallback_events.json",
+    "fit_diagnostics": "run/fit_diagnostics.csv",
+    "path_manifest": "run/path_manifest.csv",
+    "per_budget_metrics": "analysis/per_budget_metrics.csv",
+    "per_budget_predictions": "run/per_budget_predictions.csv",
+    "repeat_block_contrasts": "analysis/repeat_block_contrasts.csv",
+    "repeat_block_values": "analysis/repeat_block_values.csv",
+    "run_manifest": "run/run_manifest.json",
+    "split_manifest": "run/split_manifest.json",
+    "validation_report": "analysis/VALIDATION_REPORT.md"
+  },
+  "owner": "REPLACE_WITH_PROTOCOL_OWNER",
+  "owner_excluded_ids": [],
+  "paired_interval_method": "paired_repeat_bootstrap_percentile_10000",
+  "prelabel_fold_assignment": [
+    {
+      "folds": [
+        {"fold": 1, "test_group_tokens": ["REPLACE_WITH_GROUPS"]},
+        {"fold": 2, "test_group_tokens": ["REPLACE_WITH_GROUPS"]},
+        {"fold": 3, "test_group_tokens": ["REPLACE_WITH_GROUPS"]},
+        {"fold": 4, "test_group_tokens": ["REPLACE_WITH_GROUPS"]},
+        {"fold": 5, "test_group_tokens": ["REPLACE_WITH_GROUPS"]}
+      ],
+      "repeat": 1
+    },
+    {
+      "folds": [
+        {"fold": 1, "test_group_tokens": ["REPLACE_WITH_GROUPS"]},
+        {"fold": 2, "test_group_tokens": ["REPLACE_WITH_GROUPS"]},
+        {"fold": 3, "test_group_tokens": ["REPLACE_WITH_GROUPS"]},
+        {"fold": 4, "test_group_tokens": ["REPLACE_WITH_GROUPS"]},
+        {"fold": 5, "test_group_tokens": ["REPLACE_WITH_GROUPS"]}
+      ],
+      "repeat": 2
+    }
+  ],
+  "random_seeds": [101, 202],
+  "repeat_count": 2,
+  "split_construction": "PreassignedGroupFiveFold"
+}

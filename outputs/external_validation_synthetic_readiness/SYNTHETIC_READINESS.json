@@ -1,0 +1,35 @@
+{
+  "arms": [
+    "M3_margin_incumbent",
+    "early8__coverage_then_margin_B40",
+    "coverage_then_margin_B40"
+  ],
+  "budgets": [
+    16,
+    80
+  ],
+  "claim_ledger_exercised_not_scientific_evidence": {
+    "external_confirmation": {
+      "pass": false,
+      "requires": "primary CI entirely above zero plus frozen recall/accuracy guardrails"
+    },
+    "failures": [],
+    "incumbent_replacement": {
+      "pass": false,
+      "requires": "external confirmation and primary mean difference >= +0.01"
+    },
+    "primary_endpoint": "Fold-B1-q20 accuracy normalized trapezoidal AULC B16-B80",
+    "pure_acquisition_attribution": {
+      "pass": false,
+      "requires": "external confirmation plus same-B16 mean and CI entirely above zero",
+      "same_B16_positive_evidence": false
+    }
+  },
+  "data": "FAKE_SYNTHETIC_ONLY",
+  "diagnostic_rows": 2030,
+  "path_rows": 2400,
+  "prediction_rows": 40950,
+  "rows": 105,
+  "splits": 10,
+  "status": "PASS"
+}
