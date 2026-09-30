@@ -1,0 +1,13 @@
+{
+  "exact_input_overlap_count": 0,
+  "exact_input_overlaps": [],
+  "limitations": [
+    "Bug eligibility is unknown.",
+    "Prepared frozen intake ran and remains blocked by unresolved independence/provenance and the missing custodian sealed-oracle digest. No digest or oracle row was fabricated."
+  ],
+  "new_rows": 185,
+  "old_reference_rows": 407,
+  "simulation_id_overlap_count": 0,
+  "simulation_id_overlaps": [],
+  "stage": "LABEL_BLIND_INPUT_ONLY"
+}

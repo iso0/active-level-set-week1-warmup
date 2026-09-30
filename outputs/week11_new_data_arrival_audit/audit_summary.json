@@ -1,0 +1,111 @@
+{
+  "added_experiment_count": 185,
+  "bug_eligibility": "UNKNOWN - no independent approved Bug/status source",
+  "exact_configuration_duplicate_groups": [],
+  "final_repeat_count": "OWNER_DECISION_REQUIRED",
+  "folder_precision_mismatch_count": 0,
+  "immediate_name_availability": {
+    "frames": 185,
+    "frames.csv": 185,
+    "gif_files": 185,
+    "monitor": 185,
+    "original_data_archive.tar.gz": 185,
+    "parameters.json": 185
+  },
+  "monitor_name_availability": {
+    "average-temperature_gas.dat": 185,
+    "average-temperature_melt.dat": 185,
+    "average-temperature_substrate.dat": 185,
+    "dt.dat": 185,
+    "iter.dat": 185,
+    "kinetic-energy_gas.dat": 185,
+    "kinetic-energy_melt.dat": 185,
+    "maximum-temperature_gas.dat": 185,
+    "maximum-temperature_melt.dat": 185,
+    "maximum-temperature_substrate.dat": 185,
+    "maximum-thermal-conductivity_gas.dat": 185,
+    "maximum-thermal-conductivity_melt.dat": 185,
+    "maximum-thermal-conductivity_substrate.dat": 185,
+    "maximum-velocity_gas.dat": 185,
+    "maximum-velocity_melt.dat": 185,
+    "maximum-viscosity_gas.dat": 185,
+    "maximum-viscosity_melt.dat": 185,
+    "minimum-heat-capacity_gas.dat": 185,
+    "minimum-heat-capacity_melt.dat": 185,
+    "minimum-heat-capacity_substrate.dat": 185,
+    "minimum-temperature_gas.dat": 185,
+    "minimum-temperature_melt.dat": 185,
+    "minimum-temperature_substrate.dat": 185,
+    "particle-number_gas.dat": 185,
+    "particle-number_melt.dat": 185,
+    "particle-number_substrate.dat": 185,
+    "position-bounds_gas.dat": 185,
+    "position-bounds_melt.dat": 185,
+    "time.dat": 185,
+    "total-energy_gas.dat": 185,
+    "total-energy_melt.dat": 185,
+    "total-energy_substrate.dat": 185,
+    "transferred-laser-power_melt.dat": 185,
+    "transferred-laser-power_substrate.dat": 185
+  },
+  "new_revision": "2e1eec9c98fd57609d2815f174586336ab59da07",
+  "old_revision": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "payload_integrity": "Parameter files validated; all other listed payload contents UNKNOWN_NOT_DOWNLOADED",
+  "root_comparison_counts": {
+    "added": 186,
+    "deleted": 0,
+    "exact_content_duplicate_groups": 0,
+    "modified": 1,
+    "renamed": 0,
+    "unchanged": 410,
+    "unknown_content_change": 0
+  },
+  "scope": "metadata and approved input parameters only",
+  "structural_b80_witness_count": 2,
+  "structural_b80_witnesses": [
+    {
+      "assignment_sha256": "ba697cacc393c10a68b7c9581f06c2d603eaaec265326026a145cb2df436c825",
+      "final_bug_eligibility": "UNKNOWN",
+      "held_out_group_counts": {
+        "0": 37,
+        "1": 37,
+        "2": 37,
+        "3": 37,
+        "4": 37
+      },
+      "seed": 1101,
+      "status": "ADVISORY_NOT_APPROVED",
+      "structural_b80_feasible": true,
+      "training_group_counts": {
+        "0": 148,
+        "1": 148,
+        "2": 148,
+        "3": 148,
+        "4": 148
+      }
+    },
+    {
+      "assignment_sha256": "4f4d5faa9b064300abb6a16d3d2506cfe795da697f5b8b7226ffc856f8b98eb8",
+      "final_bug_eligibility": "UNKNOWN",
+      "held_out_group_counts": {
+        "0": 37,
+        "1": 37,
+        "2": 37,
+        "3": 37,
+        "4": 37
+      },
+      "seed": 1102,
+      "status": "ADVISORY_NOT_APPROVED",
+      "structural_b80_feasible": true,
+      "training_group_counts": {
+        "0": 148,
+        "1": 148,
+        "2": 148,
+        "3": 148,
+        "4": 148
+      }
+    }
+  ],
+  "unique_exact_configuration_count": 185,
+  "validated_parameter_count": 185
+}
