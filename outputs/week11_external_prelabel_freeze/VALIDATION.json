@@ -1,0 +1,46 @@
+{
+  "blockers": [
+    "INDEPENDENCE_OR_PROVENANCE_UNRESOLVED",
+    "ONE_CUSTODIAN_ORACLE_DIGEST_REQUIRED"
+  ],
+  "checks": {
+    "b80_structurally_feasible": true,
+    "cohort_scope_observation_recorded": true,
+    "compileall": "PASS",
+    "deterministic_rebuild_exact_bytes": true,
+    "execution_output_root_fixed": true,
+    "final_freeze_json_absent": true,
+    "final_freeze_sidecar_absent": true,
+    "focused_tests": "12 passed in 0.74s",
+    "fold_count_total": 100,
+    "full_delivery_count": 185,
+    "generated_artifact_bindings_match": true,
+    "included_count": 136,
+    "initial_design_namespace_recorded": true,
+    "label_accessed": false,
+    "maximum_training_pool_size": 109,
+    "minimum_training_pool_size": 108,
+    "owner_decision_fields_exact": true,
+    "owner_identity_recorded": true,
+    "preparation_sidecar_matches": true,
+    "repeat_count": 20,
+    "source_hash_bindings_match": true,
+    "supervisor_final_review": "PASS; dataset preparation complete; both missing custody gates remain unresolved",
+    "tracked_existing_files_unchanged": true,
+    "unique_finite_numeric_input_tuples": 136,
+    "verified_intake_manifest_hash_matches": true,
+    "withheld_count": 49
+  },
+  "created_utc": "2026-10-01T19:26:24.979223Z",
+  "files": {
+    "FREEZE_PREPARATION.json": "d7ef4c70076ba637e80acbeb5cc3ceb3c46419f53303bf3f40eeeb229ef6ad60",
+    "FREEZE_PREPARATION.sha256": "74bae41ddb3655927006a5651477884548e836c387227464fdc0b366d27621cc",
+    "FULL_DELIVERY_MANIFEST.csv": "46deec01b03b962202f2ad162a969db3fe300c27bf0fcbc98718a4b42606f910",
+    "INCLUDED_MANIFEST.csv": "7b749ace0672f94d8295f8460c1d95b4803d4cf2f50a8c2bd5289109255bd3fc",
+    "PRELABEL_FOLD_ASSIGNMENTS.json": "4d0684c421315d4ff0f91b187c9144a0faf33f72c4926d751e55f8a0afcb3b39",
+    "PRELABEL_OWNER_DECISIONS.json": "8bff98620590f527751a2af68248d7bcbb0807ff3281ad2395a773c9ccd83be6",
+    "WITHHELD_MANIFEST.csv": "5161259d0566c319916d8ddc9acbaaeaa9b6eb13e1c339c70fe3f187793e1cc9"
+  },
+  "reviewed_report_sha256": "f5e5c00e32f35399d716f22a92f0ade803730aa5f6a12c14e79647743729f801",
+  "status": "PASS_PREPARATION_REMAINS_BLOCKED"
+}
