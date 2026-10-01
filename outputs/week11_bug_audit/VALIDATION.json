@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "b80_witness_assignment_sha256": "e1acaf1e50a6faaf404bc33cd071ae125d9dff43efc91c3b65f50acc16b9b4a7",
+    "bounds_numeric_physical_integrity": "UNRESOLVED_FETCH_STOPPED_NO_RETRY",
+    "bug_affected_simulations": 49,
+    "bug_category_cells": 9675,
+    "bug_frames": 3225,
+    "compileall": "PASS",
+    "deterministic_sanitized_rebuild": "PASS_EXACT_BYTES",
+    "focused_pytest": "7 passed in 0.29s",
+    "prohibited_physical_columns_in_outputs": false,
+    "raw_mixed_csv_saved": false,
+    "report_scope_and_target_safety_clarified": true,
+    "status_counts": {
+      "EXCLUDE": 0,
+      "KEEP": 136,
+      "KEEP_WITH_TRUNCATION": 0,
+      "UNRESOLVED": 49
+    },
+    "supervisor_final_review": "PASS; 49 affected runs remain UNRESOLVED; no final freeze or execution approved",
+    "timing_mapping_count": 49,
+    "tracked_existing_files_unchanged": true
+  },
+  "commands": [
+    ".\\\\.venv\\\\Scripts\\\\python.exe -m pytest -q src/tests/test_week11_bug_audit.py",
+    ".\\\\.venv\\\\Scripts\\\\python.exe -m compileall -q src/week11_bug_audit.py src/tests/test_week11_bug_audit.py",
+    "git diff --exit-code"
+  ],
+  "created_utc": "2026-10-01T18:48:27.704109Z",
+  "files": {
+    "docs/week11/WEEK11_NEW_BATCH_BUG_AUDIT.md": "5367302d36fabe6bc9258061ecc1ff5a7a9a5e3fdd03a9ad6d12a7aeff21082c",
+    "outputs/week11_bug_audit/b80_structural_witness.json": "d9d2fefb92a7911e5f8f1dbeb80453dba7b4a71b857220895a18e21de128c3dc",
+    "outputs/week11_bug_audit/bug_affected_simulations.csv": "dae788a073e516501fbbc39deb5d6bf65086f1580022885567840e3d7726f599",
+    "outputs/week11_bug_audit/bug_audit_summary.json": "917a45bbf49e9dd4d3e64a4a28e35b6cdb4c281fceb6685157fdca41db78c4f1",
+    "outputs/week11_bug_audit/bug_frames_projection.csv": "277e3664634dcce210873895fdeeda7f451451f892fcb59e799e0917931cc323",
+    "outputs/week11_bug_audit/prebug_numeric_integrity.csv": "915e1c6a9604d5555a397ffa915295a21977285da873e866c84e8f6f081d7fae",
+    "outputs/week11_bug_audit/simulation_bug_status.csv": "77d517ca7fd7a0f5493b00d92ac8a1fc3624223fdd7aaa8cb493832fe0984ef6",
+    "outputs/week11_bug_audit/technical_payload_provenance.json": "f26cb48e2094e26f52b052c6b6705e76dd33aa2373a0c4f4a2a8e5459e4fb99a",
+    "src/tests/test_week11_bug_audit.py": "48a67e6e1f835d4faceb290542191fae39bed8389328ba99bf78194d5637b5d7",
+    "src/week11_bug_audit.py": "faf934fa016a1c33ad4aaadb80a012b6359466ed4b3966754453ffd663a0bdf1"
+  },
+  "repository": {
+    "frozen_track_a_sha256": "2e2cb37eae26d1dc16fd0b16f5101fb9ece559c99277704bb97effeb9a87cf24",
+    "head": "30efdd6df3b0ffd4bd7ccc4fcdc60a7693c6b09d"
+  },
+  "status": "PASS_WITH_EXPLICIT_PHYSICAL_INTEGRITY_LIMITATION"
+}

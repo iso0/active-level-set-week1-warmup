@@ -1,0 +1,64 @@
+{
+  "bounds_integrity": "NOT_COMPLETED_REMOTE_FETCH_TIMEOUT; no integrity or eligibility inference",
+  "bug_affected_simulations": 49,
+  "bug_frame_count": 3225,
+  "bug_free_constant_false_simulation_count": 48,
+  "bug_free_constant_true_simulation_count": 137,
+  "bug_free_simulations": 136,
+  "bug_free_varies_within_simulation_count": 0,
+  "bug_from_beginning": 0,
+  "bug_later": 49,
+  "bug_percentage": 26.486486486486488,
+  "bug_sequence_pattern_counts": {
+    "INTERMITTENT_TO_END": 13,
+    "NONTERMINAL": 2,
+    "TERMINAL_CONTIGUOUS_SUFFIX": 34
+  },
+  "clearly_usable_whole_run_cohort": 136,
+  "correctly_finished_constant_false_simulation_count": 0,
+  "correctly_finished_constant_true_simulation_count": 185,
+  "correctly_finished_varies_within_simulation_count": 0,
+  "explicit_bug_category_cell_counts": {
+    "Screenshot Bug": 9675
+  },
+  "frame_status_crosstab": {
+    "bug_free_0__finished_1__any_bug_0__screenshot_bug_0": 13620,
+    "bug_free_0__finished_1__any_bug_1__screenshot_bug_1": 3220,
+    "bug_free_1__finished_1__any_bug_0__screenshot_bug_0": 30512,
+    "bug_free_1__finished_1__any_bug_1__screenshot_bug_1": 5
+  },
+  "limitations": "Non-Bug physical categories were not retained, counted, displayed, or used.",
+  "missing_source_hash_simulations": 185,
+  "raw_sha256": "b45518a51ea59d97d1e28e3f2ce5ef563af1c049bce83d0d88b3d510b1adf16d",
+  "raw_size_bytes": 12397054,
+  "reason_and_wall_contact": "UNRESOLVED_NO_FIELD_IN_HEADER",
+  "reason_counts": {
+    "unknown": 49
+  },
+  "representation": "Frame-level explicit Bug word token flags; annotation ordinal is row order, not confirmed frame_idx.",
+  "representation_mismatch": false,
+  "source_file": "labels_new_data_4_prep.csv",
+  "source_hash_column": "EMPTY_FOR_ALL_185_ROWS; pinned file SHA-256 plus simulation IDs provide provenance",
+  "source_revision": "2e1eec9c98fd57609d2815f174586336ab59da07",
+  "timing_enrichment": {
+    "affected_with_confirmed_frame_iter_time_mapping": 49,
+    "first_bug_annotation_ordinal_max": 328,
+    "first_bug_annotation_ordinal_median": 281,
+    "first_bug_annotation_ordinal_min": 232,
+    "first_bug_fraction_max": 0.9961832061068703,
+    "first_bug_fraction_median": 0.8214285714285714,
+    "first_bug_fraction_min": 0.5710900473933649,
+    "first_bug_physical_time_seconds_max": 0.002096426,
+    "first_bug_physical_time_seconds_median": 0.001731321,
+    "first_bug_physical_time_seconds_min": 0.001208254,
+    "near_beginning_cutoff": "NOT_DEFINED"
+  },
+  "total_simulations": 185,
+  "unexpected_bug_categories": [],
+  "usability_counts": {
+    "EXCLUDE": 0,
+    "KEEP": 136,
+    "KEEP_WITH_TRUNCATION": 0,
+    "UNRESOLVED": 49
+  }
+}
