@@ -1,0 +1,149 @@
+{
+  "b16_minority_count_distribution": {
+    "histogram": {
+      "0": 3,
+      "1": 17,
+      "2": 38,
+      "3": 27,
+      "4": 12,
+      "5": 3
+    },
+    "maximum": 5,
+    "median": 2.0,
+    "minimum": 0
+  },
+  "frozen_logh_formula": "log(P) - 0.5*log(VX) - 1.5*log(LS)",
+  "frozen_split_count": 100,
+  "headline": "POST-HOC EXPLORATORY \u2014 NOT PRE-REGISTERED CONFIRMATORY EVIDENCE",
+  "included_class_0": 12,
+  "included_class_1": 124,
+  "included_count": 136,
+  "new_seeds_or_designs_or_models": false,
+  "oracle_or_withheld_outcomes_accessed": false,
+  "per_repeat": [
+    {
+      "repeat": 1,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 2,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 3,
+      "single_class_b16_count": 1,
+      "split_count": 5
+    },
+    {
+      "repeat": 4,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 5,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 6,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 7,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 8,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 9,
+      "single_class_b16_count": 1,
+      "split_count": 5
+    },
+    {
+      "repeat": 10,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 11,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 12,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 13,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 14,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 15,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 16,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 17,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 18,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    },
+    {
+      "repeat": 19,
+      "single_class_b16_count": 1,
+      "split_count": 5
+    },
+    {
+      "repeat": 20,
+      "single_class_b16_count": 0,
+      "split_count": 5
+    }
+  ],
+  "scope": "MECHANISM_DIAGNOSTIC_OF_EXACTLY_100_EXISTING_FROZEN_B16_DESIGNS",
+  "significance_tests_or_cutpoint_search": false,
+  "single_class_b16_count": 3,
+  "training_pool_minority_count_distribution": {
+    "histogram": {
+      "10": 28,
+      "11": 17,
+      "12": 9,
+      "7": 8,
+      "8": 13,
+      "9": 25
+    },
+    "maximum": 12,
+    "median": 10.0,
+    "minimum": 7
+  },
+  "training_pools_with_both_classes": 100,
+  "two_class_b16_count": 97,
+  "uniform16_without_replacement_reference": {
+    "formula": "(C(n0,16)+C(n1,16))/C(N,16)",
+    "interpretation": "descriptive expectation only; fixed pools are not asserted independent",
+    "p_value_computed": false,
+    "sum_probability_across_fixed_100_pools": 20.805190127651525
+  }
+}

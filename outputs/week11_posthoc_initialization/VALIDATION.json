@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "enumerated_only_existing_100_splits": true,
+    "manifest_hash_matches_freeze": true,
+    "no_alternate_seed_or_design": true,
+    "no_confirmatory_endpoint_or_p_value": true,
+    "no_model_evaluator_or_prediction_execution": true,
+    "no_oracle_or_withheld_input": true,
+    "saved_100_splits_equal_runner_build_splits": true,
+    "saved_truth_covers_exact_136_included_ids": true,
+    "used_runner_initial_seed_and_feature_only_maximin": true
+  },
+  "headline": "POST-HOC EXPLORATORY \u2014 NOT PRE-REGISTERED CONFIRMATORY EVIDENCE",
+  "input_sha256": {
+    "freeze": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+    "manifest": "46deec01b03b962202f2ad162a969db3fe300c27bf0fcbc98718a4b42606f910",
+    "saved_predictions": "76bbe5fe15fc3a8658a720d960036bf72bbb9caf2241ffbd4fdaa7d3a82da668",
+    "split_manifest": "782d09b9dd36774dc1ebf6fff3769db72ec72d21634eae79058c72c5137d71de"
+  },
+  "status": "PASS"
+}

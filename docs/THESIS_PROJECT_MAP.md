@@ -2,7 +2,7 @@
 
 ## Five-minute orientation
 
-This repository now carries the complete scientific record through the latest Week 10 Track A work. `main` is the canonical tree. Phase branches are historical provenance, not alternative authoritative repositories.
+The record now includes Week 11 intake, the frozen external attempt that stopped at a single-class B16, and a separately marked post-hoc initialization audit. `main` is the sole canonical development branch. Original scientific commits and historical artifacts remain preserved; redundant branch names were removed after ancestry/content verification.
 
 | Period | Purpose | Canonical entry point | Status |
 |---|---|---|---|
@@ -13,6 +13,7 @@ This repository now carries the complete scientific record through the latest We
 | Week 9 Phase 1 | M3 construction, controls, acquisition audits, Candidate B and closure work | [`docs/AUTHORITATIVE_RESULTS_INDEX.md`](AUTHORITATIVE_RESULTS_INDEX.md) | Source of frozen Track A |
 | Week 9 Phase 2 | Width dynamics, predictive association and failed acquisition use | [`outputs/week9_phase2_1r_simple_width_change_control/`](../outputs/week9_phase2_1r_simple_width_change_control/) | Predictive proof of concept; not an acquisition success |
 | Week 10 | PG-RMBC replication, comparator audit and boundary-displacement Gate 1 | [`outputs/week10_trackA_pg_rmbc/`](../outputs/week10_trackA_pg_rmbc/), [`outputs/week10_trackA_phase120_122_audit/`](../outputs/week10_trackA_phase120_122_audit/), [`outputs/week10_trackA_boundary_displacement_gate1/`](../outputs/week10_trackA_boundary_displacement_gate1/) | Track A closed/frozen |
+| Week 11 | Frozen external STOP and separate startup diagnosis | [`Week 11 synthesis`](week11/WEEK11_THESIS_DECISIVE_STAGE_REPORT.md), [`confirmatory report`](../outputs/week11_external_execution_record/CONFIRMATORY_STOP_REPORT.md), [`QC`](../outputs/week11_external_execution_record/QC_VALIDATION.json) | Incomplete frozen experiment; no confirmatory effect estimate |
 | Consolidation | Complete branch/local audit and canonical-tree validation | [`docs/consolidation/`](consolidation/) | Repository authority record |
 | Track B | Observable-signal versus hidden-state preparation | [`docs/trackB/`](trackB/) | Inventory and preregistration planning only |
 
@@ -24,7 +25,7 @@ This repository now carries the complete scientific record through the latest We
 4. `coverage_then_margin_B40` is the same-B16 attribution companion.
 5. `historical_binary_A0_live` remains a historical comparator and must not be relabelled as the current control.
 6. PG-RMBC did not beat Candidate B. Boundary-displacement M1 gained only about `+0.000004` over M0 and did not beat generic M2; Gate 2 was not earned.
-7. Internal Track A method development is closed. The next Track A event is execution of the frozen external protocol on genuinely new, eligible, label-blinded data.
+7. The frozen external protocol was attempted on the new 136-run included cohort and stopped at `external__r003_f04`: its feature-only B16 contained one class. No endpoint or external confirmation was produced. These included outcomes are now open; any revised method/startup work on them is post-hoc development. The original methods and freeze remain unchanged.
 8. Track B is a separate observability/hidden-state question, not another acquisition-function search.
 
 ## Authority and provenance
@@ -36,4 +37,4 @@ This repository now carries the complete scientific record through the latest We
 - Source-tree consolidation manifest: [`outputs/project_consolidation/source_manifest.json.gz`](../outputs/project_consolidation/source_manifest.json.gz)
 - Known preserved source-package issues: [`outputs/project_consolidation/KNOWN_LEGACY_ISSUES.md`](../outputs/project_consolidation/KNOWN_LEGACY_ISSUES.md)
 
-The repository does not contain or claim analysis of a genuinely new Ioan batch in this consolidation.
+Week 11 includes label-free intake, an incomplete authorized outcome-based execution, and a separate post-hoc audit of the original 100 starts. The 49 Bug-withheld physical outcomes were not used or summarized. See the [STOP QC summary](../outputs/week11_external_execution_record/QC_SUMMARY.md) and [canonical-main publication record](week11/WEEK11_REPOSITORY_CONSOLIDATION.md). No partial endpoint claim is made.
