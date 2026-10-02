@@ -1,0 +1,30 @@
+{
+  "stage": "FROZEN_CONFIRMATORY_EXECUTION",
+  "started_utc": "2026-10-02T14:52:36.876756+00:00",
+  "command": [
+    "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe",
+    "-u",
+    "-m",
+    "src.external_validation.cli",
+    "execute",
+    "--manifest",
+    "outputs/week11_external_prelabel_freeze/FULL_DELIVERY_MANIFEST.csv",
+    "--oracle",
+    "C:\\Users\\ozgur\\Documents\\thesis_external_quarantine\\week11\\2e1eec9c98fd57609d2815f174586336ab59da07\\NEW185_SEALED_ORACLE.csv",
+    "--freeze",
+    "outputs/week11_external_prelabel_freeze_final/EXTERNAL_BATCH_FREEZE.json",
+    "--freeze-commit",
+    "e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1",
+    "--output-root",
+    "outputs/week11_track_a_external_validation"
+  ],
+  "execution_commit": "ed491faa08782bcb9db42ac4bbc031bd2e32457f",
+  "freeze_sha256": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+  "output_root": "outputs/week11_track_a_external_validation",
+  "post_label_reseeding": false,
+  "scientific_specification_modified": false,
+  "process_id": 17412,
+  "finished_utc": "2026-10-02T14:56:15.283944+00:00",
+  "exit_code": 1,
+  "status": "COMMAND_STOPPED"
+}

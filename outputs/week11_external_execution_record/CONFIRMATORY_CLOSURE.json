@@ -1,0 +1,14 @@
+{
+  "status": "CONFIRMATORY_ATTEMPT_CLOSED_BEFORE_POSTHOC",
+  "closed_utc": "2026-10-02T19:49:06.541743+00:00",
+  "forensic_quality": "PASS",
+  "frozen_scientific_status": "INCOMPLETE_FROZEN_STOP",
+  "focused_checker_tests": "5 passed",
+  "frozen_source_hashes_unchanged": 120,
+  "freeze_commit_reachable": true,
+  "freeze_sha256": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+  "report_sha256": "0bfcbe46d39095785a86918aaedbc76dccfabd785f7915e4f6666b3afa40e4f4",
+  "qc_sha256": "17c9181b8697aa9678a235303f448e0612de90bb0cc8e23f4590f62efe6befd3",
+  "posthoc_started": false,
+  "partial_endpoint_estimation": false
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "arm": "M3_margin_incumbent",
+    "error_type": "ReadinessError",
+    "event": "STOP",
+    "message": "B16 frozen feature-only design lacks both classes; STOP, do not reseed or extend",
+    "split_id": "external__r003_f04"
+  }
+]

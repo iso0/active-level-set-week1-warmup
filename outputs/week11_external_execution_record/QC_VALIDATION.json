@@ -1,0 +1,2433 @@
+{
+  "artifact_sha256": {
+    "failure_events": "6d06cf5fe49959c537d91047115cba63e2d087975a5b45c219b75b34ef988d56",
+    "fallback_events": "579a1bb43101eb5537643e82aec205019cad199fa55898ec4bacd528f50e8810",
+    "fit_diagnostics": "e5ea20a408defa85090068fefcf74fb17a251ed7ae55ad627c58c92ce9b67cf9",
+    "path_manifest": "c5b6bf214dfffb960cf9068542de18b99cac8f5180f03d7bb1840c30161be1db",
+    "per_budget_predictions": "76bbe5fe15fc3a8658a720d960036bf72bbb9caf2241ffbd4fdaa7d3a82da668",
+    "run_manifest": "da95aef78bff4826152828130ff1ae59c688c548dfda8bfb2743f9733cb98bd3",
+    "split_manifest": "782d09b9dd36774dc1ebf6fff3769db72ec72d21634eae79058c72c5137d71de"
+  },
+  "exploratory_metrics_computed": false,
+  "failure": {
+    "arm": "M3_margin_incumbent",
+    "error_type": "ReadinessError",
+    "event": "STOP",
+    "message": "B16 frozen feature-only design lacks both classes; STOP, do not reseed or extend",
+    "split_id": "external__r003_f04"
+  },
+  "failure_reproduction": {
+    "alternative_seeds_or_rescue_evaluated": false,
+    "initial_design_size": 16,
+    "seed_namespace": "w85.seed_u32(w85.seed_key('run',split_id,'initial_design'))",
+    "split_id": "external__r003_f04",
+    "truth_source": "deduplicated saved held-out prediction truth only",
+    "unique_class_count": 1
+  },
+  "fallback_categories": {
+    "event_counts": {
+      "empty_band_margin_fallback": 103
+    },
+    "optimizer_status_counts": {}
+  },
+  "forensic_quality": "PASS",
+  "frozen_binding_checks": {
+    "batch_manifest_sha256_matches": true,
+    "completed_candidate_b_prefixes_stop_at_first_two_class_prefix": true,
+    "completed_control_and_same_b16_paths_match_recomputed_seed": true,
+    "completed_split_b16_recomputed_count": 13,
+    "prediction_row_index_to_included_id_order_matches": true,
+    "saved_split_manifest_equals_runner_build_splits": true
+  },
+  "guardrails_or_rankings_computed": false,
+  "included_class_balance_from_deduplicated_prediction_truth": {
+    "all_136_covered": true,
+    "class_0": 12,
+    "class_1": 124,
+    "total": 136,
+    "withheld_outcomes_accessed": false
+  },
+  "information_barrier_scope": {
+    "accepted_source_audit": "frozen runner masks unrevealed labels and held-out selector features",
+    "artifact_verified": "completed selections are training-only and completed predictions are held-out-only",
+    "limitation": "saved CSVs cannot independently prove in-memory access behavior"
+  },
+  "methodological_repair_or_retry_authorized": false,
+  "oracle_opened_by_qc": false,
+  "partial_coverage": {
+    "analysis_artifacts_absent_by_design_after_stop": [
+      "checkpoints",
+      "claim_ledger",
+      "descriptive_first_crossings",
+      "endpoints",
+      "per_budget_metrics",
+      "repeat_block_contrasts",
+      "repeat_block_values",
+      "validation_report"
+    ],
+    "completed_split_arm_budget_groups": 2535,
+    "completed_split_arm_pairs": 39,
+    "diagnostic_rows": 2638,
+    "executed_complete_splits_with_all_three_arms": 13,
+    "fallback_events": 103,
+    "missing_split_arm_budget_group_count": 16965,
+    "missing_split_arm_pair_count": 261,
+    "missing_split_arm_pairs": [
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r003_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r003_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r003_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r003_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r003_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r003_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r004_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r005_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r006_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r007_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r008_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r009_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r010_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r011_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r012_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r013_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r014_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r015_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r016_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r017_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r018_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r019_f05"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f01"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f01"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f01"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f02"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f02"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f02"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f03"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f03"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f03"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f04"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f04"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f04"
+      },
+      {
+        "arm": "M3_margin_incumbent",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f05"
+      },
+      {
+        "arm": "early8__coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f05"
+      },
+      {
+        "arm": "coverage_then_margin_B40",
+        "missing_budget_count": 65,
+        "missing_budget_range": [
+          16,
+          80
+        ],
+        "split_id": "external__r020_f05"
+      }
+    ],
+    "path_rows": 3120,
+    "planned_split_manifest_entries": 100,
+    "prediction_rows": 69030
+  },
+  "partial_primary_contrasts_computed": false,
+  "scientific_inference_status": "NOT_COMPUTED_INCOMPLETE_RUN",
+  "status": "INCOMPLETE_FROZEN_STOP"
+}

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\ozgur\Documents\thesis\src\external_validation\cli.py", line 151, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\ozgur\Documents\thesis\src\external_validation\cli.py", line 147, in main
+    args.function(args)
+    ~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ozgur\Documents\thesis\src\external_validation\cli.py", line 80, in command_execute
+    require(run["complete"], "Locked execution stopped; inspect preserved failure artifacts")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ozgur\Documents\thesis\src\external_validation\common.py", line 29, in require
+    raise ReadinessError(message)
+src.external_validation.common.ReadinessError: Locked execution stopped; inspect preserved failure artifacts
