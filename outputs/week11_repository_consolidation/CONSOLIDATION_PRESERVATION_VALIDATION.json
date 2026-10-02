@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "record_type": "CONSOLIDATION_PRESERVATION_VALIDATION",
+  "created_utc": "2026-10-02T14:47:42Z",
+  "status": "PASS_LOCAL_CONSOLIDATION_AND_HISTORICAL_PRESERVATION",
+  "publication_status": "PENDING_ROOT_OWNED_PUSH",
+  "local_main_sha": "e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1",
+  "cached_origin_main_sha": "5ae71520073435ff4d312c9b1bc99683c8a3eb4a",
+  "intended_sha": "e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1",
+  "week11_unique_commit_count": 4,
+  "historical_archive": {
+    "manifest_path": "outputs/_history/583da71538c8/HISTORICAL_ARTIFACT_MANIFEST.json",
+    "manifest_sha256": "37e9bce085693b20d4070a0cf05ef4b674a9ccd33d4fee32f3bba0cbda21712a",
+    "stash_unique_artifact_count": 16,
+    "stash_unique_artifact_total_bytes": 709792,
+    "safety_note_count": 1,
+    "safety_note_total_bytes": 504,
+    "all_17_archive_files_verified": true,
+    "classification": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+  },
+  "accepted_scout_preservation_evidence": {
+    "historical_worktree_byte_identical_file_count": 745,
+    "historical_worktree_byte_identical_total_bytes": 37058993,
+    "comparison_targets": [
+      "consolidated e0adbc28 tree at same tracked paths",
+      "source manifest"
+    ],
+    "stash_2_absent_path_count": 163,
+    "stash_2_unique_content_count": 0
+  },
+  "preservation_actions": {
+    "stashes_preserved": true,
+    "worktrees_removed_or_detached": false,
+    "untracked_source_worktree_modified": false
+  },
+  "frozen_binding": {
+    "freeze_path": "outputs/week11_external_prelabel_freeze_final/EXTERNAL_BATCH_FREEZE.json",
+    "freeze_sha256": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+    "expected_freeze_sha256": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+    "freeze_hash_unchanged": true,
+    "source_changes_made_by_preservation_step": false
+  },
+  "forward_policy": {
+    "canonical_branch": "main",
+    "logical_thesis_units": "commit directly to main",
+    "exceptional_branch_requirement": "documented reason",
+    "historical_variants": "archived evidence; not substitutes for current scientific reports"
+  }
+}

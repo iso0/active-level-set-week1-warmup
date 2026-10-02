@@ -1,0 +1,18 @@
+{
+  "decision": "G3_SELECTOR_SMALL_OR_UNRESOLVED",
+  "practical_threshold": 0.01,
+  "primary": {
+    "bootstrap_draws": 10000,
+    "ci_lower": -0.010569993475852834,
+    "ci_upper": 0.005445991363960129,
+    "contrast": "P2-P1",
+    "end_budget": 40,
+    "inference_role": "primary",
+    "mean_difference": -0.002560011169386167,
+    "positive_repeat_blocks": 9,
+    "seed": 2286804453,
+    "subset": "B1_q20",
+    "zero_repeat_blocks": 0
+  },
+  "replace_P1": false
+}

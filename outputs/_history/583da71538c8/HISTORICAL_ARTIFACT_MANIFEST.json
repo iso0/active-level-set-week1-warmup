@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "record_type": "HISTORICAL_ARTIFACT_PRESERVATION_MANIFEST",
+  "created_utc": "2026-10-02T14:46:25Z",
+  "stash_oid": "583da71538c8ddc7c0bb36133e0bb953e1405ca9",
+  "stash_third_parent": "a7aaa86090024579b54ccc9c13c7bf661b9392a8",
+  "archive_root": "outputs/_history/583da71538c8",
+  "classification": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE",
+  "stash_artifact_count": 16,
+  "stash_artifact_total_bytes": 709792,
+  "safety_note_count": 1,
+  "safety_note_total_bytes": 504,
+  "all_archive_copies_byte_verified": true,
+  "artifacts": [
+    {
+      "original_path": "notebooks/week_09/18_week9_phase1_20_m3_g3_margin_acquisition.ipynb",
+      "archive_path": "outputs/_history/583da71538c8/notebooks/week_09/18_week9_phase1_20_m3_g3_margin_acquisition.ipynb",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "991aac96a7b3dcc8b794875782392161cb5ae95b",
+      "sha256": "150ceb214fa57fa819d3ee5ed143146e1e1aba83eb141a1f8e3ee16ff6d236c5",
+      "size_bytes": 670587,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/FINAL_PHASE1_20_REPORT.md",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/FINAL_PHASE1_20_REPORT.md",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "bbd33e27590087ac9e545080f07d8553e7e33afb",
+      "sha256": "7135254307d03d5e1efa247b9bc8ce06d4a57e8aac34df3fee5e3ea880e66be0",
+      "size_bytes": 11866,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/SUPERVISOR_SUMMARY.md",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/SUPERVISOR_SUMMARY.md",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "c1ec408f9733863148873e65c772859e76d9e428",
+      "sha256": "f86f21e1b89c49abbb18617b39895ab0199bf4e93998f0471c668bb4414e1c62",
+      "size_bytes": 1144,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/artifact_validation.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/artifact_validation.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "0f9c29379827c15297c2794539d3a7005a855a21",
+      "sha256": "f50f02275c4dff3c04c97a81d9dbc7cd5146223454b6051f2213c90d10be44d1",
+      "size_bytes": 893,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/baseline_gate.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/baseline_gate.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "dafa33db6a6f3e326e56dc0585fa394fc38a3e26",
+      "sha256": "47472da99309365550a34f019b2c7977eb1def3df5809622d9689abd02967b3c",
+      "size_bytes": 695,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/decision.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/decision.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "1a183204fea13495162e49ac98b7b0b299afdf60",
+      "sha256": "fb59416b0230a53c1f781d855edf0fe79ece5c7099b72aa9a99de1a3314e2877",
+      "size_bytes": 468,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/execution_report.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/execution_report.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "98b768d062d44b4e051a4d0de05b23a3438a5b83",
+      "sha256": "83b144faea964a530d40bf217e6b6af34aa2bc44ee13282fa991740ca38d4528",
+      "size_bytes": 112,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/focused_tests.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/focused_tests.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "c7863034555cac71d48e77f7adb64a0e8ec4e0db",
+      "sha256": "53deae10e62a8711427328b8bf46b917f00f3ea29c36ef7aabb5278ce52eea35",
+      "size_bytes": 73,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/frozen_protocol.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/frozen_protocol.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "dff3299a3cbe77f655aae24b0232246e531d1439",
+      "sha256": "25d1f606780d862c74d998e85ba8eb4e895498671be0c66966aae005d09027a3",
+      "size_bytes": 1123,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/input_provenance.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/input_provenance.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "3c59d6d6614c4493d68b1b134ca9b495c639b995",
+      "sha256": "5fbf06c9ece528e3c1fc6ce29a16d1afe7ddbbfe944197f5df13fc4b2edab92a",
+      "size_bytes": 1776,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/resume_validation.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/resume_validation.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "198a857b521cae87ef6e7990a5f352e31ad50219",
+      "sha256": "a2e70e776ddb6f2fc75d8258e6edde3b2133dd1485589aba002e6594bb8077a3",
+      "size_bytes": 118,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/run_manifest.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/run_manifest.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "f9749a02bffa48e7c24a310da7679d2901623553",
+      "sha256": "953850d55333a5ec50fc08624b403b20dfccb96a71616a8e9a9b9ea7f487c90d",
+      "size_bytes": 8684,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/selector_specification_audit.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/selector_specification_audit.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "ec9045573fa8b8f1afa69157eca24c4c68e20fb7",
+      "sha256": "c0504eac3b5620fb5bf0e7b0165fa0486dd61d136f9b16ebe483e5284f7d4f9b",
+      "size_bytes": 8938,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/smoke_parity_report.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/smoke_parity_report.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "df31b5a926d6985c1a1ecd6771fecd78ec8f2b4a",
+      "sha256": "d60a97b803d91e53b0c45fde4441928990ad42755a21cac50cf62f4da8bdbf82",
+      "size_bytes": 127,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/smoke_report.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/smoke_report.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "8e88ddbb475e86ad35affa29865621374e0669a1",
+      "sha256": "e9e41214932c849a941c79fea5381bddd89b2c9b41d6799a23c5949e7e48e89c",
+      "size_bytes": 110,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "outputs/week9_phase1_20_m3_g3_margin_acquisition/validation_report.json",
+      "archive_path": "outputs/_history/583da71538c8/outputs/week9_phase1_20_m3_g3_margin_acquisition/validation_report.json",
+      "source": "stash 583da71538c8ddc7c0bb36133e0bb953e1405ca9 third parent",
+      "source_git_blob_oid": "0e3294a9934b6d62db3c161da29731d7cf68cf8b",
+      "sha256": "fbba9fd8c5b6816cc6e3ca69370c547920b5edb0442f7a8d110799f2b97bc663",
+      "size_bytes": 3078,
+      "byte_verified_against_source_blob": true,
+      "provenance_status": "ARCHIVED HISTORICAL VARIANT NOT ACTIVE"
+    },
+    {
+      "original_path": "00_AKTIF_PROJE_YOLU.md",
+      "archive_path": "outputs/_history/583da71538c8/00_AKTIF_PROJE_YOLU.md",
+      "source": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit\\00_AKTIF_PROJE_YOLU.md",
+      "source_git_blob_oid": null,
+      "git_blob_oid_of_archived_bytes": "0efe48032e12403222c53683896c6c8ee468252d",
+      "sha256": "51a4d14d79af4ce4aaa6564d02cf72079ad2fa879858ac69309dd507ffc35b9f",
+      "size_bytes": 504,
+      "byte_verified_against_source_file": true,
+      "provenance_status": "ARCHIVED HISTORICAL SAFETY NOTE NOT ACTIVE"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "G3": {
+    "fit": "p12.fit_gpc_model / predict_positive",
+    "kernel": "1**2 * Matern(length_scale=[1, 1, 1, 1], nu=1.5)",
+    "lengthscales": 4,
+    "seed": "p12.seed_u32(G3, run_id, budget)"
+  },
+  "Week8.5": {
+    "fit": "p6.fit_gpc; w85.run_trajectory",
+    "kernel": "1**2 * Matern(length_scale=1, nu=1.5)",
+    "lengthscales": 1,
+    "seed": "w85.fit_seed_key / seed_u32"
+  },
+  "evidence": {
+    "src\\week7_phase6_real_data_boundary_active_level_set.py": {
+      "sha256": "23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479"
+    },
+    "src\\week8_5_frozen_sample_efficiency_confirmation.py": {
+      "sha256": "cb63cd474817a91a755d779d8a0f4ad5337ab51a0778f3bc1788c3f6d943b60c"
+    },
+    "src\\week9_phase1_11_fixed_mean_discrepancy_gp.py": {
+      "sha256": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5"
+    },
+    "src\\week9_phase1_12_gpc_kernel_adequacy.py": {
+      "sha256": "1d0e4227c7ed7599b4a43a2fc5d1c86364f256f6c89b816455a343d740069da2"
+    },
+    "src\\week9_phase1_13_fixed_physics_ard_discrepancy.py": {
+      "sha256": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba"
+    },
+    "src\\week9_phase1_14_m3_margin_acquisition.py": {
+      "sha256": "e767622d3efa89948774263779d7025e90419666cba933010a30d655d8a757fa"
+    }
+  },
+  "identical": false,
+  "shared": {
+    "amplitude_bounds": [
+      0.001,
+      1000.0
+    ],
+    "fallback": "exact imported historical fitting functions; diagnostics retained",
+    "length_bounds": [
+      0.01,
+      100.0
+    ],
+    "max_iter_predict": 100,
+    "optimizer": "fmin_l_bfgs_b",
+    "restarts": 0,
+    "scaler": "StandardScaler on outer training pool features",
+    "warm_start": false
+  },
+  "source_excerpt_g3_fit": "def fit_gpc_model(model_name: str,x_scaled: np.ndarray,labels: np.ndarray,seed: int) -> tuple[Any,dict[str,Any]]:\n    kernel=make_kernel(model_name); caught=[]; fit_status=\"optimized_primary\"; fallback_status=\"none\"\n    model=GaussianProcessClassifier(kernel=kernel,optimizer=\"fmin_l_bfgs_b\",n_restarts_optimizer=N_RESTARTS,max_iter_predict=100,warm_start=False,random_state=int(seed))\n    try:\n        with warnings.catch_warnings(record=True) as records:\n            warnings.simplefilter(\"always\"); model.fit(x_scaled,labels)\n        caught=[str(item.message) for item in records]\n    except Exception as exc:\n        fallback_status=f\"fixed_kernel_after_{type(exc).__name__}\"; fit_status=\"fixed_kernel_fallback\"\n        model=GaussianProcessClassifier(kernel=kernel,optimizer=None,n_restarts_optimizer=0,max_iter_predict=200,warm_start=False,random_state=int(seed))\n        try:\n            with warnings.catch_warnings(record=True) as records:\n                warnings.simplefilter(\"always\"); model.fit(x_scaled,labels)\n            caught=[str(exc),*(str(item.message) for item in records)]\n        except Exception as second:\n            fallback_status=f\"logistic_after_{type(exc).__name__}_{type(second).__name__}\"; fit_status=\"logistic_fallback\"\n            model=LogisticRegression(C=1.0,max_iter=2000,random_state=int(seed)).fit(x_scaled,labels); caught=[str(exc),str(second)]\n    if fit_status==\"logistic_fallback\":\n        diag={\"fit_status\":fit_status,\"fallback_status\":fallback_status,\"optimizer_warning\":bool(caught),\"warning_text\":\" | \".join(caught),\"objective_value\":math.nan,\"amplitude\":math.nan,\"amplitude_lower_bound_hit\":False,\"amplitude_upper_bound_hit\":False,\"length_scale\":math.nan,\"l_P\":math.nan,\"l_VX\":math.nan,\"l_LS\":math.nan,\"l_ST\":math.nan,\"anisotropy_ratio\":math.nan,\"any_length_lower_bound_hit\":False,\"any_length_upper_bound_hit\":False,\"any_length_bound_hit\":False}\n        return model,diag\n    amplitude=float(model.kernel_.k1.constant_value); values=np.ravel(model.kernel_.k2.length_scale).astype(float); ard=len(values)==4; expanded=values if ard else np.repeat(values[0],4)\n    lower=np.isclose(expanded,LENGTH_BOUNDS[0],rtol=BOUND_RTOL,atol=0); upper=np.isclose(expanded,LENGTH_BOUNDS[1],rtol=BOUND_RTOL,atol=0)\n    diag={\"fit_status\":fit_status,\"fallback_status\":fallback_status,\"optimizer_warning\":bool(caught),\"warning_text\":\" | \".join(caught),\"objective_value\":float(-model.log_marginal_likelihood_value_),\"amplitude\":amplitude,\"amplitude_lower_bound_hit\":bool(np.isclose(amplitude,AMPLITUDE_BOUNDS[0],rtol=BOUND_RTOL,atol=0)),\"amplitude_upper_bound_hit\":bool(np.isclose(amplitude,AMPLITUDE_BOUNDS[1],rtol=BOUND_RTOL,atol=0)),\"length_scale\":float(values[0]) if not ard else math.nan,\"l_P\":float(expanded[0]),\"l_VX\":float(expanded[1]),\"l_LS\":float(expanded[2]),\"l_ST\":float(expanded[3]),\"anisotropy_ratio\":float(expanded.max()/expanded.min()),\"any_length_lower_bound_hit\":bool(lower.any()),\"any_length_upper_bound_hit\":bool(upper.any()),\"any_length_bound_hit\":bool(lower.any() or upper.any())}\n    for name,index in zip(FEATURES,range(4)):\n        diag[f\"l_{name}_lower_bound_hit\"]=bool(lower[index]); diag[f\"l_{name}_upper_bound_hit\"]=bool(upper[index])\n    return model,diag\n",
+  "source_excerpt_g3_kernel": "def make_kernel(model: str) -> Any:\n    require(model in MODEL_SPECS,f\"unknown GPC model {model}\")\n    spec=MODEL_SPECS[model]\n    length=np.ones(4,dtype=float) if spec[\"ard\"] else 1.0\n    if spec[\"family\"]==\"RBF\":\n        base=RBF(length_scale=length,length_scale_bounds=LENGTH_BOUNDS)\n    else:\n        base=Matern(length_scale=length,length_scale_bounds=LENGTH_BOUNDS,nu=float(spec[\"nu\"]))\n    return ConstantKernel(1.0,constant_value_bounds=AMPLITUDE_BOUNDS)*base\n",
+  "source_excerpt_week85_fit": "def fit_gpc(\n    x: np.ndarray,\n    labels: np.ndarray,\n    *,\n    scaler: StandardScaler,\n    seed: int,\n    kernel_kind: str = \"matern32\",\n    restarts: int = ACTIVE_OPTIMIZER_RESTARTS,\n) -> FitResult:\n    x_scaled = scaler.transform(x)\n    caught: list[str] = []\n    model = GaussianProcessClassifier(\n        kernel=make_signal_kernel(kernel_kind),\n        optimizer=\"fmin_l_bfgs_b\",\n        n_restarts_optimizer=restarts,\n        max_iter_predict=100,\n        warm_start=False,\n        random_state=seed,\n    )\n    try:\n        with warnings.catch_warnings(record=True) as records:\n            warnings.simplefilter(\"always\")\n            model.fit(x_scaled, labels)\n        caught.extend(str(record.message) for record in records)\n        constant, length, hit = extract_kernel_diagnostics(model.kernel_)\n        return FitResult(\n            model=model,\n            scaler=scaler,\n            y_mean=None,\n            y_scale=None,\n            fit_status=\"optimized_primary\",\n            warnings=caught,\n            kernel=str(model.kernel_),\n            constant_value=constant,\n            length_scale=length,\n            bound_hit=hit,\n        )\n    except Exception as exc:\n        caught.append(f\"{type(exc).__name__}: {exc}\")\n\n    fixed = GaussianProcessClassifier(\n        kernel=make_signal_kernel(kernel_kind),\n        optimizer=None,\n        max_iter_predict=200,\n        random_state=seed,\n    )\n    try:\n        with warnings.catch_warnings(record=True) as records:\n            warnings.simplefilter(\"always\")\n            fixed.fit(x_scaled, labels)\n        caught.extend(str(record.message) for record in records)\n        constant, length, hit = extract_kernel_diagnostics(fixed.kernel_)\n        return FitResult(\n            model=fixed,\n            scaler=scaler,\n            y_mean=None,\n            y_scale=None,\n            fit_status=\"fixed_kernel_fallback\",\n            warnings=caught,\n            kernel=str(fixed.kernel_),\n            constant_value=constant,\n            length_scale=length,\n            bound_hit=hit,\n        )\n    except Exception as exc:\n        caught.append(f\"{type(exc).__name__}: {exc}\")\n\n    logistic = LogisticRegression(C=1.0, max_iter=2000, random_state=seed)\n    logistic.fit(x_scaled, labels)\n    return FitResult(\n        model=logistic,\n        scaler=scaler,\n        y_mean=None,\n        y_scale=None,\n        fit_status=\"logistic_numerical_fallback\",\n        warnings=caught,\n        kernel=\"NA_logistic_fallback\",\n        constant_value=None,\n        length_scale=None,\n        bound_hit=False,\n    )\n",
+  "source_excerpt_week85_kernel": "def make_signal_kernel(kind: str = \"matern32\") -> Any:\n    if kind == \"matern32\":\n        base = Matern(length_scale=1.0, length_scale_bounds=KERNEL_LENGTH_BOUNDS, nu=1.5)\n    elif kind == \"matern52\":\n        base = Matern(length_scale=1.0, length_scale_bounds=KERNEL_LENGTH_BOUNDS, nu=2.5)\n    elif kind == \"rbf\":\n        base = RBF(length_scale=1.0, length_scale_bounds=KERNEL_LENGTH_BOUNDS)\n    else:\n        raise ValueError(f\"Unknown kernel kind: {kind}\")\n    return ConstantKernel(1.0, constant_value_bounds=KERNEL_CONSTANT_BOUNDS) * base\n",
+  "status": "PASS"
+}

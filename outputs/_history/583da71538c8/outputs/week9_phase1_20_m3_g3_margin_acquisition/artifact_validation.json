@@ -1,0 +1,20 @@
+{
+  "all_executed": true,
+  "figure_count": 4,
+  "figure_sha256": {
+    "01_q20_learning_curve.png": "3b2d33e8ac6178f139a662e5ff3e0ee7e3de4c0c52fe9a77ed86b0eb7fbc5b14",
+    "02_early_q20_zoom.png": "52e5c2c386e6ab743ae83463fd0a1d34b6fb0fc61d447662654d59b980057015",
+    "03_early_P2_minus_P1.png": "7c0642a093ed4ec72d29df7efe006091da965b1cb4e19770b4214f02a69053eb",
+    "04_early_P2_minus_P0.png": "f6d6fdcf6d30afbcaddc96ede4344686c932a66be8d9e9d2332b13c7add0e1d6"
+  },
+  "notebook_code_cells": 10,
+  "published_compressed_table_counts": {
+    "budget_metrics.csv.gz": 58500,
+    "candidate_probability_audit.csv.gz": 1769600,
+    "p2_test_predictions.csv.gz": 526500,
+    "query_paths.csv.gz": 24000
+  },
+  "status": "PASS",
+  "visual_inspection": "PASS",
+  "visual_inspection_detail": "All four final PNGs inspected: readable labels, correct legends, no clipped content or obscured bars."
+}

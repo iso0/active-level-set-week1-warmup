@@ -1,0 +1,31 @@
+{
+  "P0": "stored A0",
+  "P1": "stored validated Phase 1.14 path",
+  "P2": "live sequential standalone G3",
+  "bootstrap": "exact p14.bootstrap_interval: 10000 percentile draws, p14 seed namespace and key convention",
+  "decision": "SUPPORTED if mean >= .01 and lower > 0; NOT_SUPPORTED if mean <= -.01 and upper < 0; otherwise SMALL_OR_UNRESOLVED",
+  "evaluator": "exact Phase 1.13 M3 at all integer budgets 16 through 80",
+  "historical_numbers_are": "accuracy AULC, not balanced accuracy AULC",
+  "integration": "normalized trapezoidal, divide by last minus first budget; larger is better",
+  "parent": "5a7a6c0",
+  "parity_probability_tolerance": 1e-08,
+  "practical_threshold": 0.01,
+  "primary": "B1_q20 balanced_accuracy AULC B16-B40 P2-P1",
+  "secondary": [
+    "P2-P0",
+    "q20 B16-B80",
+    "q30 B16-B40",
+    "q30 B16-B80"
+  ],
+  "selector_interface": [
+    "pool_features",
+    "pool_indices",
+    "revealed_indices",
+    "revealed_labels",
+    "run_id",
+    "budget"
+  ],
+  "sign_flip": "not present in Phase 1.14",
+  "status": "FROZEN_BEFORE_P2",
+  "unit": "20 repeat means, each retaining all five folds"
+}

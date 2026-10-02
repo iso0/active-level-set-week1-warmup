@@ -1,0 +1,2336 @@
+{
+  "schema_version": 1,
+  "record_type": "PRE_CONSOLIDATION_READ_ONLY_SNAPSHOT",
+  "captured_utc": "2026-10-02T14:38:47Z",
+  "snapshot_complete": true,
+  "snapshot_readiness": "PASS",
+  "consolidation_readiness": "PENDING_HISTORICAL_UNTRACKED_PRESERVATION_REVIEW",
+  "network_fetch_performed": false,
+  "git_mutations_performed": false,
+  "repository": {
+    "root": "C:\\Users\\ozgur\\Documents\\thesis",
+    "current_branch": "codex/week11-new-data-arrival-audit",
+    "current_head": "e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1",
+    "main_sha": "5ae71520073435ff4d312c9b1bc99683c8a3eb4a",
+    "intended_week11_tip_sha": "e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1",
+    "primary_status_lines": [
+      "## codex/week11-new-data-arrival-audit...origin/codex/week11-new-data-arrival-audit [ahead 3]",
+      "?? .codex/",
+      "?? docs/week11/WEEK11_REPOSITORY_CONSOLIDATION.md"
+    ],
+    "primary_status_before_record_creation_lines": [
+      "## codex/week11-new-data-arrival-audit...origin/codex/week11-new-data-arrival-audit [ahead 3]",
+      "?? .codex/"
+    ],
+    "record_artifacts_created_after_initial_status": [
+      "docs/week11/WEEK11_REPOSITORY_CONSOLIDATION.md",
+      "outputs/week11_repository_consolidation/PRE_CONSOLIDATION_SNAPSHOT.json"
+    ],
+    "status_collection_note": "The initial status was captured before either record artifact was written. registered_worktrees.status_lines was collected after the Markdown record and before the JSON record."
+  },
+  "ref_summary": {
+    "local_head_count": 53,
+    "cached_remote_branch_head_count_excluding_symbolic_origin_head": 3,
+    "main_to_intended_ahead_behind": {
+      "ref_only": 0,
+      "target_only": 4
+    }
+  },
+  "local_refs": [
+    {
+      "ref": "refs/heads/codex/archive-week3-named-benchmark",
+      "oid": "27035c84625d1228a6ed8994c619727ed9f40262",
+      "upstream": null,
+      "upstream_track": null,
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 83
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 87
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/external-masinelli-feasibility-audit",
+      "oid": "8d99c1976890bbf4a12a7cfcd00e9bdd7ae924a8",
+      "upstream": "refs/remotes/origin/codex/external-masinelli-feasibility-audit",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 46
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 50
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/pre-new-data-readiness",
+      "oid": "5ae71520073435ff4d312c9b1bc99683c8a3eb4a",
+      "upstream": "refs/remotes/origin/codex/pre-new-data-readiness",
+      "upstream_track": null,
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 0
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 4
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/thesis-complete-consolidation",
+      "oid": "3b42fb235ca3e39c1712ed6b60c4dba71084f3f1",
+      "upstream": "refs/remotes/origin/codex/thesis-complete-consolidation",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 3
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 7
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/thesis-unified-project",
+      "oid": "5b7d030413ed2aa24e6e4c8f124dd5145f735618",
+      "upstream": "refs/remotes/origin/codex/thesis-unified-project",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 12
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 16
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week10-pg-rmbc-internal-replication",
+      "oid": "a380aeb07f6328d8365273835c09a452b4e33d8b",
+      "upstream": "refs/remotes/origin/codex/week10-pg-rmbc-internal-replication",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 11
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 15
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week11-new-data-arrival-audit",
+      "oid": "e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1",
+      "upstream": "refs/remotes/origin/codex/week11-new-data-arrival-audit",
+      "upstream_track": "[ahead 3]",
+      "ahead_behind_vs_main": {
+        "ref_only": 4,
+        "target_only": 0
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 0
+      },
+      "ancestor_of_main": false,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week3-4d-benchmark",
+      "oid": "50293d32f81901d69814260a94e14bd77927a028",
+      "upstream": "refs/remotes/origin/codex/week3-4d-benchmark",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 76
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 80
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week4-chronology-restructure",
+      "oid": "2042f025aa205165bf6be607f3152b7cd69f0ef1",
+      "upstream": "refs/remotes/origin/codex/week4-chronology-restructure",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 72
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 76
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week5-first-conduction-gp",
+      "oid": "1751286bb0da617d8c8c57a5440d187ca288e720",
+      "upstream": "refs/remotes/origin/codex/week5-first-conduction-gp",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 67
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 71
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week6-1-optimized-gpc",
+      "oid": "2d49ec3a9282a1df69eb9f6d4737917f69bb9c3a",
+      "upstream": "refs/remotes/origin/codex/week6-1-optimized-gpc",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 75
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 79
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week6-phase1-melt-pool-data-audit",
+      "oid": "1751286bb0da617d8c8c57a5440d187ca288e720",
+      "upstream": null,
+      "upstream_track": null,
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 67
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 71
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week6-phase2-5-depth-closure",
+      "oid": "b112f6b22898976f77410190614cb4fb218d38f9",
+      "upstream": "refs/remotes/origin/codex/week6-phase2-5-depth-closure",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 66
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 70
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week6-phase2-gp-response-models",
+      "oid": "1751286bb0da617d8c8c57a5440d187ca288e720",
+      "upstream": null,
+      "upstream_track": null,
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 67
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 71
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week6-phase3-5-regime-target-design",
+      "oid": "b112f6b22898976f77410190614cb4fb218d38f9",
+      "upstream": null,
+      "upstream_track": null,
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 66
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 70
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week6-phase3-model-target-robustness",
+      "oid": "b112f6b22898976f77410190614cb4fb218d38f9",
+      "upstream": null,
+      "upstream_track": null,
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 66
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 70
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week6-phase4-new-outputs-feature-effects",
+      "oid": "cba151880fc670d1b8a20ff2f7f25295f9bcb892",
+      "upstream": "refs/remotes/origin/codex/week6-phase4-new-outputs-feature-effects",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 65
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 69
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-1-gpc-sur-validation",
+      "oid": "00e71a62fa68d16834af8ac7802ade6404f57f95",
+      "upstream": "refs/remotes/origin/codex/week7-1-gpc-sur-validation",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 73
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 77
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-boundary-weighted-sur",
+      "oid": "16fe1b6212d474780704ceadba45d88323ef16f3",
+      "upstream": "refs/remotes/origin/codex/week7-boundary-weighted-sur",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 74
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 78
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-comprehensive-presentation",
+      "oid": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+      "upstream": null,
+      "upstream_track": null,
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 56
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 60
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-phase1-2-sph-v2-audit",
+      "oid": "7ab7ada0c89680fe11dbdce22a51ad5f2ee7c929",
+      "upstream": "refs/remotes/origin/codex/week7-phase1-2-sph-v2-audit",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 61
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 65
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-phase3-new-data-model-stability",
+      "oid": "1118d30f3199a97b9836591f8fdea75b46dfac0d",
+      "upstream": "refs/remotes/origin/codex/week7-phase3-new-data-model-stability",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 61
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 65
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-phase4-new-data-feature-effects-depth-diagnostics",
+      "oid": "5b7004017cadc5ecd0eb128f2031f9148ed70900",
+      "upstream": "refs/remotes/origin/codex/week7-phase4-new-data-feature-effects-depth-diagnostics",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 60
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 64
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-phase5-5-g3-robustness-transfer",
+      "oid": "6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb",
+      "upstream": "refs/remotes/origin/codex/week7-phase5-5-g3-robustness-transfer",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 58
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 62
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-phase5-keyhole-physical-proxy-analysis",
+      "oid": "3367f4c9b5af2def802f72a65258f5cc01896bac",
+      "upstream": "refs/remotes/origin/codex/week7-phase5-keyhole-physical-proxy-analysis",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 59
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 63
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-phase6-real-data-boundary-active-level-set",
+      "oid": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+      "upstream": "refs/remotes/origin/codex/week7-phase6-real-data-boundary-active-level-set",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 57
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 61
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week7-phase7-final-boundary-hybrid-benchmark",
+      "oid": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+      "upstream": "refs/remotes/origin/codex/week7-phase7-final-boundary-hybrid-benchmark",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 56
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 60
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week8-5-frozen-sample-efficiency-confirmation",
+      "oid": "6487722fe5e60d951ab929d8539e0793f9bed366",
+      "upstream": "refs/remotes/origin/codex/week8-5-frozen-sample-efficiency-confirmation",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 54
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 58
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week8-definitive-sample-efficiency-presentation",
+      "oid": "401b51c3da96897995d2156cde92604231ba9b4a",
+      "upstream": null,
+      "upstream_track": null,
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 55
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 59
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week8-final-sample-efficiency-thesis-consolidation",
+      "oid": "401b51c3da96897995d2156cde92604231ba9b4a",
+      "upstream": "refs/remotes/origin/codex/week8-final-sample-efficiency-thesis-consolidation",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 55
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 59
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-no-phase-controls-r-and-d",
+      "oid": "9c487d61ced8bb731b719950f5f195e46519254f",
+      "upstream": "refs/remotes/origin/codex/week9-no-phase-controls-r-and-d",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 83
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 87
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-10-closure-diagnostics",
+      "oid": "e33cca4f81b865d330577ef9a8140c4bbe306e5a",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-10-closure-diagnostics",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 44
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 48
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-10-external-experimental-validation",
+      "oid": "45e2677b7a57ed3aa5ad5154459100a9b5d2d436",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-10-external-experimental-validation",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 45
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 49
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-11-fixed-mean-discrepancy-gp",
+      "oid": "5a21e5dce37fc6d4c58fa40bb7a6711920fec94e",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-11-fixed-mean-discrepancy-gp",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 43
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 47
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-12-gpc-kernel-adequacy",
+      "oid": "161453983996b763824f2d262b5ce9d63332da16",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-12-gpc-kernel-adequacy",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 41
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 45
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-13-fixed-physics-ard-discrepancy",
+      "oid": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-13-fixed-physics-ard-discrepancy",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 40
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 44
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-14-m3-margin-acquisition",
+      "oid": "5a7a6c05ae5bf3191b74766156407211ad414360",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-14-m3-margin-acquisition",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 39
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 43
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-15a-physics-residual-signal-audit",
+      "oid": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-15a-physics-residual-signal-audit",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 38
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 42
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-16-m3-repulsion-scale-audit",
+      "oid": "746b19153f377bb0b7219d1c113bab672e306b19",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-16-m3-repulsion-scale-audit",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 37
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 41
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-17a-physics-contour-geometry-audit",
+      "oid": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-17a-physics-contour-geometry-audit",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 36
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 40
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-18a-level-set-acquisition-compatibility-audit",
+      "oid": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-18a-level-set-acquisition-compatibility-audit",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 35
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 39
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-18b-prospective-global-gpc-sur-benchmark",
+      "oid": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-18b-prospective-global-gpc-sur-benchmark",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 33
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 37
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-18b0-fast-gpc-sur-update-validation",
+      "oid": "1e34b4759037d5f3d107781791524853a406a526",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-18b0-fast-gpc-sur-update-validation",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 34
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 38
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-19a-integrity-posterior-monotonicity-audit",
+      "oid": "2975e72326f1680e81f16e0a29fc003bcaaf2aae",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-19a-integrity-posterior-monotonicity-audit",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 32
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 36
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-19b-prospective-robust-monotone-pool-lse",
+      "oid": "bf4782881bc27fe1ec5256dc3ba0516478a1ed13",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-19b-prospective-robust-monotone-pool-lse",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 30
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 34
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-20-m3-g3-margin-acquisition",
+      "oid": "49a054e3f80b8601fcb175826d54d71519f2813a",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-20-m3-g3-margin-acquisition",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 38
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 42
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-5-h-physics-confirmation",
+      "oid": "b36a815e12dfa872c20a050228e0545f18c443ef",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-5-h-physics-confirmation",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 50
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 54
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-7-physics-ridge-residual-gp",
+      "oid": "2f750c8c270baebc7e013ebe83fc429f9df14d51",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-7-physics-ridge-residual-gp",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 49
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 53
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-8-model-path-decomposition",
+      "oid": "f74c6252bbb48d503f969ef5300f20894079301b",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-8-model-path-decomposition",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 48
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 52
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-9-physics-specificity-control",
+      "oid": "0df38fd5492d8ea264a2b9bbcd714d6c9d74be49",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-9-physics-specificity-control",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 47
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 51
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase1-close-week8-sample-efficiency",
+      "oid": "bdb6eb3628ae5eafaa0e5bc94d454626a6cf550a",
+      "upstream": "refs/remotes/origin/codex/week9-phase1-close-week8-sample-efficiency",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 51
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 55
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/codex/week9-phase2-temporal-width-dynamics",
+      "oid": "da913797d14b171bec55d3708f96aa87f09a4f94",
+      "upstream": "refs/remotes/origin/codex/week9-phase2-temporal-width-dynamics",
+      "upstream_track": "[gone]",
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 46
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 50
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    },
+    {
+      "ref": "refs/heads/main",
+      "oid": "5ae71520073435ff4d312c9b1bc99683c8a3eb4a",
+      "upstream": "refs/remotes/origin/main",
+      "upstream_track": null,
+      "ahead_behind_vs_main": {
+        "ref_only": 0,
+        "target_only": 0
+      },
+      "ahead_behind_vs_intended_week11_tip": {
+        "ref_only": 0,
+        "target_only": 4
+      },
+      "ancestor_of_main": true,
+      "ancestor_of_intended_week11_tip": true
+    }
+  ],
+  "cached_remote_refs": [
+    {
+      "ref": "refs/remotes/origin/HEAD",
+      "oid": "5ae71520073435ff4d312c9b1bc99683c8a3eb4a",
+      "symbolic_target": "refs/remotes/origin/main"
+    },
+    {
+      "ref": "refs/remotes/origin/codex/pre-new-data-readiness",
+      "oid": "5ae71520073435ff4d312c9b1bc99683c8a3eb4a",
+      "symbolic_target": null
+    },
+    {
+      "ref": "refs/remotes/origin/codex/week11-new-data-arrival-audit",
+      "oid": "30efdd6df3b0ffd4bd7ccc4fcdc60a7693c6b09d",
+      "symbolic_target": null
+    },
+    {
+      "ref": "refs/remotes/origin/main",
+      "oid": "5ae71520073435ff4d312c9b1bc99683c8a3eb4a",
+      "symbolic_target": null
+    }
+  ],
+  "week11_unique_commits": [
+    {
+      "sha": "30efdd6df3b0ffd4bd7ccc4fcdc60a7693c6b09d",
+      "parents": [
+        "5ae71520073435ff4d312c9b1bc99683c8a3eb4a"
+      ],
+      "subject": "Audit Week 11 simulation arrival without outcome access"
+    },
+    {
+      "sha": "1bfb965e512e50d5d12e8ac4184a5472f307a92b",
+      "parents": [
+        "30efdd6df3b0ffd4bd7ccc4fcdc60a7693c6b09d"
+      ],
+      "subject": "Audit Week 11 Bug annotations without physical outcome access"
+    },
+    {
+      "sha": "2f3c0ea834d1bdc5d5ddc0a014eb726f31a00d03",
+      "parents": [
+        "1bfb965e512e50d5d12e8ac4184a5472f307a92b"
+      ],
+      "subject": "Record pre-label 136-run design with unresolved custody gates"
+    },
+    {
+      "sha": "e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1",
+      "parents": [
+        "2f3c0ea834d1bdc5d5ddc0a014eb726f31a00d03"
+      ],
+      "subject": "Seal Week 11 external validation with owner-authorized blinded oracle"
+    }
+  ],
+  "week11_diff": {
+    "path_count": 248,
+    "status_counts": {
+      "A": 248
+    },
+    "top_level_counts": {
+      "outputs": 230,
+      "docs": 10,
+      "src": 8
+    },
+    "paths": [
+      {
+        "status": "A",
+        "path": "docs/week11/OFFLINE_ADAPTER_RUNBOOK.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/week11/TECHNICAL_ADAPTER_CONTRACT.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/week11/WEEK11_B80_FEASIBILITY.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/week11/WEEK11_BUG_AUDIT.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/week11/WEEK11_DECISION_GATE.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/week11/WEEK11_EXTERNAL_PRELABEL_FREEZE.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/week11/WEEK11_LABEL_BLIND_INTAKE.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/week11/WEEK11_NEW_BATCH_BUG_AUDIT.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/week11/WEEK11_NEW_DATA_PROVENANCE.md"
+      },
+      {
+        "status": "A",
+        "path": "docs/week11/WEEK11_TRACKB_SIGNAL_AVAILABILITY.md"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_bug_audit/VALIDATION.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_bug_audit/b80_structural_witness.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_bug_audit/bug_affected_simulations.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_bug_audit/bug_audit_summary.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_bug_audit/bug_frames_projection.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_bug_audit/prebug_numeric_integrity.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_bug_audit/simulation_bug_status.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_bug_audit/technical_payload_provenance.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze/FREEZE_PREPARATION.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze/FREEZE_PREPARATION.sha256"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze/FULL_DELIVERY_MANIFEST.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze/INCLUDED_MANIFEST.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze/PRELABEL_FOLD_ASSIGNMENTS.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze/PRELABEL_OWNER_DECISIONS.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze/VALIDATION.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze/WITHHELD_MANIFEST.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/EXTERNAL_BATCH_FREEZE.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/EXTERNAL_BATCH_FREEZE.sha256"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/FINALIZATION_VALIDATION.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/LABEL_BLIND_INTAKE.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/LABEL_BLIND_INTAKE.json.sha256"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/PRELABEL_FREEZE_COMPLETION.md"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/intake_inputs/ORACLE_CUSTODY_RECEIPT.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/intake_inputs/delivery_inventory.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/intake_inputs/provenance.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_external_prelabel_freeze_final/intake_inputs/units.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/VALIDATION.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/WEEK11_NEW_BATCH_MANIFEST.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/audit_summary.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_inventory.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projection_source_mapping.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/022f0fb77d5a26d76d2a7556e8b41f5f03ba0c3197d0b56539ca576aa018844d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/028f8789d93aaaf3c8fe09bcfa1aa7e6232d1033367aee29bb922a79278bf107.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/057057e9c176bbc0f32d2663f9f0475c28b206c04439c4494e74a922016ddaf1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/05b78c2d382d0ceab200b70e27ecf8155f720d8a625842dab44dc1b5917b5d54.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/061289edb000aafd6d987570f9693f026a4a7f50ed5b460e4b4a4feb017d1013.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/06880996c4d7ecb9629fd62f24ccba582d4abb8d2649a3f025a1cb7a0c623987.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/08664d8ee9182bb78db5b1b6c9d3919fdcef793db790a3ace175e8096cf3a229.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/098ca3ec6c4a26a30d9d513715e28fd61443ecf2be306053babd80df3ee4e94d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0a026e30f5b8507a0308c207943f88aaf86d2d893b0e26e029136ee9343fc73b.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0a81a3fbea8d9924b3a12cd11b307a1adeee3e0e969c111fdb650366114e8413.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0a84b7b7c04a88a14ba2e4e706e5700e0f463be8220b061b1be928335304ade5.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0a9354392c51b0a13a1c0b335c15857933df13591d67c356e92c1f378b24ce0b.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0b9c523178398036c5f53bd0211c64a06683f7770b0ed2b0101f9bde480b7259.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0c6604f0381a722f9b26056ed34fe5cd2077cf12cbb5d77dddf11ec06fc9fe2c.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0e0c7e457850c79b180e1b2b15d142ed86ce9098a5e36d9942c9a27e811a87a0.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0e188e3d0cfb70d549103b25897fa7ba86582fa73c865f49a601bf4192d6184e.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0e7d383149ed05977da37e7284f8e46ccc57dede6c9cf41fac91f559b8d51d7d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/0f7f11613f8da5984342d57ff8db34c2566b96094dd2645072fa764bcb2f7ae1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/1220c50520607e529f9e9e7546383f2aa0b886ee280cd4c0a1cdcce691bfa241.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/17daac4f0239613af3c49ff14114236bd248fba5e5be8252f428725c60052547.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/1898470ec8351f59546c64c7080e1a808dc30bf10c4ec15e02956c713b1ed139.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/1918bbccb4cfda1ced9a4194f043bd064cc4dca142266ec599b603a240b60c25.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/1b950327ac826e6831a8da8a8eed245978f36778f219a694c846f2a43c609a3f.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/1c053fa8546c4a883c7fe9b0868d2ce5f29f99c89cfb78105b49a104c36e7f5c.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/1fd5121fa2f1193a3fa0bf8826ffcd845c2641fef27dea0595a98216243a6323.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/20796e292a6eeff2bf36b497fa6598680590d7d3a2fb9001920fecbb7952dfb3.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/20fee8b7c342dcddb234faa884fbd4f76d88655f4337e2b203ac8b678db858bd.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/21d49b6a40edd97123e675827818e6cf7483acaedbc20662beec24f334262b46.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/23e396249cbb434d9847b5066214743947917277f4d5dec29563d4da086cef92.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/24da4d6cccd311a373690e0772de14bc42e33f9b13f495fa5c5d00633586ab2e.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/256e4f220e603b7aad7afe5b6d1ae2ea7b16430da12f06029c009854f3afcee0.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/25b9ffe54766b844662eaa02019c82588e94e93f95f0447a5d4162d510617984.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/25e95593ecdefffdfc2f093148b9ab100b1412ba858d37d97879597d480f8c01.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/27602cff5b88bfc7d324b88bc7b8e5e1125c7a4ab0c9220640650446fe897739.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/2940b44b88105a109fa1e95c7f2970705c8c35eb0f5c740c1b7a558d59c5d83f.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/2a30cdd761339e16b4f7be26fabb79308ca535a78b340da9b1528101eb998bff.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/2b6f06642972272610bc6b42133dedb341b4140d559a6ebdac3b5fa7f45ae047.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/2fddb0e0ed45a4f31ac3f865534605282353e283af9e030c9d93a3ce9aa26c29.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/30d0679ff0caf5227e4eac2752e02bcfb76452d57745af3d76d8b4c633ce410d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/30e685b5d3c07da3630aa411f1fb9c375c36238b9aecc2e779a4539492b9b0fd.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/32eab077a4b7f831fd5baa922e13f827277e6b5b4790df328ddbb6a85d5bfba7.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/3447924c1d4e3c402e0a88f16be3547ae94299b72184eb955b6caf024dc1ff72.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/353d650512044138a1f5187d14b252971d4975ffcf311dd0a22619efe59f4b95.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/385cae9d0b9ca8052caf7b91c7e42fa51815f5645b5216b7e6676a7df51cb1e7.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/3994ce841733af5ebb218339ad3092dfa0b02956bb5169220cd24436b34565b3.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/3bdef44f3bb273ade62351f48a7db050adf573f1826512fce8adce245667559d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/3c751264f5cc8e8de5391376ebbb34ca44df30f72f00182ea2072869eed7b1d7.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/3cd746c904cc939dcf21f47a02c66d7b59dedc891f140be48aab8bae6db3ad43.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/3e3decfc65dc297e03df0cc3ad9dad372cf2cf6305571960532d137a05cb74e6.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/3eb66b316a1e57bceda96a4750adaaf5782fe1835f56d69ab54e5bce10982ac1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/4015010f0760c7d44a4c3efb9a9fc7317b85ceec24accb6971dc46ec5b0a30ba.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/412672e21c9f4602aa0a77cb11e902acde4de55709faf2464db5a3ed039217d6.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/4341921bb52b67ac521a27e05892013f65a2238d44dd732cc4091d200ce09762.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/44a22f64649dbe969fc099e0e68eff0e1db6c9334842a2d055a4e05e16674650.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/44c15eda64e33c51a57ada395212cd1bab9008c702b9c8656df18a359141cee8.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/472186424a8c765dbb0ea9e8318b624fea84e5721455de27811e03978884b655.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/481579191e79fe590bf663fb23ee0481be53a3d73cbfac2df2f4e476a2606c93.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/4f4b40d985f77ba1a9ad3123e648e80b9b309552c217cec579b326c6890ae829.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/4fda725396d9d49977266fc37a2d729ba77eeeaca56fe92a58fddd04dd8f316b.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/53e567c4c82399248169f7c2ca21c2e4ea16df8659e32a5bb511ac59510dd33f.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/555a43c9126c1e0c2f7bb67bfc563525f0e99dfe3bcd79a6ef4e3dd9bd19e0ad.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/55917aaf264afd0fc5d1f4e3c14ba63b316452de270388f303d3569d77cb01eb.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/57241d401e0ebd9535e8a9022cf258f048f263231f07d29a7d1d1b6c668a24ed.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/57ef9302bb2399e825830c30a867b2cdcdb4b5c5f8632e0be123a1391ab5c734.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/57f6b04adc49ed4dc9500fa81da1111ee0611e38af9978504ffe2dd67998b992.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/585ed20d08a887d06a820270eab73d0b2fb5ef5836e72f965adddb2c7595e59a.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/5b457305837339b6a057eefe8302438d2a031099046f13acf6741c77b4db916f.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/5b7e6e114467556fb9ad34cf9602dc2ae932dffbc151e7a2c523cecf409f2362.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/5cac3c1a18eac22d051b0522ed45ba7a114903757f73b2c9a97622e85164b8e2.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/5d49dcee61508deb03a119d8f96819cb4d08de4f29da1bfd846177f40767378d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/5db9388c14e78887e3aa4bc15fde332c92aadb2ebe267b976e8eca899297c28a.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/5ee5a0b506ff0da5ec9a58b7a2b02ff14826c5eebe2ec5d1f1e7594c8af0e414.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/617a1897182910a15baa97372a42a5126805cf03e7a847c3004c6ec82efba92c.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/61ce30e1a11376c37cc292a8605a5cc358e412b0e66b12422ad7f360b30d4391.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/63ce1188f63686eb6f83ce7d97c2e18ea7c9a2ec5b89a5d800b7e6edcfb9f519.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/63de60155a71399941044bf2967d7b8d9da3cd4b50cc6c401a8ec103207be22f.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/63edf5273d0e0f49c7a638ce3beb515f80d922f70a6bd665675e26d3c031ca42.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/64099d3b57daff1f559c769de0644f80a3253864b5bc69c1f8902ecfac12c756.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/6465df7b67686745ae679e10a499a5f0bb6056778fa99633685044b0d481ea1b.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/68020445ea79193ff0ec283117d56ad66e4f8ddbc0a41c932b6d73e3995983b2.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/6945a39109d8db45f205bfab001d77723c9fa88b833b7f3e31f28266b48cd9f7.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/6a6c54f82065d4e7b481d01b177730a4ff74b297d706d934189119162d397a5b.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/6b0b8c00254c4fdb43870479e9af1d0c74cc93083a34c2a3837239232828a0f5.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/6c5ade2f3c77e30595c7d8218867b68d45c1597c43bfc9e69a8252db42f988c1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/6d133f1575c708b95a9cabe58a2cab4769b91e11d53f89d6b6bd403f04b3c46a.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/6dae1686561387ee5bfff48b55b0aafbbce7cecd67a0523495a74fab6a5f78fe.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/70f0ebd2c0f9b5f08197c263078ba0c838b2d2d1a60cb8505e55e92a9bdadec7.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/72646f76f7606dc97e1e8379bfa9e8430c5377dfe06e680389f271aca6033925.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/74c4e4ce54b5f1a61f762804e6c8655b309fc345a814e084a36451ab6054eaab.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/74eae14ce49c4bbe2a9a0d9631abf91d714c3315535435c19636009cdbb9da44.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/765afdd9a049d9a80caf92d773d0e7bdfd11eb8464fd883351f0dd83971285a1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/779a519088a0a89768733a189ead7bd4ca43093344a24204bcd5cbe3202b8329.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/77e7209c460f57a6088625f05dbdbdca8b9ae43bc02ba0b49aded62b2e4305c7.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/792b9ff524cb2c46c3592e391869b44d083b233cffbef436f55a4e6fcdf1b58c.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/7a0d1980235b6c4a6a4eb855454c56b3cd2e23aa7e118e11cbffe7e83d4815af.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/7ab4a2d99adecf1ec1a99f583830fde310be4bb58b308b38b8227f82767f2ad0.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/7b4d99799b5195048cfad70d465be17ff30049ba565b2b24fcca709de8c617d1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/7b992aae313e766d23c4dbd911fd7210911ca9e4038792f95102c37d699af21e.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/7ce0b6533e5255a6845a4e7f9d8b0e2059abeceb91e3b641b846a66d326efb14.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/7ef0e26ae4e0f5ac0f769dbc4a1185365377852cd94d97ad5c4993ad7516cba1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/7ef395ed18620016f13ebc90683d86d741cb8817997069e0591a8bfd3daa25da.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/82f406002b12b4794ae6aa0b94fc1e884caacbf2209b56efe5e30a7a0e3b05f9.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/87b2632e5905ae012e7cdc32a2962c22eed732ef2a80e9185fe947e7e14bf63b.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/8a302e5cbb4befb471be8d62599ee70c29d4c543ba4d1fd51da553e1f2c838a9.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/8b4503b6d5fc84d7a89654821875ac72c70eb1f9de1715bab725448ea7391790.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/8ca3f41d23cbffb71eb9649939b10e3089c04e0f02ac932288ebc61d14132766.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/8d172f1947af66295beff34dc41fa4889424bbb8081f80dca55b4cac84470b4a.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/8df37afaa435db5a4e097fb952e137bdd7e607c23e01774d9868f5948948d6bc.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/8efb0ca570123de1daf724bd77b8f0a10846e56e99f05c989114e9cafaf8fa49.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/8fdc87fb077847633f4e35ceeda7204c48c2fef5d3e68ae0aff35effebeb2d51.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/918dfcfb29dd8dfc80ce04097b8941a1c6dc41eea3b2b4f4fce38ad6aba8efb8.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/92c8e2626a373a7b083ae966dcfa5e5e3699d276769e0702974e2c982b6475ef.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/933c72820b61194bc4709cb71a576e7e64dcc4af853bd457e2765f4a4fa911c1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/97b8bfc8ab7b44bbe46f683712fa4e151ad15ccaf9f0b9be35f200931ebab945.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/9913a1f3801dd2b2f6b801bfb23afcce0d27a8d42bea91a86ebee1f7d5e4cc66.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/9f01041d4a8692ad48b66866455caf4e5ed39096f7d94db1aa5d5f7fca8eab76.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/9f0f12f9483716b6ff9da93ee396011556b5da5d4990ead290779efe6c4b2715.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/a15829efbe38c1149a51ccf310f549d4d699cc75eeaa89533e9561f16c557863.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/a552fd967e24bce56b6cc251ea06f5c62129574adbe812c171c7419e873178c0.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/a62268831c7c816f43f1905b145ca70d5b7a512f5cf3019d28c321d592b42948.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/a8ac864df66aa28ed68995d0b62a7c5ec08b16902a16d97c69b8307abc2669a2.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/aa28f0b5579b85eb9f184e373ef0a92a370f83f2f67ec12e6c0833c61df5e4c4.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/aa305a39d266f343be90f5be9251f04d5ed8aa1c1b3b01a3b1ec65c56a984154.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ab2f0852ee97615a82871ebad1748e7802534d7eacf1e3c4cd715c7a5ee27d3d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/abc6134ae613fe1ee619ae4ce42baaaf54751781ab4abec21b51c94a1cfed2cc.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ac3b7e3b5344bd61b6346a9149e880eddfe8eba81fd068766cd0d865efd9f360.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ac4c7f3237b251550ebca1d73cd4489dfec7063bd919de9c393fcff718893ee5.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ad7112b70c0e4c63d25ec8e922083bfaa6d1e20bd00a31bb72affd841b45c890.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/add44b3b39fcc851f6d24033aedc5623ae31dd180dedbbffd2b221b853add189.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ae23f20820a63042440a62dc837d00f1f287d507cc6a523eb0726f6bee282020.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ae58a189a197921314c128bd364071c47ce47bb49d2f713b6a1fddbf83fa599b.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/af307e63be706096d223d3d7e7dcd4d53b14f8414e82fdf8c8ca66ce8ffdec4e.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/b08587c94f3140a24090e89b33c6c86e4d713957b7b8e9e692eaef28877fa963.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/b1c9987dcdb47f14b952be4a66be648625f951510c9bbb645d1787cfc28bdbd1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/b1cbc6a9d94a880dc3619fe1dd4fb555546d5b04c19bef0b6ef4aa6b8847f75d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/b2730dffaf6278362ff72d27ffd55d955b5720524e52664135c3f5e4c65676f1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/b47bc9ca96e1282c66cdd2ccb5e9cb050483761d463e86198d31d0c8859f5185.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/b73c81a7418c6cb7be3557e8567bad7ecafb0e952438d2fa7e673758097c514f.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/b8576e5b84454346c8c36943a535d18564dd1f8d1a2bb523e74045ffcd67d2d1.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/b9e8ff44a05dd67078a914857e8f74cec666063287d110cb8c5917dfd74e3b48.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/bb42d224cf3956223c04f2433caed59174d1497dd9b82ee1f82f239b08ac2f9d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/bdce71e8b6ff49ac35116d6b63d25687b58e4613c4f37f6eab728adeda91fff4.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/bdf494f86ad7a39f0619b7ff6cad59e049ca8b9a4b264023cfff2b7beb6f6bb2.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/bf72b29b48cf167e4bd1876e1c4cbc67195f7bc8045f7712325dfd6085550155.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/c1b4427488d3339b774782b5ec42a378973b6b4b98f90681bcbf4411e41e4619.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/c34ae6c14e4f4044cb3d47a521d6d20c272d7461c1cbdc531282f90c8dc2b2b0.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/c5fccce49cccfcc8abba727d24865361ea4cde3e40071142062dd3d365fe69da.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/c633c894ef513a8677ee02dac02a15bc9a987da2a0788bf4a89bbd49eba06691.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/cbf6abb5cc6aa19135240c29c00fff76163da7b02a36764df21a4efeef19d63a.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/cc1b7fd3cddb4957e7f26d472d9e234ac85e23c4cb5e118824e3bf1d1ab08a48.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/cc918843839a113cd7810dded1fa4464dae5d35613b4334772199ad89723eb78.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/cdf05454783f6040a8b98c4c2d5d9f1d986d995cafbf0966f28468c268e765e3.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ce44bd2a47b6736a55c573e6fcc3c7c261db2d05fb6152f9c84b133b171aa45b.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ceb0de3a8b29d1bafa7338c74e5d8511d49594925b75ae9e1d2ad0b174f56d8d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/cf57003845ad5095b4264cffdd5a29218a56563e9415549e9415db09754a2e94.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/cf8330394185f53c72c0cef98efec9cadcfad36431598414d531b000bf77a20d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/d086dfdb786e5877a9d1a42452e52cea0603eebb7aac77749cbda8140fcf1fa7.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/d1f1dfcc0bd77be50da7459787579bff441b4bb41326d2d28086506404c3e956.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/d3a16985d456d2ac5dcd96d4913f52cb00ee21ff08d7eabc928e5a219c58325f.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/d6985547f769b5898a0928150233981d9a36d274c796885109b1d51b519084ea.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/d7f73c0dd551fe3cbc0261d8e615f8c11ead404cc796e47e77dbbcdd9d604931.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/d89641f8d1315e8b69cff8a20e7a6874ad37a4b8c98efee3d142d98da69ce2e4.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/db3915971f3c4938cf11f5a834df8ef2e130887947f44528c8b35706c088c30c.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/dc628ac93707bbdc085b4f90ab4edff75b24623f5bfb2ac7ad89119aa7f3cb17.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ddb397fcf3484c3a4f2fcfdddd1f41d379b8bbc12d3560a0259f25c7dce5a24a.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/e128f778585f49d7c2249113f4db5573957da280e113eb82e70b74d682e63a83.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/e33a0b037fd3269cd59e1156a38e18bc23a479b5a742dc8870fc45ab4484b451.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/e9498198b1331bf81ea53e0bbdebda07abecc98079620d4a534e45344008de55.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/e996ca4ea105a63dce2e7060e97e40d950d5caa7b0301559fb4d96f6dfa0092d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ed305f134f378884956d67dc16bd68f9b66fae268022125dca8a92355c7b8c55.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/efe648464dadd50c9bab0748cc7e9dd656d7f09a8cfa4423ca163f2e0ee84cda.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/f11314777dc2fe5f0e7b3dc2e5bfebef797799abac79f19b1f316181a09c3864.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/f21bede72aab6394a4eb2f549e129c312c4839deac1049e9faef8d3b4afbde5e.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/f22d86816d0c0e84e817e86efa61065481570b9bee3555abf89f2de7e8440c92.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/f3d3e464835e462794cf132e57780efd45ddf43f5cfe0fe00e9ac863cdba37c8.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/f5fec0b69df268dc9221c556811853939226176922824a9ba2d75df6dbed4986.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/f9a92e531eaec4f1bf96ed83f3044302d9daa6e4fe74e11829b84ca5db446f4e.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/fa9984c0342129cb51867154108e81ab40412d64d58f2ff42c3a29712d50ff84.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/fd2d7a18c06d75b5f69cac2610d6e9004adf99831784c8c3c1fc30a12ca28e52.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/fdf39810d273851ed096bd088653becb71581d6001a8fea46a014c43da59d642.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/fec11ab99a4f2d7ec8538821973f182843629ea599c8c791378c876eb402e7aa.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/feeae40fe2ee2f6c1102cf64ab6b9d3d25482d7d30933e2214c3a68f279fd61d.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ff37727b77431b5f6e1d710d7b34e83818e3dbf9599188bfe3a7eaa597976954.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ff59ade54355af80225607a11b0fb48798a97dcf1294a940bb159b292f8781b9.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/input_projections/ff6adc6cbd41e715e38184dc527eb1176a6b7cf7756a91e0e926557bf120be8c.input.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/label_blind_overlap_summary.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/metadata_content_identity_review.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/new185_input_manifest_candidate.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/new_directory_metadata.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/new_input_parameters.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/new_monitor_metadata.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/new_root_tree.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/old_root_tree.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/prepared_intake_report.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/prepared_intake_report.json.sha256"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/reference_manifests/OLD405_LABEL_FREE.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/reference_manifests/OLD407_LABEL_FREE.csv"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/root_tree_comparison.json"
+      },
+      {
+        "status": "A",
+        "path": "outputs/week11_new_data_arrival_audit/structural_b80_witnesses.json"
+      },
+      {
+        "status": "A",
+        "path": "src/tests/test_week11_bug_audit.py"
+      },
+      {
+        "status": "A",
+        "path": "src/tests/test_week11_external_freeze_prep.py"
+      },
+      {
+        "status": "A",
+        "path": "src/tests/test_week11_external_oracle_deriver.py"
+      },
+      {
+        "status": "A",
+        "path": "src/tests/test_week11_new_data_arrival_audit.py"
+      },
+      {
+        "status": "A",
+        "path": "src/week11_bug_audit.py"
+      },
+      {
+        "status": "A",
+        "path": "src/week11_external_freeze_prep.py"
+      },
+      {
+        "status": "A",
+        "path": "src/week11_external_oracle_deriver.py"
+      },
+      {
+        "status": "A",
+        "path": "src/week11_new_data_arrival_audit.py"
+      }
+    ]
+  },
+  "registered_worktrees": [
+    {
+      "path": "C:/Users/ozgur/Documents/thesis",
+      "head": "e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1",
+      "branch": "refs/heads/codex/week11-new-data-arrival-audit",
+      "path_exists": true,
+      "status_lines": [
+        "## codex/week11-new-data-arrival-audit...origin/codex/week11-new-data-arrival-audit [ahead 3]",
+        "?? .codex/",
+        "?? docs/week11/WEEK11_REPOSITORY_CONSOLIDATION.md"
+      ],
+      "dirty_entries": [
+        "?? .codex/",
+        "?? docs/week11/WEEK11_REPOSITORY_CONSOLIDATION.md"
+      ]
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-complete-consolidation",
+      "head": "3b42fb235ca3e39c1712ed6b60c4dba71084f3f1",
+      "branch": "refs/heads/codex/thesis-complete-consolidation",
+      "path_exists": true,
+      "status_lines": [
+        "## codex/thesis-complete-consolidation...origin/codex/thesis-complete-consolidation [gone]"
+      ],
+      "dirty_entries": []
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-external-masinelli-feasibility-audit",
+      "head": "8d99c1976890bbf4a12a7cfcd00e9bdd7ae924a8",
+      "branch": "refs/heads/codex/external-masinelli-feasibility-audit",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week4-chronology-restructure",
+      "head": "2042f025aa205165bf6be607f3152b7cd69f0ef1",
+      "branch": "refs/heads/codex/week4-chronology-restructure",
+      "path_exists": true,
+      "status_lines": [
+        "## codex/week4-chronology-restructure...origin/codex/week4-chronology-restructure [gone]"
+      ],
+      "dirty_entries": []
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week5-first-conduction-gp",
+      "head": "1751286bb0da617d8c8c57a5440d187ca288e720",
+      "branch": "refs/heads/codex/week5-first-conduction-gp",
+      "path_exists": true,
+      "status_lines": [
+        "## codex/week5-first-conduction-gp...origin/codex/week5-first-conduction-gp [gone]"
+      ],
+      "dirty_entries": []
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week6-melt-pool-audit",
+      "head": "cba151880fc670d1b8a20ff2f7f25295f9bcb892",
+      "branch": "refs/heads/codex/week6-phase4-new-outputs-feature-effects",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week7-comprehensive-presentation",
+      "head": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+      "branch": "refs/heads/codex/week7-comprehensive-presentation",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week7-phase3-new-data-model-stability",
+      "head": "1118d30f3199a97b9836591f8fdea75b46dfac0d",
+      "branch": "refs/heads/codex/week7-phase3-new-data-model-stability",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week7-phase4-new-data-feature-effects-depth-diagnostics",
+      "head": "5b7004017cadc5ecd0eb128f2031f9148ed70900",
+      "branch": "refs/heads/codex/week7-phase4-new-data-feature-effects-depth-diagnostics",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week7-phase5-5-g3-robustness-transfer",
+      "head": "6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb",
+      "branch": "refs/heads/codex/week7-phase5-5-g3-robustness-transfer",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week7-phase5-keyhole-physical-proxy-analysis",
+      "head": "3367f4c9b5af2def802f72a65258f5cc01896bac",
+      "branch": "refs/heads/codex/week7-phase5-keyhole-physical-proxy-analysis",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week7-phase6-real-data-boundary-active-level-set",
+      "head": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+      "branch": "refs/heads/codex/week7-phase6-real-data-boundary-active-level-set",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week7-phase7-final-boundary-hybrid-benchmark",
+      "head": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+      "branch": "refs/heads/codex/week7-phase7-final-boundary-hybrid-benchmark",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week7-sph-v2-audit",
+      "head": "7ab7ada0c89680fe11dbdce22a51ad5f2ee7c929",
+      "branch": "refs/heads/codex/week7-phase1-2-sph-v2-audit",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week8-5-frozen-sample-efficiency-confirmation",
+      "head": "6487722fe5e60d951ab929d8539e0793f9bed366",
+      "branch": "refs/heads/codex/week8-5-frozen-sample-efficiency-confirmation",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week8-definitive-sample-efficiency-presentation",
+      "head": "401b51c3da96897995d2156cde92604231ba9b4a",
+      "branch": "refs/heads/codex/week8-definitive-sample-efficiency-presentation",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week8-final-sample-efficiency-thesis-consolidation",
+      "head": "401b51c3da96897995d2156cde92604231ba9b4a",
+      "branch": "refs/heads/codex/week8-final-sample-efficiency-thesis-consolidation",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-10-closure-diagnostics",
+      "head": "e33cca4f81b865d330577ef9a8140c4bbe306e5a",
+      "branch": "refs/heads/codex/week9-phase1-10-closure-diagnostics",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-10-external-experimental-validation",
+      "head": "45e2677b7a57ed3aa5ad5154459100a9b5d2d436",
+      "branch": "refs/heads/codex/week9-phase1-10-external-experimental-validation",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-11-fixed-mean-discrepancy-gp-clean",
+      "head": "5a21e5dce37fc6d4c58fa40bb7a6711920fec94e",
+      "branch": "refs/heads/codex/week9-phase1-11-fixed-mean-discrepancy-gp",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-12-gpc-kernel-adequacy",
+      "head": "161453983996b763824f2d262b5ce9d63332da16",
+      "branch": "refs/heads/codex/week9-phase1-12-gpc-kernel-adequacy",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-13-fixed-physics-ard-discrepancy-clean",
+      "head": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+      "branch": "refs/heads/codex/week9-phase1-13-fixed-physics-ard-discrepancy",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-14-m3-margin-acquisition",
+      "head": "5a7a6c05ae5bf3191b74766156407211ad414360",
+      "branch": "refs/heads/codex/week9-phase1-14-m3-margin-acquisition",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-15a-physics-residual-signal-audit",
+      "head": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+      "branch": "refs/heads/codex/week9-phase1-15a-physics-residual-signal-audit",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-16-m3-repulsion-scale-audit",
+      "head": "746b19153f377bb0b7219d1c113bab672e306b19",
+      "branch": "refs/heads/codex/week9-phase1-16-m3-repulsion-scale-audit",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-17a-physics-contour-geometry-audit",
+      "head": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+      "branch": "refs/heads/codex/week9-phase1-17a-physics-contour-geometry-audit",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-18a-level-set-acquisition-compatibility-audit",
+      "head": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+      "branch": "refs/heads/codex/week9-phase1-18a-level-set-acquisition-compatibility-audit",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-18b-prospective-global-gpc-sur-benchmark",
+      "head": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+      "branch": "refs/heads/codex/week9-phase1-18b-prospective-global-gpc-sur-benchmark",
+      "path_exists": true,
+      "status_lines": [
+        "## codex/week9-phase1-18b-prospective-global-gpc-sur-benchmark...origin/codex/week9-phase1-18b-prospective-global-gpc-sur-benchmark [gone]"
+      ],
+      "dirty_entries": []
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-18b0-fast-gpc-sur-update-validation",
+      "head": "1e34b4759037d5f3d107781791524853a406a526",
+      "branch": "refs/heads/codex/week9-phase1-18b0-fast-gpc-sur-update-validation",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit",
+      "head": "bf4782881bc27fe1ec5256dc3ba0516478a1ed13",
+      "branch": "refs/heads/codex/week9-phase1-19b-prospective-robust-monotone-pool-lse",
+      "path_exists": true,
+      "status_lines": [
+        "## codex/week9-phase1-19b-prospective-robust-monotone-pool-lse...origin/codex/week9-phase1-19b-prospective-robust-monotone-pool-lse [gone]",
+        "?? 00_AKTIF_PROJE_YOLU.md",
+        "?? notebooks/week_09/06_week9_phase2_1_fourd_plus_width_control.ipynb",
+        "?? notebooks/week_09/07_week9_phase2_1r_simple_width_change_control.ipynb",
+        "?? notebooks/week_09/08_week9_phase2_1re_early_prefix_width_control.ipynb",
+        "?? notebooks/week_09/09_week9_phase2_2_width_informed_active_learning.ipynb",
+        "?? outputs/week9_phase2_1_fourd_plus_width_control/",
+        "?? outputs/week9_phase2_1r_simple_width_change_control/",
+        "?? outputs/week9_phase2_1re_early_prefix_width_control/",
+        "?? outputs/week9_phase2_2_width_informed_active_learning/",
+        "?? src/week9_phase2_1_fourd_plus_width_control.py",
+        "?? src/week9_phase2_1r_simple_width_change_control.py",
+        "?? src/week9_phase2_1re_early_prefix_width_control.py",
+        "?? src/week9_phase2_2_width_informed_active_learning.py"
+      ],
+      "dirty_entries": [
+        "?? 00_AKTIF_PROJE_YOLU.md",
+        "?? notebooks/week_09/06_week9_phase2_1_fourd_plus_width_control.ipynb",
+        "?? notebooks/week_09/07_week9_phase2_1r_simple_width_change_control.ipynb",
+        "?? notebooks/week_09/08_week9_phase2_1re_early_prefix_width_control.ipynb",
+        "?? notebooks/week_09/09_week9_phase2_2_width_informed_active_learning.ipynb",
+        "?? outputs/week9_phase2_1_fourd_plus_width_control/",
+        "?? outputs/week9_phase2_1r_simple_width_change_control/",
+        "?? outputs/week9_phase2_1re_early_prefix_width_control/",
+        "?? outputs/week9_phase2_2_width_informed_active_learning/",
+        "?? src/week9_phase2_1_fourd_plus_width_control.py",
+        "?? src/week9_phase2_1r_simple_width_change_control.py",
+        "?? src/week9_phase2_1re_early_prefix_width_control.py",
+        "?? src/week9_phase2_2_width_informed_active_learning.py"
+      ]
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-5-h-physics-confirmation",
+      "head": "b36a815e12dfa872c20a050228e0545f18c443ef",
+      "branch": "refs/heads/codex/week9-phase1-5-h-physics-confirmation",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-7-physics-ridge-residual-gp",
+      "head": "2f750c8c270baebc7e013ebe83fc429f9df14d51",
+      "branch": "refs/heads/codex/week9-phase1-7-physics-ridge-residual-gp",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-8-model-path-decomposition",
+      "head": "f74c6252bbb48d503f969ef5300f20894079301b",
+      "branch": "refs/heads/codex/week9-phase1-8-model-path-decomposition",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-9-physics-specificity-control",
+      "head": "0df38fd5492d8ea264a2b9bbcd714d6c9d74be49",
+      "branch": "refs/heads/codex/week9-phase1-9-physics-specificity-control",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase1-close-week8",
+      "head": "bdb6eb3628ae5eafaa0e5bc94d454626a6cf550a",
+      "branch": "refs/heads/codex/week9-phase1-close-week8-sample-efficiency",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    },
+    {
+      "path": "C:/Users/ozgur/Documents/thesis-week9-phase2-temporal-width-dynamics",
+      "head": "da913797d14b171bec55d3708f96aa87f09a4f94",
+      "branch": "refs/heads/codex/week9-phase2-temporal-width-dynamics",
+      "prunable_reason": "gitdir file points to non-existent location",
+      "path_exists": false,
+      "status_lines": null,
+      "dirty_entries": null
+    }
+  ],
+  "stashes": [
+    {
+      "name": "stash@{0}",
+      "oid": "583da71538c8ddc7c0bb36133e0bb953e1405ca9",
+      "subject": "On main: thesis consolidation 20260914 original main safety snapshot"
+    },
+    {
+      "name": "stash@{1}",
+      "oid": "2fea08d7bd7bfdac1eefa281c7123b7f43e43972",
+      "subject": "On main: phase1-20 preserve original main user work"
+    }
+  ],
+  "tracked_freeze": {
+    "path": "outputs/week11_external_prelabel_freeze_final/EXTERNAL_BATCH_FREEZE.json",
+    "sha256": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+    "sidecar_sha256": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+    "sidecar_matches": true,
+    "git_blob_oid": "f99cac57a2e187c20bea89bff44ca1ef2ca6ab6e",
+    "tracked": true
+  },
+  "preservation_gate": {
+    "primary_checkout_only_user_untracked_codex": true,
+    "historical_untracked_worktree_pending": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit",
+    "historical_untracked_action": "PRESERVE; DO NOT COPY OR DELETE UNTIL COMPARISON REVIEW COMPLETES",
+    "ref_changes_authorized_by_this_record": false
+  }
+}
