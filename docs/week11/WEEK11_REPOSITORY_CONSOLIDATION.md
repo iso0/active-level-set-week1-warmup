@@ -1,6 +1,6 @@
 # Week 11 repository consolidation checkpoint
 
-Status: **LOCAL MAIN CONSOLIDATED; HISTORICAL PRESERVATION PASS; PUBLICATION PENDING**
+Status: **CONSOLIDATION, HISTORICAL PRESERVATION, PUBLICATION, AND BRANCH CLEANUP COMPLETE**
 
 This record was created before changing any branch, remote ref, worktree, or stash. The machine-readable companion is `outputs/week11_repository_consolidation/PRE_CONSOLIDATION_SNAPSHOT.json`. It records the exact local and cached remote refs, ahead/behind relationships, registered worktrees and their visible status, stashes, the four Week 11 commits, and the tracked external-validation freeze hash.
 
@@ -17,7 +17,7 @@ The accepted ancestry audit found 53 local heads. Every local head except the We
 
 The cached remote view contains three live branch heads: `main` and `codex/pre-new-data-readiness` at `5ae71520073435ff4d312c9b1bc99683c8a3eb4a`, and `codex/week11-new-data-arrival-audit` at `30efdd6df3b0ffd4bd7ccc4fcdc60a7693c6b09d`. This is a local snapshot and does not claim a fresh network fetch.
 
-After the snapshot, local `main` was fast-forwarded to `e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1`. A non-oracle preflight with the repository `.venv` passed at that commit: the freeze remained unchanged with 136 included runs, 49 withheld runs, 20 repeats by 5 folds, and minimum training size 108. Publication of the consolidated local main is a separate root-owned step.
+After the snapshot, local `main` was fast-forwarded to `e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1`. A non-oracle preflight with the repository `.venv` passed at that commit: the freeze remained unchanged with 136 included runs, 49 withheld runs, 20 repeats by 5 folds, and minimum training size 108. The preservation archive and this consolidation record were then committed and published as `768ab38fb781e6aefded3a1596fc40feedb314d1`; local and remote `main` were verified equal at that commit.
 
 ## Preservation gate
 
@@ -35,6 +35,18 @@ The tracked freeze file `outputs/week11_external_prelabel_freeze_final/EXTERNAL_
 
 ## Gate result
 
-Snapshot readiness is **PASS** and historical-artifact preservation is **PASS**. Local `main` contains the complete four-commit Week 11 line. Publication and any later ref cleanup remain root-owned operations; this record does not perform them.
+Snapshot readiness, historical-artifact preservation, publication, and branch cleanup are **PASS**. The complete Week 11 line and its preservation record are on canonical local and remote `main`.
 
 The forward policy is that `main` is the single canonical development branch. Future logical thesis units are committed directly to `main`. An exceptional branch requires a documented reason. Historical variants remain archived evidence and must not replace the current scientific reports.
+
+## Completed checkpoint
+
+- Published canonical `main`: `768ab38fb781e6aefded3a1596fc40feedb314d1` locally and remotely.
+- Retained freeze commit: `e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1`, reachable from canonical `main`.
+- Retained freeze SHA-256: `856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee`.
+- Branch cleanup: 52 redundant local branches and 2 redundant remote branches removed; `main` is the sole local and remote development branch. Every removed head was already reachable from canonical `main`.
+- Worktree cleanup: five existing historical worktrees were detached at their unchanged commits and unchanged statuses; 30 registrations for absent directories were pruned. No worktree file was deleted.
+- Recovery state: both existing stashes remain retained, the user-owned `.codex/` directory remains untouched, and the archived historical variants remain available under `outputs/_history/583da71538c8/`.
+- Source state: no source file, frozen method, oracle, or validation result was modified by branch cleanup.
+
+`outputs/week11_repository_consolidation/PUBLICATION_AND_BRANCH_CLEANUP.json` is the machine-readable completion record. The next record commit will only record this cleanup JSON and completed checkpoint prose; it will not alter source code or the frozen validation binding.

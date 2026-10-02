@@ -1,0 +1,507 @@
+{
+  "status": "PASS",
+  "published_main_sha": "768ab38fb781e6aefded3a1596fc40feedb314d1",
+  "remote_main_verified": true,
+  "local_and_remote_branches": [
+    "main"
+  ],
+  "deleted_local_branches": [
+    {
+      "branch": "codex/archive-week3-named-benchmark",
+      "old_tip": "27035c84625d1228a6ed8994c619727ed9f40262",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/external-masinelli-feasibility-audit",
+      "old_tip": "8d99c1976890bbf4a12a7cfcd00e9bdd7ae924a8",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/pre-new-data-readiness",
+      "old_tip": "5ae71520073435ff4d312c9b1bc99683c8a3eb4a",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/thesis-complete-consolidation",
+      "old_tip": "3b42fb235ca3e39c1712ed6b60c4dba71084f3f1",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/thesis-unified-project",
+      "old_tip": "5b7d030413ed2aa24e6e4c8f124dd5145f735618",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week10-pg-rmbc-internal-replication",
+      "old_tip": "a380aeb07f6328d8365273835c09a452b4e33d8b",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week11-new-data-arrival-audit",
+      "old_tip": "e0adbc28b6368ee6366c6dcd7d500632c7b5f8f1",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week3-4d-benchmark",
+      "old_tip": "50293d32f81901d69814260a94e14bd77927a028",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week4-chronology-restructure",
+      "old_tip": "2042f025aa205165bf6be607f3152b7cd69f0ef1",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week5-first-conduction-gp",
+      "old_tip": "1751286bb0da617d8c8c57a5440d187ca288e720",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week6-1-optimized-gpc",
+      "old_tip": "2d49ec3a9282a1df69eb9f6d4737917f69bb9c3a",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week6-phase1-melt-pool-data-audit",
+      "old_tip": "1751286bb0da617d8c8c57a5440d187ca288e720",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week6-phase2-5-depth-closure",
+      "old_tip": "b112f6b22898976f77410190614cb4fb218d38f9",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week6-phase2-gp-response-models",
+      "old_tip": "1751286bb0da617d8c8c57a5440d187ca288e720",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week6-phase3-5-regime-target-design",
+      "old_tip": "b112f6b22898976f77410190614cb4fb218d38f9",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week6-phase3-model-target-robustness",
+      "old_tip": "b112f6b22898976f77410190614cb4fb218d38f9",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week6-phase4-new-outputs-feature-effects",
+      "old_tip": "cba151880fc670d1b8a20ff2f7f25295f9bcb892",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-1-gpc-sur-validation",
+      "old_tip": "00e71a62fa68d16834af8ac7802ade6404f57f95",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-boundary-weighted-sur",
+      "old_tip": "16fe1b6212d474780704ceadba45d88323ef16f3",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-comprehensive-presentation",
+      "old_tip": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-phase1-2-sph-v2-audit",
+      "old_tip": "7ab7ada0c89680fe11dbdce22a51ad5f2ee7c929",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-phase3-new-data-model-stability",
+      "old_tip": "1118d30f3199a97b9836591f8fdea75b46dfac0d",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-phase4-new-data-feature-effects-depth-diagnostics",
+      "old_tip": "5b7004017cadc5ecd0eb128f2031f9148ed70900",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-phase5-5-g3-robustness-transfer",
+      "old_tip": "6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-phase5-keyhole-physical-proxy-analysis",
+      "old_tip": "3367f4c9b5af2def802f72a65258f5cc01896bac",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-phase6-real-data-boundary-active-level-set",
+      "old_tip": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week7-phase7-final-boundary-hybrid-benchmark",
+      "old_tip": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week8-5-frozen-sample-efficiency-confirmation",
+      "old_tip": "6487722fe5e60d951ab929d8539e0793f9bed366",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week8-definitive-sample-efficiency-presentation",
+      "old_tip": "401b51c3da96897995d2156cde92604231ba9b4a",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week8-final-sample-efficiency-thesis-consolidation",
+      "old_tip": "401b51c3da96897995d2156cde92604231ba9b4a",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-no-phase-controls-r-and-d",
+      "old_tip": "9c487d61ced8bb731b719950f5f195e46519254f",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-10-closure-diagnostics",
+      "old_tip": "e33cca4f81b865d330577ef9a8140c4bbe306e5a",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-10-external-experimental-validation",
+      "old_tip": "45e2677b7a57ed3aa5ad5154459100a9b5d2d436",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-11-fixed-mean-discrepancy-gp",
+      "old_tip": "5a21e5dce37fc6d4c58fa40bb7a6711920fec94e",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-12-gpc-kernel-adequacy",
+      "old_tip": "161453983996b763824f2d262b5ce9d63332da16",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-13-fixed-physics-ard-discrepancy",
+      "old_tip": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-14-m3-margin-acquisition",
+      "old_tip": "5a7a6c05ae5bf3191b74766156407211ad414360",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-15a-physics-residual-signal-audit",
+      "old_tip": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-16-m3-repulsion-scale-audit",
+      "old_tip": "746b19153f377bb0b7219d1c113bab672e306b19",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-17a-physics-contour-geometry-audit",
+      "old_tip": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-18a-level-set-acquisition-compatibility-audit",
+      "old_tip": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-18b-prospective-global-gpc-sur-benchmark",
+      "old_tip": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-18b0-fast-gpc-sur-update-validation",
+      "old_tip": "1e34b4759037d5f3d107781791524853a406a526",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-19a-integrity-posterior-monotonicity-audit",
+      "old_tip": "2975e72326f1680e81f16e0a29fc003bcaaf2aae",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-19b-prospective-robust-monotone-pool-lse",
+      "old_tip": "bf4782881bc27fe1ec5256dc3ba0516478a1ed13",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-20-m3-g3-margin-acquisition",
+      "old_tip": "49a054e3f80b8601fcb175826d54d71519f2813a",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-5-h-physics-confirmation",
+      "old_tip": "b36a815e12dfa872c20a050228e0545f18c443ef",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-7-physics-ridge-residual-gp",
+      "old_tip": "2f750c8c270baebc7e013ebe83fc429f9df14d51",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-8-model-path-decomposition",
+      "old_tip": "f74c6252bbb48d503f969ef5300f20894079301b",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-9-physics-specificity-control",
+      "old_tip": "0df38fd5492d8ea264a2b9bbcd714d6c9d74be49",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase1-close-week8-sample-efficiency",
+      "old_tip": "bdb6eb3628ae5eafaa0e5bc94d454626a6cf550a",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week9-phase2-temporal-width-dynamics",
+      "old_tip": "da913797d14b171bec55d3708f96aa87f09a4f94",
+      "reachable_from_main": true
+    }
+  ],
+  "deleted_remote_branches": [
+    {
+      "branch": "codex/pre-new-data-readiness",
+      "old_tip": "5ae71520073435ff4d312c9b1bc99683c8a3eb4a",
+      "reachable_from_main": true
+    },
+    {
+      "branch": "codex/week11-new-data-arrival-audit",
+      "old_tip": "30efdd6df3b0ffd4bd7ccc4fcdc60a7693c6b09d",
+      "reachable_from_main": true
+    }
+  ],
+  "historical_worktrees": [
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-complete-consolidation",
+      "head": "3b42fb235ca3e39c1712ed6b60c4dba71084f3f1",
+      "action": "detached_at_identical_commit",
+      "status_unchanged": true,
+      "files_deleted": false
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-external-masinelli-feasibility-audit",
+      "head": "8d99c1976890bbf4a12a7cfcd00e9bdd7ae924a8",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week4-chronology-restructure",
+      "head": "2042f025aa205165bf6be607f3152b7cd69f0ef1",
+      "action": "detached_at_identical_commit",
+      "status_unchanged": true,
+      "files_deleted": false
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week5-first-conduction-gp",
+      "head": "1751286bb0da617d8c8c57a5440d187ca288e720",
+      "action": "detached_at_identical_commit",
+      "status_unchanged": true,
+      "files_deleted": false
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week6-melt-pool-audit",
+      "head": "cba151880fc670d1b8a20ff2f7f25295f9bcb892",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week7-comprehensive-presentation",
+      "head": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week7-phase3-new-data-model-stability",
+      "head": "1118d30f3199a97b9836591f8fdea75b46dfac0d",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week7-phase4-new-data-feature-effects-depth-diagnostics",
+      "head": "5b7004017cadc5ecd0eb128f2031f9148ed70900",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week7-phase5-5-g3-robustness-transfer",
+      "head": "6cc2ea150b9deb6ec9dd529d94ac55cc86556cfb",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week7-phase5-keyhole-physical-proxy-analysis",
+      "head": "3367f4c9b5af2def802f72a65258f5cc01896bac",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week7-phase6-real-data-boundary-active-level-set",
+      "head": "5734de6f533e1de1e15a07de24e7d4e6e53bb6fa",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week7-phase7-final-boundary-hybrid-benchmark",
+      "head": "167aad945b20822de712e891e901bd3ec6d5ffc6",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week7-sph-v2-audit",
+      "head": "7ab7ada0c89680fe11dbdce22a51ad5f2ee7c929",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week8-5-frozen-sample-efficiency-confirmation",
+      "head": "6487722fe5e60d951ab929d8539e0793f9bed366",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week8-definitive-sample-efficiency-presentation",
+      "head": "401b51c3da96897995d2156cde92604231ba9b4a",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week8-final-sample-efficiency-thesis-consolidation",
+      "head": "401b51c3da96897995d2156cde92604231ba9b4a",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-10-closure-diagnostics",
+      "head": "e33cca4f81b865d330577ef9a8140c4bbe306e5a",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-10-external-experimental-validation",
+      "head": "45e2677b7a57ed3aa5ad5154459100a9b5d2d436",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-11-fixed-mean-discrepancy-gp-clean",
+      "head": "5a21e5dce37fc6d4c58fa40bb7a6711920fec94e",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-12-gpc-kernel-adequacy",
+      "head": "161453983996b763824f2d262b5ce9d63332da16",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-13-fixed-physics-ard-discrepancy-clean",
+      "head": "fbe76352f86580818659ab87fa23ec29a74c7f59",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-14-m3-margin-acquisition",
+      "head": "5a7a6c05ae5bf3191b74766156407211ad414360",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-15a-physics-residual-signal-audit",
+      "head": "a8eafbbb814f5d5c9fe71a985746d6d1c4cb76eb",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-16-m3-repulsion-scale-audit",
+      "head": "746b19153f377bb0b7219d1c113bab672e306b19",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-17a-physics-contour-geometry-audit",
+      "head": "2acdb9aba6bbadcd90ba0760ea0958c08e0ea593",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-18a-level-set-acquisition-compatibility-audit",
+      "head": "658d5b73cf27e45b4b2e0897cff27a49a2ef4b84",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-18b-prospective-global-gpc-sur-benchmark",
+      "head": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+      "action": "detached_at_identical_commit",
+      "status_unchanged": true,
+      "files_deleted": false
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-18b0-fast-gpc-sur-update-validation",
+      "head": "1e34b4759037d5f3d107781791524853a406a526",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-19a-integrity-posterior-monotonicity-audit",
+      "head": "bf4782881bc27fe1ec5256dc3ba0516478a1ed13",
+      "action": "detached_at_identical_commit",
+      "status_unchanged": true,
+      "files_deleted": false
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-5-h-physics-confirmation",
+      "head": "b36a815e12dfa872c20a050228e0545f18c443ef",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-7-physics-ridge-residual-gp",
+      "head": "2f750c8c270baebc7e013ebe83fc429f9df14d51",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-8-model-path-decomposition",
+      "head": "f74c6252bbb48d503f969ef5300f20894079301b",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-9-physics-specificity-control",
+      "head": "0df38fd5492d8ea264a2b9bbcd714d6c9d74be49",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase1-close-week8",
+      "head": "bdb6eb3628ae5eafaa0e5bc94d454626a6cf550a",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis-week9-phase2-temporal-width-dynamics",
+      "head": "da913797d14b171bec55d3708f96aa87f09a4f94",
+      "action": "prune_stale_registration_only",
+      "directory_absent": true
+    }
+  ],
+  "stashes_retained": [
+    "583da71538c8ddc7c0bb36133e0bb953e1405ca9",
+    "2fea08d7bd7bfdac1eefa281c7123b7f43e43972"
+  ],
+  "freeze_sha256": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+  "freeze_commit_reachable": true,
+  "no_worktree_files_deleted": true,
+  "user_codex_untouched": true
+}
