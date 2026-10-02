@@ -1,0 +1,35 @@
+{
+  "analyst_label_accessed": false,
+  "created_utc": "2026-10-02T09:00:18.771253Z",
+  "custody_authorization": "Protocol owner explicitly authorized automated oracle derivation in the current owner instruction.",
+  "custody_mode": "OWNER_AUTHORIZED_AUTOMATED_CUSTODY",
+  "derivation": {
+    "authority_path": "src/alse/data.py",
+    "authority_sha256": "577e44a5cd5ea4dc2642e3328bb1bb74baa9aeabd91ddbfa7bce78331a6601c3",
+    "bug_filter_or_truncation_applied": false,
+    "deriver_path": "src/week11_external_oracle_deriver.py",
+    "deriver_sha256": "579f258dfa8919da40da1cc9988d781389fd820598187b46fa248ec989077b40",
+    "full_manifest_sha256": "46deec01b03b962202f2ad162a969db3fe300c27bf0fcbc98718a4b42606f910",
+    "prelabel_owner_decisions_sha256": "8bff98620590f527751a2af68248d7bcbb0807ff3281ad2395a773c9ccd83be6",
+    "rule": "has_keyhole = any(row.label_final == exact literal 'Keyhole') for the simulation"
+  },
+  "post_seal_policy": "Do not open or re-hash outside the locked external-validation gate.",
+  "prior_bug_audit_exception": "The same pinned source was previously processed only through the approved sanitized Bug/status projection.",
+  "schema_version": 1,
+  "sealed_oracle_inventory": {
+    "byte_size": 28608,
+    "file_name": "NEW185_SEALED_ORACLE.csv",
+    "sha256": "cdd338fb76148a02f98b7353102424df481a6a709bc4048730c5e0c50adb7d35",
+    "status": "ok"
+  },
+  "source": {
+    "byte_size": 12397054,
+    "file_name": "labels_new_data_4_prep.csv",
+    "repository": "ioandanielc/sph_v2",
+    "revision": "2e1eec9c98fd57609d2815f174586336ab59da07",
+    "sha256": "b45518a51ea59d97d1e28e3f2ce5ef563af1c049bce83d0d88b3d510b1adf16d"
+  },
+  "source_annotations_processed_inside_blinded_deriver": true,
+  "status": "SEALED_READ_ONLY",
+  "values_disclosed_to_method_side": false
+}

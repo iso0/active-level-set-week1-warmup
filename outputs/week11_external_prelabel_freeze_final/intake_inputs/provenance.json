@@ -1,0 +1,6 @@
+{
+  "independence_evidence": "The 185 simulations are genuinely new, independently generated simulations, not copies or reprocessed versions of the historical 405/407 population.",
+  "received_utc": "2026-10-02T09:00:18.771253Z",
+  "simulator_version": "SIMULATOR_VERSION_NOT_SEPARATELY_DOCUMENTED",
+  "source": "ioandanielc/sph_v2@2e1eec9c98fd57609d2815f174586336ab59da07; thesis protocol owner explicitly accepts SIMULATOR_VERSION_NOT_SEPARATELY_DOCUMENTED under the current owner instruction."
+}

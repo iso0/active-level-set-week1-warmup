@@ -1,0 +1,54 @@
+{
+  "checks": {
+    "analyst_label_accessed": false,
+    "budget_count": 65,
+    "budget_max": 80,
+    "budget_min": 16,
+    "compileall": "PASS",
+    "decisions_sha256_unchanged": true,
+    "environment_matches": "PASS",
+    "execution_output_root_absent": true,
+    "focused_tests": "12 passed in 0.66s",
+    "fold_count_total": 100,
+    "freeze_sidecar_matches": true,
+    "freeze_verify": "PASS",
+    "fresh_intake_blockers": 0,
+    "fresh_intake_usable_rows": 185,
+    "included_count": 136,
+    "manifest_sha256_unchanged": true,
+    "maximum_training_pool_size": 109,
+    "minimum_training_pool_size": 108,
+    "repeat_count": 20,
+    "repeat_seeds": "1101..1120",
+    "source_hashes_match": "PASS",
+    "values_disclosed_to_method_side": false,
+    "verify_bindings_import_only": "PASS",
+    "withheld_count": 49
+  },
+  "created_utc": "2026-10-02T09:03:56.635081Z",
+  "custody": {
+    "derivation_authority_sha256": "577e44a5cd5ea4dc2642e3328bb1bb74baa9aeabd91ddbfa7bce78331a6601c3",
+    "deriver_sha256": "579f258dfa8919da40da1cc9988d781389fd820598187b46fa248ec989077b40",
+    "mode": "OWNER_AUTHORIZED_AUTOMATED_CUSTODY",
+    "oracle_byte_size": 28608,
+    "oracle_file_name": "NEW185_SEALED_ORACLE.csv",
+    "oracle_sha256": "cdd338fb76148a02f98b7353102424df481a6a709bc4048730c5e0c50adb7d35",
+    "source_annotations_processed_inside_blinded_deriver": true,
+    "source_revision": "2e1eec9c98fd57609d2815f174586336ab59da07",
+    "status": "SEALED_READ_ONLY",
+    "values_disclosed_to_method_side": false
+  },
+  "freeze": {
+    "label_accessed": false,
+    "sha256": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+    "stage": "PRE_LABEL_DATASET_FREEZE"
+  },
+  "limitations": [
+    "Custody is owner-authorized automated custody, not a separate human custodian.",
+    "The protocol owner explicitly accepted SIMULATOR_VERSION_NOT_SEPARATELY_DOCUMENTED.",
+    "This validation did not open the sealed oracle or run external validation."
+  ],
+  "phase": "PRE_COMMIT_VALIDATION",
+  "status": "FINAL_PRELABEL_SEAL_VALIDATED",
+  "supervisor_final_review": "PASS"
+}
