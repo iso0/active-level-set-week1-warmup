@@ -1,0 +1,6 @@
+{
+  "classification": "EXPLORATORY",
+  "no_tuning": true,
+  "old_neighbor_k": 5,
+  "subgroups": "ST inside/outside historical marginal range; descriptive only"
+}

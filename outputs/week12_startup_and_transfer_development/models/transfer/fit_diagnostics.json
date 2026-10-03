@@ -1,0 +1,191 @@
+[
+  {
+    "coefficient": 5.706349268812617,
+    "components": true,
+    "fit_seed": 3611974227,
+    "fit_status": "historical_h_logistic",
+    "intercept": -5.356926886366765,
+    "model": "H",
+    "prediction_count": 136,
+    "prediction_finite": true,
+    "scaler_mean": 20.060023798565762,
+    "scaler_scale": 0.6679597998532304,
+    "scaler_scope": "training_rows_log_h",
+    "train_keyhole": 73,
+    "train_n": 405,
+    "train_non_keyhole": 332
+  },
+  {
+    "bound_hit": true,
+    "components": false,
+    "constant_value": 999.9999999999998,
+    "fit_seed": 1033902303,
+    "fit_status": "optimized_primary",
+    "kernel": "31.6**2 * Matern(length_scale=14.7, nu=1.5)",
+    "length_scale": 14.695196874921766,
+    "model": "G0",
+    "prediction_count": 136,
+    "prediction_finite": true,
+    "scaler_mean": [
+      206.61046574549056,
+      0.6230361962460571,
+      6.26420732850057e-05,
+      348.9465761894741
+    ],
+    "scaler_scale": [
+      96.23674769090111,
+      0.2335730803710266,
+      1.442101368781592e-05,
+      31.58292303492877
+    ],
+    "scaler_scope": "training_rows_4d",
+    "train_keyhole": 73,
+    "train_n": 405,
+    "train_non_keyhole": 332,
+    "warnings": [
+      "The optimal value found for dimension 0 of parameter k1__constant_value is close to the specified upper bound 1000.0. Increasing the bound and calling fit again may find a better value."
+    ]
+  },
+  {
+    "components": false,
+    "fit_seed": 652260754,
+    "fit_status": "optimized_primary",
+    "historical_diagnostics": {
+      "amplitude": 378.5472663825369,
+      "amplitude_lower_bound_hit": false,
+      "amplitude_upper_bound_hit": false,
+      "anisotropy_ratio": 14.332306597914574,
+      "any_length_bound_hit": true,
+      "any_length_lower_bound_hit": false,
+      "any_length_upper_bound_hit": true,
+      "fallback_status": "none",
+      "fit_status": "optimized_primary",
+      "l_LS": 8.39121281119428,
+      "l_LS_lower_bound_hit": false,
+      "l_LS_upper_bound_hit": false,
+      "l_P": 7.640050230159867,
+      "l_P_lower_bound_hit": false,
+      "l_P_upper_bound_hit": false,
+      "l_ST": 100.00000000000004,
+      "l_ST_lower_bound_hit": false,
+      "l_ST_upper_bound_hit": true,
+      "l_VX": 6.977243984897069,
+      "l_VX_lower_bound_hit": false,
+      "l_VX_upper_bound_hit": false,
+      "length_scale": null,
+      "objective_value": 43.057020995119544,
+      "optimizer_warning": true,
+      "warning_text": "The optimal value found for dimension 3 of parameter k2__length_scale is close to the specified upper bound 100.0. Increasing the bound and calling fit again may find a better value."
+    },
+    "kernel": "19.5**2 * Matern(length_scale=[7.64, 6.98, 8.39, 100], nu=1.5)",
+    "model": "G3",
+    "prediction_count": 136,
+    "prediction_finite": true,
+    "scaler_mean": [
+      206.61046574549056,
+      0.6230361962460571,
+      6.26420732850057e-05,
+      348.9465761894741
+    ],
+    "scaler_scale": [
+      96.23674769090111,
+      0.2335730803710266,
+      1.442101368781592e-05,
+      31.58292303492877
+    ],
+    "scaler_scope": "training_rows_4d",
+    "train_keyhole": 73,
+    "train_n": 405,
+    "train_non_keyhole": 332,
+    "warnings": []
+  },
+  {
+    "components": true,
+    "fallback_status": "none",
+    "fit_seed": 510110262,
+    "fit_status": "historical_m3_fixed_mean_ard",
+    "historical_diagnostics": {
+      "anisotropy_ratio": 159.30714661572827,
+      "any_length_bound_hit": true,
+      "any_length_lower_bound_hit": false,
+      "any_length_upper_bound_hit": true,
+      "fallback_status": "none",
+      "l_LS": 100.00000000000004,
+      "l_LS_lower_bound_hit": false,
+      "l_LS_upper_bound_hit": true,
+      "l_P": 100.00000000000004,
+      "l_P_lower_bound_hit": false,
+      "l_P_upper_bound_hit": true,
+      "l_ST": 100.00000000000004,
+      "l_ST_lower_bound_hit": false,
+      "l_ST_upper_bound_hit": true,
+      "l_VX": 0.6277182293724362,
+      "l_VX_lower_bound_hit": false,
+      "l_VX_upper_bound_hit": false,
+      "length_upper_bound": 100.0,
+      "objective_value": 35.7228908060904,
+      "optimizer_converged": true,
+      "optimizer_evaluations": 43,
+      "optimizer_iterations": 20,
+      "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "posterior_iterations": 2,
+      "residual_sd": 1.0,
+      "residual_sd_any_bound_hit": true,
+      "residual_sd_lower_bound_hit": false,
+      "residual_sd_upper_bound_hit": true
+    },
+    "kernel": "1**2 * Matern(length_scale=[100, 0.628, 100, 100], nu=1.5)",
+    "length_scales": [
+      100.00000000000004,
+      0.6277182293724362,
+      100.00000000000004,
+      100.00000000000004
+    ],
+    "length_upper": 100.0,
+    "model": "M3",
+    "objective_value": 35.7228908060904,
+    "optimizer_converged": true,
+    "optimizer_evaluations": 43,
+    "optimizer_iterations": 20,
+    "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "physics_scaler_mean": [
+      20.060023798565762
+    ],
+    "physics_scaler_scale": [
+      0.6679597998532304
+    ],
+    "posterior_iterations": 2,
+    "prediction_count": 136,
+    "prediction_finite": true,
+    "residual_sd": 1.0,
+    "scaler_scope": "training_rows_4d",
+    "train_keyhole": 73,
+    "train_n": 405,
+    "train_non_keyhole": 332,
+    "x_scaler_mean": [
+      206.61046574549056,
+      0.6230361962460571,
+      6.26420732850057e-05,
+      348.9465761894741
+    ],
+    "x_scaler_scale": [
+      96.23674769090111,
+      0.2335730803710266,
+      1.442101368781592e-05,
+      31.58292303492877
+    ]
+  },
+  {
+    "components": false,
+    "fit_seed": 288373855,
+    "fit_status": "fixed_old_training_prevalence",
+    "model": "empirical_prior",
+    "prediction_count": 136,
+    "prediction_finite": true,
+    "prior_probability": 0.18024691358024691,
+    "prior_scope": "OLD-405",
+    "train_keyhole": 73,
+    "train_n": 405,
+    "train_non_keyhole": 332
+  }
+]

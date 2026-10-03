@@ -1,0 +1,57 @@
+{
+  "failure_policy": "retain failed fit/prediction rows and diagnostics with NaN metrics; no unrecorded fallback",
+  "features": [
+    "P",
+    "VX",
+    "LS",
+    "ST"
+  ],
+  "fit_models": [
+    "H",
+    "G0",
+    "G3",
+    "M3"
+  ],
+  "historical_sources": {
+    "G0": "src/week7_phase6_real_data_boundary_active_level_set.py",
+    "G3": "src/week9_phase1_12_gpc_kernel_adequacy.py",
+    "H": "src/week9_phase1_11_fixed_mean_discrepancy_gp.py",
+    "M3": "src/week9_phase1_13_fixed_physics_ard_discrepancy.py"
+  },
+  "mode": "transfer",
+  "model_specs": {
+    "G0": "p6.fit_gpc(P,VX,LS,ST training rows; historical Mat\u00e9rn-3/2 isotropic; restarts=0)",
+    "G3": "p12.fit_gpc_model('G3', StandardScaler(training rows).transform(X), labels, seed); ARD Mat\u00e9rn-3/2; restarts=0",
+    "H": "p11.fit_physics_mean(log_h, labels, training_indices, seed); logistic C=1e6 on StandardScaler(log_h)",
+    "M3": "p11.fit_physics_mean then p13.fit_hybrid(X, log_h, labels, revealed=training_indices, training_pool=training_indices, physics, 'M3', 100.0)",
+    "empirical_prior": "constant training prevalence; no fitted scaler/model"
+  },
+  "models": [
+    "H",
+    "G0",
+    "G3",
+    "M3",
+    "empirical_prior"
+  ],
+  "new_keyhole": 124,
+  "new_rows": 136,
+  "old_keyhole": 73,
+  "old_rows": 405,
+  "q20": "src.external_validation.analysis.boundary_flags with entire_evaluation_batch; evaluation-only",
+  "schema_version": "week12_models_v1",
+  "seed_namespace": "week12|...",
+  "source_hashes": {
+    "outputs/week11_new_data_arrival_audit/WEEK11_NEW_BATCH_MANIFEST.csv": "46deec01b03b962202f2ad162a969db3fe300c27bf0fcbc98718a4b42606f910",
+    "outputs/week11_track_a_external_validation/external_validation/per_budget_predictions.csv": "76bbe5fe15fc3a8658a720d960036bf72bbb9caf2241ffbd4fdaa7d3a82da668",
+    "outputs/week11_track_a_external_validation/external_validation/split_manifest.json": "782d09b9dd36774dc1ebf6fff3769db72ec72d21634eae79058c72c5137d71de",
+    "outputs/week7_06_real_data_boundary_active_level_set/primary_common_population.csv": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7",
+    "src/external_validation/analysis.py": "9df0d7e03a26e7e0635365dd0be5a9983e928254b9bb02bed7a441878a09f1b1",
+    "src/week12_development_common.py": "e2cc86e1bfcee165706061e859833d81d63a20e2cd7eb5477d8b947d1dca050f",
+    "src/week12_models.py": "a5d814cdbbdde48e5fb0751b2e180322e964bb080c7dfeafad1883d22ca1a806",
+    "src/week7_phase6_real_data_boundary_active_level_set.py": "23797dcbc706f891cf1cd0f560299c64ed903d82f146248d13708d051d841479",
+    "src/week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5",
+    "src/week9_phase1_12_gpc_kernel_adequacy.py": "1d0e4227c7ed7599b4a43a2fc5d1c86364f256f6c89b816455a343d740069da2",
+    "src/week9_phase1_13_fixed_physics_ard_discrepancy.py": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba"
+  },
+  "status": "POST-HOC DEVELOPMENT"
+}

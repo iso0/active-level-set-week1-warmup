@@ -1,0 +1,22 @@
+{
+  "fold_summary": "summary.csv",
+  "mode": "new_only",
+  "pooled_oof": "pooled_oof_per_repeat.csv",
+  "qc": {
+    "failure_policy": "retained in predictions and fit_diagnostics; lane status is FAIL",
+    "fit_failure_count": 0,
+    "models": [
+      "G0",
+      "G3",
+      "H",
+      "M3",
+      "empirical_prior"
+    ],
+    "per_group_row_count_failures": [],
+    "pooled_oof_coverage_failures": [],
+    "prediction_missing_count": 0,
+    "prediction_rows": 13600,
+    "status": "PASS"
+  },
+  "splits": 100
+}

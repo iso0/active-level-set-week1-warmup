@@ -1,0 +1,5 @@
+rule,mean,median,max,release_min8_mean
+adaptive_physics,4.43,4.0,9,8.07
+maximin,4.83,4.0,24,8.47
+physics_stratified_geometry,5.67,5.0,26,9.01
+uniform_random,11.32,8.0,48,13.29

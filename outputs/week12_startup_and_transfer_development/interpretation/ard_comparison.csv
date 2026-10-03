@@ -1,0 +1,5 @@
+feature,old_standardized_scale,new_cv_median_standardized_scale,new_cv_min,new_cv_max,new_cv_upper_bound_fraction,meaning
+P,100.00000000000004,100.00000000000004,0.5739365533282472,100.00000000000004,0.76,Different scaler distributions and repeated data; not causal feature importance
+VX,0.6277182293724362,0.5886706859930559,0.0445347633755369,100.00000000000004,0.01,Different scaler distributions and repeated data; not causal feature importance
+LS,100.00000000000004,100.00000000000004,0.19160221378301845,100.00000000000004,0.61,Different scaler distributions and repeated data; not causal feature importance
+ST,100.00000000000004,3.225020288243562,1.2084138759210845,100.00000000000004,0.47,Different scaler distributions and repeated data; not causal feature importance
