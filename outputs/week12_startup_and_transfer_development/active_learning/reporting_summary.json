@@ -1,0 +1,7 @@
+{
+  "majority_mean_fold_q20_accuracy": 0.6849999999999998,
+  "number_independent_new_campaigns": 1,
+  "optimizer_records_may_share_exact_prefix_fits": true,
+  "primary_aggregation": "Equal-fold within repeat, equal-repeat across20 repeats",
+  "secondary_aggregation": "Pooled heldout predictions within each repeat"
+}

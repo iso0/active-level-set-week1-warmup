@@ -1,0 +1,7 @@
+contrast,subset,metric,bootstrap_mean,low,high,draws,scope
+M3-H,full,pr_auc_non_keyhole,0.05743610567412161,0.0012769589009178769,0.13276741362375644,2000,Paired fixed-prediction class-stratified cohort resampling
+M3-G0,full,pr_auc_non_keyhole,-0.10789212821789752,-0.24022647018779872,0.03197598560992135,2000,Paired fixed-prediction class-stratified cohort resampling
+M3-G3,full,pr_auc_non_keyhole,-0.04993662556025339,-0.11823675967313295,-0.0002802645679484646,2000,Paired fixed-prediction class-stratified cohort resampling
+M3-H,q20,pr_auc_non_keyhole,0.02866235794297868,-0.034297619047619014,0.13214501096491213,2000,Paired fixed-prediction class-stratified cohort resampling
+M3-G0,q20,pr_auc_non_keyhole,-0.05019805516131652,-0.16649669312169313,0.028754750552861696,2000,Paired fixed-prediction class-stratified cohort resampling
+M3-G3,q20,pr_auc_non_keyhole,-0.05200827289589951,-0.15866227685712989,0.014204337785752207,2000,Paired fixed-prediction class-stratified cohort resampling

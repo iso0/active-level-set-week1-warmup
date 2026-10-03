@@ -1,0 +1,12 @@
+{
+  "all_100_development_splits_complete": true,
+  "all_queries_charged": true,
+  "complete_heldout_prediction_grid": true,
+  "frozen_checkpoints_reused": false,
+  "no_duplicate_queries": true,
+  "no_test_queries": true,
+  "q20_implementation_sha256": "9df0d7e03a26e7e0635365dd0be5a9983e928254b9bb02bed7a441878a09f1b1",
+  "refinement_requires_observed_two_classes": true,
+  "status": "PASS",
+  "truth_mapping_verified": true
+}
