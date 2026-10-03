@@ -1,0 +1,31 @@
+[Parallel(n_jobs=7)]: Using backend LokyBackend with 7 concurrent workers.
+[Parallel(n_jobs=7)]: Done  15 out of  18 | elapsed:  7.8min remaining:  1.6min
+[Parallel(n_jobs=7)]: Done  18 out of  18 | elapsed:  8.0min finished
+scenario  budget
+BAL       16        0.942
+          24        0.947
+          32        0.947
+          40        0.949
+          48        0.950
+          56        0.950
+          64        0.959
+          72        0.960
+          80        0.965
+NEW       16        0.947
+          24        0.952
+          32        0.950
+          40        0.950
+          48        0.949
+          56        0.948
+          64        0.948
+          72        0.947
+          80        0.946
+OLD       16        0.888
+          24        0.894
+          32        0.907
+          40        0.909
+          48        0.909
+          56        0.912
+          64        0.916
+          72        0.921
+          80        0.924
