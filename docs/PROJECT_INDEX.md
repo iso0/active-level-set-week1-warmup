@@ -5,6 +5,11 @@ Güncel kararlar için önce [beş dakikalık proje haritasını](THESIS_PROJECT
 [Track A dondurma paketini](trackA_freeze/TRACK_A_FINAL_STATE.md) okuyun.
 Bu sayfa bütün tarihsel hafta/aşama ailelerini koruyan ayrıntılı dizindir.
 
+2026-10-03: [Week 12 başlangıç, model transferi ve ücretli aktif öğrenme raporu](../outputs/week12_startup_and_transfer_development/COMPREHENSIVE_REPORT.md)
+tamamlandı. NEW-136 üzerinde ayrı geliştirme çalışmasıdır; Week 11 donmuş STOP
+değişmedi. [Yeniden üretim](../outputs/week12_startup_and_transfer_development/REPRODUCIBILITY.md)
+ve [son QC](../outputs/week12_startup_and_transfer_development/FINAL_QC.json).
+
 Aktif ve birleşik çalışma klasörü: `C:\Users\ozgur\Documents\thesis`.
 GitHub varsayılan dalı `main` bu birleşik yapıyı gösterecek şekilde güncellenir.
 

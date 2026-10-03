@@ -1,0 +1,13 @@
+{
+  "sha256": {
+    "src/week12_active_learning.py": "309ec8256d5c9d4634e2425f050dc431c9bb9a456b5b1bba526a9cf73b87a14e",
+    "src/week12_development_common.py": "e2cc86e1bfcee165706061e859833d81d63a20e2cd7eb5477d8b947d1dca050f",
+    "src/week12_models.py": "a5d814cdbbdde48e5fb0751b2e180322e964bb080c7dfeafad1883d22ca1a806",
+    "src/week12_reporting.py": "44afe9b7ebcbe0eb74732700477513c21e13d7e68a5562e50d8d587b8c5db115",
+    "src/week12_startup.py": "6bd30c2569cf66917339b7c0a9e78fa73d1d0fba77592443b544f82f25ec49a0",
+    "src/week12_validate.py": "d668703fe077367faef7df493758dc7bd3cf347d484ebe691ef674bf30c503b1"
+  },
+  "scientific_results_commit": "e0f0c849",
+  "report_source_commit": "e0f0c849",
+  "final_validation_source": "src/week12_validate.py"
+}

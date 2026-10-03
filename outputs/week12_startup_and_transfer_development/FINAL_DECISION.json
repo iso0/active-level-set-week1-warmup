@@ -1,0 +1,29 @@
+{
+  "classification": "POST-HOC DEVELOPMENT / EXPLORATORY",
+  "complete": true,
+  "frozen_external_status": "INCOMPLETE_FROZEN_STOP_UNCHANGED",
+  "new_labels_still_blind": false,
+  "withheld_outcomes_used": false,
+  "old_new_pooled": false,
+  "startup_decision": "Adaptive physics removes observed discovery tail; no universal boundary-learning winner",
+  "model_decision": "M3 improves physics-only H but does not outperform generic controls",
+  "candidate_B_decision": "Small positive primary point direction; complete-protocol advantage unresolved; no external confirmation",
+  "primary_candidate_B_contrast": {
+    "arm": "Candidate_B__maximin8_continue",
+    "endpoint": "accuracy_AULC_B16_B80",
+    "independent_campaigns": 1,
+    "max_repeat_delta": 0.03671874999999991,
+    "mean_delta": 0.002643229166666666,
+    "min_repeat_delta": -0.030989583333333348,
+    "partition_interval_high": 0.00979199218750001,
+    "partition_interval_low": -0.004752929687500002,
+    "positive_repeats": 12,
+    "reference": "M3_margin__maximin16_continue",
+    "subset": "q20"
+  },
+  "always_keyhole_mean_fold_q20_accuracy": 0.685,
+  "all_protocol_mean_primary_endpoints_below_majority": true,
+  "replacement_established": false,
+  "next_step": "Preregistered independent campaign with paid discovery and matched model controls",
+  "report": "COMPREHENSIVE_REPORT.md"
+}

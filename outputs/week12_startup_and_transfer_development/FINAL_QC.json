@@ -1,0 +1,37 @@
+{
+  "active_learning": {
+    "paid_queries": 64000,
+    "paths": 800,
+    "predictions": 1588480,
+    "q20_flags_verified": true,
+    "startup_queries_independently_replayed": 9570
+  },
+  "frozen_external_status": "INCOMPLETE_FROZEN_STOP_UNCHANGED",
+  "model_prediction_counts": {
+    "new_only": 13600,
+    "transfer": 680
+  },
+  "old_new_training_mixed": false,
+  "protected_evidence": {
+    "changed_files": [],
+    "file_count": 387,
+    "status": "PASS"
+  },
+  "scientific_categories": [
+    "HISTORICAL CONFIRMATORY / FROZEN",
+    "FROZEN EXTERNAL ATTEMPT",
+    "POST-HOC DEVELOPMENT",
+    "EXPLORATORY"
+  ],
+  "single_class_q20_folds": 13,
+  "single_class_test_folds": 9,
+  "status": "PASS",
+  "superseded_defect_retained": true,
+  "tests": {
+    "details": "audit/historical_test_limitations.json",
+    "historical_implementation_passed": 16,
+    "preexisting_archive_checks_failed": 4,
+    "week12_passed": 15
+  },
+  "withheld_outcomes_used": false
+}
