@@ -1,0 +1,63 @@
+{
+  "OLD": {
+    "logh_level_p50": 20.687076076322548,
+    "slope_per_logh": 8.532045531073758,
+    "auc_logh": 0.990757550750949,
+    "free_exponent_ratios": {
+      "VX_over_P": -0.5180442420361098,
+      "LS_over_P": -1.4449302767210805
+    },
+    "h_exponents_ratio_reference": {
+      "VX_over_P": -0.5,
+      "LS_over_P": -1.5
+    },
+    "logh_level_p50_stratified_bootstrap_95": [
+      20.616443809400277,
+      20.76197565556554
+    ]
+  },
+  "NEW": {
+    "logh_level_p50": 20.823206515423117,
+    "slope_per_logh": 6.443272452799793,
+    "auc_logh": 0.8568548387096774,
+    "free_exponent_ratios": {
+      "VX_over_P": -2.117111135547779,
+      "LS_over_P": 0.9513028766798443
+    },
+    "h_exponents_ratio_reference": {
+      "VX_over_P": -0.5,
+      "LS_over_P": -1.5
+    },
+    "logh_level_p50_stratified_bootstrap_95": [
+      20.49127452663152,
+      20.953391036313477
+    ]
+  },
+  "level_shift_NEW_minus_OLD": 0.13613043910056888,
+  "OLD_level_on_NEW": {
+    "balanced_accuracy": 0.5,
+    "rare_recall": 0.0
+  },
+  "NEW_oracle_logh_threshold": {
+    "balanced_accuracy": 0.8521505376344086,
+    "threshold": 21.086708205546003
+  },
+  "NEW_oracle_VX_threshold": {
+    "balanced_accuracy": 0.918010752688172,
+    "threshold": 0.89878118514
+  },
+  "Ke_ST_factor_max_log_range_over_both_campaigns": 0.130915919846427,
+  "Ke_ST_factor_mean_log_difference_NEW_rare_vs_keyhole": 0.0121610346009355,
+  "OLD_cases_inside_NEW_bounding_box": {
+    "n": 40,
+    "keyhole": 38
+  },
+  "OLD_cases_inside_NEW_P_LS_range": {
+    "n": 45,
+    "keyhole": 43,
+    "non_keyhole_VX_values": [
+      0.951,
+      0.982
+    ]
+  }
+}

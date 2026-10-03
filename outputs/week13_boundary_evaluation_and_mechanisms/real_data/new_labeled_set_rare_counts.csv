@@ -1,0 +1,9 @@
+arm,mean_rare_labels_at_B16,mean_rare_labels_at_B40,mean_rare_labels_at_B80
+Candidate_A__maximin16_continue,2.37,8.07,8.82
+Candidate_B__maximin8_continue,3.61,8.18,8.82
+M3_margin__adaptive_physics8,4.24,7.82,8.69
+M3_margin__maximin16_continue,2.37,8.5,8.83
+M3_margin__maximin8_continue,4.14,7.8,8.69
+M3_margin__physics_stratified8,3.96,7.79,8.58
+M3_margin__uniform8_continue,2.42,7.05,8.29
+M3_random__maximin16_continue,2.37,4.12,7.2

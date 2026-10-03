@@ -1,0 +1,41 @@
+{
+  "M3_capped_var_le_1": {
+    "balanced_accuracy": 0.5793010752688172,
+    "rare_recall_count": 2,
+    "roc_auc": 0.8797043010752688,
+    "amplitude_var": 1.0,
+    "length_scales_PVXLSST": [
+      100.0,
+      0.628,
+      100.0,
+      100.0
+    ],
+    "converged": true
+  },
+  "M3_uncapped_var_le_1e3": {
+    "balanced_accuracy": 0.6169354838709677,
+    "rare_recall_count": 3,
+    "roc_auc": 0.8797043010752688,
+    "amplitude_var": 1.9073342349083215,
+    "length_scales_PVXLSST": [
+      2.295,
+      0.722,
+      2.382,
+      100.0
+    ],
+    "converged": true
+  },
+  "G3_like_zero_mean": {
+    "balanced_accuracy": 0.7002688172043011,
+    "rare_recall_count": 5,
+    "roc_auc": 0.9240591397849461,
+    "amplitude_var": 378.54699319817024,
+    "length_scales_PVXLSST": [
+      7.64,
+      6.977,
+      8.391,
+      100.0
+    ],
+    "converged": true
+  }
+}

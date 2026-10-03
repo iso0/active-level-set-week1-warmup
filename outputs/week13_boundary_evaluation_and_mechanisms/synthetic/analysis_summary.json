@@ -1,0 +1,92 @@
+{
+  "n_paths": 2880,
+  "metric_validity_mean_spearman_NSD": {
+    "BEBA": {
+      "BAL": 0.448,
+      "NEW": 0.501,
+      "OLD": 0.484
+    },
+    "BEF1": {
+      "BAL": 0.494,
+      "NEW": 0.55,
+      "OLD": 0.561
+    },
+    "BER": {
+      "BAL": 0.484,
+      "NEW": 0.553,
+      "OLD": 0.511
+    },
+    "full_accuracy": {
+      "BAL": 0.549,
+      "NEW": 0.387,
+      "OLD": 0.615
+    },
+    "full_balanced_accuracy": {
+      "BAL": 0.551,
+      "NEW": 0.41,
+      "OLD": 0.431
+    },
+    "full_minority_recall": {
+      "BAL": 0.339,
+      "NEW": 0.382,
+      "OLD": 0.288
+    },
+    "q20_accuracy": {
+      "BAL": 0.418,
+      "NEW": 0.382,
+      "OLD": 0.491
+    },
+    "q20_balanced_accuracy": {
+      "BAL": 0.419,
+      "NEW": 0.492,
+      "OLD": 0.477
+    }
+  },
+  "constant_beats_fraction": {
+    "BEBA": {
+      "BAL": 0.0,
+      "NEW": 0.003,
+      "OLD": 0.0
+    },
+    "BEF1": {
+      "BAL": 0.0,
+      "NEW": 0.0,
+      "OLD": 0.0
+    },
+    "BER": {
+      "BAL": 0.0,
+      "NEW": 0.0,
+      "OLD": 0.0
+    },
+    "NSD_0.1": {
+      "BAL": 0.0,
+      "NEW": 0.0,
+      "OLD": 0.0
+    },
+    "full_accuracy": {
+      "BAL": 0.0,
+      "NEW": 0.133,
+      "OLD": 0.01
+    },
+    "full_balanced_accuracy": {
+      "BAL": 0.0,
+      "NEW": 0.002,
+      "OLD": 0.0
+    },
+    "full_minority_recall": {
+      "BAL": 0.0,
+      "NEW": 0.0,
+      "OLD": 0.0
+    },
+    "q20_accuracy": {
+      "BAL": 0.007,
+      "NEW": 0.119,
+      "OLD": 0.023
+    },
+    "q20_balanced_accuracy": {
+      "BAL": 0.002,
+      "NEW": 0.006,
+      "OLD": 0.002
+    }
+  }
+}

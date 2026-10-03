@@ -1,0 +1,63 @@
+[Parallel(n_jobs=5)]: Using backend LokyBackend with 5 concurrent workers.
+[Parallel(n_jobs=5)]: Done   8 tasks      | elapsed:   59.5s
+[Parallel(n_jobs=5)]: Done  62 tasks      | elapsed:  5.2min
+[Parallel(n_jobs=5)]: Done  80 out of  80 | elapsed:  6.4min finished
+                     balanced_accuracy  rare_recall  roc_auc   BEF1  NSD_0.1   ASSD  dense_balanced_accuracy  amplitude_var    ls_P   ls_VX   ls_LS   ls_ST
+amp  model                                                                                                                                                 
+0.00 G3_generic                  0.616        0.240    0.984  0.171    0.652  0.090                    0.841        902.258   7.150  17.212  12.446  99.342
+     H_physics_only              0.629        0.260    0.989  0.266    0.942  0.019                    0.915            NaN     NaN     NaN     NaN     NaN
+     M3_capped                   0.644        0.292    0.988  0.265    0.933  0.021                    0.921          0.704  47.160  26.099  29.148  20.673
+     M3_uncapped                 0.644        0.292    0.988  0.265    0.925  0.023                    0.912          0.875  55.959  40.687  30.545  16.056
+0.75 G3_generic                  0.726        0.472    0.973  0.368    0.772  0.057                    0.857        828.758   6.849  14.722  12.400  96.255
+     H_physics_only              0.544        0.088    0.973  0.122    0.284  0.188                    0.569            NaN     NaN     NaN     NaN     NaN
+     M3_capped                   0.598        0.196    0.975  0.234    0.481  0.132                    0.644          0.778  69.090   2.293  66.394  51.019
+     M3_uncapped                 0.609        0.220    0.973  0.246    0.487  0.129                    0.651          1.017  60.095  10.637  51.922  34.084
+1.50 G3_generic                  0.786        0.593    0.980  0.494    0.828  0.047                    0.843        911.623   7.791  13.375  13.272  96.401
+     H_physics_only              0.539        0.079    0.970  0.085    0.098  0.329                    0.531            NaN     NaN     NaN     NaN     NaN
+     M3_capped                   0.620        0.242    0.976  0.262    0.390  0.187                    0.631          0.926  70.869   5.551  70.309  64.187
+     M3_uncapped                 0.658        0.322    0.977  0.309    0.459  0.168                    0.667          1.812  75.312   5.677  70.293  61.139
+3.00 G3_generic                  0.885        0.796    0.992  0.654    0.904  0.031                    0.914        807.253   7.337   9.466  13.076  93.132
+     H_physics_only              0.516        0.031    0.952  0.027    0.035  0.451                    0.517            NaN     NaN     NaN     NaN     NaN
+     M3_capped                   0.666        0.334    0.978  0.336    0.440  0.179                    0.654          1.000  66.057   0.693  67.957  80.712
+     M3_uncapped                 0.774        0.560    0.985  0.504    0.711  0.088                    0.792          6.447  71.268   1.178  68.988  77.109
+{
+  "M3_capped_var_le_1": {
+    "balanced_accuracy": 0.5793010752688172,
+    "rare_recall_count": 2,
+    "roc_auc": 0.8797043010752688,
+    "amplitude_var": 1.0,
+    "length_scales_PVXLSST": [
+      100.0,
+      0.628,
+      100.0,
+      100.0
+    ],
+    "converged": true
+  },
+  "M3_uncapped_var_le_1e3": {
+    "balanced_accuracy": 0.6169354838709677,
+    "rare_recall_count": 3,
+    "roc_auc": 0.8797043010752688,
+    "amplitude_var": 1.9073342349083215,
+    "length_scales_PVXLSST": [
+      2.295,
+      0.722,
+      2.382,
+      100.0
+    ],
+    "converged": true
+  },
+  "G3_like_zero_mean": {
+    "balanced_accuracy": 0.7002688172043011,
+    "rare_recall_count": 5,
+    "roc_auc": 0.9240591397849461,
+    "amplitude_var": 378.54699319817024,
+    "length_scales_PVXLSST": [
+      7.64,
+      6.977,
+      8.391,
+      100.0
+    ],
+    "converged": true
+  }
+}

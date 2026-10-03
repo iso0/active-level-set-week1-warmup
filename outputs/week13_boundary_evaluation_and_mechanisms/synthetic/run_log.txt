@@ -1,0 +1,14 @@
+[Parallel(n_jobs=7)]: Using backend LokyBackend with 7 concurrent workers.
+[Parallel(n_jobs=7)]: Done   4 tasks      | elapsed:    9.6s
+[Parallel(n_jobs=7)]: Done  58 tasks      | elapsed:  1.1min
+[Parallel(n_jobs=7)]: Done 148 tasks      | elapsed:  2.6min
+[Parallel(n_jobs=7)]: Done 274 tasks      | elapsed:  5.0min
+[Parallel(n_jobs=7)]: Done 436 tasks      | elapsed:  7.9min
+[Parallel(n_jobs=7)]: Done 634 tasks      | elapsed: 11.4min
+[Parallel(n_jobs=7)]: Done 868 tasks      | elapsed: 15.4min
+[Parallel(n_jobs=7)]: Done 1138 tasks      | elapsed: 19.9min
+[Parallel(n_jobs=7)]: Done 1444 tasks      | elapsed: 25.7min
+[Parallel(n_jobs=7)]: Done 1786 tasks      | elapsed: 33.0min
+[Parallel(n_jobs=7)]: Done 2164 tasks      | elapsed: 40.0min
+[Parallel(n_jobs=7)]: Done 2578 tasks      | elapsed: 47.3min
+[Parallel(n_jobs=7)]: Done 2880 out of 2880 | elapsed: 52.6min finished

@@ -1,0 +1,3 @@
+campaign,n,n_minority,minority_label,pool_majority_share,mean_majority_per_minority_target,max,minority_never_targeted,median_nearest_opposite_minority,median_nearest_opposite_majority
+OLD,405,73,1,0.8197530864197531,4.5479452054794525,80,47,0.9583468597801755,1.5024797519598445
+NEW,136,12,0,0.9117647058823529,10.333333333333334,47,0,0.9310147199954782,1.8900043229550798

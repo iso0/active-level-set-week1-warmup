@@ -19,3 +19,7 @@ For all other historical phases, use [`PROJECT_INDEX.md`](PROJECT_INDEX.md). Neg
 ## Week 11 external attempt — 2026-10-02
 
 The [confirmatory STOP report](../outputs/week11_external_execution_record/CONFIRMATORY_STOP_REPORT.md) and [QC record](../outputs/week11_external_execution_record/QC_VALIDATION.json) are authoritative for the incomplete new-campaign attempt: 136 included, 49 Bug-withheld, 39 completed arm paths, prescribed STOP at `external__r003_f04`, and no partial confirmatory inference. The [separate post-hoc research assessment](../outputs/week11_posthoc_initialization/RESEARCH_INTERPRETATION_AND_NOVELTY.md) does not change the frozen conclusion. [Full synthesis](week11/WEEK11_THESIS_DECISIVE_STAGE_REPORT.md).
+
+## Week 13 exploratory and synthetic analysis — 2026-10-03
+
+[`WEEK13_RESEARCH_REPORT.md`](../outputs/week13_boundary_evaluation_and_mechanisms/WEEK13_RESEARCH_REPORT.md) re-analyses retained Week 8.5 and Week 12 predictions (no frozen run resumed, no withheld outcome used, q20 unchanged) and adds a design-frozen synthetic study ([`DESIGN.md`](../outputs/week13_boundary_evaluation_and_mechanisms/synthetic/DESIGN.md)). It contributes exact metric identities and discovery certificates ([`THEORY.md`](../outputs/week13_boundary_evaluation_and_mechanisms/THEORY.md)), Gabriel boundary-edge metrics as secondary endpoints, an acquisition-headroom analysis and a physics-prior transfer mechanism. Status: EXPLORATORY / CONTROLLED METHODOLOGICAL; not confirmation of any method.

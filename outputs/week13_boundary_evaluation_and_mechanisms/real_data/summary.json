@@ -1,0 +1,134 @@
+{
+  "band_composition": {
+    "NEW": {
+      "n_q20": 6.0,
+      "minority_in_q20": 1.89,
+      "majority_share_q20": 0.685,
+      "distinct_minority_targets_of_q20_majority": 3.16
+    },
+    "OLD": {
+      "n_q20": 17.0,
+      "minority_in_q20": 6.62,
+      "majority_share_q20": 0.6105882352941177,
+      "distinct_minority_targets_of_q20_majority": 7.64
+    }
+  },
+  "hubness": [
+    {
+      "campaign": "OLD",
+      "n": 405,
+      "n_minority": 73,
+      "minority_label": 1,
+      "pool_majority_share": 0.8197530864197531,
+      "mean_majority_per_minority_target": 4.5479452054794525,
+      "max": 80,
+      "minority_never_targeted": 47,
+      "median_nearest_opposite_minority": 0.9583468597801755,
+      "median_nearest_opposite_majority": 1.5024797519598445
+    },
+    {
+      "campaign": "NEW",
+      "n": 136,
+      "n_minority": 12,
+      "minority_label": 0,
+      "pool_majority_share": 0.9117647058823529,
+      "mean_majority_per_minority_target": 10.333333333333334,
+      "max": 47,
+      "minority_never_targeted": 0,
+      "median_nearest_opposite_minority": 0.9310147199954782,
+      "median_nearest_opposite_majority": 1.8900043229550798
+    }
+  ],
+  "new_graph_edges": {
+    "gabriel": 636,
+    "knn5": 431,
+    "knn10": 855
+  },
+  "new_true_cut_edges": {
+    "gabriel": 85,
+    "knn5": 49,
+    "knn10": 100
+  },
+  "old_w85_arm_means": {
+    "binary_margin": {
+      "continuation_id": 1.0,
+      "B1_q20_accuracy_AULC": 0.8135202205882353,
+      "B1_q20_balanced_accuracy_AULC": 0.7906596601098554,
+      "always_majority_q20_accuracy_AULC": 0.6105882352941177,
+      "minority_calls_mean": 5.792153846153846,
+      "correct_minority_calls_mean": 4.616923076923078,
+      "wrong_minority_calls_mean": 1.1752307692307693,
+      "labeled_keyhole_share_mean": 0.40475979148727026
+    },
+    "binary_random": {
+      "continuation_id": 15.5,
+      "B1_q20_accuracy_AULC": 0.7762204350490196,
+      "B1_q20_balanced_accuracy_AULC": 0.743494542982336,
+      "always_majority_q20_accuracy_AULC": 0.6105882352941177,
+      "minority_calls_mean": 5.3867692307692305,
+      "correct_minority_calls_mean": 4.099635897435897,
+      "wrong_minority_calls_mean": 1.2871333333333332,
+      "labeled_keyhole_share_mean": 0.23342090086222292
+    },
+    "binary_uncertainty_repulsion": {
+      "continuation_id": 1.0,
+      "B1_q20_accuracy_AULC": 0.8153492647058824,
+      "B1_q20_balanced_accuracy_AULC": 0.7916895006035631,
+      "always_majority_q20_accuracy_AULC": 0.6105882352941177,
+      "minority_calls_mean": 5.739230769230769,
+      "correct_minority_calls_mean": 4.605846153846153,
+      "wrong_minority_calls_mean": 1.1333846153846152,
+      "labeled_keyhole_share_mean": 0.40393843918067107
+    }
+  },
+  "new_labeled_rare_counts": [
+    {
+      "arm": "Candidate_A__maximin16_continue",
+      "mean_rare_labels_at_B16": 2.37,
+      "mean_rare_labels_at_B40": 8.07,
+      "mean_rare_labels_at_B80": 8.82
+    },
+    {
+      "arm": "Candidate_B__maximin8_continue",
+      "mean_rare_labels_at_B16": 3.61,
+      "mean_rare_labels_at_B40": 8.18,
+      "mean_rare_labels_at_B80": 8.82
+    },
+    {
+      "arm": "M3_margin__adaptive_physics8",
+      "mean_rare_labels_at_B16": 4.24,
+      "mean_rare_labels_at_B40": 7.82,
+      "mean_rare_labels_at_B80": 8.69
+    },
+    {
+      "arm": "M3_margin__maximin16_continue",
+      "mean_rare_labels_at_B16": 2.37,
+      "mean_rare_labels_at_B40": 8.5,
+      "mean_rare_labels_at_B80": 8.83
+    },
+    {
+      "arm": "M3_margin__maximin8_continue",
+      "mean_rare_labels_at_B16": 4.14,
+      "mean_rare_labels_at_B40": 7.8,
+      "mean_rare_labels_at_B80": 8.69
+    },
+    {
+      "arm": "M3_margin__physics_stratified8",
+      "mean_rare_labels_at_B16": 3.96,
+      "mean_rare_labels_at_B40": 7.79,
+      "mean_rare_labels_at_B80": 8.58
+    },
+    {
+      "arm": "M3_margin__uniform8_continue",
+      "mean_rare_labels_at_B16": 2.42,
+      "mean_rare_labels_at_B40": 7.05,
+      "mean_rare_labels_at_B80": 8.29
+    },
+    {
+      "arm": "M3_random__maximin16_continue",
+      "mean_rare_labels_at_B16": 2.37,
+      "mean_rare_labels_at_B40": 4.12,
+      "mean_rare_labels_at_B80": 7.2
+    }
+  ]
+}
