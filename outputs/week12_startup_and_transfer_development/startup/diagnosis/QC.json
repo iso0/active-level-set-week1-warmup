@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "b16_single_class_three": true,
+    "new_classes_124_12": true,
+    "new_rows_136": true,
+    "no_startup_rule_design": true,
+    "no_withheld_outcomes": true,
+    "orders_cover_each_training_pool": true,
+    "prefix_parity_available_pass": true,
+    "required_failures_identified": true,
+    "split_count_100": true,
+    "unique_order_rows": true
+  },
+  "status": "PASS"
+}

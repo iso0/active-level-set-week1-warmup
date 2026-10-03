@@ -1,0 +1,16 @@
+{
+  "analytic_reference": "[C(n0,k)+C(n1,k)]/C(N,k)",
+  "features": [
+    "P",
+    "VX",
+    "LS",
+    "ST"
+  ],
+  "log_h": "log(P) - 0.5*log(VX) - 1.5*log(LS)",
+  "old_support_distance": "Euclidean distance after StandardScaler fit on OLD-405 inputs",
+  "order": "StandardScaler fit on each training pool; seeded maximin; isclose ties then smallest global row index",
+  "prefix_distance": "minimum distance from selected prefix to each unqueried class in OLD-standardized 4D",
+  "schema_version": "week12_startup_diagnosis_v1",
+  "scope": "Diagnosis only; no startup-rule tuning or benchmarking",
+  "seed": "w85.seed_u32(w85.seed_key('run', split_id, 'initial_design'))"
+}

@@ -1,0 +1,92 @@
+{
+  "b16_minority_histogram": {
+    "0": 3,
+    "1": 17,
+    "2": 38,
+    "3": 27,
+    "4": 12,
+    "5": 3
+  },
+  "b16_single_class_count": 3,
+  "b16_two_class_count": 97,
+  "failure_splits": [
+    {
+      "b16_class_0": 0,
+      "b16_class_1": 16,
+      "b16_has_both_classes": false,
+      "first_both_query": 18,
+      "fold": 4,
+      "queries_after_b16_to_both": 2,
+      "repeat": 3,
+      "split_id": "external__r003_f04",
+      "split_seed": 1103,
+      "train_class_0": 8,
+      "train_class_1": 101,
+      "train_minority": 8,
+      "train_size": 109
+    },
+    {
+      "b16_class_0": 0,
+      "b16_class_1": 16,
+      "b16_has_both_classes": false,
+      "first_both_query": 24,
+      "fold": 5,
+      "queries_after_b16_to_both": 8,
+      "repeat": 9,
+      "split_id": "external__r009_f05",
+      "split_seed": 1109,
+      "train_class_0": 7,
+      "train_class_1": 102,
+      "train_minority": 7,
+      "train_size": 109
+    },
+    {
+      "b16_class_0": 0,
+      "b16_class_1": 16,
+      "b16_has_both_classes": false,
+      "first_both_query": 19,
+      "fold": 4,
+      "queries_after_b16_to_both": 3,
+      "repeat": 19,
+      "split_id": "external__r019_f04",
+      "split_seed": 1119,
+      "train_class_0": 8,
+      "train_class_1": 101,
+      "train_minority": 8,
+      "train_size": 109
+    }
+  ],
+  "first_both_query_histogram": {
+    "11": 3,
+    "18": 1,
+    "19": 1,
+    "2": 30,
+    "24": 1,
+    "3": 19,
+    "4": 10,
+    "5": 11,
+    "6": 5,
+    "7": 6,
+    "8": 12,
+    "9": 1
+  },
+  "first_both_query_mean": 4.83,
+  "first_both_query_median": 4.0,
+  "included_count": 136,
+  "keyhole_count": 124,
+  "new_startup_rule_designed": false,
+  "non_keyhole_count": 12,
+  "prefix_parity": {
+    "available_split_count": 13,
+    "rows": 39,
+    "status": "PASS"
+  },
+  "rare_high_vx_count": 11,
+  "rare_nearest_new_keyhole_std4_median": 0.9310147199954782,
+  "schema_version": "week12_startup_diagnosis_v1",
+  "split_count": 100,
+  "status": "POST-HOC DEVELOPMENT / EXPLORATORY DIAGNOSIS",
+  "uniform_reference_interpretation": "Descriptive hypergeometric reference conditioned on each fixed training-pool class count; no formal superiority test.",
+  "uniform_reference_sum_at_b16": 20.805190127651525,
+  "withheld_outcomes_accessed": false
+}
