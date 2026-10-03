@@ -1,0 +1,19 @@
+{
+  "branch": "main",
+  "data_mixing": false,
+  "freeze_sha256": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+  "frozen_external_status": "INCOMPLETE_FROZEN_STOP",
+  "label_recovery": "Unique included sim_id/truth mapping only; no historical probabilities loaded",
+  "new_status": "POST-HOC DEVELOPMENT DATA",
+  "numpy": "2.4.6",
+  "pandas": "2.3.3",
+  "protected_file_count": 387,
+  "python": "3.14.4",
+  "remote_main_verified_equal": true,
+  "runtime": ".venv/Scripts/python.exe",
+  "scikit_learn": "1.9.0",
+  "scipy": "1.17.1",
+  "start_commit": "d8fa330c1e404e4d36569e094db14625249480af",
+  "threadpoolctl": "3.6.0",
+  "withheld_outcomes_accessed": false
+}
