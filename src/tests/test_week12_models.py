@@ -1,4 +1,5 @@
 import importlib
+import json
 
 import numpy as np
 import pandas as pd
@@ -82,3 +83,37 @@ def test_pooled_oof_summary_preserves_one_class_nan_metrics(tmp_path):
     assert np.isnan(q20.balanced_accuracy)
     assert np.isnan(q20.roc_auc)
     assert q20.accuracy == 1.0
+
+
+def test_new_only_checkpoint_serialization_and_coverage_qc(tmp_path, monkeypatch):
+    module = importlib.import_module("src.week12_models")
+    new = _toy_frame(4)
+    splits = [
+        {"split_id": "r1_f1", "repeat": 1, "fold": 1, "train_indices": [0, 1], "test_indices": [2, 3]},
+        {"split_id": "r1_f2", "repeat": 1, "fold": 2, "train_indices": [2, 3], "test_indices": [0, 1]},
+    ]
+
+    def fake_fit_predict(name, frame, train, test, fit_seed, old_prevalence=None):
+        rows = [{"model": name, "row_index": int(i), "sim_id": str(frame.sim_id.iloc[i]), "truth": int(frame.has_keyhole.iloc[i]), "probability": 0.25 + 0.1 * int(i), "fit_status": "ok"} for i in test]
+        return pd.DataFrame(rows), {"model": name, "fit_status": "ok", "fit_seed": int(fit_seed)}
+
+    monkeypatch.setattr(module, "OUT", tmp_path)
+    monkeypatch.setattr(module, "load_new", lambda: new.copy())
+    monkeypatch.setattr(module, "load_old", lambda: new.copy())
+    monkeypatch.setattr(module, "load_splits", lambda: splits)
+    monkeypatch.setattr(module, "sha", lambda path: "fixture-hash")
+    monkeypatch.setattr(module, "_provenance", lambda mode, frame, old: {"mode": mode, "schema_version": "fixture"})
+    monkeypatch.setattr(module, "_subset_flags", lambda frame, indices: {20: np.array([True, False]), 30: np.array([True, False])})
+    monkeypatch.setattr(module, "_fit_predict", fake_fit_predict)
+
+    result = module.run_new_only()
+    assert result["status"] == "PASS"
+    checkpoint_root = tmp_path / "models" / "new_only" / "checkpoints"
+    for split in splits:
+        payload = json.loads((checkpoint_root / f"{split['split_id']}.json").read_text())
+        assert isinstance(payload["predictions"], list)
+        assert len(payload["predictions"]) == len(module.MODELS) * 2
+    qc = json.loads((tmp_path / "models" / "new_only" / "qc.json").read_text())
+    assert qc["status"] == "PASS"
+    assert qc["per_group_row_count_failures"] == []
+    assert qc["pooled_oof_coverage_failures"] == []

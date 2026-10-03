@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "100_splits_each_rule": true,
+    "all_costs_finite": true,
+    "config_before_execution": true,
+    "four_rules": true,
+    "full_paths": true,
+    "labelblind_prefix_parity": true,
+    "no_tuning": true,
+    "no_withheld_outcomes": true
+  },
+  "status": "PASS"
+}

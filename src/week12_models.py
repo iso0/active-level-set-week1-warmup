@@ -197,7 +197,7 @@ def _fit_predict_transfer(name: str, old: pd.DataFrame, new: pd.DataFrame, fit_s
 
 def _provenance(mode: str, frame: pd.DataFrame, old: pd.DataFrame) -> dict[str, Any]:
     historical_sources = {"H": "src/week9_phase1_11_fixed_mean_discrepancy_gp.py", "G0": "src/week7_phase6_real_data_boundary_active_level_set.py", "G3": "src/week9_phase1_12_gpc_kernel_adequacy.py", "M3": "src/week9_phase1_13_fixed_physics_ard_discrepancy.py"}
-    source_paths = [OLD, MANIFEST, HIST / "split_manifest.json", HIST / "per_budget_predictions.csv", ROOT / "src/week12_development_common.py", ROOT / "src/week12_models.py", *(ROOT / p for p in historical_sources.values())]
+    source_paths = [OLD, MANIFEST, HIST / "split_manifest.json", HIST / "per_budget_predictions.csv", ROOT / "src/week12_development_common.py", ROOT / "src/week12_models.py", ROOT / "src/external_validation/analysis.py", *(ROOT / p for p in historical_sources.values())]
     return {"schema_version": SCHEMA_VERSION, "mode": mode, "status": "POST-HOC DEVELOPMENT", "models": list(MODELS), "fit_models": list(FIT_MODELS), "features": list(FEATURES), "new_rows": int(len(frame)), "new_keyhole": int(frame.has_keyhole.sum()), "old_rows": int(len(old)), "old_keyhole": int(old.has_keyhole.sum()), "source_hashes": {str(p.relative_to(ROOT)).replace("\\", "/"): sha(p) for p in source_paths}, "historical_sources": historical_sources, "model_specs": {"H": "p11.fit_physics_mean(log_h, labels, training_indices, seed); logistic C=1e6 on StandardScaler(log_h)", "G0": "p6.fit_gpc(P,VX,LS,ST training rows; historical Matérn-3/2 isotropic; restarts=0)", "G3": "p12.fit_gpc_model('G3', StandardScaler(training rows).transform(X), labels, seed); ARD Matérn-3/2; restarts=0", "M3": "p11.fit_physics_mean then p13.fit_hybrid(X, log_h, labels, revealed=training_indices, training_pool=training_indices, physics, 'M3', 100.0)", "empirical_prior": "constant training prevalence; no fitted scaler/model"}, "seed_namespace": "week12|...", "q20": "src.external_validation.analysis.boundary_flags with entire_evaluation_batch; evaluation-only", "failure_policy": "retain failed fit/prediction rows and diagnostics with NaN metrics; no unrecorded fallback"}
 
 
@@ -211,14 +211,13 @@ def run_transfer() -> dict[str, Any]:
     old_prevalence = float(old.has_keyhole.mean())
     flags = _subset_flags(new, np.arange(len(new), dtype=int))
     predictions, diagnostics = [], []
-    for name in MODELS:
-        frame, diag = _fit_predict_transfer(name, old, new, seed("transfer", name), old_prevalence)
-        frame["is_q20"] = flags[20]
-        frame["is_q30"] = flags[30]
-        predictions.append(frame[["model", "row_index", "sim_id", "truth", "probability", "fit_status"] + [c for c in frame.columns if c in ("physics_latent", "residual_latent", "final_latent", "latent_variance")]])
-        predictions[-1]["is_q20"] = flags[20]
-        predictions[-1]["is_q30"] = flags[30]
-        diagnostics.append(diag)
+    with threadpool_limits(limits=1):
+        for name in MODELS:
+            frame, diag = _fit_predict_transfer(name, old, new, seed("transfer", name), old_prevalence)
+            frame["is_q20"] = flags[20]
+            frame["is_q30"] = flags[30]
+            predictions.append(frame[["model", "row_index", "sim_id", "truth", "probability", "fit_status"] + [c for c in frame.columns if c in ("physics_latent", "residual_latent", "final_latent", "latent_variance", "is_q20", "is_q30")]])
+            diagnostics.append(diag)
     pred = pd.concat(predictions, ignore_index=True)
     write_csv(root / "predictions.csv.gz", pred)
     write_json(root / "fit_diagnostics.json", diagnostics)
@@ -240,16 +239,31 @@ def run_transfer() -> dict[str, Any]:
     _transfer_diagnostics(pred, new, old, root)
     _make_transfer_figures(pred, new, root)
     (root / "REPORT.md").write_text(_transfer_report(summary), encoding="utf-8")
-    qc = _write_qc(root, pred, diagnostics)
+    qc = _write_qc(root, pred, diagnostics, expected_rows={(name,): len(new) for name in MODELS})
     reference = pred[pred.model.eq(MODELS[0])].sort_values("row_index")
     (root / "summary.json").write_text(json.dumps(safe({"mode": "transfer", "models": list(MODELS), "qc": qc, "subsets": {"full": int(len(reference)), "q20": int(reference.is_q20.sum()), "q30": int(reference.is_q30.sum())}}), indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return {"status": qc["status"], "mode": "transfer", "models": list(MODELS), "output": str(root)}
 
 
-def _write_qc(root: Path, predictions: pd.DataFrame, diagnostics: list[dict[str, Any]]) -> dict[str, Any]:
+def _write_qc(root: Path, predictions: pd.DataFrame, diagnostics: list[dict[str, Any]], expected_rows: dict[tuple[Any, ...], int] | None = None, expected_oof_rows: int | None = None) -> dict[str, Any]:
     failed = [d for d in diagnostics if d.get("fit_status") == "FAILED"]
     missing = int(predictions.probability.isna().sum())
-    qc = {"status": "PASS" if not failed and missing == 0 else "FAIL", "fit_failure_count": len(failed), "prediction_missing_count": missing, "prediction_rows": int(len(predictions)), "models": sorted(predictions.model.astype(str).unique().tolist()), "failure_policy": "retained in predictions and fit_diagnostics; lane status is FAIL"}
+    row_count_failures = []
+    if expected_rows is not None:
+        group_columns = [c for c in ("split_id", "model") if c in predictions.columns]
+        grouped = predictions.groupby(group_columns).size() if group_columns else pd.Series(dtype=int)
+        for key, expected in expected_rows.items():
+            lookup = key[0] if len(key) == 1 else key
+            actual = int(grouped.get(lookup, 0))
+            if actual != int(expected):
+                row_count_failures.append({"group": list(key), "expected": int(expected), "actual": actual})
+    oof_failures = []
+    if expected_oof_rows is not None and {"repeat", "model", "row_index"}.issubset(predictions.columns):
+        for (model, repeat), group in predictions.groupby(["model", "repeat"], sort=True):
+            actual = int(group.row_index.nunique())
+            if actual != int(expected_oof_rows) or len(group) != int(expected_oof_rows):
+                oof_failures.append({"model": str(model), "repeat": int(repeat), "expected": int(expected_oof_rows), "unique_rows": actual, "rows": int(len(group))})
+    qc = {"status": "PASS" if not failed and missing == 0 and not row_count_failures and not oof_failures else "FAIL", "fit_failure_count": len(failed), "prediction_missing_count": missing, "prediction_rows": int(len(predictions)), "models": sorted(predictions.model.astype(str).unique().tolist()), "per_group_row_count_failures": row_count_failures, "pooled_oof_coverage_failures": oof_failures, "failure_policy": "retained in predictions and fit_diagnostics; lane status is FAIL"}
     write_json(root / "qc.json", qc)
     return qc
 
@@ -425,11 +439,12 @@ def run_new_only() -> dict[str, Any]:
                     metric = metrics(sub_y, sub_p) if np.isfinite(sub_p).all() else _failure_metrics(sub_y)
                     split_metrics.append({"split_id": split["split_id"], "repeat": int(split["repeat"]), "fold": int(split["fold"]), "model": name, "subset": subset, **metric, "fit_status": diag.get("fit_status", "ok")})
             predictions.extend(split_predictions); diagnostics.extend(split_diagnostics); metric_rows.extend(split_metrics)
-            write_json(checkpoint_root / f"{split['split_id']}.json", {"split_id": split["split_id"], "status": "retained", "predictions": split_predictions, "diagnostics": split_diagnostics, "metrics": split_metrics})
+            write_json(checkpoint_root / f"{split['split_id']}.json", {"split_id": split["split_id"], "status": "retained", "predictions": [record for part in split_predictions for record in part.to_dict("records")], "diagnostics": split_diagnostics, "metrics": split_metrics})
     pred = pd.concat(predictions, ignore_index=True); metric_frame = pd.DataFrame(metric_rows)
     write_csv(root / "predictions.csv.gz", pred); write_csv(root / "metrics.csv.gz", metric_frame); write_json(root / "fit_diagnostics.json", diagnostics)
     _new_only_summary(metric_frame, pred, root)
-    qc = _write_qc(root, pred, diagnostics)
+    expected_rows = {(split["split_id"], name): len(split["test_indices"]) for split in splits for name in MODELS}
+    qc = _write_qc(root, pred, diagnostics, expected_rows=expected_rows, expected_oof_rows=len(new))
     write_json(root / "summary.json", {"mode": "new_only", "splits": len(splits), "qc": qc, "pooled_oof": "pooled_oof_per_repeat.csv", "fold_summary": "summary.csv"})
     return {"status": qc["status"], "mode": "new_only", "splits": len(splits), "output": str(root)}
 

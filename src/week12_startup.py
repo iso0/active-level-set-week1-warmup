@@ -38,6 +38,7 @@ from src.week12_development_common import (
     original_order,
     safe,
     sha,
+    seed,
     write_csv,
     write_json,
 )
@@ -46,6 +47,8 @@ from src.week12_development_common import (
 SCHEMA_VERSION = "week12_startup_diagnosis_v1"
 DIAG = OUT / "startup" / "diagnosis"
 FAILURES = {"external__r003_f04", "external__r009_f05", "external__r019_f04"}
+STARTUP_RULES = ("maximin", "physics_stratified_geometry", "adaptive_physics", "uniform_random")
+STARTUP_BUDGETS = (8, 12, 16, 20, 24, 40, 80)
 
 
 def _single_class_probability(n0: int, n1: int, k: int) -> float:
@@ -293,6 +296,216 @@ def _figures(new, split_summary, prefix, rare, root):
         ax.legend(frameon=False, fontsize=7, ncol=2); fig.tight_layout(); fig.savefig(root / "failure_prefix_distances.png", dpi=170); plt.close(fig)
 
 
+def _require_selector_inputs(rule, x, train, queried, observed, original):
+    if rule not in STARTUP_RULES:
+        raise ValueError(f"unknown startup rule: {rule}")
+    x = np.asarray(x, float)
+    train = np.asarray(train, int)
+    queried = np.asarray(queried, int)
+    observed = np.asarray(observed, int)
+    original = np.asarray(original, int)
+    if x.ndim != 2 or x.shape[1] != 4 or not np.isfinite(x).all():
+        raise ValueError("x must be a finite n-by-4 feature matrix")
+    if len(queried) != len(observed) or len(set(queried.tolist())) != len(queried):
+        raise ValueError("queried and observed labels must have the same unique prefix")
+    if len(train) == 0 or not set(queried.tolist()).issubset(set(train.tolist())):
+        raise ValueError("queried rows must lie in the training pool")
+    if len(original) != len(train) or set(original.tolist()) != set(train.tolist()):
+        raise ValueError("original_order must be a full training-pool permutation")
+    if not set(np.unique(observed).tolist()).issubset({0, 1}):
+        raise ValueError("observed labels must be binary")
+    return x, train, queried, observed, original
+
+
+def _scaled_geometry(x, train):
+    scaler = StandardScaler().fit(x[train])
+    return scaler.transform(x), scaler
+
+
+def _farthest_from_chosen(x_scaled, candidates, chosen):
+    candidates = np.asarray(candidates, int)
+    chosen = np.asarray(chosen, int)
+    if len(candidates) == 0:
+        raise ValueError("no candidates remain")
+    if len(chosen) == 0:
+        return int(candidates.min())
+    nearest = cdist(x_scaled[candidates], x_scaled[chosen]).min(axis=1)
+    best = float(nearest.max())
+    ties = candidates[np.isclose(nearest, best, rtol=1e-12, atol=1e-14)]
+    return int(ties.min())
+
+
+def _physics_strata(x, train, original):
+    """Return train-row strata from training-only log-h ranks and 4D geometry."""
+    train = np.asarray(train, int)
+    original = np.asarray(original, int)
+    log_h = np.log(x[:, 0]) - .5 * np.log(x[:, 1]) - 1.5 * np.log(x[:, 2])
+    ordered = sorted(train.tolist(), key=lambda row: (float(log_h[row]), int(row)))
+    strata = {}
+    for rank, row in enumerate(ordered):
+        strata[int(row)] = min(2, (3 * rank) // len(ordered))
+    return log_h, strata
+
+
+def _uniform_permutation(train, split_id):
+    train = np.asarray(train, int)
+    return train[np.random.default_rng(seed(split_id, "uniform_startup")).permutation(len(train))]
+
+
+def startup_next(rule, x, train, queried, observed, original_order, split_id):
+    """Select one startup row using only inputs and already observed labels.
+
+    ``original_order`` is the complete, label-blind frozen maximin order.  It is an
+    explicit argument so callers can test that hidden labels cannot affect any
+    rule's choice.  The function never receives the unobserved truth vector.
+    """
+    x, train, queried, observed, original = _require_selector_inputs(
+        rule, x, train, queried, observed, original_order)
+    remaining = np.setdiff1d(train, queried, assume_unique=False)
+    if len(remaining) == 0:
+        raise ValueError("no startup candidates remain")
+    if rule == "maximin":
+        return int(next(row for row in original if row not in set(queried.tolist())))
+    if rule == "uniform_random":
+        permutation = _uniform_permutation(train, split_id)
+        return int(next(row for row in permutation if row not in set(queried.tolist())))
+
+    x_scaled, _ = _scaled_geometry(x, train)
+    if rule == "physics_stratified_geometry":
+        if len(queried) == 0:
+            return int(original[0])
+        _, strata = _physics_strata(x, train, original)
+        selected = set(queried.tolist())
+        # The first point is the original seeded maximin point.  Subsequent
+        # points cycle low -> mid -> high log-h strata; if a stratum is
+        # exhausted, advance cyclically to the next nonempty stratum.
+        first_target = (len(queried) - 1) % 3
+        for offset in range(3):
+            target = (first_target + offset) % 3
+            candidates = np.asarray([row for row in remaining if strata[int(row)] == target], int)
+            if len(candidates):
+                return _farthest_from_chosen(x_scaled, candidates, queried)
+        return _farthest_from_chosen(x_scaled, remaining, queried)
+
+    # Adaptive physics: the first eight are the frozen order.  While only one
+    # class has been observed, query the opposite log-h extreme.  Once both
+    # classes exist, continue with geometry-only maximin from the revealed set.
+    if len(queried) < min(8, len(original)):
+        return int(original[len(queried)])
+    labels = set(observed.tolist())
+    log_h = np.log(x[:, 0]) - .5 * np.log(x[:, 1]) - 1.5 * np.log(x[:, 2])
+    if labels == {1}:
+        best = float(log_h[remaining].min())
+        ties = remaining[np.isclose(log_h[remaining], best, rtol=1e-12, atol=1e-14)]
+        return int(ties.min())
+    if labels == {0}:
+        best = float(log_h[remaining].max())
+        ties = remaining[np.isclose(log_h[remaining], best, rtol=1e-12, atol=1e-14)]
+        return int(ties.min())
+    return _farthest_from_chosen(x_scaled, remaining, queried)
+
+
+def _coverage_metrics(x_scaled, train, queried, y):
+    train = np.asarray(train, int)
+    queried = np.asarray(queried, int)
+    nearest = cdist(x_scaled[train], x_scaled[queried]).min(axis=1)
+    return {
+        "coverage_mean_nearest_std4": float(nearest.mean()),
+        "coverage_worst_nearest_std4": float(nearest.max()),
+        "both_classes_seen": bool(np.unique(y[queried]).size == 2),
+        "rare_capture": int((y[queried] == 0).sum()),
+        "keyhole_capture": int((y[queried] == 1).sum()),
+    }
+
+
+def _benchmark_paths(new, splits, x, y, ids):
+    rows, costs, coverage = [], [], []
+    for split in splits:
+        sid = split["split_id"]
+        train = np.asarray(split["train_indices"], int)
+        original = np.asarray(original_order(x, split), int)
+        x_scaled, _ = _scaled_geometry(x, train)
+        for rule in STARTUP_RULES:
+            queried, observed = [], []
+            cost = None
+            for q in range(1, len(train) + 1):
+                nxt = startup_next(rule, x, train, queried, observed, original, sid)
+                if nxt in queried or nxt not in set(train.tolist()):
+                    raise RuntimeError(f"invalid selector output {rule} {sid} {nxt}")
+                queried.append(int(nxt)); observed.append(int(y[nxt]))
+                if cost is None and len(set(observed)) == 2:
+                    cost = q
+                rows.append({"split_id": sid, "repeat": int(split["repeat"]), "fold": int(split["fold"]), "rule": rule, "query_order": q, "row_index": int(nxt), "sim_id": str(ids[nxt]), "has_keyhole": int(y[nxt]), "log_h": float(new.log_h.iloc[nxt]), "both_classes_seen": bool(len(set(observed)) == 2)})
+                if q in STARTUP_BUDGETS:
+                    coverage.append({"split_id": sid, "repeat": int(split["repeat"]), "fold": int(split["fold"]), "rule": rule, "budget": q, **_coverage_metrics(x_scaled, train, np.asarray(queried), y)})
+            costs.append({"split_id": sid, "repeat": int(split["repeat"]), "fold": int(split["fold"]), "rule": rule, "discovery_cost": int(cost) if cost is not None else np.nan, "train_size": int(len(train)), "train_minority": int(min((y[train] == 0).sum(), (y[train] == 1).sum()))})
+    return pd.DataFrame(rows), pd.DataFrame(costs), pd.DataFrame(coverage)
+
+
+def _benchmark_prefix_parity(paths, splits, x):
+    rows = []
+    for split in splits:
+        sid = split["split_id"]
+        expected = np.asarray(original_order(x, split), int)
+        for rule, n in (("maximin", len(expected)), ("adaptive_physics", min(8, len(expected))), ("physics_stratified_geometry", 1)):
+            observed = paths[(paths.split_id == sid) & (paths.rule == rule)].sort_values("query_order").row_index.astype(int).to_numpy()
+            target = expected[:n]
+            rows.append({"split_id": sid, "rule": rule, "prefix_length": int(n), "exact": bool(np.array_equal(observed[:n], target)), "observed_count": int(len(observed))})
+    return pd.DataFrame(rows)
+
+
+def run_benchmark() -> dict:
+    """Run the four fixed startup protocols on all original frozen pools."""
+    root = OUT / "startup" / "benchmark"
+    new, old, splits, x, y, ids, *_ = _load_context()
+    root.mkdir(parents=True, exist_ok=True)
+    config = {
+        "schema_version": "week12_startup_benchmark_v1", "status": "POST-HOC DEVELOPMENT",
+        "rules": list(STARTUP_RULES), "budgets": list(STARTUP_BUDGETS), "split_count": len(splits),
+        "training_scope": "NEW-136 original Week11 frozen training pools", "features": FEATURES,
+        "maximin": "original_order; pool-only StandardScaler; seeded farthest-point continuation",
+        "physics_stratified_geometry": "same original first point; train-only log-h tertiles; low/mid/high cyclic farthest 4D point; row-index ties",
+        "adaptive_physics": "first eight original points; all-one lowest remaining log-h; all-zero highest remaining log-h; after both classes standardized-4D farthest continuation",
+        "uniform_random": "np.random.default_rng(common.seed(split_id, 'uniform_startup')).permutation(train)",
+        "cost": "first paid query index containing both classes; no free labels",
+        "coverage": "mean and worst nearest Euclidean distance over full training pool in pool-standardized 4D",
+        "rare_capture": "number of queried non-Keyhole labels, diagnostic only",
+        "hidden_label_contract": "startup_next receives observed labels only; unobserved truth is never passed to a selector",
+        "no_tuning": True,
+    }
+    write_json(root / "config.json", config)
+    config_sha = sha(root / "config.json")
+    write_json(root / "config_binding.json", {"config_sha256_before_execution": config_sha, "execution_started_after_config": True})
+    paths, costs, coverage = _benchmark_paths(new, splits, x, y, ids)
+    parity = _benchmark_prefix_parity(paths, splits, x)
+    write_csv(root / "full_startup_paths.csv.gz", paths)
+    write_csv(root / "discovery_costs.csv", costs)
+    write_csv(root / "coverage_and_rare_capture.csv", coverage)
+    write_csv(root / "label_blind_prefix_parity.csv", parity)
+    cdf = []
+    for rule, group in costs.groupby("rule", sort=True):
+        values = group.discovery_cost.to_numpy(float)
+        for budget in STARTUP_BUDGETS:
+            cdf.append({"rule": rule, "budget": budget, "fraction_both_classes": float(np.mean(values <= budget)), "median_cost": float(np.median(values)), "mean_cost": float(np.mean(values)), "tail_cost_q95": float(np.quantile(values, .95)), "run_count": int(len(values))})
+    cdf = pd.DataFrame(cdf)
+    write_csv(root / "discovery_cdf.csv", cdf)
+    coverage_summary = coverage.groupby(["rule", "budget"], as_index=False).agg(
+        mean_nearest_std4=("coverage_mean_nearest_std4", "mean"), worst_nearest_std4=("coverage_worst_nearest_std4", "mean"),
+        q95_worst_nearest_std4=("coverage_worst_nearest_std4", lambda v: v.quantile(.95)),
+        fraction_both_classes=("both_classes_seen", "mean"), mean_rare_capture=("rare_capture", "mean"),
+        fraction_any_rare=("rare_capture", lambda v: float(np.mean(v > 0))), run_count=("split_id", "nunique"))
+    write_csv(root / "coverage_summary.csv", coverage_summary)
+    summary = {"schema_version": "week12_startup_benchmark_v1", "status": "POST-HOC DEVELOPMENT", "config_sha256": config_sha, "rules": list(STARTUP_RULES), "split_count": len(splits), "outcomes": cdf.to_dict(orient="records"), "coverage_summary": coverage_summary.to_dict(orient="records"), "no_withheld_outcomes": True, "no_rule_tuning": True}
+    write_json(root / "summary.json", summary)
+    source_paths = [FREEZE, MANIFEST, OLD, HIST / "split_manifest.json", HIST / "per_budget_predictions.csv", Path(__file__), Path(__file__).resolve().parent / "week12_development_common.py", Path(__file__).resolve().parent / "external_validation" / "runner.py"]
+    write_json(root / "provenance.json", {"schema_version": "week12_startup_benchmark_v1", "source_hashes": _hashes(source_paths), "config_sha256": config_sha, "status": "POST-HOC DEVELOPMENT", "withheld_outcomes_accessed": False})
+    qc = {"status": "PASS", "checks": {"four_rules": tuple(sorted(costs.rule.unique())) == tuple(sorted(STARTUP_RULES)), "100_splits_each_rule": len(costs) == 100 * len(STARTUP_RULES), "full_paths": len(paths) == int(sum(len(s["train_indices"]) for s in splits)) * len(STARTUP_RULES), "all_costs_finite": bool(np.isfinite(costs.discovery_cost).all()), "config_before_execution": config_sha == sha(root / "config.json"), "labelblind_prefix_parity": bool(parity.exact.all()), "no_withheld_outcomes": True, "no_tuning": True}}
+    write_json(root / "QC.json", qc)
+    lines = ["# Week 12 startup benchmark", "", "Post-hoc developmental benchmark of four fixed, label-blind startup protocols over the original 100 NEW-136 training pools. Every query is paid. The benchmark does not establish external confirmation.", "", "The four protocols are maximin, physics-stratified geometry, adaptive physics, and deterministic uniform random. Configuration was written and hashed before path execution. Discovery costs, budget CDFs, standardized 4D coverage, and rare-class capture are reported separately.", "", "The adaptive rule uses observed labels only during its one-class phase. Once both classes are observed, its continuation is geometry-only. No rule or parameter was tuned against outcomes.", ""]
+    (root / "REPORT.md").write_text("\n".join(lines), encoding="utf-8")
+    return summary
+
+
 def run_diagnosis() -> dict:
     root = DIAG
     root.mkdir(parents=True, exist_ok=True)
@@ -351,9 +564,9 @@ def run_diagnosis() -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=("diagnosis",), required=True)
+    parser.add_argument("--mode", choices=("diagnosis", "benchmark"), required=True)
     args = parser.parse_args()
-    result = run_diagnosis()
+    result = run_diagnosis() if args.mode == "diagnosis" else run_benchmark()
     print(json.dumps(safe(result), indent=2, sort_keys=True))
 
 

@@ -1,0 +1,36 @@
+{
+  "adaptive_physics": "first eight original points; all-one lowest remaining log-h; all-zero highest remaining log-h; after both classes standardized-4D farthest continuation",
+  "budgets": [
+    8,
+    12,
+    16,
+    20,
+    24,
+    40,
+    80
+  ],
+  "cost": "first paid query index containing both classes; no free labels",
+  "coverage": "mean and worst nearest Euclidean distance over full training pool in pool-standardized 4D",
+  "features": [
+    "P",
+    "VX",
+    "LS",
+    "ST"
+  ],
+  "hidden_label_contract": "startup_next receives observed labels only; unobserved truth is never passed to a selector",
+  "maximin": "original_order; pool-only StandardScaler; seeded farthest-point continuation",
+  "no_tuning": true,
+  "physics_stratified_geometry": "same original first point; train-only log-h tertiles; low/mid/high cyclic farthest 4D point; row-index ties",
+  "rare_capture": "number of queried non-Keyhole labels, diagnostic only",
+  "rules": [
+    "maximin",
+    "physics_stratified_geometry",
+    "adaptive_physics",
+    "uniform_random"
+  ],
+  "schema_version": "week12_startup_benchmark_v1",
+  "split_count": 100,
+  "status": "POST-HOC DEVELOPMENT",
+  "training_scope": "NEW-136 original Week11 frozen training pools",
+  "uniform_random": "np.random.default_rng(common.seed(split_id, 'uniform_startup')).permutation(train)"
+}

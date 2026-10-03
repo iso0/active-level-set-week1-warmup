@@ -1,0 +1,13 @@
+{
+  "status": "SUPERSEDED_IMPLEMENTATION_ERROR_ARCHIVE",
+  "schema_version": "week12_startup_benchmark_v1",
+  "defect": "physics_stratified_geometry selected the first nonempty stratum in low/mid/high order at every step instead of round-robin low/mid/high cycling.",
+  "affected_rule": "physics_stratified_geometry",
+  "affected_artifacts": "All benchmark artifacts in this directory were produced by the defective selector and are retained for provenance only.",
+  "old_config_sha256": "db06cf5f461ab1061a49385dbb3f1c480741c724980b15146cee42741e436627",
+  "old_summary_sha256": "4d3fbeddfa353b1a552f6fb28bd7b76f4943cdfd10cc48c86561677a5e8b3dc0",
+  "correction": "Use target=(len(queried)-1) mod 3 after the first point, with cyclic fallback only when the target stratum is exhausted.",
+  "outcome_tuning": false,
+  "week11_frozen_artifacts_changed": false,
+  "replacement_output": "../benchmark"
+}

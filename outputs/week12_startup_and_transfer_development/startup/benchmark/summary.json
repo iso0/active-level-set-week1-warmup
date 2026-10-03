@@ -1,0 +1,578 @@
+{
+  "config_sha256": "db06cf5f461ab1061a49385dbb3f1c480741c724980b15146cee42741e436627",
+  "coverage_summary": [
+    {
+      "budget": 8,
+      "fraction_any_rare": 0.93,
+      "fraction_both_classes": 0.93,
+      "mean_nearest_std4": 1.4969063518762327,
+      "mean_rare_capture": 1.54,
+      "q95_worst_nearest_std4": 2.768002260024917,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "worst_nearest_std4": 2.5115297059346653
+    },
+    {
+      "budget": 12,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 1.2304858580992686,
+      "mean_rare_capture": 2.0,
+      "q95_worst_nearest_std4": 2.190896854214559,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "worst_nearest_std4": 2.052087244571579
+    },
+    {
+      "budget": 16,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 1.0450614884589815,
+      "mean_rare_capture": 2.42,
+      "q95_worst_nearest_std4": 1.9168663185449653,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "worst_nearest_std4": 1.8213359262953366
+    },
+    {
+      "budget": 20,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.9037328286971489,
+      "mean_rare_capture": 2.73,
+      "q95_worst_nearest_std4": 1.7032850943469156,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "worst_nearest_std4": 1.6252795520484167
+    },
+    {
+      "budget": 24,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.803657097348334,
+      "mean_rare_capture": 3.02,
+      "q95_worst_nearest_std4": 1.5610505901323561,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "worst_nearest_std4": 1.4903175680359746
+    },
+    {
+      "budget": 40,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.5404390262710144,
+      "mean_rare_capture": 4.77,
+      "q95_worst_nearest_std4": 1.2223537016026043,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "worst_nearest_std4": 1.1675303281870602
+    },
+    {
+      "budget": 80,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.15160295026740722,
+      "mean_rare_capture": 8.01,
+      "q95_worst_nearest_std4": 0.7544642588047104,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "worst_nearest_std4": 0.719662159627425
+    },
+    {
+      "budget": 8,
+      "fraction_any_rare": 0.93,
+      "fraction_both_classes": 0.93,
+      "mean_nearest_std4": 1.4969063518762327,
+      "mean_rare_capture": 1.54,
+      "q95_worst_nearest_std4": 2.768002260024917,
+      "rule": "maximin",
+      "run_count": 100,
+      "worst_nearest_std4": 2.5115297059346653
+    },
+    {
+      "budget": 12,
+      "fraction_any_rare": 0.97,
+      "fraction_both_classes": 0.97,
+      "mean_nearest_std4": 1.2296037461166183,
+      "mean_rare_capture": 1.96,
+      "q95_worst_nearest_std4": 2.190896854214559,
+      "rule": "maximin",
+      "run_count": 100,
+      "worst_nearest_std4": 2.0508492648222396
+    },
+    {
+      "budget": 16,
+      "fraction_any_rare": 0.97,
+      "fraction_both_classes": 0.97,
+      "mean_nearest_std4": 1.043869164814201,
+      "mean_rare_capture": 2.37,
+      "q95_worst_nearest_std4": 1.9168663185449653,
+      "rule": "maximin",
+      "run_count": 100,
+      "worst_nearest_std4": 1.8198682922966156
+    },
+    {
+      "budget": 20,
+      "fraction_any_rare": 0.99,
+      "fraction_both_classes": 0.99,
+      "mean_nearest_std4": 0.9040459440767796,
+      "mean_rare_capture": 2.71,
+      "q95_worst_nearest_std4": 1.7032850943469156,
+      "rule": "maximin",
+      "run_count": 100,
+      "worst_nearest_std4": 1.623914510429072
+    },
+    {
+      "budget": 24,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.8038664084912255,
+      "mean_rare_capture": 3.03,
+      "q95_worst_nearest_std4": 1.5609771337653724,
+      "rule": "maximin",
+      "run_count": 100,
+      "worst_nearest_std4": 1.490536666781586
+    },
+    {
+      "budget": 40,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.5402934906264251,
+      "mean_rare_capture": 4.75,
+      "q95_worst_nearest_std4": 1.2223537016026043,
+      "rule": "maximin",
+      "run_count": 100,
+      "worst_nearest_std4": 1.1673232945142074
+    },
+    {
+      "budget": 80,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.15160688762042707,
+      "mean_rare_capture": 8.01,
+      "q95_worst_nearest_std4": 0.7544642588047104,
+      "rule": "maximin",
+      "run_count": 100,
+      "worst_nearest_std4": 0.7197405937250526
+    },
+    {
+      "budget": 8,
+      "fraction_any_rare": 0.82,
+      "fraction_both_classes": 0.82,
+      "mean_nearest_std4": 1.4733383148470751,
+      "mean_rare_capture": 1.25,
+      "q95_worst_nearest_std4": 2.9236561349034687,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "worst_nearest_std4": 2.5863102290742845
+    },
+    {
+      "budget": 12,
+      "fraction_any_rare": 0.92,
+      "fraction_both_classes": 0.92,
+      "mean_nearest_std4": 1.201174734315514,
+      "mean_rare_capture": 1.68,
+      "q95_worst_nearest_std4": 2.3707084484154177,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "worst_nearest_std4": 2.148604296594789
+    },
+    {
+      "budget": 16,
+      "fraction_any_rare": 0.96,
+      "fraction_both_classes": 0.96,
+      "mean_nearest_std4": 1.032678994480122,
+      "mean_rare_capture": 1.9,
+      "q95_worst_nearest_std4": 2.090968199915874,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "worst_nearest_std4": 1.9149491422538967
+    },
+    {
+      "budget": 20,
+      "fraction_any_rare": 0.99,
+      "fraction_both_classes": 0.99,
+      "mean_nearest_std4": 0.9025548845010525,
+      "mean_rare_capture": 2.53,
+      "q95_worst_nearest_std4": 1.8471662094736305,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "worst_nearest_std4": 1.686163920500315
+    },
+    {
+      "budget": 24,
+      "fraction_any_rare": 0.99,
+      "fraction_both_classes": 0.99,
+      "mean_nearest_std4": 0.8034528728525993,
+      "mean_rare_capture": 2.74,
+      "q95_worst_nearest_std4": 1.670098781996894,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "worst_nearest_std4": 1.5788152814085346
+    },
+    {
+      "budget": 40,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.5399948468937928,
+      "mean_rare_capture": 4.21,
+      "q95_worst_nearest_std4": 1.3391257845135867,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "worst_nearest_std4": 1.2457046406640102
+    },
+    {
+      "budget": 80,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.153388544031359,
+      "mean_rare_capture": 7.82,
+      "q95_worst_nearest_std4": 0.8591145617718227,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "worst_nearest_std4": 0.7690939998685523
+    },
+    {
+      "budget": 8,
+      "fraction_any_rare": 0.52,
+      "fraction_both_classes": 0.52,
+      "mean_nearest_std4": 1.3992214829522986,
+      "mean_rare_capture": 0.68,
+      "q95_worst_nearest_std4": 3.4123452234081406,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "worst_nearest_std4": 2.882718614389211
+    },
+    {
+      "budget": 12,
+      "fraction_any_rare": 0.7,
+      "fraction_both_classes": 0.7,
+      "mean_nearest_std4": 1.1905470467322856,
+      "mean_rare_capture": 1.0,
+      "q95_worst_nearest_std4": 3.017273520748298,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "worst_nearest_std4": 2.6161385197324436
+    },
+    {
+      "budget": 16,
+      "fraction_any_rare": 0.78,
+      "fraction_both_classes": 0.78,
+      "mean_nearest_std4": 1.0550558271619417,
+      "mean_rare_capture": 1.3,
+      "q95_worst_nearest_std4": 2.8845452132937224,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "worst_nearest_std4": 2.441047215401066
+    },
+    {
+      "budget": 20,
+      "fraction_any_rare": 0.83,
+      "fraction_both_classes": 0.83,
+      "mean_nearest_std4": 0.9481658923268997,
+      "mean_rare_capture": 1.71,
+      "q95_worst_nearest_std4": 2.752248445640762,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "worst_nearest_std4": 2.2808263984202743
+    },
+    {
+      "budget": 24,
+      "fraction_any_rare": 0.9,
+      "fraction_both_classes": 0.9,
+      "mean_nearest_std4": 0.861572085015713,
+      "mean_rare_capture": 2.03,
+      "q95_worst_nearest_std4": 2.621800051149566,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "worst_nearest_std4": 2.177807870433945
+    },
+    {
+      "budget": 40,
+      "fraction_any_rare": 0.97,
+      "fraction_both_classes": 0.97,
+      "mean_nearest_std4": 0.6151618401168693,
+      "mean_rare_capture": 3.41,
+      "q95_worst_nearest_std4": 2.3151564717724473,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "worst_nearest_std4": 1.9366008716648213
+    },
+    {
+      "budget": 80,
+      "fraction_any_rare": 1.0,
+      "fraction_both_classes": 1.0,
+      "mean_nearest_std4": 0.214398667731699,
+      "mean_rare_capture": 7.18,
+      "q95_worst_nearest_std4": 1.8001609181708618,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "worst_nearest_std4": 1.4935433766360557
+    }
+  ],
+  "no_rule_tuning": true,
+  "no_withheld_outcomes": true,
+  "outcomes": [
+    {
+      "budget": 8,
+      "fraction_both_classes": 0.93,
+      "mean_cost": 4.43,
+      "median_cost": 4.0,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "tail_cost_q95": 9.0
+    },
+    {
+      "budget": 12,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 4.43,
+      "median_cost": 4.0,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "tail_cost_q95": 9.0
+    },
+    {
+      "budget": 16,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 4.43,
+      "median_cost": 4.0,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "tail_cost_q95": 9.0
+    },
+    {
+      "budget": 20,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 4.43,
+      "median_cost": 4.0,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "tail_cost_q95": 9.0
+    },
+    {
+      "budget": 24,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 4.43,
+      "median_cost": 4.0,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "tail_cost_q95": 9.0
+    },
+    {
+      "budget": 40,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 4.43,
+      "median_cost": 4.0,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "tail_cost_q95": 9.0
+    },
+    {
+      "budget": 80,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 4.43,
+      "median_cost": 4.0,
+      "rule": "adaptive_physics",
+      "run_count": 100,
+      "tail_cost_q95": 9.0
+    },
+    {
+      "budget": 8,
+      "fraction_both_classes": 0.93,
+      "mean_cost": 4.83,
+      "median_cost": 4.0,
+      "rule": "maximin",
+      "run_count": 100,
+      "tail_cost_q95": 11.0
+    },
+    {
+      "budget": 12,
+      "fraction_both_classes": 0.97,
+      "mean_cost": 4.83,
+      "median_cost": 4.0,
+      "rule": "maximin",
+      "run_count": 100,
+      "tail_cost_q95": 11.0
+    },
+    {
+      "budget": 16,
+      "fraction_both_classes": 0.97,
+      "mean_cost": 4.83,
+      "median_cost": 4.0,
+      "rule": "maximin",
+      "run_count": 100,
+      "tail_cost_q95": 11.0
+    },
+    {
+      "budget": 20,
+      "fraction_both_classes": 0.99,
+      "mean_cost": 4.83,
+      "median_cost": 4.0,
+      "rule": "maximin",
+      "run_count": 100,
+      "tail_cost_q95": 11.0
+    },
+    {
+      "budget": 24,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 4.83,
+      "median_cost": 4.0,
+      "rule": "maximin",
+      "run_count": 100,
+      "tail_cost_q95": 11.0
+    },
+    {
+      "budget": 40,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 4.83,
+      "median_cost": 4.0,
+      "rule": "maximin",
+      "run_count": 100,
+      "tail_cost_q95": 11.0
+    },
+    {
+      "budget": 80,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 4.83,
+      "median_cost": 4.0,
+      "rule": "maximin",
+      "run_count": 100,
+      "tail_cost_q95": 11.0
+    },
+    {
+      "budget": 8,
+      "fraction_both_classes": 0.82,
+      "mean_cost": 5.67,
+      "median_cost": 5.0,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "tail_cost_q95": 14.0
+    },
+    {
+      "budget": 12,
+      "fraction_both_classes": 0.92,
+      "mean_cost": 5.67,
+      "median_cost": 5.0,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "tail_cost_q95": 14.0
+    },
+    {
+      "budget": 16,
+      "fraction_both_classes": 0.96,
+      "mean_cost": 5.67,
+      "median_cost": 5.0,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "tail_cost_q95": 14.0
+    },
+    {
+      "budget": 20,
+      "fraction_both_classes": 0.99,
+      "mean_cost": 5.67,
+      "median_cost": 5.0,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "tail_cost_q95": 14.0
+    },
+    {
+      "budget": 24,
+      "fraction_both_classes": 0.99,
+      "mean_cost": 5.67,
+      "median_cost": 5.0,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "tail_cost_q95": 14.0
+    },
+    {
+      "budget": 40,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 5.67,
+      "median_cost": 5.0,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "tail_cost_q95": 14.0
+    },
+    {
+      "budget": 80,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 5.67,
+      "median_cost": 5.0,
+      "rule": "physics_stratified_geometry",
+      "run_count": 100,
+      "tail_cost_q95": 14.0
+    },
+    {
+      "budget": 8,
+      "fraction_both_classes": 0.52,
+      "mean_cost": 11.32,
+      "median_cost": 8.0,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "tail_cost_q95": 35.0
+    },
+    {
+      "budget": 12,
+      "fraction_both_classes": 0.7,
+      "mean_cost": 11.32,
+      "median_cost": 8.0,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "tail_cost_q95": 35.0
+    },
+    {
+      "budget": 16,
+      "fraction_both_classes": 0.78,
+      "mean_cost": 11.32,
+      "median_cost": 8.0,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "tail_cost_q95": 35.0
+    },
+    {
+      "budget": 20,
+      "fraction_both_classes": 0.83,
+      "mean_cost": 11.32,
+      "median_cost": 8.0,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "tail_cost_q95": 35.0
+    },
+    {
+      "budget": 24,
+      "fraction_both_classes": 0.9,
+      "mean_cost": 11.32,
+      "median_cost": 8.0,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "tail_cost_q95": 35.0
+    },
+    {
+      "budget": 40,
+      "fraction_both_classes": 0.97,
+      "mean_cost": 11.32,
+      "median_cost": 8.0,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "tail_cost_q95": 35.0
+    },
+    {
+      "budget": 80,
+      "fraction_both_classes": 1.0,
+      "mean_cost": 11.32,
+      "median_cost": 8.0,
+      "rule": "uniform_random",
+      "run_count": 100,
+      "tail_cost_q95": 35.0
+    }
+  ],
+  "rules": [
+    "maximin",
+    "physics_stratified_geometry",
+    "adaptive_physics",
+    "uniform_random"
+  ],
+  "schema_version": "week12_startup_benchmark_v1",
+  "split_count": 100,
+  "status": "POST-HOC DEVELOPMENT"
+}
