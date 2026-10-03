@@ -1,0 +1,37 @@
+{
+  "classification": "POST-HOC DEVELOPMENT",
+  "design_status": "Specified after startup benchmark and before any downstream acquisition results",
+  "horizon": 80,
+  "primary_endpoint": "Original Fold-B1-q20 accuracy normalized trapezoidal AULC B16-B80, every integer budget",
+  "secondary_early_endpoint": "B8-B80 accuracy AULC with explicit startup predictor; not historically identical",
+  "split_policy": "All100 original input-only Week11 partitions, executed anew under developmental protocols",
+  "budget_policy": "Every startup and refinement label is paid; no reset at discovery",
+  "startup_predictor": "Beta(1,1) posterior mean (ones+1)/(queried+2) while prescribed initialization is unfinished; never called M3",
+  "model": "Unmodified historical M3; identical split/budget seed namespace across arms",
+  "old_data_used_for_training": false,
+  "frozen_run_resumed": false,
+  "arms": {
+    "M3_margin__maximin16_continue": {"startup": "maximin", "minimum_start": 16, "refinement": "margin"},
+    "Candidate_A__maximin16_continue": {"startup": "maximin", "minimum_start": 16, "refinement": "coverage"},
+    "Candidate_B__maximin8_continue": {"startup": "maximin", "minimum_start": 8, "refinement": "coverage"},
+    "M3_margin__maximin8_continue": {"startup": "maximin", "minimum_start": 8, "refinement": "margin"},
+    "M3_margin__physics_stratified8": {"startup": "physics_stratified_geometry", "minimum_start": 8, "refinement": "margin"},
+    "M3_margin__adaptive_physics8": {"startup": "adaptive_physics", "minimum_start": 8, "refinement": "margin"},
+    "M3_margin__uniform8_continue": {"startup": "uniform_random", "minimum_start": 8, "refinement": "margin"},
+    "M3_random__maximin16_continue": {"startup": "maximin", "minimum_start": 16, "refinement": "random"}
+  },
+  "contrasts": [
+    ["Candidate_B__maximin8_continue", "M3_margin__maximin16_continue"],
+    ["Candidate_A__maximin16_continue", "M3_margin__maximin16_continue"],
+    ["Candidate_B__maximin8_continue", "M3_margin__maximin8_continue"],
+    ["M3_margin__maximin8_continue", "M3_margin__maximin16_continue"],
+    ["M3_margin__adaptive_physics8", "M3_margin__maximin8_continue"],
+    ["M3_margin__physics_stratified8", "M3_margin__maximin8_continue"],
+    ["M3_margin__uniform8_continue", "M3_margin__maximin8_continue"],
+    ["M3_random__maximin16_continue", "M3_margin__maximin16_continue"]
+  ],
+  "inference": "Descriptive paired repeat-block contrasts and conditional partition bootstrap intervals; no confirmation or replacement decision",
+  "startup_rules": "startup/benchmark/config.json; the superseded implementation-error-v0 outputs are excluded",
+  "failure_policy": "Retain path, diagnostics and error; do not silently discard, reseed, tune, or summarize incomplete comparisons",
+  "why_eight_complete_protocols": "Three historical structures plus matched early-margin attribution, three startup controls at B8, and one random acquisition control; only existing margin/coverage/random refinement rules"
+}

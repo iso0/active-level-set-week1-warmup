@@ -1,0 +1,48 @@
+{
+  "classification": "POST-HOC DEVELOPMENT",
+  "config_sha256": "43e4c1edff37b0d5c8b84b1cebbc8d475dfc055f3d333708b8240520e409db3f",
+  "input_provenance": {
+    "outputs\\week11_external_prelabel_freeze_final\\EXTERNAL_BATCH_FREEZE.json": "856219763ec41ba22eb13ebb5c23e2137fb3d6eb884de71a44f96d80debe1eee",
+    "outputs\\week11_new_data_arrival_audit\\WEEK11_NEW_BATCH_MANIFEST.csv": "46deec01b03b962202f2ad162a969db3fe300c27bf0fcbc98718a4b42606f910",
+    "outputs\\week11_track_a_external_validation\\external_validation\\per_budget_predictions.csv": "76bbe5fe15fc3a8658a720d960036bf72bbb9caf2241ffbd4fdaa7d3a82da668",
+    "outputs\\week11_track_a_external_validation\\external_validation\\split_manifest.json": "782d09b9dd36774dc1ebf6fff3769db72ec72d21634eae79058c72c5137d71de",
+    "outputs\\week7_06_real_data_boundary_active_level_set\\primary_common_population.csv": "c15658cac87a8616a1984185ec1afc8126a1db811f0d5819e62cfb621a7486c7"
+  },
+  "original_repeat_seeds": [
+    1101,
+    1102,
+    1103,
+    1104,
+    1105,
+    1106,
+    1107,
+    1108,
+    1109,
+    1110,
+    1111,
+    1112,
+    1113,
+    1114,
+    1115,
+    1116,
+    1117,
+    1118,
+    1119,
+    1120
+  ],
+  "query_random_seed": "week12|split_id|random_refinement|budget",
+  "source_hashes": {
+    "outputs\\week12_startup_and_transfer_development\\audit\\input_provenance.json": "0833c6255663892a2be676e8b3753e30a76a0500ab6c13fbc2718159d79efeab",
+    "src\\external_validation\\analysis.py": "9df0d7e03a26e7e0635365dd0be5a9983e928254b9bb02bed7a441878a09f1b1",
+    "src\\external_validation\\runner.py": "554e90f5e217bcfbf24a9a9148c6393889eb36bb1c2fd01a069deb081aff97ea",
+    "src\\week12_active_learning.py": "309ec8256d5c9d4634e2425f050dc431c9bb9a456b5b1bba526a9cf73b87a14e",
+    "src\\week12_development_common.py": "e2cc86e1bfcee165706061e859833d81d63a20e2cd7eb5477d8b947d1dca050f",
+    "src\\week12_startup.py": "6bd30c2569cf66917339b7c0a9e78fa73d1d0fba77592443b544f82f25ec49a0",
+    "src\\week8_5_frozen_sample_efficiency_confirmation.py": "cb63cd474817a91a755d779d8a0f4ad5337ab51a0778f3bc1788c3f6d943b60c",
+    "src\\week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5",
+    "src\\week9_phase1_13_fixed_physics_ard_discrepancy.py": "03928c4dbb11a1b925586443b7c9ace61e1ca0164782e3af7fa1b7401bffb0ba",
+    "src\\week9_phase1_20_acquisition_search.py": "a47a4c2a872bda39da0ef1415360447d9fafb570c603cf3e6687ead5681a26b2",
+    "src\\week9_phase1_21_simplification_replication.py": "b7c436e88c15cb569c4c5f8cf2f26f3c2742f436da403c8c4b6fce85386d19c9"
+  },
+  "startup_config_sha256": "db06cf5f461ab1061a49385dbb3f1c480741c724980b15146cee42741e436627"
+}
