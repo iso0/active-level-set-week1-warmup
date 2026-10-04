@@ -1,0 +1,14 @@
+{
+  "OLD": {
+    "rare_class": 1,
+    "K": 73,
+    "LOO_front_certified_fraction": 0.6438356164383562,
+    "rare_front_size": 26
+  },
+  "NEW": {
+    "rare_class": 0,
+    "K": 12,
+    "LOO_front_certified_fraction": 0.75,
+    "rare_front_size": 3
+  }
+}

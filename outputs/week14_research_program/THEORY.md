@@ -255,3 +255,25 @@ discovery, model and metric effects interact (changing the startup changes which
 occur), so no unique additive attribution exists (a 2×2 example with an interaction is given in
 COUNTEREXAMPLES.md C9). We therefore recommend reporting the ledger with fixed, pre-declared
 references rather than claiming a causal decomposition.
+
+---
+
+## Post-confirmation status (appended after the frozen runs; text above unchanged)
+
+- **D1–D3, D5** survived every check: property tests, the frozen held-out benchmark (P1, P3a never
+  violated over all held-out pools) and the real campaigns. The *assumptions* did not always hold:
+  on NEW-136 the order O3 is violated (75 violating pairs; 64 from one case), so D3's certificate does
+  not apply there and FRONT needed up to 21 queries in 9/100 pools. This is the theorem working as
+  stated (assumption false → no guarantee), and it shows that extreme-point certificates are fragile to
+  violations located on the front, whereas rank-based discovery (D4) degraded gracefully (max 7).
+- **D2's dimension prediction** was confirmed on the monotone held-out family: maximin cost grew from
+  4.0 (d = 2) to 6.3 (d = 6) while the order certificate stayed at 2.0.
+- **E2** consequences confirmed: density-weighting of all finite metrics (C3) and attenuation under noise
+  (C4). Length weighting reduced the density sensitivity of BER in every held-out cell (P7a) but did not
+  dominate q20 accuracy in rank agreement with ASSD in 3/12 cells (P7b failed).
+- **H1** is true but numerically vacuous for the GPCs studied (Study 4); the useful headroom statements
+  are empirical: the full-pool model is not a ceiling (C7), and finite-pool metrics cannot identify the
+  true-objective headroom (C8).
+- **I1** on real data: 9/12 NEW and 47/73 OLD rare cases are dominated by another rare case, i.e. the
+  order would carry most of the rare-regime information *if* it held; on NEW it is the violations, not a
+  lack of order information, that make closure inference unsafe.

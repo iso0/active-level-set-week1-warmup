@@ -1,0 +1,204 @@
+{
+  "fit_failures": 0,
+  "P5a_G3C_ge_G3_every_cell": false,
+  "P5b_no_cell_below_-0.01": false,
+  "P5c_curvedMono_ci_excludes0_in_half_shifted": true,
+  "P6a_M3_lt_G3_majority_shifted": true,
+  "P6b_M3_ge_G3_minus_0.005_indomain": true,
+  "G3C_minus_G3_BA": [
+    {
+      "family": "curvedMono",
+      "setting": "indomain80",
+      "mean": 0.0004,
+      "ci_low": -0.0006,
+      "ci_high": 0.0017,
+      "positive": 2,
+      "n": 30
+    },
+    {
+      "family": "curvedMono",
+      "setting": "target40",
+      "mean": 0.0228,
+      "ci_low": 0.0082,
+      "ci_high": 0.0405,
+      "positive": 14,
+      "n": 30
+    },
+    {
+      "family": "curvedMono",
+      "setting": "target80",
+      "mean": 0.0098,
+      "ci_low": 0.0002,
+      "ci_high": 0.0192,
+      "positive": 13,
+      "n": 30
+    },
+    {
+      "family": "curvedMono",
+      "setting": "transfer",
+      "mean": 0.0025,
+      "ci_low": -0.0021,
+      "ci_high": 0.0084,
+      "positive": 4,
+      "n": 30
+    },
+    {
+      "family": "hartmannDev",
+      "setting": "indomain80",
+      "mean": 0.0001,
+      "ci_low": -0.001,
+      "ci_high": 0.0012,
+      "positive": 3,
+      "n": 30
+    },
+    {
+      "family": "hartmannDev",
+      "setting": "target40",
+      "mean": 0.0277,
+      "ci_low": 0.0109,
+      "ci_high": 0.0472,
+      "positive": 11,
+      "n": 30
+    },
+    {
+      "family": "hartmannDev",
+      "setting": "target80",
+      "mean": 0.0172,
+      "ci_low": -0.001,
+      "ci_high": 0.035,
+      "positive": 12,
+      "n": 30
+    },
+    {
+      "family": "hartmannDev",
+      "setting": "transfer",
+      "mean": 0.0102,
+      "ci_low": 0.0017,
+      "ci_high": 0.0206,
+      "positive": 7,
+      "n": 30
+    },
+    {
+      "family": "twoRegimeST",
+      "setting": "indomain80",
+      "mean": 0.0018,
+      "ci_low": -0.0002,
+      "ci_high": 0.0038,
+      "positive": 8,
+      "n": 30
+    },
+    {
+      "family": "twoRegimeST",
+      "setting": "target40",
+      "mean": -0.0042,
+      "ci_low": -0.0294,
+      "ci_high": 0.0232,
+      "positive": 5,
+      "n": 30
+    },
+    {
+      "family": "twoRegimeST",
+      "setting": "target80",
+      "mean": -0.0161,
+      "ci_low": -0.0443,
+      "ci_high": 0.0121,
+      "positive": 12,
+      "n": 30
+    },
+    {
+      "family": "twoRegimeST",
+      "setting": "transfer",
+      "mean": -0.005,
+      "ci_low": -0.0191,
+      "ci_high": 0.0076,
+      "positive": 5,
+      "n": 30
+    }
+  ],
+  "M3_minus_G3_BA": [
+    {
+      "family": "curvedMono",
+      "setting": "indomain80",
+      "mean": 0.0044,
+      "ci_low": -0.0044,
+      "ci_high": 0.0133
+    },
+    {
+      "family": "curvedMono",
+      "setting": "target40",
+      "mean": 0.0086,
+      "ci_low": -0.0155,
+      "ci_high": 0.0318
+    },
+    {
+      "family": "curvedMono",
+      "setting": "target80",
+      "mean": -0.0168,
+      "ci_low": -0.0455,
+      "ci_high": 0.0104
+    },
+    {
+      "family": "curvedMono",
+      "setting": "transfer",
+      "mean": -0.1019,
+      "ci_low": -0.1388,
+      "ci_high": -0.0657
+    },
+    {
+      "family": "hartmannDev",
+      "setting": "indomain80",
+      "mean": 0.0297,
+      "ci_low": 0.0207,
+      "ci_high": 0.0402
+    },
+    {
+      "family": "hartmannDev",
+      "setting": "target40",
+      "mean": 0.0241,
+      "ci_low": -0.015,
+      "ci_high": 0.064
+    },
+    {
+      "family": "hartmannDev",
+      "setting": "target80",
+      "mean": -0.0282,
+      "ci_low": -0.0514,
+      "ci_high": -0.0054
+    },
+    {
+      "family": "hartmannDev",
+      "setting": "transfer",
+      "mean": -0.0394,
+      "ci_low": -0.0637,
+      "ci_high": -0.0179
+    },
+    {
+      "family": "twoRegimeST",
+      "setting": "indomain80",
+      "mean": 0.0119,
+      "ci_low": 0.0026,
+      "ci_high": 0.021
+    },
+    {
+      "family": "twoRegimeST",
+      "setting": "target40",
+      "mean": -0.1888,
+      "ci_low": -0.2248,
+      "ci_high": -0.1506
+    },
+    {
+      "family": "twoRegimeST",
+      "setting": "target80",
+      "mean": -0.1248,
+      "ci_low": -0.1573,
+      "ci_high": -0.0925
+    },
+    {
+      "family": "twoRegimeST",
+      "setting": "transfer",
+      "mean": -0.189,
+      "ci_low": -0.222,
+      "ci_high": -0.1554
+    }
+  ]
+}

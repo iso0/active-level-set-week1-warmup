@@ -65,3 +65,30 @@ EXTERNAL/PUBLIC, SPECULATIVE.
   numerically vacuous for these GPCs (mean-swap bound 0.03-0.47, max-swap bound > 1).
 - Week 13 source restored byte-identical; the new weighted metric lives in src/week14_metrics.py.
 - Freeze committed before any held-out family or Week 14 real-data check is executed.
+
+## Stage D — confirmatory results (after freeze 3278f7dc)
+
+- C1 discovery (held-out): P1, P2, P3a, P3b, P4 all hold. FRONT cost is dimension-free on the monotone
+  held-out family (2.0 at d = 2, 4, 6) while MAXI grows (4.0 -> 6.3); MAXI is best on Branin/Hartmann
+  (peripheral compact basins); RAND/HEDGE_FR best on twoislands_skew at d >= 4.
+- C2 transfer (held-out): P5a and P5b FAIL (G3C below G3 in twoRegimeST: BA -0.016 at target80, NSD
+  -0.075), P5c holds (curvedMono), P6a/P6b hold. Risk asymmetry: worst cell G3C - G3 = -0.016 BA, whereas
+  M3 - G3 reaches -0.19 and H - G3 -0.26.
+- C3 metrics: P7a holds (wBER less density-sensitive than BER in every cell; 6-D reduction small), P7b
+  fails in 3/12 cells (uniform/clustered sphere; two of them by < 0.002).
+- R1 (POST-HOC NEW) FAILS: FRONT needs > 16 queries in 9/100 NEW pools (max 21). NEW labels violate O3
+  far more than OLD: 75 violating pairs on the full 136, of which 64 come from one non-Keyhole case
+  (P 423 W, VX 0.332 m/s, LS 42 um, ST 473 K) in the highest-energy-density corner; the remaining 11 are
+  near-front boundary violations that defeat the min-front certificate in 9 pools. SCORE (log-h extremes)
+  has max 7 and the three-way HEDGE (MAXI+FRONT+SCORE) max 14 on NEW; HEDGE_FR max 37.
+- R2 (EXTERNAL Masinelli) holds strongly: FRONT mean 2.0-2.5 (max 8) vs RAND 8.4-16.4 and MAXI up to 35.
+- R7: Prop. I1 — 75% of NEW rare cases (9/12) and 64% of OLD rare cases are dominated by another rare case.
+- R3-R5 real models: G3C helps within-material on Masinelli (+0.016/+0.020 at n = 10), neutral on
+  transfers, +0.006 OLD in-domain, -0.023 NEW-only (closure errors 11% of implied labels). Removing the
+  anomalous NEW case from training only (sensitivity) makes G3C worse (-0.051): the harm is not a single
+  label; NEW's labels genuinely violate O3 near the extreme-VX boundary.
+- R6: weighted metrics on Week 12 NEW paths resolve no protocol difference.
+- Study 4b/4c: a true-NSD oracle beats margin by +0.05/+0.07/+0.10 NSD (BAL/OLD/NEW-like) by avoiding
+  noisy near-boundary labels (flipped acquired labels <= 2.3% vs 8-17%). Study 5 (development): BALD does
+  not capture this headroom (NEW-like NSD 0.734 vs margin 0.825 at sigma 0.5). Not pursued further.
+- Wrote LITERATURE_NOVELTY_AUDIT, COUNTEREXAMPLES, CLAIM_LEDGER, WEEK14_MASTER_REPORT, THESIS_INTEGRATION.

@@ -156,16 +156,21 @@ def real_models():
     Xo, yo, so = to_log(old[F].to_numpy()), old.has_keyhole.to_numpy(), old.log_h.to_numpy()
     Xn, yn, sn = to_log(new[F].to_numpy()), new.has_keyhole.to_numpy(), new.log_h.to_numpy()
     rows += score_models(Xo, yo, so, Xn, yn, sn, SIGNS_O3, "POSTHOC_OLD_to_NEW")
-    for s in json.loads((W12 / "audit/original_splits.json").read_text()):
-        tr, te = np.asarray(s["train_indices"]), np.asarray(s["test_indices"])
-        rows += score_models(Xn[tr], yn[tr], sn[tr], Xn[te], yn[te], sn[te], SIGNS_O3, "POSTHOC_NEW_only",
-                             {"split": s["split_id"], "repeat": s["repeat"]})
+    from joblib import Parallel, delayed   # parallel execution only; results are deterministic per split
+    sp = json.loads((W12 / "audit/original_splits.json").read_text())
+    res = Parallel(n_jobs=7)(delayed(score_models)(Xn[np.asarray(s["train_indices"])], yn[np.asarray(s["train_indices"])], sn[np.asarray(s["train_indices"])],
+                                                   Xn[np.asarray(s["test_indices"])], yn[np.asarray(s["test_indices"])], sn[np.asarray(s["test_indices"])],
+                                                   SIGNS_O3, "POSTHOC_NEW_only", {"split": s["split_id"], "repeat": s["repeat"]}) for s in sp)
+    rows += [x for r in res for x in r]
     man = pd.read_csv(ROOT / "outputs/week8_5_frozen_confirmation/split_manifest.csv", usecols=["run_id", "repeat", "role", "population_row_index"])
+    jobs = []
     for run, g in man.groupby("run_id"):
         tr = g[g.role.eq("training_pool")].population_row_index.to_numpy(int)
         te = g[g.role.eq("untouched_test")].population_row_index.to_numpy(int)
-        rows += score_models(Xo[tr], yo[tr], so[tr], Xo[te], yo[te], so[te], SIGNS_O3, "HISTORICAL_OLD_indomain",
-                             {"split": run, "repeat": int(g.repeat.iloc[0])})
+        jobs.append((tr, te, run, int(g.repeat.iloc[0])))
+    res = Parallel(n_jobs=7)(delayed(score_models)(Xo[tr], yo[tr], so[tr], Xo[te], yo[te], so[te], SIGNS_O3, "HISTORICAL_OLD_indomain",
+                                                   {"split": run, "repeat": rep}) for tr, te, run, rep in jobs)
+    rows += [x for r in res for x in r]
     mas = load_masinelli()
     for a, b in (("Ti64", "316L"), ("316L", "Ti64")):
         da, db = mas[a], mas[b]

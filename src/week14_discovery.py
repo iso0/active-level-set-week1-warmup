@@ -21,7 +21,8 @@ from src.week14_order import dominance, first_both, front_discovery_order, inter
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs/week14_research_program/synthetic/discovery"
 FAMILIES = ("mono", "mono_noise", "mono_tworegime", "islands", "bump", "slab",
-            "heldout_branin", "heldout_hartmann", "heldout_rotated_mono", "heldout_twoislands_skew")
+            "heldout_branin", "heldout_hartmann", "heldout_rotated_mono", "heldout_twoislands_skew",
+            "heldout_mono_curved")  # appended after the freeze (deviation D1: crash fix, no design change)
 DESIGNS = ("uniform", "skewed", "clustered")
 
 

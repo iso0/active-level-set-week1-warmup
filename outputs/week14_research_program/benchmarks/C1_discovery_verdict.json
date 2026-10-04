@@ -1,0 +1,277 @@
+{
+  "P1_front_within_front_sizes": true,
+  "P2_front_lt_maxi_lt_rand_every_dn_cell": true,
+  "P2_cells": [
+    {
+      "d": 2,
+      "n": 108,
+      "FRONT": 2.001,
+      "MAXI": 4.093,
+      "RAND": 13.393
+    },
+    {
+      "d": 2,
+      "n": 324,
+      "FRONT": 2.0,
+      "MAXI": 3.934,
+      "RAND": 16.677
+    },
+    {
+      "d": 4,
+      "n": 108,
+      "FRONT": 2.012,
+      "MAXI": 5.626,
+      "RAND": 13.52
+    },
+    {
+      "d": 4,
+      "n": 324,
+      "FRONT": 2.013,
+      "MAXI": 5.171,
+      "RAND": 15.353
+    },
+    {
+      "d": 6,
+      "n": 108,
+      "FRONT": 2.013,
+      "MAXI": 6.366,
+      "RAND": 13.466
+    },
+    {
+      "d": 6,
+      "n": 324,
+      "FRONT": 2.013,
+      "MAXI": 6.324,
+      "RAND": 16.203
+    }
+  ],
+  "P3a_hedge_pathwise_bound": true,
+  "P3b_hedge_le_1.5x_rand_every_family": true,
+  "P4_maxi_worse_than_rand_somewhere": true,
+  "family_means": {
+    "heldout_branin": {
+      "HEDGE_FR": 12.144,
+      "RAND": 14.769,
+      "MAXI": 9.405,
+      "FRONT": 10.783,
+      "SCORE": 23.436,
+      "HEDGE": 9.493,
+      "ADAPT8": 26.969
+    },
+    "heldout_hartmann": {
+      "HEDGE_FR": 13.922,
+      "RAND": 14.21,
+      "MAXI": 10.235,
+      "FRONT": 14.136,
+      "SCORE": 19.889,
+      "HEDGE": 12.431,
+      "ADAPT8": 10.66
+    },
+    "heldout_mono_curved": {
+      "HEDGE_FR": 2.519,
+      "RAND": 14.769,
+      "MAXI": 5.252,
+      "FRONT": 2.009,
+      "SCORE": 2.009,
+      "HEDGE": 2.864,
+      "ADAPT8": 4.435
+    },
+    "heldout_rotated_mono": {
+      "HEDGE_FR": 5.292,
+      "RAND": 14.314,
+      "MAXI": 5.353,
+      "FRONT": 4.033,
+      "SCORE": 8.963,
+      "HEDGE": 4.121,
+      "ADAPT8": 5.01
+    },
+    "heldout_twoislands_skew": {
+      "HEDGE_FR": 14.639,
+      "RAND": 14.626,
+      "MAXI": 16.87,
+      "FRONT": 19.224,
+      "SCORE": 30.809,
+      "HEDGE": 19.214,
+      "ADAPT8": 33.25
+    }
+  },
+  "family_q90": {
+    "heldout_branin": {
+      "HEDGE_FR": 28.0,
+      "RAND": 36.0,
+      "MAXI": 22.0,
+      "FRONT": 25.0
+    },
+    "heldout_hartmann": {
+      "HEDGE_FR": 34.0,
+      "RAND": 34.09999999999991,
+      "MAXI": 24.0,
+      "FRONT": 34.0
+    },
+    "heldout_mono_curved": {
+      "HEDGE_FR": 3.0,
+      "RAND": 36.0,
+      "MAXI": 10.0,
+      "FRONT": 2.0
+    },
+    "heldout_rotated_mono": {
+      "HEDGE_FR": 13.0,
+      "RAND": 34.0,
+      "MAXI": 11.0,
+      "FRONT": 10.0
+    },
+    "heldout_twoislands_skew": {
+      "HEDGE_FR": 40.0,
+      "RAND": 36.0,
+      "MAXI": 40.0,
+      "FRONT": 50.0
+    }
+  },
+  "family_max": {
+    "heldout_branin": {
+      "HEDGE_FR": 132.0,
+      "RAND": 171.0,
+      "MAXI": 157.0,
+      "FRONT": 156.0
+    },
+    "heldout_hartmann": {
+      "HEDGE_FR": 140.0,
+      "RAND": 173.0,
+      "MAXI": 125.0,
+      "FRONT": 134.0
+    },
+    "heldout_mono_curved": {
+      "HEDGE_FR": 27.0,
+      "RAND": 157.0,
+      "MAXI": 73.0,
+      "FRONT": 14.0
+    },
+    "heldout_rotated_mono": {
+      "HEDGE_FR": 84.0,
+      "RAND": 163.0,
+      "MAXI": 129.0,
+      "FRONT": 56.0
+    },
+    "heldout_twoislands_skew": {
+      "HEDGE_FR": 174.0,
+      "RAND": 169.0,
+      "MAXI": 203.0,
+      "FRONT": 210.0
+    }
+  },
+  "n_pools": 25192,
+  "front_vs_maxi_by_family_d": [
+    {
+      "family": "heldout_branin",
+      "d": 2,
+      "FRONT": 9.97,
+      "MAXI": 8.57,
+      "RAND": 14.37,
+      "HEDGE_FR": 11.51
+    },
+    {
+      "family": "heldout_branin",
+      "d": 4,
+      "FRONT": 10.93,
+      "MAXI": 9.21,
+      "RAND": 14.81,
+      "HEDGE_FR": 12.21
+    },
+    {
+      "family": "heldout_branin",
+      "d": 6,
+      "FRONT": 11.45,
+      "MAXI": 10.44,
+      "RAND": 15.13,
+      "HEDGE_FR": 12.71
+    },
+    {
+      "family": "heldout_hartmann",
+      "d": 4,
+      "FRONT": 14.23,
+      "MAXI": 9.87,
+      "RAND": 14.08,
+      "HEDGE_FR": 14.01
+    },
+    {
+      "family": "heldout_hartmann",
+      "d": 6,
+      "FRONT": 14.04,
+      "MAXI": 10.6,
+      "RAND": 14.34,
+      "HEDGE_FR": 13.84
+    },
+    {
+      "family": "heldout_mono_curved",
+      "d": 2,
+      "FRONT": 2.0,
+      "MAXI": 4.01,
+      "RAND": 15.04,
+      "HEDGE_FR": 2.5
+    },
+    {
+      "family": "heldout_mono_curved",
+      "d": 4,
+      "FRONT": 2.01,
+      "MAXI": 5.4,
+      "RAND": 14.44,
+      "HEDGE_FR": 2.51
+    },
+    {
+      "family": "heldout_mono_curved",
+      "d": 6,
+      "FRONT": 2.01,
+      "MAXI": 6.34,
+      "RAND": 14.83,
+      "HEDGE_FR": 2.54
+    },
+    {
+      "family": "heldout_rotated_mono",
+      "d": 2,
+      "FRONT": 4.65,
+      "MAXI": 4.1,
+      "RAND": 14.03,
+      "HEDGE_FR": 6.17
+    },
+    {
+      "family": "heldout_rotated_mono",
+      "d": 4,
+      "FRONT": 3.74,
+      "MAXI": 5.59,
+      "RAND": 14.47,
+      "HEDGE_FR": 4.86
+    },
+    {
+      "family": "heldout_rotated_mono",
+      "d": 6,
+      "FRONT": 3.71,
+      "MAXI": 6.37,
+      "RAND": 14.43,
+      "HEDGE_FR": 4.85
+    },
+    {
+      "family": "heldout_twoislands_skew",
+      "d": 2,
+      "FRONT": 15.04,
+      "MAXI": 12.59,
+      "RAND": 14.09,
+      "HEDGE_FR": 12.77
+    },
+    {
+      "family": "heldout_twoislands_skew",
+      "d": 4,
+      "FRONT": 22.28,
+      "MAXI": 17.94,
+      "RAND": 14.83,
+      "HEDGE_FR": 16.02
+    },
+    {
+      "family": "heldout_twoislands_skew",
+      "d": 6,
+      "FRONT": 20.36,
+      "MAXI": 20.08,
+      "RAND": 14.96,
+      "HEDGE_FR": 15.13
+    }
+  ]
+}
