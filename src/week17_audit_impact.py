@@ -26,6 +26,7 @@ class SafeguardedFixedMeanLaplaceGPC(p11.FixedMeanLaplaceGPC):
     def _posterior_mode(self, kernel, return_temporaries=False):
         K = kernel(self.X_train_)
         r = safeguarded_mode(K, self.y_train_, self.mean_train_)
+        self.mode_fp_, self.mode_converged_ = r["fp"], r["converged"]
         pi, sw, L, g = r["pi"], r["sw"], r["L"], r["g"]
         a = self.y_train_ - pi
         b = pi * (1 - pi) * g + a
