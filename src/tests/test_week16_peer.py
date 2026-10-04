@@ -67,3 +67,25 @@ def test_robust_laplace_matches_converged_and_fixes_oscillation():
     good = RobustLaplaceGPC(c["hyp"]["ls"], c["hyp"]["var"]).fit(c["z_pool"][L], c["y_pool"][L], mean=m)
     assert good.converged and good.fp_err < 1e-8
     assert mode_gap(bad) > 1.0 and mode_gap(good) < 1e-8
+
+
+def test_noisy_observation_breaks_margin_bound():
+    """Proposition W16-1: with latent-sign targets and probit observations the 1/(N-1) margin guarantee fails.
+    Point a: mu = 0, sd eps (aleatoric: p = 1/2 exactly); point b: mu = delta, sd S, independent of a.
+    Margin picks a; V(a) = arcsin(eps / sqrt(eps^2 + 8/pi)) / pi -> 0 while V(b) stays positive."""
+    from scipy.special import ndtr
+    from src.week15_ebr import bvn_lower
+    tau2 = NOISE_VAR
+    def value(mu, s):          # self value (|E[T O]| - |E T|)_+ / 2 for a single Gaussian latent
+        a, c = mu / s, mu / np.sqrt(s * s + tau2); rho = s / np.sqrt(s * s + tau2)
+        pT, pO = ndtr(a), ndtr(c); p11 = bvn_lower(np.array([a]), np.array([c]), np.array([rho]))[0]
+        return .5 * max(abs(4 * p11 - 2 * pT - 2 * pO + 1) - abs(2 * pT - 1), 0)
+    S, delta = 3.0, .3
+    vb = value(delta, S)
+    assert vb > .1
+    for eps in (1e-1, 1e-2, 1e-3):
+        va = value(1e-12, eps)
+        assert np.isclose(va, np.arcsin(eps / np.sqrt(eps ** 2 + tau2)) / np.pi, atol=1e-6)
+        pa, pb = ndtr(0.0), ndtr(delta / np.sqrt(S * S + tau2))
+        assert abs(pa - .5) < abs(pb - .5)                     # margin picks a
+    assert value(1e-12, 1e-3) / vb < 1e-3                        # ratio far below 1/(N-1) = 1

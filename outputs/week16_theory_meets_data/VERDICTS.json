@@ -1,0 +1,85 @@
+{
+  "P1": {
+    "P1_median_r_model_ref_physics_like": 0.4060359166807255,
+    "P1_states_non_saturated": 908,
+    "P1_holds": false
+  },
+  "P2": {
+    "P2_sumA_over_sumH": {
+      "dev": -0.058731501451012545,
+      "curvedMono": -0.0035518711278831753,
+      "branin4d": -0.08255462574830989,
+      "rough": 0.15999999999999984
+    },
+    "P2_gpworld": 0.09804126807897888,
+    "P2_holds": true
+  },
+  "P3": {
+    "decoys": 538,
+    "decoy_outside_hull_share": 0.6356877323420075,
+    "decoy_median_dist_ratio": 0.7530116537956477,
+    "nondecoy_outside_hull_share": 0.6432432432432432,
+    "nondecoy_median_dist_ratio": 0.838194826798913,
+    "decoy_median_abs_latent": 0.9583856431578739,
+    "nondecoy_median_abs_latent": 2.915476054208576,
+    "decoy_share_by_mean_variant": {
+      "mean_base": 0.5925110132158591,
+      "mean_ml2": 0.6284454244762955,
+      "mean_physics": 0.6413641364136413
+    },
+    "mean_Vtrue_ham_ref_of_margin_pick_by_variant": {
+      "mean_base": 0.00046584535279128907,
+      "mean_ml2": 0.0006638525020357556,
+      "mean_physics": 0.0006234548848377094
+    },
+    "mean_Vtrue_nsd_of_margin_pick_by_variant": {
+      "mean_base": 0.003099744445426487,
+      "mean_ml2": 0.003916615358622146,
+      "mean_physics": 0.004784774894052854
+    },
+    "P3_holds": false
+  },
+  "argmax_Vmodel_vs_margin_dev": {
+    "mean_A_ham_ref": -0.00023772753735089828,
+    "ci": [
+      -0.0008625245185080642,
+      0.0003923995678320694
+    ],
+    "mean_A_nsd": -0.0016051987775168042,
+    "ci_nsd": [
+      -0.0038168379266808102,
+      0.0005964964174174513
+    ],
+    "share_states_A_pos_ham": 0.33796296296296297,
+    "share_states_A_neg_ham": 0.28935185185185186
+  },
+  "P4": {
+    "cells": 25,
+    "mean_within_cell_rho_negLL_NSD": 0.3768571428571429,
+    "mean_within_cell_rho_negJLLnear_NSD": 0.36828571428571427,
+    "mean_difference": -0.008571428571428574,
+    "partial_rho_JLLnear_NSD_given_LL": -0.010577299244892986,
+    "partial_p": 0.8917598625633746,
+    "partial_rho_DEnear_NSD_given_LL": 0.07248766881608887,
+    "partial_p_DE": 0.35042671508928624,
+    "mean_within_cell_rho_negLL_BA": 0.2465714285714286,
+    "mean_within_cell_rho_negJLLnear_BA": 0.2651428571428572,
+    "mean_within_cell_rho_negLL_negH": -0.08457142857142859,
+    "mean_within_cell_rho_negJLLnear_negH": -0.06885714285714287,
+    "corr_LL_JLLnear_within_cell_ranks": 0.9848470229782913,
+    "P4_holds": false
+  },
+  "P5": {
+    "enriched_share": {
+      "NEW_M5": 1.0,
+      "NEW_M10": 1.0,
+      "NEW_M15": 1.0,
+      "NEW_M20": 1.0,
+      "OLD_M5": 1.0,
+      "OLD_M10": 1.0,
+      "OLD_M15": 1.0,
+      "OLD_M20": 1.0
+    },
+    "P5_holds": true
+  }
+}
