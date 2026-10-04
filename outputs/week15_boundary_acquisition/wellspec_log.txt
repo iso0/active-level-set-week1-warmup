@@ -1,0 +1,14 @@
+[Parallel(n_jobs=7)]: Using backend LokyBackend with 7 concurrent workers.
+[Parallel(n_jobs=7)]: Done  27 tasks      | elapsed:  6.1min
+[Parallel(n_jobs=7)]: Done  60 out of  60 | elapsed: 12.0min finished
+            NSD    ASSD
+policy                 
+bayesmc  0.5301  0.1721
+ebrd     0.5303  0.1814
+margin   0.5204  0.2073
+random   0.4609  0.2419
+vsur     0.5135  0.2176
+ebrd - margin NSD AULC 0.0099 positive 7 / 12
+vsur - margin NSD AULC -0.0069 positive 4 / 12
+bayesmc - margin NSD AULC 0.0097 positive 6 / 12
+random - margin NSD AULC -0.0595 positive 2 / 12

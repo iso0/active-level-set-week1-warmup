@@ -1,0 +1,27 @@
+[Parallel(n_jobs=7)]: Using backend LokyBackend with 7 concurrent workers.
+[Parallel(n_jobs=7)]: Done  27 tasks      | elapsed:  6.8min
+[Parallel(n_jobs=7)]: Done  72 out of  72 | elapsed: 17.4min finished
+               NSD_0.1   ASSD q20_accuracy
+policy            ebrd   ebrd         ebrd
+scenario sigma                            
+BAL      0.0     0.928  0.017        0.862
+         0.5     0.887  0.024        0.799
+         1.0     0.846  0.031        0.677
+NEW      0.0     0.927  0.016        0.898
+         0.5     0.867  0.029        0.786
+         1.0     0.669  0.082        0.673
+OLD      0.0     0.904  0.021        0.896
+         0.5     0.847  0.033        0.808
+         1.0     0.801  0.040        0.662
+               flipped_acquired median_abs_latent_acquired
+policy                     ebrd                       ebrd
+scenario sigma                                            
+BAL      0.0              0.000                      1.538
+         0.5              0.066                      1.609
+         1.0              0.123                      1.671
+NEW      0.0              0.000                      2.440
+         0.5              0.059                      1.951
+         1.0              0.054                      2.803
+OLD      0.0              0.000                      2.274
+         0.5              0.056                      2.141
+         1.0              0.103                      2.304

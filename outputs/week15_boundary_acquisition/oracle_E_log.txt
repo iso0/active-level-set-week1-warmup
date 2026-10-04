@@ -1,0 +1,8 @@
+[Parallel(n_jobs=7)]: Using backend LokyBackend with 7 concurrent workers.
+[Parallel(n_jobs=7)]: Done  15 out of  18 | elapsed: 14.5min remaining:  2.9min
+[Parallel(n_jobs=7)]: Done  18 out of  18 | elapsed: 14.6min finished
+policy    margin  oracle_E  oracle_R  random  attainable_headroom_E_minus_margin  peeking_R_minus_E
+scenario                                                                                           
+BAL        0.899     0.949     0.952   0.842                               0.050              0.003
+NEW        0.845     0.921     0.949   0.664                               0.076              0.028
+OLD        0.835     0.909     0.909   0.798                               0.074              0.000
