@@ -13,19 +13,42 @@ first minority answer; T_both the first index at which both classes have been ob
 
 ## Part D — Discovery of the rare regime
 
-### Theorem D1 (no free lunch for discovery). THEOREM
-Assume the minority set R is uniformly distributed over the K-subsets of U, independently of the
-rule's internal randomness ξ (features may be used freely). Then for every query rule, adaptive or
-not,
-  P(T_m > t) = C(n−t, K) / C(n, K)  for t = 0, …, n,  hence  E[T_m] = (n+1)/(K+1),
-which is the law of uniform random sampling without replacement. The same holds for T_both.
+### Theorem D1 (no free lunch for discovery). THEOREM — *corrected 2026-10-04 (Week 15 erratum E15-1)*
+Assume the minority set R is uniformly distributed over the K-subsets of U (1 ≤ K ≤ n − 1),
+independently of the rule's internal randomness ξ (features may be used freely). Then for every query
+rule, adaptive or not:
 
-*Proof.* Until T_m every answer is "majority", so on {T_m > t} the first t queries are a fixed
-function q_1(ξ), …, q_t(ξ) of ξ alone. Conditional on ξ these are t distinct points and, R being
-uniform and independent of ξ, P(R ∩ {q_1,…,q_t} = ∅ | ξ) = C(n−t,K)/C(n,K). Integrate over ξ.
-For T_both: given ξ and the first label c, the rule follows a fixed sequence σ^c until a label
-≠ c appears; conditional on y(q_1) = c the remaining labels are again a uniformly random
-arrangement, so the waiting time has the same law for every σ^c. ∎
+(a) first minority answer: P(T_m > t) = C(n−t, K) / C(n, K) = C(n−K, t) / C(n, t), t = 0, …, n,
+    hence E[T_m] = (n+1)/(K+1);
+
+(b) both classes observed: P(T_both > 0) = 1 and, for 1 ≤ t ≤ n,
+    P(T_both > t) = [C(K, t) + C(n−K, t)] / C(n, t)   (C(a, t) = 0 for t > a),
+    hence E[T_both] = E[T_m] + E[T_M] − 1 = (n+1)/(K+1) + (n+1)/(n−K+1) − 1,
+    where T_M is the first majority answer.
+
+Both laws are those of uniform random sampling without replacement.
+
+*Proof.* (a) Until T_m every answer is "majority", so on {T_m > t} the first t queries are a fixed
+function q_1(ξ), …, q_t(ξ) of ξ alone (they are distinct points). Conditional on ξ, R uniform and
+independent of ξ gives P(R ∩ {q_1,…,q_t} = ∅ | ξ) = C(n−t, K)/C(n, K). Integrate over ξ.
+(b) Fix ξ. The first query q_1 = q_1(ξ). Until both classes have appeared the history is (c, c, …, c)
+with c = y(q_1), so the rule follows one of two ξ-determined sequences σ⁰ (if c = 0) or σ¹ (if c = 1),
+both starting with q_1 and consisting of distinct points. For t ≥ 1,
+{T_both > t} = {y = 0 on σ⁰_{1:t}} ∪ {y = 1 on σ¹_{1:t}}, and the two events are disjoint because they
+prescribe different values of y(q_1). For any fixed t-set Q, P(Q ⊂ R) = C(n−t, K−t)/C(n, K) =
+C(K, t)/C(n, t) and P(Q ∩ R = ∅) = C(n−K, t)/C(n, t) (labelling the minority 0 w.l.o.g.). Hence
+P(T_both > t | ξ) = [C(K, t) + C(n−K, t)]/C(n, t) for every ξ. At t = 0 the two events coincide
+(both are the sure event), which is why the formula, which would give 2, does not apply there.
+Finally, for t ≥ 1 at most one of T_m > t, T_M > t can hold (the first label is one of the classes),
+so P(T_both > t) = P(T_m > t) + P(T_M > t); summing over t ≥ 0 gives E[T_both] = 1 + (E[T_m] − 1) +
+(E[T_M] − 1), and E[T_M] = (n+1)/(n−K+1) by (a) with the roles of the classes exchanged. ∎
+
+*Erratum note.* The Week 14 version stated the T_m law and then "the same holds for T_both". The
+qualitative statement (T_both has the random-sampling law for every adaptive rule) was correct, but
+read as "the same formula" it was wrong; (b) above is the correct law. The Week 13 code
+(`hypergeom_expected_discovery`) already used (b) with the t = 0 term set to 1; Week 13 THEORY Prop. 6
+needs the same t = 0 caveat (recorded in `outputs/week15_boundary_acquisition/THEORY_ERRATA.md`,
+Week 13 file left unchanged).
 
 **Corollaries.** (a) Deterministic rules: an adversary placing R at the last K positions of the
 all-majority sequence forces T_m = n − K + 1. (b) By Yao's principle the minimax expected cost over
@@ -96,8 +119,9 @@ minority case has a minority-labelled minimal element below it; violations elsew
 irrelevant.
 
 *Comparison of the three structures.* No structure: ~ n/K. Geometry: ~ (1/ρ*)^d. Order: ~ (ln n)^{k−1}.
-For the LPBF order (P↑, VX↓, LS↓; k = 3) and n = 108 the order bound is ≈ 11 per side for
-uniform-like pools; the observed label-free NEW-136 fronts are 6 (Min) and 9 (Max).
+For the LPBF order (P↑, VX↓, LS↓; k = 3) and n = 108 the expected front size is H₁₀₈⁽²⁾ = 14.7 per side
+for product-uniform pools (*corrected, erratum E15-2: the Week 14 text said ≈ 11*); the observed
+label-free NEW-136 fronts are 6 (Min) and 9 (Max).
 
 *Novelty:* the fact in 1 is trivial poset theory; its use as a label-blind, assumption-explicit
 cold-start certificate with a matching minimax lower bound in active level-set estimation was not
@@ -108,7 +132,9 @@ violations in 22,050 pairs before NEW existed) that makes discovery cheap and di
 
 ### Proposition D4 (score structure; tight). PROPOSITION
 Querying in a fixed score order, T_m ≤ 1 + #{majority ranked before the best-ranked minority}
-≤ 1 + n_M (1 − AUC). The second inequality is tight (all minority cases tied in rank). Week 13 Prop. 5.
+≤ 1 + n_M (1 − AUC). The first relation is an equality; the second is tight exactly when the minority
+cases are consecutive in the score order (*corrected, erratum E15-3: the Week 14 text said "tied in
+rank"*). Week 13 Prop. 5.
 
 ### Proposition D5 (hedging). PROPOSITION
 Round-robin interleaving of J query orders, skipping already-queried points, satisfies
@@ -133,10 +159,14 @@ points a, b: h_w(a) ≤ h_w(b) for every w > 0 ⟺ b₁ ≥ a₁, b₂ ≤ a₂,
 **Corollary O1a.** For the class 𝓜 of all labellings y = 1[g(z) > 0] with g coordinatewise monotone
 (which contains every positive-exponent scaling law with any threshold, any increasing link, and
 multi-regime laws such as min/max of such laws), the labels implied *for every member consistent
-with the data* are exactly the dominance closure of the data. For the narrower class of
-positive-exponent log-linear laws, the implied set is the dominance closure of the convex hulls of
-the two classes (a linear-feasibility check), i.e. strictly more informative but no longer robust to
-curved or multi-regime boundaries.
+with the data* are exactly the dominance closure of the data. (*Proof added in Week 15:* if u is not
+implied, the up-closure of L₁ ∪ {u} and the down-closure of L₀ ∪ {u} are both consistent monotone
+labellings, one labelling u positive and one negative.) For the narrower class of positive-exponent
+log-linear laws, the implied set *contains* the dominance closure of the convex hulls of the two
+classes; its exact characterization is a pair of linear-feasibility problems per point (is there
+w > 0, t separating the data with u on the positive / negative side?) (*corrected, erratum E15-4: the
+Week 14 text stated equality with the convex-hull closure*). It is more informative than dominance
+alone but no longer robust to curved or multi-regime boundaries.
 
 *Why it matters.* Week 13 found that log h transfers its *ranking* (AUC 0.991 OLD, 0.857 NEW) but
 not its *level/orientation* (free exponents VX/P −0.52 on OLD vs −2.1 on NEW; NEW ≈ a VX threshold).
