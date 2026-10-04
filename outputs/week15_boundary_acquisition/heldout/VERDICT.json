@@ -1,0 +1,17 @@
+{
+  "S1_majority_NSD_and_ASSD": false,
+  "S2_no_catastrophe": false,
+  "S3_noise_regime": false,
+  "S4_noisefree_comparable": false,
+  "S5_identical_startup": true,
+  "S6_two_pools_two_imbalances": false,
+  "useful_wellspec": false,
+  "useful_noisy": false,
+  "verdict": "NO NEW METHOD JUSTIFIED",
+  "cells_ebrd_better_NSD": 7,
+  "cells_ebrd_better_ASSD": 7,
+  "n_cells": 16,
+  "mean_ebrd_minus_margin_NSD": -0.009540590742287906,
+  "mean_vsur_minus_margin_NSD": -0.01950081085189388,
+  "mean_ebrd_minus_vsur_NSD": 0.009960220109605972
+}

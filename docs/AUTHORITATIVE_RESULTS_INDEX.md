@@ -27,3 +27,7 @@ The [confirmatory STOP report](../outputs/week11_external_execution_record/CONFI
 ## Week 14 research program — 2026-10-04
 
 [`WEEK14_MASTER_REPORT.md`](../outputs/week14_research_program/WEEK14_MASTER_REPORT.md) with [`THEORY.md`](../outputs/week14_research_program/THEORY.md), [`CLAIM_LEDGER.md`](../outputs/week14_research_program/CLAIM_LEDGER.md) and [`THESIS_INTEGRATION.md`](../outputs/week14_research_program/THESIS_INTEGRATION.md). Pre-result freeze committed at `3278f7dc` before held-out and real-data runs; one recorded deviation. Status: theorems (discovery certificates, metric characterizations), frozen held-out synthetic evidence, HISTORICAL OLD, EXTERNAL Masinelli and POST-HOC NEW checks. Two pre-registered predictions failed and are reported. q20 remains the historical primary endpoint.
+
+## Week 15 boundary-acquisition study — 2026-10-04
+
+[`WEEK15_REPORT.md`](../outputs/week15_boundary_acquisition/WEEK15_REPORT.md). Theory correction committed first (`2e52d227`, [`THEORY_ERRATA.md`](../outputs/week15_boundary_acquisition/THEORY_ERRATA.md)); freeze `58da2050` before held-out runs. The proposed EBR-D acquisition failed its frozen criteria (verdict **NO NEW METHOD JUSTIFIED**); the oracle headroom is mostly truth knowledge rather than label peeking, and legal rules capture little of it outside well-specified worlds. DC-BD (density-corrected boundary Dice) has a stated estimand but failed its held-out comparisons with q20 accuracy. q20 remains the historical primary endpoint.

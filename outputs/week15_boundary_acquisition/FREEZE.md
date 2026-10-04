@@ -68,3 +68,9 @@ trimmed at the 95th percentile.
 NEW-136 100 original partitions (POST-HOC), OLD Week 8.5 repeats 1–4 (HISTORICAL), Masinelli Ti64/316L
 5-fold × 4 (EXTERNAL); policies random, margin, EBR-D; q20 accuracy, pooled BA, pooled DC-BD, minority
 recall. No real-data result can change the verdict.
+
+## Deviations after the freeze
+- **D1 (execution only).** The first held-out run (single process writing results at the end) was stopped
+  after ~25 minutes, before producing any output, because its estimated duration approached the 2-hour
+  limit of background jobs. `week15_heldout.job` was given resumable per-path files; seeds, cells,
+  policies and model are unchanged, so results are identical to an uninterrupted run.

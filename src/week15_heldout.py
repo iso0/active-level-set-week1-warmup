@@ -141,7 +141,16 @@ def hypers_for(fam, cfg):
 PARS: dict = {}
 
 
-def job(fam, cfg, rep, policy, hyp, pars):
+def job(fam, cfg, rep, policy, hyp, pars, out_dir=None):
+    """One path; if out_dir is given the rows are written to their own file and existing files are reused
+    (resumable execution; results are identical to a single run because every path is seeded independently)."""
+    if out_dir is not None:
+        dest = Path(out_dir) / (cell_key(fam, cfg).replace("|", "__").replace("=", "-") + f"__r{rep}__{policy}.csv")
+        if dest.exists():
+            return pd.read_csv(dest).to_dict("records")
+        rows = job(fam, cfg, rep, policy, hyp, pars)
+        pd.DataFrame(rows).to_csv(dest, index=False)
+        return rows
     PARS.update(pars)
     c = make_cell(fam, cfg, rep)
     Zref = np.random.default_rng([15, 99]).random((400, 4)); Eref = knn_graph(Zref, 8)
@@ -167,7 +176,8 @@ def main():
     cells = CELLS if a.cells == "all" else [CELLS[int(i)] for i in a.cells.split(",")]
     jobs = [(fam, cfg, r, p) for p in a.policies.split(",") for fam, cfg in cells for r in range(a.reps)]
     jobs.sort(key=lambda j: (j[3] not in ("ebrd", "vsur"), -j[1]["pool"]))   # heavy jobs first
-    res = Parallel(n_jobs=7, verbose=2)(delayed(job)(fam, cfg, r, p, H[cell_key(fam, cfg)], PARS) for fam, cfg, r, p in jobs)
+    pdir = OUT / f"paths_{a.tag}"; pdir.mkdir(exist_ok=True)
+    res = Parallel(n_jobs=7, verbose=2)(delayed(job)(fam, cfg, r, p, H[cell_key(fam, cfg)], PARS, pdir) for fam, cfg, r, p in jobs)
     df = pd.DataFrame([x for rows in res for x in rows]); df.to_csv(OUT / f"al_{a.tag}.csv.gz", index=False)
 
 
