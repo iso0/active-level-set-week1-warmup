@@ -95,8 +95,12 @@ def main(exp, which, part="all"):
     split into pieces that fit the 2 h background limit; the CSV is written from all cached tasks."""
     pdir = OUT / exp / f"cache_{which}"; pdir.mkdir(parents=True, exist_ok=True)
     T = tasks(exp, which); T.sort(key=lambda t: -(len(t["prior"]) + len(t["pool"])))
-    if part != "all":
+    if part in ("noprior", "prior"):
         T = [t for t in T if (len(t["prior"]) == 0) == (part == "noprior")]
+    elif part.startswith("screen"):     # screening subset: real folds 1–2 of every DEV repeat, twins reps 0–3
+        T = [t for t in T if (t["fold"] in (1, 2) if not t["task"].startswith("S1_") else t["repeat"] < 4)]
+        if part == "screen_noprior":
+            T = [t for t in T if len(t["prior"]) == 0]
     Parallel(n_jobs=7, verbose=5)(delayed(task_job)(t, EXPERIMENTS[exp], pdir, exp) for t in T)
     rows = [r for p in sorted(pdir.glob("*.json")) for r in json.loads(p.read_text())]
     pd.DataFrame(rows).to_csv(OUT / exp / f"{exp}_dev_{which}.csv.gz", index=False)

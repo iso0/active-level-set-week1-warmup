@@ -91,3 +91,8 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   whether it extends to NEW/POOLED needs the NEW monitors (decision D1).
 - 2026-10-05 Chain split to fit the 2 h background limit (dev_arms `part` = noprior / prior). Headroom restricted to
   tasks without a large prior (14 R2 tasks done before the limit are kept).
+- 2026-10-05 **Confirmation round 1 (freeze fc1afb50): E1 PASSES** (round_1/ROUND_1_RESULTS.md). C1 block, first use:
+  R3_OLD +0.0285 [0.010, 0.047] BA AULC, queries to REF's B80 level 30 vs 88 (−66% [44, 74]); R2rev +0.012
+  [−0.001, 0.024]; fresh twins T_DEPTH +0.082 [0.041, 0.125], T_TOBIT OLD +0.062; non-inferior on every in-scope
+  task (min +0.009). q20: R3_OLD −0.003 n.s., R2rev −0.024. 2,064 fits converged. Phase 6 (depth stress round 1,
+  base seed 1870) launched; Weeks 12–18 regression tests running.

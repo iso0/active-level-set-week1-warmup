@@ -1,0 +1,42 @@
+{
+ "round": 1,
+ "candidates": [
+  "E1"
+ ],
+ "E1": {
+  "S_a_real_R3_OLD": true,
+  "S_b_twin_T_DEPTH": true,
+  "S_c_qtt_R3_OLD": true,
+  "noninferior_all_in_scope": true,
+  "pass_round": true,
+  "R3_OLD_BA": {
+   "mean": 0.028475003808701604,
+   "lo": 0.010381489075374117,
+   "hi": 0.04656851854202909
+  },
+  "T_DEPTH_NSD": {
+   "mean": 0.08175254395321346,
+   "lo": 0.04097857333573397,
+   "hi": 0.12522744923443163
+  },
+  "R3_OLD_QTT": {
+   "task": "R3_OLD",
+   "target_budget": 80,
+   "target": 0.9287372091104142,
+   "qtt_cand_mean": 30.0,
+   "qtt_ref_mean": 88.0,
+   "reduction": 0.6590909090909092,
+   "lo": 0.4375,
+   "hi": 0.7413793103448276,
+   "censored_cand": 0,
+   "censored_ref": 1,
+   "repeats": 4
+  },
+  "min_in_scope": 0.009310397422683234
+ },
+ "convergence": {
+  "fits": 2064,
+  "fp_gt_1e-6": 0,
+  "fp_max": 1.3698695511266124e-09
+ }
+}

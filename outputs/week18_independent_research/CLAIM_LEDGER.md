@@ -43,4 +43,11 @@ THEOREM (proved, known, or derived — status stated). Pointers are relative to 
 | T18-5 | ML-II under boundary-concentrated designs. | CONJECTURE (check pending) |
 
 ## Method claims (Phase 3 / 5)
-Pending — see ATTEMPT_LEDGER.md for every candidate and its kill criterion.
+| id | claim | label | evidence |
+|---|---|---|---|
+| M1 | Where every paid simulation reports max depth, GPR on log depth + straddle (E1) beats G3 + margin: R3_OLD +0.0285 [0.010, 0.047] BA AULC and 66% fewer simulations [44, 74] to G3's B80 accuracy; R2rev +0.012 [−0.001, 0.024]. | SPLIT-CONFIRMATION (block C1, freeze fc1afb50) | round_1/ |
+| M2 | Same on fresh digital-twin seeds: T_DEPTH +0.082 [0.041, 0.125], T_TOBIT OLD +0.062 [0.028, 0.104] NSD AULC; NEW-like twin +0.009. | SEMI-SYNTHETIC (fresh reps, frozen) | round_1/ |
+| M3 | E1's gain is largest at small budgets (R3_OLD BA 0.927 vs 0.863 at B24), as predicted by T18-4 / P-T18-1. | SPLIT-CONFIRMATION (descriptive) | round_1/ |
+| M4 | With partial depth (NEW runs without depth) E1 is worse than G3 on POOLED (−0.037 [−0.050, −0.026]); a mixed-likelihood GP (E3) using the label-only rows does not fix it (−0.031). | DEVELOPMENT | phase3/depth2/ |
+| M5 | E1 is fragile to stale hyperparameters: ML-II every 8 queries instead of per step turns R2rev +0.012 into −0.081. | DEVELOPMENT | phase3/depth2/ |
+| M6 | q20 (historical) does not improve with E1: R3_OLD −0.003 n.s. (round 1), R2rev −0.024 (round 1), DEV −0.026 / −0.045. | SPLIT-CONFIRMATION + DEVELOPMENT | round_1/, phase2/ |
