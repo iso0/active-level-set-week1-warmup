@@ -25,8 +25,6 @@ def arms_for(t):
         A += [(("G3", "fixed:old"), "margin"), (("G3", "fixed:old"), "random")]
     if np.isfinite(t["depth"][t["pool"]]).any():
         A += [(("GPR_depth", "mlii"), "straddle")]
-    if t["block"] == "S2":                      # stress worlds (binary): label-only E3 as a development check
-        A += [(("MixGP", "auto4"), "margin")]
     return A
 
 

@@ -3,17 +3,18 @@
 Evidence labels as in CLAIM_LEDGER.md. Nothing here changes a frozen earlier verdict. Where an earlier conclusion
 is re-framed, it is marked as a re-reading or an erratum.
 
-## 1. The headline result changes from "no improvement over G3 + margin" to a scoped improvement
-- **New main empirical claim (SPLIT-CONFIRMATION + SEMI-SYNTHETIC).** When each paid simulation reports its
-  continuous output (max melt-pool depth), learning the level set {depth ≥ u} of that output with a depth GP and
-  straddle acquisition (E1) needs far fewer simulations than the binary G3 + margin endpoint. On the confirmation
-  block it reached G3's B80 accuracy after 30 instead of 88 runs (R3_OLD), with +0.029 BA AULC [0.010, 0.047]. Fresh
-  digital-twin seeds gave +0.08 NSD AULC. The method itself is Week 7's formulation. What is new is a pre-registered
-  confirmation on the redesigned benchmark, a queries-to-target endpoint, the mechanism (§3), and stated scope limits.
-- **Scope (state it in the abstract and conclusion).** The result holds only where every run reports depth. That is
-  OLD-type data in this repository: the NEW runs are labels-only here (their monitors exist upstream, owner decision D1).
-  With partial depth, the depth GP is worse than G3 on POOLED (DEVELOPMENT −0.037). The historical q20 endpoint does
-  not improve (R3_OLD −0.003 n.s., R2rev −0.024).
+## 1. The headline result changes from "no improvement over G3 + margin" to a scoped, replicated-in-direction improvement
+- **Main empirical claim (SPLIT-CONFIRMATION + SEMI-SYNTHETIC).** When each paid simulation reports its continuous
+  output (max melt-pool depth) *and the regime label is a threshold of that output*, learning the level set
+  {depth ≥ u} with a depth GP and straddle acquisition (E1) beats the binary G3 + margin endpoint:
+  - BA AULC +0.021 (DEV), +0.029 [0.010, 0.047] (C1), +0.016 [0.013, 0.020] (C2) on R3_OLD; fresh twins +0.08 NSD AULC;
+  - simulations to G3's B80 accuracy: −66% in C1 but only −12% in C2, so quote the range, not the C1 number alone;
+  - the pre-registered size bar (+0.02) was met in C1 and missed in C2. State this explicitly.
+  The method is Week 7's formulation. What is new is the pre-registered confirmation, the queries-to-target endpoint,
+  the mechanism (§3) and the scope analysis.
+- **Scope (abstract and conclusion).** OLD-type data only. After obtaining the NEW monitors (D1): on NEW the label is
+  not a max-depth threshold (AUC 0.891; fast scans), and with depth for every run E1 ≈ G3 on POOLED (C2 +0.004) and is
+  worse on NEW (C2 −0.022). The historical q20 endpoint does not improve (C2 R3_OLD −0.028).
 - **For binary-only data the endpoint stays G3 + margin.** Week 18 found no binary model or acquisition rule that
   clears its kill criteria: log inputs, nested-start LT and an exploration mixture were all within ±0.011 BA AULC.
   At the end of the budget G3 + margin already equals its own full-pool ceiling (T18-2 check). For binary labels the
@@ -57,7 +58,12 @@ is re-framed, it is marked as a re-reading or an erratum.
   every attempt is in ATTEMPT_LEDGER.md (multiplicity visible).
 
 ## 5. What to do next (for the thesis)
-1. Decide D1: with the NEW monitors (depth for the 136 NEW runs), E1 can be tested on NEW and POOLED. The
-   remaining confirmation blocks C2/C3 are unused and available for exactly that test.
-2. Write the depth-level-set result as the main positive contribution, with its scope and the q20 caveat.
-3. Keep G3 + margin as the binary-label baseline and recommendation.
+1. Write the depth-level-set result as the main positive contribution: three blocks, direction stable, size
+   C1 > C2, and the stated scope (label must be a threshold of the observed output). Draft:
+   `thesis_draft/sec_depth_level_set.tex`.
+2. Keep G3 + margin as the binary-label baseline and recommendation, including for NEW.
+3. Treat the NEW depth–label disagreement as a physics/labelling finding: fast scans reach keyhole-like depths
+   transiently without being labelled Keyhole. Candidate explanations to discuss: transient depth peaks, the
+   frame-based label definition, end-of-domain effects.
+4. C3 is the last unused block. Use it only for a new, separately justified candidate, for example a depth model with
+   a scan-speed-dependent threshold developed on DEV. Its motivation would be post-hoc with respect to the NEW labels.

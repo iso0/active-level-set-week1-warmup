@@ -2,20 +2,24 @@
 
 Start `bbb79eaf` (Week 17). Commits: `dd7fde9c` (Phase 0–1), `b17bed56` (benchmark lock), `e351cb4f`, `092582f4`,
 `e183d345` (Phase 2), `1ded7f43` (E3 registered, solver fix), `3b3ac406` (Astra Round 3, truth freeze),
-`fc1afb50` (**FREEZE round 1**), `0e8aaa82` (round 1 results), `9ee38d3f` (Phase 6). Evidence labels as in
+`fc1afb50` (**FREEZE round 1**), `0e8aaa82` (round 1 results), `9ee38d3f` (Phase 6), `2a459284` (close-out),
+`1d560792` (D1 + **FREEZE round 2**). Evidence labels as in
 CLAIM_LEDGER.md; every attempt in ATTEMPT_LEDGER.md; resume point RESEARCH_LOG.md.
 
 ## 0. Summary
-- **Confirmed improvement, scoped.** Where each paid simulation reports its max melt-pool depth, a GP on log depth
-  with straddle acquisition (E1, Week 7's formulation) beats the G3 + margin endpoint. On the untouched C1 block
-  of R3_OLD it gives **+0.0285 BA AULC [0.010, 0.047]** and reaches G3's B80 accuracy after **30 instead of 88
-  simulations (−66% [44, 74])** (SPLIT-CONFIRMATION). Fresh twin seeds give +0.082 NSD AULC [0.041, 0.125]
-  (SEMI-SYNTHETIC). It survives six depth stress worlds; the worst is 25% depth noise at −0.018 (HELD-OUT-SYNTHETIC).
-- **Not shown, and why.** NEW runs have no depth in this repository, so POOLED/NEW could not be tested with full
-  depth (owner decision D1). With partial depth, E1 is worse than G3 on POOLED (DEVELOPMENT −0.037). q20 does not
-  improve. For binary-only data no new model or rule cleared its kill criteria: G3 + margin stays the endpoint there.
-- **Several earlier conclusions were benchmark or framing artefacts** (§1). These are: the NEW exploration exception;
-  the transfer of Week 17's held-out synthetic ranking to real tasks; and the strength of the OLD→NEW level-shift claim.
+- **Scoped improvement, replicated in direction but not at full size.** Where each paid simulation reports its max
+  melt-pool depth and the label is a threshold of it (OLD-type data), a GP on log depth with straddle acquisition
+  (E1, Week 7's formulation) beats the G3 + margin endpoint:
+  - round 1, block C1: **+0.0285 BA AULC [0.010, 0.047]**, G3's B80 accuracy after 30 instead of 88 simulations
+    (SPLIT-CONFIRMATION); fresh twins +0.082 NSD AULC (SEMI-SYNTHETIC);
+  - survives six depth stress worlds (HELD-OUT-SYNTHETIC);
+  - round 2, block C2: **+0.016 [0.013, 0.020]**, below the pre-registered +0.02 bar, with only 12% fewer simulations.
+- **No extension to NEW / POOLED.** The owner allowed the NEW monitors to be downloaded (D1). On NEW the label is *not* a
+  max-depth threshold (AUC 0.891; fast scans). With depth for every run, E1 ≈ G3 on POOLED (C2 +0.004) and is worse on
+  NEW (−0.022). q20 does not improve. For binary-only data no candidate cleared its kill criteria: G3 + margin stays the
+  endpoint, and at the end of the budget it sits at its own full-pool ceiling.
+- **Several earlier conclusions were benchmark or framing artefacts** (§1): the NEW exploration exception, the transfer
+  of Week 17's held-out synthetic ranking to real tasks, and the strength of the OLD→NEW level-shift claim.
 
 ## 1. Phase 0–1: re-grounding (POST-HOC / HISTORICAL)
 | Earlier conclusion | Week 18 finding | Status |
@@ -73,7 +77,7 @@ FREEZE_ROUND_1.md was pushed before any round-1 run (`fc1afb50`); the runner ref
 | T_TOBIT OLD / pooled / NEW | +0.062 / +0.039 / +0.009 | — | SEMI-SYNTHETIC |
 | depth stress: worst world (25% depth noise) | −0.018 | [−0.077, 0.034] | HELD-OUT-SYNTHETIC |
 Decision: all three success routes held, non-inferior on every in-scope task (minimum +0.009), no stress world
-below −0.03 → **passes, survives; stopping rule met after one round** (C2/C3 unused).
+below −0.03 → **passes, survives; stopping rule met after one round**. Round 2 (C2, after D1) is a separate pre-registered scope and replication test (§6).
 
 ## 5. Phase 4: theory (THEORY_WEEK18.md)
 | Result | Status | Prediction / check | Held? |
@@ -85,6 +89,17 @@ below −0.03 → **passes, survives; stopping rule met after one round** (C2/C3
 | T18-5 ML-II under boundary-concentrated designs | CONJECTURE | shorter length-scales, larger amplitude, classifier insensitive | **partly refuted**: length-scale bias harmful at b = 40 (−0.03…−0.10 BA); amplitude unidentified (at the bound), not inflated; insensitive only at b ≥ 80 |
 | Astra Round 3 | integrated as hypotheses; L3, C10, R5, P5, D4 independently checked | level-shift conjecture tested → E18-3 | partly |
 
-## 6. Verdict
-**IMPROVEMENT ON SOME TASKS ONLY** — confirmed where depth is observed (OLD-type tasks), untested on NEW/POOLED for
-lack of NEW depth, and none for binary-only data.
+## 6. After D1: NEW depth and confirmation round 2
+- NEW monitors: 272 files (1.43 GB) from `ioandanielc/sph_v2@2e1eec9c`, all verified against the pinned tree.
+  Max depth uses the Week 7 definition (exact on OLD). On NEW the label is not a depth threshold: AUC 0.891,
+  7/12 non-Keyhole runs ≥ 111 µm, concentrated in fast scans (DATA_AUDIT amendment 2).
+- Full-depth DEV (`phase3/depth3/`): R1_POOLED −0.001, R3_NEW −0.021, R2_TRANSFER +0.022 (n.s.), R2rev +0.008,
+  R3_OLD +0.021. In R1 the NEW rows pull the learned depth threshold away from OLD's: E1 is worse even on OLD test points.
+- Round 2 (FREEZE_ROUND_2.md, `1d560792`; block C2; round_2/ROUND_2_RESULTS.md): Q2a (POOLED improvement) fails,
+  +0.004; Q2b (NEW non-inferiority) fails, R3_NEW −0.022; Q2c (OLD replication at ≥ +0.02) fails, +0.016
+  [0.013, 0.020]. Positive and significant, but below the size bar.
+
+## 7. Verdict
+**IMPROVEMENT ON SOME TASKS ONLY.** The depth-observing learner is better in every OLD-type block (DEV +0.021, C1
++0.029, C2 +0.016; all intervals above 0). Its size met the pre-registered bar in C1 only, and it does not extend to
+NEW / POOLED, where the label is not a depth threshold. For binary labels the frontier is explained, not moved.

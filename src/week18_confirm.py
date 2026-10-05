@@ -86,14 +86,24 @@ def tasks(spec, which):
     return S.all_stress(spec["stress_round"])
 
 
-def main(k, which, n_jobs=7):
+def main(k, which, n_jobs=7, only=None):
+    """only: optional chunk filter 'task=<NAME>[,<NAME>]' or 'task=<NAME>:<i>/<n>' (i-th of n slices) so that long
+    rounds fit the 2 h background limit; results are always written from all cached tasks."""
     check_freeze(k)
     spec = json.loads((W18 / f"round_{k}/freeze_spec.json").read_text())
     d = W18 / f"round_{k}/cache_{which}"; d.mkdir(parents=True, exist_ok=True)
-    T = tasks(spec, which); T.sort(key=lambda t: -(len(t["prior"]) + len(t["pool"])))
-    res = Parallel(n_jobs=n_jobs, verbose=5)(delayed(job)(t, spec["arms"], d / f"{t['task']}__r{t['repeat']:03d}_f{t['fold']}.json") for t in T)
-    pd.DataFrame([r for rr in res for r in rr]).to_csv(W18 / f"round_{k}/results_{which}.csv.gz", index=False)
+    T = tasks(spec, which); T.sort(key=lambda t: (t["task"], t["repeat"], t["fold"]))
+    if only:
+        sel = only.split("=", 1)[1]
+        names, part = (sel.split(":") + [None])[:2]
+        T = [t for t in T if t["task"] in names.split(",")]
+        if part:
+            i, n = map(int, part.split("/")); T = T[i::n]
+    T.sort(key=lambda t: -(len(t["prior"]) + len(t["pool"])))
+    Parallel(n_jobs=n_jobs, verbose=5)(delayed(job)(t, spec["arms"], d / f"{t['task']}__r{t['repeat']:03d}_f{t['fold']}.json") for t in T)
+    rows = [r for p in sorted(d.glob("*.json")) for r in json.loads(p.read_text())]
+    pd.DataFrame(rows).to_csv(W18 / f"round_{k}/results_{which}.csv.gz", index=False)
 
 
 if __name__ == "__main__":
-    main(int(sys.argv[1]), sys.argv[2], int(sys.argv[3]) if len(sys.argv) > 3 else 7)
+    main(int(sys.argv[1]), sys.argv[2], int(sys.argv[3]) if len(sys.argv) > 3 else 7, sys.argv[4] if len(sys.argv) > 4 else None)

@@ -68,9 +68,9 @@ def summarize(df):
     return s, pd.DataFrame(fit)
 
 
-def main(n_jobs=7):
+def main(n_jobs=7, twins=("T_GP", "T_GBT"), reps=6):
     OUT.mkdir(parents=True, exist_ok=True)
-    jobs = [(tw, n, r) for tw in ("T_GP", "T_GBT") for n in SIZES[::-1] for r in range(6)]
+    jobs = [(tw, n, r) for tw in twins for n in SIZES[::-1] for r in range(reps)]
     res = Parallel(n_jobs=n_jobs, verbose=5)(delayed(job)(*a) for a in jobs)
     df = pd.DataFrame([r for rr in res for r in rr]); df.to_csv(OUT / "saturation_curves.csv", index=False)
     s, fit = summarize(df); s.to_csv(OUT / "saturation_summary.csv", index=False); fit.to_csv(OUT / "saturation_fit.csv", index=False)
@@ -78,5 +78,6 @@ def main(n_jobs=7):
 
 
 if __name__ == "__main__":
-    s, fit = main(int(sys.argv[1]) if len(sys.argv) > 1 else 7)
+    s, fit = main(int(sys.argv[1]) if len(sys.argv) > 1 else 7, tuple(sys.argv[2].split(",")) if len(sys.argv) > 2 else ("T_GP", "T_GBT"),
+                  int(sys.argv[3]) if len(sys.argv) > 3 else 6)
     print(s.groupby(["twin", "N"])[["ceiling", "B16", "B_end", "B_sat"]].median().round(3).to_string()); print(fit.round(3).to_string())

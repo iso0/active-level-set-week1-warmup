@@ -52,4 +52,7 @@ THEOREM (proved, known, or derived — status stated). Pointers are relative to 
 | M5 | E1 is fragile to stale hyperparameters: ML-II every 8 queries instead of per step turns R2rev +0.012 into −0.081. | DEVELOPMENT | phase3/depth2/ |
 | M7 | E1 survives depth stress: no world below −0.03 NSD AULC (worst 25% depth noise −0.018 [−0.077, 0.034]); gains under threshold drift (+0.052) and 30% missing depth (+0.033). | HELD-OUT-SYNTHETIC (round-1 seeds) | round_1/stress_depth_* |
 | M8 | For binary labels no Week 18 candidate improves on G3 + margin: G3 on log inputs, nested-start LT and a 25% exploration mixture are all within ±0.011 BA AULC (intervals include 0); at B_max G3 + margin equals its full-pool ceiling on R1/R2. | DEVELOPMENT (paired screening) | phase3/cfa/, phase3/headroom/ |
+| M9 | On NEW the label is not a max-depth threshold (AUC 0.891; 7/12 non-Keyhole runs ≥ 111 µm, fast scans). | POST-HOC (descriptive, after D1) | phase1/new_depth*.csv, DATA_AUDIT amendment 2 |
+| M10 | With depth for every run, E1 does not improve POOLED (C2 +0.004 [−0.001, 0.009]) and is worse on NEW (C2 −0.022). | SPLIT-CONFIRMATION (block C2, freeze 1d560792) | round_2/ |
+| M11 | The OLD improvement replicates in direction but not at the pre-registered size: R3_OLD C2 +0.016 [0.013, 0.020] (bar +0.02); QTT −12% (C1 −66%). | SPLIT-CONFIRMATION (block C2) | round_2/ |
 | M6 | q20 (historical) does not improve with E1: R3_OLD −0.003 n.s. (round 1), R2rev −0.024 (round 1), DEV −0.026 / −0.045. | SPLIT-CONFIRMATION + DEVELOPMENT | round_1/, phase2/ |
