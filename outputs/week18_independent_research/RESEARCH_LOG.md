@@ -6,11 +6,13 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
 | Phase | State | Pointer |
 |---|---|---|
 | 0 Re-ground / red-team | done | RED_TEAM.md, ERRATA.md, phase0/ |
-| 1 Data foundation | done (NEW continuous outputs pending D1) | DATA_AUDIT.md |
-| 2 Benchmark redesign | done (S2 stress baselines queued) | BENCHMARK_SPEC.md, PHASE2_BASELINES.md |
-| 3 Research loop | running: depth2 (E1b/E2/E3), cfa (C1/F1/A1), headroom; killed B1, D1, A2 | ATTEMPT_LEDGER.md, phase3/ |
-| 4 Theory | T18-1 done; T18-2..T18-5 drafted, checks queued | THEORY_WEEK18.md |
-| 5 Confirmation | 0 rounds used | FREEZE_ROUND_k.md |
+| 1 Data foundation | done (NEW continuous outputs pending D1) | DATA_AUDIT.md (+ amendment) |
+| 2 Benchmark redesign | done (S2 binary stress baselines not run) | BENCHMARK_SPEC.md, PHASE2_BASELINES.md |
+| 3 Research loop | done: E1 kept; E2 retired; E3, C1, F1, A1, B1, D1, A2 killed | ATTEMPT_LEDGER.md, phase3/ |
+| 4 Theory | T18-1…T18-5 + Astra Round 3 integrated | THEORY_WEEK18.md, phase4/ |
+| 5 Confirmation | 1 round used (C1): E1 PASSED | FREEZE_ROUND_1.md, round_1/ |
+| 6 Stress | E1 survived (depth stress, round-1 seeds) | round_1/ROUND_1_RESULTS.md |
+| Stop | stopping rule met (candidate passed + survived) | REPORT.md — verdict IMPROVEMENT ON SOME TASKS ONLY |
 
 ## Open decisions for the owner
 - D1. NEW continuous targets (depth/width) need the NEW monitors from Hugging Face `ioandanielc/sph_v2`
@@ -99,3 +101,9 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
 - 2026-10-05 **Phase 6: E1 survives** the depth stress worlds (round-1 seeds): worst SD_NOISE25 −0.018
   [−0.077, 0.034]; drift +0.052, missing-30% +0.033, noise-10% +0.082, jump +0.013, NEW-like +0.005. **Stopping
   rule met.** Remaining: finish the binary-portfolio screening (cfa) and theory checks for the record; reports.
+- 2026-10-05 Binary portfolio screening (paired DEV subset): G3L, LTn, mix25 all killed (none ≥ +0.005 on 2 of 3
+  real families). Partial headroom: G3 + margin at B_max equals its full-pool ceiling on R1/R2 → binary frontier
+  explained. T18-5 partly refuted (length-scale bias at b = 40 harmful; amplitude unidentified; insensitive only at
+  b ≥ 80). Background jobs stopped by the 2 h limit (headroom R1 22/40, R2 13/40; cfa R3_OLD 15/16) were not
+  restarted. **Campaign closed: verdict IMPROVEMENT ON SOME TASKS ONLY.** Open: D1 (NEW monitors) → the unused C2/C3
+  blocks can test E1 on NEW/POOLED with full depth.

@@ -71,7 +71,7 @@ def tasks():
             lat = f(t["z_of"](t["X"]))
             for b in (40, 80, 120):
                 J.append((f"{tw}_{d}", rep, t["X"], t["y"], lat, t["pool"], t["test"], b))
-    for t in [t for t in T.r3_old_tasks() if t["block"] == "DEV" and t["fold"] == 0][:4]:
+    for t in [t for t in T.r3_old_tasks() if t["block"] == "DEV" and t["fold"] == 1][:4]:
         allrows = np.r_[t["pool"], t["test"]]
         g = M.fit("G3", t["X"], E.logh(t["X"]), t["y"], t["pool"], allrows)
         lat = np.asarray(E.latent(g, t["X"])[0])

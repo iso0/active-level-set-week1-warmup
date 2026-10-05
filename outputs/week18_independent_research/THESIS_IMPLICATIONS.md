@@ -15,7 +15,9 @@ is re-framed, it is marked as a re-reading or an erratum.
   With partial depth, the depth GP is worse than G3 on POOLED (DEVELOPMENT −0.037). The historical q20 endpoint does
   not improve (R3_OLD −0.003 n.s., R2rev −0.024).
 - **For binary-only data the endpoint stays G3 + margin.** Week 18 found no binary model or acquisition rule that
-  clears its kill criteria on the real DEV tasks (portfolio results in ATTEMPT_LEDGER.md).
+  clears its kill criteria: log inputs, nested-start LT and an exploration mixture were all within ±0.011 BA AULC.
+  At the end of the budget G3 + margin already equals its own full-pool ceiling (T18-2 check). For binary labels the
+  frontier is explained, not moved.
 
 ## 2. Re-readings of earlier chapters
 - **Week 7 (depth GPR, "HYBRID / NO CLEAR WINNER").** This is now superseded for BA and queries-to-target on full-depth

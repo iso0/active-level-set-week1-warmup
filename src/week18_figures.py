@@ -39,6 +39,32 @@ def real_curves():
     FIG.mkdir(exist_ok=True); fig.savefig(FIG / "fig_w18_real_baseline_curves.png", dpi=200, bbox_inches="tight"); plt.close(fig)
 
 
+
+def round1():
+    import src.week18_round_analysis as R
+    import src.week18_tasks as T
+    from src.week18_metrics import real_curves
+    real = R.load(1, "real"); y = {t["task"]: t["y"] for t in T.all_real_with_depth("C1")}
+    rc = real_curves(real, y); rc["arm"] = rc.arm.str.split("|").str[0]
+    tw = R.load(1, "twins"); tw["arm"] = tw.arm_name
+    tc = tw.groupby(["task", "repeat", "arm", "budget"], as_index=False)["NSD_0.1"].mean()
+    panels = [("R3_OLD", rc, "BA", "R3_OLD (C1 block)"), ("R2rev_TRANSFER", rc, "BA", "R2rev (C1 block)"),
+              ("S1_T_DEPTH_OLD_324", tc, "NSD_0.1", "twin T_DEPTH, fresh reps"), ("S1_T_TOBIT_OLD_324", tc, "NSD_0.1", "twin T_TOBIT OLD, fresh reps")]
+    lab = {"REF": "G3 + margin (reference)", "E1": "depth GPR + straddle (E1)"}
+    fig, axs = plt.subplots(1, 4, figsize=(12, 2.9))
+    for ax, (task, cur, key, title) in zip(axs, panels):
+        g = cur[cur.task == task]
+        for i, arm in enumerate(["REF", "E1"]):
+            h = g[g.arm == arm].groupby("budget")[key].mean()
+            ax.plot(h.index, h.values, color=C[i], label=lab[arm])
+        ax.set_title(title, fontsize=9); ax.set_xlabel("paid simulations")
+        ax.set_ylabel("balanced accuracy" if key == "BA" else "NSD (τ = 0.1)")
+    h, l = axs[0].get_legend_handles_labels()
+    fig.legend(h, l, loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(.5, -.07))
+    fig.tight_layout(rect=(0, .07, 1, 1))
+    FIG.mkdir(exist_ok=True); fig.savefig(FIG / "fig_w18_round1_confirmation.png", dpi=200, bbox_inches="tight"); plt.close(fig)
+
+
 if __name__ == "__main__":
     for name in sys.argv[1:] or ["real_curves"]:
         globals()[name]()

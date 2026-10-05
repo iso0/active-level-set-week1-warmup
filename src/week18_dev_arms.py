@@ -101,6 +101,8 @@ def main(exp, which, part="all"):
         T = [t for t in T if (t["fold"] in (1, 2) if not t["task"].startswith("S1_") else t["repeat"] < 4)]
         if part == "screen_noprior":
             T = [t for t in T if len(t["prior"]) == 0]
+        elif part.startswith("screen_task:"):
+            T = [t for t in T if t["task"] == part.split(":", 1)[1]]
     Parallel(n_jobs=7, verbose=5)(delayed(task_job)(t, EXPERIMENTS[exp], pdir, exp) for t in T)
     rows = [r for p in sorted(pdir.glob("*.json")) for r in json.loads(p.read_text())]
     pd.DataFrame(rows).to_csv(OUT / exp / f"{exp}_dev_{which}.csv.gz", index=False)

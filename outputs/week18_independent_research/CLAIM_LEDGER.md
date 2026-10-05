@@ -40,7 +40,7 @@ THEOREM (proved, known, or derived — status stated). Pointers are relative to 
 | T18-2 | Pool floor N^{−α/(α+d−1)}; saturation budget N^{(d−1)/(α+d−1)}. | KNOWN / DERIVED |
 | T18-3 | Binary source labels cannot identify a target level shift (only nesting); index structure or continuous source values reduce the target to a 1-D threshold search. | PROVED |
 | T18-4 | Information per query: binary probit Fisher information decays as φ(m)²/(Φ(m)Φ(−m)); exact depth carries 1/σ² everywhere. | KNOWN (application PROVED) |
-| T18-5 | ML-II under boundary-concentrated designs. | CONJECTURE (check pending) |
+| T18-5 | ML-II under boundary-concentrated designs: shorter length-scales and harmful hyperparameters at b = 40 (twins −0.03…−0.05, real OLD −0.10 BA); amplitude unidentified (at the bound under both designs), not inflated; effects ≤ 0.015 at b ≥ 80. | CONJECTURE partly refuted (NUMERICALLY CHECKED; real part POST-HOC) |
 
 ## Method claims (Phase 3 / 5)
 | id | claim | label | evidence |
@@ -51,4 +51,5 @@ THEOREM (proved, known, or derived — status stated). Pointers are relative to 
 | M4 | With partial depth (NEW runs without depth) E1 is worse than G3 on POOLED (−0.037 [−0.050, −0.026]); a mixed-likelihood GP (E3) using the label-only rows does not fix it (−0.031). | DEVELOPMENT | phase3/depth2/ |
 | M5 | E1 is fragile to stale hyperparameters: ML-II every 8 queries instead of per step turns R2rev +0.012 into −0.081. | DEVELOPMENT | phase3/depth2/ |
 | M7 | E1 survives depth stress: no world below −0.03 NSD AULC (worst 25% depth noise −0.018 [−0.077, 0.034]); gains under threshold drift (+0.052) and 30% missing depth (+0.033). | HELD-OUT-SYNTHETIC (round-1 seeds) | round_1/stress_depth_* |
+| M8 | For binary labels no Week 18 candidate improves on G3 + margin: G3 on log inputs, nested-start LT and a 25% exploration mixture are all within ±0.011 BA AULC (intervals include 0); at B_max G3 + margin equals its full-pool ceiling on R1/R2. | DEVELOPMENT (paired screening) | phase3/cfa/, phase3/headroom/ |
 | M6 | q20 (historical) does not improve with E1: R3_OLD −0.003 n.s. (round 1), R2rev −0.024 (round 1), DEV −0.026 / −0.045. | SPLIT-CONFIRMATION + DEVELOPMENT | round_1/, phase2/ |

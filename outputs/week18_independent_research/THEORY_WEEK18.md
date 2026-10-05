@@ -72,6 +72,13 @@ saturated well before B80, so rules can only differ at small budgets; (iii) at $
 at most the difference of full-pool ceilings, and a better acquisition rule at most the gap between the arm's
 $B_{\max}$ value and its own ceiling. Test: `src/week18_headroom.py` (full-pool fits) against the DEV curves.
 
+**Check of (ii)–(iii) (DEVELOPMENT, partial: 22/40 R1_POOLED and 13/40 R2_TRANSFER runs; `phase3/headroom/`).**
+G3 + margin at $B_{\max}$ already equals G3's full-pool ceiling: R1 0.9607 at B120 vs 0.9595 with all ≈ 431 pool
+labels; R2 0.7227 at B80 vs 0.7227 with all 108. Full-pool ceilings of the other models lie within 0.008 (R1: depth
+GPR 0.961, mixed GP 0.960, LT 0.953). So at the end of the budget neither a better rule nor a better binary model
+has room. Any improvement must come at small budgets, which is where E1's confirmed gain lies (B24 +0.064 on R3_OLD).
+**Prediction (ii)–(iii) held.** The N-scaling part (i) was not run (compute was used for confirmation).
+
 ## T18-3 What a binary-labelled source campaign can transfer
 **Setting.** Source latent $f_A$, target latent $f_B=f_A+\delta$ ($\delta$ an unknown constant: the "level shift"),
 labels $y=\mathbf 1[f>0]$ in both campaigns, target pool of $N_B$ points.
@@ -113,7 +120,7 @@ informative anywhere on the conduction side, and the kernel carries it to the bo
 P-T18-1: a depth learner's gain should be largest at small budgets and in conduction-rich pools (OLD-like, pooled),
 and small on NEW-like pools (≈ 9% conduction runs).
 
-## T18-5 ML-II hyperparameters under boundary-concentrated designs (CONJECTURE → numerical check)
+## T18-5 ML-II hyperparameters under boundary-concentrated designs (CONJECTURE → partly refuted)
 **Conjecture.** With deterministic labels, ML-II on a margin-type design (all points near the boundary, both
 classes interleaved) selects shorter length-scales and a larger amplitude than on a random design of the same size,
 but the resulting classifier near the pool is insensitive to this (the decision is driven by the nearest
@@ -122,6 +129,21 @@ length-scales to the target region. This is the explanation offered for Phase 0 
 OLD and per-step ML-II hyperparameters, random gains +0.023–0.026 from ML-II. Check: `src/week18_mlii_design.py`
 (idealized boundary design = the $b$ pool points with smallest $|f|$ vs uniform random; cross-refits with the other
 design's hyperparameters).
+
+**Result (NUMERICALLY CHECKED, twins T_GP / T_TOBIT × pooled / OLD, DEV reps 0–3, b ∈ {40, 80, 120};
+`phase4/mlii_design_bias.csv`).** (a) *Amplitude:* under deterministic labels ML-II drives the latent amplitude to
+its upper bound (10³) in most fits under **both** designs, as Astra Round 3 C2 implies (signs and boundary are
+invariant to latent rescaling, so separable labels leave the scale unidentified). It is *lower*, not higher, for
+boundary designs at b = 40 (median 11–515 vs 778–1000). (b) *Length-scales:* boundary designs choose shorter
+length-scales at b = 40 (pooled twins 0.3–0.9 vs 3–4.5), and similar ones at b ≥ 80. (c) *Classifier sensitivity:*
+refitting a design with the other design's hyperparameters changes test BA by 0.039 on average for boundary designs
+and 0.025 for random designs. At b = 40 the boundary design is hurt by its own ML-II hyperparameters (−0.03 to −0.05
+on the GP twins). At b ≥ 80 the effects are mostly ≤ 0.015. **Status: conjecture partly refuted.** The length-scale
+bias exists and matters at small n, the amplitude part is wrong (the amplitude is unidentified, not inflated), and
+insensitivity holds only once the design has ≈ 80 points. The Phase 0 observation (margin ≈ equal under fixed and
+ML-II hyperparameters on NEW) is therefore a large-budget statement, not a general immunity of margin designs. Real OLD (POST-HOC; boundary design = smallest |latent| of a full-data G3 fit, DEV repeats, fold 1) shows the
+same pattern: at b = 40 the boundary design's ML-II amplitude is 2.4 (random: 627), and refitting it with the random
+design's hyperparameters raises its BA by 0.097. At b ≥ 80 the hyperparameter effect is ≤ 0.015.
 
 ## Astra Round 3 (received 2026-10-05) — integrated as hypotheses
 Source: `outputs/astra_round3/` (verbatim copy of the owner-supplied package, 25 files matching its SHA-256 manifest;
