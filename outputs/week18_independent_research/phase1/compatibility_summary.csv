@@ -1,0 +1,25 @@
+,0
+NEW_inside_OLD_box,72
+inside_n,72
+inside_nonKH,8
+inside_agree_G3old,0.9444444444444444
+inside_agree_5NNold,0.8888888888888888
+inside_nonKH_recall_G3old,0.5
+outside_n,64
+outside_nonKH,4
+outside_agree_G3old,0.921875
+outside_agree_5NNold,0.9375
+outside_nonKH_recall_G3old,0.25
+logh_threshold_OLD,20.687081772462
+logh_threshold_OLD_standard,20.697692760826975
+logh_threshold_NEW,20.822820491917742
+logh_threshold_NEW_inside,20.939615507991146
+logh_threshold_NEW_outside,20.409403230803083
+OLD_inside_NEW_box,40
+OLD_inside_NEW_box_KH,38
+logh_threshold_OLD_inside_NEW_box,20.907593749651152
+lml_pooled_G3,-69.9221151536274
+lml_pooled_offset,-69.920756895206
+offset_var,0.0587294765433274
+offset_hypers,"[95.8287, 3.3466, 4.3302, 4.4578, 30.9796, 0.0587]"
+lml_pooled_offset_resid,-69.49483237393521
