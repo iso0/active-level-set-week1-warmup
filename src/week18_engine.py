@@ -41,11 +41,14 @@ class DepthGPR:
     def __init__(self, pool_X):
         self.xs = StandardScaler().fit(np.log(pool_X))
 
-    def fit(self, X, depth, y):
+    def fit(self, X, depth, y, kernel=None, optimize=True):
+        """kernel=None: ML-II from the default start; kernel given: warm start (optimize) or fixed (no optimize)."""
+        ok = np.isfinite(depth); X, depth, y = X[ok], depth[ok], y[ok]
         Z = self.xs.transform(np.log(X)); t = np.log(depth)
         self.mu_t, self.sd_t = t.mean(), t.std() + 1e-9
-        k = ConstantKernel(1.0, (1e-3, 1e3)) * Matern(np.ones(4), (1e-2, 1e2), nu=1.5) + WhiteKernel(1e-2, (1e-6, 1.0))
-        self.gp = GaussianProcessRegressor(k, normalize_y=False, n_restarts_optimizer=0, random_state=0).fit(Z, (t - self.mu_t) / self.sd_t)
+        k = kernel if kernel is not None else ConstantKernel(1.0, (1e-3, 1e3)) * Matern(np.ones(4), (1e-2, 1e2), nu=1.5) + WhiteKernel(1e-2, (1e-6, 1.0))
+        self.gp = GaussianProcessRegressor(k, normalize_y=False, n_restarts_optimizer=0, random_state=0,
+                                           optimizer="fmin_l_bfgs_b" if optimize else None).fit(Z, (t - self.mu_t) / self.sd_t)
         kh, nk = t[y == 1], t[y == 0]
         if len(kh) and len(nk) and nk.max() < kh.min():
             self.u = .5 * (nk.max() + kh.min())
@@ -68,16 +71,49 @@ class DepthGPR:
         return ndtr(mu / np.sqrt(var))
 
 
-def fit_learner(learner, task, L, fixed=None):
+def fit_learner(learner, task, L, fixed=None, state=None):
+    """hyper: 'mlii' (ML-II every step); 'mlii_k<k>' (ML-II every k paid queries, warm-started from the last
+    optimum, kernel held fixed in between); 'fixed:<name>' (kernel from `fixed`, never optimized).
+    `state` = {"kernel": last optimized kernel or None, "b0": startup size}."""
     model, hyper = learner
     X, y = task["X"], task["y"]
     rows = np.r_[task["prior"], L].astype(int)
-    if model == "GPR_depth":
-        return DepthGPR(X[task["pool"]]).fit(X[rows], task["depth"][rows], y[rows])
     lh = logh(X)
-    if hyper == "mlii":
-        return M.fit(model, X, lh, y, task["pool"], rows)
-    return M.fit(model, X, lh, y, task["pool"], rows, kernel=fixed[hyper.split(":", 1)[1]], scalers=fixed.get("scalers"))
+    if model == "H":
+        return M.fit("H", X, lh, y, task["pool"], rows)
+    every = int(hyper[6:]) if hyper.startswith("mlii_k") else (1 if hyper == "mlii" else None)
+    if every is None:
+        return M.fit(model, X, lh, y, task["pool"], rows, kernel=fixed[hyper.split(":", 1)[1]], scalers=fixed.get("scalers"))
+    last = state.get("kernel") if state is not None else None
+    refit = last is None or every == 1 or (len(L) - state["b0"]) % every == 0
+    if model == "GPR_depth":
+        f = DepthGPR(X[task["pool"]])
+        f.fit(X[rows], task["depth"][rows], y[rows], kernel=None if last is None or every == 1 else _copy(last), optimize=refit)
+    elif not refit:
+        f = M.fit(model, X, lh, y, task["pool"], rows, kernel=_copy(last))
+    elif last is None or every == 1:
+        f = M.fit(model, X, lh, y, task["pool"], rows)
+    else:
+        f = _warm_fit(model, X, lh, y, task["pool"], rows, last)
+    if state is not None and refit:
+        state["kernel"] = f.gp.kernel_
+    return f
+
+
+def _copy(kernel):
+    from sklearn.base import clone
+    k = clone(kernel); k.theta = kernel.theta
+    return k
+
+
+def _warm_fit(model, X, lh, y, pool, rows, warm):
+    """ML-II started from the previous optimum (same parameterization and bounds as kernel_for(model))."""
+    from sklearn.base import clone
+    from src.week17_audit_impact import SafeguardedFixedMeanLaplaceGPC
+    f = M.fit(model, X, lh, y, pool, rows, kernel=_copy(warm))          # scalers and physics mean
+    k = clone(M.kernel_for(model)); k.theta = np.clip(warm.theta, k.bounds[:, 0], k.bounds[:, 1])
+    f.gp = SafeguardedFixedMeanLaplaceGPC(k, optimize=True).fit(f.inputs(X[rows], lh[rows]), y[rows], f.mean(lh[rows]))
+    return f
 
 
 def proba(f, X):
@@ -122,14 +158,18 @@ def choose(rule, f, task, L, rng, b):
 def run(task, learner, rule, budgets, fixed=None, horizon=None):
     horizon = horizon or max(budgets)
     rng = np.random.default_rng(list(task["seed"]) + [RULE_ID[rule], 11])
-    L = startup(task); out = []
+    L = startup(task); out = []; state = {"kernel": None, "b0": len(L)}; startup_n = len(L)
     while True:
         b = len(L)
-        f = fit_learner(learner, task, L, fixed)
+        f = fit_learner(learner, task, L, fixed, state)
         if b in budgets:
             p = proba(f, task["X"][task["test"]])
-            out.append({"budget": b, "startup": None, "p": p, "fp": float(getattr(getattr(f, "gp", None), "mode_fp_", np.nan)) if not isinstance(f, DepthGPR) else 0.0,
-                        "u": float(np.exp(f.u)) if isinstance(f, DepthGPR) else np.nan})
+            r = {"budget": b, "startup": startup_n, "p": p, "u": float(np.exp(f.u)) if isinstance(f, DepthGPR) else np.nan,
+                 "fp": float(getattr(getattr(f, "gp", None), "mode_fp_", np.nan)) if not isinstance(f, (DepthGPR, M.FittedH)) else 0.0}
+            if "dense_X" in task:
+                pd_ = proba(f, task["dense_X"])
+                r.update(task["dense"].metrics((pd_ >= .5).astype(int)))
+            out.append(r)
         if b >= horizon or len(np.setdiff1d(task["pool"], L)) == 0:
             return out, L
         L.append(choose(rule, f, task, L, rng, b))

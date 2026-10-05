@@ -32,3 +32,7 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   −0.022/−0.003 (fixed; W15/W17 seeds) vs +0.002/+0.020 (ML-II). The NEW exception = ML-II × random-design
   interaction + seed noise; margin is not hyperparameter-limited.
 - 2026-10-05 Items (b)–(d) recorded in ERRATA.md / RED_TEAM.md.
+- 2026-10-05 Phase 2: BENCHMARK_SPEC.md locked (tasks R1/R1_STD/R2/R2rev/R3_NEW/R3_OLD, S1 twins, S2 stress;
+  blocks DEV 1–8, C1 9–12, C2 13–16, C3 17–20; metrics incl. queries-to-target). Twin truths fitted to the 541
+  pooled labels (agreement 0.946–1.000; T_NW/T_QL nearly erase NEW's rare pocket). Baseline reproduction on DEV
+  launched (`src/week18_baselines.py`, caches `phase2/cache_*`).
