@@ -1,6 +1,6 @@
 """Week 18 Phase 5 confirmation runner (one round = one locked real block + fresh twin reps + fresh stress seeds).
 
-Usage: python -m src.week18_confirm <round_k> <real|twins|stress> [n_jobs]
+Usage: python -m src.week18_confirm <round_k> <real|twins|stress|stress_depth> [n_jobs]
 Reads outputs/week18_independent_research/round_<k>/freeze_spec.json.  Refuses to run unless FREEZE_ROUND_<k>.md and
 the spec are committed and present on origin/main unchanged (the freeze must be pushed before any confirmatory run).
 Spec keys: round, real_block ("C1"/"C2"/"C3"), real_tasks, twin_tasks [[twin, dist, pool]], twin_reps, stress_round,
@@ -78,6 +78,9 @@ def tasks(spec, which):
     if which == "twins":
         import src.week18_twins as W
         return [W.twin_task(tw, d, n, rep) for tw, d, n in spec["twin_tasks"] for rep in spec["twin_reps"]]
+    if which == "stress_depth":
+        import src.week18_stress_depth as SD
+        return SD.all_depth_stress(spec["stress_round"])
     import src.week18_stress as S
     return S.all_stress(spec["stress_round"])
 

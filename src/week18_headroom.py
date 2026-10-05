@@ -33,7 +33,7 @@ def job(t, dest):
     E._PHYS[0] = t.get("phys_fn")
     L = list(map(int, t["pool"]))
     with threadpool_limits(1):
-        for model in ["G3", "LT", "MixGP"] + (["GPR_depth", "Tobit"] if has_depth else []):
+        for model in ["G3", "LT", "MixGP"] + (["GPR_depth"] if has_depth else []):     # Tobit dropped (dominated by MixGP)
             f = E.fit_learner((model, "mlii"), t, L, None, {"kernel": None, "b0": len(L)})
             p = E.proba(f, t["X"][t["test"]])
             r = {"task": t["task"], "repeat": t["repeat"], "fold": t["fold"], "model": model, "n_fit": len(L) + len(t["prior"]),
@@ -53,7 +53,8 @@ def tasks(which):
     import src.week18_twins as W
     if which == "real":
         dt = {(t["task"], t["repeat"], t["fold"]): t for t in depth_tasks("real")}
-        return [dt.get((t["task"], t["repeat"], t["fold"]), t) for t in T.all_real("DEV")]
+        # large-prior tasks (R2/R2rev, 460–513 rows) omitted for cost after 14 R2 tasks (2 h on one core)
+        return [dt.get((t["task"], t["repeat"], t["fold"]), t) for t in T.all_real("DEV") if len(t["prior"]) == 0]
     T_ = [W.twin_task(tw, d, n, rep) for tw in ("T_GP", "T_GBT", "T_NW", "T_QL", "T_TOBIT") for d, n in (("pooled", 433), ("OLD", 324), ("NEW", 108)) for rep in range(8)]
     return T_ + [W.twin_task("T_DEPTH", "OLD", 324, rep) for rep in range(8)]
 

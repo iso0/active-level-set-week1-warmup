@@ -90,12 +90,17 @@ def tasks(exp, which):
     return [W.twin_task(tw, d, n, rep) for tw in ("T_GP", "T_GBT", "T_NW", "T_QL", "T_TOBIT") for d, n in (("pooled", 433), ("OLD", 324), ("NEW", 108)) for rep in range(8)]
 
 
-def main(exp, which):
+def main(exp, which, part="all"):
+    """part: 'all', 'noprior' (tasks without free prior labels) or 'prior' (transfer tasks) — lets long runs be
+    split into pieces that fit the 2 h background limit; the CSV is written from all cached tasks."""
     pdir = OUT / exp / f"cache_{which}"; pdir.mkdir(parents=True, exist_ok=True)
     T = tasks(exp, which); T.sort(key=lambda t: -(len(t["prior"]) + len(t["pool"])))
-    res = Parallel(n_jobs=7, verbose=5)(delayed(task_job)(t, EXPERIMENTS[exp], pdir, exp) for t in T)
-    pd.DataFrame([r for rr in res for r in rr]).to_csv(OUT / exp / f"{exp}_dev_{which}.csv.gz", index=False)
+    if part != "all":
+        T = [t for t in T if (len(t["prior"]) == 0) == (part == "noprior")]
+    Parallel(n_jobs=7, verbose=5)(delayed(task_job)(t, EXPERIMENTS[exp], pdir, exp) for t in T)
+    rows = [r for p in sorted(pdir.glob("*.json")) for r in json.loads(p.read_text())]
+    pd.DataFrame(rows).to_csv(OUT / exp / f"{exp}_dev_{which}.csv.gz", index=False)
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else "all")

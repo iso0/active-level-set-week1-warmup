@@ -80,3 +80,14 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   1-D threshold shift +0.17 [0.03, 0.29] overall, +0.01 [−0.14, 0.28] in the overlap — not decidable). Deferred:
   same-state latent/channel/updater factorial (needs Week 16 covariances, not saved; PEER is not a Week 18 candidate).
   No freeze changed.
+- 2026-10-05 **depth2 results (DEV; 10,797 real fits, 0 with fixed-point error > 1e-6).** E1 (Week 7 depth GPR +
+  straddle) is the only depth learner that wins on real data: R3_OLD +0.021 [0.014, 0.030], R2rev +0.012 BA AULC,
+  queries to G3's B80 accuracy 32 vs 56 / 28 vs 48; gain largest at startup (B16 BA 0.904 vs 0.821) — **P-T18-1
+  held** (early, conduction-rich pools; NEW-like twin +0.020 n.s.). q20 lower (−0.026 / −0.045). With partial depth
+  (R1_POOLED: NEW rows have no depth in the repository) E1 is −0.037: its straddle picks NEW points whose depth it
+  cannot use. **E3 killed** (R3_OLD +0.008 with straddle, R1 −0.031, below E1; its label-only part is weaker than G3
+  on every binary twin). **E2 not carried forward** (R3_OLD −0.023). Twins (frozen truth): E3 ≈ E1 (+0.057–0.066
+  on OLD-like depth twins). Conclusion so far: the depth advantage is real where every paid run reports depth;
+  whether it extends to NEW/POOLED needs the NEW monitors (decision D1).
+- 2026-10-05 Chain split to fit the 2 h background limit (dev_arms `part` = noprior / prior). Headroom restricted to
+  tasks without a large prior (14 R2 tasks done before the limit are kept).

@@ -1,0 +1,12 @@
+{
+  "round": 1,
+  "real_block": "C1",
+  "real_tasks": ["R3_OLD", "R2rev_TRANSFER"],
+  "twin_tasks": [["T_DEPTH", "OLD", 324], ["T_TOBIT", "OLD", 324], ["T_TOBIT", "pooled", 433], ["T_TOBIT", "NEW", 108]],
+  "twin_reps": [100, 101, 102, 103, 104, 105, 106, 107],
+  "stress_round": 1,
+  "arms": [
+    {"name": "REF", "model": "G3", "hyper": "phase2", "rule": "margin"},
+    {"name": "E1", "model": "GPR_depth", "hyper": "mlii", "rule": "straddle"}
+  ]
+}
