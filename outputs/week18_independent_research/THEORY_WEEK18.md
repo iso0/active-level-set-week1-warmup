@@ -77,7 +77,18 @@ G3 + margin at $B_{\max}$ already equals G3's full-pool ceiling: R1 0.9607 at B1
 labels; R2 0.7227 at B80 vs 0.7227 with all 108. Full-pool ceilings of the other models lie within 0.008 (R1: depth
 GPR 0.961, mixed GP 0.960, LT 0.953). So at the end of the budget neither a better rule nor a better binary model
 has room. Any improvement must come at small budgets, which is where E1's confirmed gain lies (B24 +0.064 on R3_OLD).
-**Prediction (ii)–(iii) held.** The N-scaling part (i) was not run (compute was used for confirmation).
+**Prediction (ii)–(iii) held.**
+
+**Check of (i) (SEMI-SYNTHETIC, twin T_GP on the pooled input distribution, pool sizes 108 / 216 / 433 / 866, 3 reps
+each, theory-check seeds 900+, G3 + margin with ML-II every 4 queries to B = min(N, 200); `phase4/saturation/`).**
+Budget at which NSD reaches 95% of the way from B16 to the full-pool ceiling: median 40 / 48 / 40 / 40, a log-log
+slope of −0.03. Full-pool ceilings: 0.59 / 0.85 / 0.92 / 0.94 (the floor (a) falls with N, as it should). **The
+nonparametric saturation law of (b) is refuted for this boundary.** Over an eightfold range of pool sizes, the budget
+needed to saturate does not grow. This is the behaviour of the low-complexity, index-like case
+($\lceil\log_2(N+1)\rceil$ grows only from 7 to 10), not of an $N^{(d-1)/(\alpha+d-1)}$ boundary fragment. The
+boundary that the real labels support is simple enough for a few dozen well-placed queries to saturate any pool we
+have. That is why acquisition differences vanish by B80, and why the only confirmed gain (depth, T18-4) appears at
+small budgets.
 
 ## T18-3 What a binary-labelled source campaign can transfer
 **Setting.** Source latent $f_A$, target latent $f_B=f_A+\delta$ ($\delta$ an unknown constant: the "level shift"),

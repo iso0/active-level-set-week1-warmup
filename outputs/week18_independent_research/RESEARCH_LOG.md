@@ -115,3 +115,9 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   R3_NEW −0.021 [−0.080, 0.039], R3_OLD +0.021 (reproduces Phase 2 exactly). In R1, E1 is no better even on the OLD
   test points (accuracy 0.959 vs 0.970 at B112): NEW's label/depth disagreement contaminates the single-threshold
   depth model. Transfer tasks running.
+- 2026-10-05 **Round 2 complete (C2, freeze 1d560792):** Q2a fails (R1_POOLED +0.004 [−0.001, 0.009]); Q2b fails
+  (R3_NEW −0.022; R2_TRANSFER +0.020 n.s.); Q2c fails (R3_OLD +0.016 [0.013, 0.020], positive but below the +0.02 bar;
+  QTT −12%). 10 of 3,040 fits (G3 reference on R2_TRANSFER) above the fixed-point rule (≤ 2.3e-5), recorded and not
+  decision-relevant. Saturation check (T18-2(i)): the saturation budget is ≈ 40 queries for N = 108…866 → the
+  nonparametric law is refuted for the real-data boundary (index-like). Verdict unchanged: IMPROVEMENT ON SOME TASKS ONLY.
+  C3 unused.

@@ -37,7 +37,7 @@ THEOREM (proved, known, or derived — status stated). Pointers are relative to 
 | id | claim | status |
 |---|---|---|
 | T18-1 | Binary threshold localization needs ⌈log₂(N+1)⌉ queries; censored affine branch 2; censored smooth branch saves only on fine pools. | KNOWN / PROVED / NUMERICALLY CHECKED |
-| T18-2 | Pool floor N^{−α/(α+d−1)}; saturation budget N^{(d−1)/(α+d−1)}. | KNOWN / DERIVED |
+| T18-2 | Pool floor N^{−α/(α+d−1)}; saturation budget N^{(d−1)/(α+d−1)}. Checks: no rule/model headroom at B_max on R1/R2 (held); saturation budget ≈ 40 for N = 108…866 on the T_GP twin, flat in N (nonparametric law refuted for this boundary; index-like). | KNOWN / DERIVED; checks NUMERICALLY CHECKED / SEMI-SYNTHETIC |
 | T18-3 | Binary source labels cannot identify a target level shift (only nesting); index structure or continuous source values reduce the target to a 1-D threshold search. | PROVED |
 | T18-4 | Information per query: binary probit Fisher information decays as φ(m)²/(Φ(m)Φ(−m)); exact depth carries 1/σ² everywhere. | KNOWN (application PROVED) |
 | T18-5 | ML-II under boundary-concentrated designs: shorter length-scales and harmful hyperparameters at b = 40 (twins −0.03…−0.05, real OLD −0.10 BA); amplitude unidentified (at the bound under both designs), not inflated; effects ≤ 0.015 at b ≥ 80. | CONJECTURE partly refuted (NUMERICALLY CHECKED; real part POST-HOC) |

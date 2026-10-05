@@ -67,6 +67,17 @@ def two_campaign(rep, base, delta=.6):
                  prior=ua, yprior=(fA(ua) > 0).astype(int), seed=[base, 60, rep, 3])
 
 
+def two_campaign_noprior(rep, base, delta=.6):
+    """Same draws as two_campaign (identical seeds) with the campaign-A prior removed: P-T18-3 check (the binary
+    prior should lift ranking quality (AUC) far more than the decision threshold (BA))."""
+    t = two_campaign(rep, base, delta)
+    off = len(t["prior"])
+    keep = np.r_[t["pool"], t["test"]]
+    X, y = t["X"][keep], t["y"][keep]; n = len(t["pool"])
+    return {**t, "task": "S2_TWO_CAMP_NOPRIOR", "X": X, "y": y, "depth": np.full(len(y), np.nan), "pool": np.arange(n),
+            "test": np.arange(n, len(y)), "prior": np.array([], int)}
+
+
 def all_stress(round_k=0, reps=range(8)):
     base = 1840 + 10 * round_k
     T = [w17_cell(n, r, base) for n in W17_CELLS for r in reps]

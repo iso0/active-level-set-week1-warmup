@@ -83,7 +83,7 @@ below −0.03 → **passes, survives; stopping rule met after one round**. Round
 | Result | Status | Prediction / check | Held? |
 |---|---|---|---|
 | T18-1 binary vs censored 1-D threshold search | KNOWN / PROVED / NUMERICALLY CHECKED | depth gains on coarse 4-D pools must come from shared surface information, appear early, be small on NEW-like pools | **yes** (B24 0.927 vs 0.863; NEW-like twin +0.009) |
-| T18-2 finite-pool floor N^{−α/(α+d−1)}, saturation budget N^{(d−1)/(α+d−1)} | KNOWN / DERIVED | at B_max no rule/model headroom; gains only at small budgets | **yes** (R1: G3 + margin B120 0.961 = full-pool ceiling 0.960; model ceilings within 0.008); N-scaling not run |
+| T18-2 finite-pool floor N^{−α/(α+d−1)}, saturation budget N^{(d−1)/(α+d−1)} | KNOWN / DERIVED | at B_max no rule/model headroom; gains only at small budgets | (ii)–(iii) **yes** (R1: G3 + margin B120 0.961 = full-pool ceiling 0.960; model ceilings within 0.008); (i) N-scaling **refuted**: saturation at ≈ 40 queries for N = 108…866 (index-like, low-complexity boundary) |
 | T18-3 binary source labels identify only nesting, not a level shift | PROVED | prior lifts AUC more than BA | **yes** (AUC +0.09, BA +0.011; agrees with Astra P6) |
 | T18-4 information per query (probit Fisher information vs 1/σ²) | KNOWN (application PROVED) | depth gain early and conduction-rich; random loses on large pools; gain falls with depth noise | **yes** (round 1, Phase 6 noise trend) |
 | T18-5 ML-II under boundary-concentrated designs | CONJECTURE | shorter length-scales, larger amplitude, classifier insensitive | **partly refuted**: length-scale bias harmful at b = 40 (−0.03…−0.10 BA); amplitude unidentified (at the bound), not inflated; insensitive only at b ≥ 80 |
@@ -96,8 +96,9 @@ below −0.03 → **passes, survives; stopping rule met after one round**. Round
 - Full-depth DEV (`phase3/depth3/`): R1_POOLED −0.001, R3_NEW −0.021, R2_TRANSFER +0.022 (n.s.), R2rev +0.008,
   R3_OLD +0.021. In R1 the NEW rows pull the learned depth threshold away from OLD's: E1 is worse even on OLD test points.
 - Round 2 (FREEZE_ROUND_2.md, `1d560792`; block C2; round_2/ROUND_2_RESULTS.md): Q2a (POOLED improvement) fails,
-  +0.004; Q2b (NEW non-inferiority) fails, R3_NEW −0.022; Q2c (OLD replication at ≥ +0.02) fails, +0.016
-  [0.013, 0.020]. Positive and significant, but below the size bar.
+  +0.004; Q2b (NEW non-inferiority) fails, R3_NEW −0.022 (R2_TRANSFER +0.020, n.s.); Q2c (OLD replication at
+  ≥ +0.02) fails, +0.016 [0.013, 0.020]. Positive and significant, but below the size bar. 10 of 3,040 fits (G3 reference,
+  R2_TRANSFER) above the fixed-point rule (max 2.3e-5), recorded and not decision-relevant.
 
 ## 7. Verdict
 **IMPROVEMENT ON SOME TASKS ONLY.** The depth-observing learner is better in every OLD-type block (DEV +0.021, C1

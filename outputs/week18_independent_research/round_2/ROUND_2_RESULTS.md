@@ -12,7 +12,7 @@ the background limit. That affected only the order of execution, not what was co
 | R1_POOLED | q20 AULC | +0.002 | [−0.015, +0.020] | lower ✗ |
 | R3_NEW | BA AULC | −0.022 | [−0.070, +0.030] | ≈ −0.02 ✓ |
 | R3_NEW | q20 AULC | −0.073 | [−0.169, +0.014] | lower ✓ |
-| R2_TRANSFER | BA AULC | R2_PENDING | | ≈ +0.02 (n.s.) |
+| R2_TRANSFER | BA AULC | +0.020 | [−0.007, +0.039] | ≈ +0.02 (n.s.) ✓ |
 | R2rev_TRANSFER (NEW prior with depth) | BA AULC | −0.001 | [−0.004, +0.002] | ≈ +0.008 ✗ |
 | **R3_OLD (replication)** | BA AULC | **+0.016** | [+0.013, +0.020] | +0.02 … +0.03 (low end missed) |
 | R3_OLD | queries to REF's B80 level | 42 vs 48 (−12%) | [−10%, +29%] | — |
@@ -30,3 +30,14 @@ not reproduced on C2. The *direction* is reproduced in every block (DEV +0.021, 
 above 0). The queries-to-target advantage is much smaller in C2 (−12%) than in C1 (−66%). The improvement does not
 extend to POOLED or NEW. On NEW the label is not a max-depth threshold (DATA_AUDIT amendment 2), and the single-threshold
 depth model loses.
+
+**Descriptive, not part of any decision rule.** Per-repeat R3_OLD effects: C1 +0.009 / +0.046 / +0.012 / +0.048,
+C2 +0.012 / +0.016 / +0.017 / +0.021. The C2 reference is stronger (G3 + margin BA AULC 0.922–0.930 vs 0.895–0.926 in
+C1), which leaves less room. Pooled over the eight confirmation repeats (C1 ∪ C2; post-hoc pooling): +0.022
+[0.013, 0.033].
+
+**Convergence.** 3,040 fits. 10 reference (G3) fits on R2_TRANSFER (≈ 500-row kernels; budgets 20–76) ended with
+fixed-point error 2e-6 … 2.3e-5, above the 1e-6 rule. All E1 fits and every fit on the other tasks are converged
+(max 3.9e-9). These fits were not re-run. Phase 2 measured fixed-point errors up to 9e-4 on the same task family to move
+predicted probabilities by at most 6e-5, and R2_TRANSFER does not enter any round-2 decision (Q2b already fails on
+R3_NEW).
