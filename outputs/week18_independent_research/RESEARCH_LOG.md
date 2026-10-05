@@ -50,3 +50,7 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   G3 fixed-OLD 0.686 / LT 0.685 / random 0.657; R3_NEW G3m 0.671 / random 0.681 / candB 0.674; R3_OLD G3m 0.924 /
   LT 0.931 / M3 0.930 / **GPR-depth straddle 0.944** (q20 0.817 vs 0.842); R2rev G3m 0.929 / GPR-depth 0.941.
   OLD prior lifts NEW AUC 0.819 → 0.909 (R3_NEW → R2).
+- 2026-10-05 Phase 2 done (PHASE2_BASELINES.md): twins — LT+m ≥ G3+m on most binary twins; GPR-depth best on
+  both depth twins incl. the non-own family (T_TOBIT OLD 0.830 vs 0.776). External validity: twins τ 0.22,
+  W17 cells 0.16, real-vs-real 0.00 → no universal real ranking; Week 17's "M3 ≪ G3" fails on OLD/POOLED.
+  Degenerate (single-class) NEW-like twin pools are skipped and logged.

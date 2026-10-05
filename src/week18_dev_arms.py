@@ -39,6 +39,9 @@ def task_job(t, arms, out_dir):
         return json.loads(dest.read_text())
     has_depth = np.isfinite(t["depth"][np.r_[t["prior"], t["pool"]].astype(int)]).any()
     rows = []
+    if len(set(t["y"][t["pool"]]) | set(t["y"][t["prior"]])) < 2:
+        rows = [{"task": t["task"], "repeat": t["repeat"], "fold": t["fold"], "degenerate": True}]
+        dest.write_text(json.dumps(rows)); return rows
     with threadpool_limits(1):
         for (model, hyper), rule in arms:
             if model == "Tobit" and not has_depth:

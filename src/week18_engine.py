@@ -188,8 +188,14 @@ def latent(f, X):
     return f.latent(X, logh(X))
 
 
+class DegenerateTask(Exception):
+    """The paid pool (with the prior) contains a single class: no active learning possible."""
+
+
 def startup(task):
     X, y, pool = task["X"], task["y"], task["pool"]
+    if len(set(y[pool]) | (set(y[task["prior"]]) if len(task["prior"]) else set())) < 2:
+        raise DegenerateTask(task["task"])
     order = pool[maximin_order(X[pool], np.random.default_rng(list(task["seed"]) + [2]))]
     L = list(order[:8]); k = 8
     seen = set(y[task["prior"]]) if len(task["prior"]) else set()

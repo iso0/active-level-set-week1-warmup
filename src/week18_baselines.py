@@ -47,6 +47,9 @@ def task_job(t, out_dir):
     if dest.exists():
         return json.loads(dest.read_text())
     rows = []
+    if len(set(t["y"][t["pool"]]) | set(t["y"][t["prior"]])) < 2:
+        dest.write_text(json.dumps([{"task": t["task"], "repeat": t["repeat"], "fold": t["fold"], "degenerate": True}]))
+        return [{"task": t["task"], "repeat": t["repeat"], "fold": t["fold"], "degenerate": True}]
     fx = fixed_old() if t["task"] in ("R2_TRANSFER", "R3_NEW") else None
     with threadpool_limits(1):
         for learner, rule in arms_for(t):
