@@ -74,7 +74,8 @@ def job(t, arms, dest):
 def tasks(spec, which):
     if which == "real":
         import src.week18_tasks as T
-        return [t for t in T.all_real_with_depth(spec["real_block"]) if t["task"] in spec["real_tasks"]]
+        build = T.all_real_full_depth if spec.get("depth") == "full" else T.all_real_with_depth   # "full": OLD + NEW depth (after D1)
+        return [t for t in build(spec["real_block"]) if t["task"] in spec["real_tasks"]]
     if which == "twins":
         import src.week18_twins as W
         return [W.twin_task(tw, d, n, rep) for tw, d, n in spec["twin_tasks"] for rep in spec["twin_reps"]]

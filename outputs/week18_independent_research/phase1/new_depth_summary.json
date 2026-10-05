@@ -1,0 +1,11 @@
+{
+ "n": 136,
+ "keyhole": 124,
+ "AUC_max_depth": 0.8911290322580645,
+ "min_keyhole_depth_um": 88.81158,
+ "max_nonkeyhole_depth_um": 311.9999,
+ "nonkeyhole_above_111": 7,
+ "keyhole_below_111": 1,
+ "malformed_rows_total": 0,
+ "time_checks_ok": false
+}

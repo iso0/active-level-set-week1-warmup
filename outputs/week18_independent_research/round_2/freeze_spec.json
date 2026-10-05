@@ -1,0 +1,13 @@
+{
+  "round": 2,
+  "real_block": "C2",
+  "depth": "full",
+  "real_tasks": ["R1_POOLED", "R3_NEW", "R2_TRANSFER", "R2rev_TRANSFER", "R3_OLD"],
+  "twin_tasks": [],
+  "twin_reps": [],
+  "stress_round": 2,
+  "arms": [
+    {"name": "REF", "model": "G3", "hyper": "phase2", "rule": "margin"},
+    {"name": "E1", "model": "GPR_depth", "hyper": "mlii", "rule": "straddle"}
+  ]
+}

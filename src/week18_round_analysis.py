@@ -55,7 +55,7 @@ def main(k):
     out = {"round": k, "candidates": cand}
     import src.week18_tasks as T
     real = load(k, "real")
-    y_of = {t["task"]: t["y"] for t in T.all_real_with_depth(spec["real_block"])}
+    y_of = {t["task"]: t["y"] for t in T.all_real(spec["real_block"])}
     rc = real_curves(real, y_of); rc["arm"] = rc.arm.str.split("|").str[0]
     ra = aulc(rc, "BA").merge(aulc(rc, "q20"), on=["task", "repeat", "arm"])
     tw = load(k, "twins"); tw["arm"] = tw.arm_name
@@ -103,7 +103,36 @@ def stress_depth(k):
     return res
 
 
+def main_round2(k=2):
+    """Round 2 (FREEZE_ROUND_2.md): E1 on full-depth real tasks, block C2. Q2a POOLED improvement, Q2b NEW
+    non-inferiority, Q2c OLD replication."""
+    import src.week18_tasks as T
+    spec = json.loads((W18 / f"round_{k}/freeze_spec.json").read_text())
+    real = load(k, "real")
+    y_of = {t["task"]: t["y"] for t in T.all_real(spec["real_block"])}
+    rc = real_curves(real, y_of); rc["arm"] = rc.arm.str.split("|").str[0]
+    ra = aulc(rc, "BA").merge(aulc(rc, "q20"), on=["task", "repeat", "arm"])
+    con = pd.concat([contrast(ra, "BA_AULC", "E1", "REF"), contrast(ra, "q20_AULC", "E1", "REF")])
+    q = qtt_reduction(rc, "BA", "E1", "REF")
+    get = lambda task: con[(con.task == task) & (con.metric == "BA_AULC")].iloc[0]
+    r1, r3n, r2, r3o = get("R1_POOLED"), get("R3_NEW"), get("R2_TRANSFER"), get("R3_OLD")
+    q1 = q[q.task == "R1_POOLED"].iloc[0]
+    out = {"round": k,
+           "Q2a_pooled_improvement": bool((r1["mean"] >= .02 and r1["lo"] > 0) or (q1["reduction"] >= .15 and q1["lo"] > 0)),
+           "Q2b_new_noninferior": bool(r3n["mean"] >= -.01 and r2["mean"] >= -.01),
+           "Q2c_old_replication": bool(r3o["mean"] >= .02 and r3o["lo"] > 0),
+           "R1_POOLED": r1[["mean", "lo", "hi"]].to_dict(), "R1_QTT": q1.to_dict(), "R3_NEW": r3n[["mean", "lo", "hi"]].to_dict(),
+           "R2_TRANSFER": r2[["mean", "lo", "hi"]].to_dict(), "R3_OLD": r3o[["mean", "lo", "hi"]].to_dict(),
+           "R2rev": get("R2rev_TRANSFER")[["mean", "lo", "hi"]].to_dict()}
+    fp = real.fp.astype(float); out["convergence"] = {"fits": int(len(fp)), "fp_gt_1e-6": int((fp > 1e-6).sum()), "fp_max": float(fp.max())}
+    con.to_csv(W18 / f"round_{k}/contrasts.csv", index=False); q.to_csv(W18 / f"round_{k}/qtt_E1.csv", index=False)
+    ra.to_csv(W18 / f"round_{k}/aulc_real.csv", index=False)
+    (W18 / f"round_{k}/decision.json").write_text(json.dumps(out, indent=1, default=float))
+    return out
+
+
 if __name__ == "__main__":
     k = int(sys.argv[1])
-    res = stress_depth(k) if len(sys.argv) > 2 and sys.argv[2] == "stress_depth" else main(k)
+    mode = sys.argv[2] if len(sys.argv) > 2 else ""
+    res = stress_depth(k) if mode == "stress_depth" else (main_round2(k) if mode == "round2" else main(k))
     print(json.dumps(res, indent=1, default=float))

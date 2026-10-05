@@ -27,6 +27,9 @@ EXPERIMENTS = {
     # "auto4" = per-step ML-II without a prior, ML-II every 4 paid queries (warm start) with a large prior
     "depth2": [(("G3", "auto4"), "margin"), (("Tobit", "auto4"), "margin"), (("MixGP", "auto4"), "margin"),
                (("MixGP", "auto4"), "straddle"), (("GPR_depth", "mlii"), "straddle")],
+    # depth3 (after D1): E1 exactly as frozen in round 1 (per-step ML-II everywhere) on the full-depth DEV tasks;
+    # reference = Phase 2 G3 + margin on the same runs (G3 ignores depth, seeds identical)
+    "depth3": [(("GPR_depth", "step"), "straddle")],
 }
 
 
@@ -34,6 +37,8 @@ def hyper_for(t, hyper):
     big = len(t["prior"]) + 120 > 200 and len(t["prior"]) > 0
     if hyper == "auto4":
         return "mlii_k4" if big else "mlii"
+    if hyper == "step":
+        return "mlii"
     return "mlii_k8" if (big and hyper == "mlii") else hyper
 
 
@@ -81,6 +86,8 @@ def tasks(exp, which):
     from src.week18_dev_depth import tasks as depth_tasks
     if exp == "depth":
         return depth_tasks(which)
+    if exp == "depth3":
+        return T.all_real_full_depth("DEV") if which == "real" else []
     if exp == "depth2":
         if which == "real":
             return depth_tasks("real") + [t for t in T.r3_new_tasks() if t["block"] == "DEV"]

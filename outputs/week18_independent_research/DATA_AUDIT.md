@@ -60,3 +60,26 @@ from every benchmark and test.
 §3's "level shift is a region effect" is overstated — see ERRATA E18-3: 1-D log-h threshold shift NEW − OLD
 +0.17 [0.03, 0.29] overall, +0.01 [−0.14, 0.28] in the overlap (2 + 8 non-Keyhole runs). Campaign shift and region
 effect are not distinguishable with these data; the pooled 4-D GPC needs no campaign offset.
+
+## Amendment 2026-10-05 (2) — NEW continuous outputs after decision D1 (POST-HOC, descriptive)
+The owner allowed the download (D1). Downloaded: `position-bounds_melt.dat` and `time.dat` for the 136 included NEW
+runs from `ioandanielc/sph_v2@2e1eec9c` (272 files, 1.43 GB). All match the pinned Week 11 tree (size and Git blob
+id; `phase1/new_monitor_download_manifest.csv`). The 49 Bug runs were not downloaded. Raw files are in `data/raw/`
+(git-ignored).
+Max depth uses the Week 7 Phase 2 definition. A re-derivation on 12 random OLD runs at the Week 7 revision
+reproduces Week 7's values exactly (max |Δ| 7e-15 µm; `phase1/new_depth_definition_check_old.csv`).
+Code: `src/week18_new_depth.py`; table: `phase1/new_depth.csv`.
+
+**On NEW the label is not a max-depth threshold.**
+| | OLD (405) | NEW (136) |
+|---|---|---|
+| AUC of max depth for has_keyhole | 1.000 | **0.891** |
+| non-Keyhole runs with max depth ≥ 111.2 µm | 0 | **7 of 12** (up to 312 µm) |
+| Keyhole runs below 111.2 µm | 0 | 1 of 124 (88.8 µm) |
+| best single-threshold BA | 0.9985 | 0.876 (at ≈ 132 µm) |
+The disagreement sits in the fast scans. 11 of the 12 NEW non-Keyhole runs have VX > 0.85 m/s, and among the 23 runs
+with VX > 0.85 the AUC is 0.705. Their depth peaks early (≈ 20% into the run) at 87–131 µm, overlapping the Keyhole
+runs (111–148 µm). Two maxima look like artefacts: a truncated run whose maximum is in its last row (40,805 rows,
+time file 2 rows shorter) and an end-of-domain spike (312 µm at 97% of the run). The frozen E1 definition (max
+depth) is **not** changed in response; any alternative depth target chosen after seeing these NEW labels would be
+post-hoc.

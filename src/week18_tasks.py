@@ -128,3 +128,38 @@ def attach_old_depth(T):
 def all_real_with_depth(block="DEV"):
     return attach_old_depth(all_real(block))
 
+
+
+def depth_map(include_new=True):
+    """sim_id → max depth (µm): OLD from the Week 7 table; NEW from phase1/new_depth.csv (D1, Week 18)."""
+    pop = pd.read_csv(ROOT / "outputs/week7_06_real_data_boundary_active_level_set/primary_common_population.csv", usecols=["experiment_name", "max_depth_um"])
+    m = dict(zip(pop.experiment_name, pop.max_depth_um))
+    if include_new:
+        nd = pd.read_csv(ROOT / "outputs/week18_independent_research/phase1/new_depth.csv", usecols=["sim_id", "max_depth_um"])
+        m.update(dict(zip(nd.sim_id, nd.max_depth_um)))
+    return m
+
+
+def attach_full_depth(T):
+    """Attach max depth for every OLD and NEW run (after D1): all five real tasks become full-depth tasks."""
+    m = depth_map(True)
+    D = pooled_frame(); new, old = new_old_frames()
+    dold = old.sim_id.map(m).to_numpy(float); dnew = new.sim_id.map(m).to_numpy(float)
+    for t in T:
+        if t["task"] == "R1_POOLED":
+            t["depth"] = D.sim_id.map(m).to_numpy(float)
+        elif t["task"] == "R2_TRANSFER":
+            t["depth"] = np.r_[dold, dnew]
+        elif t["task"] == "R3_NEW":
+            t["depth"] = dnew
+        elif t["task"] == "R2rev_TRANSFER":
+            t["depth"] = np.r_[dold, dnew]
+        elif t["task"] == "R3_OLD":
+            t["depth"] = dold
+        if len(t["depth"]) != len(t["y"]) or not np.isfinite(t["depth"]).all():
+            raise ValueError(f"depth attachment failed for {t['task']}")
+    return T
+
+
+def all_real_full_depth(block="DEV"):
+    return attach_full_depth(all_real(block))

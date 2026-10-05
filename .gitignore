@@ -13,3 +13,5 @@ __pycache__/
 Thumbs.db
 .DS_Store
 # Scientific checkpoints, smoke outputs and preserved imports are intentional.
+# Raw simulator monitors downloaded from Hugging Face (large; provenance in outputs/*/..._manifest.csv)
+data/raw/

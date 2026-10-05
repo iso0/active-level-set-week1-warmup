@@ -107,3 +107,11 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   b ≥ 80). Background jobs stopped by the 2 h limit (headroom R1 22/40, R2 13/40; cfa R3_OLD 15/16) were not
   restarted. **Campaign closed: verdict IMPROVEMENT ON SOME TASKS ONLY.** Open: D1 (NEW monitors) → the unused C2/C3
   blocks can test E1 on NEW/POOLED with full depth.
+- 2026-10-05 **D1 granted by the owner; NEW monitors downloaded** (272 files, 1.43 GB, all verified against the
+  pinned tree). Max depth re-derived with the Week 7 definition (exact on 12 OLD runs). **On NEW the label is not a
+  max-depth threshold** (AUC 0.891; 7/12 non-Keyhole runs ≥ 111 µm, concentrated in fast scans VX > 0.85;
+  DATA_AUDIT amendment 2). E1 frozen definition unchanged.
+- 2026-10-05 depth3 (DEV, full depth on all real tasks; E1 exactly as frozen): R1_POOLED −0.001 [−0.004, 0.003],
+  R3_NEW −0.021 [−0.080, 0.039], R3_OLD +0.021 (reproduces Phase 2 exactly). In R1, E1 is no better even on the OLD
+  test points (accuracy 0.959 vs 0.970 at B112): NEW's label/depth disagreement contaminates the single-threshold
+  depth model. Transfer tasks running.
