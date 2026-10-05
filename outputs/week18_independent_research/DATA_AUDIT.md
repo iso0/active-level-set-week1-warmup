@@ -55,3 +55,8 @@ repository**: the sealed NEW file contains labels only; the NEW monitors exist i
 49 of the 185 NEW runs contain "Screenshot Bug" frames starting 57–99% into the run (median 82%); eligibility was
 never resolved (`outputs/week11_bug_audit/bug_audit_summary.json`: usability UNRESOLVED). They remain excluded
 from every benchmark and test.
+
+## Amendment 2026-10-05 (after Astra Round 3; original text above kept)
+§3's "level shift is a region effect" is overstated — see ERRATA E18-3: 1-D log-h threshold shift NEW − OLD
++0.17 [0.03, 0.29] overall, +0.01 [−0.14, 0.28] in the overlap (2 + 8 non-Keyhole runs). Campaign shift and region
+effect are not distinguishable with these data; the pooled 4-D GPC needs no campaign offset.

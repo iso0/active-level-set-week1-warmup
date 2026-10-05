@@ -107,3 +107,24 @@ def r3_old_tasks(prior_new=False, with_depth=True):
 def all_real(block="DEV"):
     T = pooled_tasks() + r3_new_tasks(False) + r3_new_tasks(True) + r3_old_tasks(False) + r3_old_tasks(True)
     return [t for t in T if t["block"] == block]
+
+
+def attach_old_depth(T):
+    """Attach OLD max depth to R1_POOLED (OLD rows) and R2_TRANSFER (OLD prior rows); NEW rows stay NaN (no NEW
+    continuous outputs in the repository, RESEARCH_LOG D1).  R3_OLD / R2rev already carry OLD depth."""
+    pop = pd.read_csv(ROOT / "outputs/week7_06_real_data_boundary_active_level_set/primary_common_population.csv", usecols=["experiment_name", "max_depth_um"])
+    dmap = dict(zip(pop.experiment_name, pop.max_depth_um))
+    D = pooled_frame()
+    from src.week12_development_common import load_old
+    o = load_old()
+    for t in T:
+        if t["task"] == "R1_POOLED":
+            t["depth"] = D.sim_id.map(dmap).to_numpy(float)
+        if t["task"] == "R2_TRANSFER":
+            t["depth"] = np.r_[o.sim_id.map(dmap).to_numpy(float), np.full(len(t["y"]) - len(o), np.nan)]
+    return T
+
+
+def all_real_with_depth(block="DEV"):
+    return attach_old_depth(all_real(block))
+

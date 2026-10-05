@@ -95,7 +95,7 @@ def truth(name):
         return f
     if name == "T_TOBIT":
         import pandas as pd
-        from src.week18_tobit import TobitGP
+        from src.week18_tobit_truth_v1 import TobitGP      # frozen (e351cb4f): the truth must not follow model-code changes
         from sklearn.gaussian_process import GaussianProcessRegressor
         from sklearn.gaussian_process.kernels import ConstantKernel, Matern, WhiteKernel
         pop = pd.read_csv(ROOT / "outputs/week7_06_real_data_boundary_active_level_set/primary_common_population.csv", usecols=["experiment_name", "max_depth_um"])

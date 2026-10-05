@@ -33,10 +33,11 @@ def job(t, dest):
     E._PHYS[0] = t.get("phys_fn")
     L = list(map(int, t["pool"]))
     with threadpool_limits(1):
-        for model in ["G3", "LT"] + (["GPR_depth", "Tobit"] if has_depth else []):
+        for model in ["G3", "LT", "MixGP"] + (["GPR_depth", "Tobit"] if has_depth else []):
             f = E.fit_learner((model, "mlii"), t, L, None, {"kernel": None, "b0": len(L)})
             p = E.proba(f, t["X"][t["test"]])
             r = {"task": t["task"], "repeat": t["repeat"], "fold": t["fold"], "model": model, "n_fit": len(L) + len(t["prior"]),
+                 "fp": float(getattr(f, "mode_fp_", getattr(getattr(f, "gp", None), "mode_fp_", np.nan))),
                  "rows": ",".join(map(str, t["test"])), "p": ",".join(f"{v:.5g}" for v in p),
                  "q20": ",".join("1" if v else "0" for v in t["q20"]) if t["q20"] is not None else ""}
             if "dense_X" in t:

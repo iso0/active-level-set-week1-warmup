@@ -1,0 +1,321 @@
+% Root synthesis results, complete proofs; no external file dependencies.
+\section{Additional decision certificates and finite-pool checks}
+
+\begin{proposition}[PROVED: exact zero-value and limiting conditions]
+\label{prop:zero-value-r3}
+If Bayes actions are attained under a fixed loss, coherent Bayes value
+is zero exactly when some current Bayes action is conditionally optimal
+after almost every observation. For a sequence of binary experiments,
+$P(O_j=1)\to1/2$ is equivalent to $\mathbb E O_j\to0$.
+For fixed finite Hamming targets with positive weights, query value tends
+to zero if and only if
+$(|\mathbb E[T_iO_j]|-|\mathbb E T_i|)_+\to0$ for every target.
+For integrated squared graph displacement with a binary observation
+whose mean tends to zero, value tends to zero if and only if
+$\int w(u)\operatorname{Cov}(g(u),O_j)^2du\to0$.
+\end{proposition}
+\begin{proof}
+For a current Bayes action $a_0$, the value equals the expectation of
+the nonnegative conditional optimality gap
+$\mathbb E[L(a_0,T)\mid O]-\inf_a\mathbb E[L(a,T)\mid O]$.
+It vanishes exactly when that gap vanishes almost surely.
+The observation-marginal equivalence follows from
+$P(O=1)=(1+\mathbb E O)/2$. The Hamming result follows from the
+binary-observation identity and a finite sum of nonnegative terms
+with fixed positive weights. The squared-graph formula is
+Proposition~\ref{rthreegeo:graphloss}; its denominator
+$\operatorname{Var}(O)=1-(\mathbb E O)^2$ tends to one.
+\end{proof}
+
+\begin{proposition}[PROVED: a self-information condition for observed-label margin]
+\label{prop:self-margin-r3}
+Let fixed binary targets have nonnegative weights summing to one. Put
+$b_j=\min\{P(O_j=1),P(O_j=-1)\}$. Then their total Hamming Bayes
+value $V(j)$ is at most $b_j$. Suppose every candidate $j$ is also a target
+with weight $w_j>0$, and its unweighted self-value $v_{jj}$ is at least
+$\alpha b_j$ for a common $\alpha>0$. If $m$ maximizes $b_j$, then
+\[
+ V(m)\ge \alpha w_m\max_j V(j)\ge\alpha w_{\min}\max_j V(j).
+\]
+It suffices that the self-value condition hold at the selected $m$.
+\end{proposition}
+\begin{proof}
+Let $o_+$ be a most probable observation outcome and $d_+,d_-$ the
+conditional Bayes actions. Before querying, using $d_+$ is feasible,
+so the old Bayes risk is at most its unconditional risk. Subtracting the
+optimal observation-dependent risk leaves at most
+\[
+ P(O_j=o_-)\,
+ \mathbb E[L(d_+,T)-L(d_-,T)\mid O_j=o_-]\le b_j,
+\]
+because normalized Hamming loss lies in $[0,1]$.
+The selected query's total value includes its nonnegative self contribution,
+so $V(m)\ge w_m v_{mm}\ge\alpha w_m b_m$. Finally
+$b_m\ge b_j\ge V(j)$ for each $j$.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: noiseless disjoint targets give no margin ratio]
+Let the sole target $T$ have $P(T=1)=1/2+\delta$, where $0<\delta<1/2$.
+Query $a$ reveals an independent fair sign; query $b$ reveals $T$.
+Observed-label margin uniquely selects $a$, whose value is zero.
+Query $b$ has value $1/2-\delta$.
+\end{counterexample}
+\begin{proof}
+The fair observation is strictly more uncertain than the biased one.
+Independence leaves the target posterior unchanged after $a$; revelation
+after $b$ removes all target error.
+\end{proof}
+
+\begin{proposition}[PROVED: model-internal improvement and updater error]
+\label{prop:improvement-r3}
+In Theorem~\ref{thm:terminal-transfer-r3}'s notation, let
+$\gamma=V_Q(j_Q)-V_Q(j_m)$, and use the $Q$-Bayes terminal rules
+$g_{j_Q},g_{j_m}$. The true-risk improvement from replacing $j_m$ by
+$j_Q$ is at least
+\[
+ \gamma-\frac{D_{j_Q}+D_{j_m}}2.
+\]
+If actual terminal rules $\widetilde g_j$ differ from $g_j$, define
+\[
+ \zeta_j=\sum_iw_iP\{\widetilde g_{ij}(O_j)\ne g_{ij}(O_j)\}.
+\]
+The same improvement lower bound for the actual rules subtracts the
+additional term $\zeta_{j_Q}+\zeta_{j_m}$.
+\end{proposition}
+\begin{proof}
+The fixed-rule risk discrepancy is at most $D_j/2$ by
+Theorem~\ref{thm:terminal-transfer-r3}. Insert the two corresponding
+$Q$ risks between the true risks. Their difference is $\gamma$ because
+the baseline cancels. A classification loss can change only when the
+two predicted labels differ; the absolute risk difference caused by
+replacing $g_j$ is at most $\zeta_j$. Apply the triangle inequality.
+\end{proof}
+
+\begin{proposition}[PROVED: covariance and joint-log-score versions]
+\label{prop:cov-kl-r3}
+Write $n_j^R=\mathbb E_R O_j$ and
+$k_{ij}^R=\operatorname{Cov}_R(T_i,O_j)$. If both target and observation
+spin marginals differ by at most $\epsilon_m$, and
+$\sum_iw_i|k_{ij}^P-k_{ij}^Q|\le\epsilon_c$ for every $j$, then
+the terminal regret in Theorem~\ref{thm:terminal-transfer-r3} is at most
+$2\epsilon_m+\epsilon_c$.
+Alternatively, if $P_{ij},Q_{ij}$ are the actual joint laws of
+$(T_i,O_j)$, then
+\[
+ D_j\le\sum_iw_i\sqrt{2\operatorname{KL}(P_{ij}\Vert Q_{ij})}
+ \le\sqrt{2\sum_iw_i\operatorname{KL}(P_{ij}\Vert Q_{ij})}.
+\]
+Thus a uniform bound $K$ on the last weighted KL sum gives terminal
+regret at most $\sqrt{2K}$.
+\end{proposition}
+\begin{proof}
+Since $c_{ij}=m_i n_j+k_{ij}$ and spin means are bounded by one,
+$|c_{ij}^P-c_{ij}^Q|\le |m_i^P-m_i^Q|+|n_j^P-n_j^Q|
++|k_{ij}^P-k_{ij}^Q|$. The same bound dominates the target-mean
+error, proving $D_j\le2\epsilon_m+\epsilon_c$.
+Each of the two moments defining $D_j$ is an expectation of a
+function in $[-1,1]$, so its difference is at most $2\operatorname{TV}
+(P_{ij},Q_{ij})\le\sqrt{2\operatorname{KL}(P_{ij}\Vert Q_{ij})}$
+by Pinsker. Jensen's inequality for the square root gives the weighted
+bound. Expected excess negative log score equals KL by its definition;
+raw negative log score also contains the true entropy and is not KL.
+\end{proof}
+
+\begin{proposition}[PROVED: vanishing information under a fixed smooth channel]
+\label{prop:bounded-scale-r3}
+Let $G$ be a random state/field and let a query return a binary observation
+with $P_c(O=1\mid G)=\kappa(cG_j)$, where $\kappa(0)=1/2$.
+For any fixed measurable loss in $[0,1]$, its coherent Bayes information
+value satisfies
+\[
+ 0\le V_c(j)\le\mathbb E|\kappa(cG_j)-1/2|.
+\]
+Consequently the value vanishes as $c\downarrow0$ for a continuous
+bounded channel. If $\mathbb E|G_j|<\infty$, logistic gives the upper
+bound $c\mathbb E|G_j|/4$, and $\kappa(f)=\Phi(f/\tau)$ gives
+$c\mathbb E|G_j|/(\tau\sqrt{2\pi})$.
+\end{proposition}
+\begin{proof}
+Compare the joint law of $(G,O)$ with the law sharing the same $G$
+but making $O$ an independent fair coin. Their total variation is
+$\mathbb E|\kappa(cG_j)-1/2|$, as follows by summing the two outcome
+probability differences conditionally on $G$. The risk of any fixed
+observation-to-action rule changes by at most this TV, and taking the
+infimum preserves the same bound. Under the independent coin no rule
+improves on the prequery Bayes action, so its optimal risk is the
+prequery risk. Nonnegativity follows from retaining that action.
+Dominated convergence and the respective derivative bounds on the
+links finish the proof.
+\end{proof}
+
+\begin{proposition}[PROVED: independent copy blocks make EER optimal for every budget]
+\label{prop:blocks-r3}
+Partition a finite target pool into blocks. Labels are identical within
+each block and independent between blocks. A noiseless query reveals
+the block's common sign. Let $W_b$ be total block weight and $u_b$
+its initial Bayes error. Optimal total gain at budget $B$ is the sum
+of the largest $\min(B,\text{number of blocks})$ numbers $W_bu_b$.
+Exact greedy EER achieves it.
+\end{proposition}
+\begin{proof}
+A query resolves its block and leaves every other block law unchanged.
+Hence the value of the first query in block $b$ is always $W_bu_b$,
+and additional queries there have zero value. Every adaptive
+realization can resolve at most $B$ blocks, so its gain is bounded
+by the sum of the largest fixed block values. Choosing those blocks
+attains the bound, independently of the observed signs.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: correct-specification multistep EER exceeds margin]
+Take two independent fair singleton blocks and an independent
+$M$-point copy block of error $1/2-\eta$, with equal point weights
+$1/(M+2)$ and $0<\eta<1/2$. If $M(1/2-\eta)>1/2$, then at budget two
+margin gains $1/(M+2)$, whereas exact EER gains
+$[M(1/2-\eta)+1/2]/(M+2)$ and is horizon-optimal.
+\end{counterexample}
+\begin{proof}
+The two fair singleton marginals are strictly most uncertain until
+both are queried, so margin spends both queries there. Each contributes
+$1/[2(M+2)]$. The copy-block value is strictly larger than either
+singleton value; the preceding proposition gives the EER ordering
+and optimum.
+\end{proof}
+
+\begin{proposition}[PROVED: randomization cannot improve a known finite-policy optimum]
+For a fixed known finite-world law, finite actions/outcomes, a fixed
+horizon and terminal loss, an optimal adaptive policy can be chosen
+deterministic.
+\end{proposition}
+\begin{proof}
+Condition on all internal random choices of a randomized decision tree.
+Its expected risk is a mixture of risks of deterministic trees, so at
+least one tree has risk no greater than the mixture. Equivalently,
+backward induction minimizes an affine function of each action
+distribution at an extreme point. This does not address minimax
+robustness over an unknown law, where mixtures can help.
+\end{proof}
+
+\begin{proposition}[PROVED: edge-loss Bayes actions and the third moment]
+\label{prop:edge-moment-r3}
+On a fixed weighted graph, let $Z_e=T_iT_k$ denote whether endpoint
+signs agree. For unconstrained edge-sign predictions $a_e\in\{-1,1\}$,
+weighted edge-disagreement Bayes risk is
+\[
+ R_E=\frac12\sum_e w_e(1-|\mathbb E Z_e|).
+\]
+The exact one-step reduction after binary $O_j$ is
+\[
+ \frac12\sum_e w_e
+ (|\mathbb E[T_iT_kO_j]|-|\mathbb E[T_iT_k]|)_+.
+\]
+If the output must be a cut induced by vertex predictions, the
+optimization is over the feasible cut signs instead. Pair and triple
+moments remain sufficient for evaluating and optimizing this fixed
+loss before and after one binary observation, but coordinatewise edge
+modes need not form a feasible cut.
+\end{proposition}
+\begin{proof}
+Apply Lemma~\ref{lem:binary-observation-r3} to the binary target $Z_e$.
+For constrained actions, the expected loss of any vertex labeling is
+an affine combination of the edge means, so minimizing over finitely
+many labelings uses only those means. Conditional edge means are
+\[
+ \mathbb E[Z_e\mid O_j=o]
+ =\frac{\mathbb E Z_e+o\mathbb E[Z_eO_j]}
+        {1+o\mathbb E O_j}
+\]
+on positive-probability outcomes. Thus second and third moments plus
+the observation marginal suffice. Cycles impose compatibility
+constraints: an odd number of cut edges on a cycle is impossible,
+illustrating why independent edge modes may fail feasibility.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: even an optimized ratio can have negative coherent value]
+\label{ce:optimized-ratio-r3}
+Use two disjoint graph edges with cut indicators $(1,Z)$, where
+$P(Z=1)=p$. All four cut predictions are feasible. Consider the
+posterior functional
+\[
+ R(p)=\min_{a\in\{0,1\}^2}
+ \frac{\mathbb E\sum_{e=1}^2|Z_e-a_e|}
+      {\mathbb E\sum_{e=1}^2 Z_e+\sum_{e=1}^2a_e}.
+\]
+At $p=3/4$, $R(p)=1/15$. A coherent binary observation with equally
+probable posterior probabilities $p'=1/2$ and $p'=1$ gives expected
+future risk $1/14$, hence reduction $-1/210$.
+\end{counterexample}
+\begin{proof}
+For predictions $(0,0),(1,0),(0,1),(1,1)$ the respective ratios are
+\[
+ 1,\qquad \frac p{2+p},\qquad\frac{2-p}{2+p},
+ \qquad\frac{1-p}{3+p}.
+\]
+For $p\in[1/2,1]$, the last is minimal. At $3/4$ it is $1/15$,
+at $1/2$ it is $1/7$, and at $1$ it is zero.
+Define the observation by the joint probabilities
+$P(O=0,Z=0)=1/4$, $P(O=0,Z=1)=1/4$,
+$P(O=1,Z=1)=1/2$. Its two branches have the stated masses and
+posteriors; no incoherent update is used. The expected future ratio
+is $1/14$. Unlike this ratio of expectations, the posterior expectation
+of a fixed normalized loss, minimized over fixed admissible actions,
+obeys Proposition~\ref{prop:nonnegative-r3}.
+\end{proof}
+
+\begin{proposition}[PROVED: uniform first-hit and both-class discovery laws]
+\label{prop:tail-r3}
+For $0<r<N$, a uniform random ordering of $N$ items with $r$ designated
+rare items has first-hit time $D$ satisfying, for $0\le k\le N$,
+\[
+ P(D>k)=\frac{\binom{N-r}{k}}{\binom Nk},\qquad
+ \mathbb E D=\frac{N+1}{r+1}.
+\]
+Its time $T$ to observe both classes satisfies, for $1\le k\le N$,
+\[
+ P(T>k)=\frac{\binom rk+\binom{N-r}k}{\binom Nk},\qquad
+ \mathbb E T=\frac{N+1}{r+1}+\frac{N+1}{N-r+1}-1.
+\]
+Binomial coefficients exceeding available items are zero; survivors
+are zero beyond the population size.
+In a fixed subset with $M$ items and $s\ge1$ rare items, uniform
+ordering has the same first-hit formulas with $N,r$ replaced by $M,s$.
+If $s/M\ge r/N$, this subset first-hit time stochastically dominates
+in the favorable direction: its survival probability is no larger.
+\end{proposition}
+\begin{proof}
+No rare item among the first $k$ is precisely a size-$k$ subset chosen
+from the $N-r$ common items, giving the survival formula.
+The $N-r$ common items occupy $r+1$ exchangeable gaps around the rare
+items, so the expected number before the first rare is $(N-r)/(r+1)$.
+For $T>k$ with $k\ge1$, all $k$ labels are rare or all are common,
+disjoint events. Summing their survivor probabilities gives the
+displayed mean, with the duplicated $k=0$ term corrected by subtracting
+one. Apply the same argument to the subset.
+Conditional on $k$ failures, the subset success hazard is $s/(M-k)$
+and the full-pool hazard is $r/(N-k)$ while both are defined.
+The difference after cross multiplication has numerator
+$sN-rM+k(r-s)\ge0$, because $s\le r$ and enrichment holds.
+Multiplying failure hazards proves the survivor ordering; after
+the subset's common items are exhausted its survival is zero.
+Neither argument applies to an arbitrary history-conditioned
+deterministic extreme-selection policy.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: no arbitrary continuous-boundary guarantee from finite signs]
+\label{ce:finite-boundary-r3}
+Let a finite query pool in an interval leave an open gap $(a,b)$.
+Two noiseless smooth classifiers $f_0(x)=x-\theta_0$ and
+$f_1(x)=x-\theta_1$, with $a<\theta_0<\theta_1<b$, agree on every
+pool label but have boundary Hausdorff distance $\theta_1-\theta_0$.
+Any pool-only estimator has worst-world expected boundary error at
+least $(\theta_1-\theta_0)/2$.
+\end{counterexample}
+\begin{proof}
+Every pool point is on the same side of both thresholds. Thus even
+revealing all pool labels gives identical data in the two worlds.
+Couple the estimator's randomness so its output is the same.
+The triangle inequality for Hausdorff distance implies that its two
+errors sum to at least the distance between the boundaries. Take
+expectations and the larger error. The thresholds can approach the
+gap endpoints. A coverage bound limits this ambiguity but an arbitrary
+finite pool supplies no smaller universal positional guarantee.
+\end{proof}

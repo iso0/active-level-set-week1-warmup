@@ -1,0 +1,4 @@
+campaign,N,rare,r,V_inversions,AUC,D_first_rare,bound_V,bound_AUC,holds
+OLD,405,KH,73,224,0.990757550750949,1,4,4,True
+NEW,136,non-KH,12,213,0.8568548387096773,2,18,18,True
+POOLED,541,KH,197,825,0.9878261126195254,1,5,5,True

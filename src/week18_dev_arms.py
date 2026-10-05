@@ -54,6 +54,8 @@ def task_job(t, arms, out_dir, exp_name=""):
                 continue
             if exp_name == "depth2" and model == "GPR_depth" and len(t["prior"]) == 0 and t["task"] != "R1_POOLED" and not t["task"].startswith("S1_"):
                 continue                      # E1 baseline already run in Phase 2 on R3_OLD / R2rev (same seeds)
+            if exp_name == "depth2" and model in ("G3", "Tobit") and len(t["prior"]) + 120 > 200 and len(t["prior"]) > 0:
+                continue                      # large-prior tasks: reference = locked Phase 2 G3 + margin (mlii_k8); E2 not needed
             if exp_name == "depth2" and model in ("Tobit", "GPR_depth", "G3") and t["task"].startswith("S1_") and not has_depth:
                 continue                      # binary twins: only the label-only MixGP non-inferiority check (G3 from Phase 2)
             if model == "LTn" and len(t["prior"]) + 120 > 200 and len(t["prior"]) > 0:

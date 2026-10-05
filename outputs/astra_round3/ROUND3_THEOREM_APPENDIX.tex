@@ -1,0 +1,1959 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{microtype}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pbb}{\mathbb P}
+\newcommand{\TV}{\operatorname{TV}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{counterexample}[theorem]{Counterexample}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\setlength{\emergencystretch}{3em}
+\allowdisplaybreaks
+\title{Round 3: Theorem and Proof Appendix\\
+Decision-Relevant Uncertainty for Deterministic Boundary Learning}
+\author{Research synthesis for Burak's MSc thesis}
+\date{5 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+This standalone appendix proves the finite-pool, latent-observation,
+model-perturbation, sequential, physics-transfer, discovery and geometric
+statements used in the Round 3 report. It distinguishes a coherent
+Bayesian experiment from an approximate refitting algorithm, and a
+deterministic physical sign from a stochastic working likelihood.
+PROVED means valid under the stated mathematical assumptions; it is not
+a claim of research priority or an empirical result about SPH.
+COUNTEREXAMPLE identifies an explicit failure of a proposed implication.
+KNOWN/PRIOR ART identifies established principles or specializations.
+\end{abstract}
+\tableofcontents
+\clearpage
+\section*{Assumptions and relation to the previous rounds}
+\addcontentsline{toc}{section}{Assumptions and relation to the previous rounds}
+\paragraph{Fixed decision contract [KNOWN/PRIOR ART].}
+Targets, candidate queries, loss and admissible actions are fixed when
+comparing current and expected future risks. Binary variables are spins
+in $\{-1,+1\}$ unless a construction explicitly uses bits in $\{0,1\}$.
+Hamming weights are nonnegative and sum to one except where unit weights
+are explicitly used; a common positive normalization does not change
+competitive ratios. Conditioning is exact under the declared joint law
+unless a result explicitly concerns an approximate updater. Expectations
+over latent worlds and over observation noise must not be conflated.
+\paragraph{Observation contract [PROVED definitions].}
+A deterministic observation reveals the target sign. A logistic/probit
+observation draws a Bernoulli label conditional on the latent field.
+These define different experiments even when their current predictive
+class probabilities happen to coincide. A stochastic working likelihood
+does not establish physical randomness of a deterministic simulator.
+\paragraph{Scope of inherited results [KNOWN/PRIOR ART within this project].}
+The earlier $B/N$ sequential margin bound and the sharp $4/5$ result for
+$N=3,B=2$ remain restricted to ideal updating, noiseless revelation,
+equal-weight full-pool Hamming loss and the fixed original pool.
+They are not claimed for geometric losses or the sensor examples below.
+Their full proofs and rational certificates are in the accompanying
+Round 1--2 reference appendix and original verification package.
+The new common-sign-noise theorem below includes the one-step noiseless
+$1/(N-1)$ theorem as its $\alpha=1$ case.
+\paragraph{Geometry and transfer [PROVED definitions].}
+Graph and normal-tube results state their coverage, derivative,
+density and topology assumptions explicitly. Shrinkage results use an
+exact normal-location experiment and a declared shift class, not an
+unstated normal approximation to binary GP training.
+\paragraph{Priority [KNOWN/PRIOR ART].}
+Bayes risk reduction, SUR, Gaussian conditioning, simulation bounds,
+adaptive-submodular greedy guarantees and normal-mean shrinkage have
+substantial prior literature. The separate literature-priority table
+identifies the closest sources and leaves priority of specific finite
+constructions unresolved. No novelty follows from a bounded search.
+% Appendix fragment: no preamble or document environment.
+% The parent document defines theorem, proposition, lemma and counterexample.
+
+\section{Binary observations, latent targets, and coherent decision value}
+
+Throughout this appendix, a binary target or observation takes values in
+$\{-1,+1\}$ unless a counterexample explicitly uses $0/1$ notation.
+The target set and nonnegative weights $w_i$ are fixed before the query.
+The loss is weighted Hamming loss
+$L(t,a)=\sum_i w_i\mathbf{1}\{t_i\ne a_i\}$, and every coordinatewise
+binary action is allowed. Write $W=\sum_i w_i$.
+
+\begin{lemma}[PROVED: binary-observation identity]
+\label{lem:binary-observation-r3}
+For any coherent joint law of $(T,O)$, put
+$m=\mathbb{E}T$ and $c=\mathbb{E}(TO)$. The minimum expected error after
+observing $O$ is
+\[
+ r^O=\frac{1-\max\{|m|,|c|\}}{2}.
+\]
+Consequently, for target coordinates $T_i$ and candidate observation $O_j$,
+\[
+ V(j)=\frac12\sum_i w_i\bigl(|c_{ij}|-|m_i|\bigr)_+,
+ \qquad m_i=\mathbb{E}T_i,\quad c_{ij}=\mathbb{E}(T_iO_j).
+\]
+\end{lemma}
+\begin{proof}
+There are exactly four deterministic maps from a binary observation to a
+binary action: $+1,-1,O,-O$. Their correlations with $T$ are respectively
+$m,-m,c,-c$, and their errors are one half of one minus that correlation.
+Randomization cannot improve a linear expected loss. The best correlation
+is therefore $\max\{|m|,|c|\}$. Before querying, the best correlation is
+$|m|$. Subtract the two errors and sum coordinatewise, which is legitimate
+because Hamming loss is additive and the action space is unrestricted.
+\end{proof}
+
+\begin{proposition}[KNOWN/PRIOR ART; PROVED: nonnegative coherent Bayes value]
+\label{prop:nonnegative-r3}
+Let a fixed decision problem have integrable loss $L(T,a)$ and action set
+$\mathcal A$. If the same coherent law is used before and after an
+observation $O$, the expected posterior Bayes risk is no larger than the
+prior Bayes risk. This applies to any loss, provided the posterior action
+minimizes that same loss over the same action set.
+\end{proposition}
+\begin{proof}
+For every prequery action $a\in\mathcal A$, the constant posterior policy
+that ignores $O$ is admissible. Hence
+\[
+ \mathbb{E}\!\left[\inf_{b\in\mathcal A}
+          \mathbb{E}[L(T,b)\mid O]\right]
+ \le \mathbb{E}\!\left[\mathbb{E}[L(T,a)\mid O]\right]
+ =\mathbb{E}L(T,a).
+\]
+Take the infimum over $a$. For finite binary Hamming decisions, existence
+and measurability of minimizers present no difficulty. Equivalently, for
+$q_i=\mathbb{P}(T_i=1)$ and $q_i'=\mathbb{P}(T_i=1\mid O)$, the concavity
+of $h(q)=\min(q,1-q)$ and the identity $\mathbb{E}q_i'=q_i$ imply
+$\mathbb{E}h(q_i')\le h(q_i)$.
+\end{proof}
+
+\begin{proposition}[PROVED: Gaussian/probit target-observation moments]
+\label{prop:gaussian-probit-r3}
+Suppose $F\sim N(\mu,\Sigma)$ is the current working posterior,
+$T_i=\operatorname{sign}F_i$, and
+$O_j=\operatorname{sign}(F_j+\eta_j)$ with independent
+$\eta_j\sim N(0,\tau^2)$, $\tau>0$. For $s_i^2=\Sigma_{ii}>0$,
+$g_j^2=\Sigma_{jj}+\tau^2$, and
+$\rho_{ij}=\Sigma_{ij}/(s_i g_j)$,
+\begin{align*}
+ m_i&=2\Phi(\mu_i/s_i)-1,\\
+ c_{ij}
+ &=4\Phi_2(\mu_i/s_i,\mu_j/g_j;\rho_{ij})
+   -2\Phi(\mu_i/s_i)-2\Phi(\mu_j/g_j)+1.
+\end{align*}
+In particular, for a centered candidate with standard deviation $s$,
+\[
+ V_{\rm self}
+ =\frac1\pi\arcsin\!\left(\frac{s}{\sqrt{s^2+\tau^2}}\right)
+ =\frac1\pi\arctan(s/\tau).
+\]
+\end{proposition}
+\begin{proof}
+The pair $(F_i,F_j+\eta_j)$ is Gaussian with the displayed variances and
+correlation. Its positive-positive orthant probability is the displayed
+bivariate normal CDF, by changing both centered standardized signs.
+For two binary signs, direct expansion gives
+$\mathbb{E}(TO)=4\mathbb{P}(T=1,O=1)-2\mathbb{P}(T=1)
+-2\mathbb{P}(O=1)+1$. This proves the general formulas.
+At zero means, the Gaussian quadrant identity
+$\Phi_2(0,0;\rho)=1/4+\arcsin(\rho)/(2\pi)$ yields
+$m=0$ and $c=2\arcsin(\rho)/\pi$. Apply
+Lemma~\ref{lem:binary-observation-r3}. The trigonometric equality follows
+because $s,\tau>0$. These are exact statements for the current Gaussian
+law and the stated probit experiment; they do not make a logistic
+posterior or a fresh Laplace refit exact.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: logistic and probit margin ratios]
+\label{ce:logistic-margin-r3}
+For both a fixed logistic and a fixed probit observation channel, there
+are two independent latent targets for which observed-label margin
+uniquely selects a candidate whose coherent Hamming-value ratio tends
+to zero.
+\end{counterexample}
+\begin{proof}
+Let $S$ be a fair sign, let $U$ be an independent sign with
+$\mathbb{E}U=2\delta>0$, and take
+$F_a=\varepsilon S$, $F_b=M U$. Write the channel as
+$\mathbb{E}[O\mid F=f]=a(f)$, with either
+$a(f)=\tanh(f/2)$ or $a(f)=2\Phi(f/\tau)-1$.
+Choose $M>0$ and $0<2\delta<a(M)$. Then
+$\mathbb{E}O_a=0$, while $\mathbb{E}O_b=2\delta a(M)>0$,
+so observed-label margin selects $a$ uniquely.
+The target means are $m_a=0$, $m_b=2\delta$ and the self-moments are
+$c_{aa}=a(\varepsilon)$ and $c_{bb}=a(M)$.
+Independence gives
+$c_{ba}=m_b\mathbb{E}O_a=0$ and
+$c_{ab}=m_a\mathbb{E}O_b=0$, so cross-target gains vanish. Thus
+\[
+ \frac{V(a)}{V(b)}
+ =\frac{a(\varepsilon)}{a(M)-2\delta}\longrightarrow0.
+\]
+For sufficiently small $\varepsilon$, $b$ is the optimal candidate.
+\end{proof}
+
+\begin{proposition}[PROVED: centered Gaussian logistic self-value]
+If $F=sZ$ with $Z\sim N(0,1)$ and the observation channel is logistic,
+then
+\[
+ V_{\rm self}(s)=\frac12\mathbb{E}\tanh(s|Z|/2)
+ \sim \frac{s}{\sqrt{8\pi}}\qquad(s\downarrow0).
+\]
+The probit channel with $\tau^2=8/\pi$ has the same first-order limit.
+\end{proposition}
+\begin{proof}
+The target mean is zero by symmetry. Its target-observation moment is
+$\mathbb{E}[\operatorname{sign}(F)\tanh(F/2)]
+=\mathbb{E}\tanh(s|Z|/2)$, proving the equality.
+Since $\tanh x\le x$ for $x\ge0$, dominated convergence after division by
+$s$ gives limit $\mathbb{E}|Z|/4=1/\sqrt{8\pi}$.
+The probit formula follows from
+$\arctan(s/\tau)/\pi\sim s/(\pi\tau)$.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: latent-scale gauge]
+\label{ce:scale-gauge-r3}
+Let $G$ be any random field with
+$\mathbb{P}(G_i=0)=0$ at all finitely many target coordinates, and put
+$F^{(c)}=cG$ for $c>0$. All sign laws and samplewise zero sets are
+unchanged by $c$. Nevertheless, under any fixed bounded local channel
+with response $a$ continuous at zero and $a(0)=0$, the one-query
+Hamming values tend to zero as $c\downarrow0$.
+\end{counterexample}
+\begin{proof}
+Positive scaling leaves every sign and zero set unchanged. Conditional
+on $G$, the observation mean is $a(cG_j)$, so
+\[
+ \mathbb{E}[T_iO_j]
+ =\mathbb{E}[\operatorname{sign}(G_i)a(cG_j)]
+ \longrightarrow0
+\]
+by bounded dominated convergence. Lemma~\ref{lem:binary-observation-r3}
+then gives $V_c(j)\to0$ for every candidate. In a Gaussian example,
+means and covariance scale as $c\mu$ and $c^2\Sigma$; standardized means
+$\mu_i/s_i$ remain fixed. In particular a centered sign has entropy one
+bit for every $c>0$, even though its latent standard deviation vanishes.
+When defined, the local boundary-displacement proxy
+$s_i/|\nabla\mu_i|$ is also invariant. Under the different, noiseless
+channel $O_j=T_j$, all query values are invariant rather than vanishing.
+\end{proof}
+
+\begin{theorem}[PROVED: sharp margin guarantee under common sign noise]
+\label{thm:bsc-margin-r3}
+Suppose the $N\ge2$ candidates are exactly the $N$ unit-weight targets.
+For each candidate let $O_j=T_jB_j$, where $B_j$ is independent of the
+entire target field and $\mathbb{E}B_j=\alpha\in(0,1]$ is common to all
+candidates. Every observed-label margin maximizer $m$ satisfies
+\[
+ V(m)\ge\frac{1}{N-1}\max_k V(k).
+\]
+The constant is sharp for every fixed $\alpha>0$.
+\end{theorem}
+\begin{proof}
+Put $a_i=|\mathbb{E}T_i|$ and $q_{ik}=|\mathbb{E}T_iT_k|$.
+Since $\mathbb{E}O_j=\alpha\mathbb{E}T_j$, margin minimizes $a_j$.
+The value identity becomes
+$2V(k)=\sum_i(\alpha q_{ik}-a_i)_+$.
+Let $f_b(x)=(b-x)_+$, $s_i=f_\alpha(a_i)$, and
+$d_{ik}=f_{\alpha q_{ik}}(a_i)$. For $a_m\le a_k$ and $b\le\alpha$,
+\[
+ f_\alpha(a_m)-f_\alpha(a_k)
+ \ge f_b(a_m)-f_b(a_k).
+\]
+Indeed the left and right sides are the lengths of the intersections of
+$[a_m,a_k]$ with $[0,\alpha]$ and $[0,b]$, respectively.
+Using $b=\alpha q_{mk}$ and symmetry of $q_{mk}$ gives
+$s_k+d_{mk}\le s_m+d_{km}$.
+Every remaining term satisfies $d_{ik}\le s_i\le s_m$, whence
+\[
+ 2V(k)
+ \le s_m+d_{km}+(N-2)s_m
+ \le (N-1)\,2V(m).
+\]
+If $V(m)=0$, this inequality also proves all values are zero.
+
+For sharpness when $N\ge3$, take one independent fair decoy sign and
+$N-1$ identical signs of mean $2\eta>0$. Margin uniquely selects the
+decoy. Its value is $\alpha/2$, whereas a cluster query has value
+$(N-1)(\alpha-2\eta)/2$ when $2\eta<\alpha$. For sufficiently small
+$\eta$, the cluster query is optimal, and the ratio approaches
+$1/(N-1)$ as $\eta\downarrow0$. For $N=2$, the proved constant is one
+and cannot be improved. Independence among the different noise variables
+$B_j$ is not needed because only one observation is acquired.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: sign calibration misses amplitude]
+\label{ce:amplitude-swap-r3}
+For a fixed symmetric logistic or probit channel, identical full
+latent-sign laws and identical observation marginals need not yield
+identical optimal queries.
+\end{counterexample}
+\begin{proof}
+Take independent centered Gaussian coordinates with standard deviations
+$(1,\varepsilon)$ under $P$ and $(\varepsilon,1)$ under $Q$.
+Under both laws the sign vector consists of two independent fair signs;
+all sign marginals and sign-pair probabilities therefore agree exactly.
+Symmetry also makes every observation marginal fair.
+The self-value of the unit-scale coordinate is strictly positive,
+whereas that of the $\varepsilon$-scale coordinate tends to zero by the
+preceding propositions. Independence eliminates cross-target gains.
+Consequently the optimal query swaps between $P$ and $Q$.
+No score depending only on latent-sign joint probabilities, even when
+supplemented with observation marginals, detects this discrepancy.
+\end{proof}
+
+\section{Transfer between working and comparison laws}
+
+In this section $P$ and $Q$ concern the same binary target coordinates,
+candidate observation actions, fixed weights, and loss. They may differ
+in latent distribution or observation channel.
+
+\begin{proposition}[PROVED: moment transfer for Bayes query values]
+\label{prop:moment-transfer-r3}
+Define
+\[
+ M=\sum_i w_i|m_i^P-m_i^Q|,
+ \qquad C_j=\sum_i w_i|c_{ij}^P-c_{ij}^Q|.
+\]
+Then
+$|V_P(j)-V_Q(j)|\le(M+C_j)/2$.
+If $j_P$ and $j_Q$ maximize the corresponding values, then
+\[
+ V_P(j_P)-V_P(j_Q)
+ \le M+\frac{C_{j_P}+C_{j_Q}}{2}
+ \le M+\max_j C_j.
+\]
+\end{proposition}
+\begin{proof}
+The map $(m,c)\mapsto(|c|-|m|)_+$ is one-Lipschitz in each coordinate,
+so apply the triangle inequality to the binary-observation formula.
+For the second claim insert
+$V_Q(j_P)-V_Q(j_Q)\le0$ between the two $P$-values and apply the
+per-candidate bound to each remaining difference.
+\end{proof}
+
+\begin{theorem}[PROVED: tight terminal-policy transfer]
+\label{thm:terminal-transfer-r3}
+Let
+\[
+ D_j=\sum_i w_i
+ \max\{|m_i^P-m_i^Q|,\ |c_{ij}^P-c_{ij}^Q|\}.
+\]
+Let $j_Q$ minimize terminal Bayes risk under $Q$, and after this query
+use a $Q$-optimal decision rule $A^Q_{j_Q}(O_{j_Q})$.
+Let $j_P$ minimize terminal Bayes risk under $P$, with terminal risk
+$r_P^*(j_P)$. Then the complete query-and-decision policy satisfies
+\[
+ \mathbb{E}_P L(T,A^Q_{j_Q}(O_{j_Q}))-r_P^*(j_P)
+ \le \frac{D_{j_Q}+D_{j_P}}{2}
+ \le \max_j D_j.
+\]
+The universal leading constant one in the last bound cannot be reduced.
+The same bound controls query-selection regret when the final decision
+after $j_Q$ is instead optimized under $P$.
+\end{theorem}
+\begin{proof}
+Fix a candidate $j$ and a deterministic coordinatewise rule.
+Each coordinate rule is one of $+1,-1,O_j,-O_j$, so its correlation
+with $T_i$ is one of $\pm m_i,\pm c_{ij}$.
+Its error differs between $P$ and $Q$ by at most half the maximum
+moment difference appearing in $D_j$. Summing gives
+\[
+ |\operatorname{risk}_P(A_j)-\operatorname{risk}_Q(A_j)|
+ \le D_j/2.
+\]
+Taking minima also yields $|r_P^*(j)-r_Q^*(j)|\le D_j/2$.
+Since $j_Q$ is $Q$-optimal,
+\begin{align*}
+ \operatorname{risk}_P(A^Q_{j_Q})
+ &\le r_Q^*(j_Q)+D_{j_Q}/2\\
+ &\le r_Q^*(j_P)+D_{j_Q}/2\\
+ &\le r_P^*(j_P)+(D_{j_Q}+D_{j_P})/2.
+\end{align*}
+Optimizing the final action under $P$ can only decrease the left side.
+
+To show sharpness, one target and one candidate suffice.
+Choose $0<\epsilon<1/2$ and $0<\delta$ small.
+Let $P$ have moments $(m,c,n)=(\epsilon,-\epsilon,0)$ and let $Q$
+have $(m,c,n)=(0,\delta,0)$, where $n=\mathbb{E}O$.
+Both are valid laws because
+$\mathbb{P}(T=t,O=o)=(1+tm+on+toc)/4$ is nonnegative for these choices.
+Under $Q$, the unique optimal rule is $A=O$.
+Under $P$ its error is $(1+\epsilon)/2$, whereas optimal error is
+$(1-\epsilon)/2$. Regret equals $\epsilon$, while
+$D=\epsilon+\delta$. Their ratio tends to one as $\delta\downarrow0$.
+\end{proof}
+
+\begin{proposition}[PROVED: latent marginals, conditional structure, and channel]
+\label{prop:channel-split-r3}
+Assume local channels
+$\mathbb{E}_R[O_j\mid F]=a_j^R(F_j)$ for $R\in\{P,Q\}$,
+with $|a_j^R|\le1$.
+Write $\mu_j^R=\operatorname{Law}_R(F_j)$ and
+$h_{ij}^R(f)=\mathbb{E}_R[T_i\mid F_j=f]$.
+Using total variation distance
+$\operatorname{TV}(\mu,\nu)=\sup_A|\mu(A)-\nu(A)|$, one has
+\begin{align*}
+ |c_{ij}^P-c_{ij}^Q|
+ \le{}&2\operatorname{TV}(\mu_j^P,\mu_j^Q)\\
+ &+\mathbb{E}_Q|h_{ij}^P(F_j)-h_{ij}^Q(F_j)|\\
+ &+\mathbb{E}_Q|a_j^P(F_j)-a_j^Q(F_j)|.
+\end{align*}
+The terms separate candidate latent marginal error, latent conditional
+structure error, and observation channel error. Target marginal errors
+remain explicit in the preceding transfer bounds.
+\end{proposition}
+\begin{proof}
+The local channel assumption gives
+$c_{ij}^R=\int h_{ij}^R a_j^R\,d\mu_j^R$.
+Add and subtract $\int h_{ij}^P a_j^P\,d\mu_j^Q$ and then
+$\int h_{ij}^Q a_j^P\,d\mu_j^Q$.
+The first difference is bounded by twice total variation because the
+integrand has absolute value at most one. The other two differences are
+bounded by the displayed expectations, since $|h|,|a|\le1$.
+One may choose any bounded version of $h^P$ on $Q$-only support;
+the identity and bound remain valid, although the bound can then be
+uninformative. The conditional-structure term is not asserted to be a
+pure copula discrepancy.
+\end{proof}
+
+\begin{proposition}[PROVED: alternative marginal/dependence/channel split]
+Let $\gamma_{ij}^R=\operatorname{Law}_R(F_i,F_j)$ and
+$\kappa_{ij}^R=\gamma_{ij}^R-\mu_i^R\otimes\mu_j^R$.
+Set $\delta_i=\operatorname{TV}(\mu_i^P,\mu_i^Q)$ and let
+$\|\cdot\|_{\rm var}$ denote the full variation norm of a signed measure.
+Under the preceding local-channel assumptions,
+\begin{align*}
+ |c_{ij}^P-c_{ij}^Q|
+ \le{}&2\delta_i+2\delta_j+
+       \|\kappa_{ij}^P-\kappa_{ij}^Q\|_{\rm var}\\
+ &+\mathbb{E}_Q|a_j^P(F_j)-a_j^Q(F_j)|,
+ \qquad |m_i^P-m_i^Q|\le2\delta_i.
+\end{align*}
+\end{proposition}
+\begin{proof}
+First keep the $P$ channel fixed. The integrand
+$\operatorname{sign}(f_i)a_j^P(f_j)$ is bounded by one.
+Decompose the pair-law difference into its product-marginal difference
+and $\kappa_{ij}^P-\kappa_{ij}^Q$.
+The product measures have total variation distance at most
+$\delta_i+\delta_j$, as follows by adding and subtracting
+$\mu_i^Q\otimes\mu_j^P$. Integration against their difference is
+therefore bounded by $2\delta_i+2\delta_j$.
+The dependence part is bounded by its full variation norm.
+Finally change the channel under $Q$ and use its displayed expectation.
+The marginal sign bound follows directly from the bounded sign function.
+\end{proof}
+
+\begin{proposition}[PROVED: algorithmic gain versus Bayes information]
+\label{prop:updater-decomposition-r3}
+For a fixed prequery action $a_0$ and algorithmic postquery rule
+$A_j(O_j)$, define
+\[
+ b_P=\operatorname{risk}_P(a_0)-r_P^0,\qquad
+ e_P(j)=\operatorname{risk}_P(A_j)-r_P^*(j).
+\]
+Both are nonnegative, and the algorithmic gain is exactly
+\[
+ G_P^A(j)=V_P(j)+b_P-e_P(j).
+\]
+Consequently, for any model-selected query $j_Q$,
+\[
+ \max_jG_P^A(j)-G_P^A(j_Q)
+ =\max_j\{V_P(j)-e_P(j)\}
+    -\{V_P(j_Q)-e_P(j_Q)\}.
+\]
+This residual does not, without additional controls, identify
+information absent from the working model.
+\end{proposition}
+\begin{proof}
+By definition,
+$\operatorname{risk}_P(a_0)=r_P^0+b_P$ and
+$\operatorname{risk}_P(A_j)=r_P^*(j)+e_P(j)$.
+Subtract and use $V_P(j)=r_P^0-r_P^*(j)$.
+The second identity follows because $b_P$ is independent of $j$.
+Even if the working law equals $P$, different updater excess risks
+$e_P(j)$ can leave positive algorithmic regret.
+If $P$ is conditioned on a fully known realized target field, then
+$r_P^0=r_P^*(j)=V_P(j)=0$; nevertheless a restricted learner may have
+positive gains because its own errors change. Such fixed-truth gains
+are algorithmic utilities, not positive Bayes information under the
+omniscient conditional law.
+\end{proof}
+
+\section{Coherent negative values for other risk functionals}
+
+The next examples use $T_1,T_2\in\{0,1\}$.
+A plug-in edge prediction is the exclusive-or of the two marginal
+mode predictions. Its edge risk is the probability that this predicted
+cut differs from the true cut. Its Dice ratio is
+\[
+ R_D=\frac{\mathbb{E}W_{\rm err}}
+           {\mathbb{E}W_{\rm true}+W_{\rm pred}}.
+\]
+Neither operation is automatically the minimum posterior expectation
+of one fixed loss, so Proposition~\ref{prop:nonnegative-r3} does not
+automatically apply.
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: negative coherent plug-in edge gain]
+Assign masses $(2,2,2,3)/9$ to states $(00,01,10,11)$ and observe
+$O=\mathbf{1}\{(T_1,T_2)=(0,1)\}$. Exact Bayesian conditioning gives
+an expected plug-in edge-risk reduction of $-1/9$.
+\end{counterexample}
+\begin{proof}
+Before observing, both marginal modes are one, so the edge is predicted
+uncut. Its error is the true-cut probability $4/9$.
+The branch $O=1$ identifies state $01$ exactly and has zero error.
+On $O=0$, whose probability is $7/9$, the conditional masses on
+$(00,10,11)$ are $(2,2,3)/7$. The marginal probabilities of one are
+$5/7$ and $3/7$, so the plug-in modes are $(1,0)$ and predict a cut.
+Its conditional error is the no-cut probability $5/7$.
+Expected future error is $(7/9)(5/7)=5/9$, so the reduction is
+$4/9-5/9=-1/9$. All marginal decisions are strict, and every update
+is exact conditioning.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: negative coherent Dice-ratio gain]
+Assign masses $(1,1,2,1)/5$ to $(00,01,10,11)$ and observe the same
+$O=\mathbf{1}\{(T_1,T_2)=(0,1)\}$. Exact conditioning gives an expected
+Dice-ratio reduction of $-1/60$.
+\end{counterexample}
+\begin{proof}
+The prior marginal modes are $(1,0)$, the true-cut probability is $3/5$,
+and the ratio is
+$R_D=(2/5)/(1+3/5)=1/4$.
+The $O=1$ branch has zero error and zero ratio.
+On $O=0$, of probability $4/5$, conditional masses on $(00,10,11)$
+are $(1,2,1)/4$. Marginal modes remain strictly $(1,0)$.
+The true-cut probability is $1/2$, so
+$R_D=(1/2)/(1+1/2)=1/3$.
+Expected future ratio is $(4/5)(1/3)=4/15$ and the reduction is
+$1/4-4/15=-1/60$.
+Thus a negative ratio reduction by itself does not demonstrate an
+incoherent posterior. A separately measured failure of the posterior
+martingale identity is a different diagnostic.
+\end{proof}
+
+
+% Round 3 proof fragment. No preamble or document environment.
+% Requires amsmath/amssymb/amsthm and theorem/proposition/lemma/counterexample
+% environments; the parent document supplies \E and \TV. Links use hyperref.
+% No thesis experiments were run and the repository was read-only.
+
+\section{Sequential planning under a misspecified law}
+
+\paragraph{Scope [KNOWN/PRIOR ART].}
+Throughout this section, the target, feasible queries, horizon, and loss are
+common to the truth law $P$ and planning law $Q$.  The existing Round~2
+$B/N$ guarantee and the sharp $N=3,B=2$ ratio $4/5$ concern noiseless
+full-pool Hamming loss and are retained without rederivation.  The sensor
+counterexample below has a disjoint target and a noisy observation and is
+outside that scope.
+
+Let $H_t=(A_0,O_0,\ldots,A_{t-1},O_{t-1})$ be the history before query $t$.
+A policy $\pi$ maps histories to distributions over feasible actions.
+Its internal randomness is independent of the underlying state.  Its
+terminal decision is $d(H_B)$, and $0\leq L(d,T)\leq1$ is the common loss
+for a fixed target $T$.  Write $R_M(\pi,d)=\E_M^\pi L(d(H_B),T)$ for
+$M\in\{P,Q\}$.  Evaluating a fixed policy under the two laws means using
+the same action and terminal-decision maps, even when these maps were
+computed using $Q$.
+
+\begin{theorem}[PROVED: a history-dependent simulation bound]
+Define
+\begin{align*}
+ K_{M,t}(\cdot\mid h,a)&=M(O_t\in\cdot\mid H_t=h,A_t=a),\\
+ \epsilon_t(h,a)&=\TV\bigl(K_{P,t}(\cdot\mid h,a),
+                              K_{Q,t}(\cdot\mid h,a)\bigr),\\
+ \delta(h)&=\TV\bigl(P(T\in\cdot\mid H_B=h),
+                         Q(T\in\cdot\mid H_B=h)\bigr),\\
+ E_\pi&=\sum_{t=0}^{B-1}\E_P^\pi\epsilon_t(H_t,A_t),
+ &D_\pi&=\E_P^\pi\delta(H_B),\\
+ \Gamma_\pi&=\min\{1,E_\pi+D_\pi\}.
+\end{align*}
+Use $\TV(P,Q)=\sup_A|P(A)-Q(A)|$, one half of the $L^1$ distance.
+Specify versions of the $Q$ kernels and posterior at every $P$-reachable
+history, including $Q$-null histories.  Then every terminal rule satisfies
+\begin{equation}
+ |R_P(\pi,d)-R_Q(\pi,d)|\leq\Gamma_\pi.
+ \label{eq:r3-sequential-simulation}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Let $\mu_t$ and $\nu_t$ be the $P$ and $Q$ laws of $H_t$ under the fixed
+policy.  Their initial histories agree.  Incorporate the common action
+kernel into $K_{P,t}$ and $K_{Q,t}$, and apply contraction of total variation
+under a Markov kernel:
+\begin{align*}
+ \TV(\mu_{t+1},\nu_{t+1})
+ &\leq \TV(\mu_tK_{P,t},\mu_tK_{Q,t})
+       +\TV(\mu_tK_{Q,t},\nu_tK_{Q,t})\\
+ &\leq\E_{\mu_t,\pi}\epsilon_t(H_t,A_t)
+       +\TV(\mu_t,\nu_t).
+\end{align*}
+Induction gives $\TV(\mu_B,\nu_B)\leq E_\pi$.
+Put $r_M(h)=\E_M[L(d(h),T)\mid H_B=h]$.  The terminal posterior comparison
+gives $|r_P(h)-r_Q(h)|\leq\delta(h)$, and $0\leq r_Q\leq1$.  Therefore
+\begin{align*}
+ |\E_{\mu_B}r_P-\E_{\nu_B}r_Q|
+ &\leq\E_{\mu_B}|r_P-r_Q|
+          +|\E_{\mu_B}r_Q-\E_{\nu_B}r_Q|\\
+ &\leq D_\pi+\TV(\mu_B,\nu_B)\leq D_\pi+E_\pi.
+\end{align*}
+The difference of two risks in $[0,1]$ is at most one.  Randomized terminal
+decisions can be averaged in $r_M$, so the same proof applies.
+\end{proof}
+
+\begin{proposition}[PROVED: only terminal marginals are needed for Hamming]
+For binary targets $T_i$, fixed weights $w_i\geq0$, $\sum_iw_i=1$, and
+loss $L(d,T)=\sum_iw_i\mathbf{1}\{d_i\ne T_i\}$, the preceding theorem
+remains true on replacing $\delta$ by
+\begin{equation}
+ \delta_H(h)=\sum_iw_i
+ \left|P(T_i=1\mid h)-Q(T_i=1\mid h)\right|.
+ \label{eq:r3-terminal-marginals}
+\end{equation}
+\end{proposition}
+\begin{proof}
+For a fixed binary decision the error probability is either $p_i$ or
+$1-p_i$, whose change is bounded by $|p_{P,i}-p_{Q,i}|$.  Sum over $i$ and
+repeat the proof above.  The required marginals are those conditional on
+the terminal history, not merely those before acquisition.
+\end{proof}
+
+\begin{theorem}[PROVED: regret of a planning-law-optimal policy]
+Suppose $(\pi_Q,d_Q)$ is $\beta$-optimal under $Q$ in a common class of
+policies and terminal decisions, and $(\pi_P,d_P)$ is optimal under $P$.
+Then
+\begin{equation}
+ R_P(\pi_Q,d_Q)-R_P(\pi_P,d_P)
+ \leq\beta+\Gamma_{\pi_Q}+\Gamma_{\pi_P}.
+ \label{eq:r3-sequential-regret}
+\end{equation}
+The right side can be capped by one.  The weighted-Hamming version uses
+\eqref{eq:r3-terminal-marginals}.
+\end{theorem}
+\begin{proof}
+Add and subtract $R_Q(\pi_Q,d_Q)$ and $R_Q(\pi_P,d_P)$.  The two
+cross-law differences are bounded by
+\eqref{eq:r3-sequential-simulation}; $\beta$-optimality bounds the remaining
+within-$Q$ difference.  This also proves the result with infima and
+arbitrarily small optimization errors if an optimizer is not attained.
+\end{proof}
+
+\paragraph{Interpretation [PROVED].}
+The discrepancies are weighted by histories reached under $P$ by each
+compared policy.  Checking only histories generated by an old margin
+policy does not bound a new policy's error when it visits different
+histories.  The $P$-optimal-policy term is not identifiable from a single
+realized campaign without further information.
+
+\begin{proposition}[PROVED: uniform coupling and relative-entropy versions]
+If $\epsilon_t(h,a)\leq e_t\in[0,1]$ and full target-posterior
+$\delta(h)\leq d\in[0,1]$ uniformly, then
+\begin{equation}
+ |R_P(\pi,d_0)-R_Q(\pi,d_0)|
+ \leq1-(1-d)\prod_{t=0}^{B-1}(1-e_t)
+ \leq d+\sum_{t=0}^{B-1}e_t
+ \label{eq:r3-coupling}
+\end{equation}
+for any terminal rule $d_0$.
+Under absolute continuity, define
+\begin{align*}
+ J_\pi={}&\sum_{t=0}^{B-1}\E_P^\pi
+ \operatorname{KL}\bigl(K_{P,t}(\cdot\mid H_t,A_t)
+                    \Vert K_{Q,t}(\cdot\mid H_t,A_t)\bigr)\\
+ &+\E_P^\pi\operatorname{KL}\bigl(P(T\mid H_B)\Vert Q(T\mid H_B)\bigr).
+\end{align*}
+Then $|R_P(\pi,d_0)-R_Q(\pi,d_0)|\leq\sqrt{J_\pi/2}$, and the regret
+is at most $\beta+\sqrt{J_{\pi_Q}/2}+\sqrt{J_{\pi_P}/2}$.
+\end{proposition}
+\begin{proof}
+While histories coincide, couple actions with identical policy randomness
+and observations by a maximal coupling.  The probability of remaining
+matched through the observations is at least $\prod_t(1-e_t)$.  Conditional
+on a matched terminal history, a maximal target coupling succeeds with
+probability at least $1-d$.  The probability of any mismatch bounds the
+difference of expectations of a common $[0,1]$ loss.  For the second claim,
+the chain rule gives
+$\operatorname{KL}(P^\pi_{H_B,T}\Vert Q^\pi_{H_B,T})=J_\pi$ because the
+common policy action factors cancel.  Pinsker's inequality and the
+regret decomposition complete the proof.  Without absolute continuity
+the corresponding infinite bound is uninformative, not false.
+\end{proof}
+
+\paragraph{Prior art [KNOWN/PRIOR ART].}
+The simulation-lemma strategy is classical; see Kearns and Singh,
+\emph{Near-Optimal Reinforcement Learning in Polynomial Time}, Machine
+Learning 49 (2002), 209--232,
+\href{https://people.eecs.berkeley.edu/~pabbeel/cs287-fa09/readings/KearnsSingh_E3_2002.pdf}{primary paper}.
+The display above separates the observation kernel from the terminal
+latent-target posterior.  Its loss is terminal and normalized; cumulative
+losses require summing prefix bounds and can introduce another horizon
+factor.
+
+\paragraph{Experiment row [CONJECTURE: test proposal].}
+Prediction: small errors in both objects prevent large regret.
+Model/data: a frozen finite sensor law or small discretized Gaussian world,
+with exact history enumeration and common feasible actions.
+Statistic: exact regret and the signed slack in
+\eqref{eq:r3-sequential-regret}, together with each occupancy-weighted term.
+Falsifier: negative certified slack.  Real observed labels alone do not
+reveal the latent-target posterior or all counterfactual truth kernels.
+
+\subsection{One-step correctness and long-horizon failure}
+
+\begin{counterexample}[COUNTEREXAMPLE: parity defeats exact myopic value]
+Let $A,B$ be independent fair signs, $T=AB$, and $E$ independent with
+$P(E=1)=1/2+\eta$, $0<\eta<1/2$.  Queries reveal $A$, $B$, or $C=TE$,
+each at most once.  The sole target is $T$, the loss is classification
+error, and the budget is two.  Exact true-law myopic value has total gain
+$\eta$, while the optimal two-query gain is $1/2$.
+\end{counterexample}
+\begin{proof}
+$A$ is independent of $(T,E)$ because $B$ is fair; similarly $B$ is
+independent of $(T,E)$.  Therefore the initial values of $A,B$ are zero.
+Query $C$ predicts $T$ with accuracy $1/2+\eta$, so its value is $\eta$
+and myopic value selects it strictly.  Either remaining query is
+independent of $(T,C)$, hence adds no value.  Querying $A,B$ reveals $T$
+exactly, giving gain $1/2$.  The gain ratio is $2\eta\to0$.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: observation kernels and initial pairs can agree]
+Keep the preceding truth law $P$.  Let $Q$ instead make $T,A,B$ independent
+fair signs while preserving $C=TE$ and the same noise law.  All initial
+pairs among $T,A,B,C$ agree under $P,Q$, and every adaptive observation
+transcript of length at most two has the same law.  Nevertheless a
+$Q$-optimal policy has $P$ risk $1/2-\eta$, while the $P$ optimum has
+risk zero.
+\end{counterexample}
+\begin{proof}
+Under each law, every distinct sensor pair among $A,B,C$ is independent
+fair.  Thus the first observation is fair and, given its realized value,
+either unqueried second observation is fair; this establishes transcript
+equality even with adaptive action selection.  The pair $(T,C)$ has
+agreement probability $1/2+\eta$ in both laws; $(T,A)$ and $(T,B)$ are
+independent fair in both.  Under $Q$, $A,B$ together contain no target
+information, so an optimal policy includes $C$.  Under $P$, their product
+is the target.  After $A,B$, the $P$ target posterior is a point mass at
+$AB$, while the $Q$ posterior is fair, at total variation $1/2$.  All
+observation-kernel errors through budget two are zero, but this terminal
+posterior error is nonzero.  The stated risks follow.
+\end{proof}
+
+\paragraph{Scope [PROVED].}
+The example proves that initial target-observation pairwise correctness
+does not determine multi-observation target posteriors.  It also proves
+that the terminal-posterior term cannot be dropped from the simulation
+bound.  It does not contradict noiseless full-pool Hamming guarantees.
+
+\paragraph{Experiment row [CONJECTURE: test proposal].}
+Use the finite sign worlds with rational $\eta=1/10$.  Enumerate all
+one-step values and two-query trees, all initial pair laws, and the final
+risks.  The exact predictions are gains $1/10$ and $1/2$, zero initial
+pair discrepancy, and terminal discrepancy $1/2$ after $A,B$.  Any
+different value falsifies the implementation of the construction.
+
+\subsection{A sufficient condition for a greedy horizon guarantee}
+
+\begin{theorem}[KNOWN/PRIOR ART: adaptive submodularity]
+Let a nonnegative realization utility $f(S,\phi)$ be normalized by
+$f(\varnothing,\phi)=0$.  Assume adaptive monotonicity and adaptive
+submodularity under the actual common law: conditional expected gains
+$\Delta(e\mid\psi)$ are nonnegative and
+$\Delta(e\mid\psi)\geq\Delta(e\mid\psi')$ whenever $\psi\subseteq\psi'$
+and $e$ is still unqueried.  For unit costs and budget $B$, exact adaptive
+greedy has expected gain at least
+\[
+ \left[1-\left(1-\frac1B\right)^B\right]\operatorname{OPT}
+ \geq(1-e^{-1})\operatorname{OPT}.
+\]
+\end{theorem}
+\begin{proof}
+Let $G_t$ denote expected greedy gain after $t$ selections.  At its current
+partial history, adaptive submodularity bounds the expected incremental
+value of any $B$-query continuation by $B$ times the best current marginal
+gain.  Adaptive monotonicity allows comparison with concatenating the
+current policy and the optimal $B$-query policy, omitting already known
+queries and ignoring the first policy's extra information when simulating
+the second.  Consequently
+$\operatorname{OPT}-G_t\leq B(G_{t+1}-G_t)$.
+Rearrange and iterate from $G_0=0$ to obtain the displayed bound.
+\end{proof}
+
+\paragraph{Attribution and limits [KNOWN/PRIOR ART; PROVED].}
+See Golovin and Krause, JAIR 42 (2011),
+\href{https://arxiv.org/pdf/1003.3967}{Theorem 5 in the primary PDF}.
+These are law-specific, objective-specific premises, not properties of
+all Bayesian acquisition.  The parity example violates adaptive
+submodularity: $\Delta(B\mid\varnothing)=0$ but
+$\Delta(B\mid A=a)=1/2$.  A result for version-space elimination does not
+automatically give a result for Hamming, NSD, DC-BD, or q20.
+
+\begin{proposition}[PROVED: an adaptive-modular Hamming special case]
+For independent binary targets with noiseless self-observation and fixed
+Hamming weights, a query of target $i$ has fixed gain
+$w_i\min(p_i,1-p_i)$, independent of previous observations.  Selecting the
+largest $B$ such values is optimal; for equal weights this is ideal margin.
+\end{proposition}
+\begin{proof}
+Observation removes target $i$'s own error and independence leaves every
+other target posterior unchanged.  Gains therefore add without history
+dependence, and maximizing their sum means taking the largest values.
+\end{proof}
+
+\paragraph{Experiment row [CONJECTURE: test proposal].}
+Enumerate all nested reachable histories in a finite independent-label
+positive control and the parity negative control.  Record
+$\max_{\psi\subseteq\psi',e}[\Delta(e\mid\psi')-\Delta(e\mid\psi)]$
+and the greedy-to-optimal ratio.  A positive value falsifies the
+submodularity premise; a below-bound ratio with a fully verified premise
+falsifies the computation.  A small sample of histories can find a
+violation but cannot certify the universal premise.
+
+\section{Physics as transferable order and uncertain level}
+
+\subsection{An exact normal experiment for campaign-threshold borrowing}
+
+Let the monotone score threshold in a new campaign be
+$\theta=\theta_0+\Delta$, where $\theta_0$ is an OLD or external anchor.
+At a fixed paid budget suppose current-campaign information is exactly
+\[
+ Z=\theta+\varepsilon,\qquad \varepsilon\sim N(0,v),\quad v>0,
+\]
+with noise independent of the campaign shift.  This is an exact
+normal-location model.  Approximating a binary-label threshold estimate
+by such a $Z$ is a separate assumption.  Consider
+$\widehat\theta_w=\theta_0+w(Z-\theta_0)$, $0\leq w\leq1$.
+Here $w=0$ fixes the OLD level; $w=1$ discards the OLD level while retaining
+the score's direction; intermediate values weaken level borrowing.
+
+\begin{proposition}[PROVED: exact bias--variance and crossover formulas]
+For a fixed shift $\Delta$,
+\begin{equation}
+ R_\Delta(w)=\E(\widehat\theta_w-\theta)^2
+           =(1-w)^2\Delta^2+w^2v.
+ \label{eq:r3-normal-risk}
+\end{equation}
+The anchor has higher risk than current-only estimation exactly when
+$\Delta^2>v$.  For $w<1$, borrowing has higher risk than current-only
+exactly when $\Delta^2>v(1+w)/(1-w)$.  If $w<w'\leq1$, increasing the
+update weight improves risk exactly when
+\[
+ \Delta^2>v\frac{w+w'}{2-w-w'}.
+\]
+\end{proposition}
+\begin{proof}
+$\widehat\theta_w-\theta=-(1-w)\Delta+w\varepsilon$; the cross term has
+zero expectation, proving \eqref{eq:r3-normal-risk}.  Subtract $v$ or
+$R_\Delta(w)$ from the respective comparison risks and factor:
+\begin{align*}
+ R_\Delta(w)-v
+ &=(1-w)\{(1-w)\Delta^2-(1+w)v\},\\
+ R_\Delta(w')-R_\Delta(w)
+ &=(w'-w)\{(w+w')v-(2-w-w')\Delta^2\}.
+\end{align*}
+The factors' signs give the claimed thresholds.
+\end{proof}
+
+\begin{theorem}[PROVED: bounded-shift minimax among affine rules]
+For $|\Delta|\leq D$,
+\begin{align}
+ w_D&=\frac{D^2}{D^2+v},\label{eq:r3-shrink-weight}\\
+ \inf_{0\leq w\leq1}\sup_{|\Delta|\leq D}R_\Delta(w)
+ &=\frac{D^2v}{D^2+v}.\label{eq:r3-affine-minimax}
+\end{align}
+For $D>0$ this is strictly below both endpoint worst-case risks $D^2,v$.
+It is not an unrestricted bounded-parameter minimax claim.
+\end{theorem}
+\begin{proof}
+The supremum in \eqref{eq:r3-normal-risk} is
+$(1-w)^2D^2+w^2v$.  Its unique minimum follows by differentiation, yielding
+\eqref{eq:r3-shrink-weight}--\eqref{eq:r3-affine-minimax}.
+For the final distinction, project the affine estimator onto the interval
+$[\theta_0-D,\theta_0+D]$.  Projection weakly decreases squared distance to
+every parameter in that interval and strictly decreases expected loss
+on positive-probability Gaussian tails when $D,v>0$.  Continuity on the
+compact parameter interval also makes the worst-case risk strictly
+smaller than that of the unclipped affine rule.  Therefore the latter
+cannot be unrestricted minimax on the bounded parameter interval.
+\end{proof}
+
+\begin{theorem}[KNOWN/PRIOR ART: moment-class robust Bayes, specialized to campaigns]
+Let
+\[
+ \mathcal G_D=\{\nu:\E_\nu\Delta^2\leq D^2\}
+\]
+be an ambiguity set of shift distributions with independent
+$N(0,v)$ observation noise.  Among all measurable estimators,
+\begin{equation}
+ \inf_a\sup_{\nu\in\mathcal G_D}
+ \E_{\nu,\varepsilon}\{a(Z)-\theta\}^2
+ =\frac{D^2v}{D^2+v}.
+ \label{eq:r3-moment-minimax}
+\end{equation}
+The affine rule with weight $w_D$ attains the value, and
+$\nu_*=N(0,D^2)$ is least favorable.
+\end{theorem}
+\begin{proof}
+Integrating \eqref{eq:r3-normal-risk} over any $\nu\in\mathcal G_D$ shows
+that the affine estimator's risk is at most
+$(1-w)^2D^2+w^2v$.  At $w_D$ this proves the upper bound.
+For a matching lower bound, $\nu_*=N(0,D^2)$ belongs to the ambiguity set.
+Completing the square gives
+\[
+ \Delta\mid Z=z\sim N\left(
+ \frac{D^2}{D^2+v}(z-\theta_0),\frac{D^2v}{D^2+v}\right).
+\]
+The posterior mean minimizes conditional squared loss among all
+measurable estimators.  Its Bayes risk is the constant posterior variance
+$D^2v/(D^2+v)$.  Every estimator's worst-prior risk is at least its risk
+under this admissible prior, hence at least that Bayes risk.  The affine
+upper bound attains it, proving the saddle-point statement.  If $D=0$,
+the ambiguity set concentrates at zero and the conclusion is immediate.
+\end{proof}
+
+\paragraph{Attribution and distinction [KNOWN/PRIOR ART].}
+This is the classical univariate second-moment bound with a Gaussian
+least favorable prior, not a new minimax result; see Johnstone,
+\emph{Gaussian Estimation: Sequence and Wavelet Models}, subsection on
+univariate moment bounds,
+\href{https://imjohnstone.su.domains/GE_08_09_17.pdf}{author's primary PDF}.
+The campaign interpretation is the specialization used here.
+A Gaussian prior with variance $D^2$ has mass outside $[-D,D]$, so this
+proof cannot establish unrestricted minimaxity for the bounded-shift
+problem.  The two problems happen to share the same affine weight.
+
+\begin{proposition}[PROVED: no bounded shift assumption, no finite worst-case borrowing]
+Over all fixed $\Delta\in\mathbb R$, the current-only estimator $Z$ is
+minimax among all measurable estimators with risk $v$.  Every fixed
+affine rule with $w<1$ has infinite worst-case risk.
+\end{proposition}
+\begin{proof}
+$Z$ has constant risk $v$.  For a lower bound, use normal priors of
+variance $M^2$.  Their optimal Bayes risks are $M^2v/(M^2+v)\to v$;
+worst-parameter risk bounds every such Bayes risk from above.
+Equation~\eqref{eq:r3-normal-risk} diverges as $|\Delta|\to\infty$ when
+$w<1$.
+\end{proof}
+
+\paragraph{Design limitation [PROVED].}
+If a design changes only $v$, the robust risk $D^2v/(D^2+v)$ is increasing
+in $v$.  Thus the design ordering still minimizes variance.  The theorem
+proves a borrowing/inference result, not improved acquisition.  A design
+claim needs a model in which bias or information geometry also changes
+with the design.
+
+\paragraph{Experiment row [CONJECTURE: test proposal].}
+Freeze $v,D$ and a shift grid before generating normal-location data.
+Compare squared-error means with \eqref{eq:r3-normal-risk}; report the
+maximum over the prespecified shifts and the clipped-affine control.
+The prediction is the exact quadratic and the displayed crossover.
+Systematic disagreement in this exact experiment falsifies the
+implementation.  Failure of a separately tested normal approximation in
+binary-label data rejects applicability rather than the normal theorem.
+
+\subsection{An exact order-only threshold model}
+
+\begin{theorem}[PROVED; KNOWN binary-search mechanism: finite-pool order transfer]
+Let $s_1<\cdots<s_N$ and $y_i=\mathbf{1}\{i>k\}$ for
+$k\in\{0,\ldots,N\}$.  A fixed OLD threshold $k_0$ has normalized
+full-pool Hamming error $|k-k_0|/N$.  An order-only learner that repeatedly
+bisects the feasible threshold ranks leaves at most
+\[
+ m_B=\left\lceil\frac{N+1}{2^B}\right\rceil
+\]
+possible ranks after $B$ noiseless labels.  Predicting a median feasible
+rank has worst-case error at most $\lfloor m_B/2\rfloor/N$.  Exact
+identification is possible and requires
+$\lceil\log_2(N+1)\rceil$ queries in the worst case.
+\end{theorem}
+\begin{proof}
+Querying $i$ reveals whether $k<i$, which cuts the ordered feasible set
+into two contiguous parts.  A balanced cut reduces its cardinality by
+half up to a ceiling, giving $m_B$.  A set of $m$ consecutive integer
+ranks spans $m-1$ positions; a median is at most
+$\lceil(m-1)/2\rceil=\lfloor m/2\rfloor$ positions from either endpoint.
+Two threshold vectors at ranks $k,k'$ differ on exactly $|k-k'|$ labels.
+For exact identification a binary decision tree of depth $B$ has at most
+$2^B$ leaves and must distinguish $N+1$ possible vectors.  Balanced search
+attains that lower bound.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: in-domain efficiency versus transfer worst case]
+Take $N=7$, $k_0=2$, and $B=1$.  The order-only rule queries $i=4$ and
+predicts the lower median of the remaining feasible threshold ranks.
+At the unchanged campaign $k=2$, its estimate is $1$ and its error $1/7$,
+whereas the correct anchor has zero error.  Across all transferred ranks
+$k\in\{0,\ldots,7\}$, its worst-case error is $2/7$, while the anchor's
+worst-case error is $5/7$.
+\end{counterexample}
+\begin{proof}
+When $k<4$, the remaining ranks are $0,1,2,3$ and the estimate is $1$;
+when $k\geq4$, they are $4,5,6,7$ and the estimate is $5$.  The maximum
+distance to those estimates is two.  The maximum distance from the fixed
+anchor $2$ is five, attained at $k=7$.
+\end{proof}
+
+\paragraph{Prior art and scope [KNOWN/PRIOR ART; PROVED].}
+See Dasgupta, \emph{Analysis of a greedy active learning strategy},
+NIPS 2004 / author version 2005,
+\href{https://cseweb.ucsd.edu/~dasgupta/papers/greedy.pdf}{introduction and Figure 1}.
+Strictly increasing transformations of the score preserve the entire
+search problem.  The guarantee protects against changed level while
+requiring an unchanged noiseless monotone order.  It does not survive
+arbitrary inversions, nonmonotone boundaries, or noise without additional
+analysis.  The observed overlap in real log-$h$ label ranges prevents
+claiming that exact realizability has already been established for SPH.
+
+\paragraph{Experiment row [CONJECTURE: test proposal].}
+Enumerate all threshold ranks on a fixed sorted synthetic pool.  Record
+feasible-set cardinality and maximum Hamming error by budget; recover
+the explicit $N=7$ contrast.  Any bound violation in the exact noiseless
+model falsifies the calculation.  On real labels, the inversion count
+$\sum_{i<j}\mathbf{1}\{y_i=1,y_j=0\}$ tests the noiseless single-threshold
+premise; a positive count rejects that premise, not every noisy monotone
+association.
+
+\subsection{Regularization is not automatically robust Bayes}
+
+\begin{proposition}[PROVED: attenuating an affine mean preserves its threshold]
+For $m(s)=b_0+b_1s$, $b_1\ne0$, and $\lambda>0$, multiplying both
+coefficients by $\lambda$ leaves the zero crossing $-b_0/b_1$ unchanged.
+A free campaign intercept $c$ changes the crossing to
+$-(b_0+c)/b_1$.
+\end{proposition}
+\begin{proof}
+Solve $\lambda(b_0+b_1s)=0$ and $b_0+b_1s+c=0$, respectively.
+\end{proof}
+
+\paragraph{Interpretation [PROVED; KNOWN/PRIOR ART].}
+Mean attenuation can change confidence and interaction with a fitted
+residual, but it cannot by itself repair a pure threshold shift.
+Penalized logistic coefficients admit a MAP interpretation only after
+the loss scaling, standardization, intercept convention, and prior are
+specified.  A choice such as $C=1$ alone supplies no shift radius,
+ambiguity set, least favorable prior, or minimax guarantee.
+
+\paragraph{Repository mapping [NUMERICALLY CHECKED: source audit].}
+The original M3 estimates a physics trend from its supplied training
+labels and then fixes that trend in the residual-GP stage; strict
+OLD-to-NEW transfer fixes an OLD-estimated level.  Week~16 instead uses
+a standardized-score, $C=1$ logistic trend fitted on the currently
+revealed labels, with zero-mean fallback for one class.  These differ
+in campaign adaptation and regularization.  A plug-in two-stage fit also
+omits posterior uncertainty in the estimated trend.  Reusing labels in
+both stages may define an empirical-Bayes/composite procedure, but is
+not equivalent to joint hierarchical Bayes with a single label
+likelihood and uncertainty propagated through both components.
+
+\paragraph{Experiment row [CONJECTURE: proposed mechanism test].}
+Use a frozen logistic threshold-shift family with matched paid labels
+and acquisition paths.  Separate intercept adaptation, slope penalty,
+and residual flexibility.  Report threshold bias, variance, final risk,
+and uncertainty.  The conjecture is that appropriately weakened level
+borrowing improves shifted-campaign risk while preserving useful order.
+A claim that positive whole-mean attenuation moves the zero crossing is
+algebraically false; a benefit disappearing after matched controls does
+not support a regularization-specific mechanism.
+
+\section{What OLD-only calibration can identify}
+
+\begin{theorem}[PROVED: an OLD-only threshold-transfer impossibility]
+Suppose the OLD labeled-data law and the unlabeled target law are
+identical in two worlds.  Let target $X\sim\operatorname{Uniform}[0,1]$
+in both worlds, with labels $\mathbf{1}\{X>\theta_0\}$ and
+$\mathbf{1}\{X>\theta_1\}$, respectively, where
+$0\leq\theta_0<\theta_1\leq1$.  A learner using OLD labels and any
+quantity of unlabeled target data, but no target labels, has risks
+\[
+ R_0+R_1\geq\theta_1-\theta_0,
+ \qquad \max(R_0,R_1)\geq\frac{\theta_1-\theta_0}{2}.
+\]
+\end{theorem}
+\begin{proof}
+The learner's input and hence its output distribution are identical in
+the two worlds.  At every $x\in(\theta_0,\theta_1]$ the true labels are
+opposite.  For any randomized prediction, its two error probabilities
+there sum to one.  Integrate over the interval and use nonnegativity of
+the remaining errors.  The maximum is at least half the sum.
+\end{proof}
+
+\paragraph{Consequences and prior art [PROVED; KNOWN/PRIOR ART].}
+OLD-only evidence cannot universally select the realized new shift or
+the oracle affine weight $\Delta^2/(\Delta^2+v)$.  Identical OLD evidence
+can accompany $\Delta=0$ or a very large shift.  A useful selection rule
+therefore needs a declared relationship between campaigns, not merely
+more OLD resampling.  The example changes $P(Y\mid X)$ and is
+conditional/concept shift, not pure covariate shift.  Broader results are
+given by Ben-David, Lu, Luu and Pal, AISTATS 2010,
+\href{https://proceedings.mlr.press/v9/david10a.html}{Impossibility Theorems for Domain Adaptation}.
+
+\paragraph{Experiment row [CONJECTURE: test proposal].}
+Construct paired target-threshold worlds sharing exactly the same OLD
+data and target score pool.  Verify identical model-selection inputs
+and record the slack $R_0+R_1-(\theta_1-\theta_0)$.  A negative slack
+falsifies the implementation.  Distinguishing the worlds through
+additional information tests a different assumption set.
+
+\begin{proposition}[PROVED: illustrative calibration with genuine historical campaigns]
+Suppose an external anchor $\theta_0$ is known and $G$ independent
+historical campaign estimates satisfy
+\[
+ Z_g-\theta_0\sim N(0,\tau^2+v_0),
+\]
+with known common $v_0$.  If $S=\sum_g(Z_g-\theta_0)^2$ and
+$q_{\alpha,G}$ is the lower $\alpha$ quantile of a chi-square law with
+$G$ degrees of freedom, then
+\[
+ \tau_U^2=\max\{0,S/q_{\alpha,G}-v_0\}
+\]
+is a one-sided confidence upper bound for $\tau^2$ with coverage at
+least $1-\alpha$.
+\end{proposition}
+\begin{proof}
+$S/(\tau^2+v_0)$ is chi-square with $G$ degrees of freedom.  With
+probability $1-\alpha$, this ratio exceeds $q_{\alpha,G}$, implying
+$\tau^2\leq S/q_{\alpha,G}-v_0$.  Truncating a negative upper expression
+at zero cannot reduce coverage for the nonnegative parameter.
+\end{proof}
+
+\paragraph{Calibration limits [PROVED; protocol options CONJECTURE].}
+Estimating the anchor from the same campaigns requires modified degrees
+of freedom and future-prediction uncertainty; the displayed formula
+does not then apply unchanged.  Random row splits from one OLD campaign
+cannot identify between-campaign shift variance without further
+assumptions.  Genuine historical campaigns plus exchangeability could
+support nested leave-one-campaign-out calibration.  With one campaign,
+a physically justified frozen shift range or transparent prespecified
+sensitivity grid is defensible, but choosing its radius from NEW outcomes
+is development.  A frozen rule may adapt to newly paid target labels
+with their cost charged; choosing the rule after inspecting its target
+endpoint is different.  NEW-136 is already open development data, so a
+new transfer claim needs a separate future campaign.
+
+\paragraph{Related robustness literature [KNOWN/PRIOR ART].}
+Go and Isaac (UAI 2022),
+\href{https://proceedings.mlr.press/v180/go22a.html}{Robust expected information gain using ambiguity sets},
+construct an explicitly robust design objective using a KL ambiguity set
+and an affine relaxation.  Sloman, Oppenheimer, Broomell and Shalizi,
+\href{https://arxiv.org/abs/2205.13698}{arXiv:2205.13698},
+study model misspecification and active-learning bias.  Barlas, Sloman
+and Kaski,
+\href{https://arxiv.org/abs/2511.07671}{arXiv:2511.07671},
+develop generalized-Bayes experimental design for specified
+misspecification settings.  None establishes that arbitrary logistic
+coefficient regularization implements robust Bayes, or that information
+gain improvements imply better Hamming acquisition in this repository.
+
+
+% Round 3 geometry/discovery fragment. No preamble; all results proved below.
+% Environments theorem, proposition, lemma, counterexample, proof assumed.
+% Labels use the prefix rthreegeo to avoid collisions.
+
+\section{Geometric Bayes risk and explicit regularity bridges}
+
+\begin{proposition}[PROVED: Coherent geometric value of information]
+\label{rthreegeo:coherence}
+Let $G$ be a random geometric target, $\mathcal A$ a fixed action space,
+and $L(a,G)\ge0$ an integrable loss. Given data $D$, define
+\[
+ R(D)=\inf_{a\in\mathcal A}\E[L(a,G)\mid D],\qquad
+ \Delta_j(D)=R(D)-\E[R(D,O_j)\mid D].
+\]
+Under coherent conditioning, $\Delta_j(D)\ge0$ whenever the conditional
+Bayes risks and decisions are measurable. This is an expected, one-step
+statement, not an outcome-wise or multistep-optimality statement.
+\end{proposition}
+\begin{proof}
+Retain a current Bayes action $a_D$ after every possible observation.
+Optimality of the updated action gives
+$R(D,O_j)\le\E[L(a_D,G)\mid D,O_j]$.
+Take the conditional expectation and use the tower identity. If the
+infimum is not attained, apply this argument to measurable
+$\epsilon$-optimal actions and let $\epsilon\downarrow0$.
+\end{proof}
+
+\begin{proposition}[PROVED: Graph volume, medians, means and binary observations]
+\label{rthreegeo:graphloss}
+Let $U\subset\mathbb R^m$, let $g,h:U\to[a,b]$ be measurable, and put
+$A_g=\{(u,z):u\in U,\ a\le z\le g(u)\}$.
+For a nonnegative density $q$,
+\[
+ \mu_q(A_g\triangle A_h)
+ =\int_U\left|\int_{g(u)}^{h(u)}q(u,z)\,dz\right|du.
+\]
+If $q(u,z)=w(u)$, this is $\int_Uw(u)|g(u)-h(u)|du$.
+If $0<c\le q\le C$ between the graphs, it lies between
+$c\|g-h\|_1$ and $C\|g-h\|_1$.
+
+For a random graph $g$, the Bayes action under integrated absolute
+displacement is a measurable pointwise posterior median. Under
+integrated squared displacement, it is the posterior mean, and the
+exact value of observing $O_j$ is
+\[
+ \Delta_{2,j}
+ =\int_Uw(u)\operatorname{Var}\bigl(\E[g(u)\mid D,O_j]\mid D\bigr)\,du.
+\]
+For a binary observation $O_j\in\{-1,1\}$ with positive variance,
+\[
+ \Delta_{2,j}
+ =\int_Uw(u)
+ \frac{\operatorname{Cov}(g(u),O_j\mid D)^2}
+      {\operatorname{Var}(O_j\mid D)}\,du.
+\]
+If every posterior graph is $L$-Lipschitz, the pointwise posterior mean
+and a consistently chosen quantile median are also $L$-Lipschitz.
+\end{proposition}
+\begin{proof}
+At each $u$, the symmetric difference of the vertical sections is exactly
+the interval between $g(u)$ and $h(u)$. Tonelli's theorem proves the
+identity; the density bounds follow pointwise.
+Tonelli also separates each integrated posterior loss by $u$.
+For a scalar $Z$, a number $a$ minimizes $\E|a-Z|$ precisely when
+$\mathbb P(Z\le a)\ge1/2$ and $\mathbb P(Z\ge a)\ge1/2$; this follows
+from the one-sided derivatives of the convex objective. The squared-loss
+claim follows by completing the square.
+Conditional total variance proves the displayed value identity.
+Every square-integrable function of a nondegenerate binary variable is
+affine in that variable; its conditional-mean regression coefficient is
+$\operatorname{Cov}(g(u),O_j)/\operatorname{Var}(O_j)$, giving the final
+formula. A deterministic observation has value zero.
+Finally, the almost-sure inequality
+$|g(u)-g(v)|\le L\|u-v\|$ implies the same inequality for corresponding
+quantiles of the two marginal laws. Taking expectations gives it for
+the means. These actions are measurable under the usual measurable
+posterior-process assumptions.
+\end{proof}
+
+\begin{proposition}[PROVED: A restricted Gaussian graph problem]
+\label{rthreegeo:gaussiangraph}
+Suppose the current posterior of $g$ is Gaussian, with variance $s(u)^2$
+and covariance $c(u,v)$, and a paid observation directly reveals $g(v)$.
+Assume the displayed integrals are finite. For integrated absolute
+displacement of unrestricted graph heights,
+\[
+ R_1=\sqrt{\frac2\pi}\int_U w(u)s(u)\,du,
+\]
+\[
+ \Delta_1(v)=\sqrt{\frac2\pi}\int_Uw(u)
+ \left[s(u)-\sqrt{s(u)^2-\frac{c(u,v)^2}{s(v)^2}}\right]du.
+\]
+For integrated squared displacement,
+\[
+ \Delta_2(v)=\int_Uw(u)\frac{c(u,v)^2}{s(v)^2}\,du.
+\]
+The values are zero if $s(v)=0$. A binary membership observation does not
+directly reveal $g(v)$ and is a different observation experiment.
+\end{proposition}
+\begin{proof}
+A Gaussian marginal's mean is a median and its mean absolute centered
+deviation is $\sqrt{2/\pi}s(u)$. Gaussian conditioning changes the variance
+to $s(u)^2-c(u,v)^2/s(v)^2$, independently of the observed value.
+Substitute this into the absolute-deviation risk. For squared loss,
+subtract the integrated updated variance from the integrated current
+variance. A zero-variance observation is already known.
+\end{proof}
+
+\begin{proposition}[PROVED: Graph Hausdorff and density-dependent $L^1$ control]
+\label{rthreegeo:holderbridge}
+Let $g,h$ be $L$-Lipschitz on the same compact $U$, and let
+$\Gamma_g=\{(u,g(u)):u\in U\}$. Then
+\[
+ \frac{\|g-h\|_\infty}{\sqrt{1+L^2}}
+ \le H(\Gamma_g,\Gamma_h)\le\|g-h\|_\infty.
+\]
+More specifically, let $U=[0,1]^m$, let $f=g-h$ be $K$-Lipschitz,
+$K>0$, and let $w\ge w_{\min}>0$. Put $M=\|f\|_\infty$ and
+$r=\min\{1/2,M/(2K\sqrt m)\}$. Then
+\[
+ \int_Uw|f|\ge w_{\min}\frac M2 r^m.
+\]
+In the regime $M\le K\sqrt m$ this gives
+\[
+ M\le\left[
+ \frac{2^{m+1}K^m m^{m/2}}{w_{\min}}\int_Uw|f|
+ \right]^{1/(m+1)}.
+\]
+\end{proposition}
+\begin{proof}
+Match graph points with the same base coordinate for the upper bound.
+At $u$ maximizing $|g(u)-h(u)|=M$, a point $(v,h(v))$ is at least
+\[
+ \sqrt{t^2+(M-Lt)_+^2},\qquad t=\|u-v\|,
+\]
+away. The minimum over $t\ge0$ is $M/\sqrt{1+L^2}$.
+For the integral bound, at a maximizer of $|f|$ choose, in each coordinate,
+a direction with at least $1/2$ available space inside the unit cube.
+The resulting one-sided box of side $r$ is contained in $U$. Every point
+in it lies within $\sqrt m r$ of the maximizer, and therefore has
+$|f|\ge M/2$. Integrate on this box and rearrange. For $K=0$, $f$ is
+constant and the integral is exactly $M\int w$. A cone of height $M$
+and slope $K$ has mass of order $M^{m+1}/K^m$, showing that the
+small-error exponent cannot generally be improved under only a
+Lipschitz bound.
+\end{proof}
+
+\begin{proposition}[PROVED: A finite graph approximation]
+\label{rthreegeo:quadrature}
+Let a probability measure $\nu$ on $U$ be partitioned into cells $C_i$
+of diameter at most $h$, with $u_i\in C_i$ and $w_i=\nu(C_i)$.
+For graphs with Lipschitz constants $L_g,L_h$,
+\[
+ \left|\int_U|g-h|\,d\nu-
+ \sum_iw_i|g(u_i)-h(u_i)|\right|\le(L_g+L_h)h.
+\]
+If the base points form an $h$-net, the difference between the Hausdorff
+distance of the sampled graph clouds and that of the complete graphs
+is at most
+\[
+ h\left(\sqrt{1+L_g^2}+\sqrt{1+L_h^2}\right).
+\]
+\end{proposition}
+\begin{proof}
+The function $|g-h|$ is $(L_g+L_h)$-Lipschitz. Integrate its deviation
+from each cell representative. Every graph point is within
+$h\sqrt{1+L_g^2}$ of its sampled graph cloud, and conversely every cloud
+point lies on the graph. Apply the triangle inequality for Hausdorff
+distance twice. These arguments require graph heights; a finite label
+pool alone need not locate an intervening root.
+\end{proof}
+
+\begin{proposition}[PROVED: A density-weighted normal-displacement expansion]
+\label{rthreegeo:tube}
+Let $S$ be a compact oriented $C^2$ hypersurface of dimension $m$ with
+injective normal coordinates $F(s,t)=s+tn(s)$ for $|t|<r$.
+Suppose its principal curvatures are bounded in magnitude by $K$.
+Let $0<a<r$, $aK<1$, and assume two regions differ exactly by the
+normal strip between $t=0$ and $t=\delta(s)$, where $|\delta|\le a$;
+there are no additional components or orientation changes.
+Let $q\ge0$ be bounded by $Q$ and $L_q$-Lipschitz on the tube. Then
+\[
+ \mu_q(A\triangle B)=
+ \int_S\left|\int_0^{\delta(s)}q(F(s,t))J(s,t)\,dt\right|dA(s),
+ \quad J(s,t)=\prod_{i=1}^m(1-t\kappa_i(s)),
+\]
+and
+\[
+ \left|\mu_q(A\triangle B)-\int_Sq(s)|\delta(s)|\,dA(s)\right|
+ \le\frac C2\int_S\delta(s)^2\,dA(s),
+\]
+where
+\[
+ C=L_q(1+aK)^m+QmK(1+aK)^{m-1}.
+\]
+\end{proposition}
+\begin{proof}
+The normal-coordinate change of variables gives the first identity.
+The assumptions make its Jacobian positive. Telescoping the product
+gives
+$|J-1|\le mK|t|(1+aK)^{m-1}$ and $|J|\le(1+aK)^m$.
+Consequently
+$|q(F(s,t))J(s,t)-q(s)|\le C|t|$.
+Integrating from $0$ to $\delta(s)$ and then over $S$ proves the bound.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: Latent amplitude does not identify boundary uncertainty]
+\label{rthreegeo:scale}
+Let $\Theta\sim N(m,\sigma^2)$ and $f_c(x)=c(x-\Theta)$, $c>0$.
+The boundary is $\{\Theta\}$ for all $c$, although
+$\operatorname{sd}(f_c(x))=c\sigma\to0$ as $c\downarrow0$.
+Squared boundary Bayes risk remains $\sigma^2$; the scale-invariant
+quantity $\operatorname{sd}(f_c)/|f_c'|$ equals $\sigma$.
+A noiseless sign query at $x=m$ has squared-boundary value
+$2\sigma^2/\pi$. Under the different observation contract
+$O=\operatorname{sign}(f_c(m)+\eta)$ with independent
+$\eta\sim N(0,\tau^2)$, the value is
+\[
+ \frac{2c^2\sigma^4}{\pi(c^2\sigma^2+\tau^2)}.
+\]
+\end{counterexample}
+\begin{proof}
+The root and scale claims follow directly from the definition.
+A noiseless query splits the Gaussian threshold at its median; the two
+conditional means are $m\pm\sigma\sqrt{2/\pi}$, whose variance is
+$2\sigma^2/\pi$. More generally put $X=\Theta-m$ and
+$Z=-cX+\eta$. Joint Gaussian regression gives
+\[
+ \E[X\mid\operatorname{sign}Z]
+ =\frac{\operatorname{Cov}(X,Z)}{\operatorname{sd}(Z)}
+   \sqrt{\frac2\pi}\operatorname{sign}Z.
+\]
+Its variance is the displayed value by conditional total variance.
+The fixed-noise value tends to zero while the random boundary law stays
+unchanged.
+\end{proof}
+
+\begin{proposition}[PROVED: Local root sensitivity requires a nonzero gradient]
+\label{rthreegeo:rootsensitivity}
+On a fixed normal line, let $f_t(x)=f(x)+t e(x)$ be continuously
+differentiable near $(t,x)=(0,x_0)$, with $f(x_0)=0$ and
+$f'(x_0)\ne0$. There is a local differentiable root $x(t)$, and
+\[
+ x'(0)=-\frac{e(x_0)}{f'(x_0)}.
+\]
+This derivative is invariant when both $f$ and $e$ are multiplied by a
+positive constant.
+\end{proposition}
+\begin{proof}
+The implicit function theorem gives the root and its differentiability.
+Differentiate $f(x(t))+t e(x(t))=0$ at zero and solve for $x'(0)$.
+The multiplicative constant cancels. Uniform positional bounds require
+a uniform derivative lower bound and control of additional roots;
+the local identity by itself supplies neither.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: Area and tolerance overlap are different losses]
+\label{rthreegeo:areansd}
+For $h=0$ and $g_k(u)=k^{-1}\sin(k^2u)$ on $[0,1]$, graph Hausdorff
+distance and symmetric-difference area tend to zero, whereas graph
+length diverges. For two parallel equal-area surfaces separated by $d$,
+normalized surface Dice at tolerance $\tau$ is one for $d\le\tau$ and
+zero for $d>\tau$, while Hausdorff distance is $d$.
+\end{counterexample}
+\begin{proof}
+Uniform graph displacement is at most $1/k$, bounding both Hausdorff
+distance and integrated displacement. Graph length is at least
+$\int_0^1 k|\cos(k^2u)|du=(2/\pi)k+o(k)$.
+For the parallel surfaces every point's nearest-surface distance is
+exactly $d$, so every point either counts within tolerance or does not.
+\end{proof}
+
+\section{A Hausdorff acquisition counterexample beyond pairwise moments}
+
+\begin{lemma}[PROVED: Bayes sup-distance risk on a binary cube]
+\label{rthreegeo:cuberisk}
+For any distribution of $B\in\{0,1\}^m$, allowing all estimates
+$h\in[0,1]^m$,
+\[
+ \inf_h\E\|h-B\|_\infty
+ =\min\left\{\frac12,1-\max_b\mathbb P(B=b)\right\}.
+\]
+\end{lemma}
+\begin{proof}
+The cube center has risk $1/2$, and a modal vertex has risk $1-p_{\max}$.
+For any $h$, round each coordinate to a nearest endpoint to obtain $v$,
+and let $r=\|h-v\|_\infty\le1/2$.
+Every other vertex is at distance at least $1-r$, hence the risk is at
+least $p_vr+(1-p_v)(1-r)$. Its minimum over $r\in[0,1/2]$ is
+$\min\{1/2,1-p_v\}$, which is at least the stated lower bound.
+The two explicit actions attain that bound.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: Equal binary pair moments, different geometric query values]
+\label{rthreegeo:parity}
+Let three bases $u_i$ have pairwise distances at least $3$.
+A random boundary is $\{(u_i,B_i):i=1,2,3\}$, where
+$B\in\{0,1\}^3$, and admissible estimates have heights in $[0,1]^3$.
+Querying column $i$ at height $1/2$ reveals $B_i$.
+The following two laws have identical first and pairwise binary moments:
+\[
+\begin{array}{c|rrrrrrrr}
+ B&000&001&010&011&100&101&110&111\\\hline
+ 70P_+(B)&34&0&0&12&0&12&12&0\\
+ 70P_-(B)&22&12&12&0&12&0&0&12
+\end{array}
+\]
+Their current Hausdorff Bayes risks are both $1/2$, but the exact values
+of querying $B_1$ are $11/70$ and zero, respectively.
+\end{counterexample}
+\begin{proof}
+Because other columns are at distance at least $3$ whereas the
+same-column height difference is at most $1$, the Hausdorff loss is
+exactly $\|h-B\|_\infty$.
+Direct summation gives, for both laws,
+\[
+ \mathbb P(B_i=1)=24/70,\qquad
+ \mathbb P(B_i=B_j=1)=12/70\quad(i\ne j).
+\]
+These determine every first and pairwise binary moment.
+Every atom has probability less than $1/2$, so
+Lemma~\ref{rthreegeo:cuberisk} gives current risk $35/70$.
+The events $B_1=0$ and $B_1=1$ have masses $46/70$ and $24/70$.
+For a branch of mass $s$ and largest atom mass $p$, its unnormalized
+Bayes risk is $\min\{s/2,s-p\}$ by the same lemma.
+Under $P_+$, branch zero has largest atom $34/70$ and risk $12/70$;
+branch one has risk $12/70$. Updated expected risk is $24/70$.
+Under $P_-$, branch zero has largest atom $22/70$, so its risk is
+$23/70$; branch one again has risk $12/70$. Updated expected risk
+is $35/70$. Subtraction proves the two query values.
+This counterexample permits intermediate height estimates and thus
+does not rely on forcing the estimate to be a posterior sample.
+\end{proof}
+
+\section{Discovery, refinement, and violations of structural assumptions}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: Optimal startup, suboptimal later geometry at equal budget]
+\label{rthreegeo:discoverygeometry}
+Fix any $k\ge1$, put $M=k+1$, and let
+$\Theta_1,\ldots,\Theta_M$ be independent fair bits.
+The geometric target has $M$ separated columns, heights $H\Theta_i$,
+and base separations at least $3H$.
+The finite candidate pool contains one membership query $q_i$ at height
+$H/2$ in each column, revealing $\Theta_i$, and two paid certification
+anchors of fixed labels $0$ and $1$.
+Startup requires actually observed labels of both classes.
+
+Policy A queries the anchors first. It has the globally minimal
+$T_{\rm both}=2$ surely. With an optimal continuation and total paid
+budget $Q=k+2$, its final Hausdorff Bayes risk is $H/2$.
+Policy B has $\E T_{\rm both}=5/2$, $T_{\rm both}\le3$, and zero final
+geometric risk by the same total budget $Q$.
+\end{counterexample}
+\begin{proof}
+No policy can observe both labels in fewer than two queries, proving
+A's startup optimality. After its two anchors, A has at most $k$
+individual-bit queries for $M=k+1$ independent bits.
+Conditional on any adaptive query history, an unqueried bit remains
+independent and fair. Its minimum expected absolute height error is
+$H/2$, a lower bound on expected Hausdorff error.
+Set every unknown height to $H/2$ and every known height correctly;
+the loss is exactly $H/2$, attaining the bound.
+
+B first queries $q_1,q_2$. With probability $1/2$ their labels differ,
+so startup ends at two. Otherwise it queries the opposite-label anchor,
+ending at three. Thus its expected startup cost is $5/2$.
+It then queries the remaining $M-2=k-1$ bits. The total cost is at most
+$3+(k-1)=Q$, and all boundary heights are known. Unused budget can be
+padded by an irrelevant remaining query if an exactly equal paid count
+is desired. Therefore its risk is zero.
+
+This is an operational paid-certification example. If known structural
+anchors may replace actual paid observations, the startup contract
+changes. The result concerns the stated actual-observation contract.
+\end{proof}
+
+\begin{proposition}[PROVED: State coalescence bounds later effects]
+\label{rthreegeo:coupling}
+Couple two policies on the same truth and continuation seed. Suppose
+their complete sufficient states coincide at budget $b$ with probability
+at least $1-\delta$, and they use the same subsequent transition and
+prediction rules. For any later endpoint in an interval of length $L$,
+\[
+ |\E Z_A-\E Z_B|\le L\delta.
+\]
+For a weighted learning-curve endpoint with nonnegative weights
+$\lambda_t$ summing to one, if $\delta_t$ bounds the probability of
+noncoalescence at budget $t$, then
+\[
+ |\E\textstyle\sum_t\lambda_t Z_{A,t}
+       -\E\sum_t\lambda_t Z_{B,t}|
+ \le L\sum_t\lambda_t\delta_t.
+\]
+Identical query sets imply identical states only under order-invariant
+fitting, equal seeds, and absence of additional history-dependent state.
+\end{proposition}
+\begin{proof}
+Identical transitions preserve identical states inductively on the
+coalescence event. Endpoint differences vanish on that event and are
+bounded by $L$ on its complement. Take expectations.
+Apply this argument at each budget and use the triangle inequality for
+the weighted endpoint.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: Three different meanings of monotonicity]
+\label{rthreegeo:monotone}
+Monotone class probabilities do not permit deterministic label
+propagation: independent labels with probabilities $0.49,0.51$ are
+stochastically ordered but have probability $0.49^2$ of the reversed
+pair $(1,0)$.
+
+On a chain of $N$ points, the deterministic truth
+$(1,0,\ldots,0,1)$ differs at one point from the monotone threshold
+$(0,\ldots,0,1)$. Propagating the first observed positive upward gives
+$N-2$ wrong labels. This is one contaminated point but $N-2$ violating
+pairs. Even exactly one violating pair destroys zero-error propagation:
+the sequence $(0,\ldots,0,1,0,1,\ldots,1)$ with adjacent $1,0$
+incorrectly propagates the first of those two labels to the second.
+\end{counterexample}
+\begin{proof}
+Independence gives $\mathbb P(Y_1=1,Y_2=0)=0.49(1-0.51)$.
+For the first deterministic sequence, every middle zero is dominated
+by the first positive and is therefore incorrectly removed by the
+hard monotonicity rule. Each is also a distinct violating pair with
+the first point. In the second sequence the adjacent reversed pair is
+the only inversion; propagation across it is nonetheless wrong.
+\end{proof}
+
+\begin{proposition}[PROVED: A robust and tight rank-error discovery bound]
+\label{rthreegeo:rank}
+In a fixed tie-broken order of $N$ items containing $r\ge1$ designated
+rare items, let $V$ count common-before-rare pairs, and let $D$ be the
+first rare rank. Then
+\[
+ D\le1+\left\lfloor\frac Vr\right\rfloor.
+\]
+If $0<r<N$ and AUC is computed on this strict rare-oriented ranking,
+\[
+ D\le1+\lfloor(1-\mathrm{AUC})(N-r)\rfloor.
+\]
+For a top-$M$ subset containing $s$ rare items,
+\[
+ V\ge(M-s)(r-s).
+\]
+In particular $V<Mr$ guarantees that the first $M$ positions contain
+a rare item. The first-hit bound is attained when $V=kr$ by placing
+$k$ common items, all $r$ rare items, then all remaining common items.
+\end{proposition}
+\begin{proof}
+Each of the $D-1$ common items preceding the first rare precedes all
+$r$ rare items. Thus $V\ge r(D-1)$.
+For a strict ranking, $1-\mathrm{AUC}=V/[r(N-r)]$.
+For the tail inequality, each of the $M-s$ common items inside the
+top-$M$ subset precedes every one of the $r-s$ rare items outside it.
+If $s=0$, this forces $V\ge Mr$.
+The displayed block ordering has exactly $kr$ inversions and first-hit
+rank $k+1$, proving attainment. Half-credit AUC for unresolved ties
+does not fix a deterministic first-hit rank; the declared tie order
+must be used.
+\end{proof}
+
+
+% Root synthesis results, complete proofs; no external file dependencies.
+\section{Additional decision certificates and finite-pool checks}
+
+\begin{proposition}[PROVED: exact zero-value and limiting conditions]
+\label{prop:zero-value-r3}
+If Bayes actions are attained under a fixed loss, coherent Bayes value
+is zero exactly when some current Bayes action is conditionally optimal
+after almost every observation. For a sequence of binary experiments,
+$P(O_j=1)\to1/2$ is equivalent to $\mathbb E O_j\to0$.
+For fixed finite Hamming targets with positive weights, query value tends
+to zero if and only if
+$(|\mathbb E[T_iO_j]|-|\mathbb E T_i|)_+\to0$ for every target.
+For integrated squared graph displacement with a binary observation
+whose mean tends to zero, value tends to zero if and only if
+$\int w(u)\operatorname{Cov}(g(u),O_j)^2du\to0$.
+\end{proposition}
+\begin{proof}
+For a current Bayes action $a_0$, the value equals the expectation of
+the nonnegative conditional optimality gap
+$\mathbb E[L(a_0,T)\mid O]-\inf_a\mathbb E[L(a,T)\mid O]$.
+It vanishes exactly when that gap vanishes almost surely.
+The observation-marginal equivalence follows from
+$P(O=1)=(1+\mathbb E O)/2$. The Hamming result follows from the
+binary-observation identity and a finite sum of nonnegative terms
+with fixed positive weights. The squared-graph formula is
+Proposition~\ref{rthreegeo:graphloss}; its denominator
+$\operatorname{Var}(O)=1-(\mathbb E O)^2$ tends to one.
+\end{proof}
+
+\begin{proposition}[PROVED: a self-information condition for observed-label margin]
+\label{prop:self-margin-r3}
+Let fixed binary targets have nonnegative weights summing to one. Put
+$b_j=\min\{P(O_j=1),P(O_j=-1)\}$. Then their total Hamming Bayes
+value $V(j)$ is at most $b_j$. Suppose every candidate $j$ is also a target
+with weight $w_j>0$, and its unweighted self-value $v_{jj}$ is at least
+$\alpha b_j$ for a common $\alpha>0$. If $m$ maximizes $b_j$, then
+\[
+ V(m)\ge \alpha w_m\max_j V(j)\ge\alpha w_{\min}\max_j V(j).
+\]
+It suffices that the self-value condition hold at the selected $m$.
+\end{proposition}
+\begin{proof}
+Let $o_+$ be a most probable observation outcome and $d_+,d_-$ the
+conditional Bayes actions. Before querying, using $d_+$ is feasible,
+so the old Bayes risk is at most its unconditional risk. Subtracting the
+optimal observation-dependent risk leaves at most
+\[
+ P(O_j=o_-)\,
+ \mathbb E[L(d_+,T)-L(d_-,T)\mid O_j=o_-]\le b_j,
+\]
+because normalized Hamming loss lies in $[0,1]$.
+The selected query's total value includes its nonnegative self contribution,
+so $V(m)\ge w_m v_{mm}\ge\alpha w_m b_m$. Finally
+$b_m\ge b_j\ge V(j)$ for each $j$.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: noiseless disjoint targets give no margin ratio]
+Let the sole target $T$ have $P(T=1)=1/2+\delta$, where $0<\delta<1/2$.
+Query $a$ reveals an independent fair sign; query $b$ reveals $T$.
+Observed-label margin uniquely selects $a$, whose value is zero.
+Query $b$ has value $1/2-\delta$.
+\end{counterexample}
+\begin{proof}
+The fair observation is strictly more uncertain than the biased one.
+Independence leaves the target posterior unchanged after $a$; revelation
+after $b$ removes all target error.
+\end{proof}
+
+\begin{proposition}[PROVED: model-internal improvement and updater error]
+\label{prop:improvement-r3}
+In Theorem~\ref{thm:terminal-transfer-r3}'s notation, let
+$\gamma=V_Q(j_Q)-V_Q(j_m)$, and use the $Q$-Bayes terminal rules
+$g_{j_Q},g_{j_m}$. The true-risk improvement from replacing $j_m$ by
+$j_Q$ is at least
+\[
+ \gamma-\frac{D_{j_Q}+D_{j_m}}2.
+\]
+If actual terminal rules $\widetilde g_j$ differ from $g_j$, define
+\[
+ \zeta_j=\sum_iw_iP\{\widetilde g_{ij}(O_j)\ne g_{ij}(O_j)\}.
+\]
+The same improvement lower bound for the actual rules subtracts the
+additional term $\zeta_{j_Q}+\zeta_{j_m}$.
+\end{proposition}
+\begin{proof}
+The fixed-rule risk discrepancy is at most $D_j/2$ by
+Theorem~\ref{thm:terminal-transfer-r3}. Insert the two corresponding
+$Q$ risks between the true risks. Their difference is $\gamma$ because
+the baseline cancels. A classification loss can change only when the
+two predicted labels differ; the absolute risk difference caused by
+replacing $g_j$ is at most $\zeta_j$. Apply the triangle inequality.
+\end{proof}
+
+\begin{proposition}[PROVED: covariance and joint-log-score versions]
+\label{prop:cov-kl-r3}
+Write $n_j^R=\mathbb E_R O_j$ and
+$k_{ij}^R=\operatorname{Cov}_R(T_i,O_j)$. If both target and observation
+spin marginals differ by at most $\epsilon_m$, and
+$\sum_iw_i|k_{ij}^P-k_{ij}^Q|\le\epsilon_c$ for every $j$, then
+the terminal regret in Theorem~\ref{thm:terminal-transfer-r3} is at most
+$2\epsilon_m+\epsilon_c$.
+Alternatively, if $P_{ij},Q_{ij}$ are the actual joint laws of
+$(T_i,O_j)$, then
+\[
+ D_j\le\sum_iw_i\sqrt{2\operatorname{KL}(P_{ij}\Vert Q_{ij})}
+ \le\sqrt{2\sum_iw_i\operatorname{KL}(P_{ij}\Vert Q_{ij})}.
+\]
+Thus a uniform bound $K$ on the last weighted KL sum gives terminal
+regret at most $\sqrt{2K}$.
+\end{proposition}
+\begin{proof}
+Since $c_{ij}=m_i n_j+k_{ij}$ and spin means are bounded by one,
+$|c_{ij}^P-c_{ij}^Q|\le |m_i^P-m_i^Q|+|n_j^P-n_j^Q|
++|k_{ij}^P-k_{ij}^Q|$. The same bound dominates the target-mean
+error, proving $D_j\le2\epsilon_m+\epsilon_c$.
+Each of the two moments defining $D_j$ is an expectation of a
+function in $[-1,1]$, so its difference is at most $2\operatorname{TV}
+(P_{ij},Q_{ij})\le\sqrt{2\operatorname{KL}(P_{ij}\Vert Q_{ij})}$
+by Pinsker. Jensen's inequality for the square root gives the weighted
+bound. Expected excess negative log score equals KL by its definition;
+raw negative log score also contains the true entropy and is not KL.
+\end{proof}
+
+\begin{proposition}[PROVED: vanishing information under a fixed smooth channel]
+\label{prop:bounded-scale-r3}
+Let $G$ be a random state/field and let a query return a binary observation
+with $P_c(O=1\mid G)=\kappa(cG_j)$, where $\kappa(0)=1/2$.
+For any fixed measurable loss in $[0,1]$, its coherent Bayes information
+value satisfies
+\[
+ 0\le V_c(j)\le\mathbb E|\kappa(cG_j)-1/2|.
+\]
+Consequently the value vanishes as $c\downarrow0$ for a continuous
+bounded channel. If $\mathbb E|G_j|<\infty$, logistic gives the upper
+bound $c\mathbb E|G_j|/4$, and $\kappa(f)=\Phi(f/\tau)$ gives
+$c\mathbb E|G_j|/(\tau\sqrt{2\pi})$.
+\end{proposition}
+\begin{proof}
+Compare the joint law of $(G,O)$ with the law sharing the same $G$
+but making $O$ an independent fair coin. Their total variation is
+$\mathbb E|\kappa(cG_j)-1/2|$, as follows by summing the two outcome
+probability differences conditionally on $G$. The risk of any fixed
+observation-to-action rule changes by at most this TV, and taking the
+infimum preserves the same bound. Under the independent coin no rule
+improves on the prequery Bayes action, so its optimal risk is the
+prequery risk. Nonnegativity follows from retaining that action.
+Dominated convergence and the respective derivative bounds on the
+links finish the proof.
+\end{proof}
+
+\begin{proposition}[PROVED: independent copy blocks make EER optimal for every budget]
+\label{prop:blocks-r3}
+Partition a finite target pool into blocks. Labels are identical within
+each block and independent between blocks. A noiseless query reveals
+the block's common sign. Let $W_b$ be total block weight and $u_b$
+its initial Bayes error. Optimal total gain at budget $B$ is the sum
+of the largest $\min(B,\text{number of blocks})$ numbers $W_bu_b$.
+Exact greedy EER achieves it.
+\end{proposition}
+\begin{proof}
+A query resolves its block and leaves every other block law unchanged.
+Hence the value of the first query in block $b$ is always $W_bu_b$,
+and additional queries there have zero value. Every adaptive
+realization can resolve at most $B$ blocks, so its gain is bounded
+by the sum of the largest fixed block values. Choosing those blocks
+attains the bound, independently of the observed signs.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: correct-specification multistep EER exceeds margin]
+Take two independent fair singleton blocks and an independent
+$M$-point copy block of error $1/2-\eta$, with equal point weights
+$1/(M+2)$ and $0<\eta<1/2$. If $M(1/2-\eta)>1/2$, then at budget two
+margin gains $1/(M+2)$, whereas exact EER gains
+$[M(1/2-\eta)+1/2]/(M+2)$ and is horizon-optimal.
+\end{counterexample}
+\begin{proof}
+The two fair singleton marginals are strictly most uncertain until
+both are queried, so margin spends both queries there. Each contributes
+$1/[2(M+2)]$. The copy-block value is strictly larger than either
+singleton value; the preceding proposition gives the EER ordering
+and optimum.
+\end{proof}
+
+\begin{proposition}[PROVED: randomization cannot improve a known finite-policy optimum]
+For a fixed known finite-world law, finite actions/outcomes, a fixed
+horizon and terminal loss, an optimal adaptive policy can be chosen
+deterministic.
+\end{proposition}
+\begin{proof}
+Condition on all internal random choices of a randomized decision tree.
+Its expected risk is a mixture of risks of deterministic trees, so at
+least one tree has risk no greater than the mixture. Equivalently,
+backward induction minimizes an affine function of each action
+distribution at an extreme point. This does not address minimax
+robustness over an unknown law, where mixtures can help.
+\end{proof}
+
+\begin{proposition}[PROVED: edge-loss Bayes actions and the third moment]
+\label{prop:edge-moment-r3}
+On a fixed weighted graph, let $Z_e=T_iT_k$ denote whether endpoint
+signs agree. For unconstrained edge-sign predictions $a_e\in\{-1,1\}$,
+weighted edge-disagreement Bayes risk is
+\[
+ R_E=\frac12\sum_e w_e(1-|\mathbb E Z_e|).
+\]
+The exact one-step reduction after binary $O_j$ is
+\[
+ \frac12\sum_e w_e
+ (|\mathbb E[T_iT_kO_j]|-|\mathbb E[T_iT_k]|)_+.
+\]
+If the output must be a cut induced by vertex predictions, the
+optimization is over the feasible cut signs instead. Pair and triple
+moments remain sufficient for evaluating and optimizing this fixed
+loss before and after one binary observation, but coordinatewise edge
+modes need not form a feasible cut.
+\end{proposition}
+\begin{proof}
+Apply Lemma~\ref{lem:binary-observation-r3} to the binary target $Z_e$.
+For constrained actions, the expected loss of any vertex labeling is
+an affine combination of the edge means, so minimizing over finitely
+many labelings uses only those means. Conditional edge means are
+\[
+ \mathbb E[Z_e\mid O_j=o]
+ =\frac{\mathbb E Z_e+o\mathbb E[Z_eO_j]}
+        {1+o\mathbb E O_j}
+\]
+on positive-probability outcomes. Thus second and third moments plus
+the observation marginal suffice. Cycles impose compatibility
+constraints: an odd number of cut edges on a cycle is impossible,
+illustrating why independent edge modes may fail feasibility.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: even an optimized ratio can have negative coherent value]
+\label{ce:optimized-ratio-r3}
+Use two disjoint graph edges with cut indicators $(1,Z)$, where
+$P(Z=1)=p$. All four cut predictions are feasible. Consider the
+posterior functional
+\[
+ R(p)=\min_{a\in\{0,1\}^2}
+ \frac{\mathbb E\sum_{e=1}^2|Z_e-a_e|}
+      {\mathbb E\sum_{e=1}^2 Z_e+\sum_{e=1}^2a_e}.
+\]
+At $p=3/4$, $R(p)=1/15$. A coherent binary observation with equally
+probable posterior probabilities $p'=1/2$ and $p'=1$ gives expected
+future risk $1/14$, hence reduction $-1/210$.
+\end{counterexample}
+\begin{proof}
+For predictions $(0,0),(1,0),(0,1),(1,1)$ the respective ratios are
+\[
+ 1,\qquad \frac p{2+p},\qquad\frac{2-p}{2+p},
+ \qquad\frac{1-p}{3+p}.
+\]
+For $p\in[1/2,1]$, the last is minimal. At $3/4$ it is $1/15$,
+at $1/2$ it is $1/7$, and at $1$ it is zero.
+Define the observation by the joint probabilities
+$P(O=0,Z=0)=1/4$, $P(O=0,Z=1)=1/4$,
+$P(O=1,Z=1)=1/2$. Its two branches have the stated masses and
+posteriors; no incoherent update is used. The expected future ratio
+is $1/14$. Unlike this ratio of expectations, the posterior expectation
+of a fixed normalized loss, minimized over fixed admissible actions,
+obeys Proposition~\ref{prop:nonnegative-r3}.
+\end{proof}
+
+\begin{proposition}[PROVED: uniform first-hit and both-class discovery laws]
+\label{prop:tail-r3}
+For $0<r<N$, a uniform random ordering of $N$ items with $r$ designated
+rare items has first-hit time $D$ satisfying, for $0\le k\le N$,
+\[
+ P(D>k)=\frac{\binom{N-r}{k}}{\binom Nk},\qquad
+ \mathbb E D=\frac{N+1}{r+1}.
+\]
+Its time $T$ to observe both classes satisfies, for $1\le k\le N$,
+\[
+ P(T>k)=\frac{\binom rk+\binom{N-r}k}{\binom Nk},\qquad
+ \mathbb E T=\frac{N+1}{r+1}+\frac{N+1}{N-r+1}-1.
+\]
+Binomial coefficients exceeding available items are zero; survivors
+are zero beyond the population size.
+In a fixed subset with $M$ items and $s\ge1$ rare items, uniform
+ordering has the same first-hit formulas with $N,r$ replaced by $M,s$.
+If $s/M\ge r/N$, this subset first-hit time stochastically dominates
+in the favorable direction: its survival probability is no larger.
+\end{proposition}
+\begin{proof}
+No rare item among the first $k$ is precisely a size-$k$ subset chosen
+from the $N-r$ common items, giving the survival formula.
+The $N-r$ common items occupy $r+1$ exchangeable gaps around the rare
+items, so the expected number before the first rare is $(N-r)/(r+1)$.
+For $T>k$ with $k\ge1$, all $k$ labels are rare or all are common,
+disjoint events. Summing their survivor probabilities gives the
+displayed mean, with the duplicated $k=0$ term corrected by subtracting
+one. Apply the same argument to the subset.
+Conditional on $k$ failures, the subset success hazard is $s/(M-k)$
+and the full-pool hazard is $r/(N-k)$ while both are defined.
+The difference after cross multiplication has numerator
+$sN-rM+k(r-s)\ge0$, because $s\le r$ and enrichment holds.
+Multiplying failure hazards proves the survivor ordering; after
+the subset's common items are exhausted its survival is zero.
+Neither argument applies to an arbitrary history-conditioned
+deterministic extreme-selection policy.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE: no arbitrary continuous-boundary guarantee from finite signs]
+\label{ce:finite-boundary-r3}
+Let a finite query pool in an interval leave an open gap $(a,b)$.
+Two noiseless smooth classifiers $f_0(x)=x-\theta_0$ and
+$f_1(x)=x-\theta_1$, with $a<\theta_0<\theta_1<b$, agree on every
+pool label but have boundary Hausdorff distance $\theta_1-\theta_0$.
+Any pool-only estimator has worst-world expected boundary error at
+least $(\theta_1-\theta_0)/2$.
+\end{counterexample}
+\begin{proof}
+Every pool point is on the same side of both thresholds. Thus even
+revealing all pool labels gives identical data in the two worlds.
+Couple the estimator's randomness so its output is the same.
+The triangle inequality for Hausdorff distance implies that its two
+errors sum to at least the distance between the boundaries. Take
+expectations and the larger error. The thresholds can approach the
+gap endpoints. A coverage bound limits this ambiguity but an arbitrary
+finite pool supplies no smaller universal positional guarantee.
+\end{proof}
+
+\section*{Verification and use}
+\addcontentsline{toc}{section}{Verification and use}
+\paragraph{Verification [NUMERICALLY CHECKED].}
+The companion verification record checks the binary identity on 1,819
+rational laws, the exact negative edge/Dice examples, the parity
+example's identical initial pairs, and 2,036 ranked binary sequences.
+The terminal moment bound was additionally checked on 2,000 random
+joint-law pairs. These checks supplement the proofs and do not
+establish that any assumption holds for a real campaign.
+\paragraph{Experiment mapping [CONJECTURE: test proposals].}
+Every useful result is paired with a computable statistic and falsifier
+in the report's experiment table. Synthetic algebra checks, same-state
+model diagnostics, and future-campaign policy comparisons are distinct
+forms of evidence. No new empirical acquisition experiment was run.
+\end{document}

@@ -1,0 +1,40 @@
+## 8. Week 16 cross-audit and minimal fixes
+
+**NUMERICALLY CHECKED.** Source inspection covered week16_peer.py, week16_headroom.py, week16_cells.py, week16_validate.py, week16_calibration.py, week16_real.py, week15_ebr.py, the Week 16 report/theory/erratum and the cited result tables. The verdicts below distinguish exact mathematics from implementation/evidence scope.
+
+| Item | Verdict | Tagged reason | Minimal fix |
+|---|---|---|---|
+| General binary-observation lemma | CORRECT | PROVED: exact under binary target/observation and unconstrained coordinatewise Hamming actions | State weights, target set, and conditioning law |
+| PEER derivation | CORRECT WITH CONDITIONS | PROVED: exact for a current Gaussian law and independent Gaussian future noise; logistic posterior and refits are approximations | Call it Gaussian/probit coherent one-step EER |
+| W16-1 zero margin ratio | CORRECT WITH CONDITIONS | COUNTEREXAMPLE: ratio zero under variable effective sign reliability; noise alone is insufficient | Add common-BSC positive theorem and target-overlap qualification |
+| “This is the regime of every GPC in the thesis” | GAP | PROVED / NUMERICALLY CHECKED: a stochastic working likelihood is not evidence of stochastic physical observations | Distinguish P-deterministic oracle from Q-stochastic channel |
+| “Pinned latent, hence boundary known” | GAP | COUNTEREXAMPLE: positive rescaling changes latent sd without changing boundary law; centered sign entropy stays maximal | Report root-position uncertainty or sd/normal-gradient plus regularity |
+| All low-ratio picks are aleatoric decoys / not extrapolation | GAP | NUMERICALLY CHECKED: lower self-values support part of the story; geometry, covariance, targets and hull baselines remain confounded | Use common-state self/cross-value decomposition and explicit alternative explanations |
+| Coherent Bayes expected risk reduction cannot be negative | CORRECT WITH CONDITIONS | PROVED: fixed loss, fixed action space, actual Bayes action and one coherent update | State these conditions; expectation, not every realized outcome |
+| Negative VSUR + measured martingale discrepancy | CORRECT WITH CONDITIONS | NUMERICALLY CHECKED: validates failure of the implemented Hamming refit construction as one coherent experiment | Compare exact same-law conditionals; report numerical tolerances |
+| Negative EBR/EBR-D implies incoherent updating | WRONG | COUNTEREXAMPLE: plug-in marginal-sign cuts and ratios of expectations can increase under exact conditioning | Separate action suboptimality/functional nonconcavity from update error |
+| Graph-cut Dice ratio equals geometric surface-Dice/NSD deficit | WRONG as an identity | COUNTEREXAMPLE: two nonoverlapping parallel cuts can have the same cut disagreement at different physical separations, while fixed-tolerance surface Dice changes | Name the graph estimand; prove a separate geometric approximation under an explicit resolution/tolerance regime |
+| Headroom identity H=A+(H−A) | CORRECT WITH CONDITIONS | PROVED: algebra on evaluated candidates, targets and specified updater | Identify candidate cap and all components of utility |
+| H−A identifies inaccessible truth/model information | WRONG as identification; GAP as hypothesis | PROVED: updater-excess-risk decomposition; truth-conditioned Bayes value is zero | Say PEER did not recover the truth-weighted refit oracle's gain |
+| Pairwise calibration test directly tests the regret theorem | GAP | PROVED / NUMERICALLY CHECKED: required pair is (T_i,O_j); tested pairs and states differ | Same states, correct target-query pair law, proper excess score |
+| “Corollary operates in its contrapositive” | WRONG | PROVED: poor rank correlation does not imply large absolute regret or certify moment error | Use a matched regret bound and quantified discrepancy |
+| Saturation example in THEORY_WEEK16 | WRONG numerical illustration | NUMERICALLY CHECKED: 0.002 is above the declared 10^−6 threshold; actual flagged state is B48 | Replace stale B24 illustration or call it small-but-nonsaturated |
+| Martingale gap “max 4.3” | CORRECT WITH CONDITIONS | NUMERICALLY CHECKED: 4.268 is maximum of state medians; candidatewise maximum is 7.158 | Name the aggregation explicitly |
+| Enrichment exactly explains adaptive startup | GAP | PROVED: fixed uniform-tail law differs from history-conditioned extreme selection | Add conditional-rank analysis and maintain discovery/refinement distinction |
+| Model formulation matters more than acquisition sophistication | GAP as established ordering; CONJECTURE as research direction | PROVED / NUMERICALLY CHECKED: current audit has not controlled channel, updater and loss simultaneously | Run discriminating factorial tests; avoid causal ranking of bottlenecks |
+| Regularized physics mean is an established replacement | WRONG if asserted | NUMERICALLY CHECKED: descriptive candidate, distinct fitting architecture | Retain candidate status and require a matched future transfer test |
+| Laplace convergence correction | CORRECT WITH CONDITIONS | NUMERICALLY CHECKED: two affected cells materially change; coherent-conditioning issue remains | Withdraw all affected historical policy/oracle numbers; do not infer unrun corrected comparisons |
+
+### 8.1 Two explicit negative-score refutations
+
+**COUNTEREXAMPLE [C10].** Put masses (2,2,2,3)/9 on target states (00,01,10,11) and observe whether the state is 01. XOR of marginal Bayes labels has prior edge risk 4/9 and expected postquery edge risk 5/9: coherent EBR is −1/9. With masses (1,1,2,1)/5 and the same observation, the code-style Dice ratio has prior risk 1/4 and expected future risk 4/15: coherent EBR-D is −1/60. All relevant marginal decisions are strict.
+
+**COUNTEREXAMPLE [R5].** Even optimizing the ratio-of-expectations action does not fix its nonconcavity. With one always-cut edge and one random cut of probability p, predict both cuts. At p=3/4 its optimal ratio risk is 1/15. A coherent observation yielding posterior p=1/2 or 1, each with probability 1/2, increases expected optimal ratio risk to 1/14. Reduction is −1/210. Expected *fixed* Dice loss, minimized over actions, would instead obey Bayes nonnegativity. This separates a ratio-of-expectations defect from a plug-in-action defect.
+
+### 8.2 What the Laplace correction changes
+
+**NUMERICALLY CHECKED.** The saved convergence audit has 16 affected paths, all from the two gpworld m0=−4 cells, with no base-fit failures among the other 184 paths. Corrected margin mean NSD is 0.6134607 instead of 0.0636513 for pool 108, and 0.5976201 instead of 0.0128758 for pool 324. The table records zero maximum trace change outside those cells. This confirms the erratum's main numerical scope from saved artifacts, not by independently refitting every GP.
+
+**PROVED; interpretation.** Reaching the logistic posterior mode corrects an optimization defect. It does not turn a Gaussian Laplace approximation into the exact posterior, make repeated projection a posterior martingale, match a probit surrogate to a logistic truth channel, or validate the Bayes action for a geometric loss. The unchanged frozen Week 15 verdict remains a statement about its tested procedure and unaffected failures. Corrected unrun policy/oracle comparisons remain unknown. Model.fit also needs its convergence diagnostic checked in every base and fantasy fit; computing a flag without enforcing or auditing it is not a universal convergence guarantee.
+
+**NUMERICALLY CHECKED; additional mathematical validation.** The final check also verified the geometric parity example exactly, the optimized negative Dice ratio, 2,700 common-BSC law/channel combinations, 200 sequential P/Q pairs with all 12 two-query sensor policy maps, and the discovery construction for k=1,…,6. Independent quadrature of the Gaussian random-threshold geometric value agreed with its formula to 8.3×10^−15. These are mathematical/control checks, not new SPH performance evidence.

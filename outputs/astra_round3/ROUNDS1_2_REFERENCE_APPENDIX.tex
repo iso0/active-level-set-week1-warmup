@@ -1,0 +1,1376 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,longtable,array,booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Counterexample}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\sg}{\operatorname{sgn}_{+}}
+\newcommand{\pos}[1]{\left(#1\right)_{+}}
+\newcommand{\pr}{\textbf{[PROVED]}}
+\newcommand{\ce}{\textbf{[COUNTEREXAMPLE]}}
+\newcommand{\nc}{\textbf{[NUMERICALLY CHECKED]}}
+\newcommand{\cj}{\textbf{[CONJECTURE]}}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\Per}{Per}
+\title{Marginal information and acquisition\\Rounds 1--2: proof appendix and Week 15 cross-audit}
+\author{Research working note; priority not established}
+\date{4 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For a finite binary pool, expected Hamming-error reduction is determined by
+first moments and uncentered pair moments. This note proves the sharp one-query
+margin guarantee, the balanced marginal-only minimax value, an exact formula
+for homogeneous rare-class marginals, and misspecification bounds.
+The general sharp finite-horizon margin constant remains unresolved.
+It audits Week 15 and distinguishes coherent conditioning from Laplace
+refitting. This document and all computations are outside the repository;
+no empirical acquisition run was repeated.
+\end{abstract}
+\tableofcontents
+\section{Scope, status, and priority audit}
+All laws are conditional on the current data unless stated otherwise.
+The default model has a fixed pool of $N\ge2$ binary labels, noiseless
+revelation of the queried label, equal-weight evaluation on \emph{all} $N$
+points including queried points, and ideal conditioning under one joint law.
+Each realized world may be deterministic while the unknown label vector is
+random epistemically. A spin takes values $\{-1,+1\}$; transform $0/1$ labels
+before using spin formulas. Set $\sg(0)=+1$.
+
+Ratios compare expected \emph{risk reductions}, not residual errors.
+Zero optimal gain gives a vacuous guarantee. Hamming loss is not NSD, ASSD,
+or boundary Dice. Statements about other targets, noise, weights or model
+updates explicitly change the default assumptions.
+\pr\ means proved here, \ce\ a refuted generalization with a construction,
+\nc\ a finite computation, and \cj\ an unresolved claim.
+Mathematical correctness does not establish publication priority.
+
+\subsection{Closest results and verdicts}
+This is a bounded primary-source audit, not a certificate of absence.
+\small
+\begin{longtable}{p{.24\textwidth}p{.36\textwidth}p{.31\textwidth}}
+\toprule Source & Closest result & Verdict\\\midrule\endhead
+Mussmann--Liang, ICML 2018 \cite{ml18icml}&
+Theorems 4.1--4.2: asymptotic uncertainty-sampling data efficiency versus
+passive logistic regression.&
+Different comparator and regime; not a fixed-pool one-step EER ratio.\\
+Mussmann--Liang, NeurIPS 2018 \cite{ml18nips}&
+Uncertainty sampling as preconditioned SGD on smoothed zero-one loss.&
+Optimization/stationarity results, not the $1/(N-1)$ constant.\\
+Mussmann et al., 2022 \cite{eer}&
+Section 3.2, PDF equation (6), MEZL: expected zero-one loss via pairwise
+predictive probabilities.&
+Direct priority for pairwise EER. Our binary max identity is a specialization.\\
+Liu--Li, 2023 v1 \cite{liu}&
+Equivalent losses and excess-risk guarantees for uncertainty weighting.&
+Different optimization model; no matching finite-pool minimax theorem located.
+Do not attribute later revisions to the original version.\\
+Bickford Smith et al., EPIG 2023 \cite{epig}&
+Section 4: predictive mutual information targeted to test inputs, and expected
+cross-entropy after querying.&
+Direct priority for target-aware dependence; not zero-one sharp constants.\\
+H\"ubotter et al., 2024 \cite{tal}&
+Conference Theorems 3.2--3.3: transductive variance/confidence bounds with
+distinct sampling and target sets.&
+Structural transfer guarantees for function observations; not binary
+Hamming ratios without extra assumptions.\\
+Wang--Sun--Grosse, 2021 \cite{wang}&
+Predictive-correlation benchmarking through TAL, metacorrelations, and XLL.&
+Strong conceptual priority for the failure of marginal quality to imply
+acquisition quality; also separates selection from prediction models.\\
+Pass--Spektor \cite{pass}&
+Extremal moments of pairwise independent Rademacher sums and exchangeable
+sign-slice constructions.&
+Close extremal method, different objective. Ingredients are not new.\\
+Cut-polytope gap inequalities \cite{gap}&
+Integer/parity strengthening of positive semidefiniteness.&
+The parity step for $\kappa_N$ is a known gap inequality.\\
+Bickford Smith--Foster--Rainforth 2024 \cite{update}&
+Section 4.2.1: mismatch between assumed Bayesian updates and actual learning.&
+Direct conceptual priority for the update-consistency caveat.\\
+Hu--Mussmann, arXiv v3, 2026 \cite{batch}&
+Myopic Bayesian decision theory and partial batch label sampling for EPIG.&
+Further decision-theoretic prior art; not the optimal adaptive Hamming ratio.\\
+\bottomrule
+\end{longtable}
+\normalsize
+No equivalent exact $1/(N-1)$ or $\kappa_N$ statement was located in these
+sources or targeted searches under EER competitive ratios, cut-matrix norm
+ratios, sign-sum extremality, or oblivious/marginal-only selection.
+\emph{Priority remains unestablished.} The general claim that marginals miss
+acquisition-relevant dependence is already established prior art.
+The rare-marginal results below also need a separate priority audit.
+
+\section{Binary identity and sharp one-step margin bound}
+\begin{theorem}[Arbitrary binary target and observation]\label{th:binary}
+\pr\ Let $T,O\in\{-1,+1\}$ have any joint law, $m=\E T$, $c=\E TO$.
+The minimum expected zero-one error after observing $O$ is
+\[
+ e(T\mid O)=\frac{1-\max\{|m|,|c|\}}2.
+\]
+For targets $T_i$, weights $w_i\ge0$, $\sum_iw_i=1$, and observations $O_j$,
+put $m_i=\E T_i$ and $c_{ij}=\E T_iO_j$. Then
+\begin{align}
+ R_0&=\tfrac12\sum_iw_i(1-|m_i|),\\
+ F(j)&=\tfrac12\sum_iw_i[1-\max\{|m_i|,|c_{ij}|\}],\\
+ \Delta(j)&=\tfrac12\sum_iw_i\pos{|c_{ij}|-|m_i|}.\label{eq:gain}
+\end{align}
+\end{theorem}
+\begin{proof}
+$\E[T\1_{\{O=s\}}]=(m+sc)/2$. Optimal accuracy minus error therefore equals
+$\sum_s|\E[T\1_{\{O=s\}}]|=(|m+c|+|m-c|)/2=\max(|m|,|c|)$.
+Zero-probability branches cause no problem. Sum the target risks.
+\end{proof}
+\begin{theorem}[Sharp margin guarantee]\label{th:margin}
+\pr\ In the default model put $u_i=\min(p_i,1-p_i)$ and choose
+$a\in\arg\max_i u_i$. Then
+$\Delta(a)\ge\max_j\Delta(j)/(N-1)$.
+The infimum is sharp even with a unique margin maximizer.
+For $N=2$, margin is optimal.
+\end{theorem}
+\begin{proof}
+Let $e_i^{(j)}$ be expected posterior error, $v_{ij}=u_i-e_i^{(j)}$ and
+$G_j=\sum_i v_{ij}=N\Delta(j)$.
+Then $0\le v_{ij}\le u_i$, $v_{jj}=u_j$, and $u_a\ge u_b$ implies
+$e_b^{(a)}\le e_a^{(b)}$ by Theorem \ref{th:binary}.
+Thus $u_b+v_{ab}\le u_a+v_{ba}$ and
+\[
+ G_b\le u_b+v_{ab}+(N-2)u_a
+ \le G_a+(N-2)u_a\le(N-1)G_a.
+\]
+For sharpness take an independent fair decoy $D$ and $N-1$ copies of
+$Z\sim\mathrm{Bernoulli}(1/2+\eta)$. Margin uniquely queries $D$.
+Gains are $1/(2N)$ and $(N-1)(1/2-\eta)/N$, whose ratio tends to $1/(N-1)$.
+\end{proof}
+\begin{corollary}[Independence, entropy, perturbations]\label{cor:basic}
+\pr\ Pairwise independence makes margin one-step Hamming-optimal.
+Noiseless margin maximizes reduction of joint label entropy for every joint
+law. If $|\widehat m_i-m_i|\le\epsilon_m$ and
+$|\widehat c_{ij}-c_{ij}|\le\epsilon_c$, each score \eqref{eq:gain} has error
+at most $(\epsilon_m+\epsilon_c)/2$, and its estimated maximizer has regret
+at most $\epsilon_m+\epsilon_c$.
+\end{corollary}
+\begin{proof}
+Under independence $c_{ij}=m_im_j$ for $i\ne j$, so off-diagonal gains vanish.
+For entropy, $I(Y;Y_j)=H(Y_j)$, increasing with $u_j$.
+For perturbations use the Lipschitz properties of absolute value and positive
+part, then compare the estimated and true maximizing scores.
+\end{proof}
+
+\section{Balanced minimax and the cut polytope}
+\begin{theorem}[Exact balanced marginal-only minimax]\label{th:kappa}
+\pr\ Suppose all $p_i=1/2$. A marginal-only selector uses probabilities
+$q_j$, without access to the joint law. Put $M=N-1$; let $a$ be the greatest
+nonnegative integer at most $\sqrt M$ with the same parity as $M$, and $b=a+2$.
+Set
+\[
+ \tau=(M+ab)/(a+b),\qquad \kappa_N=\frac{N+2\tau}{N(1+\tau)}.
+\]
+Then uniform selection is minimax and
+\[
+ \max_{q\in\Delta_N}\inf_P
+ \frac{\sum_jq_j\Delta_P(j)}{\max_j\Delta_P(j)}=\kappa_N.
+\]
+Equivalently, with $\mathcal C_N=\conv\{ss^\top:s\in\{-1,+1\}^N\}$,
+\[
+ \min_{C\in\mathcal C_N}
+ \frac{\sum_{ij}|C_{ij}|}{N\max_k\sum_i|C_{ik}|}=\kappa_N.
+\]
+\end{theorem}
+\begin{proof}
+Global sign symmetrization makes means zero without changing second moments,
+so $\mathcal C_N$ is exactly the feasible set. Let a maximal column $k$ have
+sum $1+t$ and let $A=\sum_{ij}|C_{ij}|$. Diagonal and root entries imply
+$A\ge N+2t$. Let $W=\sum_{i\ne k}\sigma_iS_iS_k$ with
+$\sigma_iC_{ik}=|C_{ik}|$. Then $\E W=t$ and $W$ lies on the parity-$M$
+lattice, so $(W-a)(W-b)\ge0$. Consequently
+\[
+ \E W^2\ge(a+b)t-ab,\qquad
+ A\ge1+2t+\E W^2\ge1+(2+a+b)t-ab.
+\]
+Divide by $N(1+t)$: the first bound decreases and the second increases.
+Their intersection is $t=\tau$, yielding the lower bound.
+
+For attainment take a fair root $R$ and an independent sign vector $V$ of
+length $M$. Its sum $W$ takes values $a,b$ with
+$\Pp(W=b)=(M-a^2)/(b^2-a^2)$; conditional on $W$, use a uniform sign slice.
+Set root spin $R$ and leaf spins $-RV_i$. Then $\E W=\tau$, $\E W^2=M$,
+leaf-pair correlations vanish, and root--leaf correlations equal $-\tau/M$.
+The root and leaf column sums are $1+\tau$ and $1+\tau/M$.
+Uniform selection attains the bound. For any $q$ place the root at an index
+with $q_k\le1/N$, making its ratio no larger than the uniform ratio.
+Every world in this construction contains both classes.
+\end{proof}
+\begin{proposition}[PSD relaxation and known gap inequality]\label{prop:psd}
+\pr\ Over all PSD unit-diagonal matrices the same minimum is
+$(1+\sqrt{N-1})/N$. It equals $\kappa_N$ exactly when $N-1$ is a square.
+The parity step above is a cut-polytope gap inequality.
+\end{proposition}
+\begin{proof}
+The Schur complement gives the algebraic analogue $\E W^2\ge t^2$, hence
+the ratio is at least
+$\max\{(N+2t)/(N(1+t)),(1+t)/N\}$.
+These intersect at $t=\sqrt M$. The matrix with leaf block $I_M$ and every
+root--leaf entry $1/\sqrt M$ is PSD and attains the bound.
+For $N>2$, binary equality requires $W=\sqrt M$ almost surely, possible only
+for square $M$; the extremal slice construction then attains it.
+The case $N=2$ has value one directly.
+For the gap interpretation take integer coefficients $b_k=-(a+1)$,
+$b_i=\sigma_i$. The odd integer $b^\top S=S_k(W-a-1)$ satisfies
+$(b^\top S)^2\ge1$, precisely $(W-a)(W-a-2)\ge0$.
+These inequalities predate this note \cite{gap}.
+\end{proof}
+\nc\ Round-1 checks of extremal laws for $N=4,\ldots,10$ agree with this proof.
+Examples: $\kappa_3=5/6$, $\kappa_4=7/10$, $\kappa_5=3/5$,
+$\kappa_6=5/9$, $\kappa_7=1/2$, $\kappa_{10}=2/5$.
+
+\section{General marginals and an exact rare-class formula}
+\begin{proposition}[Fully oblivious versus marginal-only selection]
+\label{prop:oblivious}
+\pr\ A selector fixed before seeing either marginals or dependence has
+minimax gain ratio $1/N$ over all binary pool laws. Uniform attains it.
+This is a different game from the balanced marginal-only game.
+For any gain guarantee $\Delta_a\ge r\Delta^\star$, the corresponding
+residual-risk statement is
+$R_a\le(1-r)R_0+rR^\star$, not $R_a/R^\star\le1/r$.
+\end{proposition}
+\begin{proof}
+Uniform averages nonnegative gains, hence achieves at least their maximum
+divided by $N$. For any fixed selector choose its least-probable coordinate
+as an independent fair bit and make every other label deterministic.
+Only that query has nonzero value, giving ratio at most $1/N$.
+If all marginals must be nondegenerate, approximate the deterministic ones
+by independent bits of vanishing uncertainty. The risk conversion follows
+by subtracting gains from $R_0$.
+\end{proof}
+\begin{theorem}[Finite LP characterization]\label{th:LP}
+\pr\ Fix $p=(p_1,\ldots,p_N)$ with some nondegenerate coordinate. Let
+$\mathcal P(p)$ be all world laws with these marginals. Partition this
+probability simplex by $c_{ij}=\pm|m_i|$, and collect the vertices $v$ of
+all cells. Set $G_j(v)=N\Delta_v(j)$ and
+$r_j(v)=G_j(v)/\max_kG_k(v)$. The minimax value and an optimal selector solve
+\[
+ \max_{q,z}z,\quad q_j\ge0,\quad\sum_jq_j=1,\quad
+ \sum_jq_jr_j(v)\ge z\quad\hbox{for every cell vertex }v.
+\]
+An optimizer can be constant within each identical-marginal group.
+For two levels, selection therefore reduces to one group-mass variable,
+although enumerating constraints remains exponential.
+\end{theorem}
+\begin{proof}
+Each $G_j$ is linear on each cell. For fixed $q$, the ratio equals
+$\min_{k:G_k>0}(q^\top G)/G_k$. A linear-fractional function with nonnegative
+denominator attains its infimum at a positive-denominator vertex: express
+any point as a convex combination of vertices and weight their ratios by
+their denominators. Zero-denominator vertices add a nonnegative numerator.
+At every law some $G_j\ge u_j>0$. Taking all cells proves the LP.
+The worst-law value is concave in $q$ and invariant under within-group
+permutations; averaging an optimizer proves the symmetry statement.
+\end{proof}
+\begin{proposition}[Uniform is not always minimax]\label{prop:uniform}
+\pr\ If all $p_i=p\in(0,1)$, uniform selection is minimax; the same holds
+when all $u_i$ are equal, after known coordinate label flips.
+For $N=2$, $u_1\ge u_2>0$, the minimax value is one, attained by margin.
+A selector choosing point 1 with probability $q$ has worst-case ratio
+$q+(1-q)u_2/u_1$.
+\end{proposition}
+\begin{proof}
+Average over all permutations in the homogeneous case; flips preserve risks.
+For $N=2$, margin is optimal. Let $e_i^{(j)}$ be expected posterior errors.
+Then $e_1^{(2)}\ge e_2^{(1)}$, and
+$G_1-G_2=e_1^{(2)}-e_2^{(1)}\le u_1-u_2$.
+The last bound follows directly by subtracting the two max formulas.
+Since $G_1\ge u_1$, $G_2/G_1\ge u_2/u_1$.
+Independent labels attain equality.
+\end{proof}
+\ce\ At $(p_1,p_2)=(1/2,1/100)$, uniform has value $0.51$ while margin has
+value one. Thus heterogeneous imbalance can make uniform suboptimal.
+
+\begin{theorem}[A nontrivial exact two-level family]\label{th:twolevel}
+\pr\ For $N=3$, marginals $(a,a,b)$, $0<2a\le b\le3a$ and $b\le1/3$,
+put $r=b/a\in[2,3]$. An optimal marginal-only selector assigns total mass
+\[
+ \theta=\frac{r(3-r)}{6r-3-r^2}
+\]
+equally to the first two points and mass $1-\theta$ to the third.
+Its exact minimax value is
+\[
+ V(a,a,b)=\frac{2r}{6r-3-r^2}.
+\]
+In particular, for $(a,a,b)=(.1,.1,.25)$, the selector is
+$(5/46,5/46,18/23)$ and its value is $20/23$.
+Pure margin has value $5/6$ in this example; uniform has value $3/5$.
+\end{theorem}
+\begin{proof}
+All probabilities are at most $1/3$, so the influence of query $j$ on
+target $i$ is $(2q_{ij}-p_j)_+$, where $q_{ij}=P(Y_i=Y_j=1)$.
+Since $b\ge2a$, $G_3=b$ always. Put
+$x=(2q_{12}-a)_+$ and $y_i=(2q_{i3}-a)_+$.
+Then $G_1=a+x+y_1$, $G_2=a+x+y_2$, with $0\le x,y_i\le a$.
+Symmetry permits a selector with masses $(\theta/2,\theta/2,1-\theta)$.
+Independent labels give ratio $1-\theta(1-1/r)$.
+Taking $Y_1=Y_2$ with their common event a subset of $\{Y_3=1\}$ gives
+ratio $\theta+(1-\theta)r/3$.
+Balancing these two lines gives the asserted $\theta$ and an upper bound
+on every selector's worst-case ratio.
+
+For the matching lower bound, if $\max(G_1,G_2)\le b$, the ratio is at
+least the independent-label line since each $G_i\ge a$.
+Otherwise suppose $d=G_1>b\ge2a$. Both $x,y_1$ are positive and
+$q_{23}\ge q_{12}+q_{13}-a$ implies
+$y_2\ge x+y_1-a=d-2a$.
+Also $x\ge d-2a$, so $G_2\ge2d-3a$.
+The ratio is therefore at least
+\[
+ \frac{\theta(3d-3a)/2+(1-\theta)b}{d}.
+\]
+For the specified $\theta$, $0\le\theta\le2/5$ and
+$b(1-\theta)-3a\theta/2>0$.
+This expression decreases with $d\le3a$, and its value at $3a$ is exactly
+the second line. This proves the minimax formula.
+For pure margin $b/\max G\ge b/(3a)$, attained by the nested law.
+For uniform in the stated example, if the maximum is $b$ the ratio is at
+least $(2a+b)/(3b)=3/5$. If it is $d>b$, the preceding bound gives
+$1+(b-3a)/(3d)>3/5$. Independence attains $3/5$.
+\end{proof}
+
+\begin{theorem}[Exact homogeneous rare-class value]\label{th:rare}
+\pr\ Suppose $p_i=p$, $0<p\le1/3$, and denote the minimax value by
+$\kappa_N(p)$. For $z\ge0$ define
+$\phi(z)=2\lfloor z\rfloor z-\lfloor z\rfloor(\lfloor z\rfloor+1)$.
+For $1\le K\le N-1$, $0\le t\le K$, put
+\[
+ \mu_1=(K+t)/2,\quad
+ \mu_0=\frac{p(K-t)}{2(1-p)},\quad
+ L_{K,p}(t)=\pos{2p\phi(\mu_1)+2(1-p)\phi(\mu_0)-pK(K-1)}.
+\]
+Then
+\begin{equation}\label{eq:rare}
+ \boxed{\kappa_N(p)=
+ \min\left\{1,\
+ \min_{\substack{1\le K\le N-1,\ 0\le t\le K\\
+ L_{K,p}(t)\le p(K-1)t}}
+ \frac{Np+2pt+L_{K,p}(t)}{Np(1+t)}
+ \right\}.}
+\end{equation}
+Only finitely many endpoints need checking: floor breakpoints and crossings
+of the piecewise-linear constraints.
+\end{theorem}
+\begin{proof}
+Write $q_{ij}=\Pp(Y_i=Y_j=1)$. The influence is $v_{ij}=(2q_{ij}-p)_+$,
+including $v_{ii}=p$. The negative-correlation branch can contribute only
+if $q_{ij}<(3p-1)/2$, impossible here.
+Choose a maximal-gain root with row sum $p(1+t)$ and let its $K$ active
+neighbors satisfy $q_{i0}>p/2$. If $t=0$ all rows equal $p$.
+Otherwise let $Z$ count the ones in the active set.
+Summing root joint probabilities gives conditional means $\mu_1,\mu_0$.
+The convex envelope of $k(k-1)$ on integers is $\phi$, so
+$\E[Z(Z-1)]\ge p\phi(\mu_1)+(1-p)\phi(\mu_0)$.
+The ordered active-leaf influence sum is at least $L_{K,p}(t)$, and the full
+sum is at least $Np+2pt+L_{K,p}(t)$.
+Sum the $K$ inequalities saying each active leaf row is at most the root
+row: its active-leaf influence sum is at most $p(K-1)t$.
+Thus every law yields a feasible pair and the lower bound in \eqref{eq:rare}.
+
+Conversely take a $\mathrm{Bernoulli}(p)$ root. Conditional on root $s$,
+draw $Z$ on the two neighboring integers around $\mu_s$ with that mean,
+then choose a uniform subset of $Z$ active leaves to label one.
+Every active leaf has marginal $p$ and root influence $pt/K$.
+Exchangeability makes its total ordered leaf influence exactly $L_{K,p}(t)$.
+Take remaining labels independently $\mathrm{Bernoulli}(p)$, independent of
+the block; their cross-influences vanish.
+The feasibility constraint is exactly that the root row be maximal.
+This attains every feasible displayed ratio. Between all specified
+breakpoints the objective is linear fractional and is minimized at an
+endpoint (or is constant).
+\end{proof}
+
+\begin{proposition}[Imbalance changes the asymptotic order]\label{prop:rareorder}
+\pr\ For every fixed $0<p<1/2$, $\kappa_N(p)=\Theta(N^{-1})$.
+Define $t_p=2p-1+\sqrt{2(1-p)(1-2p)}>0$. Then
+\[
+ \frac{3N-2}{N^2}\le\kappa_N(p)
+ \le\frac{N+2(N-1)t_p}{N[1+(N-1)t_p]}.
+\]
+For $0<p\le1/3$,
+$\lim_{N\to\infty}N\kappa_N(p)=2+t_p^{-1}$.
+\end{proposition}
+\begin{proof}
+Homogeneous influences are symmetric, nonnegative, bounded by $p$.
+If their maximal row is $D$, the total is at least $Np+2(D-p)$ and
+$D\le Np$. Divide by $ND$.
+For the upper bound use a root of probability $p$ and conditionally iid
+leaves with probabilities
+$a=p+\sqrt{(1-p)(1/2-p)}$ given root 1 and
+$b=p(1-a)/(1-p)$ given root 0.
+Leaves have marginal $p$; distinct leaf pairs have joint probability $p/2$
+and zero influence. Root--leaf influence is $p(2a-1)=pt_p$.
+
+For the limit, an optimizing pair in \eqref{eq:rare} has $t=\Omega(N)$,
+$K\ge t=\Omega(N)$ and $L/p=O(N)$, by the upper bound and numerator $Np$.
+The inequality $\phi(z)\ge z^2-z$ yields
+\[
+ L/p\ge[K^2 f_p(t/K)-K]_+,\qquad
+ f_p(z)=\frac{z^2+2(1-2p)z-(1-2p)}{2(1-p)}.
+\]
+This increasing quadratic for $z\ge0$ has positive root $t_p$.
+Thus $t/K\le t_p+o(1)$, so $t/N\le t_p+o(1)$.
+Finally $N\kappa_N(p)\ge(N+2t)/(1+t)
+=2+(N-2)/(1+t)$ gives the matching lower limit.
+\end{proof}
+\nc\ Exact rational endpoint enumeration for $N=136$, $p=3/34=12/136$
+gives $\kappa_{136}(3/34)=2798/86615\simeq0.0323038735$.
+An attaining law has $K=135$, $t=5004/91$, $L=0$,
+$\mu_1=17289/182$, $\mu_0=21843/5642$, and leaf-pair probability $3/68=p/2$.
+This fixes each marginal to $12/136$; it does not fix the realized count.
+Under the uniform law on exactly 12 rare labels all query values coincide,
+so the ratio is one. The finite LP can incorporate a fixed-count constraint.
+
+\section{Different targets and noisy observations}
+\begin{proposition}[Exact positivity condition]\label{prop:transfer}
+\pr\ For arbitrary targets and binary observations, query $a$ has positive
+Bayes Hamming value iff some positive-weight target satisfies
+$|c_{ia}|>|m_i|$. If a set of targets of total weight at least $\omega$
+has $|c_{ia}|-|m_i|\ge g>0$, then
+\[
+ \Delta(a)\ge\omega g/2,\qquad
+ \Delta(a)/\Delta^\star\ge\omega g/(2R_0)\ge\omega g.
+\]
+\end{proposition}
+\begin{proof}
+Use the nonnegative summands in \eqref{eq:gain} and
+$\Delta^\star\le R_0\le1/2$.
+\end{proof}
+This is a necessary-and-sufficient pointwise condition for positive value,
+and a quantitative sufficient condition for a ratio. There is no unique
+weakest named family of structural assumptions; any uniform ratio needs
+quantitative transfer of this kind or an equivalent restriction.
+
+\begin{example}[Disjoint targets]\label{ex:heldout}
+\ce\ A fair target $T$ and a fair candidate $O_1$ can be independent, while
+$O_2$ is a noisy copy of $T$ with $\E O_2\ne0$ and positive information value.
+For example set $O_2=+1$ when $T=+1$ and, when $T=-1$, let $O_2=+1$ with
+probability $1/2$. Then $\E O_2=1/2$, $\E TO_2=1/2$.
+Margin uniquely selects $O_1$, with zero value, whereas $O_2$ has value $1/4$.
+Hence target--pool separation admits no unconditional positive margin ratio.
+\end{example}
+
+\begin{theorem}[Common binary symmetric observation noise]\label{th:bsc}
+\pr\ In the full-pool Hamming model observe $O_j=S_j\xi_j$, where the
+one-query channel noise is independent of the world and
+$\E\xi_j=\eta=1-2\epsilon\in[0,1]$, common to all candidates.
+Latent-label margin still satisfies $\Delta(a)\ge\Delta^\star/(N-1)$.
+For $\eta>0$ the constant is sharp. Observation-marginal margin has the same
+ranking as latent margin.
+\end{theorem}
+\begin{proof}
+Now $v_{ij}=(\eta|c_{ij}|-|m_i|)_+/2$ and
+$v_{ii}=w_i=(\eta-|m_i|)_+/2=(u_i-\epsilon)_+$.
+For every $i,j$, $0\le v_{ij}\le w_i$, and
+\[
+ w_i-v_{ij}=\tfrac12[\eta-\max\{|m_i|,\eta|c_{ij}|\}]_+.
+\]
+If $|m_a|\le|m_b|$, the right side at $(b,a)$ is no larger than at $(a,b)$.
+Repeat the proof of Theorem \ref{th:margin} with $w_i$ in place of $u_i$.
+The independent fair decoy and slightly biased duplicate cluster approach
+the same sharp ratio. Finally $|\E O_j|=\eta|m_j|$.
+\end{proof}
+\begin{example}[Informative but heterogeneous noise]\label{ex:hetero}
+\ce\ Take independent labels with probabilities $(0.10,0.09)$ and BSC
+error rates $(0.20,0.01)$. Both latent and observation margin choose point 1.
+Its Bayes value is zero, because its uncertainty $0.10$ is below its channel
+error $0.20$. Query 2 has full-pool gain $(0.09-0.01)/2=0.04$.
+Every channel is informative; that alone does not guarantee a positive ratio.
+\end{example}
+\begin{corollary}[Weighted overlapping targets]
+\pr\ If the targets are the pool labels, possibly with known sign flips,
+and all target weights lie in $[w_{\min},w_{\max}]$ with $w_{\min}>0$,
+then noiseless or common-BSC margin has ratio at least
+$w_{\min}/[w_{\max}(N-1)]$.
+\end{corollary}
+\begin{proof}
+Sandwich each weighted sum of nonnegative influences between $w_{\min}$
+and $w_{\max}$ times its unweighted sum.
+\end{proof}
+
+\section{Sequential budgets: proved bounds and unresolved sharp constant}
+\begin{theorem}[Finite-horizon bounds]\label{th:budget}
+\pr\ In the default noiseless model, sequential margin with exact updating
+and $B$ distinct queries satisfies
+\[
+ G_{\rm margin}(B)\ge (B/N)R_0
+ \ge (B/N)G_{\rm opt}(B),\quad 1\le B\le N,
+\]
+where the comparator is the optimal adaptive $B$-step policy.
+For $B=1$ the sharper ratio is $1/(N-1)$; for $B=N$ it is one.
+For $N\ge B+2$ the worst-case ratio is at most $B/(N-1)$.
+For fixed $B$ and $N\to\infty$ these bounds establish the sharp leading
+order $B/N$.
+\end{theorem}
+\begin{proof}
+After $t$ queries, posterior Bayes risk is the sum of the $N-t$ remaining
+uncertainties divided by $N$. Its largest uncertainty is at least
+$NR_t/(N-t)$; observing that point reduces risk by at least its own
+uncertainty divided by $N$. Thus
+$\E[R_{t+1}\mid H_t]\le(1-1/(N-t))R_t$.
+Iterating gives $\E R_B\le(N-B)R_0/N$.
+
+For the upper construction take $B$ independent fair decoys and
+$M=N-B$ copies of an independent $\mathrm{Bernoulli}(1/2+\eta)$ bit.
+Margin spends all $B$ queries on decoys. For small $\eta$, an optimal policy
+queries the cluster and $B-1$ decoys; further cluster queries are useless.
+The ratio is
+$B/[M(1-2\eta)+B-1]\to B/(N-1)$.
+\end{proof}
+\begin{example}[The tempting $B/(N-1)$ lower bound is false]\label{ex:budget}
+\ce\ For $N=3$, $B=2$, let
+\[
+ P(010)=1/6,\quad P(100)=1/3-\varepsilon,\quad
+ P(101)=1/3+\varepsilon,\quad P(110)=1/6,
+ \qquad 0<\varepsilon<1/6.
+\]
+Uncertainties are $(1/6,1/3,1/3+\varepsilon)$, so margin first queries
+coordinate 3. If it is zero, margin queries coordinate 2, leaving
+unnormalized expected residual error $1/6$; if it is one the world is known.
+Initial unnormalized risk is $5/6+\varepsilon$.
+An optimal policy queries coordinate 2, then coordinate 3 if it is zero
+and coordinate 1 otherwise, identifying the world exactly.
+The ratio is $(4+6\varepsilon)/(5+6\varepsilon)\to4/5<1=B/(N-1)$.
+\end{example}
+\begin{theorem}[Sharp three-point, two-query constant]\label{th:n3b2}
+\pr\ For $N=3$, $B=2$, the worst-case ratio of sequential margin to the
+optimal adaptive policy is exactly $4/5$. This includes arbitrary random
+tie-breaking within the margin maximizers.
+\end{theorem}
+\begin{proof}
+We give a finite rational certificate proof; all certificate coefficients
+are displayed below, so the proof does not rely on floating-point
+optimization or a claimed exhaustive sample of priors.
+Use unnormalized risks. By coordinate flips suppose all marginal
+probabilities $p_i\le1/2$, and permute the first margin query to coordinate
+3, so $p_3\ge p_1,p_2$. Write the eight world probabilities in lexicographic
+order as $\pi=(\pi_{000},\ldots,\pi_{111})$.
+
+For four masses in a $2$ by $2$ table, the smaller expected residual error
+after revealing one of the two coordinates is the sum of the two smallest
+masses. Indeed each row/column error selects two entries and is at least
+that sum; at least one of the two partitions separates the two largest
+entries, attaining it. Conditional on the first query, margin is optimal
+on the remaining two coordinates by Theorem \ref{th:margin}.
+Thus its residual risk $F_j$ after first querying $j$ is the sum of the two
+smallest masses in each of the two $j$-slices.
+
+For $j=1,2,3$, form a $36$ by $8$ matrix $L^{(j)}$ as follows.
+List the indices of the four worlds with coordinate $j=0$ and those with
+$j=1$, each in lexicographic order. List their six two-element subsets in
+lexicographic order. For each pair of subsets, taking the zero-slice subset
+as the outer loop, put a row with ones on their union and zeros elsewhere.
+Then $F_j=\min_k L^{(j)}_k\pi$.
+The initial risk is $R_0=\sum_i p_i$.
+It suffices to prove $5F_3\le R_0+4F_2$; symmetry gives the comparison with
+query 1 as well.
+
+Let $z=(\pi,h)\ge0$ and $e=(1,1,1,1,1,1,1,1,0)$.
+Define the $41$ by $9$ matrix $A$ by rows
+\[
+ A_k=(-L^{(3)}_k,1)\ (1\le k\le36),\quad
+ A_{36+i}=(x_i,0)\ (1\le i\le3),\quad
+ A_{40}=(x_1-x_3,0),\ A_{41}=(x_2-x_3,0),
+\]
+where $x_i$ is the length-eight vector of coordinate-$i$ labels in the
+world order. Let $b_{37}=b_{38}=b_{39}=1/2$ and all other $b_i=0$.
+At $h=F_3$ we have $Az\le b$ and $e^\top z=1$.
+For each $k=1,\ldots,36$ set
+$c_k=(4L^{(2)}_k+x_1+x_2+x_3,-5)$.
+The table provides $\lambda_k$ and a nonnegative vector $v_k$ such that
+\[
+ c_k+A^\top v_k-\lambda_ke\ge0,\qquad
+ d_k=\lambda_k-b^\top v_k\ge0.
+\]
+These are just nine rational inequalities and one rational equality per row,
+directly checkable using the matrix definitions.
+Therefore
+$c_k^\top z\ge\lambda_ke^\top z-v_k^\top Az
+\ge\lambda_k-v_k^\top b=d_k\ge0$.
+Taking the minimum over $k$ proves $5F_3\le R_0+4F_2$.
+Consequently $R_0-F_3\ge(4/5)(R_0-\min_jF_j)$.
+The argument holds for every allowed first margin choice and its conditional
+continuation, hence also their randomized mixtures.
+Example \ref{ex:budget} with $\varepsilon\downarrow0$ proves sharpness.
+\end{proof}
+
+\small
+\begin{longtable}{r r p{.65\textwidth} r}
+\toprule $k$ & $\lambda_k$ & Nonzero entries of $v_k$ (index:value) & $d_k$\\
+\midrule\endhead
+1 & $1$ & $1:3,\ 30:1,\ 35:1,\ 40:1$ & $1$\\
+2 & $2$ & $13:1,\ 15:1,\ 26:1,\ 27:1,\ 30:1,\ 37:1,\ 39:1$ & $1$\\
+3 & $6/7$ & $3:12/7,\ 5:8/7,\ 6:2/7,\ 27:12/7,\ 36:1/7,\ 41:5/7$ & $6/7$\\
+4 & $4/5$ & $13:7/5,\ 14:6/5,\ 17:3/5,\ 25:1/5,\ 35:8/5,\ 40:7/5$ & $4/5$\\
+5 & $6/7$ & $6:9/14,\ 9:1/2,\ 15:13/14,\ 17:15/14,\ 35:13/7,\ 40:31/14,\ 41:1/2$ & $6/7$\\
+6 & $2/3$ & $15:10/3,\ 29:1,\ 30:1/3,\ 35:1/3,\ 41:1$ & $2/3$\\
+7 & $2$ & $5:1,\ 11:1,\ 22:2,\ 35:1,\ 37:1,\ 39:1$ & $1$\\
+8 & $5/2$ & $1:3/4,\ 9:3/8,\ 10:3/8,\ 30:7/4,\ 32:3/8,\ 35:11/8,\ 39:3$ & $1$\\
+9 & $3/2$ & $5:3/2,\ 9:1,\ 24:2,\ 35:1/2,\ 39:3/2$ & $3/4$\\
+10 & $2$ & $13:1/3,\ 16:4/3,\ 17:1/3,\ 35:3,\ 38:1,\ 39:4/3$ & $5/6$\\
+11 & $2/3$ & $5:1/3,\ 10:4/3,\ 11:5/3,\ 35:5/3,\ 40:1/3$ & $2/3$\\
+12 & $2$ & $15:1/3,\ 18:5/3,\ 33:1/3,\ 35:8/3,\ 38:1,\ 39:5/3$ & $2/3$\\
+13 & $2/3$ & $4:10/3,\ 28:1,\ 35:2/3,\ 40:1/3$ & $2/3$\\
+14 & $2$ & $14:1/3,\ 16:4/3,\ 18:1/3,\ 30:3,\ 37:1,\ 39:4/3$ & $5/6$\\
+15 & $2/3$ & $4:4/3,\ 6:5/3,\ 12:1/3,\ 30:5/3,\ 41:1/3$ & $2/3$\\
+16 & $1/2$ & $16:2,\ 18:3/2,\ 28:1/2,\ 35:1,\ 40:1/2$ & $1/2$\\
+17 & $0$ & $4:1,\ 10:1,\ 18:2,\ 35:1,\ 40:1$ & $0$\\
+18 & $1/2$ & $18:7/2,\ 28:1,\ 35:1/2,\ 41:1/2$ & $1/2$\\
+19 & $0$ & $19:1,\ 20:2,\ 35:2$ & $0$\\
+20 & $0$ & $26:2,\ 27:1,\ 35:2$ & $0$\\
+21 & $0$ & $21:3,\ 35:2$ & $0$\\
+22 & $0$ & $19:1,\ 31:1,\ 35:3$ & $0$\\
+23 & $0$ & $20:3/2,\ 35:7/2,\ 40:1,\ 41:1/2$ & $0$\\
+24 & $0$ & $30:1,\ 32:1,\ 33:1,\ 35:2$ & $0$\\
+25 & $0$ & $19:1/2,\ 26:3/2,\ 35:3,\ 40:5/2$ & $0$\\
+26 & $0$ & $26:7/2,\ 35:3/2,\ 40:1/2$ & $0$\\
+27 & $0$ & $24:1,\ 26:3,\ 35:1,\ 40:1,\ 41:1$ & $0$\\
+28 & $0$ & $26:2,\ 35:3,\ 40:2,\ 41:1$ & $0$\\
+29 & $0$ & $26:3/2,\ 35:7/2,\ 40:5/2,\ 41:1/2$ & $0$\\
+30 & $0$ & $26:2,\ 30:3/2,\ 35:3/2,\ 40:1/2,\ 41:5/2$ & $0$\\
+31 & $0$ & $20:1,\ 22:1,\ 24:1,\ 35:2$ & $0$\\
+32 & $0$ & $26:1,\ 28:1,\ 30:2,\ 35:1$ & $0$\\
+33 & $0$ & $21:1,\ 24:2,\ 35:2$ & $0$\\
+34 & $0$ & $19:1,\ 34:1,\ 35:3$ & $0$\\
+35 & $0$ & $22:2,\ 35:3,\ 41:1$ & $0$\\
+36 & $0$ & $30:1,\ 32:1,\ 35:2,\ 36:1$ & $0$\\
+\bottomrule
+\end{longtable}
+\normalsize
+Every displayed certificate was verified in exact rational arithmetic.
+The general finite-$N,B$ sharp ratio is still unresolved.
+Random tie-breaking does not repair the unique-choice limiting construction.
+
+\begin{proposition}[What randomization does establish]
+\pr\ Uniform sampling without replacement achieves at least
+$(B/N)R_0$ expected reduction. With a known joint law, an optimal adaptive
+finite-horizon policy can be deterministic. In marginal-only one-step
+selection randomization can strictly improve the worst-case guarantee,
+as Theorem \ref{th:kappa} proves.
+\end{proposition}
+\begin{proof}
+Each point is sampled with probability $B/N$ and its original error is then
+zero; expected error at unqueried points cannot increase under Bayes
+conditioning. For known-law optimality, backward induction maximizes a
+linear function of the action probabilities at every history.
+\end{proof}
+
+\section{Misspecified selection and updating}
+For acquisition-regret comparisons, $P$ is the reference posterior under the
+correct generating law at the fixed data state. A truth-knowing oracle
+conditions further on the realized world and is a different comparator.
+The risk identity also allows a point-mass $P$, but then its Bayes-optimal
+Hamming baseline is already zero.
+\begin{theorem}[True value under a model-based update]\label{th:PQ}
+\pr\ Let $P$ be the true joint law and $Q$ the learner's law.
+For targets and observations as in Theorem \ref{th:binary}, write
+$m_i^P,m_i^Q,c_{ij}^P,c_{ij}^Q$ for their moments.
+The learner initially predicts $h_i=\sg(m_i^Q)$ and, after $O_j=s$,
+predicts $g_{ij}(s)=\sg(m_i^Q+s c_{ij}^Q)$.
+Define $\alpha_{ij}=(g_{ij}(+1)+g_{ij}(-1))/2$,
+$\beta_{ij}=(g_{ij}(+1)-g_{ij}(-1))/2$.
+Its true post-query risk and gain from its own pre-query risk are
+\begin{align}
+ F_{P,Q}(j)&=\tfrac12\sum_iw_i
+ [1-\alpha_{ij}m_i^P-\beta_{ij}c_{ij}^P],\label{eq:PQrisk}\\
+ U_{P,Q}(j)&=\tfrac12\sum_iw_i
+ [(\alpha_{ij}-h_i)m_i^P+\beta_{ij}c_{ij}^P].\label{eq:PQgain}
+\end{align}
+These identities hold for any prescribed binary branch decisions $g$;
+expressing $g$ through $Q$ moments assumes coherent conditioning under $Q$.
+On a $Q$-null observation branch the displayed sign convention specifies
+the learner's otherwise arbitrary action.
+\end{theorem}
+\begin{proof}
+$g_{ij}(O_j)=\alpha_{ij}+\beta_{ij}O_j$ and
+$\1_{\{g\ne T_i\}}=(1-T_ig)/2$. Take expectations under $P$ and subtract
+the initial risk $\sum_iw_i(1-h_im_i^P)/2$.
+\end{proof}
+Away from ties, inactive pairs $|c_{ij}^Q|\le|m_i^Q|$ contribute zero gain.
+For active pairs,
+\[
+ U_{P,Q}(j)=\tfrac12\sum_{i:\,|c_{ij}^Q|>|m_i^Q|}
+ w_i[\sg(c_{ij}^Q)c_{ij}^P-\sg(m_i^Q)m_i^P].
+\]
+Thus the sum on the right being zero exactly characterizes zero true value;
+it can also be negative. Positive $P$-optimal value is independently
+characterized by $|c_{ij}^P|>|m_i^P|$ for some $i,j$ of positive weight.
+
+\begin{theorem}[Pairwise discrepancy bounds]\label{th:regret}
+\pr\ Define
+\[
+ E_j=\tfrac12\sum_iw_i(|m_i^P-m_i^Q|+|c_{ij}^P-c_{ij}^Q|),\qquad
+ D_j=\sum_iw_i\max\{|m_i^P-m_i^Q|,|c_{ij}^P-c_{ij}^Q|\}.
+\]
+Let $j_Q$ maximize $\Delta_Q$ and $j_P$ maximize $\Delta_P$.
+Then
+\begin{align*}
+ |U_{P,Q}(j)-\Delta_Q(j)|&\le E_j,&
+ |\Delta_P(j)-\Delta_Q(j)|&\le E_j,\\
+ \Delta_P(j_P)-U_{P,Q}(j_Q)&\le E_{j_P}+E_{j_Q},\\
+ 0\le F_{P,Q}(j_Q)-F_P(j_P)&\le(D_{j_Q}+D_{j_P})/2\le\max_jD_j.
+\end{align*}
+The terminal-risk comparison uses a common endpoint and is preferable to
+comparing gains from two different baselines.
+\end{theorem}
+\begin{proof}
+For the coherent sign rule, either the branch is constant and equals $h_i$
+(zero gain), or $\alpha_{ij}=0$, $|\beta_{ij}|=1$, so
+$|\alpha_{ij}-h_i|\le1$. Apply \eqref{eq:PQgain}; for $\Delta$ apply the
+Lipschitz argument in Corollary \ref{cor:basic}. Maximization gives the gain
+comparison. For terminal risks exactly one of $\alpha,\beta$ has magnitude
+one, yielding $|F_{P,Q}(j)-F_Q(j)|\le D_j/2$.
+Also $|F_P(j)-F_Q(j)|\le D_j/2$ because a maximum is 1-Lipschitz in the
+sup norm. Insert $F_Q(j_Q)\le F_Q(j_P)$.
+Nonnegativity follows from Bayes optimality under $P$.
+\end{proof}
+\begin{corollary}[Approximation and refit defect]
+\pr\ If the estimated $Q$ scores have uniform error at most $\epsilon$,
+the terminal bound acquires $2\epsilon$. If the actual branch predictor
+$\widetilde g$ differs from the coherent predictor with weighted probability
+\[
+ \zeta_j=\sum_iw_i P_P(\widetilde g_{ij}(O_j)\ne g_{ij}(O_j)),
+\]
+add $\zeta_j$ for the selected candidate.
+\end{corollary}
+\begin{proof}
+Score maximization loses at most $2\epsilon$.
+Two predictions' zero-one losses differ by at most their disagreement
+indicator. Sum and take expectations.
+\end{proof}
+
+\begin{example}[Selection failure with identical marginals]\label{ex:selection}
+\ce\ Let all variables be fair. Under $P$, $O_1$ is independent of $T$ and
+$O_2=T$; under $Q$, swap the two observations. The unique $Q$-optimal query
+has zero true value, while the $P$-optimal query has value $1/2$.
+All first moments agree exactly.
+\end{example}
+\begin{example}[Zero value even in the full pool]\label{ex:update}
+\ce\ Take a fair root $R$ and two leaves. Under $P$ let the leaves be
+$-RV_1,-RV_2$, with probabilities $1/2,1/4,1/4$ on
+$(V_1,V_2)=(++),(+-),(-+)$.
+Under $Q$ let them be $RV_1,RV_2$ with probabilities $3/5,1/5,1/5$.
+All three marginals are fair. Under $P$ root--leaf moments are $-1/2$ and
+the leaf-pair moment is zero. Under $Q$ they are $3/5,3/5,1/5$.
+The unique $Q$-optimal query is the root (column sum $11/5$ versus $9/5$).
+Its $Q$ update predicts all labels equal to the root. True posterior risk
+is $(0+3/4+3/4)/3=1/2$, exactly the baseline: zero gain.
+The $P$-optimal query is also the root, but its correct update gains $1/3$.
+This isolates update failure from candidate misranking.
+\end{example}
+\nc\ Finite random-law checks for $N=2,\ldots,6$ (1,500 $P,Q$ pairs)
+confirmed the direct-risk identities, terminal discrepancy bound, and
+common-noise margin inequality. These checks supplement the proofs.
+\nc\ A separate fixed-marginal check for $(.1,.1,.25)$ enumerated the six
+vertices of its world-law polytope and 50,000 random convex mixtures.
+The smallest tested ratio of the selector in Theorem \ref{th:twolevel}
+was $20/23$, attained at a vertex. The proof, rather than this finite
+sample, establishes the universal claim.
+
+\section{Week 15 cross-audit and corrected propositions}
+Inspected: \texttt{outputs/week15\_boundary\_acquisition/WEEK15\_REPORT.md},
+\texttt{THEORY\_WEEK15.md}, \texttt{THEORY\_ERRATA.md}, the Week 14 theory,
+and \texttt{src/week15\_bayes\_frontier.py}, \texttt{week15\_metric.py},
+\texttt{week15\_metric\_confirm.py}. Empirical results were not rerun.
+\small
+\begin{longtable}{p{.07\textwidth}p{.13\textwidth}p{.70\textwidth}}
+\toprule Item & Verdict & Minimal correction\\\midrule\endhead
+B1 & Correct identity; gap &
+XOR and orientation invariance are exact. Error-set perimeter is not a
+displacement metric; delete its general identification with NSD/ASSD.\\
+B2 & Gap &
+Fixed-$r$, fixed-set iid-cloud consistency is correct. Fix the posterior
+independently of the evaluation cloud or prove uniform convergence.
+Require positive denominator. Fixed-$k$ kNN and shrinking-radius claims
+need separate normalization/assumptions. Graph Dice is not NSD.\\
+B3 & Wrong as exact; repairable &
+An unspecified spread does not imply small overlap probability. State a
+posterior law. For a uniform threshold posterior, normalized plug-in loss
+is $1-r/(3s)$, not exactly one. Static risk does not prove the cause of
+an acquisition run's collapse.\\
+B4 & Correct theorem; empirical gap &
+Fix state, posterior, metric, update, and coupling of potential labels.
+Truth-information gap is $V_E-V_B$; $V_E-V_{\rm margin}$ also contains a
+method gap. Separate-policy AULCs are not this decomposition.
+The inspected implementation is Laplace/Monte Carlo NSD look-ahead.\\
+M1 & Correct core; gaps &
+For true weights and fixed radius/geometry, bounded-below measurable density
+suffices. Smoothness at graph scale is unnecessary. Assume uniform density
+consistency explicitly; the listed $k$ conditions do not establish it.
+Fixed 95\% clipping changes the estimand. Radius and standardization also
+vary between designs in the implementation.\\
+E15-1 & Correct &
+Exchangeable fixed counts, distinct queries, independent randomization,
+both classes present; survival at zero is one.\\
+E15-2 & Correct number; notation gap &
+Use $(H_{108}^2+\sum_{i=1}^{108}i^{-2})/2=14.67254557\ldots$.
+Standard $H_n^{(2)}$ alone usually means $\sum i^{-2}$.\\
+E15-3 & Correct with convention &
+Resolve ties and compute AUC on the same order. Half-credit AUC on unresolved
+ties can violate the claimed relation to the query order.\\
+E15-4 & Correct &
+The convex dominance closure is contained in the implied set. State
+consistency and strict-inequality conventions for the two feasibility LPs.\\
+E15-5 & Correct &
+The zero-budget survival term is one; the binomial sum starts at one.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\begin{proposition}[Fixed-cloud continuum estimands]\label{prop:Ustat}
+\pr\ Let $X_i$ be iid on bounded $\Omega$ with density $p\ge p_{\min}>0$,
+and let $h$ be a bounded measurable symmetric pair kernel, fixed independently
+of the cloud. Then, almost surely,
+\[
+ {1\over {n\choose2}}\sum_{i<j}\frac{h(X_i,X_j)}{p(X_i)p(X_j)}
+ \longrightarrow\int_\Omega\int_\Omega h(x,y)\,dx\,dy.
+\]
+This applies to fixed-radius true, predicted, shared and mismatched cuts.
+Ratios converge when their limiting denominators are positive.
+A fixed posterior average independent of the cloud is allowed.
+If $\|\widehat p-p\|_\infty\to0$ almost surely, plug-in weights have the
+same limit.
+\end{proposition}
+\begin{proof}
+The bounded weighted kernel obeys the U-statistic strong law; sampling
+densities cancel. For posterior averaging use its integrated kernel,
+conditioning first on fixed training data. Uniform density consistency
+implies eventual $\widehat p\ge p_{\min}/2$ and uniformly converging inverse
+products. Use continuous mapping for the ratio.
+\end{proof}
+The unweighted uniform-cloud limit has factor $|\Omega|^{-2}$.
+Density continuity is unnecessary for true weights.
+If clipping thresholds converge to a finite $c$, the limit is instead
+$\int\!\int h(x,y)\min\{1,c\,p(x)p(y)\}\,dx\,dy$ by dominated convergence.
+Fixed quantile clipping therefore generally retains density dependence.
+
+\begin{proposition}[Exact flat-boundary repair]\label{prop:flat}
+\pr\ On $(-L,L)$ let $A_\theta=\{x>\theta\}$, with all thresholds farther
+than $r$ from the endpoints. For ordered pairs with $|x-y|<r$,
+\[
+ J_r(A_\theta)=r^2,\qquad
+ S_r(A_\theta,A_0)=(r-|\theta|)_+^2.
+\]
+If $\Theta\sim\mathrm{Uniform}[-s,s]$, $s\ge r$, $L>s+r$, then
+\[
+ \E S_r=r^3/(3s),\quad
+ \E J_r(A_\Theta\triangle A_0)=2r^2(1-r/(3s)).
+\]
+A constant predictor has mismatch $r^2$, strictly smaller.
+Normalized ratio-of-expectations losses are $1-r/(3s)$ and one, respectively.
+\end{proposition}
+\begin{proof}
+Crossing pairs form two triangles of total area $r^2$; shared crossings
+form triangles with side $(r-|\theta|)_+$. Integrate the square against
+the uniform density and use mismatch = true + predicted $-2$ shared.
+\end{proof}
+\ce\ For $\theta=r/2$, graph Dice is $1/4$ while NSD with tolerance $r$
+is one. These functionals differ.
+\pr\ If expected true cut mass is positive, normalized static loss is
+at most one for every predictor because shared mass is nonnegative.
+A constant predictor equals one, so it is never strictly preferred over
+a predictor with positive shared mass. This does not prove NSD improvement
+by the resulting acquisition.
+
+\begin{proposition}[Oracle decomposition]\label{prop:oracle}
+\pr\ Fix data, a finite common action set, a joint law of truth $f$ and all
+potential labels $(Y_c)$, and an integrable gain $G(c,Y_c,f)$ for a fixed
+update procedure. Then
+\[
+ V_R=\E\max_cG(c,Y_c,f)\ \ge\
+ V_E=\E_f\max_c\E[G(c,Y_c,f)\mid f]\ \ge\
+ V_B=\max_c\E G(c,Y_c,f).
+\]
+$V_B$ dominates any rule independent of unknown truth and potential labels
+conditional on the data.
+\end{proposition}
+\begin{proof}
+Apply convexity of the maximum to conditional expectation twice.
+A non-anticipating randomized rule averages fixed action values.
+\end{proof}
+Label marginals alone do not define $V_R$; a coupling is required.
+The chain holds for any such coupling. Values need not be nonnegative for
+a fixed non-Bayes prediction/update procedure evaluated by NSD.
+
+\nc\ The inspected frontier code uses \texttt{S=24}, Laplace Gaussian
+posterior samples, and fresh fantasy-label Laplace fits. A well-specified
+prior does not make these exact posterior updates.
+The reported $0.0155/0.0645\simeq24\%$ compares absolute gains.
+Relative to reported margin gain $-0.007$, captured headroom is
+$(0.0155+0.007)/(0.0645+0.007)\simeq31.5\%$.
+Both descriptions must name their denominator.
+
+\begin{proposition}[Precise errata statements]\label{prop:errata}
+\pr\ For $n$ iid points with independent continuous coordinates in three
+dimensions, expected minimal Pareto-front size is
+$\sum_{i=1}^n H_i/i=(H_n^2+\sum_{i=1}^ni^{-2})/2$.
+In a strict score order with $r$ rare and $m$ common labels, let $a_i$
+count common labels preceding rare label $i$, in rare-label order.
+First rare position is $a_1+1$ and
+$m(1-\mathrm{AUC})=r^{-1}\sum_i a_i\ge a_1$.
+Equality holds iff rare labels are consecutive.
+\end{proposition}
+\begin{proof}
+Sort in the first coordinate. Point $i$ is minimal iff its two other
+coordinates are undominated among the first $i$ points. Their expected
+minimal count is $H_i$, by record probabilities, so exchangeability gives
+probability $H_i/i$. Sum and rearrange the harmonic double sum.
+For AUC each rare--common inversion contributes one pair.
+The nondecreasing $a_i$ have average equal to their minimum iff all equal.
+\end{proof}
+\ce\ Positive point $(1,0)$ and negative point $(0,1)$ under positive
+linear weights imply $w_1>w_2>0$, $t\in[w_2,w_1)$.
+Point $(2,-1/2)$ must be positive but is outside the upward closure of
+the positive convex hull, proving E15-4's containment can be strict.
+\pr\ Exact implication is two candidate-label feasibility checks.
+For finitely many constraints, strictly positive weights and positive-class
+margins can be jointly scaled to at least one; negative scores remain
+at most zero. These are LP constraints. Exclude inconsistent training data.
+
+\section{Round-1 results retained: prediction, discovery, and stopping}
+\begin{example}[Better marginals, worse acquisition]\label{ex:prediction}
+\ce\ Use a fair decoy and $M=N-1$ copies of
+$\mathrm{Bernoulli}(1/2+\eta)$, $N\ge3$.
+Model A reports true probabilities. Model B reports $1/2+2\eta$ on the
+decoy, $1/2-\eta/2$ on one cluster point and $1/2+3\eta/2$ on the others,
+for small $\eta>0$.
+A is strictly better in expected Brier/log loss at every point and has
+classification error lower by $2\eta/N$.
+B's average Brier excess is $\eta^2(M+24)/(4(M+1))$ and maximum probability
+error $2\eta$. Yet A's margin queries the decoy and B's queries the cluster.
+Under a common ideal update their acquisition-value ratio tends to $1/M$.
+\end{example}
+\begin{proof}
+Proper scores minimize uniquely at the true probabilities. B changes the
+majority decision on one cluster point only. Its squared errors sum to
+$4\eta^2+(3\eta/2)^2+(M-1)(\eta/2)^2$.
+Its smallest absolute margin is the misclassified cluster point.
+\end{proof}
+
+\begin{theorem}[Finite-population discovery]\label{th:discovery}
+\pr\ In a uniform random order of $n_0,n_1\ge1$ labels, $N=n_0+n_1$,
+let $T$ be first both-class discovery. Then
+\[
+ \Pp(T>0)=1,\quad
+ \Pp(T>k)=\frac{\binom{n_0}k+\binom{n_1}k}{\binom Nk}\ (k\ge1),\quad
+ \E T=\frac{N+1}{n_0+1}+\frac{N+1}{n_1+1}-1.
+\]
+For first discovery $D$ of a designated class with $r$ members,
+\[
+ \Pp(D>k)=\frac{\binom{N-r}k}{\binom Nk}
+ =\frac{\binom{N-k}r}{\binom Nr}
+ \le\min\{(1-r/N)^k,(1-k/N)^r\},\quad
+ \E D=\frac{N+1}{r+1}.
+\]
+The geometric mean $N/r$ exceeds this by $(N-r)/(r(r+1))$.
+\end{theorem}
+\begin{proof}
+Survival means a monochromatic sample; its two events are disjoint for
+$k\ge1$. If $D_0,D_1$ are first class positions, $\min(D_0,D_1)=1$,
+hence $T=D_0+D_1-1$. The minimum of $r$ uniform distinct positions has
+expectation $(N+1)/(r+1)$, by exchangeability of the $r+1$ gaps.
+The two survival product forms give the bounds.
+\end{proof}
+\begin{corollary}[Exchangeable minimax and limits]
+\pr\ Under the uniform fixed-count assignment prior, all adaptive distinct
+query rules with truth-independent randomization have this discovery law.
+Uniform query ordering is minimax over assignments for expected discovery
+time. For fixed $r$, $T/N\Rightarrow\mathrm{Beta}(1,r)$.
+If $r\to\infty$, $r/N\to0$, then $(r/N)T\Rightarrow\mathrm{Exp}(1)$.
+\end{corollary}
+\begin{proof}
+Unqueried labels remain exchangeable after every history; the transition
+probabilities depend only on remaining counts. A policy's worst assignment
+is at least its prior average, and uniform ordering equalizes assignments.
+The rare-class survival products tend to $(1-x)^r$ and $e^{-x}$ at the
+respective scalings. Except with probability $r/N$, the first label is
+common and $T$ equals rare-class discovery time.
+\end{proof}
+\nc\ At $N=136,r=12$: $\E T=10.6344615\ldots$,
+$P(D>9)=0.42394419\ldots$, $P(D>16)=0.2078709166\ldots$;
+rare-class 95\% and 99\% discovery quantiles are 29 and 42.
+These are design calculations, not a frozen thesis endpoint estimate.
+
+\begin{proposition}[Exact enrichment condition]\label{prop:tail}
+\pr\ A subset of size $M$ containing $s\ge1$ designated-class members has
+first-discovery time stochastically no larger than a full pool of size $N$
+containing $r$, iff $s/M\ge r/N$.
+Both-class startup additionally needs an opposite-class anchor or a separate
+argument.
+\end{proposition}
+\begin{proof}
+Necessity is the first-draw probability. For sufficiency compare hazards
+$s/(M-j)$ and $r/(N-j)$ while survival is possible:
+$sN-rM+j(r-s)\ge0$, because the subset has $s\le r$.
+Multiply the complementary hazards; subset exhaustion sets survival to zero.
+\end{proof}
+\begin{example}[Weak global prediction can aid startup]\label{ex:startup}
+\ce\ Let $N=r^2$, $r\ge4$. A three-point high-score subset contains one
+rare and two common labels; outside it are $r-1$ rare labels.
+Both conditional rare probabilities are below $1/2$, so the Bayes classifier
+remains constant. Rare-oriented AUC is
+$1/2+\frac12(1/r-2/(N-r))\to1/2$.
+Calibrated Brier improvement is $(N-3r)^2/[3N^2(N-3)]\to0$ and log-loss
+gain is at most $h_2(3/N)\to0$.
+Both-class discovery within the subset has mean $7/3$; full-pool mean is
+asymptotic to $r$.
+\end{example}
+\begin{proof}
+Count binary-score pairs for AUC; compute the variance of the conditional
+rare-class probability for Brier improvement. Mutual information is bounded
+by the subset indicator entropy. Apply the discovery formula to each pool.
+\end{proof}
+\begin{example}[Same startup time, different information]\label{ex:history}
+\ce\ For fair $\Theta$, let labels be $(0,1,\Theta,1-\Theta)$.
+Querying the first two or last two gives $T=2$ in both cases, but posterior
+full-pool risk is respectively $1/4$ or zero.
+\end{example}
+\begin{theorem}[Stopping-time information]\label{th:stop}
+\pr\ Let $\Theta$ be a finite identifiable family of deterministic binary
+worlds, each containing both classes. Let $U$ be an independent policy
+seed, $H_T$ the history at first both-class discovery, and $Q\ge T$ a
+zero-error identification stopping time. In bits,
+\[
+ I(\Theta;H_T\mid U)=H(Y_{\rm first},T\mid U)\le1+H(T),\qquad
+ \E Q\ge\E T+H(\Theta)-1-H(T).
+\]
+If $T\le b$, the information is at most $\log_2[2(b-1)]$;
+if $T$ is deterministic it is at most one bit.
+\end{theorem}
+\begin{proof}
+Given $U$, all labels before $T$ equal the first label and the last label
+is opposite. Thus $(Y_{\rm first},T)$ reconstructs all queries and labels;
+conversely the history gives this pair. History is deterministic given
+$(\Theta,U)$, proving the information identity.
+Conditional on $(H_T,U)$ the remaining zero-error decision tree is a binary
+prefix code, with mean length at least $H(\Theta\mid H_T,U)$.
+Average and use independence of $U$. There are at most $2(b-1)$ pairs.
+\end{proof}
+
+\section{Round-1 results retained: boundary metrics and structural priors}
+\begin{example}[A nearest-opposite-label band can reverse boundary ranking]
+\label{ex:q20}
+\ce\ Let $m\ge4$, $0<\epsilon<1/(5m)$, and use the $5m$ test points
+$-2,-\epsilon,\epsilon,2\epsilon,\ldots,(5m-2)\epsilon$ with truth
+$y(x)=\1_{\{x>0\}}$. Let $q20$ be the $m$ points of smallest distance to
+an opposite-labelled test point. Then
+$q20=\{-\epsilon,\epsilon,\ldots,(m-1)\epsilon\}$, with a strict cutoff.
+Threshold A at $-1$ has band accuracy $(m-1)/m$ and boundary error one.
+Threshold B at $(m-3/2)\epsilon$ has band accuracy $2/m$ and boundary
+error $(m-3/2)\epsilon$. Both have nonempty boundaries; the band has both
+classes. Taking $\epsilon=1/(100m^2)$ makes the geometric reversal arbitrarily
+large. Embed the construction in four dimensions by constant other
+coordinates; a common affine scaling of the varying coordinate preserves it.
+\end{example}
+\begin{proof}
+Nearest-opposite distances are $2+\epsilon$ at $-2$, $2\epsilon$ at
+$-\epsilon$, and $(j+1)\epsilon$ at $j\epsilon$.
+They give the stated strict band cutoff. A misclassifies only its negative
+band point. B correctly classifies that point and the largest positive band
+point. Distances of the thresholds from zero give the geometric errors.
+Training anchors at $\pm R$, $R>4$, can be included without changing this
+test-band construction.
+\end{proof}
+
+\begin{proposition}[Graph cuts and localization]\label{prop:cut}
+\pr\ On a graph $G=(V,E)$ let $C_y=\{\{i,j\}\in E:y_i\ne y_j\}$ and
+$A=\{i:y_i\ne\widehat y_i\}$. Then
+$C_y\triangle C_{\widehat y}=\delta_G(A)$.
+Zero cut mismatch means the two labelings differ by an independent global
+flip on each connected component; one known label per component removes
+this ambiguity. Also
+$|C_y\triangle C_{\widehat y}|\le d_{\max}|A|$.
+Cut disagreement count alone cannot measure displacement.
+\end{proposition}
+\begin{proof}
+For each edge,
+$(y_i\oplus y_j)\oplus(\widehat y_i\oplus\widehat y_j)
+ =(y_i\oplus\widehat y_i)\oplus(y_j\oplus\widehat y_j)$.
+An error set with no crossing edge is a union of connected components.
+Counting incident edges gives the degree bound. On a path, any two different
+single-cut labelings disagree on exactly two cut edges, irrespective of
+their separation.
+\end{proof}
+
+\begin{proposition}[A finite-pool boundary-location metric]\label{prop:metric}
+\pr\ For geometric edges define
+\[
+ \rho(\{x_1,x_2\},\{y_1,y_2\})
+ =\min_{\pi\in\mathfrak S_2}\max_{i=1,2}\|x_i-y_{\pi(i)}\|.
+\]
+Hausdorff distance induced by $\rho$ is a metric on nonempty finite edge
+sets. Add the empty set by assigning its distance to every nonempty set a
+constant $D_0\ge\operatorname{diam}(\Omega)>0$.
+Applied to cut sets it is a metric on labelings modulo component flips;
+anchors give identity of labelings. On an equally spaced path, two single
+cuts $i,j$ have distance $|i-j|h$.
+\end{proposition}
+\begin{proof}
+The optimal endpoint matchings compose, proving the triangle inequality
+for $\rho$; the other metric properties follow from endpoint matching.
+Hausdorff distance inherits these properties on finite sets.
+All nonempty distances are at most $\operatorname{diam}(\Omega)$, so adding
+the empty set preserves the triangle inequality. Use
+Proposition \ref{prop:cut} for the quotient. For path edges, matching left
+to left and right to right minimizes the maximal displacement.
+\end{proof}
+
+\begin{theorem}[Geometric approximation by graph cuts]\label{th:geometry}
+\pr\ Let $\Omega$ be bounded and convex and $X$ an $\epsilon$-net.
+Connect all pairs at distance at most $6\epsilon$.
+Let $A,B$ have compact smooth boundaries with two-sided tubular neighborhoods
+of radius strictly greater than $2\epsilon$, contained in $\Omega$.
+Label $X$ by membership in each set. For their cut sets,
+\[
+ \left|H_\rho(C_A,C_B)-H(\partial A,\partial B)\right|\le12\epsilon.
+\]
+\end{theorem}
+\begin{proof}
+At each boundary point take normal offsets $\pm2\epsilon$ and net points
+within $\epsilon$ of them. The tubular condition puts these net points on
+opposite sides; their distance is at most $6\epsilon$ and their edge
+midpoint is within $3\epsilon$ of the boundary point.
+Conversely every crossing edge meets the boundary along its segment
+(convexity keeps the segment in $\Omega$), so its midpoint is within
+$3\epsilon$ of a boundary point.
+Each midpoint set is therefore within Hausdorff distance $3\epsilon$ of
+its boundary. Their mutual Hausdorff distance differs from the true one
+by at most $6\epsilon$.
+For two edges of length at most $6\epsilon$, midpoint distance is at most
+$\rho$, which is at most midpoint distance plus $6\epsilon$.
+The same comparison holds for Hausdorff distances, giving $12\epsilon$.
+\end{proof}
+
+\begin{proposition}[Moment hierarchy]\label{prop:hierarchy}
+\pr\ Current Bayes vertex Hamming risk uses first moments; one-query vertex
+Hamming value uses second moments. Current cut-Hamming risk for the
+edgewise Bayes cut predictor uses second label moments. One-query
+cut-Hamming value can require third moments.
+\end{proposition}
+\begin{proof}
+The first two claims follow from Theorem \ref{th:binary}.
+The spin encoding a cut on $\{i,j\}$ is $-S_iS_j$, so its mean is a second
+moment and its cross-moment with a queried $S_k$ is a third moment.
+For strict necessity compare three independent fair bits with the uniform
+law on $000,011,101,110$. All first and second moments agree.
+On the triangle the current edgewise Bayes cut risk is $3/2$ for both.
+After one bit, independent bits give zero reduction, whereas even parity
+determines the opposite edge and gives reduction $1/2$.
+The edgewise predictor need not itself be realizable as a vertex cut;
+this distinction is part of the stated loss/action model.
+\end{proof}
+
+\begin{proposition}[A physics prior can help one target distribution and hurt another]
+\label{prop:physics}
+\pr\ At two independent design sites minimize
+$\sum_i n_i(g_i-f_i)^2+\lambda\sum_i(g_i-\mu_i)^2$.
+Then $g_i-f_i=\lambda(\mu_i-f_i)/(n_i+\lambda)$.
+Compared with the zero prior, weighted squared-risk change is
+\[
+ \sum_i q_i\left(\frac{\lambda}{n_i+\lambda}\right)^2
+ (\mu_i^2-2\mu_if_i).
+\]
+For $f=(10,1)$, $\mu=(10,3)$, $n=(9,1)$, $\lambda=1$,
+target weights $(.9,.1)$ give risks $.4,.1,.925$ for the physics prior alone,
+physics plus correction, and zero-prior correction.
+Weights $(.1,.9)$ give $3.6,.9,.325$ respectively.
+\end{proposition}
+\begin{proof}
+Differentiate the strictly convex objective coordinatewise, substitute the
+solution, and expand the squared-error difference.
+The stated risks follow by direct substitution.
+\end{proof}
+\begin{proposition}[Smoothness alone does not exclude finite sign worlds]
+\label{prop:smooth}
+\pr\ On distinct finite locations with minimum spacing $d_{\min}$, every
+binary sign assignment is realized by an $L$-Lipschitz function, for every
+$L>0$. It is also realized by a function of arbitrarily small positive
+norm bound in an RKHS whose pool Gram matrix is strictly positive definite.
+\end{proposition}
+\begin{proof}
+Assign values $\alpha s_i$ with $0<2\alpha\le Ld_{\min}$ and extend by
+the McShane formula $\min_i(\alpha s_i+L\|x-x_i\|)$.
+For an RKHS with Gram matrix $K$, the interpolant with coefficient vector
+$K^{-1}\alpha s$ has squared norm $\alpha^2s^\top K^{-1}s$, which can be
+made arbitrarily small.
+\end{proof}
+Known amplitude exceeding $L$ times a coverage radius can certify a sign;
+binary signs alone do not supply that amplitude. These are elementary
+extension/interpolation facts, not novelty claims.
+
+\section{Concrete predictions for a Laplace GP classifier}
+Let $Q_f=\mathcal N(\mu,\Sigma)$ be the current Laplace latent approximation.
+Two target definitions must be separated. For \emph{persistent observed labels},
+draw conditionally independent $Y_i$ once given $f$, with
+$P(Y_i=1\mid f)=\sigma(f_i)$, and reveal that same $Y_j$ on query.
+Then for distinct indices,
+\[
+ m_i=\E_{Q_f}\tanh(f_i/2),\qquad
+ c_{ij}=\E_{Q_f}\tanh(f_i/2)\tanh(f_j/2),\qquad c_{jj}=1.
+\]
+For \emph{latent-sign targets} $T_i=\operatorname{sign}(f_i)$ and a logistic
+observation $O_j$, instead use
+\[
+ m_i=\E_{Q_f}\operatorname{sign}(f_i),\qquad
+ c_{ij}=\E_{Q_f}\operatorname{sign}(f_i)\tanh(f_j/2).
+\]
+In particular $c_{jj}=\E|\tanh(f_j/2)|<1$ for finite nonsingular latents.
+These moments are computable by one- or two-dimensional Gaussian quadrature.
+Coherent fantasy conditioning reweights $Q_f$ by the observation likelihood;
+a fresh Laplace fit generally gives a different law.
+
+Each row below gives a falsifiable calculation, not an assertion that a GP
+can realize every extremal binary law or that Hamming rankings predict NSD.
+\small
+\begin{longtable}{p{.24\textwidth}p{.68\textwidth}}
+\toprule Result & Computable prediction / next check\\\midrule\endhead
+Binary identity, Theorem \ref{th:binary}&
+For every candidate, quadrature moments and direct coherent two-branch
+posterior Hamming risks must agree. Test persistent-label and latent-sign
+targets separately; substituting latent covariance for $c_{ij}$ should not
+be expected to agree.\\
+Sharp margin and balanced $\kappa_N$&
+For persistent-label targets and coherent updating, verify
+$\Delta_{\rm margin}/\Delta^\star\ge1/(N-1)$.
+At zero latent means, all marginals are fair; verify uniform ratio
+$\ge\kappa_N$. Failure beyond numerical tolerance diagnoses inconsistent
+moments, targets, or updates. Attainment by a particular GP kernel is not
+predicted.\\
+General/two-level marginals, Theorem \ref{th:LP}&
+On a small pool, compute moments and the finite LP using only the marginal
+vector. Its worst-law guarantee must hold for the GP joint law.
+At two points with unequal uncertainties, margin must be Hamming-optimal
+under coherent revelation.\\
+Exact two-level family, Theorem \ref{th:twolevel}&
+Tune a three-point Gaussian latent law's marginal means to persistent-label
+probabilities $(.1,.1,.25)$. Query with probabilities
+$(5/46,5/46,18/23)$; the expected coherent Hamming gain divided by the best
+candidate gain must be at least $20/23$. A GP-restricted optimum may be
+better than this universal-law guarantee.\\
+Rare marginals, Theorem \ref{th:rare}&
+Use a constant-mean equal-variance latent prior tuned so every label marginal
+equals $3/34$. For $N=136$, its uniform-query ratio cannot fall below
+$2798/86615$. Compare with the constant-count posterior separately.
+The value is a universal-law lower bound, not a claim that this GP attains it.\\
+Positive transfer, Proposition \ref{prop:transfer}&
+For latent-sign targets and logistic observations, mark candidates with
+no pair satisfying $|c_{ij}|>|m_i|$. Their exact one-step Bayes Hamming
+gain must be zero despite positive mutual information or observation entropy.\\
+Common/heterogeneous noise, Theorem \ref{th:bsc}&
+Add a common independent BSC channel to persistent labels and verify the
+margin bound using $\eta c_{ij}$. With candidate-dependent noise, search
+for margin candidates with no decision-crossing pair; positive information
+alone will not prevent zero gain.\\
+Budgets, Theorem \ref{th:budget}&
+On a small finite label law induced by the GP, condition exactly and compare
+margin with dynamic programming for $B=2,3$. Verify the $B/N$ bound.
+For $N=3,B=2$, verify the stronger sharp $4/5$ bound from
+Theorem \ref{th:n3b2}. Refitting a Laplace model is a separate experiment
+and need not obey these bounds.\\
+Misspecification, Theorems \ref{th:PQ}--\ref{th:regret}&
+In a synthetic GP world with a controlled reference posterior $P$, compare
+direct branch risks with the $P,Q$ moment formula; terminal regret must
+be at most $\max_jD_j$. Identical marginal calibration does not remove the
+$c^P-c^Q$ term. A single realized ground-truth function is not itself this
+posterior $P$.\\
+Update defect&
+At fixed states, compare coherent likelihood reweighting of the current
+Laplace Gaussian with fresh Laplace fantasy fits. Record weighted
+decision disagreement $\zeta_j$ and verify its risk bound.
+Repeat numerical integration/Monte Carlo precision checks before ranking
+the 24-sample frontier estimates.\\
+B1--B3, graph versus displacement&
+For GP posterior draws near a flat interface, vary posterior location spread
+and graph radius separately. The uniform-threshold control must recover
+$1-r/(3s)$ normalized loss. Plot graph Dice and NSD on the same displaced
+thresholds; the analytic discrepancy at displacement $r/2$ is $1/4$ versus one.\\
+B4, oracle decomposition&
+At the same frozen states, use a common coupled fantasy-label array and
+the same refit/metric rule for all oracle levels. Population estimates
+should satisfy the Jensen chain as sampling error shrinks; separate
+policy AULCs need not form an exact decomposition.\\
+M1, Proposition \ref{prop:Ustat}&
+Freeze scaling and radius; with known densities and no clipping, replicate
+cloud sampling and check convergence to one common pair-integral Dice.
+Then change clipping, density estimation, and radius one at a time.
+Fixed clipping is predicted to retain density dependence.\\
+Errata / discovery&
+Under exchangeable fixed-count posterior worlds, feature-adaptive queries
+cannot improve discovery over random. Verify $t=0$ separately and reproduce
+the $14.6725$ front calculation as an arithmetic control, not as evidence
+for a GP acquisition improvement.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{What remains unresolved}
+\cj\ The exact general finite-$N,B$ sequential-margin competitive ratio
+remains open here. The $N=3,B=2$ case is now proved to be $4/5$
+by the rational certificates in Theorem \ref{th:n3b2}.
+The general-marginal LP is exact but may be computationally prohibitive;
+the compact rare-marginal formula currently covers homogeneous
+$p\le1/3$ (and $p\ge2/3$ by flipping labels).
+There is no claim of a sharp GP-restricted minimax constant, a universal NSD
+margin ratio, or a publication-priority theorem.
+The user's independent round-1 checks and the scratch numerical checks
+support specified formulas only; they do not resolve these open questions.
+The requested Astra-ultra subagents encountered their usage limit; the
+extensions assembled here did not receive a completed independent second
+proof audit. Source environments and references passed static checks.
+The native LaTeX compiler returned a platform-directory error
+(\texttt{Unable to find standard directories for platform}); PDF compilation
+and visual layout therefore remain unverified.
+
+\begin{thebibliography}{99}
+\bibitem{ml18icml} S. Mussmann and P. Liang (2018).
+On the Relationship between Data Efficiency and Error for Uncertainty Sampling.
+\url{https://proceedings.mlr.press/v80/mussmann18a/mussmann18a.pdf}
+\bibitem{ml18nips} S. Mussmann and P. Liang (2018).
+Uncertainty Sampling is Preconditioned Stochastic Gradient Descent on Zero-One Loss.
+\url{https://arxiv.org/abs/1812.01815}
+\bibitem{eer} S. Mussmann et al. (2022).
+Active Learning with Expected Error Reduction.
+\url{https://arxiv.org/abs/2211.09283}
+\bibitem{liu} S. Liu and X. Li (2023), original version.
+Understanding Uncertainty Sampling (later titled Understanding Uncertainty
+Sampling via Equivalent Loss).
+\url{https://arxiv.org/pdf/2307.02719v1}
+\bibitem{epig} F. Bickford Smith et al. (2023).
+Prediction-Oriented Bayesian Active Learning.
+\url{https://proceedings.mlr.press/v206/bickfordsmith23a/bickfordsmith23a.pdf}
+\bibitem{tal} J. H\"ubotter et al. (2024). Transductive Active Learning:
+Theory and Applications. Conference version.
+\url{https://openreview.net/pdf/a4d2fe62468dee7d8a39e169ecd8c2cfd078a896.pdf}
+\bibitem{wang} C. Wang, S. Sun and R. Grosse (2021).
+Beyond Marginal Uncertainty: How Accurately can Bayesian Regression Models
+Estimate Posterior Predictive Correlations?
+\url{https://proceedings.mlr.press/v130/wang21g/wang21g.pdf}
+\bibitem{pass} B. Pass and S. Spektor (2017 preprint).
+On Khintchine type inequalities for pairwise independent Rademacher random variables.
+\url{https://arxiv.org/abs/1708.08775}
+\bibitem{gap} L. Galli, K. Kaparis and A. N. Letchford (2012).
+Complexity results for the gap inequalities for the max-cut problem.
+Includes discussion of earlier Laurent--Poljak gap inequalities.
+\url{https://www.lancaster.ac.uk/staff/letchfoa/articles/2012-gap-ineqs-complexity.pdf}
+\bibitem{update} F. Bickford Smith, A. Foster and T. Rainforth (2024).
+Making Better Use of Unlabelled Data in Bayesian Active Learning.
+\url{https://proceedings.mlr.press/v238/bickford-smith24a/bickford-smith24a.pdf}
+\bibitem{batch} K. Hu and S. Mussmann (2026, arXiv v3).
+Batch Bayesian Active Learning with Partial Batch Label Sampling.
+\url{https://arxiv.org/pdf/2510.09877}
+\end{thebibliography}
+\end{document}
+

@@ -1,0 +1,63 @@
+{
+  "hausdorff_pair_counterexample": {
+    "value_plus": "11/70",
+    "value_minus": "0",
+    "all_pairs_equal": true
+  },
+  "optimized_ratio_gain": "-1/210",
+  "common_bsc": {
+    "law_channel_checks": 2700,
+    "minimum_bound_slack": 0.0
+  },
+  "sequential_simulation": {
+    "law_pairs": 200,
+    "policies_each": 12,
+    "minimum_regret_slack": 0.569645529945251
+  },
+  "gaussian_boundary_value_max_quadrature_error": 8.215650382226158e-15,
+  "discovery_geometry": [
+    {
+      "k": 1,
+      "A_T": 2,
+      "B_mean_T": 2.5,
+      "A_final_risk": 0.5,
+      "B_final_risk": 0
+    },
+    {
+      "k": 2,
+      "A_T": 2,
+      "B_mean_T": 2.5,
+      "A_final_risk": 0.5,
+      "B_final_risk": 0
+    },
+    {
+      "k": 3,
+      "A_T": 2,
+      "B_mean_T": 2.5,
+      "A_final_risk": 0.5,
+      "B_final_risk": 0
+    },
+    {
+      "k": 4,
+      "A_T": 2,
+      "B_mean_T": 2.5,
+      "A_final_risk": 0.5,
+      "B_final_risk": 0
+    },
+    {
+      "k": 5,
+      "A_T": 2,
+      "B_mean_T": 2.5,
+      "A_final_risk": 0.5,
+      "B_final_risk": 0
+    },
+    {
+      "k": 6,
+      "A_T": 2,
+      "B_mean_T": 2.5,
+      "A_final_risk": 0.5,
+      "B_final_risk": 0
+    }
+  ],
+  "shrinkage_formula_grids": 9
+}

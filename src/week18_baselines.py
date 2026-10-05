@@ -25,6 +25,8 @@ def arms_for(t):
         A += [(("G3", "fixed:old"), "margin"), (("G3", "fixed:old"), "random")]
     if np.isfinite(t["depth"][t["pool"]]).any():
         A += [(("GPR_depth", "mlii"), "straddle")]
+    if t["block"] == "S2":                      # stress worlds (binary): label-only E3 as a development check
+        A += [(("MixGP", "auto4"), "margin")]
     return A
 
 
@@ -53,6 +55,9 @@ def task_job(t, out_dir):
     fx = fixed_old() if t["task"] in ("R2_TRANSFER", "R3_NEW") else None
     with threadpool_limits(1):
         for learner, rule in arms_for(t):
+            if learner[1] == "auto4":
+                from src.week18_dev_arms import hyper_for
+                learner = (learner[0], hyper_for(t, "auto4"))
             out, L = E.run(t, learner, rule, set(budgets(t)), fixed=fx)
             for o in out:
                 r = {"task": t["task"], "repeat": t["repeat"], "fold": t["fold"], "model": learner[0], "hyper": learner[1], "rule": rule,
@@ -73,6 +78,9 @@ def main(which="real"):
     OUT.mkdir(parents=True, exist_ok=True); pdir = OUT / f"cache_{which}"; pdir.mkdir(exist_ok=True)
     if which == "real":
         tasks = T.all_real("DEV")
+    elif which == "stress":
+        import src.week18_stress as S
+        tasks = S.all_stress(0)
     else:
         tasks = [W.twin_task(tw, d, n, rep) for tw, d, n in
                  [(tw, d, n) for tw in ("T_GP", "T_GBT", "T_NW", "T_QL", "T_TOBIT") for d, n in (("pooled", 433), ("OLD", 324), ("NEW", 108))] + [("T_DEPTH", "OLD", 324)]

@@ -122,3 +122,34 @@ length-scales to the target region. This is the explanation offered for Phase 0 
 OLD and per-step ML-II hyperparameters, random gains +0.023–0.026 from ML-II. Check: `src/week18_mlii_design.py`
 (idealized boundary design = the $b$ pool points with smallest $|f|$ vs uniform random; cross-refits with the other
 design's hyperparameters).
+
+## Astra Round 3 (received 2026-10-05) — integrated as hypotheses
+Source: `outputs/astra_round3/` (verbatim copy of the owner-supplied package, 25 files matching its SHA-256 manifest;
+Astra inspected HEAD 1ded7f43 read-only). Round 3 audits **Week 16** (PEER, oracle headroom, calibration); it does not
+evaluate Week 18 methods. Per the Week 18 brief its claims are hypotheses here; no freeze is changed (none exists yet
+for Week 18; earlier weeks' frozen verdicts stand). Astra's PROVED statements are Astra's proofs (appendix
+`ROUND3_THEOREM_APPENDIX.tex`, 60 statements); "checked" below means re-derived independently from the statements
+(`src/week18_astra3_checks.py`, no Astra code imported or executed).
+
+| Astra item | Our status | Relation to Week 18 |
+|---|---|---|
+| L3: centred Gaussian/probit self-value arctan(s/τ)/π | **checked** (quadrature vs closed form, max error 1e-16) | — |
+| C10: coherent plug-in edge EBR = −1/9 | **checked** (exact rationals) | Week 15/16 negative EBR ≠ proof of incoherent updating (erratum E18-4) |
+| R5: optimized ratio-of-expectations Dice risk rises by 1/210 | **checked** (exact) | same |
+| P5: attenuating the whole physics mean never moves its zero threshold | **checked** (trivial) | Week 17 M3 vs M3_Cfree: level changes need an intercept/discrepancy, not attenuation |
+| D4: first rare rank D ≤ 1 + ⌊V/r⌋ | **checked on real data**: OLD D = 1 ≤ 4, NEW D = 2 ≤ 18, POOLED 1 ≤ 5 (log-h order; `phase4/astra3_D4_real.csv`) | the physics order is a strong rare-class ranker (AUC 0.99 OLD, 0.86 NEW) |
+| P6: OLD data + unlabelled NEW inputs cannot identify a NEW threshold shift | agrees with **T18-3(a)** (stronger premise there: all source labels identify only nesting) | transfer of thresholds needs target labels or continuous outputs (T18-3(c)) |
+| P1–P4: order-only threshold search, ⌈log₂(N+1)⌉ | = **T18-1(a)** / **T18-3(b)** | — |
+| G2: value of observing a real-valued boundary height = conditional variance; "substituting a binary label for an observed height invalidates the experiment" | formal counterpart of **T18-4** | mechanism behind E1/E3: a depth query observes a real value |
+| C2: positive rescaling of the latent preserves every sign and the boundary; latent sd is no geometric certificate | accepted (elementary) | sharpens **T18-5**: with deterministic labels the latent amplitude is weakly identified by ML-II; amplitude/length-scale drift under margin designs need not change the classifier |
+| §10 conjecture "level shifts, order survives" | **tested (POST-HOC)**: order survives within campaigns (AUC above); 1-D threshold shift +0.17 [0.03, 0.29] overall, +0.01 [−0.14, 0.28] in the overlap → shift vs region effect **not decidable**; flexible GPC needs no offset | erratum E18-3 to our own DATA_AUDIT; B1 (hierarchical) stays killed (offset adds +0.001 nats) |
+| §1/§14 Week 16 interpretation ("remaining gap = model information") | **accepted** as a correction | erratum E18-4; THESIS_IMPLICATIONS uses the narrower wording |
+| §8 numerical audit (martingale "max 4.3"; saturation illustration) | **verified** from saved tables | erratum E18-5 |
+| §10 top-priority test: same-state factorial separating latent law, channel and updater on Week 16 states | **deferred** — needs the Week 16 posterior states with full target–candidate covariances (not saved; `headroom/candidates.csv.gz` holds per-candidate summaries only) and concerns PEER, which is not a Week 18 candidate | listed in OPEN items; the deterministic-vs-stochastic channel distinction is built into E3 (σ is a working likelihood scale absorbing model misfit; the simulator is deterministic) |
+| O2/O5: campaign intercept / robust prior over level | covered by B1 (killed, premise unsupported on our data) and E18-3 | — |
+
+**What Round 3 changes in Week 18's reporting.** (i) Effects are reported as absolute differences with intervals,
+QTT alongside AULC; no ratio-only claims. (ii) "Deterministic simulator, stochastic working likelihood" is stated
+for every model (G3/LT/M3 logistic, E3 Gaussian σ on log depth). (iii) Startup and refinement stay separate
+(unchanged design: startup is identical across arms). (iv) No claim that the remaining gap to an oracle is "model
+information".

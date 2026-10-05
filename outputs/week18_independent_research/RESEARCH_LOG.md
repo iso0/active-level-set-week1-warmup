@@ -5,11 +5,11 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
 ## Status board
 | Phase | State | Pointer |
 |---|---|---|
-| 0 Re-ground / red-team | in progress | RED_TEAM.md, this log |
-| 1 Data foundation | in progress | DATA_AUDIT.md |
-| 2 Benchmark redesign | not started | BENCHMARK_SPEC.md |
-| 3 Research loop | not started | ATTEMPT_LEDGER.md |
-| 4 Theory | not started | THEORY_WEEK18.md |
+| 0 Re-ground / red-team | done | RED_TEAM.md, ERRATA.md, phase0/ |
+| 1 Data foundation | done (NEW continuous outputs pending D1) | DATA_AUDIT.md |
+| 2 Benchmark redesign | done (S2 stress baselines queued) | BENCHMARK_SPEC.md, PHASE2_BASELINES.md |
+| 3 Research loop | running: depth2 (E1b/E2/E3), cfa (C1/F1/A1), headroom; killed B1, D1, A2 | ATTEMPT_LEDGER.md, phase3/ |
+| 4 Theory | T18-1 done; T18-2..T18-5 drafted, checks queued | THEORY_WEEK18.md |
 | 5 Confirmation | 0 rounds used | FREEZE_ROUND_k.md |
 
 ## Open decisions for the owner
@@ -54,3 +54,29 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   both depth twins incl. the non-own family (T_TOBIT OLD 0.830 vs 0.776). External validity: twins τ 0.22,
   W17 cells 0.16, real-vs-real 0.00 → no universal real ranking; Week 17's "M3 ≪ G3" fails on OLD/POOLED.
   Degenerate (single-class) NEW-like twin pools are skipped and logged.
+- 2026-10-05 Phase 3: E2 (Tobit) first twin run: weak (+0.012…+0.021 vs G3, CIs include 0; E1 GPR-depth
+  +0.034…+0.124) and 12.7% of fits not converged (fixed point > 1e-6) → solver rewritten (analytic GPML-5.1
+  gradients — implicit term sign verified numerically; relative fixed-point stopping with round-off-floor stall
+  rule); ≈ 35× faster at n = 485. New candidate E3 (mixed-likelihood depth GP: every observed depth exact, label-only
+  rows censored) registered with kill criteria (commit 1ded7f43) and launched with E2 re-run and E1 on
+  partial-depth tasks (depth2). Killed before running: B1 hierarchical (no campaign offset), D1 monotone (NEW
+  order violations 2.4%; Week 14 G3C harm on NEW), A2 hyperprior (no headroom under margin).
+- 2026-10-05 Phase 2 contrasts (phase2/contrasts_*.csv, qtt_*.csv): E1 (GPR-depth + straddle) vs G3 + margin:
+  R3_OLD +0.021 [0.014, 0.030] BA AULC, median QTT to G3's B80 level 32 vs 56 (−43%); R2rev +0.012 [0.007, 0.016],
+  28 vs 48. q20 lower (0.817 vs 0.842 on R3_OLD) — as in Week 7.
+- 2026-10-05 **Integrity: twin truth drift caught and fixed.** T_TOBIT's truth is a TobitGP fit; rewriting the
+  E2/E3 solver (1ded7f43) silently changed the truth (G3/E1 runs on T_TOBIT tasks no longer reproduced Phase 2;
+  T_DEPTH and binary twins reproduced exactly). Fix: the truth now uses a frozen copy of the e351cb4f code
+  (`src/week18_tobit_truth_v1.py`), verified to reproduce Phase 2 bit-for-bit; regression test
+  `test_week18_twin_truth_frozen.py`. The first depth2 T_TOBIT results (against the drifted truth) are kept in
+  `phase3/depth2/superseded_truth_v2/` and not used; T_TOBIT tasks re-run.
+- 2026-10-05 depth2 twins (DEV, non-T_TOBIT part valid): E3 (MixGP + margin) on T_DEPTH OLD +0.066 [0.040, 0.095]
+  NSD AULC vs G3 + margin (E1 +0.059). **Label-only E3 is a weaker binary classifier than G3** on all binary twins
+  (−0.02 … −0.22; straddle far worse): E3's value is the depth likelihood, not its probit/log-input GPC part.
+- 2026-10-05 **Astra Round 3 integrated (Phase 4)** at the owner's request (files opened with the owner's
+  permission; verbatim copy in `outputs/astra_round3/`, SHA-256 manifest verified). Scope: Week 16 audit. Checked
+  independently: L3, C10, R5, P5 exact; D4 bound on real data; Week 16 numerical items (E18-5). Accepted: Week 16
+  interpretation narrowed (E18-4). Their level-shift conjecture tested → own Phase 1 wording corrected (E18-3:
+  1-D threshold shift +0.17 [0.03, 0.29] overall, +0.01 [−0.14, 0.28] in the overlap — not decidable). Deferred:
+  same-state latent/channel/updater factorial (needs Week 16 covariances, not saved; PEER is not a Week 18 candidate).
+  No freeze changed.

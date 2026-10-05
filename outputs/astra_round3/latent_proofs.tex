@@ -1,0 +1,466 @@
+% Appendix fragment: no preamble or document environment.
+% The parent document defines theorem, proposition, lemma and counterexample.
+
+\section{Binary observations, latent targets, and coherent decision value}
+
+Throughout this appendix, a binary target or observation takes values in
+$\{-1,+1\}$ unless a counterexample explicitly uses $0/1$ notation.
+The target set and nonnegative weights $w_i$ are fixed before the query.
+The loss is weighted Hamming loss
+$L(t,a)=\sum_i w_i\mathbf{1}\{t_i\ne a_i\}$, and every coordinatewise
+binary action is allowed. Write $W=\sum_i w_i$.
+
+\begin{lemma}[PROVED: binary-observation identity]
+\label{lem:binary-observation-r3}
+For any coherent joint law of $(T,O)$, put
+$m=\mathbb{E}T$ and $c=\mathbb{E}(TO)$. The minimum expected error after
+observing $O$ is
+\[
+ r^O=\frac{1-\max\{|m|,|c|\}}{2}.
+\]
+Consequently, for target coordinates $T_i$ and candidate observation $O_j$,
+\[
+ V(j)=\frac12\sum_i w_i\bigl(|c_{ij}|-|m_i|\bigr)_+,
+ \qquad m_i=\mathbb{E}T_i,\quad c_{ij}=\mathbb{E}(T_iO_j).
+\]
+\end{lemma}
+\begin{proof}
+There are exactly four deterministic maps from a binary observation to a
+binary action: $+1,-1,O,-O$. Their correlations with $T$ are respectively
+$m,-m,c,-c$, and their errors are one half of one minus that correlation.
+Randomization cannot improve a linear expected loss. The best correlation
+is therefore $\max\{|m|,|c|\}$. Before querying, the best correlation is
+$|m|$. Subtract the two errors and sum coordinatewise, which is legitimate
+because Hamming loss is additive and the action space is unrestricted.
+\end{proof}
+
+\begin{proposition}[KNOWN/PRIOR ART; PROVED: nonnegative coherent Bayes value]
+\label{prop:nonnegative-r3}
+Let a fixed decision problem have integrable loss $L(T,a)$ and action set
+$\mathcal A$. If the same coherent law is used before and after an
+observation $O$, the expected posterior Bayes risk is no larger than the
+prior Bayes risk. This applies to any loss, provided the posterior action
+minimizes that same loss over the same action set.
+\end{proposition}
+\begin{proof}
+For every prequery action $a\in\mathcal A$, the constant posterior policy
+that ignores $O$ is admissible. Hence
+\[
+ \mathbb{E}\!\left[\inf_{b\in\mathcal A}
+          \mathbb{E}[L(T,b)\mid O]\right]
+ \le \mathbb{E}\!\left[\mathbb{E}[L(T,a)\mid O]\right]
+ =\mathbb{E}L(T,a).
+\]
+Take the infimum over $a$. For finite binary Hamming decisions, existence
+and measurability of minimizers present no difficulty. Equivalently, for
+$q_i=\mathbb{P}(T_i=1)$ and $q_i'=\mathbb{P}(T_i=1\mid O)$, the concavity
+of $h(q)=\min(q,1-q)$ and the identity $\mathbb{E}q_i'=q_i$ imply
+$\mathbb{E}h(q_i')\le h(q_i)$.
+\end{proof}
+
+\begin{proposition}[PROVED: Gaussian/probit target-observation moments]
+\label{prop:gaussian-probit-r3}
+Suppose $F\sim N(\mu,\Sigma)$ is the current working posterior,
+$T_i=\operatorname{sign}F_i$, and
+$O_j=\operatorname{sign}(F_j+\eta_j)$ with independent
+$\eta_j\sim N(0,\tau^2)$, $\tau>0$. For $s_i^2=\Sigma_{ii}>0$,
+$g_j^2=\Sigma_{jj}+\tau^2$, and
+$\rho_{ij}=\Sigma_{ij}/(s_i g_j)$,
+\begin{align*}
+ m_i&=2\Phi(\mu_i/s_i)-1,\\
+ c_{ij}
+ &=4\Phi_2(\mu_i/s_i,\mu_j/g_j;\rho_{ij})
+   -2\Phi(\mu_i/s_i)-2\Phi(\mu_j/g_j)+1.
+\end{align*}
+In particular, for a centered candidate with standard deviation $s$,
+\[
+ V_{\rm self}
+ =\frac1\pi\arcsin\!\left(\frac{s}{\sqrt{s^2+\tau^2}}\right)
+ =\frac1\pi\arctan(s/\tau).
+\]
+\end{proposition}
+\begin{proof}
+The pair $(F_i,F_j+\eta_j)$ is Gaussian with the displayed variances and
+correlation. Its positive-positive orthant probability is the displayed
+bivariate normal CDF, by changing both centered standardized signs.
+For two binary signs, direct expansion gives
+$\mathbb{E}(TO)=4\mathbb{P}(T=1,O=1)-2\mathbb{P}(T=1)
+-2\mathbb{P}(O=1)+1$. This proves the general formulas.
+At zero means, the Gaussian quadrant identity
+$\Phi_2(0,0;\rho)=1/4+\arcsin(\rho)/(2\pi)$ yields
+$m=0$ and $c=2\arcsin(\rho)/\pi$. Apply
+Lemma~\ref{lem:binary-observation-r3}. The trigonometric equality follows
+because $s,\tau>0$. These are exact statements for the current Gaussian
+law and the stated probit experiment; they do not make a logistic
+posterior or a fresh Laplace refit exact.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: logistic and probit margin ratios]
+\label{ce:logistic-margin-r3}
+For both a fixed logistic and a fixed probit observation channel, there
+are two independent latent targets for which observed-label margin
+uniquely selects a candidate whose coherent Hamming-value ratio tends
+to zero.
+\end{counterexample}
+\begin{proof}
+Let $S$ be a fair sign, let $U$ be an independent sign with
+$\mathbb{E}U=2\delta>0$, and take
+$F_a=\varepsilon S$, $F_b=M U$. Write the channel as
+$\mathbb{E}[O\mid F=f]=a(f)$, with either
+$a(f)=\tanh(f/2)$ or $a(f)=2\Phi(f/\tau)-1$.
+Choose $M>0$ and $0<2\delta<a(M)$. Then
+$\mathbb{E}O_a=0$, while $\mathbb{E}O_b=2\delta a(M)>0$,
+so observed-label margin selects $a$ uniquely.
+The target means are $m_a=0$, $m_b=2\delta$ and the self-moments are
+$c_{aa}=a(\varepsilon)$ and $c_{bb}=a(M)$.
+Independence gives
+$c_{ba}=m_b\mathbb{E}O_a=0$ and
+$c_{ab}=m_a\mathbb{E}O_b=0$, so cross-target gains vanish. Thus
+\[
+ \frac{V(a)}{V(b)}
+ =\frac{a(\varepsilon)}{a(M)-2\delta}\longrightarrow0.
+\]
+For sufficiently small $\varepsilon$, $b$ is the optimal candidate.
+\end{proof}
+
+\begin{proposition}[PROVED: centered Gaussian logistic self-value]
+If $F=sZ$ with $Z\sim N(0,1)$ and the observation channel is logistic,
+then
+\[
+ V_{\rm self}(s)=\frac12\mathbb{E}\tanh(s|Z|/2)
+ \sim \frac{s}{\sqrt{8\pi}}\qquad(s\downarrow0).
+\]
+The probit channel with $\tau^2=8/\pi$ has the same first-order limit.
+\end{proposition}
+\begin{proof}
+The target mean is zero by symmetry. Its target-observation moment is
+$\mathbb{E}[\operatorname{sign}(F)\tanh(F/2)]
+=\mathbb{E}\tanh(s|Z|/2)$, proving the equality.
+Since $\tanh x\le x$ for $x\ge0$, dominated convergence after division by
+$s$ gives limit $\mathbb{E}|Z|/4=1/\sqrt{8\pi}$.
+The probit formula follows from
+$\arctan(s/\tau)/\pi\sim s/(\pi\tau)$.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: latent-scale gauge]
+\label{ce:scale-gauge-r3}
+Let $G$ be any random field with
+$\mathbb{P}(G_i=0)=0$ at all finitely many target coordinates, and put
+$F^{(c)}=cG$ for $c>0$. All sign laws and samplewise zero sets are
+unchanged by $c$. Nevertheless, under any fixed bounded local channel
+with response $a$ continuous at zero and $a(0)=0$, the one-query
+Hamming values tend to zero as $c\downarrow0$.
+\end{counterexample}
+\begin{proof}
+Positive scaling leaves every sign and zero set unchanged. Conditional
+on $G$, the observation mean is $a(cG_j)$, so
+\[
+ \mathbb{E}[T_iO_j]
+ =\mathbb{E}[\operatorname{sign}(G_i)a(cG_j)]
+ \longrightarrow0
+\]
+by bounded dominated convergence. Lemma~\ref{lem:binary-observation-r3}
+then gives $V_c(j)\to0$ for every candidate. In a Gaussian example,
+means and covariance scale as $c\mu$ and $c^2\Sigma$; standardized means
+$\mu_i/s_i$ remain fixed. In particular a centered sign has entropy one
+bit for every $c>0$, even though its latent standard deviation vanishes.
+When defined, the local boundary-displacement proxy
+$s_i/|\nabla\mu_i|$ is also invariant. Under the different, noiseless
+channel $O_j=T_j$, all query values are invariant rather than vanishing.
+\end{proof}
+
+\begin{theorem}[PROVED: sharp margin guarantee under common sign noise]
+\label{thm:bsc-margin-r3}
+Suppose the $N\ge2$ candidates are exactly the $N$ unit-weight targets.
+For each candidate let $O_j=T_jB_j$, where $B_j$ is independent of the
+entire target field and $\mathbb{E}B_j=\alpha\in(0,1]$ is common to all
+candidates. Every observed-label margin maximizer $m$ satisfies
+\[
+ V(m)\ge\frac{1}{N-1}\max_k V(k).
+\]
+The constant is sharp for every fixed $\alpha>0$.
+\end{theorem}
+\begin{proof}
+Put $a_i=|\mathbb{E}T_i|$ and $q_{ik}=|\mathbb{E}T_iT_k|$.
+Since $\mathbb{E}O_j=\alpha\mathbb{E}T_j$, margin minimizes $a_j$.
+The value identity becomes
+$2V(k)=\sum_i(\alpha q_{ik}-a_i)_+$.
+Let $f_b(x)=(b-x)_+$, $s_i=f_\alpha(a_i)$, and
+$d_{ik}=f_{\alpha q_{ik}}(a_i)$. For $a_m\le a_k$ and $b\le\alpha$,
+\[
+ f_\alpha(a_m)-f_\alpha(a_k)
+ \ge f_b(a_m)-f_b(a_k).
+\]
+Indeed the left and right sides are the lengths of the intersections of
+$[a_m,a_k]$ with $[0,\alpha]$ and $[0,b]$, respectively.
+Using $b=\alpha q_{mk}$ and symmetry of $q_{mk}$ gives
+$s_k+d_{mk}\le s_m+d_{km}$.
+Every remaining term satisfies $d_{ik}\le s_i\le s_m$, whence
+\[
+ 2V(k)
+ \le s_m+d_{km}+(N-2)s_m
+ \le (N-1)\,2V(m).
+\]
+If $V(m)=0$, this inequality also proves all values are zero.
+
+For sharpness when $N\ge3$, take one independent fair decoy sign and
+$N-1$ identical signs of mean $2\eta>0$. Margin uniquely selects the
+decoy. Its value is $\alpha/2$, whereas a cluster query has value
+$(N-1)(\alpha-2\eta)/2$ when $2\eta<\alpha$. For sufficiently small
+$\eta$, the cluster query is optimal, and the ratio approaches
+$1/(N-1)$ as $\eta\downarrow0$. For $N=2$, the proved constant is one
+and cannot be improved. Independence among the different noise variables
+$B_j$ is not needed because only one observation is acquired.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: sign calibration misses amplitude]
+\label{ce:amplitude-swap-r3}
+For a fixed symmetric logistic or probit channel, identical full
+latent-sign laws and identical observation marginals need not yield
+identical optimal queries.
+\end{counterexample}
+\begin{proof}
+Take independent centered Gaussian coordinates with standard deviations
+$(1,\varepsilon)$ under $P$ and $(\varepsilon,1)$ under $Q$.
+Under both laws the sign vector consists of two independent fair signs;
+all sign marginals and sign-pair probabilities therefore agree exactly.
+Symmetry also makes every observation marginal fair.
+The self-value of the unit-scale coordinate is strictly positive,
+whereas that of the $\varepsilon$-scale coordinate tends to zero by the
+preceding propositions. Independence eliminates cross-target gains.
+Consequently the optimal query swaps between $P$ and $Q$.
+No score depending only on latent-sign joint probabilities, even when
+supplemented with observation marginals, detects this discrepancy.
+\end{proof}
+
+\section{Transfer between working and comparison laws}
+
+In this section $P$ and $Q$ concern the same binary target coordinates,
+candidate observation actions, fixed weights, and loss. They may differ
+in latent distribution or observation channel.
+
+\begin{proposition}[PROVED: moment transfer for Bayes query values]
+\label{prop:moment-transfer-r3}
+Define
+\[
+ M=\sum_i w_i|m_i^P-m_i^Q|,
+ \qquad C_j=\sum_i w_i|c_{ij}^P-c_{ij}^Q|.
+\]
+Then
+$|V_P(j)-V_Q(j)|\le(M+C_j)/2$.
+If $j_P$ and $j_Q$ maximize the corresponding values, then
+\[
+ V_P(j_P)-V_P(j_Q)
+ \le M+\frac{C_{j_P}+C_{j_Q}}{2}
+ \le M+\max_j C_j.
+\]
+\end{proposition}
+\begin{proof}
+The map $(m,c)\mapsto(|c|-|m|)_+$ is one-Lipschitz in each coordinate,
+so apply the triangle inequality to the binary-observation formula.
+For the second claim insert
+$V_Q(j_P)-V_Q(j_Q)\le0$ between the two $P$-values and apply the
+per-candidate bound to each remaining difference.
+\end{proof}
+
+\begin{theorem}[PROVED: tight terminal-policy transfer]
+\label{thm:terminal-transfer-r3}
+Let
+\[
+ D_j=\sum_i w_i
+ \max\{|m_i^P-m_i^Q|,\ |c_{ij}^P-c_{ij}^Q|\}.
+\]
+Let $j_Q$ minimize terminal Bayes risk under $Q$, and after this query
+use a $Q$-optimal decision rule $A^Q_{j_Q}(O_{j_Q})$.
+Let $j_P$ minimize terminal Bayes risk under $P$, with terminal risk
+$r_P^*(j_P)$. Then the complete query-and-decision policy satisfies
+\[
+ \mathbb{E}_P L(T,A^Q_{j_Q}(O_{j_Q}))-r_P^*(j_P)
+ \le \frac{D_{j_Q}+D_{j_P}}{2}
+ \le \max_j D_j.
+\]
+The universal leading constant one in the last bound cannot be reduced.
+The same bound controls query-selection regret when the final decision
+after $j_Q$ is instead optimized under $P$.
+\end{theorem}
+\begin{proof}
+Fix a candidate $j$ and a deterministic coordinatewise rule.
+Each coordinate rule is one of $+1,-1,O_j,-O_j$, so its correlation
+with $T_i$ is one of $\pm m_i,\pm c_{ij}$.
+Its error differs between $P$ and $Q$ by at most half the maximum
+moment difference appearing in $D_j$. Summing gives
+\[
+ |\operatorname{risk}_P(A_j)-\operatorname{risk}_Q(A_j)|
+ \le D_j/2.
+\]
+Taking minima also yields $|r_P^*(j)-r_Q^*(j)|\le D_j/2$.
+Since $j_Q$ is $Q$-optimal,
+\begin{align*}
+ \operatorname{risk}_P(A^Q_{j_Q})
+ &\le r_Q^*(j_Q)+D_{j_Q}/2\\
+ &\le r_Q^*(j_P)+D_{j_Q}/2\\
+ &\le r_P^*(j_P)+(D_{j_Q}+D_{j_P})/2.
+\end{align*}
+Optimizing the final action under $P$ can only decrease the left side.
+
+To show sharpness, one target and one candidate suffice.
+Choose $0<\epsilon<1/2$ and $0<\delta$ small.
+Let $P$ have moments $(m,c,n)=(\epsilon,-\epsilon,0)$ and let $Q$
+have $(m,c,n)=(0,\delta,0)$, where $n=\mathbb{E}O$.
+Both are valid laws because
+$\mathbb{P}(T=t,O=o)=(1+tm+on+toc)/4$ is nonnegative for these choices.
+Under $Q$, the unique optimal rule is $A=O$.
+Under $P$ its error is $(1+\epsilon)/2$, whereas optimal error is
+$(1-\epsilon)/2$. Regret equals $\epsilon$, while
+$D=\epsilon+\delta$. Their ratio tends to one as $\delta\downarrow0$.
+\end{proof}
+
+\begin{proposition}[PROVED: latent marginals, conditional structure, and channel]
+\label{prop:channel-split-r3}
+Assume local channels
+$\mathbb{E}_R[O_j\mid F]=a_j^R(F_j)$ for $R\in\{P,Q\}$,
+with $|a_j^R|\le1$.
+Write $\mu_j^R=\operatorname{Law}_R(F_j)$ and
+$h_{ij}^R(f)=\mathbb{E}_R[T_i\mid F_j=f]$.
+Using total variation distance
+$\operatorname{TV}(\mu,\nu)=\sup_A|\mu(A)-\nu(A)|$, one has
+\begin{align*}
+ |c_{ij}^P-c_{ij}^Q|
+ \le{}&2\operatorname{TV}(\mu_j^P,\mu_j^Q)\\
+ &+\mathbb{E}_Q|h_{ij}^P(F_j)-h_{ij}^Q(F_j)|\\
+ &+\mathbb{E}_Q|a_j^P(F_j)-a_j^Q(F_j)|.
+\end{align*}
+The terms separate candidate latent marginal error, latent conditional
+structure error, and observation channel error. Target marginal errors
+remain explicit in the preceding transfer bounds.
+\end{proposition}
+\begin{proof}
+The local channel assumption gives
+$c_{ij}^R=\int h_{ij}^R a_j^R\,d\mu_j^R$.
+Add and subtract $\int h_{ij}^P a_j^P\,d\mu_j^Q$ and then
+$\int h_{ij}^Q a_j^P\,d\mu_j^Q$.
+The first difference is bounded by twice total variation because the
+integrand has absolute value at most one. The other two differences are
+bounded by the displayed expectations, since $|h|,|a|\le1$.
+One may choose any bounded version of $h^P$ on $Q$-only support;
+the identity and bound remain valid, although the bound can then be
+uninformative. The conditional-structure term is not asserted to be a
+pure copula discrepancy.
+\end{proof}
+
+\begin{proposition}[PROVED: alternative marginal/dependence/channel split]
+Let $\gamma_{ij}^R=\operatorname{Law}_R(F_i,F_j)$ and
+$\kappa_{ij}^R=\gamma_{ij}^R-\mu_i^R\otimes\mu_j^R$.
+Set $\delta_i=\operatorname{TV}(\mu_i^P,\mu_i^Q)$ and let
+$\|\cdot\|_{\rm var}$ denote the full variation norm of a signed measure.
+Under the preceding local-channel assumptions,
+\begin{align*}
+ |c_{ij}^P-c_{ij}^Q|
+ \le{}&2\delta_i+2\delta_j+
+       \|\kappa_{ij}^P-\kappa_{ij}^Q\|_{\rm var}\\
+ &+\mathbb{E}_Q|a_j^P(F_j)-a_j^Q(F_j)|,
+ \qquad |m_i^P-m_i^Q|\le2\delta_i.
+\end{align*}
+\end{proposition}
+\begin{proof}
+First keep the $P$ channel fixed. The integrand
+$\operatorname{sign}(f_i)a_j^P(f_j)$ is bounded by one.
+Decompose the pair-law difference into its product-marginal difference
+and $\kappa_{ij}^P-\kappa_{ij}^Q$.
+The product measures have total variation distance at most
+$\delta_i+\delta_j$, as follows by adding and subtracting
+$\mu_i^Q\otimes\mu_j^P$. Integration against their difference is
+therefore bounded by $2\delta_i+2\delta_j$.
+The dependence part is bounded by its full variation norm.
+Finally change the channel under $Q$ and use its displayed expectation.
+The marginal sign bound follows directly from the bounded sign function.
+\end{proof}
+
+\begin{proposition}[PROVED: algorithmic gain versus Bayes information]
+\label{prop:updater-decomposition-r3}
+For a fixed prequery action $a_0$ and algorithmic postquery rule
+$A_j(O_j)$, define
+\[
+ b_P=\operatorname{risk}_P(a_0)-r_P^0,\qquad
+ e_P(j)=\operatorname{risk}_P(A_j)-r_P^*(j).
+\]
+Both are nonnegative, and the algorithmic gain is exactly
+\[
+ G_P^A(j)=V_P(j)+b_P-e_P(j).
+\]
+Consequently, for any model-selected query $j_Q$,
+\[
+ \max_jG_P^A(j)-G_P^A(j_Q)
+ =\max_j\{V_P(j)-e_P(j)\}
+    -\{V_P(j_Q)-e_P(j_Q)\}.
+\]
+This residual does not, without additional controls, identify
+information absent from the working model.
+\end{proposition}
+\begin{proof}
+By definition,
+$\operatorname{risk}_P(a_0)=r_P^0+b_P$ and
+$\operatorname{risk}_P(A_j)=r_P^*(j)+e_P(j)$.
+Subtract and use $V_P(j)=r_P^0-r_P^*(j)$.
+The second identity follows because $b_P$ is independent of $j$.
+Even if the working law equals $P$, different updater excess risks
+$e_P(j)$ can leave positive algorithmic regret.
+If $P$ is conditioned on a fully known realized target field, then
+$r_P^0=r_P^*(j)=V_P(j)=0$; nevertheless a restricted learner may have
+positive gains because its own errors change. Such fixed-truth gains
+are algorithmic utilities, not positive Bayes information under the
+omniscient conditional law.
+\end{proof}
+
+\section{Coherent negative values for other risk functionals}
+
+The next examples use $T_1,T_2\in\{0,1\}$.
+A plug-in edge prediction is the exclusive-or of the two marginal
+mode predictions. Its edge risk is the probability that this predicted
+cut differs from the true cut. Its Dice ratio is
+\[
+ R_D=\frac{\mathbb{E}W_{\rm err}}
+           {\mathbb{E}W_{\rm true}+W_{\rm pred}}.
+\]
+Neither operation is automatically the minimum posterior expectation
+of one fixed loss, so Proposition~\ref{prop:nonnegative-r3} does not
+automatically apply.
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: negative coherent plug-in edge gain]
+Assign masses $(2,2,2,3)/9$ to states $(00,01,10,11)$ and observe
+$O=\mathbf{1}\{(T_1,T_2)=(0,1)\}$. Exact Bayesian conditioning gives
+an expected plug-in edge-risk reduction of $-1/9$.
+\end{counterexample}
+\begin{proof}
+Before observing, both marginal modes are one, so the edge is predicted
+uncut. Its error is the true-cut probability $4/9$.
+The branch $O=1$ identifies state $01$ exactly and has zero error.
+On $O=0$, whose probability is $7/9$, the conditional masses on
+$(00,10,11)$ are $(2,2,3)/7$. The marginal probabilities of one are
+$5/7$ and $3/7$, so the plug-in modes are $(1,0)$ and predict a cut.
+Its conditional error is the no-cut probability $5/7$.
+Expected future error is $(7/9)(5/7)=5/9$, so the reduction is
+$4/9-5/9=-1/9$. All marginal decisions are strict, and every update
+is exact conditioning.
+\end{proof}
+
+\begin{counterexample}[COUNTEREXAMPLE; PROVED: negative coherent Dice-ratio gain]
+Assign masses $(1,1,2,1)/5$ to $(00,01,10,11)$ and observe the same
+$O=\mathbf{1}\{(T_1,T_2)=(0,1)\}$. Exact conditioning gives an expected
+Dice-ratio reduction of $-1/60$.
+\end{counterexample}
+\begin{proof}
+The prior marginal modes are $(1,0)$, the true-cut probability is $3/5$,
+and the ratio is
+$R_D=(2/5)/(1+3/5)=1/4$.
+The $O=1$ branch has zero error and zero ratio.
+On $O=0$, of probability $4/5$, conditional masses on $(00,10,11)$
+are $(1,2,1)/4$. Marginal modes remain strictly $(1,0)$.
+The true-cut probability is $1/2$, so
+$R_D=(1/2)/(1+1/2)=1/3$.
+Expected future ratio is $(4/5)(1/3)=4/15$ and the reduction is
+$1/4-4/15=-1/60$.
+Thus a negative ratio reduction by itself does not demonstrate an
+incoherent posterior. A separately measured failure of the posterior
+martingale identity is a different diagnostic.
+\end{proof}

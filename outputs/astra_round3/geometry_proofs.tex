@@ -1,0 +1,460 @@
+% Round 3 geometry/discovery fragment. No preamble; all results proved below.
+% Environments theorem, proposition, lemma, counterexample, proof assumed.
+% Labels use the prefix rthreegeo to avoid collisions.
+
+\section{Geometric Bayes risk and explicit regularity bridges}
+
+\begin{proposition}[Coherent geometric value of information]
+\label{rthreegeo:coherence}
+Let $G$ be a random geometric target, $\mathcal A$ a fixed action space,
+and $L(a,G)\ge0$ an integrable loss. Given data $D$, define
+\[
+ R(D)=\inf_{a\in\mathcal A}\E[L(a,G)\mid D],\qquad
+ \Delta_j(D)=R(D)-\E[R(D,O_j)\mid D].
+\]
+Under coherent conditioning, $\Delta_j(D)\ge0$ whenever the conditional
+Bayes risks and decisions are measurable. This is an expected, one-step
+statement, not an outcome-wise or multistep-optimality statement.
+\end{proposition}
+\begin{proof}
+Retain a current Bayes action $a_D$ after every possible observation.
+Optimality of the updated action gives
+$R(D,O_j)\le\E[L(a_D,G)\mid D,O_j]$.
+Take the conditional expectation and use the tower identity. If the
+infimum is not attained, apply this argument to measurable
+$\epsilon$-optimal actions and let $\epsilon\downarrow0$.
+\end{proof}
+
+\begin{proposition}[Graph volume, medians, means and binary observations]
+\label{rthreegeo:graphloss}
+Let $U\subset\mathbb R^m$, let $g,h:U\to[a,b]$ be measurable, and put
+$A_g=\{(u,z):u\in U,\ a\le z\le g(u)\}$.
+For a nonnegative density $q$,
+\[
+ \mu_q(A_g\triangle A_h)
+ =\int_U\left|\int_{g(u)}^{h(u)}q(u,z)\,dz\right|du.
+\]
+If $q(u,z)=w(u)$, this is $\int_Uw(u)|g(u)-h(u)|du$.
+If $0<c\le q\le C$ between the graphs, it lies between
+$c\|g-h\|_1$ and $C\|g-h\|_1$.
+
+For a random graph $g$, the Bayes action under integrated absolute
+displacement is a measurable pointwise posterior median. Under
+integrated squared displacement, it is the posterior mean, and the
+exact value of observing $O_j$ is
+\[
+ \Delta_{2,j}
+ =\int_Uw(u)\operatorname{Var}\bigl(\E[g(u)\mid D,O_j]\mid D\bigr)\,du.
+\]
+For a binary observation $O_j\in\{-1,1\}$ with positive variance,
+\[
+ \Delta_{2,j}
+ =\int_Uw(u)
+ \frac{\operatorname{Cov}(g(u),O_j\mid D)^2}
+      {\operatorname{Var}(O_j\mid D)}\,du.
+\]
+If every posterior graph is $L$-Lipschitz, the pointwise posterior mean
+and a consistently chosen quantile median are also $L$-Lipschitz.
+\end{proposition}
+\begin{proof}
+At each $u$, the symmetric difference of the vertical sections is exactly
+the interval between $g(u)$ and $h(u)$. Tonelli's theorem proves the
+identity; the density bounds follow pointwise.
+Tonelli also separates each integrated posterior loss by $u$.
+For a scalar $Z$, a number $a$ minimizes $\E|a-Z|$ precisely when
+$\mathbb P(Z\le a)\ge1/2$ and $\mathbb P(Z\ge a)\ge1/2$; this follows
+from the one-sided derivatives of the convex objective. The squared-loss
+claim follows by completing the square.
+Conditional total variance proves the displayed value identity.
+Every square-integrable function of a nondegenerate binary variable is
+affine in that variable; its conditional-mean regression coefficient is
+$\operatorname{Cov}(g(u),O_j)/\operatorname{Var}(O_j)$, giving the final
+formula. A deterministic observation has value zero.
+Finally, the almost-sure inequality
+$|g(u)-g(v)|\le L\|u-v\|$ implies the same inequality for corresponding
+quantiles of the two marginal laws. Taking expectations gives it for
+the means. These actions are measurable under the usual measurable
+posterior-process assumptions.
+\end{proof}
+
+\begin{proposition}[A restricted Gaussian graph problem]
+\label{rthreegeo:gaussiangraph}
+Suppose the current posterior of $g$ is Gaussian, with variance $s(u)^2$
+and covariance $c(u,v)$, and a paid observation directly reveals $g(v)$.
+Assume the displayed integrals are finite. For integrated absolute
+displacement of unrestricted graph heights,
+\[
+ R_1=\sqrt{\frac2\pi}\int_U w(u)s(u)\,du,
+\]
+\[
+ \Delta_1(v)=\sqrt{\frac2\pi}\int_Uw(u)
+ \left[s(u)-\sqrt{s(u)^2-\frac{c(u,v)^2}{s(v)^2}}\right]du.
+\]
+For integrated squared displacement,
+\[
+ \Delta_2(v)=\int_Uw(u)\frac{c(u,v)^2}{s(v)^2}\,du.
+\]
+The values are zero if $s(v)=0$. A binary membership observation does not
+directly reveal $g(v)$ and is a different observation experiment.
+\end{proposition}
+\begin{proof}
+A Gaussian marginal's mean is a median and its mean absolute centered
+deviation is $\sqrt{2/\pi}s(u)$. Gaussian conditioning changes the variance
+to $s(u)^2-c(u,v)^2/s(v)^2$, independently of the observed value.
+Substitute this into the absolute-deviation risk. For squared loss,
+subtract the integrated updated variance from the integrated current
+variance. A zero-variance observation is already known.
+\end{proof}
+
+\begin{proposition}[Graph Hausdorff and density-dependent $L^1$ control]
+\label{rthreegeo:holderbridge}
+Let $g,h$ be $L$-Lipschitz on the same compact $U$, and let
+$\Gamma_g=\{(u,g(u)):u\in U\}$. Then
+\[
+ \frac{\|g-h\|_\infty}{\sqrt{1+L^2}}
+ \le H(\Gamma_g,\Gamma_h)\le\|g-h\|_\infty.
+\]
+More specifically, let $U=[0,1]^m$, let $f=g-h$ be $K$-Lipschitz,
+$K>0$, and let $w\ge w_{\min}>0$. Put $M=\|f\|_\infty$ and
+$r=\min\{1/2,M/(2K\sqrt m)\}$. Then
+\[
+ \int_Uw|f|\ge w_{\min}\frac M2 r^m.
+\]
+In the regime $M\le K\sqrt m$ this gives
+\[
+ M\le\left[
+ \frac{2^{m+1}K^m m^{m/2}}{w_{\min}}\int_Uw|f|
+ \right]^{1/(m+1)}.
+\]
+\end{proposition}
+\begin{proof}
+Match graph points with the same base coordinate for the upper bound.
+At $u$ maximizing $|g(u)-h(u)|=M$, a point $(v,h(v))$ is at least
+\[
+ \sqrt{t^2+(M-Lt)_+^2},\qquad t=\|u-v\|,
+\]
+away. The minimum over $t\ge0$ is $M/\sqrt{1+L^2}$.
+For the integral bound, at a maximizer of $|f|$ choose, in each coordinate,
+a direction with at least $1/2$ available space inside the unit cube.
+The resulting one-sided box of side $r$ is contained in $U$. Every point
+in it lies within $\sqrt m r$ of the maximizer, and therefore has
+$|f|\ge M/2$. Integrate on this box and rearrange. For $K=0$, $f$ is
+constant and the integral is exactly $M\int w$. A cone of height $M$
+and slope $K$ has mass of order $M^{m+1}/K^m$, showing that the
+small-error exponent cannot generally be improved under only a
+Lipschitz bound.
+\end{proof}
+
+\begin{proposition}[A finite graph approximation]
+\label{rthreegeo:quadrature}
+Let a probability measure $\nu$ on $U$ be partitioned into cells $C_i$
+of diameter at most $h$, with $u_i\in C_i$ and $w_i=\nu(C_i)$.
+For graphs with Lipschitz constants $L_g,L_h$,
+\[
+ \left|\int_U|g-h|\,d\nu-
+ \sum_iw_i|g(u_i)-h(u_i)|\right|\le(L_g+L_h)h.
+\]
+If the base points form an $h$-net, the difference between the Hausdorff
+distance of the sampled graph clouds and that of the complete graphs
+is at most
+\[
+ h\left(\sqrt{1+L_g^2}+\sqrt{1+L_h^2}\right).
+\]
+\end{proposition}
+\begin{proof}
+The function $|g-h|$ is $(L_g+L_h)$-Lipschitz. Integrate its deviation
+from each cell representative. Every graph point is within
+$h\sqrt{1+L_g^2}$ of its sampled graph cloud, and conversely every cloud
+point lies on the graph. Apply the triangle inequality for Hausdorff
+distance twice. These arguments require graph heights; a finite label
+pool alone need not locate an intervening root.
+\end{proof}
+
+\begin{proposition}[A density-weighted normal-displacement expansion]
+\label{rthreegeo:tube}
+Let $S$ be a compact oriented $C^2$ hypersurface of dimension $m$ with
+injective normal coordinates $F(s,t)=s+tn(s)$ for $|t|<r$.
+Suppose its principal curvatures are bounded in magnitude by $K$.
+Let $0<a<r$, $aK<1$, and assume two regions differ exactly by the
+normal strip between $t=0$ and $t=\delta(s)$, where $|\delta|\le a$;
+there are no additional components or orientation changes.
+Let $q\ge0$ be bounded by $Q$ and $L_q$-Lipschitz on the tube. Then
+\[
+ \mu_q(A\triangle B)=
+ \int_S\left|\int_0^{\delta(s)}q(F(s,t))J(s,t)\,dt\right|dA(s),
+ \quad J(s,t)=\prod_{i=1}^m(1-t\kappa_i(s)),
+\]
+and
+\[
+ \left|\mu_q(A\triangle B)-\int_Sq(s)|\delta(s)|\,dA(s)\right|
+ \le\frac C2\int_S\delta(s)^2\,dA(s),
+\]
+where
+\[
+ C=L_q(1+aK)^m+QmK(1+aK)^{m-1}.
+\]
+\end{proposition}
+\begin{proof}
+The normal-coordinate change of variables gives the first identity.
+The assumptions make its Jacobian positive. Telescoping the product
+gives
+$|J-1|\le mK|t|(1+aK)^{m-1}$ and $|J|\le(1+aK)^m$.
+Consequently
+$|q(F(s,t))J(s,t)-q(s)|\le C|t|$.
+Integrating from $0$ to $\delta(s)$ and then over $S$ proves the bound.
+\end{proof}
+
+\begin{counterexample}[Latent amplitude does not identify boundary uncertainty]
+\label{rthreegeo:scale}
+Let $\Theta\sim N(m,\sigma^2)$ and $f_c(x)=c(x-\Theta)$, $c>0$.
+The boundary is $\{\Theta\}$ for all $c$, although
+$\operatorname{sd}(f_c(x))=c\sigma\to0$ as $c\downarrow0$.
+Squared boundary Bayes risk remains $\sigma^2$; the scale-invariant
+quantity $\operatorname{sd}(f_c)/|f_c'|$ equals $\sigma$.
+A noiseless sign query at $x=m$ has squared-boundary value
+$2\sigma^2/\pi$. Under the different observation contract
+$O=\operatorname{sign}(f_c(m)+\eta)$ with independent
+$\eta\sim N(0,\tau^2)$, the value is
+\[
+ \frac{2c^2\sigma^4}{\pi(c^2\sigma^2+\tau^2)}.
+\]
+\end{counterexample}
+\begin{proof}
+The root and scale claims follow directly from the definition.
+A noiseless query splits the Gaussian threshold at its median; the two
+conditional means are $m\pm\sigma\sqrt{2/\pi}$, whose variance is
+$2\sigma^2/\pi$. More generally put $X=\Theta-m$ and
+$Z=-cX+\eta$. Joint Gaussian regression gives
+\[
+ \E[X\mid\operatorname{sign}Z]
+ =\frac{\operatorname{Cov}(X,Z)}{\operatorname{sd}(Z)}
+   \sqrt{\frac2\pi}\operatorname{sign}Z.
+\]
+Its variance is the displayed value by conditional total variance.
+The fixed-noise value tends to zero while the random boundary law stays
+unchanged.
+\end{proof}
+
+\begin{proposition}[Local root sensitivity requires a nonzero gradient]
+\label{rthreegeo:rootsensitivity}
+On a fixed normal line, let $f_t(x)=f(x)+t e(x)$ be continuously
+differentiable near $(t,x)=(0,x_0)$, with $f(x_0)=0$ and
+$f'(x_0)\ne0$. There is a local differentiable root $x(t)$, and
+\[
+ x'(0)=-\frac{e(x_0)}{f'(x_0)}.
+\]
+This derivative is invariant when both $f$ and $e$ are multiplied by a
+positive constant.
+\end{proposition}
+\begin{proof}
+The implicit function theorem gives the root and its differentiability.
+Differentiate $f(x(t))+t e(x(t))=0$ at zero and solve for $x'(0)$.
+The multiplicative constant cancels. Uniform positional bounds require
+a uniform derivative lower bound and control of additional roots;
+the local identity by itself supplies neither.
+\end{proof}
+
+\begin{counterexample}[Area and tolerance overlap are different losses]
+\label{rthreegeo:areansd}
+For $h=0$ and $g_k(u)=k^{-1}\sin(k^2u)$ on $[0,1]$, graph Hausdorff
+distance and symmetric-difference area tend to zero, whereas graph
+length diverges. For two parallel equal-area surfaces separated by $d$,
+normalized surface Dice at tolerance $\tau$ is one for $d\le\tau$ and
+zero for $d>\tau$, while Hausdorff distance is $d$.
+\end{counterexample}
+\begin{proof}
+Uniform graph displacement is at most $1/k$, bounding both Hausdorff
+distance and integrated displacement. Graph length is at least
+$\int_0^1 k|\cos(k^2u)|du=(2/\pi)k+o(k)$.
+For the parallel surfaces every point's nearest-surface distance is
+exactly $d$, so every point either counts within tolerance or does not.
+\end{proof}
+
+\section{A Hausdorff acquisition counterexample beyond pairwise moments}
+
+\begin{lemma}[Bayes sup-distance risk on a binary cube]
+\label{rthreegeo:cuberisk}
+For any distribution of $B\in\{0,1\}^m$, allowing all estimates
+$h\in[0,1]^m$,
+\[
+ \inf_h\E\|h-B\|_\infty
+ =\min\left\{\frac12,1-\max_b\mathbb P(B=b)\right\}.
+\]
+\end{lemma}
+\begin{proof}
+The cube center has risk $1/2$, and a modal vertex has risk $1-p_{\max}$.
+For any $h$, round each coordinate to a nearest endpoint to obtain $v$,
+and let $r=\|h-v\|_\infty\le1/2$.
+Every other vertex is at distance at least $1-r$, hence the risk is at
+least $p_vr+(1-p_v)(1-r)$. Its minimum over $r\in[0,1/2]$ is
+$\min\{1/2,1-p_v\}$, which is at least the stated lower bound.
+The two explicit actions attain that bound.
+\end{proof}
+
+\begin{counterexample}[Equal binary pair moments, different geometric query values]
+\label{rthreegeo:parity}
+Let three bases $u_i$ have pairwise distances at least $3$.
+A random boundary is $\{(u_i,B_i):i=1,2,3\}$, where
+$B\in\{0,1\}^3$, and admissible estimates have heights in $[0,1]^3$.
+Querying column $i$ at height $1/2$ reveals $B_i$.
+The following two laws have identical first and pairwise binary moments:
+\[
+\begin{array}{c|rrrrrrrr}
+ B&000&001&010&011&100&101&110&111\\\hline
+ 70P_+(B)&34&0&0&12&0&12&12&0\\
+ 70P_-(B)&22&12&12&0&12&0&0&12
+\end{array}
+\]
+Their current Hausdorff Bayes risks are both $1/2$, but the exact values
+of querying $B_1$ are $11/70$ and zero, respectively.
+\end{counterexample}
+\begin{proof}
+Because other columns are at distance at least $3$ whereas the
+same-column height difference is at most $1$, the Hausdorff loss is
+exactly $\|h-B\|_\infty$.
+Direct summation gives, for both laws,
+\[
+ \mathbb P(B_i=1)=24/70,\qquad
+ \mathbb P(B_i=B_j=1)=12/70\quad(i\ne j).
+\]
+These determine every first and pairwise binary moment.
+Every atom has probability less than $1/2$, so
+Lemma~\ref{rthreegeo:cuberisk} gives current risk $35/70$.
+The events $B_1=0$ and $B_1=1$ have masses $46/70$ and $24/70$.
+For a branch of mass $s$ and largest atom mass $p$, its unnormalized
+Bayes risk is $\min\{s/2,s-p\}$ by the same lemma.
+Under $P_+$, branch zero has largest atom $34/70$ and risk $12/70$;
+branch one has risk $12/70$. Updated expected risk is $24/70$.
+Under $P_-$, branch zero has largest atom $22/70$, so its risk is
+$23/70$; branch one again has risk $12/70$. Updated expected risk
+is $35/70$. Subtraction proves the two query values.
+This counterexample permits intermediate height estimates and thus
+does not rely on forcing the estimate to be a posterior sample.
+\end{proof}
+
+\section{Discovery, refinement, and violations of structural assumptions}
+
+\begin{counterexample}[Optimal startup, suboptimal later geometry at equal budget]
+\label{rthreegeo:discoverygeometry}
+Fix any $k\ge1$, put $M=k+1$, and let
+$\Theta_1,\ldots,\Theta_M$ be independent fair bits.
+The geometric target has $M$ separated columns, heights $H\Theta_i$,
+and base separations at least $3H$.
+The finite candidate pool contains one membership query $q_i$ at height
+$H/2$ in each column, revealing $\Theta_i$, and two paid certification
+anchors of fixed labels $0$ and $1$.
+Startup requires actually observed labels of both classes.
+
+Policy A queries the anchors first. It has the globally minimal
+$T_{\rm both}=2$ surely. With an optimal continuation and total paid
+budget $Q=k+2$, its final Hausdorff Bayes risk is $H/2$.
+Policy B has $\E T_{\rm both}=5/2$, $T_{\rm both}\le3$, and zero final
+geometric risk by the same total budget $Q$.
+\end{counterexample}
+\begin{proof}
+No policy can observe both labels in fewer than two queries, proving
+A's startup optimality. After its two anchors, A has at most $k$
+individual-bit queries for $M=k+1$ independent bits.
+Conditional on any adaptive query history, an unqueried bit remains
+independent and fair. Its minimum expected absolute height error is
+$H/2$, a lower bound on expected Hausdorff error.
+Set every unknown height to $H/2$ and every known height correctly;
+the loss is exactly $H/2$, attaining the bound.
+
+B first queries $q_1,q_2$. With probability $1/2$ their labels differ,
+so startup ends at two. Otherwise it queries the opposite-label anchor,
+ending at three. Thus its expected startup cost is $5/2$.
+It then queries the remaining $M-2=k-1$ bits. The total cost is at most
+$3+(k-1)=Q$, and all boundary heights are known. Unused budget can be
+padded by an irrelevant remaining query if an exactly equal paid count
+is desired. Therefore its risk is zero.
+
+This is an operational paid-certification example. If known structural
+anchors may replace actual paid observations, the startup contract
+changes. The result concerns the stated actual-observation contract.
+\end{proof}
+
+\begin{proposition}[State coalescence bounds later effects]
+\label{rthreegeo:coupling}
+Couple two policies on the same truth and continuation seed. Suppose
+their complete sufficient states coincide at budget $b$ with probability
+at least $1-\delta$, and they use the same subsequent transition and
+prediction rules. For any later endpoint in an interval of length $L$,
+\[
+ |\E Z_A-\E Z_B|\le L\delta.
+\]
+For a weighted learning-curve endpoint with nonnegative weights
+$\lambda_t$ summing to one, if $\delta_t$ bounds the probability of
+noncoalescence at budget $t$, then
+\[
+ |\E\textstyle\sum_t\lambda_t Z_{A,t}
+       -\E\sum_t\lambda_t Z_{B,t}|
+ \le L\sum_t\lambda_t\delta_t.
+\]
+Identical query sets imply identical states only under order-invariant
+fitting, equal seeds, and absence of additional history-dependent state.
+\end{proposition}
+\begin{proof}
+Identical transitions preserve identical states inductively on the
+coalescence event. Endpoint differences vanish on that event and are
+bounded by $L$ on its complement. Take expectations.
+Apply this argument at each budget and use the triangle inequality for
+the weighted endpoint.
+\end{proof}
+
+\begin{counterexample}[Three different meanings of monotonicity]
+\label{rthreegeo:monotone}
+Monotone class probabilities do not permit deterministic label
+propagation: independent labels with probabilities $0.49,0.51$ are
+stochastically ordered but have probability $0.49^2$ of the reversed
+pair $(1,0)$.
+
+On a chain of $N$ points, the deterministic truth
+$(1,0,\ldots,0,1)$ differs at one point from the monotone threshold
+$(0,\ldots,0,1)$. Propagating the first observed positive upward gives
+$N-2$ wrong labels. This is one contaminated point but $N-2$ violating
+pairs. Even exactly one violating pair destroys zero-error propagation:
+the sequence $(0,\ldots,0,1,0,1,\ldots,1)$ with adjacent $1,0$
+incorrectly propagates the first of those two labels to the second.
+\end{counterexample}
+\begin{proof}
+Independence gives $\mathbb P(Y_1=1,Y_2=0)=0.49(1-0.51)$.
+For the first deterministic sequence, every middle zero is dominated
+by the first positive and is therefore incorrectly removed by the
+hard monotonicity rule. Each is also a distinct violating pair with
+the first point. In the second sequence the adjacent reversed pair is
+the only inversion; propagation across it is nonetheless wrong.
+\end{proof}
+
+\begin{proposition}[A robust and tight rank-error discovery bound]
+\label{rthreegeo:rank}
+In a fixed tie-broken order of $N$ items containing $r\ge1$ designated
+rare items, let $V$ count common-before-rare pairs, and let $D$ be the
+first rare rank. Then
+\[
+ D\le1+\left\lfloor\frac Vr\right\rfloor.
+\]
+If $0<r<N$ and AUC is computed on this strict rare-oriented ranking,
+\[
+ D\le1+\lfloor(1-\mathrm{AUC})(N-r)\rfloor.
+\]
+For a top-$M$ subset containing $s$ rare items,
+\[
+ V\ge(M-s)(r-s).
+\]
+In particular $V<Mr$ guarantees that the first $M$ positions contain
+a rare item. The first-hit bound is attained when $V=kr$ by placing
+$k$ common items, all $r$ rare items, then all remaining common items.
+\end{proposition}
+\begin{proof}
+Each of the $D-1$ common items preceding the first rare precedes all
+$r$ rare items. Thus $V\ge r(D-1)$.
+For a strict ranking, $1-\mathrm{AUC}=V/[r(N-r)]$.
+For the tail inequality, each of the $M-s$ common items inside the
+top-$M$ subset precedes every one of the $r-s$ rare items outside it.
+If $s=0$, this forces $V\ge Mr$.
+The displayed block ordering has exactly $kr$ inversions and first-hit
+rank $k+1$, proving attainment. Half-credit AUC for unresolved ties
+does not fix a deterministic first-hit rank; the declared tie order
+must be used.
+\end{proof}

@@ -1,0 +1,45 @@
+{
+ "L3_max_abs_err": 1.1102230246251565e-16,
+ "C10": {
+  "prior_edge_risk": "4/9",
+  "expected_post_risk": "5/9",
+  "EBR": "-1/9"
+ },
+ "R5": {
+  "prior_ratio_risk": "1/15",
+  "expected_post_risk": "1/14",
+  "reduction": "-1/210"
+ },
+ "P5": {
+  "zero_threshold": 0.5384615384615384,
+  "attenuation_invariant": true
+ },
+ "D4_holds_all": true,
+ "level_shift": "per-group bootstrap thresholds are unstable (OLD in NEW box has 2 non-Keyhole runs: quasi-separation); use the shared-slope profile-likelihood intervals (campaign_offset_profile, astra3_campaign_offset_profile.json)",
+ "campaign_offset_profile": [
+  {
+   "subset": "all",
+   "n": 541,
+   "NEW_n": 136,
+   "NEW_nonKH": 12,
+   "OLD_nonKH": 332,
+   "shift_hat_logh": 0.1741512412914412,
+   "lo": 0.030000000000000027,
+   "hi": 0.29000000000000004,
+   "interval_hits_grid_edge": false,
+   "slope": 7.961446866521741
+  },
+  {
+   "subset": "overlap",
+   "n": 112,
+   "NEW_n": 72,
+   "NEW_nonKH": 8,
+   "OLD_nonKH": 2,
+   "shift_hat_logh": 0.009157431603596626,
+   "lo": -0.1399999999999999,
+   "hi": 0.28,
+   "interval_hits_grid_edge": false,
+   "slope": 10.526282685419087
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-05",
+  "repository": "C:\\Users\\ozgur\\Documents\\thesis",
+  "inspected_HEAD": "1ded7f43da9612412bd7e81373d645e4da56516c",
+  "repository_access": "read-only; no repository modules imported or experimental trajectories run",
+  "output_directory": "C:\\Users\\ozgur\\Documents\\thesis-research-outputs\\round3-20261005",
+  "source_hashes_unchanged_during_audit": true,
+  "source_sha256": {
+    "C:\\Users\\ozgur\\Documents\\thesis\\src\\week16_peer.py": "c6edddf57958854852b79c07479c1b64d208e4d94a13e819cd6f405ee49642ce",
+    "C:\\Users\\ozgur\\Documents\\thesis\\src\\week16_headroom.py": "a91914cd04c8f13503739b4185bef44b4978c4f36cf37663d59f1b83c82a8889",
+    "C:\\Users\\ozgur\\Documents\\thesis\\src\\week16_cells.py": "d5d2ec70a916e5786ffd397d598b0373b04e6075500519ca9448da95d523c81e",
+    "C:\\Users\\ozgur\\Documents\\thesis\\src\\week16_validate.py": "c9590d566d8df385da4d579c9160b6c815ec77d4889a8e374a43ef4445c326c9",
+    "C:\\Users\\ozgur\\Documents\\thesis\\src\\week16_calibration.py": "d988259bd787068ef1aa30eee13dc13c05eed38ece7629f4ed70b522d5900419",
+    "C:\\Users\\ozgur\\Documents\\thesis\\src\\week16_real.py": "35ea71c0f16cdbb1a7f70a066c42b115f1f869800dd872fcd2b561b4c0c0f8fd",
+    "C:\\Users\\ozgur\\Documents\\thesis\\src\\week15_ebr.py": "1e721d29846b49fb2b3bd9f19f6c9030e56e36719b65141fe0c3fea41908d0bc",
+    "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week16_theory_meets_data\\WEEK16_REPORT.md": "332119168d7048a43ae2d467f801d9e1a3cd1172e3984bf11846960bb2dc44b8",
+    "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week16_theory_meets_data\\THEORY_WEEK16.md": "baba554f1e9a711c84597b4aff359b7a449c460387edad45c140fd60c161c3e3",
+    "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week16_theory_meets_data\\ERRATUM_LAPLACE.md": "49b7fd22b8f0e0888b468857a0c1efb5ef4e4b7a7928b89fbade5cd6612a9d6e",
+    "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week16_theory_meets_data\\headroom\\states.csv": "17d531b8f5c3d8f48db15d1e624119790caa60464252ef6d8be52678bcf7ccd6",
+    "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week16_theory_meets_data\\headroom\\decoy_sd.csv": "437ffd1c195f6b215f57446c7348b8eb19a3251f60ba668fe41844cde86b89f1",
+    "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week16_theory_meets_data\\validation\\peer_validation.csv": "b74bc7ef4f871a5b0f4a3022139b2286331b09f67bcb776132fc67a79d09f64b",
+    "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week16_theory_meets_data\\laplace_audit\\synthetic_paths.csv": "36c48cfda175ace57b7cd0871db0b025da271d83d28ddf3d68c006f103efa932"
+  },
+  "literature_priority": "bounded primary-source audit; no novelty established",
+  "empirical_scope": "existing descriptive Week 12/16 outputs; not new confirmation"
+}

@@ -1,0 +1,8 @@
+{
+  "compiler": "Codex built-in LaTeX compiler",
+  "result": "unverified compilation: platform setup failure",
+  "message": "Unable to find standard directories for platform",
+  "pdf_created": false,
+  "source_structural_checks": "60 theorem/counterexample statements, 60 proofs; balanced environments/braces, unique labels and resolved references",
+  "source_preserved": true
+}
