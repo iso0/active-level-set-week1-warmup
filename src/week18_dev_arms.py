@@ -23,15 +23,21 @@ OUT = ROOT / "outputs/week18_independent_research/phase3"
 EXPERIMENTS = {
     "depth": [(("G3", "mlii_k4"), "margin"), (("Tobit", "mlii_k4"), "margin"), (("Tobit", "mlii_k4"), "straddle")],
     "cfa": [(("G3L", "mlii"), "margin"), (("LTn", "mlii"), "margin"), (("G3", "mlii"), "mix25")],
+    # depth2: re-run of E2 with the analytic-gradient solver, E3 mixed-likelihood depth GP, E1 on partial-depth tasks;
+    # "auto4" = per-step ML-II without a prior, ML-II every 4 paid queries (warm start) with a large prior
+    "depth2": [(("G3", "auto4"), "margin"), (("Tobit", "auto4"), "margin"), (("MixGP", "auto4"), "margin"),
+               (("MixGP", "auto4"), "straddle"), (("GPR_depth", "mlii"), "straddle")],
 }
 
 
 def hyper_for(t, hyper):
     big = len(t["prior"]) + 120 > 200 and len(t["prior"]) > 0
+    if hyper == "auto4":
+        return "mlii_k4" if big else "mlii"
     return "mlii_k8" if (big and hyper == "mlii") else hyper
 
 
-def task_job(t, arms, out_dir):
+def task_job(t, arms, out_dir, exp_name=""):
     from threadpoolctl import threadpool_limits
     import src.week18_engine as E
     dest = Path(out_dir) / f"{t['task']}__r{t['repeat']:03d}_f{t['fold']}.json"
@@ -44,8 +50,12 @@ def task_job(t, arms, out_dir):
         dest.write_text(json.dumps(rows)); return rows
     with threadpool_limits(1):
         for (model, hyper), rule in arms:
-            if model == "Tobit" and not has_depth:
+            if model in ("Tobit", "GPR_depth") and not has_depth:
                 continue
+            if exp_name == "depth2" and model == "GPR_depth" and len(t["prior"]) == 0 and t["task"] != "R1_POOLED" and not t["task"].startswith("S1_"):
+                continue                      # E1 baseline already run in Phase 2 on R3_OLD / R2rev (same seeds)
+            if exp_name == "depth2" and model in ("Tobit", "GPR_depth", "G3") and t["task"].startswith("S1_") and not has_depth:
+                continue                      # binary twins: only the label-only MixGP non-inferiority check (G3 from Phase 2)
             if model == "LTn" and len(t["prior"]) + 120 > 200 and len(t["prior"]) > 0:
                 continue                      # nested LT is per-step ML-II only; skipped on the large transfer fits
             learner = (model, hyper_for(t, hyper))
@@ -69,6 +79,10 @@ def tasks(exp, which):
     from src.week18_dev_depth import tasks as depth_tasks
     if exp == "depth":
         return depth_tasks(which)
+    if exp == "depth2":
+        if which == "real":
+            return depth_tasks("real") + [t for t in T.r3_new_tasks() if t["block"] == "DEV"]
+        return depth_tasks("twins") + [W.twin_task(tw, d, n, rep) for tw in ("T_GP", "T_GBT", "T_NW", "T_QL") for d, n in (("pooled", 433), ("OLD", 324), ("NEW", 108)) for rep in range(8)]
     if which == "real":
         return T.all_real("DEV")
     return [W.twin_task(tw, d, n, rep) for tw in ("T_GP", "T_GBT", "T_NW", "T_QL", "T_TOBIT") for d, n in (("pooled", 433), ("OLD", 324), ("NEW", 108)) for rep in range(8)]
@@ -77,7 +91,7 @@ def tasks(exp, which):
 def main(exp, which):
     pdir = OUT / exp / f"cache_{which}"; pdir.mkdir(parents=True, exist_ok=True)
     T = tasks(exp, which); T.sort(key=lambda t: -(len(t["prior"]) + len(t["pool"])))
-    res = Parallel(n_jobs=7, verbose=5)(delayed(task_job)(t, EXPERIMENTS[exp], pdir) for t in T)
+    res = Parallel(n_jobs=7, verbose=5)(delayed(task_job)(t, EXPERIMENTS[exp], pdir, exp) for t in T)
     pd.DataFrame([r for rr in res for r in rr]).to_csv(OUT / exp / f"{exp}_dev_{which}.csv.gz", index=False)
 
 

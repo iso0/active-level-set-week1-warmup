@@ -131,9 +131,9 @@ def fit_learner(learner, task, L, fixed=None, state=None):
         return M.fit(model, X, lh, y, task["pool"], rows, kernel=fixed[hyper.split(":", 1)[1]], scalers=fixed.get("scalers"))
     last = state.get("kernel") if state is not None else None
     refit = last is None or every == 1 or (len(L) - state["b0"]) % every == 0
-    if model == "Tobit":
+    if model in ("Tobit", "MixGP"):
         from src.week18_tobit import TobitGP
-        f = TobitGP(X[task["pool"]])
+        f = TobitGP(X[task["pool"]], censor_kh=model == "Tobit")
         f.fit(X[rows], task["depth"][rows], y[rows], theta=None if last is None else last, optimize=refit)
         if state is not None and refit:
             state["kernel"] = f.theta
