@@ -121,3 +121,7 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   decision-relevant. Saturation check (T18-2(i)): the saturation budget is ≈ 40 queries for N = 108…866 → the
   nonparametric law is refuted for the real-data boundary (index-like). Verdict unchanged: IMPROVEMENT ON SOME TASKS ONLY.
   C3 unused.
+- 2026-10-05 S2 checks (development seeds): P-T18-3 refuted in the two-campaign world (prior lifts BA +0.065 more
+  than AUC +0.034; AUC ceiling confound). Rare-pocket world: random − margin NSD −0.138 n.s. → margin not beaten even
+  with a real pocket. All optional items from the close-out list are now done (D1 + round 2, thesis section draft,
+  saturation, S2 checks).

@@ -117,6 +117,17 @@ structure, but not the threshold. Observed (POST-HOC): the OLD prior raises NEW 
 has nothing to estimate (portfolio B). P-T18-3: in the S2 two-campaign world ($\delta=0.6$) the prior lifts AUC far
 more than BA.
 
+**Check of P-T18-3 (HELD-OUT-SYNTHETIC development seeds, base 1840, 8 reps; `phase4/s2_checks_*`).** In the
+two-campaign world, G3 + margin with the campaign-A prior vs without it (same draws): BA AULC lift **+0.065
+[0.045, 0.091]**, AUC AULC lift **+0.034 [0.017, 0.060]**. **Prediction refuted in this world.** The prior lifts BA
+more than AUC. A probable confound is the AUC ceiling: without the prior AUC is already 0.964. The theorem (a) is
+worst-case non-identifiability and is untouched. The real-data asymmetry (AUC +0.09 vs BA +0.011 on NEW) remains a
+POST-HOC observation, not a confirmed consequence of T18-3.
+Side check (same seeds, rare-pocket world, 9% pocket): G3 + random − G3 + margin NSD AULC −0.138 [−0.340, 0.073],
+BA −0.046 [−0.116, 0.027]. Random does not beat margin even when a genuine rare pocket exists, consistent with
+Phase 0 (NEW's exception is not pocket discovery). 3 of the fits (G3 with the 300-run prior) ended with fixed-point
+error up to 4.2e-6.
+
 ## T18-4 Information per query: binary labels vs continuous outputs
 **Statement (KNOWN facts; application PROVED).** With probit link and latent margin $m$ (in noise-scale units) the
 Fisher information that one binary label carries about the latent at the queried point is

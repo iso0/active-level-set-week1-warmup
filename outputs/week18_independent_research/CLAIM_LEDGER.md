@@ -38,7 +38,7 @@ THEOREM (proved, known, or derived — status stated). Pointers are relative to 
 |---|---|---|
 | T18-1 | Binary threshold localization needs ⌈log₂(N+1)⌉ queries; censored affine branch 2; censored smooth branch saves only on fine pools. | KNOWN / PROVED / NUMERICALLY CHECKED |
 | T18-2 | Pool floor N^{−α/(α+d−1)}; saturation budget N^{(d−1)/(α+d−1)}. Checks: no rule/model headroom at B_max on R1/R2 (held); saturation budget ≈ 40 for N = 108…866 on the T_GP twin, flat in N (nonparametric law refuted for this boundary; index-like). | KNOWN / DERIVED; checks NUMERICALLY CHECKED / SEMI-SYNTHETIC |
-| T18-3 | Binary source labels cannot identify a target level shift (only nesting); index structure or continuous source values reduce the target to a 1-D threshold search. | PROVED |
+| T18-3 | Binary source labels cannot identify a target level shift (only nesting); index structure or continuous source values reduce the target to a 1-D threshold search. Its empirical prediction (prior lifts AUC ≫ BA) holds post hoc on NEW but is refuted in the S2 two-campaign world (BA +0.065 vs AUC +0.034). | PROVED; prediction mixed |
 | T18-4 | Information per query: binary probit Fisher information decays as φ(m)²/(Φ(m)Φ(−m)); exact depth carries 1/σ² everywhere. | KNOWN (application PROVED) |
 | T18-5 | ML-II under boundary-concentrated designs: shorter length-scales and harmful hyperparameters at b = 40 (twins −0.03…−0.05, real OLD −0.10 BA); amplitude unidentified (at the bound under both designs), not inflated; effects ≤ 0.015 at b ≥ 80. | CONJECTURE partly refuted (NUMERICALLY CHECKED; real part POST-HOC) |
 
@@ -55,4 +55,5 @@ THEOREM (proved, known, or derived — status stated). Pointers are relative to 
 | M9 | On NEW the label is not a max-depth threshold (AUC 0.891; 7/12 non-Keyhole runs ≥ 111 µm, fast scans). | POST-HOC (descriptive, after D1) | phase1/new_depth*.csv, DATA_AUDIT amendment 2 |
 | M10 | With depth for every run, E1 does not improve POOLED (C2 +0.004 [−0.001, 0.009]) and is worse on NEW (C2 −0.022). | SPLIT-CONFIRMATION (block C2, freeze 1d560792) | round_2/ |
 | M11 | The OLD improvement replicates in direction but not at the pre-registered size: R3_OLD C2 +0.016 [0.013, 0.020] (bar +0.02); QTT −12% (C1 −66%). | SPLIT-CONFIRMATION (block C2) | round_2/ |
+| M12 | In a rare-pocket stress world random refinement does not beat margin (NSD −0.138 [−0.340, 0.073]). | HELD-OUT-SYNTHETIC (development seeds) | phase4/s2_checks_* |
 | M6 | q20 (historical) does not improve with E1: R3_OLD −0.003 n.s. (round 1), R2rev −0.024 (round 1), DEV −0.026 / −0.045. | SPLIT-CONFIRMATION + DEVELOPMENT | round_1/, phase2/ |

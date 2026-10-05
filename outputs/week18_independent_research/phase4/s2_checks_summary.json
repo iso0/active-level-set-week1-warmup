@@ -1,0 +1,36 @@
+{
+ "means": [
+  {
+   "task": "S2_POCKET",
+   "arm": "margin",
+   "BA_AULC": 0.6116,
+   "AUC_AULC": 0.7389,
+   "NSD_AULC": 0.3443
+  },
+  {
+   "task": "S2_POCKET",
+   "arm": "random",
+   "BA_AULC": 0.5654,
+   "AUC_AULC": 0.8065,
+   "NSD_AULC": 0.2061
+  },
+  {
+   "task": "S2_TWO_CAMP",
+   "arm": "margin",
+   "BA_AULC": 0.9755,
+   "AUC_AULC": 0.9975,
+   "NSD_AULC": 0.9437
+  },
+  {
+   "task": "S2_TWO_CAMP_NOPRIOR",
+   "arm": "margin",
+   "BA_AULC": 0.9106,
+   "AUC_AULC": 0.9639,
+   "NSD_AULC": 0.8317
+  }
+ ],
+ "BA_lift_mean": 0.06496460202484876,
+ "AUC_lift_mean": 0.03357675116344344,
+ "POCKET_random_minus_margin_NSD": -0.1381919246209633,
+ "POCKET_random_minus_margin_BA": -0.04625269743635832
+}
