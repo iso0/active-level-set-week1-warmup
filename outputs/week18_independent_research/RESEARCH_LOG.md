@@ -36,3 +36,9 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   blocks DEV 1–8, C1 9–12, C2 13–16, C3 17–20; metrics incl. queries-to-target). Twin truths fitted to the 541
   pooled labels (agreement 0.946–1.000; T_NW/T_QL nearly erase NEW's rare pocket). Baseline reproduction on DEV
   launched (`src/week18_baselines.py`, caches `phase2/cache_*`).
+- 2026-10-05 Phase 3 prep: censored (Tobit) GP implemented and tested (exact in the all-Gaussian case; label-only
+  rows censored on either side); T_TOBIT twin (agreement 0.983 with OLD labels; NEW-like prevalence 0.915).
+  Arms added: G3L (log inputs), LTn (nested LT), mix25 (exploration mixture). Kill criteria logged before runs.
+- 2026-10-05 Theory T18-1: binary needs ⌈log2(N+1)⌉ (KNOWN); censored affine branch 2 queries (PROVED); censored
+  smooth branch saves ≈30% only at N = 4096, nothing at N ≤ 64 (NUMERICALLY CHECKED) → prediction P-T18-1.
+- 2026-10-05 Real DEV baselines running (resumable; heavy transfer tasks first).

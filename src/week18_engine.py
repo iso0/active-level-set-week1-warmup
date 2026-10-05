@@ -28,7 +28,7 @@ import src.week17_models as M
 from src.week13_synthetic_al import maximin_order
 
 warnings.filterwarnings("ignore")
-RULE_ID = {"random": 1, "margin": 2, "straddle": 3, "candB": 4, "mix": 5}
+RULE_ID = {"random": 1, "margin": 2, "straddle": 3, "candB": 4, "mix25": 5, "mix50": 6}
 
 
 def logh(X):
@@ -71,6 +71,38 @@ class DepthGPR:
         return ndtr(mu / np.sqrt(var))
 
 
+def logx(X):
+    return np.c_[np.log(X[:, 0]), np.log(X[:, 1]), np.log(X[:, 2]), X[:, 3]]
+
+
+class LogInputs:
+    """Wraps a fitted model trained on (log P, log VX, log LS, ST) (models G3L / LTL)."""
+
+    def __init__(self, f):
+        self.f = f; self.gp = getattr(f, "gp", None)
+        self.mode_fp_ = getattr(self.gp, "mode_fp_", np.nan)
+
+    def proba(self, X, lh=None):
+        return self.f.proba(logx(X), logh(X))
+
+    def latent(self, X, lh=None):
+        return self.f.latent(logx(X), logh(X))
+
+
+def _nested_lt(task, rows):
+    """LT with two ML-II starts: the default one and G3's optimum (trend variances at their lower bound)."""
+    from sklearn.base import clone
+    from src.week17_audit_impact import SafeguardedFixedMeanLaplaceGPC
+    X, y = task["X"], task["y"]; lh = logh(X)
+    f1 = M.fit("LT", X, lh, y, task["pool"], rows)
+    g3 = M.fit("G3", X, lh, y, task["pool"], rows)
+    k = clone(M.kernel_for("LT")); th = k.theta.copy(); th[0] = th[1] = np.log(1e-3); th[2:] = g3.gp.kernel_.theta
+    k.theta = np.clip(th, k.bounds[:, 0], k.bounds[:, 1])
+    f2 = M.fit("LT", X, lh, y, task["pool"], rows, kernel=_copy(f1.gp.kernel_))
+    f2.gp = SafeguardedFixedMeanLaplaceGPC(k, optimize=True).fit(f2.inputs(X[rows], lh[rows]), y[rows], f2.mean(lh[rows]))
+    return f1 if f1.gp.log_marginal_likelihood_value_ >= f2.gp.log_marginal_likelihood_value_ else f2
+
+
 def fit_learner(learner, task, L, fixed=None, state=None):
     """hyper: 'mlii' (ML-II every step); 'mlii_k<k>' (ML-II every k paid queries, warm-started from the last
     optimum, kernel held fixed in between); 'fixed:<name>' (kernel from `fixed`, never optimized).
@@ -81,11 +113,24 @@ def fit_learner(learner, task, L, fixed=None, state=None):
     lh = logh(X)
     if model == "H":
         return M.fit("H", X, lh, y, task["pool"], rows)
+    if model == "LTn":
+        return _nested_lt(task, rows)
+    if model in ("G3L", "LTL"):
+        t2 = dict(task); t2["X"] = logx(X)
+        f = fit_learner((model[:-1], hyper), t2, L, fixed, state)
+        return LogInputs(f)
     every = int(hyper[6:]) if hyper.startswith("mlii_k") else (1 if hyper == "mlii" else None)
     if every is None:
         return M.fit(model, X, lh, y, task["pool"], rows, kernel=fixed[hyper.split(":", 1)[1]], scalers=fixed.get("scalers"))
     last = state.get("kernel") if state is not None else None
     refit = last is None or every == 1 or (len(L) - state["b0"]) % every == 0
+    if model == "Tobit":
+        from src.week18_tobit import TobitGP
+        f = TobitGP(X[task["pool"]])
+        f.fit(X[rows], task["depth"][rows], y[rows], theta=None if last is None else last, optimize=refit)
+        if state is not None and refit:
+            state["kernel"] = f.theta
+        return f
     if model == "GPR_depth":
         f = DepthGPR(X[task["pool"]])
         f.fit(X[rows], task["depth"][rows], y[rows], kernel=None if last is None or every == 1 else _copy(last), optimize=refit)
@@ -117,12 +162,20 @@ def _warm_fit(model, X, lh, y, pool, rows, warm):
 
 
 def proba(f, X):
+    if isinstance(f, LogInputs):
+        return f.proba(X)
+    if hasattr(f, "kh"):          # TobitGP
+        return f.proba(X)
     if isinstance(f, DepthGPR):
         return f.proba(X)
     return f.proba(X, logh(X))
 
 
 def latent(f, X):
+    if isinstance(f, LogInputs):
+        return f.latent(X)
+    if hasattr(f, "kh"):          # TobitGP: latent relative to the threshold
+        return f.latent(X)
     if isinstance(f, DepthGPR):
         return f.latent(X)
     return f.latent(X, logh(X))
@@ -143,12 +196,18 @@ def choose(rule, f, task, L, rng, b):
     cands = np.setdiff1d(pool, L)
     if rule == "random":
         return int(rng.choice(cands))
+    if rule.startswith("mix"):            # exploration mixture: random with probability eps (e.g. mix25), else margin
+        if rng.random() < int(rule[3:]) / 100:
+            return int(rng.choice(cands))
+        return int(cands[np.argmin(np.abs(proba(f, X[cands]) - .5))])
     if rule == "margin":
         return int(cands[np.argmin(np.abs(proba(f, X[cands]) - .5))])
     if rule == "straddle":
         mu, var = latent(f, X[cands])
         return int(cands[np.argmax(1.96 * np.sqrt(var) - np.abs(mu))])
     if rule == "candB":
+        if len(set(y[L])) < 2:        # band needs both classes among paid labels (transfer tasks): margin fallback
+            return int(cands[np.argmin(np.abs(proba(f, X[cands]) - .5))])
         from src.external_validation.runner import _select
         nxt, _ = _select("Candidate_B__early8", b, X, logh(X), pool, L, y[L], cands, proba(f, X[cands]), None, f"w18_{task['seed']}")
         return int(nxt)
@@ -164,8 +223,8 @@ def run(task, learner, rule, budgets, fixed=None, horizon=None):
         f = fit_learner(learner, task, L, fixed, state)
         if b in budgets:
             p = proba(f, task["X"][task["test"]])
-            r = {"budget": b, "startup": startup_n, "p": p, "u": float(np.exp(f.u)) if isinstance(f, DepthGPR) else np.nan,
-                 "fp": float(getattr(getattr(f, "gp", None), "mode_fp_", np.nan)) if not isinstance(f, (DepthGPR, M.FittedH)) else 0.0}
+            r = {"budget": b, "startup": startup_n, "p": p, "u": float(np.exp(f.u)) if hasattr(f, "u") else np.nan,
+                 "fp": float(f.mode_fp_) if hasattr(f, "mode_fp_") else (float(getattr(getattr(f, "gp", None), "mode_fp_", np.nan)) if not isinstance(f, (DepthGPR, M.FittedH)) else 0.0)}
             if "dense_X" in task:
                 pd_ = proba(f, task["dense_X"])
                 r.update(task["dense"].metrics((pd_ >= .5).astype(int)))

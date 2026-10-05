@@ -22,7 +22,7 @@ from scipy.special import expit, logit
 from src.week15_al import DenseEval
 
 ROOT = Path(__file__).resolve().parents[1]
-TWINS = ("T_GP", "T_GBT", "T_NW", "T_QL", "T_DEPTH")
+TWINS = ("T_GP", "T_GBT", "T_NW", "T_QL", "T_DEPTH", "T_TOBIT")
 DISTS = ("pooled", "OLD", "NEW")
 
 
@@ -93,6 +93,23 @@ def truth(name):
             return g.predict(np.asarray(z)) + m0 - np.log(111.0)
         f.depth = lambda z: np.exp(g.predict(np.asarray(z)) + m0)
         return f
+    if name == "T_TOBIT":
+        import pandas as pd
+        from src.week18_tobit import TobitGP
+        from sklearn.gaussian_process import GaussianProcessRegressor
+        from sklearn.gaussian_process.kernels import ConstantKernel, Matern, WhiteKernel
+        pop = pd.read_csv(ROOT / "outputs/week7_06_real_data_boundary_active_level_set/primary_common_population.csv", usecols=["experiment_name", "max_depth_um"])
+        o = D[D.campaign == 0]; dep = o.sim_id.map(dict(zip(pop.experiment_name, pop.max_depth_um))).to_numpy(float)
+        Xo = o[["P", "VX", "LS", "ST"]].to_numpy(float); yo = o.y.to_numpy(int)
+        tg = TobitGP(Xo).fit(Xo, dep, yo)
+        kz = Z[D.campaign.to_numpy() == 0][yo == 1]
+        k = ConstantKernel(1.0, (1e-3, 1e3)) * Matern(np.ones(4), (1e-2, 1e2), nu=1.5) + WhiteKernel(1e-2, (1e-6, 1))
+        kg = GaussianProcessRegressor(k, random_state=0).fit(kz, np.log(dep[yo == 1]) - 5.5)
+        def f(z):
+            return tg.latent(to_x(z))[0]
+        f.depth = lambda z: np.where(f(z) >= 0, np.exp(kg.predict(np.asarray(z)) + 5.5), np.exp(f(z) + tg.u))
+        f.u = float(np.exp(tg.u)); f.theta = tg.theta
+        return f
     raise ValueError(name)
 
 
@@ -113,7 +130,7 @@ def twin_task(twin, dist, pool_size, rep, test_size=None):
     zd = sample(dist, 6000, np.random.default_rng([1823, ti, di, 999]))
     Z = np.r_[zp, zt]; y = (f(Z) > 0).astype(int)
     X = to_x(Z)
-    depth = f.depth(Z) if twin == "T_DEPTH" else np.full(len(Z), np.nan)
+    depth = f.depth(Z) if twin in ("T_DEPTH", "T_TOBIT") else np.full(len(Z), np.nan)
     from src.external_validation.analysis import boundary_flags
     te = np.arange(pool_size, pool_size + test_size)
     q = boundary_flags(X, y, te, np.array([f"t{i:05d}" for i in range(len(y))]), "entire_evaluation_batch")[20] if len(set(y[te])) == 2 else None
@@ -130,7 +147,7 @@ def twin_fidelity():
     out = {}
     for t in TWINS:
         f = truth(t)
-        if t == "T_DEPTH":
+        if t in ("T_DEPTH", "T_TOBIT"):
             m = D.campaign.to_numpy() == 0
             out[t] = {"agree_real": float(np.mean((f(Z[m]) > 0) == y[m])), "scope": "OLD"}
         else:

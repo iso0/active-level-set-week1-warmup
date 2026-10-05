@@ -72,7 +72,7 @@ def main(which="real"):
         tasks = T.all_real("DEV")
     else:
         tasks = [W.twin_task(tw, d, n, rep) for tw, d, n in
-                 [(tw, d, n) for tw in ("T_GP", "T_GBT", "T_NW", "T_QL") for d, n in (("pooled", 433), ("OLD", 324), ("NEW", 108))] + [("T_DEPTH", "OLD", 324)]
+                 [(tw, d, n) for tw in ("T_GP", "T_GBT", "T_NW", "T_QL", "T_TOBIT") for d, n in (("pooled", 433), ("OLD", 324), ("NEW", 108))] + [("T_DEPTH", "OLD", 324)]
                  for rep in range(8)]
     tasks.sort(key=lambda t: -(len(t["prior"]) + len(t["pool"])))
     res = Parallel(n_jobs=7, verbose=5)(delayed(task_job)(t, pdir) for t in tasks)
