@@ -21,11 +21,13 @@ from src.week17_audit import OUT, ROOT, campaigns, safeguarded_mode
 
 
 class SafeguardedFixedMeanLaplaceGPC(p11.FixedMeanLaplaceGPC):
-    """p11.FixedMeanLaplaceGPC with the posterior mode found by backtracking Newton (consistent temporaries)."""
+    """p11.FixedMeanLaplaceGPC with the posterior mode found by backtracking Newton (consistent temporaries).
+    FP_TOL = None reproduces Week 17; Week 18 sets FP_TOL = 1e-9 (stop on the fixed-point error)."""
+    FP_TOL = None
 
     def _posterior_mode(self, kernel, return_temporaries=False):
         K = kernel(self.X_train_)
-        r = safeguarded_mode(K, self.y_train_, self.mean_train_)
+        r = safeguarded_mode(K, self.y_train_, self.mean_train_, iters=2000 if self.FP_TOL else 500, fp_tol=self.FP_TOL)
         self.mode_fp_, self.mode_converged_ = r["fp"], r["converged"]
         pi, sw, L, g = r["pi"], r["sw"], r["L"], r["g"]
         a = self.y_train_ - pi

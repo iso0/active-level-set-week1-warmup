@@ -28,10 +28,17 @@ import src.week17_models as M
 from src.week13_synthetic_al import maximin_order
 
 warnings.filterwarnings("ignore")
+from src.week17_audit_impact import SafeguardedFixedMeanLaplaceGPC as _SG
+_SG.FP_TOL = 1e-9          # Week 18: stop the Laplace Newton on the fixed-point error (see RESEARCH_LOG)
 RULE_ID = {"random": 1, "margin": 2, "straddle": 3, "candB": 4, "mix25": 5, "mix50": 6}
 
 
+_PHYS = [None]          # per-task physics-score override (set by run(); one task at a time per worker)
+
+
 def logh(X):
+    if _PHYS[0] is not None:
+        return _PHYS[0](X)
     return np.log(X[:, 0]) - .5 * np.log(X[:, 1]) - 1.5 * np.log(X[:, 2])
 
 
@@ -216,6 +223,7 @@ def choose(rule, f, task, L, rng, b):
 
 def run(task, learner, rule, budgets, fixed=None, horizon=None):
     horizon = horizon or max(budgets)
+    _PHYS[0] = task.get("phys_fn")
     rng = np.random.default_rng(list(task["seed"]) + [RULE_ID[rule], 11])
     L = startup(task); out = []; state = {"kernel": None, "b0": len(L)}; startup_n = len(L)
     while True:

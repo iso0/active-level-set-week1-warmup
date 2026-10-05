@@ -29,10 +29,14 @@ OUT = ROOT / "outputs/week17_model_and_acquisition/integrity"
 warnings.filterwarnings("ignore")
 
 
-def safeguarded_mode(K, y, m, iters=500, tol=1e-12):
-    """Laplace mode of f = m + g, g ~ N(0, K), logistic likelihood; Newton with backtracking."""
+def safeguarded_mode(K, y, m, iters=500, tol=1e-12, fp_tol=None):
+    """Laplace mode of f = m + g, g ~ N(0, K), logistic likelihood; Newton with backtracking.
+    fp_tol=None: Week 17 stopping rule (objective and step stall).  fp_tol given (Week 18): iterate until the
+    fixed-point error |K(y - pi) - g| <= fp_tol; when backtracking stalls on round-off the full Newton step is
+    taken if it lowers the fixed-point error."""
     y = np.asarray(y, int); m = np.asarray(m, float); s = 2 * y - 1
     psi = lambda a: -.5 * a @ K @ a - np.logaddexp(0, -s * (m + K @ a)).sum()
+    fperr = lambda a: float(np.abs(K @ (y - expit(m + K @ a)) - K @ a).max())
     a = np.zeros(len(y)); cur = psi(a); it = 0; conv = False
     for it in range(1, iters + 1):
         g = K @ a
@@ -43,8 +47,13 @@ def safeguarded_mode(K, y, m, iters=500, tol=1e-12):
         t = 1.0
         while t > 1e-10 and psi(a + t * d) < cur - 1e-13:
             t *= .5
+        if fp_tol is not None and t <= 1e-10 and fperr(a + d) < fperr(a):
+            t = 1.0
         a = a + t * d; new = psi(a)
-        if abs(new - cur) < tol and t * np.abs(K @ d).max() < 1e-9:
+        if fp_tol is not None:
+            if fperr(a) <= fp_tol:
+                cur = new; conv = True; break
+        elif abs(new - cur) < tol and t * np.abs(K @ d).max() < 1e-9:
             cur = new; conv = True; break
         cur = new
     g = K @ a; pi = expit(m + g); sw = np.sqrt(pi * (1 - pi))

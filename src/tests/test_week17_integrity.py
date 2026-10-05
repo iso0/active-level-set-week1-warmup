@@ -46,3 +46,13 @@ def test_historical_m3_transfer_fit_is_not_at_its_mode():
     gp, sc, ph = fit_m3_safe(xo, lo, yo, np.arange(len(yo)), np.arange(len(yo)), safe=True)
     r2 = audit_fixedmean(gp, sc.transform(xn), ph.latent(ln))
     assert r2["dg_train"] < 1e-8
+
+
+def test_fixed_point_stopping_rule_converges_large_kernel():
+    """Week 18 rule: with a large-amplitude kernel and saturated points the Week 17 rule can stop early;
+    fp_tol forces convergence of the fixed-point error."""
+    rng = np.random.default_rng(4)
+    x = rng.standard_normal((120, 4)); y = (x[:, 0] + .2 * x[:, 1] > 0).astype(int)
+    K = ConstantKernel(378.0, "fixed")(x) * Matern([7., 7., 8., 100.], "fixed", nu=1.5)(x)
+    r = safeguarded_mode(K, y, np.zeros(120), iters=2000, fp_tol=1e-9)
+    assert r["fp"] <= 1e-8
