@@ -96,3 +96,6 @@ Start: 2026-10-05, main = `bbb79eaf` (Week 17). Deadline context: thesis due 15 
   [−0.001, 0.024]; fresh twins T_DEPTH +0.082 [0.041, 0.125], T_TOBIT OLD +0.062; non-inferior on every in-scope
   task (min +0.009). q20: R3_OLD −0.003 n.s., R2rev −0.024. 2,064 fits converged. Phase 6 (depth stress round 1,
   base seed 1870) launched; Weeks 12–18 regression tests running.
+- 2026-10-05 **Phase 6: E1 survives** the depth stress worlds (round-1 seeds): worst SD_NOISE25 −0.018
+  [−0.077, 0.034]; drift +0.052, missing-30% +0.033, noise-10% +0.082, jump +0.013, NEW-like +0.005. **Stopping
+  rule met.** Remaining: finish the binary-portfolio screening (cfa) and theory checks for the record; reports.

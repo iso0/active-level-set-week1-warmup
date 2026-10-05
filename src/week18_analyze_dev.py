@@ -45,6 +45,8 @@ def analyze(exp, which):
     d = d.dropna(subset=["model"])
     base = pd.read_csv(W18 / f"phase2/baselines_{which}.csv.gz")
     base = base[base.task.isin(d.task.unique())].dropna(subset=["model"])
+    keys = set(zip(d.task, d.repeat, d.fold))               # pair with the same runs (screening subsets)
+    base = base[[k in keys for k in zip(base.task, base.repeat, base.fold)]]
     if which == "real":
         y_of = y_of_tasks(d.task.unique())
         cur = pd.concat([real_curves(d, y_of), real_curves(base, y_of)]).drop_duplicates(["task", "repeat", "arm", "budget"])

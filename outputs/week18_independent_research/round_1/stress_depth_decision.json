@@ -1,0 +1,69 @@
+{
+ "E1": {
+  "worst_world": "SD_NOISE25",
+  "worst_mean": -0.017614729914603236,
+  "pass_no_cell_below_-0.03": true,
+  "table": [
+   {
+    "task": "SD_DRIFT",
+    "arm": "E1",
+    "ref": "REF",
+    "metric": "NSD_0.1_AULC",
+    "mean": 0.0516,
+    "lo": 0.0291,
+    "hi": 0.0736,
+    "repeats": 8
+   },
+   {
+    "task": "SD_JUMP",
+    "arm": "E1",
+    "ref": "REF",
+    "metric": "NSD_0.1_AULC",
+    "mean": 0.0127,
+    "lo": -0.0164,
+    "hi": 0.0547,
+    "repeats": 8
+   },
+   {
+    "task": "SD_MISSING30",
+    "arm": "E1",
+    "ref": "REF",
+    "metric": "NSD_0.1_AULC",
+    "mean": 0.0332,
+    "lo": -0.0209,
+    "hi": 0.1005,
+    "repeats": 8
+   },
+   {
+    "task": "SD_NEWLIKE",
+    "arm": "E1",
+    "ref": "REF",
+    "metric": "NSD_0.1_AULC",
+    "mean": 0.0047,
+    "lo": 0.001,
+    "hi": 0.009,
+    "repeats": 8
+   },
+   {
+    "task": "SD_NOISE10",
+    "arm": "E1",
+    "ref": "REF",
+    "metric": "NSD_0.1_AULC",
+    "mean": 0.0819,
+    "lo": -0.0069,
+    "hi": 0.2097,
+    "repeats": 8
+   },
+   {
+    "task": "SD_NOISE25",
+    "arm": "E1",
+    "ref": "REF",
+    "metric": "NSD_0.1_AULC",
+    "mean": -0.0176,
+    "lo": -0.0766,
+    "hi": 0.0344,
+    "repeats": 8
+   }
+  ]
+ }
+}

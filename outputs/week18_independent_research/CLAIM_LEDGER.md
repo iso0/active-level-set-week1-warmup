@@ -50,4 +50,5 @@ THEOREM (proved, known, or derived — status stated). Pointers are relative to 
 | M3 | E1's gain is largest at small budgets (R3_OLD BA 0.927 vs 0.863 at B24), as predicted by T18-4 / P-T18-1. | SPLIT-CONFIRMATION (descriptive) | round_1/ |
 | M4 | With partial depth (NEW runs without depth) E1 is worse than G3 on POOLED (−0.037 [−0.050, −0.026]); a mixed-likelihood GP (E3) using the label-only rows does not fix it (−0.031). | DEVELOPMENT | phase3/depth2/ |
 | M5 | E1 is fragile to stale hyperparameters: ML-II every 8 queries instead of per step turns R2rev +0.012 into −0.081. | DEVELOPMENT | phase3/depth2/ |
+| M7 | E1 survives depth stress: no world below −0.03 NSD AULC (worst 25% depth noise −0.018 [−0.077, 0.034]); gains under threshold drift (+0.052) and 30% missing depth (+0.033). | HELD-OUT-SYNTHETIC (round-1 seeds) | round_1/stress_depth_* |
 | M6 | q20 (historical) does not improve with E1: R3_OLD −0.003 n.s. (round 1), R2rev −0.024 (round 1), DEV −0.026 / −0.045. | SPLIT-CONFIRMATION + DEVELOPMENT | round_1/, phase2/ |
