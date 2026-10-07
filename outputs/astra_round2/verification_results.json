@@ -1,0 +1,39 @@
+{
+  "seed": 20261004,
+  "random_laws_checked": 1500,
+  "max_binary_identity_error": 5.551115123125783e-16,
+  "max_terminal_regret_violation": 0.0,
+  "max_common_BSC_bound_violation": 2.7755575615628914e-17,
+  "rare_exact_value": "2798/86615",
+  "rare_value_float": 0.03230387346302604,
+  "rare_K": 135,
+  "rare_t": "5004/91",
+  "rare_L": "0",
+  "rare_mu1": "17289/182",
+  "rare_mu0": "21843/5642",
+  "rare_leaf_pair": "3/68",
+  "balanced_extremal_values": {
+    "4": "7/10",
+    "5": "3/5",
+    "6": "5/9",
+    "7": "1/2",
+    "8": "13/28",
+    "9": "43/99",
+    "10": "2/5"
+  },
+  "rare_discovery_survival_9": 0.4239441901999249,
+  "rare_discovery_survival_16": 0.2078709165950704,
+  "discovery_quantiles": {
+    "19/20": 29,
+    "99/100": 42
+  },
+  "twolevel_vertices": 6,
+  "twolevel_laws_checked": 50006,
+  "twolevel_min_tested_ratio": 0.8695652173913043,
+  "tex_static_checks": "PASS; not a compilation or visual-layout check",
+  "latex_source_sha256": "655befb984c4ee12037967f94549576795099a14f7890de92118d6e834bf5b47",
+  "native_compile_status": "Unavailable: Unable to find standard directories for platform",
+  "final_source_structural_check": "PASS",
+  "three_point_budget_exact_certificates": "36/36 PASS; coefficients also matched to LaTeX table",
+  "three_point_budget_sharp_ratio": "4/5; proof via exact rational certificates and matching limiting construction"
+}

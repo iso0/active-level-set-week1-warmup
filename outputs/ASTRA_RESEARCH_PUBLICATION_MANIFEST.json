@@ -1,0 +1,62 @@
+{
+  "outputs/ASTRA_RESEARCH_INDEX.md": {
+    "bytes": 2848,
+    "sha256": "89605bb9ff82aada4faed9456ada00bbc075c0ba141d2b388517e08f5a0faf40"
+  },
+  "outputs/ASTRA_RESEARCH_PUBLICATION_CHECKS.json": {
+    "bytes": 6475,
+    "sha256": "77c41c5630b688e9ab771623e72bdbba2d9d05f8be95ad68d3fb0620c1bdd8f5"
+  },
+  "outputs/astra_round2/marginal_information_rounds_1_2.pdf": {
+    "bytes": 527021,
+    "sha256": "f12beca3167932f6d611017e22b7d5976af56792e5295483dbb3a6a23dda8263"
+  },
+  "outputs/astra_round2/marginal_information_rounds_1_2.tex": {
+    "bytes": 67857,
+    "sha256": "655befb984c4ee12037967f94549576795099a14f7890de92118d6e834bf5b47"
+  },
+  "outputs/astra_round2/prove_three_point_budget.py": {
+    "bytes": 1902,
+    "sha256": "9c6bc62c872fce65dff86ab004677fb3e6e35a006449a62eacc418a45ac25dd2"
+  },
+  "outputs/astra_round2/PUBLICATION.md": {
+    "bytes": 1509,
+    "sha256": "a674edf644d6303ffa3ebb6b099da467bbd0cfd758737e62871eab1ae59e5e70"
+  },
+  "outputs/astra_round2/README.txt": {
+    "bytes": 1449,
+    "sha256": "7abe87d415bfe677ebc3800304900f3a2da58d20f8635329d617de76b750f23f"
+  },
+  "outputs/astra_round2/round2_research_package.zip": {
+    "bytes": 33414,
+    "sha256": "94485bebe8739c69468c02b51618e774c803f8338db97221a865fc9dee9182da"
+  },
+  "outputs/astra_round2/three_point_budget_certificates.json": {
+    "bytes": 7554,
+    "sha256": "de913597d91bbb36c8b461a95ba7ea5e39185a47d68ee5a7925f5aadfc7719ad"
+  },
+  "outputs/astra_round2/verification_results.json": {
+    "bytes": 1415,
+    "sha256": "4618b40ec0edea825c53d24245fa1880e780b9b3a81da97d94ca6e6e29a3abf2"
+  },
+  "outputs/astra_round2/verify_round2.py": {
+    "bytes": 5900,
+    "sha256": "e7dc54a6ba48f16ec8f2a85cfdfdafcc211bd345c24e81e38e2856070b343adf"
+  },
+  "outputs/astra_round3/ROUND3_RESEARCH_PACKAGE.zip": {
+    "bytes": 161231,
+    "sha256": "2aeb8076e5007e2a3a385cdad51c3620d4022cc7c536d8743d5048f2f52e168c"
+  },
+  "outputs/astra_round3/working_notes/geometry_discovery.md": {
+    "bytes": 37857,
+    "sha256": "5799d4dfcf90660e0d47444c36c9ccf5336ea1e2543f9d87372832ea3583a099"
+  },
+  "outputs/astra_round3/working_notes/latent_audit.md": {
+    "bytes": 23337,
+    "sha256": "987d1e9664a4526075fd4f08f63b291377beb97f17eae63735fe01d3d91911d8"
+  },
+  "outputs/astra_round3/working_notes/sequential_physics.md": {
+    "bytes": 36706,
+    "sha256": "dfd0dbd9e9f8fcda1b83c439596a0fcc10ebaaf8e0ca6df88fac05cb0c5fd67b"
+  }
+}
