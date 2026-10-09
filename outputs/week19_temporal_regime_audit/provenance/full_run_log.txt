@@ -1,0 +1,143 @@
+{
+ "old_ledger_experiments": 407,
+ "old_ledger_frames": 110804,
+ "old_experiments_in_more_than_one_partition": 0,
+ "old_eligible_present": 405,
+ "new_label_file_experiments": 185,
+ "new_eligible_present": 136,
+ "new_not_eligible_count": 49,
+ "old_partition_mismatch": 0,
+ "week7_cross_check": {
+  "rows_compared": 405,
+  "has_keyhole_equal": 405,
+  "keyhole_frame_count_equal": 405,
+  "keyhole_segment_count_equal": 405,
+  "fraction_equal": 405,
+  "label_sequence_sha256_equal": 405,
+  "w7_transient_by_sequence_true": 30,
+  "w7_persistent_to_last_physical_true": 43,
+  "w7_transient_but_final_active_K": 0
+ },
+ "week11_bug_status_columns": [
+  "simulation_id",
+  "source_hash",
+  "bug_affected",
+  "bug_from_beginning",
+  "any_bug_free_false",
+  "any_correctly_finished_false",
+  "technical_usability_status",
+  "eligibility_basis"
+ ]
+}
+campaign  descriptor             
+NEW       keyhole_only__K_at_end      88
+          K_then_C__no_later_K        25
+          conduction_only             11
+          alternating__K_at_end        8
+          C_then_K__K_at_end           2
+          alternating__terminal_C      1
+          forming_only                 1
+OLD       conduction_only            331
+          keyhole_only__K_at_end      33
+          K_then_C__no_later_K        18
+          alternating__terminal_C     12
+          C_then_K__K_at_end           9
+          forming_only                 1
+          alternating__K_at_end        1
+series 50/541
+series 100/541
+series 150/541
+series 200/541
+series 250/541
+series 300/541
+series 350/541
+series 400/541
+series 450/541
+series 500/541
+series 541/541
+failure
+ok                                                                                                   540
+bounds/time row mismatch 40805/40803: time-dependent depth quantities unavailable (no truncation)      1
+campaign  descriptor             
+NEW       keyhole_only__K_at_end      88
+          K_then_C__no_later_K        25
+          conduction_only             11
+          alternating__K_at_end        8
+          C_then_K__K_at_end           2
+          alternating__terminal_C      1
+          forming_only                 1
+OLD       conduction_only            331
+          keyhole_only__K_at_end      33
+          K_then_C__no_later_K        18
+          alternating__terminal_C     12
+          C_then_K__K_at_end           9
+          forming_only                 1
+          alternating__K_at_end        1
+                                                  mechanism_vs_uref                        mechanism_status  n
+0  active_elevated_depth_after_first_C_frame__persistent_G3_ge_uref                    unresolved_mechanism  1
+1   active_elevated_depth_after_first_C_frame__transient_G3_lt_uref                    unresolved_mechanism  3
+2                                            incomplete_observation             accounted_for_as_incomplete  1
+3                                               late_window_maximum                 accounted_for_by_window  1
+4                               no_disagreement_under_frozen_target                                  agrees  5
+5                             startup_related_event__also_passes_G3  accounted_for_by_manual_forming_window  1
+                       definition population       AUC   uref_BA  oldE1thr_BA  oracle_BA_same_population
+0              max_depth_whole_um        OLD  0.999959  0.998494     0.998494                   0.998494
+3              max_depth_whole_um        NEW  0.891129  0.704301     0.704301                   0.913978
+6              max_depth_whole_um     POOLED  0.995802  0.985834     0.985834                   0.985834
+9                 A_active_max_um        OLD  0.999959  0.998494     0.998494                   0.998494
+12                A_active_max_um        NEW  0.978006  0.768695     0.723240                   0.959677
+15                A_active_max_um     POOLED  0.998712  0.988716     0.987258                   0.988716
+18           B_postforming_max_um        OLD  1.000000  1.000000     1.000000                   1.000000
+21           B_postforming_max_um        NEW  0.984604  0.814150     0.768695                   0.983871
+24           B_postforming_max_um     POOLED  0.999020  0.991614     0.990152                   0.991614
+27         G3_persistent_depth_um        OLD  0.994123  0.938356     0.979452                   0.979452
+30         G3_persistent_depth_um        NEW  0.965723  0.880402     0.801788                   0.954918
+33         G3_persistent_depth_um     POOLED  0.993372  0.956050     0.976203                   0.977305
+36                    T0_depth_um        OLD  0.973015  0.780822     0.844116                   0.909205
+39                    T0_depth_um        NEW  0.962610  0.907258     0.898094                   0.939516
+42                    T0_depth_um     POOLED  0.982211  0.860406     0.898048                   0.921764
+45        D_whole_frac_above_uref        OLD  0.999959       NaN          NaN                   0.998494
+48        D_whole_frac_above_uref        NEW  0.967375       NaN          NaN                   0.939516
+51        D_whole_frac_above_uref     POOLED  0.996315       NaN          NaN                   0.987258
+54       D_active_frac_above_uref        OLD  0.999959       NaN          NaN                   0.998494
+57       D_active_frac_above_uref        NEW  0.978006       NaN          NaN                   0.967742
+60       D_active_frac_above_uref     POOLED  0.996781       NaN          NaN                   0.988716
+63  D_postforming_frac_above_uref        OLD  1.000000       NaN          NaN                   1.000000
+66  D_postforming_frac_above_uref        NEW  0.985704       NaN          NaN                   0.971774
+69  D_postforming_frac_above_uref     POOLED  0.997091       NaN          NaN                   0.991614
+72     D_interior_frac_above_uref        OLD  0.986219       NaN          NaN                   0.984791
+75     D_interior_frac_above_uref        NEW  0.966001       NaN          NaN                   0.959350
+78     D_interior_frac_above_uref     POOLED  0.986320       NaN          NaN                   0.978473
+81         D_active_ms_above_uref        OLD  0.999959       NaN          NaN                   0.998494
+84         D_active_ms_above_uref        NEW  0.975073       NaN          NaN                   0.955645
+87         D_active_ms_above_uref     POOLED  0.996752       NaN          NaN                   0.988716
+resolved 20/20
+revision                                  source          verified
+2e1eec9c98fd57609d2815f174586336ab59da07  verified_cache  True        16
+b6dc254a2b607a31cb9f97b40990339c3d5ca1e8  verified_cache  True         4
+dtype: int64
+   check status                                                                                                         detail
+0    C01   PASS                                                                                         sha256 c15658cac87a...
+1    C02   PASS                                                      sha256 b45518a51ea5...; LFS sha256 equals the pinned tree
+2    C03   PASS  2e1eec9c downloaded: 272/272; 2e1eec9c verified_cache: 273/273; b6dc254a downloaded: 1611/1611; b6dc254a v...
+3    C04   PASS                                                                     not eligible: ['4ecd858c02', 'f4a4199ba7']
+4    C05   PASS              185 names; 136 eligible; 49 non-eligible == bug_affected: True; their labels were not interpreted
+5   C06O   PASS                                                               405/405 equal; positives 73; discrepancies: none
+6   C06N   PASS                                                              136/136 equal; positives 124; discrepancies: none
+7    C07   PASS  {"rows_compared": 405, "has_keyhole_equal": 405, "keyhole_frame_count_equal": 405, "keyhole_segment_count_...
+8    C08   PASS  frames_csv_rows_match_ledger: 541/541; frames_csv_timesteps_match_ledger: 541/541; frames_csv_labels_match...
+9    C09   PASS                                                        unmatched frames 0; simulations with timing failures: 0
+10   C10   INFO                                                             median relative error +440.041; max |rel| 1757.152
+11  C11O   PASS                                                                                max |diff| 5.68e-14 um over 405
+12  C11N   PASS                                                                                max |diff| 5.68e-14 um over 136
+13   C12   PASS                                                 G3 max |diff| 5.68e-14 (n=404); T0 max |diff| 2.84e-14 (n=405)
+14   C13   PASS                                                                exit max |diff| 9.86e-14 ms; cutoff 9.95e-14 ms
+15  C14a   PASS  max 311.99990 at 2.042652 ms; exit 1.270891; A 110.75500; G3 93.83694; >=300 rows 18065 in 3 episodes, lon...
+16  C14b   PASS  max 131.19130 at 0.4303165 ms (active_window, interior=1, manual-label phase: before_first_C_or_K_frame); ...
+17  C14c   PASS                                        max 144.97870; rows 40805/40803; IE 33, F 17, C 0, K 0; last row max: 1
+18   C15   PASS                                                                                0 cache files for repeats 17-20
+19   C16   PASS  R3_OLD GPR_depth 0.9443; R3_OLD G3 0.9237; R3_OLD M3 0.9299; R1_POOLED GPR_depth 0.9474; R1_POOLED G3 0.94...
+20   C17   INFO  u_ref 110.9641 um; E1 learned-threshold procedure (src/week18_engine.py::DepthGPR.fit) applied to all 405 ...
+21   C18   PASS                                         OLD 405 (73 positive); NEW 136 (124 positive, 12 negative); POOLED 541
+22   C19   PASS                               0.90 cutoff, 20 % T0, 50 rows, 50 um margins, 50 um window, 12 um wall extension
+23   C20   PASS  R1_POOLED E1: 4328 preds, 541 sims x 8 reps; R1_POOLED G3: 4328 preds, 541 sims x 8 reps; R3_NEW E1: 1088 ...

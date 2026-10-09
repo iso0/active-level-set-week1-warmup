@@ -1,0 +1,25 @@
+check,description,status,detail
+C01,frozen OLD population bytes,PASS,sha256 c15658cac87a...
+C02,"NEW annotation source bytes (12,397,054 B, audited SHA-256)",PASS,sha256 b45518a51ea5...; LFS sha256 equals the pinned tree
+C03,every used raw file verified against the pinned tree (size + Git blob SHA-1 or LFS SHA-256),PASS,2e1eec9c downloaded: 272/272; 2e1eec9c verified_cache: 273/273; b6dc254a downloaded: 1611/1611; b6dc254a verified_cache_d69dac5b: 12/12
+C04,"OLD ledgers: 407 experiments, 405 eligible present, the 2 documented exclusions",PASS,"not eligible: ['4ecd858c02', 'f4a4199ba7']"
+C05,"NEW: 185 names, 136 eligible, the 49 non-eligible are exactly the Week 11 Bug-affected runs",PASS,185 names; 136 eligible; 49 non-eligible == bug_affected: True; their labels were not interpreted
+C06O,has_keyhole reproduced from label_final (OLD),PASS,405/405 equal; positives 73; discrepancies: none
+C06N,has_keyhole reproduced from label_final (NEW),PASS,136/136 equal; positives 124; discrepancies: none
+C07,"Week 7 OLD sequence audit reproduced (has_keyhole, K frames, K segments, K/(F+C+K), label-sequence SHA-256)",PASS,"{""rows_compared"": 405, ""has_keyhole_equal"": 405, ""keyhole_frame_count_equal"": 405, ""keyhole_segment_count_equal"": 405, ""fraction_equal"": 405, ""label_sequence_sha256_equal"": 405, ""w7_transient_by_sequence_true"": 30, ""w7_persistent_to_last_physical_true"": 43, ""w7_transient_but_final_active_K"": 0}"
+C08,"frames.csv agrees with the ledgers (rows, timesteps, labels, contiguous frame_idx)",PASS,frames_csv_rows_match_ledger: 541/541; frames_csv_timesteps_match_ledger: 541/541; frames_csv_labels_match_label_final: 541/541; frames_csv_frame_idx_contiguous: 541/541
+C09,every labelled frame maps to exactly one iter.dat row (exact integer match),PASS,unmatched frames 0; simulations with timing failures: 0
+C10,timestep x nominal DT is not monitor time (information),INFO,median relative error +440.041; max |rel| 1757.152
+C11O,frozen whole-record max reproduced (OLD),PASS,max |diff| 5.68e-14 um over 405
+C11N,frozen whole-record max reproduced (NEW),PASS,max |diff| 5.68e-14 um over 136
+C12,Week 7 G3 and T0 depth reproduced on OLD,PASS,G3 max |diff| 5.68e-14 (n=404); T0 max |diff| 2.84e-14 (n=405)
+C13,derived exit and 90 % active cutoff reproduce Week 7 (OLD),PASS,exit max |diff| 9.86e-14 ms; cutoff 9.95e-14 ms
+C14a,"H-f4fc937e86: whole max 311.99990 um at 2.042652 ms after exit 1.270891 ms; active max 110.75500; G3 93.83694; >=300 um rows 18,065 in 3 episodes",PASS,"max 311.99990 at 2.042652 ms; exit 1.270891; A 110.75500; G3 93.83694; >=300 rows 18065 in 3 episodes, longest 0.316815 ms"
+C14b,H-29cf03a279: max 131.19130 um inside the pipeline active window and adaptive interior (0.4303165 ms); G3 119.66220,PASS,"max 131.19130 at 0.4303165 ms (active_window, interior=1, manual-label phase: before_first_C_or_K_frame); G3 119.66220 (event before_first_C_or_K_frame)"
+C14c,"H-e7dbd8e5ce: max 144.97870 um; 40,805 bounds vs 40,803 time rows; 33 IE + 17 F, no C/K",PASS,"max 144.97870; rows 40805/40803; IE 33, F 17, C 0, K 0; last row max: 1"
+C15,"C3 (repeats 17-20) unused: no Week 18 cache file for repeats 17-20 (verified, not executed)",PASS,0 cache files for repeats 17-20
+C16,historical DEV BA AULC reference values (repeats 1-8; phase3/depth3/aulc_real.csv),PASS,R3_OLD GPR_depth 0.9443; R3_OLD G3 0.9237; R3_OLD M3 0.9299; R1_POOLED GPR_depth 0.9474; R1_POOLED G3 0.9479; R1_POOLED M3 0.9499; R3_NEW GPR_depth 0.6507; R3_NEW G3 0.6713; R3_NEW M3 0.6014
+C17,OLD reference depth threshold recovered with the existing E1 rule on OLD only,INFO,"u_ref 110.9641 um; E1 learned-threshold procedure (src/week18_engine.py::DepthGPR.fit) applied to all 405 OLD runs: 1-D logistic regression on log depth (C=1e6), the non-separable branch; OLD BA at u_ref 0.9985"
+C18,population counts,PASS,"OLD 405 (73 positive); NEW 136 (124 positive, 12 negative); POOLED 541"
+C19,window constants equal the executable Week 6/7 constants,PASS,"0.90 cutoff, 20 % T0, 50 rows, 50 um margins, 50 um window, 12 um wall extension"
+C20,existing DEV out-of-fold predictions recovered (each DEV run predicted once per repeat),PASS,"R1_POOLED E1: 4328 preds, 541 sims x 8 reps; R1_POOLED G3: 4328 preds, 541 sims x 8 reps; R3_NEW E1: 1088 preds, 136 sims x 8 reps; R3_NEW G3: 1088 preds, 136 sims x 8 reps; R3_OLD E1: 3240 preds, 405 sims x 8 reps; R3_OLD G3: 3240 preds, 405 sims x 8 reps"

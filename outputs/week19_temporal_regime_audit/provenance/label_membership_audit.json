@@ -1,0 +1,35 @@
+{
+ "old_ledger_experiments": 407,
+ "old_ledger_frames": 110804,
+ "old_experiments_in_more_than_one_partition": 0,
+ "old_eligible_present": 405,
+ "old_not_eligible": [
+  "P-204p165012598_VX-0p624752635414_LS-8p54709329997e-05_ST-334p626206985_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-7p72164906486e-06_H-4ecd858c02",
+  "P-242p540096613_VX-0p410466748632_LS-6p92043418329e-05_ST-378p456653244_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p1752768328e-05_H-f4a4199ba7"
+ ],
+ "new_label_file_experiments": 185,
+ "new_eligible_present": 136,
+ "new_not_eligible_count": 49,
+ "old_partition_mismatch": 0,
+ "week7_cross_check": {
+  "rows_compared": 405,
+  "has_keyhole_equal": 405,
+  "keyhole_frame_count_equal": 405,
+  "keyhole_segment_count_equal": 405,
+  "fraction_equal": 405,
+  "label_sequence_sha256_equal": 405,
+  "w7_transient_by_sequence_true": 30,
+  "w7_persistent_to_last_physical_true": 43,
+  "w7_transient_but_final_active_K": 0
+ },
+ "week11_bug_status_columns": [
+  "simulation_id",
+  "source_hash",
+  "bug_affected",
+  "bug_from_beginning",
+  "any_bug_free_false",
+  "any_correctly_finished_false",
+  "technical_usability_status",
+  "eligibility_basis"
+ ]
+}

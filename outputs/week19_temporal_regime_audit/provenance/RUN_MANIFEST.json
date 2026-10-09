@@ -1,0 +1,236 @@
+{
+ "generated_by": "python -m src.week19_temporal_audit all",
+ "code_base_commit": "40580a6d31725e8a79daddb37c2dc1e68c475207",
+ "branch": "week19-temporal-audit",
+ "python": "3.14.4",
+ "packages": {
+  "numpy": "2.5.1",
+  "pandas": "3.0.5",
+  "scipy": "1.18.0",
+  "scikit-learn": "1.9.0",
+  "matplotlib": "3.11.1",
+  "huggingface_hub": "1.29.0"
+ },
+ "pins": {
+  "OLD": "b6dc254a2b607a31cb9f97b40990339c3d5ca1e8",
+  "OLD_audit_pin_reused_bytes": "d69dac5bda8b622bc0de316b112815c6056c06ec",
+  "NEW": "2e1eec9c98fd57609d2815f174586336ab59da07"
+ },
+ "outputs": [
+  {
+   "path": "outputs/week19_temporal_regime_audit/ASTRA_HANDOFF.md",
+   "bytes": 7290,
+   "sha256": "cf7cb5ced440b69bdc348d9ebf1666daf20e5b4dccbe0d43941348009d0d2167"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/figures/fig1_descriptors_by_group.png",
+   "bytes": 57930,
+   "sha256": "10977f7bab8cc600391388c62f809e9cff8cda8bc597f5d382caa78e7cdeeefd"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/figures/fig2_positive_K_fraction_vs_VX.png",
+   "bytes": 62043,
+   "sha256": "cb4390dd374c600d3f7f69e92fba57190a7a46b37d6fbcf3d14e98e23e4b1ec0"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/figures/fig3_first_K_to_C_switch_timing.png",
+   "bytes": 37047,
+   "sha256": "4d0a449c44095b7d8ec45774a71c0e56c473fd1f3e996fbdc0553e92d2631202"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/figures/fig4_depth_definitions_by_class.png",
+   "bytes": 110976,
+   "sha256": "4f02ad4e8e44d76c16fc53fa05bf2d53d3e1af93adec8a9beac5b79367a0561b"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/figures/fig5_new_negatives_depth_with_labels.png",
+   "bytes": 317367,
+   "sha256": "1151fd323740d200d6665b9f20dfdf2c392d774b707d6f2a05298e3841643168"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/figures/fig6_representative_cases.png",
+   "bytes": 582485,
+   "sha256": "eb7921e1bd0413d05a62bdc7da4afce8352f67268b726b59d47a4cc8b9a47db5"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/provenance/download_log.txt",
+   "bytes": 654,
+   "sha256": "dc4257e4383fb0e104e7bf70d91a165d9795839167b98ac30a3e684c305318a2"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/provenance/download_manifest.csv",
+   "bytes": 527800,
+   "sha256": "33a0b2183759efc67f6eb035f1d095b124d4cd6e852672bac416106cd79da808"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/provenance/download_manifest_ke.csv",
+   "bytes": 5244,
+   "sha256": "e5d96dc7db1346d150afd5e5d4d699db17d8f189448b3e1d2071e424f37cee7c"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/provenance/label_membership_audit.json",
+   "bytes": 1212,
+   "sha256": "052169ab39d74d8d046ff5f63fa1ec51445d5947fb201f36680b8d7cd40042b1"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/provenance/old_reference_threshold.json",
+   "bytes": 787,
+   "sha256": "62741a8f25b3f761fbde98b2cd12a9ef7391591f79b8af19aaf3c013bc3a6bfa"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/provenance/remote_metadata.csv.gz",
+   "bytes": 113811,
+   "sha256": "e85873ab0050c95e7cf80473dc21f1dd7df86aa91b7b584a082a51e6c3e2c9c0"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/README.md",
+   "bytes": 4535,
+   "sha256": "a8835e02bae52ec483cf235ac68d3a5ade5efe444a5e85d68e061fa76a9631bd"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/REPORT.md",
+   "bytes": 29790,
+   "sha256": "e49cdc79c92fa3e3720b25def0f7e41f0060dc3e1e2b54555de8372ba58c322d"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/alternative_label_class_changes.csv",
+   "bytes": 9848,
+   "sha256": "f82dc204f05e590f334bfb6bb7727682b1e0dca23eaf8632cd9922ff844e52fc"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/CHECKS.csv",
+   "bytes": 4418,
+   "sha256": "1b6facc2cafccbc51acd93635c4dcff01edb2dacb28916c231dbba96519737a1"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/common_support_comparison.csv",
+   "bytes": 4326,
+   "sha256": "ede061ff3c49cb4a7412db0e7e063a4b72f3dea15408307f191f8287d3531c0b"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/depth_definitions.csv",
+   "bytes": 418905,
+   "sha256": "d06a3af12365336c0d266414064ee0a0fe1cbed9ea08d86805df0b0343990d7b"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/descriptor_counts.csv",
+   "bytes": 2824,
+   "sha256": "89f98d6ee57467ea648ef1a86e7ea677aa649b84e636b1242c275442ab27ef20"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/fast_scan_common_support_cases.csv",
+   "bytes": 8826,
+   "sha256": "58aa8eaf9a1c259950d2b2df679295e391c7ba84473f3fb74fd6ec6879bca0f6"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/figure_manifest.csv",
+   "bytes": 485,
+   "sha256": "66438319fd4cca1ccaad15cf17292c9cfd99b6360d6f72203e8cf1abd72b661f"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/frame_level_map.csv.gz",
+   "bytes": 3333788,
+   "sha256": "993ce476aaa765104b1e7bf5eae691df8d8b7c2ed58820428404ed369a512aaf"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/input_region_by_VX.csv",
+   "bytes": 867,
+   "sha256": "2b06eab387135313680db382182918498afd38c80f93d99d644c85ee91908b76"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/k_runs.csv",
+   "bytes": 93931,
+   "sha256": "77f49559f3eccf4b9d906bb0d654585739181d7c5b17b529232ec67f7396e03a"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/K_then_C_cases.csv",
+   "bytes": 22463,
+   "sha256": "6d5758e98c78c557518f091d4526d6e47016a40476f6c9eeb8ed5dce9cc91902"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/K_then_C_subgroups.csv",
+   "bytes": 944,
+   "sha256": "bfb31a1d04c5b615ad745fcabc4547503dd2314cc027d9ceb2b85533cdfeb56f"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/kinetic_energy_row_check.csv",
+   "bytes": 3399,
+   "sha256": "495ecf19eafb22e55dca217a34d27118519051ac6e65e265e179556657e45bc9"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/nearest_neighbours_new_negatives.csv",
+   "bytes": 16608,
+   "sha256": "0413f4beba7af352505f63e8c1aa55e8809ae8d748449bfc8a3bf624164d970b"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/new_negatives_12_cases.csv",
+   "bytes": 8478,
+   "sha256": "c59e7d4f270c7ee8a0e2d92e62c93fe682174bf47541826791a2a30b365389d3"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/new_negatives_mechanism_summary.csv",
+   "bytes": 435,
+   "sha256": "25527667bf504654363669446248bcd0daae72fc3f3e405b04f733eb4d06cb9f"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/oof_diagnostics_by_K_fraction.csv",
+   "bytes": 37758,
+   "sha256": "dd673bd08adab34948548f83457c624bc90d1072054cf90b9c42db4e42e8d3dc"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/oof_E1_learned_threshold_final_budget.csv",
+   "bytes": 5999,
+   "sha256": "85e428b36af67f89b11c6f935e2ecb43bbbbb01b4c1aba284c58c03b25ce71de"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/oof_E1_threshold_pull_by_fold.csv",
+   "bytes": 9185,
+   "sha256": "7836b395a93e1ae42297203606218457e4270008206abac0a1681dbad2f6f685"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/oof_per_simulation_final_budget.csv",
+   "bytes": 468184,
+   "sha256": "ded420a7667bc2732367fa1a708e70be9eeff4b7d8955ae397a8cc321ce18efc"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/oof_predictions_final_budget.csv.gz",
+   "bytes": 862287,
+   "sha256": "3b29c8278fe990f535b3a12a2d854aab4d7fa12362d8ec0cd254182ffc2e36e3"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/positive_K_fraction_summary.csv",
+   "bytes": 1591,
+   "sha256": "3b993268666bfdec400061fd8d4ce5c108b5938e8e9ae237b86bb7d67db24d08"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/positives_below_uref_by_definition.csv",
+   "bytes": 3166,
+   "sha256": "3fe280b1647cfbd7a11a0c922e998ffb45ba7bea93c4cbe89b1d6cb53395e52f"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/regime_switches.csv",
+   "bytes": 52453,
+   "sha256": "7b173751a3ea5ce34ce0868b6c40b322a7783564deebcc21eb6008c143162caa"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/representative_cases.csv",
+   "bytes": 3532,
+   "sha256": "3cda9906b946f88eb6857f9e5808ba4ecd70f3c165434cd0faa84d7ac652e058"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/separability.csv",
+   "bytes": 35085,
+   "sha256": "cf903a2753a7bb9286997ccba5a9099c32fd15d5388799030a263e3e6262a63e"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/switch_timing_summary.csv",
+   "bytes": 768,
+   "sha256": "c1ec0fcb7f3294d620f272f0472fb39c59c2f27918c71de70cb09c912d0bcb97"
+  },
+  {
+   "path": "outputs/week19_temporal_regime_audit/tables/temporal_registry.csv",
+   "bytes": 1354718,
+   "sha256": "3d45fb6c41f8e52d9cb95be8c6bdbf978f9b9174e1a7a0cecf1d4e8ae19466fd"
+  }
+ ]
+}

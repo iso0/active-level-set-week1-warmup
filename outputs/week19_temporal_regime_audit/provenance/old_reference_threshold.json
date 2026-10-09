@@ -1,0 +1,17 @@
+{
+ "source": "outputs/week7_06_real_data_boundary_active_level_set/primary_common_population.csv (max_depth_um, has_keyhole)",
+ "n_old": 405,
+ "n_keyhole": 73,
+ "min_keyhole_max_depth_um": 111.19819999999999,
+ "max_nonkeyhole_max_depth_um": 111.58380000000001,
+ "separable": false,
+ "u_ref_um": 110.9641179189907,
+ "rule": "E1 learned-threshold procedure (src/week18_engine.py::DepthGPR.fit) applied to all 405 OLD runs: 1-D logistic regression on log depth (C=1e6), the non-separable branch",
+ "engine_default_um": 111.0,
+ "week18_count_rule_um": 111.2,
+ "old_best_single_threshold_BA": 0.9984939759036144,
+ "old_best_single_threshold_um": 111.1982,
+ "old_BA_at_u_ref": 0.9984939759036144,
+ "old_BA_at_111.0": 0.9984939759036144,
+ "old_BA_at_111.2": 0.9916446608351213
+}

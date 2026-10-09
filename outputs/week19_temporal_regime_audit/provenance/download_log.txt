@@ -1,0 +1,18 @@
+resolved 200/2168
+resolved 400/2168
+resolved 600/2168
+resolved 800/2168
+resolved 1000/2168
+resolved 1200/2168
+resolved 1400/2168
+resolved 1600/2168
+resolved 1800/2168
+resolved 2000/2168
+resolved 2168/2168
+revision                                  source                   verified
+2e1eec9c98fd57609d2815f174586336ab59da07  downloaded               True         272
+                                          verified_cache           True         273
+b6dc254a2b607a31cb9f97b40990339c3d5ca1e8  downloaded               True        1611
+                                          verified_cache_d69dac5b  True          12
+dtype: int64
+EXIT=0

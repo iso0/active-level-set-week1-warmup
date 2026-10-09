@@ -1,0 +1,51 @@
+group,descriptor,n,share,group_n
+NEW,keyhole_only__K_at_end,88,0.6470588235294118,136
+NEW,K_then_C__no_later_K,25,0.18382352941176472,136
+NEW,conduction_only,11,0.08088235294117647,136
+NEW,alternating__K_at_end,8,0.058823529411764705,136
+NEW,C_then_K__K_at_end,2,0.014705882352941176,136
+NEW,alternating__terminal_C,1,0.007352941176470588,136
+NEW,forming_only,1,0.007352941176470588,136
+NEW,ANY_with_keyhole,124,0.9117647058823529,136
+NEW,K_then_only_C (subset),23,0.16911764705882354,136
+NEW,alternation (>=2 K blocks),9,0.0661764705882353,136
+NEW,K_ongoing_at_observation_end,98,0.7205882352941176,136
+NEW,last_frame_is_K,77,0.5661764705882353,136
+OLD,conduction_only,331,0.817283950617284,405
+OLD,keyhole_only__K_at_end,33,0.08148148148148149,405
+OLD,K_then_C__no_later_K,18,0.044444444444444446,405
+OLD,alternating__terminal_C,12,0.02962962962962963,405
+OLD,C_then_K__K_at_end,9,0.022222222222222223,405
+OLD,forming_only,1,0.0024691358024691358,405
+OLD,alternating__K_at_end,1,0.0024691358024691358,405
+OLD,ANY_with_keyhole,73,0.18024691358024691,405
+OLD,K_then_only_C (subset),26,0.06419753086419754,405
+OLD,alternation (>=2 K blocks),13,0.03209876543209877,405
+OLD,K_ongoing_at_observation_end,43,0.10617283950617284,405
+OLD,last_frame_is_K,36,0.08888888888888889,405
+new-data,conduction_only,101,0.6158536585365854,164
+new-data,keyhole_only__K_at_end,32,0.1951219512195122,164
+new-data,K_then_C__no_later_K,18,0.10975609756097561,164
+new-data,alternating__terminal_C,12,0.07317073170731707,164
+new-data,alternating__K_at_end,1,0.006097560975609756,164
+new-data,ANY_with_keyhole,63,0.38414634146341464,164
+new-data,K_then_only_C (subset),26,0.15853658536585366,164
+new-data,alternation (>=2 K blocks),13,0.07926829268292683,164
+new-data,K_ongoing_at_observation_end,33,0.20121951219512196,164
+new-data,last_frame_is_K,27,0.16463414634146342,164
+old-data-local,conduction_only,169,0.949438202247191,178
+old-data-local,C_then_K__K_at_end,8,0.0449438202247191,178
+old-data-local,forming_only,1,0.0056179775280898875,178
+old-data-local,ANY_with_keyhole,8,0.0449438202247191,178
+old-data-local,K_then_only_C (subset),0,0.0,178
+old-data-local,alternation (>=2 K blocks),0,0.0,178
+old-data-local,K_ongoing_at_observation_end,8,0.0449438202247191,178
+old-data-local,last_frame_is_K,8,0.0449438202247191,178
+old-data-remote-clean,conduction_only,61,0.9682539682539683,63
+old-data-remote-clean,C_then_K__K_at_end,1,0.015873015873015872,63
+old-data-remote-clean,keyhole_only__K_at_end,1,0.015873015873015872,63
+old-data-remote-clean,ANY_with_keyhole,2,0.031746031746031744,63
+old-data-remote-clean,K_then_only_C (subset),0,0.0,63
+old-data-remote-clean,alternation (>=2 K blocks),0,0.0,63
+old-data-remote-clean,K_ongoing_at_observation_end,2,0.031746031746031744,63
+old-data-remote-clean,last_frame_is_K,1,0.015873015873015872,63
