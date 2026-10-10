@@ -23,6 +23,14 @@ Astra's statements are treated as hypotheses; every number Astra reported was re
 - `python -m src.week19_dev_pilot p0|p1|p2`
 - `python -m src.week19_pilot_reports all`
 
+> **Reporting corrections, 2026-10-10.** A post-hoc review of this pilot (`review/REVIEW.md`; no new fits) narrowed four interpretive statements. They are marked *[corrected]* below and listed with the original wording in `review/REPORTING_CORRECTIONS.md`:
+> - the late-negative attribution;
+> - the mechanism of the specificity gain;
+> - the oracle-response conclusion;
+> - the H1 threshold range.
+>
+> Every number, the verdict, the manifest and the saved predictions are unchanged.
+
 ## Verdict
 
 **ADVANCE, as an exploratory DEV gate under the owner-modified rule.** All eight gate conditions hold at B40 (`decision.json`). Two hold by a narrow margin:
@@ -69,11 +77,20 @@ Astra's statements are treated as hypotheses; every number Astra reported was re
    - Fast-scan ambiguity remains: **supported**.
 
    The overall prediction is **not supported as stated**.
-7. **Where the gain comes from (PRED/HYP, §4–5).** The gain does not come from the late negative.
-   - The late negative's own prediction is unchanged (1 of 2 called Keyhole in both arms).
-   - ACTIVE_E1's five fewer false positives fall on four fast-scan negatives whose own A *equals* their whole-record maximum. The improvement therefore comes from a different fitted response surface.
+7. **Where the gain comes from (PRED/HYP, §4–5; `review/REVIEW.md` §1–3).** *[corrected]*
+   - **Late negative.** Its own held-out classification is unchanged in both arms (1 of 2 called Keyhole). It therefore contributes no direct improvement; its influence through training remains unresolved.
+
+     It is isolated at only two checkpoints (B40 repeat 1 fold 2; B16 repeat 2 fold 5), where its response is the only paid response that differs between the arms. There, the ACTIVE arm's learned threshold was higher and three classifications changed: two false positives removed, one true positive lost.
+   - **Mechanism.** The 12 B40 classification changes decompose exactly into a change of predicted mean and a change of learned threshold.
+     - Of the five false positives removed, one flips with the mean change alone, one with the threshold change alone and three only with both.
+     - Four of those five lie in the two folds where WHOLE_E1's threshold was low (86.0 and 73.0 µm, root outside the paid depth range).
+     - Six of the seven positive changes flip with the mean change alone.
    - A is easier to predict: log RMSE 0.082 vs 0.178.
-   - Classifying the *observed* response with the same learned threshold gives the same BA as the GP prediction (0.728 vs 0.730; 0.628 vs 0.632). Regression error is not the bottleneck.
+   - **Observed response vs GP.** On identical cases with the same thresholds, the observed response and the GP disagree on 12/272 (WHOLE) and 8/270 (ACTIVE) B40 predictions, in both directions.
+     - Similar aggregate BA therefore hides cancelling errors.
+     - The earlier "0.728 vs 0.730" also compared different cohorts; on the same 135 runs the ACTIVE GP gives 0.753.
+     - At B16 and B80 the observed response classifies better for WHOLE (+0.040, +0.058 BA).
+     - The pilot does not show that regression is not a bottleneck.
    - The learned threshold costs BA against the fixed OLD u_ref in both arms (u_ref gives 0.780 and 0.717). This is a diagnostic only.
 8. **Descriptive table (OBS, no fits; `tables/descriptive_whole_vs_A_by_label.csv`).**
    - **NEW overall:** A ranks the labels far better than the whole-record maximum (AUC 0.978 vs 0.889, paired cohort).
@@ -96,7 +113,11 @@ Astra's statements are treated as hypotheses; every number Astra reported was re
 
 **H1 was known before the real run.** The E1 learned threshold depends only on the paid (depth, label) pairs, not on the GP. The stub dry run (no GP fits, `ATTEMPT_LEDGER.md`, attempt 0) therefore revealed these thresholds before P1. The manifest had already been frozen, and nothing in it was changed.
 
-**What H1 implies (HYP).** The historical pull (u up to 309.6 µm in 13 of 32 folds) does not arise from the late negative's presence alone. On space-filling paths, several shallow negatives are paid alongside it and the logistic root stays near 100–130 µm. The pull appears to need the composition produced by adaptive acquisition. Without acquisition logs this remains unresolved.
+**What H1 implies (HYP).** The historical pull (u up to 309.6 µm in 13 of 32 folds) does not arise from the late negative's presence alone.
+
+*[corrected]* On the space-filling paths, WHOLE_E1's learned threshold stayed between 22.5 and 130.3 µm in all 23 checkpoints where the late negative was paid. In the two checkpoints where its response is the only difference between the arms, the threshold was *lower* with its whole-record value: 86.0 vs 117.1 µm and 104.0 vs 119.6 µm. This is a downward effect, not an upward pull (`review/REVIEW.md` §2).
+
+The historical pull appears to need the composition produced by adaptive acquisition. Without acquisition logs this remains unresolved.
 
 ## 3. Results at B40
 
@@ -140,8 +161,14 @@ These are the two diagnostics the spec requires, at B40 (BA / specificity):
 | WHOLE_E1 | 0.632 / 0.292 | 0.717 / 0.458 | 0.628 / 0.292 |
 | ACTIVE_E1 | 0.730 / 0.500 | 0.780 / 0.583 | 0.728 / 0.500 (H-e7dbd8e5ce unscored) |
 
+*[corrected]* The ACTIVE oracle column covers 135 runs, while the learned column covers all 136. On the same 135 runs the learned BA is 0.753 (`review/oracle_vs_GP_same_cohort.csv`).
+
 **HYP.**
-- **The target matters.** Predicting the response well gains nothing beyond the GP: the oracle column matches the learned column.
+- *[corrected]* **Response prediction is not separated from target and threshold effects by this table.**
+  - At B40 the aggregate oracle and learned BA are close.
+  - On identical cases and thresholds, however, they disagree on 12 (WHOLE) and 8 (ACTIVE) predictions, in both directions and in both classes.
+  - At B16 and B80 the observed response classifies better for WHOLE (+0.040 and +0.058 BA).
+  - Similar aggregate BA here conceals cancelling errors (`review/REVIEW.md` §3).
 - **The threshold matters.** The threshold learned from 3–7 paid negatives at B40 costs about 0.05–0.09 BA relative to the OLD-derived u_ref, in both arms. u_ref is reported only as a diagnostic, so this is not a recommendation.
 
 ## 5. Which simulations moved (B40, 2 repeats)
@@ -168,6 +195,17 @@ These are the two diagnostics the spec requires, at B40 (BA / specificity):
 - **Gains:** the short-K positives H-6dae2a1270 and H-85317ef64f.
 
 Details: `tables/named_case_predictions.csv`, `tables/evaluation.csv`.
+
+**Why each prediction moved.** For every change, the exact split into a predicted-mean change and a threshold change is in `review/B40_classification_changes.csv`, with the four-cell diagnostic in `review/B40_four_cell_diagnostic.csv`. In summary:
+
+| Cell | BA |
+|---|---:|
+| WHOLE as fitted | 0.632 |
+| ACTIVE means with WHOLE thresholds | 0.669 |
+| WHOLE means with ACTIVE thresholds | 0.651 |
+| ACTIVE as fitted | 0.730 |
+
+These are algorithmic diagnostics, not candidates.
 
 ## 6. Thresholds on the shared paths
 
@@ -215,6 +253,10 @@ Learned u at B40 ranges 73.0–127.0 µm (WHOLE) and 97.2–125.1 µm (ACTIVE); 
 - **Narrow uncertainty.** The bootstrap is conditional on these fitted models and two historical split repeats. It carries no refitting, independent-fold or external uncertainty, and each repeat's own interval includes 0.
 - **Budget-specific.** The advantage is clear only at B40, the pre-chosen primary checkpoint.
 - **Known failures persist.** The A-unavailable negative and the four unresolved fast-scan negatives remain misclassified, and H-349225d53c is lost.
+- *[corrected]* **Mechanism not isolated.**
+  - The gain combines mean and threshold changes, with an interaction.
+  - Four of the five removed false positives sit in two folds where WHOLE_E1's threshold root fell outside the paid depth range.
+  - The late negative's influence through training is isolated at only two checkpoints and is otherwise unresolved without an isolated refit.
 
 ## 9. Files
 
@@ -230,3 +272,5 @@ Learned u at B40 ranges 73.0–127.0 µm (WHOLE) and 97.2–125.1 µm (ACTIVE); 
 | `IOAN_SUMMARY.md`, `tables/ioan_cases.csv`, `tables/ioan_case_frames.csv`, `figures/ioan_*` | One-page summary for Ioan; six cases with verified image links. |
 | `TIMESTEP_DT_USAGE_AUDIT.md`, `tables/timestep_dt_*.csv` | The `timestep × DT` audit (item 6). |
 | `figures/pilot_fig1_learned_thresholds.png`, `figures/pilot_fig2_metrics_by_budget.png` | Pilot figures. |
+| `review/` | Post-hoc review (2026-10-10, no new fits): `REVIEW.md`, `REPORTING_CORRECTIONS.md`, the B40 change decomposition, the four-cell diagnostic, the late-negative isolation tables, the same-cohort oracle comparison and `REVIEW_CHECKS.csv`. |
+| `ioan_gallery/`, `IOAN_MEETING_BRIEF.md` | The 30 native images as contact sheets (`GALLERY.md`, shown without labels), the separate `KEY.md`, `image_inventory.csv` with usability, and the meeting brief. |

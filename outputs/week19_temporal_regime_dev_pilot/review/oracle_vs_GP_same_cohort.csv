@@ -1,0 +1,25 @@
+budget,arm,class,n_predictions,both_correct,GP_correct_observed_wrong,GP_wrong_observed_correct,both_wrong,cohort,oracle_recheck_disagreements,BA_mean_over_repeats
+16,WHOLE_E1_SHARED,positives,248,244.0,2.0,1.0,1.0,available observed whole max (136 simulations x 2 repeats),0.0,
+16,WHOLE_E1_SHARED,negatives,24,1.0,2.0,4.0,17.0,available observed whole max (136 simulations x 2 repeats),0.0,
+16,WHOLE_E1_SHARED,BA on this cohort: GP (learned threshold),272,,,,,,,0.5584677419354839
+16,WHOLE_E1_SHARED,"BA on this cohort: observed response (same threshold; ORACLE, NOT DEPLOYABLE)",272,,,,,,,0.5981182795698925
+16,ACTIVE_E1_SHARED,positives,248,239.0,2.0,4.0,3.0,available observed A (135 simulations x 2 repeats),0.0,
+16,ACTIVE_E1_SHARED,negatives,22,6.0,0.0,2.0,14.0,available observed A (135 simulations x 2 repeats),0.0,
+16,ACTIVE_E1_SHARED,BA on this cohort: GP (learned threshold),270,,,,,,,0.62225073313783
+16,ACTIVE_E1_SHARED,"BA on this cohort: observed response (same threshold; ORACLE, NOT DEPLOYABLE)",270,,,,,,,0.6717375366568915
+40,WHOLE_E1_SHARED,positives,248,236.0,5.0,3.0,4.0,available observed whole max (136 simulations x 2 repeats),0.0,
+40,WHOLE_E1_SHARED,negatives,24,5.0,2.0,2.0,15.0,available observed whole max (136 simulations x 2 repeats),0.0,
+40,WHOLE_E1_SHARED,BA on this cohort: GP (learned threshold),272,,,,,,,0.6317204301075269
+40,WHOLE_E1_SHARED,"BA on this cohort: observed response (same threshold; ORACLE, NOT DEPLOYABLE)",272,,,,,,,0.6276881720430108
+40,ACTIVE_E1_SHARED,positives,248,236.0,2.0,1.0,9.0,available observed A (135 simulations x 2 repeats),0.0,
+40,ACTIVE_E1_SHARED,negatives,22,9.0,3.0,2.0,8.0,available observed A (135 simulations x 2 repeats),0.0,
+40,ACTIVE_E1_SHARED,BA on this cohort: GP (learned threshold),270,,,,,,,0.7525659824046921
+40,ACTIVE_E1_SHARED,"BA on this cohort: observed response (same threshold; ORACLE, NOT DEPLOYABLE)",270,,,,,,,0.7278225806451613
+80,WHOLE_E1_SHARED,positives,248,235.0,6.0,4.0,3.0,available observed whole max (136 simulations x 2 repeats),0.0,
+80,WHOLE_E1_SHARED,negatives,24,4.0,4.0,7.0,9.0,available observed whole max (136 simulations x 2 repeats),0.0,
+80,WHOLE_E1_SHARED,BA on this cohort: GP (learned threshold),272,,,,,,,0.6525537634408602
+80,WHOLE_E1_SHARED,"BA on this cohort: observed response (same threshold; ORACLE, NOT DEPLOYABLE)",272,,,,,,,0.7110215053763441
+80,ACTIVE_E1_SHARED,positives,248,235.0,2.0,5.0,6.0,available observed A (135 simulations x 2 repeats),0.0,
+80,ACTIVE_E1_SHARED,negatives,22,9.0,1.0,1.0,11.0,available observed A (135 simulations x 2 repeats),0.0,
+80,ACTIVE_E1_SHARED,BA on this cohort: GP (learned threshold),270,,,,,,,0.7050953079178885
+80,ACTIVE_E1_SHARED,"BA on this cohort: observed response (same threshold; ORACLE, NOT DEPLOYABLE)",270,,,,,,,0.7111436950146628

@@ -1,0 +1,15 @@
+identity,max_abs_error,status
+mu_W = margin_W + log u_W (oracle predicted_log_depth vs learned latent_mean + fit log_u),8.881784197001252e-16,PASS
+log u_W = log(u_um_W) (fit table),8.881784197001252e-16,PASS
+oracle training threshold = u_um_W,0.0,PASS
+class_W = 1(margin >= 0) = 1(p >= 0.5) = saved pred_label (count of disagreements),0.0,PASS
+cell_WW = class_W (count of disagreements),0.0,PASS
+mu_A = margin_A + log u_A (oracle predicted_log_depth vs learned latent_mean + fit log_u),8.881784197001252e-16,PASS
+log u_A = log(u_um_A) (fit table),0.0,PASS
+oracle training threshold = u_um_A,0.0,PASS
+class_A = 1(margin >= 0) = 1(p >= 0.5) = saved pred_label (count of disagreements),0.0,PASS
+cell_AA = class_A (count of disagreements),0.0,PASS
+delta_margin = (mu_A - mu_W) - (log u_A - log u_W),1.7763568394002505e-15,PASS
+fold identical in both arms (count of disagreements),0.0,PASS
+"log u constant within (arm, repeat, fold): max spread",0.0,PASS
+"rows = 136 simulations x 2 repeats, unique (sim_id, repeat)",0.0,PASS

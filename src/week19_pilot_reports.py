@@ -445,7 +445,7 @@ def write_ioan_summary():
 - **Slow scans** (VX < 0.4; 12 NEW, 7 OLD): long Keyhole at about 300 µm, switching to Conduction 15–21 frames before the fixed 2.1 ms recording end, with the scan unfinished.
 - Timing is almost the same in OLD and NEW. Alternation (C frames between K frames) occurs in 9 NEW and 13 OLD runs; each switch is known to one frame interval (about 7 µs).
 
-**2. The matched fast-scan pair differs only in its labels (Figure 2).** H-b302fc6cbd (negative) and H-b7e3ed2e12 (positive) have nearly the same inputs and depth. The positive's 16 Keyhole frames (0.395–0.471 ms) lie on the same startup peak (112–116 µm) that the negative labels Forming/Conduction.
+**2. The matched fast-scan pair (Figure 2): similar inputs and depth trajectories, opposite recorded labels; the morphology difference has not been established.** *[corrected 2026-10-10]* H-b302fc6cbd is the negative and H-b7e3ed2e12 the positive. The positive's 16 Keyhole frames (0.395–0.471 ms) coincide with the same startup depth peak (112–116 µm) that the negative's frames label Forming/Conduction.
 
 **3. The active window restores the depth ranking, except in fast scans (Figure 3, Table 1).** A is the maximum depth up to 90 % of the derived exit time (startup kept).
 - **NEW overall:** AUC {a('NEW', 'all', 'has_keyhole', 'whole_max_um'):.3f} for the whole-record maximum vs {a('NEW', 'all', 'has_keyhole', 'A_um'):.3f} for A (135 runs).
@@ -457,7 +457,9 @@ def write_ioan_summary():
 - **Result.** A GP of A beat the same GP of the whole-record maximum: balanced accuracy {g('ACTIVE_E1_SHARED', 'BA'):.2f} vs {g('WHOLE_E1_SHARED', 'BA'):.2f}, with {cnt['ACTIVE_E1_SHARED']['true_negatives_of_24']} vs {cnt['WHOLE_E1_SHARED']['true_negatives_of_24']} of 24 negative predictions right. The binary GP classifier scored {g('G3_SHARED', 'BA'):.2f}.
 - **Not fixed.** The four unresolved fast-scan negatives were still called Keyhole in {int(u4.pred_label.sum())} of {len(u4)} predictions. H-349225d53c, whose Keyhole frames all come after the 90 % cutoff, was missed by the A model in both repeats (the whole-record model caught it).
 
-**What would help most.** Your reading of the six runs below: do the images show a cavity where depth is raised but the label says Conduction or Forming, or the reverse? Some late frames are tiny image files (under 1 kB) and may be nearly empty. We have not viewed any images.
+**What would help most.** Your reading of the six runs below: do the images show a cavity where depth is raised but the label says Conduction or Forming, or the reverse?
+
+*[updated 2026-10-10]* The 30 linked images are now in [ioan_gallery/GALLERY.md](ioan_gallery/GALLERY.md) as contact sheets without labels; the labels are in a separate key. A usability check (no morphology judgement) found 22 usable, 6 nearly empty, 1 blank and 1 unclear. Meeting brief: [IOAN_MEETING_BRIEF.md](IOAN_MEETING_BRIEF.md).
 
 ![Figure 1](figures/ioan_fig1_two_K_to_C_forms.png)
 
@@ -479,7 +481,9 @@ def write_ioan_summary():
 
 All links are at the pinned NEW revision `{NEW_REV}`. Each link was checked to exist there (`tables/ioan_case_frames.csv`). Frame numbers are `frame_idx` in `frames.csv`, and times are monitor times.
 
-{case_markdown()}"""
+{case_markdown()}
+*[added 2026-10-10]* Case 1's linked frame 82 is 0.18 µs after that run's depth maximum. It follows a sharp drop in monitored depth (114.3 µm at frame 81 → 89.1 µm at frame 82). The near-peak frame 81 is not among the linked images.
+"""
     (OUT / "IOAN_SUMMARY.md").write_text(text, encoding="utf-8")
     return text
 

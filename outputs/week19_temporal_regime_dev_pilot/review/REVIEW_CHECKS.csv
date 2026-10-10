@@ -1,0 +1,10 @@
+check,description,status,detail
+RV-01,margin identities (absolute mean = latent + log u; class = sign of margin; decomposition; joins; constant fold threshold),PASS,14/14; worst 1.8e-15
+RV-02,"four-cell corners reproduce the pilot's B40 metrics (BA, specificity, short-K, q20) for both arms",PASS,WW BA 0.631720; AA BA 0.729839
+RV-03,every B40 WHOLE/ACTIVE classification change is listed once; the decomposition reproduces each change's margin,PASS,12 changes
+RV-04,"oracle comparison uses the available-response cohort (WHOLE 272, ACTIVE 270 predictions) and the training threshold; oracle labels recompute exactly",PASS,cohorts and recheck
+RV-05,"manifest, decision, saved predictions, metrics and every other committed pilot output byte-identical to de065db9; audit inputs identical to f3206f29",PASS,35/35 files
+RV-06,no learner fit: the review never imports the Week 18 engine or a GP/logistic estimator,PASS,sys.modules inspection
+RV-07,"gallery uses only the 30 already-linked native images, each identity-verified at the pinned NEW revision",PASS,30/30 verified; sources {'verified_cache': 30}
+RV-08,"IOAN_MEETING_BRIEF.md: at most 350 words, at most five questions, all linked files exist",PASS,346 words; 5 questions; links ok
+RV-09,the categorical matched-pair wording is gone from the pilot's reader-facing documents (kept only as quoted text in review/REPORTING_CORRECTIONS.md),PASS,remaining: []

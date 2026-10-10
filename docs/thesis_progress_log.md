@@ -1173,7 +1173,27 @@ Karar: **IMPROVEMENT ON SOME TASKS ONLY**. Tez bölümü taslağı: [`sec_depth_
 - H3 (hızlı tarama belirsizliği sürer): desteklendi (6/8 hata).
 
 **Diğer çıktılar.**
-- Kazanç geç negatiften değil, kendi A'sı tüm kayıt maksimumuna eşit dört hızlı tarama negatifinden geliyor. Gözlenen yanıtla sınıflama, GP tahmininden iyi değil; yani darboğaz regresyon değil, hedef ve eşik.
+- *[düzeltildi 2026-10-10]* Geç negatifin kendi test sınıflaması iki kolda da aynı; doğrudan bir iyileşme katkısı yok. Eğitim yoluyla etkisi ise çözülmüş değil: yalnızca iki kontrol noktasında yalıtılmış durumda ve orada eşiği yükseltip üçer sınıflamayı değiştiriyor. Kazanç, tahmin ortalaması ile öğrenilen eşiğin birlikte değişmesinden, etkileşimle geliyor. Gözlenen yanıt aynı vakalarda GP'den farklı sınıflıyor (B40'ta WHOLE 12/272, ACTIVE 8/270); bu pilot regresyonun darboğaz olmadığını göstermiyor ([inceleme](../outputs/week19_temporal_regime_dev_pilot/review/REVIEW.md), [düzeltmeler](../outputs/week19_temporal_regime_dev_pilot/review/REPORTING_CORRECTIONS.md)).
 - Betimleyici tablo: NEW hızlı taramalarda K/(K+C) ≥ %5 veya ≥ %10 etiketleri ayrımı düzeltmiyor (AUC 0.62–0.76).
 - Hiçbir önceki hafta `timestep×DT`'yi fiziksel zaman olarak kullanmamış. Hafta 18'deki "time-step rule" yalnızca bir ifade düzeltmesi; Hafta 5 yanıtı iterasyon birimindedir.
 - Ioan için altı vaka hazırlandı; görüntü bağlantıları pinli revizyonda doğrulandı.
+
+### 2026-10-10 — Week 19 pilot incelemesi (yeni uydurma yok) ve Ioan paketi
+
+[İnceleme](../outputs/week19_temporal_regime_dev_pilot/review/REVIEW.md), [raporlama düzeltmeleri](../outputs/week19_temporal_regime_dev_pilot/review/REPORTING_CORRECTIONS.md), [toplantı özeti](../outputs/week19_temporal_regime_dev_pilot/IOAN_MEETING_BRIEF.md), [galeri](../outputs/week19_temporal_regime_dev_pilot/ioan_gallery/GALLERY.md).
+
+**Kapsam.** Yalnızca kayıtlı tahminler ve eşikler kullanıldı. Manifest, karar ve tüm sayısal çıktılar bayt düzeyinde aynı; karar **ADVANCE (keşif amaçlı)** olarak kalıyor.
+
+**Ayrıştırma (B40).** 12 sınıflama değişikliği tam olarak "ortalama değişimi − eşik değişimi" diye ayrışıyor.
+- Kaldırılan 5 yanlış pozitifin 1'i yalnız ortalamayla, 1'i yalnız eşikle, 3'ü ancak ikisi birlikte dönüyor.
+- Dört hücre: BA 0.632 / 0.669 / 0.651 / 0.730.
+
+**Geç negatif.** Kendi tahmini değişmiyor. İki kontrol noktasında (B40 r1k2, B16 r2k5) kollar arasındaki tek fark onun yanıtı; orada eşik yükseliyor ve üçer sınıflama değişiyor. Diğer noktalarda etkisi karışık, dolayısıyla çözülmemiş.
+
+**Gözlenen yanıt ile GP.** Aynı vakalarda B40'ta birbirini götüren hatalar var. B16 ve B80'de gözlenen yanıt WHOLE için daha iyi.
+
+**Görüntüler.** 30 görüntü pinli revizyondan indirildi ve doğrulandı: 22'si kullanılabilir, 6'sı neredeyse boş, 1'i boş, 1'i belirsiz.
+- G2 (geç negatif) için kullanılabilir görüntü yok.
+- G5'in karesi derinlikteki keskin düşüşün hemen sonrasına denk geliyor.
+
+Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, zıt kayıtlı etiket; morfoloji farkı kanıtlanmadı".

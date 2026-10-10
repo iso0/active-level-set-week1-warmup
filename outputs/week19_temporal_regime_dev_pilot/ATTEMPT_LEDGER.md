@@ -10,6 +10,9 @@
 | P1 | 23:53:34–39 | `python -m src.week19_dev_pilot p1` | **90** (cap 90) | `paid_paths.csv`, `fit_diagnostics.csv`, `predictions.csv`, `oracle_response_diagnostics.csv`, `provenance/p1_run.json`, `provenance/p1_stdout.log`. 90/90 ok. | — |
 | P2a | 23:54–23:56 | `python -m src.week19_dev_pilot p2` | 0 | Metrics, bootstrap, decision: ADVANCE. | — |
 | P2b | 23:56 | P2 rerun after a code correction (see below) | 0 | `metrics.csv` byte-identical to P2a; verdict unchanged (ADVANCE). | None. The decision rule and its thresholds were not changed. |
+| R1 | 2026-10-10 | Post-hoc review: `python -m src.week19_pilot_review margins`, `latent`, `oracle`, `gallery`, `review`, `checks`. It reads the saved predictions, thresholds and oracle diagnostics only. | **0** | `review/`, `ioan_gallery/`. Reporting corrections are listed in `review/REPORTING_CORRECTIONS.md`. | None. The verdict, manifest, decision and saved predictions are unchanged (`review/experimental_files_unchanged.csv`). |
+| D1 | 2026-10-10 | Download of the 30 already-linked native images at the pinned NEW revision. No local copy existed. Each was identity-verified by LFS SHA-256 and stored in the git-ignored raw cache. | 0 | `ioan_gallery/image_inventory.csv` | None. No other image was fetched. |
+| T1 | 2026-10-10 | `pytest src/tests/test_week19_pilot_review.py src/tests/test_week19_dev_pilot.py`: 18 passed. The existing pilot test file includes one synthetic unit test of the E1 threshold rule (two small GP fits on 30 random points). No learner was fitted to thesis data. | 0 on thesis data | — | None. |
 
 ## Notes
 
@@ -27,4 +30,4 @@ Nothing about the GP fits, predictions or metrics was seen before P1.
 
 No threshold, metric, aggregation or bootstrap setting changed.
 
-**No other executions.** No fits were run outside P1. Neither P3 nor the morphology fallback, nor any C3 repeat, was run.
+**No other executions.** No fits were run outside P1; the review (R1) fits nothing. Neither P3 nor the morphology fallback, nor any C3 repeat, was run.
