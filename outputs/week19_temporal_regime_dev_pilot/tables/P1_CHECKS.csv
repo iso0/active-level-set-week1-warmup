@@ -1,0 +1,14 @@
+check,description,status,detail
+P1-01,"train/test disjoint; the 5 test folds partition the 136 per repeat; path inside the training pool, unique and disjoint from test",PASS,12 rows
+P1-02,"paid_paths.csv: 80 unique paid simulations per (repeat, fold) and one path hash each",PASS,10 paths
+P1-03,exact path equality across arms (identical paid-prefix hash for the three arms at every checkpoint),PASS,"30 checkpoints, 90 arm-checkpoints"
+P1-04,no future-query label or response in fitting: learner arrays carry labels of the paid prefix only and responses of its valid rows only,PASS,leakage guard per fit
+P1-05,"q20 flags and test rows identical to the pinned Week 18 phase2 cache (R3_NEW repeats 1-2, folds 1-5)",PASS,"10/10 folds; q20 points per fold [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]"
+P1-06,"exactly one prediction per simulation per (arm, threshold mode, repeat, checkpoint)",PASS,30 series
+P1-07,"missing-target accounting: the A-unavailable negative costs one query without an ACTIVE response pair, keeps its label for G3, and is evaluated (unscored by the oracle diagnostic) when held out",PASS,ACTIVE fits with H-e7dbd8e5ce paid: 2/30; oracle rows 6
+P1-08,"positive finite variances and probabilities in [0,1] for every available prediction",PASS,4080 predictions
+P1-09,E1 threshold: engine u equals the replicated rule (|diff| < 1e-12); every fitted E1 used the midpoint or logistic branch (the 111 um fallback is never used),PASS,"60 fits; branches {'logistic': 55, 'midpoint': 5}; near-zero slopes 0; roots outside range 6"
+P1-10,"resource caps: <= 90 learner fits, one optimizer start per fit, <= 2 threads, <= 8 GiB peak working set, <= 4 h, not stopped",PASS,"fits 90; peak 0.25 GiB; 4 s; threads [2, 2, 2]"
+P1-11,manifest written before any fit and unchanged since (hash recorded at fit time),PASS,manifest 2026-10-09T23:51:14+00:00 <= P1 start 2026-10-09T23:53:34+00:00
+P1-12,"labels, eligibility, pinned audit inputs, tracked historical outputs and the C3 inventory unchanged",PASS,tracked historical modifications: []; C3 files 40
+P2-01,"bootstrap: 2000 stratified draws (seed 191026), 124 positives and 12 negatives per draw, observed sample in row 0",PASS,"(2001, 136)"

@@ -797,7 +797,7 @@ def step_p2():
     negatives_summary(ev, inp)
     named_cases(ev, inp)
     checks = p2_checks(ev, fd, pr, od, W)
-    dec = decide(mt, fd, checks)
+    dec = decide(mt, fd, checks, ev)
     hyp = hypotheses(mt, fd, ev)
     (OUT / "decision.json").write_text(json.dumps({"status": "POST-HOC EXPLORATORY DEV PILOT", "decision": dec, "prediction_vs_outcome": hyp}, indent=1, default=float))
     print(json.dumps(dec, indent=1, default=float)); print(json.dumps(hyp, indent=1, default=float))
@@ -812,7 +812,10 @@ def _get(mt, metric, b, arm=None, contrast=None, scope="mean_over_repeats", mode
     return {k: float(v) for k, v in q.iloc[0][["estimate", "lo95", "hi95"]].items()}
 
 
-def decide(mt, fd, checks):
+EXACT_TOL = 1e-12         # gate comparisons are evaluated in exact arithmetic: the metrics are fractions k/20 or k/24
+
+
+def decide(mt, fd, checks, ev=None):
     b = PRIMARY_BUDGET
     d = _get(mt, "BA", b, contrast="ACTIVE_E1_SHARED - WHOLE_E1_SHARED")
     spec = {a: _get(mt, "specificity_12neg", b, a)["estimate"] for a in ARMS}
@@ -823,11 +826,12 @@ def decide(mt, fd, checks):
     lbfgs = int((f40.optimizer_success.astype("boolean") == False).sum()) if "optimizer_success" in f40 else 0  # noqa: E712
     p0 = pd.read_csv(TAB / "P0_CHECKS.csv")
     checks_ok = bool((p0.status != "FAIL").all() and (checks.status != "FAIL").all())
-    cond = {"mean_delta_BA_ge_0.01": bool(d["estimate"] >= 0.01), "lower_bound_gt_0": bool(d["lo95"] > 0),
-            "specificity_ACTIVE_ge_WHOLE": bool(spec["ACTIVE_E1_SHARED"] >= spec["WHOLE_E1_SHARED"]),
-            "specificity_ACTIVE_ge_G3": bool(spec["ACTIVE_E1_SHARED"] >= spec["G3_SHARED"]),
-            "shortK_ACTIVE_ge_WHOLE_minus_0.05": bool(skv["ACTIVE_E1_SHARED"] >= skv["WHOLE_E1_SHARED"] - 0.05),
-            "shortK_ACTIVE_ge_G3_minus_0.05": bool(skv["ACTIVE_E1_SHARED"] >= skv["G3_SHARED"] - 0.05),
+    ge = lambda x, y: bool(x >= y - EXACT_TOL)  # noqa: E731
+    cond = {"mean_delta_BA_ge_0.01": ge(d["estimate"], 0.01), "lower_bound_gt_0": bool(d["lo95"] > 0),
+            "specificity_ACTIVE_ge_WHOLE": ge(spec["ACTIVE_E1_SHARED"], spec["WHOLE_E1_SHARED"]),
+            "specificity_ACTIVE_ge_G3": ge(spec["ACTIVE_E1_SHARED"], spec["G3_SHARED"]),
+            "shortK_ACTIVE_ge_WHOLE_minus_0.05": ge(skv["ACTIVE_E1_SHARED"], skv["WHOLE_E1_SHARED"] - 0.05),
+            "shortK_ACTIVE_ge_G3_minus_0.05": ge(skv["ACTIVE_E1_SHARED"], skv["G3_SHARED"] - 0.05),
             "all_B40_fits_available": avail, "all_checks_pass": checks_ok}
     if not avail or not checks_ok:
         verdict = "INCONCLUSIVE"
@@ -837,9 +841,21 @@ def decide(mt, fd, checks):
         verdict = "INCONCLUSIVE"
     else:
         verdict = "NO_ADVANCE"
-    return {"verdict": verdict, "conditions": cond, "delta_BA_B40_ACTIVE_minus_WHOLE": d, "delta_q20_B40_ACTIVE_minus_WHOLE": q,
-            "improved_boundary_claim_allowed": bool(verdict == "ADVANCE" and q["estimate"] >= 0),
-            "specificity_B40": spec, "shortK_sensitivity_B40": skv,
+    cnt = {}
+    if ev is not None:
+        e = ev[(ev.threshold_mode == "learned") & (ev.budget == b)]
+        for a in ARMS:
+            g = e[e.arm == a]
+            cnt[a] = {"true_negatives_of_24": int(((g.y == 0) & (g.pred_label == 0)).sum()), "short_K_detected_of_20": int((g.short_K & (g.pred_label == 1)).sum())}
+    margin = {"shortK_loss_vs_WHOLE": skv["WHOLE_E1_SHARED"] - skv["ACTIVE_E1_SHARED"], "shortK_loss_vs_G3": skv["G3_SHARED"] - skv["ACTIVE_E1_SHARED"],
+              "BA_lower_bound": d["lo95"]}
+    return {"verdict": verdict, "meaning": "exploratory DEV gate of the owner-modified rule; not confirmation. P3 and the fallback are not started (owner instruction); C3 stays reserved.",
+            "conditions": cond, "comparison_tolerance": f"{EXACT_TOL:g} (exact-arithmetic evaluation of k/20 and k/24 fractions)",
+            "delta_BA_B40_ACTIVE_minus_WHOLE": d, "delta_q20_B40_ACTIVE_minus_WHOLE": q,
+            "q20_deteriorated": bool(q["estimate"] < 0),
+            "boundary_statement": "q20 did not deteriorate, but its interval includes 0: no boundary improvement is claimed" if q["estimate"] >= 0 and q["lo95"] <= 0
+                                  else ("q20 deteriorated: no improved-boundary claim" if q["estimate"] < 0 else "q20 improved with lower bound > 0"),
+            "specificity_B40": spec, "shortK_sensitivity_B40": skv, "counts_B40_two_repeats": cnt, "margins": margin,
             "lbfgs_sensitivity": f"{lbfgs} B40 fits carry an L-BFGS-B non-success message; counted as failures, the verdict would be "
                                  + ("INCONCLUSIVE (B40 unavailable)" if lbfgs else "unchanged")}
 
@@ -865,7 +881,7 @@ def hypotheses(mt, fd, ev):
     err4 = float(u4.pred_label.mean()) if len(u4) and u4.pred_label.notna().all() else np.nan
     skv = {x: _get(mt, "sensitivity_shortK", b, x)["estimate"] for x in ARMS}
     gain = skv["ACTIVE_E1_SHARED"] - skv["WHOLE_E1_SHARED"]
-    h3 = "UNTESTABLE (prediction unavailable)" if not np.isfinite(err4) else ("SUPPORTED" if (err4 >= 0.5 and gain <= 0.05) else "FALSIFIED")
+    h3 = "UNTESTABLE (prediction unavailable)" if not np.isfinite(err4) else ("SUPPORTED" if (err4 >= 0.5 - EXACT_TOL and gain <= 0.05 + EXACT_TOL) else "FALSIFIED")
     mx = lambda d: float(d.u_um.max()) if len(d) else np.nan  # noqa: E731
     return {"H1_threshold_pull_removed": {"result": h1, "fits_with_late_negative_paid": {"WHOLE": len(w), "ACTIVE": len(a)},
                                           "fits_with_u_ge_200um_late_negative_paid": {"WHOLE": whole_pull, "ACTIVE": active_pull},

@@ -1,0 +1,36 @@
+search,path,line,text
+DT_field_use_in_code,src/tests/alse/test_data.py,84,"assert parsed[""LS""] == 5.29394366699e-05 and parsed[""XF""] == 0.0014 and parsed[""DT""] == 7.61136145079e-06"
+DT_field_use_in_code,src/week18_data_audit.py,39,"d[""DTr""] = d.sim_id.map(lambda s: float(g(s, ""DT"").replace(""p"", "".""))) * d.VX / d.LS"
+DT_field_use_in_code,src/week19_series.py,172,"dt_nom = meta[""DT""]"
+product_with_DT_in_code,src/week19_series.py,175,rel = (fmap.timestep.to_numpy(float)[ok] * dt_nom) / (t[pos_c][ok]) - 1
+DT_field_use_in_code,src/week19_series.py,175,rel = (fmap.timestep.to_numpy(float)[ok] * dt_nom) / (t[pos_c][ok]) - 1
+DT_field_use_in_code,src/week19_series.py,182,"""frame_dt_median_over_nominal_DT"": float(np.median(d)) * 1e-6 / dt_nom,"
+DT_field_use_in_code,src/week7_sph_v2_common.py,120,"""DT"": decode_number(values[""DT""]),"
+DT_arithmetic_in_notebook,notebooks/week_05/01_first_conduction_data_audit.ipynb,cell 68,"(""Physical-time interpretation"", ""blocked by data ambiguity"", ""Sections 8, 13"", ""DT/TE semantics are not documented here""),"
+time_step_wording_in_reports,outputs/week18_independent_research/DATA_AUDIT.md,14,- **Time-step rule differs:** DT·VX/LS ≈ 0.075 (1–99%: 0.042–0.119) in OLD vs 0.108 (0.097–0.120) in NEW.
+time_step_wording_in_reports,outputs/week18_independent_research/RED_TEAM.md,9,"| 2 | **NEW is a separate test campaign and OLD→NEW is a ""level shift"".** | OLD itself mixes three partitions and two simulator-setting groups (41 runs TE 0.001"
+time_step_wording_in_reports,outputs/week18_independent_research/RESEARCH_LOG.md,23,"(vs 0.0021), 27 runs with a different domain (XI −0.0002 / XF 0.0012 / XL 0.0014); time-step rule"
+time_step_wording_in_reports,outputs/week18_independent_research/RESEARCH_LOG.md,24,DT·VX/LS ≈ 0.075 (0.04–0.12) in OLD vs 0.108 (0.097–0.120) in NEW. OLD-405 = three partitions
+reads_monitor_time_dat,src/week11_bug_audit.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week11_external_freeze_prep.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week18_new_depth.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week19_series.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week19_sources.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week19_temporal_audit.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week6_phase1_melt_pool_data_audit.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week6_phase2_gp_response_noise_comparison.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week6_phase3_5_regime_target_design.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week6_phase3_model_target_robustness.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week6_phase4_new_outputs_feature_effects.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week7_phase1_sph_v2_dataset_shift_audit.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week7_phase2_sph_v2_physical_target_extraction.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week7_phase4_new_data_feature_effects_depth_diagnostics.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week7_phase5_5_g3_robustness_transfer_analysis.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week7_phase5_keyhole_physical_proxy_analysis.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week9_phase1_19a_integrity_posterior_monotonicity_audit.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week9_phase1_21_freeze.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week9_phase1_21_report.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week9_phase1_22_external_pool_audit.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week9_phase1_23_freeze.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week9_phase1_23_sph_ablation.py,,physical time from monitor/time.dat
+reads_monitor_time_dat,src/week9_phase2_temporal_width_dynamics.py,,physical time from monitor/time.dat

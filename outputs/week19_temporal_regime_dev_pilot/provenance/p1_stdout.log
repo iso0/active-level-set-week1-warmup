@@ -1,0 +1,138 @@
+r1 f1 B16 WHOLE_E1_SHARED   ok                         u=   77.16   0.03s
+r1 f1 B16 ACTIVE_E1_SHARED  ok                         u=   66.92   0.03s
+r1 f1 B16 G3_SHARED         ok                         u=     nan   0.08s
+r1 f1 B40 WHOLE_E1_SHARED   ok                         u=  107.14   0.03s
+r1 f1 B40 ACTIVE_E1_SHARED  ok                         u=  104.37   0.03s
+r1 f1 B40 G3_SHARED         ok                         u=     nan   0.05s
+r1 f1 B80 WHOLE_E1_SHARED   ok                         u=  106.26   0.05s
+r1 f1 B80 ACTIVE_E1_SHARED  ok                         u=  104.15   0.04s
+r1 f1 B80 G3_SHARED         ok                         u=     nan   0.07s
+r1 f2 B16 WHOLE_E1_SHARED   ok                         u=  117.14   0.03s
+r1 f2 B16 ACTIVE_E1_SHARED  ok                         u=  117.14   0.03s
+r1 f2 B16 G3_SHARED         ok                         u=     nan   0.04s
+r1 f2 B40 WHOLE_E1_SHARED   ok                         u=   86.02   0.04s
+r1 f2 B40 ACTIVE_E1_SHARED  ok                         u=  117.14   0.04s
+r1 f2 B40 G3_SHARED         ok                         u=     nan   0.05s
+r1 f2 B80 WHOLE_E1_SHARED   ok                         u=  106.51   0.05s
+r1 f2 B80 ACTIVE_E1_SHARED  ok                         u=  114.14   0.04s
+r1 f2 B80 G3_SHARED         ok                         u=     nan   0.06s
+r1 f3 B16 WHOLE_E1_SHARED   ok                         u=   96.38   0.04s
+r1 f3 B16 ACTIVE_E1_SHARED  ok                         u=  106.76   0.04s
+r1 f3 B16 G3_SHARED         ok                         u=     nan   0.03s
+r1 f3 B40 WHOLE_E1_SHARED   ok                         u=   91.38   0.05s
+r1 f3 B40 ACTIVE_E1_SHARED  ok                         u=  103.02   0.03s
+r1 f3 B40 G3_SHARED         ok                         u=     nan   0.04s
+r1 f3 B80 WHOLE_E1_SHARED   ok                         u=  110.84   0.08s
+r1 f3 B80 ACTIVE_E1_SHARED  ok                         u=  112.84   0.05s
+r1 f3 B80 G3_SHARED         ok                         u=     nan   0.05s
+r1 f4 B16 WHOLE_E1_SHARED   ok                         u=   48.81   0.03s
+r1 f4 B16 ACTIVE_E1_SHARED  ok                         u=   97.33   0.04s
+r1 f4 B16 G3_SHARED         ok                         u=     nan   0.03s
+r1 f4 B40 WHOLE_E1_SHARED   ok                         u=  126.96   0.03s
+r1 f4 B40 ACTIVE_E1_SHARED  ok                         u=  125.14   0.03s
+r1 f4 B40 G3_SHARED         ok                         u=     nan   0.05s
+r1 f4 B80 WHOLE_E1_SHARED   ok                         u=  130.29   0.06s
+r1 f4 B80 ACTIVE_E1_SHARED  ok                         u=  121.36   0.05s
+r1 f4 B80 G3_SHARED         ok                         u=     nan   0.12s
+r1 f5 B16 WHOLE_E1_SHARED   ok                         u=   97.07   0.03s
+r1 f5 B16 ACTIVE_E1_SHARED  ok                         u=  108.02   0.04s
+r1 f5 B16 G3_SHARED         ok                         u=     nan   0.04s
+r1 f5 B40 WHOLE_E1_SHARED   ok                         u=  115.93   0.04s
+r1 f5 B40 ACTIVE_E1_SHARED  ok                         u=  116.49   0.04s
+r1 f5 B40 G3_SHARED         ok                         u=     nan   0.03s
+r1 f5 B80 WHOLE_E1_SHARED   ok                         u=  107.66   0.05s
+r1 f5 B80 ACTIVE_E1_SHARED  ok                         u=  108.94   0.04s
+r1 f5 B80 G3_SHARED         ok                         u=     nan   0.05s
+r2 f1 B16 WHOLE_E1_SHARED   ok                         u=   92.75   0.03s
+r2 f1 B16 ACTIVE_E1_SHARED  ok                         u=  109.15   0.03s
+r2 f1 B16 G3_SHARED         ok                         u=     nan   0.03s
+r2 f1 B40 WHOLE_E1_SHARED   ok                         u=  110.64   0.04s
+r2 f1 B40 ACTIVE_E1_SHARED  ok                         u=  115.14   0.03s
+r2 f1 B40 G3_SHARED         ok                         u=     nan   0.04s
+r2 f1 B80 WHOLE_E1_SHARED   ok                         u=  110.18   0.07s
+r2 f1 B80 ACTIVE_E1_SHARED  ok                         u=  107.31   0.04s
+r2 f1 B80 G3_SHARED         ok                         u=     nan   0.12s
+r2 f2 B16 WHOLE_E1_SHARED   ok                         u=   22.52   0.03s
+r2 f2 B16 ACTIVE_E1_SHARED  ok                         u=   88.78   0.04s
+r2 f2 B16 G3_SHARED         ok                         u=     nan   0.03s
+r2 f2 B40 WHOLE_E1_SHARED   ok                         u=   72.96   0.05s
+r2 f2 B40 ACTIVE_E1_SHARED  ok                         u=   97.21   0.03s
+r2 f2 B40 G3_SHARED         ok                         u=     nan   0.03s
+r2 f2 B80 WHOLE_E1_SHARED   ok                         u=   91.82   0.06s
+r2 f2 B80 ACTIVE_E1_SHARED  ok                         u=   99.85   0.05s
+r2 f2 B80 G3_SHARED         ok                         u=     nan   0.05s
+r2 f3 B16 WHOLE_E1_SHARED   ok                         u=  100.02   0.04s
+r2 f3 B16 ACTIVE_E1_SHARED  ok                         u=  107.77   0.03s
+r2 f3 B16 G3_SHARED         ok                         u=     nan   0.04s
+r2 f3 B40 WHOLE_E1_SHARED   ok                         u=  105.01   0.04s
+r2 f3 B40 ACTIVE_E1_SHARED  ok                         u=  107.80   0.03s
+r2 f3 B40 G3_SHARED         ok                         u=     nan   0.03s
+r2 f3 B80 WHOLE_E1_SHARED   ok                         u=  115.33   0.08s
+r2 f3 B80 ACTIVE_E1_SHARED  ok                         u=  115.01   0.05s
+r2 f3 B80 G3_SHARED         ok                         u=     nan   0.06s
+r2 f4 B16 WHOLE_E1_SHARED   ok                         u=   96.95   0.03s
+r2 f4 B16 ACTIVE_E1_SHARED  ok                         u=   90.92   0.04s
+r2 f4 B16 G3_SHARED         ok                         u=     nan   0.05s
+r2 f4 B40 WHOLE_E1_SHARED   ok                         u=  109.94   0.03s
+r2 f4 B40 ACTIVE_E1_SHARED  ok                         u=  108.67   0.03s
+r2 f4 B40 G3_SHARED         ok                         u=     nan   0.05s
+r2 f4 B80 WHOLE_E1_SHARED   ok                         u=  108.99   0.05s
+r2 f4 B80 ACTIVE_E1_SHARED  ok                         u=  107.20   0.05s
+r2 f4 B80 G3_SHARED         ok                         u=     nan   0.07s
+r2 f5 B16 WHOLE_E1_SHARED   ok                         u=  104.04   0.04s
+r2 f5 B16 ACTIVE_E1_SHARED  ok                         u=  119.64   0.03s
+r2 f5 B16 G3_SHARED         ok                         u=     nan   0.04s
+r2 f5 B40 WHOLE_E1_SHARED   ok                         u=  116.29   0.05s
+r2 f5 B40 ACTIVE_E1_SHARED  ok                         u=  119.10   0.03s
+r2 f5 B40 G3_SHARED         ok                         u=     nan   0.04s
+r2 f5 B80 WHOLE_E1_SHARED   ok                         u=  125.19   0.08s
+r2 f5 B80 ACTIVE_E1_SHARED  ok                         u=  120.92   0.07s
+r2 f5 B80 G3_SHARED         ok                         u=     nan   0.07s
+{
+ "manifest_sha256_at_fit_time": "a94ad88b07b39ec112c748744469fa6f4e4ae658497e0d3e760990cd4a2b41b0",
+ "manifest_created_utc": "2026-10-09T23:51:14+00:00",
+ "p1_started_utc": "2026-10-09T23:53:34+00:00",
+ "p1_finished_utc": "2026-10-09T23:53:39+00:00",
+ "learner_fits": 90,
+ "elapsed_s": 4.49862813949585,
+ "peak_memory_bytes": 270831616,
+ "threadpools": [
+  {
+   "user_api": "blas",
+   "internal_api": "openblas",
+   "num_threads": 2
+  },
+  {
+   "user_api": "blas",
+   "internal_api": "openblas",
+   "num_threads": 2
+  },
+  {
+   "user_api": "openmp",
+   "internal_api": "openmp",
+   "num_threads": 2
+  }
+ ],
+ "stopped": null,
+ "python": "3.14.4",
+ "numpy": "2.5.1",
+ "pandas": "3.0.5",
+ "scipy": "1.18.0",
+ "sklearn": "1.9.0",
+ "env_threads": {
+  "OMP_NUM_THREADS": "2",
+  "OPENBLAS_NUM_THREADS": "2",
+  "MKL_NUM_THREADS": "2"
+ }
+}
+arm               budget  status
+ACTIVE_E1_SHARED  16      ok        10
+                  40      ok        10
+                  80      ok        10
+G3_SHARED         16      ok        10
+                  40      ok        10
+                  80      ok        10
+WHOLE_E1_SHARED   16      ok        10
+                  40      ok        10
+                  80      ok        10
+exit 0

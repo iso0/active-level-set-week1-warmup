@@ -1150,3 +1150,30 @@ Karar: **IMPROVEMENT ON SOME TASKS ONLY**. Tez bölümü taslağı: [`sec_depth_
 [Rapor](../outputs/week19_temporal_regime_audit/REPORT.md), [Astra devri](../outputs/week19_temporal_regime_audit/ASTRA_HANDOFF.md), [kontroller](../outputs/week19_temporal_regime_audit/tables/CHECKS.csv). Model eğitilmedi; etiket, uygunluk kararı ve tarihsel çıktı değişmedi; C3 kullanılmadı. Pinler doğrulandı: OLD `b6dc254a`, NEW `2e1eec9c` (etiket dosyası 12,397,054 B, SHA-256 `b45518a5…`); 2,168 ham dosya boyut ve blob kimliğiyle doğrulandı. `has_keyhole` 541/541, Week 7 OLD dizi denetimi 405/405 yeniden üretildi; 140,594 karenin tamamı `iter.dat` üzerinden tam eşlendi. Klasördeki `DT` kare aralığıdır, çözücü adımı değil.
 
 "K sonra yalnızca C" iki kampanyada da iki biçimde görülüyor: hızlı taramada kısa başlangıç K'sı (OLD 10, NEW 11), yavaş taramada sabit 2.1 ms kayıt sonundan hemen önce geçiş (OLD 7, NEW 12). NEW'de geçici K daha yaygın değil. 12 NEW negatifinin 7'si OLD eşiğini (u_ref 110.96 µm, E1 kuralı OLD üzerinde) aşıyor: 1 geç pencere maksimumu, 1 eksik gözlem, 1 manuel forming fazında başlangıç olayı, 4 çözülmemiş hızlı tarama derinlik artışı. Pencereler NEW AUC'yi 0.891 → 0.978 (A) → 0.985 (B, etikete bağlı, POST-HOC) yükseltiyor; OLD eşik seviyesi taşınmıyor (BA 0.704 → 0.814). Mevcut OOF tahminlerinde E1'in R3_NEW açığı, H-f4fc937e86 havuzdayken öğrenilen eşiğin ≥ 200 µm'ye çekildiği 13 katta yoğunlaşıyor (E1 − G3 −0.090; diğer katlarda +0.006); bu bir ilişkidir, müdahale değildir.
+
+### 2026-10-10 — Week 19 DEV pilotu: aktif pencere hedefi (A) ile E1
+
+[Pilot raporu](../outputs/week19_temporal_regime_dev_pilot/PILOT_REPORT.md), [Ioan özeti](../outputs/week19_temporal_regime_dev_pilot/IOAN_SUMMARY.md), [deneme defteri](../outputs/week19_temporal_regime_dev_pilot/ATTEMPT_LEDGER.md), [`timestep×DT` denetimi](../outputs/week19_temporal_regime_dev_pilot/TIMESTEP_DT_USAGE_AUDIT.md).
+
+**Kapsam.** Astra'nın P0–P2 isteği, sahibin 10 Ekim değişiklikleriyle uygulandı. POST-HOC keşif çalışmasıdır; yalnızca DEV tekrar 1–2 kullanıldı. P3, morfoloji yedeği ve C3 başlatılmadı.
+
+**Yöntem.**
+- Manifest ve yanlışlanabilir tahmin, ilk uydurmadan önce `c88f92c9` commit'inde donduruldu.
+- Üç kol (WHOLE_E1, ACTIVE_E1, G3) aynı etiketten bağımsız maximin yoluyla eğitildi: B16/B40/B80 bütçeleri, 90/90 uydurma; sızıntı koruması ve 13 kontrolün hepsi geçti.
+
+**Sonuç (B40).**
+- BA: ACTIVE 0.730, WHOLE 0.632, G3 0.618; ΔBA +0.098 [+0.013, +0.185].
+- Özgüllük 12/24'e karşı 7/24; kısa-K 12/20'ye karşı 13/20, yani izin verilen 0.05 sınırında.
+- q20 +0.067; aralık sıfırı içerdiği için sınır iyileşmesi iddia edilmiyor.
+- Karar: **ADVANCE**. Bu, keşif amaçlı DEV kapısıdır; doğrulama değildir.
+
+**Tahmin karşılaştırması.**
+- H1 (eşik çekilmesi kalkar): test edilemedi, çünkü paylaşılan yollarda çekilme hiç oluşmadı (en yüksek u 130 µm).
+- H2 (G3'e yaklaşır): ifade edildiği biçimiyle yanlışlandı; A, G3'ü aştı.
+- H3 (hızlı tarama belirsizliği sürer): desteklendi (6/8 hata).
+
+**Diğer çıktılar.**
+- Kazanç geç negatiften değil, kendi A'sı tüm kayıt maksimumuna eşit dört hızlı tarama negatifinden geliyor. Gözlenen yanıtla sınıflama, GP tahmininden iyi değil; yani darboğaz regresyon değil, hedef ve eşik.
+- Betimleyici tablo: NEW hızlı taramalarda K/(K+C) ≥ %5 veya ≥ %10 etiketleri ayrımı düzeltmiyor (AUC 0.62–0.76).
+- Hiçbir önceki hafta `timestep×DT`'yi fiziksel zaman olarak kullanmamış. Hafta 18'deki "time-step rule" yalnızca bir ifade düzeltmesi; Hafta 5 yanıtı iterasyon birimindedir.
+- Ioan için altı vaka hazırlandı; görüntü bağlantıları pinli revizyonda doğrulandı.

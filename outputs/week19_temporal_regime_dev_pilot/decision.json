@@ -1,0 +1,99 @@
+{
+ "status": "POST-HOC EXPLORATORY DEV PILOT",
+ "decision": {
+  "verdict": "ADVANCE",
+  "meaning": "exploratory DEV gate of the owner-modified rule; not confirmation. P3 and the fallback are not started (owner instruction); C3 stays reserved.",
+  "conditions": {
+   "mean_delta_BA_ge_0.01": true,
+   "lower_bound_gt_0": true,
+   "specificity_ACTIVE_ge_WHOLE": true,
+   "specificity_ACTIVE_ge_G3": true,
+   "shortK_ACTIVE_ge_WHOLE_minus_0.05": true,
+   "shortK_ACTIVE_ge_G3_minus_0.05": true,
+   "all_B40_fits_available": true,
+   "all_checks_pass": true
+  },
+  "comparison_tolerance": "1e-12 (exact-arithmetic evaluation of k/20 and k/24 fractions)",
+  "delta_BA_B40_ACTIVE_minus_WHOLE": {
+   "estimate": 0.09811827956989255,
+   "lo95": 0.01276881720430112,
+   "hi95": 0.18548387096774194
+  },
+  "delta_q20_B40_ACTIVE_minus_WHOLE": {
+   "estimate": 0.06666666666666671,
+   "lo95": -0.009113636363636258,
+   "hi95": 0.14805600649350653
+  },
+  "q20_deteriorated": false,
+  "boundary_statement": "q20 did not deteriorate, but its interval includes 0: no boundary improvement is claimed",
+  "specificity_B40": {
+   "WHOLE_E1_SHARED": 0.29166666666666663,
+   "ACTIVE_E1_SHARED": 0.5,
+   "G3_SHARED": 0.29166666666666663
+  },
+  "shortK_sensitivity_B40": {
+   "WHOLE_E1_SHARED": 0.6499999999999999,
+   "ACTIVE_E1_SHARED": 0.6,
+   "G3_SHARED": 0.4
+  },
+  "counts_B40_two_repeats": {
+   "WHOLE_E1_SHARED": {
+    "true_negatives_of_24": 7,
+    "short_K_detected_of_20": 13
+   },
+   "ACTIVE_E1_SHARED": {
+    "true_negatives_of_24": 12,
+    "short_K_detected_of_20": 12
+   },
+   "G3_SHARED": {
+    "true_negatives_of_24": 7,
+    "short_K_detected_of_20": 8
+   }
+  },
+  "margins": {
+   "shortK_loss_vs_WHOLE": 0.04999999999999993,
+   "shortK_loss_vs_G3": -0.19999999999999996,
+   "BA_lower_bound": 0.01276881720430112
+  },
+  "lbfgs_sensitivity": "0 B40 fits carry an L-BFGS-B non-success message; counted as failures, the verdict would be unchanged"
+ },
+ "prediction_vs_outcome": {
+  "H1_threshold_pull_removed": {
+   "result": "UNTESTABLE (WHOLE_E1 shows no pull on the shared paths)",
+   "fits_with_late_negative_paid": {
+    "WHOLE": 23,
+    "ACTIVE": 23
+   },
+   "fits_with_u_ge_200um_late_negative_paid": {
+    "WHOLE": 0,
+    "ACTIVE": 0
+   },
+   "fits_with_u_ge_200um_late_negative_not_paid": {
+    "WHOLE": 0,
+    "ACTIVE": 0
+   },
+   "max_u_um_late_negative_paid": {
+    "WHOLE": 130.28815277171773,
+    "ACTIVE": 125.13838339739034
+   },
+   "max_u_um_late_negative_not_paid": {
+    "WHOLE": 117.13633141472376,
+    "ACTIVE": 117.13633141472376
+   }
+  },
+  "H2_moves_toward_G3": {
+   "result": "FALSIFIED",
+   "BA_B40": {
+    "WHOLE_E1_SHARED": 0.6317204301075269,
+    "ACTIVE_E1_SHARED": 0.7298387096774195,
+    "G3_SHARED": 0.6176075268817205
+   }
+  },
+  "H3_fast_scan_ambiguity_remains": {
+   "result": "SUPPORTED",
+   "ACTIVE_mean_error_unresolved_4": 0.75,
+   "shortK_gain_ACTIVE_minus_WHOLE": -0.04999999999999993
+  },
+  "overall_prediction": "NOT SUPPORTED AS STATED (see components)"
+ }
+}

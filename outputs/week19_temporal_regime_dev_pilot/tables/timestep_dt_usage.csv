@@ -1,0 +1,14 @@
+path,lines,week,what,assessment,class
+src/week19_series.py,172-182,Week 19 audit (diagnostic),timestep × DT compared with time.dat,Correct use: only to show that timestep × DT overstates monitor time (by the iterations per frame); never used as time.,none
+src/week18_data_audit.py,39,Week 18 data audit,DTr = DT · VX / LS,"DT is the frame interval, so DTr is frame spacing in spot-crossing units, not a solver time step. Numbers are unaffected.",wording
+outputs/week18_independent_research/DATA_AUDIT.md,14,Week 18,'Time-step rule differs: DT·VX/LS …',Should read 'frame-spacing rule'; values (0.075 OLD vs 0.108 NEW) stand.,wording
+outputs/week18_independent_research/RESEARCH_LOG.md,23-24,Week 18,'time-step rule DT·VX/LS …',Same wording point.,wording
+outputs/week18_independent_research/RED_TEAM.md,9,Week 18,'the time-step rule differs between OLD and NEW',Same wording point.,wording
+notebooks/week_05/01_first_conduction_data_audit.ipynb,"cells 40-54, 68",Week 5,first-Conduction target = raw timestep,"Raw iteration count, explicitly 'not established as physical time'; DT only parsed. Not a ×DT error, but iteration units are not comparable across runs (iterations per frame: median 410 OLD, 567 NEW).",caveat
+notebooks/week_05/02_first_conduction_gp_kernel_comparison.ipynb,-,Week 5,GP on raw first-Conduction timestep,Same caveat (iteration units).,caveat
+notebooks/week_05/03_bug_initial_emptiness_ls_analysis.ipynb,cells 5-34,Week 5,initial empty-like block width in raw timestep units,Same caveat.,caveat
+notebooks/week_05/04_matern32_optimizer_comparison.ipynb,-,Week 5,GP on raw first-Conduction timestep,Same caveat.,caveat
+notebooks/week_05/05_ard_matern32_extension.ipynb,cell 0,Week 5,"'the target is a simulation timestep number, not physical time'",Same caveat.,caveat
+outputs/week5_01_first_conduction_data_audit … week5_05_ard_matern32_extension,-,Week 5,outputs of the notebooks above,Same caveat; MAE/RMSE are in timesteps.,caveat
+docs/week5_first_conduction_gp_log.md,"33, 51, 190",Week 5,'raw timestep … not converted to physical time',Same caveat; already stated in the log.,caveat
+docs/week5_gp_meeting_brief.md,5,Week 5,'The response is not converted to physical time',Same caveat; already stated.,caveat

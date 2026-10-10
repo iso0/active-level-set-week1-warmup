@@ -1,0 +1,11 @@
+repeat,fold,cache_file,cache_records,distinct_row_q20_pairs,test_rows_equal,q20_equal,n_test,n_q20
+1,1,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r001_f1.json,136,1,True,True,28,6
+1,2,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r001_f2.json,136,1,True,True,27,6
+1,3,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r001_f3.json,136,1,True,True,27,6
+1,4,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r001_f4.json,136,1,True,True,27,6
+1,5,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r001_f5.json,136,1,True,True,27,6
+2,1,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r002_f1.json,136,1,True,True,28,6
+2,2,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r002_f2.json,136,1,True,True,27,6
+2,3,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r002_f3.json,136,1,True,True,27,6
+2,4,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r002_f4.json,136,1,True,True,27,6
+2,5,outputs/week18_independent_research/phase2/cache_real/R3_NEW__r002_f5.json,136,1,True,True,27,6

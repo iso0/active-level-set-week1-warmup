@@ -1,0 +1,37 @@
+{
+ "manifest_sha256_at_fit_time": "a94ad88b07b39ec112c748744469fa6f4e4ae658497e0d3e760990cd4a2b41b0",
+ "manifest_created_utc": "2026-10-09T23:51:14+00:00",
+ "p1_started_utc": "2026-10-09T23:53:34+00:00",
+ "p1_finished_utc": "2026-10-09T23:53:39+00:00",
+ "learner_fits": 90,
+ "elapsed_s": 4.49862813949585,
+ "peak_memory_bytes": 270831616,
+ "threadpools": [
+  {
+   "user_api": "blas",
+   "internal_api": "openblas",
+   "num_threads": 2
+  },
+  {
+   "user_api": "blas",
+   "internal_api": "openblas",
+   "num_threads": 2
+  },
+  {
+   "user_api": "openmp",
+   "internal_api": "openmp",
+   "num_threads": 2
+  }
+ ],
+ "stopped": null,
+ "python": "3.14.4",
+ "numpy": "2.5.1",
+ "pandas": "3.0.5",
+ "scipy": "1.18.0",
+ "sklearn": "1.9.0",
+ "env_threads": {
+  "OMP_NUM_THREADS": "2",
+  "OPENBLAS_NUM_THREADS": "2",
+  "MKL_NUM_THREADS": "2"
+ }
+}

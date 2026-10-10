@@ -1,0 +1,37 @@
+campaign,subset,exploratory,label,label_role,score,cohort,n_runs_in_subset,n_undefined_ratio,n_target_missing,n_evaluated,n_positive,n_negative,n_relabelled_vs_has_keyhole,AUC,oracle_BA_same_population,oracle_threshold_um,BA_at_uref
+OLD,all,False,has_keyhole,original benchmark label (unchanged),whole_max_um,all runs with the score,405,0,0,405,73,332,0,0.9999587390658524,0.9984939759036144,111.1982,0.9984939759036144
+OLD,all,False,has_keyhole,original benchmark label (unchanged),whole_max_um,paired cohort (A available),405,0,0,405,73,332,0,0.9999587390658524,0.9984939759036144,111.1982,0.9984939759036144
+OLD,all,False,has_keyhole,original benchmark label (unchanged),A_um,paired cohort (A available),405,0,0,405,73,332,0,0.9999587390658524,0.9984939759036144,111.1982,0.9984939759036144
+OLD,all,False,K/(K+C)>=0.05,"descriptive alternative, not a replacement",whole_max_um,all runs with the score,405,1,0,404,67,337,6,0.9999114221178972,0.9970326409495549,119.0752,0.989614243323442
+OLD,all,False,K/(K+C)>=0.05,"descriptive alternative, not a replacement",whole_max_um,paired cohort (A available),405,1,0,404,67,337,6,0.9999114221178972,0.9970326409495549,119.0752,0.989614243323442
+OLD,all,False,K/(K+C)>=0.05,"descriptive alternative, not a replacement",A_um,paired cohort (A available),405,1,0,404,67,337,6,0.9999114221178972,0.9970326409495549,119.0752,0.989614243323442
+OLD,all,False,K/(K+C)>=0.10,"descriptive alternative, not a replacement",whole_max_um,all runs with the score,405,1,0,404,62,342,11,0.9958026787398604,0.989766081871345,119.0752,0.9824561403508771
+OLD,all,False,K/(K+C)>=0.10,"descriptive alternative, not a replacement",whole_max_um,paired cohort (A available),405,1,0,404,62,342,11,0.9958026787398604,0.989766081871345,119.0752,0.9824561403508771
+OLD,all,False,K/(K+C)>=0.10,"descriptive alternative, not a replacement",A_um,paired cohort (A available),405,1,0,404,62,342,11,0.9983965289568006,0.989766081871345,119.0752,0.9824561403508771
+OLD,VX>0.85,True,has_keyhole,original benchmark label (unchanged),whole_max_um,all runs with the score,98,0,0,98,10,88,0,0.9988636363636364,0.9943181818181819,111.1982,0.9943181818181819
+OLD,VX>0.85,True,has_keyhole,original benchmark label (unchanged),whole_max_um,paired cohort (A available),98,0,0,98,10,88,0,0.9988636363636364,0.9943181818181819,111.1982,0.9943181818181819
+OLD,VX>0.85,True,has_keyhole,original benchmark label (unchanged),A_um,paired cohort (A available),98,0,0,98,10,88,0,0.9988636363636364,0.9943181818181819,111.1982,0.9943181818181819
+OLD,VX>0.85,True,K/(K+C)>=0.05,"descriptive alternative, not a replacement",whole_max_um,all runs with the score,98,0,0,98,5,93,5,1.0,1.0,138.2149,0.967741935483871
+OLD,VX>0.85,True,K/(K+C)>=0.05,"descriptive alternative, not a replacement",whole_max_um,paired cohort (A available),98,0,0,98,5,93,5,1.0,1.0,138.2149,0.967741935483871
+OLD,VX>0.85,True,K/(K+C)>=0.05,"descriptive alternative, not a replacement",A_um,paired cohort (A available),98,0,0,98,5,93,5,1.0,1.0,138.2149,0.967741935483871
+OLD,VX>0.85,True,K/(K+C)>=0.10,"descriptive alternative, not a replacement",whole_max_um,all runs with the score,98,0,0,98,2,96,8,0.9895833333333334,0.9947916666666667,147.8212,0.953125
+OLD,VX>0.85,True,K/(K+C)>=0.10,"descriptive alternative, not a replacement",whole_max_um,paired cohort (A available),98,0,0,98,2,96,8,0.9895833333333334,0.9947916666666667,147.8212,0.953125
+OLD,VX>0.85,True,K/(K+C)>=0.10,"descriptive alternative, not a replacement",A_um,paired cohort (A available),98,0,0,98,2,96,8,1.0,1.0,147.8212,0.953125
+NEW,all,False,has_keyhole,original benchmark label (unchanged),whole_max_um,all runs with the score,136,0,0,136,124,12,0,0.8911290322580645,0.9139784946236559,147.7707,0.7043010752688172
+NEW,all,False,has_keyhole,original benchmark label (unchanged),whole_max_um,paired cohort (A available),136,0,1,135,124,11,0,0.8892961876832844,0.9142228739002932,144.39180000000002,0.7232404692082112
+NEW,all,False,has_keyhole,original benchmark label (unchanged),A_um,paired cohort (A available),136,0,1,135,124,11,0,0.9780058651026393,0.9596774193548387,142.23219999999998,0.7686950146627566
+NEW,all,False,K/(K+C)>=0.05,"descriptive alternative, not a replacement",whole_max_um,all runs with the score,136,1,0,135,120,15,4,0.9188888888888889,0.9416666666666667,144.39180000000002,0.6625
+NEW,all,False,K/(K+C)>=0.05,"descriptive alternative, not a replacement",whole_max_um,paired cohort (A available),136,1,0,135,120,15,4,0.9188888888888889,0.9416666666666667,144.39180000000002,0.6625
+NEW,all,False,K/(K+C)>=0.05,"descriptive alternative, not a replacement",A_um,paired cohort (A available),136,1,0,135,120,15,4,0.9838888888888889,0.975,142.23219999999998,0.6958333333333333
+NEW,all,False,K/(K+C)>=0.10,"descriptive alternative, not a replacement",whole_max_um,all runs with the score,136,1,0,135,116,19,8,0.9360254083484574,0.9607531760435571,147.7707,0.6272686025408348
+NEW,all,False,K/(K+C)>=0.10,"descriptive alternative, not a replacement",whole_max_um,paired cohort (A available),136,1,0,135,116,19,8,0.9360254083484574,0.9607531760435571,147.7707,0.6272686025408348
+NEW,all,False,K/(K+C)>=0.10,"descriptive alternative, not a replacement",A_um,paired cohort (A available),136,1,0,135,116,19,8,0.9868421052631579,0.9827586206896552,147.7707,0.653584392014519
+NEW,VX>0.85,True,has_keyhole,original benchmark label (unchanged),whole_max_um,all runs with the score,23,0,0,23,12,11,0,0.7045454545454546,0.7424242424242424,119.209,0.6856060606060606
+NEW,VX>0.85,True,has_keyhole,original benchmark label (unchanged),whole_max_um,paired cohort (A available),23,0,0,23,12,11,0,0.7045454545454546,0.7424242424242424,119.209,0.6856060606060606
+NEW,VX>0.85,True,has_keyhole,original benchmark label (unchanged),A_um,paired cohort (A available),23,0,0,23,12,11,0,0.7727272727272727,0.7878787878787878,119.209,0.731060606060606
+NEW,VX>0.85,True,K/(K+C)>=0.05,"descriptive alternative, not a replacement",whole_max_um,all runs with the score,23,0,0,23,8,15,4,0.7166666666666667,0.7416666666666667,119.209,0.6041666666666666
+NEW,VX>0.85,True,K/(K+C)>=0.05,"descriptive alternative, not a replacement",whole_max_um,paired cohort (A available),23,0,0,23,8,15,4,0.7166666666666667,0.7416666666666667,119.209,0.6041666666666666
+NEW,VX>0.85,True,K/(K+C)>=0.05,"descriptive alternative, not a replacement",A_um,paired cohort (A available),23,0,0,23,8,15,4,0.7583333333333333,0.775,119.209,0.6375
+NEW,VX>0.85,True,K/(K+C)>=0.10,"descriptive alternative, not a replacement",whole_max_um,all runs with the score,23,0,0,23,4,19,8,0.618421052631579,0.6907894736842105,119.209,0.506578947368421
+NEW,VX>0.85,True,K/(K+C)>=0.10,"descriptive alternative, not a replacement",whole_max_um,paired cohort (A available),23,0,0,23,4,19,8,0.618421052631579,0.6907894736842105,119.209,0.506578947368421
+NEW,VX>0.85,True,K/(K+C)>=0.10,"descriptive alternative, not a replacement",A_um,paired cohort (A available),23,0,0,23,4,19,8,0.631578947368421,0.7171052631578947,119.209,0.5328947368421053
