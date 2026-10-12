@@ -1,0 +1,11 @@
+start poststart 2026-10-12T21:57:16Z
+C:\Users\ozgur\Documents\thesis\src\week20_track2_svgp.py:103: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:823.)
+  run += float(loss)
+{"checkpoint": "ckpt_r1_f1_B40", "tag": "svgp_it6000", "n_points": 11332, "fit_seconds": 382.69100069999695, "elbo_per_point": 1.0223395411601877, "lengthscale_s": 0.21876417843981893, "noise": 0.006206077282657762}
+{"checkpoint": "ckpt_r1_f2_B40", "tag": "svgp_it6000", "n_points": 11269, "fit_seconds": 380.0348343849182, "elbo_per_point": 1.253389628098561, "lengthscale_s": 0.19903042774104077, "noise": 0.0038505165991820816}
+{"checkpoint": "ckpt_r1_f3_B40", "tag": "svgp_it6000", "n_points": 11656, "fit_seconds": 382.4252042770386, "elbo_per_point": 1.291171493864045, "lengthscale_s": 0.20957556880756847, "noise": 0.0038403573320545184}
+{"checkpoint": "ckpt_r1_f4_B40", "tag": "svgp_it6000", "n_points": 11626, "fit_seconds": 393.1147286891937, "elbo_per_point": 1.0636917034365982, "lengthscale_s": 0.2282025545152828, "noise": 0.005308318494556559}
+{"checkpoint": "ckpt_r1_f5_B40", "tag": "svgp_it6000", "n_points": 11788, "fit_seconds": 385.3848521709442, "elbo_per_point": 1.2700269329946052, "lengthscale_s": 0.21105408380216603, "noise": 0.00383855817228399}
+exit 0
+end 2026-10-12T22:29:31Z

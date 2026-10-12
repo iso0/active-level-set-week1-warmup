@@ -1,0 +1,9 @@
+scope,checkpoints,model,rows,traj_rmse_mean,traj_rmse_median,A_abs_err_median_um,A_signed_err_median_um
+well-posed checkpoints (no paid run with |coefficient| > 100),9,mean_trajectory,243,0.4790988449333185,0.4702181225364892,,
+well-posed checkpoints (no paid run with |coefficient| > 100),9,functional,243,0.25589544665197983,0.17376924414671624,52.34641768161828,41.97777350293927
+well-posed checkpoints (no paid run with |coefficient| > 100),9,svgp,243,0.34278957465805815,0.2912757678586417,89.96916542191045,73.3264994195502
+well-posed checkpoints (no paid run with |coefficient| > 100),9,scalar_A_GP,243,,,5.09574881948555,-0.22588344595681065
+other checkpoints,21,mean_trajectory,567,0.4536951392194008,0.45355066630037977,,
+other checkpoints,21,functional,567,7.087841192413456,0.9506450968187494,3594731.956448165,3594731.956448165
+other checkpoints,21,svgp,567,0.26668041413969323,0.21772775345741127,60.36797947699472,41.779001041445156
+other checkpoints,21,scalar_A_GP,567,,,5.659293858173157,-0.6468930915941087

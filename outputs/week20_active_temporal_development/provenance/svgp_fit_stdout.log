@@ -1,0 +1,34 @@
+C:\Users\ozgur\Documents\thesis\src\week20_track2_svgp.py:103: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:823.)
+  run += float(loss)
+{"checkpoint": "ckpt_r1_f1_B16", "tag": "svgp", "n_points": 4506, "fit_seconds": 178.39404010772705, "elbo_per_point": 1.0769212008890447, "lengthscale_s": 0.21753399436958423, "noise": 0.008493853371227314}
+{"checkpoint": "ckpt_r1_f1_B40", "tag": "svgp", "n_points": 11332, "fit_seconds": 179.30588960647583, "elbo_per_point": 0.8356071391746729, "lengthscale_s": 0.2577685318781197, "noise": 0.013195546544770183}
+{"checkpoint": "ckpt_r1_f1_B80", "tag": "svgp", "n_points": 23223, "fit_seconds": 167.0768609046936, "elbo_per_point": 0.8145068054061654, "lengthscale_s": 0.3021981762535046, "noise": 0.014778254283725721}
+{"checkpoint": "ckpt_r1_f2_B16", "tag": "svgp", "n_points": 4515, "fit_seconds": 185.29224753379822, "elbo_per_point": 1.0701555137866183, "lengthscale_s": 0.22075454112174533, "noise": 0.008297002069844942}
+{"checkpoint": "ckpt_r1_f2_B40", "tag": "svgp", "n_points": 11269, "fit_seconds": 196.13406586647034, "elbo_per_point": 0.9130480893813401, "lengthscale_s": 0.2678546146506075, "noise": 0.01176570922287707}
+{"checkpoint": "ckpt_r1_f2_B80", "tag": "svgp", "n_points": 23291, "fit_seconds": 183.0349943637848, "elbo_per_point": 0.846195643976073, "lengthscale_s": 0.28937386217195327, "noise": 0.014300069246485981}
+{"checkpoint": "ckpt_r1_f3_B16", "tag": "svgp", "n_points": 4522, "fit_seconds": 206.57060861587524, "elbo_per_point": 0.9921463937215053, "lengthscale_s": 0.217421300699654, "noise": 0.009176297990776204}
+{"checkpoint": "ckpt_r1_f3_B40", "tag": "svgp", "n_points": 11656, "fit_seconds": 186.38780307769775, "elbo_per_point": 0.9190003698614295, "lengthscale_s": 0.2683537787769635, "noise": 0.011790539661771068}
+{"checkpoint": "ckpt_r1_f3_B80", "tag": "svgp", "n_points": 23138, "fit_seconds": 147.6148247718811, "elbo_per_point": 0.7971225426624652, "lengthscale_s": 0.2988166334313707, "noise": 0.015306348243334782}
+{"checkpoint": "ckpt_r1_f4_B16", "tag": "svgp", "n_points": 4425, "fit_seconds": 155.7130982875824, "elbo_per_point": 1.0543240699518897, "lengthscale_s": 0.21350454666740953, "noise": 0.00831114547394239}
+{"checkpoint": "ckpt_r1_f4_B40", "tag": "svgp", "n_points": 11626, "fit_seconds": 163.05772495269775, "elbo_per_point": 0.8175257074999986, "lengthscale_s": 0.2668849715726323, "noise": 0.01284440680534099}
+{"checkpoint": "ckpt_r1_f4_B80", "tag": "svgp", "n_points": 23476, "fit_seconds": 149.86176800727844, "elbo_per_point": 0.8058916771770147, "lengthscale_s": 0.2974236616293761, "noise": 0.014990191236703492}
+{"checkpoint": "ckpt_r1_f5_B16", "tag": "svgp", "n_points": 4185, "fit_seconds": 150.40007424354553, "elbo_per_point": 0.9854988202869667, "lengthscale_s": 0.20965403834651866, "noise": 0.009067802693145843}
+{"checkpoint": "ckpt_r1_f5_B40", "tag": "svgp", "n_points": 11788, "fit_seconds": 174.74556946754456, "elbo_per_point": 0.9038004036743464, "lengthscale_s": 0.26826644804851957, "noise": 0.01189520781251147}
+{"checkpoint": "ckpt_r1_f5_B80", "tag": "svgp", "n_points": 22385, "fit_seconds": 166.13886094093323, "elbo_per_point": 0.8090095800638419, "lengthscale_s": 0.2939402060484303, "noise": 0.015057152166006746}
+{"checkpoint": "ckpt_r2_f1_B16", "tag": "svgp", "n_points": 4722, "fit_seconds": 138.60216426849365, "elbo_per_point": 0.9934998775126055, "lengthscale_s": 0.21899058678090028, "noise": 0.009192593516052673}
+{"checkpoint": "ckpt_r2_f1_B40", "tag": "svgp", "n_points": 11715, "fit_seconds": 173.1709122657776, "elbo_per_point": 0.9148193169146391, "lengthscale_s": 0.27924193454566415, "noise": 0.011872220762120952}
+{"checkpoint": "ckpt_r2_f1_B80", "tag": "svgp", "n_points": 23294, "fit_seconds": 171.04900979995728, "elbo_per_point": 0.8026002265405024, "lengthscale_s": 0.29651832356025193, "noise": 0.015007027918694897}
+{"checkpoint": "ckpt_r2_f2_B16", "tag": "svgp", "n_points": 4519, "fit_seconds": 171.49715733528137, "elbo_per_point": 1.0807843951460308, "lengthscale_s": 0.21483101154240852, "noise": 0.008275981139446624}
+{"checkpoint": "ckpt_r2_f2_B40", "tag": "svgp", "n_points": 11461, "fit_seconds": 166.63658785820007, "elbo_per_point": 0.8957455214871352, "lengthscale_s": 0.2702653071707459, "noise": 0.011961960276334437}
+{"checkpoint": "ckpt_r2_f2_B80", "tag": "svgp", "n_points": 23276, "fit_seconds": 171.26556825637817, "elbo_per_point": 0.8596172394600872, "lengthscale_s": 0.29996814577417286, "noise": 0.014184421037385474}
+{"checkpoint": "ckpt_r2_f3_B16", "tag": "svgp", "n_points": 4405, "fit_seconds": 158.12710905075073, "elbo_per_point": 1.0749474046966676, "lengthscale_s": 0.21297455776443355, "noise": 0.008100335788860462}
+{"checkpoint": "ckpt_r2_f3_B40", "tag": "svgp", "n_points": 11650, "fit_seconds": 141.7547628879547, "elbo_per_point": 0.835630326523961, "lengthscale_s": 0.266154200118877, "noise": 0.01302026447888957}
+{"checkpoint": "ckpt_r2_f3_B80", "tag": "svgp", "n_points": 22979, "fit_seconds": 116.03467082977295, "elbo_per_point": 0.7985249802708845, "lengthscale_s": 0.30253875950293796, "noise": 0.015134534637486445}
+{"checkpoint": "ckpt_r2_f4_B16", "tag": "svgp", "n_points": 4466, "fit_seconds": 122.86255216598511, "elbo_per_point": 1.025427139102331, "lengthscale_s": 0.21431353886286544, "noise": 0.00840000336075885}
+{"checkpoint": "ckpt_r2_f4_B40", "tag": "svgp", "n_points": 11336, "fit_seconds": 153.0144226551056, "elbo_per_point": 0.8657927235477655, "lengthscale_s": 0.2684530986176034, "noise": 0.012504539001259541}
+{"checkpoint": "ckpt_r2_f4_B80", "tag": "svgp", "n_points": 23004, "fit_seconds": 154.49605011940002, "elbo_per_point": 0.7949307821790597, "lengthscale_s": 0.30293327121076297, "noise": 0.01494332832000762}
+{"checkpoint": "ckpt_r2_f5_B16", "tag": "svgp", "n_points": 4445, "fit_seconds": 151.11466813087463, "elbo_per_point": 0.9938327177610222, "lengthscale_s": 0.2175758034645088, "noise": 0.009111234639667424}
+{"checkpoint": "ckpt_r2_f5_B40", "tag": "svgp", "n_points": 11340, "fit_seconds": 155.90150904655457, "elbo_per_point": 0.8327284390796539, "lengthscale_s": 0.26972719599497796, "noise": 0.012935009386596065}
+{"checkpoint": "ckpt_r2_f5_B80", "tag": "svgp", "n_points": 23207, "fit_seconds": 157.31965136528015, "elbo_per_point": 0.7792941015399717, "lengthscale_s": 0.30167059298791576, "noise": 0.015141371507155629}
+exit 0

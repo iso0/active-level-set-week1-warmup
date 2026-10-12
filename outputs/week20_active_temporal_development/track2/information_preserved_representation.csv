@@ -1,0 +1,2 @@
+K,runs,rmse_median_log1p,rmse_p90_log1p,rmse_max_log1p,peak_loss_median_log1p,peak_loss_p90_log1p,peak_loss_max_log1p,note
+360,135,0.0365764143874796,0.05771700052508713,0.2974323334250636,0.0040105040456559,0.00689049021706168,0.2774307510672642,label-free; the exact native maximum of every training run is added as an extra GP training point

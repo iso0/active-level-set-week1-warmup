@@ -1,0 +1,203 @@
+start eval 2026-10-12T22:29:52Z
+                                          model  fits  checkpoints  seconds_median  seconds_total  peak_memory_gib_max  points_median  loss_trace_last_block_change_median  lengthscale_s_median  noise_median
+0                                   scalar_A_GP    30           30           0.056          1.639                  NaN            NaN                                  NaN                   NaN           NaN
+1  functional_rank3 (3 coefficient GPs + basis)    90           30           1.329         40.369                  NaN            NaN                                  NaN                   NaN           NaN
+2                                          svgp    30           30         166.475       4950.347                0.603        11543.5                               -0.033                 0.268         0.012
+3                                     svgp_M800     1            1         505.479        505.479                0.518        11332.0                               -0.046                 0.227         0.010
+4                                   svgp_it6000     5            5         384.369       1931.458                0.444        11626.0                               -0.011                 0.211         0.004 
+
+       checkpoint  rms_mean_difference_M400_vs_M800  rmse_M400  rmse_M800  median_abs_diff_pred_A_um  mean_sd_ratio_M800_over_M400
+0  ckpt_r1_f1_B40                            0.1667     0.2468      0.309                    30.9924                        1.1202 
+
+  POSTSTART  checkpoints  rows  rmse_mean_it2000  rmse_mean_it6000  relative_change hypothesis_abs_change_lt_10pct
+0    T2-PS1            5   135             0.257            0.1979          -0.2302                      FALSIFIED 
+
+             model  budget  rows  traj_rmse_mean  traj_rmse_median   cov50   cov90  width90  unsupported_bins  traj_rmse_fold_mean  traj_rmse_fold_sd  checkpoints
+0       functional      16   270          1.4541            0.2815  0.7570  0.9112   4.3532               0.0               1.4671             1.7007           10
+1       functional      40   270          4.3262            0.3164  0.8653  0.9575  32.2281               0.0               4.3343             6.4937           10
+2       functional      80   270          9.3345            1.3707  0.9077  0.9584  76.1890               0.0               9.4055             9.3153           10
+3  mean_trajectory      16   270          0.5009            0.5000  0.3902  0.9423   1.3780               0.0               0.5009             0.0223           10
+4  mean_trajectory      40   270          0.4513            0.4611  0.4043  0.9739   1.3426               0.0               0.4515             0.0205           10
+5  mean_trajectory      80   270          0.4317            0.4159  0.4319  0.9559   1.3127               0.0               0.4319             0.0240           10
+6             svgp      16   270          0.3860            0.3513  0.7654  0.9936   2.2927               0.0               0.3862             0.0390           10
+7             svgp      40   270          0.2673            0.2248  0.8000  0.9882   1.6398               0.0               0.2673             0.0293           10
+8             svgp      80   270          0.2152            0.1876  0.8240  0.9853   1.2756               0.0               0.2152             0.0198           10 
+
+         model  budget  rows  A_abs_err_median_um  A_abs_err_mean_um  A_signed_err_median_um  A_log1p_err_median  A_in_90  binmax_abs_err_median_um  argmax_err_median_us  exceed_abs_err_median_us  obs_exceed_median_us  brier_p_max_exceeds_uref_vs_event
+0   functional      16   260         2.056090e+02       4.542187e+29            1.840930e+02               0.501    0.735              2.066330e+02               119.496                   300.539              1242.429                              0.063
+1   functional      40   260         3.865770e+02       1.140705e+32            3.865770e+02               0.821    0.723              3.878280e+02               181.902                   292.096              1242.429                              0.042
+2   functional      80   260         4.104149e+09      2.613937e+132            4.104149e+09              16.665    0.796              4.104149e+09               213.300                   452.529              1242.429                              0.070
+3  scalar_A_GP      16   260         8.231000e+00       1.734000e+01           -8.420000e-01              -0.003    0.819              7.983000e+00                   NaN                       NaN                   NaN                              0.045
+4  scalar_A_GP      40   260         5.111000e+00       1.035400e+01           -2.280000e-01              -0.001    0.865              4.888000e+00                   NaN                       NaN                   NaN                              0.022
+5  scalar_A_GP      80   260         3.922000e+00       9.772000e+00           -5.880000e-01              -0.002    0.873              4.328000e+00                   NaN                       NaN                   NaN                              0.025
+6         svgp      16   260         1.046500e+02       1.615260e+02            9.835300e+01               0.379    0.923              1.049750e+02               252.981                   212.266              1242.429                              0.032
+7         svgp      40   260         6.455600e+01       8.626600e+01            4.862600e+01               0.186    0.950              6.512100e+01               187.768                    65.728              1242.429                              0.041
+8         svgp      80   260         4.229500e+01       5.292000e+01            2.725900e+01               0.102    0.958              4.316600e+01               177.922                    42.018              1242.429                              0.039 
+
+         model  budget  short_event  rows  runs  A_log1p_err_median  A_signed_err_median_um  A_abs_err_median_um
+0   functional      16        False   260   130               0.501            1.840930e+02         2.056090e+02
+1   functional      40        False   260   130               0.821            3.865770e+02         3.865770e+02
+2   functional      80        False   260   130              16.665            4.104149e+09         4.104149e+09
+3  scalar_A_GP      16        False   260   130              -0.003           -8.420000e-01         8.231000e+00
+4  scalar_A_GP      40        False   260   130              -0.001           -2.280000e-01         5.111000e+00
+5  scalar_A_GP      80        False   260   130              -0.002           -5.880000e-01         3.922000e+00
+6         svgp      16        False   260   130               0.379            9.835300e+01         1.046500e+02
+7         svgp      40        False   260   130               0.186            4.862600e+01         6.455600e+01
+8         svgp      80        False   260   130               0.102            2.725900e+01         4.229500e+01 
+
+            model  budget  repeat             H   A_um     pred_A_um  pred_max_observed_window_um  A_lo90         A_hi90
+104   scalar_A_GP      16       1  H-2d632333b4  302.9  3.032000e+02                          NaN   273.2   3.366000e+02
+106    functional      16       1  H-2d632333b4  302.9  1.496270e+04                 8.740900e+03   464.5   1.530117e+07
+107          svgp      16       1  H-2d632333b4  302.9  5.576000e+02                 5.314000e+02   231.2   1.358500e+03
+216   scalar_A_GP      40       1  H-2d632333b4  302.9  3.042000e+02                          NaN   272.3   3.397000e+02
+218    functional      40       1  H-2d632333b4  302.9  1.778218e+15                 4.338690e+05     2.5   4.016470e+41
+219          svgp      40       1  H-2d632333b4  302.9  4.605000e+02                 4.432000e+02   221.6   9.456000e+02
+328   scalar_A_GP      80       1  H-2d632333b4  302.9  3.034000e+02                          NaN   269.5   3.416000e+02
+330    functional      80       1  H-2d632333b4  302.9  2.154562e+14                 7.640979e+08     0.0   5.039082e+59
+331          svgp      80       1  H-2d632333b4  302.9  5.053000e+02                 4.903000e+02   334.4   7.992000e+02
+388   scalar_A_GP      16       1  H-ce04be44b1   87.3  1.200000e+02                          NaN   116.9   1.231000e+02
+390    functional      16       1  H-ce04be44b1   87.3  1.236000e+02                 1.195000e+02   104.1   2.074000e+02
+391          svgp      16       1  H-ce04be44b1   87.3  1.726000e+02                 1.324000e+02    86.2   3.574000e+02
+496   scalar_A_GP      40       1  H-ce04be44b1   87.3  1.069000e+02                          NaN    96.8   1.180000e+02
+498    functional      40       1  H-ce04be44b1   87.3  1.114000e+02                 1.114000e+02    97.7   1.271000e+02
+499          svgp      40       1  H-ce04be44b1   87.3  1.640000e+02                 1.479000e+02    89.7   3.177000e+02
+604   scalar_A_GP      80       1  H-ce04be44b1   87.3  1.112000e+02                          NaN   100.2   1.234000e+02
+606    functional      80       1  H-ce04be44b1   87.3  1.545000e+02                 1.529000e+02    35.4   1.066900e+03
+607          svgp      80       1  H-ce04be44b1   87.3  1.168000e+02                 1.123000e+02    79.7   1.787000e+02
+1004  scalar_A_GP      16       1  H-374c2f82c8  238.2  3.016000e+02                          NaN   246.3   3.692000e+02
+1006   functional      16       1  H-374c2f82c8  238.2  1.495100e+03                 1.239000e+02    74.3   7.558990e+04
+1007         svgp      16       1  H-374c2f82c8  238.2  3.507000e+02                 1.218000e+02   113.7   1.135500e+03
+1028  scalar_A_GP      16       1  H-6dae2a1270  297.7  3.248000e+02                          NaN   242.7   4.347000e+02
+1030   functional      16       1  H-6dae2a1270  297.7  6.840400e+03                 1.798600e+03   808.4   2.034824e+05
+1031         svgp      16       1  H-6dae2a1270  297.7  7.178000e+02                 3.312000e+02   265.7   2.000100e+03
+1076  scalar_A_GP      16       1  H-3fdf3f0635  252.1  2.809000e+02                          NaN   193.4   4.082000e+02
+1078   functional      16       1  H-3fdf3f0635  252.1  1.879800e+03                 3.956000e+02   440.6   3.834580e+04
+1079         svgp      16       1  H-3fdf3f0635  252.1  4.762000e+02                 2.289000e+02   151.1   1.559700e+03
+1112  scalar_A_GP      40       1  H-374c2f82c8  238.2  3.038000e+02                          NaN   254.3   3.629000e+02
+1114   functional      40       1  H-374c2f82c8  238.2  2.383464e+06                 8.310000e+01     0.0   5.874594e+19
+1115         svgp      40       1  H-374c2f82c8  238.2  2.081000e+02                 9.240000e+01    74.0   6.241000e+02
+1136  scalar_A_GP      40       1  H-6dae2a1270  297.7  3.067000e+02                          NaN   261.5   3.596000e+02
+1138   functional      40       1  H-6dae2a1270  297.7  5.099780e+14                 1.852000e+02  1800.0   3.217881e+44
+1139         svgp      40       1  H-6dae2a1270  297.7  6.822000e+02                 2.019000e+02   375.0   1.219000e+03
+1184  scalar_A_GP      40       1  H-3fdf3f0635  252.1  2.960000e+02                          NaN   251.9   3.478000e+02
+1186   functional      40       1  H-3fdf3f0635  252.1  4.767000e+15                 2.230700e+03  4352.0   2.611426e+52
+1187         svgp      40       1  H-3fdf3f0635  252.1  3.943000e+02                 1.863000e+02   165.1   9.515000e+02
+1220  scalar_A_GP      80       1  H-374c2f82c8  238.2  3.043000e+02                          NaN   271.6   3.409000e+02
+1222   functional      80       1  H-374c2f82c8  238.2  1.031183e+06                 6.880000e+01    43.1   1.284021e+19
+1223         svgp      80       1  H-374c2f82c8  238.2  2.067000e+02                 8.710000e+01   111.5   3.981000e+02
+1244  scalar_A_GP      80       1  H-6dae2a1270  297.7  3.026000e+02                          NaN   270.0   3.392000e+02
+1246   functional      80       1  H-6dae2a1270  297.7  6.691399e+07                 3.764000e+02   134.3   6.497311e+20
+1247         svgp      80       1  H-6dae2a1270  297.7  4.678000e+02                 1.797000e+02   319.8   6.752000e+02
+1292  scalar_A_GP      80       1  H-3fdf3f0635  252.1  2.960000e+02                          NaN   261.9   3.344000e+02
+1294   functional      80       1  H-3fdf3f0635  252.1  7.453249e+07                 5.215000e+02   122.8   1.274558e+22
+1295         svgp      80       1  H-3fdf3f0635  252.1  3.443000e+02                 1.870000e+02   200.7   5.976000e+02
+1992  scalar_A_GP      16       2  H-374c2f82c8  238.2  3.029000e+02                          NaN   242.4   3.784000e+02
+1994   functional      16       2  H-374c2f82c8  238.2  3.783000e+02                 2.133000e+02   288.5   5.091000e+02
+1995         svgp      16       2  H-374c2f82c8  238.2  3.027000e+02                 1.244000e+02    94.5   1.039700e+03
+2004  scalar_A_GP      16       2  H-ce04be44b1   87.3  1.084000e+02                          NaN    91.8   1.279000e+02
+2006   functional      16       2  H-ce04be44b1   87.3  1.105000e+02                 1.100000e+02   100.6   1.315000e+02
+2007         svgp      16       2  H-ce04be44b1   87.3  1.426000e+02                 1.207000e+02    82.2   2.485000e+02
+2016  scalar_A_GP      16       2  H-6dae2a1270  297.7  3.107000e+02                          NaN   240.4   4.016000e+02
+2018   functional      16       2  H-6dae2a1270  297.7  3.924000e+02                 2.378000e+02   312.2   5.271000e+02
+2019         svgp      16       2  H-6dae2a1270  297.7  3.469000e+02                 1.844000e+02   142.1   8.518000e+02
+2100  scalar_A_GP      40       2  H-374c2f82c8  238.2  3.035000e+02                          NaN   250.7   3.674000e+02
+2102   functional      40       2  H-374c2f82c8  238.2  3.427000e+02                 1.197000e+02   231.5   5.348000e+02
+2103         svgp      40       2  H-374c2f82c8  238.2  2.907000e+02                 1.096000e+02   109.7   8.037000e+02
+2112  scalar_A_GP      40       2  H-ce04be44b1   87.3  1.151000e+02                          NaN   107.3   1.235000e+02
+2114   functional      40       2  H-ce04be44b1   87.3  1.056000e+02                 1.056000e+02    97.9   1.144000e+02
+2115         svgp      40       2  H-ce04be44b1   87.3  1.347000e+02                 1.280000e+02    82.2   2.256000e+02
+2124  scalar_A_GP      40       2  H-6dae2a1270  297.7  3.086000e+02                          NaN   267.4   3.561000e+02
+2126   functional      40       2  H-6dae2a1270  297.7  3.545000e+02                 2.208000e+02   297.8   4.242000e+02
+2127         svgp      40       2  H-6dae2a1270  297.7  5.647000e+02                 1.976000e+02   330.7   9.567000e+02
+2208  scalar_A_GP      80       2  H-374c2f82c8  238.2  3.046000e+02                          NaN   286.6   3.237000e+02
+2210   functional      80       2  H-374c2f82c8  238.2  3.941000e+02                 1.413000e+02   323.0   4.780000e+02
+2211         svgp      80       2  H-374c2f82c8  238.2  2.848000e+02                 1.361000e+02   162.5   5.001000e+02
+2220  scalar_A_GP      80       2  H-ce04be44b1   87.3  1.167000e+02                          NaN   111.0   1.227000e+02
+2222   functional      80       2  H-ce04be44b1   87.3  1.059000e+02                 1.059000e+02    99.4   1.141000e+02
+2223         svgp      80       2  H-ce04be44b1   87.3  1.132000e+02                 1.107000e+02    83.8   1.554000e+02
+2232  scalar_A_GP      80       2  H-6dae2a1270  297.7  3.090000e+02                          NaN   279.4   3.418000e+02
+2234   functional      80       2  H-6dae2a1270  297.7  3.373000e+02                 2.171000e+02   300.8   3.819000e+02
+2235         svgp      80       2  H-6dae2a1270  297.7  5.212000e+02                 2.194000e+02   357.1   7.582000e+02
+2376  scalar_A_GP      16       2  H-2d632333b4  302.9  3.029000e+02                          NaN   247.8   3.701000e+02
+2378   functional      16       2  H-2d632333b4  302.9  3.634000e+02                 3.634000e+02   304.8   4.360000e+02
+2379         svgp      16       2  H-2d632333b4  302.9  4.293000e+02                 4.027000e+02   155.0   1.257100e+03
+2380  scalar_A_GP      16       2  H-3fdf3f0635  252.1  2.965000e+02                          NaN   216.3   4.066000e+02
+2382   functional      16       2  H-3fdf3f0635  252.1  4.071000e+02                 1.863000e+02   287.0   5.844000e+02
+2383         svgp      16       2  H-3fdf3f0635  252.1  2.786000e+02                 7.910000e+01    70.6   1.154700e+03
+2484  scalar_A_GP      40       2  H-2d632333b4  302.9  3.041000e+02                          NaN   257.7   3.588000e+02
+2486   functional      40       2  H-2d632333b4  302.9  7.096900e+03                 1.764300e+03   196.5   2.878901e+07
+2487         svgp      40       2  H-2d632333b4  302.9  6.703000e+02                 6.297000e+02   321.2   1.504800e+03
+2488  scalar_A_GP      40       2  H-3fdf3f0635  252.1  2.979000e+02                          NaN   250.5   3.543000e+02
+2490   functional      40       2  H-3fdf3f0635  252.1  3.978748e+17                 1.159600e+03   851.0   4.334025e+89
+2491         svgp      40       2  H-3fdf3f0635  252.1  3.672000e+02                 1.531000e+02   180.8   7.300000e+02
+2592  scalar_A_GP      80       2  H-2d632333b4  302.9  3.033000e+02                          NaN   268.8   3.424000e+02
+2594   functional      80       2  H-2d632333b4  302.9  7.542104e+13                 2.408871e+11     0.0   6.234472e+48
+2595         svgp      80       2  H-2d632333b4  302.9  4.479000e+02                 4.281000e+02   284.1   7.070000e+02
+2596  scalar_A_GP      80       2  H-3fdf3f0635  252.1  3.049000e+02                          NaN   267.3   3.477000e+02
+2598   functional      80       2  H-3fdf3f0635  252.1  3.166151e+47                 4.394779e+05  2347.3  9.382435e+189
+2599         svgp      80       2  H-3fdf3f0635  252.1  3.730000e+02                 2.294000e+02   217.0   6.367000e+02 
+
+                                            comparison  budget      estimate       ci95_lo       ci95_hi  rows
+0         T2-H1 traj_rmse functional - mean_trajectory      16  9.532000e-01  5.425000e-01  1.423400e+00   270
+1               T2-H1 traj_rmse svgp - mean_trajectory      16 -1.149000e-01 -1.418000e-01 -8.710000e-02   270
+2   T2-H3 median |A err| scalar_A_GP - functional (um)      16 -1.973782e+02 -2.907000e+02 -1.463099e+02   260
+3         T2-H3 median |A err| scalar_A_GP - svgp (um)      16 -9.641890e+01 -1.249655e+02 -8.143710e+01   260
+4         T2-H1 traj_rmse functional - mean_trajectory      40  3.874900e+00  2.022800e+00  6.140300e+00   270
+5               T2-H1 traj_rmse svgp - mean_trajectory      40 -1.841000e-01 -2.083000e-01 -1.583000e-01   270
+6   T2-H3 median |A err| scalar_A_GP - functional (um)      40 -3.814662e+02 -6.276814e+02 -2.609568e+02   260
+7         T2-H3 median |A err| scalar_A_GP - svgp (um)      40 -5.944490e+01 -7.214740e+01 -4.674810e+01   260
+8         T2-H1 traj_rmse functional - mean_trajectory      80  8.902800e+00  5.764000e+00  1.332250e+01   270
+9               T2-H1 traj_rmse svgp - mean_trajectory      80 -2.165000e-01 -2.441000e-01 -1.894000e-01   270
+10  T2-H3 median |A err| scalar_A_GP - functional (um)      80 -4.104149e+09 -4.431269e+11 -4.132169e+08   260
+11        T2-H3 median |A err| scalar_A_GP - svgp (um)      80 -3.837280e+01 -5.013450e+01 -3.127800e+01   260 
+
+          model  budget                  scope  rows  runs  n_pos  n_neg  AUC_label_pred_A  AUC_label_p_max_exceeds_uref  AUC_label_observed_A  AUC_label_pred_exceed_time  AUC_label_observed_exceed_time  AUC_event_A_gt_uref_p_max_exceeds  label_agrees_with_event_A_gt_uref
+0    functional      16                    all   260   130    240     20             0.712                         0.828                 0.976                       0.924                           0.975                              0.836                              0.954
+1    functional      16  VX>0.85 (exploratory)    44    22     24     20             0.556                         0.545                 0.758                       0.633                           0.754                              0.592                              0.727
+2    functional      40                    all   260   130    240     20             0.617                         0.745                 0.976                       0.951                           0.975                              0.788                              0.954
+3    functional      40  VX>0.85 (exploratory)    44    22     24     20             0.519                         0.593                 0.758                       0.590                           0.754                              0.671                              0.727
+4    functional      80                    all   260   130    240     20             0.473                         0.636                 0.976                       0.945                           0.975                              0.700                              0.954
+5    functional      80  VX>0.85 (exploratory)    44    22     24     20             0.460                         0.640                 0.758                       0.652                           0.754                              0.687                              0.727
+6   scalar_A_GP      16                    all   260   130    240     20             0.969                         0.957                 0.976                         NaN                             NaN                              0.969                              0.954
+7   scalar_A_GP      16  VX>0.85 (exploratory)    44    22     24     20             0.690                         0.658                 0.758                         NaN                             NaN                              0.758                              0.727
+8   scalar_A_GP      40                    all   260   130    240     20             0.969                         0.966                 0.976                         NaN                             NaN                              0.994                              0.954
+9   scalar_A_GP      40  VX>0.85 (exploratory)    44    22     24     20             0.692                         0.667                 0.758                         NaN                             NaN                              0.956                              0.727
+10  scalar_A_GP      80                    all   260   130    240     20             0.965                         0.964                 0.976                         NaN                             NaN                              0.989                              0.954
+11  scalar_A_GP      80  VX>0.85 (exploratory)    44    22     24     20             0.650                         0.635                 0.758                         NaN                             NaN                              0.917                              0.727
+12         svgp      16                    all   260   130    240     20             0.937                         0.931                 0.976                       0.968                           0.975                              0.969                              0.954
+13         svgp      16  VX>0.85 (exploratory)    44    22     24     20             0.746                         0.769                 0.758                       0.733                           0.754                              0.930                              0.727
+14         svgp      40                    all   260   130    240     20             0.946                         0.942                 0.976                       0.954                           0.975                              0.948                              0.954
+15         svgp      40  VX>0.85 (exploratory)    44    22     24     20             0.527                         0.547                 0.758                       0.550                           0.754                              0.645                              0.727
+16         svgp      80                    all   260   130    240     20             0.958                         0.956                 0.976                       0.957                           0.975                              0.963                              0.954
+17         svgp      80  VX>0.85 (exploratory)    44    22     24     20             0.592                         0.588                 0.758                       0.573                           0.754                              0.714                              0.727 
+
+     K  runs  rmse_median_log1p  rmse_p90_log1p  rmse_max_log1p  peak_loss_median_log1p  peak_loss_p90_log1p  peak_loss_max_log1p                                                                                               note
+0  360   135             0.0366          0.0577          0.2974                   0.004               0.0069               0.2774  label-free; the exact native maximum of every training run is added as an extra GP training point 
+
+         model  budget  repeat  observed_rms_difference  predicted_rms_difference  rms_sd_of_difference  ratio_observed_to_sd_of_difference  differs_beyond_predictive_uncertainty  common_bins                      checkpoints
+0   functional      16       1                   0.0466                    0.4119                1.9365                              0.0241                                  False          360  ckpt_r1_f1_B16 / ckpt_r1_f4_B16
+1         svgp      16       1                   0.0466                    0.1253                0.7344                              0.0634                                  False          360  ckpt_r1_f1_B16 / ckpt_r1_f4_B16
+2   functional      16       2                   0.0466                    0.0732                1.7562                              0.0265                                  False          360  ckpt_r2_f5_B16 / ckpt_r2_f5_B16
+3         svgp      16       2                   0.0466                    0.0788                0.7615                              0.0612                                  False          360  ckpt_r2_f5_B16 / ckpt_r2_f5_B16
+4   functional      40       1                   0.0466                    3.9855               39.7309                              0.0012                                  False          360  ckpt_r1_f1_B40 / ckpt_r1_f4_B40
+5         svgp      40       1                   0.0466                    0.3772                0.5764                              0.0808                                  False          360  ckpt_r1_f1_B40 / ckpt_r1_f4_B40
+6   functional      40       2                   0.0466                    0.5941               65.4615                              0.0007                                  False          360  ckpt_r2_f5_B40 / ckpt_r2_f5_B40
+7         svgp      40       2                   0.0466                    0.3629                0.6569                              0.0709                                  False          360  ckpt_r2_f5_B40 / ckpt_r2_f5_B40
+8   functional      80       1                   0.0466                   24.0081               66.3696                              0.0007                                  False          360  ckpt_r1_f1_B80 / ckpt_r1_f4_B80
+9         svgp      80       1                   0.0466                    0.2274                0.4529                              0.1029                                  False          360  ckpt_r1_f1_B80 / ckpt_r1_f4_B80
+10  functional      80       2                   0.0466                   22.2209               21.0605                              0.0022                                  False          360  ckpt_r2_f5_B80 / ckpt_r2_f5_B80
+11        svgp      80       2                   0.0466                    0.1014                0.5279                              0.0882                                  False          360  ckpt_r2_f5_B80 / ckpt_r2_f5_B80 
+
+                      hypothesis                             verdict                                                                                                                                              detail
+0              T2-H1_inputs_help                           FALSIFIED                  functional B16: NOT lower; functional B40: NOT lower; functional B80: NOT lower; svgp B16: lower; svgp B40: lower; svgp B80: lower
+1                 T2-H2_learning                           FALSIFIED                                                                        functional: B80<B16 False, monotone False; svgp: B80<B16 True, monotone True
+2                T2-H3_max_depth                           SUPPORTED  scalar vs functional B40: scalar lower; scalar vs functional B80: scalar lower; scalar vs svgp B40: scalar lower; scalar vs svgp B80: scalar lower
+3             T2-H4_short_events                        INCONCLUSIVE                                                                                                                   0 distinct short-event runs (< 5)
+4              T2-H5_calibration  NO VERDICT (descriptive by design)                                                                                                                                         descriptive
+5            T2-H6_model_ranking  NO VERDICT (descriptive by design)                                                                                                                                         descriptive
+6  T2-H7_matched_pair_fast_scans  NO VERDICT (descriptive by design)                                                                                                                                         descriptive
+7                T2-H8_truncated  NO VERDICT (descriptive by design)                                                                                                                                         descriptive
+8            T2-PS1 (POST-START)                           FALSIFIED                                                                    mean RMSE 0.2570 (2000 it) -> 0.1979 (6000 it), relative change -23.0%, 135 rows 
+
+exit 0
+end 2026-10-12T22:30:06Z

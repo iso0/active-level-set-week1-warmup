@@ -1197,3 +1197,33 @@ Karar: **IMPROVEMENT ON SOME TASKS ONLY**. Tez bölümü taslağı: [`sec_depth_
 - G5'in karesi derinlikteki keskin düşüşün hemen sonrasına denk geliyor.
 
 Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, zıt kayıtlı etiket; morfoloji farkı kanıtlanmadı".
+
+### 2026-10-12 — Week 20 gelişim turu: aktif pencere hedefiyle gerçek aktif öğrenme ve zamansal GP
+
+[Gelişim raporu](../outputs/week20_active_temporal_development/DEVELOPMENT_REPORT.md), [deneme defteri](../outputs/week20_active_temporal_development/ATTEMPT_LEDGER.md). Dal `week20-active-temporal-dev` (main ile birleştirilmedi). C3 kullanılmadı; etiket ve dışlama değişikliği yok.
+
+**Track 1 (DEV tekrar 1–4, beş kat, B80'e kadar).**
+- Üç kol karşılaştırıldı: WHOLE E1 + straddle, ACTIVE E1 + straddle ve G3 + margin. Başlangıç bilgisi üç kolda aynıydı.
+- 13.101 skaler uydurma yapıldı. Hafta 18 önbelleklerine sadakat |Δp| ≤ 6e-6.
+- **NEW BA-AULC:** ACTIVE 0.721, G3 0.664, WHOLE 0.651.
+  - ACTIVE − G3 = +0.057 [−0.007, +0.115]. Birincil hipotez nokta tahmini olarak olumlu, ancak aralık 0'ı içeriyor.
+  - ACTIVE − WHOLE = +0.070 [+0.030, +0.110].
+  - q20 farkı: +0.096 [+0.053, +0.145].
+- **OLD ve POOLED:** ACTIVE ile WHOLE neredeyse aynı (fark ≤ 0.002).
+- **Mekanizma: ters eğimli eşik tuzağı.**
+  - WHOLE, 20 NEW koşusunun 9'unda u ≥ 200 µm'ye çıkıyor. Bu koşuların hepsinde geç negatif önceden ödenmiş; bu bir zamansal önceliktir.
+  - 6 uzun dönemde ödenmiş tek negatif geç negatif (whole 312 µm). Lojistik eşik eğimi ≈ −400, kök ≈ 308 µm.
+  - Bu sırada straddle yavaş taramalı pozitifleri seçiyor. Dönem, ikinci bir negatif ödenince bitiyor.
+  - ACTIVE hiç 200 µm'yi aşmıyor.
+- **Zayıflık:** NEW özgüllüğü bütün kollarda düşük (≤ 0.48).
+
+**Track 2 (NEW, tekrar 1–2, 30 kontrol noktası; 128 zamansal/fonksiyonel uydurma).**
+- **Ayrılabilir SVGP:** yörünge RMSE'si 0.386 → 0.267 → 0.215; girdisiz ortalama yörüngede 0.501 → 0.451 → 0.432.
+- **Maksimum derinlik A:** skaler A GP medyan 5.1 µm hatayla yaklaşık 10 kat daha iyi; SVGP'nin hatası 65 µm (B40). T2-H3 desteklendi.
+- **Rank-3 fonksiyonel model başarısız.** Kaydı erken biten ödenmiş koşuların katsayıları kötü koşullu: |c| 26.571'e kadar çıkıyor ve hata bütçeyle büyüyor. Bu tanı POST-HOC.
+- **Yakınsama:** 6000 iterasyon RMSE'yi %23 düşürüyor. Post-start T2-PS1 yanlışlandı, yani dondurulmuş SVGP yakınsamamış. M = 800 ile tahminler 0.17 değişiyor.
+- **Eşleşmiş çift (G5/G4):** gözlenen derinlik yörüngeleri neredeyse aynı (RMS 0.047). Derinliğe dayalı hiçbir model bu etiketleri ayıramaz.
+- **Hızlı taramalar:** tam gözlenen derinlik özellikleri bile etiketleri ancak AUC ≈ 0.76 ile sıralıyor.
+- **Değerlendirme hatası düzeltildi:** H-kodu sonekleri benzersiz değil (NEW'de 136 koşu için 88 sonek). Tam kimlikler `NAMED_RUNS.csv` dosyasında.
+
+**Sonraki aday:** ACTIVE E1 + straddle. Önce aynı protokol DEV tekrar 5–8 üzerinde çalıştırılacak; eğim işareti korumalı WHOLE ablasyonu fit'ten önce ilan edilecek. Sonuç olumlu kalırsa C3 protokolü dondurulacak.

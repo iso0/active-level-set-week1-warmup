@@ -1,0 +1,2 @@
+POSTSTART,checkpoints,rows,rmse_mean_it2000,rmse_mean_it6000,relative_change,hypothesis_abs_change_lt_10pct
+T2-PS1,5,135,0.257018393880045,0.19785714632742357,-0.23018293227773035,FALSIFIED

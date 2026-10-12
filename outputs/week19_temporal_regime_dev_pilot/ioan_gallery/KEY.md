@@ -113,3 +113,7 @@ Whole-record max 118.83 µm; A (active window) 118.83 µm.
 | WHOLE_E1_SHARED | 1.000 / Keyhole | 1.000 / Keyhole |
 | ACTIVE_E1_SHARED | 0.991 / Keyhole | 0.992 / Keyhole |
 | G3_SHARED | 0.753 / Keyhole | 0.461 / no Keyhole |
+
+## Addendum (2026-10-12)
+
+The labels and depths for G5 frame 81 are in `../../week20_active_temporal_development/ioan_addendum/KEY_ADDENDUM.md`.

@@ -1,0 +1,25 @@
+{
+ "kronecker_vs_dense": {
+  "max_abs_posterior_mean_diff": 6.039613253960852e-14,
+  "lml_diff": 2.2737367544323206e-13,
+  "relative_residual": 1.2874966533919667e-14,
+  "pass_1e-8": true,
+  "covariance_order": "kron(Kz, Ks): z outer, s inner (row-major Y[z, s])"
+ },
+ "svgp_M375": {
+  "max_abs_mean_diff": 2.1790102040342152e-05,
+  "max_abs_var_diff": 3.545915518399223e-05,
+  "elbo_total": -64.32013492424998,
+  "exact_lml": -63.38633591061489,
+  "elbo_minus_lml": -0.9337990136350953,
+  "inducing": "all training inputs, fixed"
+ },
+ "svgp_M60": {
+  "max_abs_mean_diff": 0.41699100667586475,
+  "max_abs_var_diff": 0.26976622295185515,
+  "elbo_total": -18815.76199447984,
+  "exact_lml": -63.38633591061489,
+  "elbo_minus_lml": -18752.375658569224,
+  "inducing": "60 learned"
+ }
+}

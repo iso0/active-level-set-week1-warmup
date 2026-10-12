@@ -1,0 +1,6 @@
+start fidelity 2026-10-12T21:48:47Z
+C:\Users\ozgur\Documents\thesis\src\week20_track2_svgp.py:103: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:823.)
+  run += float(loss)
+{"checkpoint": "ckpt_r1_f1_B40", "tag": "svgp_M800", "n_points": 11332, "fit_seconds": 503.2209749221802, "elbo_per_point": 0.9492023945225309, "lengthscale_s": 0.2273798500973089, "noise": 0.009849154714027154}
+exit 0

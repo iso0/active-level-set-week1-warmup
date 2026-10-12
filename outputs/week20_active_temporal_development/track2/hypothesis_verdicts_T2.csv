@@ -1,0 +1,10 @@
+hypothesis,verdict,detail
+T2-H1_inputs_help,FALSIFIED,functional B16: NOT lower; functional B40: NOT lower; functional B80: NOT lower; svgp B16: lower; svgp B40: lower; svgp B80: lower
+T2-H2_learning,FALSIFIED,"functional: B80<B16 False, monotone False; svgp: B80<B16 True, monotone True"
+T2-H3_max_depth,SUPPORTED,scalar vs functional B40: scalar lower; scalar vs functional B80: scalar lower; scalar vs svgp B40: scalar lower; scalar vs svgp B80: scalar lower
+T2-H4_short_events,INCONCLUSIVE,0 distinct short-event runs (< 5)
+T2-H5_calibration,NO VERDICT (descriptive by design),descriptive
+T2-H6_model_ranking,NO VERDICT (descriptive by design),descriptive
+T2-H7_matched_pair_fast_scans,NO VERDICT (descriptive by design),descriptive
+T2-H8_truncated,NO VERDICT (descriptive by design),descriptive
+T2-PS1 (POST-START),FALSIFIED,"mean RMSE 0.2570 (2000 it) -> 0.1979 (6000 it), relative change -23.0%, 135 rows"

@@ -20,10 +20,12 @@ from src.week20_track2_models import PRED, load_ckpt
 MODELS = ("mean_trajectory", "functional", "svgp")
 TEMPORAL = ("functional", "svgp")
 UREF = float(np.expm1(UREF_LOG1P))
-NAMED = {"H-b302fc6cbd": "matched pair, recorded negative (G5)", "H-b7e3ed2e12": "matched pair, recorded positive (G4)", "H-f4fc937e86": "late negative"}
 Z90, Z50 = 1.6448536269514722, 0.6744897501960817
 PAIR = ("P-387p361336282_VX-0p960187357846_LS-4p72484046084e-05_ST-390p52586458_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p02414509376e-06_H-b302fc6cbd",
         "P-380p041479483_VX-0p952843483906_LS-4p56527036263e-05_ST-376p177191048_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p0628678104e-06_H-b7e3ed2e12")
+LATE_NEG = "P-353p784791664_VX-0p953661701626_LS-4p00659722232e-05_ST-310p795032219_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p05852399734e-06_H-f4fc937e86"
+# Named runs by FULL sim_id: the H suffix is not unique (NEW: 136 runs, 88 distinct suffixes; H-b302fc6cbd is shared by two NEW runs).
+NAMED = {PAIR[0]: "matched pair, recorded negative (G5)", PAIR[1]: "matched pair, recorded positive (G4)", LATE_NEG: "late negative"}
 N_BOOT, BOOT_SEED, MIN_SHORT_RUNS = 2000, 0, 5
 
 
@@ -97,7 +99,7 @@ def evaluate():
     ev["A_in_90"] = np.where(ev.pred_A_um.notna(), (ev.A_um >= ev.A_lo90) & (ev.A_um <= ev.A_hi90), np.nan)
     ev["binmax_abs_err_um"] = (ev.pred_A_um - ev.binmean_max_um).abs()
     ev["exceed_abs_err_us"] = (ev.pred_exceed_us - ev.obs_exceed_us).abs()
-    ev.to_csv(T2 / "evaluation_per_run.csv.gz", index=False, lineterminator="\n")
+    ev.to_csv(T2 / "evaluation_per_run.csv.gz", index=False, lineterminator="\n", compression={"method": "gzip", "mtime": 0})   # byte-reproducible
     return ev
 
 
@@ -216,10 +218,107 @@ def matched_pair(ev):
                              "differs_beyond_predictive_uncertainty": bool(obs_diff / spread > 2), "common_bins": len(common),
                              "checkpoints": f"{hits[PAIR[0]][0]} / {hits[PAIR[1]][0]}"})
     t = pd.DataFrame(rows); t.to_csv(T2 / "matched_pair_trajectories.csv", index=False, lineterminator="\n")
-    nr = ev[ev.H.isin(NAMED)][["H", "model", "budget", "repeat", "has_keyhole", "VX_m_s", "A_um", "pred_A_um", "A_lo90", "A_hi90", "p_max_exceeds_uref",
-                               "traj_rmse", "cov90", "obs_exceed_us", "pred_exceed_us"]].assign(role=lambda x: x.H.map(NAMED))
+    nr = ev[ev.sim_id.isin(NAMED)][["sim_id", "H", "model", "budget", "repeat", "has_keyhole", "VX_m_s", "A_um", "pred_A_um", "A_lo90", "A_hi90", "p_max_exceeds_uref",
+                                     "traj_rmse", "cov90", "obs_exceed_us", "pred_exceed_us"]].assign(role=lambda x: x.sim_id.map(NAMED))
     nr.sort_values(["H", "model", "budget", "repeat"]).to_csv(T2 / "named_runs_predictions.csv", index=False, lineterminator="\n")
     return t, nr
+
+
+def posthoc(ev):
+    """POST-HOC diagnostics, added after the first evaluation run had been seen (labelled POSTHOC in file names).
+    (1) functional failure: the frozen ALS basis is recomputed (deterministic; no coefficient-GP fit) to relate the
+        exploding predictions to early-ending paid training runs; (2) SVGP A error at 6000 iterations on the T2-PS1
+        checkpoints; (3) SVGP A from the maximum of the posterior mean vs the frozen estimator (median of posterior
+        trajectory maxima) - a diagnostic of where the A bias comes from, not a replacement estimator."""
+    from src.week20_track2_models import als_rank
+    reg = registry(); ck = pd.read_csv(T2 / "checkpoints.csv")
+    fe = ev[ev.model == "functional"].groupby("checkpoint").traj_rmse.agg(["mean", "median"])
+    rows = []
+    for c in ck.itertuples():
+        d = load_ckpt(c.checkpoint); Y = d["Ytr"]; sup = np.isfinite(Y).any(0)
+        R = (Y - np.nanmean(Y, axis=0))[:, sup]
+        Phi, C, info = als_rank(R)
+        s_obs = reg.loc[d["train_ids"], "s_obs"].to_numpy(); cmax = np.abs(C).max(1); w = int(np.argmax(cmax))
+        sv = np.linalg.svd(Phi[np.isfinite(R[w])], compute_uv=False)
+        rows.append({"checkpoint": c.checkpoint, "budget": c.budget, "functional_rmse_mean": fe.loc[c.checkpoint, "mean"], "functional_rmse_median": fe.loc[c.checkpoint, "median"],
+                     "paid_runs_s_obs_lt_0.4": int((s_obs < 0.4).sum()), "max_abs_coefficient": float(cmax.max()), "runs_abs_coefficient_gt_100": int((cmax > 100).sum()),
+                     "worst_run": "H-" + d["train_ids"][w].split("_H-")[-1], "worst_run_s_obs": float(s_obs[w]),
+                     "worst_run_basis_min_singular_value": float(sv.min()), "als_iterations": info["iterations"]})
+    f = pd.DataFrame(rows); f.to_csv(T2 / "POSTHOC_functional_failure.csv", index=False, lineterminator="\n")
+    wp = set(f[f.runs_abs_coefficient_gt_100 == 0].checkpoint)              # training-side criterion: no paid run with |coefficient| > 100
+    cmp_rows = []
+    for scope, sel in (("well-posed checkpoints (no paid run with |coefficient| > 100)", ev.checkpoint.isin(wp)), ("other checkpoints", ~ev.checkpoint.isin(wp))):
+        for m in (*MODELS, "scalar_A_GP"):
+            e = ev[sel & (ev.model == m)]; el = e[~e.truncated_before_plan]
+            cmp_rows.append({"scope": scope, "checkpoints": e.checkpoint.nunique(), "model": m, "rows": len(e),
+                             "traj_rmse_mean": e.traj_rmse.mean() if m != "scalar_A_GP" else np.nan, "traj_rmse_median": e.traj_rmse.median() if m != "scalar_A_GP" else np.nan,
+                             "A_abs_err_median_um": el.A_abs_err_um.median(), "A_signed_err_median_um": el.A_signed_err_um.median()})
+    pd.DataFrame(cmp_rows).to_csv(T2 / "POSTHOC_wellposed_checkpoints_comparison.csv", index=False, lineterminator="\n")
+    inp = pd.read_csv(PILOT / "tables/pilot_inputs.csv").set_index("sim_id")
+    r2 = []
+    for k in range(1, 6):
+        name = f"ckpt_r1_f{k}_B40"; d = load_ckpt(name)
+        for tag in ("svgp", "svgp_it6000"):
+            z = dict(np.load(PRED / f"{tag}_{name}.npz", allow_pickle=False))
+            for i, sid in enumerate(d["test_ids"]):
+                if reg.loc[sid, "truncated_before_plan"]:
+                    continue
+                mp = np.expm1(z["max_planned"][i].astype(float)); A = float(inp.loc[sid, "A_um"])
+                r2.append({"checkpoint": name, "tag": tag, "sim_id": sid, "A_abs_err_um": abs(float(np.median(mp)) - A), "A_signed_err_um": float(np.median(mp)) - A,
+                           "A_in_90": bool(np.quantile(mp, .05) <= A <= np.quantile(mp, .95))})
+    g = pd.DataFrame(r2).groupby("tag").agg(rows=("sim_id", "size"), A_abs_err_median_um=("A_abs_err_um", "median"), A_signed_err_median_um=("A_signed_err_um", "median"),
+                                            A_in_90=("A_in_90", "mean")).reset_index()
+    sc = ev[(ev.model == "scalar_A_GP") & ev.checkpoint.isin([f"ckpt_r1_f{k}_B40" for k in range(1, 6)]) & ~ev.truncated_before_plan]
+    g = pd.concat([g, pd.DataFrame([{"tag": "scalar_A_GP (same rows)", "rows": len(sc), "A_abs_err_median_um": sc.A_abs_err_um.median(),
+                                     "A_signed_err_median_um": sc.A_signed_err_um.median(), "A_in_90": sc.A_in_90.mean()}])])
+    g.to_csv(T2 / "POSTHOC_svgp_it6000_A_error.csv", index=False, lineterminator="\n")
+    like = ev[(ev.model == "svgp") & ~ev.truncated_before_plan].assign(mean_max_abs_err_um=lambda x: (x.pred_mean_max_um - x.A_um).abs(),
+                                                                       mean_max_signed_err_um=lambda x: x.pred_mean_max_um - x.A_um)
+    e3 = like.groupby("budget").agg(rows=("sim_id", "size"), frozen_median_of_sample_maxima_abs_err_um=("A_abs_err_um", "median"),
+                                    frozen_signed_err_um=("A_signed_err_um", "median"), max_of_posterior_mean_abs_err_um=("mean_max_abs_err_um", "median"),
+                                    max_of_posterior_mean_signed_err_um=("mean_max_signed_err_um", "median")).reset_index()
+    e3.to_csv(T2 / "POSTHOC_svgp_A_estimator_diagnostic.csv", index=False, lineterminator="\n")
+    # (4) terminal invalid rows: runs whose recording ends with invalid-bounds rows that the frozen rule sets to depth 0
+    native = load_native(); term = {}
+    for sid, tr in native.items():
+        if tr is None:
+            continue
+        on = np.flatnonzero(tr["y"] > 0)
+        if len(on) and on[-1] < len(tr["y"]) - 1 and not tr["valid"][on[-1] + 1:].any():
+            term[sid] = float(tr["s"][on[-1]])
+    sens = []
+    for c in ck.itertuples():
+        d = load_ckpt(c.checkpoint)
+        for i, sid in enumerate(d["test_ids"]):
+            if sid not in term:
+                continue
+            obs = np.isfinite(d["te_obs"][i]); keep = obs & (d["centers"] - S_MAX / int(d["K"]) / 2 <= term[sid])
+            for m in TEMPORAL:
+                z = dict(np.load(PRED / f"{m}_{c.checkpoint}.npz", allow_pickle=False)); e = z["mean"][i] - d["te_obs"][i]
+                sens.append({"checkpoint": c.checkpoint, "budget": c.budget, "sim_id": sid, "H": "H-" + sid.split("_H-")[-1], "model": m, "terminal_zero_bins": int((obs & ~keep).sum()),
+                             "rmse_frozen": float(np.sqrt(np.mean(e[obs] ** 2))), "rmse_without_terminal_zero_bins": float(np.sqrt(np.mean(e[keep] ** 2)))})
+    st = pd.DataFrame(sens)
+    adj = ev[ev.model.isin(TEMPORAL)].merge(st[["checkpoint", "sim_id", "model", "rmse_without_terminal_zero_bins"]], on=["checkpoint", "sim_id", "model"], how="left")
+    adj["rmse_adj"] = adj.rmse_without_terminal_zero_bins.fillna(adj.traj_rmse)
+    summ = adj.groupby(["model", "budget"]).agg(traj_rmse_mean_frozen=("traj_rmse", "mean"), traj_rmse_mean_without_terminal_zero_bins=("rmse_adj", "mean")).reset_index()
+    st.to_csv(T2 / "POSTHOC_terminal_invalid_rows_per_run.csv", index=False, lineterminator="\n")
+    summ.to_csv(T2 / "POSTHOC_terminal_invalid_rows_sensitivity.csv", index=False, lineterminator="\n")
+    return f, g, e3, summ
+
+
+def named_ids():
+    """Disambiguation table for runs named in the report (H suffixes are not unique)."""
+    inp = pd.read_csv(PILOT / "tables/pilot_inputs.csv"); inp["H"] = "H-" + inp.sim_id.str.split("_H-").str[-1]
+    new = inp[inp.campaign == "NEW"]
+    one = lambda h, y: new[(new.H == h) & (new.has_keyhole == y)].sim_id.item()
+    roles = {PAIR[0]: "G5: matched pair, recorded negative", PAIR[1]: "G4: matched pair, recorded positive", LATE_NEG: "late negative (Track 1 threshold trap)",
+             one("H-e7dbd8e5ce", 0): "A-unavailable negative (no aligned active-window record, no trajectory); ends 5 trap episodes",
+             one("H-2e066980ca", 0): "negative that ends 1 trap episode"}
+    t = new[new.sim_id.isin(roles)][["sim_id", "H", "P_W", "VX_m_s", "has_keyhole", "whole_max_um", "A_um"]].assign(
+        role=lambda x: x.sim_id.map(roles), NEW_runs_sharing_H=lambda x: x.H.map(new.H.value_counts()))
+    t = t[["role", "H", "NEW_runs_sharing_H", "P_W", "VX_m_s", "has_keyhole", "whole_max_um", "A_um", "sim_id"]]
+    t.to_csv(T2.parent / "NAMED_RUNS.csv", index=False, lineterminator="\n")
+    return t
 
 
 def verdicts(ev, s1, s2, ps):
@@ -277,34 +376,45 @@ def figures(ev):
     for m in a.columns:
         axs[1].plot(a.index, a[m], marker="o", color=col.get(m, "#000000"), label=m)
     axs[1].set_title("Maximum depth A: median absolute error (µm), like-for-like runs", loc="left", fontsize=8); axs[1].set_xlabel("paid simulations"); axs[1].legend(fontsize=7, frameon=False)
-    for ax in axs:
-        ax.set_xticks([16, 40, 80]); ax.spines[["top", "right"]].set_visible(False)
+    for ax, tab, fmt in ((axs[0], s, "{:.3g}"), (axs[1], a, "{:.3g}")):
+        ax.set_yscale("log"); ax.set_xticks([16, 40, 80]); ax.spines[["top", "right"]].set_visible(False)
+        for m in tab.columns:
+            for b_, v in tab[m].items():
+                ax.annotate(fmt.format(v), (b_, v), textcoords="offset points", xytext=(4, 3), fontsize=6, color=col.get(m, "#000000"))
+    axs[0].set_ylabel("log scale", fontsize=7); axs[1].set_ylabel("log scale", fontsize=7)
     fig.tight_layout(); fig.savefig(T2 / "figures/track2_errors_by_budget.png", dpi=160); plt.close(fig)
     # representative held-out runs at B40, repeat 1 (best / median / worst by SVGP RMSE) + named runs
     sv = ev[(ev.model == "svgp") & (ev.budget == 40) & (ev.repeat == 1)].dropna(subset=["traj_rmse"]).sort_values("traj_rmse")
     if not len(sv):
         return
     picks = [("best", sv.iloc[0]), ("median", sv.iloc[len(sv) // 2]), ("worst", sv.iloc[-1])]
-    for h in NAMED:
-        q = sv[sv.H == h]
+    for sid, role in NAMED.items():
+        q = sv[sv.sim_id == sid]
         if len(q):
-            picks.append((NAMED[h], q.iloc[0]))
+            picks.append((role, q.iloc[0]))
     fig, axs = plt.subplots(len(picks), 1, figsize=(9, 2.3 * len(picks)))
     for ax, (lab, r) in zip(np.atleast_1d(axs), picks):
         d = load_ckpt(r.checkpoint); i = list(d["test_ids"]).index(r.sim_id); c_ = d["centers"]; tr = native[r.sim_id]
         step = max(1, len(tr["s"]) // 4000)
         ax.plot(tr["s"][::step], tr["y"][::step], color="#BBBBBB", lw=0.6, label="native (thinned)")
         ax.plot(c_, d["te_obs"][i], color="black", lw=0.9, label="observed bin means")
+        off = []
         for m in TEMPORAL:
             z = dict(np.load(PRED / f"{m}_{r.checkpoint}.npz", allow_pickle=False)); sd = np.sqrt(z["var_latent"][i] + z["var_noise"][i])
             ax.plot(c_, z["mean"][i], color=col[m], lw=1.0, label=f"{m} mean ± 90 %"); ax.fill_between(c_, z["mean"][i] - Z90 * sd, z["mean"][i] + Z90 * sd, color=col[m], alpha=.15, lw=0)
+            if np.nanmax(np.abs(z["mean"][i][d["te_plan"][i]])) > 7:
+                off.append(f"{m} mean leaves the axis (max |mean| {np.nanmax(np.abs(z['mean'][i][d['te_plan'][i]])):.0f})")
+        ax.set_ylim(-1, 7)
+        if off:
+            ax.text(0.99, 0.95, "; ".join(off), transform=ax.transAxes, ha="right", va="top", fontsize=6, color=col["functional"])
         sc = dict(np.load(PRED / f"scalar_{r.checkpoint}.npz", allow_pickle=False))
         ax.axhline(np.log1p(np.exp(sc["mu_logA"][i])), color=col["scalar_A_GP"], ls="--", lw=0.8, label="scalar A GP: predicted A")
         ax.axhline(UREF_LOG1P, color="#666666", ls=":", lw=0.7, label="u_ref")
         ax.axvline(reg.loc[r.sim_id, "s_plan"], color="#888888", ls="--", lw=0.6)
         ax.set_xlim(0, 0.92); ax.set_title(f"{lab}: {r.H}, label {r.has_keyhole}, VX {r.VX_m_s:.3f} m/s; SVGP RMSE {r.traj_rmse:.3f}", loc="left", fontsize=8)
         ax.set_ylabel("log(1 + depth µm)", fontsize=7); ax.spines[["top", "right"]].set_visible(False)
-    np.atleast_1d(axs)[0].legend(fontsize=6, frameon=False, ncol=3, loc="lower right"); np.atleast_1d(axs)[-1].set_xlabel("s = t / derived exit (dashed vertical line: planned horizon)")
+    np.atleast_1d(axs)[0].legend(fontsize=6, frameon=False, ncol=3, loc="lower right")
+    np.atleast_1d(axs)[-1].set_xlabel("s = t / derived exit (dashed vertical line: planned horizon; y-axis clipped to [-1, 7])")
     fig.tight_layout(); fig.savefig(T2 / "figures/track2_representative_B40_r1.png", dpi=150); plt.close(fig)
 
 
@@ -364,8 +474,10 @@ def poststart():
 def main():
     pd.set_option("display.width", 250); pd.set_option("display.max_columns", 40)
     ev = evaluate(); s1, s2, sh, tr = summarise(ev); pr = paired(ev); info, rep = information(ev); mp, nr = matched_pair(ev)
-    rs, sv = resources(); fm = fidelity_m800(); ps = poststart(); vd = verdicts(ev, s1, s2, ps); figures(ev)
-    for t, nd in ((rs, 3), (fm, 4), (ps, 4), (s1, 4), (s2, 3), (sh, 3), (tr, 1), (pr, 4), (info, 3), (rep, 4), (mp, 4), (vd, 0)):
+    rs, sv = resources(); fm = fidelity_m800(); ps = poststart(); vd = verdicts(ev, s1, s2, ps); figures(ev); ni = named_ids()
+    pf, pg, pe, pt = posthoc(ev)
+    for t, nd in ((rs, 3), (fm, 4), (ps, 4), (s1, 4), (s2, 3), (sh, 3), (tr, 1), (pr, 4), (info, 3), (rep, 4), (mp, 4), (vd, 0), (ni.drop(columns="sim_id"), 2),
+                  (pf, 4), (pg, 3), (pe, 2), (pt, 4)):
         print(t.round(nd).to_string(), "\n")
     return ev
 

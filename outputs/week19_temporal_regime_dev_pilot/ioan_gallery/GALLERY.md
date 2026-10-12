@@ -103,3 +103,7 @@ Folder at the pinned revision: [H-b2eec677b1/frames](https://huggingface.co/data
 These two runs have similar inputs and depth trajectories, but opposite recorded labels; the morphology difference has not been established. The sheet repeats their images at the same scale.
 
 ![G4 and G5 side by side](contact_sheet_G4_G5_side_by_side.png)
+
+## Addendum (2026-10-12)
+
+G5 frame 81 (the last frame before G5's depth maximum) was added in front, side and top views. It is in `../../week20_active_temporal_development/ioan_addendum/GALLERY_ADDENDUM.md`, with exact timing. This gallery is otherwise unchanged.
