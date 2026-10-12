@@ -1,0 +1,85 @@
+{
+ "status": "POST-HOC DEV RESEARCH \u2014 temporal-GP development; not confirmatory; C3 reserved",
+ "written_utc": "2026-10-12T20:17:41+00:00",
+ "written_before_any_track2_fit": true,
+ "data": {
+  "population": "NEW, 135 runs with an aligned bounds/time record (H-e7dbd8e5ce has none: a paid query without a trajectory, absent from test scoring)",
+  "checkpoints": "repeats 1-2 x folds 1-5 x budgets 16/40/80 = 30; training = Week 19 pilot shared label-blind paid prefixes (tables/paid_paths.csv); complete runs held out",
+  "target": "y = log(1 + depth_um) on s = t / derived_exit; depth = 0 on rows without melt; native monitor time from iter.dat -> time.dat",
+  "planned_horizon": "s_plan = min(TE, 0.9 exit) / exit (pre-query scheduled settings)",
+  "observed_window": "s_obs = min(recording end, 0.9 exit) / exit (scoring support only; no stretching or tail filling)",
+  "compression": "per-bin means on a uniform s-grid of K bins over [0, 0.9]; each training run also contributes its exact native maximum (s, y) to the separable GP",
+  "resolution_rule": "For each checkpoint, K is the smallest value in (90, 180, 360, 720) whose median, over the PAID training runs, of the RMSE between the native log1p-depth series and its bin-mean reconstruction (observed window only) is <= 0.04; if none qualifies, K = 720 and the checkpoint is flagged.  Test runs never influence K.",
+  "tau": 0.04,
+  "K_selected": [
+   360
+  ]
+ },
+ "models": {
+  "scalar_A_GP": "Week 19 ACTIVE E1 regression (src.week18_engine DepthGPR on log A, ML-II, one start), refitted on the same paid prefixes; must equal the pilot's saved predictions",
+  "mean_trajectory": "input-free training mean per bin (no fit)",
+  "functional_rank3": "per-bin training mean + rank-3 basis from alternating least squares on observed training entries only (no imputation as data); three coefficient GPs (sklearn, ConstantKernel x Matern-3/2 ARD + white noise, ML-II, one start) on training-standardized log inputs; global residual variance",
+  "separable_SVGP": {
+   "library": "gpytorch 1.15.1 / torch 2.13.0+cpu in .venv",
+   "kernel": "sigma^2 Matern32_ARD(z) x Matern32(s)",
+   "inducing_points": 400,
+   "iterations": 2000,
+   "learning_rate": 0.01,
+   "minibatch": 1024,
+   "samples": 2000,
+   "seed": 20261012,
+   "init": {
+    "lengthscale_z": 1.0,
+    "lengthscale_s": 0.05,
+    "outputscale": 1.0,
+    "noise": 0.01
+   },
+   "inducing_init": "fixed-seed random subset of the training inputs; locations learned",
+   "optimizer": "Adam on all hyperparameters, variational and inducing parameters",
+   "threads": 4,
+   "dtype": "float64",
+   "why_not_kronecker": "training design is a staircase (each run covers [0, s_obs]); Kronecker identities need a complete grid with common noise; validated on a complete synthetic grid only"
+  }
+ },
+ "uncertainty": "maximum, argmax timing and exceedance distributions from 2000 posterior latent trajectories per held-out run (never the maximum of the posterior mean); scalar A from its predictive lognormal",
+ "evaluation": [
+  "simulation-weighted trajectory RMSE (observed bins) and median",
+  "50 %/90 % pointwise interval coverage and width (latent + noise variance)",
+  "A error (um, log1p) vs native maximum and vs bin-mean maximum; 90 % interval coverage of A",
+  "argmax timing error (us) and time-above-u_ref error (us) on the observed window",
+  "short-event analysis: near-peak (>= 95 % of A) episode shorter than one bin",
+  "runtime, peak memory, SVGP ELBO trace, SVGP vs exact on a controlled example, M=400 vs M=800 at one checkpoint",
+  "representative best / median / worst held-out runs and the named runs (matched pair, late negative)",
+  "planned-horizon vs observed-window quantities reported separately for the six truncated runs"
+ ],
+ "hypotheses": {
+  "T2-H1_inputs_help": "At every budget (B16/B40/B80) both temporal models (rank-3 functional and separable SVGP) have lower simulation-weighted trajectory RMSE (log1p depth, observed bins) than the input-free training-mean trajectory. Basis: depth trajectories depend strongly on scan speed (slow scans near 300 um, fast scans near 110 um). Falsified if either model is not lower at any budget.",
+  "T2-H2_learning": "Trajectory RMSE of both temporal models decreases from B16 to B80 (mean over the ten folds). Falsified otherwise.",
+  "T2-H3_max_depth": "For the maximum depth A of held-out runs (like-for-like runs, observed window = planned horizon), the scalar A GP has a lower median absolute error (um) than both temporal models at B40 and at B80. Basis: the scalar model targets A directly, while bin means lose 0.004-0.02 log1p units at the native peak (measured compression gap). Falsified if a temporal model is lower at B40 or B80.",
+  "T2-H4_short_events": "The temporal models' underestimation of A (relative to the native maximum) is larger for runs whose near-peak episode (depth >= 95 % of A) is shorter than one bin width than for longer episodes. Basis: bin means smooth sub-bin peaks by construction.",
+  "T2-H5_calibration": "No numerical expectation. 50 % and 90 % pointwise predictive intervals are evaluated on observed bins, together with interval coverage for A.",
+  "T2-H6_model_ranking": "No directional expectation between the functional baseline and the separable SVGP.",
+  "T2-H7_matched_pair_fast_scans": "No assumption either way. Evaluated: (a) whether the observed trajectories of the matched pair (H-b302fc6cbd vs H-b7e3ed2e12) differ beyond each model's predictive uncertainty; (b) whether the models' predictions for the two runs differ; (c) descriptively, whether trajectory features (predicted A, predicted time above u_ref) rank held-out labels within fast scans (VX > 0.85; exploratory). Trajectory accuracy and canonical-label information are reported separately; no classifier is built.",
+  "T2-H8_truncated": "For the six runs whose recording ends before the planned horizon, planned-horizon predicted maxima and observed-window maxima are reported separately as different estimands. No expectation."
+ },
+ "fit_accounting": {
+  "scalar_refits": 30,
+  "functional_coefficient_GPs": 90,
+  "separable_SVGP": 30,
+  "validation_SVGP": 2,
+  "approximation_fidelity_SVGP": 1,
+  "total_temporal_functional": 123,
+  "cap": 160
+ },
+ "resource_limits": {
+  "threads": 4,
+  "memory_gib": 8,
+  "total_hours_both_tracks": 8
+ },
+ "code_sha256": {
+  "src/week20_track2_data.py": "34d920464f9c2d1289531ce66ab386c868a1644dfbb0e1889dd5d876530ba988",
+  "src/week20_track2_models.py": "18e85e0e13216ea42ea15f4ef20a6c51177d06cc036ff620f82dcf6b5a9cd89d",
+  "src/week20_track2_svgp.py": "0c8ddf0cb12e3f479eb980b4ce67d90f862adee54d1336d8010e51372e0b1b73",
+  "src/week20_track2_common.py": "eff858fc9fdbf72351dcd8469888f9aaa4a02e455843aacbc051c1a63170c045"
+ }
+}
