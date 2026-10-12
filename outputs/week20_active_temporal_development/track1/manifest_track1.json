@@ -1,0 +1,242 @@
+{
+ "status": "POST-HOC DEV RESEARCH \u2014 not confirmatory; C3 (repeats 17-20) reserved",
+ "written_utc": "2026-10-12T19:56:23+00:00",
+ "written_before_any_track1_fit": true,
+ "start_commit": "7707d7f43f1c36a1d4cce3c18edaf563e75a1fe9",
+ "branch": "week20-active-temporal-dev",
+ "arms": {
+  "WHOLE_E1_STRADDLE": {
+   "learner": [
+    "GPR_depth",
+    "mlii"
+   ],
+   "rule": "straddle",
+   "response": "whole"
+  },
+  "ACTIVE_E1_STRADDLE": {
+   "learner": [
+    "GPR_depth",
+    "mlii"
+   ],
+   "rule": "straddle",
+   "response": "A"
+  },
+  "G3_MARGIN": {
+   "learner": [
+    "G3",
+    "mlii"
+   ],
+   "rule": "margin",
+   "response": null
+  }
+ },
+ "arm_notes": {
+  "WHOLE_E1_STRADDLE": "historical Week 18 E1 (FREEZE_ROUND_2: GPR on log max depth + straddle, per-step ML-II); response = Week 7 OLD / phase1 NEW whole-record max (src.week18_tasks.depth_map)",
+  "ACTIVE_E1_STRADDLE": "identical code; response = A_active_max_um (Week 19 audit; NaN for H-e7dbd8e5ce, whose query is still paid and whose label is kept)",
+  "G3_MARGIN": "historical Week 18 REF (G3 'phase2' schedule = per-step ML-II for R1/R3, safeguarded Laplace FP_TOL 1e-9) + margin"
+ },
+ "tasks": {
+  "R3_NEW": {
+   "source": "src.week18_tasks.all_real_full_depth('DEV')",
+   "repeats": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "folds": 5,
+   "grid": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    44,
+    48,
+    52,
+    56,
+    60,
+    64,
+    68,
+    72,
+    76,
+    80
+   ],
+   "q20": "unchanged Week 18 construction (R3_NEW: boundary_flags; R3_OLD: Week 8.5 distance rule; R1_POOLED: pooled-q20)"
+  },
+  "R3_OLD": {
+   "source": "src.week18_tasks.all_real_full_depth('DEV')",
+   "repeats": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "folds": 5,
+   "grid": [
+    16,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    72,
+    80
+   ],
+   "q20": "unchanged Week 18 construction (R3_NEW: boundary_flags; R3_OLD: Week 8.5 distance rule; R1_POOLED: pooled-q20)"
+  },
+  "R1_POOLED": {
+   "source": "src.week18_tasks.all_real_full_depth('DEV')",
+   "repeats": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "folds": 5,
+   "grid": [
+    16,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    72,
+    80
+   ],
+   "q20": "unchanged Week 18 construction (R3_NEW: boundary_flags; R3_OLD: Week 8.5 distance rule; R1_POOLED: pooled-q20)"
+  }
+ },
+ "task_checks": {
+  "n_task_folds": 60,
+  "whole_response_equals_pilot_inputs_max_abs": 0.0,
+  "labels_equal_pilot_inputs": true,
+  "split_sha256": {
+   "R1_POOLED_r1_f1": "adea501773e8c544",
+   "R1_POOLED_r1_f2": "e1a5dea4dae932a8",
+   "R1_POOLED_r1_f3": "3186de3e1adbcada",
+   "R1_POOLED_r1_f4": "abb87c70fe3d5f4c",
+   "R1_POOLED_r1_f5": "f5ab00f7a244a809",
+   "R1_POOLED_r2_f1": "e6388e1eb47deeb8",
+   "R1_POOLED_r2_f2": "026c2282e637e8b3",
+   "R1_POOLED_r2_f3": "97a96d88f304e422",
+   "R1_POOLED_r2_f4": "54459e92238db1cc",
+   "R1_POOLED_r2_f5": "eae9d7d85049d1b5",
+   "R1_POOLED_r3_f1": "1f24877373e82436",
+   "R1_POOLED_r3_f2": "2577c0a5064f385f",
+   "R1_POOLED_r3_f3": "dd765e80c7aba2b6",
+   "R1_POOLED_r3_f4": "0d75ef99747fe418",
+   "R1_POOLED_r3_f5": "7488023814031b4b",
+   "R1_POOLED_r4_f1": "99ee708fccb5f679",
+   "R1_POOLED_r4_f2": "3c4850d74dab6388",
+   "R1_POOLED_r4_f3": "a320257d293c2e47",
+   "R1_POOLED_r4_f4": "23ab2b92f0ff5a0b",
+   "R1_POOLED_r4_f5": "9746ef2d4a116d39",
+   "R3_NEW_r1_f1": "51e124c0a75acdcb",
+   "R3_NEW_r1_f2": "cc22e1412b9d6ecc",
+   "R3_NEW_r1_f3": "eee049c29b8f58c3",
+   "R3_NEW_r1_f4": "1eed64d28c987e9a",
+   "R3_NEW_r1_f5": "4b861386e38b4950",
+   "R3_NEW_r2_f1": "24656e0b7b20d625",
+   "R3_NEW_r2_f2": "873839a4ab96e0cb",
+   "R3_NEW_r2_f3": "ad60525f9301744a",
+   "R3_NEW_r2_f4": "d4790c2b7e1941d0",
+   "R3_NEW_r2_f5": "8eefa0a5e2ff13c4",
+   "R3_NEW_r3_f1": "8902b6ae7373eaff",
+   "R3_NEW_r3_f2": "39d3543e5f794420",
+   "R3_NEW_r3_f3": "bac3ec430d1e317a",
+   "R3_NEW_r3_f4": "d6e72e1d78345c30",
+   "R3_NEW_r3_f5": "2bdebd1179cb67ae",
+   "R3_NEW_r4_f1": "ac021b473f1d2163",
+   "R3_NEW_r4_f2": "593305f65da109b6",
+   "R3_NEW_r4_f3": "c86ad4754bb10318",
+   "R3_NEW_r4_f4": "6d1141f61be1ffff",
+   "R3_NEW_r4_f5": "6caa5c3cc10e314d",
+   "R3_OLD_r1_f1": "70e761e5abcb6d3f",
+   "R3_OLD_r1_f2": "10a898175846db03",
+   "R3_OLD_r1_f3": "f842e1f7cd45f6be",
+   "R3_OLD_r1_f4": "c382ddfe53c6fc69",
+   "R3_OLD_r1_f5": "080dbfaa459a26a8",
+   "R3_OLD_r2_f1": "406bc5e6a6226a24",
+   "R3_OLD_r2_f2": "e28d9b7269a16594",
+   "R3_OLD_r2_f3": "851b28f1f6ecb87c",
+   "R3_OLD_r2_f4": "f46453d5d6b6ff1a",
+   "R3_OLD_r2_f5": "2efb5b5f18ac50d7",
+   "R3_OLD_r3_f1": "f60abc7912e1899a",
+   "R3_OLD_r3_f2": "420e0ed8e0311c71",
+   "R3_OLD_r3_f3": "e212d6d36e83d77e",
+   "R3_OLD_r3_f4": "0b2dea3982d2440c",
+   "R3_OLD_r3_f5": "ff0ca765cf68f1a4",
+   "R3_OLD_r4_f1": "726a4402223c08be",
+   "R3_OLD_r4_f2": "3bb8a483e7bdb3f9",
+   "R3_OLD_r4_f3": "e87ae2aee272048b",
+   "R3_OLD_r4_f4": "4a6fcdebfa48a762",
+   "R3_OLD_r4_f5": "b986e649c1c3ec21"
+  }
+ },
+ "seeds": "task seed from src.week18_tasks ([1820,rep,fold] R3_NEW; [1822,rep,fold] R3_OLD; [1818,rep,fold] R1_POOLED); startup maximin rng = seed+[2]; engine rule rng = seed+[RULE_ID,11] (unused by straddle/margin)",
+ "startup": "src.week18_engine.startup: 8 maximin points of the paid pool + maximin continuation until both classes are revealed; identical for all arms; every query costs 1",
+ "transformations": {
+  "E1": "StandardScaler on log(pool X); log response standardized on paid finite responses; ARD Matern-3/2 + white noise; learned threshold: midpoint if separable, else logistic C=1e6 on log response",
+  "G3": "StandardScaler on raw pool X and pool log h; fixed-mean Laplace GPC (ARD Matern-3/2), ML-II one L-BFGS-B start"
+ },
+ "acquisition": {
+  "straddle": "argmax 1.96*sd - |mu - log u| over unpaid pool (src.week18_engine.choose)",
+  "margin": "argmin |p - 0.5| over unpaid pool"
+ },
+ "fits": "one learner fit after every paid query from the startup size to 80 (original methods); test predictions recorded at every fit",
+ "leakage_guard": "the learner receives y and responses with every unpaid row masked (y=-1, response=NaN); held-out labels and q20 flags are evaluator-only",
+ "endpoints": {
+  "primary": "R3_NEW pooled-per-repeat BA AULC (trapezoid over 16..80 step 4 / width), ACTIVE_E1_STRADDLE - G3_MARGIN; per-repeat values and the Week 18 repeat bootstrap (4000, seed 0)",
+  "ablation": "R3_NEW ACTIVE - WHOLE",
+  "secondary": [
+   "R3_OLD and R1_POOLED (grid 16..80 step 8) for all contrasts",
+   "q20 AULC (unchanged)",
+   "specificity, sensitivity, short-K sensitivity (fixed ten NEW positives; NEW and POOLED-NEW rows), Brier, AUC at B40/B80 and as AULC",
+   "full per-step curves"
+  ],
+  "query_savings": "QTT (Week 18 qtt): first grid budget at which an arm's repeat-pooled BA reaches G3_MARGIN's repeat-1-4 mean BA at B40 and at B80 on the same task; unreached by B80 = 'not reached' (no extrapolation); means use B80 + one grid step for unreached (Week 18 qtt_reduction convention), always with the unreached count",
+  "mechanism": "learned thresholds per step from the ledgers; u >= 200 um episodes; paid composition before the first such step; late-negative timing as precedence only"
+ },
+ "hypotheses": {
+  "T1-H0_fidelity": "Arms A and C reproduce the historical Week 18 DEV caches (phase3/depth3 E1; phase2 G3|mlii|margin) on repeats 1-4 at every grid budget <= 80: max |p_new - p_cache| <= 1e-4 (cache rounding is 5 significant digits). Otherwise they are reported as re-implementations with the discrepancy.",
+  "T1-H1_primary": "R3_NEW BA-AULC (grid 16..80 step 4), ACTIVE_E1_STRADDLE minus G3_MARGIN, is > 0. Supporting evidence: Week 19 shared-path pilot, B40 ACTIVE - G3 = +0.112 [-0.009, +0.212]; adaptive acquisition untested, so no magnitude is predicted.",
+  "T1-H2_ablation": "R3_NEW BA-AULC, ACTIVE minus WHOLE, is > 0 (shared-path pilot B40: +0.098 [+0.013, +0.185]). No magnitude predicted.",
+  "T1-H3_old": "R3_OLD: WHOLE minus G3 reproduces the historical DEV value (+0.0286 [+0.0117, +0.0518] on repeats 1-4 up to B80); ACTIVE minus WHOLE is small (|delta| < 0.01), because whole max and A separate OLD labels equally well (AUC 0.99996 both; 37/405 runs differ).",
+  "T1-H4_pooled": "R1_POOLED: WHOLE minus G3 reproduces the historical DEV value (+0.0028 [-0.0003, +0.0062]); ACTIVE minus G3 >= WHOLE minus G3 (A separates POOLED labels better: AUC 0.9987 vs 0.9958). No magnitude predicted.",
+  "T1-H5_threshold": "WHOLE E1 on R3_NEW reproduces the historical high thresholds (u >= 200 um in 6 of 20 folds of repeats 1-4: r1f5, r2f1, r3f1, r3f2, r4f1, r4f2). ACTIVE E1 never reaches u >= 200 um on R3_NEW (every NEW negative has A <= 131.2 um). Falsified by any ACTIVE R3_NEW step with u >= 200 um.",
+  "T1-H6_precedence": "In every WHOLE R3_NEW run with a u >= 200 um step, the late negative H-f4fc937e86 was paid before the first such step. This is temporal precedence only; causal attribution would need an isolated refit and is not claimed.",
+  "T1-H7_secondary": "No expectations are set for q20, short-K sensitivity, Brier or AUC; they are reported."
+ },
+ "failure_rules": [
+  "fit exception, non-finite prediction or non-finite acquisition score: the run stops there, status recorded, later budgets missing; no reseeding or repair",
+  "single-class usable response pairs for an E1 arm: run stops (the engine's 111 um fallback is never used); cannot arise in DEV 1-4 (checked: the A-unavailable run is in no startup set)",
+  "logistic slope <= 0 or root outside the paid range: recorded, not repaired (historical behaviour)",
+  "G3 Laplace fixed-point error > 1e-6: recorded as a Week 18 convergence violation, run continues (historical behaviour)",
+  "no forced queries, no favourable-repeat selection; all 180 runs are reported"
+ ],
+ "resource_limits": {
+  "track1_max_scalar_fits": 13500,
+  "total_scalar_fits": 15000,
+  "workers": 4,
+  "threads_per_worker": 1,
+  "max_memory_gib_total": 8,
+  "max_elapsed_h_total": 8
+ },
+ "expected_fits": "180 runs x at most 73 fits = 13,140",
+ "code_sha256": {
+  "src/week20_track1_al.py": "e3d0cfbf3e017463d3b2da5232a625d0a40011ec55934a57727a4c1322002e7a",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d",
+  "src/week18_tasks.py": "7f3c78a0659df3fa32c47073ef668a749543304b1dbbccd1854b86c300634198",
+  "src/week17_models.py": "7b7ad8846a4fa4f721b21ec6853b06b704ece658ee4a7e7902d3d21827d47570",
+  "src/week17_audit_impact.py": "46e05394afe519b28148a1d382bc7d9f767a97a99fba5e124457c223f653905e",
+  "src/week9_phase1_11_fixed_mean_discrepancy_gp.py": "cfbbbd4a8ddcdf88d04467b64c3908489c49265cedac1292bb77baa2cd8fc0e5",
+  "src/week13_synthetic_al.py": "3df1c6f83e249bcc8831014914a3d99431371e3fa5269fa121b8ffd7d8317d5f",
+  "src/week18_metrics.py": "dee2d121ac5802c3b4d86060166db80dc62150dd712013a84a7d4a16945514fb",
+  "src/week19_dev_pilot.py": "9f8d256d5897acd784b43326abd761a926f15d758067233aa0fa0981e5369bd1"
+ }
+}
