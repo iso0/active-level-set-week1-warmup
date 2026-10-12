@@ -1,0 +1,18 @@
+180 runs, 3 cached (219 fits); remaining 177 runs, at most 12921 fits
+[Parallel(n_jobs=4)]: Using backend LokyBackend with 4 concurrent workers.
+[Parallel(n_jobs=4)]: Done  10 tasks      | elapsed:   27.5s
+[Parallel(n_jobs=4)]: Done  64 tasks      | elapsed:  2.7min
+[Parallel(n_jobs=4)]: Done 154 tasks      | elapsed:  5.9min
+[Parallel(n_jobs=4)]: Done 177 out of 177 | elapsed:  6.4min finished
+{
+ "started_utc": "2026-10-12T20:04:26+00:00",
+ "runs": 177,
+ "elapsed_s": 381.565824508667,
+ "n_jobs": 4,
+ "fits_this_session": 12882,
+ "max_worker_peak_memory_bytes": 241995776,
+ "statuses": {
+  "ok": 177
+ }
+}
+exit 0
