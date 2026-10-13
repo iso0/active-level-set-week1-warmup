@@ -1,0 +1,73 @@
+{
+ "status": "DRAFT - not frozen, not executed. Becomes the C3 freeze only after owner approval, committed before any C3 run.",
+ "written_utc": "2026-10-13T09:00:23+00:00",
+ "candidate": "ACTIVE_E1_STRADDLE: src.week20_track1_al arm B unchanged (GPR on log A, per-step ML-II, learned threshold midpoint/logistic, straddle), no guard",
+ "reference": "G3_MARGIN: src.week20_track1_al arm C unchanged (Week 18 REF)",
+ "ablation_reported_not_decisive": "WHOLE_E1_STRADDLE (arm A)",
+ "code": "the frozen runner src/week20_track1_al.py (sha256 e3d0cfbf3e017463...) through src/week20_track1_ext.py with REPEATS = (17, 18, 19, 20); 1 BLAS thread per worker",
+ "data_used_once": "block C3 = repeats 17-20, 5 folds each (src.week18_tasks.BLOCKS); tasks R3_NEW (primary), R3_OLD, R1_POOLED; SPLIT-CONFIRMATION on the same 541 runs",
+ "decision_rule": {
+  "Q3a_primary": "R3_NEW BA-AULC (grid 16..80 step 4) ACTIVE - G3 >= +0.02 with the repeat-bootstrap 95 % interval > 0 (4,000 resamples, seed 0; Week 18 convention)",
+  "Q3b_no_loss": "R3_OLD and R1_POOLED BA-AULC ACTIVE - G3 >= -0.01 (point estimates)",
+  "interpretation": {
+   "Q3a and Q3b": "confirmed: ACTIVE E1 + straddle improves on G3 + margin on NEW, without loss on OLD / POOLED",
+   "Q3a and not Q3b": "improvement on NEW with a loss elsewhere",
+   "not Q3a, point estimate > 0": "not confirmed at the frozen bar",
+   "point estimate <= 0": "does not replicate"
+  },
+  "reported_not_decisive": [
+   "q20, specificity, sensitivity, short-K sensitivity, Brier, AUC",
+   "ACTIVE - WHOLE",
+   "QTT (frozen definition)",
+   "learned-threshold mechanism"
+  ]
+ },
+ "dev_evidence": {
+  "per_repeat_ACTIVE_minus_G3_BA_AULC_repeats_1_8": {
+   "R3_NEW": [
+    0.06187,
+    -0.031544,
+    0.066563,
+    0.132392,
+    0.004368,
+    0.029066,
+    0.175907,
+    0.013315
+   ],
+   "R3_OLD": [
+    0.00942,
+    0.061886,
+    0.021306,
+    0.027846,
+    0.0099,
+    0.011527,
+    0.023186,
+    0.016579
+   ],
+   "R1_POOLED": [
+    0.003008,
+    0.008059,
+    0.007764,
+    0.000408,
+    0.002768,
+    0.017663,
+    -0.002302,
+    0.006013
+   ]
+  },
+  "R3_NEW_mean": 0.056492125000000004,
+  "R3_NEW_sd": 0.06890447593472637,
+  "predicted_probabilities_from_DEV_resampling": {
+   "mean_ge_bar": 0.86505,
+   "interval_gt_0": 0.6201,
+   "both": 0.60165
+  },
+  "prediction_method": "draw 4 of the 8 DEV per-repeat R3_NEW differences with replacement (20,000 simulations, seed 0) and apply the rule"
+ },
+ "caveats": [
+  "A (active-window maximum depth) was defined after the Week 19 audit had seen every NEW label; C3 tests the active-learning procedure on new splits and seeds, not a target chosen blind to the labels",
+  "C1 and C2 were spent in Week 18 on WHOLE E1; C3 is the last unused block",
+  "four repeats: the repeat bootstrap is coarse"
+ ],
+ "fit_budget_if_run": "3 tasks x 4 repeats x 5 folds x 3 arms = 180 runs, <= 13,140 scalar fits"
+}

@@ -1,0 +1,8 @@
+{
+ "first_query_differing_from_ledgered_run": {
+  "ledgered_extension_run": null,
+  "engine_run_1_threads": null,
+  "engine_run_4_threads": 23
+ },
+ "n_fits": 146
+}

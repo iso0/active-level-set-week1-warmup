@@ -1,0 +1,11 @@
+hypothesis,verdict,detail
+X-H0_fidelity,FALSIFIED,max |dp| 3.86e-01 over 1400 comparisons; rows equal True
+X-H1_primary_replication,SUPPORTED,"R3_NEW repeats 5-8: +0.0557 [+0.0088, +0.1353]"
+X-H2_target_ablation,SUPPORTED,"R3_NEW repeats 5-8: +0.0841 [+0.0539, +0.1261]"
+X-H3b_guard_effect,SUPPORTED,"R3_NEW repeats 5-8: +0.0020 [-0.0305, +0.0386]"
+X-H3a_guard_identity,SUPPORTED,11 runs without a non-positive slope in A; identical 11; max |dp| 0.0
+X-H3c_remaining_target_effect,DESCRIPTIVE,"+0.0821 [+0.0737, +0.0905]"
+X-H4_old_pooled,SUPPORTED,"OLD ACTIVE-WHOLE -0.0057, ACTIVE-G3 +0.0153; POOLED ACTIVE-G3 +0.0060 vs WHOLE-G3 +0.0028"
+X-H5_threshold_mechanism,SUPPORTED,"ACTIVE max u 189.2 um; WHOLE runs with u >= 200: 10, late negative paid before in 10"
+X-H6_eight_repeat_summary,DESCRIPTIVE,"repeats 1-8: ACTIVE-G3 +0.0565 [+0.0147, +0.1033]; ACTIVE-WHOLE +0.0770 [+0.0495, +0.1056]"
+X-H7_secondary,DESCRIPTIVE,see contrasts_r5_8.csv / qtt_r5_8.csv

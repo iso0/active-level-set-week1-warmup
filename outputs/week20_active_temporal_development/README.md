@@ -6,6 +6,8 @@
 |---|---|
 | `track1/` | Real active-learning benchmark (WHOLE E1 + straddle, ACTIVE E1 + straddle, G3 + margin; R3_NEW / R3_OLD / R1_POOLED, repeats 1–4). Frozen manifest and hypotheses; complete query ledgers; per-step fits; grid predictions; curves; Week 18 AULC, contrasts and QTT; fidelity to the Week 18 caches; threshold mechanism. Post-hoc files are prefixed `POSTHOC_`. |
 | `track2/` | Temporal-GP development on NEW (repeats 1–2, 10 folds, B16/40/80, the Week 19 shared paid paths). Frozen manifest and hypotheses, post-start declaration (T2-PS1) and evaluation rules (written before scoring); trajectory inventory; compression errors and the resolution rule; checkpoints; fit tables; SVGP validation; evaluation tables, hypothesis verdicts and figures. Post-hoc files are prefixed `POSTHOC_`. |
+| `track1_ext/` | Track 1 extension (2026-10-13): the frozen protocol on DEV repeats 5–8, plus the WHOLE E1 + slope-sign guard ablation. Frozen manifest and hypotheses, startup checks, ledgers, curves, AULC for repeats 5–8 and 1–8, contrasts, QTT, fidelity and its diagnosis, guard identity, threshold mechanism, verdicts, decision. |
+| `c3_draft/` | C3 confirmation protocol DRAFT, written because the extension's frozen decision rule required it. Not frozen and not executed. |
 | `ioan_addendum/` | G5 (H-b302fc6cbd) frame 81, front/side/top, at the pinned NEW revision. The Week 19 gallery is unchanged apart from an appended pointer. |
 | `provenance/` | Run logs and the `.venv` install log. |
 | `_cache/` | Git-ignored resumable caches: per-run ledgers and per-step predictions, native trajectories, checkpoint arrays, Track 2 predictions. |
@@ -26,6 +28,11 @@ python -m src.week20_track2_models functional
 .venv/Scripts/python.exe -m src.week20_track2_svgp_poststart
 python -m src.week20_track2_eval
 python -m src.week20_ioan_addendum
+python -m src.week20_track1_ext manifest
+python -m src.week20_track1_ext run 4
+python -m src.week20_track1_ext analyze
+python -m src.week20_track1_ext_g3_divergence
+python -m src.week20_c3_protocol_draft
 ```
 
 **Environment:**

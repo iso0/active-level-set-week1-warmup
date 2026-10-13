@@ -1227,3 +1227,22 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - **Değerlendirme hatası düzeltildi:** H-kodu sonekleri benzersiz değil (NEW'de 136 koşu için 88 sonek). Tam kimlikler `NAMED_RUNS.csv` dosyasında.
 
 **Sonraki aday:** ACTIVE E1 + straddle. Önce aynı protokol DEV tekrar 5–8 üzerinde çalıştırılacak; eğim işareti korumalı WHOLE ablasyonu fit'ten önce ilan edilecek. Sonuç olumlu kalırsa C3 protokolü dondurulacak.
+
+### 2026-10-13 — Week 20 devamı: DEV tekrar 5–8 genişletmesi ve eğim koruması ablasyonu
+
+[Gelişim raporu, "Track 1 extension" bölümü](../outputs/week20_active_temporal_development/DEVELOPMENT_REPORT.md), [C3 protokol taslağı](../outputs/week20_active_temporal_development/c3_draft/C3_PROTOCOL_DRAFT.md).
+
+**Kurulum.**
+- Dondurulmuş Track 1 protokolü, kalan DEV tekrarları 5–8 üzerinde çalıştırıldı. Manifest, uydurmalardan önce commit edildi (`c96eaefb`).
+- Yeni ablasyon kolu WHOLE + korumada lojistik eğim ≤ 0 olunca eşik, motorun 111 µm varsayılanına döner.
+- Toplam 14.714 skaler uydurma yapıldı. C3'e dokunulmadı.
+
+**Bulgular.**
+- **Birincil (NEW):** ACTIVE − G3 = +0.056 [+0.009, +0.135]; tekrar 1–8 üzerinde +0.056 [+0.015, +0.103]. 8 tekrarın 7'sinde fark pozitif.
+- **Ablasyonlar:**
+  - ACTIVE − WHOLE = +0.084 [+0.054, +0.126].
+  - WHOLE + koruma − WHOLE = +0.002 [−0.031, +0.039]: koruma tuzağı kaldırıyor (duyarlılık 0.86 → 0.98) ama özgüllük düşüyor.
+  - Sonuç: kazanç ters eğimi önlemekten değil, aktif pencere hedefinden geliyor.
+- **Sadakat:** 120 G3 koşusunun biri (POOLED r8f1) Week 18 önbelleğinden ayrılıyor. Neden kayan nokta hesabı: Week 18 4 BLAS iş parçacığıyla, bu tur 1 iş parçacığıyla çalıştı.
+
+**Karar.** Dondurulmuş karar kuralı "C3 protokol taslağı" verdi. Taslak yazıldı ama çalıştırılmadı. DEV yeniden örneklemesine göre birincil kuralın geçme olasılığı yaklaşık %60. C3'ü harcama kararı sahibine ait.

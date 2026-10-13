@@ -1,0 +1,20 @@
+variant  engine_run_1_threads  engine_run_4_threads  ledgered_extension_run
+budget                                                                     
+16                   0.000005              0.000005                0.000005
+24                   0.368027              0.000005                0.368027
+32                   0.279594              0.000005                0.279594
+40                   0.378823              0.000005                0.378823
+48                   0.386285              0.000005                0.386285
+56                   0.375116              0.000005                0.375116
+64                   0.350521              0.000005                0.350521
+72                   0.183098              0.000005                0.183098
+80                   0.206992              0.000005                0.206992
+{
+ "first_query_differing_from_ledgered_run": {
+  "ledgered_extension_run": null,
+  "engine_run_1_threads": null,
+  "engine_run_4_threads": 23
+ },
+ "n_fits": 146
+}
+exit 0

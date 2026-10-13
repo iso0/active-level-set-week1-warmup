@@ -21,7 +21,12 @@
 
 ## Summary
 
-**What improved:**
+**Update, 2026-10-13: Track 1 extension** (section *Track 1 extension* below).
+- **New repeats:** the recommended next experiment ran on DEV repeats 5–8. ACTIVE − G3 on R3_NEW is **+0.056 [+0.009, +0.135]**; over all 8 DEV repeats it is **+0.056 [+0.015, +0.103]**.
+- **Guard ablation:** the slope-sign guard does not explain the gain (WHOLE + guard − WHOLE = +0.002). The gain comes from the active-window target.
+- **Decision:** the frozen decision rule returned **C3 PROTOCOL DRAFT**. The draft is written but not executed; its primary rule passes in about 60 % of DEV resamples.
+
+**What improved (Week 20 round):**
 1. **ACTIVE E1 + straddle on NEW (PRED).**
 
    | Measure | ACTIVE E1 | G3 | WHOLE E1 |
@@ -322,6 +327,77 @@ The full per-step curves are in `track1/curves_every_step.csv` and `track1/figur
 - The fast-scan subset has only 22 runs.
 - All post-hoc analyses are labelled and are not used for verdicts.
 
+## Track 1 extension (2026-10-13) — DEV repeats 5–8 and a slope-sign guard
+
+**Design.**
+- **Freeze:** commit `c96eaefb`, pushed before any extension fit (`track1_ext/manifest_track1_ext.json`, `HYPOTHESES_TRACK1_EXT.md`).
+- **Protocol:** the frozen Track 1 runner and protocol, unchanged (code hashes checked), on the remaining DEV repeats 5–8. DEV is 1–8; C1 and C2 were spent in Week 18.
+- **Added ablation arm D: WHOLE E1 + guard.** It is arm A, except when the paid pairs are not separable and the logistic slope is ≤ 0. In that case the reversed root is not used, and u falls back to 111 µm, the engine's own single-class default.
+  - Arm D ran on all 20 R3_NEW runs.
+  - Its conditional runs on OLD and POOLED were not needed: arm A had no non-positive-slope step there.
+- **Execution:** 200 runs, 14,568 scalar fits, 5.4 min with 4 workers × 1 thread, all `ok`.
+
+**Results (PRED; BA-AULC up to B80; repeat bootstrap; `track1_ext/contrasts_r5_8.csv`, `contrasts_r1_8.csv`):**
+
+| R3_NEW | Repeats 5–8 | Repeats 1–8 (8 repeats) |
+|---|---|---|
+| **ACTIVE − G3 (primary)** | **+0.056 [+0.009, +0.135]** | **+0.056 [+0.015, +0.103]** |
+| ACTIVE − WHOLE | +0.084 [+0.054, +0.126] | +0.077 [+0.050, +0.106] |
+| WHOLE + guard − WHOLE | +0.002 [−0.031, +0.039] | — |
+| ACTIVE − (WHOLE + guard) | +0.082 [+0.074, +0.091] | — |
+| WHOLE − G3 | −0.028 [−0.120, +0.085] | −0.021 [−0.080, +0.039] |
+
+- **Mean BA-AULC on R3_NEW, repeats 5–8:** ACTIVE 0.734, G3 0.678, WHOLE + guard 0.652, WHOLE 0.650.
+- **Per-repeat ACTIVE − G3 over repeats 1–8:** +0.062, −0.032, +0.067, +0.132, +0.004, +0.029, +0.176, +0.013. Seven of eight are positive.
+- **Secondary endpoints on NEW, repeats 5–8** (ACTIVE / G3 / WHOLE + guard / WHOLE):
+
+  | Endpoint | ACTIVE | G3 | WHOLE + guard | WHOLE |
+  |---|---:|---:|---:|---:|
+  | q20 | 0.799 | 0.706 | 0.740 | 0.693 |
+  | Specificity | 0.494 | 0.404 | 0.327 | 0.440 |
+  | Sensitivity | 0.974 | 0.953 | 0.977 | 0.860 |
+  | Short-K sensitivity | 0.780 | 0.614 | 0.796 | 0.652 |
+  | Brier | 0.064 | 0.085 | 0.068 | 0.137 |
+  | AUC | 0.911 | 0.834 | 0.853 | 0.836 |
+
+  - ACTIVE − G3: q20 +0.093 [+0.033, +0.179], AUC +0.077 [+0.023, +0.113], Brier −0.021 [−0.030, −0.012].
+- **R3_OLD, repeats 5–8:** ACTIVE − G3 = +0.015 [+0.011, +0.020] and ACTIVE − WHOLE = −0.006 [−0.013, +0.001].
+- **R1_POOLED, repeats 5–8:** ACTIVE − G3 = +0.006 [−0.000, +0.014].
+- **QTT** (frozen definition, target = G3's mean BA at B40 over repeats 5–8, 0.687): ACTIVE reaches it in 4/4 repeats (16, 16, 20, 16); G3, WHOLE and WHOLE + guard each in 3/4.
+
+**Hypotheses** (`track1_ext/hypothesis_verdicts.csv`):
+
+| Hypothesis | Verdict | Note |
+|---|---|---|
+| X-H0 fidelity to the Week 18 caches | **FALSIFIED** (one run) | See the diagnosis below. |
+| X-H1 primary: ACTIVE − G3 > 0 | **SUPPORTED** | +0.056; the interval excludes 0 on these four new repeats. |
+| X-H2 ACTIVE − WHOLE > 0 | **SUPPORTED** | +0.084 |
+| X-H3a guard identity | **SUPPORTED** | In the 11 runs without a non-positive slope, arm D equals arm A exactly. |
+| X-H3b guard effect > 0 | **SUPPORTED by the letter, negligible** | +0.002 [−0.031, +0.039] |
+| X-H4 OLD and POOLED | **SUPPORTED** | — |
+| X-H5 threshold mechanism | **SUPPORTED** | ACTIVE's maximum u is 189.2 µm; all 10 WHOLE runs with u ≥ 200 µm had paid the late negative first. |
+
+- **Fidelity diagnosis (OBS; `track1_ext/DIAG_g3_R1_POOLED_r8f1_divergence.*`).**
+  - Arm A matches the caches everywhere: maximum |Δp| 5e-6.
+  - Arm C matches in 59 of 60 runs. The exception is G3 on R1_POOLED repeat 8 fold 1, which differs from budget 24 onwards (maximum |Δp| 0.39).
+  - The historical engine loop (`src.week18_engine.run`) reproduces the cache exactly with 4 BLAS threads. With 1 thread it follows the extension's path exactly, diverging at query 23.
+  - The cause is therefore floating-point threading in one G3 run, not a code difference. The frozen result is kept.
+  - The effect on the POOLED WHOLE − G3 mean is 0.0005. The diagnostic cost 146 G3 fits.
+
+**Mechanism: what the guard shows (OBS from ledgers).**
+- **The trap starts at startup.** In 9 of the 20 NEW runs, the startup set's only negative is the late negative (whole 312 µm).
+  - The unguarded WHOLE then has a reversed slope (≈ −350) from the very first fit at B8, and stays at u ≈ 308 µm for 2–73 steps.
+- **The guard removes the trap.** It sets u = 111 µm for 1–5 steps, until straddle pays a second negative; ordinary positive-slope learning then resumes. Sensitivity rises from 0.860 to 0.977 and Brier falls from 0.137 to 0.068.
+- **Specificity falls, so BA does not change.** It drops from 0.440 to 0.327 because the whole-record maximum separates NEW labels poorly once a sensible threshold is used.
+- **Conclusion (HYP, supported by X-H3c: +0.082 [+0.074, +0.091]):** ACTIVE's advantage over WHOLE on NEW comes from the response target, the active-window maximum. It does not come from avoiding the reversed-slope root.
+
+**Decision (frozen rule, `track1_ext/decision.json`): C3 PROTOCOL DRAFT, not executed.**
+- **The draft:** `c3_draft/C3_PROTOCOL_DRAFT.md`.
+- **Primary rule:** R3_NEW ACTIVE − G3 ≥ +0.02 with interval > 0, plus no loss below −0.01 on OLD or POOLED.
+- **Chance of passing:** resampling four of the eight DEV repeats gives about **60 %** for the primary rule. The bar alone is met in 87 % of draws, but the interval excludes 0 in only 62 %.
+- **Optimism:** DEV numbers are optimistic, because A was defined after the NEW labels had been seen.
+- **Ownership:** C3 is untouched. Spending it is the owner's decision.
+
 ## Delivery for Ioan
 
 G5 = H-b302fc6cbd, frame 81, was added in front, side and top views (`ioan_addendum/`).
@@ -348,5 +424,10 @@ G5 = H-b302fc6cbd, frame 81, was added in front, side and top views (`ioan_adden
   - **Evaluation bug.** The named-run lookup used non-unique H suffixes; it was fixed and the evaluation re-run, with the frozen tables byte-identical.
   - **Commit message error.** The `d50e43b9` message says 7 trap runs; the correct count is 6.
   - **Correction to the frozen T2-H8 wording.** It speaks of "six truncated runs". One of the six, H-e7dbd8e5ce, has no trajectory, so five are reported.
+- **Continuation round (2026-10-13, Track 1 extension; counted separately with the same caps):**
+  - 14,714 scalar fits of 15,000, including the 146 diagnostic G3 fits; no temporal fits.
+  - About 25 min; at most 4 threads.
+  - Cumulative across both rounds: 27,845 scalar fits and 128 temporal/functional fits.
+  - C3 untouched.
 - **New environment:** a git-ignored `.venv` with torch 2.13.0+cpu and gpytorch 1.15.1 was created for the sparse variational GP.
 

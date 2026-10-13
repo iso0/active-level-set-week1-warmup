@@ -43,3 +43,15 @@ Every execution that fits a model, computes acquisition paths or evaluates resul
 | # | UTC | What ran | Scalar fits | Temporal fits | Outputs | Notes |
 |---|---|---|---:|---:|---|---|
 | X-M | 2026-10-13 | `python -m src.week20_track1_ext manifest`, run twice: the second run adds the analysis-module hash. No fit. | 0 | 0 | `track1_ext/manifest_track1_ext.json`, `track1_ext/HYPOTHESES_TRACK1_EXT.md`, `track1_ext/startup_checks.csv` | The historical WHOLE/G3 expectations come from the Week 18 caches, which are already-known results. The startup checks use paid labels only, through the protocol's own startup. Committed and pushed before any extension fit. |
+| X-0 | 2026-10-13 | Smoke test of the guard arm: R3_NEW repeat 7 fold 1, arms A and D, run through `job_x` in one process. Kept as part of phase 1 (cached). | 146 | 0 | `_cache/track1/R3_NEW__r007_f1__*` | The guard works as specified. A stays in the reversed-slope trap for all 73 steps; D uses u = 111 µm for 3 steps, then learns normally after a negative is paid at query 11. |
+| X-R | 2026-10-13 | `python -m src.week20_track1_ext run 4`. Phase 1: the remaining 198 runs, 4 workers × 1 thread, 5.4 min, worker peak 0.24 GiB, all `ok`. Phase 2: 0 runs, because arm A had no non-positive-slope step on R3_OLD or R1_POOLED. | 14,422 | 0 | `_cache/track1/*__r00[5-8]_*`, `provenance/track1_ext_run_*` | Extension scalar fits: 14,568 of the round cap of 15,000. |
+| X-A | 2026-10-13 | `python -m src.week20_track1_ext analyze`: curves, AULC (repeats 5–8 and 1–8), contrasts, QTT, fidelity, guard identity and activation, threshold mechanism, verdicts, decision. No fit. | 0 | 0 | `track1_ext/*.csv`, `track1_ext/decision.json`, `track1_ext/figures/` | The repeats 1–4 AULC recomputed from the Track 1 caches equals `track1/aulc_per_repeat.csv` (1e-16). X-H0 is falsified in one G3 run; see X-D. |
+| X-D | 2026-10-13 | `python -m src.week20_track1_ext_g3_divergence`: diagnostic re-runs of the historical engine loop for G3, R1_POOLED repeat 8 fold 1, with 1 and with 4 BLAS threads | 146 | 0 | `track1_ext/DIAG_g3_R1_POOLED_r8f1_divergence.*` | With 4 threads the run reproduces the Week 18 cache exactly. With 1 thread it reproduces the extension run, diverging at query 23. The cause is floating-point threading; nothing is replaced. Round scalar fits: 14,714. |
+| X-C | 2026-10-13 | `python -m src.week20_c3_protocol_draft`: the C3 protocol DRAFT, as the frozen decision rule required. No fit, and no C3 data touched. | 0 | 0 | `c3_draft/C3_PROTOCOL_DRAFT.md`, `c3_draft/c3_protocol_draft.json` | The predicted Q3a pass probability comes from resampling the DEV repeats (about 60 %). Not frozen and not executed; spending C3 is the owner's decision. |
+
+**Totals for the continuation round:**
+- **Scalar learner fits:** 14,714 of 15,000; no temporal fits.
+- **Wall time:** about 25 min, from the request at 08:38 UTC to the end of the analysis at about 09:03 UTC.
+- **CPU and memory:** at most 4 threads; peak memory per worker 0.24 GiB.
+- **Restarts and discarded runs:** none.
+- **Cumulative across both rounds:** 27,845 scalar fits and 128 temporal/functional fits.

@@ -1,0 +1,92 @@
+                                   BA_AULC  q20_AULC
+task      arm                                       
+R1_POOLED ACTIVE_E1_STRADDLE        0.9499    0.7814
+          G3_MARGIN                 0.9438    0.7724
+          WHOLE_E1_STRADDLE         0.9467    0.7720
+R3_NEW    ACTIVE_E1_STRADDLE        0.7342    0.7987
+          G3_MARGIN                 0.6785    0.7060
+          WHOLE_E1_GUARD_STRADDLE   0.6520    0.7398
+          WHOLE_E1_STRADDLE         0.6501    0.6932
+R3_OLD    ACTIVE_E1_STRADDLE        0.9361    0.8171
+          G3_MARGIN                 0.9208    0.8388
+          WHOLE_E1_STRADDLE         0.9418    0.8079
+         task                      arm                      ref    metric    mean      lo      hi  repeats repeats_set
+0   R1_POOLED       ACTIVE_E1_STRADDLE                G3_MARGIN   BA_AULC  0.0060 -0.0002  0.0139        4         5-8
+1      R3_NEW       ACTIVE_E1_STRADDLE                G3_MARGIN   BA_AULC  0.0557  0.0088  0.1353        4         5-8
+2      R3_OLD       ACTIVE_E1_STRADDLE                G3_MARGIN   BA_AULC  0.0153  0.0107  0.0203        4         5-8
+3   R1_POOLED       ACTIVE_E1_STRADDLE        WHOLE_E1_STRADDLE   BA_AULC  0.0032  0.0010  0.0055        4         5-8
+4      R3_NEW       ACTIVE_E1_STRADDLE        WHOLE_E1_STRADDLE   BA_AULC  0.0841  0.0539  0.1261        4         5-8
+5      R3_OLD       ACTIVE_E1_STRADDLE        WHOLE_E1_STRADDLE   BA_AULC -0.0057 -0.0125  0.0014        4         5-8
+6   R1_POOLED        WHOLE_E1_STRADDLE                G3_MARGIN   BA_AULC  0.0028 -0.0038  0.0095        4         5-8
+7      R3_NEW        WHOLE_E1_STRADDLE                G3_MARGIN   BA_AULC -0.0284 -0.1195  0.0846        4         5-8
+8      R3_OLD        WHOLE_E1_STRADDLE                G3_MARGIN   BA_AULC  0.0210  0.0183  0.0237        4         5-8
+9      R3_NEW  WHOLE_E1_GUARD_STRADDLE        WHOLE_E1_STRADDLE   BA_AULC  0.0020 -0.0305  0.0386        4         5-8
+10     R3_NEW       ACTIVE_E1_STRADDLE  WHOLE_E1_GUARD_STRADDLE   BA_AULC  0.0821  0.0737  0.0905        4         5-8
+11     R3_NEW  WHOLE_E1_GUARD_STRADDLE                G3_MARGIN   BA_AULC -0.0264 -0.0756  0.0488        4         5-8
+12  R1_POOLED       ACTIVE_E1_STRADDLE                G3_MARGIN  q20_AULC  0.0089 -0.0045  0.0224        4         5-8
+13     R3_NEW       ACTIVE_E1_STRADDLE                G3_MARGIN  q20_AULC  0.0927  0.0326  0.1794        4         5-8
+14     R3_OLD       ACTIVE_E1_STRADDLE                G3_MARGIN  q20_AULC -0.0217 -0.0342 -0.0107        4         5-8
+15  R1_POOLED       ACTIVE_E1_STRADDLE        WHOLE_E1_STRADDLE  q20_AULC  0.0094 -0.0023  0.0210        4         5-8
+16     R3_NEW       ACTIVE_E1_STRADDLE        WHOLE_E1_STRADDLE  q20_AULC  0.1055  0.0771  0.1464        4         5-8
+17     R3_OLD       ACTIVE_E1_STRADDLE        WHOLE_E1_STRADDLE  q20_AULC  0.0092 -0.0040  0.0224        4         5-8
+18  R1_POOLED        WHOLE_E1_STRADDLE                G3_MARGIN  q20_AULC -0.0004 -0.0064  0.0037        4         5-8
+19     R3_NEW        WHOLE_E1_STRADDLE                G3_MARGIN  q20_AULC -0.0128 -0.1135  0.0862        4         5-8
+20     R3_OLD        WHOLE_E1_STRADDLE                G3_MARGIN  q20_AULC -0.0309 -0.0336 -0.0287        4         5-8
+21     R3_NEW  WHOLE_E1_GUARD_STRADDLE        WHOLE_E1_STRADDLE  q20_AULC  0.0466  0.0156  0.0776        4         5-8
+22     R3_NEW       ACTIVE_E1_STRADDLE  WHOLE_E1_GUARD_STRADDLE  q20_AULC  0.0589  0.0453  0.0724        4         5-8
+23     R3_NEW  WHOLE_E1_GUARD_STRADDLE                G3_MARGIN  q20_AULC  0.0339 -0.0372  0.1341        4         5-8
+        task                 arm                ref   metric    mean      lo      hi  repeats repeats_set
+0  R1_POOLED  ACTIVE_E1_STRADDLE          G3_MARGIN  BA_AULC  0.0054  0.0017  0.0095        8         1-8
+1     R3_NEW  ACTIVE_E1_STRADDLE          G3_MARGIN  BA_AULC  0.0565  0.0147  0.1033        8         1-8
+2     R3_OLD  ACTIVE_E1_STRADDLE          G3_MARGIN  BA_AULC  0.0227  0.0137  0.0349        8         1-8
+3  R1_POOLED  ACTIVE_E1_STRADDLE  WHOLE_E1_STRADDLE  BA_AULC  0.0026  0.0003  0.0050        8         1-8
+4     R3_NEW  ACTIVE_E1_STRADDLE  WHOLE_E1_STRADDLE  BA_AULC  0.0770  0.0495  0.1056        8         1-8
+5     R3_OLD  ACTIVE_E1_STRADDLE  WHOLE_E1_STRADDLE  BA_AULC -0.0021 -0.0074  0.0039        8         1-8
+6  R1_POOLED   WHOLE_E1_STRADDLE          G3_MARGIN  BA_AULC  0.0028 -0.0010  0.0068        8         1-8
+7     R3_NEW   WHOLE_E1_STRADDLE          G3_MARGIN  BA_AULC -0.0205 -0.0799  0.0386        8         1-8
+8     R3_OLD   WHOLE_E1_STRADDLE          G3_MARGIN  BA_AULC  0.0248  0.0162  0.0371        8         1-8
+                      hypothesis      verdict                                                                                      detail
+0                  X-H0_fidelity    FALSIFIED                                    max |dp| 3.86e-01 over 1400 comparisons; rows equal True
+1       X-H1_primary_replication    SUPPORTED                                              R3_NEW repeats 5-8: +0.0557 [+0.0088, +0.1353]
+2           X-H2_target_ablation    SUPPORTED                                              R3_NEW repeats 5-8: +0.0841 [+0.0539, +0.1261]
+3             X-H3b_guard_effect    SUPPORTED                                              R3_NEW repeats 5-8: +0.0020 [-0.0305, +0.0386]
+4           X-H3a_guard_identity    SUPPORTED                       11 runs without a non-positive slope in A; identical 11; max |dp| 0.0
+5  X-H3c_remaining_target_effect  DESCRIPTIVE                                                                  +0.0821 [+0.0737, +0.0905]
+6                X-H4_old_pooled    SUPPORTED   OLD ACTIVE-WHOLE -0.0057, ACTIVE-G3 +0.0153; POOLED ACTIVE-G3 +0.0060 vs WHOLE-G3 +0.0028
+7       X-H5_threshold_mechanism    SUPPORTED        ACTIVE max u 189.2 um; WHOLE runs with u >= 200: 10, late negative paid before in 10
+8      X-H6_eight_repeat_summary  DESCRIPTIVE  repeats 1-8: ACTIVE-G3 +0.0565 [+0.0147, +0.1033]; ACTIVE-WHOLE +0.0770 [+0.0495, +0.1056]
+9                 X-H7_secondary  DESCRIPTIVE                                                       see contrasts_r5_8.csv / qtt_r5_8.csv
+{
+ "rule": "C3 protocol draft: written (NOT executed) only if X-H1 holds (repeats 5-8 point estimate > 0) AND the repeats 1-8 point estimate of R3_NEW ACTIVE - G3 BA-AULC is > 0; otherwise HOLD (no C3 protocol). Spending C3 remains the owner's decision.",
+ "X-H1_supported": true,
+ "repeats_1_8_ACTIVE_minus_G3": 0.056492212036223774,
+ "repeats_1_8_interval": [
+  0.014661901232966047,
+  0.1033359517434858
+ ],
+ "decision": "C3 PROTOCOL DRAFT (not executed)",
+ "repeats_1_4_AULC_reproduced_max_abs_diff": 1.1102230246251565e-16
+}
+fidelity max |dp|: {'G3_MARGIN': 0.3862845723706032, 'WHOLE_E1_STRADDLE': 4.999105361225276e-06} rows equal: True n 1400 | r1-4 AULC reproduced: 1.1102230246251565e-16
+      task  repeat  fold  A_nonpositive_slope_steps  D_guard_activations  D_first_activation_budget  paths_identical  first_divergent_query  max_abs_dp_D_vs_A  identity_expected  D_u_max_um  A_u_max_um
+0   R3_NEW       5     1                          0                    0                        NaN             True                    NaN           0.000000               True  107.571957  107.571957
+1   R3_NEW       5     2                          4                    5                        8.0            False                    9.0           1.000000              False  111.000000  308.776718
+2   R3_NEW       5     3                         20                    1                        8.0            False                    9.0           1.000000              False  147.625380  308.995900
+3   R3_NEW       5     4                         38                    4                        8.0            False                    9.0           1.000000              False  137.668724  308.896299
+4   R3_NEW       5     5                          0                    0                        NaN             True                    NaN           0.000000               True  145.978346  145.978346
+5   R3_NEW       6     1                         20                    1                        8.0            False                    9.0           1.000000              False  121.330240  308.797917
+6   R3_NEW       6     2                          0                    0                        NaN             True                    NaN           0.000000               True  144.476818  144.476818
+7   R3_NEW       6     3                          0                    0                        NaN             True                    NaN           0.000000               True  116.508422  116.508422
+8   R3_NEW       6     4                          2                    3                        8.0            False                    9.0           0.977918              False  112.365477  308.185582
+9   R3_NEW       6     5                          0                    0                        NaN             True                    NaN           0.000000               True  134.999466  134.999466
+10  R3_NEW       7     1                         73                    3                        8.0            False                    9.0           1.000000              False  122.575879  440.734340
+11  R3_NEW       7     2                          0                    0                        NaN             True                    NaN           0.000000               True  168.246372  168.246372
+12  R3_NEW       7     3                         33                    3                        8.0            False                    9.0           1.000000              False  111.000000  308.915622
+13  R3_NEW       7     4                          0                    0                        NaN             True                    NaN           0.000000               True  173.089748  173.089748
+14  R3_NEW       7     5                         16                    5                        8.0            False                    9.0           1.000000              False  111.000000  308.754219
+15  R3_NEW       8     1                          0                    0                        NaN             True                    NaN           0.000000               True  143.303591  143.303591
+16  R3_NEW       8     2                         17                    5                        8.0            False                    9.0           1.000000              False  111.000000  308.945737
+17  R3_NEW       8     3                          0                    0                        NaN             True                    NaN           0.000000               True  125.711081  125.711081
+18  R3_NEW       8     4                          0                    0                        NaN             True                    NaN           0.000000               True  234.056382  234.056382
+19  R3_NEW       8     5                          0                    0                        NaN             True                    NaN           0.000000               True  124.499741  124.499741
+exit 0
