@@ -30,3 +30,16 @@ Every execution that fits a model, computes acquisition paths or evaluates resul
 - **CPU and memory:** the fitting and evaluation jobs ran one at a time with at most 4 threads (Track 1: 4 workers × 1 thread; SVGP: 4 torch threads). A few short single-thread checks (file reads and the label-free support check) ran beside the SVGP job. Peak memory per process was 0.6 GiB.
 - **Wall time:** the request arrived at 19:45 UTC; the last evaluation ended at 22:41 UTC, about 3.0 h of the 8 h limit.
 - **Restarts and discarded runs:** none.
+
+## Continuation round (2026-10-13): Track 1 extension on DEV repeats 5–8
+
+**Request.** "gerekli adımlara devam et" ("continue with the necessary steps"). This round runs the next experiment recommended in DEVELOPMENT_REPORT.md.
+
+**Caps (assumed):**
+- The Week 20 limits apply afresh to this round: ≤ 15,000 scalar learner fits, ≤ 4 threads, ≤ 8 GiB, ≤ 8 h.
+- The round is counted separately from the Week 20 round, and cumulative totals are reported.
+- C3 stays unused.
+
+| # | UTC | What ran | Scalar fits | Temporal fits | Outputs | Notes |
+|---|---|---|---:|---:|---|---|
+| X-M | 2026-10-13 | `python -m src.week20_track1_ext manifest`, run twice: the second run adds the analysis-module hash. No fit. | 0 | 0 | `track1_ext/manifest_track1_ext.json`, `track1_ext/HYPOTHESES_TRACK1_EXT.md`, `track1_ext/startup_checks.csv` | The historical WHOLE/G3 expectations come from the Week 18 caches, which are already-known results. The startup checks use paid labels only, through the protocol's own startup. Committed and pushed before any extension fit. |

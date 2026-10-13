@@ -1,0 +1,275 @@
+{
+ "status": "POST-HOC DEV RESEARCH - not confirmatory; C3 (repeats 17-20) reserved; C1/C2 spent in Week 18",
+ "written_utc": "2026-10-13T08:48:17+00:00",
+ "written_before_any_extension_fit": true,
+ "branch": "week20-active-temporal-dev",
+ "parent_commit": "22306587f79746df9fc5e79a56ce1bacffebd96b",
+ "protocol": "frozen Track 1 protocol (track1/manifest_track1.json, commit acb14d4f) unchanged: tasks, splits, startup, per-step ML-II fits to B80, straddle/margin, leakage guard, ledgers, endpoints, failure rules",
+ "repeats": [
+  5,
+  6,
+  7,
+  8
+ ],
+ "dev_block": "Week 18 DEV = repeats 1-8 (src.week18_tasks.BLOCKS)",
+ "arms": {
+  "WHOLE_E1_STRADDLE": {
+   "learner": [
+    "GPR_depth",
+    "mlii"
+   ],
+   "rule": "straddle",
+   "response": "whole"
+  },
+  "ACTIVE_E1_STRADDLE": {
+   "learner": [
+    "GPR_depth",
+    "mlii"
+   ],
+   "rule": "straddle",
+   "response": "A"
+  },
+  "G3_MARGIN": {
+   "learner": [
+    "G3",
+    "mlii"
+   ],
+   "rule": "margin",
+   "response": null
+  },
+  "WHOLE_E1_GUARD_STRADDLE": {
+   "learner": [
+    "GPR_depth",
+    "mlii"
+   ],
+   "rule": "straddle",
+   "response": "whole",
+   "guard": "if the paid (log whole, label) pairs are not separable and the logistic slope (C=1e6) is <= 0, u = log(111 um), the engine's single-class default; otherwise identical to WHOLE_E1_STRADDLE"
+  }
+ },
+ "arm_scope": {
+  "WHOLE_E1_STRADDLE": "R3_NEW, R3_OLD, R1_POOLED",
+  "ACTIVE_E1_STRADDLE": "R3_NEW, R3_OLD, R1_POOLED",
+  "G3_MARGIN": "R3_NEW, R3_OLD, R1_POOLED",
+  "WHOLE_E1_GUARD_STRADDLE": "all R3_NEW runs; on R3_OLD / R1_POOLED only the runs in which arm A has >= 1 non-positive-slope step (phase 2, run in (task, repeat, fold) order while the round cap allows; any not run are listed). Elsewhere D equals A by construction."
+ },
+ "not_run_and_why": "arm D on repeats 1-4 (it would push the round above 15,000 scalar fits); C3; any simulator job",
+ "tasks": {
+  "R3_NEW": {
+   "repeats": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "folds": 5,
+   "grid": [
+    16,
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    44,
+    48,
+    52,
+    56,
+    60,
+    64,
+    68,
+    72,
+    76,
+    80
+   ]
+  },
+  "R3_OLD": {
+   "repeats": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "folds": 5,
+   "grid": [
+    16,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    72,
+    80
+   ]
+  },
+  "R1_POOLED": {
+   "repeats": [
+    5,
+    6,
+    7,
+    8
+   ],
+   "folds": 5,
+   "grid": [
+    16,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    72,
+    80
+   ]
+  }
+ },
+ "task_checks": {
+  "n_task_folds": 60,
+  "whole_response_equals_pilot_inputs_max_abs": 0.0,
+  "labels_equal_pilot_inputs": true,
+  "split_sha256": {
+   "R1_POOLED_r5_f1": "73be0c51ce75a917",
+   "R1_POOLED_r5_f2": "75e9acfe3e5144be",
+   "R1_POOLED_r5_f3": "39c91ff2b776766a",
+   "R1_POOLED_r5_f4": "f4ca5a0eac05b8fe",
+   "R1_POOLED_r5_f5": "633e04b5711fa77e",
+   "R1_POOLED_r6_f1": "d4f1874f36dcf34c",
+   "R1_POOLED_r6_f2": "f8f5cdd919ad2e4d",
+   "R1_POOLED_r6_f3": "d19e1bb7d2f30f35",
+   "R1_POOLED_r6_f4": "911a25324a2c0559",
+   "R1_POOLED_r6_f5": "a0f05eb46aa4c217",
+   "R1_POOLED_r7_f1": "e54cc7ef8dad60da",
+   "R1_POOLED_r7_f2": "f2c9fe4fb7d2fc24",
+   "R1_POOLED_r7_f3": "4a9ef7205794ec32",
+   "R1_POOLED_r7_f4": "4842ec1ecc72ab57",
+   "R1_POOLED_r7_f5": "8eb63fa1a9840a76",
+   "R1_POOLED_r8_f1": "111594e50980558b",
+   "R1_POOLED_r8_f2": "793c497bd239f1bc",
+   "R1_POOLED_r8_f3": "ca85cd653e4598d2",
+   "R1_POOLED_r8_f4": "e577c52799ee222d",
+   "R1_POOLED_r8_f5": "ff003562524bd858",
+   "R3_NEW_r5_f1": "ffe320ae8bf3660f",
+   "R3_NEW_r5_f2": "2675af102e228715",
+   "R3_NEW_r5_f3": "430fb7ea1854a88e",
+   "R3_NEW_r5_f4": "1ed7e977f37a36d4",
+   "R3_NEW_r5_f5": "13772b98617398ee",
+   "R3_NEW_r6_f1": "a9a7b095fc8532b9",
+   "R3_NEW_r6_f2": "148a55fe49134648",
+   "R3_NEW_r6_f3": "6338396597d4c41c",
+   "R3_NEW_r6_f4": "4321aa32f3b9ca8c",
+   "R3_NEW_r6_f5": "356e3e9934a85796",
+   "R3_NEW_r7_f1": "98c6f00b1bf49a78",
+   "R3_NEW_r7_f2": "084b3ca73f7f0e1a",
+   "R3_NEW_r7_f3": "17c0a610e911bec5",
+   "R3_NEW_r7_f4": "9b0ad163e10b9b7f",
+   "R3_NEW_r7_f5": "b46301c989d1d0f7",
+   "R3_NEW_r8_f1": "d6529cf82e0f1312",
+   "R3_NEW_r8_f2": "bf76f78be2047d50",
+   "R3_NEW_r8_f3": "ac7be94227e2ed22",
+   "R3_NEW_r8_f4": "5049c50f66f55c46",
+   "R3_NEW_r8_f5": "21f7ad2e33d1f166",
+   "R3_OLD_r5_f1": "0fdf0be19f54ad66",
+   "R3_OLD_r5_f2": "700a7696fa01ca9d",
+   "R3_OLD_r5_f3": "6c26123b5830c862",
+   "R3_OLD_r5_f4": "139967761f2ab88c",
+   "R3_OLD_r5_f5": "4650c27456a1e7e2",
+   "R3_OLD_r6_f1": "35e3429795216fe8",
+   "R3_OLD_r6_f2": "d0369dad9db94927",
+   "R3_OLD_r6_f3": "c990fcf317c50843",
+   "R3_OLD_r6_f4": "325044fd4cd5607a",
+   "R3_OLD_r6_f5": "9724411fc5243fab",
+   "R3_OLD_r7_f1": "392050ede47c8dcf",
+   "R3_OLD_r7_f2": "40a86fda49eb4861",
+   "R3_OLD_r7_f3": "c3c160f233b9b31b",
+   "R3_OLD_r7_f4": "cafe3c2f781269a0",
+   "R3_OLD_r7_f5": "d4e01f877d7ac42b",
+   "R3_OLD_r8_f1": "ec7fa7153ba84375",
+   "R3_OLD_r8_f2": "4165804e53ec23df",
+   "R3_OLD_r8_f3": "3004ac8f06bd1d86",
+   "R3_OLD_r8_f4": "2ffe7799ef0be730",
+   "R3_OLD_r8_f5": "cb8253b97f7583ad"
+  },
+  "startup_single_class_finite_A_runs": [],
+  "startup_A_unavailable_runs": []
+ },
+ "historical_expectations": {
+  "WHOLE_minus_G3_BA_AULC_to_B80": {
+   "R1_POOLED": {
+    "mean": 0.0033,
+    "lo": -0.0038,
+    "hi": 0.0105,
+    "repeats": 4
+   },
+   "R3_NEW": {
+    "mean": -0.0284,
+    "lo": -0.1195,
+    "hi": 0.0846,
+    "repeats": 4
+   },
+   "R3_OLD": {
+    "mean": 0.021,
+    "lo": 0.0183,
+    "hi": 0.0237,
+    "repeats": 4
+   }
+  },
+  "WHOLE_R3_NEW_folds_with_u_ge_200_at_grid_budgets": [
+   "r5f3",
+   "r5f4",
+   "r6f1",
+   "r7f1",
+   "r7f3",
+   "r7f5",
+   "r8f2"
+  ]
+ },
+ "endpoints": {
+  "primary": "R3_NEW BA-AULC ACTIVE - G3 on repeats 5-8 (Week 18 repeat bootstrap, 4000, seed 0)",
+  "ablations": [
+   "R3_NEW ACTIVE - WHOLE",
+   "R3_NEW (WHOLE + guard) - WHOLE",
+   "R3_NEW ACTIVE - (WHOLE + guard)"
+  ],
+  "summary": "repeats 1-8 (Track 1 caches for 1-4 + this extension), same contrasts",
+  "secondary": "R3_OLD, R1_POOLED; q20, specificity, sensitivity, short-K sensitivity, Brier, AUC (AULC); QTT with the frozen definition (target = G3's mean BA at B40/B80 over the repeats analysed); guard activations; learned-threshold mechanism"
+ },
+ "hypotheses": {
+  "X-H0_fidelity": "Arms A and C reproduce the Week 18 DEV caches (phase3/depth3 E1; phase2 G3|mlii|margin) on repeats 5-8 at every grid budget <= 80: max |p_new - p_cache| <= 1e-4. Their contrasts then equal the historical values listed under historical_expectations.",
+  "X-H1_primary_replication": "R3_NEW BA-AULC (grid 16..80 step 4), ACTIVE_E1_STRADDLE minus G3_MARGIN, on repeats 5-8 is > 0 (repeat-bootstrap mean). Basis: repeats 1-4 +0.057 [-0.007, +0.115] (per repeat +0.062, -0.032, +0.067, +0.132). No magnitude predicted.",
+  "X-H2_target_ablation": "R3_NEW BA-AULC, ACTIVE minus WHOLE, on repeats 5-8 is > 0. Basis: repeats 1-4 +0.070 [+0.030, +0.110]. No magnitude predicted.",
+  "X-H3a_guard_identity": "In every run in which arm A has no non-positive-slope step, arm D (WHOLE + guard) is identical to arm A: the same paid sequence and the same test probabilities (max |dp| = 0). A code-level check of the ablation.",
+  "X-H3b_guard_effect": "R3_NEW BA-AULC, WHOLE + guard minus WHOLE, on repeats 5-8 is > 0. Basis: the reversed-slope trap (only paid negative = the late negative, whole 312 um) caused all six long WHOLE episodes on repeats 1-4, and the historical WHOLE threshold reached 200 um in 7 of 20 R3_NEW folds of repeats 5-8 (historical_expectations). No magnitude predicted.",
+  "X-H3c_remaining_target_effect": "R3_NEW BA-AULC, ACTIVE minus (WHOLE + guard): the part of the ACTIVE-WHOLE difference not removed by the guard. No directional expectation.",
+  "X-H4_old_pooled": "R3_OLD: |ACTIVE - WHOLE| < 0.01 and ACTIVE - G3 > 0 (repeats 1-4: +0.001 and +0.030). R1_POOLED: ACTIVE - G3 >= WHOLE - G3 (repeats 1-4: +0.005 vs +0.003).",
+  "X-H5_threshold_mechanism": "ACTIVE E1 never reaches u >= 200 um on R3_NEW (repeats 1-4 maximum 188.9 um); falsified by any such step. In every WHOLE R3_NEW run with a u >= 200 um step, the late negative was paid before the first such step (temporal precedence only).",
+  "X-H6_eight_repeat_summary": "Descriptive: ACTIVE - G3 and ACTIVE - WHOLE on R3_NEW over DEV repeats 1-8 (repeat bootstrap, 8 repeats). No expectation on whether the interval excludes 0.",
+  "X-H7_secondary": "q20, specificity, sensitivity, short-K sensitivity, Brier, AUC and QTT are reported without expectations."
+ },
+ "decision_rule": "C3 protocol draft: written (NOT executed) only if X-H1 holds (repeats 5-8 point estimate > 0) AND the repeats 1-8 point estimate of R3_NEW ACTIVE - G3 BA-AULC is > 0; otherwise HOLD (no C3 protocol). Spending C3 remains the owner's decision.",
+ "budget_plan": {
+  "phase1_runs": 200,
+  "phase1_max_fits": 14600,
+  "round_cap": {
+   "round_max_scalar_fits": 15000,
+   "workers": 4,
+   "threads_per_worker": 1,
+   "max_memory_gib_total": 8,
+   "max_elapsed_h_total": 8
+  },
+  "accounting": "this continuation round is counted separately from the Week 20 round (13,131 scalar fits); cumulative totals are reported"
+ },
+ "code_sha256": {
+  "src/week20_track1_ext.py": "e29e95f96a8ef5954d1e3312220bbc5176cb356b95f0a570dde4d656b0198f28",
+  "src/week20_track1_ext_analysis.py": "16616016f71cbc32a15dfe48dc80085d9a6d817b71b983756fb0eb6a2be6c893",
+  "src/week20_track1_al.py": "e3d0cfbf3e017463d3b2da5232a625d0a40011ec55934a57727a4c1322002e7a",
+  "src/week20_track1_analysis.py": "3aa99b90f843bd1a668d5658c1dfc4d18a1044b7652da9fb54b2bd2d2fd22531",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d",
+  "src/week18_tasks.py": "7f3c78a0659df3fa32c47073ef668a749543304b1dbbccd1854b86c300634198",
+  "src/week17_models.py": "7b7ad8846a4fa4f721b21ec6853b06b704ece658ee4a7e7902d3d21827d47570",
+  "src/week17_audit_impact.py": "46e05394afe519b28148a1d382bc7d9f767a97a99fba5e124457c223f653905e",
+  "src/week13_synthetic_al.py": "3df1c6f83e249bcc8831014914a3d99431371e3fa5269fa121b8ffd7d8317d5f",
+  "src/week18_metrics.py": "dee2d121ac5802c3b4d86060166db80dc62150dd712013a84a7d4a16945514fb",
+  "src/week19_dev_pilot.py": "9f8d256d5897acd784b43326abd761a926f15d758067233aa0fa0981e5369bd1"
+ }
+}
