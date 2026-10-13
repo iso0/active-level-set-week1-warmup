@@ -139,7 +139,11 @@ print(pd.read_csv(tr).round(3).to_string() if tr.exists() else 'temporal repair:
 - **The exploratory tests (fresh DEV repeats 5–8, manifests committed before any fit).**
   - EX1: predicting Keyhole when p ≥ π̂ (the paid prevalence) instead of p ≥ 0.5 raised NEW B40 J balanced accuracy from 0.543 to 0.878 (+0.335, interval +0.241 to +0.419), with specificity +0.81 and sensitivity −0.14. The same rule *lowered* Binary-matched BA (−0.067), so the gain is not a generic threshold effect.
   - EX2: a response prior trained on the paid depths (ML-II) halved the fast-scan depth error (RMSE 0.236 → 0.117) and added +0.028 BA at π̂ (interval +0.012 to +0.047).
-  - Both are exploratory. Neither changes the frozen Stage M decision, and neither has been confirmed on reserved data."""),
+  - Both are exploratory. Neither changes the frozen Stage M decision, and neither has been confirmed on reserved data.
+- **What the gain consists of (POST-HOC, `exploratory/EXPLORATORY_REPORT.md` §3).**
+  - At p ≥ π̂, the joint model labels the whole fast-scan corner (VX > 0.85 m/s) "no Keyhole": all 11 fast negatives are rejected and nearly all 12 fast positives are missed.
+  - Inside that corner no model in the study is better than chance, because depth does not separate the labels there.
+  - The one persistent false positive is a slow scan whose recording ended early and which has no A."""),
 ]
 
 

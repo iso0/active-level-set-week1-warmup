@@ -115,6 +115,10 @@
    - About 91 % of NEW runs are positive, so a fixed probit model with a proper prior is calibrated to that rate. Its well-ranked negatives therefore still sit above 0.5.
    - ACTIVE_E1 classifies by a depth threshold rather than a calibrated probability. It reaches the best NEW BA (0.730), with the worst log loss (0.799).
    - POST-HOC (`MECHANISM_REPORT.md`): moving J's threshold to the paid-label prevalence, a train-only rule, raises its NEW B40 BA to 0.870. This is now tested prospectively in `exploratory/`.
+   - *Addendum, after EX1/EX2 (`exploratory/EXPLORATORY_REPORT.md`):*
+     - On DEV repeats 5–8 the registered predictions held: +0.335 BA at π̂, while the depth-free control lost −0.067. A response prior trained on the paid depths added a further +0.028.
+     - The NEW gain at π̂ amounts to classifying the whole fast-scan corner as "no Keyhole". No model resolves that corner.
+     - The frozen Stage M decision above is unchanged.
 3. **θ and δ.** Under the fixed priors, the threshold flexibility (J_fixed_theta) and the discrepancy (J_no_delta) change NEW results only within noise. The discrepancy does not carve out the fast-scan negatives.
 
 ## 6. Limitations

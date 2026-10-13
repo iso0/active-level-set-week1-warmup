@@ -4,7 +4,8 @@
 - **Pre-declared:** every diagnostic except the threshold-alignment table.
 - **POST-HOC:** the threshold-alignment table was added after the Stage M result was seen and is marked as such.
 - **Evaluation-only strata:** labels, fast scans, short-K and support classes never reach a model.
-- **Run names:** H codes are shorthand. `errors_by_full_id.csv` and `NEW_negatives_by_arm.csv` carry full simulation IDs.
+- **Run names:** full simulation IDs, as in `errors_by_full_id.csv` and `NEW_negatives_by_arm.csv`.
+- **Erratum (2026-10-13, after commit `3afad1dc`):** the first version identified runs by H suffix. Those suffixes are not unique: `H-e7dbd8e5ce` and `H-b302fc6cbd` are each shared by two NEW simulations (`week20_active_temporal_development/NAMED_RUNS.csv`). The full IDs below replace them. No number changed.
 
 ## 1. Who is misclassified (OBS; NEW, B40, both repeats)
 
@@ -14,12 +15,18 @@
 | Positives (124) | **0.020** | 0.032 | 0.040 | 0.056 | 0.921 |
 | Fast scans, VX > 0.85 (23) | 0.522 | 0.543 | 0.435 | 0.630 | 0.639 |
 | Short-K positives (10) | **0.250** | 0.300 | 0.400 | 0.600 | 0.618 |
-| A missing (1: H-e7dbd8e5ce, a negative) | 1.000 | 1.000 | 1.000 | 1.000 | 0.983 |
+| A missing (1 negative, ID below) | 1.000 | 1.000 | 1.000 | 1.000 | 0.983 |
 | Early-ending records (79) | 0.025 | 0.025 | 0.019 | 0.025 | 0.959 |
 
-- **Where the negatives are.** Eleven of the 12 NEW negatives are fast scans (VX 0.90–0.98 m/s). The twelfth, H-e7dbd8e5ce, is a slow scan with no A. It sits among deep positives, and every arm calls it positive.
-- **Hard cases.** Among the fast-scan negatives, J's mean p at B40 ranges from 0.40 (G5, H-b302fc6cbd) to 0.82 (H-29cf03a279).
-- **Correct calls.** Only three of the 24 negative predictions fall below 0.5: G5 (0.275) and H-1d4ea0f649 (0.434) in repeat 1, and H-6f28bdc6c9 (0.479) in repeat 2.
+- **Where the negatives are.** Eleven of the 12 NEW negatives are fast scans (VX 0.90–0.98 m/s).
+  - The twelfth, `P-423p267621988_VX-0p332154005524_LS-4p22725332613e-05_ST-473p308549274_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p45237465838e-05_H-e7dbd8e5ce`, is a slow scan with no A.
+  - It sits among deep positives, and every arm calls it positive.
+- **Hard cases.** Among the fast-scan negatives, J's mean p at B40 ranges:
+  - from 0.40, for `P-387p361336282_VX-0p960187357846_LS-4p72484046084e-05_ST-390p52586458_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p02414509376e-06_H-b302fc6cbd` (Week 19's G5, the recorded-negative half of the matched pair);
+  - to 0.82, for `P-369p593326825_VX-0p912334588191_LS-4p43771409089e-05_ST-483p802696386_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p28766602238e-06_H-29cf03a279`.
+- **Correct calls.** Only three of the 24 negative predictions fall below 0.5:
+  - in repeat 1, G5 (above; p = 0.275) and `P-372p400266258_VX-0p904171786761_LS-4p46899874615e-05_ST-344p55726366_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p3354027118e-06_H-1d4ea0f649` (0.434);
+  - in repeat 2, `P-361p800115091_VX-0p960992922817_LS-4p74221265218e-05_ST-336p90191265_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p01993353798e-06_H-6f28bdc6c9` (0.479).
 
 ## 2. Where the label–depth disagreement goes: into θ, into δ, or nowhere? (OBS; `latent_decomposition_by_class.csv`)
 

@@ -172,6 +172,19 @@ def test_stage_a_refuses_without_owner_authorization():
     assert not (OUT / "_cache" / "stage_a").exists() or not any((OUT / "_cache" / "stage_a").iterdir())
 
 
+def test_reports_use_full_simulation_ids():
+    """H suffixes are not unique; a bare suffix may appear only in a sentence that is about suffixes."""
+    import re
+    pat = re.compile(r"(?<![0-9A-Za-z_])H-[0-9a-f]{10}")
+    files = sorted(OUT.glob("*.md")) + sorted((OUT / "exploratory").glob("*.md")) + [OUT / "JOINT_MODEL_WALKTHROUGH.ipynb"]
+    bad = []
+    for f in files:
+        if f.exists():
+            for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+                bad += [f"{f.name}:{i}: {m.group(0)}" for m in pat.finditer(line) if "suffix" not in line.lower()]
+    assert not bad, bad[:10]
+
+
 def test_temporal_freeze_precedes_temporal_fits_and_protocol_unchanged():
     fz = _added_in(f"{REL}/temporal_repair/TEMPORAL_MANIFEST.json")
     assert fz and fz.startswith(TEMPORAL_FREEZE)

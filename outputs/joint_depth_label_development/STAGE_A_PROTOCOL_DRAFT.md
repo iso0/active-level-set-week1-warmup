@@ -5,6 +5,16 @@
 - **Consequence:** under the rule written before Stage M, Stage A is **not recommended**, and this draft does not start it.
 - **Runner:** `src/jdl_stage_a.py` is working and validated (`stage_a/stage_a_runner_validation.json`). Its `run` step refuses to execute without an owner decision and a committed `stage_a/STAGE_A_MANIFEST.json`.
 - **What would justify Stage A:** for example, a revised model or decision rule that passes its own pre-registered screen (see `exploratory/EX1`). The draft below would then become the manifest after updating the candidate definition.
+- **After EX1/EX2 (exploratory, DEV repeats 5–8; `exploratory/EXPLORATORY_REPORT.md`).**
+  - **Candidate:** J with a response prior trained on paid depths (J_trained), plus the π̂ decision rule.
+  - **Exploratory evidence:** the candidate exceeds Binary_matched by +0.18 BA even at the frozen 0.5 rule (POST-HOC), and by +0.03 at π̂ over frozen-prior J (registered).
+  - **Not a screen pass:** this is exploratory evidence on other repeats, so it does not pass the frozen Stage M screen.
+  - **The owner's decision:** whether to (a) freeze J_trained as the Stage A model or (b) first run the C4 stability check of the candidate. The study recommends (b), because the open question is generalisation of the model. Stage A asks about query choice, which only matters once the model is settled.
+  - **If Stage A goes ahead with J_trained**, three things change before the manifest is frozen:
+    1. **The runner** must refit the response hyperparameters by paid-only ML-II at every step, as `src/jdl_ex2.trained_config` does. Today it uses the fixed priors.
+    2. **The margin arm** should use |p − π̂| (the boundary of the decision rule actually in use) instead of |p − 0.5|.
+    3. **Validation** (`stage_a_runner_validation.json`) must be re-run.
+  - **No change has been made;** Stage A stays unexecuted.
 
 ## Design (as prepared)
 

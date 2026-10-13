@@ -1,1 +1,2 @@
 {"checkpoint": "ckpt_r1_f1_B16", "tag": "svgp_ngd_M400", "status": "max_iterations", "iterations": 20000, "fit_seconds": 2018.8500547409058, "final_probe_elbo_per_point": 1.675091867658849, "lengthscale_s": 0.118503970246235, "noise": 0.001318914042314005}
+{"checkpoint": "ckpt_r1_f1_B40", "tag": "svgp_ngd_M400", "status": "max_iterations", "iterations": 20000, "fit_seconds": 1942.7987320423126, "final_probe_elbo_per_point": 1.081898554582943, "lengthscale_s": 0.1583815879540785, "noise": 0.004148760744334857}
