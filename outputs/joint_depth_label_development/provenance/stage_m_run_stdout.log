@@ -1,0 +1,379 @@
+NEW    r1 f1 B16 J               ok                           converged
+NEW    r1 f1 B16 J_fixed_theta   ok                           converged
+NEW    r1 f1 B16 J_no_delta      ok                           converged
+NEW    r1 f1 B16 Binary_matched  ok                           converged
+NEW    r1 f1 B16 ACTIVE_E1       ok                           
+NEW    r1 f1 B16 G3              ok                           
+NEW    r1 f1 B40 J               ok                           converged
+NEW    r1 f1 B40 J_fixed_theta   ok                           converged
+NEW    r1 f1 B40 J_no_delta      ok                           converged
+NEW    r1 f1 B40 Binary_matched  ok                           converged
+NEW    r1 f1 B40 ACTIVE_E1       ok                           
+NEW    r1 f1 B40 G3              ok                           
+NEW    r1 f2 B16 J               ok                           converged
+NEW    r1 f2 B16 J_fixed_theta   ok                           converged
+NEW    r1 f2 B16 J_no_delta      ok                           converged
+NEW    r1 f2 B16 Binary_matched  ok                           converged
+NEW    r1 f2 B16 ACTIVE_E1       ok                           
+NEW    r1 f2 B16 G3              ok                           
+NEW    r1 f2 B40 J               ok                           converged
+NEW    r1 f2 B40 J_fixed_theta   ok                           converged
+NEW    r1 f2 B40 J_no_delta      ok                           converged
+NEW    r1 f2 B40 Binary_matched  ok                           converged
+NEW    r1 f2 B40 ACTIVE_E1       ok                           
+NEW    r1 f2 B40 G3              ok                           
+NEW    r1 f3 B16 J               ok                           converged
+NEW    r1 f3 B16 J_fixed_theta   ok                           converged
+NEW    r1 f3 B16 J_no_delta      ok                           converged
+NEW    r1 f3 B16 Binary_matched  ok                           converged
+NEW    r1 f3 B16 ACTIVE_E1       ok                           
+NEW    r1 f3 B16 G3              ok                           
+NEW    r1 f3 B40 J               ok                           converged
+NEW    r1 f3 B40 J_fixed_theta   ok                           converged
+NEW    r1 f3 B40 J_no_delta      ok                           converged
+NEW    r1 f3 B40 Binary_matched  ok                           converged
+NEW    r1 f3 B40 ACTIVE_E1       ok                           
+NEW    r1 f3 B40 G3              ok                           
+NEW    r1 f4 B16 J               ok                           converged
+NEW    r1 f4 B16 J_fixed_theta   ok                           converged
+NEW    r1 f4 B16 J_no_delta      ok                           converged
+NEW    r1 f4 B16 Binary_matched  ok                           converged
+NEW    r1 f4 B16 ACTIVE_E1       ok                           
+NEW    r1 f4 B16 G3              ok                           
+NEW    r1 f4 B40 J               ok                           converged
+NEW    r1 f4 B40 J_fixed_theta   ok                           converged
+NEW    r1 f4 B40 J_no_delta      ok                           converged
+NEW    r1 f4 B40 Binary_matched  ok                           converged
+NEW    r1 f4 B40 ACTIVE_E1       ok                           
+NEW    r1 f4 B40 G3              ok                           
+NEW    r1 f5 B16 J               ok                           converged
+NEW    r1 f5 B16 J_fixed_theta   ok                           converged
+NEW    r1 f5 B16 J_no_delta      ok                           converged
+NEW    r1 f5 B16 Binary_matched  ok                           converged
+NEW    r1 f5 B16 ACTIVE_E1       ok                           
+NEW    r1 f5 B16 G3              ok                           
+NEW    r1 f5 B40 J               ok                           converged
+NEW    r1 f5 B40 J_fixed_theta   ok                           converged
+NEW    r1 f5 B40 J_no_delta      ok                           converged
+NEW    r1 f5 B40 Binary_matched  ok                           converged
+NEW    r1 f5 B40 ACTIVE_E1       ok                           
+NEW    r1 f5 B40 G3              ok                           
+NEW    r2 f1 B16 J               ok                           converged
+NEW    r2 f1 B16 J_fixed_theta   ok                           converged
+NEW    r2 f1 B16 J_no_delta      ok                           converged
+NEW    r2 f1 B16 Binary_matched  ok                           converged
+NEW    r2 f1 B16 ACTIVE_E1       ok                           
+NEW    r2 f1 B16 G3              ok                           
+NEW    r2 f1 B40 J               ok                           converged
+NEW    r2 f1 B40 J_fixed_theta   ok                           converged
+NEW    r2 f1 B40 J_no_delta      ok                           converged
+NEW    r2 f1 B40 Binary_matched  ok                           converged
+NEW    r2 f1 B40 ACTIVE_E1       ok                           
+NEW    r2 f1 B40 G3              ok                           
+NEW    r2 f2 B16 J               ok                           converged
+NEW    r2 f2 B16 J_fixed_theta   ok                           converged
+NEW    r2 f2 B16 J_no_delta      ok                           converged
+NEW    r2 f2 B16 Binary_matched  ok                           converged
+NEW    r2 f2 B16 ACTIVE_E1       ok                           
+NEW    r2 f2 B16 G3              ok                           
+NEW    r2 f2 B40 J               ok                           converged
+NEW    r2 f2 B40 J_fixed_theta   ok                           converged
+NEW    r2 f2 B40 J_no_delta      ok                           converged
+NEW    r2 f2 B40 Binary_matched  ok                           converged
+NEW    r2 f2 B40 ACTIVE_E1       ok                           
+NEW    r2 f2 B40 G3              ok                           
+NEW    r2 f3 B16 J               ok                           converged
+NEW    r2 f3 B16 J_fixed_theta   ok                           converged
+NEW    r2 f3 B16 J_no_delta      ok                           converged
+NEW    r2 f3 B16 Binary_matched  ok                           converged
+NEW    r2 f3 B16 ACTIVE_E1       ok                           
+NEW    r2 f3 B16 G3              ok                           
+NEW    r2 f3 B40 J               ok                           converged
+NEW    r2 f3 B40 J_fixed_theta   ok                           converged
+NEW    r2 f3 B40 J_no_delta      ok                           converged
+NEW    r2 f3 B40 Binary_matched  ok                           converged
+NEW    r2 f3 B40 ACTIVE_E1       ok                           
+NEW    r2 f3 B40 G3              ok                           
+NEW    r2 f4 B16 J               ok                           converged
+NEW    r2 f4 B16 J_fixed_theta   ok                           converged
+NEW    r2 f4 B16 J_no_delta      ok                           converged
+NEW    r2 f4 B16 Binary_matched  ok                           converged
+NEW    r2 f4 B16 ACTIVE_E1       ok                           
+NEW    r2 f4 B16 G3              ok                           
+NEW    r2 f4 B40 J               ok                           converged
+NEW    r2 f4 B40 J_fixed_theta   ok                           converged
+NEW    r2 f4 B40 J_no_delta      ok                           converged
+NEW    r2 f4 B40 Binary_matched  ok                           converged
+NEW    r2 f4 B40 ACTIVE_E1       ok                           
+NEW    r2 f4 B40 G3              ok                           
+NEW    r2 f5 B16 J               ok                           converged
+NEW    r2 f5 B16 J_fixed_theta   ok                           converged
+NEW    r2 f5 B16 J_no_delta      ok                           converged
+NEW    r2 f5 B16 Binary_matched  ok                           converged
+NEW    r2 f5 B16 ACTIVE_E1       ok                           
+NEW    r2 f5 B16 G3              ok                           
+NEW    r2 f5 B40 J               ok                           converged
+NEW    r2 f5 B40 J_fixed_theta   ok                           converged
+NEW    r2 f5 B40 J_no_delta      ok                           converged
+NEW    r2 f5 B40 Binary_matched  ok                           converged
+NEW    r2 f5 B40 ACTIVE_E1       ok                           
+NEW    r2 f5 B40 G3              ok                           
+OLD    r1 f1 B16 J               ok                           converged
+OLD    r1 f1 B16 J_fixed_theta   ok                           converged
+OLD    r1 f1 B16 J_no_delta      ok                           converged
+OLD    r1 f1 B16 Binary_matched  ok                           converged
+OLD    r1 f1 B16 ACTIVE_E1       ok                           
+OLD    r1 f1 B16 G3              ok                           
+OLD    r1 f1 B40 J               ok                           converged
+OLD    r1 f1 B40 J_fixed_theta   ok                           converged
+OLD    r1 f1 B40 J_no_delta      ok                           converged
+OLD    r1 f1 B40 Binary_matched  ok                           converged
+OLD    r1 f1 B40 ACTIVE_E1       ok                           
+OLD    r1 f1 B40 G3              ok                           
+OLD    r1 f2 B16 J               ok                           converged
+OLD    r1 f2 B16 J_fixed_theta   ok                           converged
+OLD    r1 f2 B16 J_no_delta      ok                           converged
+OLD    r1 f2 B16 Binary_matched  ok                           converged
+OLD    r1 f2 B16 ACTIVE_E1       ok                           
+OLD    r1 f2 B16 G3              ok                           
+OLD    r1 f2 B40 J               ok                           converged
+OLD    r1 f2 B40 J_fixed_theta   ok                           converged
+OLD    r1 f2 B40 J_no_delta      ok                           converged
+OLD    r1 f2 B40 Binary_matched  ok                           converged
+OLD    r1 f2 B40 ACTIVE_E1       ok                           
+OLD    r1 f2 B40 G3              ok                           
+OLD    r1 f3 B16 J               ok                           converged
+OLD    r1 f3 B16 J_fixed_theta   ok                           converged
+OLD    r1 f3 B16 J_no_delta      ok                           converged
+OLD    r1 f3 B16 Binary_matched  ok                           converged
+OLD    r1 f3 B16 ACTIVE_E1       ok                           
+OLD    r1 f3 B16 G3              ok                           
+OLD    r1 f3 B40 J               ok                           converged
+OLD    r1 f3 B40 J_fixed_theta   ok                           converged
+OLD    r1 f3 B40 J_no_delta      ok                           converged
+OLD    r1 f3 B40 Binary_matched  ok                           converged
+OLD    r1 f3 B40 ACTIVE_E1       ok                           
+OLD    r1 f3 B40 G3              ok                           
+OLD    r1 f4 B16 J               ok                           converged
+OLD    r1 f4 B16 J_fixed_theta   ok                           converged
+OLD    r1 f4 B16 J_no_delta      ok                           converged
+OLD    r1 f4 B16 Binary_matched  ok                           converged
+OLD    r1 f4 B16 ACTIVE_E1       ok                           
+OLD    r1 f4 B16 G3              ok                           
+OLD    r1 f4 B40 J               ok                           converged
+OLD    r1 f4 B40 J_fixed_theta   ok                           converged
+OLD    r1 f4 B40 J_no_delta      ok                           converged
+OLD    r1 f4 B40 Binary_matched  ok                           converged
+OLD    r1 f4 B40 ACTIVE_E1       ok                           
+OLD    r1 f4 B40 G3              ok                           
+OLD    r1 f5 B16 J               ok                           converged
+OLD    r1 f5 B16 J_fixed_theta   ok                           converged
+OLD    r1 f5 B16 J_no_delta      ok                           converged
+OLD    r1 f5 B16 Binary_matched  ok                           converged
+OLD    r1 f5 B16 ACTIVE_E1       ok                           
+OLD    r1 f5 B16 G3              ok                           
+OLD    r1 f5 B40 J               ok                           converged
+OLD    r1 f5 B40 J_fixed_theta   ok                           converged
+OLD    r1 f5 B40 J_no_delta      ok                           converged
+OLD    r1 f5 B40 Binary_matched  ok                           converged
+OLD    r1 f5 B40 ACTIVE_E1       ok                           
+OLD    r1 f5 B40 G3              ok                           
+OLD    r2 f1 B16 J               ok                           converged
+OLD    r2 f1 B16 J_fixed_theta   ok                           converged
+OLD    r2 f1 B16 J_no_delta      ok                           converged
+OLD    r2 f1 B16 Binary_matched  ok                           converged
+OLD    r2 f1 B16 ACTIVE_E1       ok                           
+OLD    r2 f1 B16 G3              ok                           
+OLD    r2 f1 B40 J               ok                           converged
+OLD    r2 f1 B40 J_fixed_theta   ok                           converged
+OLD    r2 f1 B40 J_no_delta      ok                           converged
+OLD    r2 f1 B40 Binary_matched  ok                           converged
+OLD    r2 f1 B40 ACTIVE_E1       ok                           
+OLD    r2 f1 B40 G3              ok                           
+OLD    r2 f2 B16 J               ok                           converged
+OLD    r2 f2 B16 J_fixed_theta   ok                           converged
+OLD    r2 f2 B16 J_no_delta      ok                           converged
+OLD    r2 f2 B16 Binary_matched  ok                           converged
+OLD    r2 f2 B16 ACTIVE_E1       ok                           
+OLD    r2 f2 B16 G3              ok                           
+OLD    r2 f2 B40 J               ok                           converged
+OLD    r2 f2 B40 J_fixed_theta   ok                           converged
+OLD    r2 f2 B40 J_no_delta      ok                           converged
+OLD    r2 f2 B40 Binary_matched  ok                           converged
+OLD    r2 f2 B40 ACTIVE_E1       ok                           
+OLD    r2 f2 B40 G3              ok                           
+OLD    r2 f3 B16 J               ok                           converged
+OLD    r2 f3 B16 J_fixed_theta   ok                           converged
+OLD    r2 f3 B16 J_no_delta      ok                           converged
+OLD    r2 f3 B16 Binary_matched  ok                           converged
+OLD    r2 f3 B16 ACTIVE_E1       ok                           
+OLD    r2 f3 B16 G3              ok                           
+OLD    r2 f3 B40 J               ok                           converged
+OLD    r2 f3 B40 J_fixed_theta   ok                           converged
+OLD    r2 f3 B40 J_no_delta      ok                           converged
+OLD    r2 f3 B40 Binary_matched  ok                           converged
+OLD    r2 f3 B40 ACTIVE_E1       ok                           
+OLD    r2 f3 B40 G3              ok                           
+OLD    r2 f4 B16 J               ok                           converged
+OLD    r2 f4 B16 J_fixed_theta   ok                           converged
+OLD    r2 f4 B16 J_no_delta      ok                           converged
+OLD    r2 f4 B16 Binary_matched  ok                           converged
+OLD    r2 f4 B16 ACTIVE_E1       ok                           
+OLD    r2 f4 B16 G3              ok                           
+OLD    r2 f4 B40 J               ok                           converged
+OLD    r2 f4 B40 J_fixed_theta   ok                           converged
+OLD    r2 f4 B40 J_no_delta      ok                           converged
+OLD    r2 f4 B40 Binary_matched  ok                           converged
+OLD    r2 f4 B40 ACTIVE_E1       ok                           
+OLD    r2 f4 B40 G3              ok                           
+OLD    r2 f5 B16 J               ok                           converged
+OLD    r2 f5 B16 J_fixed_theta   ok                           converged
+OLD    r2 f5 B16 J_no_delta      ok                           converged
+OLD    r2 f5 B16 Binary_matched  ok                           converged
+OLD    r2 f5 B16 ACTIVE_E1       ok                           
+OLD    r2 f5 B16 G3              ok                           
+OLD    r2 f5 B40 J               ok                           converged
+OLD    r2 f5 B40 J_fixed_theta   ok                           converged
+OLD    r2 f5 B40 J_no_delta      ok                           converged
+OLD    r2 f5 B40 Binary_matched  ok                           converged
+OLD    r2 f5 B40 ACTIVE_E1       ok                           
+OLD    r2 f5 B40 G3              ok                           
+POOLED r1 f1 B16 J               ok                           converged
+POOLED r1 f1 B16 J_fixed_theta   ok                           converged
+POOLED r1 f1 B16 J_no_delta      ok                           converged
+POOLED r1 f1 B16 Binary_matched  ok                           converged
+POOLED r1 f1 B16 ACTIVE_E1       ok                           
+POOLED r1 f1 B16 G3              ok                           
+POOLED r1 f1 B40 J               ok                           converged
+POOLED r1 f1 B40 J_fixed_theta   ok                           converged
+POOLED r1 f1 B40 J_no_delta      ok                           converged
+POOLED r1 f1 B40 Binary_matched  ok                           converged
+POOLED r1 f1 B40 ACTIVE_E1       ok                           
+POOLED r1 f1 B40 G3              ok                           
+POOLED r1 f2 B16 J               ok                           converged
+POOLED r1 f2 B16 J_fixed_theta   ok                           converged
+POOLED r1 f2 B16 J_no_delta      ok                           converged
+POOLED r1 f2 B16 Binary_matched  ok                           converged
+POOLED r1 f2 B16 ACTIVE_E1       ok                           
+POOLED r1 f2 B16 G3              ok                           
+POOLED r1 f2 B40 J               ok                           converged
+POOLED r1 f2 B40 J_fixed_theta   ok                           converged
+POOLED r1 f2 B40 J_no_delta      ok                           converged
+POOLED r1 f2 B40 Binary_matched  ok                           converged
+POOLED r1 f2 B40 ACTIVE_E1       ok                           
+POOLED r1 f2 B40 G3              ok                           
+POOLED r1 f3 B16 J               ok                           converged
+POOLED r1 f3 B16 J_fixed_theta   ok                           converged
+POOLED r1 f3 B16 J_no_delta      ok                           converged
+POOLED r1 f3 B16 Binary_matched  ok                           converged
+POOLED r1 f3 B16 ACTIVE_E1       ok                           
+POOLED r1 f3 B16 G3              ok                           
+POOLED r1 f3 B40 J               ok                           converged
+POOLED r1 f3 B40 J_fixed_theta   ok                           converged
+POOLED r1 f3 B40 J_no_delta      ok                           converged
+POOLED r1 f3 B40 Binary_matched  ok                           converged
+POOLED r1 f3 B40 ACTIVE_E1       ok                           
+POOLED r1 f3 B40 G3              ok                           
+POOLED r1 f4 B16 J               ok                           converged
+POOLED r1 f4 B16 J_fixed_theta   ok                           converged
+POOLED r1 f4 B16 J_no_delta      ok                           converged
+POOLED r1 f4 B16 Binary_matched  ok                           converged
+POOLED r1 f4 B16 ACTIVE_E1       ok                           
+POOLED r1 f4 B16 G3              ok                           
+POOLED r1 f4 B40 J               ok                           converged
+POOLED r1 f4 B40 J_fixed_theta   ok                           converged
+POOLED r1 f4 B40 J_no_delta      ok                           converged
+POOLED r1 f4 B40 Binary_matched  ok                           converged
+POOLED r1 f4 B40 ACTIVE_E1       ok                           
+POOLED r1 f4 B40 G3              ok                           
+POOLED r1 f5 B16 J               ok                           converged
+POOLED r1 f5 B16 J_fixed_theta   ok                           converged
+POOLED r1 f5 B16 J_no_delta      ok                           converged
+POOLED r1 f5 B16 Binary_matched  ok                           converged
+POOLED r1 f5 B16 ACTIVE_E1       ok                           
+POOLED r1 f5 B16 G3              ok                           
+POOLED r1 f5 B40 J               ok                           converged
+POOLED r1 f5 B40 J_fixed_theta   ok                           converged
+POOLED r1 f5 B40 J_no_delta      ok                           converged
+POOLED r1 f5 B40 Binary_matched  ok                           converged
+POOLED r1 f5 B40 ACTIVE_E1       ok                           
+POOLED r1 f5 B40 G3              ok                           
+POOLED r2 f1 B16 J               ok                           converged
+POOLED r2 f1 B16 J_fixed_theta   ok                           converged
+POOLED r2 f1 B16 J_no_delta      ok                           converged
+POOLED r2 f1 B16 Binary_matched  ok                           converged
+POOLED r2 f1 B16 ACTIVE_E1       ok                           
+POOLED r2 f1 B16 G3              ok                           
+POOLED r2 f1 B40 J               ok                           converged
+POOLED r2 f1 B40 J_fixed_theta   ok                           converged
+POOLED r2 f1 B40 J_no_delta      ok                           converged
+POOLED r2 f1 B40 Binary_matched  ok                           converged
+POOLED r2 f1 B40 ACTIVE_E1       ok                           
+POOLED r2 f1 B40 G3              ok                           
+POOLED r2 f2 B16 J               ok                           converged
+POOLED r2 f2 B16 J_fixed_theta   ok                           converged
+POOLED r2 f2 B16 J_no_delta      ok                           converged
+POOLED r2 f2 B16 Binary_matched  ok                           converged
+POOLED r2 f2 B16 ACTIVE_E1       ok                           
+POOLED r2 f2 B16 G3              ok                           
+POOLED r2 f2 B40 J               ok                           converged
+POOLED r2 f2 B40 J_fixed_theta   ok                           converged
+POOLED r2 f2 B40 J_no_delta      ok                           converged
+POOLED r2 f2 B40 Binary_matched  ok                           converged
+POOLED r2 f2 B40 ACTIVE_E1       ok                           
+POOLED r2 f2 B40 G3              ok                           
+POOLED r2 f3 B16 J               ok                           converged
+POOLED r2 f3 B16 J_fixed_theta   ok                           converged
+POOLED r2 f3 B16 J_no_delta      ok                           converged
+POOLED r2 f3 B16 Binary_matched  ok                           converged
+POOLED r2 f3 B16 ACTIVE_E1       ok                           
+POOLED r2 f3 B16 G3              ok                           
+POOLED r2 f3 B40 J               ok                           converged
+POOLED r2 f3 B40 J_fixed_theta   ok                           converged
+POOLED r2 f3 B40 J_no_delta      ok                           converged
+POOLED r2 f3 B40 Binary_matched  ok                           converged
+POOLED r2 f3 B40 ACTIVE_E1       ok                           
+POOLED r2 f3 B40 G3              ok                           
+POOLED r2 f4 B16 J               ok                           converged
+POOLED r2 f4 B16 J_fixed_theta   ok                           converged
+POOLED r2 f4 B16 J_no_delta      ok                           converged
+POOLED r2 f4 B16 Binary_matched  ok                           converged
+POOLED r2 f4 B16 ACTIVE_E1       ok                           
+POOLED r2 f4 B16 G3              ok                           
+POOLED r2 f4 B40 J               ok                           converged
+POOLED r2 f4 B40 J_fixed_theta   ok                           converged
+POOLED r2 f4 B40 J_no_delta      ok                           converged
+POOLED r2 f4 B40 Binary_matched  ok                           converged
+POOLED r2 f4 B40 ACTIVE_E1       ok                           
+POOLED r2 f4 B40 G3              ok                           
+POOLED r2 f5 B16 J               ok                           converged
+POOLED r2 f5 B16 J_fixed_theta   ok                           converged
+POOLED r2 f5 B16 J_no_delta      ok                           converged
+POOLED r2 f5 B16 Binary_matched  ok                           converged
+POOLED r2 f5 B16 ACTIVE_E1       ok                           
+POOLED r2 f5 B16 G3              ok                           
+POOLED r2 f5 B40 J               ok                           converged
+POOLED r2 f5 B40 J_fixed_theta   ok                           converged
+POOLED r2 f5 B40 J_no_delta      ok                           converged
+POOLED r2 f5 B40 Binary_matched  ok                           converged
+POOLED r2 f5 B40 ACTIVE_E1       ok                           
+POOLED r2 f5 B40 G3              ok                           
+{
+ "finished_utc": "2026-10-13T13:46:33+00:00",
+ "fit_requests": 360,
+ "new_fits_this_session": 360,
+ "elapsed_s": 13.317618131637573,
+ "peak_memory_bytes": 325177344,
+ "python": "3.14.4",
+ "numpy": "2.5.1",
+ "scipy": "1.18.0",
+ "sklearn": "1.9.0",
+ "pandas": "3.0.5",
+ "threads": {
+  "OMP_NUM_THREADS": "2",
+  "OPENBLAS_NUM_THREADS": "2",
+  "MKL_NUM_THREADS": "2"
+ },
+ "baseline_threadpool_limit": 2
+}
+exit 0

@@ -1,0 +1,13 @@
+population,budget,comparison,max_abs_dp,mean_abs_dp,classification_changes,changes_on_negatives,false_positives_J,false_positives_other,false_negatives_J,false_negatives_other,n_predictions
+NEW,16,theta_conditioned_diagnostic vs J,0.01680007940348338,0.00880857039014872,0,0,20,20,1,1,272
+NEW,16,J_fixed_theta_refit vs J,0.046616117739235574,0.010916280496231988,3,2,20,20,1,2,272
+NEW,40,theta_conditioned_diagnostic vs J,0.017246501657902757,0.006006488778054875,0,0,21,21,5,5,272
+NEW,40,J_fixed_theta_refit vs J,0.04620106993193085,0.008407039796018818,0,0,21,21,5,5,272
+OLD,16,theta_conditioned_diagnostic vs J,0.040668454600666704,0.014724799435177169,0,0,34,34,23,23,810
+OLD,16,J_fixed_theta_refit vs J,0.09229228964778069,0.02598955676585287,14,6,34,32,23,17,810
+OLD,40,theta_conditioned_diagnostic vs J,0.029792059093860734,0.010139239340016367,0,0,24,24,16,16,810
+OLD,40,J_fixed_theta_refit vs J,0.09478244147773396,0.014362203880900185,9,5,24,25,16,14,810
+POOLED,16,theta_conditioned_diagnostic vs J,0.045650003120368654,0.013892983793755788,0,0,52,52,24,24,1082
+POOLED,16,J_fixed_theta_refit vs J,0.1188049614082648,0.021708672513498863,12,10,52,50,24,24,1082
+POOLED,40,theta_conditioned_diagnostic vs J,0.02600681463809923,0.007975426207434319,0,0,44,44,16,16,1082
+POOLED,40,J_fixed_theta_refit vs J,0.05841968196342395,0.01001989515719433,3,2,44,44,16,15,1082

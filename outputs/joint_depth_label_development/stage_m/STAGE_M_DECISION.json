@@ -1,0 +1,27 @@
+{
+ "rule": "Frozen screen: recommend Stage A iff numerical/leakage checks pass and, on NEW at B40 (means over the two repeats), J - Binary_matched BA >= +0.01, specificity(J) >= specificity(Binary_matched), log loss(J) <= log loss(Binary_matched).",
+ "numerical_and_leakage_checks_pass": true,
+ "NEW_B40_J_minus_Binary": {
+  "BA": 0.006048387096774188,
+  "BA_interval": [
+   -0.052419354838709686,
+   0.06451612903225806
+  ],
+  "specificity": -6.938893903907228e-18,
+  "log_loss": -0.1715458450391908,
+  "BA_per_repeat": [
+   -0.03360215053763438,
+   0.045698924731182755
+  ]
+ },
+ "criteria": {
+  "BA_gain_ge_0.01": false,
+  "specificity_not_lower": true,
+  "log_loss_not_worse": true
+ },
+ "decision": "SCREEN FAILED - Stage A not recommended",
+ "reasons_if_failed": [
+  "BA gain below +0.01"
+ ],
+ "note": "pragmatic development screen on DEV repeats 1-2, not confirmation; failure classification is in STAGE_M_REPORT.md"
+}
