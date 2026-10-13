@@ -1,0 +1,29 @@
+{
+ "runs": {
+  "J_PV": "ok",
+  "J_MARGIN": "ok",
+  "seconds": 1.9797422885894775
+ },
+ "paired_information": true,
+ "missing_response_keeps_label_and_cost": true,
+ "first_divergent_query": 17,
+ "decisions": [
+  "accepted at 31 nodes",
+  "accepted at 31 nodes",
+  "accepted at 31 nodes",
+  "accepted at 31 nodes",
+  "accepted at 31 nodes"
+ ],
+ "leakage_first_selection_identical": true,
+ "tie_rule": {
+  "decision": "numerical tie broken by fixed simulation-ID order",
+  "selected": "SIM-A"
+ },
+ "tie_rule_ok": true,
+ "score_log_complete": true,
+ "controls": {
+  "G3_MARGIN": "ok",
+  "ACTIVE_E1_STRADDLE": "ok"
+ },
+ "passed": true
+}

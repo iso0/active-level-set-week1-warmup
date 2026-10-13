@@ -57,18 +57,21 @@ pos = {s: i for i, s in enumerate(task['ids'])}; task['path'] = g.sim_id.map(pos
 std, scaler = SMM.standardizer(task)
 paid = SMM.Oracle(task).reveal(task['path'][:16])
 print('paid simulations:', len(paid.ids), '| positives', int(paid.y.sum()), '| negatives', int((paid.y == 0).sum()), '| responses', int(np.isfinite(paid.z).sum()))
-print(pd.DataFrame({'sim (H code)': ['H-' + s.split('_H-')[-1] for s in paid.ids], 'Y': paid.y, 'z=log(A/111)': np.round(paid.z, 3)}).head(8).to_string(index=False))
+print(pd.DataFrame({'Y': paid.y, 'z=log(A/111)': np.round(paid.z, 3), 'sim_id (full)': paid.ids}).head(8).to_string(index=False))
 model = JM.JointDepthLabelGP(std(task['X'][task['pool']]), cfg).fit(std(paid.X), paid.y, paid.z)
 print({k: model.diagnostics[k] for k in ('solver_status', 'gradient_inf', 'gradient_accepted', 'newton_iterations')})
 post = model.marginals(std(task['X'][task['test']]))
 print('theta posterior: mean %.3f, sd %.3f (prior sd 0.35)' % (post['theta_mean'], np.sqrt(post['theta_var'])))"""),
     ("md", """## 2. What a prediction is made of
 
-Each test probability is Φ(μ_h / √(τ² + V_h)), with μ_h = μ_f − μ_θ + μ_δ. The label column is shown for the reader only; the model never sees it."""),
+Each test probability is Φ(μ_h / √(τ² + V_h)), with μ_h = μ_f − μ_θ + μ_δ. The label column is shown for the reader only; the model never sees it.
+
+Simulations are identified by their full IDs. The H suffix alone is not unique: two test simulations in this very fold end in `H-24e1882408`, a suffix shared by 14 NEW simulations."""),
     ("code", """te = task['test']
-tab = pd.DataFrame({'H': ['H-' + task['ids'][i].split('_H-')[-1] for i in te], 'VX': task['VX'][te].round(3), 'f (pred z)': post['f_mean'].round(3),
+tab = pd.DataFrame({'VX': task['VX'][te].round(3), 'f (pred z)': post['f_mean'].round(3),
                     'theta': round(post['theta_mean'], 3), 'delta': post['delta_mean'].round(3), 'h': post['h_mean'].round(3),
-                    'sd(h)': np.sqrt(post['h_var']).round(3), 'p': post['p'].round(3), 'label (evaluator only)': task['y'][te]})
+                    'sd(h)': np.sqrt(post['h_var']).round(3), 'p': post['p'].round(3), 'label (evaluator only)': task['y'][te],
+                    'sim_id (full)': [task['ids'][i] for i in te]})
 print(tab.sort_values('p').head(10).to_string(index=False))"""),
     ("md", """## 3. One paid update
 
@@ -76,7 +79,7 @@ print(tab.sort_values('p').head(10).to_string(index=False))"""),
 - **How the model updates:** it is refit from the original prior with every paid likelihood factor exactly once. The old posterior is never reused as a new prior."""),
     ("code", """paid17 = SMM.Oracle(task).reveal(task['path'][:17])
 new = paid17.ids[-1]
-print('revealed:', 'H-' + new.split('_H-')[-1], '| Y =', paid17.y[-1], '| z =', round(float(paid17.z[-1]), 3))
+print('revealed:', new, '| Y =', paid17.y[-1], '| z =', round(float(paid17.z[-1]), 3))
 model17 = JM.JointDepthLabelGP(std(task['X'][task['pool']]), cfg).fit(std(paid17.X), paid17.y, paid17.z)
 post17 = model17.marginals(std(task['X'][te]))
 xref = std(task['X'][task['pool']])
@@ -98,11 +101,11 @@ cand = np.setdiff1d(task['pool'], task['path'][:16]); cid = [task['ids'][i] for 
 log = []
 j, rec = select_pv(model, std(task['X'][cand]), cid, xref, log)
 s = pd.DataFrame([r for r in log if r['gh_order'] == 31]).sort_values('score', ascending=False).head(5)
-s['candidate'] = ['H-' + c.split('_H-')[-1] for c in s.candidate]
-print(s[['candidate', 'score', 'response_component', 'label_component']].round(6).to_string(index=False))
+print(s[['score', 'response_component', 'label_component', 'candidate']].round(6).to_string(index=False))
 print('decision:', rec['decision'], '| e(15,31) = %.2e, gap = %.2e' % (rec['e_15_31'], rec['gap_31']))
 jm, recm = select_margin(model, std(task['X'][cand]), cid, [])
-print('probability-variance pick:', 'H-' + rec['selected'].split('_H-')[-1], '| margin pick:', 'H-' + recm['selected'].split('_H-')[-1])"""),
+print('probability-variance pick:', rec['selected'])
+print('margin pick:              ', recm['selected'])"""),
     ("md", "## 5. The actual results"),
     ("code", """dec = json.loads((SMM.SM / 'STAGE_M_DECISION.json').read_text(encoding='utf-8'))
 print('Stage M screen:', dec['decision'], '|', dec['NEW_B40_J_minus_Binary'])
@@ -133,7 +136,10 @@ print(pd.read_csv(tr).round(3).to_string() if tr.exists() else 'temporal repair:
 
 - **What depth adds.** Paid continuous depth adds label information on OLD and POOLED, and improves NEW ranking and probability quality.
 - **Why the screen failed.** The frozen NEW screen requires a balanced-accuracy gain at p ≥ 0.5 and it failed. The diagnostics point to the decision threshold under 91 % prevalence, to over-smoothed depth predictions in the fast-scan corner, and to 12 negatives being too few to resolve +0.01 BA.
-- **The exploratory tests.** EX1 tests the prevalence decision rule prospectively, and EX2 a trained response prior. Neither changes the frozen Stage M decision."""),
+- **The exploratory tests (fresh DEV repeats 5–8, manifests committed before any fit).**
+  - EX1: predicting Keyhole when p ≥ π̂ (the paid prevalence) instead of p ≥ 0.5 raised NEW B40 J balanced accuracy from 0.543 to 0.878 (+0.335, interval +0.241 to +0.419), with specificity +0.81 and sensitivity −0.14. The same rule *lowered* Binary-matched BA (−0.067), so the gain is not a generic threshold effect.
+  - EX2: a response prior trained on the paid depths (ML-II) halved the fast-scan depth error (RMSE 0.236 → 0.117) and added +0.028 BA at π̂ (interval +0.012 to +0.047).
+  - Both are exploratory. Neither changes the frozen Stage M decision, and neither has been confirmed on reserved data."""),
 ]
 
 

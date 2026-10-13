@@ -138,7 +138,7 @@ def fit_checkpoint(name, M):
                         supported=np.ones(K, bool), **{k: np.array(v) for k, v in summ.items()})
     row = {"checkpoint": name, "tag": tag, "inducing_points": M, "n_points": int(X.size(0)), "status": info["status"], "iterations": info["iterations"],
            "fit_seconds": t_fit, "total_seconds": time.time() - t0, "final_probe_elbo_per_point": info["trace"][-1]["probe_elbo_per_point"] if info["trace"] else None,
-           "trace": info["trace"], "peak_memory_bytes": W20.peak_memory_bytes(), **W20.hypers(model, lik)}
+           "trace": info["trace"], "peak_memory_bytes": W20.peak_memory_bytes(), "torch_threads": torch.get_num_threads(), **W20.hypers(model, lik)}
     TR.mkdir(parents=True, exist_ok=True)
     with open(TR / "svgp_ngd_fits.jsonl", "a") as fh:
         fh.write(json.dumps(row) + "\n")
@@ -199,11 +199,20 @@ if __name__ == "__main__":
     if step == "validate":
         validate()
     elif step == "fit":
-        M = int(sys.argv[2]); names = sys.argv[3:]
-        done = set()
-        f = TR / "svgp_ngd_fits.jsonl"
-        if f.exists():
-            done = {(json.loads(l)["checkpoint"], json.loads(l)["inducing_points"]) for l in f.read_text().splitlines() if l.strip()}
+        # Scheduling only (amendment T-A2): re-read the finished set before every checkpoint and claim it with an
+        # exclusive lock file, so two processes can share the list without duplicating a fit; optional --threads.
+        import os
+        args = sys.argv[2:]
+        if "--threads" in args:
+            k = args.index("--threads"); PROTOCOL["threads"] = int(args[k + 1]); torch.set_num_threads(PROTOCOL["threads"]); del args[k:k + 2]
+        M = int(args[0]); names = args[1:]
+        f = TR / "svgp_ngd_fits.jsonl"; locks = TR / "locks"; locks.mkdir(parents=True, exist_ok=True)
         for nm in names:
-            if (nm, M) not in done:
-                fit_checkpoint(nm, M)
+            done = {(json.loads(l)["checkpoint"], json.loads(l)["inducing_points"]) for l in f.read_text().splitlines() if l.strip()} if f.exists() else set()
+            if (nm, M) in done:
+                continue
+            try:
+                fd = os.open(str(locks / f"{nm}_M{M}.lock"), os.O_CREAT | os.O_EXCL | os.O_WRONLY); os.write(fd, f"pid {os.getpid()} threads {PROTOCOL['threads']}".encode()); os.close(fd)
+            except FileExistsError:
+                continue                                                        # another process owns this checkpoint
+            fit_checkpoint(nm, M)
