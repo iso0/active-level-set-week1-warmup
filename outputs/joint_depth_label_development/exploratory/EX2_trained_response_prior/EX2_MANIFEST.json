@@ -1,0 +1,32 @@
+{
+ "idea": "EX2 trained response prior for the joint model",
+ "status": "EXPLORATORY, frozen before any EX2 fit; separate from the main study",
+ "written_utc": "2026-10-13T14:42:52+00:00",
+ "parent_commit": "29ca7364c372dd6f1c05d9508508fd2e1ce3119b",
+ "mechanism": "(from the Stage M mechanism report).  Under the fixed four-input response prior (amplitude 0.60,\nlengthscales 1.5 on standardized log inputs) the response GP smooths slow-scan depths into the fast-scan corner: for\nthe fast-scan NEW negatives J predicted f = 0.10-0.42 while the observed z = log(A/111) was -0.33 to +0.17, and the\nresponse oracle showed that better depth would separate part of them.  ACTIVE E1 learns its response kernel by\npaid-only ML-II and reaches higher NEW BA.  EX2 keeps J's coupling, threshold and discrepancy priors fixed and only\nreplaces the response amplitude and four lengthscales by the ML-II estimate on the PAID responses (z, fixed noise\n0.03, zero mean - the J response model), refitted at every checkpoint.  Test responses never enter",
+ "paths": "identical to EX1 (exploratory/EX1_ba_aligned_decision_rule/paths.csv)",
+ "trained_part": "ML-II (sklearn L-BFGS-B, 0 restarts, start at the frozen values) of the response amplitude in [0.03, 10] and four lengthscales in [0.05, 20] on the paid responses only, noise fixed at 0.03, zero mean; theta, delta and tau priors unchanged",
+ "arms": {
+  "J_trained": "new fits",
+  "J": "frozen-prior J from the EX1 cache (identical paths and checkpoints)"
+ },
+ "fit_requests": 120,
+ "predictions": {
+  "EX2-P1_response": "NEW, B40: held-out response error RMSE(f_mean - z_obs) of J_trained < J (all NEW runs with A, and the fast scans VX > 0.85 separately). Direction from the mechanism report; magnitude unknown.",
+  "EX2-P2_labels": "NEW, B40, at p >= pi_hat: BA(J_trained) >= BA(J); log loss(J_trained) <= log loss(J). Direction only; magnitude unknown.",
+  "EX2-P3_other_populations": "OLD and POOLED: no directional expectation; reported.",
+  "falsification": "EX2-P1 is falsified if the trained response prior does not lower the NEW B40 held-out response RMSE; EX2-P2 is falsified if BA at pi_hat is lower."
+ },
+ "outcomes": "held-out response RMSE (all and fast scans), BA/specificity/sensitivity at p >= 0.5 and p >= pi_hat, log loss, AUC; paired differences with the class-stratified simulation-cluster bootstrap",
+ "protections": [
+  "train-only hyperparameters (paid responses)",
+  "no selection on held-out outcomes",
+  "outcomes preserved"
+ ],
+ "code_sha256": {
+  "src/jdl_ex2.py": "ef32514701a16b2c4b3a5908910c439f2a28a76b5fd730ac495dff4ef1fdf795",
+  "src/jdl_ex1.py": "d3a3484b8b7bfc1cd63153187c15cc5199129678f0f6417bbc6f0bc766148197",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc"
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "idea": "EX1 balanced-accuracy-aligned decision rule",
+ "status": "EXPLORATORY, frozen before any EX1 fit; separate from the main study; does not change the Stage M decision",
+ "written_utc": "2026-10-13T14:42:42+00:00",
+ "parent_commit": "29ca7364c372dd6f1c05d9508508fd2e1ce3119b",
+ "mechanism": "BA = (TPR + TNR) / 2 weights the two classes equally.  For a calibrated posterior probability\np(x) = P(Y = 1 | x, D), predicting 1 adds p / (2 pi) to the expected BA and predicting 0 adds (1 - p) / (2 (1 - pi)),\nso the BA-optimal decision is p >= pi (the class prior), not p >= 0.5.  A fixed proper-prior probit model is roughly\ncalibrated to the paid class mix; on NEW (pi about 0.9) the 0.5 rule therefore labels well-ranked negatives positive.\nRule tested here (train-only): pi_hat = share of positives among the PAID labels of the checkpoint.",
+ "rule": "pi_hat = mean of the paid canonical labels at the checkpoint (train-only); compare decisions p >= pi_hat with p >= 0.5 on the same stored probabilities",
+ "data": {
+  "repeats": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "reason": "DEV repeats never used for any J fit; Stage M used 1-2, Stage A reserves 3-4",
+  "populations": [
+   "NEW",
+   "OLD",
+   "POOLED"
+  ]
+ },
+ "paths_sha256": {
+  "NEW_r5_f1": "100eee3d0ed25883a3b57c441834ae9b96f0ce9a0ff1dc004a3b9edefaef75a0",
+  "NEW_r5_f2": "0568beceb4aa943eadb8f7caf7a43f0d584a27ba366f9f7d60c7ec142e1f9574",
+  "NEW_r5_f3": "0989ff96ac0602c53b65a8eb062529ba748e05d477fdd692c5c128cb719652a2",
+  "NEW_r5_f4": "4ce4574668ac2246c987284e2bcaab481d2c0d531c83f6c89f46d94b13c6ece2",
+  "NEW_r5_f5": "1402f688b4b551edfd3e4623bcc6d9d0c0816e9322eb253b4986803be665c3a7",
+  "NEW_r6_f1": "03a708267ef0fbd41de8ee1ca5b69d6fbe7a880483041643473a7c6e9c07757b",
+  "NEW_r6_f2": "2b8a36baa2a8a021fd20b650ac68cfc04c05ac2495deba0561299a8dfa040c4b",
+  "NEW_r6_f3": "17bc9d2acb2d17e855b5e69242d483f0eaa2fba9183b85b0aced565087878fcb",
+  "NEW_r6_f4": "68814ef5a3d95a1bd28a9d095a840237c7932580d99f66f2ecf5d8ba5cc9a5fd",
+  "NEW_r6_f5": "e0f68352f502b4e6f81abc3c028b7b65ed408556f82a727f346524f20042743f",
+  "NEW_r7_f1": "86ca782d19e9e633ad825c98c69435879d17d914fd0ba803256ff3e1ab83268d",
+  "NEW_r7_f2": "1c598b0e3b45ccdba5147c5158d397e2153e4deb30a912c73fde8a9402d59976",
+  "NEW_r7_f3": "884448a6eeed73beb38b258fbdadbef6254d96fa9430e0df37a693c1a4578df7",
+  "NEW_r7_f4": "a6697dd3b5527990479478ca0597670cbfaaa51e2d62f3eba7b5364d18e8dffd",
+  "NEW_r7_f5": "ea8396f5f5836c9ab566acea05991363cc5e59b79b653cefbcbf1e913e377c36",
+  "NEW_r8_f1": "58ffa0f230e91df11f21c9f908c767599f40922b0fb33a100638441436753c79",
+  "NEW_r8_f2": "c4f9c61748af246b4edab68feed060f7b173cab892b2ceed5694ed3c4950f08e",
+  "NEW_r8_f3": "b15edd239bc92c478556ad55733a9c34a7a1cdfa650133e7192b355a025b5d40",
+  "NEW_r8_f4": "a38a5bb983e52b78c20f5ca61ac69f4b2b16363965324ec297495b837b7fd718",
+  "NEW_r8_f5": "5b43e0e73b18cc31a8d208f697ca1d6e933f94f25de1c548ddcfc6a6535e4f3a",
+  "OLD_r5_f1": "3cc4a87811aa73d807a0e8d2a67b37c8ea9b22a0e9d7ce7fb9fc0fdb4e952833",
+  "OLD_r5_f2": "acada294f72c80d69aaec4c923dfad4f8d744b91dcb5ef8e9843b4b128614d9a",
+  "OLD_r5_f3": "8bb62459fc1626f2888a87a2abbbc3d1f92966f1582d5c62c6038dc26110fb9a",
+  "OLD_r5_f4": "4e38408ad007eebe7c05326af4131bb8ae649986234291531efaf2de66c07b32",
+  "OLD_r5_f5": "0ea0eb3459a5057e2510b86e86b0231f21f98f6273a3d20352268d2edc748b7a",
+  "OLD_r6_f1": "b74692c19eef3ea2b6c5c0fa715b931a46414dbc556b97086e21c34f198298cc",
+  "OLD_r6_f2": "2519687e351c43fe19acc458ab59dde9a62f9329290585b2be8bbc5c9ef1d373",
+  "OLD_r6_f3": "ff1c1e72e17db2d1c35f2a848f69432cf24cc4113ce7b23d2ad7c370f9501eaa",
+  "OLD_r6_f4": "ff4b53dbabdb4bc65c839589102f0c94342cf09ea5738dfe331f82501d2a34f6",
+  "OLD_r6_f5": "8d85c765085dfe7ff2f2a5e5d4f84fc10345a00ca038ee59450d60e9cfc00dd0",
+  "OLD_r7_f1": "015cab58cb697dffe479c5ce2b50ce5d216538082329d0b477336e9fee072ec3",
+  "OLD_r7_f2": "afa6738963f934ef1d0e3ee0cb3653700659ff8d7c8d1befe016cab5c6ecfc20",
+  "OLD_r7_f3": "558aa665db211f21941c10994e7ae2eee62fe5defd2b8509b4997ae240ab0810",
+  "OLD_r7_f4": "f294aed59c4768343f7720b7e2acc7872fe0e7a945620f9d672babc0ffca2c6b",
+  "OLD_r7_f5": "6ff35d1a9f7987d0662f185fa331f3e35dafc95bbf832e99e7dcb0893f9753ca",
+  "OLD_r8_f1": "0ece9d440ec8e54095a477822d238b2298a0b8f838ba833f69309a488d63cde2",
+  "OLD_r8_f2": "bcf0b8a9ff7977286971372da91d08ea3b59a1af67e43c5b3be60327a0ad3509",
+  "OLD_r8_f3": "2127da5b38170f683b64e6ae289e3c546bbeccd7309632c8f7215ced8e700c03",
+  "OLD_r8_f4": "5139f778efbd53d2c2f0a72f6f3ced0cdbd3c2478247201cc22d8bda6e922db2",
+  "OLD_r8_f5": "b8383097183db337f456106abd6f8aa3b869fb681bbc2448ab16e5cc56440967",
+  "POOLED_r5_f1": "b49201851066e0b36f84b6c8f75b53fd433a9094dfe5106561e93e4bc0dd80f6",
+  "POOLED_r5_f2": "bfd822c97621a63238ba23fc90a3aa3b1fba35b76480e6de4889f3baef5a4d89",
+  "POOLED_r5_f3": "1e9cebf9ef5d8a4ab0d906f31d24d4d80d589e581249de50fa442c02be1cb880",
+  "POOLED_r5_f4": "d74a25f718f01c84dcd450a4516e368818679000a3841fa5f251ea66498ccc2d",
+  "POOLED_r5_f5": "0dd04f5982bde713bad2bd75071e39856a07f825e47a301085f20e9fc1e23d03",
+  "POOLED_r6_f1": "61fe316173137b33e97cb53eb678b7ae1a862977f368baa0fa3d8c13656d6684",
+  "POOLED_r6_f2": "00e183460dfeb50579b226dc2b80ed9be34546fc3f0e2d6035a1df5bbad77e53",
+  "POOLED_r6_f3": "93c06078b04a3a02671d258e85abb68ff105527cf1c4343a007c01f2eb921ecd",
+  "POOLED_r6_f4": "287b63063aa967c0a8379b836d4ab772821b801a0df6b4a7463f57259a8f6a8d",
+  "POOLED_r6_f5": "faf19df66a38227b83aa2e832393e4cf5039451c25a1bed5ab92c2110384ae10",
+  "POOLED_r7_f1": "9dce083350a9224e72c932760a4dc9207550977e77e9073e179ff678516eaae3",
+  "POOLED_r7_f2": "01a5dc63242846c95ff0c13abd7222ebb5d50165077903f9216c70070b117f0c",
+  "POOLED_r7_f3": "59ed6624e3d6b742608e1b02b33f93ceaa8c4c39e3f22e973fede00eb04979a1",
+  "POOLED_r7_f4": "48082727a6a8c5c4d69611b5e79db92d4fa3a20bea0e510806435911c0a0f477",
+  "POOLED_r7_f5": "a8eb7a60e8cf5bee09014f5b79380fbb0c54a653fa193ba4c9cf60bee6c73087",
+  "POOLED_r8_f1": "6f4b49ff36acd265fbd783807f767c5e22cf4624088260c73c12e6249319b366",
+  "POOLED_r8_f2": "4bf892ee948aa5824b649741f4e9d20d864ad4bd9d0b6a7ad404b647997a02f3",
+  "POOLED_r8_f3": "0d1c96ca73a3283e42c7aa38244610e5e45d67d45cfb65c3c70a4a9c690ede0e",
+  "POOLED_r8_f4": "46c41b9376a6c3d1a66a3884f673cbf545362a62ef9b9b91865366cf178c6838",
+  "POOLED_r8_f5": "48f757cdac3a2f94309b9acbdcb38b085250e05a9796e446d61d0cc1685d8e97"
+ },
+ "arms": {
+  "NEW": [
+   "J",
+   "Binary_matched",
+   "ACTIVE_E1",
+   "G3"
+  ],
+  "OLD": [
+   "J",
+   "Binary_matched"
+  ],
+  "POOLED": [
+   "J",
+   "Binary_matched"
+  ]
+ },
+ "budgets": [
+  16,
+  40
+ ],
+ "fit_requests": 320,
+ "priors": "frozen Stage M STAGE_M_CONFIG; E1/G3 frozen implementations",
+ "predictions": {
+  "EX1-P1_primary": "NEW, B40, J: BA at p >= pi_hat minus BA at p >= 0.5 is > 0 (mean over repeats 5-8). Direction from the Stage M POST-HOC table (+0.32 on repeats 1-2); no magnitude committed. Falsified if <= 0.",
+  "EX1-P2_mechanism": "NEW, B40, J: the change comes from specificity (> 0) at a sensitivity cost (< 0).",
+  "EX1-P3_control": "NEW, B40, Binary_matched: BA at pi_hat minus BA at 0.5 is <= 0 (its depth-free probabilities are compressed below the paid prevalence; Stage M POST-HOC -0.04).",
+  "EX1-P4_system": "NEW, B40: J at pi_hat has higher BA than ACTIVE_E1 at its own frozen 0.5 rule (Stage M POST-HOC 0.870 vs 0.730). A complete-system comparison.",
+  "EX1-P5_secondary": "OLD and POOLED (prevalence about 0.18 and 0.36): no directional expectation for J; reported."
+ },
+ "outcomes": "BA, specificity, sensitivity at both rules; paired differences with a simulation-cluster bootstrap (2000, class-stratified); per-repeat values",
+ "controls": "Binary_matched (same priors without the response) at both rules; ACTIVE_E1 and G3 at their frozen 0.5 rules and at pi_hat",
+ "protections": [
+  "train-only threshold",
+  "no prior or threshold tuning",
+  "held-out labels only in evaluation",
+  "all outcomes preserved"
+ ],
+ "code_sha256": {
+  "src/jdl_ex1.py": "d3a3484b8b7bfc1cd63153187c15cc5199129678f0f6417bbc6f0bc766148197",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67"
+ }
+}

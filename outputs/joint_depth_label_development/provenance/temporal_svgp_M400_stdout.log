@@ -1,0 +1,1 @@
+{"checkpoint": "ckpt_r1_f1_B16", "tag": "svgp_ngd_M400", "status": "max_iterations", "iterations": 20000, "fit_seconds": 2018.8500547409058, "final_probe_elbo_per_point": 1.675091867658849, "lengthscale_s": 0.118503970246235, "noise": 0.001318914042314005}
