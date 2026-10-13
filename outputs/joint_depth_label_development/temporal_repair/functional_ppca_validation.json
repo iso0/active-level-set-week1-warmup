@@ -1,0 +1,12 @@
+{
+ "largest_principal_angle_deg_true_vs_EM_subspace": 8.237173364945415,
+ "em_status": "max_iter",
+ "em_iterations": 3000,
+ "max_abs_coefficient_partial_records": 2.3844115316534698,
+ "max_abs_coefficient_full_records": 3.6039851598480905,
+ "mean_posterior_sd_partial": 0.4863134074135217,
+ "mean_posterior_sd_full": 0.0245931416855979,
+ "frozen_week20_ALS_max_abs_coefficient_partial_records": 1286.4215956024689,
+ "frozen_week20_ALS_max_abs_coefficient_full_records": 2405.5446204176906,
+ "passed": true
+}

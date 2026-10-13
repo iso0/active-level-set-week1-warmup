@@ -1,0 +1,135 @@
+{
+ "study": "temporal repair sub-study (separate from Stage M; authorized irrespective of the Stage M gate)",
+ "written_utc": "2026-10-13T14:00:15+00:00",
+ "status": "FROZEN BEFORE ANY NEW TEMPORAL FIT ON STUDY DATA",
+ "checkpoints": [
+  "ckpt_r1_f1_B16",
+  "ckpt_r1_f1_B40",
+  "ckpt_r1_f1_B80",
+  "ckpt_r1_f2_B16",
+  "ckpt_r1_f2_B40",
+  "ckpt_r1_f2_B80",
+  "ckpt_r1_f3_B16",
+  "ckpt_r1_f3_B40",
+  "ckpt_r1_f3_B80",
+  "ckpt_r1_f4_B16",
+  "ckpt_r1_f4_B40",
+  "ckpt_r1_f4_B80",
+  "ckpt_r1_f5_B16",
+  "ckpt_r1_f5_B40",
+  "ckpt_r1_f5_B80",
+  "ckpt_r2_f1_B16",
+  "ckpt_r2_f1_B40",
+  "ckpt_r2_f1_B80",
+  "ckpt_r2_f2_B16",
+  "ckpt_r2_f2_B40",
+  "ckpt_r2_f2_B80",
+  "ckpt_r2_f3_B16",
+  "ckpt_r2_f3_B40",
+  "ckpt_r2_f3_B80",
+  "ckpt_r2_f4_B16",
+  "ckpt_r2_f4_B40",
+  "ckpt_r2_f4_B80",
+  "ckpt_r2_f5_B16",
+  "ckpt_r2_f5_B40",
+  "ckpt_r2_f5_B80"
+ ],
+ "checkpoint_files_sha256": {
+  "ckpt_r1_f1_B16": "8d08cd573705ebcd5fad861470fe0e25be210dd6c07e542a15f3caa62c9b0f39",
+  "ckpt_r1_f1_B40": "51c1aced6a78e45c26d6ddb41b3f68494bbe4d1216239c0be666f60354787cb7",
+  "ckpt_r1_f1_B80": "672376ace9b51be52cfa7ba699a9973cd6a682594b5d37aba3922336f84d07c4",
+  "ckpt_r1_f2_B16": "23e24c774441d43d29a65d4aa173be4da52ea83d2d0944381acea1df657e1de3",
+  "ckpt_r1_f2_B40": "2e9b58bbc8fa56ea6bce8ac29fccc34d27685fe40941cdd0ff040070fc45c2ed",
+  "ckpt_r1_f2_B80": "b6d0c57174076d3a15b757c72557cb83015c11ee06ab113c343838c814699978",
+  "ckpt_r1_f3_B16": "b699d44d2ea4d4d99080236d5e42a8436b4e436e4dc0518699dab90b23e7fcaa",
+  "ckpt_r1_f3_B40": "d008f030a5b937222e1f9b1ff998525d9847d227e9e9944f5ec870af051f973f",
+  "ckpt_r1_f3_B80": "4ee1eca50480c89a6266df8c3d5abb15e06eddf3121e9d7d71538287c19c7a19",
+  "ckpt_r1_f4_B16": "47c4eadb83df39895fe12d3b33d2b594236a1079a871fef0766df488bf486e59",
+  "ckpt_r1_f4_B40": "7a1cb6f5401c6dd4f53637812429e0e78d099883d0fb571316f6e71283153a94",
+  "ckpt_r1_f4_B80": "89e03c2de7e866a605acd6e77feb2e9ff7e3aa0768c71aaf24dce32c279364a7",
+  "ckpt_r1_f5_B16": "fbf826ff882d41ca048b3b84d0f9c0988885e68923be74a7c849189a4bff92f5",
+  "ckpt_r1_f5_B40": "f881800c20592a1efcbbd9240f87febcd17d8c389b652b48d1b29b236aa264a9",
+  "ckpt_r1_f5_B80": "1c231072e0299a33244cf5240432e435a4e5ba55cc2ea182e4ca64ae6e8dafb7",
+  "ckpt_r2_f1_B16": "61071a1a0917ec3dbbf785313b0d4a8e286a53a669c4ca2b0a8d7c16d4826899",
+  "ckpt_r2_f1_B40": "528a725053b42a9e8ab2044a5bb7a038266da58f84d643640e5638b54512eb8b",
+  "ckpt_r2_f1_B80": "5b7dec18002f9bc9d1d90a207da26a73c8d530748b14b61afc0fa1b5edf6db16",
+  "ckpt_r2_f2_B16": "899fbfe8dddcbac826ccac03c54fe1fc536ac918753e32ecac8a812e4946fe07",
+  "ckpt_r2_f2_B40": "693615ad0e623381bfb0709955e8c5a595d27b11b7703b9fdd0283bb8cc9164d",
+  "ckpt_r2_f2_B80": "9d2cef6405adff959a7daf41d601fa5b2b4673a1ada58529f7754e50f88268da",
+  "ckpt_r2_f3_B16": "6822d90e6901a198d3e727c9d8c9ee5eeeb30a6b7523f68c756c099785f32f9f",
+  "ckpt_r2_f3_B40": "0039511c9cc9542bd9fb4698c6347ad6577904f73acceaf2afbb421fe042bc12",
+  "ckpt_r2_f3_B80": "c1e3d9fa79b6fc5679b7902e994b33c59e3e283586e88139de3c4c63f7cea05a",
+  "ckpt_r2_f4_B16": "c9f7a784ebe582c3475c514e6731ec7d70bce81f5ff9e0da288c6ed60f263593",
+  "ckpt_r2_f4_B40": "125f40a19b3be4208bd32378db5010b78457900dcbdb9dda5a63a953bf448f81",
+  "ckpt_r2_f4_B80": "6a1c39bf3842debd14745f6ba5009ba88a4aa5f07c62c07fc186d07a88814f92",
+  "ckpt_r2_f5_B16": "4409df3780a407d309481cbb178f584f222f8ee7ee8f5b7ec5efaa5d4235cc25",
+  "ckpt_r2_f5_B40": "dbf4a6d581b4699757c8410ab28e8042e9acac284959eb735b96812106b4cd41",
+  "ckpt_r2_f5_B80": "533bcd584ddee935195f133ba9b691fce27afc90a19e1ac8a8bce039688bd0a7"
+ },
+ "native_trajectories_sha256": "37efdd723572d8a26857f2005a974cc161480c5125d89b284edb7ad7660dc60c",
+ "inputs_unchanged": "Week 20 Track 2 checkpoints: NEW DEV repeats 1-2, ten folds, B16/40/80, Week 19 shared label-blind paid prefixes; K = 360 bin means from the training-only rule; native maxima as extra training points; planned horizon from scheduled settings; observed window = recording end; no stretching or tail filling",
+ "repairs": {
+  "svgp": "NGD (lr 0.1) on the natural variational distribution + Adam (lr 0.01) on hyperparameters and inducing locations; lr halved at 5000 and 10000; stop on training evidence only (probe ELBO relative change <= 5e-4 and probe-mean RMS change <= 5e-3 for 3 consecutive 250-iteration checks, 1000 <= iterations <= 20000); identical protocol for M = 400 (30 checkpoints) and M = 800 (the ten B40 checkpoints)",
+  "functional": "rank-3 probabilistic PCA with missing data (EM; coefficient prior N(0, I), exact per-run posterior on observed bins; EM tol 1e-9 relative log likelihood, max 3000 iterations), orthogonal rotation, then one GP per coefficient with per-run noise = that run's coefficient posterior variance (sklearn, ConstantKernel x Matern-3/2 ARD + White, alpha = posterior variance)"
+ },
+ "controls_unchanged": [
+  "training-mean trajectory",
+  "scalar A GP (Week 20 refit)",
+  "frozen functional",
+  "frozen SVGP 2000 it",
+  "SVGP 6000 it (T2-PS1)"
+ ],
+ "validation_before_freeze": {
+  "svgp_ngd": {
+   "exact_vs_ngd_svgp_M_eq_N": {
+    "max_abs_mean_diff": 1.335872465424437e-06,
+    "max_abs_var_diff": 2.4678068818451138e-06,
+    "passed": true
+   },
+   "stopping_rule_on_controlled_example": {
+    "status": "converged",
+    "iterations": 1000
+   }
+  },
+  "functional_ppca": {
+   "largest_principal_angle_deg_true_vs_EM_subspace": 8.237173364945415,
+   "em_status": "max_iter",
+   "em_iterations": 3000,
+   "max_abs_coefficient_partial_records": 2.3844115316534698,
+   "max_abs_coefficient_full_records": 3.6039851598480905,
+   "mean_posterior_sd_partial": 0.4863134074135217,
+   "mean_posterior_sd_full": 0.0245931416855979,
+   "frozen_week20_ALS_max_abs_coefficient_partial_records": 1286.4215956024689,
+   "frozen_week20_ALS_max_abs_coefficient_full_records": 2405.5446204176906,
+   "passed": true
+  }
+ },
+ "fit_counts": {
+  "svgp_ngd_M400": 30,
+  "svgp_ngd_M800": 10,
+  "functional_ppca_em": 30,
+  "functional_ppca_coefficient_gps": 90,
+  "total_temporal_fits": 160
+ },
+ "threads": "SVGP: 3 torch threads; functional: 1 BLAS thread; at most 4 in total",
+ "metrics": "unchanged Week 20 Track 2 definitions: trajectory RMSE/MAE on observed bins, 50/90 % pointwise coverage and width (latent + noise), A = median of posterior maxima over the planned horizon (like-for-like runs), A 90 % interval, signed and absolute A error, argmax timing error, time above u_ref error, P(max > u_ref) Brier vs the event; plus conditioning, convergence, inducing sensitivity and runtime",
+ "hypotheses": {
+  "TR-H1_svgp_convergence_rmse": "The converged SVGP (svgp_ngd_M400) has lower mean trajectory RMSE than the frozen 2000-iteration SVGP at every budget. Direction from Week 20 T2-PS1 (6000 iterations: -23 % on five checkpoints). Magnitude not committed.",
+  "TR-H2_svgp_convergence_A": "The converged SVGP has lower median |A error| than the frozen SVGP at B40 and B80, but stays above the scalar A GP. Direction from T2-PS1 (A error 60 -> 45 um, scalar 5.0 um on the same rows).",
+  "TR-H3_inducing_sensitivity": "Under equal convergence effort, the RMS difference of the predictive mean between M=400 and M=800 at B40 is smaller than under the frozen protocol (0.167 at ckpt_r1_f1_B40). Direction only.",
+  "TR-H4_functional_conditioning": "The PPCA functional model has no exploding coefficients (max |posterior-mean coefficient| below 10 at every checkpoint) and lower mean trajectory RMSE than the frozen functional model at every budget. Basis: controlled staircase validation and the Week 20 diagnosis.",
+  "TR-H5_model_ranking": "PPCA functional vs converged SVGP: no directional expectation.",
+  "TR-H6_A_gap": "Neither repaired temporal model reaches the scalar A GP's median |A error| at B40 or B80 (Week 20: about 10x gap).",
+  "TR-H7_calibration": "No numerical expectation for 50 %/90 % pointwise coverage; reported with widths."
+ },
+ "code_sha256": {
+  "src/jdl_temporal_functional.py": "6c5ec541bd5869e8530b3a31f7da65205f347a0b678fc3637d8cc261735e5cb5",
+  "src/jdl_temporal_svgp.py": "7a94bec2c541240a6f68e906017fe6d54da2373cbe42edbd42b00537b8fccf6c",
+  "src/jdl_temporal_eval.py": "3b5823535bb87c9ec299568d9dcab3cee476fcb966f7e16136b5b119dafd4bf3",
+  "src/week20_track2_models.py": "18e85e0e13216ea42ea15f4ef20a6c51177d06cc036ff620f82dcf6b5a9cd89d",
+  "src/week20_track2_svgp.py": "0c8ddf0cb12e3f479eb980b4ce67d90f862adee54d1336d8010e51372e0b1b73",
+  "src/week20_track2_common.py": "eff858fc9fdbf72351dcd8469888f9aaa4a02e455843aacbc051c1a63170c045",
+  "src/week20_track2_data.py": "34d920464f9c2d1289531ce66ab386c868a1644dfbb0e1889dd5d876530ba988",
+  "src/week20_track2_eval.py": "84fd86f4a9724cae55f7059582895afe40f8d5835fc5f495c35c3f8a388ec6d6"
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "exact_vs_ngd_svgp_M_eq_N": {
+  "max_abs_mean_diff": 1.335872465424437e-06,
+  "max_abs_var_diff": 2.4678068818451138e-06,
+  "passed": true
+ },
+ "stopping_rule_on_controlled_example": {
+  "status": "converged",
+  "iterations": 1000
+ }
+}
