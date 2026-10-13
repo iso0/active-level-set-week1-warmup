@@ -1,0 +1,192 @@
+{
+  "status": "PASS",
+  "n_checks": 26,
+  "n_model_fits": 26,
+  "seconds": 1.6464488999918103,
+  "mismatch": {
+    "joint": {
+      "BA": 0.9375,
+      "Brier": 0.06509150723046403,
+      "log_loss": 0.2603213173424851
+    },
+    "without_discrepancy": {
+      "BA": 0.5,
+      "Brier": 0.21649887901618978,
+      "log_loss": 0.6246509805565418
+    },
+    "binary_only": {
+      "BA": 0.9375,
+      "Brier": 0.06663601784252483,
+      "log_loss": 0.2684518702211781
+    }
+  },
+  "adverse": {
+    "joint": {
+      "BA": 0.9583333333333333,
+      "Brier": 0.05592325418923241,
+      "log_loss": 0.24818559463459133
+    },
+    "binary_only": {
+      "BA": 0.9583333333333333,
+      "Brier": 0.04676494473898063,
+      "log_loss": 0.22415489175589984
+    },
+    "note": "Imposed positive depth effect can hurt under an anti-aligned true label law."
+  },
+  "sparse_p": 0.6738321900631514,
+  "scalar_reference": {
+    "exact_theta_mean": -0.14778036644179804,
+    "Laplace_theta_mean": -0.1359905754149735,
+    "exact_theta_sd": 0.09029007542155941,
+    "Laplace_theta_sd": 0.08714451943339377,
+    "exact_p": 0.8004614348013129,
+    "Laplace_p": 0.7834543026449355,
+    "absolute_probability_error": 0.01700713215637739
+  },
+  "acquisition_selected_x": 0.7,
+  "update": {
+    "before_n": 13,
+    "after_n": 14,
+    "paid_index": 51,
+    "Y": 1,
+    "z": 0.45499999999999996,
+    "theta_sd_before": 0.17676475933305624,
+    "theta_sd_after": 0.17631590269162975,
+    "integrated_variance_before": 0.04463475187908559,
+    "integrated_variance_after": 0.04442398953686366
+  }
+}
+{
+  "status": "PASS",
+  "n_checks": 26,
+  "n_model_fits": 26,
+  "seconds": 0.36178899998776615,
+  "mismatch": {
+    "joint": {
+      "BA": 0.9375,
+      "Brier": 0.06509150722864508,
+      "log_loss": 0.26032131733505764
+    },
+    "without_discrepancy": {
+      "BA": 0.5,
+      "Brier": 0.21649887888057048,
+      "log_loss": 0.6246509802561722
+    },
+    "binary_only": {
+      "BA": 0.9375,
+      "Brier": 0.06663601784252485,
+      "log_loss": 0.2684518702211781
+    }
+  },
+  "adverse": {
+    "joint": {
+      "BA": 0.9583333333333333,
+      "Brier": 0.05592325412903933,
+      "log_loss": 0.24818559441186508
+    },
+    "binary_only": {
+      "BA": 0.9583333333333333,
+      "Brier": 0.04676494473898062,
+      "log_loss": 0.22415489175589984
+    },
+    "note": "Imposed positive depth effect can hurt under an anti-aligned true label law."
+  },
+  "sparse_p": 0.6738321900631894,
+  "scalar_reference": {
+    "exact_theta_mean": -0.14778036644179804,
+    "Laplace_theta_mean": -0.13599057541497372,
+    "exact_theta_sd": 0.09029007542155941,
+    "Laplace_theta_sd": 0.087144519433394,
+    "exact_p": 0.8004614348013129,
+    "Laplace_p": 0.7834543026449358,
+    "absolute_probability_error": 0.01700713215637717
+  },
+  "acquisition_selected_x": 0.7,
+  "update": {
+    "before_n": 13,
+    "after_n": 14,
+    "paid_index": 51,
+    "Y": 1,
+    "z": 0.45499999999999996,
+    "theta_sd_before": 0.17676475933305638,
+    "theta_sd_after": 0.17631590269162967,
+    "integrated_variance_before": 0.044634751879085645,
+    "integrated_variance_after": 0.04442398953686367
+  }
+}
+{
+ "astra_26_checks_reference": {
+  "passed": true
+ },
+ "astra_26_checks_port": {
+  "passed": true,
+  "failed": []
+ },
+ "astra_documented_limitations_reproduced_by_port": {
+  "passed": true,
+  "max_abs_difference": 6.019307968729848e-11
+ },
+ "astra_toy_acquisition_scores_port_vs_reference": {
+  "passed": true,
+  "max_abs_difference": 5.0306980803327406e-17
+ },
+ "parity_4d_posterior_vs_reference": {
+  "passed": true,
+  "max_abs_difference": 1.1734779814531748e-11
+ },
+ "parity_4d_probability_vs_reference": {
+  "passed": true,
+  "max_abs_difference": 9.586553773033302e-12
+ },
+ "parity_4d_acquisition_vs_reference": {
+  "passed": true,
+  "max_abs_difference": 2.551344552292889e-14
+ },
+ "covariance_reconstruction_4d": {
+  "passed": true
+ },
+ "prediction_batch_invariance_4d": {
+  "passed": true,
+  "max_abs_difference": 7.771561172376096e-16
+ },
+ "discrepancy_centering_exact_on_fixed_pool_4d": {
+  "passed": true
+ },
+ "one_class_paid_data_finite_and_directional": {
+  "passed": true
+ },
+ "missing_response_keeps_label_and_cost": {
+  "passed": true
+ },
+ "gradient_acceptance_enforced_separately_from_solver_status": {
+  "passed": true,
+  "refused_message": "Laplace mode not accepted: status=max_iter; gradient=6.677e+00"
+ },
+ "corruption_of_every_unpaid_and_test_outcome_has_no_effect": {
+  "passed": true
+ },
+ "refit_from_prior_no_state_carried": {
+  "passed": true
+ },
+ "binary_matched_ignores_responses_4d": {
+  "passed": true
+ },
+ "bvn_genz_vs_reference_plackett": {
+  "passed": true,
+  "max_abs_difference": 3.191891195797325e-16
+ },
+ "bvn_genz_vs_independent_quad": {
+  "passed": true,
+  "max_abs_difference": 1.1102230246251565e-16
+ },
+ "probit_terms_vs_independent_log_ndtr_and_reference": {
+  "passed": true
+ },
+ "tractable_case_three_independent_methods_agree": {
+  "passed": true
+ },
+ "tractable_case_laplace_error_reported": {
+  "passed": true
+ }
+}
+STATUS PASS 70.8s

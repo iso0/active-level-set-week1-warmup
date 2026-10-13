@@ -1,0 +1,22 @@
+{
+ "question": "were repeats / seeds 21-24 used before?",
+ "OLD": {
+  "construction": "src.week8_5_frozen_sample_efficiency_confirmation.build_splits: StratifiedGroupKFold(5, shuffle) with seed_u32('outer_split|repeat|NN')",
+  "repeats_21_24": "USED: Week 9 Phase 1.20 confirmation used repeats 21-60 of this generator; Phase 1.21 used 61-120",
+  "evidence": [
+   "outputs/week9_phase1_20_acquisition_search/checkpoints/cov_then_misfit_B40",
+   "outputs/week9_phase1_20_acquisition_search/checkpoints/early8__cov_then_misfit_B40",
+   "outputs/week9_phase1_20_acquisition_search/checkpoints/margin"
+  ],
+  "phase1_21_report": "outputs/week9_phase1_21_simplification_replication/FINAL_PHASE1_21_REPORT.md (section 3)"
+ },
+ "NEW": {
+  "construction": "Week 11 owner-approved label-free group-fold certificate (outputs/week11_external_prelabel_freeze_final/EXTERNAL_BATCH_FREEZE.json), 20 seeds",
+  "repeats_21_24": "not generated"
+ },
+ "POOLED": {
+  "construction": "src.week18_tasks.pooled_tasks: campaign x label stratified shuffle with default_rng([1818, rep]), rep in 1..20",
+  "repeats_21_24": "not generated"
+ },
+ "conclusion": "collision for OLD; a common C4 block of repeats 21-24 is not appropriate. Proposed: new seed namespace 'C4|<population>|repeat|k', k = 1..4 (C4_STABILITY_DRAFT.md)"
+}

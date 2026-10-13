@@ -1,0 +1,347 @@
+{
+ "study": "joint depth-label GP development \u2014 Stage M (model value on identical feature-only paths)",
+ "status": "FROZEN BEFORE ANY COMPARATIVE FIT. DEV development on previously inspected simulations; not confirmation. Stage A and C4 are not executed under this request.",
+ "written_utc": "2026-10-13T13:45:05+00:00",
+ "baseline_commit": "e2bcf97a55736cdd2933b6761678d8b695358205",
+ "branch": "joint-depth-label-dev",
+ "parent_commit": "e2bcf97a55736cdd2933b6761678d8b695358205",
+ "source_package": {
+  "location": "outputs/astra_week20_method_development (verbatim copy of the owner-supplied package)",
+  "sha256": {
+   "ASTRA_WEEK20_METHOD_DESIGN.md": "df06e5b2cde29d871d5dd53309fd82f33f569f496f5c3beab9f4db071c0cbd6a",
+   "CHANGE_LOG.md": "4d54ac929b1729bca79fe4a194e7f9d5930639d255664fd7a0057f9b62358873",
+   "DELIVERY_VALIDATION.json": "ad0b7f153fbddae96632cb91cae05d0765c0ce73ed4ef89d8945dafcf0638880",
+   "joint_depth_label_gp.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+   "OPUS_METHOD_IMPLEMENTATION_REQUEST.md": "6a80a9cc66e61af85043c508b551aeb30415d3ab63e05f1a3f264c65717069df",
+   "prototype_mechanisms.png": "936060376884ccff0b33c5cfa7b715ce39bbb13471f49943c42e62fb1607e208",
+   "prototype_results.json": "ec228605bea88974accb74e1193975ad0e52f53b1e58094c10eb603a423705b4",
+   "README.md": "5f2236ea80f793f224f25671f67119bc0d5fdff180dfb03fd0a2e731ad0200b9",
+   "requirements.txt": "6afb83d59515deb526c4879fe45c151289c53c8b2bd6c073dfcd3702132e51ac",
+   "run_checks.py": "de122f69e4fe7b439b94ea1cc4fbee88563915e5f16b4af90aaba703706f8d7b",
+   "SELECTION_RECORD.json": "a3cbea22ca3ee2923823e22e649a33d922da34657d072d3ef8e5e6e2284d808f"
+  },
+  "matches_delivery_validation": true,
+  "role": "reference code = initial numerical specification; design text = hypotheses"
+ },
+ "data_contract": {
+  "inputs": [
+   "P",
+   "VX",
+   "LS (laser spot radius)",
+   "ST"
+  ],
+  "label": "canonical Y = any observed manually labelled Keyhole frame (pilot_inputs.has_keyhole)",
+  "response": "existing ACTIVE A (A_um, Week 19 audit; startup included; 90 %-of-derived-exit cutoff); z = log(A_um / 111) for valid positive A; missing A keeps its label and query cost",
+  "z_reference_um": 111.0,
+  "populations": {
+   "NEW": {
+    "task": "R3_NEW",
+    "n": 136,
+    "positives": 124,
+    "negatives": 12,
+    "A_available": 135,
+    "A_missing_ids": [
+     "P-423p267621988_VX-0p332154005524_LS-4p22725332613e-05_ST-473p308549274_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p45237465838e-05_H-e7dbd8e5ce"
+    ],
+    "fast_scans_VX_gt_0.85": 23,
+    "early_end_records": 79
+   },
+   "OLD": {
+    "task": "R3_OLD",
+    "n": 405,
+    "positives": 73,
+    "negatives": 332,
+    "A_available": 405,
+    "A_missing_ids": [],
+    "fast_scans_VX_gt_0.85": 98,
+    "early_end_records": 167
+   },
+   "POOLED": {
+    "task": "R1_POOLED",
+    "n": 541,
+    "positives": 197,
+    "negatives": 344,
+    "A_available": 540,
+    "A_missing_ids": [
+     "P-423p267621988_VX-0p332154005524_LS-4p22725332613e-05_ST-473p308549274_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p45237465838e-05_H-e7dbd8e5ce"
+    ],
+    "fast_scans_VX_gt_0.85": 121,
+    "early_end_records": 246
+   }
+  },
+  "population_counts_verified": true,
+  "exclusions": "the 49 Bug-withheld NEW entries are outside NEW-136 and stay excluded; no label, exclusion or q20 change",
+  "identifiers": "full simulation IDs everywhere (H suffixes are not unique)"
+ },
+ "splits": {
+  "NEW": "src.week18_tasks R3_NEW = week12 original_splits.json (identical to the Week 19 pilot)",
+  "OLD": "src.week18_tasks R3_OLD (Week 8.5 split manifest)",
+  "POOLED": "src.week18_tasks R1_POOLED (campaign x label stratified, default_rng([1818, rep]))",
+  "repeats": [
+   1,
+   2
+  ],
+  "folds": 5,
+  "split_sha256": {
+   "NEW_r1_f1": "51e124c0a75acdcb",
+   "NEW_r1_f2": "cc22e1412b9d6ecc",
+   "NEW_r1_f3": "eee049c29b8f58c3",
+   "NEW_r1_f4": "1eed64d28c987e9a",
+   "NEW_r1_f5": "4b861386e38b4950",
+   "NEW_r2_f1": "24656e0b7b20d625",
+   "NEW_r2_f2": "873839a4ab96e0cb",
+   "NEW_r2_f3": "ad60525f9301744a",
+   "NEW_r2_f4": "d4790c2b7e1941d0",
+   "NEW_r2_f5": "8eefa0a5e2ff13c4",
+   "OLD_r1_f1": "70e761e5abcb6d3f",
+   "OLD_r1_f2": "10a898175846db03",
+   "OLD_r1_f3": "f842e1f7cd45f6be",
+   "OLD_r1_f4": "c382ddfe53c6fc69",
+   "OLD_r1_f5": "080dbfaa459a26a8",
+   "OLD_r2_f1": "406bc5e6a6226a24",
+   "OLD_r2_f2": "e28d9b7269a16594",
+   "OLD_r2_f3": "851b28f1f6ecb87c",
+   "OLD_r2_f4": "f46453d5d6b6ff1a",
+   "OLD_r2_f5": "2efb5b5f18ac50d7",
+   "POOLED_r1_f1": "adea501773e8c544",
+   "POOLED_r1_f2": "e1a5dea4dae932a8",
+   "POOLED_r1_f3": "3186de3e1adbcada",
+   "POOLED_r1_f4": "abb87c70fe3d5f4c",
+   "POOLED_r1_f5": "f5ab00f7a244a809",
+   "POOLED_r2_f1": "e6388e1eb47deeb8",
+   "POOLED_r2_f2": "026c2282e637e8b3",
+   "POOLED_r2_f3": "97a96d88f304e422",
+   "POOLED_r2_f4": "54459e92238db1cc",
+   "POOLED_r2_f5": "eae9d7d85049d1b5"
+  }
+ },
+ "paths": {
+  "routine": "src.week13_synthetic_al.maximin_order on the raw inputs of the fold's training pool (StandardScaler inside), rng = task seed + [2]",
+  "task_seeds": {
+   "NEW": "[1820, repeat, fold]",
+   "OLD": "[1822, repeat, fold]",
+   "POOLED": "[1818, repeat, fold]"
+  },
+  "length": 80,
+  "prefixes": [
+   16,
+   40
+  ],
+  "NEW_identical_to_week19_saved_paths": true,
+  "sha256_by_task": {
+   "NEW_r1_f1": "b91a234470d7b002ab80d043a75aaa74efaa4319c152c853b17036c38fc59a85",
+   "NEW_r1_f2": "bc3a59f233429b89c82a60273845c41a82a8a930f932522c53392067a9418ffd",
+   "NEW_r1_f3": "e21bf01f1fe25dd10e30cc3a2d97b0bbaadc31a823c0247d1c441f67de7cb93f",
+   "NEW_r1_f4": "4839748fbb71208e931e983d7671e0049fd4b319a101c92f215c43775a17aba2",
+   "NEW_r1_f5": "dabd033cf9a3d33ea24ba6ae7726981628a511d53a059054601eeda2ef79a86b",
+   "NEW_r2_f1": "398ea7373dca38c604f1abaaa8158a621b0eb497b2bb6c01b027557ff9801de3",
+   "NEW_r2_f2": "da3c068928647601b573b63eeea5e6450036fa796f3e330ff315298071da022d",
+   "NEW_r2_f3": "556535b629d10466dfd5eaf105cee3c2ee8ecc72b1ff6eeb799cf064a672adb5",
+   "NEW_r2_f4": "77727a7bfa1c109a006467f15c2bb19dffb10138ce152c4700c3cf52df23dc17",
+   "NEW_r2_f5": "c3b5a8bb8f31bddd6080907e2be10eec6e032d7f3da2985888050cf55605c783",
+   "OLD_r1_f1": "a76cfa1e49d97d6c1d9fbfbc710158c14b03cae9fc86a68498f0d331c6120807",
+   "OLD_r1_f2": "9a4f3f2e0c6ebf8aaff619d911bbbc9fd822502feeef235317c7d7f12645e8b9",
+   "OLD_r1_f3": "38ead3b17e06c11105371fa8798f6a9cbd90296720b0e1433b14623d11684e24",
+   "OLD_r1_f4": "c673dcab1de0e4436b5b2e48a062ebe324d7d14188302c57a1f090044838b0ad",
+   "OLD_r1_f5": "1bf80adc1228b2ec514414adfbf8a25d2e30caa05b47642ba10c79f3909ccba5",
+   "OLD_r2_f1": "e3ea767436888a2eec627ad5541b1deaff89e1acc1508ded3e4b0fdf30692a4a",
+   "OLD_r2_f2": "c6fa1174a2d2c2c4596e36ad846fff15ca07b2f7327cd516fcb438988bd8580d",
+   "OLD_r2_f3": "adae7ea8b13ff62a4fbd9994d8b8ed50352517f921826aed651e8897ba8dbd1d",
+   "OLD_r2_f4": "2790b16f557492c4b341328c52424ef71c787ff2602de484ff78e9e54e844813",
+   "OLD_r2_f5": "4d0199fe93185d9e47de81bc6a345edf2bb921a1768ec6408165c5198cfa34d3",
+   "POOLED_r1_f1": "227a8c2de094df15c11fd4da096b2b28a0f71278e1fc6304f8c51880811d0073",
+   "POOLED_r1_f2": "1b6a11a424c0fffa4dbb9787f7ce83684daf953ef38f85a26f92965b9361c589",
+   "POOLED_r1_f3": "46fec9c052701fbd3229a957445cf796ad1230a0ae75cab31eb6e87c00a7b400",
+   "POOLED_r1_f4": "86e45f5d1bc2a005842a0c3bd0e6e5ded6ee94fa87ca5f721b0824fc5c2b2d7c",
+   "POOLED_r1_f5": "fc6f122b532ad578cde23d388c0d3d69834380534d557e27899c128701849236",
+   "POOLED_r2_f1": "c63a66434b2026db1f31445be1fe818e5a14fde205cb748561f4f50956b5a697",
+   "POOLED_r2_f2": "409109938106b3a3ad655bfcaaecea3406c69d48b3e3da9c8d1bf661e0634890",
+   "POOLED_r2_f3": "464fde931cd0fbb8a42f0ff7ecf55f865955720c2e06ac02c35591fcdc0322ef",
+   "POOLED_r2_f4": "8f91e8e7a8c7211d92f2f9f1c19b84543b61406580dc9a88218f108709a23761",
+   "POOLED_r2_f5": "4a709d591b1bbaf45150fda25b637def67247829fc9046c19bf4f9f8ef3c9b67"
+  },
+  "paths_csv_sha256": "990c8f63f793661d9faf272b79fc3a4bb56e9c4e364d4ec57fcf7471141a711a",
+  "prefix_composition_csv_sha256": "def2224f0aa85cf1d84e251054409c5f8fa1265ded8daf6c235f79a9d1e1c09c",
+  "no_extension": "prefixes are never extended to obtain a class composition; one-class prefixes are kept"
+ },
+ "transformations": {
+  "J_family": "log of the four raw inputs, standardized with the mean/sd of the fold's feature-only training pool (ddof 0); the discrepancy is centred on that fixed standardized pool",
+  "ACTIVE_E1": "frozen: StandardScaler on log(pool X); log A standardized on paid finite responses",
+  "G3": "frozen Week 17/18 G3 transformations"
+ },
+ "priors_J": {
+  "f_amplitude": 0.6,
+  "f_lengthscale": [
+   1.5,
+   1.5,
+   1.5,
+   1.5
+  ],
+  "discrepancy_amplitude": 0.35,
+  "discrepancy_lengthscale": [
+   1.5,
+   1.5,
+   1.5,
+   1.5
+  ],
+  "threshold_mean": 0.0,
+  "threshold_sd": 0.35,
+  "response_noise_sd": 0.03,
+  "probit_scale": 0.15,
+  "f_mean": 0.0,
+  "jitter": 1e-10
+ },
+ "variants": {
+  "J": {
+   "config_changes": {},
+   "use_response": true
+  },
+  "J_fixed_theta": {
+   "config_changes": {
+    "threshold_sd": 0.0
+   },
+   "use_response": true
+  },
+  "J_no_delta": {
+   "config_changes": {
+    "discrepancy_amplitude": 0.0
+   },
+   "use_response": true
+  },
+  "Binary_matched": {
+   "config_changes": {},
+   "use_response": false
+  }
+ },
+ "arms": [
+  "J",
+  "J_fixed_theta",
+  "J_no_delta",
+  "Binary_matched",
+  "ACTIVE_E1",
+  "G3"
+ ],
+ "baseline_declared_behaviour": {
+  "source": "src.week19_dev_pilot.fit_one (frozen shared-path implementation of Week 19)",
+  "ACTIVE_E1": "single-class usable pairs -> unavailable; logistic slope <= 0 -> failed_nonpositive_slope; non-positive response -> failed; otherwise predictions",
+  "G3": "single-class paid labels -> unavailable; Laplace fixed-point error > 1e-6 or fallback -> failed_convergence; otherwise predictions",
+  "no_reseeding_no_extra_startup_no_silent_exclusion": true
+ },
+ "task_counts": {
+  "checkpoints": 60,
+  "fit_requests": 360,
+  "cap": {
+   "fit_requests": 360,
+   "cpu_threads": 4,
+   "max_memory_gib": 8
+  }
+ },
+ "numerical_limits": {
+  "J_newton_max_iterations": 100,
+  "J_newton_gradient_tolerance": 1e-11,
+  "J_gradient_acceptance": 2e-06,
+  "J_line_search_min_step": 1e-10,
+  "E1": "sklearn GPR L-BFGS-B, 0 restarts; logistic C=1e6, max_iter 5000",
+  "G3": "frozen safeguarded Laplace (FP_TOL 1e-9), one L-BFGS-B start",
+  "threads": "J fits: 2 BLAS threads; E1/G3: threadpool limit 2; at most 4 threads in total"
+ },
+ "evaluation": {
+  "pooling": "per repeat over the five test folds (every simulation once); headline = mean of the two repeats",
+  "metrics": [
+   "BA at p >= 0.5",
+   "q20 accuracy: unchanged membership, mean over folds with q20 points",
+   "specificity",
+   "sensitivity",
+   "short-K sensitivity",
+   "Brier",
+   "log loss (p clipped to [1e-12, 1-1e-12])",
+   "AUC"
+  ],
+  "short_K": {
+   "definition": "NEW positives with 0 < K/(F+C+K) < 0.10 (frac_K_FCK; not K/(K+C))",
+   "unique_simulations": 10,
+   "membership_sha256": "0850e48253c7b159ce7672c90c5d8aada0d8f7c0479844041a9d73f84fb131e2",
+   "OLD": "not defined (NaN)",
+   "POOLED": "the same NEW simulations"
+  },
+  "contrasts": "paired on identical tasks, restricted to the common available cohort; per-repeat values reported",
+  "uncertainty": "simulation-cluster bootstrap (2000 draws, seed 20261013): class-stratified multiplicities per simulation shared across repeats, budgets and arms; conditional on the stored fits",
+  "populations_reported_separately": true,
+  "no_pooled_significance_claim": true
+ },
+ "primary_contrast": "NEW, B40, BA: J - Binary_matched",
+ "hypotheses": {
+  "SM-H1_primary": "NEW, B40, BA (pooled per repeat, mean of repeats 1-2): J > Binary_matched. Direction from the evidence that ACTIVE A carries canonical-label information on NEW (Week 20 C3: ACTIVE - WHOLE +0.044 [+0.023, +0.067]; ACTIVE ranks NEW labels better than G3: AUC +0.095). Magnitude unknown: the fixed positive depth coupling and fixed priors can also hurt (Astra adverse case).",
+  "SM-H2_specificity": "NEW B40 specificity, J vs Binary_matched: no directional expectation (fast-scan negatives share depths with fast-scan positives; whether the centered discrepancy represents them under the fixed prior is unknown).",
+  "SM-H3_log_loss": "NEW B40 log loss: J <= Binary_matched (direction from the better ACTIVE Brier scores on DEV and C3). Magnitude unknown.",
+  "SM-H4_OLD": "OLD, B16 and B40 BA: J > Binary_matched. Direction: OLD labels are almost a threshold on A (Week 19 audit: A separates OLD labels with AUC about 0.9999), and the threshold prior is centred at 111 um, near the OLD reference threshold. Magnitude unknown.",
+  "SM-H5_POOLED": "POOLED, J vs Binary_matched: no directional expectation (one global threshold plus a smooth discrepancy must absorb the OLD/NEW shift).",
+  "SM-H6_ablations": "NEW B40 BA: J >= J_no_delta (the discrepancy is needed to represent fast-scan exceptions). J vs J_fixed_theta: no directional expectation. Magnitudes unknown.",
+  "SM-H7_systems": "J vs G3 and J vs ACTIVE_E1: complete-system comparisons with different hyperparameter treatments; no directional expectation.",
+  "SM-H8_theta": "Posterior theta SD at B40 is below the prior SD 0.35 in every population (labels inform theta). The theta-conditioning diagnostic changes probabilities by a magnitude that is unknown.",
+  "SM-H9_numerics": "Every J-family fit is accepted by the gradient criterion (2e-6) and all leakage controls pass.",
+  "thresholds": "+0.01 BA = practical improvement threshold; -0.01 BA = practical deterioration threshold. These are decision thresholds, not forecasts or equivalence margins.",
+  "null_result_reading": "a failed screen means that an incremental benefit was not demonstrated for this model, prior and budget; it does not mean depth contains no label information."
+ },
+ "decision_rule": "Recommend Stage A iff numerical/leakage checks pass AND, on NEW at B40 (mean over repeats 1-2), J - Binary_matched BA >= +0.01, specificity(J) >= specificity(Binary_matched) and log loss(J) <= log loss(Binary_matched). q20, short-K and OLD/POOLED regressions are reported explicitly. A pragmatic development screen, not confirmation.",
+ "mechanism_diagnostics_predeclared": [
+  "FP/FN by full ID per arm; strata: NEW negatives, fast scans (VX > 0.85), short-K, incomplete support (A missing or recording ends early)",
+  "theta posterior per fit; delta, response, latent margin, uncertainty and cross-covariances at test points",
+  "Astra theta-conditioning diagnostic vs J_fixed_theta refit",
+  "oracle-response diagnostic (held-out A, NOT deployable) for J and ACTIVE_E1 on the same simulations",
+  "ranking (AUC) vs probability scores (log loss, Brier) vs decisions (BA); reliability bins with counts",
+  "Laplace approximation error by elliptical slice sampling for J at NEW repeat 1, folds 1-5, B40"
+ ],
+ "validation": {
+  "status": "PASS",
+  "n_checks": 21,
+  "results_sha256": "23712e399d33a52b89c59fc22b35f65021260f7cc540750907ddce49122860e5"
+ },
+ "C4": {
+  "draft": "C4_STABILITY_DRAFT.md (written before Stage M results)",
+  "audit": {
+   "question": "were repeats / seeds 21-24 used before?",
+   "OLD": {
+    "construction": "src.week8_5_frozen_sample_efficiency_confirmation.build_splits: StratifiedGroupKFold(5, shuffle) with seed_u32('outer_split|repeat|NN')",
+    "repeats_21_24": "USED: Week 9 Phase 1.20 confirmation used repeats 21-60 of this generator; Phase 1.21 used 61-120",
+    "evidence": [
+     "outputs/week9_phase1_20_acquisition_search/checkpoints/cov_then_misfit_B40",
+     "outputs/week9_phase1_20_acquisition_search/checkpoints/early8__cov_then_misfit_B40",
+     "outputs/week9_phase1_20_acquisition_search/checkpoints/margin"
+    ],
+    "phase1_21_report": "outputs/week9_phase1_21_simplification_replication/FINAL_PHASE1_21_REPORT.md (section 3)"
+   },
+   "NEW": {
+    "construction": "Week 11 owner-approved label-free group-fold certificate (outputs/week11_external_prelabel_freeze_final/EXTERNAL_BATCH_FREEZE.json), 20 seeds",
+    "repeats_21_24": "not generated"
+   },
+   "POOLED": {
+    "construction": "src.week18_tasks.pooled_tasks: campaign x label stratified shuffle with default_rng([1818, rep]), rep in 1..20",
+    "repeats_21_24": "not generated"
+   },
+   "conclusion": "collision for OLD; a common C4 block of repeats 21-24 is not appropriate. Proposed: new seed namespace 'C4|<population>|repeat|k', k = 1..4 (C4_STABILITY_DRAFT.md)"
+  }
+ },
+ "not_authorized_here": [
+  "Stage A execution",
+  "C4 execution or scoring",
+  "simulator or cloud jobs",
+  "label/exclusion/q20 changes",
+  "q30"
+ ],
+ "code_sha256": {
+  "src/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc",
+  "src/jdl_validation.py": "a3a310baa81ed45e27f5c6a6f84d0cf77f8c9ec3df7f199ebc8fe1cf8dc0f678",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/jdl_freeze.py": "74c2d7a9b14348420f39a007951224a8ba064073009f6691963e95ee3b1fa2e3",
+  "src/week19_dev_pilot.py": "9f8d256d5897acd784b43326abd761a926f15d758067233aa0fa0981e5369bd1",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d",
+  "src/week18_tasks.py": "7f3c78a0659df3fa32c47073ef668a749543304b1dbbccd1854b86c300634198",
+  "src/week17_models.py": "7b7ad8846a4fa4f721b21ec6853b06b704ece658ee4a7e7902d3d21827d47570",
+  "src/week17_audit_impact.py": "46e05394afe519b28148a1d382bc7d9f767a97a99fba5e124457c223f653905e",
+  "src/week13_synthetic_al.py": "3df1c6f83e249bcc8831014914a3d99431371e3fa5269fa121b8ffd7d8317d5f",
+  "src/week12_development_common.py": "e2cc86e1bfcee165706061e859833d81d63a20e2cd7eb5477d8b947d1dca050f",
+  "src/external_validation/analysis.py": "9df0d7e03a26e7e0635365dd0be5a9983e928254b9bb02bed7a441878a09f1b1"
+ }
+}

@@ -1,0 +1,208 @@
+{
+ "version": "jdl-port-1.0",
+ "environment": {
+  "python": "3.14.4",
+  "numpy": "2.5.1",
+  "scipy": "1.18.0"
+ },
+ "source_sha256": {
+  "src/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc",
+  "src/jdl_validation.py": "a3a310baa81ed45e27f5c6a6f84d0cf77f8c9ec3df7f199ebc8fe1cf8dc0f678"
+ },
+ "astra_package_sha256": {
+  "ASTRA_WEEK20_METHOD_DESIGN.md": "df06e5b2cde29d871d5dd53309fd82f33f569f496f5c3beab9f4db071c0cbd6a",
+  "CHANGE_LOG.md": "4d54ac929b1729bca79fe4a194e7f9d5930639d255664fd7a0057f9b62358873",
+  "DELIVERY_VALIDATION.json": "ad0b7f153fbddae96632cb91cae05d0765c0ce73ed4ef89d8945dafcf0638880",
+  "joint_depth_label_gp.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+  "OPUS_METHOD_IMPLEMENTATION_REQUEST.md": "6a80a9cc66e61af85043c508b551aeb30415d3ab63e05f1a3f264c65717069df",
+  "prototype_mechanisms.png": "936060376884ccff0b33c5cfa7b715ce39bbb13471f49943c42e62fb1607e208",
+  "prototype_results.json": "ec228605bea88974accb74e1193975ad0e52f53b1e58094c10eb603a423705b4",
+  "README.md": "5f2236ea80f793f224f25671f67119bc0d5fdff180dfb03fd0a2e731ad0200b9",
+  "requirements.txt": "6afb83d59515deb526c4879fe45c151289c53c8b2bd6c073dfcd3702132e51ac",
+  "run_checks.py": "de122f69e4fe7b439b94ea1cc4fbee88563915e5f16b4af90aaba703706f8d7b",
+  "SELECTION_RECORD.json": "a3cbea22ca3ee2923823e22e649a33d922da34657d072d3ef8e5e6e2284d808f"
+ },
+ "checks": {
+  "astra_26_checks_reference": {
+   "passed": true,
+   "n": 26,
+   "status": "PASS"
+  },
+  "astra_26_checks_port": {
+   "passed": true,
+   "n": 26,
+   "status": "PASS",
+   "failed": []
+  },
+  "astra_documented_limitations_reproduced_by_port": {
+   "passed": true,
+   "max_abs_difference": 6.019307968729848e-11,
+   "values": {
+    "scalar_Laplace_abs_probability_error": {
+     "reference": 0.01700713215637739,
+     "port": 0.01700713215637717
+    },
+    "sparse_primary_p_at_paid_negative": {
+     "reference": 0.6738321900631514,
+     "port": 0.6738321900631894
+    },
+    "adverse_joint_brier": {
+     "reference": 0.05592325418923241,
+     "port": 0.05592325412903933
+    },
+    "adverse_binary_brier": {
+     "reference": 0.04676494473898063,
+     "port": 0.04676494473898062
+    },
+    "mismatch_joint_BA": {
+     "reference": 0.9375,
+     "port": 0.9375
+    },
+    "acquisition_selected_x": {
+     "reference": 0.7,
+     "port": 0.7
+    }
+   },
+   "note": "the Laplace error (0.017), the prior-sensitive sparse negative (0.674) and the worse joint Brier in the adverse case are reproduced, not tuned away"
+  },
+  "astra_toy_acquisition_scores_port_vs_reference": {
+   "passed": true,
+   "max_abs_difference": 5.0306980803327406e-17
+  },
+  "parity_4d_posterior_vs_reference": {
+   "passed": true,
+   "max_abs_difference": 1.1734779814531748e-11,
+   "variants": [
+    "J",
+    "J_fixed_theta",
+    "J_no_delta",
+    "Binary_matched"
+   ]
+  },
+  "parity_4d_probability_vs_reference": {
+   "passed": true,
+   "max_abs_difference": 9.586553773033302e-12
+  },
+  "parity_4d_acquisition_vs_reference": {
+   "passed": true,
+   "max_abs_difference": 2.551344552292889e-14,
+   "note": "port: Genz BVNU; reference: Plackett integral with adaptive quadrature"
+  },
+  "covariance_reconstruction_4d": {
+   "passed": true,
+   "full_matrix_reconstruction": 1.6653345369377348e-16,
+   "marginal_vs_full_variance": 1.97758476261356e-16,
+   "marginal_vs_full_mean": 0.0
+  },
+  "prediction_batch_invariance_4d": {
+   "passed": true,
+   "max_abs_difference": 7.771561172376096e-16,
+   "note": "random subsets, permutations and far-away companions"
+  },
+  "discrepancy_centering_exact_on_fixed_pool_4d": {
+   "passed": true,
+   "mean": -1.1275702593849246e-17,
+   "mean_cov": 1.1372076120292402e-18
+  },
+  "one_class_paid_data_finite_and_directional": {
+   "passed": true,
+   "theta_all_positive": -0.6492876745820685,
+   "theta_all_negative": 0.5746713183371119,
+   "note": "all-positive labels lower theta, all-negative raise it; both fits accepted"
+  },
+  "missing_response_keeps_label_and_cost": {
+   "passed": true,
+   "label_influence": 0.5345412247538752,
+   "reference_difference": 5.009015424661811e-11
+  },
+  "gradient_acceptance_enforced_separately_from_solver_status": {
+   "passed": true,
+   "refused_message": "Laplace mode not accepted: status=max_iter; gradient=6.677e+00",
+   "normal_fit": {
+    "solver_status": "converged",
+    "gradient_inf": 6.920541752423641e-15,
+    "gradient_accepted": true,
+    "newton_iterations": 5,
+    "min_whitened_hessian_eigenvalue": 1.000006127585967
+   }
+  },
+  "corruption_of_every_unpaid_and_test_outcome_has_no_effect": {
+   "passed": true,
+   "prediction_difference": 0.0,
+   "acquisition_difference": 0.0
+  },
+  "refit_from_prior_no_state_carried": {
+   "passed": true
+  },
+  "binary_matched_ignores_responses_4d": {
+   "passed": true
+  },
+  "bvn_genz_vs_reference_plackett": {
+   "passed": true,
+   "max_abs_difference": 3.191891195797325e-16,
+   "n": 6100,
+   "reference_guard_refusals": 0
+  },
+  "bvn_genz_vs_independent_quad": {
+   "passed": true,
+   "max_abs_difference": 1.1102230246251565e-16,
+   "n": 63
+  },
+  "probit_terms_vs_independent_log_ndtr_and_reference": {
+   "passed": true,
+   "max_relative_lambda_error_vs_log_ndtr": 6.447971322310216e-12,
+   "max_relative_lambda_difference_vs_reference": 2.6433544186753474e-13,
+   "max_curvature_difference_vs_reference": 1.2718492925500868e-10
+  },
+  "tractable_case_three_independent_methods_agree": {
+   "passed": true,
+   "orthant_qmc_vs_elliptical_slice": 0.010299216504244146,
+   "tolerance_4_batch_means_se": 0.01988151599561695,
+   "ess_samples": 80000,
+   "rejection_accepted_draws": 438.0,
+   "rejection_total_draws": 60000000,
+   "max_rejection_standard_error": 0.021268214478261997,
+   "max_rejection_vs_orthant_qmc": 0.028488205119658883,
+   "max_rejection_vs_elliptical_slice": 0.03235281925650868,
+   "theta_rejection": -0.19920245598951,
+   "theta_ess": -0.20263661959061338,
+   "note": "validation design repaired after the first run: prior importance sampling had only 163 effective draws (recorded in the ledger)"
+  },
+  "tractable_case_laplace_error_reported": {
+   "passed": true,
+   "max_abs_probability_error_laplace_vs_exact": 0.04037349240493315,
+   "mean_abs_probability_error": 0.015766975360982205,
+   "laplace_p": [
+    0.6773,
+    0.5554,
+    0.578,
+    0.6148,
+    0.6777,
+    0.5944,
+    0.5914,
+    0.526,
+    0.5694,
+    0.5997
+   ],
+   "exact_p_orthant": [
+    0.6821,
+    0.5888,
+    0.5983,
+    0.624,
+    0.6851,
+    0.607,
+    0.6014,
+    0.5663,
+    0.5802,
+    0.6085
+   ],
+   "theta_mean_laplace": -0.1873913827510641,
+   "theta_mean_exact": -0.19920245598951,
+   "theta_sd_laplace": 0.1323595876653904,
+   "theta_sd_exact": 0.13432732014849383,
+   "note": "approximation error of the Laplace step on a 6-label 4-input case; a limitation, not a pass/fail"
+  }
+ },
+ "seconds": 70.8134434223175,
+ "status": "PASS"
+}

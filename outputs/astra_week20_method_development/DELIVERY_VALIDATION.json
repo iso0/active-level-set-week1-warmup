@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "evidence_commit": "7707d7f43f1c36a1d4cce3c18edaf563e75a1fe9",
+  "scope": "Final delivery consistency checks; no real-data fits",
+  "prototype_checks": 26,
+  "prototype_fit_diagnostics": 26,
+  "accepted_unsuccessful_solver_flags": 4,
+  "maximum_gradient_inf": 2.493449160478889e-07,
+  "verified_local_references": 7,
+  "verified_pinned_repository_paths": [
+    "outputs/week17_model_and_acquisition/WEEK17_REPORT.md",
+    "outputs/week18_independent_research/ATTEMPT_LEDGER.md",
+    "outputs/week19_temporal_regime_audit/REPORT.md",
+    "outputs/week19_temporal_regime_dev_pilot/review/REVIEW.md",
+    "outputs/week9_phase1_18b_prospective_global_gpc_sur_benchmark/FINAL_PHASE1_18B_REPORT.md",
+    "src/week17_models.py",
+    "src/week18_engine.py",
+    "src/week18_tobit.py",
+    "src/week19_series.py"
+  ],
+  "sha256": {
+    "ASTRA_WEEK20_METHOD_DESIGN.md": "df06e5b2cde29d871d5dd53309fd82f33f569f496f5c3beab9f4db071c0cbd6a",
+    "CHANGE_LOG.md": "4d54ac929b1729bca79fe4a194e7f9d5930639d255664fd7a0057f9b62358873",
+    "joint_depth_label_gp.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+    "OPUS_METHOD_IMPLEMENTATION_REQUEST.md": "6a80a9cc66e61af85043c508b551aeb30415d3ab63e05f1a3f264c65717069df",
+    "prototype_mechanisms.png": "936060376884ccff0b33c5cfa7b715ce39bbb13471f49943c42e62fb1607e208",
+    "prototype_results.json": "ec228605bea88974accb74e1193975ad0e52f53b1e58094c10eb603a423705b4",
+    "README.md": "5f2236ea80f793f224f25671f67119bc0d5fdff180dfb03fd0a2e731ad0200b9",
+    "requirements.txt": "6afb83d59515deb526c4879fe45c151289c53c8b2bd6c073dfcd3702132e51ac",
+    "run_checks.py": "de122f69e4fe7b439b94ea1cc4fbee88563915e5f16b4af90aaba703706f8d7b",
+    "SELECTION_RECORD.json": "a3cbea22ca3ee2923823e22e649a33d922da34657d072d3ef8e5e6e2284d808f"
+  }
+}

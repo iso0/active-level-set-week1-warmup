@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-12",
+  "evidence_commit": "7707d7f43f1c36a1d4cce3c18edaf563e75a1fe9",
+  "recorded_before": "Any numerical prototype model fit or comparative result in this task",
+  "primary_direction": "A",
+  "method": "Joint depth-label GP with a proper uncertain global threshold and a centered input-dependent discrepancy",
+  "selection_reason": "Both paid depth and canonical label inform one joint posterior. The construction addresses threshold uncertainty and systematic depth-label mismatch without assuming contradictory labels are unreliable. Direction B remains a principled extension if a usable auxiliary channel is demonstrated, but privileged-noise GPC alone does not model a future auxiliary observation or systematic morphology signal.",
+  "acquisition": "Expected reduction of integrated posterior variance of the canonical-label probability, integrating the next paid depth and Bernoulli label under the coupled Gaussian posterior. Fixed uniform weights on the feature-only candidate pool; no q20 or held-out labels in acquisition.",
+  "inference": "Exact Gaussian conditioning on paid continuous outputs; joint probit Laplace update on paid labels; retain cross-covariances. Fixed hyperparameters in the prototype.",
+  "identification": "Fixed log-depth units and mean; depth coefficient fixed to one; no second intercept; discrepancy centered on the fixed candidate pool; proper Gaussian threshold prior; fixed positive probit scale.",
+  "prototype_defaults": {
+    "response_transform": "log(depth_um/111)",
+    "f_amplitude": 0.6,
+    "f_lengthscale": 0.5,
+    "discrepancy_amplitude": 0.35,
+    "discrepancy_lengthscale": 0.5,
+    "threshold_mean": 0.0,
+    "threshold_sd": 0.35,
+    "response_noise_sd": 0.03,
+    "probit_scale": 0.15,
+    "kernel": "Matern 3/2",
+    "note": "Dimensionless controlled inputs only; these are not fitted SPH hyperparameters. A separate train-only integration policy is required."
+  },
+  "planned_checks": [
+    "Fixed known threshold and discrepancy-zero predictive identity, including the plug-in E1 hard-threshold limit",
+    "Uncertain threshold widens predictive uncertainty and labels couple depth and threshold",
+    "Depth-label mismatch can be represented by discrepancy; equal inputs cannot be arbitrarily separated",
+    "Sparse and zero paid negatives remain proper and finite; sensitivity to prior and model misspecification is exposed",
+    "No-auxiliary binary GP limit and paid-observation masking",
+    "Paired acquisition quadrature, variance bounds, epistemic-versus-irreducible ambiguity, and value of continuous versus label observations"
+  ],
+  "comparison_policy": "No method, sign, descriptor window or prior will be selected by the best comparative toy score. Numerical defects may be repaired with an explicit change log. Structural failures will be reported.",
+  "real_data_scope": "No new real-data model fits or benchmark. OLD/NEW/POOLED and temporal GP benchmark remain with Opus. C3 is unused.",
+  "changes_after_record": []
+}
