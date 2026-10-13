@@ -66,3 +66,13 @@ Every execution that fits a model, computes acquisition paths or evaluates resul
 | # | UTC | What ran | Scalar fits | Temporal fits | Outputs | Notes |
 |---|---|---|---:|---:|---|---|
 | C3-F | 2026-10-13 | `python -m src.week20_c3_confirm freeze`: writes the freeze. The only computation is a check, on DEV repeats 5–8, that the parameterised task builder equals the frozen one (60 task-folds, identical). No C3 object was built. | 0 | 0 | `c3/FREEZE_C3.md`, `c3/freeze_c3.json` | Committed and pushed before any C3 computation. |
+| C3-R | 2026-10-13 | `python -m src.week20_c3_confirm run 4`: builds the C3 tasks (split hashes and startup composition in `c3/c3_tasks_and_startup.csv`), then runs all 180 runs once with 4 workers × 1 thread. 5.2 min, worker peak 0.24 GiB, all `ok`. | 13,128 | 0 | `_cache/track1/*__r0(17-20)_*`, `c3/c3_tasks_and_startup.csv`, `provenance/c3_run_*` | No rerun, repair or exclusion. |
+| C3-A | 2026-10-13 | `python -m src.week20_c3_confirm analyze`: the locked decision rule. No fit. | 0 | 0 | `c3/*.csv`, `c3/decision_c3.json`, `c3/figures/c3_BA_curves.png`, `provenance/c3_analysis_stdout.log` | **NOT CONFIRMED AT THE FROZEN BAR:** R3_NEW ACTIVE − G3 = +0.007 [−0.036, +0.053]; Q3b passes. |
+
+**Totals for the C3 round:**
+- **Scalar fits:** 13,128 of 15,000.
+- **Wall time:** about 11 min, from the approval at 09:20 UTC to the decision at 09:31 UTC.
+- **CPU:** at most 4 threads.
+- **C3 status:** block C3 is now spent.
+
+**Cumulative over all rounds:** 40,973 scalar fits and 128 temporal/functional fits.

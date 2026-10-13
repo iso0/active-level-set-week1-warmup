@@ -1,0 +1,50 @@
+                              BA_AULC  q20_AULC
+task      arm                                  
+R1_POOLED ACTIVE_E1_STRADDLE   0.9488    0.7747
+          G3_MARGIN            0.9444    0.7678
+          WHOLE_E1_STRADDLE    0.9458    0.7636
+R3_NEW    ACTIVE_E1_STRADDLE   0.6949    0.7516
+          G3_MARGIN            0.6877    0.6823
+          WHOLE_E1_STRADDLE    0.6510    0.6625
+R3_OLD    ACTIVE_E1_STRADDLE   0.9356    0.8162
+          G3_MARGIN            0.9245    0.8414
+          WHOLE_E1_STRADDLE    0.9283    0.7871
+         task                 arm                ref    metric    mean      lo      hi  repeats
+0   R1_POOLED  ACTIVE_E1_STRADDLE          G3_MARGIN   BA_AULC  0.0044 -0.0020  0.0080        4
+1      R3_NEW  ACTIVE_E1_STRADDLE          G3_MARGIN   BA_AULC  0.0071 -0.0365  0.0529        4
+2      R3_OLD  ACTIVE_E1_STRADDLE          G3_MARGIN   BA_AULC  0.0110 -0.0065  0.0311        4
+3   R1_POOLED  ACTIVE_E1_STRADDLE  WHOLE_E1_STRADDLE   BA_AULC  0.0030 -0.0033  0.0080        4
+4      R3_NEW  ACTIVE_E1_STRADDLE  WHOLE_E1_STRADDLE   BA_AULC  0.0439  0.0229  0.0671        4
+5      R3_OLD  ACTIVE_E1_STRADDLE  WHOLE_E1_STRADDLE   BA_AULC  0.0072 -0.0006  0.0151        4
+6   R1_POOLED   WHOLE_E1_STRADDLE          G3_MARGIN   BA_AULC  0.0014 -0.0016  0.0045        4
+7      R3_NEW   WHOLE_E1_STRADDLE          G3_MARGIN   BA_AULC -0.0367 -0.0901  0.0166        4
+8      R3_OLD   WHOLE_E1_STRADDLE          G3_MARGIN   BA_AULC  0.0038 -0.0069  0.0148        4
+9   R1_POOLED  ACTIVE_E1_STRADDLE          G3_MARGIN  q20_AULC  0.0070 -0.0159  0.0220        4
+10     R3_NEW  ACTIVE_E1_STRADDLE          G3_MARGIN  q20_AULC  0.0693  0.0328  0.1154        4
+11     R3_OLD  ACTIVE_E1_STRADDLE          G3_MARGIN  q20_AULC -0.0252 -0.0408 -0.0035        4
+12  R1_POOLED  ACTIVE_E1_STRADDLE  WHOLE_E1_STRADDLE  q20_AULC  0.0111 -0.0018  0.0190        4
+13     R3_NEW  ACTIVE_E1_STRADDLE  WHOLE_E1_STRADDLE  q20_AULC  0.0891  0.0766  0.1039        4
+14     R3_OLD  ACTIVE_E1_STRADDLE  WHOLE_E1_STRADDLE  q20_AULC  0.0290  0.0085  0.0496        4
+15  R1_POOLED   WHOLE_E1_STRADDLE          G3_MARGIN  q20_AULC -0.0041 -0.0132  0.0045        4
+16     R3_NEW   WHOLE_E1_STRADDLE          G3_MARGIN  q20_AULC -0.0198 -0.0672  0.0411        4
+17     R3_OLD   WHOLE_E1_STRADDLE          G3_MARGIN  q20_AULC -0.0542 -0.0667 -0.0430        4
+{
+ "freeze": "c3/freeze_c3.json",
+ "R3_NEW_ACTIVE_minus_G3": {
+  "mean": 0.007140456989247312,
+  "lo": -0.036489835349462374,
+  "hi": 0.05287088373655913,
+  "repeats": 4
+ },
+ "R3_OLD_ACTIVE_minus_G3": 0.011015702364251534,
+ "R1_POOLED_ACTIVE_minus_G3": 0.004357237191594809,
+ "Q3a": false,
+ "Q3b": true,
+ "verdict": "NOT CONFIRMED AT THE FROZEN BAR",
+ "run_statuses": {
+  "ok": 180
+ },
+ "runs": 180,
+ "fits": 13128
+}
+exit 0

@@ -1246,3 +1246,23 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - **Sadakat:** 120 G3 koşusunun biri (POOLED r8f1) Week 18 önbelleğinden ayrılıyor. Neden kayan nokta hesabı: Week 18 4 BLAS iş parçacığıyla, bu tur 1 iş parçacığıyla çalıştı.
 
 **Karar.** Dondurulmuş karar kuralı "C3 protokol taslağı" verdi. Taslak yazıldı ama çalıştırılmadı. DEV yeniden örneklemesine göre birincil kuralın geçme olasılığı yaklaşık %60. C3'ü harcama kararı sahibine ait.
+
+### 2026-10-13 — C3 doğrulaması: ACTIVE E1 + straddle, G3 + margin'e karşı (sahibin onayıyla)
+
+[Dondurma](../outputs/week20_active_temporal_development/c3/FREEZE_C3.md), [karar](../outputs/week20_active_temporal_development/c3/decision_c3.json), [rapor, "C3 confirmation"](../outputs/week20_active_temporal_development/DEVELOPMENT_REPORT.md).
+
+**Kurulum.**
+- Sahip taslağı sohbette onayladı. Dondurma, hiçbir C3 hesabından önce commit edildi (`4164f67b`).
+- C3 (tekrar 17–20) bir kez kullanıldı: 180 koşu, 13.128 uydurma, hepsi `ok`.
+
+**Karar: dondurulmuş eşikte DOĞRULANMADI.**
+- **Birincil (NEW BA-AULC, ACTIVE − G3):** +0.007 [−0.036, +0.053]. Eşik +0.02 ve aralığın 0'ı dışlaması gerekiyordu. Tekrar başına: −0.055, −0.008, +0.073, +0.018.
+- **Kayıp yok kuralı:** sağlandı (OLD +0.011, POOLED +0.004).
+- **DEV beklentisi:** +0.056 ve yaklaşık %60 geçme olasılığıydı. Sonuç örnekleme oynaklığıyla ve DEV'in iyimserliğiyle uyumlu.
+
+**Tekrarlananlar (karar dışı).**
+- ACTIVE − WHOLE = +0.044 [+0.023, +0.067].
+- ACTIVE − G3: q20 +0.069, AUC +0.095, Brier −0.024; short-K duyarlılığı +0.28.
+- Ancak özgüllük kazancı yok (−0.018), bu yüzden BA farkı oluşmuyor.
+
+**Sonuç.** Aktif pencere hedefi, bütün-kayıt hedefinden açıkça iyi. G3'e karşı BA üstünlüğü ise doğrulanmadı. C3 harcandı; yeni bir aday için yeni veri ya da yeni bir doğrulama tasarımı gerekecek.

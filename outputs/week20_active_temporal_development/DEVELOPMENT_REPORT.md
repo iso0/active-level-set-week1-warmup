@@ -21,6 +21,12 @@
 
 ## Summary
 
+**C3 confirmation, 2026-10-13: NOT CONFIRMED AT THE FROZEN BAR** (section *C3 confirmation* below).
+- **Approval:** the owner approved; the freeze (`4164f67b`) came before any C3 computation, and all 180 C3 runs are reported.
+- **Primary result:** on R3_NEW, ACTIVE − G3 BA-AULC is **+0.007 [−0.036, +0.053]**, against a frozen bar of +0.02 with interval > 0.
+- **No loss elsewhere:** OLD +0.011 and POOLED +0.004, both above −0.01.
+- **What replicates:** ACTIVE − WHOLE is +0.044 [+0.023, +0.067]. ACTIVE − G3 also holds on q20 (+0.069), AUC (+0.095) and Brier (−0.024), but these are not decisive.
+
 **Update, 2026-10-13: Track 1 extension** (section *Track 1 extension* below).
 - **New repeats:** the recommended next experiment ran on DEV repeats 5–8. ACTIVE − G3 on R3_NEW is **+0.056 [+0.009, +0.135]**; over all 8 DEV repeats it is **+0.056 [+0.015, +0.103]**.
 - **Guard ablation:** the slope-sign guard does not explain the gain (WHOLE + guard − WHOLE = +0.002). The gain comes from the active-window target.
@@ -397,6 +403,57 @@ The full per-step curves are in `track1/curves_every_step.csv` and `track1/figur
 - **Chance of passing:** resampling four of the eight DEV repeats gives about **60 %** for the primary rule. The bar alone is met in 87 % of draws, but the interval excludes 0 in only 62 %.
 - **Optimism:** DEV numbers are optimistic, because A was defined after the NEW labels had been seen.
 - **Ownership:** C3 is untouched. Spending it is the owner's decision.
+
+## C3 confirmation (2026-10-13) — ACTIVE E1 + straddle vs G3 + margin
+
+**Freeze and execution.**
+- **Approval:** the owner approved the C3 draft in chat ("C3 taslağını onaylıyorum, dondur ve çalıştır").
+- **Freeze:** `c3/FREEZE_C3.md` (commit `4164f67b`). It was committed and pushed before any C3 task object was built. The decision rule, candidate, reference and predictions are unchanged from the draft.
+- **Data:** block C3 (repeats 17–20, 5 folds, three tasks), used once through the frozen Track 1 runner at 4 workers × 1 BLAS thread.
+- **Execution:** 180 runs, 13,128 scalar fits, 5.2 min, all `ok`. Nothing was rerun.
+- **Startup checks** (`c3/c3_tasks_and_startup.csv`): no single-class start, and the A-unavailable run is in no startup set.
+
+**Locked decision (PRED; `c3/decision_c3.json`): NOT CONFIRMED AT THE FROZEN BAR.**
+
+| Rule | Result | Passed? |
+|---|---|---|
+| Q3a: R3_NEW BA-AULC ACTIVE − G3 ≥ +0.02 with interval > 0 | **+0.007 [−0.036, +0.053]** | no |
+| Q3b: R3_OLD ACTIVE − G3 ≥ −0.01 | +0.011 [−0.007, +0.031] | yes |
+| Q3b: R1_POOLED ACTIVE − G3 ≥ −0.01 | +0.004 [−0.002, +0.008] | yes |
+
+- **Per-repeat R3_NEW ACTIVE − G3:** −0.055, −0.008, +0.073, +0.018.
+- **Mean BA-AULC on R3_NEW:** ACTIVE 0.695, G3 0.688, WHOLE 0.651.
+  - G3 was strong in repeat 17 (0.780) and weak in repeat 19 (0.576).
+  - ACTIVE ranged from 0.649 to 0.725.
+- **Against the prediction:** DEV predicted the primary rule would pass with probability about 0.60. It did not pass. The C3 estimate (+0.007) is 1.4 standard errors of a four-repeat mean below the DEV mean (+0.056, SD 0.069). That is consistent with sampling variability and with the expected optimism of DEV, since A was defined after the NEW labels had been seen.
+
+**Reported, not decisive (PRED; `c3/contrasts.csv`)** — R3_NEW, ACTIVE − G3:
+
+| Endpoint | Difference [95 % interval] |
+|---|---|
+| q20 | **+0.069 [+0.033, +0.115]** |
+| AUC | **+0.095 [+0.035, +0.156]** |
+| Brier | **−0.024 [−0.031, −0.016]** |
+| Sensitivity | +0.033 [+0.023, +0.042] |
+| Short-K sensitivity | +0.279 [+0.208, +0.391] |
+| Specificity | −0.018 [−0.096, +0.061] |
+
+- **Reading:** ACTIVE ranks and calibrates NEW runs better than G3, and finds far more short-K positives. Its balanced accuracy at p = 0.5 does not differ, because it does not gain specificity.
+- **ACTIVE − WHOLE on R3_NEW:** **+0.044 [+0.023, +0.067]**. The target ablation replicates.
+- **WHOLE − G3:** −0.037 [−0.090, +0.017].
+- **QTT** (target = G3's mean BA at B40 over C3, 0.688): ACTIVE reaches it at the first grid point in 4/4 repeats; G3 and WHOLE in 3/4.
+- **Mechanism (OBS):**
+  - WHOLE reaches u ≥ 200 µm in 10 of 20 NEW runs; in every one the late negative had been paid first. In 4 of them it is the only paid negative, and WHOLE has 201 reversed-slope steps in all.
+  - ACTIVE's maximum u is 199.1 µm, with no reversed slope.
+- **POST-HOC observation:** ACTIVE's NEW BA falls slightly with budget (0.722 at B16, 0.705 at B40, 0.695 at B80). G3's is 0.678, 0.688 and 0.670.
+
+**Interpretation (HYP).**
+- **What is not confirmed:** the DEV advantage of ACTIVE E1 + straddle over G3 + margin in NEW balanced accuracy.
+- **What replicates:** two DEV findings hold on C3.
+  - The active-window target beats the whole-record target, and the reversed-slope trap explains part of WHOLE's failure.
+  - ACTIVE has better ranking, calibration and short-K detection than G3.
+- **Remaining limitation:** ACTIVE's specificity on NEW, which stays below 0.5. The binary label of fast scans is not captured by a single depth threshold.
+- **Status of C3:** it is now spent. Any further candidate needs a new data source or a new confirmation design.
 
 ## Delivery for Ioan
 

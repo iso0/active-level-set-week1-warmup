@@ -8,6 +8,7 @@
 | `track2/` | Temporal-GP development on NEW (repeats 1–2, 10 folds, B16/40/80, the Week 19 shared paid paths). Frozen manifest and hypotheses, post-start declaration (T2-PS1) and evaluation rules (written before scoring); trajectory inventory; compression errors and the resolution rule; checkpoints; fit tables; SVGP validation; evaluation tables, hypothesis verdicts and figures. Post-hoc files are prefixed `POSTHOC_`. |
 | `track1_ext/` | Track 1 extension (2026-10-13): the frozen protocol on DEV repeats 5–8, plus the WHOLE E1 + slope-sign guard ablation. Frozen manifest and hypotheses, startup checks, ledgers, curves, AULC for repeats 5–8 and 1–8, contrasts, QTT, fidelity and its diagnosis, guard identity, threshold mechanism, verdicts, decision. |
 | `c3_draft/` | C3 confirmation protocol DRAFT, written because the extension's frozen decision rule required it. Not frozen and not executed. |
+| `c3/` | **C3 confirmation (2026-10-13, owner-approved):** freeze (committed before any C3 computation), task and startup table, ledgers, curves, AULC, contrasts, QTT, threshold mechanism, decision (`decision_c3.json`: NOT CONFIRMED AT THE FROZEN BAR). |
 | `ioan_addendum/` | G5 (H-b302fc6cbd) frame 81, front/side/top, at the pinned NEW revision. The Week 19 gallery is unchanged apart from an appended pointer. |
 | `provenance/` | Run logs and the `.venv` install log. |
 | `_cache/` | Git-ignored resumable caches: per-run ledgers and per-step predictions, native trajectories, checkpoint arrays, Track 2 predictions. |
@@ -33,6 +34,9 @@ python -m src.week20_track1_ext run 4
 python -m src.week20_track1_ext analyze
 python -m src.week20_track1_ext_g3_divergence
 python -m src.week20_c3_protocol_draft
+python -m src.week20_c3_confirm freeze
+python -m src.week20_c3_confirm run 4
+python -m src.week20_c3_confirm analyze
 ```
 
 **Environment:**
@@ -41,4 +45,4 @@ python -m src.week20_c3_protocol_draft
 
 **Local inputs, not committed:** the raw cache `data/raw/sph_v2/` and `outputs/week19_temporal_regime_audit/_cache/frames.pkl`.
 
-**Scope:** C3 (repeats 17–20) unused. No label, eligibility or exclusion change. The 49 Bug-withheld NEW runs are not used.
+**Scope:** C3 (repeats 17–20) was used once, on 2026-10-13, after owner approval and a committed freeze (`c3/`). No label, eligibility or exclusion change. The 49 Bug-withheld NEW runs are not used.
