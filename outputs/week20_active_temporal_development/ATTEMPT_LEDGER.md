@@ -55,3 +55,14 @@ Every execution that fits a model, computes acquisition paths or evaluates resul
 - **CPU and memory:** at most 4 threads; peak memory per worker 0.24 GiB.
 - **Restarts and discarded runs:** none.
 - **Cumulative across both rounds:** 27,845 scalar fits and 128 temporal/functional fits.
+
+## C3 confirmation round (2026-10-13; owner-approved)
+
+**Approval and scope:**
+- The owner wrote in chat: "C3 taslağını onaylıyorum, dondur ve çalıştır" (approve the C3 draft, freeze and run).
+- Block C3 (repeats 17–20) is used once.
+- **Cap:** at most 15,000 scalar fits; plan ≤ 13,140.
+
+| # | UTC | What ran | Scalar fits | Temporal fits | Outputs | Notes |
+|---|---|---|---:|---:|---|---|
+| C3-F | 2026-10-13 | `python -m src.week20_c3_confirm freeze`: writes the freeze. The only computation is a check, on DEV repeats 5–8, that the parameterised task builder equals the frozen one (60 task-folds, identical). No C3 object was built. | 0 | 0 | `c3/FREEZE_C3.md`, `c3/freeze_c3.json` | Committed and pushed before any C3 computation. |

@@ -1,0 +1,63 @@
+{
+ "status": "FROZEN C3 CONFIRMATION - owner approved; data block C3 used once",
+ "approval": "Owner approval in chat, 2026-10-13: 'C3 tasla\u011f\u0131n\u0131 onayl\u0131yorum, dondur ve \u00e7al\u0131\u015ft\u0131r' (approve the C3 draft, freeze and run).",
+ "draft": "c3_draft/C3_PROTOCOL_DRAFT.md (commit 2833e175); decision rule, candidate, reference and predictions unchanged",
+ "candidate": "ACTIVE_E1_STRADDLE (Track 1 arm B, unchanged; no guard)",
+ "reference": "G3_MARGIN (Track 1 arm C, unchanged)",
+ "ablation_reported_not_decisive": "WHOLE_E1_STRADDLE (Track 1 arm A)",
+ "data": "block C3 = repeats 17-20, 5 folds each, from src.week18_tasks.all_real_full_depth('C3'); tasks R3_NEW (primary), R3_OLD, R1_POOLED; split confirmation on the same 541 runs",
+ "procedure": "frozen Track 1 protocol (track1/manifest_track1.json): startup, per-step ML-II fits to B80, straddle/margin, leakage guard (unpaid labels/responses masked), complete ledgers, failure rules (no reseeding, no repair, no forced queries); 4 workers x 1 BLAS thread",
+ "endpoints": {
+  "BA_AULC": "pooled-per-repeat BA on the Week 18 grid up to B80 (R3_NEW 16..80 step 4; R3_OLD, R1_POOLED 16..80 step 8), trapezoid / width (src.week20_track1_analysis.curves + aulc_table)",
+  "bootstrap": "src.week18_metrics.contrast: repeat bootstrap, 4,000 resamples, seed 0"
+ },
+ "decision_rule": {
+  "Q3a_primary": "R3_NEW BA-AULC ACTIVE - G3 >= +0.02 AND 95 % interval lower bound > 0",
+  "Q3b_no_loss": "R3_OLD and R1_POOLED BA-AULC ACTIVE - G3 >= -0.01 (point estimates)",
+  "interpretation": {
+   "Q3a and Q3b": "CONFIRMED: ACTIVE E1 + straddle improves on G3 + margin on NEW, without loss on OLD / POOLED",
+   "Q3a and not Q3b": "IMPROVEMENT ON NEW WITH A LOSS ELSEWHERE",
+   "not Q3a, point estimate > 0": "NOT CONFIRMED AT THE FROZEN BAR",
+   "point estimate <= 0": "DOES NOT REPLICATE"
+  },
+  "reported_not_decisive": [
+   "q20, specificity, sensitivity, short-K sensitivity, Brier, AUC",
+   "ACTIVE - WHOLE and WHOLE - G3",
+   "QTT (frozen definition; target = G3's mean BA at B40/B80 over C3)",
+   "learned-threshold mechanism"
+  ]
+ },
+ "predictions_from_dev": {
+  "R3_NEW_ACTIVE_minus_G3_repeats_1_8": "+0.056 [+0.015, +0.103]; per repeat +0.062, -0.032, +0.067, +0.132, +0.004, +0.029, +0.176, +0.013",
+  "Q3a_pass_probability_from_DEV_resampling": "about 60 % (bar alone 87 %, interval alone 62 %); optimistic, A was defined after the NEW labels were seen",
+  "Q3b": "expected to pass (DEV: OLD +0.023, POOLED +0.005)",
+  "mechanism": "WHOLE E1 expected to show reversed-slope trap episodes on R3_NEW whenever the late negative is the only startup negative; ACTIVE E1 expected to stay below u = 200 um"
+ },
+ "failure_rules": [
+  "fit exception, non-finite prediction or score: the run stops, status recorded, later budgets missing; nothing is rerun",
+  "single-class usable response pairs for an E1 arm (e.g. the A-unavailable negative as the only startup negative): the run stops and is reported (the engine's 111 um fallback is never used)",
+  "every C3 run is executed once; no favourable selection; all 180 runs are reported"
+ ],
+ "budget": "180 runs x <= 73 fits = 13,140 scalar fits (cap 15,000 for this round)",
+ "order": "1) this freeze is committed and pushed; 2) C3 tasks are built and their split hashes and startup composition recorded; 3) all 180 runs; 4) analysis and the locked decision",
+ "written_utc": "2026-10-13T09:22:19+00:00",
+ "parent_commit": "2833e1750ff8dee6d9fc5c262f9972469d66365e",
+ "builder_check_on_DEV_5_8": {
+  "dev_task_folds": 60,
+  "identical": true
+ },
+ "code_sha256": {
+  "src/week20_c3_confirm.py": "5a91c27c1d086102e9af44ba58bef2d67e9451a74625068010dbecdc1daab2b8",
+  "src/week20_track1_ext.py": "e29e95f96a8ef5954d1e3312220bbc5176cb356b95f0a570dde4d656b0198f28",
+  "src/week20_track1_ext_analysis.py": "16616016f71cbc32a15dfe48dc80085d9a6d817b71b983756fb0eb6a2be6c893",
+  "src/week20_track1_al.py": "e3d0cfbf3e017463d3b2da5232a625d0a40011ec55934a57727a4c1322002e7a",
+  "src/week20_track1_analysis.py": "3aa99b90f843bd1a668d5658c1dfc4d18a1044b7652da9fb54b2bd2d2fd22531",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d",
+  "src/week18_tasks.py": "7f3c78a0659df3fa32c47073ef668a749543304b1dbbccd1854b86c300634198",
+  "src/week17_models.py": "7b7ad8846a4fa4f721b21ec6853b06b704ece658ee4a7e7902d3d21827d47570",
+  "src/week17_audit_impact.py": "46e05394afe519b28148a1d382bc7d9f767a97a99fba5e124457c223f653905e",
+  "src/week13_synthetic_al.py": "3df1c6f83e249bcc8831014914a3d99431371e3fa5269fa121b8ffd7d8317d5f",
+  "src/week18_metrics.py": "dee2d121ac5802c3b4d86060166db80dc62150dd712013a84a7d4a16945514fb",
+  "src/week19_dev_pilot.py": "9f8d256d5897acd784b43326abd761a926f15d758067233aa0fa0981e5369bd1"
+ }
+}
