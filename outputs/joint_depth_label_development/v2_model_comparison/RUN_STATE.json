@@ -1,0 +1,35 @@
+{
+ "top_level_requests": 180,
+ "component_attempts": {
+  "validation": 144,
+  "comparison": 140
+ },
+ "failures": [],
+ "fallbacks": [],
+ "reuse_verified": 80,
+ "pending": null,
+ "by_arm": {
+  "V2_EP_mixture": 20,
+  "rho1_EP": 20,
+  "Binary_V2_EP": 20,
+  "V1_Laplace": 20,
+  "Binary_V1_Laplace": 20,
+  "ACTIVE_E1": 20,
+  "G3": 20,
+  "J_trained": 20,
+  "VX_stump": 20
+ },
+ "environment": {
+  "python": "3.14.4",
+  "numpy": "2.5.1",
+  "scipy": "1.18.0",
+  "sklearn": "1.9.0",
+  "threads": {
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1",
+   "MKL_NUM_THREADS": "1"
+  }
+ },
+ "finished_utc": "2026-10-14T22:18:22+00:00",
+ "elapsed_s_this_session": 8.917583465576172
+}

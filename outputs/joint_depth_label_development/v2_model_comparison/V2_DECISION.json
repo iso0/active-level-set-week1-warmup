@@ -1,0 +1,67 @@
+{
+ "primary": {
+  "contrast": "NEW B40 BA at p >= 0.5, V2_EP_mixture - Binary_V2_EP",
+  "estimate": -0.0020161290322580627,
+  "interval": [
+   -0.006048387096774188,
+   0.0
+  ],
+  "per_repeat": [
+   -0.0040322580645161255,
+   0.0
+  ]
+ },
+ "screen": {
+  "BA_gain_ge_0.01": false,
+  "specificity_not_lower": true,
+  "log_loss_not_worse": true,
+  "specificity_difference": 0.0,
+  "log_loss_difference": -0.03960567227190509,
+  "verdict": "SCREEN NOT PASSED"
+ },
+ "tradeoffs_B40_p>=0.5": {
+  "q20": -0.016666666666666663,
+  "shortK_sensitivity": -0.04999999999999999,
+  "sensitivity": -0.0040322580645161255,
+  "AUC": 0.06720430107526881,
+  "brier": -0.009320497905598156
+ },
+ "mechanism_B40_BA": {
+  "rho1_EP - V1_Laplace": [
+   0.0020161290322580627,
+   -0.06048387096774194,
+   0.0625
+  ],
+  "V2_EP_mixture - rho1_EP": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "system_B40_BA": {
+  "V2_EP_mixture - J_trained": [
+   -0.15255376344086025,
+   -0.2755376344086022,
+   -0.04027217741935508
+  ],
+  "V2_EP_mixture - ACTIVE_E1": [
+   -0.17540322580645168,
+   -0.3024193548387097,
+   -0.051058467741935586
+  ],
+  "V2_EP_mixture - G3": [
+   -0.06317204301075269,
+   -0.13449260752688177,
+   0.003360215053763438
+  ],
+  "V2_EP_mixture - VX_stump": [
+   -0.2970430107526882,
+   -0.4012096774193548,
+   -0.1868279569892473
+  ]
+ },
+ "fit_status_counts": {
+  "ok": 180
+ },
+ "note": "practical threshold, not a forecast or significance test; development DEV repeats 1-2 of inspected simulations, not confirmation"
+}

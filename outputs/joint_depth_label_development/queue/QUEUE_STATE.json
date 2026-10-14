@@ -14,13 +14,22 @@
                                         "started_utc":  "2026-10-14T22:15:54.3382597Z",
                                         "exit_code":  0,
                                         "seconds":  2.5,
-                                        "finished_utc":  "2026-10-14T22:15:56.8992558Z"
+                                        "finished_utc":  "2026-10-14T22:15:56.8992558Z",
+                                        "commit":  "44b7f0cd"
                                     },
                   "T03_V2_RUN":  {
-                                     "status":  "pending"
+                                     "status":  "done",
+                                     "started_utc":  "2026-10-14T22:18:05.6955017Z",
+                                     "exit_code":  0,
+                                     "seconds":  17.7,
+                                     "finished_utc":  "2026-10-14T22:18:23.3792811Z"
                                  },
                   "T04_V2_EVALUATE":  {
-                                          "status":  "pending"
+                                          "status":  "done",
+                                          "started_utc":  "2026-10-14T22:19:23.8612707Z",
+                                          "exit_code":  0,
+                                          "seconds":  12.8,
+                                          "finished_utc":  "2026-10-14T22:19:36.7011648Z"
                                       },
                   "T05_DECISION_VALIDATION":  {
                                                   "status":  "pending"
