@@ -1,0 +1,155 @@
+{
+ "m2_max_error": 6.661338147750939e-16,
+ "m4_enumeration_max_error": 4.440892098500626e-16,
+ "geometric_max_error": {
+  "96": 3.552713678800501e-15,
+  "136": 1.0658141036401503e-14
+ },
+ "astra_parity_max_rel_error": {
+  "96": 0.0,
+  "136": 0.0
+ },
+ "astra_balanced_method_sha256": "7fb4674ff56e98164870033b18e7c88baf1e6bd9a4fcf47f350d16caafa1f516",
+ "gaussian_fixture": {
+  "96": {
+   "max_A_error": 6.432483385498955e-06,
+   "max_B_error": 5.39153873724274e-06,
+   "decision_agrees": true
+  },
+  "136": {
+   "max_A_error": 5.7262636110611e-06,
+   "max_B_error": 5.777358256686682e-06,
+   "decision_agrees": true
+  }
+ },
+ "known_eta_cutoff_is_pi": true,
+ "safeguards": {
+  "checks": {
+   "valid_case_accepted": true,
+   "valid_case_unchanged": true,
+   "forced_ladder_failure_is_numerical_stop": true,
+   "forced_ladder_failure_excludes_only_qmc_rules": true,
+   "forced_ladder_failure_keeps_attempted_decisions": true,
+   "non_psd_covariance_is_numerical_stop": true,
+   "nonfinite_coefficients_flagged": true,
+   "probability_mismatch_fails_parity": true,
+   "difference_within_tolerance_accepted": true,
+   "nonfinite_stored_prediction_fails_parity": true,
+   "invalid_export_nonfinite_h_mean": true,
+   "invalid_export_weights_not_a_probability_vector": true,
+   "invalid_export_inputs_not_aligned_with_test_ids": true,
+   "invalid_export_duplicated_test_id": true,
+   "invalid_export_stored_ids_differ": true,
+   "invalid_export_sidecar_metadata_differs": true,
+   "invalid_export_loader_reason": true,
+   "file_valid_export_accepted": true,
+   "file_rho1_reuse_uses_the_rho1_component": true,
+   "file_failed_fit_invalid": true,
+   "file_missing_record_invalid": true,
+   "file_not_in_frozen_index_invalid": true,
+   "file_frozen_hash_mismatch_invalid": true,
+   "file_missing_export_invalid": true,
+   "file_altered_export_invalid": true,
+   "summary_all_ok_complete": true,
+   "summary_primary_stop_unavailable": true,
+   "summary_secondary_failure_keeps_primary": true,
+   "summary_missing_primary_record_unavailable": true,
+   "summary_duplicate_primary_record_unavailable": true,
+   "summary_incomplete_test_partition_unavailable": true,
+   "marker_absent_when_primary_unavailable": true,
+   "marker_written_when_primary_complete": true,
+   "queue_T08_marker_is_the_summary_file": true
+  },
+  "info": {
+   "valid_case": {
+    "status": "ok",
+    "bits": 12,
+    "max_abs_p_minus_stored": 0.0,
+    "decisions": {
+     "finite_batch": [
+      true,
+      false,
+      true,
+      false
+     ],
+     "posterior_mean_pi": [
+      true,
+      false,
+      true,
+      false
+     ],
+     "paid_fraction": [
+      true,
+      false,
+      true,
+      false
+     ],
+     "cutoff_0.5": [
+      true,
+      false,
+      true,
+      false
+     ]
+    }
+   }
+  },
+  "audit_version": "decision-audit-1.1",
+  "p_parity_tolerance": 1e-10
+ },
+ "hard_checks": {
+  "m2_identity": true,
+  "m4_enumeration": true,
+  "m96_geometric_identity": true,
+  "m96_bounded_by_m": true,
+  "m136_geometric_identity": true,
+  "m136_bounded_by_m": true,
+  "parity_with_astra_m96": true,
+  "parity_with_astra_m136": true,
+  "fixture_qmc_accuracy_m96": true,
+  "fixture_qmc_accuracy_m136": true,
+  "known_eta_cutoff_is_pi": true,
+  "safeguard_valid_case_accepted": true,
+  "safeguard_valid_case_unchanged": true,
+  "safeguard_forced_ladder_failure_is_numerical_stop": true,
+  "safeguard_forced_ladder_failure_excludes_only_qmc_rules": true,
+  "safeguard_forced_ladder_failure_keeps_attempted_decisions": true,
+  "safeguard_non_psd_covariance_is_numerical_stop": true,
+  "safeguard_nonfinite_coefficients_flagged": true,
+  "safeguard_probability_mismatch_fails_parity": true,
+  "safeguard_difference_within_tolerance_accepted": true,
+  "safeguard_nonfinite_stored_prediction_fails_parity": true,
+  "safeguard_invalid_export_nonfinite_h_mean": true,
+  "safeguard_invalid_export_weights_not_a_probability_vector": true,
+  "safeguard_invalid_export_inputs_not_aligned_with_test_ids": true,
+  "safeguard_invalid_export_duplicated_test_id": true,
+  "safeguard_invalid_export_stored_ids_differ": true,
+  "safeguard_invalid_export_sidecar_metadata_differs": true,
+  "safeguard_invalid_export_loader_reason": true,
+  "safeguard_file_valid_export_accepted": true,
+  "safeguard_file_rho1_reuse_uses_the_rho1_component": true,
+  "safeguard_file_failed_fit_invalid": true,
+  "safeguard_file_missing_record_invalid": true,
+  "safeguard_file_not_in_frozen_index_invalid": true,
+  "safeguard_file_frozen_hash_mismatch_invalid": true,
+  "safeguard_file_missing_export_invalid": true,
+  "safeguard_file_altered_export_invalid": true,
+  "safeguard_summary_all_ok_complete": true,
+  "safeguard_summary_primary_stop_unavailable": true,
+  "safeguard_summary_secondary_failure_keeps_primary": true,
+  "safeguard_summary_missing_primary_record_unavailable": true,
+  "safeguard_summary_duplicate_primary_record_unavailable": true,
+  "safeguard_summary_incomplete_test_partition_unavailable": true,
+  "safeguard_marker_absent_when_primary_unavailable": true,
+  "safeguard_marker_written_when_primary_complete": true,
+  "safeguard_queue_T08_marker_is_the_summary_file": true
+ },
+ "status": "PASS",
+ "batch_size_m": 136,
+ "seconds": 1.200206995010376,
+ "module_sha256": "7af7a326c44f37d3baa8845976d942e82e41da5990cb790845f7f600dd3c7f7a",
+ "audit_version": "decision-audit-1.1",
+ "p_parity_tolerance": 1e-10,
+ "weight_sum_tolerance": 1e-09,
+ "component_solves": 0,
+ "note": "identities and numerical references for the decision computation only; Astra's own INDEPENDENT_CHECKS gate for her acquisition study is separate and is not duplicated here"
+}

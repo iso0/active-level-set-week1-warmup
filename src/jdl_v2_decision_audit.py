@@ -39,6 +39,11 @@ version is commit a0e3dd67, sha256 4199768b...): checkpoint acceptance safeguard
     numerical failure.  `validate` runs the safeguard self-tests (synthetic export) as part of its gate.
   * Unchanged: model, exports, decision equations, m, tau, ladder, acceptance thresholds, seeds, metrics, labels,
     bootstrap and success criteria; nothing is retried and no tolerance is relaxed after a failure.
+Version decision-audit-1.1.1 (2026-10-14, after queue task T05 failed): the 1.1 `validate` run wrote
+DECISION_AUDIT_VALIDATION.json (status PASS, 45 of 45 hard checks) and then crashed with exit code 1 in its console
+echo, which passed numpy bools to json.dumps (a line inherited from 1.0).  Only that echo changed (values cast to
+bool); no check, tolerance or output field changed.  The 1.1 validation file no longer matches this module's hash, so
+`manifest` refuses it and the validation must be re-run before any freeze.
 
 Steps: python -m src.jdl_v2_decision_audit validate | manifest | run | evaluate        (one BLAS thread)
 """
@@ -85,7 +90,7 @@ ARMS = ("V2_EP_mixture", "rho1_EP", "Binary_V2_EP")
 PRIMARY_ARM, PRIMARY_RULE = "V2_EP_mixture", "finite_batch"
 DESIGN = {"repeats": (1, 2), "folds": (1, 2, 3, 4, 5), "budgets": (16, 40)}
 SEED = 771
-AUDIT_VERSION = "decision-audit-1.1"
+AUDIT_VERSION = "decision-audit-1.1.1"                               # 1.1.1: validate's console echo only (see docstring)
 P_PARITY_TOL = 1e-10                                                 # declared 2026-10-14 before any audit outcome
 EXIT_PRIMARY_UNAVAILABLE = 3
 
@@ -262,7 +267,7 @@ def validate():
                 "component_solves": 0, "note": "identities and numerical references for the decision computation only; Astra's own INDEPENDENT_CHECKS gate for her acquisition study is separate and is not duplicated here"})
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "DECISION_AUDIT_VALIDATION.json").write_text(json.dumps(res, indent=1, default=lambda o: o.tolist() if isinstance(o, np.ndarray) else (o.item() if hasattr(o, "item") else str(o))), encoding="utf-8")
-    print(json.dumps({"status": res["status"], "hard_checks": hard}, indent=1))
+    print(json.dumps({"status": res["status"], "hard_checks": {k: bool(v) for k, v in hard.items()}}, indent=1))   # numpy bools (1.1.1 fix)
     return res
 
 

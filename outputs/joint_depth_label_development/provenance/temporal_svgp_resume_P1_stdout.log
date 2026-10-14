@@ -2,3 +2,5 @@
 {"checkpoint": "ckpt_r2_f5_B40", "tag": "svgp_ngd_M800", "status": "max_iterations", "iterations": 20000, "fit_seconds": 20540.821420907974, "final_probe_elbo_per_point": 1.1990056509773515, "lengthscale_s": 0.11919424363830335, "noise": 0.0030769497637038673}
 exit800 0
 {"checkpoint": "ckpt_r2_f3_B80", "tag": "svgp_ngd_M400", "status": "max_iterations", "iterations": 20000, "fit_seconds": 4555.105195522308, "final_probe_elbo_per_point": 1.1263744421767141, "lengthscale_s": 0.11430145508137525, "noise": 0.003431257359477761}
+{"checkpoint": "ckpt_r2_f5_B16", "tag": "svgp_ngd_M400", "status": "max_iterations", "iterations": 20000, "fit_seconds": 4468.412051200867, "final_probe_elbo_per_point": 1.351005213249419, "lengthscale_s": 0.10428048312803138, "noise": 0.002704337883741722}
+exit400 0

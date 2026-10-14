@@ -1,4 +1,18 @@
-# Decision-audit safeguard correction (decision-audit-1.1)
+# Decision-audit safeguard correction (decision-audit-1.1, with addendum 1.1.1)
+
+> **Addendum 1.1.1 (2026-10-14, 22:26 UTC).**
+>
+> **What happened in queue task T05 (22:20:46–22:20:50 UTC):**
+> - The 1.1 `validate` ran in 3.6 s on one thread. It wrote `DECISION_AUDIT_VALIDATION.json` with status **PASS** and all 45 hard checks passing.
+> - Those 45 checks are the 11 decision identities and references, including parity with Astra's frozen coefficients at m = 96 and m = 136, plus the 34 safeguard self-checks in section 4.
+> - The valid synthetic case was accepted at 2^12 with a parity difference of 0.0.
+> - The process then crashed with exit code 1 in its console echo: `json.dumps` was passed numpy bools, a line inherited from version 1.0.
+> - The runner recorded T05 as `failed` and blocked T06–T08. Nothing was retried.
+>
+> **Correction 1.1.1:** the echo now casts the values to `bool`. No check, tolerance or output field changed.
+> - Module SHA-256: `7af7a326…` → `e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f`.
+> - The 1.1 validation file is kept as the record of that attempt. It no longer matches the module hash, so `manifest` refuses it, and T05 must be re-run on 1.1.1 before any freeze.
+> - T05–T08 were not reset and the runner was not restarted. Re-running them is the owner's decision.
 
 **Recorded:** 2026-10-14, 21:10 UTC (23:10 CEST), before the audit was validated, frozen or run.
 
