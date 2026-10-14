@@ -24,6 +24,10 @@ All population results are on previously inspected simulations: DEV repeats 1–
 | S9 | J at π̂ beats ACTIVE_E1 at its frozen rule | EX1-P4: +0.196 [+0.074, +0.318] | EXPL (registered) | A comparison of complete systems |
 | S10 | A response prior trained on the paid depths reduces depth error and adds label value | EX2-P1: NEW B40 response RMSE −0.091 [−0.113, −0.070]; fast scans 0.236 → 0.117. EX2-P2: BA at π̂ +0.028 [+0.012, +0.047]; log loss −0.048 | EXPL (registered) | DEV repeats 5–8. Log loss is better in all three populations |
 | S11 | The PPCA functional model removes the exploding coefficients of the frozen functional model | Maximum \|posterior-mean coefficient\| 9.79 against 26,571 for the frozen ALS, at 30/30 checkpoints | OBS | EM reached its iteration cap at every checkpoint (L9). Trajectory and A accuracy: see §5 |
+| S12 | The V2 port `src/jdl_v2_model.py` reproduces Astra's V2 and passes independent checks | `v2_model_comparison/validation/V2_VALIDATION.json`: 17/17 hard checks PASS, using 144 component solves and 16 sampling chains | OBS | 180/180 comparison fits `ok`, no fallback, 284 of 300 component attempts used |
+| S13 | On NEW, V2's depth sharing improves probability quality over its binary counterpart | B40 V2_EP_mixture − Binary_V2_EP: log loss −0.040 [−0.065, −0.013]; Brier −0.009 [−0.015, −0.004]; AUC +0.067 [+0.023, +0.125] | PRED | DEV repeats 1–2. It does not improve BA at 0.5 (F6) |
+| S14 | With the trained response prior, the V2 mixture concentrates on full sharing | EX3-P1: median NEW B40 mass on ρ = 1 is 0.889 (prediction ≥ 0.8) | EXPL (registered) | DEV repeats 5–8 |
+| S15 | The atomic SVGP checkpoint mechanism (for future jobs) resumes bitwise-identically | `checkpoint_mechanism/CHECKPOINT_MECHANISM_VALIDATION_v2.json` PASS on all 5 checks | OBS | Synthetic data. The first validation (T11) failed because of a harness defect (F8); the mechanism was not retrofitted |
 
 ## 2. Failed or not established (frozen decisions, preserved)
 
@@ -34,6 +38,9 @@ All population results are on previously inspected simulations: DEV repeats 1–
 | F3 | SM-H6: NEW B40 BA, J ≥ J_no_delta | −0.023 [−0.087, +0.042] | Falsified (point estimate) |
 | F4 | Week 20 C3 confirmation | NOT CONFIRMED at the frozen bar | Unchanged (a test checks this) |
 | F5 | The frozen SVGP stopping rule (relative ELBO ≤ 5e-4 and mean RMS ≤ 5e-3) can be met | No fit converged; per-check minibatch noise is about 1e-2 | The rule is below the noise floor (see §5) |
+| F6 | V2 screen (Astra's): NEW B40 BA of V2_EP_mixture − Binary_V2_EP ≥ +0.01, specificity not lower, log loss not worse | BA −0.002 [−0.006, 0.000]; specificity equal; log loss −0.040 | **SCREEN NOT PASSED** (`V2_DECISION.json`, `V2_MODEL_REPORT.md`) |
+| F7 | EX3-P2: \|BA(V2_trained) − BA(rho1_trained_EP)\| < 0.01 at NEW B40 | −0.042 [−0.094, 0.000] | Falsified: uncertainty over ρ costs specificity against forced sharing |
+| F8 | First validation of the checkpoint mechanism (queue T11) | FAIL on both bitwise checks; cause: gpytorch's initialisation noise comes from the unseeded global RNG | Superseded by v2 PASS (S15); the FAIL file is kept |
 
 ## 3. Limitations (what qualifies the supported claims)
 
@@ -49,13 +56,16 @@ All population results are on previously inspected simulations: DEV repeats 1–
 | L8 | **Response-prior fits hit their bounds.** sklearn raised bound warnings in 102 of 120 EX2 fits; the ST lengthscale is at its upper bound in 99 of 120 | `POSTHOC_descriptive/EX2_learned_response_hyperparameters.csv` | OBS |
 | L9 | **PPCA EM did not reach its tolerance.** It hit the 3000-iteration cap at all 30 checkpoints | `temporal_repair/functional_ppca_fits.jsonl` | OBS |
 | L10 | **The data are not independent.** All DEV repeats and C1–C3 have been inspected, and C4 would re-partition the same 541 simulations. A defined after NEW labels were inspected; the 0.85 cut came from Week 19's inspection of NEW | `C4_STABILITY_DRAFT.md` | OBS |
+| L11 | **V2's "uncertain sharing" was not tested where it would matter.** At NEW B40 the mixture puts 0.949 of its mass on ρ = 1, so V2_EP_mixture − rho1_EP = 0.000 BA | `v2_model_comparison/component_masses_and_moments.csv` | OBS |
+| L12 | **The temporal SVGP fits are not bitwise reproducible across worker histories.** Their initial natural-parameter noise (sd 1e-3) comes from the unseeded process-global torch RNG | `TEMPORAL_STOPPING_AUDIT.md` §4.6; ledger CKV | OBS |
 
 ## 4. Untested or not authorized
 
 | # | Question | Status | What it would take |
 |---|---|---|---|
 | U1 | Does probability-variance acquisition beat margin with the model held fixed (Stage A)? | Runner validated (`stage_a/stage_a_runner_validation.json`); **not executed** | An owner decision. With J_trained, also a per-step ML-II refit, a margin at π̂, and re-validation |
-| U2 | Does the candidate J_trained + π̂ generalise beyond the DEV partitions, and does it beat a train-only VX stump? | Untested | A frozen C4 stability check (about 600 fits, under 1 CPU-minute); owner decision |
+| U2 | Does the candidate J_trained + π̂ generalise beyond the DEV partitions, and does it beat a train-only VX stump? | Generalisation is untested. The train-only stump was measured on DEV repeats 1–2 in the V2 comparison: VX_stump B40 BA 0.851, against J_trained 0.707 at 0.5 and 0.906 at π̂ (descriptive; no frozen contrast between those two) | A frozen C4 stability check (about 600 fits, under 1 CPU-minute); owner decision |
+| U5 | Does Astra's finite-batch BA rule (m = 136) change decisions or BA on the frozen V2 posteriors (the cached-posterior decision audit)? | **Not run.** The decision-rule validation wrote PASS (45/45, including the 34 safeguard self-checks) but queue T05 exited with code 1 at its console echo, so T06–T08 are blocked. Fix 1.1.1 is committed; no task was reset | Owner decision: archive the 1.1 validation file, reset T05–T08 and restart the runner at a natural boundary (or run them by hand) |
 | U3 | Query savings / sample efficiency | Not claimable from identical feature-only paths | A pre-specified target and a hitting-time design |
 | U4 | What separates Keyhole from no Keyhole inside the fast-scan corner? | Untested; depth at 111 µm does not | New simulations inside the corner (simulator time; outside this request) |
 

@@ -63,6 +63,28 @@ Every task uses one BLAS thread and carries `--threads 1` on its command line. C
   - The runner computes and commits, but the narrative reports (`V2_MODEL_REPORT.md`, `EX_METRICS_ADDENDUM.md`, the decision-audit report, `TEMPORAL_REPAIR_REPORT.md`, the claims matrix) need an Opus agent turn after the computations.
   - A reboot also stops the temporal workers; restarting them is a separate, explicit recovery step.
 
+## C2. Logged technical recovery of T05–T08 (owner authorization of 2026-10-14)
+
+- **What happened:**
+  - Queue T05 wrote a PASS validation (45/45) and then exited with code 1 at its console echo.
+  - The runner recorded T05 as `failed` and T06–T08 as `blocked`.
+  - These records stay unchanged in `QUEUE_STATE.json` and `queue_log.jsonl`.
+- **Recovery sequence:** `src/jdl_recovery_decision_audit.ps1` is a one-shot sequence, not a second runner. It has its own lock, state and log in `recovery/decision_audit_T05_T08/`.
+
+  | Step | Action |
+  |---|---|
+  | R04 | Preserve the 1.1 PASS file |
+  | R05 | Validation retry with decision-audit-1.1.1 |
+  | R06 | Freeze and commit the manifest |
+  | R07 | Decision-only run (zero fits) |
+  | R08 | Evaluate (exit 3 = PRIMARY_UNAVAILABLE, recorded) |
+
+- **Coordination with the live runner:**
+  - **Capacity:** both use the same rule, so the combined total stays at four threads or fewer.
+  - **No duplicate work:** the live runner never reruns T05–T08, because they are `failed` or `blocked` in its state.
+  - **No shared outputs:** the recovery writes only `v2_decision_audit/`, `_cache/decision_audit/` and its own records. T15–T18 write elsewhere.
+  - **Tests:** T17 only reads the audit outputs once the summary file exists.
+
 ## D. Outside the authorized scope (proposals or drafts only)
 
 - **Real-data Stage A** (`STAGE_A_PROTOCOL_DRAFT.md`): not authorized.
