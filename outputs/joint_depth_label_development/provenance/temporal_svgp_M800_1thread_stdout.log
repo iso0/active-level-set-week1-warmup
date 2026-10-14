@@ -1,2 +1,4 @@
 exit 1
 restart after a planned stop (no fit had finished; ledger T-S2)
+{"checkpoint": "ckpt_r1_f1_B40", "tag": "svgp_ngd_M800", "status": "max_iterations", "iterations": 20000, "fit_seconds": 19246.034437656403, "final_probe_elbo_per_point": 1.2195301956412503, "lengthscale_s": 0.1188894057863574, "noise": 0.0028298650641956197}
+{"checkpoint": "ckpt_r1_f2_B40", "tag": "svgp_ngd_M800", "status": "max_iterations", "iterations": 20000, "fit_seconds": 17634.798310995102, "final_probe_elbo_per_point": 1.5944251707337613, "lengthscale_s": 0.11076652705861269, "noise": 0.0014933841706834777}
