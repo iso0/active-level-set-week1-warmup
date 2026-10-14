@@ -1,0 +1,10 @@
+{
+ "status": "EXPLORATORY, frozen before any EX3 fit; separate from the frozen V2 comparison (DEV 1-2)",
+ "written_utc": "2026-10-14T22:27:09+00:00",
+ "bounded_plan": {
+  "checkpoints": 40,
+  "component_solves": "120 (V2_trained) + 40 (Binary_V2_EP)",
+  "cap_including_fallback": 200,
+  "runs": "one; no tuning, all outcomes preserved"
+ }
+}

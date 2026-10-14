@@ -1,0 +1,79 @@
+{
+ "idea": "EX3 V2 coupling mixture with the EX2-trained response prior",
+ "status": "EXPLORATORY, frozen before any EX3 fit; separate from the frozen V2 comparison (DEV 1-2)",
+ "written_utc": "2026-10-14T22:27:09+00:00",
+ "parent_commit": "d1edb1f398d6ae86b0362c4b775e4d3f33cb507d",
+ "mechanism": "(from EX2 and the V2 design).  EX2 showed that a paid-only ML-II response prior removes most of J's\nfast-scan depth over-prediction (NEW B40 specificity at 0.5: 0.104 -> 0.542).  The negatives that remain wrong at 0.5\nare fast scans whose depth is above the 111 um reference, i.e. places where the depth-label bridge itself points the\nwrong way.  V2 can move posterior mass away from rho = 1 when the paid labels contradict the bridge, but its coupling\nis global: on NEW the paid positives (mostly deep slow scans) agree with the bridge, so the mass should stay near\nrho = 1 and the mixture should behave like the fixed-coupling model",
+ "data": {
+  "population": "NEW",
+  "repeats": [
+   5,
+   6,
+   7,
+   8
+  ],
+  "folds": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "budgets": [
+   16,
+   40
+  ],
+  "paths": "exploratory/EX1_ba_aligned_decision_rule/paths.csv",
+  "path_sha256_by_task": {
+   "NEW_r5_f1": "100eee3d0ed25883a3b57c441834ae9b96f0ce9a0ff1dc004a3b9edefaef75a0",
+   "NEW_r5_f2": "0568beceb4aa943eadb8f7caf7a43f0d584a27ba366f9f7d60c7ec142e1f9574",
+   "NEW_r5_f3": "0989ff96ac0602c53b65a8eb062529ba748e05d477fdd692c5c128cb719652a2",
+   "NEW_r5_f4": "4ce4574668ac2246c987284e2bcaab481d2c0d531c83f6c89f46d94b13c6ece2",
+   "NEW_r5_f5": "1402f688b4b551edfd3e4623bcc6d9d0c0816e9322eb253b4986803be665c3a7",
+   "NEW_r6_f1": "03a708267ef0fbd41de8ee1ca5b69d6fbe7a880483041643473a7c6e9c07757b",
+   "NEW_r6_f2": "2b8a36baa2a8a021fd20b650ac68cfc04c05ac2495deba0561299a8dfa040c4b",
+   "NEW_r6_f3": "17bc9d2acb2d17e855b5e69242d483f0eaa2fba9183b85b0aced565087878fcb",
+   "NEW_r6_f4": "68814ef5a3d95a1bd28a9d095a840237c7932580d99f66f2ecf5d8ba5cc9a5fd",
+   "NEW_r6_f5": "e0f68352f502b4e6f81abc3c028b7b65ed408556f82a727f346524f20042743f",
+   "NEW_r7_f1": "86ca782d19e9e633ad825c98c69435879d17d914fd0ba803256ff3e1ab83268d",
+   "NEW_r7_f2": "1c598b0e3b45ccdba5147c5158d397e2153e4deb30a912c73fde8a9402d59976",
+   "NEW_r7_f3": "884448a6eeed73beb38b258fbdadbef6254d96fa9430e0df37a693c1a4578df7",
+   "NEW_r7_f4": "a6697dd3b5527990479478ca0597670cbfaaa51e2d62f3eba7b5364d18e8dffd",
+   "NEW_r7_f5": "ea8396f5f5836c9ab566acea05991363cc5e59b79b653cefbcbf1e913e377c36",
+   "NEW_r8_f1": "58ffa0f230e91df11f21c9f908c767599f40922b0fb33a100638441436753c79",
+   "NEW_r8_f2": "c4f9c61748af246b4edab68feed060f7b173cab892b2ceed5694ed3c4950f08e",
+   "NEW_r8_f3": "b15edd239bc92c478556ad55733a9c34a7a1cdfa650133e7192b355a025b5d40",
+   "NEW_r8_f4": "a38a5bb983e52b78c20f5ca61ac69f4b2b16363965324ec297495b837b7fd718",
+   "NEW_r8_f5": "5b43e0e73b18cc31a8d208f697ca1d6e933f94f25de1c548ddcfc6a6535e4f3a"
+  }
+ },
+ "trained_part": "f and g share k_f with EX2's paid-only ML-II amplitude and lengthscales for the same checkpoint (read from EX2 fit_log.csv; no refit); delta 0.35, theta 0.35, tau 0.15, sigma_z 0.03, rho prior 1/3 each unchanged",
+ "arms": {
+  "V2_trained": "new EP mixture fits",
+  "rho1_trained_EP": "the V2_trained rho=1 EP component (exact reuse; separate EP fit only after a whole-mixture fallback)",
+  "J_trained": "EX2 stored predictions (Laplace, rho = 1, same trained prior)",
+  "Binary_V2_EP": "new EP fits with the fixed reference prior, no continuous likelihood"
+ },
+ "predictions": {
+  "EX3-P1_mechanism": "NEW, B40: the median (over the 20 checkpoints) posterior mass of V2_trained on rho = 1 is >= 0.8. Falsified if it is below 0.8.",
+  "EX3-P2_consequence": "NEW, B40, p >= 0.5: |BA(V2_trained) - BA(rho1_trained_EP)| < 0.01 (uncertain global coupling adds nothing once the response prior is trained). Falsified if the absolute difference is >= 0.01.",
+  "EX3-P3_inference": "NEW, B40: rho1_trained_EP vs J_trained (EP vs Laplace with the same trained prior): no directional expectation; reported.",
+  "EX3-P4_reference": "Binary_V2_EP (fixed prior, no depth) at 0.5 is reported as the depth-free reference; no expectation."
+ },
+ "outcomes": "BA, specificity, sensitivity, short-K sensitivity, q20, log loss, AUC at p >= 0.5; component masses; paired class-stratified simulation-cluster bootstrap",
+ "bounded_plan": {
+  "checkpoints": 40,
+  "component_solves": "120 (V2_trained) + 40 (Binary_V2_EP)",
+  "cap_including_fallback": 200,
+  "runs": "one; no tuning, all outcomes preserved"
+ },
+ "trained_hyperparameters_sha256": "adb7d7cc9b8d9604921cfd3df1b26b376aa2e90458d635cbcb3aa1a2a283d16d",
+ "code_sha256": {
+  "src/jdl_ex3.py": "1e7dc323a961e29f510ba34327b640f0348ce559108ccca88fb398caddeeee6c",
+  "src/jdl_v2_model.py": "d055df28acf2cd71f9c5809bf3341edfa48027ab9d924706c5d008cac8d8f361",
+  "src/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_ex1.py": "d3a3484b8b7bfc1cd63153187c15cc5199129678f0f6417bbc6f0bc766148197",
+  "src/jdl_ex2.py": "ef32514701a16b2c4b3a5908910c439f2a28a76b5fd730ac495dff4ef1fdf795"
+ }
+}
