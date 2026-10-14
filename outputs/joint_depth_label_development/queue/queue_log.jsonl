@@ -66,3 +66,6 @@
 {"event":"END","task":"T17_TESTS","exit_code":1,"seconds":25.9,"status":"failed","utc":"2026-10-14T23:26:09.6219967Z"}
 {"event":"START","task":"T18_NOTEBOOK","used_before":1,"astra_active":true,"python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_notebook --threads 1","utc":"2026-10-14T23:27:10.0296991Z"}
 {"event":"END","task":"T18_NOTEBOOK","exit_code":0,"seconds":8.6,"status":"done","utc":"2026-10-14T23:27:18.6407920Z"}
+{"event":"COMMIT","task":"T18_NOTEBOOK","ok":true,"head":"f0f6f84c","detail":"","utc":"2026-10-14T23:27:20.6957102Z"}
+{"event":"PUSH","task":"T18_NOTEBOOK","ok":true,"detail":"","utc":"2026-10-14T23:27:25.7386351Z"}
+{"event":"RUNNER_END","dry_run":false,"utc":"2026-10-14T23:27:25.7553325Z"}

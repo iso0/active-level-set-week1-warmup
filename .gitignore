@@ -26,3 +26,5 @@ outputs/joint_depth_label_development/temporal_repair/locks/
 # Continuation-runner single-instance handle and temporary state files
 outputs/joint_depth_label_development/queue/runner.lock
 outputs/joint_depth_label_development/queue/*.tmp
+# One-shot recovery sequence locks
+outputs/joint_depth_label_development/recovery/*/recovery.lock

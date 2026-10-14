@@ -46,7 +46,30 @@ $$\text{ELBO}_{\text{probe}}=\overline{E_q\log p}_{\,\text{probe}}-\mathrm{KL}/m
 - The per-fit s_y and the equivalent log1p tolerance are in `stopping_audit_per_fit.csv`. Whether reading the tolerance in log1p units would have stopped any fit is in `stopping_audit_summary.json` (§3).
 
 ## 3. Numbers
-*(Filled in from `stopping_audit_summary.json` once all 40 SVGP fits have finished.)*
+
+From queue T16 (`stopping_audit_summary.json` and `stopping_audit_per_fit.csv`, commit `b3c1c6ac`), over all 40 SVGP fits.
+
+| Quantity | Value |
+|---|---|
+| Fits / recorded `converged` | 40 / 0. All stopped at the 20,000-iteration cap, i.e. 80 probe checks each |
+| Fits whose probe value is the training objective (n ≤ 8192: the ten B16 checkpoints) | 10 |
+| KL weight ratio n/m over all fits | 1.00–2.87 |
+| s_y, the target SD in log1p units | 1.97–2.08 |
+| Implemented 5e-3 mean tolerance expressed in log1p units | 0.0098–0.0104, about twice as loose as documented |
+| Relative probe-ELBO change over the last 12 checks: per-fit medians (median over fits) | 0.0024–0.0192 (0.0053), 4.7–38× the 5e-4 tolerance |
+| Checks per fit meeting the ELBO tolerance | median 2 of 80, at most 6 |
+| Probe-mean RMS change over the last 12 checks: per-fit medians | 0.0130–0.0195 standardized (0.026–0.040 log1p) |
+| Checks meeting the mean tolerance, in either unit reading | **0 in every fit** |
+| Fits that would have stopped as implemented | 0 |
+| Fits that would have stopped with the tolerance read in log1p units | 0 |
+
+- **No stopping decision changes under either reading.** The mean-change criterion was never met at any check, so neither the KL scaling (§1) nor the unit question (§2) changed any decision.
+- **Why no fit converged.** Check-to-check changes stay at the optimiser's noise level: about 1.6e-2 in standardized mean units and about 5e-3 relative ELBO. That is above both tolerances, and the rule cannot be met without a decaying learning rate or iterate averaging (§4).
+- **Correction to the summary file.** The field `decisions_changed_by_log1p_reinterpretation` = 40 in `stopping_audit_summary.json` is an artifact.
+  - Both per-fit columns `would_stop_*` are empty for all 40 fits.
+  - Under pandas 3, `astype(str)` keeps missing values as missing, and missing ≠ missing, so every fit was counted as changed.
+  - The correct count is **0**, consistent with the two "would have stopped" counts of 0.
+  - The recorded file is kept as produced.
 
 ## 4. Corrected protocol for future temporal fits (proposal, not applied to this study)
 1. **Monitor the optimised objective.**

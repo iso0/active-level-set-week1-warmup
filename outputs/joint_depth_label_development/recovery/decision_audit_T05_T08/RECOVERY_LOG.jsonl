@@ -20,3 +20,5 @@
 {"event":"COMMIT","ok":true,"head":"3e990a8d","attempt":1,"message":"Recovery R08: cached-posterior decision audit results (PRIMARY_UNAVAILABLE; decision-only, zero fits)","utc":"2026-10-14T23:15:02.3075175Z"}
 {"event":"PUSH","ok":true,"attempt":1,"detail":"","utc":"2026-10-14T23:15:08.0237971Z"}
 {"event":"RECOVERY_COMPLETE","utc":"2026-10-14T23:15:08.0521556Z"}
+{"event":"COMMIT","ok":true,"head":"b5c7b0e2","attempt":1,"message":"Recovery T05-T08: sequence complete (records)","utc":"2026-10-14T23:15:10.3572470Z"}
+{"event":"PUSH","ok":true,"attempt":1,"detail":"","utc":"2026-10-14T23:15:16.0389294Z"}

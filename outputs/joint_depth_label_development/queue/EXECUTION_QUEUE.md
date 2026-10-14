@@ -85,6 +85,23 @@ Every task uses one BLAS thread and carries `--threads 1` on its command line. C
   - **No shared outputs:** the recovery writes only `v2_decision_audit/`, `_cache/decision_audit/` and its own records. T15–T18 write elsewhere.
   - **Tests:** T17 only reads the audit outputs once the summary file exists.
 
+## C3. Final status (2026-10-14 23:27 UTC; runner ended normally)
+
+| Tasks | Status |
+|---|---|
+| T01–T04, T09–T16, T18 | done |
+| T05 | failed at its console echo; recovered as R04–R08 → PRIMARY_UNAVAILABLE |
+| T06–T08 | blocked in the runner (results come from the recovery) |
+| T17 | failed: 88 passed, 2 skipped, 1 failed (a one-ULP CSV round trip in one reused value; ledger Q-END) |
+
+Narrative reports:
+- `V2_MODEL_REPORT.md`
+- `exploratory/EX_METRICS_ADDENDUM.md`
+- `v2_decision_audit/DECISION_AUDIT_REPORT.md`
+- `TEMPORAL_REPAIR_REPORT.md`
+- `temporal_repair/TEMPORAL_STOPPING_AUDIT.md` §3
+- `CLAIMS_MATRIX.md`
+
 ## D. Outside the authorized scope (proposals or drafts only)
 
 - **Real-data Stage A** (`STAGE_A_PROTOCOL_DRAFT.md`): not authorized.

@@ -59,6 +59,7 @@ All population results are on previously inspected simulations: DEV repeats 1–
 | L10 | **The data are not independent.** All DEV repeats and C1–C3 have been inspected, and C4 would re-partition the same 541 simulations. A defined after NEW labels were inspected; the 0.85 cut came from Week 19's inspection of NEW | `C4_STABILITY_DRAFT.md` | OBS |
 | L11 | **V2's "uncertain sharing" was not tested where it would matter.** At NEW B40 the mixture puts 0.949 of its mass on ρ = 1, so V2_EP_mixture − rho1_EP = 0.000 BA | `v2_model_comparison/component_masses_and_moments.csv` | OBS |
 | L12 | **The temporal SVGP fits are not bitwise reproducible across worker histories.** Their initial natural-parameter noise (sd 1e-3) comes from the unseeded process-global torch RNG | `TEMPORAL_STOPPING_AUDIT.md` §4.6; ledger CKV | OBS |
+| L13 | **"Exact reuse" holds to one ULP of the CSV-parsed source.** In queue T17, 1 of 91 tests failed. One of the 2,176 reused Stage M probabilities (ACTIVE_E1, r1 f4 B40, p ≈ 1.24e-9) differs by 2.1e-25 after the CSV round trip, because pandas' default float parser is not correctly rounded. No decision or metric changes; the test was not relaxed | `queue/logs/T17_TESTS.log`; ledger Q-END | OBS |
 
 ## 4. Untested or not authorized
 
@@ -70,5 +71,13 @@ All population results are on previously inspected simulations: DEV repeats 1–
 | U3 | Query savings / sample efficiency | Not claimable from identical feature-only paths | A pre-specified target and a hitting-time design |
 | U4 | What separates Keyhole from no Keyhole inside the fast-scan corner? | Untested; depth at 111 µm does not | New simulations inside the corner (simulator time; outside this request) |
 
-## 5. Temporal repair (`TEMPORAL_REPAIR_REPORT.md`)
-*Filled in after the 30 M400 and 10 M800 SVGP fits and the evaluation have finished.*
+## 5. Temporal repair (`TEMPORAL_REPAIR_REPORT.md`; freeze `29ca7364`; evaluation T15 `da46dd70`)
+
+| # | Claim | Evidence | Label | Status and caveats |
+|---|---|---|---|---|
+| TR1 | The NGD SVGP trained to the cap has lower trajectory RMSE than the frozen 2,000-iteration SVGP at every budget | M400 − frozen: B16 −0.200 [−0.225, −0.177], B40 −0.109, B80 −0.089 | PRED | TR-H1 **supported**. None of the 40 fits met its stopping rule (F5) |
+| TR2 | It lowers A error, but stays well above the scalar A GP | Median \|A error\| B40 36.3 µm (frozen SVGP 64.6, scalar 5.1); B80 27.5 (42.3, 3.9) | PRED | TR-H2 and TR-H6 **supported**. The scalar A GP remains the A model |
+| TR3 | Its A 90 % intervals under-cover | A inside the 90 % interval: 0.60 / 0.37 / 0.25 at B16 / B40 / B80; P(max > u_ref) Brier worse than the frozen SVGP at B40 and B80 | PRED | Pointwise trajectory coverage at 90 % is near nominal (0.89–0.91) |
+| TR4 | PPCA removes the exploding coefficients and beats the frozen functional model | max \|coefficient\| 9.80 (frozen ALS up to 26,571); RMSE −0.77 / −3.57 / −8.51 | PRED/OBS | TR-H4 **supported**. Its mean RMSE is worse than the training-mean curve (+0.19 to +0.39), and its A error is 101 µm at B40 and 693 µm at B80 |
+| TR5 | More inducing points at the same iteration cap reduce the approximation difference | M400 − M800 RMS 0.198 at `ckpt_r1_f1_B40`, against 0.167 under the frozen protocol | PRED | TR-H3 **falsified**; M800 is less optimised at the cap |
+| TR6 | NGD SVGP ranks above PPCA | PPCA − SVGP RMSE +0.50 to +0.69; A error +29 to +665 µm | PRED | TR-H5 (no direction committed) |
