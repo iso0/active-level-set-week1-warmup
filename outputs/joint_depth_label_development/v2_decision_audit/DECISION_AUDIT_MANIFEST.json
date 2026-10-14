@@ -1,0 +1,119 @@
+{
+ "study": "cached-posterior decision audit of the frozen V2 comparison (decision-only readouts; zero new fits)",
+ "status": "FROZEN BEFORE ANY AUDIT DECISION",
+ "written_utc": "2026-10-14T23:07:14+00:00",
+ "audit_version": "decision-audit-1.1.1",
+ "parent_commit": "97f1fde2fb188ae9d981a5577c733a3b8789d0dd",
+ "source": "outputs/astra_balanced_decision_acquisition/OPUS_DECISION_ACQUISITION_REQUEST.md (first step)",
+ "fits": "none; the exported V2 component posteriors of v2_model_comparison (V2_EP_mixture, its rho=1 EP component as rho1_EP, Binary_V2_EP), NEW DEV repeats 1-2, folds 1-5, B16/B40",
+ "rules": {
+  "finite_batch": "A_m >= B_m (prospective IID batch, m = 136, fixed fold-pool reference)",
+  "posterior_mean_pi": "p >= E[pi | D] (same draws)",
+  "paid_fraction": "p >= paid positive fraction",
+  "cutoff_0.5": "p >= 0.5"
+ },
+ "target_distribution": "uniform over the fixed fold training-candidate inputs (never the paid subset); a model-based approximation to the eligible feature distribution; may be biased for another deployment population",
+ "batch_size_m": 136,
+ "m_source": "NEW population size from the feature/provenance intake (not its positive count)",
+ "numerics": {
+  "QMC": "scrambled Sobol, 4 scrambles, seeds 771 + 1009 s + 37 k, ladder 2^10 -> 2^12 -> 2^14",
+  "accept": "max signed-margin change <= 0.015 and pi change <= 0.003",
+  "ambiguous": "|signed margin| <= max(2 SE over scrambles, last margin change); the sign of the estimate is used and the flag reported (distinct from numerical failure)",
+  "failure": "a checkpoint whose ladder is not accepted or whose QMC decision pass fails is DECISION_NUMERICAL_STOP; nonfinite coefficients, margins or ladder changes are DECISION_NONFINITE; their finite_batch and posterior_mean_pi decisions are kept as failed output and never scored; no seed, ladder or tolerance change and no retry"
+ },
+ "acceptance": {
+  "order": "export validity -> probability parity -> QMC decisions -> finiteness -> ladder acceptance",
+  "p_parity_tolerance": 1e-10,
+  "p_parity_definition": "max over test inputs of |closed-form mixture probability from the export - stored V2 prediction|; all values finite",
+  "weight_sum_tolerance": 1e-09,
+  "statuses": {
+   "ok": "valid for all four rules",
+   "INVALID_EXPORT": "missing, altered or inconsistent export, failed fit, or missing/duplicated/misaligned simulation IDs: no rule",
+   "PROBABILITY_PARITY_FAILURE": "export probabilities differ from the stored V2 predictions: no rule",
+   "DECISION_NONFINITE": "cutoff rules only",
+   "DECISION_NUMERICAL_STOP": "cutoff rules only"
+  },
+  "readout": "a pooled-per-repeat readout is AVAILABLE only if all five folds are valid for that rule and the five test sets partition the NEW population; otherwise UNAVAILABLE (no surviving-subset metric)",
+  "contrast": "a rule - cutoff_0.5 contrast needs both readouts available in both repeats",
+  "primary": "finite_batch on all 20 V2_EP_mixture checkpoints (2 repeats x 5 folds x B16/B40); COMPLETE only if all 20 are ok, otherwise PRIMARY_UNAVAILABLE",
+  "unavailable_primary": "evaluate writes DECISION_AUDIT_UNAVAILABLE.json instead of DECISION_AUDIT_SUMMARY.json (the queue's T08 completion marker) and exits with code 3",
+  "correction_record": "v2_decision_audit/SAFEGUARD_CORRECTION.md"
+ },
+ "protections": [
+  "no held-out label, global label count, short-K or q20 membership, test depth or post-hoc VX cut enters a decision",
+  "probability parity enforced per checkpoint (max absolute difference <= 1e-10); the three cutoff rules use that single probability vector",
+  "no rule is tuned on these metrics",
+  "not an acquisition or simulation-saving experiment"
+ ],
+ "metrics": [
+  "pooled-per-repeat BA",
+  "sensitivity",
+  "specificity",
+  "q20 (unchanged)",
+  "short-K sensitivity (10 unique simulations)",
+  "Brier / log loss (rule-independent)",
+  "per-simulation decision changes (full IDs)",
+  "class fractions: model reference prevalence E[pi|D], paid fraction, evaluator-only true fractions (never learner inputs)"
+ ],
+ "uncertainty": "Stage M class-stratified simulation-cluster bootstrap (2000, seed 20261013), conditional on the stored fits and splits",
+ "validation": {
+  "file": "v2_decision_audit/DECISION_AUDIT_VALIDATION.json",
+  "status": "PASS",
+  "sha256": "9505282d81ccfe7fe8362eab807cf15b1e9e8ba677efd958fc09d5eff2f8321a"
+ },
+ "exports_sha256": {
+  "NEW__r1_f1__B16__Binary_V2_EP": "d1cd5c8eaa48f1318bcc2f880d6821b0a67ead6e2dfb9915c1a17acd5013d06a",
+  "NEW__r1_f1__B16__V2_EP_mixture": "0d15398b31ee80bf99a449b6438edf9649702162bbb51f18664088bb83b5e1a5",
+  "NEW__r1_f1__B40__Binary_V2_EP": "e89150241b17019b88c648febb088d14c81a7757f688bd63e9371b8642a77ff0",
+  "NEW__r1_f1__B40__V2_EP_mixture": "0614992a9d166f15316b5692504842d7a614da1d9fa5555028b74927663ae868",
+  "NEW__r1_f2__B16__Binary_V2_EP": "0911fdeb1ab819805901233fef507d3277a04a56655630f8f66741c223e4dc71",
+  "NEW__r1_f2__B16__V2_EP_mixture": "488e677ae0dea68c5a3a3b12e5872e79bcff6064f0b2ff3db30dbcb71fceac9d",
+  "NEW__r1_f2__B40__Binary_V2_EP": "4541430d09c82fd4f9a50da3d1d13055b29b2baee33a6b7525a3689273218dd5",
+  "NEW__r1_f2__B40__V2_EP_mixture": "3edc67adbc35b0707cc570fb44f75f774a0ddcabe02024f77612087e561f417b",
+  "NEW__r1_f3__B16__Binary_V2_EP": "48607a9a0cad2ab3b8abbe350f6d927585c678b653a72893b4bfb4528cdcb387",
+  "NEW__r1_f3__B16__V2_EP_mixture": "306e065a4c1e9c67af953b17e7491be76bd3acb2e589f6b30f3e77ca63d08689",
+  "NEW__r1_f3__B40__Binary_V2_EP": "d9dd2f43945c3140fcbc2d49095eda27d6d4e554a93ba5934b1a0985b5fc0954",
+  "NEW__r1_f3__B40__V2_EP_mixture": "d0243b1225d18d0239c38f0e1f8bbaa82ac506ec61d209380095f4bb2764ae76",
+  "NEW__r1_f4__B16__Binary_V2_EP": "72a9f358398911737ddfc47b194977e2ba6ef326ed10be54f1ae214c85b20cec",
+  "NEW__r1_f4__B16__V2_EP_mixture": "319f8f33c28d30e92f83dec82661e2aa729132b7e66af10fbf96f83edc40cc8c",
+  "NEW__r1_f4__B40__Binary_V2_EP": "5b3a32dd1890d38e065e6f436d8292a61392f2d55f7eab3020a738042e84cc07",
+  "NEW__r1_f4__B40__V2_EP_mixture": "967a4932ca5a533bd20d2cd51b8cba01938581cc561627d8429f3dc72e4337bc",
+  "NEW__r1_f5__B16__Binary_V2_EP": "0273886a82bdac946680e26268fa685beb6e3dda9ac2705cc15680a1e4591851",
+  "NEW__r1_f5__B16__V2_EP_mixture": "83abeb996fa4d2e5e00e852f53adca9f838d6f8690cc7ebfec1dadd99bb869d7",
+  "NEW__r1_f5__B40__Binary_V2_EP": "ac6d77ebbfdac4ad64166c715394d87b832a885f1b60e7be5680cfadb4fdaa14",
+  "NEW__r1_f5__B40__V2_EP_mixture": "3717fd8b6ae4a1e211c93b8de9c1676f58df392d293ac5620ea9788ca4ccfaf1",
+  "NEW__r2_f1__B16__Binary_V2_EP": "6cd03b4f61c426da945517acee296e81b599579d653b6705b6d69440c6e8a722",
+  "NEW__r2_f1__B16__V2_EP_mixture": "e9b35be8a81e564eb2c0f3cc174d7732d49f76156fed6611171995338350a6a2",
+  "NEW__r2_f1__B40__Binary_V2_EP": "60813d470f2e3e33dac22ae62d4680965ce6bca6242dc8f7e61a65556a0fbbe0",
+  "NEW__r2_f1__B40__V2_EP_mixture": "db41336df67a8312c2d0b4adc9a6f17c76a8430f6f78bc2e65507acb22cbc356",
+  "NEW__r2_f2__B16__Binary_V2_EP": "85cea0bdee4bfdd605e40db7356913961e4799d952c63cdbcc5d8184d8483b15",
+  "NEW__r2_f2__B16__V2_EP_mixture": "892618a745c5ccbb79b2bde87d63c3da152ccd2d1577068896573988b5cbf027",
+  "NEW__r2_f2__B40__Binary_V2_EP": "b079f1d234d4c13f3fd6dad4400c23f7eb4ed60726c3ea37801db6b7e173a09e",
+  "NEW__r2_f2__B40__V2_EP_mixture": "86935bb0993837c78c21174820b9bd63a91773a72ff0ce19d70ee4a466b658df",
+  "NEW__r2_f3__B16__Binary_V2_EP": "c7fd7885591d90c432f85428528a1631ee3280fc6d98428fbe600368ec9ff7d0",
+  "NEW__r2_f3__B16__V2_EP_mixture": "c26bfbcca33bfcb4fa4cb7944b6d48a2156b67f23bc5be69338702d01289cd7b",
+  "NEW__r2_f3__B40__Binary_V2_EP": "70ed462e96fcd5b429f943d5075fcaf786ad693bc11cc503b44e9ded05e2297d",
+  "NEW__r2_f3__B40__V2_EP_mixture": "7095b32259e79a8fdfe7762706ee46c56a8da0e4b61d3420e5d8477ba0840dd0",
+  "NEW__r2_f4__B16__Binary_V2_EP": "17267461ea27adcfdf5049016b7ba2a7e204e8da40253b2b3313a2dc24722ebf",
+  "NEW__r2_f4__B16__V2_EP_mixture": "85c35444e4ba24a13683e2f858783045748beb9aec60ee6e875b3e4da532f0b5",
+  "NEW__r2_f4__B40__Binary_V2_EP": "9fb9f2dbbe86d1f7af2c9fa9c82980bcd11605f1c8fa651a3fc7484d9ad6a67e",
+  "NEW__r2_f4__B40__V2_EP_mixture": "2ce172e7f9da063a35e789b48600416a6ccf0b4615464450adcd6011bc03f882",
+  "NEW__r2_f5__B16__Binary_V2_EP": "adef3399676a29e81792b7a90e29022380aa5ef49461fddb85f60815015dba1b",
+  "NEW__r2_f5__B16__V2_EP_mixture": "5d398718a57461d348e153490adb39ee48289b74c32c74a84fc26776c32d3fbc",
+  "NEW__r2_f5__B40__Binary_V2_EP": "777633477eb654dac69f229db6b468d87fd24445d25ca9f7f8bbb2bc939a4f41",
+  "NEW__r2_f5__B40__V2_EP_mixture": "652bf76b15690d96f6f294ce2f1474fa1525ebd56fb7fbfab3cd2243982abc11"
+ },
+ "code_sha256": {
+  "src/jdl_v2_decision_audit.py": "e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f",
+  "src/jdl_v2_export.py": "66d290a8f6a9fa023e3411b7e52c293aed26adce4da94c502f335ffbcb8e93a1",
+  "src/jdl_v2_evaluate.py": "584b479c02383d4e439c55b4a69a39053b5df0516fc5cb0878fdce5873f228cb",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a"
+ },
+ "not_authorized": [
+  "acquisition",
+  "Stage A",
+  "C4",
+  "new fits"
+ ]
+}

@@ -6,3 +6,7 @@
 {"event":"START","step":"R05_DECISION_VALIDATION_RETRY","used_before":2,"astra_active":true,"astra_state":"CONTROLLED_RUN","leaves":"16972:1","python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_decision_audit validate --threads 1","module_sha256":"e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f","utc":"2026-10-14T23:05:53.9222410Z"}
 {"event":"END","step":"R05_DECISION_VALIDATION_RETRY","exit_code":0,"seconds":9.9,"utc":"2026-10-14T23:06:03.8658070Z"}
 {"event":"GATE_PASSED","step":"R05_DECISION_VALIDATION_RETRY","hard_checks":45,"validation_sha256":"9505282d81ccfe7fe8362eab807cf15b1e9e8ba677efd958fc09d5eff2f8321a","utc":"2026-10-14T23:06:03.9160623Z"}
+{"event":"COMMIT","ok":true,"head":"97f1fde2","attempt":1,"message":"Recovery R05: decision-rule validation retry with decision-audit-1.1.1 (45/45 hard checks, exit 0)","utc":"2026-10-14T23:06:06.3657905Z"}
+{"event":"PUSH","ok":true,"attempt":1,"detail":"","utc":"2026-10-14T23:06:11.7890934Z"}
+{"event":"START","step":"R06_DECISION_FREEZE","used_before":2,"astra_active":true,"astra_state":"CONTROLLED_RUN","leaves":"16972:1","python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_decision_audit manifest --threads 1","module_sha256":"e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f","utc":"2026-10-14T23:07:12.2400203Z"}
+{"event":"END","step":"R06_DECISION_FREEZE","exit_code":0,"seconds":2.6,"utc":"2026-10-14T23:07:14.8605991Z"}
