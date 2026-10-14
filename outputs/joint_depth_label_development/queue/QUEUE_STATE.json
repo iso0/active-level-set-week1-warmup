@@ -64,10 +64,15 @@
                                              "started_utc":  "2026-10-14T22:23:45.6569124Z",
                                              "exit_code":  0,
                                              "seconds":  16.2,
-                                             "finished_utc":  "2026-10-14T22:24:01.8607393Z"
+                                             "finished_utc":  "2026-10-14T22:24:01.8607393Z",
+                                             "commit":  "3b50def4"
                                          },
                   "T11_CHECKPOINT_VALIDATION":  {
-                                                    "status":  "pending"
+                                                    "status":  "done",
+                                                    "started_utc":  "2026-10-14T22:25:14.0399768Z",
+                                                    "exit_code":  0,
+                                                    "seconds":  38.1,
+                                                    "finished_utc":  "2026-10-14T22:25:52.1246051Z"
                                                 },
                   "T12_EX3_FREEZE":  {
                                          "status":  "pending"

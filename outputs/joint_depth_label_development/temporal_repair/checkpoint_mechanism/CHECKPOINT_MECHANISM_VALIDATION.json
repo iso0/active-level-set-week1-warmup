@@ -1,0 +1,16 @@
+{
+ "status": "FAIL",
+ "torch_threads": 1,
+ "torch": "2.13.0+cpu",
+ "gpytorch": "1.15.1",
+ "uninterrupted_resumable_equals_frozen_train_bitwise": false,
+ "resumed_at_iteration": 300,
+ "interrupted_and_resumed_equals_uninterrupted_bitwise": false,
+ "corrupted_checkpoint_refused": true,
+ "stale_tmp_leaves_checkpoint_valid": true,
+ "other_data_refused": true,
+ "status_frozen_run": "max_iterations",
+ "iterations": 600,
+ "seconds": 31.489292860031128,
+ "note": "validation of the mechanism only; not used by any running or completed study fit"
+}
