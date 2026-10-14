@@ -1,0 +1,24 @@
+{
+ "EX3-P1_mechanism": {
+  "median_mass_rho1_B40": 0.8893410864132655,
+  "mean_masses_B40": [
+   0.014997317276246373,
+   0.12046290262776838,
+   0.8645397800959852
+  ],
+  "supported": true
+ },
+ "EX3-P2_consequence": {
+  "BA_difference": -0.041666666666666685,
+  "interval": [
+   -0.09375,
+   0.0
+  ],
+  "supported": false
+ },
+ "fits": 40,
+ "statuses": {
+  "ok": 40
+ },
+ "fallbacks": 0
+}

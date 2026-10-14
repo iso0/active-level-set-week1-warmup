@@ -1,0 +1,65 @@
+                           BA    q20  specificity  sensitivity  shortK_sensitivity  brier  log_loss    AUC      TP    FN    TN     FP
+budget arm                                                                                                                           
+16     Binary_V2_EP     0.513  0.683        0.042        0.984               0.975  0.082     0.296  0.685  122.00  2.00  0.50  11.50
+       J_trained        0.618  0.767        0.250        0.986               0.925  0.050     0.164  0.927  122.25  1.75  3.00   9.00
+       V2_trained       0.569  0.725        0.146        0.992               0.925  0.056     0.180  0.903  123.00  1.00  1.75  10.25
+       rho1_trained_EP  0.568  0.725        0.146        0.990               0.925  0.054     0.176  0.922  122.75  1.25  1.75  10.25
+40     Binary_V2_EP     0.541  0.658        0.104        0.978               0.825  0.078     0.269  0.778  121.25  2.75  1.25  10.75
+       J_trained        0.752  0.783        0.542        0.962               0.675  0.050     0.166  0.916  119.25  4.75  6.50   5.50
+       V2_trained       0.684  0.742        0.396        0.972               0.750  0.056     0.183  0.903  120.50  3.50  4.75   7.25
+       rho1_trained_EP  0.725  0.775        0.479        0.972               0.750  0.054     0.181  0.907  120.50  3.50  5.75   6.25
+                arm              ref  budget              metric  estimate                            per_repeat  cluster_bootstrap_lo  cluster_bootstrap_hi
+0        V2_trained  rho1_trained_EP      16                  BA    0.0010                [0.0, 0.0, 0.0, 0.004]                0.0000                0.0040
+2        V2_trained  rho1_trained_EP      16         specificity    0.0000                  [0.0, 0.0, 0.0, 0.0]                0.0000                0.0000
+4        V2_trained  rho1_trained_EP      16  shortK_sensitivity    0.0000                  [0.0, 0.0, 0.0, 0.0]                0.0000                0.0000
+8        V2_trained  rho1_trained_EP      40                  BA   -0.0417          [0.0, -0.0833, -0.0833, 0.0]               -0.0938                0.0000
+10       V2_trained  rho1_trained_EP      40         specificity   -0.0833          [0.0, -0.1667, -0.1667, 0.0]               -0.1875                0.0000
+12       V2_trained  rho1_trained_EP      40  shortK_sensitivity    0.0000                  [0.0, 0.0, 0.0, 0.0]                0.0000                0.0000
+16  rho1_trained_EP        J_trained      16                  BA   -0.0501    [-0.125, 0.0457, -0.0793, -0.0417]               -0.1334                0.0144
+18  rho1_trained_EP        J_trained      16         specificity   -0.1042     [-0.25, 0.0833, -0.1667, -0.0833]               -0.2708                0.0208
+20  rho1_trained_EP        J_trained      16  shortK_sensitivity    0.0000                  [0.0, 0.0, 0.0, 0.0]                0.0000                0.0000
+24  rho1_trained_EP        J_trained      40                  BA   -0.0262    [-0.0417, 0.004, -0.0336, -0.0336]               -0.0907                0.0081
+26  rho1_trained_EP        J_trained      40         specificity   -0.0625      [-0.0833, 0.0, -0.0833, -0.0833]               -0.1875                0.0000
+28  rho1_trained_EP        J_trained      40  shortK_sensitivity    0.0750                  [0.0, 0.0, 0.1, 0.2]                0.0000                0.1562
+32       V2_trained        J_trained      16                  BA   -0.0491    [-0.125, 0.0457, -0.0793, -0.0376]               -0.1324                0.0165
+34       V2_trained        J_trained      16         specificity   -0.1042     [-0.25, 0.0833, -0.1667, -0.0833]               -0.2708                0.0208
+36       V2_trained        J_trained      16  shortK_sensitivity    0.0000                  [0.0, 0.0, 0.0, 0.0]                0.0000                0.0000
+40       V2_trained        J_trained      40                  BA   -0.0679  [-0.0417, -0.0793, -0.1169, -0.0336]               -0.1418               -0.0074
+42       V2_trained        J_trained      40         specificity   -0.1458    [-0.0833, -0.1667, -0.25, -0.0833]               -0.2917               -0.0208
+44       V2_trained        J_trained      40  shortK_sensitivity    0.0750                  [0.0, 0.0, 0.1, 0.2]                0.0000                0.1562
+48       V2_trained     Binary_V2_EP      16                  BA    0.0561     [0.0753, 0.1707, -0.0296, 0.0081]                0.0040                0.1112
+50       V2_trained     Binary_V2_EP      16         specificity    0.1042        [0.1667, 0.3333, -0.0833, 0.0]                0.0000                0.2083
+52       V2_trained     Binary_V2_EP      16  shortK_sensitivity   -0.0500                [-0.1, 0.0, 0.0, -0.1]               -0.1562                0.0500
+56       V2_trained     Binary_V2_EP      40                  BA    0.1428      [0.2755, 0.0833, 0.0081, 0.2043]                0.0813                0.2063
+58       V2_trained     Binary_V2_EP      40         specificity    0.2917         [0.5833, 0.1667, 0.0, 0.4167]                0.1667                0.4167
+60       V2_trained     Binary_V2_EP      40  shortK_sensitivity   -0.0750                 [-0.3, 0.0, 0.0, 0.0]               -0.2045                0.0417
+64        J_trained     Binary_V2_EP      16                  BA    0.1052       [0.2003, 0.125, 0.0497, 0.0457]                0.0074                0.2141
+66        J_trained     Binary_V2_EP      16         specificity    0.2083        [0.4167, 0.25, 0.0833, 0.0833]                0.0208                0.4167
+68        J_trained     Binary_V2_EP      16  shortK_sensitivity   -0.0500                [-0.1, 0.0, 0.0, -0.1]               -0.1562                0.0500
+72        J_trained     Binary_V2_EP      40                  BA    0.2107       [0.3172, 0.1626, 0.125, 0.2379]                0.1105                0.3115
+74        J_trained     Binary_V2_EP      40         specificity    0.4375           [0.6667, 0.3333, 0.25, 0.5]                0.2500                0.6458
+76        J_trained     Binary_V2_EP      40  shortK_sensitivity   -0.1500               [-0.3, 0.0, -0.1, -0.2]               -0.3000                0.0000
+{
+ "EX3-P1_mechanism": {
+  "median_mass_rho1_B40": 0.8893410864132655,
+  "mean_masses_B40": [
+   0.014997317276246373,
+   0.12046290262776838,
+   0.8645397800959852
+  ],
+  "supported": true
+ },
+ "EX3-P2_consequence": {
+  "BA_difference": -0.041666666666666685,
+  "interval": [
+   -0.09375,
+   0.0
+  ],
+  "supported": false
+ },
+ "fits": 40,
+ "statuses": {
+  "ok": 40
+ },
+ "fallbacks": 0
+}
