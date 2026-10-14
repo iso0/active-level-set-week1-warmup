@@ -1,7 +1,12 @@
 {
     "tasks":  {
                   "T01_V2_VALIDATION":  {
-                                            "status":  "pending"
+                                            "status":  "done",
+                                            "started_utc":  "2026-10-14T22:13:53.4940442Z",
+                                            "exit_code":  0,
+                                            "seconds":  50.5,
+                                            "finished_utc":  "2026-10-14T22:14:44.0115484Z",
+                                            "gate_passed":  true
                                         },
                   "T02_V2_FREEZE":  {
                                         "status":  "pending"

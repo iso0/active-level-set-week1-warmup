@@ -10,3 +10,7 @@
 {"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T19:47:57.7491214Z"}
 {"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T20:18:07.3536371Z"}
 {"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T20:48:18.7897209Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T21:18:35.2201224Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T21:48:45.2811345Z"}
+{"event":"START","task":"T01_V2_VALIDATION","used_before":2,"astra_active":true,"python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_validation --threads 1","utc":"2026-10-14T22:13:53.5116321Z"}
+{"event":"END","task":"T01_V2_VALIDATION","exit_code":0,"seconds":50.5,"status":"done","utc":"2026-10-14T22:14:44.0436671Z"}

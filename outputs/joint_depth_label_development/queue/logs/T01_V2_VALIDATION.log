@@ -1,0 +1,27 @@
+{
+ "status": "PASS",
+ "hard_checks": {
+  "astra_checks_reproduced": true,
+  "port_passes_astra_checks": true,
+  "port_matches_delivered_references": true,
+  "sparse_case_reproduced": true,
+  "ess_reference_reproduced": true,
+  "synthetic_leakage_zero": true,
+  "synthetic_record_reproduced": true,
+  "induced_fallback_whole_mixture": true,
+  "real_parity": true,
+  "real_rho1_laplace_is_V1": true,
+  "real_binary_limits": true,
+  "real_corruption_invariance": true,
+  "real_batch_invariance": true,
+  "real_missing_response_keeps_label": true,
+  "real_induced_fallback": true,
+  "real_covariance_identities": true,
+  "real_acquisition_identities": true
+ },
+ "counts": {
+  "component_solves": 144,
+  "sampling_chains": 16
+ },
+ "seconds": 45.55925273895264
+}

@@ -1,0 +1,492 @@
+{
+ "version": "jdl-v2-port-1.0",
+ "tolerances_fixed_before_run": {
+  "astra_rerun_vs_delivered": 1e-09,
+  "port_vs_astra_ep": 1e-07,
+  "port_vs_astra_laplace": 1e-06,
+  "port_vs_delivered_references": 1e-06,
+  "rho1_laplace_vs_v1": 2e-07,
+  "identity": 1e-09,
+  "batch": 1e-12,
+  "ess_mcse_multiple": 4.0
+ },
+ "supplemental": {
+  "sparse_case": {
+   "probabilities": {
+    "V1_Laplace": 0.6738321900631514,
+    "rho1_EP_astra": 0.7210968039642143,
+    "V2_astra": 0.5083130317822349,
+    "rho1_EP_port": 0.7210968039642218,
+    "V2_port": 0.5083130317822162
+   },
+   "delivered": {
+    "V1_Laplace": 0.6738321900631508,
+    "rho1_EP": 0.7210968039642345,
+    "V2_EP_mixture": 0.508313031782077
+   },
+   "astra_rerun_max_diff": 1.5787371410169726e-13,
+   "port_max_diff": 1.3922196728799463e-13,
+   "port_weights": [
+    0.4791452490307356,
+    0.45172764202662413,
+    0.06912710894264058
+   ],
+   "astra_weights": [
+    0.47914524903073213,
+    0.4517276420266285,
+    0.0691271089426396
+   ]
+  },
+  "ess_reference": {
+   "probability_mean": 0.7323732350488078,
+   "batch_MCSE": 0.004094291611091214,
+   "probability_split_Rhat": 1.0015576231381427,
+   "maximum_latent_split_Rhat": 1.0031021432809377,
+   "delivered_probability_mean": 0.7323732350488078,
+   "delivered_batch_MCSE": 0.004094291611091211,
+   "abs_diff_vs_delivered": 0.0,
+   "port_rho1_EP_error_vs_reference": 0.01127643108458598,
+   "V1_Laplace_error_vs_reference": 0.058541044985656376,
+   "samples_sha256": "b58c71428529b07121f8037a44a1bd11d0cd04b94e6779493b8a9241a9dc6434"
+  },
+  "synthetic_leakage": {
+   "astra": {
+    "max_probability_change": 0.0,
+    "max_acquisition_change": 0.0
+   },
+   "port": {
+    "max_probability_change": 0.0,
+    "max_acquisition_change": 0.0
+   },
+   "astra_rerun_vs_stored_record_max_diff": 2.3869795029440866e-15,
+   "port_vs_stored_record_max_diff": 4.579669976578771e-15
+  },
+  "induced_fallback": {
+   "astra": {
+    "fallback": true,
+    "components": 3,
+    "methods": [
+     "laplace",
+     "laplace",
+     "laplace"
+    ],
+    "weights": [
+     0.46170924204199987,
+     0.44925968643855924,
+     0.08903107151944084
+    ]
+   },
+   "port": {
+    "fallback": true,
+    "components": 3,
+    "methods": [
+     "laplace",
+     "laplace",
+     "laplace"
+    ],
+    "weights": [
+     0.46170924205350183,
+     0.44925968642838654,
+     0.0890310715181119
+    ],
+    "failures": [
+     {
+      "method": "ep",
+      "error": "Injected EP failure at rho=0.5 (validation only)"
+     }
+    ],
+    "solve_count": 5
+   },
+   "laplace_mixture_port_vs_astra_max_prob_diff": 7.09432512735475e-13
+  }
+ },
+ "port_sha256": "d055df28acf2cd71f9c5809bf3341edfa48027ab9d924706c5d008cac8d8f361",
+ "astra_sources_sha256": {
+  "joint_model_v2.py": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+  "v1_reference.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+  "reference_checks.py": "5e30ceb36c9661eb2c954e20b73686a28cff6ae312e4d8dbe7ad8e8527dcc454",
+  "run_controlled.py": "9e5fb3644ea947b4ffd0fe476bd71acabef924c5de4c57faaca71da8ad83f79b",
+  "controlled_worlds.py": "a9fa89cbf4c963655d68d495f18421944a0205f8f627be3999e8e61cdfb00a1a",
+  "supplemental_diagnostics.py": "c2c0ba6edba349280098648f0d217fb9d7099cf4a465860bcb00e40bcd6ec175",
+  "SELECTION_RECORD_V2.json": "046a523df4f556b704b8a412ab30a9d33ecd881e1868bcec7296e61ac0ebe002"
+ },
+ "astra_reference_rerun": {
+  "status": "PASS",
+  "checks_passed": 17,
+  "n_checks": 17,
+  "max_numeric_diff_vs_delivered": 5.5844218138645374e-14,
+  "non_numeric_mismatches": []
+ },
+ "port_under_astra_checks": {
+  "status": "PASS",
+  "checks_passed": 17,
+  "n_checks": 17,
+  "max_numeric_diff_vs_delivered": 4.410989351555372e-10,
+  "non_numeric_mismatches": [],
+  "scalar_threshold": {
+   "exact_probability": 0.8004614348013129,
+   "exact_theta_mean": -0.1477803664417976,
+   "exact_theta_variance": 0.008152297719630597,
+   "EP": {
+    "probability": 0.8010441158447924,
+    "probability_error": 0.0005826810434794716,
+    "theta_mean": -0.14752817251371786,
+    "theta_variance": 0.007955801269335275,
+    "variance_error": 0.00019649645029532273
+   },
+   "Laplace": {
+    "probability": 0.783454302644935,
+    "probability_error": 0.017007132156377947,
+    "theta_mean": -0.13599057541497306,
+    "theta_variance": 0.007594167267277088,
+    "variance_error": 0.0005581304523535092
+   }
+  },
+  "two_label_reference": {
+   "probability_max_error": 0.0033794548300156713,
+   "joint_covariance_max_error": 0.0005789492582767841,
+   "weight_max_error": 0.00020999186418579896,
+   "EP_selected": 2,
+   "reference_selected": 2
+  },
+  "single_label_paired_reference": {
+   "probability_error": 0.00257689362142538,
+   "score_max_error": 0.00047375436697421475,
+   "EP_selected": 1,
+   "reference_selected": 1
+  }
+ },
+ "real_data": [
+  {
+   "checkpoint": "NEW_r1_f1_B16",
+   "n_paid": 16,
+   "n_negative": 1,
+   "n_response": 16,
+   "parity_max_abs_diff": {
+    "mix_prob": 5.551115123125783e-16,
+    "mix_weights": 8.326672684688674e-16,
+    "mix_log_evidence": 6.217248937900877e-15,
+    "bin_prob": 2.220446049250313e-16,
+    "bin_weights": 0.0,
+    "bin_log_evidence": 3.552713678800501e-15,
+    "rho1_prob": 7.771561172376096e-16,
+    "rho1_weights": 0.0,
+    "rho1_log_evidence": 2.6645352591003757e-15,
+    "mix_component_h_mean": 2.220446049250313e-15,
+    "mix_component_h_cov": 2.220446049250313e-16,
+    "mix_component_f_h_cov": 1.6653345369377348e-16,
+    "mix_theta": 1.762479051592436e-15,
+    "mix_interval": 3.608224830031759e-15,
+    "mix_acquisition": 4.553649124439119e-18
+   },
+   "ep_iterations_port": [
+    36,
+    35,
+    33
+   ],
+   "weights_port": [
+    0.04323893675103988,
+    0.31192881513977444,
+    0.6448322481091855
+   ],
+   "log_evidence_port": [
+    -6.355030918752375,
+    -4.378997316570125,
+    -3.652782119226531
+   ],
+   "rho1_laplace_vs_V1": {
+    "astra_v1": 8.359979375427429e-14,
+    "port_v1": 2.220446049250313e-16,
+    "rho1_EP_minus_rho1_Laplace_max_abs": 0.0697029532529041
+   },
+   "binary_limits": {
+    "rho0_vs_binaryV2": 4.440892098500626e-16,
+    "rho0_depth_shift_change": 0.0,
+    "binary_masses_minus_prior": 1.1102230246251565e-16,
+    "binary_solves": 1
+   },
+   "corruption": {
+    "paid_arrays_identical": true,
+    "probability_change": 0.0,
+    "acquisition_change": 0.0
+   },
+   "batch": {
+    "max_diff": 0.0,
+    "reference_pool_unchanged": true
+   },
+   "missing_response": {
+    "n_paid": 16,
+    "n_response": 15,
+    "expected_n_response": 15
+   },
+   "induced_fallback": {
+    "fallback": true,
+    "methods": [
+     "laplace",
+     "laplace",
+     "laplace"
+    ],
+    "n_components": 3,
+    "weights": [
+     0.005638918686212591,
+     0.5054712753826295,
+     0.48888980593115755
+    ],
+    "max_prob_diff_vs_EP": 0.10909014075100698
+   },
+   "covariance": {
+    "joint_identity": 3.3306690738754696e-16,
+    "mixture_within_plus_between": 0.0,
+    "unconditioned_h_prior_equal_across_rho": 0.0
+   },
+   "acquisition": {
+    "label_only_closed_form_vs_direct": 8.944667923005412e-18,
+    "mixture_minus_weighted_component_average": [
+     -4.471060641359425e-06,
+     -1.1092637064780359e-05,
+     -1.0896950735344224e-05
+    ],
+    "nonnegative_and_bounded": true,
+    "quadrature_15_48_vs_31_64": 3.80183023040645e-09
+   },
+   "ep_vs_ess": [
+    {
+     "rho": 0.0,
+     "max_abs_EP_minus_ESS": 0.005887168799070586,
+     "mean_abs_EP_minus_ESS": 0.0023926002457255536,
+     "max_MCSE": 0.0029028110963801833,
+     "decision_changes_at_0.5": 0,
+     "paid_latent_split_Rhat_max": 1.006808429683308
+    },
+    {
+     "rho": 0.5,
+     "max_abs_EP_minus_ESS": 0.005350508680587063,
+     "mean_abs_EP_minus_ESS": 0.001990387488429398,
+     "max_MCSE": 0.0020703529435280024,
+     "decision_changes_at_0.5": 0,
+     "paid_latent_split_Rhat_max": 1.0029571854534685
+    },
+    {
+     "rho": 1.0,
+     "max_abs_EP_minus_ESS": 0.003642452876033375,
+     "mean_abs_EP_minus_ESS": 0.001148966947031744,
+     "max_MCSE": 0.0017918865915063074,
+     "decision_changes_at_0.5": 0,
+     "paid_latent_split_Rhat_max": 1.0031602563185937
+    }
+   ]
+  },
+  {
+   "checkpoint": "NEW_r1_f1_B40",
+   "n_paid": 40,
+   "n_negative": 4,
+   "n_response": 40,
+   "parity_max_abs_diff": {
+    "mix_prob": 1.7208456881689926e-15,
+    "mix_weights": 8.257283745649602e-16,
+    "mix_log_evidence": 2.3092638912203256e-14,
+    "bin_prob": 7.827072323607354e-15,
+    "bin_weights": 0.0,
+    "bin_log_evidence": 2.3092638912203256e-14,
+    "rho1_prob": 2.220446049250313e-15,
+    "rho1_weights": 0.0,
+    "rho1_log_evidence": 1.865174681370263e-14,
+    "mix_component_h_mean": 9.769962616701378e-15,
+    "mix_component_h_cov": 5.551115123125783e-16,
+    "mix_component_f_h_cov": 1.4224732503009818e-16,
+    "mix_theta": 3.1225022567582528e-15,
+    "mix_interval": 3.83026943495679e-15,
+    "mix_acquisition": 6.288372600415926e-18
+   },
+   "ep_iterations_port": [
+    41,
+    38,
+    33
+   ],
+   "weights_port": [
+    0.0005057270714000389,
+    0.03889445307575683,
+    0.9605998198528433
+   ],
+   "log_evidence_port": [
+    -15.050997098650043,
+    -10.708387312846982,
+    -7.501681057155646
+   ],
+   "rho1_laplace_vs_V1": {
+    "astra_v1": 1.1102230246251565e-16,
+    "port_v1": 2.220446049250313e-16,
+    "rho1_EP_minus_rho1_Laplace_max_abs": 0.023525706059618234
+   },
+   "binary_limits": {
+    "rho0_vs_binaryV2": 6.661338147750939e-16,
+    "rho0_depth_shift_change": 0.0,
+    "binary_masses_minus_prior": 2.220446049250313e-16,
+    "binary_solves": 1
+   },
+   "corruption": {
+    "paid_arrays_identical": true,
+    "probability_change": 0.0,
+    "acquisition_change": 0.0
+   },
+   "batch": {
+    "max_diff": 1.1102230246251565e-16,
+    "reference_pool_unchanged": true
+   },
+   "missing_response": {
+    "n_paid": 40,
+    "n_response": 39,
+    "expected_n_response": 39
+   },
+   "induced_fallback": {
+    "fallback": true,
+    "methods": [
+     "laplace",
+     "laplace",
+     "laplace"
+    ],
+    "n_components": 3,
+    "weights": [
+     3.00654569256335e-05,
+     0.11414998014825262,
+     0.8858199543948213
+    ],
+    "max_prob_diff_vs_EP": 0.039685104391809056
+   },
+   "covariance": {
+    "joint_identity": 5.551115123125783e-16,
+    "mixture_within_plus_between": 0.0,
+    "unconditioned_h_prior_equal_across_rho": 0.0
+   },
+   "acquisition": {
+    "label_only_closed_form_vs_direct": 5.421010862427522e-18,
+    "mixture_minus_weighted_component_average": [
+     -2.1123325703968903e-07,
+     -4.9737625062750476e-06,
+     -3.1042708230563393e-06
+    ],
+    "nonnegative_and_bounded": true,
+    "quadrature_15_48_vs_31_64": 9.102810542664652e-09
+   }
+  },
+  {
+   "checkpoint": "NEW_r2_f3_B40",
+   "n_paid": 40,
+   "n_negative": 5,
+   "n_response": 40,
+   "parity_max_abs_diff": {
+    "mix_prob": 4.107825191113079e-15,
+    "mix_weights": 4.0245584642661925e-16,
+    "mix_log_evidence": 2.1316282072803006e-14,
+    "bin_prob": 1.7985612998927536e-14,
+    "bin_weights": 0.0,
+    "bin_log_evidence": 2.1316282072803006e-14,
+    "rho1_prob": 4.107825191113079e-15,
+    "rho1_weights": 0.0,
+    "rho1_log_evidence": 1.1546319456101628e-14,
+    "mix_component_h_mean": 2.398081733190338e-14,
+    "mix_component_h_cov": 3.885780586188048e-16,
+    "mix_component_f_h_cov": 1.6653345369377348e-16,
+    "mix_theta": 8.618106228652778e-15,
+    "mix_interval": 1.1213252548714081e-14,
+    "mix_acquisition": 7.047314121155779e-18
+   },
+   "ep_iterations_port": [
+    40,
+    37,
+    33
+   ],
+   "weights_port": [
+    6.639188308573986e-05,
+    0.017427428554554668,
+    0.9825061795623591
+   ],
+   "log_evidence_port": [
+    -17.06059744743367,
+    -11.490371655987875,
+    -7.458310341422498
+   ],
+   "rho1_laplace_vs_V1": {
+    "astra_v1": 4.440892098500626e-16,
+    "port_v1": 1.1102230246251565e-16,
+    "rho1_EP_minus_rho1_Laplace_max_abs": 0.049338237922280315
+   },
+   "binary_limits": {
+    "rho0_vs_binaryV2": 1.3322676295501878e-15,
+    "rho0_depth_shift_change": 0.0,
+    "binary_masses_minus_prior": 3.885780586188048e-16,
+    "binary_solves": 1
+   },
+   "corruption": {
+    "paid_arrays_identical": true,
+    "probability_change": 0.0,
+    "acquisition_change": 0.0
+   },
+   "batch": {
+    "max_diff": 1.1102230246251565e-16,
+    "reference_pool_unchanged": true
+   },
+   "missing_response": {
+    "n_paid": 40,
+    "n_response": 39,
+    "expected_n_response": 39
+   },
+   "induced_fallback": {
+    "fallback": true,
+    "methods": [
+     "laplace",
+     "laplace",
+     "laplace"
+    ],
+    "n_components": 3,
+    "weights": [
+     2.970415927112201e-06,
+     0.06318541241025014,
+     0.9368116171738222
+    ],
+    "max_prob_diff_vs_EP": 0.04216257474089924
+   },
+   "covariance": {
+    "joint_identity": 4.996003610813204e-16,
+    "mixture_within_plus_between": 0.0,
+    "unconditioned_h_prior_equal_across_rho": 0.0
+   },
+   "acquisition": {
+    "label_only_closed_form_vs_direct": 1.3010426069826053e-18,
+    "mixture_minus_weighted_component_average": [
+     -2.692647344644354e-06,
+     -1.9683380617006684e-07,
+     -5.285370614508322e-07
+    ],
+    "nonnegative_and_bounded": true,
+    "quadrature_15_48_vs_31_64": 4.578503302941732e-10
+   }
+  }
+ ],
+ "paid_prefixes_with_missing_response": [],
+ "hard_checks": {
+  "astra_checks_reproduced": true,
+  "port_passes_astra_checks": true,
+  "port_matches_delivered_references": true,
+  "sparse_case_reproduced": true,
+  "ess_reference_reproduced": true,
+  "synthetic_leakage_zero": true,
+  "synthetic_record_reproduced": true,
+  "induced_fallback_whole_mixture": true,
+  "real_parity": true,
+  "real_rho1_laplace_is_V1": true,
+  "real_binary_limits": true,
+  "real_corruption_invariance": true,
+  "real_batch_invariance": true,
+  "real_missing_response_keeps_label": true,
+  "real_induced_fallback": true,
+  "real_covariance_identities": true,
+  "real_acquisition_identities": true
+ },
+ "status": "PASS",
+ "counts": {
+  "component_solves": 144,
+  "sampling_chains": 16
+ },
+ "seconds": 45.55925273895264
+}

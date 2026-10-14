@@ -1,0 +1,76 @@
+{
+  "record_date": "2026-10-13",
+  "status": "FROZEN BEFORE V2 NUMERICAL FITS OR COMPARATIVE RESULTS",
+  "evidence_commit": "e2bcf97a55736cdd2933b6761678d8b695358205",
+  "immutable_v1_directory": "../week20_method_development",
+  "primary_direction": "A",
+  "primary_improvement": "Integrate uncertain depth-label coupling while preserving the marginal classifier prior.",
+  "model": "h = rho*f + sqrt(1-rho^2)*g - theta + delta; f and g independent GPs with identical Kf, centered delta and proper theta as in V1.",
+  "rho_hyperprior": {"support":[0.0,0.5,1.0],"probabilities":[0.3333333333333333,0.3333333333333333,0.3333333333333333]},
+  "rationale": "V1 forces all of its response-GP contribution to share with classification. Lowering that coupling must not simultaneously shrink or enlarge the marginal classifier prior. rho=0 recovers the capacity-matched binary law and rho=1 recovers V1's model. Paid paired outcomes update all component weights. One global rho may still miss local exceptions; no rare-negative guarantee is claimed.",
+  "inference": "Damped probit expectation propagation per rho component, then approximate-evidence-weighted Gaussian mixture. EP is a declared numerical refinement supported by primary literature, not an outcome-selected alternative. Fixed-rho=1 EP and V1 Laplace isolate this refinement. If any EP component fails the declared acceptance policy, refit every component with Laplace and mark fallback; never drop a component.",
+  "other_priors": {"f_sd":0.6,"delta_sd":0.35,"theta_mean":0.0,"theta_sd":0.35,"sigma_z":0.03,"tau":0.15,"lengthscale_1d":0.5,"lengthscale_4d":1.5,"kernel":"Matern-3/2","fixed_response_mean":0.0},
+  "preprocessing": "Synthetic coordinates as generated; real deployment uses frozen standardized four-log inputs on feature-only training candidates. Fixed log(A/111 um). No learned real-data parameters in this task.",
+  "tuning": "No empirical-Bayes search, class weights or selected decision cutoff. Integrate the three rho values with equal prior mass. All remaining priors fixed. Binary V2 uses the same marginal prior and EP rules without any continuous likelihood or depth-trained kernel.",
+  "primary_decision": "p>=0.5, unchanged, to isolate model contribution; BA-aligned decisions studied separately as a small decision-theory counterexample.",
+  "acquisition": "Integrated posterior variance reduction of pi=Phi(h/tau), with mixture weights updated for both future Z and Y. Uniform fixed feature-only integration pool. Same model and information contract versus p=0.5 margin.",
+  "static_worlds": [
+    "informative_depth: linear smooth depth and positively aligned probit label law",
+    "redundant_depth: constant depth, labels depend on other inputs",
+    "local_contradiction: positive depth relation with a local negative discrepancy",
+    "harmful_bridge: label law anti-aligned with depth",
+    "uncertain_threshold: positive relation with threshold shifted by 0.25",
+    "zero_paid_negatives: rare-negative world, conditioned paid prefix with zero negatives",
+    "one_paid_negative: same world, conditioned prefix with one negative",
+    "two_paid_negatives: same world, conditioned prefix with two negatives",
+    "missing_response: informative world with every third response absent",
+    "model_generated: draw from the specified joint family with rho=0.5"
+  ],
+  "static_plan": {
+    "seeds":[1301,1302],
+    "dimensions":4,
+    "pool_size":40,
+    "test_size":96,
+    "budgets":[8,16],
+    "arms":["V2_EP_mixture","V1_Laplace","Binary_V2_EP","Binary_V1_Laplace","rho1_EP"],
+    "top_level_requests":200,
+    "maximum_component_solves_without_fallback":280
+  },
+  "sequential_plan": {
+    "worlds":["informative_depth","local_contradiction","harmful_bridge"],
+    "seeds":[2301,2302,2303],
+    "dimensions":4,
+    "pool_size":24,
+    "test_size":96,
+    "startup":6,
+    "last_budget":10,
+    "rules":["paired","margin"],
+    "same_information_contract":"Both arms receive label and available response after each selected query; no unqueried/test outcomes to model or scorer.",
+    "top_level_requests":90,
+    "maximum_component_solves_without_fallback":270,
+    "quadrature":"15 response nodes/48 CDF nodes checked against 31/64 before selection; 63/96 only if ranking unstable. Numerical stability screen, not rigorous integration bound. Stop unresolved trajectory."
+  },
+  "compute": {
+    "controlled_model_fit_request_ceiling":600,
+    "conservative_accounting":"Also cap component solves at 600, counting failed solves and fallbacks. Expected static+sequential component solves 550; at most 30 correctness component solves, 20 contingency. Numerical-reference integrations/sampling counted separately.",
+    "workers":1,
+    "blas_threads":1,
+    "resumable":"One record per completed request; preserve failures; refuse incompatible source/manifest hashes.",
+    "no_real_data_fits":true
+  },
+  "metrics":["BA","specificity","sensitivity","Brier","log_loss","90pct_pi_coverage","90pct_pi_width","mean_squared_probability_error","posterior_rho_weights","inference_status","path_divergence"],
+  "expected_directions": {
+    "identities":"Without continuous observations rho is not learned and predictions equal Binary V2; rho=1 model equals V1; rho=0 removes depth influence.",
+    "uncertain":"V2 may protect specificity when forced sharing is harmful; it may lose efficiency when depth is strongly informative. Local exceptions and one-class prefixes may not identify global rho. No numeric performance gain forecast.",
+    "inference":"EP should match exact single-probit tilted mean/variance; Gaussian prediction and evidence errors must still be measured on non-Gaussian multi-observation references.",
+    "acquisition":"Joint information is not the average of component utilities. No forecast of superior BA, query savings or path divergence."
+  },
+  "numerical_reference_plan":"Independent scalar and two-variable quadrature; response/label moment checks, component evidence and covariance error. Where tractable compare mixture acquisition rankings against dense posterior integration. References do not choose primary priors or worlds.",
+  "additional_idea":{
+    "name":"Decision loss versus calibration",
+    "mechanism":"BA-optimal decisions depend on population class weights; even exact calibrated probabilities need not use cutoff 0.5.",
+    "test":"Small exact finite-pool enumeration and biased-paid-composition counterexample, no model fitting or held-out threshold selection.",
+    "stopping_condition":"Do not expand into a threshold search or real-data post-hoc rescoring; report whether this explains only a possible decision effect, not the C3 failure."
+  },
+  "ownership":"Opus completes frozen V1 Stage M on NEW/OLD/POOLED first; V2 is separate. C3 spent. Stage A real-data and C4 are not executed here. No messages, push, simulators or Opus edits."
+}
