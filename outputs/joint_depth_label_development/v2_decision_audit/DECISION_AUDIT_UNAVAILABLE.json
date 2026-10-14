@@ -1,0 +1,413 @@
+{
+ "audit_version": "decision-audit-1.1.1",
+ "audit_status": "PRIMARY_UNAVAILABLE",
+ "exit_code": 3,
+ "primary": {
+  "arm": "V2_EP_mixture",
+  "rule": "finite_batch",
+  "checkpoints_expected": 20,
+  "checkpoints_ok": 11,
+  "invalid_checkpoints": [
+   "NEW__r1_f1__B16__V2_EP_mixture",
+   "NEW__r1_f1__B40__V2_EP_mixture",
+   "NEW__r1_f2__B16__V2_EP_mixture",
+   "NEW__r1_f2__B40__V2_EP_mixture",
+   "NEW__r2_f1__B40__V2_EP_mixture",
+   "NEW__r2_f2__B40__V2_EP_mixture",
+   "NEW__r2_f3__B40__V2_EP_mixture",
+   "NEW__r2_f5__B16__V2_EP_mixture",
+   "NEW__r2_f5__B40__V2_EP_mixture"
+  ],
+  "test_partitions_complete": true,
+  "status": "PRIMARY_UNAVAILABLE"
+ },
+ "checkpoints_expected": 60,
+ "checkpoints_recorded": 60,
+ "unexpected_records": [],
+ "status_counts": {
+  "DECISION_NUMERICAL_STOP": 21,
+  "ok": 39
+ },
+ "numerical_stops": 21,
+ "invalid_checkpoints": {
+  "NEW__r1_f1__B16__V2_EP_mixture": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f1__B16__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f1__B40__V2_EP_mixture": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f1__B40__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f2__B16__V2_EP_mixture": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f2__B40__V2_EP_mixture": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f2__B40__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f3__B16__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f3__B40__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f4__B16__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f1__B16__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f1__B40__V2_EP_mixture": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f2__B16__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f2__B40__Binary_V2_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f2__B40__V2_EP_mixture": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f2__B40__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f3__B40__V2_EP_mixture": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f4__B40__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f5__B16__V2_EP_mixture": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f5__B40__V2_EP_mixture": "DECISION_NUMERICAL_STOP",
+  "NEW__r2_f5__B40__rho1_EP": "DECISION_NUMERICAL_STOP"
+ },
+ "p_parity_tolerance": 1e-10,
+ "readouts": {
+  "V2_EP_mixture|B16|r1|finite_batch": {
+   "available": false,
+   "valid_folds": 3,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B16__V2_EP_mixture",
+    "NEW__r1_f2__B16__V2_EP_mixture"
+   ],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r1|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 3,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B16__V2_EP_mixture",
+    "NEW__r1_f2__B16__V2_EP_mixture"
+   ],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r2|finite_batch": {
+   "available": false,
+   "valid_folds": 4,
+   "invalid_checkpoints": [
+    "NEW__r2_f5__B16__V2_EP_mixture"
+   ],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r2|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 4,
+   "invalid_checkpoints": [
+    "NEW__r2_f5__B16__V2_EP_mixture"
+   ],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r1|finite_batch": {
+   "available": false,
+   "valid_folds": 3,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B40__V2_EP_mixture",
+    "NEW__r1_f2__B40__V2_EP_mixture"
+   ],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r1|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 3,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B40__V2_EP_mixture",
+    "NEW__r1_f2__B40__V2_EP_mixture"
+   ],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r2|finite_batch": {
+   "available": false,
+   "valid_folds": 1,
+   "invalid_checkpoints": [
+    "NEW__r2_f1__B40__V2_EP_mixture",
+    "NEW__r2_f2__B40__V2_EP_mixture",
+    "NEW__r2_f3__B40__V2_EP_mixture",
+    "NEW__r2_f5__B40__V2_EP_mixture"
+   ],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r2|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 1,
+   "invalid_checkpoints": [
+    "NEW__r2_f1__B40__V2_EP_mixture",
+    "NEW__r2_f2__B40__V2_EP_mixture",
+    "NEW__r2_f3__B40__V2_EP_mixture",
+    "NEW__r2_f5__B40__V2_EP_mixture"
+   ],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r1|finite_batch": {
+   "available": false,
+   "valid_folds": 2,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B16__rho1_EP",
+    "NEW__r1_f3__B16__rho1_EP",
+    "NEW__r1_f4__B16__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r1|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 2,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B16__rho1_EP",
+    "NEW__r1_f3__B16__rho1_EP",
+    "NEW__r1_f4__B16__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r2|finite_batch": {
+   "available": false,
+   "valid_folds": 3,
+   "invalid_checkpoints": [
+    "NEW__r2_f1__B16__rho1_EP",
+    "NEW__r2_f2__B16__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r2|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 3,
+   "invalid_checkpoints": [
+    "NEW__r2_f1__B16__rho1_EP",
+    "NEW__r2_f2__B16__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r1|finite_batch": {
+   "available": false,
+   "valid_folds": 2,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B40__rho1_EP",
+    "NEW__r1_f2__B40__rho1_EP",
+    "NEW__r1_f3__B40__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r1|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 2,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B40__rho1_EP",
+    "NEW__r1_f2__B40__rho1_EP",
+    "NEW__r1_f3__B40__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r2|finite_batch": {
+   "available": false,
+   "valid_folds": 2,
+   "invalid_checkpoints": [
+    "NEW__r2_f2__B40__rho1_EP",
+    "NEW__r2_f4__B40__rho1_EP",
+    "NEW__r2_f5__B40__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r2|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 2,
+   "invalid_checkpoints": [
+    "NEW__r2_f2__B40__rho1_EP",
+    "NEW__r2_f4__B40__rho1_EP",
+    "NEW__r2_f5__B40__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r1|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r1|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r2|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r2|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r1|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r1|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r2|finite_batch": {
+   "available": false,
+   "valid_folds": 4,
+   "invalid_checkpoints": [
+    "NEW__r2_f2__B40__Binary_V2_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r2|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 4,
+   "invalid_checkpoints": [
+    "NEW__r2_f2__B40__Binary_V2_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  }
+ },
+ "unreadable_records": [],
+ "max_abs_p_minus_stored": 2.220446049250313e-16,
+ "probability_parity_pass_all_checkpoints": true,
+ "cutoff_decisions_recomputed_from_p": true,
+ "probabilities_identical_across_cutoff_rules": true,
+ "ambiguous_test_decisions_accepted": 12,
+ "ambiguous_test_decisions_all_attempted": 24
+}

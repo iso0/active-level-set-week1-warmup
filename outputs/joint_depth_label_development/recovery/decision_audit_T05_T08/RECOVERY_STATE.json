@@ -24,13 +24,33 @@
                                                         "validation_status":  "PASS"
                                                     },
                   "R06_DECISION_FREEZE":  {
-                                              "status":  "pending"
+                                              "status":  "done",
+                                              "manifest_commit":  "4107fa31",
+                                              "seconds":  2.6,
+                                              "module_sha256":  "e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f",
+                                              "started_utc":  "2026-10-14T23:07:12.2423385Z",
+                                              "attempt_id":  "R06_DECISION_FREEZE",
+                                              "manifest_sha256":  "172a4f00647de1d274afc0d48a07da00a9c955898a4b49110c6d4a715c11865e",
+                                              "exit_code":  0
                                           },
                   "R07_DECISION_RUN":  {
-                                           "status":  "pending"
+                                           "status":  "done",
+                                           "exit_code":  0,
+                                           "attempt_id":  "R07_DECISION_RUN",
+                                           "records":  60,
+                                           "started_utc":  "2026-10-14T23:08:23.1650797Z",
+                                           "module_sha256":  "e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f",
+                                           "seconds":  325.2
                                        },
                   "R08_DECISION_EVALUATE":  {
-                                                "status":  "pending"
+                                                "status":  "done",
+                                                "seconds":  10.8,
+                                                "module_sha256":  "e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f",
+                                                "result_file":  "DECISION_AUDIT_UNAVAILABLE.json",
+                                                "started_utc":  "2026-10-14T23:14:48.8669745Z",
+                                                "attempt_id":  "R08_DECISION_EVALUATE",
+                                                "exit_code":  3,
+                                                "outcome":  "PRIMARY_UNAVAILABLE"
                                             }
               },
     "recovery_pid":  22276,

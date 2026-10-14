@@ -1,0 +1,61 @@
+NEW__r1_f1__B16__V2_EP_mixture DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.925 paid 0.938 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f1__B16__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.931 paid 0.938 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f1__B16__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.900 paid 0.938
+NEW__r1_f1__B40__V2_EP_mixture DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.916 paid 0.900 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f1__B40__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.917 paid 0.900 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f1__B40__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.892 paid 0.900
+NEW__r1_f2__B16__V2_EP_mixture DECISION_NUMERICAL_STOP |p-stored| 2.2e-16 pi_mean 0.864 paid 0.875 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f2__B16__rho1_EP ok |p-stored| 1.1e-16 pi_mean 0.867 paid 0.875
+NEW__r1_f2__B16__Binary_V2_EP ok |p-stored| 2.2e-16 pi_mean 0.838 paid 0.875
+NEW__r1_f2__B40__V2_EP_mixture DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.926 paid 0.925 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f2__B40__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.926 paid 0.925 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f2__B40__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.909 paid 0.925
+NEW__r1_f3__B16__V2_EP_mixture ok |p-stored| 1.1e-16 pi_mean 0.846 paid 0.812
+NEW__r1_f3__B16__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.852 paid 0.812 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f3__B16__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.803 paid 0.812
+NEW__r1_f3__B40__V2_EP_mixture ok |p-stored| 1.1e-16 pi_mean 0.915 paid 0.900
+NEW__r1_f3__B40__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.916 paid 0.900 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f3__B40__Binary_V2_EP ok |p-stored| 2.2e-16 pi_mean 0.894 paid 0.900
+NEW__r1_f4__B16__V2_EP_mixture ok |p-stored| 1.1e-16 pi_mean 0.897 paid 0.875
+NEW__r1_f4__B16__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 2.2e-16 pi_mean 0.906 paid 0.875 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r1_f4__B16__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.861 paid 0.875
+NEW__r1_f4__B40__V2_EP_mixture ok |p-stored| 1.1e-16 pi_mean 0.875 paid 0.825
+NEW__r1_f4__B40__rho1_EP ok |p-stored| 1.1e-16 pi_mean 0.876 paid 0.825
+NEW__r1_f4__B40__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.848 paid 0.825
+NEW__r1_f5__B16__V2_EP_mixture ok |p-stored| 1.1e-16 pi_mean 0.818 paid 0.812
+NEW__r1_f5__B16__rho1_EP ok |p-stored| 1.1e-16 pi_mean 0.831 paid 0.812
+NEW__r1_f5__B16__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.772 paid 0.812
+NEW__r1_f5__B40__V2_EP_mixture ok |p-stored| 2.2e-16 pi_mean 0.883 paid 0.850
+NEW__r1_f5__B40__rho1_EP ok |p-stored| 1.1e-16 pi_mean 0.883 paid 0.850
+NEW__r1_f5__B40__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.862 paid 0.850
+NEW__r2_f1__B16__V2_EP_mixture ok |p-stored| 1.1e-16 pi_mean 0.868 paid 0.812
+NEW__r2_f1__B16__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.878 paid 0.812 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f1__B16__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.820 paid 0.812
+NEW__r2_f1__B40__V2_EP_mixture DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.899 paid 0.875 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f1__B40__rho1_EP ok |p-stored| 1.1e-16 pi_mean 0.900 paid 0.875
+NEW__r2_f1__B40__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.876 paid 0.875
+NEW__r2_f2__B16__V2_EP_mixture ok |p-stored| 1.1e-16 pi_mean 0.897 paid 0.875
+NEW__r2_f2__B16__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.906 paid 0.875 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f2__B16__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.865 paid 0.875
+NEW__r2_f2__B40__V2_EP_mixture DECISION_NUMERICAL_STOP |p-stored| 2.2e-16 pi_mean 0.942 paid 0.925 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f2__B40__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.943 paid 0.925 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f2__B40__Binary_V2_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.927 paid 0.925 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f3__B16__V2_EP_mixture ok |p-stored| 1.1e-16 pi_mean 0.858 paid 0.812
+NEW__r2_f3__B16__rho1_EP ok |p-stored| 1.1e-16 pi_mean 0.865 paid 0.812
+NEW__r2_f3__B16__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.817 paid 0.812
+NEW__r2_f3__B40__V2_EP_mixture DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.898 paid 0.875 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f3__B40__rho1_EP ok |p-stored| 1.1e-16 pi_mean 0.899 paid 0.875
+NEW__r2_f3__B40__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.876 paid 0.875
+NEW__r2_f4__B16__V2_EP_mixture ok |p-stored| 2.2e-16 pi_mean 0.885 paid 0.875
+NEW__r2_f4__B16__rho1_EP ok |p-stored| 1.1e-16 pi_mean 0.894 paid 0.875
+NEW__r2_f4__B16__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.842 paid 0.875
+NEW__r2_f4__B40__V2_EP_mixture ok |p-stored| 1.1e-16 pi_mean 0.901 paid 0.875
+NEW__r2_f4__B40__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.902 paid 0.875 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f4__B40__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.869 paid 0.875
+NEW__r2_f5__B16__V2_EP_mixture DECISION_NUMERICAL_STOP |p-stored| 2.2e-16 pi_mean 0.846 paid 0.812 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f5__B16__rho1_EP ok |p-stored| 1.1e-16 pi_mean 0.848 paid 0.812
+NEW__r2_f5__B16__Binary_V2_EP ok |p-stored| 1.1e-16 pi_mean 0.818 paid 0.812
+NEW__r2_f5__B40__V2_EP_mixture DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.912 paid 0.875 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f5__B40__rho1_EP DECISION_NUMERICAL_STOP |p-stored| 1.1e-16 pi_mean 0.912 paid 0.875 (ladder not accepted up to 2^14 (needs max margin change <= 0.015 and pi change <= 0.003))
+NEW__r2_f5__B40__Binary_V2_EP ok |p-stored| 2.2e-16 pi_mean 0.895 paid 0.875
+decision audit: 322.3s, zero fits; checkpoint statuses written in this session: {'DECISION_NUMERICAL_STOP': 21, 'ok': 39}

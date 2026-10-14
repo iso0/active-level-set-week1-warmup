@@ -10,3 +10,10 @@
 {"event":"PUSH","ok":true,"attempt":1,"detail":"","utc":"2026-10-14T23:06:11.7890934Z"}
 {"event":"START","step":"R06_DECISION_FREEZE","used_before":2,"astra_active":true,"astra_state":"CONTROLLED_RUN","leaves":"16972:1","python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_decision_audit manifest --threads 1","module_sha256":"e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f","utc":"2026-10-14T23:07:12.2400203Z"}
 {"event":"END","step":"R06_DECISION_FREEZE","exit_code":0,"seconds":2.6,"utc":"2026-10-14T23:07:14.8605991Z"}
+{"event":"COMMIT","ok":true,"head":"4107fa31","attempt":1,"message":"Recovery R06: decision-audit manifest frozen against decision-audit-1.1.1 and its new validation, before any audit decis","utc":"2026-10-14T23:07:17.2398273Z"}
+{"event":"PUSH","ok":true,"attempt":1,"detail":"","utc":"2026-10-14T23:07:22.5564001Z"}
+{"event":"START","step":"R07_DECISION_RUN","used_before":2,"astra_active":true,"astra_state":"CONTROLLED_RUN","leaves":"16972:1","python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_decision_audit run --threads 1","module_sha256":"e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f","utc":"2026-10-14T23:08:23.1650797Z"}
+{"event":"END","step":"R07_DECISION_RUN","exit_code":0,"seconds":325.2,"utc":"2026-10-14T23:13:48.4049673Z"}
+{"event":"START","step":"R08_DECISION_EVALUATE","used_before":2,"astra_active":true,"astra_state":"CONTROLLED_RUN","leaves":"16972:1","python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_decision_audit evaluate --threads 1","module_sha256":"e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f","utc":"2026-10-14T23:14:48.8649644Z"}
+{"event":"END","step":"R08_DECISION_EVALUATE","exit_code":3,"seconds":10.8,"utc":"2026-10-14T23:14:59.7130944Z"}
+{"event":"AUDIT_OUTCOME","step":"R08_DECISION_EVALUATE","outcome":"PRIMARY_UNAVAILABLE","exit_code":3,"utc":"2026-10-14T23:14:59.7421642Z"}
