@@ -1,0 +1,19 @@
+{
+ "freeze": "c3/freeze_c3.json",
+ "R3_NEW_ACTIVE_minus_G3": {
+  "mean": 0.007140456989247312,
+  "lo": -0.036489835349462374,
+  "hi": 0.05287088373655913,
+  "repeats": 4
+ },
+ "R3_OLD_ACTIVE_minus_G3": 0.011015702364251534,
+ "R1_POOLED_ACTIVE_minus_G3": 0.004357237191594809,
+ "Q3a": false,
+ "Q3b": true,
+ "verdict": "NOT CONFIRMED AT THE FROZEN BAR",
+ "run_statuses": {
+  "ok": 180
+ },
+ "runs": 180,
+ "fits": 13128
+}

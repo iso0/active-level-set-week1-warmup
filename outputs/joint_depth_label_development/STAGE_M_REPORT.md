@@ -4,6 +4,10 @@
 - **Freeze:** `STUDY_MANIFEST.json`, commit `0c0ce614`, written before any comparative fit.
 - **Results:** commit `23acbaa3`.
 - **Evidence labels:** **PRED** = held-out predictions; **OBS** = logs and tables; **POST-HOC** = added after the results were seen; **HYP** = interpretation.
+- **Errata of 2026-10-14** (claims narrowed; the frozen screen, its numbers and the failed decision are unchanged; markers in §5):
+  - **[E1]** The paid-prevalence cutoff is a heuristic. The paid fraction is not an unbiased estimate of the target prevalence, and probabilities need not be population-calibrated, so "BA is maximised at the class prior" does not make p ≥ π̂ optimal.
+  - **[E2]** Small effects of the θ and δ ablations do not show that either is physically unidentifiable or irrelevant; they describe these priors, budgets and data.
+  - **[E4]** "No model resolves that corner" means that none of the tested models did, not that no discriminator exists.
 
 ## 1. What was run
 
@@ -112,14 +116,14 @@
 
 1. **Continuous depth helps.** It helps decisively on OLD, where the label is nearly a depth threshold: +0.06 to +0.07 BA, and J nearly matches ACTIVE_E1. It helps marginally on POOLED. On NEW it improves ranking and probability quality (AUC, log loss, Brier) but not balanced accuracy at p ≥ 0.5.
 2. **The NEW BA gap is a decision-rule problem as much as a model problem.**
-   - About 91 % of NEW runs are positive, so a fixed probit model with a proper prior is calibrated to that rate. Its well-ranked negatives therefore still sit above 0.5.
+   - About 91 % of NEW runs are positive, so a fixed probit model with a proper prior is calibrated to that rate. Its well-ranked negatives therefore still sit above 0.5. [E1: "calibrated to that rate" was not tested; reliability with 12 negatives is coarse]
    - ACTIVE_E1 classifies by a depth threshold rather than a calibrated probability. It reaches the best NEW BA (0.730), with the worst log loss (0.799).
    - POST-HOC (`MECHANISM_REPORT.md`): moving J's threshold to the paid-label prevalence, a train-only rule, raises its NEW B40 BA to 0.870. This is now tested prospectively in `exploratory/`.
    - *Addendum, after EX1/EX2 (`exploratory/EXPLORATORY_REPORT.md`):*
      - On DEV repeats 5–8 the registered predictions held: +0.335 BA at π̂, while the depth-free control lost −0.067. A response prior trained on the paid depths added a further +0.028.
-     - The NEW gain at π̂ amounts to classifying the whole fast-scan corner as "no Keyhole". No model resolves that corner.
+     - The NEW gain at π̂ amounts to classifying the whole fast-scan corner as "no Keyhole". No model resolves that corner. [E4: none of the tested models did. The π̂ version also gives up short-K detection (0.675 → 0.05 for J_trained; `exploratory/EX_METRICS_ADDENDUM.md`)]
      - The frozen Stage M decision above is unchanged.
-3. **θ and δ.** Under the fixed priors, the threshold flexibility (J_fixed_theta) and the discrepancy (J_no_delta) change NEW results only within noise. The discrepancy does not carve out the fast-scan negatives.
+3. **θ and δ.** Under the fixed priors, the threshold flexibility (J_fixed_theta) and the discrepancy (J_no_delta) change NEW results only within noise. The discrepancy does not carve out the fast-scan negatives. [E2]
 
 ## 6. Limitations
 - **Data:** two repeats and 12 NEW negatives. The bootstrap is conditional on the stored fits and these splits.

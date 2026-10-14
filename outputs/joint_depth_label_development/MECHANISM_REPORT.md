@@ -5,6 +5,18 @@
 - **POST-HOC:** the threshold-alignment table was added after the Stage M result was seen and is marked as such.
 - **Evaluation-only strata:** labels, fast scans, short-K and support classes never reach a model.
 - **Run names:** full simulation IDs, as in `errors_by_full_id.csv` and `NEW_negatives_by_arm.csv`.
+- **Errata of 2026-10-14 (narrowing of claims; numbers, manifests and decisions unchanged; markers [E1]–[E4] in the text below):**
+  - **[E1] The paid-prevalence cutoff is a heuristic.**
+    - "BA is maximised at p = the class prior" holds for probabilities calibrated to the target population and for that population's prevalence.
+    - The paid fraction of a feature-only maximin prefix, or of any adaptive prefix, is not an unbiased estimate of that prevalence.
+    - Under posterior uncertainty the BA-optimal action is in general not a single plug-in cutoff (Astra's finite-pool example).
+    - So p ≥ π̂ is a train-only heuristic, not a derived optimum.
+  - **[E2] Small ablation effects do not establish physical identifiability or irrelevance.** That θ and δ barely move, or that fixing them changes little, describes these fixed priors, budgets and data, not the physics.
+  - **[E3] The θ-conditioning diagnostic's zero decision changes are structural.**
+    - For the jointly Gaussian (Laplace) posterior, conditioning on θ at its own posterior mean leaves E[h] unchanged: the conditional mean shifts by Cov(h, θ)/Var(θ) · (θ − E θ) = 0. Only Var(h) shrinks.
+    - Because p ≥ 0.5 ⟺ E[h] ≥ 0, no decision at 0.5 can change from that variance reduction.
+    - The "0 decision changes" are therefore not evidence that threshold uncertainty is unimportant; it changes probabilities by up to 0.046.
+  - **[E4] No discriminator among those tested does not mean that none exists.** Where the text says depth or a model cannot separate the fast-scan cases, it means the tested models with these priors and paid data did not.
 - **Erratum (2026-10-13, after commit `3afad1dc`):** the first version identified runs by H suffix. Those suffixes are not unique: `H-e7dbd8e5ce` and `H-b302fc6cbd` are each shared by two NEW simulations (`week20_active_temporal_development/NAMED_RUNS.csv`). The full IDs below replace them. No number changed.
 
 ## 1. Who is misclassified (OBS; NEW, B40, both repeats)
@@ -39,8 +51,8 @@ NEW, B40: the latent margin h = f − θ + δ, averaged per class.
 | J_no_delta | negatives | 0.269 | −0.010 | — | 0.278 | 0.833 |
 | Binary_matched | negatives | 0.035 | −0.188 | −0.032 | 0.191 | 0.875 |
 
-- **Not absorbed into θ.** θ stays at about 0 (posterior SD 0.155), and removing δ hardly moves it (J_no_delta θ −0.010).
-- **Not represented by δ.** Its posterior means are tiny: |δ| 0.04–0.06 against a prior SD of 0.35.
+- **Not absorbed into θ.** θ stays at about 0 (posterior SD 0.155), and removing δ hardly moves it (J_no_delta θ −0.010). [E2]
+- **Not represented by δ.** Its posterior means are tiny: |δ| 0.04–0.06 against a prior SD of 0.35. [E2]
 - **Left unresolved.** The negatives keep h ≈ 0.30 > 0, so p ≈ 0.69. Ranking still works: the mean h is 0.30 for negatives and 0.85 for positives, and AUC is 0.873.
 - **The depth prediction is too deep for fast-scan negatives.**
   - Predicted f is 0.10 to 0.42. Observed z = log(A/111) is −0.33 to +0.17, i.e. 79–131 µm.
@@ -59,7 +71,7 @@ NEW, B40: the latent margin h = f − θ + δ, averaged per class.
 | POOLED 16 | 0.046 | 0 | 0.119 | 12 (10) |
 | POOLED 40 | 0.026 | 0 | 0.058 | 3 (2) |
 
-- **The two quantities are different.** Conditioning the fitted joint posterior on θ̂ removes only the local contribution of θ uncertainty to Var(h), and it never changes a decision. Refitting with θ fixed at the prior mean changes the fit itself (other components re-balance), and it changes up to 14 decisions.
+- **The two quantities are different.** Conditioning the fitted joint posterior on θ̂ removes only the local contribution of θ uncertainty to Var(h), and it never changes a decision [E3: structurally impossible at 0.5, since E[h] is unchanged]. Refitting with θ fixed at the prior mean changes the fit itself (other components re-balance), and it changes up to 14 decisions.
 - **The posterior on θ is informative but stays centred near 0 (111 µm).** Its mean is −0.15 to +0.10 and its SD 0.14–0.27, down from 0.35.
 
 ## 4. The same simulations through two lenses: GP prediction vs response oracle (held-out A, NOT deployable; `oracle_response_vs_gp_same_simulations.csv`)
@@ -102,7 +114,7 @@ The comparison: p ≥ 0.5 vs p ≥ the paid-label prevalence of the same checkpo
 | G3, B40 | 0.618 | 0.722 | 0.775 | 0.292 → 1.000 |
 | Binary_matched, B40 | 0.546 | 0.504 | 0.802 | 0.125 → 1.000 |
 
-- **Why it matters.** For a calibrated probability, BA is maximised at p = the class prior, not at 0.5. NEW's paid prevalence is about 0.9.
+- **Why it matters.** For a calibrated probability, BA is maximised at p = the class prior, not at 0.5. NEW's paid prevalence is about 0.9. [E1: holds only for population-calibrated p and the population prevalence; the paid prevalence is a heuristic plug-in]
 - **J is ready for the prevalence threshold.** Its probabilities are sharp enough that the threshold lands between its negatives and positives.
 - **Binary_matched is not.** Its probabilities, which lack depth information, are compressed below the prevalence, so the same rule calls everything negative.
 - **OLD and POOLED.** Prevalence 0.18 and 0.36: the rule leaves J roughly unchanged (OLD B40 0.927 → 0.932) and hurts Binary_matched.
@@ -115,7 +127,7 @@ The comparison: p ≥ 0.5 vs p ≥ the paid-label prevalence of the same checkpo
   - Decision changes per fold: 0, 0, 1, 0, 1 (one of them on a negative).
   - The approximation is adequate for decisions at 0.5 but not negligible for probabilities.
 - **Conditioning** (`conditioning_and_convergence.csv`): every J-family fit converged in a few Newton steps. The whitened Hessian's minimum eigenvalue is ≥ 1 by construction. No numerical failure.
-- **Positive-depth coupling (HYP).** The fixed coefficient of 1 is helpful on OLD and POOLED. On NEW, fast-scan positives and negatives share depths around 110 µm, so the coupling cannot separate them; that work is left to δ, which under this prior is too smooth and too small.
+- **Positive-depth coupling (HYP).** The fixed coefficient of 1 is helpful on OLD and POOLED. On NEW, fast-scan positives and negatives share depths around 110 µm, so the coupling cannot separate them; that work is left to δ, which under this prior is too smooth and too small. [E4: "cannot" refers to this model and prior]
   - A trained (paid-data-only) or less smooth discrepancy prior would be a separately manifested development step, never one selected on held-out BA.
 
 ## 8. Diagnosis of the failed Stage M screen

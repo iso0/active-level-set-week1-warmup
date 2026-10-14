@@ -1,0 +1,11 @@
+{
+ "rule": "C3 protocol draft: written (NOT executed) only if X-H1 holds (repeats 5-8 point estimate > 0) AND the repeats 1-8 point estimate of R3_NEW ACTIVE - G3 BA-AULC is > 0; otherwise HOLD (no C3 protocol). Spending C3 remains the owner's decision.",
+ "X-H1_supported": true,
+ "repeats_1_8_ACTIVE_minus_G3": 0.056492212036223774,
+ "repeats_1_8_interval": [
+  0.014661901232966047,
+  0.1033359517434858
+ ],
+ "decision": "C3 PROTOCOL DRAFT (not executed)",
+ "repeats_1_4_AULC_reproduced_max_abs_diff": 1.1102230246251565e-16
+}

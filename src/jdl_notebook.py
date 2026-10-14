@@ -142,8 +142,12 @@ print(pd.read_csv(tr).round(3).to_string() if tr.exists() else 'temporal repair:
   - Both are exploratory. Neither changes the frozen Stage M decision, and neither has been confirmed on reserved data.
 - **What the gain consists of (POST-HOC, `exploratory/EXPLORATORY_REPORT.md` §3).**
   - At p ≥ π̂, the joint model labels the whole fast-scan corner (VX > 0.85 m/s) "no Keyhole": all 11 fast negatives are rejected and nearly all 12 fast positives are missed.
-  - Inside that corner no model in the study is better than chance, because depth does not separate the labels there.
-  - The one persistent false positive is a slow scan whose recording ended early and which has no A."""),
+  - None of the tested models separated the cases inside that corner. This does not show that no discriminator exists.
+  - The one persistent false positive is a slow scan whose recording ended early and which has no A.
+- **Errata of 2026-10-14.**
+  - p ≥ π̂ is a train-only heuristic: the paid fraction is not an unbiased prevalence estimate.
+  - Its global BA gain costs short-K detection (J_trained 0.675 → 0.05), so J_trained at 0.5 remains a serious comparator.
+  - Small ablation effects do not establish physical (non-)identifiability."""),
 ]
 
 

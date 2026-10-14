@@ -1,0 +1,23 @@
+{
+  "fingerprint": "9ef9ffefb59d6d2b9c6053df4eeb03dd8e71fa2a79a38c220d480a781ae9cd41",
+  "source_sha256": {
+    "joint_model_v2.py": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+    "v1_reference.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+    "controlled_worlds.py": "a9fa89cbf4c963655d68d495f18421944a0205f8f627be3999e8e61cdfb00a1a",
+    "run_controlled.py": "9e5fb3644ea947b4ffd0fe476bd71acabef924c5de4c57faaca71da8ad83f79b",
+    "reference_checks.py": "5e30ceb36c9661eb2c954e20b73686a28cff6ae312e4d8dbe7ad8e8527dcc454",
+    "SELECTION_RECORD_V2.json": "046a523df4f556b704b8a412ab30a9d33ecd881e1868bcec7296e61ac0ebe002"
+  },
+  "requests": 302,
+  "component_solves": 568,
+  "correctness_requests": 12,
+  "correctness_component_solves": 18,
+  "failures": 0,
+  "reference_checks": 7,
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "pending": []
+}

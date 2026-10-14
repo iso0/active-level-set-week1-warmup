@@ -10,11 +10,32 @@
   - BA is pooled over the five folds within each repeat, so every NEW simulation is scored once per repeat.
 - **POST-HOC sections (§3, §4):** these were computed from stored predictions after the results were seen (`src/jdl_ex_descriptive.py`, outputs in `POSTHOC_descriptive/`). They describe where the registered effects come from; they are not tests.
 
+## Errata of 2026-10-14 (claims narrowed; every number, manifest and decision below is unchanged)
+- **[E1] The paid-prevalence rule is a heuristic.**
+  - The mechanism in §1 holds for probabilities calibrated to the target population and for that population's prevalence.
+  - π̂, the paid fraction of a feature-only maximin prefix, is not an unbiased estimate of that prevalence.
+  - Under posterior uncertainty, the BA-optimal action is in general not a single plug-in cutoff.
+  - p ≥ π̂ is therefore a train-only heuristic, and its EX1 gain is an empirical result, not the confirmation of an optimum.
+- **[E2] Small effects do not establish physical identifiability or irrelevance.**
+  - "ST is effectively irrelevant" means that paid-data ML-II put its lengthscale at the bound.
+  - "θ and δ stay unidentified" means that the fixed-prior ablations changed little.
+  - Neither statement is a physical identifiability or relevance result.
+- **[E3] No discriminator among those tested does not mean that none exists.**
+  - "No model discriminates", "depth cannot resolve it" and "a property of the NEW data, not of a model" go too far.
+  - What is supported: none of the tested models and rules (E1, G3, Binary_matched, J, J_trained; at 0.5 and π̂) separated the fast-corner cases on DEV repeats 5–8, and the depths observed there overlap.
+- **[E4] The candidate was chosen on global BA, which is not a sufficient selection criterion.**
+  - §7 proposed J_trained at π̂ (BA 0.906) as the single candidate. That version buys its global BA by labelling the fast corner "no Keyhole".
+  - The cost: short-K sensitivity falls from 0.675 at 0.5 to 0.05 at π̂, and each NEW negative weighs as much in BA as about ten positives.
+  - J_trained at 0.5 (BA 0.752, short-K 0.675) is a serious complete-system comparator and is carried forward alongside it; see `EX_METRICS_ADDENDUM.md`.
+  - The V2 comparison uses the 0.5 rule as primary and π̂ only as a secondary rule.
+- **[E5] The VX > 0.85 rule is an explanatory reference from earlier inspection, not an independently trained competitor.**
+  - The V2 comparison adds a stump whose cut and orientation are learned from the paid labels only.
+
 ## 1. The two ideas as registered
 
 | | **EX1: decision rule aligned with BA** | **EX2: response prior trained on paid depths** |
 |---|---|---|
-| **Mechanism** | BA weights the two classes equally. For a calibrated probability p, the BA-optimal decision is p ≥ π (the class prior), not p ≥ 0.5. On NEW, π is about 0.88–0.91. | The frozen response prior is isotropic: amplitude 0.60 and lengthscale 1.5 on all four standardized log inputs. It smooths slow-scan depths into the fast-scan corner. For the fast-scan NEW negatives, J predicted f = 0.10–0.42 where the observed z ran from −0.33 to +0.17 (Stage M mechanism report). |
+| **Mechanism** [E1] | BA weights the two classes equally. For a calibrated probability p, the BA-optimal decision is p ≥ π (the class prior), not p ≥ 0.5. On NEW, π is about 0.88–0.91. | The frozen response prior is isotropic: amplitude 0.60 and lengthscale 1.5 on all four standardized log inputs. It smooths slow-scan depths into the fast-scan corner. For the fast-scan NEW negatives, J predicted f = 0.10–0.42 where the observed z ran from −0.33 to +0.17 (Stage M mechanism report). |
 | **What changes** | π̂ = share of positives among the paid labels at the checkpoint (train-only). Decisions at p ≥ π̂ are compared with decisions at p ≥ 0.5 on the same stored probabilities. | At every checkpoint, the response amplitude and the four lengthscales are set by ML-II on the paid responses only (noise fixed at 0.03, zero mean). The θ, δ and τ priors are unchanged. |
 | **Fits** | 320: NEW arms J, Binary_matched, ACTIVE_E1 and G3; OLD/POOLED arms J and Binary_matched; budgets B16 and B40 | 120: J_trained in every population, same paths |
 | **Registered** | P1–P4 directional; P5 (OLD/POOLED) reported only | P1–P2 directional; P3 (OLD/POOLED) reported only |
@@ -111,7 +132,7 @@ False negatives per repeat (mean over the four repeats, B40; NEW has 124 positiv
 
 The corresponding list for J is in `POSTHOC_descriptive/NEW_missed_positive_ids.csv`.
 
-### 3.3 Inside the fast-scan corner, no model discriminates
+### 3.3 Inside the fast-scan corner, no model discriminates [E3: none of the tested models did]
 - **The corner:** 23 NEW runs with VX > 0.85 m/s, of which 12 are positive and 11 negative. Their depths overlap: fast positives have A = 79–148 µm and fast negatives A = 79–131 µm.
 - **Week 19 already saw this:** its matched fast-scan pair had the same startup depth peak and opposite recorded labels.
 - **Balanced accuracy inside the corner** (B40, mean over repeats; `POSTHOC_descriptive/NEW_BA_inside_vs_outside_fast_corner.csv`):
@@ -139,7 +160,7 @@ Median ML-II estimates over all fits (`POSTHOC_descriptive/EX2_learned_response_
 | POOLED, B40 | 2.2 | 2.44 | 3.8 | 20.0 | 0.76 | 17/20 |
 
 - **On NEW, depth varies mainly with scan speed;** VX has the only short lengthscale.
-- **ST is effectively irrelevant everywhere:** it sits at the upper bound in 99 of 120 fits.
+- **ST is effectively irrelevant everywhere:** it sits at the upper bound in 99 of 120 fits. [E2: a property of these ML-II fits, not a physical irrelevance result]
 - **Warnings:** sklearn raised a bound warning in 102 of the 120 fits. These are recorded and were not acted on.
 - **Defect:** the field `learned_lengthscales_median_NEW_B40` in `EX2_RESULTS.json` lists the first three NEW B40 fits, not medians. The values above replace it; the results file is left as written.
 
@@ -171,8 +192,8 @@ For comparison, the frozen Stage M J − Binary_matched values on repeats 1–2 
 3. **On OLD, paid depth adds label information at either rule:** J_trained − Binary_matched at 0.5 is +0.063, consistent with Stage M's +0.067 for J. On POOLED the gain is small (+0.011).
 
 **They do not show:**
-1. **That depth resolves the NEW fast-scan boundary.** Inside the corner every model is near chance, and at π̂ the joint model labels the whole corner "no Keyhole".
-2. **That the candidate beats a one-feature split on NEW.** Its BA (0.906) equals that of the Week 19 VX cut (0.910).
+1. **That depth resolves the NEW fast-scan boundary.** Inside the corner every model is near chance, and at π̂ the joint model labels the whole corner "no Keyhole". [E3]
+2. **That the candidate beats a one-feature split on NEW.** Its BA (0.906) equals that of the Week 19 VX cut (0.910). [E5: an explanatory reference, not a trained competitor; the paid-trained stump is in the V2 comparison]
 3. **Anything about acquisition.** All paths are feature-only maximin.
 4. **A magnitude that should be expected elsewhere.** DEV repeats 1–8 and the C1–C3 blocks have all been inspected, and the 0.85 cut itself came from inspecting NEW.
 
@@ -189,15 +210,16 @@ For comparison, the frozen Stage M J − Binary_matched values on repeats 1–2 
    - the trained prior lowers depth error first, and BA second.
 2. **After both repairs, NEW balanced accuracy is a fast-corner split.**
    - The joint model rejects all 11 fast-scan negatives and gives up nearly all 12 fast-scan (mostly short-K) positives.
-   - Inside the corner, no model in the study is better than chance, because depth at the 111 µm reference does not separate the labels there.
+   - Inside the corner, no model in the study is better than chance, because depth at the 111 µm reference does not separate the labels there. [E3]
    - The one persistent NEW false positive is a slow scan whose recording ended early and which has no A.
-   - This ceiling is a property of the NEW data, not of a model.
-3. **At B16–B40 the threshold θ and the discrepancy δ stay unidentified.**
+   - This ceiling is a property of the NEW data, not of a model. [E3: overstated. It is a ceiling of the tested models on these data]
+3. **At B16–B40 the threshold θ and the discrepancy δ stay unidentified.** [E2]
    - In Stage M, the fixed-θ and no-δ ablations perform like J: NEW B40 BA 0.552 / 0.552 / 0.575 and AUC 0.873 / 0.878 / 0.876.
    - The posterior SD of θ stays between 0.14 and 0.27, against a prior SD of 0.35.
    - The label information passes through f, so the joint model's value lies in its response model and decision rule, not in its threshold or discrepancy terms.
 
 **The most efficient next test:**
+- **[E4: superseded. Do not select the π̂ version on global BA. J_trained at 0.5 is carried as a serious comparator, and the V2 comparison is the next frozen model study.]**
 - **What:** freeze one candidate, J_trained (paid-only ML-II response prior) with the π̂ rule, and run it once as the C4 stability check that is already drafted (new seed namespace, NEW/OLD/POOLED, four repeats, feature-only paths, B16/B40).
 - **Arms:** the candidate, plus four frozen comparators:
   - ACTIVE_E1 and G3 at 0.5;
@@ -210,5 +232,5 @@ For comparison, the frozen Stage M J − Binary_matched values on repeats 1–2 
   - OLD and POOLED not worse than −0.01.
 - **Cost:** about 600 fits, under one CPU-minute. The only scarce resource is the unused partitions, which is why it should be a single frozen run.
 - **What it answers:** whether the repaired model generalises beyond the DEV partitions, and whether it adds anything beyond the speed split.
-- **Outside this request:** if the corner is the scientific target, depth cannot resolve it. That needs new simulations placed inside the corner, which would require simulator time.
+- **Outside this request:** if the corner is the scientific target, depth cannot resolve it [E3: the tested depth models did not]. That needs new simulations placed inside the corner, which would require simulator time.
 - **Authorisation:** C4 and any simulator work need an owner decision; this study runs neither.

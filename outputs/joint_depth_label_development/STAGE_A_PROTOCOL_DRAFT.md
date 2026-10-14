@@ -6,6 +6,11 @@
 - **Runner:** `src/jdl_stage_a.py` is working and validated (`stage_a/stage_a_runner_validation.json`). Its `run` step refuses to execute without an owner decision and a committed `stage_a/STAGE_A_MANIFEST.json`.
 - **What would justify Stage A:** for example, a revised model or decision rule that passes its own pre-registered screen (see `exploratory/EX1`). The draft below would then become the manifest after updating the candidate definition.
 - **After EX1/EX2 (exploratory, DEV repeats 5–8; `exploratory/EXPLORATORY_REPORT.md`).**
+  - **Erratum, 2026-10-14:** the candidate below was chosen on global BA.
+    - At π̂, J_trained gives up short-K detection (0.675 → 0.05).
+    - J_trained at 0.5 is a serious complete-system comparator and must be carried alongside.
+    - The π̂ rule is a train-only heuristic, not a derived optimum.
+    - The next frozen model study is the V2 comparison (`v2_model_comparison/`), with the 0.5 rule primary.
   - **Candidate:** J with a response prior trained on paid depths (J_trained), plus the π̂ decision rule.
   - **Exploratory evidence:** the candidate exceeds Binary_matched by +0.18 BA even at the frozen 0.5 rule (POST-HOC), and by +0.03 at π̂ over frozen-prior J (registered).
   - **Not a screen pass:** this is exploratory evidence on other repeats, so it does not pass the frozen Stage M screen.

@@ -1,0 +1,19 @@
+{
+  "accounting": {
+    "controlled_model_requests": 307,
+    "component_solves_including_correctness_and_induced_fallback": 580,
+    "main_numerical_reference_groups": 7,
+    "supplemental_ESS_chains": 4,
+    "ceiling": 600
+  },
+  "sequential_BA_delta_mean": 0.00415590124602177,
+  "sequential_BA_delta_range": [
+    -0.050585480093676694,
+    0.0932489693082913
+  ],
+  "sequential_positive_pairs": 2,
+  "sequential_path_divergence": 9,
+  "main_failures": 0,
+  "main_fallbacks": 0,
+  "query_stops": 0
+}

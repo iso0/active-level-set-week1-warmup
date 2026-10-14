@@ -1,0 +1,28 @@
+{
+  "commit": "e2bcf97a55736cdd2933b6761678d8b695358205",
+  "files": {
+    "outputs/week20_active_temporal_development/DEVELOPMENT_REPORT.md": "2089ce03e1dc1102d9bab29cea466ec6227b82d5b1cd4c691af0a12c91f7f0cd",
+    "outputs/week20_active_temporal_development/c3/FREEZE_C3.md": "d451efe236eae486049fd663061e23e5ceb3bb1a2404ccab664def50df6dc194",
+    "outputs/week20_active_temporal_development/c3/freeze_c3.json": "74528c1db3f62c71c15d6d819684d49d230285d71aa81f6e0b54b49add26a881",
+    "outputs/week20_active_temporal_development/c3/decision_c3.json": "8db5e7eeb4cbf252b22cb3b8587af4a81a09006e39e4e5a5b6c661d9eb8fd188",
+    "outputs/week20_active_temporal_development/c3/contrasts.csv": "95d096d3d8aa1c395a5e75eba5b0094dd6274e8e2835296fa49583021127c468",
+    "outputs/week20_active_temporal_development/track1_ext/decision.json": "2d2321b7a23f7e5481821b48298166203f07c9fbe33152232928161338b8f444",
+    "outputs/week20_active_temporal_development/track1_ext/contrasts_r1_8.csv": "00096c53dc1581b48cf66e9245a820e480d36631666ffaff2879239ce0070d8f",
+    "outputs/week20_active_temporal_development/track1_ext/contrasts_r5_8.csv": "9af147a2d6f61a437e8d9f49d2e1df8af27ff3d858216f673a10000a06b02e39",
+    "outputs/week20_active_temporal_development/track1_ext/manifest_track1_ext.json": "03cb11f4c8551ea61741bddc2cce33f18d32c52ca7fff6904ea2045c678fd4a8"
+  },
+  "immutable_V1_sha256": {
+    "ASTRA_WEEK20_METHOD_DESIGN.md": "df06e5b2cde29d871d5dd53309fd82f33f569f496f5c3beab9f4db071c0cbd6a",
+    "CHANGE_LOG.md": "4d54ac929b1729bca79fe4a194e7f9d5930639d255664fd7a0057f9b62358873",
+    "DELIVERY_VALIDATION.json": "ad0b7f153fbddae96632cb91cae05d0765c0ce73ed4ef89d8945dafcf0638880",
+    "joint_depth_label_gp.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+    "OPUS_METHOD_IMPLEMENTATION_REQUEST.md": "6a80a9cc66e61af85043c508b551aeb30415d3ab63e05f1a3f264c65717069df",
+    "prototype_mechanisms.png": "936060376884ccff0b33c5cfa7b715ce39bbb13471f49943c42e62fb1607e208",
+    "prototype_results.json": "ec228605bea88974accb74e1193975ad0e52f53b1e58094c10eb603a423705b4",
+    "README.md": "5f2236ea80f793f224f25671f67119bc0d5fdff180dfb03fd0a2e731ad0200b9",
+    "requirements.txt": "6afb83d59515deb526c4879fe45c151289c53c8b2bd6c073dfcd3702132e51ac",
+    "run_checks.py": "de122f69e4fe7b439b94ea1cc4fbee88563915e5f16b4af90aaba703706f8d7b",
+    "SELECTION_RECORD.json": "a3cbea22ca3ee2923823e22e649a33d922da34657d072d3ef8e5e6e2284d808f"
+  },
+  "V1_reference_copy_identical": true
+}

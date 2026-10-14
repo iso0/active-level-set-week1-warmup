@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "checks": {
+    "rho1_Laplace_matches_immutable_V1": {
+      "passed": true,
+      "max_abs_error": 0.0
+    },
+    "proper_component_weights": {
+      "passed": true,
+      "weights": [
+        0.17182514237351665,
+        0.28487276966076625,
+        0.5433020879657169
+      ]
+    },
+    "component_0_joint_covariance_identity": {
+      "passed": true,
+      "error": 1.942890293094024e-16
+    },
+    "component_1_joint_covariance_identity": {
+      "passed": true,
+      "error": 2.220446049250313e-16
+    },
+    "component_2_joint_covariance_identity": {
+      "passed": true,
+      "error": 8.326672684688674e-17
+    },
+    "rho0_equals_binary": {
+      "passed": true
+    },
+    "binary_weights_remain_prior": {
+      "passed": true
+    },
+    "rho0_ignores_depth_values": {
+      "passed": true
+    },
+    "missing_response_retains_label": {
+      "passed": true
+    },
+    "mixture_between_component_covariance": {
+      "passed": true
+    },
+    "single_component_acquisition_V1_identity": {
+      "passed": true,
+      "error": 6.938893903907228e-18
+    },
+    "mixture_acquisition_variance_bound": {
+      "passed": true
+    },
+    "quadrature_on_checked_case": {
+      "passed": true,
+      "error": 1.6501907840194008e-08
+    },
+    "EP_single_factor_exact_moments": {
+      "passed": true
+    },
+    "EP_single_factor_exact_evidence": {
+      "passed": true
+    },
+    "two_label_quadrature_convergence": {
+      "passed": true
+    },
+    "paired_reference_quadrature_convergence": {
+      "passed": true
+    }
+  },
+  "diagnostics": {
+    "scalar_threshold": {
+      "exact_probability": 0.8004614348013129,
+      "exact_theta_mean": -0.1477803664417976,
+      "exact_theta_variance": 0.008152297719630597,
+      "EP": {
+        "probability": 0.8010441158447916,
+        "probability_error": 0.0005826810434786944,
+        "theta_mean": -0.14752817251371764,
+        "theta_variance": 0.007955801269335358,
+        "variance_error": 0.00019649645029523946
+      },
+      "Laplace": {
+        "probability": 0.7834543026449348,
+        "probability_error": 0.01700713215637817,
+        "theta_mean": -0.1359905754149735,
+        "theta_variance": 0.007594167267277338,
+        "variance_error": 0.0005581304523532594
+      }
+    },
+    "two_label_reference": {
+      "quadrature_p_difference": 1.905828291409728e-05,
+      "probability_max_error": 0.0033794548300157823,
+      "joint_covariance_max_error": 0.0005789492582766731,
+      "weight_max_error": 0.00020999186418568794,
+      "EP_weights": [
+        0.21727669406577046,
+        0.29986338143627733,
+        0.4828599244979522
+      ],
+      "reference_weights": [
+        0.21737596889054417,
+        0.2999740984756893,
+        0.4826499326337665
+      ],
+      "EP_label_scores": [
+        0.044196286369832895,
+        0.05304888187034116,
+        0.06436850298270165
+      ],
+      "reference_label_scores": [
+        0.04401798321088717,
+        0.05287894583627597,
+        0.06437542496201755
+      ],
+      "EP_selected": 2,
+      "reference_selected": 2
+    },
+    "single_label_paired_reference": {
+      "reference_score_convergence": 6.819175276152889e-06,
+      "reference_mass_error": 0.0,
+      "probability_error": 0.002576893621425491,
+      "score_max_error": 0.0004737543669742286,
+      "EP_scores": [
+        0.04088768846268774,
+        0.07074948555467023,
+        0.07056841103279601
+      ],
+      "reference_scores": [
+        0.04041393409571351,
+        0.07072780224376117,
+        0.07054221820788531
+      ],
+      "EP_selected": 1,
+      "reference_selected": 1
+    },
+    "decision_counterexample": {
+      "eta": [
+        0.1,
+        0.65,
+        0.75,
+        0.85,
+        0.9,
+        0.95
+      ],
+      "pool_expected_prevalence": 0.7000000000000001,
+      "paid_ids": [
+        3,
+        4,
+        5
+      ],
+      "paid_labels": [
+        1,
+        1,
+        1
+      ],
+      "paid_fraction": 1.0,
+      "retained_two_class_probability": 0.964511875,
+      "decision_half": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "decision_prevalence_plugin": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "decision_exact_finite_pool": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_BA_half": 0.790235064930296,
+      "expected_BA_prevalence_plugin": 0.798592660320192,
+      "expected_BA_exact": 0.798592660320192,
+      "note": "Exact probabilities can need a different BA decision. This is not evidence that C3 is solely a calibration or threshold problem."
+    }
+  },
+  "correctness_component_solves": 18,
+  "separately_counted_reference_evaluations": 7,
+  "seconds": 4.240681099996436,
+  "source_sha256": {
+    "reference_checks.py": "5e30ceb36c9661eb2c954e20b73686a28cff6ae312e4d8dbe7ad8e8527dcc454",
+    "joint_model_v2.py": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+    "v1_reference.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59"
+  }
+}
