@@ -6,10 +6,15 @@
                                             "exit_code":  0,
                                             "seconds":  50.5,
                                             "finished_utc":  "2026-10-14T22:14:44.0115484Z",
-                                            "gate_passed":  true
+                                            "gate_passed":  true,
+                                            "commit":  "05f628dc"
                                         },
                   "T02_V2_FREEZE":  {
-                                        "status":  "pending"
+                                        "status":  "done",
+                                        "started_utc":  "2026-10-14T22:15:54.3382597Z",
+                                        "exit_code":  0,
+                                        "seconds":  2.5,
+                                        "finished_utc":  "2026-10-14T22:15:56.8992558Z"
                                     },
                   "T03_V2_RUN":  {
                                      "status":  "pending"

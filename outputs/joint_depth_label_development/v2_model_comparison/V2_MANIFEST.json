@@ -1,0 +1,210 @@
+{
+ "study": "V2 joint depth-label model comparison (separate from the frozen V1 Stage M; Stage M and C3 decisions unchanged)",
+ "status": "FROZEN BEFORE ANY V2 COMPARISON FIT",
+ "written_utc": "2026-10-14T22:15:56+00:00",
+ "parent_commit": "05f628dcd0cccb15a0b84b40b134b57a180e51f6",
+ "baseline_reviewed": "2b22c13df41ee0179d5999ff07a98c0aa36814ca",
+ "source_package": {
+  "directory": "outputs/astra_joint_model_v2",
+  "handoff": "OPUS_V2_IMPLEMENTATION_REQUEST.md",
+  "intake": "v2_model_comparison/intake/PACKAGE_INTAKE.json",
+  "expansion": "Astra's seven-arm design plus two system controls (J_trained, VX_stump), prospectively; Astra's 140/180/200 fit caps are replaced by the caps below"
+ },
+ "data": {
+  "population": "NEW-136 (124 Keyhole / 12 no Keyhole), canonical any-observed-Keyhole label, all 49 exclusions preserved, full simulation IDs",
+  "inputs": "P, VX, LS radius, ST only (log of each, standardized on the feature-only fold training pool, ddof 0)",
+  "response": "existing ACTIVE A (startup retained, 90 % of derived exit), z = log(A / 111 um); unavailable or nonpositive A is missing (never imputed); a missing response keeps its label and its query",
+  "repeats": [
+   1,
+   2
+  ],
+  "folds": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "budgets": [
+   16,
+   40
+  ],
+  "paths": "exactly the saved Week 19 feature-only maximin prefixes = stage_m/paths.csv NEW rows (verified identical to Week 19, 10/10)",
+  "path_sha256_by_task": {
+   "NEW_r1_f1": "b91a234470d7b002ab80d043a75aaa74efaa4319c152c853b17036c38fc59a85",
+   "NEW_r1_f2": "bc3a59f233429b89c82a60273845c41a82a8a930f932522c53392067a9418ffd",
+   "NEW_r1_f3": "e21bf01f1fe25dd10e30cc3a2d97b0bbaadc31a823c0247d1c441f67de7cb93f",
+   "NEW_r1_f4": "4839748fbb71208e931e983d7671e0049fd4b319a101c92f215c43775a17aba2",
+   "NEW_r1_f5": "dabd033cf9a3d33ea24ba6ae7726981628a511d53a059054601eeda2ef79a86b",
+   "NEW_r2_f1": "398ea7373dca38c604f1abaaa8158a621b0eb497b2bb6c01b027557ff9801de3",
+   "NEW_r2_f2": "da3c068928647601b573b63eeea5e6450036fa796f3e330ff315298071da022d",
+   "NEW_r2_f3": "556535b629d10466dfd5eaf105cee3c2ee8ecc72b1ff6eeb799cf064a672adb5",
+   "NEW_r2_f4": "77727a7bfa1c109a006467f15c2bb19dffb10138ce152c4700c3cf52df23dc17",
+   "NEW_r2_f5": "c3b5a8bb8f31bddd6080907e2be10eec6e032d7f3da2985888050cf55605c783"
+  },
+  "split_sha256_by_task": {
+   "NEW_r1_f1": "51e124c0a75acdcb",
+   "NEW_r1_f2": "cc22e1412b9d6ecc",
+   "NEW_r1_f3": "eee049c29b8f58c3",
+   "NEW_r1_f4": "1eed64d28c987e9a",
+   "NEW_r1_f5": "4b861386e38b4950",
+   "NEW_r2_f1": "24656e0b7b20d625",
+   "NEW_r2_f2": "873839a4ab96e0cb",
+   "NEW_r2_f3": "ad60525f9301744a",
+   "NEW_r2_f4": "d4790c2b7e1941d0",
+   "NEW_r2_f5": "8eefa0a5e2ff13c4"
+  },
+  "paid_interface": "src.jdl_stage_m.Oracle reveals only the paid rows (Y, z); the learner never receives unpaid or held-out outcomes",
+  "reference_pool": "the fixed feature-only fold training pool; delta is centred there; test rows are never candidates; the pool is never recentred on the paid subset or the prediction batch",
+  "no": [
+   "adaptive acquisitions",
+   "startup extension",
+   "reseeding",
+   "monitor-based candidate filtering",
+   "held-out monitors or subgroup metadata in training"
+  ]
+ },
+ "priors_V2": {
+  "f_sd": 0.6,
+  "g_sd": 0.6,
+  "delta_sd": 0.35,
+  "theta_mean": 0.0,
+  "theta_sd": 0.35,
+  "sigma_z": 0.03,
+  "tau": 0.15,
+  "kernel": "Matern-3/2",
+  "lengthscales": [
+   1.5,
+   1.5,
+   1.5,
+   1.5
+  ],
+  "delta_lengthscales": [
+   1.5,
+   1.5,
+   1.5,
+   1.5
+  ],
+  "jitter": 1e-10,
+  "rho_support": [
+   0.0,
+   0.5,
+   1.0
+  ],
+  "rho_prior": [
+   0.3333333333333333,
+   0.3333333333333333,
+   0.3333333333333333
+  ],
+  "nothing_trained": true
+ },
+ "inference_V2": {
+  "method": "probit EP per component",
+  "sites_initialised_at": 0,
+  "updates": "parallel",
+  "damping": 0.5,
+  "stop": "3 consecutive relative natural-parameter changes < 1e-08",
+  "max_iterations": 200,
+  "evidence": "EP approximate label evidence including site constants; the identical response evidence cancels between components",
+  "fallback": "if EP fails in ANY component, EVERY component is refitted by Laplace (accept: finite objective, whitened gradient inf-norm <= 2e-06); a failing fallback marks that checkpoint failed; no component is dropped; tau, delta, tolerances are never changed; no second seed",
+  "prediction": "mixture of component probit probabilities; within- and between-component covariance retained",
+  "known_approximation_errors": "preserved as recorded by Astra (scalar EP 0.000583 vs Laplace 0.017007; two-label 0.00338/0.000579/0.000210; V1 sparse negative Laplace 0.674 / EP 0.721 / ESS 0.732) and measured on one real prefix in the validation (EP vs elliptical slice)"
+ },
+ "arms": {
+  "V2_EP_mixture": "new fit",
+  "rho1_EP": "the mixture's rho=1 EP component (exact reuse; same paths/preprocessing/target/priors/EP implementation); a separate fixed-rho=1 EP fit if the mixture fell back to Laplace; a Laplace-fallback rho=1 component is flagged as not an EP control",
+  "Binary_V2_EP": "new fit, continuous likelihood removed only; one EP solve shared by the three components; masses must equal 1/3; nothing learned from depth",
+  "V1_Laplace": "exact reuse of Stage M J predictions after verifying path prefix hash, scaler, config, use_response and implementation hash",
+  "Binary_V1_Laplace": "exact reuse of Stage M Binary_matched predictions (same verification)",
+  "ACTIVE_E1": "exact reuse of Stage M ACTIVE_E1 predictions (frozen implementation, prefix hash verified)",
+  "G3": "exact reuse of Stage M G3 predictions (frozen implementation, prefix hash verified)",
+  "J_trained": "new fit with EX2's trained_config exactly (sklearn ML-II on paid responses only: amplitude in [0.032, 10], four lengthscales in [0.05, 20], noise fixed 0.03, zero mean, 0 restarts); theta, delta, tau priors unchanged. A complete-system control, not a capacity-matched attribution control",
+  "VX_stump": "new fit, vx-stump-1.0: cut and orientation learned from the paid labels on standardized log VX (rule in src/jdl_vx_stump.py); class-weighted smoothed leaf scores are not population-calibrated probabilities"
+ },
+ "endpoints": {
+  "primary": "NEW B40 BA at cutoff 0.5 (pooled per repeat, mean of repeats 1-2), V2_EP_mixture minus Binary_V2_EP, paired by split and budget",
+  "mechanism": [
+   "rho1_EP minus V1_Laplace (inference, same model)",
+   "V2_EP_mixture minus rho1_EP (uncertain sharing vs forced sharing)"
+  ],
+  "system": [
+   "V2 minus J_trained",
+   "V2 minus ACTIVE_E1",
+   "V2 minus G3",
+   "V2 minus VX_stump"
+  ],
+  "descriptive": [
+   "Binary_V2_EP minus Binary_V1_Laplace",
+   "J_trained minus Binary_V2_EP",
+   "J_trained minus ACTIVE_E1",
+   "VX_stump minus G3"
+  ],
+  "metrics": [
+   "BA",
+   "q20 (unchanged, fold-mean)",
+   "specificity",
+   "sensitivity",
+   "short-K sensitivity (the existing 10 NEW short-K simulations, unique cases)",
+   "Brier",
+   "log loss",
+   "AUC"
+  ],
+  "budgets": "B16 and B40",
+  "confusion_counts": "TP/FN/TN/FP and unique simulations reported with every rate",
+  "secondary_rule": "for probabilistic arms (all except VX_stump) the previously declared paid-prevalence rule p >= pi_hat (share of positives among the checkpoint's paid labels; train-only; no threshold fitted from evaluation labels). A train-only cutoff is a heuristic, not necessarily an unbiased prevalence estimate or a Bayes-optimal rule",
+  "fast_scan_corner": "errors inside VX > 0.85 m/s are reported as evaluation-only description (the cut is used by the evaluator only and never by a model)"
+ },
+ "uncertainty": {
+  "bootstrap": "class-stratified simulation-cluster resampling (src.jdl_evaluate.boot_weights: 2000 draws, seed 20261013), multiplicities shared by both repeats, both budgets and all arms; conditional on the stored fits and these splits; repeated predictions of a simulation are not additional independent cases"
+ },
+ "screen": {
+  "rule": "Astra's development screen: V2 is promising for further model work only if NEW B40 mean BA(V2) - BA(Binary_V2) >= +0.01, specificity(V2) >= specificity(Binary_V2) and log loss(V2) <= log loss(Binary_V2). +0.01 is a practical effect threshold, not a forecast or a significance test",
+  "always_reported": "intervals, case counts, q20 and short-K trade-offs, whether or not the screen passes; no success criterion is added after the results"
+ },
+ "expectations": {
+  "identities": "Binary_V2_EP masses equal 1/3 exactly; rho1_EP equals the mixture's rho=1 component; no numeric performance forecast (Astra: V2 may withdraw harmful sharing and may lose efficiency where depth is informative)"
+ },
+ "accounting": {
+  "top_level_requests": 180,
+  "component_attempts_including_validation_and_fallback": 300,
+  "planned_component_attempts": {
+   "validation": 144,
+   "V2_EP_mixture": 60,
+   "Binary_V2_EP": 20,
+   "rho1_EP": "0 if reused (up to 20 if fallbacks force separate fits)",
+   "J_trained": "20 ML-II + 20 Laplace",
+   "VX_stump": 20,
+   "reused_arms": 0
+  },
+  "rule": "failures and fallbacks are counted; if a genuine numerical need would exceed the caps, a prospective amendment is written before any further computation"
+ },
+ "validation": {
+  "file": "v2_model_comparison/validation/V2_VALIDATION.json",
+  "sha256": "f019d268574b987062c74faaf5140d24914a8727380fbf299541974f1dcdf8ce",
+  "status": "PASS"
+ },
+ "post_fit_export": "src/jdl_v2_export.py, added on 2026-10-14 after Astra's decision-acquisition handoff and before this freeze. For V2_EP_mixture, Binary_V2_EP and any separate rho1_EP fit it saves the full component posteriors (weights, log evidences, joint h and f means and covariances, f-h cross-covariances and theta moments over [fold reference pool; test inputs]) to _cache/v2_exports, with SHA-256 sidecars. It changes no fit, prediction, metric or decision of this comparison; it serves the separately manifested cached-posterior decision audit.",
+ "threads": "one BLAS thread; the four-thread total across all local jobs is respected (the run starts only when a temporal worker thread has freed)",
+ "not_authorized": [
+  "real-data Stage A",
+  "C4",
+  "simulator or cloud jobs",
+  "label changes"
+ ],
+ "code_sha256": {
+  "src/jdl_v2_model.py": "d055df28acf2cd71f9c5809bf3341edfa48027ab9d924706c5d008cac8d8f361",
+  "src/jdl_v2_comparison.py": "9e3f31ab6b4b8832d264cc4067145c72275d081c76f633110ad714be733af992",
+  "src/jdl_v2_evaluate.py": "584b479c02383d4e439c55b4a69a39053b5df0516fc5cb0878fdce5873f228cb",
+  "src/jdl_v2_export.py": "66d290a8f6a9fa023e3411b7e52c293aed26adce4da94c502f335ffbcb8e93a1",
+  "src/jdl_vx_stump.py": "0c2745a89c9cc4b84dd0c8213610542385bfd0a8c61533224e45e13f5cda12ff",
+  "src/jdl_v2_validation.py": "c55df6d0dbd3a4431c3be12ae464faf034d72f0c94d2f72b2745a3e11a7390c8",
+  "src/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/jdl_ex2.py": "ef32514701a16b2c4b3a5908910c439f2a28a76b5fd730ac495dff4ef1fdf795",
+  "src/jdl_ex1.py": "d3a3484b8b7bfc1cd63153187c15cc5199129678f0f6417bbc6f0bc766148197",
+  "src/week19_dev_pilot.py": "9f8d256d5897acd784b43326abd761a926f15d758067233aa0fa0981e5369bd1",
+  "src/week18_tasks.py": "7f3c78a0659df3fa32c47073ef668a749543304b1dbbccd1854b86c300634198",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d"
+ }
+}
