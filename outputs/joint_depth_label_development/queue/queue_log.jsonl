@@ -1,3 +1,12 @@
 {"event":"RUNNER_START","pid":13152,"dry_run":true,"utc":"2026-10-14T17:14:13.4225313Z"}
 {"event":"DRY_RUN","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"astra_state":"REFERENCE_CHECKS_OR_HOST_QUEUE","utc":"2026-10-14T17:14:14.4840487Z"}
 {"event":"RUNNER_END","dry_run":true,"utc":"2026-10-14T17:14:14.6179373Z"}
+{"event":"RUNNER_START","pid":16292,"dry_run":false,"utc":"2026-10-14T17:17:09.2671670Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T17:17:10.4318019Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T17:47:20.2405863Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T18:17:29.5144695Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T18:47:39.0682478Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T19:17:48.4996507Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T19:47:57.7491214Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T20:18:07.3536371Z"}
+{"event":"WAIT_CAPACITY","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"utc":"2026-10-14T20:48:18.7897209Z"}

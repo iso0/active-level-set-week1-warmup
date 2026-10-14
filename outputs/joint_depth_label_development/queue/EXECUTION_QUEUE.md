@@ -39,6 +39,11 @@ Every task uses one BLAS thread and carries `--threads 1` on its command line. C
   - If T01 fails, T02–T04, T06–T08 and T12–T14 are blocked and recorded; T05 and T09–T11 and T15–T18 still run.
   - If T05 fails, only T06–T08 are blocked.
   - Nothing is retried automatically.
+- **Decision-audit safeguards (decision-audit-1.1, recorded 2026-10-14 21:10 UTC, before T05–T08 ran):** see `v2_decision_audit/SAFEGUARD_CORRECTION.md`.
+  - T05 now also runs 34 safeguard self-checks, and its gate needs all of them to pass.
+  - T07 writes one record per checkpoint with an acceptance status (P_PARITY_TOL = 1e-10).
+  - If the primary finite-batch audit is incomplete, T08 writes `DECISION_AUDIT_UNAVAILABLE.json` instead of its completion marker and exits with code 3. The runner then records T08 as `failed`, does not commit it, and still runs T17.
+  - `QUEUE.json` is unchanged.
 - **Commits:** after each successful task its outputs, together with this queue directory, are committed by path and pushed. Git failures are logged, not fatal.
 
 ## C. Continuation mechanism (what actually advances the queue)
