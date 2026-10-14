@@ -1,0 +1,27 @@
+{
+    "recovery":  "logged technical recovery of queue T05-T08 (owner authorization of 2026-10-14); the original T05 failure and T06-T08 blocks stay recorded in queue/QUEUE_STATE.json",
+    "audit_version":  "decision-audit-1.1.1",
+    "steps":  {
+                  "R04_PRESERVE":  {
+                                       "status":  "done",
+                                       "sha256":  "cd573ef38659143446a6299f274b547dc73b38f9b19044f2309e8c4363b82431",
+                                       "original_commit":  "b0697f2ba1b0e39eecb9c87e76b014ad4165f0cb",
+                                       "preserved":  "outputs/joint_depth_label_development/recovery/decision_audit_T05_T08/preserved/T05_decision-audit-1.1_DECISION_AUDIT_VALIDATION.json",
+                                       "original_attempt":  "queue T05, 2026-10-14 22:20:46-22:20:50 UTC, exit code 1 at the console echo after writing status PASS (45/45)"
+                                   },
+                  "R05_DECISION_VALIDATION_RETRY":  {
+                                                        "status":  "pending"
+                                                    },
+                  "R06_DECISION_FREEZE":  {
+                                              "status":  "pending"
+                                          },
+                  "R07_DECISION_RUN":  {
+                                           "status":  "pending"
+                                       },
+                  "R08_DECISION_EVALUATE":  {
+                                                "status":  "pending"
+                                            }
+              },
+    "recovery_pid":  22276,
+    "started_utc":  "2026-10-14T23:04:44.2688245Z"
+}
