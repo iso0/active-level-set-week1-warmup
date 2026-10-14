@@ -111,13 +111,22 @@
                                              "started_utc":  "2026-10-14T23:24:32.5200087Z",
                                              "exit_code":  0,
                                              "seconds":  1.4,
-                                             "finished_utc":  "2026-10-14T23:24:33.8942720Z"
+                                             "finished_utc":  "2026-10-14T23:24:33.8942720Z",
+                                             "commit":  "b3c1c6ac"
                                          },
                   "T17_TESTS":  {
-                                    "status":  "pending"
+                                    "status":  "failed",
+                                    "started_utc":  "2026-10-14T23:25:43.6907672Z",
+                                    "exit_code":  1,
+                                    "seconds":  25.9,
+                                    "finished_utc":  "2026-10-14T23:26:09.6219967Z"
                                 },
                   "T18_NOTEBOOK":  {
-                                       "status":  "pending"
+                                       "status":  "done",
+                                       "started_utc":  "2026-10-14T23:27:10.0296991Z",
+                                       "exit_code":  0,
+                                       "seconds":  8.6,
+                                       "finished_utc":  "2026-10-14T23:27:18.6407920Z"
                                    }
               },
     "finished_utc":  "2026-10-14T17:14:14.5957827Z",

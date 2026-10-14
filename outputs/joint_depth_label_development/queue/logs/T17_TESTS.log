@@ -1,0 +1,37 @@
+....................F...........................................s....... [ 79%]
+.s.................                                                      [100%]
+================================== FAILURES ===================================
+_______________ test_v2_run_complete_reuse_exact_and_identities _______________
+
+    @needs_v2
+    def test_v2_run_complete_reuse_exact_and_identities():
+        st = json.loads((V2DIR / "RUN_STATE.json").read_text(encoding="utf-8"))
+        assert st["top_level_requests"] == 180 and st["pending"] is None
+        assert st["component_attempts"]["validation"] + st["component_attempts"]["comparison"] <= 300
+        pr = pd.read_csv(V2DIR / "predictions_all.csv.gz")
+        assert set(pr.arm) == {"V2_EP_mixture", "rho1_EP", "Binary_V2_EP", "V1_Laplace", "Binary_V1_Laplace", "ACTIVE_E1", "G3", "J_trained", "VX_stump"}
+        sm = pd.read_csv(OUT / "stage_m" / "predictions_all.csv.gz")
+        sm = sm[sm.population == "NEW"]
+        for arm, src in (("V1_Laplace", "J"), ("Binary_V1_Laplace", "Binary_matched"), ("ACTIVE_E1", "ACTIVE_E1"), ("G3", "G3")):
+            a = pr[pr.arm == arm].set_index(["repeat", "fold", "budget", "sim_id"]).p.sort_index()
+            b = sm[sm.arm == src].set_index(["repeat", "fold", "budget", "sim_id"]).p.sort_index()
+>           assert np.array_equal(a.to_numpy(), b.loc[a.index].to_numpy(), equal_nan=True), arm
+E           AssertionError: ACTIVE_E1
+E           assert False
+E            +  where False = <function array_equal at 0x000001797F97F4B0>(array([1.00000000e+00, 9.99979443e-01, 1.00000000e+00, 1.00000000e+00,\n       1.00000000e+00, 1.00000000e+00, 1.000000...1.00000000e+00, 1.00000000e+00, 1.00000000e+00,\n       8.68139083e-01, 1.00000000e+00, 1.00000000e+00, 1.00000000e+00]), array([1.00000000e+00, 9.99979443e-01, 1.00000000e+00, 1.00000000e+00,\n       1.00000000e+00, 1.00000000e+00, 1.000000...1.00000000e+00, 1.00000000e+00, 1.00000000e+00,\n       8.68139083e-01, 1.00000000e+00, 1.00000000e+00, 1.00000000e+00]), equal_nan=True)
+E            +    where <function array_equal at 0x000001797F97F4B0> = np.array_equal
+E            +    and   array([1.00000000e+00, 9.99979443e-01, 1.00000000e+00, 1.00000000e+00,\n       1.00000000e+00, 1.00000000e+00, 1.000000...1.00000000e+00, 1.00000000e+00, 1.00000000e+00,\n       8.68139083e-01, 1.00000000e+00, 1.00000000e+00, 1.00000000e+00]) = to_numpy()
+E            +      where to_numpy = repeat  fold  budget  sim_id                                                                                          ...0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p43189314539e-05_H-319907919c    1.000000\nName: p, Length: 544, dtype: float64.to_numpy
+E            +    and   array([1.00000000e+00, 9.99979443e-01, 1.00000000e+00, 1.00000000e+00,\n       1.00000000e+00, 1.00000000e+00, 1.000000...1.00000000e+00, 1.00000000e+00, 1.00000000e+00,\n       8.68139083e-01, 1.00000000e+00, 1.00000000e+00, 1.00000000e+00]) = to_numpy()
+E            +      where to_numpy = repeat  fold  budget  sim_id                                                                                          ...0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p43189314539e-05_H-319907919c    1.000000\nName: p, Length: 544, dtype: float64.to_numpy
+
+src\tests\test_jdl_v2.py:151: AssertionError
+============================== warnings summary ===============================
+src/tests/test_joint_depth_label.py::test_freeze_precedes_every_comparative_result
+  C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pytest_asyncio\plugin.py:1216: DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16
+    return asyncio.get_event_loop_policy()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED src/tests/test_jdl_v2.py::test_v2_run_complete_reuse_exact_and_identities
+1 failed, 88 passed, 2 skipped, 1 warning in 23.68s
