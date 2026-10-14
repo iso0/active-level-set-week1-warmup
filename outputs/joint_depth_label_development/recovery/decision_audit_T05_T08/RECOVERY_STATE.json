@@ -54,5 +54,7 @@
                                             }
               },
     "recovery_pid":  22276,
-    "started_utc":  "2026-10-14T23:04:44.2688245Z"
+    "started_utc":  "2026-10-14T23:04:44.2688245Z",
+    "finished_utc":  "2026-10-14T23:15:08.0443055Z",
+    "recovery_complete":  true
 }

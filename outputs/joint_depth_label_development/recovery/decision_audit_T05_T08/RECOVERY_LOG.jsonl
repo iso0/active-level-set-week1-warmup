@@ -17,3 +17,6 @@
 {"event":"START","step":"R08_DECISION_EVALUATE","used_before":2,"astra_active":true,"astra_state":"CONTROLLED_RUN","leaves":"16972:1","python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_decision_audit evaluate --threads 1","module_sha256":"e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f","utc":"2026-10-14T23:14:48.8649644Z"}
 {"event":"END","step":"R08_DECISION_EVALUATE","exit_code":3,"seconds":10.8,"utc":"2026-10-14T23:14:59.7130944Z"}
 {"event":"AUDIT_OUTCOME","step":"R08_DECISION_EVALUATE","outcome":"PRIMARY_UNAVAILABLE","exit_code":3,"utc":"2026-10-14T23:14:59.7421642Z"}
+{"event":"COMMIT","ok":true,"head":"3e990a8d","attempt":1,"message":"Recovery R08: cached-posterior decision audit results (PRIMARY_UNAVAILABLE; decision-only, zero fits)","utc":"2026-10-14T23:15:02.3075175Z"}
+{"event":"PUSH","ok":true,"attempt":1,"detail":"","utc":"2026-10-14T23:15:08.0237971Z"}
+{"event":"RECOVERY_COMPLETE","utc":"2026-10-14T23:15:08.0521556Z"}
