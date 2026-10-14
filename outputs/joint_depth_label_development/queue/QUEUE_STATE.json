@@ -29,22 +29,34 @@
                                           "started_utc":  "2026-10-14T22:19:23.8612707Z",
                                           "exit_code":  0,
                                           "seconds":  12.8,
-                                          "finished_utc":  "2026-10-14T22:19:36.7011648Z"
+                                          "finished_utc":  "2026-10-14T22:19:36.7011648Z",
+                                          "commit":  "006ca9f5"
                                       },
                   "T05_DECISION_VALIDATION":  {
-                                                  "status":  "pending"
+                                                  "status":  "failed",
+                                                  "started_utc":  "2026-10-14T22:20:46.6974881Z",
+                                                  "exit_code":  1,
+                                                  "seconds":  3.6,
+                                                  "finished_utc":  "2026-10-14T22:20:50.3475744Z"
                                               },
                   "T06_DECISION_FREEZE":  {
-                                              "status":  "pending"
+                                              "status":  "blocked",
+                                              "blocked_by":  "T05_DECISION_VALIDATION (failed)"
                                           },
                   "T07_DECISION_RUN":  {
-                                           "status":  "pending"
+                                           "status":  "blocked",
+                                           "blocked_by":  "T06_DECISION_FREEZE (blocked)"
                                        },
                   "T08_DECISION_EVALUATE":  {
-                                                "status":  "pending"
+                                                "status":  "blocked",
+                                                "blocked_by":  "T07_DECISION_RUN (blocked)"
                                             },
                   "T09_EX_ADDENDUM":  {
-                                          "status":  "pending"
+                                          "status":  "done",
+                                          "started_utc":  "2026-10-14T22:21:50.8982202Z",
+                                          "exit_code":  0,
+                                          "seconds":  45.5,
+                                          "finished_utc":  "2026-10-14T22:22:36.3974870Z"
                                       },
                   "T10_EX_DESCRIPTIVE":  {
                                              "status":  "pending"

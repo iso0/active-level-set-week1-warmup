@@ -24,3 +24,12 @@
 {"event":"END","task":"T03_V2_RUN","exit_code":0,"seconds":17.7,"status":"done","utc":"2026-10-14T22:18:23.3804375Z"}
 {"event":"START","task":"T04_V2_EVALUATE","used_before":2,"astra_active":true,"python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_comparison evaluate --threads 1","utc":"2026-10-14T22:19:23.8717990Z"}
 {"event":"END","task":"T04_V2_EVALUATE","exit_code":0,"seconds":12.8,"status":"done","utc":"2026-10-14T22:19:36.7011648Z"}
+{"event":"COMMIT","task":"T04_V2_EVALUATE","ok":true,"head":"006ca9f5","detail":"","utc":"2026-10-14T22:19:39.3210083Z"}
+{"event":"PUSH","task":"T04_V2_EVALUATE","ok":true,"detail":"","utc":"2026-10-14T22:19:46.1732865Z"}
+{"event":"START","task":"T05_DECISION_VALIDATION","used_before":2,"astra_active":true,"python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_decision_audit validate --threads 1","utc":"2026-10-14T22:20:46.7021349Z"}
+{"event":"END","task":"T05_DECISION_VALIDATION","exit_code":1,"seconds":3.6,"status":"failed","utc":"2026-10-14T22:20:50.3485783Z"}
+{"event":"BLOCKED","task":"T06_DECISION_FREEZE","by":"T05_DECISION_VALIDATION (failed)","utc":"2026-10-14T22:20:50.3655855Z"}
+{"event":"BLOCKED","task":"T07_DECISION_RUN","by":"T06_DECISION_FREEZE (blocked)","utc":"2026-10-14T22:20:50.3801961Z"}
+{"event":"BLOCKED","task":"T08_DECISION_EVALUATE","by":"T07_DECISION_RUN (blocked)","utc":"2026-10-14T22:20:50.3895803Z"}
+{"event":"START","task":"T09_EX_ADDENDUM","used_before":2,"astra_active":true,"python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_ex_metrics_addendum --threads 1","utc":"2026-10-14T22:21:50.9076251Z"}
+{"event":"END","task":"T09_EX_ADDENDUM","exit_code":0,"seconds":45.5,"status":"done","utc":"2026-10-14T22:22:36.3995047Z"}
