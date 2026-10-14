@@ -37,11 +37,13 @@ from scipy.special import ndtr
 
 import src.jdl_model as JM
 import src.jdl_stage_m as SMM
+import src.jdl_v2_export as VX
 import src.jdl_v2_model as V2
 import src.jdl_vx_stump as VS
 
 OUT = SMM.OUT / "v2_model_comparison"
 CACHE = SMM.OUT / "_cache" / "v2"
+EXPORTS = SMM.OUT / "_cache" / "v2_exports"          # post-fit posterior exports (jdl_v2_export; no effect on fits)
 STATE = OUT / "RUN_STATE.json"
 MANIFEST = OUT / "V2_MANIFEST.json"
 VALIDATION = OUT / "validation" / "V2_VALIDATION.json"
@@ -57,7 +59,7 @@ CONTRASTS = {
     "system": [("V2_EP_mixture", "J_trained"), ("V2_EP_mixture", "ACTIVE_E1"), ("V2_EP_mixture", "G3"), ("V2_EP_mixture", "VX_stump")],
     "descriptive": [("Binary_V2_EP", "Binary_V1_Laplace"), ("J_trained", "Binary_V2_EP"), ("J_trained", "ACTIVE_E1"), ("VX_stump", "G3")],
 }
-CODE = ["src/jdl_v2_model.py", "src/jdl_v2_comparison.py", "src/jdl_v2_evaluate.py", "src/jdl_vx_stump.py", "src/jdl_v2_validation.py", "src/jdl_model.py", "src/jdl_stage_m.py",
+CODE = ["src/jdl_v2_model.py", "src/jdl_v2_comparison.py", "src/jdl_v2_evaluate.py", "src/jdl_v2_export.py", "src/jdl_vx_stump.py", "src/jdl_v2_validation.py", "src/jdl_model.py", "src/jdl_stage_m.py",
         "src/jdl_evaluate.py", "src/jdl_ex2.py", "src/jdl_ex1.py", "src/week19_dev_pilot.py", "src/week18_tasks.py", "src/week18_engine.py"]
 
 
@@ -142,6 +144,7 @@ def write_manifest():
                                                                 "J_trained": "20 ML-II + 20 Laplace", "VX_stump": 20, "reused_arms": 0},
                        "rule": "failures and fallbacks are counted; if a genuine numerical need would exceed the caps, a prospective amendment is written before any further computation"},
         "validation": {"file": "v2_model_comparison/validation/V2_VALIDATION.json", "sha256": sha(VALIDATION), "status": val["status"]},
+        "post_fit_export": "src/jdl_v2_export.py, added on 2026-10-14 after Astra's decision-acquisition handoff and before this freeze. For V2_EP_mixture, Binary_V2_EP and any separate rho1_EP fit it saves the full component posteriors (weights, log evidences, joint h and f means and covariances, f-h cross-covariances and theta moments over [fold reference pool; test inputs]) to _cache/v2_exports, with SHA-256 sidecars. It changes no fit, prediction, metric or decision of this comparison; it serves the separately manifested cached-posterior decision audit.",
         "threads": "one BLAS thread; the four-thread total across all local jobs is respected (the run starts only when a temporal worker thread has freed)",
         "not_authorized": ["real-data Stage A", "C4", "simulator or cloud jobs", "label changes"],
         "code_sha256": {c: sha(SMM.ROOT / c) for c in CODE}}
@@ -235,6 +238,9 @@ def run():
                         mix = V2.JointModelV2(xr, CFG).fit(Xp, yp, zp)
                         state["component_attempts"]["comparison"] += mix.solve_count
                         rec["mechanism"] = _mixture_record(mix, xt, Xp, yp)
+                        rec["export"] = VX.save_export(EXPORTS / cf.name.replace(".json.gz", ".npz"), VX.export_mixture(mix, xr, xt),
+                                                       {"arm": arm, "repeat": t["repeat"], "fold": t["fold"], "budget": b, "prefix_sha256": prefix,
+                                                        "paid_ids": list(paid.ids), "test_ids": test_ids, "fallback": bool(mix.diagnostics["fallback"])})
                         if mix.diagnostics["fallback"]:
                             state["fallbacks"].append(cf.name)
                         p_all = mix.predict_proba(xt); post = mix.posterior(xt); iv = mix.probability_interval(xt)
@@ -262,6 +268,9 @@ def run():
                         else:
                             sep = V2.JointModelV2(xr, CFG, rhos=(1.0,)).fit(Xp, yp, zp)
                             state["component_attempts"]["comparison"] += sep.solve_count
+                            rec["export"] = VX.save_export(EXPORTS / cf.name.replace(".json.gz", ".npz"), VX.export_mixture(sep, xr, xt),
+                                                           {"arm": arm, "repeat": t["repeat"], "fold": t["fold"], "budget": b, "prefix_sha256": prefix,
+                                                            "paid_ids": list(paid.ids), "test_ids": test_ids, "fallback": bool(sep.diagnostics["fallback"])})
                             q = sep.component_posteriors(xt)[0]
                             p1 = sep.predict_proba(xt)
                             meth = sep.diagnostics["components"][0]["method"]
@@ -276,6 +285,9 @@ def run():
                         if np.max(np.abs(bm.weights - 1 / 3)) > 1e-12:
                             raise RuntimeError("Binary V2 masses moved from the prior")
                         rec["mechanism"] = _mixture_record(bm, xt, Xp, yp)
+                        rec["export"] = VX.save_export(EXPORTS / cf.name.replace(".json.gz", ".npz"), VX.export_mixture(bm, xr, xt),
+                                                       {"arm": arm, "repeat": t["repeat"], "fold": t["fold"], "budget": b, "prefix_sha256": prefix,
+                                                        "paid_ids": list(paid.ids), "test_ids": test_ids, "fallback": bool(bm.diagnostics["fallback"])})
                         if bm.diagnostics["fallback"]:
                             state["fallbacks"].append(cf.name)
                         pb = bm.predict_proba(xt); post = bm.posterior(xt)

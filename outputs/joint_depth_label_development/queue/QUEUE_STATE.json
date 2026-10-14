@@ -1,0 +1,61 @@
+{
+    "tasks":  {
+                  "T01_V2_VALIDATION":  {
+                                            "status":  "pending"
+                                        },
+                  "T02_V2_FREEZE":  {
+                                        "status":  "pending"
+                                    },
+                  "T03_V2_RUN":  {
+                                     "status":  "pending"
+                                 },
+                  "T04_V2_EVALUATE":  {
+                                          "status":  "pending"
+                                      },
+                  "T05_DECISION_VALIDATION":  {
+                                                  "status":  "pending"
+                                              },
+                  "T06_DECISION_FREEZE":  {
+                                              "status":  "pending"
+                                          },
+                  "T07_DECISION_RUN":  {
+                                           "status":  "pending"
+                                       },
+                  "T08_DECISION_EVALUATE":  {
+                                                "status":  "pending"
+                                            },
+                  "T09_EX_ADDENDUM":  {
+                                          "status":  "pending"
+                                      },
+                  "T10_EX_DESCRIPTIVE":  {
+                                             "status":  "pending"
+                                         },
+                  "T11_CHECKPOINT_VALIDATION":  {
+                                                    "status":  "pending"
+                                                },
+                  "T12_EX3_FREEZE":  {
+                                         "status":  "pending"
+                                     },
+                  "T13_EX3_RUN":  {
+                                      "status":  "pending"
+                                  },
+                  "T14_EX3_EVALUATE":  {
+                                           "status":  "pending"
+                                       },
+                  "T15_TEMPORAL_EVALUATE":  {
+                                                "status":  "pending"
+                                            },
+                  "T16_STOPPING_AUDIT":  {
+                                             "status":  "pending"
+                                         },
+                  "T17_TESTS":  {
+                                    "status":  "pending"
+                                },
+                  "T18_NOTEBOOK":  {
+                                       "status":  "pending"
+                                   }
+              },
+    "runner_pid":  13152,
+    "started_utc":  "2026-10-14T17:14:13.3045093Z",
+    "finished_utc":  "2026-10-14T17:14:14.5957827Z"
+}

@@ -1,0 +1,3 @@
+{"event":"RUNNER_START","pid":13152,"dry_run":true,"utc":"2026-10-14T17:14:13.4225313Z"}
+{"event":"DRY_RUN","next_task":"T01_V2_VALIDATION","used":5,"astra_active":true,"astra_state":"REFERENCE_CHECKS_OR_HOST_QUEUE","utc":"2026-10-14T17:14:14.4840487Z"}
+{"event":"RUNNER_END","dry_run":true,"utc":"2026-10-14T17:14:14.6179373Z"}

@@ -1,0 +1,128 @@
+{
+ "snapshot_utc": "2026-10-14T17:14:48+00:00",
+ "source_directory": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_balanced_decision_acquisition",
+ "copied_files": 64,
+ "copy_identical_to_source": true,
+ "differences": [],
+ "frozen_sources_match_manifest": true,
+ "frozen_source_mismatches": [],
+ "not_copied": [
+  "live queue files: PIPELINE_STATE.json, HOST_QUEUE.json, pipeline.lock, checks_stdout.log, wrapper_*.log",
+  "__pycache__/",
+  "reproduction_preparation_check/ (a prepared duplicate)"
+ ],
+ "live_state_at_snapshot": {
+  "PIPELINE_STATE.json": {
+   "utc": "2026-10-14T13:49:04.2332010Z",
+   "state": "REFERENCE_CHECKS_OR_HOST_QUEUE",
+   "detail": "One check worker; it waits while all four shared numerical slots are occupied.",
+   "wrapper_pid": 19116
+  },
+  "HOST_QUEUE.json": {
+   "utc": "2026-10-14T17:14:25.155597+00:00",
+   "host": "BURAK",
+   "foreign_leaves": [
+    {
+     "ProcessId": 10216,
+     "ParentProcessId": 12220,
+     "Name": "python.exe",
+     "CommandLine": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe -W ignore -m src.jdl_temporal_svgp fit --threads 1 800 ckpt_r1_f1_B40 ckpt_r1_f2_B40 ckpt_r1_f3_B40 ckpt_r1_f4_B40 ckpt_r1_f5_B40 ckpt_r2_f1_B40 ckpt_r2_f2_B40 ckpt_r2_f3_B40 ckpt_r2_f4_B40 ckpt_r2_f5_B40"
+    },
+    {
+     "ProcessId": 22648,
+     "ParentProcessId": 16348,
+     "Name": "python.exe",
+     "CommandLine": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe -W ignore -m src.jdl_temporal_svgp fit --threads 1 800 ckpt_r1_f1_B40 ckpt_r1_f2_B40 ckpt_r1_f3_B40 ckpt_r1_f4_B40 ckpt_r1_f5_B40 ckpt_r2_f1_B40 ckpt_r2_f2_B40 ckpt_r2_f3_B40 ckpt_r2_f4_B40 ckpt_r2_f5_B40"
+    },
+    {
+     "ProcessId": 20544,
+     "ParentProcessId": 22492,
+     "Name": "python.exe",
+     "CommandLine": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe -W ignore -m src.jdl_temporal_svgp fit --threads 1 800 ckpt_r1_f1_B40 ckpt_r1_f2_B40 ckpt_r1_f3_B40 ckpt_r1_f4_B40 ckpt_r1_f5_B40 ckpt_r2_f1_B40 ckpt_r2_f2_B40 ckpt_r2_f3_B40 ckpt_r2_f4_B40 ckpt_r2_f5_B40"
+    },
+    {
+     "ProcessId": 11824,
+     "ParentProcessId": 23300,
+     "Name": "python.exe",
+     "CommandLine": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe -W ignore -m src.jdl_temporal_svgp fit --threads 1 800 ckpt_r1_f1_B40 ckpt_r1_f2_B40 ckpt_r1_f3_B40 ckpt_r1_f4_B40 ckpt_r1_f5_B40 ckpt_r2_f1_B40 ckpt_r2_f2_B40 ckpt_r2_f3_B40 ckpt_r2_f4_B40 ckpt_r2_f5_B40"
+    }
+   ],
+   "foreign_slots": 4,
+   "own_threads": 1
+  },
+  "INDEPENDENT_CHECKS.json_exists": false,
+  "CONTROLLED_RESULTS.json_exists": false,
+  "ledger_events": [
+   "FREEZE",
+   "FREEZE",
+   "IMPLEMENTATION_FREEZE"
+  ]
+ },
+ "interpretation": "implementation frozen and queued; no numerical reference, fit or controlled result exists at this snapshot",
+ "files_sha256": {
+  "AMENDMENT_00_BEFORE_RESULTS.md": "3e06cb93b5310c20ce9ae70fa02d61297a5359fb2567749302af6b5ad788cc72",
+  "AMENDMENT_01_NUMERICAL_AUDIT.md": "17c18b37530ba5cee011af8e584ce5b6cef6d1b0cb292d8181bef1d78e6b2a72",
+  "ATTEMPT_LEDGER.md": "951a3edc34b88854c662ba6388992302ce674b941f699ec70039229d53c50321",
+  "balanced_method.py": "7fb4674ff56e98164870033b18e7c88baf1e6bd9a4fcf47f350d16caafa1f516",
+  "DECISION_ACQUISITION_DESIGN.md": "6670c77b42115af2d367aaf3e6fce85607326f28c78a271a03bef04a2009d980",
+  "evidence/exploratory__EX1_ba_aligned_decision_rule__metrics_per_repeat.csv": "7f3391ad91596e2556a15323c6b4ef9063856fa24e2740425525f6aa2b781fba",
+  "evidence/exploratory__EX2_trained_response_prior__metrics_per_repeat.csv": "c0fc4e5d076a6187343f99206a18c2d17a587187df60cb47a9cdddc294238349",
+  "evidence/exploratory__EXPLORATORY_REPORT.md": "5112b64418ad4738cb75449199209979e185354526f0febba4a6e687f38a08fd",
+  "evidence/exploratory__POSTHOC_descriptive__NEW_negatives_by_rule.csv": "034aa36db68b890f2d8d17035565963d7b5d15064d5bc19fe9984638e948c78a",
+  "evidence/exploratory__POSTHOC_descriptive__NEW_positive_misses_by_rule.csv": "4529d25302f26c8a6566089facc2c097e0e8dd04abb1b6dad6665f48980727ba",
+  "evidence/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "evidence/jdl_ex1.py": "d3a3484b8b7bfc1cd63153187c15cc5199129678f0f6417bbc6f0bc766148197",
+  "evidence/jdl_ex2.py": "ef32514701a16b2c4b3a5908910c439f2a28a76b5fd730ac495dff4ef1fdf795",
+  "evidence/jdl_ex_descriptive.py": "461da4dc21d30ca75bd8d4f57a6bebabb929fa78cf169f9d7087211560da6deb",
+  "evidence/jdl_mechanism.py": "3a6629c4a3cada24fd2ebc58d309fbe1fbfbce2cf589fa5615b54afb94a0b9dd",
+  "evidence/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc",
+  "evidence/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "evidence/mechanism__laplace_error_NEW_r1_B40_ess.csv": "f09a738309a9a252badb4b934610a00943c4f5c0e7851c80907e2639904f904d",
+  "evidence/mechanism__oracle_response_vs_gp_same_simulations.csv": "8af845d97828fcecf8d35a28212635c564357e8b0fad1373f54532c7dc726aed",
+  "evidence/mechanism__reliability_bins.csv": "605409de0991f7cd8c3e7e7152a6450d21ec6b4a07582258cb810ddd72e74d51",
+  "evidence/MECHANISM_REPORT.md": "af4ae3796fa0f31ad6b62d136653f9113e167d34d7cefc1d268d0638a96ff145",
+  "evidence/pre_batch_correction/balanced_method.py": "76f4c9dab9662f3adcd58f3d2eab0415749779fec7c63112968d1b77428598db",
+  "evidence/pre_batch_correction/independent_checks.py": "8284717a7c55962fb1c7f44abe1cf6c90a9b5b455ba08ba9a9593c5c718fdc82",
+  "evidence/pre_batch_correction/MANIFEST.json": "f39c0d2f00c8c46630f0c3408a3b6e645d1439a7f003606fc4cae82c111d9bb4",
+  "evidence/pre_batch_correction/PROSPECTIVE_SELECTION.md": "6597be06762f468f9041d1ae34a1af238b755250829858694572a2ad80f841d5",
+  "evidence/pre_batch_correction/run_controlled.py": "781b4848e63f9127ba1da1d0ee47c6751247f33d4db2da7b43c472302791cda2",
+  "evidence/pre_batch_correction/runtime.py": "59c14429bd4b067e4fb2ce6bd081e56d735b2f170a0fdb44605f8f9b9b9bb6e5",
+  "evidence/pre_batch_correction/worlds.py": "43415f46368507a4ab82024cdc0c47cc42984f2bcda046aec05222584899afe4",
+  "evidence/pre_numerical_audit/balanced_method.py": "d9217007f7d69aa83948d438f63ac45bc2e043f5e9facbbc8a3a9452fb245f27",
+  "evidence/pre_numerical_audit/independent_checks.py": "d3100f0325cb2f8810645ce92ace7e630b2b78a3c4ad53df07dec1a12f099dda",
+  "evidence/pre_numerical_audit/MANIFEST.json": "08f9a2b01cfbbabd1f7a87753a6177e7922684a38b45d56bd2e87f938dfc2601",
+  "evidence/pre_numerical_audit/run_controlled.py": "781b4848e63f9127ba1da1d0ee47c6751247f33d4db2da7b43c472302791cda2",
+  "evidence/pre_numerical_audit/runtime.py": "41829e48c45334ae365438931276b83b2ab25b0feb1e717357093bb5c014a3d1",
+  "evidence/pre_numerical_audit/worlds.py": "43415f46368507a4ab82024cdc0c47cc42984f2bcda046aec05222584899afe4",
+  "evidence/stage_m__metrics_per_repeat.csv": "c62ff26424e1a93ccd3f12ee48cc5d6499b101325b9eae85da27d55fb90d19af",
+  "evidence/stage_m__paired_contrasts.csv": "e9a58b9d6195f2fc3892ffa6ab4c5f30f7525df3969bc51a7d1deddf763e2282",
+  "evidence/stage_m__prefix_composition.csv": "def2224f0aa85cf1d84e251054409c5f8fa1265ded8daf6c235f79a9d1e1c09c",
+  "evidence/stage_m__STAGE_M_DECISION.json": "45cccdf7c2cfb7d98903eac1702ecdd0b4956bf1aa0fcb92f61aa3dfbcd0ad38",
+  "evidence/STAGE_M_REPORT.md": "ec420f397e4096cf4b042ac11db6e1cbca3b42138800767dfd72c5ed87928294",
+  "evidence/STUDY_MANIFEST.json": "bef7b76ec4ccb99af05cb1733f8c7a00536192d9f281c6afcd0767dd855013c2",
+  "evidence/V2_DESIGN_BEFORE_ERRATUM.md": "dff89d5c6467135bf4a9403b070381cb7bf293e5cea1c283c8031c06d307e8d1",
+  "finish_queue.ps1": "007b19b4ea3fe8ebbb02113cd815395f87c6de38f50a7bc8d98f7dfd540158e9",
+  "independent_checks.py": "74e3df21683ba0d1532b427108d51434c565bc983b373e891b79ba4afb859546",
+  "joint_model_v2.py": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+  "ledger.jsonl": "35958921d2504b8d6b573887a2f2fdbc06ad3969f54dffe6e5ebcd1f4f584ade",
+  "MANIFEST.json": "5cb55b923f61e04b7453173867be2e23160bcc4917340be647076c0154765bef",
+  "MANIFEST_00_SUPERSEDED.json": "f39c0d2f00c8c46630f0c3408a3b6e645d1439a7f003606fc4cae82c111d9bb4",
+  "OPUS_DECISION_ACQUISITION_REQUEST.md": "090948588b7dafaa10e89aa2caab78a8f63bd00fb07083bfb38ab9fdc7b4569b",
+  "PREPARATION_CHECK.json": "97d2ded2f0a22252528ff20f0577d18aeac5321d440ae805d3668cf4d0724c32",
+  "PREPARATION_CHECK_CONTINUATION.json": "d13555f1cbf9dd5fb6444a1accc353ee86e060056f96088450fcdbe36e69b613",
+  "preserved_v2_identity/CONTROLLED_RESULTS.json": "59d3cea2856458ad05a2ad9dca98084b260661bd417a08b1c4a3c5e84b4cbc07",
+  "preserved_v2_identity/joint_model_v2.py": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+  "preserved_v2_identity/SELECTION_RECORD_V2.json": "046a523df4f556b704b8a412ab30a9d33ecd881e1868bcec7296e61ac0ebe002",
+  "preserved_v2_identity/v1_reference.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+  "PROSPECTIVE_SELECTION.md": "6597be06762f468f9041d1ae34a1af238b755250829858694572a2ad80f841d5",
+  "QUEUE_LAUNCH.json": "2a8ee3e15bd5b75ba30f9607c4976a09c447ee5d0655998f9705cf35349285a0",
+  "README.md": "f61cf27f8afc5c3cb7d68b184a60b7ea802c76405c4eb3afa0fcd3d5ceba91a4",
+  "reproduce_standalone.py": "261c5d404930ea3d9890131a8ce77717751da53d0ba34db91511bfe2cc4fa7dd",
+  "requirements.txt": "6afb83d59515deb526c4879fe45c151289c53c8b2bd6c073dfcd3702132e51ac",
+  "run_controlled.py": "52f59d121fa3fc76537c80e5828257a9d4d248b9682890856ab37821b9b98c8d",
+  "runtime.py": "eae77de6a5d6924c1c9f2df1c9ce47bdc305dd575c9ed9eb5c88c55b68551cd4",
+  "summarize_results.py": "279eb06e34802c22d9e86536ae7b2ec2777287adf0db8f962be3463a6baf666e",
+  "v1_reference.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+  "worlds.py": "98265fe9bf184682cd0b016116d06f2d6eda007b76f0a876408eb6f1c65ee68b"
+ }
+}

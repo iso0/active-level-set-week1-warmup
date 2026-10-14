@@ -1,0 +1,14 @@
+{
+  "syntax_files": [
+    "balanced_method.py",
+    "independent_checks.py",
+    "joint_model_v2.py",
+    "runtime.py",
+    "run_controlled.py",
+    "summarize_results.py",
+    "v1_reference.py",
+    "worlds.py"
+  ],
+  "numpy": "2.4.6",
+  "scipy": "1.17.1"
+}

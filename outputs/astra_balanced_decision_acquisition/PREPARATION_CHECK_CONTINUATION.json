@@ -1,0 +1,16 @@
+{
+ "utc": "2026-10-14T14:02:44.868406+00:00",
+ "python_source_syntax": "PASS",
+ "python_files": 9,
+ "manifest_sha256": "5cb55b923f61e04b7453173867be2e23160bcc4917340be647076c0154765bef",
+ "frozen_V2_identity": "PASS",
+ "standalone_preparation": "PASS",
+ "fresh_copy_source_verification": "PASS",
+ "numerical_fit_requests": 0,
+ "reference_groups": 0,
+ "numerical_acceptance": "PENDING; shared host queue",
+ "reporting_source_sha256": {
+  "summarize_results.py": "279eb06e34802c22d9e86536ae7b2ec2777287adf0db8f962be3463a6baf666e",
+  "reproduce_standalone.py": "261c5d404930ea3d9890131a8ce77717751da53d0ba34db91511bfe2cc4fa7dd"
+ }
+}
