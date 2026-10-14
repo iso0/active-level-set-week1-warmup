@@ -3,3 +3,5 @@
 exit800 0
 {"checkpoint": "ckpt_r2_f3_B16", "tag": "svgp_ngd_M400", "status": "max_iterations", "iterations": 20000, "fit_seconds": 4406.310971736908, "final_probe_elbo_per_point": 1.653810239142011, "lengthscale_s": 0.12208925784663859, "noise": 0.001364611616793187}
 {"checkpoint": "ckpt_r2_f4_B40", "tag": "svgp_ngd_M400", "status": "max_iterations", "iterations": 20000, "fit_seconds": 4617.244373559952, "final_probe_elbo_per_point": 1.1997385524673991, "lengthscale_s": 0.15580042458998813, "noise": 0.0036416871841435648}
+{"checkpoint": "ckpt_r2_f5_B80", "tag": "svgp_ngd_M400", "status": "max_iterations", "iterations": 20000, "fit_seconds": 3026.8826434612274, "final_probe_elbo_per_point": 1.1372515585161402, "lengthscale_s": 0.120370929290767, "noise": 0.0031460790332116565}
+exit400 0

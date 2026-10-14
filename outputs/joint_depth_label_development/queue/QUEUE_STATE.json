@@ -95,10 +95,15 @@
                                            "started_utc":  "2026-10-14T22:29:37.5277817Z",
                                            "exit_code":  0,
                                            "seconds":  12.2,
-                                           "finished_utc":  "2026-10-14T22:29:49.7184301Z"
+                                           "finished_utc":  "2026-10-14T22:29:49.7184301Z",
+                                           "commit":  "74c5ae0d"
                                        },
                   "T15_TEMPORAL_EVALUATE":  {
-                                                "status":  "pending"
+                                                "status":  "done",
+                                                "started_utc":  "2026-10-14T23:01:05.2197463Z",
+                                                "exit_code":  0,
+                                                "seconds":  1338.9,
+                                                "finished_utc":  "2026-10-14T23:23:24.1238061Z"
                                             },
                   "T16_STOPPING_AUDIT":  {
                                              "status":  "pending"

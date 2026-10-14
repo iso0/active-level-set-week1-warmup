@@ -1,0 +1,2 @@
+C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_temporal_eval.py:112: RuntimeWarning: overflow encountered in expm1
+  mp = np.expm1(p["max_planned"][i].astype(float))
