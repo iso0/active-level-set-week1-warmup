@@ -1,0 +1,20 @@
+{
+ "fits": 40,
+ "recorded_converged": 0,
+ "fits_with_probe_equal_to_training_objective": 10,
+ "KL_weight_ratio_range": [
+  1.0,
+  2.86572265625
+ ],
+ "ys_range": [
+  1.9673369846658195,
+  2.081861377602154
+ ],
+ "equivalent_log1p_tolerance_range": [
+  0.009836684923329097,
+  0.01040930688801077
+ ],
+ "decisions_changed_by_log1p_reinterpretation": 40,
+ "fits_that_would_have_stopped_as_implemented": 0,
+ "fits_that_would_have_stopped_with_log1p_tolerance": 0
+}

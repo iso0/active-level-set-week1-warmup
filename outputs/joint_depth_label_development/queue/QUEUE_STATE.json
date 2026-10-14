@@ -103,10 +103,15 @@
                                                 "started_utc":  "2026-10-14T23:01:05.2197463Z",
                                                 "exit_code":  0,
                                                 "seconds":  1338.9,
-                                                "finished_utc":  "2026-10-14T23:23:24.1238061Z"
+                                                "finished_utc":  "2026-10-14T23:23:24.1238061Z",
+                                                "commit":  "da46dd70"
                                             },
                   "T16_STOPPING_AUDIT":  {
-                                             "status":  "pending"
+                                             "status":  "done",
+                                             "started_utc":  "2026-10-14T23:24:32.5200087Z",
+                                             "exit_code":  0,
+                                             "seconds":  1.4,
+                                             "finished_utc":  "2026-10-14T23:24:33.8942720Z"
                                          },
                   "T17_TESTS":  {
                                     "status":  "pending"
