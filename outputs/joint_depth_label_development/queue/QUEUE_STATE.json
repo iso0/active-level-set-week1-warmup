@@ -56,10 +56,15 @@
                                           "started_utc":  "2026-10-14T22:21:50.8982202Z",
                                           "exit_code":  0,
                                           "seconds":  45.5,
-                                          "finished_utc":  "2026-10-14T22:22:36.3974870Z"
+                                          "finished_utc":  "2026-10-14T22:22:36.3974870Z",
+                                          "commit":  "cabdbe57"
                                       },
                   "T10_EX_DESCRIPTIVE":  {
-                                             "status":  "pending"
+                                             "status":  "done",
+                                             "started_utc":  "2026-10-14T22:23:45.6569124Z",
+                                             "exit_code":  0,
+                                             "seconds":  16.2,
+                                             "finished_utc":  "2026-10-14T22:24:01.8607393Z"
                                          },
                   "T11_CHECKPOINT_VALIDATION":  {
                                                     "status":  "pending"

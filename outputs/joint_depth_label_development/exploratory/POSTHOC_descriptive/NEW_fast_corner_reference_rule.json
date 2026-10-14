@@ -1,0 +1,6 @@
+{
+ "rule": "predict no Keyhole iff VX > 0.85 m/s (Week 19 cut; NOT train-only)",
+ "sensitivity": 0.9032258064516129,
+ "specificity": 0.9166666666666666,
+ "BA": 0.9099462365591398
+}
