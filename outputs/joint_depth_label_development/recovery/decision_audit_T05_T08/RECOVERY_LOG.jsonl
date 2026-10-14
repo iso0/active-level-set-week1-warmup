@@ -1,3 +1,8 @@
 {"event":"LAUNCH_ATTEMPT_FAILED_BEFORE_START","detail":"the stdout redirect target directory did not exist yet, so the script never started; no step ran","utc":"2026-10-14T23:04:35.3650869Z"}
 {"event":"RECOVERY_START","pid":22276,"module_sha256":"e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f","utc":"2026-10-14T23:04:44.6540669Z"}
 {"event":"PRESERVED","step":"R04_PRESERVE","sha256":"cd573ef38659143446a6299f274b547dc73b38f9b19044f2309e8c4363b82431","original_commit":"b0697f2ba1b0e39eecb9c87e76b014ad4165f0cb","utc":"2026-10-14T23:04:44.9394840Z"}
+{"event":"COMMIT","ok":true,"head":"034eae6b","attempt":1,"message":"Recovery R04: preserve the decision-audit-1.1 PASS validation file of failed queue T05","utc":"2026-10-14T23:04:47.5750207Z"}
+{"event":"PUSH","ok":true,"attempt":1,"detail":"","utc":"2026-10-14T23:04:53.1282798Z"}
+{"event":"START","step":"R05_DECISION_VALIDATION_RETRY","used_before":2,"astra_active":true,"astra_state":"CONTROLLED_RUN","leaves":"16972:1","python":"C:\\Users\\ozgur\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe","args":"-m src.jdl_v2_decision_audit validate --threads 1","module_sha256":"e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f","utc":"2026-10-14T23:05:53.9222410Z"}
+{"event":"END","step":"R05_DECISION_VALIDATION_RETRY","exit_code":0,"seconds":9.9,"utc":"2026-10-14T23:06:03.8658070Z"}
+{"event":"GATE_PASSED","step":"R05_DECISION_VALIDATION_RETRY","hard_checks":45,"validation_sha256":"9505282d81ccfe7fe8362eab807cf15b1e9e8ba677efd958fc09d5eff2f8321a","utc":"2026-10-14T23:06:03.9160623Z"}

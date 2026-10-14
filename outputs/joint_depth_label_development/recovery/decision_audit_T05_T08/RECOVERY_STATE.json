@@ -10,7 +10,18 @@
                                        "original_attempt":  "queue T05, 2026-10-14 22:20:46-22:20:50 UTC, exit code 1 at the console echo after writing status PASS (45/45)"
                                    },
                   "R05_DECISION_VALIDATION_RETRY":  {
-                                                        "status":  "pending"
+                                                        "status":  "done",
+                                                        "seconds":  9.9,
+                                                        "module_sha256":  "e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f",
+                                                        "audit_version":  "decision-audit-1.1.1",
+                                                        "validated_module_sha256":  "e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f",
+                                                        "started_utc":  "2026-10-14T23:05:53.9294147Z",
+                                                        "hard_checks_passed":  45,
+                                                        "attempt_id":  "R05_DECISION_VALIDATION_RETRY",
+                                                        "hard_checks":  45,
+                                                        "validation_sha256":  "9505282d81ccfe7fe8362eab807cf15b1e9e8ba677efd958fc09d5eff2f8321a",
+                                                        "exit_code":  0,
+                                                        "validation_status":  "PASS"
                                                     },
                   "R06_DECISION_FREEZE":  {
                                               "status":  "pending"

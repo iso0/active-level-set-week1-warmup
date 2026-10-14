@@ -93,7 +93,7 @@
     }
    }
   },
-  "audit_version": "decision-audit-1.1",
+  "audit_version": "decision-audit-1.1.1",
   "p_parity_tolerance": 1e-10
  },
  "hard_checks": {
@@ -145,9 +145,9 @@
  },
  "status": "PASS",
  "batch_size_m": 136,
- "seconds": 1.200206995010376,
- "module_sha256": "7af7a326c44f37d3baa8845976d942e82e41da5990cb790845f7f600dd3c7f7a",
- "audit_version": "decision-audit-1.1",
+ "seconds": 1.0190043449401855,
+ "module_sha256": "e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f",
+ "audit_version": "decision-audit-1.1.1",
  "p_parity_tolerance": 1e-10,
  "weight_sum_tolerance": 1e-09,
  "component_solves": 0,
