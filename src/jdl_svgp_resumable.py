@@ -16,6 +16,13 @@ Validation (`python -m src.jdl_svgp_resumable validate`, torch venv, one thread)
 intermediate checkpoint and resumed in fresh objects ends bitwise identical to the uninterrupted run (parameters,
 trace, predictions); (c) a corrupted checkpoint is refused; (d) an interrupted write (stale .tmp) leaves the previous
 checkpoint valid.
+
+v2 (2026-10-14, after queue task T11): the first validation (CHECKPOINT_MECHANISM_VALIDATION.json, kept) failed both
+bitwise checks.  gpytorch's NaturalVariationalDistribution draws its initial natural-parameter noise
+(torch.randn_like, sd 1e-3) from the unseeded global torch RNG at the first forward pass, and the harness seeded that
+RNG only once, so the compared runs started from different initialisations.  v2 seeds the global RNG before every
+fresh run, and checkpoints/restores the global RNG state together with the minibatch generator.  It writes
+CHECKPOINT_MECHANISM_VALIDATION_v2.json; checks and tolerances (bitwise equality) are unchanged.
 """
 from __future__ import annotations
 
@@ -35,6 +42,7 @@ import src.jdl_temporal_svgp as F            # frozen module (read only); import
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "joint_depth_label_development" / "temporal_repair" / "checkpoint_mechanism"
+GLOBAL_SEED = 0                                                      # v2 validation: global torch seed before each fresh run
 
 
 def _fingerprint(X, y, proto):
@@ -106,6 +114,8 @@ def train_resumable(X, y, M, proto=F.PROTOCOL, fixed=None, ckpt_path=None, every
             if adam is not None:
                 adam.load_state_dict(ck["adam"])
             gen.set_state(ck["gen_state"])
+            if ck.get("torch_rng_state") is not None:                # v2: the global stream (gpytorch draws its init noise there)
+                torch.set_rng_state(ck["torch_rng_state"])
             if not torch.equal(probe, ck["probe"]):
                 raise RuntimeError("probe indices differ from the checkpoint")
             trace, stable, prev_elbo, prev_mean = ck["trace"], ck["stable"], ck["prev_elbo"], ck["prev_mean"]
@@ -148,7 +158,8 @@ def train_resumable(X, y, M, proto=F.PROTOCOL, fixed=None, ckpt_path=None, every
                 status = "converged"; done = True
         if ckpt_path is not None and every and (it % every == 0 or done or it == proto["max_iterations"]):
             save_checkpoint(ckpt_path, {"model": model.state_dict(), "likelihood": lik.state_dict(), "ngd": ngd.state_dict(),
-                                        "adam": adam.state_dict() if adam is not None else None, "gen_state": gen.get_state(), "probe": probe,
+                                        "adam": adam.state_dict() if adam is not None else None, "gen_state": gen.get_state(),
+                                        "torch_rng_state": torch.get_rng_state(), "probe": probe,
                                         "trace": trace, "stable": stable, "prev_elbo": prev_elbo, "prev_mean": prev_mean, "iteration": it,
                                         "finished": done or it == proto["max_iterations"], "status": status, "data_fp": data_fp, "protocol_fp": prot_fp})
         if done:
@@ -176,7 +187,12 @@ def validate(threads=1):
              "probe_points": 1024, "seed": 777, "threads": threads}
     OUT.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
+    # v2: every fresh run starts from the same global torch RNG state, as a fresh process would (gpytorch draws the
+    # initial natural-parameter noise from the global stream); the resumed run starts from a deliberately different
+    # global state, so its continuation relies on the checkpointed state alone
+    torch.manual_seed(GLOBAL_SEED)
     mF, lF, iF = F.train(Xt, yt, 40, proto)
+    torch.manual_seed(GLOBAL_SEED)
     mA, lA, iA = train_resumable(Xt, yt, 40, proto)
     pF, pA = _params(mF, lF), _params(mA, lA)
     same_as_frozen = all(torch.equal(pF[k], pA[k]) for k in pF) and iF["trace"] == iA["trace"]
@@ -184,7 +200,9 @@ def validate(threads=1):
     for p in (ck, ck.with_suffix(".pt.json")):
         if p.exists():
             p.unlink()
+    torch.manual_seed(GLOBAL_SEED)
     train_resumable(Xt, yt, 40, proto, ckpt_path=ck, every=150, stop_after=300)           # "killed" right after iteration 300
+    torch.manual_seed(GLOBAL_SEED + 12345)
     mB, lB, iB = train_resumable(Xt, yt, 40, proto, ckpt_path=ck, every=150)                # fresh objects, resume at 301
     pB = _params(mB, lB)
     with torch.no_grad():
@@ -212,11 +230,14 @@ def validate(threads=1):
            "uninterrupted_resumable_equals_frozen_train_bitwise": same_as_frozen, "resumed_at_iteration": iB.get("resumed_from"),
            "interrupted_and_resumed_equals_uninterrupted_bitwise": resume_identical, "corrupted_checkpoint_refused": refused,
            "stale_tmp_leaves_checkpoint_valid": still_valid, "other_data_refused": wrong_data_refused, "status_frozen_run": iF["status"],
-           "iterations": iA["iterations"], "seconds": time.time() - t0, "note": "validation of the mechanism only; not used by any running or completed study fit"}
+           "iterations": iA["iterations"], "seconds": time.time() - t0, "note": "validation of the mechanism only; not used by any running or completed study fit",
+           "version": "v2", "module_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+           "global_rng_control": f"torch.manual_seed({GLOBAL_SEED}) before every fresh run; the resumed run starts from seed {GLOBAL_SEED + 12345} and must rely on the checkpointed generator and global RNG states",
+           "previous_attempt": "CHECKPOINT_MECHANISM_VALIDATION.json (queue T11, 2026-10-14 22:25 UTC): FAIL on both bitwise checks because the harness seeded the global RNG once, so the compared runs started from different gpytorch initialisations; kept unchanged"}
     for p in (bad, bad.with_suffix(".pt.json"), ck.with_suffix(".pt.tmp")):
         if p.exists():
             p.unlink()
-    (OUT / "CHECKPOINT_MECHANISM_VALIDATION.json").write_text(json.dumps(res, indent=1), encoding="utf-8")
+    (OUT / "CHECKPOINT_MECHANISM_VALIDATION_v2.json").write_text(json.dumps(res, indent=1), encoding="utf-8")
     print(json.dumps(res, indent=1))
     return res
 

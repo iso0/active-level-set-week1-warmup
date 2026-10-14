@@ -1,0 +1,20 @@
+{
+ "status": "PASS",
+ "torch_threads": 1,
+ "torch": "2.13.0+cpu",
+ "gpytorch": "1.15.1",
+ "uninterrupted_resumable_equals_frozen_train_bitwise": true,
+ "resumed_at_iteration": 300,
+ "interrupted_and_resumed_equals_uninterrupted_bitwise": true,
+ "corrupted_checkpoint_refused": true,
+ "stale_tmp_leaves_checkpoint_valid": true,
+ "other_data_refused": true,
+ "status_frozen_run": "max_iterations",
+ "iterations": 600,
+ "seconds": 28.988690614700317,
+ "note": "validation of the mechanism only; not used by any running or completed study fit",
+ "version": "v2",
+ "module_sha256": "271aacd86df31697da767f737b41d08b17861120fa49bdb4dcb593e191dc25f7",
+ "global_rng_control": "torch.manual_seed(0) before every fresh run; the resumed run starts from seed 12345 and must rely on the checkpointed generator and global RNG states",
+ "previous_attempt": "CHECKPOINT_MECHANISM_VALIDATION.json (queue T11, 2026-10-14 22:25 UTC): FAIL on both bitwise checks because the harness seeded the global RNG once, so the compared runs started from different gpytorch initialisations; kept unchanged"
+}

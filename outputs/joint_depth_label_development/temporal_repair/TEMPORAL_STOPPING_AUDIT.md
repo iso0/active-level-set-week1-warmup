@@ -61,6 +61,18 @@ $$\text{ELBO}_{\text{probe}}=\overline{E_q\log p}_{\,\text{probe}}-\mathrm{KL}/m
    - A rule whose tolerance lies below the measured noise floor of its own optimiser should be rejected at the design stage, not discovered at the cap.
 4. **Make long fits resumable.**
    - Use `src/jdl_svgp_resumable.py`: atomic model, likelihood, NGD/Adam and generator-state checkpoints with SHA-256 sidecars, plus data and protocol fingerprints.
-   - It has been validated to resume bitwise-identically (`checkpoint_mechanism/CHECKPOINT_MECHANISM_VALIDATION.json`).
+   - **Correction (2026-10-14, after queue T11; this bullet had been written before the validation ran).**
+     - **First validation failed.** `checkpoint_mechanism/CHECKPOINT_MECHANISM_VALIDATION.json` (T11) **failed** both bitwise checks.
+       - gpytorch draws its initial natural-parameter noise from the unseeded global torch RNG.
+       - The harness seeded that RNG only once, so the compared runs started from different initialisations.
+     - **Version v2 passes.** v2 checkpoints and restores the global RNG state, and its harness seeds every fresh run. Its validation (`CHECKPOINT_MECHANISM_VALIDATION_v2.json`, 29 s on one thread) **passes** every check:
+       - identical to the frozen `train`;
+       - interrupted-and-resumed identical to uninterrupted;
+       - corrupted or foreign checkpoints refused;
+       - a stale `.tmp` file harmless.
    - It is for new jobs only and was not retrofitted into the fits above.
+6. **Seed the variational initialisation per fit.**
+   - The frozen fits draw their initial natural-parameter noise (sd 1e-3) from the process-global torch stream, which the protocol does not seed.
+   - A fit's bitwise result therefore depends on what its worker process ran before it. A re-run with a different checkpoint-to-worker order could give slightly different fits.
+   - This is a reproducibility caveat for this study. The evaluation uses each fit as recorded.
 5. **Give M400 and M800 equal convergence effort** under the same declared rule, and report wall time separately from convergence, with the thread count of each fit.
