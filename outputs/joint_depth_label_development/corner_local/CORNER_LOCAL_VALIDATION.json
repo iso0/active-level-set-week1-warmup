@@ -10,7 +10,10 @@
   "jt_component_equals_trained_al_b16": true,
   "controls_share_region_and_counts": true,
   "predictors_equal_outside_region": true,
-  "synthetic_local_boundary_recovered": true
+  "synthetic_local_boundary_recovered": true,
+  "fixed_paths_match_frozen_stage_m_manifest": true,
+  "fixed_unit_predictors_run": true,
+  "adaptive_unit_v10_reproduced_bitwise": true
  },
  "info": {
   "synthetic_local_auc": {
@@ -57,7 +60,7 @@
       "type": "constant_leaf_score"
      }
     },
-    "seconds": 0.08965754508972168
+    "seconds": 0.09011673927307129
    },
    {
     "budget": 17,
@@ -98,7 +101,7 @@
       "type": "constant_leaf_score"
      }
     },
-    "seconds": 0.13614296913146973
+    "seconds": 0.1383821964263916
    },
    {
     "budget": 18,
@@ -139,11 +142,10 @@
       "type": "constant_leaf_score"
      }
     },
-    "seconds": 0.12004303932189941
+    "seconds": 0.12228035926818848
    }
-  ],
-  "fixed_paths": "built at run time from SMM.build_tasks() with REPEATS = (1, 2) (the Stage M / Week 19 paths)"
+  ]
  },
- "seconds": 10.153242349624634,
- "module_sha256": "594eaba212d64b3c38f81e6082af0e9467a5da0963056f2120748c6b04244feb"
+ "seconds": 17.61241888999939,
+ "module_sha256": "160cc8aaefceb05cc5cebf6bed41182ce01e2c3dc80cd21741cc782efe04713a"
 }

@@ -1,8 +1,12 @@
 {
  "study": "CORNER_LOCAL",
- "status": "FROZEN BEFORE ANY CORNER_LOCAL OUTCOME",
- "written_utc": "2026-10-15T09:39:59+00:00",
- "parent_commit": "300196ec84772fc752f5af2efb5f518e6adf690c",
+ "version": "1.1",
+ "repairs": [
+  "1.1 (2026-10-15 09:44 UTC): the FIXED unit crashed with KeyError 'path' before producing any output (SMM.build_tasks sets no path; the Stage M paths live in stage_m/paths.csv).  fixed_tasks() now loads them with the frozen sha256 check.  The ten adaptive units finished under 1.0; validation 1.1 reproduces one of them bitwise.  No endpoint, model or setting changed."
+ ],
+ "status": "v1.1 TECHNICAL REPAIR, FROZEN BEFORE ANY CORNER_LOCAL EVALUATION (the 10 adaptive units were computed under v1.0 and have not been evaluated or viewed; the FIXED unit produced no output)",
+ "written_utc": "2026-10-15T09:45:05+00:00",
+ "parent_commit": "11f49747dbd181846ab76d8dfb16ead679de875e",
  "authorization": "owner execution request of 2026-10-15 (Experiment C, candidate 1 of at most 2)",
  "population": "NEW-136; adaptive DEV repeats 3-4 (frozen B16 starts), fixed paths DEV repeats 1-2 (B16, B40)",
  "budgets": [
@@ -44,10 +48,10 @@
  "primary": "L1: pooled corner AUC at B40 on TREED_MARGIN's paid sets, TREED - TREED_PERM, mean of repeats 3-4",
  "validation": {
   "status": "PASS",
-  "sha256": "431d903a8fd605d116ce1ef6af1935133c9e677f2a17665e39cbd6c70d2a3630"
+  "sha256": "c2f101a8778ceb619e7984e43e5d147e7f3e1a8d6d53f2f30a2e3a9b4446aa58"
  },
  "code_sha256": {
-  "src/jdl_corner_local.py": "594eaba212d64b3c38f81e6082af0e9467a5da0963056f2120748c6b04244feb",
+  "src/jdl_corner_local.py": "160cc8aaefceb05cc5cebf6bed41182ce01e2c3dc80cd21741cc782efe04713a",
   "src/jdl_corner_local_eval.py": "29a496e767d80dc851b464e9388d5f42f4c6d419c82e9673d4a2017ca2418d14",
   "src/jdl_vx_stump.py": "0c2745a89c9cc4b84dd0c8213610542385bfd0a8c61533224e45e13f5cda12ff",
   "src/jdl_trained_al.py": "914a8ca17314a13e6a5c47b978b603b63ca14f8339da50bd27f13da1aeeaeec7",

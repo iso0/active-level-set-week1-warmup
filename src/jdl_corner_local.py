@@ -50,6 +50,10 @@ import src.jdl_trained_al as TA
 import src.jdl_vx_stump as VS
 
 STUDY = "CORNER_LOCAL"
+VERSION = "1.1"
+REPAIRS = ["1.1 (2026-10-15 09:44 UTC): the FIXED unit crashed with KeyError 'path' before producing any output (SMM.build_tasks sets no "
+           "path; the Stage M paths live in stage_m/paths.csv).  fixed_tasks() now loads them with the frozen sha256 check.  The ten "
+           "adaptive units finished under 1.0; validation 1.1 reproduces one of them bitwise.  No endpoint, model or setting changed."]
 OUT = SMM.OUT / "corner_local"
 CACHE = SMM.OUT / "_cache" / "corner_local"
 MANIFEST = OUT / "CORNER_LOCAL_MANIFEST.json"
@@ -169,13 +173,31 @@ def run_treed(task, b_start=B_START, b_end=B_END, ckpt=None, std_fn=None, stop_a
     return st
 
 
-def run_fixed():
-    """TREED and its controls on the fixed Week 19 paths (DEV repeats 1-2, B16 and B40)."""
+def fixed_tasks():
+    """NEW tasks of DEV repeats 1-2 with the saved Stage M / Week 19 paths (stage_m/paths.csv, as the V2 comparison), each
+    checked against the sha256 frozen in STUDY_MANIFEST.json.  (v1.1 repair: v1.0 read a 'path' key that SMM.build_tasks
+    does not set.)"""
+    import hashlib
+    import pandas as pd
     old = SMM.REPEATS; SMM.REPEATS = FIXED_REPEATS
     try:
         tasks = [t for t in SMM.build_tasks() if t["population"] == "NEW"]
     finally:
         SMM.REPEATS = old
+    frozen = json.loads((SMM.OUT / "STUDY_MANIFEST.json").read_text(encoding="utf-8"))["paths"]["sha256_by_task"]
+    paths = pd.read_csv(SMM.SM / "paths.csv")
+    for t in tasks:
+        g = paths[(paths.population == "NEW") & (paths.repeat == t["repeat"]) & (paths.fold == t["fold"])].sort_values("query_index")
+        if hashlib.sha256("\n".join(g.sim_id).encode()).hexdigest() != frozen[f"NEW_r{t['repeat']}_f{t['fold']}"]:
+            raise SystemExit(f"fixed path NEW_r{t['repeat']}_f{t['fold']} differs from the frozen Stage M manifest")
+        pos = {s: i for i, s in enumerate(t["ids"])}
+        t["path"] = g.sim_id.map(pos).to_numpy(int)
+    return tasks
+
+
+def run_fixed():
+    """TREED and its controls on the fixed Week 19 paths (DEV repeats 1-2, B16 and B40)."""
+    tasks = fixed_tasks()
     rows = []
     for t in tasks:
         std = SMM.standardizer(t)[0]
@@ -280,7 +302,17 @@ def validate():
         info["synthetic_local_auc"] = {"local": auc(f1(Xs[30:]), ys[30:]), "permuted": auc(f2(Xs[30:]), ys[30:])}
         checks["synthetic_local_boundary_recovered"] = info["synthetic_local_auc"]["local"] >= 0.9 and r1["type"] == "gpc"
         info["first_steps"] = [{k: s[k] for k in ("budget", "stump", "leaf", "leaf_score", "local", "seconds")} for s in a["steps"]]
-        info["fixed_paths"] = "built at run time from SMM.build_tasks() with REPEATS = (1, 2) (the Stage M / Week 19 paths)"
+        # v1.1: the fixed-path unit loads the frozen Stage M paths and runs (the v1.0 defect is covered by a check)
+        ft = fixed_tasks()
+        checks["fixed_paths_match_frozen_stage_m_manifest"] = len(ft) == 10 and all(len(x["path"]) >= max(FIXED_BUDGETS) for x in ft)
+        sf = SMM.standardizer(ft[0])[0]
+        o, _ = predictors(ft[0], sf, list(ft[0]["path"][:16]), ft[0]["repeat"], ft[0]["fold"], 16, {"test": sf(ft[0]["X"][ft[0]["test"]])})
+        checks["fixed_unit_predictors_run"] = all(np.isfinite(o["test"][0][k]).all() for k in PREDICTORS)
+        # v1.1: the repair leaves the adaptive computation bitwise unchanged (stored v1.0 unit reproduced)
+        done = CACHE / "NEW__r3_f1__TREED_MARGIN.json.gz"
+        if done.exists():
+            v10 = TA._read(done); v11 = run_treed(t, std_fn=std)
+            checks["adaptive_unit_v10_reproduced_bitwise"] = v10["evals"] == json.loads(json.dumps(v11["evals"], default=TA._default)) and v10["paid"] == v11["paid"]
     except Exception as ex:
         checks["selftest_completed"] = False; info["error"] = f"{type(ex).__name__}: {ex}"[:400]; info["traceback"] = traceback.format_exc()[-2500:]
     res = {"study": STUDY, "status": "PASS" if checks and all(checks.values()) else "FAIL", "checks": {k: bool(v) for k, v in checks.items()}, "info": info,
@@ -297,7 +329,7 @@ def write_manifest():
     if val["status"] != "PASS" or val["module_sha256"] != SMM.sha256(SMM.ROOT / "src" / "jdl_corner_local.py"):
         raise SystemExit("CORNER_LOCAL validation must PASS with this module before the freeze")
     tm = json.loads(TA.MANIFEST.read_text(encoding="utf-8"))
-    man = {"study": STUDY, "status": "FROZEN BEFORE ANY CORNER_LOCAL OUTCOME", "written_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+    man = {"study": STUDY, "version": VERSION, "repairs": REPAIRS, "status": "FROZEN BEFORE ANY CORNER_LOCAL OUTCOME", "written_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
            "parent_commit": SMM._git("rev-parse", "HEAD"), "authorization": "owner execution request of 2026-10-15 (Experiment C, candidate 1 of at most 2)",
            "population": "NEW-136; adaptive DEV repeats 3-4 (frozen B16 starts), fixed paths DEV repeats 1-2 (B16, B40)", "budgets": [B_START, B_END],
            "path_sha256": tm["path_sha256"], "predictors": list(PREDICTORS), "gpc": GPC, "permutation_seed": "7000 + 100 r + f + 101 b",

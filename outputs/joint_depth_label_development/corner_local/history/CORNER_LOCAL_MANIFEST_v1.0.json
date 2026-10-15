@@ -1,0 +1,60 @@
+{
+ "study": "CORNER_LOCAL",
+ "status": "FROZEN BEFORE ANY CORNER_LOCAL OUTCOME",
+ "written_utc": "2026-10-15T09:39:59+00:00",
+ "parent_commit": "300196ec84772fc752f5af2efb5f518e6adf690c",
+ "authorization": "owner execution request of 2026-10-15 (Experiment C, candidate 1 of at most 2)",
+ "population": "NEW-136; adaptive DEV repeats 3-4 (frozen B16 starts), fixed paths DEV repeats 1-2 (B16, B40)",
+ "budgets": [
+  16,
+  40
+ ],
+ "path_sha256": {
+  "r3_f1": "041ffa17bd8a24bb85a672608b6e2f9fb0242be20bc7f678f4dea9956f793f81",
+  "r3_f2": "4382abce1e18d8e56145e481c7b56bbae6b6bbfb3b7d38c08facca89fc3708dc",
+  "r3_f3": "8eee43c559cf6169cd3d69f379d455b8e093fac053f87366bfafdeac4f1e9b03",
+  "r3_f4": "a24ca2d72f37298d6e628d194ca68a0cf1178212b2eae3d2189c77294407a5d6",
+  "r3_f5": "56f5cf42ca04d7b7b8b09176aae4b32065c1a95239611bd87ef51290eae6b2fb",
+  "r4_f1": "eea2dbdf4071be2c3ff529e3ea0c32c0843f68b9c22d6d7a5944ae2a754dab44",
+  "r4_f2": "be8be49fd8ab11a8783a71de5a1b315bc12104c469aa934bc82f7a7f420dd2b0",
+  "r4_f3": "eb7adca8a02e7ba90db66e48de6b0d7135d7b0b4276942fea5ed3dd50716f110",
+  "r4_f4": "9fc879ce663fce29daa4ac5d3b192f9edb59d0c42622d7193c94e1af0d34ebb8",
+  "r4_f5": "2a050581a9423dba7374c57f46d5712c40c09750f8037c50546d5ff482c1b736"
+ },
+ "predictors": [
+  "TREED",
+  "TREED_PERM",
+  "TREED_CONST",
+  "JT"
+ ],
+ "gpc": {
+  "c_init": 1.0,
+  "c_bounds": [
+   0.05,
+   20.0
+  ],
+  "ls_init": 1.0,
+  "ls_bounds": [
+   0.05,
+   20.0
+  ],
+  "restarts": 0
+ },
+ "permutation_seed": "7000 + 100 r + f + 101 b",
+ "primary": "L1: pooled corner AUC at B40 on TREED_MARGIN's paid sets, TREED - TREED_PERM, mean of repeats 3-4",
+ "validation": {
+  "status": "PASS",
+  "sha256": "431d903a8fd605d116ce1ef6af1935133c9e677f2a17665e39cbd6c70d2a3630"
+ },
+ "code_sha256": {
+  "src/jdl_corner_local.py": "594eaba212d64b3c38f81e6082af0e9467a5da0963056f2120748c6b04244feb",
+  "src/jdl_corner_local_eval.py": "29a496e767d80dc851b464e9388d5f42f4c6d419c82e9673d4a2017ca2418d14",
+  "src/jdl_vx_stump.py": "0c2745a89c9cc4b84dd0c8213610542385bfd0a8c61533224e45e13f5cda12ff",
+  "src/jdl_trained_al.py": "914a8ca17314a13e6a5c47b978b603b63ca14f8339da50bd27f13da1aeeaeec7",
+  "src/jdl_trained_al_eval.py": "d39a4d8ea9a5c18790c9b1e5630b636119c408cc932e8f8f8df4810ee5c30ac7",
+  "src/jdl_ex2.py": "ef32514701a16b2c4b3a5908910c439f2a28a76b5fd730ac495dff4ef1fdf795",
+  "src/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67"
+ }
+}
