@@ -89,7 +89,8 @@
    "name": "astra_al_risk",
    "enabled": true,
    "priority": 3,
-   "max_workers": 1,
+   "max_workers": 2,
+   "note": "10:04 UTC: timing unit step recorded (1779 s, level (10,17)); raised 1 -> 2 per ASTRA_AL_PROTOCOL section 4 (other registered studies still have claimable units); up to 3 later, when no other registered study has claimable units",
    "python": "system",
    "args": [
     "-m",

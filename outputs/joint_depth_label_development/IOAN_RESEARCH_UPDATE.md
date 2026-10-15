@@ -16,8 +16,8 @@ Find and test a method that **improves on G3 + margin while keeping short-Keyhol
 
 The structure of NEW that drives every result below:
 - NEW has 124 Keyhole runs and 12 no-Keyhole runs.
-- Outside the fast-scan corner (VX > 0.85 m/s; an evaluator-only description), every model is right on every Keyhole run. The single exception is one early-ended slow scan without depth, whose label we keep.
-- **Inside the corner** there are 23 runs: 11 no-Keyhole and 12 Keyhole, and 10 of those 12 are short-K. There, every model and every decision rule so far has BA 0.45–0.60.
+- Outside the fast-scan corner (VX > 0.85 m/s; an evaluator-only description), at cutoff 0.5 and B40, every model classifies every Keyhole run correctly. The only error outside the corner is one early-ended slow scan without depth: a no-Keyhole run that every model calls Keyhole. Its label is kept.
+- **Inside the corner** there are 23 runs: 11 no-Keyhole and 12 Keyhole. All 10 short-K runs of NEW are among those 12. There, every model and every decision rule so far has BA 0.45–0.60.
 
 So "better BA" and "keeping short-K" pull in opposite directions unless a model can tell the corner runs apart.
 
@@ -28,7 +28,7 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
 
 - Open circles are DEV (repeats 1–8, inspected). Filled squares are the one-shot C3 confirmation (repeats 17–20).
 - **Replicated:** ACTIVE beats WHOLE on NEW.
-- **Not confirmed:** ACTIVE beats G3 on NEW. The DEV +0.056 shrank to +0.007, which is about the optimism expected from a target defined after the NEW labels were seen.
+- **Not confirmed:** ACTIVE beats G3 on NEW. The DEV +0.056 shrank to +0.007. That is consistent with sampling variability and with DEV optimism, since the ACTIVE target was defined after the NEW labels had been seen.
 - On OLD, the whole-record E1 advantage was clear in DEV (+0.025) but small in C3 (+0.004).
 - Source: `outputs/week20_active_temporal_development/{track1_ext/contrasts_r1_8.csv, c3/contrasts.csv}`.
 
@@ -37,9 +37,10 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
 
 - **Setup:** fixed feature-only paths (not adaptive). Every system sees the same paid runs: Week 19 maximin prefixes, NEW, DEV repeats 1–2, B40.
 - **The trade-off is the whole story so far:**
-  - Rules that raise BA above about 0.78 do so by labelling the whole corner "no Keyhole". That includes J_trained with the π̂ cutoff (BA 0.906), V2's finite-batch BA rule (0.858, amended A1), V2 at π̂ (0.878) and a one-cut VX stump (0.851).
+  - Rules that raise BA above about 0.8 do so by labelling (almost) the whole corner "no Keyhole". That includes J_trained with the π̂ cutoff (BA 0.906), V2's finite-batch BA rule (0.858, amended A1), V2 at π̂ (0.878) and a one-cut VX stump learned from paid labels (0.851).
   - Those rules detect 0–1 of 10 short-K runs.
-  - Systems that keep short-K at or above G3's level (shaded band) stay at BA 0.55–0.78. The best of them is ACTIVE E1, at 0.730 with cutoff 0.5 and 0.784 with π̂.
+  - Systems inside the shaded band (short-K no more than 2 events of 20 below G3, or better) stay at BA 0.55–0.78. The best of them is ACTIVE E1, at 0.730 with cutoff 0.5 and 0.784 with π̂. Today's C1 model (star) sits at 0.766 with short-K 0.50.
+  - π̂ is the paid positive fraction. Applied to ACTIVE E1 it is a descriptive secondary rule, not a frozen comparison.
 - A decision-rule gain is not new information. These BA gains move the cutoff on the same posterior.
 - Sources: `v2_model_comparison/metrics_per_repeat.csv`, `v2_decision_audit/A1_extended_ladder/metrics_per_repeat.csv`.
 
@@ -107,7 +108,8 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
 **ASTRA_AL interim** (8 of 30 units at 10:00 UTC; do not read as a result):
 - **Progress.** The cheap arms take 3–7 minutes per unit.
 - **Preserved stop.** One aligned-margin trajectory (`NEW__r3_f4`, the one-class start) stopped at B20, because its reference-pool finite-batch decision did not meet the A1 criterion at 2^16. By protocol, that makes the repeat-3 aligned-margin AULC, and so the primary contrast P1, **unavailable**.
-- **BA_RISK.** The first BA_RISK step, the predeclared timing unit, had not finished after 28 minutes. Its projected cost is reported when the step is recorded. SNAPSHOT_RISK_TIMING
+- **BA_RISK.** The first BA_RISK step, the predeclared timing unit, took **30 minutes**. It was accepted at the (10, 17) level, but its ranking was **not resolved**: 18 candidates were tied within numerical error, and the frozen smallest-index rule chose among them.
+- **Projection and allocation.** That projects to about 3.9 h per trajectory and about 39 single-thread hours for all 10. Per the protocol, BA_RISK now has 2 workers and gets 3 once nothing else is claimable. Expected completion is roughly 16 h after the meeting. Only complete units will ever be reported.
 
 ## 5. Task table
 
@@ -153,8 +155,8 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
   - ACTIVE E1 + straddle'ın G3 + margin'e üstünlüğü C3'te **doğrulanmadı**: +0.007, oysa donmuş eşik +0.02 idi.
   - C3 harcandı; bu sonuç değişmez.
 - **Ana tablo.** NEW'deki bütün hatalar hızlı tarama köşesinde (VX > 0.85 m/s; yalnız değerlendirmede kullanılan bir tanım).
-  - Köşede 23 koşu var: 11 Keyhole-yok, 12 Keyhole; Keyhole'ların 10'u kısa-K.
-  - Köşe dışında her model doğru. Tek istisna, derinliği olmayan erken biten bir yavaş tarama.
+  - Köşede 23 koşu var: 11 Keyhole-yok, 12 Keyhole. NEW'deki 10 kısa-K koşusunun hepsi bu 12'nin içinde.
+  - 0.5 eşiğinde ve B40'ta köşe dışında her model doğru. Tek istisna, derinliği olmayan, erken biten bir yavaş tarama: her modelin Keyhole dediği bir Keyhole-yok koşusu.
   - Köşenin içinde hiçbir model ve kural şansın belirgin üstüne çıkmıyor.
 - **Karar kuralı ≠ yeni bilgi.** Aynı posterior üzerinde eşiği kaydırmak BA'yı 0.55–0.71'den 0.86–0.91'e çıkarıyor. Ama bunu köşenin tamamına "Keyhole yok" diyerek yapıyor ve kısa-K tespiti 0–1/10'a düşüyor. BA 0.8'in üstündeki her kural kısa-K'yı kaybediyor (Şekil 2).
 - **Bugün koşanlar** (hepsi sonuçtan önce kayıtlı):
