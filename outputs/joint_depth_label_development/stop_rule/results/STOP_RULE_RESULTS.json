@@ -1,0 +1,143 @@
+{
+ "units_done": 20,
+ "units_expected": 20,
+ "complete": true,
+ "arms": {
+  "JT_MARGIN": {
+   "available": true,
+   "stop_budgets": {
+    "r3_f1": 29,
+    "r3_f2": 28,
+    "r3_f3": 37,
+    "r3_f4": 30,
+    "r3_f5": 32,
+    "r4_f1": 25,
+    "r4_f2": 29,
+    "r4_f3": 22,
+    "r4_f4": 32,
+    "r4_f5": 32
+   },
+   "censored_trajectories": 0,
+   "mean_cost": 29.6,
+   "mean_saving_vs_B40": 10.4,
+   "fixed_stop_budget": 30,
+   "stopped_minus_B40": {
+    "BA": {
+     "estimate": 0.0020161290322580627,
+     "lo": 0.0,
+     "hi": 0.006048387096774244,
+     "per_repeat": [
+      0.0040322580645161255,
+      0.0
+     ]
+    },
+    "q20": {
+     "estimate": 0.016666666666666663,
+     "lo": 0.0,
+     "hi": 0.050000000000000044,
+     "per_repeat": [
+      0.033333333333333326,
+      0.0
+     ]
+    },
+    "shortK_events_sum": 1
+   },
+   "stopped_minus_fixed_stop": {
+    "BA": {
+     "estimate": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "per_repeat": [
+      0.0,
+      0.0
+     ]
+    },
+    "q20": {
+     "estimate": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "per_repeat": [
+      0.0,
+      0.0
+     ]
+    },
+    "shortK_events_sum": 0
+   },
+   "shortK_events_of_20": {
+    "STOPPED": 13,
+    "B40": 12,
+    "FIXED_STOP": 13
+   },
+   "refits_reproduce_stored_predictions": true,
+   "verdict": "SAVING WITHOUT MATERIAL LOSS (DEV, relative to continuing to B40)"
+  },
+  "TREED_MARGIN": {
+   "available": true,
+   "stop_budgets": {
+    "r3_f1": 33,
+    "r3_f2": 29,
+    "r3_f3": 37,
+    "r3_f4": 29,
+    "r3_f5": 22,
+    "r4_f1": 29,
+    "r4_f2": 31,
+    "r4_f3": 29,
+    "r4_f4": 29,
+    "r4_f5": 34
+   },
+   "censored_trajectories": 0,
+   "mean_cost": 30.2,
+   "mean_saving_vs_B40": 9.8,
+   "fixed_stop_budget": 30,
+   "stopped_minus_B40": {
+    "BA": {
+     "estimate": 0.0020161290322581182,
+     "lo": -0.06048387096774194,
+     "hi": 0.06451612903225806,
+     "per_repeat": [
+      -0.07930107526881713,
+      0.08333333333333337
+     ]
+    },
+    "q20": {
+     "estimate": 0.03333333333333338,
+     "lo": -0.044057539682539636,
+     "hi": 0.1119047619047619,
+     "per_repeat": [
+      0.0,
+      0.06666666666666676
+     ]
+    },
+    "shortK_events_sum": 1
+   },
+   "stopped_minus_fixed_stop": {
+    "BA": {
+     "estimate": -0.0625,
+     "lo": -0.12706653225806455,
+     "hi": 0.0,
+     "per_repeat": [
+      -0.08333333333333337,
+      -0.04166666666666663
+     ]
+    },
+    "q20": {
+     "estimate": -0.016666666666666607,
+     "lo": -0.08333333333333337,
+     "hi": 0.041666666666666685,
+     "per_repeat": [
+      0.0,
+      -0.033333333333333215
+     ]
+    },
+    "shortK_events_sum": 1
+   },
+   "shortK_events_of_20": {
+    "STOPPED": 13,
+    "B40": 12,
+    "FIXED_STOP": 12
+   },
+   "refits_reproduce_stored_predictions": true,
+   "verdict": "SAVING WITHOUT MATERIAL LOSS (DEV, relative to continuing to B40)"
+  }
+ }
+}

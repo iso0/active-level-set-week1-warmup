@@ -1,0 +1,14 @@
+{
+ "JT_MARGIN": {
+  "mean_cost": 29.6,
+  "mean_saving_vs_B40": 10.4,
+  "censored_trajectories": 0,
+  "verdict": "SAVING WITHOUT MATERIAL LOSS (DEV, relative to continuing to B40)"
+ },
+ "TREED_MARGIN": {
+  "mean_cost": 30.2,
+  "mean_saving_vs_B40": 9.8,
+  "censored_trajectories": 0,
+  "verdict": "SAVING WITHOUT MATERIAL LOSS (DEV, relative to continuing to B40)"
+ }
+}

@@ -37,6 +37,17 @@
    "note": "re-enabled 09:47 UTC after the v1.1 repair (commit 8573c1de); only the FIXED unit remains"
   },
   {
+   "name": "stop_rule",
+   "enabled": true,
+   "priority": 1,
+   "max_workers": 1,
+   "python": "system",
+   "args": ["-m", "src.jdl_stop_rule", "work", "--threads", "1"],
+   "done_glob": "outputs/joint_depth_label_development/_cache/stop_rule/NEW__*.json.gz",
+   "units_total": 20,
+   "locks_dir": "outputs/joint_depth_label_development/_cache/stop_rule/locks"
+  },
+  {
    "name": "astra_al_margin",
    "enabled": true,
    "priority": 2,
