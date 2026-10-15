@@ -1,20 +1,21 @@
 {
  "study": "ASTRA_AL",
- "units_done": 8,
+ "units_done": 20,
  "units_expected": 30,
  "units_done_by_arm": {
-  "ALIGNED_MARGIN": 5,
-  "V2_VARIANCE": 3,
+  "ALIGNED_MARGIN": 10,
+  "V2_VARIANCE": 10,
   "BA_RISK": 0
  },
  "complete": false,
  "statuses": {
   "ALIGNED_MARGIN": {
-   "ok": "4",
-   "DECISION_NUMERICAL_STOP at B20": "1"
+   "ok": "8",
+   "DECISION_NUMERICAL_STOP at B20": "1",
+   "DECISION_NUMERICAL_STOP at B24": "1"
   },
   "V2_VARIANCE": {
-   "ok": "3"
+   "ok": "10"
   },
   "BA_RISK": {}
  },
@@ -181,51 +182,51 @@
   {
    "arm": "V2_VARIANCE",
    "metric": "BA_AULC",
-   "available": false,
-   "estimate": null,
+   "available": true,
+   "estimate": 0.8180023521505377,
    "per_repeat": [
-    null,
-    null
+    0.8150201612903227,
+    0.8209845430107526
    ]
   },
   {
    "arm": "V2_VARIANCE",
    "metric": "shortK_sensitivity_AULC",
-   "available": false,
-   "estimate": null,
+   "available": true,
+   "estimate": 0.053125000000000006,
    "per_repeat": [
-    null,
-    null
+    0.043750000000000004,
+    0.0625
    ]
   },
   {
    "arm": "V2_VARIANCE",
    "metric": "q20_AULC",
-   "available": false,
-   "estimate": null,
+   "available": true,
+   "estimate": 0.5760416666666666,
    "per_repeat": [
-    null,
-    null
+    0.5791666666666666,
+    0.5729166666666666
    ]
   },
   {
    "arm": "V2_VARIANCE",
    "metric": "p05_BA_AULC",
-   "available": false,
-   "estimate": null,
+   "available": true,
+   "estimate": 0.5287718413978495,
    "per_repeat": [
-    null,
-    null
+    0.5378864247311828,
+    0.5196572580645161
    ]
   },
   {
    "arm": "V2_VARIANCE",
    "metric": "AUC_AULC",
-   "available": false,
-   "estimate": null,
+   "available": true,
+   "estimate": 0.8409778225806451,
    "per_repeat": [
-    null,
-    null
+    0.8148521505376345,
+    0.8671034946236558
    ]
   },
   {
@@ -280,8 +281,8 @@
   }
  ],
  "caps": {
-  "fits_executed": 68,
-  "component_solves": 204,
+  "fits_executed": 176,
+  "component_solves": 528,
   "top_level_requests": 270,
   "component_solves_including_fallback": 900,
   "within_caps": true

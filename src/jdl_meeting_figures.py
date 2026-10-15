@@ -52,7 +52,10 @@ def fig1():
         ax.set_title(title, fontsize=10.5); ax.set_xlabel("difference in BA-AULC (95% interval)")
         ax.set_yticks(range(len(rows))); ax.set_yticklabels([r[2] for r in rows][::-1]); ax.set_ylim(-0.8, len(rows) - 0.4)
     axes[0].legend(loc="lower left", bbox_to_anchor=(0.0, -0.42), ncol=2, frameon=False, fontsize=9)
-    fig.suptitle("Figure 1. Whole-record -> ACTIVE depth target.  Replicated: ACTIVE beats WHOLE on NEW.  NOT CONFIRMED: ACTIVE beats G3.", fontsize=11, x=0.02, ha="left")
+    fig.suptitle("Figure 1. Whole-record -> ACTIVE depth target.  Replicated: ACTIVE beats WHOLE on NEW.  NOT CONFIRMED: ACTIVE beats G3.\n"
+                 "(Week 18-20 adaptive runs: each arm on its own paths; BA-AULC up to B80; paired differences per repeat, 95% repeat-bootstrap interval)",
+                 fontsize=10.5, x=0.02, ha="left", y=1.0)
+    fig.subplots_adjust(top=0.82)
     FIG.mkdir(parents=True, exist_ok=True); fig.savefig(FIG / "fig1_whole_to_active.png"); plt.close(fig)
 
 

@@ -26,6 +26,7 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
 ### Figure 1 — Whole-record → ACTIVE depth target, with C3 stated correctly
 ![Figure 1](meeting_figures/fig1_whole_to_active.png)
 
+- These are adaptive Week 18–20 runs, each arm on its own paths, with BA-AULC up to B80 and paired differences per repeat.
 - Open circles are DEV (repeats 1–8, inspected). Filled squares are the one-shot C3 confirmation (repeats 17–20).
 - **Replicated:** ACTIVE beats WHOLE on NEW.
 - **Not confirmed:** ACTIVE beats G3 on NEW. The DEV +0.056 shrank to +0.007. That is consistent with sampling variability and with DEV optimism, since the ACTIVE target was defined after the NEW labels had been seen.
@@ -56,7 +57,7 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
 | Study | What it tests | Status | Result so far |
 |---|---|---|---|
 | **TRAINED_AL** (Experiment B) | J_trained (response prior re-trained by ML-II on paid depths at every step), with margin or probability-variance selection, against G3 + margin and ACTIVE E1 + straddle; B16–B40 | **Complete** (40/40) | **Primary contrast unavailable** (single-class start, above). J_trained: probability-variance − margin BA-AULC −0.008 [−0.029, +0.013], so selection made no difference. At B40, BA 0.707 / 0.686, short-K 12/20, AUC 0.93. Repeat 4 only (descriptive): BA-AULC G3 0.625, ACTIVE E1 0.714, JT-margin 0.681, JT-PV 0.672; short-K AULC 0.746 / 0.806 / 0.748 / 0.752. No arm reached the target. |
-| **ASTRA_AL** (Experiment A) | Astra's real-data policy: BA-risk lookahead vs integrated-variance lookahead vs aligned margin, all on V2 + finite-batch BA rule; B16–B24 | **Running** (interim; see §4) | No result yet; interim figures only. One preserved numerical stop already makes the primary contrast P1 unavailable by protocol. The interim V2 + finite-batch curve has high BA but short-K near 0, the same trade-off as Figure 2. |
+| **ASTRA_AL** (Experiment A) | Astra's real-data policy: BA-risk lookahead vs integrated-variance lookahead vs aligned margin, all on V2 + finite-batch BA rule; B16–B24 | **Running** (20/30 units; see §4) | No result yet. **P1 and S1 are unavailable by protocol**, because two aligned-margin trajectories hit preserved numerical stops. The complete V2 + variance arm has high BA (BA-AULC 0.815 / 0.821) but short-K near 0 (AULC 0.04 / 0.06), the same trade-off as Figure 2. P2 (BA-risk − variance) waits for BA_RISK. |
 | **CORNER_LOCAL** (Experiment C1) | Can a model learn the corner? A VX region learned from paid labels, with its own GP classifier inside, J_trained elsewhere. The decisive control permutes the labels inside the region | **Complete** (11/11; one technical repair before evaluation, v1.1) | **Local discrimination NOT SUPPORTED.** Corner AUC at B40 against the permuted control: +0.159 [−0.178, +0.475]. **System: no practical difference** against J_trained + margin: BA-AULC 0.757 vs 0.703, +0.054 [−0.056, +0.152], with short-K equal at B40 (12/20). Repeat 4 only: +0.101 [+0.030, +0.180] over G3, with equal short-K (7/10 each). By B40 nearly the whole corner of each training pool is paid, and held-out corner runs are still predicted near chance. |
 | **STOP_RULE** (Experiment C2) | Learner-side stopping (stabilizing predictions, standard parameters) on the two completed J-family arms; decisive control = a fixed stop at the same mean cost | **Complete** (20/20) | The rule stops at about B30 (22–37) and saves **about 10 of 40 queries** with no material loss relative to continuing to B40. J_trained + margin: BA +0.002 [0.000, +0.006], short-K 13 vs 12 of 20. **The decisive control explains it:** a fixed stop at B30 does as well (J_trained: identical) or better (C1: +0.062 BA). The late queries bought nothing, and the adaptive rule is not the reason. This is a statement about the schedule, not about useful performance; the registered target was never reached. |
 
@@ -73,7 +74,7 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
 
 **(2) Is short-K retained?**
 - **At cutoff 0.5, yes,** for the J family and C1 relative to G3: 7 vs 7 of 10 at B40 in repeat 4, and 0.5–0.6 vs 0.4 on fixed paths. ACTIVE E1 is the best on repeat 4 (8 of 10).
-- **No for every BA-aligned rule** (π̂, finite-batch), which detects 0–1 of 10. ASTRA_AL's interim V2 + finite-batch arm repeats this in repeat 3: short-K 0.0–0.1 over B16–B20 with BA 0.76–0.81.
+- **No for every BA-aligned rule** (π̂, finite-batch), which detects 0–1 of 10. ASTRA_AL's complete V2 + variance arm repeats this along an adaptive path: BA-AULC 0.82 with short-K AULC 0.04–0.06.
 
 **(3) Local discrimination, decision trade-off or query path?**
 - **The decision trade-off dominates.** On the same posterior, moving the cutoff changes BA by up to +0.30, and it does so only by rejecting the corner:
@@ -105,11 +106,19 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
   - Whether brief Keyhole events should count as Keyhole is a question about the target, not the model (§7).
 - **The C2 stop.** The flat late curves were seen before C2 was registered.
 
-**ASTRA_AL interim** (8 of 30 units at 10:00 UTC; do not read as a result):
-- **Progress.** The cheap arms take 3–7 minutes per unit.
-- **Preserved stop.** One aligned-margin trajectory (`NEW__r3_f4`, the one-class start) stopped at B20, because its reference-pool finite-batch decision did not meet the A1 criterion at 2^16. By protocol, that makes the repeat-3 aligned-margin AULC, and so the primary contrast P1, **unavailable**.
+**ASTRA_AL interim** (20 of 30 units at 10:55 UTC; do not read as a result):
+- **Progress.** The two cheap arms are complete. They took 3–7 minutes per unit.
+- **Preserved stops.** Two aligned-margin trajectories stopped on the finite-batch decision's numerical criterion. All stops are kept.
+  - `NEW__r3_f4`, the one-class start, stopped at B20: its reference-pool decision missed the A1 criterion at 2^16.
+  - `NEW__r4_f3` stopped at B24, with its B24 readout unavailable.
+  - By protocol, the aligned-margin AULC is therefore unavailable in both repeats, and with it **P1 (BA-risk − margin) and S1 (variance − margin)**.
+- **V2 + variance lookahead (complete arm, descriptive).**
+  - Finite-batch BA-AULC is 0.815 / 0.821 (repeats 3 / 4), with short-K AULC 0.044 / 0.063 (1 of 20 short-K detected at B24).
+  - On the same posterior, the 0.5 cutoff gives BA-AULC 0.538 / 0.520.
+  - This is the Figure 2 trade-off again, now along an adaptive path.
 - **BA_RISK.** The first BA_RISK step, the predeclared timing unit, took **30 minutes**. It was accepted at the (10, 17) level, but its ranking was **not resolved**: 18 candidates were tied within numerical error, and the frozen smallest-index rule chose among them.
-- **Projection and allocation.** That projects to about 3.9 h per trajectory and about 39 single-thread hours for all 10. Per the protocol, BA_RISK now has 2 workers and gets 3 once nothing else is claimable. Expected completion is roughly 16 h after the meeting. Only complete units will ever be reported.
+- **Projection and allocation.** That projects to about 3.9 h per trajectory and about 39 single-thread hours for all 10. Per the protocol, BA_RISK had 2 workers from 10:04 UTC and 3 from 10:55 UTC, once nothing else was claimable. Expected completion is around 01:00–02:00 UTC tomorrow, if every step is accepted at (10, 17). Only complete units will be reported.
+- **Continuation.** The coordinated pool runner keeps launching BA_RISK units. A dependency-gated finalizer (`src/jdl_astra_al_finalize.sh`) waits for all 30 units and the runner's end, checks capacity, and then runs the frozen evaluator once. Both run in the background of this session. If the session stops, rerun the runner and the finalizer; both resume from the atomic checkpoints.
 
 ## 5. Task table
 
@@ -148,6 +157,13 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
 2. **Brief Keyhole events.** 10 of the 12 Keyhole runs in the corner are short-K, i.e. brief events. For the process-window question, should a brief event count the same as a sustained keyhole? Or is there a physically meaningful duration? We will not relabel anything; we need to know which target matters.
 3. **Observation window.** The ACTIVE-window depth target helped over the whole record. At fast scans, is the simulated track long enough to see a stable regime, or are some corner labels window-limited? One early-ended slow scan without depth is the only error outside the corner.
 
+## 7b. Decisions that need you or the owner (nothing below has been started)
+
+- **New simulations inside the fast-scan corner.** This is the only way to learn whether corner labels are predictable at all from the scan inputs; it is open question U4. It needs simulator time and is not authorized now.
+- **Target definition for brief events (question 2).** If brief Keyhole events should not count the same as sustained ones, the target would change. That needs a separately registered study, and the canonical labels stay as they are.
+- **Budget.** On these paths the queries after about B30 bought nothing (C2). A future registered design could fix a smaller budget, but that is development evidence, not a saving at a useful level.
+- **ASTRA_AL** keeps running and will be reported only when complete, together with its preserved stops.
+
 ## 8. Türkçe açıklama
 
 - **Önce düzeltme.** E1'in avantajı OLD'daydı. NEW'de E1'in G3'e genel bir üstünlüğü gösterilmedi.
@@ -163,7 +179,10 @@ So "better BA" and "keeping short-K" pull in opposite directions unless a model 
   - **TRAINED_AL:** eğitilmiş yanıt öncüllü J ile seçim yöntemi fark yaratmadı (−0.008). Tekrar 3'te bir katlamanın sabit başlangıcında negatif yok. Bu yüzden G3/E1 o tekrarda protokol gereği çalıştırılamadı ve birincil karşılaştırma yapılamadı. Tekrar 4'te ACTIVE E1 en iyisi.
   - **C1 (köşe-yerel model):** ödenmiş etiketlerden öğrenilen bir VX bölgesi ve içinde ayrı bir GP. Etiketleri karıştırılmış kontrolü geçemedi; yerel ayrım **desteklenmedi**. Sistem düzeyinde J_trained + margin'e göre +0.054 BA-AULC var (iki tekrarda da pozitif), ama güven aralığı 0'ı içeriyor: pratik fark kanıtlanmadı. B40'ta kısa-K eşit. B40'a gelindiğinde her eğitim havuzundaki köşe koşularının neredeyse tamamı ödenmiş durumda; yine de dışarıda tutulan köşe koşuları şansa yakın tahmin ediliyor.
   - **C2 (durma kuralı):** tahminler kararlı hale gelince duran standart bir kural. Ortalama B30 civarında duruyor ve B40'a göre yaklaşık 10 sorgu kazandırıyor; kayıp yok. Ama belirleyici kontrol olan sabit B30 durması da aynı (veya daha iyi) sonucu veriyor. Yani son sorgular bir şey kazandırmıyor; kazancı uyarlamalı kural sağlamıyor. Bu, kullanışlı bir performansa daha az sorguyla ulaşıldığı anlamına gelmez.
-  - **ASTRA_AL** (Astra'nın politikası; V2 + sonlu-yığın kuralı ile BA-risk / varyans / marj): çalışıyor, ara durum 8/30 birim. Tekrar 3'te bir marj yörüngesi (tek sınıflı başlangıç) B20'de sayısal olarak durdu; protokol gereği korunuyor. Bu yüzden birincil karşılaştırma P1 yapılamayacak. Ara eğri, yüksek BA'yı yine kısa-K'yı kaybederek veriyor. BA_RISK adımı çok pahalı; ilk adım 28 dakikada bitmedi. Toplantıdan sonra sürüyor.
+  - **ASTRA_AL** (Astra'nın politikası; V2 + sonlu-yığın kuralı ile BA-risk / varyans / marj): çalışıyor, ara durum 20/30 birim.
+    - Ucuz iki kol tamamlandı. İki marj yörüngesi sayısal ölçüte takılıp durdu (r3_f4 B20'de, r4_f3 B24'te); protokol gereği korunuyor. Bu yüzden P1 ve S1 yapılamayacak.
+    - Varyans kolu yüksek BA veriyor (BA-AULC 0.815 / 0.821), ama kısa-K neredeyse sıfır (0.04 / 0.06): Şekil 2'deki ödünleşim yine görülüyor.
+    - BA_RISK adımı 30 dakika sürüyor; birim başına yaklaşık 3.9 saat. 3 işçiyle yarın 01–02 UTC civarında biter. Sonucu, bağımlılık kapılı bir sonlandırıcı donmuş değerlendirmeyle hesaplayacak.
 - **Sorgu tasarrufu.** Kayıtlı hedefe (BA ≥ 0.75, kısa-K ≥ 0.70, q20 ≥ 0.70, sürekli) B40'a kadar hiçbir kol ulaşmadı; hepsi sağdan sansürlü. Bu yüzden ölçülmüş bir tasarruf yok.
 - **İnceleme kaynaklı belirsizlik.** Köşe, A hedefi ve 0.85 tanımı NEW incelenerek bulundu. DEV sonuçları iyimser: C3'te +0.056, +0.007'ye düştü. Olumlu her sonuç, incelenmemiş veride (özellikle köşede yeni simülasyonlarla) sınanmalı. Bu talep yeni simülasyona izin vermiyor.
 - **Ioan'a üç soru:** hızlı tarama etiketleri nasıl verildi; kısa Keyhole olayları sürekli Keyhole ile aynı mı sayılmalı; gözlem penceresi hızlı taramada yeterli mi.
