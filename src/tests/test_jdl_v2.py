@@ -148,7 +148,13 @@ def test_v2_run_complete_reuse_exact_and_identities():
     for arm, src in (("V1_Laplace", "J"), ("Binary_V1_Laplace", "Binary_matched"), ("ACTIVE_E1", "ACTIVE_E1"), ("G3", "G3")):
         a = pr[pr.arm == arm].set_index(["repeat", "fold", "budget", "sim_id"]).p.sort_index()
         b = sm[sm.arm == src].set_index(["repeat", "fold", "budget", "sim_id"]).p.sort_index()
-        assert np.array_equal(a.to_numpy(), b.loc[a.index].to_numpy(), equal_nan=True), arm
+        x, z = a.to_numpy(), b.loc[a.index].to_numpy()
+        # Exact up to the CSV round trip (owner decision of 2026-10-15, ledger T17-FIX): the reused value was parsed from
+        # the Stage M CSV by pandas' default float parser, which is not correctly rounded, before being stored, so it may
+        # lie one ULP away (T17: 1 of 2,176 values, 2.1e-25 at p = 1.24e-9).  Missing values must coincide exactly.
+        same = (x == z) | (np.isnan(x) & np.isnan(z))
+        one_ulp = np.abs(x - z) <= np.spacing(np.maximum(np.abs(x), np.abs(z)))
+        assert (same | one_ulp).all(), arm
     mix = pr[pr.arm == "V2_EP_mixture"].set_index(["repeat", "fold", "budget", "sim_id"]).sort_index()
     r1 = pr[pr.arm == "rho1_EP"].set_index(["repeat", "fold", "budget", "sim_id"]).sort_index()
     fl = pd.read_csv(V2DIR / "fit_log.csv")
