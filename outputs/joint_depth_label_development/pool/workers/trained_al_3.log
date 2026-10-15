@@ -1,0 +1,4 @@
+{"unit": "NEW__r4_f4__G3_MARGIN", "status": "ok", "seconds": 1.4, "queries": 40}
+{"unit": "NEW__r4_f4__ACTIVE_E1_STRADDLE", "status": "ok", "seconds": 0.8, "queries": 40}
+{"unit": "NEW__r4_f4__JT_MARGIN", "status": "ok", "seconds": 0.8, "queries": 40}
+{"unit": "NEW__r4_f4__JT_PV", "status": "ok", "seconds": 28.0, "queries": 40}

@@ -1,0 +1,9 @@
+arm,repeat,attained,queries_to_sustained_target,censored_at,trajectory_complete,target_met_at
+G3_MARGIN,3,False,,,False,[]
+G3_MARGIN,4,False,,40.0,True,[]
+ACTIVE_E1_STRADDLE,3,False,,,False,[]
+ACTIVE_E1_STRADDLE,4,False,,40.0,True,[]
+JT_MARGIN,3,False,,40.0,True,[]
+JT_MARGIN,4,False,,40.0,True,[]
+JT_PV,3,False,,40.0,True,[]
+JT_PV,4,False,,40.0,True,[]

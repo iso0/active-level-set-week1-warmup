@@ -1,0 +1,380 @@
+{
+ "study": "TRAINED_AL",
+ "units_done": 40,
+ "units_expected": 40,
+ "complete": true,
+ "statuses": {
+  "G3_MARGIN": {
+   "ok": "9",
+   "not permitted at B16: single-class usable paid data": "1"
+  },
+  "ACTIVE_E1_STRADDLE": {
+   "ok": "9",
+   "not permitted at B16: single-class usable paid data": "1"
+  },
+  "JT_MARGIN": {
+   "ok": "10"
+  },
+  "JT_PV": {
+   "ok": "10"
+  }
+ },
+ "practical_aulc_threshold": 0.04,
+ "shortK_tolerance_events": 2,
+ "target": {
+  "BA": 0.75,
+  "shortK_sensitivity": 0.7,
+  "q20": 0.7
+ },
+ "shortK_retention": {
+  "G3_MARGIN": {},
+  "ACTIVE_E1_STRADDLE": {},
+  "JT_MARGIN": {},
+  "JT_PV": {}
+ },
+ "contrasts": [
+  {
+   "contrast": "C1_primary",
+   "arm": "JT_PV",
+   "ref": "G3_MARGIN",
+   "metric": "BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "C1_primary",
+   "arm": "JT_PV",
+   "ref": "G3_MARGIN",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false
+  },
+  {
+   "contrast": "C1_primary",
+   "arm": "JT_PV",
+   "ref": "G3_MARGIN",
+   "metric": "q20_AULC",
+   "available": false
+  },
+  {
+   "contrast": "C2_selection",
+   "arm": "JT_PV",
+   "ref": "JT_MARGIN",
+   "metric": "BA_AULC",
+   "available": true,
+   "estimate": -0.008022513440860135,
+   "per_repeat": [
+    -0.006468413978494514,
+    -0.009576612903225756
+   ],
+   "boot_lo": -0.029014756944444466,
+   "boot_hi": 0.01297288026433689
+  },
+  {
+   "contrast": "C2_selection",
+   "arm": "JT_PV",
+   "ref": "JT_MARGIN",
+   "metric": "shortK_sensitivity_AULC",
+   "available": true,
+   "estimate": 0.018749999999999878,
+   "per_repeat": [
+    0.033333333333333104,
+    0.004166666666666652
+   ],
+   "boot_lo": -0.05833333333333329,
+   "boot_hi": 0.1015625
+  },
+  {
+   "contrast": "C2_selection",
+   "arm": "JT_PV",
+   "ref": "JT_MARGIN",
+   "metric": "q20_AULC",
+   "available": true,
+   "estimate": -0.002083333333333437,
+   "per_repeat": [
+    0.00416666666666643,
+    -0.008333333333333304
+   ],
+   "boot_lo": -0.031609164562289536,
+   "boot_hi": 0.028919327200577202
+  },
+  {
+   "contrast": "C3_model",
+   "arm": "JT_MARGIN",
+   "ref": "G3_MARGIN",
+   "metric": "BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "C3_model",
+   "arm": "JT_MARGIN",
+   "ref": "G3_MARGIN",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false
+  },
+  {
+   "contrast": "C3_model",
+   "arm": "JT_MARGIN",
+   "ref": "G3_MARGIN",
+   "metric": "q20_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S1",
+   "arm": "ACTIVE_E1_STRADDLE",
+   "ref": "G3_MARGIN",
+   "metric": "BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S1",
+   "arm": "ACTIVE_E1_STRADDLE",
+   "ref": "G3_MARGIN",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S1",
+   "arm": "ACTIVE_E1_STRADDLE",
+   "ref": "G3_MARGIN",
+   "metric": "q20_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S2",
+   "arm": "JT_PV",
+   "ref": "ACTIVE_E1_STRADDLE",
+   "metric": "BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S2",
+   "arm": "JT_PV",
+   "ref": "ACTIVE_E1_STRADDLE",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S2",
+   "arm": "JT_PV",
+   "ref": "ACTIVE_E1_STRADDLE",
+   "metric": "q20_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S3",
+   "arm": "JT_MARGIN",
+   "ref": "ACTIVE_E1_STRADDLE",
+   "metric": "BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S3",
+   "arm": "JT_MARGIN",
+   "ref": "ACTIVE_E1_STRADDLE",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S3",
+   "arm": "JT_MARGIN",
+   "ref": "ACTIVE_E1_STRADDLE",
+   "metric": "q20_AULC",
+   "available": false
+  }
+ ],
+ "aulc": [
+  {
+   "arm": "G3_MARGIN",
+   "metric": "BA_AULC",
+   "estimate": null,
+   "per_repeat": [
+    null,
+    0.6246079749103947
+   ],
+   "available": false
+  },
+  {
+   "arm": "G3_MARGIN",
+   "metric": "shortK_sensitivity_AULC",
+   "estimate": null,
+   "per_repeat": [
+    null,
+    0.745833333333333
+   ],
+   "available": false
+  },
+  {
+   "arm": "G3_MARGIN",
+   "metric": "q20_AULC",
+   "estimate": null,
+   "per_repeat": [
+    null,
+    0.6930555555555554
+   ],
+   "available": false
+  },
+  {
+   "arm": "ACTIVE_E1_STRADDLE",
+   "metric": "BA_AULC",
+   "estimate": null,
+   "per_repeat": [
+    null,
+    0.7138496863799283
+   ],
+   "available": false
+  },
+  {
+   "arm": "ACTIVE_E1_STRADDLE",
+   "metric": "shortK_sensitivity_AULC",
+   "estimate": null,
+   "per_repeat": [
+    null,
+    0.8062500000000004
+   ],
+   "available": false
+  },
+  {
+   "arm": "ACTIVE_E1_STRADDLE",
+   "metric": "q20_AULC",
+   "estimate": null,
+   "per_repeat": [
+    null,
+    0.7826388888888891
+   ],
+   "available": false
+  },
+  {
+   "arm": "JT_MARGIN",
+   "metric": "BA_AULC",
+   "estimate": 0.7027049731182795,
+   "per_repeat": [
+    0.7239303315412188,
+    0.6814796146953402
+   ],
+   "available": true
+  },
+  {
+   "arm": "JT_MARGIN",
+   "metric": "shortK_sensitivity_AULC",
+   "estimate": 0.6760416666666665,
+   "per_repeat": [
+    0.6041666666666669,
+    0.7479166666666662
+   ],
+   "available": true
+  },
+  {
+   "arm": "JT_MARGIN",
+   "metric": "q20_AULC",
+   "estimate": 0.7368055555555555,
+   "per_repeat": [
+    0.7305555555555555,
+    0.7430555555555554
+   ],
+   "available": true
+  },
+  {
+   "arm": "JT_PV",
+   "metric": "BA_AULC",
+   "estimate": 0.6946824596774194,
+   "per_repeat": [
+    0.7174619175627243,
+    0.6719030017921145
+   ],
+   "available": true
+  },
+  {
+   "arm": "JT_PV",
+   "metric": "shortK_sensitivity_AULC",
+   "estimate": 0.6947916666666665,
+   "per_repeat": [
+    0.6375,
+    0.7520833333333329
+   ],
+   "available": true
+  },
+  {
+   "arm": "JT_PV",
+   "metric": "q20_AULC",
+   "estimate": 0.734722222222222,
+   "per_repeat": [
+    0.7347222222222219,
+    0.734722222222222
+   ],
+   "available": true
+  }
+ ],
+ "attainment": [
+  {
+   "arm": "G3_MARGIN",
+   "repeat": 3,
+   "attained": false,
+   "queries_to_sustained_target": null,
+   "censored_at": null,
+   "trajectory_complete": false,
+   "target_met_at": []
+  },
+  {
+   "arm": "G3_MARGIN",
+   "repeat": 4,
+   "attained": false,
+   "queries_to_sustained_target": null,
+   "censored_at": 40,
+   "trajectory_complete": true,
+   "target_met_at": []
+  },
+  {
+   "arm": "ACTIVE_E1_STRADDLE",
+   "repeat": 3,
+   "attained": false,
+   "queries_to_sustained_target": null,
+   "censored_at": null,
+   "trajectory_complete": false,
+   "target_met_at": []
+  },
+  {
+   "arm": "ACTIVE_E1_STRADDLE",
+   "repeat": 4,
+   "attained": false,
+   "queries_to_sustained_target": null,
+   "censored_at": 40,
+   "trajectory_complete": true,
+   "target_met_at": []
+  },
+  {
+   "arm": "JT_MARGIN",
+   "repeat": 3,
+   "attained": false,
+   "queries_to_sustained_target": null,
+   "censored_at": 40,
+   "trajectory_complete": true,
+   "target_met_at": []
+  },
+  {
+   "arm": "JT_MARGIN",
+   "repeat": 4,
+   "attained": false,
+   "queries_to_sustained_target": null,
+   "censored_at": 40,
+   "trajectory_complete": true,
+   "target_met_at": []
+  },
+  {
+   "arm": "JT_PV",
+   "repeat": 3,
+   "attained": false,
+   "queries_to_sustained_target": null,
+   "censored_at": 40,
+   "trajectory_complete": true,
+   "target_met_at": []
+  },
+  {
+   "arm": "JT_PV",
+   "repeat": 4,
+   "attained": false,
+   "queries_to_sustained_target": null,
+   "censored_at": 40,
+   "trajectory_complete": true,
+   "target_met_at": []
+  }
+ ]
+}

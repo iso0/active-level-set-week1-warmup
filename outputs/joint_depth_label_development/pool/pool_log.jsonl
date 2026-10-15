@@ -1,0 +1,8 @@
+{"event":"POOL_START","pid":14876,"utc":"2026-10-15T09:07:29.1191620Z"}
+{"event":"WORKER_START","study":"trained_al","worker":1,"pid":2852,"external_used":0,"live_workers":1,"astra_active":false,"leaves":"","utc":"2026-10-15T09:08:29.7164218Z"}
+{"event":"WORKER_START","study":"trained_al","worker":2,"pid":20064,"external_used":0,"live_workers":2,"astra_active":false,"leaves":"","utc":"2026-10-15T09:09:30.0594060Z"}
+{"event":"WORKER_START","study":"trained_al","worker":3,"pid":18932,"external_used":0,"live_workers":3,"astra_active":false,"leaves":"","utc":"2026-10-15T09:10:30.3514830Z"}
+{"event":"WORKER_END","study":"trained_al","worker":3,"pid":18932,"exit_code":0,"locks_released":0,"utc":"2026-10-15T09:11:30.4094699Z"}
+{"event":"WORKER_END","study":"trained_al","worker":1,"pid":2852,"exit_code":0,"locks_released":0,"utc":"2026-10-15T09:11:30.4135241Z"}
+{"event":"WORKER_END","study":"trained_al","worker":2,"pid":20064,"exit_code":0,"locks_released":0,"utc":"2026-10-15T09:11:30.4165727Z"}
+{"event":"POOL_END","reason":"all enabled studies finished","utc":"2026-10-15T09:11:30.4240818Z"}

@@ -1,0 +1,12 @@
+{"unit": "NEW__r3_f4__G3_MARGIN", "status": "not permitted at B16: single-class usable paid data", "seconds": 0.0, "queries": 16}
+{"unit": "NEW__r3_f4__ACTIVE_E1_STRADDLE", "status": "not permitted at B16: single-class usable paid data", "seconds": 0.0, "queries": 16}
+{"unit": "NEW__r3_f4__JT_MARGIN", "status": "ok", "seconds": 0.7, "queries": 40}
+{"unit": "NEW__r3_f4__JT_PV", "status": "ok", "seconds": 24.6, "queries": 40}
+{"unit": "NEW__r4_f1__G3_MARGIN", "status": "ok", "seconds": 1.1, "queries": 40}
+{"unit": "NEW__r4_f1__ACTIVE_E1_STRADDLE", "status": "ok", "seconds": 0.6, "queries": 40}
+{"unit": "NEW__r4_f1__JT_MARGIN", "status": "ok", "seconds": 0.7, "queries": 40}
+{"unit": "NEW__r4_f1__JT_PV", "status": "ok", "seconds": 24.0, "queries": 40}
+{"unit": "NEW__r4_f3__G3_MARGIN", "status": "ok", "seconds": 1.2, "queries": 40}
+{"unit": "NEW__r4_f3__ACTIVE_E1_STRADDLE", "status": "ok", "seconds": 0.7, "queries": 40}
+{"unit": "NEW__r4_f3__JT_MARGIN", "status": "ok", "seconds": 0.9, "queries": 40}
+{"unit": "NEW__r4_f3__JT_PV", "status": "ok", "seconds": 28.0, "queries": 40}
