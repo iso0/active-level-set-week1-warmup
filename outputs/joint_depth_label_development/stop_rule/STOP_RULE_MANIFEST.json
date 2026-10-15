@@ -1,0 +1,40 @@
+{
+ "study": "STOP_RULE",
+ "status": "FROZEN BEFORE ANY STOP_RULE COMPUTATION",
+ "written_utc": "2026-10-15T09:54:09+00:00",
+ "parent_commit": "a15ff66b465ae9b818633d12cc17b0679740aebd",
+ "authorization": "owner execution request of 2026-10-15 (Experiment C, candidate 2 of 2)",
+ "rule": {
+  "stop_set": "fold pool (features only)",
+  "kappa_threshold": 0.99,
+  "window": 3,
+  "min_stop_budget": 20,
+  "max_budget": 40
+ },
+ "arms": [
+  "JT_MARGIN",
+  "TREED_MARGIN"
+ ],
+ "noninferiority_vs_B40": {
+  "BA": -0.02,
+  "q20": -0.05,
+  "shortK_events": -2
+ },
+ "min_saving_queries": 4,
+ "decisive_control": "FIXED_STOP at the rounded mean adaptive cost",
+ "validation": {
+  "status": "PASS",
+  "sha256": "9a2d721c4c89456877a2820bf6963308761d8680cba3b98bf5b9730e036825d6"
+ },
+ "code_sha256": {
+  "src/jdl_stop_rule.py": "10ac45fed04cd0a073e3f0091bdd91ac9d48125cb050e3e3e090d9f4cc5380c4",
+  "src/jdl_corner_local.py": "160cc8aaefceb05cc5cebf6bed41182ce01e2c3dc80cd21741cc782efe04713a",
+  "src/jdl_trained_al.py": "914a8ca17314a13e6a5c47b978b603b63ca14f8339da50bd27f13da1aeeaeec7",
+  "src/jdl_trained_al_eval.py": "d39a4d8ea9a5c18790c9b1e5630b636119c408cc932e8f8f8df4810ee5c30ac7",
+  "src/jdl_ex2.py": "ef32514701a16b2c4b3a5908910c439f2a28a76b5fd730ac495dff4ef1fdf795",
+  "src/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/jdl_vx_stump.py": "0c2745a89c9cc4b84dd0c8213610542385bfd0a8c61533224e45e13f5cda12ff"
+ }
+}

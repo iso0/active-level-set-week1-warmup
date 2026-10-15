@@ -1,0 +1,12 @@
+{
+ "status": "PASS",
+ "checks": {
+  "kappa_identity_and_edge_cases": true,
+  "stop_rule_window": true,
+  "refit_reproduces_stored_JT_MARGIN": true,
+  "refit_reproduces_stored_TREED_MARGIN": true,
+  "hidden_outcomes_do_not_change_pool_decisions": true,
+  "stored_trajectories_complete": true
+ },
+ "info": {}
+}
