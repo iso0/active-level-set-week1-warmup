@@ -1,0 +1,290 @@
+{
+ "study": "ASTRA_AL",
+ "units_done": 8,
+ "units_expected": 30,
+ "units_done_by_arm": {
+  "ALIGNED_MARGIN": 5,
+  "V2_VARIANCE": 3,
+  "BA_RISK": 0
+ },
+ "complete": false,
+ "statuses": {
+  "ALIGNED_MARGIN": {
+   "ok": "4",
+   "DECISION_NUMERICAL_STOP at B20": "1"
+  },
+  "V2_VARIANCE": {
+   "ok": "3"
+  },
+  "BA_RISK": {}
+ },
+ "practical_aulc_threshold": 0.02,
+ "shortK_tolerance_events": 2,
+ "contrasts": [
+  {
+   "contrast": "P1_primary",
+   "arm": "BA_RISK",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "P1_primary",
+   "arm": "BA_RISK",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false
+  },
+  {
+   "contrast": "P1_primary",
+   "arm": "BA_RISK",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "q20_AULC",
+   "available": false
+  },
+  {
+   "contrast": "P1_primary",
+   "arm": "BA_RISK",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "p05_BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "P1_primary",
+   "arm": "BA_RISK",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "AUC_AULC",
+   "available": false
+  },
+  {
+   "contrast": "P2_primary",
+   "arm": "BA_RISK",
+   "ref": "V2_VARIANCE",
+   "metric": "BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "P2_primary",
+   "arm": "BA_RISK",
+   "ref": "V2_VARIANCE",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false
+  },
+  {
+   "contrast": "P2_primary",
+   "arm": "BA_RISK",
+   "ref": "V2_VARIANCE",
+   "metric": "q20_AULC",
+   "available": false
+  },
+  {
+   "contrast": "P2_primary",
+   "arm": "BA_RISK",
+   "ref": "V2_VARIANCE",
+   "metric": "p05_BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "P2_primary",
+   "arm": "BA_RISK",
+   "ref": "V2_VARIANCE",
+   "metric": "AUC_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S1",
+   "arm": "V2_VARIANCE",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S1",
+   "arm": "V2_VARIANCE",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S1",
+   "arm": "V2_VARIANCE",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "q20_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S1",
+   "arm": "V2_VARIANCE",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "p05_BA_AULC",
+   "available": false
+  },
+  {
+   "contrast": "S1",
+   "arm": "V2_VARIANCE",
+   "ref": "ALIGNED_MARGIN",
+   "metric": "AUC_AULC",
+   "available": false
+  }
+ ],
+ "aulc": [
+  {
+   "arm": "ALIGNED_MARGIN",
+   "metric": "BA_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "ALIGNED_MARGIN",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "ALIGNED_MARGIN",
+   "metric": "q20_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "ALIGNED_MARGIN",
+   "metric": "p05_BA_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "ALIGNED_MARGIN",
+   "metric": "AUC_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "V2_VARIANCE",
+   "metric": "BA_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "V2_VARIANCE",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "V2_VARIANCE",
+   "metric": "q20_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "V2_VARIANCE",
+   "metric": "p05_BA_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "V2_VARIANCE",
+   "metric": "AUC_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "BA_RISK",
+   "metric": "BA_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "BA_RISK",
+   "metric": "shortK_sensitivity_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "BA_RISK",
+   "metric": "q20_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "BA_RISK",
+   "metric": "p05_BA_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  },
+  {
+   "arm": "BA_RISK",
+   "metric": "AUC_AULC",
+   "available": false,
+   "estimate": null,
+   "per_repeat": [
+    null,
+    null
+   ]
+  }
+ ],
+ "caps": {
+  "fits_executed": 68,
+  "component_solves": 204,
+  "top_level_requests": 270,
+  "component_solves_including_fallback": 900,
+  "within_caps": true
+ },
+ "note": "UNAVAILABLE readouts are never replaced by surviving subsets; partial units are not loaded"
+}

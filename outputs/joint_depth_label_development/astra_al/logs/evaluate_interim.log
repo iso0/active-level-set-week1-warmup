@@ -1,0 +1,27 @@
+{
+ "units_done": 8,
+ "units_expected": 30,
+ "units_done_by_arm": {
+  "ALIGNED_MARGIN": 5,
+  "V2_VARIANCE": 3,
+  "BA_RISK": 0
+ },
+ "complete": false,
+ "statuses": {
+  "ALIGNED_MARGIN": {
+   "ok": "4",
+   "DECISION_NUMERICAL_STOP at B20": "1"
+  },
+  "V2_VARIANCE": {
+   "ok": "3"
+  },
+  "BA_RISK": {}
+ },
+ "caps": {
+  "fits_executed": 68,
+  "component_solves": 204,
+  "top_level_requests": 270,
+  "component_solves_including_fallback": 900,
+  "within_caps": true
+ }
+}

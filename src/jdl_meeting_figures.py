@@ -109,8 +109,9 @@ def fig3():
     aa_file = JDL / "astra_al" / "results" / "metrics_by_budget.csv"
     aa = pd.read_csv(aa_file) if aa_file.exists() and aa_file.stat().st_size > 10 else pd.DataFrame()
     aa_status = json.loads((JDL / "astra_al" / "results" / "ASTRA_AL_RESULTS.json").read_text()) if (JDL / "astra_al" / "results" / "ASTRA_AL_RESULTS.json").exists() else None
-    v2arms = [("ALIGNED_MARGIN", "V2 + aligned margin (finite-batch rule)", "#009E73", "-"), ("V2_VARIANCE", "V2 + variance lookahead (finite-batch rule)", "#009E73", ":"),
-              ("BA_RISK", "V2 + BA-risk lookahead (finite-batch rule)", "#000000", "-.")]
+    v2arms = [("ALIGNED_MARGIN", "ASTRA_AL interim: V2 + aligned margin (finite-batch rule)", "#009E73", "-"),
+              ("V2_VARIANCE", "ASTRA_AL interim: V2 + variance lookahead (finite-batch rule)", "#009E73", ":"),
+              ("BA_RISK", "ASTRA_AL interim: V2 + BA-risk lookahead (finite-batch rule)", "#000000", "-.")]
     clf = JDL / "corner_local" / "results" / "metrics_by_budget.csv"
     cl = pd.read_csv(clf) if clf.exists() else None
     fig, axes = plt.subplots(2, 2, figsize=(11, 7.2), sharex=True)
@@ -131,7 +132,7 @@ def fig3():
                     if len(d):
                         ax.plot(d.budget, d[key], color=c, ls=ls, lw=2.0, label=lab)
             if rep == 3:
-                ax.text(17, 0.05 if key == "BA" else 0.05, "G3 and ACTIVE E1: not available in repeat 3\n(the frozen start of fold 4 has no negative)",
+                ax.text(17, 0.05 if key == "BA" else 0.22, "G3 and ACTIVE E1: not available in repeat 3\n(the frozen start of fold 4 has no negative)",
                         fontsize=8, color="#555555")
             ax.set_ylim(0.0, 1.02) if key == "shortK_sensitivity" else ax.set_ylim(0.0, 1.0)
             if i == 1:
@@ -140,8 +141,11 @@ def fig3():
                 ax.set_ylabel(ylab)
             ax.set_title(f"repeat {rep}: {ylab}", fontsize=10)
             ax.set_xticks(range(16, 41, 4))
-    h, l = axes[0, 1].get_legend_handles_labels()
-    fig.legend(h, l, loc="lower center", ncol=2, frameon=False, fontsize=8.8, bbox_to_anchor=(0.5, -0.08))
+    seen = {}
+    for ax in axes.ravel():
+        for hh, ll in zip(*ax.get_legend_handles_labels()):
+            seen.setdefault(ll, hh)
+    fig.legend(list(seen.values()), list(seen.keys()), loc="lower center", ncol=2, frameon=False, fontsize=8.8, bbox_to_anchor=(0.5, -0.10))
     note = "ASTRA_AL (V2 arms, B16-B24): ONGOING"
     if aa_status:
         note += f" - {aa_status['units_done']}/{aa_status['units_expected']} units finished; a curve is drawn only where all five folds of the repeat are finished"
