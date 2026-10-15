@@ -1,0 +1,27 @@
+{
+ "status": "PASS",
+ "checks": {
+  "frozen_safeguard_selftest": true,
+  "identical_to_frozen_when_accepted_by_2^14": true,
+  "criterion_restored": true,
+  "frozen_ladder_stops_at_2^14": true,
+  "extended_ladder_adds_only_2^16": true,
+  "levels_up_to_2^14_identical": true,
+  "audit_checkpoint_accepts_toy_with_A1": true,
+  "frozen_module_hash_matches_frozen_manifest": true
+ },
+ "info": {
+  "toy_bits": 12
+ },
+ "amendment": "A1_extended_ladder_2^16",
+ "a1_version": "decision-audit-1.1.1+A1",
+ "ladder": [
+  10,
+  12,
+  14,
+  16
+ ],
+ "seconds": 2.639721632003784,
+ "module_sha256": "9b94d7f24c4b1659c642800d6ecf2296a0ccedc45695d07a0f1d8bc20fd6467c",
+ "frozen_module_sha256": "e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f"
+}

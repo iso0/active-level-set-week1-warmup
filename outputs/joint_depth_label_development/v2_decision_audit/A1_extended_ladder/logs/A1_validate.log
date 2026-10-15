@@ -1,0 +1,13 @@
+{
+ "status": "PASS",
+ "checks": {
+  "frozen_safeguard_selftest": true,
+  "identical_to_frozen_when_accepted_by_2^14": true,
+  "criterion_restored": true,
+  "frozen_ladder_stops_at_2^14": true,
+  "extended_ladder_adds_only_2^16": true,
+  "levels_up_to_2^14_identical": true,
+  "audit_checkpoint_accepts_toy_with_A1": true,
+  "frozen_module_hash_matches_frozen_manifest": true
+ }
+}
