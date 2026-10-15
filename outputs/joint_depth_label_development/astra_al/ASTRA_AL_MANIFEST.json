@@ -1,0 +1,85 @@
+{
+ "study": "ASTRA_AL",
+ "status": "FROZEN BEFORE ANY ASTRA_AL OUTCOME",
+ "written_utc": "2026-10-15T09:28:39+00:00",
+ "parent_commit": "d3098064310429952a0dd34f9261ab7c6f0e4655",
+ "authorization": "owner execution request of 2026-10-15 (Astra's real-data acquisition policy draft)",
+ "design_source": "outputs/astra_balanced_decision_acquisition/OPUS_DECISION_ACQUISITION_REQUEST.md (bounded future DEV policy draft)",
+ "population": "NEW-136, DEV repeats 3-4, folds 1-5",
+ "start": "frozen feature-only B16 (stage_a paths)",
+ "budgets": [
+  16,
+  24
+ ],
+ "arms": [
+  "ALIGNED_MARGIN",
+  "V2_VARIANCE",
+  "BA_RISK"
+ ],
+ "path_sha256": {
+  "r3_f1": "041ffa17bd8a24bb85a672608b6e2f9fb0242be20bc7f678f4dea9956f793f81",
+  "r3_f2": "4382abce1e18d8e56145e481c7b56bbae6b6bbfb3b7d38c08facca89fc3708dc",
+  "r3_f3": "8eee43c559cf6169cd3d69f379d455b8e093fac053f87366bfafdeac4f1e9b03",
+  "r3_f4": "a24ca2d72f37298d6e628d194ca68a0cf1178212b2eae3d2189c77294407a5d6",
+  "r3_f5": "56f5cf42ca04d7b7b8b09176aae4b32065c1a95239611bd87ef51290eae6b2fb",
+  "r4_f1": "eea2dbdf4071be2c3ff529e3ea0c32c0843f68b9c22d6d7a5944ae2a754dab44",
+  "r4_f2": "be8be49fd8ab11a8783a71de5a1b315bc12104c469aa934bc82f7a7f420dd2b0",
+  "r4_f3": "eb7adca8a02e7ba90db66e48de6b0d7135d7b0b4276942fea5ed3dd50716f110",
+  "r4_f4": "9fc879ce663fce29daa4ac5d3b192f9edb59d0c42622d7193c94e1af0d34ebb8",
+  "r4_f5": "2a050581a9423dba7374c57f46d5712c40c09750f8037c50546d5ff482c1b736"
+ },
+ "m": 136,
+ "decision_level": "A1 extended ladder 2^10..2^16 (criterion unchanged)",
+ "risk_ladder": [
+  [
+   8,
+   9
+  ],
+  [
+   10,
+   17
+  ],
+  [
+   12,
+   33
+  ]
+ ],
+ "risk_acceptance": "max(order difference, 2 SE) <= 0.002, low-ESS mass <= 0.002, tower <= 0.002, normalisation <= 1e-8",
+ "precision_extension": "none registered for the risk selector; an unresolved risk ranking is a NUMERICAL_STOP",
+ "availability_model": "alpha = (paid responses + 1) / (paid simulations + 2) at each budget",
+ "seeds": "task seed s = 6000 + 100 r + f; decisions 91000 + s + 101 b; risk 20000 + s + 101 b",
+ "primary_contrasts": [
+  "BA_RISK - ALIGNED_MARGIN",
+  "BA_RISK - V2_VARIANCE"
+ ],
+ "endpoint": "pooled-per-repeat finite-batch BA-AULC over B16-B24 (trapezoid / 8), mean of repeats 3-4",
+ "reported": "terminal (B24) BA, both class recalls, q20, short-K recall (evaluation guardrail only), AUC/Brier/log loss of the mixture probability, decisions per simulation",
+ "guardrail": "short-K recall is never a selector input; a BA gain with short-K loss beyond 2 of 20 events relative to ALIGNED_MARGIN is a trade-off, not success",
+ "savings": "no savings endpoint is registered for this study (her draft)",
+ "caps": {
+  "top_level_requests": 270,
+  "component_solves_including_fallback": 900
+ },
+ "cap_enforcement": "before every fit: recorded solves + 6 per active unit <= 900, else CAP_STOP (preserved); executed fits reported beside the 270 logical requests",
+ "runtime_plan": "pool runner src/jdl_pool_runner.ps1, one BLAS thread per worker, each worker exits after one unit (--max-units 1); cheap arms (ALIGNED_MARGIN, V2_VARIANCE) up to 2 workers; BA_RISK: the predeclared first unit NEW__r3_f1__BA_RISK runs alone until its first acquisition step is recorded, then BA_RISK gets up to 2 workers while any other registered study has claimable units, else up to 3; unfinished units are reported as unfinished",
+ "validation": {
+  "status": "PASS",
+  "sha256": "5f821237937fe62a66d8bd024ad32637754755c8e0f7c7753e76bffc8227f44c"
+ },
+ "code_sha256": {
+  "src/jdl_astra_al.py": "7825eaf85e920c9bae427bc612ff7786271cf88772169a773eb2a723c7db0076",
+  "src/jdl_astra_al_eval.py": "dc48e213680c92774fa20775d6df4470e51cbb30e2cbf8c10372109e6bcf47f4",
+  "src/jdl_v2_decision_audit_a1.py": "9b94d7f24c4b1659c642800d6ecf2296a0ccedc45695d07a0f1d8bc20fd6467c",
+  "src/jdl_v2_decision_audit.py": "e5e61a25cc4ac741d869ec1c68ff8f01f29cfc302d46cddefea8bc2b2842390f",
+  "src/jdl_trained_al.py": "914a8ca17314a13e6a5c47b978b603b63ca14f8339da50bd27f13da1aeeaeec7",
+  "src/jdl_trained_al_eval.py": "d39a4d8ea9a5c18790c9b1e5630b636119c408cc932e8f8f8df4810ee5c30ac7",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_model.py": "63f70bb20649885b0dfac9257dc527d26d17c32f31b56c3eaf429d73b26147cc"
+ },
+ "astra_source_sha256": {
+  "balanced_method.py": "7fb4674ff56e98164870033b18e7c88baf1e6bd9a4fcf47f350d16caafa1f516",
+  "joint_model_v2.py": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+  "v1_reference.py": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59"
+ }
+}

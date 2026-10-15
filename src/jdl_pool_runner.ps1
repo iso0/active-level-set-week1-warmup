@@ -107,6 +107,21 @@ try {
                 $workers.Remove($wpid)
             }
         }
+        # release stale locks: the lock records the PID of the python process that created it (with the WindowsApps alias this
+        # is the child of the launched process, so the per-worker release above can miss it); a lock whose PID is not alive
+        # belongs to a crashed or killed worker and is removed so that the unit resumes from its own atomic state
+        foreach ($st in @($plan.studies)) {
+            $ld = Join-Path $Root ($st.locks_dir -replace '/', '\')
+            if (-not (Test-Path -LiteralPath $ld)) { continue }
+            foreach ($lf in @(Get-ChildItem -LiteralPath $ld -Filter '*.lock' -File)) {
+                $c = ''; try { $c = [System.IO.File]::ReadAllText($lf.FullName).Trim() } catch { continue }
+                $n = 0
+                if ([int]::TryParse($c, [ref]$n) -and $null -eq (Get-Process -Id $n -ErrorAction SilentlyContinue)) {
+                    Remove-Item -LiteralPath $lf.FullName -Force
+                    Add-Log ([pscustomobject]@{ event = 'STALE_LOCK_RELEASED'; study = $st.name; lock = $lf.Name; pid = $n })
+                }
+            }
+        }
         $states = @{}; $open = 0
         foreach ($st in @($plan.studies)) {
             if (-not $st.enabled) { continue }

@@ -1,0 +1,40 @@
+{
+ "status": "PASS",
+ "checks": {
+  "astra_sources_match_her_manifest": true,
+  "her_independent_reference_checks_accepted": true,
+  "her_frozen_sources_unchanged": true,
+  "m_identities_and_parity_with_astra_m96_m136": true,
+  "risk_table_equals_hers_at_m96": true,
+  "outcome_normalization_m136": true,
+  "risk_selector_runs_m136": true,
+  "decision_A1_m136_runs": true,
+  "joint_covariance_identity": true,
+  "hidden_outcomes_do_not_change_first_selection_margin": true,
+  "hidden_outcomes_do_not_change_first_selection_variance": true,
+  "hidden_outcomes_do_not_change_risk_scores": true,
+  "ten_task_folds_with_frozen_paths": true
+ },
+ "info": {
+  "her_independent_checks": {
+   "finite_exact": true,
+   "iid_batch_exact": true,
+   "tail_arithmetic": true,
+   "zero_class": true,
+   "posterior_mean_not_exact": true,
+   "quadrature_converged": true,
+   "qmc_acquisition_accuracy": true,
+   "qmc_decision_accuracy": true,
+   "toy_ranking": true,
+   "nonGaussian_reference_converged": true,
+   "nonGaussian_paired_reference_converged": true,
+   "leakage": true,
+   "missing_response": true
+  },
+  "first_unit_timing_seconds": {
+   "ALIGNED_MARGIN_one_step": 12.832022428512573,
+   "V2_VARIANCE_one_step": 26.916114807128906
+  }
+ }
+}
+exit 0
