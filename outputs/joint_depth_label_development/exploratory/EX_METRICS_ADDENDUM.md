@@ -84,4 +84,7 @@
 - **Ranking:** J_trained has the best ranking on NEW (AUC 0.916) and the best BA at 0.5 (0.752). It is a serious complete-system comparator.
 - **The π̂ gain is a cutoff trade:** at π̂ its extra BA (+0.154) comes from rejecting 8 corner negatives at the cost of 13 positives, most of them transient short-K cases (short-K sensitivity 0.675 → 0.05) [C1, C4].
 - **The frontier is post-hoc:** every model's best label-chosen cutoff reaches BA 0.82–0.92, the same ceiling set by the corner. No tested score separates the corner [C2].
-- **Rule question:** choosing a cutoff without evaluation labels is a separate decision-rule question. It is what the frozen finite-batch decision audit was built to study on the V2 posteriors; that audit is currently stopped at T05 (see `../v2_decision_audit/SAFEGUARD_CORRECTION.md`).
+- **Rule question:** choosing a cutoff without evaluation labels is a separate decision-rule question. It is what the frozen finite-batch decision audit was built to study on the V2 posteriors; at the time of writing that audit was stopped at T05 (see `../v2_decision_audit/SAFEGUARD_CORRECTION.md`).
+  - **Update 2026-10-15** (`../v2_decision_audit/DECISION_AUDIT_REPORT.md`):
+    - Frozen outcome: PRIMARY_UNAVAILABLE.
+    - Registered amendment A1 (AMENDED): the finite-batch rule is a prevalence-level cutoff on the same scores. At V2 B40 it gives BA 0.858 with short-K 0.00, the same decisions as the posterior-mean-π rule, and no new discriminatory information.

@@ -70,8 +70,45 @@ Sensitivity is the Keyhole recall and specificity the no-Keyhole recall. Each ce
   - C3: not confirmed.
 - **Still not authorized:** C4 and real-data Stage A.
 
+## 5. Amendment A1 (extended QMC ladder): AMENDED result, not the frozen primary
+
+**Registration.**
+- The owner decided on 2026-10-15; the code went in at `abbb349b`.
+- Validation PASS, 8/8 checks; the manifest `A1_extended_ladder/DECISION_AUDIT_A1_MANIFEST.json` was committed at `f7b5c06e`, before any A1 decision.
+- The single change is one more ladder level, 2^16. The criterion (0.015 / 0.003), seeds, rules, parity, validity, availability and primary definition are unchanged, and the frozen module is unchanged (`e5e61a25…`).
+- The frozen outcome above (PRIMARY_UNAVAILABLE) remains the frozen result of this audit.
+
+**Run.**
+- 503 s on one thread, zero fits.
+- **Reproducibility gate:** all 39 checkpoints accepted by 1.1.1 reproduced bitwise.
+- **Outcome:** of the 21 frozen stops, 19 were accepted at 2^16, with final margin changes of 0.0038–0.0107.
+- **Still stopped (2, both rho1_EP):** `NEW__r1_f1__B16__rho1_EP` (0.0160) and `NEW__r1_f2__B40__rho1_EP` (0.0223).
+- **Status: PRIMARY_COMPLETE_SECONDARY_UNAVAILABLE** (`A1_extended_ladder/DECISION_AUDIT_SUMMARY.json`, `A1_OUTCOME.json`, exit 0).
+  - All 20 V2_EP_mixture checkpoints are `ok`; parity is exact.
+  - rho1_EP finite_batch and posterior_mean_pi are UNAVAILABLE at both budgets (4/5 valid folds in repeat 1).
+
+**Readouts** (V2_EP_mixture, mean of repeats 1–2). Each cell gives BA / q20 / sensitivity (Keyhole recall) / specificity (no-Keyhole recall) / short-K sensitivity.
+
+| Budget | finite_batch | posterior_mean_pi | paid_fraction (π̂) | cutoff_0.5 |
+|---|---|---|---|---|
+| B40 | 0.858 / 0.567 / 0.798 / 0.917 / 0.00 | 0.858 / 0.567 / 0.798 / 0.917 / 0.00 | 0.878 / 0.600 / 0.839 / 0.917 / 0.00 | 0.554 / 0.667 / 0.984 / 0.125 / 0.80 |
+| B16 | 0.795 / 0.567 / 0.673 / 0.917 / 0.15 | 0.770 / 0.550 / 0.665 / 0.875 / 0.15 | 0.792 / 0.567 / 0.710 / 0.875 / 0.15 | 0.600 / 0.717 / 0.992 / 0.208 / 1.00 |
+
+- **Contrast at B40, finite_batch − cutoff_0.5:** BA +0.303 [0.209, 0.393]; sensitivity −0.186; specificity +0.792; short-K −0.80; q20 −0.100. Brier and log loss are identical, since the scores are the same.
+- **Decision changes at B40** (both repeats, `A1_extended_ladder/decision_changes_by_simulation.csv`, full IDs):
+  - 19 negative cases move to "no Keyhole", all of them in the fast-scan corner.
+  - 46 positive cases move to "no Keyhole": 16 fast-scan short-K, 4 other fast-scan and 26 outside the corner.
+- **Binary_V2_EP at B40** (finite_batch now available): 0.800 / 0.550 / 0.766 / 0.833 / 0.05.
+
+**Interpretation (HYP).**
+- On these posteriors the finite-batch rule (m = 136) is a prevalence-level cutoff. At B40 its decisions equal those of p ≥ E[π | D] exactly (272 of 272; at B16, 9 of 272 differ), which is the known-η limit checked in validation.
+- It gives the same kind of BA gain as the paid-fraction rule and does not exceed it (0.858 against 0.878, descriptive; not a frozen contrast).
+- The gain is a re-weighting of the same scores: corner negatives are rejected and short-Keyhole positives are lost. It is not new discriminatory information, and it shows no simulation saving.
+- Astra's synthetic study points the same way (`ASTRA_CONTROLLED_STUDY_INTAKE.md`): there, PBR is within ±0.007 of the posterior-mean-π rule.
+
 ## Files
 - `DECISION_AUDIT_MANIFEST.json`, `DECISION_AUDIT_VALIDATION.json` (R05), `DECISION_AUDIT_UNAVAILABLE.json`
+- `A1_extended_ladder/`: amendment A1 manifest, validation, summary, outcome, metrics, contrasts, decision changes and logs
 - `metrics_per_repeat.csv`, `rule_contrasts.csv`
 - `decision_changes_by_simulation.csv` (available contrasts only), `class_fractions_and_numerics.csv` (per-checkpoint status, ladder history, π, paid fraction, evaluator-only true fractions)
 - `decisions_all.csv.gz` (every attempted decision, with validity)

@@ -164,7 +164,11 @@ B40 counts are summed over both repeats: 24 positive and 22 negative cases in th
    - "Uncertain sharing" neither protects nor hurts here: on NEW the paid responses favour full sharing.
    - EP vs Laplace on the same model changes BA by +0.002 (interval ±0.06). The inference method is not the bottleneck.
 3. **The cutoff dominates.** Moving it from 0.5 to π̂ raises V2's BA by +0.32. That only re-states the rule question [C1]: the gain comes from rejecting the corner, at the cost of short-K detection.
-   - The finite-batch decision audit was frozen to study this rule on the same exported posteriors. It is currently stopped at T05 (see `v2_decision_audit/SAFEGUARD_CORRECTION.md`, addendum 1.1.1).
+   - The finite-batch decision audit was frozen to study this rule on the same exported posteriors. At the time of writing it was stopped at T05 (see `v2_decision_audit/SAFEGUARD_CORRECTION.md`, addendum 1.1.1).
+   - **Update 2026-10-15** (see `v2_decision_audit/DECISION_AUDIT_REPORT.md`):
+     - The audit ran in the owner-authorized recovery. Its frozen outcome is **PRIMARY_UNAVAILABLE**: only 11 of 20 checkpoints met the frozen QMC acceptance.
+     - Under the registered amendment A1 (one more ladder level, criterion unchanged; AMENDED), the finite-batch rule at NEW B40 gives BA 0.858, sensitivity 0.798, specificity 0.917, short-K 0.00.
+     - Its decisions equal the posterior-mean-π rule, and it does not exceed π̂ (0.878).
 4. **The complete-system controls beat V2 at 0.5 by 0.15–0.30 BA,** almost entirely through corner specificity.
    - The controls are J_trained, ACTIVE_E1 and VX_stump.
    - They differ from V2 in more than one factor (a trained response prior; one learned VX cut), so these are not attributions.

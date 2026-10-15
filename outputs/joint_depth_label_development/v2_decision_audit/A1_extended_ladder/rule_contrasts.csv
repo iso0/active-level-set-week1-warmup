@@ -1,0 +1,127 @@
+arm,budget,contrast,metric,availability,estimate,per_repeat,cluster_bootstrap_lo,cluster_bootstrap_hi
+V2_EP_mixture,16,finite_batch - cutoff_0.5,BA,AVAILABLE,0.19489247311827962,"[0.12231182795698925, 0.26747311827957]",0.07861223118279574,0.2990591397849462
+V2_EP_mixture,16,finite_batch - cutoff_0.5,sensitivity,AVAILABLE,-0.3185483870967742,"[-0.33870967741935487, -0.2983870967741935]",-0.3911290322580645,-0.25
+V2_EP_mixture,16,finite_batch - cutoff_0.5,specificity,AVAILABLE,0.7083333333333333,"[0.5833333333333333, 0.8333333333333333]",0.49999999999999994,0.9166666666666667
+V2_EP_mixture,16,finite_batch - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8500000000000001,"[-0.9, -0.8]",-1.0,-0.6875
+V2_EP_mixture,16,finite_batch - cutoff_0.5,q20,AVAILABLE,-0.15000000000000002,"[-0.2666666666666667, -0.033333333333333326]",-0.3289702380952381,0.05496726190476192
+V2_EP_mixture,16,finite_batch - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,16,finite_batch - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,16,posterior_mean_pi - cutoff_0.5,BA,AVAILABLE,0.17002688172043012,"[0.0766129032258065, 0.26344086021505375]",0.060467069892473066,0.269489247311828
+V2_EP_mixture,16,posterior_mean_pi - cutoff_0.5,sensitivity,AVAILABLE,-0.3266129032258065,"[-0.3467741935483871, -0.30645161290322587]",-0.39919354838709675,-0.25806451612903225
+V2_EP_mixture,16,posterior_mean_pi - cutoff_0.5,specificity,AVAILABLE,0.6666666666666666,"[0.5, 0.8333333333333333]",0.4583333333333333,0.875
+V2_EP_mixture,16,posterior_mean_pi - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8500000000000001,"[-0.9, -0.8]",-1.0,-0.6875
+V2_EP_mixture,16,posterior_mean_pi - cutoff_0.5,q20,AVAILABLE,-0.16666666666666674,"[-0.30000000000000016, -0.033333333333333326]",-0.34277777777777774,0.03169444444444425
+V2_EP_mixture,16,posterior_mean_pi - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,16,posterior_mean_pi - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,16,paid_fraction - cutoff_0.5,BA,AVAILABLE,0.19220430107526887,"[0.1303763440860215, 0.25403225806451624]",0.059122983870967746,0.3098118279569892
+V2_EP_mixture,16,paid_fraction - cutoff_0.5,sensitivity,AVAILABLE,-0.28225806451612906,"[-0.32258064516129037, -0.24193548387096775]",-0.3548387096774194,-0.21370967741935487
+V2_EP_mixture,16,paid_fraction - cutoff_0.5,specificity,AVAILABLE,0.6666666666666666,"[0.5833333333333333, 0.75]",0.41666666666666663,0.875
+V2_EP_mixture,16,paid_fraction - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8500000000000001,"[-0.9, -0.8]",-1.0,-0.6875
+V2_EP_mixture,16,paid_fraction - cutoff_0.5,q20,AVAILABLE,-0.15000000000000002,"[-0.2333333333333334, -0.06666666666666665]",-0.3357003968253968,0.06072023809523807
+V2_EP_mixture,16,paid_fraction - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,16,paid_fraction - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,40,finite_batch - cutoff_0.5,BA,AVAILABLE,0.3030913978494624,"[0.2446236559139785, 0.36155913978494625]",0.20897177419354832,0.3924731182795699
+V2_EP_mixture,40,finite_batch - cutoff_0.5,sensitivity,AVAILABLE,-0.185483870967742,"[-0.17741935483870974, -0.19354838709677424]",-0.25,-0.125
+V2_EP_mixture,40,finite_batch - cutoff_0.5,specificity,AVAILABLE,0.7916666666666666,"[0.6666666666666666, 0.9166666666666666]",0.625,0.9583333333333333
+V2_EP_mixture,40,finite_batch - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8,"[-0.8, -0.8]",-1.0,-0.5
+V2_EP_mixture,40,finite_batch - cutoff_0.5,q20,AVAILABLE,-0.10000000000000003,"[-0.2333333333333334, 0.033333333333333326]",-0.27777777777777785,0.11557440476190468
+V2_EP_mixture,40,finite_batch - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,40,finite_batch - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,40,posterior_mean_pi - cutoff_0.5,BA,AVAILABLE,0.3030913978494624,"[0.2446236559139785, 0.36155913978494625]",0.20897177419354832,0.3924731182795699
+V2_EP_mixture,40,posterior_mean_pi - cutoff_0.5,sensitivity,AVAILABLE,-0.185483870967742,"[-0.17741935483870974, -0.19354838709677424]",-0.25,-0.125
+V2_EP_mixture,40,posterior_mean_pi - cutoff_0.5,specificity,AVAILABLE,0.7916666666666666,"[0.6666666666666666, 0.9166666666666666]",0.625,0.9583333333333333
+V2_EP_mixture,40,posterior_mean_pi - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8,"[-0.8, -0.8]",-1.0,-0.5
+V2_EP_mixture,40,posterior_mean_pi - cutoff_0.5,q20,AVAILABLE,-0.10000000000000003,"[-0.2333333333333334, 0.033333333333333326]",-0.27777777777777785,0.11557440476190468
+V2_EP_mixture,40,posterior_mean_pi - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,40,posterior_mean_pi - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,40,paid_fraction - cutoff_0.5,BA,AVAILABLE,0.323252688172043,"[0.25268817204301075, 0.39381720430107525]",0.22983870967741932,0.41197916666666656
+V2_EP_mixture,40,paid_fraction - cutoff_0.5,sensitivity,AVAILABLE,-0.14516129032258063,"[-0.16129032258064513, -0.12903225806451613]",-0.20564516129032262,-0.08870967741935487
+V2_EP_mixture,40,paid_fraction - cutoff_0.5,specificity,AVAILABLE,0.7916666666666666,"[0.6666666666666666, 0.9166666666666666]",0.625,0.9583333333333333
+V2_EP_mixture,40,paid_fraction - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8,"[-0.8, -0.8]",-1.0,-0.5
+V2_EP_mixture,40,paid_fraction - cutoff_0.5,q20,AVAILABLE,-0.06666666666666671,"[-0.2333333333333334, 0.09999999999999998]",-0.24982805735930735,0.1466755952380952
+V2_EP_mixture,40,paid_fraction - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+V2_EP_mixture,40,paid_fraction - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+rho1_EP,16,finite_batch - cutoff_0.5,BA,UNAVAILABLE,,,,
+rho1_EP,16,finite_batch - cutoff_0.5,sensitivity,UNAVAILABLE,,,,
+rho1_EP,16,finite_batch - cutoff_0.5,specificity,UNAVAILABLE,,,,
+rho1_EP,16,finite_batch - cutoff_0.5,shortK_sensitivity,UNAVAILABLE,,,,
+rho1_EP,16,finite_batch - cutoff_0.5,q20,UNAVAILABLE,,,,
+rho1_EP,16,finite_batch - cutoff_0.5,brier,UNAVAILABLE,,,,
+rho1_EP,16,finite_batch - cutoff_0.5,log_loss,UNAVAILABLE,,,,
+rho1_EP,16,posterior_mean_pi - cutoff_0.5,BA,UNAVAILABLE,,,,
+rho1_EP,16,posterior_mean_pi - cutoff_0.5,sensitivity,UNAVAILABLE,,,,
+rho1_EP,16,posterior_mean_pi - cutoff_0.5,specificity,UNAVAILABLE,,,,
+rho1_EP,16,posterior_mean_pi - cutoff_0.5,shortK_sensitivity,UNAVAILABLE,,,,
+rho1_EP,16,posterior_mean_pi - cutoff_0.5,q20,UNAVAILABLE,,,,
+rho1_EP,16,posterior_mean_pi - cutoff_0.5,brier,UNAVAILABLE,,,,
+rho1_EP,16,posterior_mean_pi - cutoff_0.5,log_loss,UNAVAILABLE,,,,
+rho1_EP,16,paid_fraction - cutoff_0.5,BA,AVAILABLE,0.22715053763440857,"[0.146505376344086, 0.30779569892473113]",0.10749327956989244,0.3326612903225806
+rho1_EP,16,paid_fraction - cutoff_0.5,sensitivity,AVAILABLE,-0.2540322580645161,"[-0.29032258064516125, -0.217741935483871]",-0.32661290322580644,-0.18548387096774194
+rho1_EP,16,paid_fraction - cutoff_0.5,specificity,AVAILABLE,0.7083333333333333,"[0.5833333333333333, 0.8333333333333334]",0.49895833333333334,0.9166666666666667
+rho1_EP,16,paid_fraction - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8500000000000001,"[-0.9, -0.8]",-1.0,-0.6875
+rho1_EP,16,paid_fraction - cutoff_0.5,q20,AVAILABLE,-0.13333333333333336,"[-0.2333333333333334, -0.033333333333333326]",-0.31539087301587304,0.07988392857142856
+rho1_EP,16,paid_fraction - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+rho1_EP,16,paid_fraction - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+rho1_EP,40,finite_batch - cutoff_0.5,BA,UNAVAILABLE,,,,
+rho1_EP,40,finite_batch - cutoff_0.5,sensitivity,UNAVAILABLE,,,,
+rho1_EP,40,finite_batch - cutoff_0.5,specificity,UNAVAILABLE,,,,
+rho1_EP,40,finite_batch - cutoff_0.5,shortK_sensitivity,UNAVAILABLE,,,,
+rho1_EP,40,finite_batch - cutoff_0.5,q20,UNAVAILABLE,,,,
+rho1_EP,40,finite_batch - cutoff_0.5,brier,UNAVAILABLE,,,,
+rho1_EP,40,finite_batch - cutoff_0.5,log_loss,UNAVAILABLE,,,,
+rho1_EP,40,posterior_mean_pi - cutoff_0.5,BA,UNAVAILABLE,,,,
+rho1_EP,40,posterior_mean_pi - cutoff_0.5,sensitivity,UNAVAILABLE,,,,
+rho1_EP,40,posterior_mean_pi - cutoff_0.5,specificity,UNAVAILABLE,,,,
+rho1_EP,40,posterior_mean_pi - cutoff_0.5,shortK_sensitivity,UNAVAILABLE,,,,
+rho1_EP,40,posterior_mean_pi - cutoff_0.5,q20,UNAVAILABLE,,,,
+rho1_EP,40,posterior_mean_pi - cutoff_0.5,brier,UNAVAILABLE,,,,
+rho1_EP,40,posterior_mean_pi - cutoff_0.5,log_loss,UNAVAILABLE,,,,
+rho1_EP,40,paid_fraction - cutoff_0.5,BA,AVAILABLE,0.32526881720430106,"[0.2567204301075269, 0.39381720430107525]",0.23319892473118276,0.4133064516129032
+rho1_EP,40,paid_fraction - cutoff_0.5,sensitivity,AVAILABLE,-0.1411290322580645,"[-0.15322580645161288, -0.12903225806451613]",-0.2016129032258065,-0.08467741935483875
+rho1_EP,40,paid_fraction - cutoff_0.5,specificity,AVAILABLE,0.7916666666666666,"[0.6666666666666666, 0.9166666666666666]",0.625,0.9583333333333333
+rho1_EP,40,paid_fraction - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8,"[-0.8, -0.8]",-1.0,-0.5
+rho1_EP,40,paid_fraction - cutoff_0.5,q20,AVAILABLE,-0.06666666666666671,"[-0.2333333333333334, 0.09999999999999998]",-0.24982805735930735,0.1466755952380952
+rho1_EP,40,paid_fraction - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+rho1_EP,40,paid_fraction - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,16,finite_batch - cutoff_0.5,BA,AVAILABLE,0.036290322580645185,"[-0.020161290322580627, 0.092741935483871]",-0.06922043010752688,0.14381720430107525
+Binary_V2_EP,16,finite_batch - cutoff_0.5,sensitivity,AVAILABLE,-0.30241935483870974,"[-0.29032258064516137, -0.3145161290322581]",-0.3709677419354839,-0.2338709677419355
+Binary_V2_EP,16,finite_batch - cutoff_0.5,specificity,AVAILABLE,0.375,"[0.25000000000000006, 0.5]",0.16666666666666669,0.5833333333333334
+Binary_V2_EP,16,finite_batch - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.55,"[-0.6, -0.5]",-0.7857142857142857,-0.3333333333333333
+Binary_V2_EP,16,finite_batch - cutoff_0.5,q20,AVAILABLE,-0.15000000000000002,"[-0.2333333333333334, -0.06666666666666665]",-0.2772774170274171,-0.013171626984127027
+Binary_V2_EP,16,finite_batch - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,16,finite_batch - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,16,posterior_mean_pi - cutoff_0.5,BA,AVAILABLE,-0.007392473118279563,"[-0.0658602150537635, 0.05107526881720437]",-0.10282258064516128,0.09072580645161288
+Binary_V2_EP,16,posterior_mean_pi - cutoff_0.5,sensitivity,AVAILABLE,-0.30645161290322587,"[-0.2983870967741936, -0.3145161290322581]",-0.37500000000000006,-0.23790322580645162
+Binary_V2_EP,16,posterior_mean_pi - cutoff_0.5,specificity,AVAILABLE,0.2916666666666667,"[0.16666666666666669, 0.4166666666666667]",0.125,0.45833333333333337
+Binary_V2_EP,16,posterior_mean_pi - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.6,"[-0.6, -0.6]",-0.8333333333333333,-0.3636363636363636
+Binary_V2_EP,16,posterior_mean_pi - cutoff_0.5,q20,AVAILABLE,-0.16666666666666669,"[-0.19999999999999996, -0.13333333333333341]",-0.30124909812409806,-0.018321428571428672
+Binary_V2_EP,16,posterior_mean_pi - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,16,posterior_mean_pi - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,16,paid_fraction - cutoff_0.5,BA,AVAILABLE,0.040322580645161366,"[0.0040322580645162365, 0.0766129032258065]",-0.08133400537634412,0.15927419354838707
+Binary_V2_EP,16,paid_fraction - cutoff_0.5,sensitivity,AVAILABLE,-0.41935483870967744,"[-0.49193548387096775, -0.3467741935483871]",-0.48790322580645157,-0.3548387096774194
+Binary_V2_EP,16,paid_fraction - cutoff_0.5,specificity,AVAILABLE,0.5,"[0.5, 0.5]",0.25,0.75
+Binary_V2_EP,16,paid_fraction - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.55,"[-0.6, -0.5]",-0.7693181818181819,-0.33333333333333337
+Binary_V2_EP,16,paid_fraction - cutoff_0.5,q20,AVAILABLE,-0.14999999999999997,"[-0.19999999999999996, -0.09999999999999998]",-0.305723137973138,0.026687499999999892
+Binary_V2_EP,16,paid_fraction - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,16,paid_fraction - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,40,finite_batch - cutoff_0.5,BA,AVAILABLE,0.24327956989247312,"[0.13306451612903225, 0.353494623655914]",0.14783266129032255,0.3407258064516128
+Binary_V2_EP,40,finite_batch - cutoff_0.5,sensitivity,AVAILABLE,-0.22177419354838712,"[-0.2338709677419355, -0.20967741935483875]",-0.28629032258064513,-0.157258064516129
+Binary_V2_EP,40,finite_batch - cutoff_0.5,specificity,AVAILABLE,0.7083333333333333,"[0.5, 0.9166666666666666]",0.5416666666666666,0.875
+Binary_V2_EP,40,finite_batch - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8,"[-0.8, -0.8]",-1.0,-0.5555555555555556
+Binary_V2_EP,40,finite_batch - cutoff_0.5,q20,AVAILABLE,-0.13333333333333336,"[-0.2666666666666667, 0.0]",-0.3083204365079365,0.07441369047619038
+Binary_V2_EP,40,finite_batch - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,40,finite_batch - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,40,posterior_mean_pi - cutoff_0.5,BA,AVAILABLE,0.22244623655913975,"[0.13306451612903225, 0.31182795698924726]",0.11423051075268813,0.33335013440860206
+Binary_V2_EP,40,posterior_mean_pi - cutoff_0.5,sensitivity,AVAILABLE,-0.22177419354838712,"[-0.2338709677419355, -0.20967741935483875]",-0.28629032258064513,-0.157258064516129
+Binary_V2_EP,40,posterior_mean_pi - cutoff_0.5,specificity,AVAILABLE,0.6666666666666667,"[0.5, 0.8333333333333334]",0.4583333333333333,0.875
+Binary_V2_EP,40,posterior_mean_pi - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.8,"[-0.8, -0.8]",-1.0,-0.5555555555555556
+Binary_V2_EP,40,posterior_mean_pi - cutoff_0.5,q20,AVAILABLE,-0.13333333333333336,"[-0.2666666666666667, 0.0]",-0.3083204365079365,0.07441369047619038
+Binary_V2_EP,40,posterior_mean_pi - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,40,posterior_mean_pi - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,40,paid_fraction - cutoff_0.5,BA,AVAILABLE,0.22849462365591394,"[0.13709677419354838, 0.3198924731182795]",0.11960685483870968,0.3393817204301075
+Binary_V2_EP,40,paid_fraction - cutoff_0.5,sensitivity,AVAILABLE,-0.20967741935483875,"[-0.22580645161290325, -0.19354838709677424]",-0.27419354838709675,-0.14516129032258063
+Binary_V2_EP,40,paid_fraction - cutoff_0.5,specificity,AVAILABLE,0.6666666666666667,"[0.5, 0.8333333333333334]",0.4583333333333333,0.875
+Binary_V2_EP,40,paid_fraction - cutoff_0.5,shortK_sensitivity,AVAILABLE,-0.75,"[-0.8, -0.7000000000000001]",-0.95,-0.5
+Binary_V2_EP,40,paid_fraction - cutoff_0.5,q20,AVAILABLE,-0.13333333333333336,"[-0.2666666666666667, 0.0]",-0.3083204365079365,0.07441369047619038
+Binary_V2_EP,40,paid_fraction - cutoff_0.5,brier,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0
+Binary_V2_EP,40,paid_fraction - cutoff_0.5,log_loss,AVAILABLE,0.0,"[0.0, 0.0]",0.0,0.0

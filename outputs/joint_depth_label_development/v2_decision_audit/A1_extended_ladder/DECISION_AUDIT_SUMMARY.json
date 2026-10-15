@@ -1,0 +1,332 @@
+{
+ "audit_version": "decision-audit-1.1.1",
+ "audit_status": "PRIMARY_COMPLETE_SECONDARY_UNAVAILABLE",
+ "exit_code": 0,
+ "primary": {
+  "arm": "V2_EP_mixture",
+  "rule": "finite_batch",
+  "checkpoints_expected": 20,
+  "checkpoints_ok": 20,
+  "invalid_checkpoints": [],
+  "test_partitions_complete": true,
+  "status": "COMPLETE"
+ },
+ "checkpoints_expected": 60,
+ "checkpoints_recorded": 60,
+ "unexpected_records": [],
+ "status_counts": {
+  "ok": 58,
+  "DECISION_NUMERICAL_STOP": 2
+ },
+ "numerical_stops": 2,
+ "invalid_checkpoints": {
+  "NEW__r1_f1__B16__rho1_EP": "DECISION_NUMERICAL_STOP",
+  "NEW__r1_f2__B40__rho1_EP": "DECISION_NUMERICAL_STOP"
+ },
+ "p_parity_tolerance": 1e-10,
+ "readouts": {
+  "V2_EP_mixture|B16|r1|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r1|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r2|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r2|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B16|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r1|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r1|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r2|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r2|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "V2_EP_mixture|B40|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r1|finite_batch": {
+   "available": false,
+   "valid_folds": 4,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B16__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r1|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 4,
+   "invalid_checkpoints": [
+    "NEW__r1_f1__B16__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r2|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r2|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B16|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r1|finite_batch": {
+   "available": false,
+   "valid_folds": 4,
+   "invalid_checkpoints": [
+    "NEW__r1_f2__B40__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r1|posterior_mean_pi": {
+   "available": false,
+   "valid_folds": 4,
+   "invalid_checkpoints": [
+    "NEW__r1_f2__B40__rho1_EP"
+   ],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r2|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r2|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "rho1_EP|B40|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r1|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r1|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r2|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r2|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B16|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r1|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r1|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r1|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r1|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r2|finite_batch": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r2|posterior_mean_pi": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r2|paid_fraction": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  },
+  "Binary_V2_EP|B40|r2|cutoff_0.5": {
+   "available": true,
+   "valid_folds": 5,
+   "invalid_checkpoints": [],
+   "test_partition_complete": true
+  }
+ },
+ "unreadable_records": [],
+ "max_abs_p_minus_stored": 2.220446049250313e-16,
+ "probability_parity_pass_all_checkpoints": true,
+ "cutoff_decisions_recomputed_from_p": true,
+ "probabilities_identical_across_cutoff_rules": true,
+ "ambiguous_test_decisions_accepted": 13,
+ "ambiguous_test_decisions_all_attempted": 14
+}

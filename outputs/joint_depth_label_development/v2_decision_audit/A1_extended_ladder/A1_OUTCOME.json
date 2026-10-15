@@ -1,0 +1,27 @@
+{
+ "amendment": "A1_extended_ladder_2^16",
+ "a1_version": "decision-audit-1.1.1+A1",
+ "label": "AMENDED (extended ladder); not the frozen primary",
+ "exit_code": 0,
+ "result_file": "DECISION_AUDIT_SUMMARY.json",
+ "result_sha256": "ad6c1c924c89f1d90723f9b59a9931a714d4e8deaf99f445a8ceb754f37432c6",
+ "audit_status": "PRIMARY_COMPLETE_SECONDARY_UNAVAILABLE",
+ "primary": {
+  "arm": "V2_EP_mixture",
+  "rule": "finite_batch",
+  "checkpoints_expected": 20,
+  "checkpoints_ok": 20,
+  "invalid_checkpoints": [],
+  "test_partitions_complete": true,
+  "status": "COMPLETE"
+ },
+ "status_counts": {
+  "ok": 58,
+  "DECISION_NUMERICAL_STOP": 2
+ },
+ "frozen_outcome": {
+  "file": "v2_decision_audit/DECISION_AUDIT_UNAVAILABLE.json",
+  "sha256": "163cfb3c845e2b7c54747ada870f04bead94f5cb3c04494da68a003e00b45ee6",
+  "audit_status": "PRIMARY_UNAVAILABLE"
+ }
+}
