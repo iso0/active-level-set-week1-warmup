@@ -1,0 +1,127 @@
+{
+ "snapshot_utc": "2026-10-15T02:42:47+00:00",
+ "source_directory": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_balanced_decision_acquisition",
+ "pipeline_state": {
+  "utc": "2026-10-15T00:58:11.0081696Z",
+  "state": "COMPUTATION_FINISHED_REVIEW_REQUIRED",
+  "detail": "Results and report tables saved. Final scientific and artifact review still required.",
+  "wrapper_pid": 19116
+ },
+ "status_note": "Astra's computation finished (COMPUTATION_FINISHED_REVIEW_REQUIRED); her final scientific and artifact review is still pending, so these are her unreviewed results",
+ "files": {
+  "CONTROLLED_SUMMARY.md": {
+   "sha256": "af38fb1e40df04154aac02d5fbd5a757eda7a6ad06323429440b92c87058af3e",
+   "bytes": 5288,
+   "stored_as": "CONTROLLED_SUMMARY.md"
+  },
+  "RESULTS_SUMMARY.json": {
+   "sha256": "3bd796ff6837b018f726273a4ce32adfc15e2ee1e7e2ba2a688a922776703514",
+   "bytes": 185044,
+   "stored_as": "RESULTS_SUMMARY.json"
+  },
+  "DECISION_ACQUISITION_DESIGN.md": {
+   "sha256": "b0763c289d9675e934e1b0bc4ea0b1d51cd5b1904a274377e92df77296bcf0b1",
+   "bytes": 32965,
+   "stored_as": "DECISION_ACQUISITION_DESIGN.md"
+  },
+  "controlled_stdout.log": {
+   "sha256": "e0f7f8fcb4c721fb1bee5bdc9ea741990cc634ebc1dc531b8e69b701ddba0480",
+   "bytes": 19163,
+   "stored_as": "controlled_stdout.log"
+  },
+  "summary_stdout.log": {
+   "sha256": "89ea12a31eaaa511d8a8e542b3e407d1986fc34314658a7ca2e2b406e1f4a10f",
+   "bytes": 53,
+   "stored_as": "summary_stdout.log"
+  },
+  "PIPELINE_STATE.json": {
+   "sha256": "938619b11171a70ddbc499c707b5598bf8c07168692bdc38f8da4d9fbf48609e",
+   "bytes": 226,
+   "stored_as": "PIPELINE_STATE.json"
+  },
+  "CONTROLLED_RESULTS.json": {
+   "sha256": "f0cab99a88034d9bad89b1ed35989263372d7d63a06561ca756f7704c040b739",
+   "bytes": 16904930,
+   "stored_as": "CONTROLLED_RESULTS.json.gz",
+   "stored_sha256": "a8975b5680d374bdb1bdf38b06ada21d66d4ad59d8b8007a0e0d8b46752f914d"
+  },
+  "ledger.jsonl": {
+   "sha256": "6c1324e948bdd96104a1c468aecd7f7e5d90d9f8bb020b381292666d24617bfd",
+   "bytes": 628233,
+   "stored_as": "ledger.jsonl.gz",
+   "stored_sha256": "10837de42485aba4977f483b40987c7b65ad0c4dc638dd1c589073be42325ec7"
+  }
+ },
+ "directories_hashed_not_copied": {
+  "records": {
+   "files": 372,
+   "listing_sha256": "bb276a0f01e91c48ce0c8cba16dd932425c6e71edb359c69cbaa2eed23f548d9"
+  },
+  "fit_records": {
+   "files": 374,
+   "listing_sha256": "c72eafa099f5127efc7e1a2f11bb406c867094630ea1ab3b4abefd80b418eead"
+  },
+  "checkpoints": {
+   "files": 374,
+   "listing_sha256": "a0fa22b6eaf4fd1271de11194710cb3c81115977a932285f9a67cec8c19dbd36"
+  },
+  "worlds": {
+   "files": 28,
+   "listing_sha256": "b95be880546fac1bd29005b573a7bd7a971a77d62e4ccbb4766d1944f7105ee2"
+  },
+  "evidence": {
+   "files": 36,
+   "listing_sha256": "c18ae65a634848cee636c67aba5560c9e5e517be72ee7d40b826ca8493a76b3e"
+  }
+ },
+ "frozen_sources_unchanged_since_intake": true,
+ "frozen_sources": {
+  "balanced_method.py": {
+   "now": "7fb4674ff56e98164870033b18e7c88baf1e6bd9a4fcf47f350d16caafa1f516",
+   "at_intake": "7fb4674ff56e98164870033b18e7c88baf1e6bd9a4fcf47f350d16caafa1f516",
+   "unchanged": true
+  },
+  "run_controlled.py": {
+   "now": "52f59d121fa3fc76537c80e5828257a9d4d248b9682890856ab37821b9b98c8d",
+   "at_intake": "52f59d121fa3fc76537c80e5828257a9d4d248b9682890856ab37821b9b98c8d",
+   "unchanged": true
+  },
+  "worlds.py": {
+   "now": "98265fe9bf184682cd0b016116d06f2d6eda007b76f0a876408eb6f1c65ee68b",
+   "at_intake": "98265fe9bf184682cd0b016116d06f2d6eda007b76f0a876408eb6f1c65ee68b",
+   "unchanged": true
+  },
+  "joint_model_v2.py": {
+   "now": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+   "at_intake": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+   "unchanged": true
+  },
+  "v1_reference.py": {
+   "now": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+   "at_intake": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+   "unchanged": true
+  },
+  "independent_checks.py": {
+   "now": "74e3df21683ba0d1532b427108d51434c565bc983b373e891b79ba4afb859546",
+   "at_intake": "74e3df21683ba0d1532b427108d51434c565bc983b373e891b79ba4afb859546",
+   "unchanged": true
+  },
+  "summarize_results.py": {
+   "now": "279eb06e34802c22d9e86536ae7b2ec2777287adf0db8f962be3463a6baf666e",
+   "at_intake": "279eb06e34802c22d9e86536ae7b2ec2777287adf0db8f962be3463a6baf666e",
+   "unchanged": true
+  },
+  "runtime.py": {
+   "now": "eae77de6a5d6924c1c9f2df1c9ce47bdc305dd575c9ed9eb5c88c55b68551cd4",
+   "at_intake": "eae77de6a5d6924c1c9f2df1c9ce47bdc305dd575c9ed9eb5c88c55b68551cd4",
+   "unchanged": true
+  },
+  "MANIFEST.json": {
+   "now": "5cb55b923f61e04b7453173867be2e23160bcc4917340be647076c0154765bef",
+   "at_intake": "5cb55b923f61e04b7453173867be2e23160bcc4917340be647076c0154765bef",
+   "unchanged": true
+  }
+ },
+ "workspace_written": false,
+ "checkpoints_deserialised": false
+}
