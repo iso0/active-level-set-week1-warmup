@@ -1,0 +1,16 @@
+{
+ "units_done": 11,
+ "units_expected": 11,
+ "complete": true,
+ "L1_primary": {
+  "estimate": 0.15909090909090912,
+  "lo": -0.17805871212121213,
+  "hi": 0.4752477425772878,
+  "per_repeat": [
+   0.030303030303030387,
+   0.28787878787878785
+  ],
+  "verdict": "NOT SUPPORTED"
+ },
+ "query_saving": "NONE MEASURED (target not attained in both repeats)"
+}

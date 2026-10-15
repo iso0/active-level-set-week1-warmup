@@ -7,10 +7,34 @@
    "priority": 1,
    "max_workers": 3,
    "python": "system",
-   "args": ["-m", "src.jdl_trained_al", "work", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.jdl_trained_al",
+    "work",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/joint_depth_label_development/_cache/trained_al/NEW__*.json.gz",
    "units_total": 40,
    "locks_dir": "outputs/joint_depth_label_development/_cache/trained_al/locks"
+  },
+  {
+   "name": "corner_local",
+   "enabled": true,
+   "priority": 1,
+   "max_workers": 1,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.jdl_corner_local",
+    "work",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/joint_depth_label_development/_cache/corner_local/NEW__*.json.gz",
+   "units_total": 11,
+   "locks_dir": "outputs/joint_depth_label_development/_cache/corner_local/locks",
+   "note": "re-enabled 09:47 UTC after the v1.1 repair (commit 8573c1de); only the FIXED unit remains"
   },
   {
    "name": "astra_al_margin",
@@ -18,7 +42,15 @@
    "priority": 2,
    "max_workers": 1,
    "python": "system",
-   "args": ["-m", "src.jdl_astra_al", "work", "--arms", "ALIGNED_MARGIN", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.jdl_astra_al",
+    "work",
+    "--arms",
+    "ALIGNED_MARGIN",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/joint_depth_label_development/_cache/astra_al/NEW__*__ALIGNED_MARGIN.json.gz",
    "units_total": 10,
    "locks_dir": "outputs/joint_depth_label_development/_cache/astra_al/locks/ALIGNED_MARGIN"
@@ -29,7 +61,15 @@
    "priority": 2,
    "max_workers": 1,
    "python": "system",
-   "args": ["-m", "src.jdl_astra_al", "work", "--arms", "V2_VARIANCE", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.jdl_astra_al",
+    "work",
+    "--arms",
+    "V2_VARIANCE",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/joint_depth_label_development/_cache/astra_al/NEW__*__V2_VARIANCE.json.gz",
    "units_total": 10,
    "locks_dir": "outputs/joint_depth_label_development/_cache/astra_al/locks/V2_VARIANCE"
@@ -40,7 +80,17 @@
    "priority": 3,
    "max_workers": 1,
    "python": "system",
-   "args": ["-m", "src.jdl_astra_al", "work", "--arms", "BA_RISK", "--max-units", "1", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.jdl_astra_al",
+    "work",
+    "--arms",
+    "BA_RISK",
+    "--max-units",
+    "1",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/joint_depth_label_development/_cache/astra_al/NEW__*__BA_RISK.json.gz",
    "units_total": 10,
    "locks_dir": "outputs/joint_depth_label_development/_cache/astra_al/locks/BA_RISK"
