@@ -1,0 +1,16 @@
+{
+ "note": "Read by src/jdl_pool_runner.ps1 every cycle. Total capacity 4 threads shared with Astra; one BLAS thread per worker.",
+ "studies": [
+  {
+   "name": "trained_al",
+   "enabled": true,
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": ["-m", "src.jdl_trained_al", "work", "--threads", "1"],
+   "done_glob": "outputs/joint_depth_label_development/_cache/trained_al/NEW__*.json.gz",
+   "units_total": 40,
+   "locks_dir": "outputs/joint_depth_label_development/_cache/trained_al/locks"
+  }
+ ]
+}
