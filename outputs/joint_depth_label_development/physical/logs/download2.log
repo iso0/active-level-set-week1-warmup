@@ -1,0 +1,90 @@
+paths-info 2e1eec9c: 100/272
+paths-info 2e1eec9c: 200/272
+paths-info 2e1eec9c: 272/272
+paths-info b6dc254a: 100/3645
+paths-info b6dc254a: 200/3645
+paths-info b6dc254a: 300/3645
+paths-info b6dc254a: 400/3645
+paths-info b6dc254a: 500/3645
+paths-info b6dc254a: 600/3645
+paths-info b6dc254a: 700/3645
+paths-info b6dc254a: 800/3645
+paths-info b6dc254a: 900/3645
+paths-info b6dc254a: 1000/3645
+paths-info b6dc254a: 1100/3645
+paths-info b6dc254a: 1200/3645
+paths-info b6dc254a: 1300/3645
+paths-info b6dc254a: 1400/3645
+paths-info b6dc254a: 1500/3645
+paths-info b6dc254a: 1600/3645
+paths-info b6dc254a: 1700/3645
+paths-info b6dc254a: 1800/3645
+paths-info b6dc254a: 1900/3645
+paths-info b6dc254a: 2000/3645
+paths-info b6dc254a: 2100/3645
+paths-info b6dc254a: 2200/3645
+paths-info b6dc254a: 2300/3645
+paths-info b6dc254a: 2400/3645
+paths-info b6dc254a: 2500/3645
+paths-info b6dc254a: 2600/3645
+paths-info b6dc254a: 2700/3645
+paths-info b6dc254a: 2800/3645
+paths-info b6dc254a: 2900/3645
+paths-info b6dc254a: 3000/3645
+paths-info b6dc254a: 3100/3645
+paths-info b6dc254a: 3200/3645
+paths-info b6dc254a: 3300/3645
+paths-info b6dc254a: 3400/3645
+paths-info b6dc254a: 3500/3645
+paths-info b6dc254a: 3600/3645
+paths-info b6dc254a: 3645/3645
+{"paths": 3917, "missing_remote": 278, "bytes": 7531942634}
+{"resolved": 250, "of": 3639, "utc": "2026-10-16T23:08:53+00:00"}
+{"resolved": 500, "of": 3639, "utc": "2026-10-16T23:09:30+00:00"}
+{"resolved": 750, "of": 3639, "utc": "2026-10-16T23:10:05+00:00"}
+{"resolved": 1000, "of": 3639, "utc": "2026-10-16T23:10:41+00:00"}
+{"resolved": 1250, "of": 3639, "utc": "2026-10-16T23:11:17+00:00"}
+{"resolved": 1500, "of": 3639, "utc": "2026-10-16T23:11:51+00:00"}
+{"resolved": 1750, "of": 3639, "utc": "2026-10-16T23:12:30+00:00"}
+{"resolved": 2000, "of": 3639, "utc": "2026-10-16T23:13:01+00:00"}
+{"resolved": 2250, "of": 3639, "utc": "2026-10-16T23:13:32+00:00"}
+{"resolved": 2500, "of": 3639, "utc": "2026-10-16T23:14:03+00:00"}
+{"resolved": 2750, "of": 3639, "utc": "2026-10-16T23:14:35+00:00"}
+{"resolved": 3000, "of": 3639, "utc": "2026-10-16T23:15:06+00:00"}
+{"resolved": 3250, "of": 3639, "utc": "2026-10-16T23:15:39+00:00"}
+{"resolved": 3500, "of": 3639, "utc": "2026-10-16T23:16:13+00:00"}
+{"resolved": 3639, "of": 3639, "utc": "2026-10-16T23:16:32+00:00"}
+{
+ "files": 3639,
+ "verified": 3639,
+ "by_source": {
+  "downloaded": 2420,
+  "verified_cache": 1207,
+  "verified_cache_d69dac5b": 12
+ },
+ "missing_remote": [
+  "P-107p176159755_VX-0p320752066655_LS-8p75302281584e-05_ST-393p859643937_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p50400296819e-05_H-8daf8adcd4/monitor/maximum-velocity_melt.dat",
+  "P-107p176159755_VX-0p320752066655_LS-8p75302281584e-05_ST-393p859643937_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p50400296819e-05_H-8daf8adcd4/monitor/transferred-laser-power_melt.dat",
+  "P-107p176159755_VX-0p320752066655_LS-8p75302281584e-05_ST-393p859643937_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p50400296819e-05_H-8daf8adcd4/monitor/maximum-temperature_melt.dat",
+  "P-107p176159755_VX-0p320752066655_LS-8p75302281584e-05_ST-393p859643937_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p50400296819e-05_H-8daf8adcd4/monitor/total-energy_melt.dat",
+  "P-107p176159755_VX-0p320752066655_LS-8p75302281584e-05_ST-393p859643937_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p50400296819e-05_H-8daf8adcd4/monitor/particle-number_melt.dat",
+  "P-110p234671953_VX-0p866589137882_LS-8p08580037422e-05_ST-348p980680204_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p56679098795e-06_H-6705b84f8a/monitor/maximum-velocity_melt.dat",
+  "P-110p234671953_VX-0p866589137882_LS-8p08580037422e-05_ST-348p980680204_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p56679098795e-06_H-6705b84f8a/monitor/transferred-laser-power_melt.dat",
+  "P-110p234671953_VX-0p866589137882_LS-8p08580037422e-05_ST-348p980680204_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p56679098795e-06_H-6705b84f8a/monitor/maximum-temperature_melt.dat",
+  "P-110p234671953_VX-0p866589137882_LS-8p08580037422e-05_ST-348p980680204_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p56679098795e-06_H-6705b84f8a/monitor/total-energy_melt.dat",
+  "P-110p234671953_VX-0p866589137882_LS-8p08580037422e-05_ST-348p980680204_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p56679098795e-06_H-6705b84f8a/monitor/particle-number_melt.dat",
+  "P-112p428225508_VX-0p704865651228_LS-6p30987392704e-05_ST-309p241492678_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-6p84402849623e-06_H-30d8d23b36/monitor/maximum-velocity_melt.dat",
+  "P-112p428225508_VX-0p704865651228_LS-6p30987392704e-05_ST-309p241492678_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-6p84402849623e-06_H-30d8d23b36/monitor/transferred-laser-power_melt.dat",
+  "P-112p428225508_VX-0p704865651228_LS-6p30987392704e-05_ST-309p241492678_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-6p84402849623e-06_H-30d8d23b36/monitor/maximum-temperature_melt.dat",
+  "P-112p428225508_VX-0p704865651228_LS-6p30987392704e-05_ST-309p241492678_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-6p84402849623e-06_H-30d8d23b36/monitor/total-energy_melt.dat",
+  "P-112p428225508_VX-0p704865651228_LS-6p30987392704e-05_ST-309p241492678_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-6p84402849623e-06_H-30d8d23b36/monitor/particle-number_melt.dat",
+  "P-112p904894498_VX-0p537693260466_LS-4p63068354409e-05_ST-322p169166627_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p00125_DT-1p19825809506e-05_H-bf889bf790/monitor/maximum-velocity_melt.dat",
+  "P-112p904894498_VX-0p537693260466_LS-4p63068354409e-05_ST-322p169166627_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p00125_DT-1p19825809506e-05_H-bf889bf790/monitor/transferred-laser-power_melt.dat",
+  "P-112p904894498_VX-0p537693260466_LS-4p63068354409e-05_ST-322p169166627_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p00125_DT-1p19825809506e-05_H-bf889bf790/monitor/maximum-temperature_melt.dat",
+  "P-112p904894498_VX-0p537693260466_LS-4p63068354409e-05_ST-322p169166627_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p00125_DT-1p19825809506e-05_H-bf889bf790/monitor/total-energy_melt.dat",
+  "P-112p904894498_VX-0p537693260466_LS-4p63068354409e-05_ST-322p169166627_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p00125_DT-1p19825809506e-05_H-bf889bf790/monitor/particle-number_melt.dat"
+ ],
+ "n_missing_remote": 278,
+ "bytes_remote": 7531942634,
+ "finished_utc": "2026-10-16T23:16:32+00:00"
+}
