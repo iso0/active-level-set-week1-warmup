@@ -1,11 +1,11 @@
 {
  "study": "ASTRA_AL",
- "units_done": 20,
+ "units_done": 26,
  "units_expected": 30,
  "units_done_by_arm": {
   "ALIGNED_MARGIN": 10,
   "V2_VARIANCE": 10,
-  "BA_RISK": 0
+  "BA_RISK": 6
  },
  "complete": false,
  "statuses": {
@@ -17,7 +17,9 @@
   "V2_VARIANCE": {
    "ok": "10"
   },
-  "BA_RISK": {}
+  "BA_RISK": {
+   "ok": "6"
+  }
  },
  "practical_aulc_threshold": 0.02,
  "shortK_tolerance_events": 2,
@@ -235,7 +237,7 @@
    "available": false,
    "estimate": null,
    "per_repeat": [
-    null,
+    0.8151041666666666,
     null
    ]
   },
@@ -245,7 +247,7 @@
    "available": false,
    "estimate": null,
    "per_repeat": [
-    null,
+    0.00625,
     null
    ]
   },
@@ -255,7 +257,7 @@
    "available": false,
    "estimate": null,
    "per_repeat": [
-    null,
+    0.5479166666666666,
     null
    ]
   },
@@ -265,7 +267,7 @@
    "available": false,
    "estimate": null,
    "per_repeat": [
-    null,
+    0.5815692204301075,
     null
    ]
   },
@@ -275,14 +277,14 @@
    "available": false,
    "estimate": null,
    "per_repeat": [
-    null,
+    0.8542086693548387,
     null
    ]
   }
  ],
  "caps": {
-  "fits_executed": 176,
-  "component_solves": 528,
+  "fits_executed": 230,
+  "component_solves": 690,
   "top_level_requests": 270,
   "component_solves_including_fallback": 900,
   "within_caps": true

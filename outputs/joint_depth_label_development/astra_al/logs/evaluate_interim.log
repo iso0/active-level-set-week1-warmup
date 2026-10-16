@@ -1,10 +1,10 @@
 {
- "units_done": 20,
+ "units_done": 26,
  "units_expected": 30,
  "units_done_by_arm": {
   "ALIGNED_MARGIN": 10,
   "V2_VARIANCE": 10,
-  "BA_RISK": 0
+  "BA_RISK": 6
  },
  "complete": false,
  "statuses": {
@@ -16,11 +16,13 @@
   "V2_VARIANCE": {
    "ok": "10"
   },
-  "BA_RISK": {}
+  "BA_RISK": {
+   "ok": "6"
+  }
  },
  "caps": {
-  "fits_executed": 176,
-  "component_solves": 528,
+  "fits_executed": 230,
+  "component_solves": 690,
   "top_level_requests": 270,
   "component_solves_including_fallback": 900,
   "within_caps": true
