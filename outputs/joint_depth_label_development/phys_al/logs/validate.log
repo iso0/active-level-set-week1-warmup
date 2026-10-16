@@ -1,0 +1,28 @@
+{
+ "status": "PASS",
+ "checks": {
+  "ivr_equals_bruteforce_variance_reduction": true,
+  "icm_nlml_equals_bruteforce": true,
+  "icm_mean_equals_bruteforce": true,
+  "new_primary_targets_present": true,
+  "trajectory_runs": true,
+  "hidden_targets_do_not_change_path_or_predictions": true,
+  "mo_trajectory_runs": true,
+  "random_path_independent_of_target": true,
+  "old_tasks_with_label_free_paths": true
+ },
+ "info": {
+  "new_target_counts": {
+   "log_A_um": 135,
+   "log_ke_T0_nJ": 135,
+   "vmax_spike_logratio": 135,
+   "vmax_spike_us": 135,
+   "laser_T0_W": 135,
+   "tmax_T0_K": 135,
+   "log_etot_T0_J": 0,
+   "log_npart_T0": 0
+  },
+  "unit_seconds_IVR": 2.1067330837249756,
+  "unit_seconds_MO": 11.465083837509155
+ }
+}
