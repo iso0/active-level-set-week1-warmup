@@ -1,0 +1,12 @@
+{
+ "runs": 136,
+ "status_counts": {
+  "ok": 135,
+  "UNAVAILABLE: channel row counts differ from time.dat": 1
+ },
+ "nonfinite_ke_total": 1358,
+ "runs_with_nonfinite_ke": 3,
+ "implausible_vmax_rows_total": 39,
+ "runs_with_implausible_vmax": 9,
+ "seconds": 37.4587938785553
+}
