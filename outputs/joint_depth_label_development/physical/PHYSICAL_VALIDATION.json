@@ -1,0 +1,19 @@
+{
+ "study": "PHYSICAL_PILOT",
+ "status": "PASS",
+ "checks": {
+  "depth_peak_after_ke_peak_lag_positive": true,
+  "spike_duration_counts_held_time": true,
+  "implausible_velocity_counted_not_used": true,
+  "nonfinite_ke_counted": true,
+  "sentinel_rows_invalid": true,
+  "too_short_window_unavailable": true,
+  "inventory_136_runs_verified": true,
+  "week19_active_cutoff_available_for_all_new": true
+ },
+ "info": {
+  "cutoff_available": 136
+ },
+ "seconds": 6.389954328536987,
+ "module_sha256": "e8c773c9dc52b5b1523d72c072c3f35976900bc8c49417bb5b7ce267b529e8ac"
+}
