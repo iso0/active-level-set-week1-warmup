@@ -6,3 +6,40 @@
 {"event":"WORKER_END","study":"trained_al","worker":1,"pid":2852,"exit_code":0,"locks_released":0,"utc":"2026-10-15T09:11:30.4135241Z"}
 {"event":"WORKER_END","study":"trained_al","worker":2,"pid":20064,"exit_code":0,"locks_released":0,"utc":"2026-10-15T09:11:30.4165727Z"}
 {"event":"POOL_END","reason":"all enabled studies finished","utc":"2026-10-15T09:11:30.4240818Z"}
+{"event":"POOL_START","pid":21772,"utc":"2026-10-15T09:29:17.0442464Z"}
+{"event":"WORKER_START","study":"astra_al_variance","worker":1,"pid":4856,"external_used":0,"live_workers":1,"astra_active":false,"leaves":"","utc":"2026-10-15T09:30:17.6781642Z"}
+{"event":"WORKER_START","study":"astra_al_margin","worker":1,"pid":12248,"external_used":0,"live_workers":2,"astra_active":false,"leaves":"","utc":"2026-10-15T09:31:18.0161779Z"}
+{"event":"WORKER_START","study":"astra_al_risk","worker":1,"pid":10044,"external_used":0,"live_workers":3,"astra_active":false,"leaves":"","utc":"2026-10-15T09:32:18.3984004Z"}
+{"event":"WORKER_START","study":"corner_local","worker":1,"pid":22288,"external_used":0,"live_workers":4,"astra_active":false,"leaves":"","utc":"2026-10-15T09:41:49.9236475Z"}
+{"event":"WORKER_END","study":"corner_local","worker":1,"pid":22288,"exit_code":1,"locks_released":0,"utc":"2026-10-15T09:42:50.2228958Z"}
+{"event":"WORKER_START","study":"corner_local","worker":2,"pid":7512,"external_used":0,"live_workers":4,"astra_active":false,"leaves":"","utc":"2026-10-15T09:43:50.7444322Z"}
+{"event":"WORKER_END","study":"corner_local","worker":2,"pid":7512,"exit_code":1,"locks_released":0,"utc":"2026-10-15T09:44:20.8334133Z"}
+{"event":"WORKER_START","study":"corner_local","worker":3,"pid":17760,"external_used":0,"live_workers":4,"astra_active":false,"leaves":"","utc":"2026-10-15T09:46:51.4348954Z"}
+{"event":"WORKER_END","study":"corner_local","worker":3,"pid":17760,"exit_code":0,"locks_released":0,"utc":"2026-10-15T09:47:21.5100387Z"}
+{"event":"WORKER_START","study":"stop_rule","worker":1,"pid":21488,"external_used":0,"live_workers":4,"astra_active":false,"leaves":"","utc":"2026-10-15T09:55:52.8845155Z"}
+{"event":"WORKER_END","study":"stop_rule","worker":1,"pid":21488,"exit_code":0,"locks_released":0,"utc":"2026-10-15T09:57:23.2115505Z"}
+{"event":"BA_RISK_TIMING","unit":"NEW__r3_f1__BA_RISK","step":"B16->B17","step_seconds":1779.5,"score_seconds":1761.1,"levels":{"8_9_done_utc":"2026-10-15T09:36:12Z","10_17_done_utc":"2026-10-15T10:02:06Z"},"accepted_level":[10,17],"ranking_resolved":false,"near_ties":18,"projected_unit_hours_if_10_17_every_step":3.9,"projected_total_single_thread_hours":39,"allocation":"astra_al_risk max_workers 1 -> 2 (protocol: up to 2 while other registered studies have claimable units; the 4th thread is kept for the registered evaluations); revisit when the cheap arms finish","utc":"2026-10-15T10:04:30Z"}
+{"event":"WORKER_START","study":"astra_al_risk","worker":2,"pid":11384,"external_used":0,"live_workers":4,"astra_active":false,"leaves":"","utc":"2026-10-15T10:05:54.9116745Z"}
+{"event":"WORKER_END","study":"astra_al_margin","worker":1,"pid":12248,"exit_code":0,"locks_released":0,"utc":"2026-10-15T10:31:29.4810137Z"}
+{"event":"WORKER_END","study":"astra_al_variance","worker":1,"pid":4856,"exit_code":0,"locks_released":0,"utc":"2026-10-15T10:53:32.8219762Z"}
+{"event":"WORKER_START","study":"astra_al_risk","worker":3,"pid":14404,"external_used":0,"live_workers":3,"astra_active":false,"leaves":"","utc":"2026-10-15T10:56:03.4052219Z"}
+{"event":"WORKER_END","study":"astra_al_risk","worker":1,"pid":10044,"exit_code":0,"locks_released":0,"utc":"2026-10-15T20:08:39.4981051Z"}
+{"event":"WORKER_START","study":"astra_al_risk","worker":4,"pid":25444,"external_used":0,"live_workers":3,"astra_active":false,"leaves":"","utc":"2026-10-15T20:09:39.8000805Z"}
+{"event":"WORKER_END","study":"astra_al_risk","worker":2,"pid":11384,"exit_code":0,"locks_released":0,"utc":"2026-10-15T20:45:43.6362548Z"}
+{"event":"WORKER_START","study":"astra_al_risk","worker":5,"pid":13104,"external_used":0,"live_workers":3,"astra_active":false,"leaves":"","utc":"2026-10-15T20:46:43.9615796Z"}
+{"event":"WORKER_END","study":"astra_al_risk","worker":3,"pid":14404,"exit_code":0,"locks_released":0,"utc":"2026-10-15T23:42:32.1121503Z"}
+{"event":"WORKER_START","study":"astra_al_risk","worker":6,"pid":20176,"external_used":0,"live_workers":3,"astra_active":false,"leaves":"","utc":"2026-10-15T23:43:32.4145692Z"}
+{"event":"WORKER_END","study":"astra_al_risk","worker":4,"pid":25444,"exit_code":0,"locks_released":0,"utc":"2026-10-16T08:05:55.3287193Z"}
+{"event":"WORKER_START","study":"astra_al_risk","worker":7,"pid":3108,"external_used":0,"live_workers":3,"astra_active":false,"leaves":"","utc":"2026-10-16T08:06:55.6434033Z"}
+{"event":"WORKER_END","study":"astra_al_risk","worker":6,"pid":20176,"exit_code":0,"locks_released":0,"utc":"2026-10-16T13:53:02.5378035Z"}
+{"event":"WORKER_START","study":"astra_al_risk","worker":8,"pid":17196,"external_used":0,"live_workers":3,"astra_active":false,"leaves":"","utc":"2026-10-16T13:54:02.8149233Z"}
+{"event":"WORKER_END","study":"astra_al_risk","worker":5,"pid":13104,"exit_code":0,"locks_released":0,"utc":"2026-10-16T18:36:31.6365370Z"}
+{"event":"WORKER_START","study":"astra_al_risk","worker":9,"pid":23608,"external_used":0,"live_workers":3,"astra_active":false,"leaves":"","utc":"2026-10-16T18:37:31.9282588Z"}
+{"event":"OWNER_STOP_ASTRA_AL_RISK","action":"astra_al_risk disabled in POOL_PLAN (enabled false, max_workers 0) before stopping its workers","utc":"2026-10-16T21:01:14Z"}
+{"event":"WORKER_END","study":"astra_al_risk","worker":8,"pid":17196,"exit_code":-1,"locks_released":0,"utc":"2026-10-16T21:02:49.2376941Z"}
+{"event":"WORKER_END","study":"astra_al_risk","worker":7,"pid":3108,"exit_code":-1,"locks_released":0,"utc":"2026-10-16T21:02:49.2420299Z"}
+{"event":"WORKER_END","study":"astra_al_risk","worker":9,"pid":23608,"exit_code":-1,"locks_released":0,"utc":"2026-10-16T21:02:49.2460320Z"}
+{"event":"STALE_LOCK_RELEASED","study":"astra_al_risk","lock":"NEW__r4_f2__BA_RISK.lock","pid":23200,"utc":"2026-10-16T21:02:49.2686134Z"}
+{"event":"STALE_LOCK_RELEASED","study":"astra_al_risk","lock":"NEW__r4_f3__BA_RISK.lock","pid":15456,"utc":"2026-10-16T21:02:49.2736475Z"}
+{"event":"STALE_LOCK_RELEASED","study":"astra_al_risk","lock":"NEW__r4_f4__BA_RISK.lock","pid":7976,"utc":"2026-10-16T21:02:49.2770483Z"}
+{"event":"POOL_END","reason":"all enabled studies finished","utc":"2026-10-16T21:02:49.3051359Z"}

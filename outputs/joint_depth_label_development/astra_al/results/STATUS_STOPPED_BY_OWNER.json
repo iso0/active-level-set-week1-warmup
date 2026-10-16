@@ -1,0 +1,12 @@
+{
+ "study": "ASTRA_AL",
+ "status": "STOPPED BY OWNER (compute cost and priority), 2026-10-16 21:01-21:03 UTC; INCOMPLETE",
+ "results_in_this_folder": "frozen evaluation of the 26 finished units (run 2026-10-16 19:50 UTC); descriptive only",
+ "P1": "unavailable by protocol (preserved ALIGNED_MARGIN decision stops r3_f4 B20, r4_f3 B24)",
+ "S1": "unavailable by protocol (same stops)",
+ "P2": "NOT COMPLETED - stopped by the owner; not a negative result",
+ "BA_RISK_units_finished": 6,
+ "BA_RISK_units_interrupted": {"NEW__r4_f2": "last sound budget B19", "NEW__r4_f3": "last sound budget B21", "NEW__r4_f4": "last sound budget B16"},
+ "BA_RISK_units_not_started": ["NEW__r4_f5"],
+ "record": "astra_al/cancellation/ASTRA_AL_STOP_RECORD.md"
+}

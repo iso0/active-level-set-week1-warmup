@@ -87,10 +87,10 @@
   },
   {
    "name": "astra_al_risk",
-   "enabled": true,
+   "enabled": false,
    "priority": 3,
-   "max_workers": 3,
-   "note": "10:04 UTC: timing unit step recorded (1779 s, level (10,17)); raised 1 -> 2 per ASTRA_AL_PROTOCOL section 4. 10:55 UTC: cheap arms complete, no other registered study has claimable units -> 3 (the 4th thread stays free for evaluations)",
+   "max_workers": 0,
+   "note": "STOPPED BY OWNER 2026-10-16 21:01 UTC (compute cost and priority; owner decision of 2026-10-16): no further BA_RISK launches. History: 10:04 UTC 1 -> 2 workers, 10:55 UTC -> 3 (ASTRA_AL_PROTOCOL section 4).",
    "python": "system",
    "args": [
     "-m",
