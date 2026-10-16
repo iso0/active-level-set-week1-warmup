@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "tests": 23,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_s": 0.04254439999931492,
+  "model_fits": 0,
+  "synthetic_experiments": 0,
+  "scope": "deterministic software contracts and hand-calculable time examples"
+}
