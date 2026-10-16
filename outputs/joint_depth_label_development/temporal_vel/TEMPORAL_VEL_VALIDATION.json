@@ -1,0 +1,18 @@
+{
+ "study": "TEMPORAL_VEL",
+ "status": "PASS",
+ "checks": {
+  "kronecker_nlml_equals_bruteforce": true,
+  "kronecker_mean_equals_bruteforce": true,
+  "kronecker_variance_equals_bruteforce": true,
+  "curves_extract_three_runs": true
+ },
+ "info": {
+  "example_curve_range_log_m_s": [
+   1.0942370646524442,
+   2.6625555009215747
+  ]
+ },
+ "seconds": 5.857285499572754,
+ "module_sha256": "92888e63ff5411361354a69325f034f102a0b43a672fda5c8a5ac1c31b57c044"
+}
