@@ -1,0 +1,30 @@
+{
+ "study": "TEMPORAL_STRUCT",
+ "status": "FROZEN BEFORE ANY TEMPORAL_STRUCT OUTCOME",
+ "written_utc": "2026-10-16T23:23:56+00:00",
+ "parent_commit": "8e5ccd77e699850538770049f708d482e97d3f7c",
+ "channels": [
+  "velocity",
+  "ke",
+  "depth"
+ ],
+ "models": [
+  "MEAN",
+  "KRON",
+  "PCA",
+  "FULL5D (NEW only)",
+  "SCALAR (derived control)"
+ ],
+ "validation": {
+  "status": "PASS",
+  "sha256": "fec57324e33739beb4408bd8d1e2724f906802dfa361295d9ec4e60a29ec639b"
+ },
+ "code_sha256": {
+  "src/jdl_temporal_struct.py": "14d101e92967e967e3dadf815390d06b94ee64c29215fad3ab6a266284e8ffca",
+  "src/jdl_temporal_vel.py": "92888e63ff5411361354a69325f034f102a0b43a672fda5c8a5ac1c31b57c044",
+  "src/jdl_phys_al.py": "32e78805fde496cf5743e583982426b6bbdfad7bc1bd2ce4f20717ad55170f8e",
+  "src/jdl_physical_pilot.py": "e8c773c9dc52b5b1523d72c072c3f35976900bc8c49417bb5b7ce267b529e8ac",
+  "src/jdl_physical_data2.py": "c89b369001972df986cae8ac946418af1b2f74dee65b746ac76340192b14cc30",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a"
+ }
+}

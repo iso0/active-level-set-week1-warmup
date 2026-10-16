@@ -1,0 +1,32 @@
+{
+ "study": "TEMPORAL_STRUCT",
+ "status": "PASS",
+ "checks": {
+  "pca_emulator_runs": true,
+  "pca_reconstruction_exact_with_all_components": true,
+  "full5d_runs": true,
+  "curves_three_channels_new": true,
+  "derived_definitions": true
+ },
+ "info": {
+  "ok_counts_first3": {
+   "velocity": [
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "ke": [
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "depth": [
+    "ok",
+    "ok",
+    "ok"
+   ]
+  }
+ },
+ "seconds": 7.144688367843628,
+ "module_sha256": "14d101e92967e967e3dadf815390d06b94ee64c29215fad3ab6a266284e8ffca"
+}
