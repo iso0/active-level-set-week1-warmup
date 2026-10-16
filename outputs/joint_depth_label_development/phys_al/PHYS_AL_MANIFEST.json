@@ -1,8 +1,12 @@
 {
  "study": "PHYS_AL",
+ "version": "1.1",
+ "repairs": [
+  "1.1 (2026-10-16 23:21 UTC, before any outcome): the frozen 1.0 extraction crashed on an OLD position-bounds file containing the token 's3.402823e+38'.  Position-bounds files now use Week 7's load_numeric (the supervisor-confirmed rule for that exact token; any other malformed token still raises), and a remaining per-run parse error is recorded as UNAVAILABLE.  No target, arm, endpoint or setting changed."
+ ],
  "status": "FROZEN BEFORE ANY PHYS_AL OUTCOME",
- "written_utc": "2026-10-16T23:13:26+00:00",
- "parent_commit": "e2cfd7bfb684f31325b4c1b854f70f9ff1630aa2",
+ "written_utc": "2026-10-16T23:22:00+00:00",
+ "parent_commit": "7cb8996d0e65f950f9310639a584342df3cb7fa9",
  "targets_primary": [
   "log_A_um",
   "log_ke_T0_nJ",
@@ -53,15 +57,16 @@
  "endpoints": "R2-AULC; attainable R2_full; level 0.9 x R2_full; sustained budget-to-target, censored at 64; FEWER SIMULATIONS / SAME-BUDGET GAIN rules as in the module docstring",
  "validation": {
   "status": "PASS",
-  "sha256": "2b477ffbf1942c681c21e127aeb923f1cb4eaf608a1362420ba2218468416b48"
+  "sha256": "226972077309562bdfe8a67dad77be5ac5bdf23599b53f20e8d17e2b7c446d4c"
  },
  "code_sha256": {
-  "src/jdl_phys_al.py": "cc7828abc7c5e9b7849f2ed1db793672d25e31f0bdc21457d36207b23fed99c6",
+  "src/jdl_phys_al.py": "32e78805fde496cf5743e583982426b6bbdfad7bc1bd2ce4f20717ad55170f8e",
   "src/jdl_physical_data2.py": "c89b369001972df986cae8ac946418af1b2f74dee65b746ac76340192b14cc30",
   "src/jdl_physical_data.py": "78eff9bd3809c5518a089b364608ba7651e22cdff12e2dc97ac105a8f3c91062",
   "src/jdl_physical_pilot.py": "e8c773c9dc52b5b1523d72c072c3f35976900bc8c49417bb5b7ce267b529e8ac",
   "src/jdl_trained_al.py": "914a8ca17314a13e6a5c47b978b603b63ca14f8339da50bd27f13da1aeeaeec7",
   "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
-  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67"
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/week7_phase2_sph_v2_physical_target_extraction.py": "c4b975830a7cc4dd09fe214bb3e98383fa337b93e3075e2812c27ed5382bd3a0"
  }
 }

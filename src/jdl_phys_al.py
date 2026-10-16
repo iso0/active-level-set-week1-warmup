@@ -60,6 +60,11 @@ import src.jdl_stage_m as SMM
 import src.jdl_trained_al as TA
 
 STUDY = "PHYS_AL"
+VERSION = "1.1"
+REPAIRS = ["1.1 (2026-10-16 23:21 UTC, before any outcome): the frozen 1.0 extraction crashed on an OLD position-bounds file containing "
+           "the token 's3.402823e+38'.  Position-bounds files now use Week 7's load_numeric (the supervisor-confirmed rule for that exact "
+           "token; any other malformed token still raises), and a remaining per-run parse error is recorded as UNAVAILABLE.  No target, "
+           "arm, endpoint or setting changed."]
 OUT = SMM.OUT / "phys_al"
 CACHE = SMM.OUT / "_cache" / "phys_al"
 MANIFEST = OUT / "PHYS_AL_MANIFEST.json"
@@ -71,7 +76,7 @@ REPEATS, FOLDS, B0, B1 = (3, 4), (1, 2, 3, 4, 5), 8, 60
 GRID = tuple(range(8, 61, 4))
 UNIT_TIME_LIMIT_S = 1800
 CODE = ("src/jdl_phys_al.py", "src/jdl_physical_data2.py", "src/jdl_physical_data.py", "src/jdl_physical_pilot.py", "src/jdl_trained_al.py",
-        "src/jdl_stage_m.py", "src/jdl_evaluate.py")
+        "src/jdl_stage_m.py", "src/jdl_evaluate.py", "src/week7_phase2_sph_v2_physical_target_extraction.py")
 
 
 # ======================================================================================== targets
@@ -91,14 +96,26 @@ def _summ_extra(t_s, zmin, etot, npart, cutoff_ms):
     return out
 
 
+def load_monitor(path, channel):
+    """v1.1 repair: position-bounds files go through Week 7's load_numeric (the supervisor-confirmed rule for the exact
+    malformed token 's3.402823e+38' -> ordinary no-melt sentinel; any other malformed token still raises); other channels
+    unchanged (numpy.loadtxt)."""
+    if channel == "position-bounds_melt.dat":
+        from src.week7_phase2_sph_v2_physical_target_extraction import load_numeric
+        v, audit = load_numeric(path, channel)
+        return v, int(audit.get("known_malformed_no_melt_sentinel_count", 0) or 0)
+    return PP._load(path), 0
+
+
 def extract():
     """Primary targets for OLD (pilot B's summarize, unchanged) and secondary targets for both populations."""
     W = pd.read_csv(PP.W19_DEPTH).set_index("sim_id"); rows = []; t0 = time.time()
     pops = [("NEW", s) for s in PD2.PD.new_ids()] + [("OLD", s) for s in PD2.old_ids()]
     for k, (pop, s) in enumerate(pops):
-        rec = {"population": pop, "sim_id": s}
+        rec = {"population": pop, "sim_id": s}; fixes = []
         try:
-            f = lambda c: PP._load(PD2.local(s, c, pop))
+            def f(c):
+                v, n = load_monitor(PD2.local(s, c, pop), c); fixes.append(n); return v
             t = f("time.dat"); z = f("position-bounds_melt.dat")[:, 4]; cut = float(W.loc[s, "active_cutoff_ms"]) if s in W.index else np.nan
             ex = {c: f(c) for c in ("total-energy_melt.dat", "particle-number_melt.dat")}
             if pop == "OLD":
@@ -115,6 +132,9 @@ def extract():
                 rec["status"] = "ok"
         except FileNotFoundError as e:
             rec["status"] = f"UNAVAILABLE: {e}"[:200]
+        except ValueError as e:                                                # any other malformed token: recorded, never repaired
+            rec["status"] = f"UNAVAILABLE: parse error {e}"[:200]
+        rec["known_malformed_sentinel_replacements"] = int(sum(fixes))
         rows.append(rec)
         if (k + 1) % 50 == 0:
             print(json.dumps({"extracted": k + 1, "of": len(pops), "s": round(time.time() - t0, 1)}), flush=True)
@@ -461,6 +481,18 @@ def validate():
         r1, r2 = run_traj(t, "NEW", "RANDOM", "log_A_um", Tt), run_traj(t, "NEW", "RANDOM", "vmax_spike_us", Tt)
         checks["random_path_independent_of_target"] = r1["paid"] == r2["paid"]
         old = tasks("OLD"); checks["old_tasks_with_label_free_paths"] = len(old) == 10 and all(len(x["path"]) >= B1 for x in old)
+        # v1.1 repair: the known malformed token is mapped to the no-melt sentinel; any other malformed token still raises
+        import tempfile
+        from pathlib import Path
+        d = Path(tempfile.mkdtemp()); p1 = d / "position-bounds_melt.dat"
+        p1.write_text("1e-4,2e-4,1e-4,2e-4,-5e-5,0\ns3.402823e+38,-3.402823e+38,3.402823e+38,-3.402823e+38,3.402823e+38,-3.402823e+38\n")
+        v, n = load_monitor(p1, "position-bounds_melt.dat")
+        checks["known_malformed_token_mapped_to_sentinel"] = n == 1 and v.shape == (2, 6) and abs(v[1, 0] - 3.402823e38) < 1e32
+        p1.write_text("1e-4,2e-4,1e-4,2e-4,-5e-5,0\nx1.0,2,3,4,5,6\n")
+        try:
+            load_monitor(p1, "position-bounds_melt.dat"); checks["other_malformed_token_still_raises"] = False
+        except ValueError:
+            checks["other_malformed_token_still_raises"] = True
     except Exception as ex:
         checks["selftest_completed"] = False; info["error"] = f"{type(ex).__name__}: {ex}"[:400]; info["traceback"] = traceback.format_exc()[-2500:]
     res = {"study": STUDY, "status": "PASS" if checks and all(checks.values()) else "FAIL", "checks": {k: bool(v) for k, v in checks.items()}, "info": info,
@@ -475,7 +507,7 @@ def write_manifest():
     val = json.loads(VALIDATION.read_text(encoding="utf-8"))
     if val["status"] != "PASS" or val["module_sha256"] != SMM.sha256(SMM.ROOT / "src" / "jdl_phys_al.py"):
         raise SystemExit("PHYS_AL validation must PASS with this module before the freeze")
-    man = {"study": STUDY, "status": "FROZEN BEFORE ANY PHYS_AL OUTCOME", "written_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+    man = {"study": STUDY, "version": VERSION, "repairs": REPAIRS, "status": "FROZEN BEFORE ANY PHYS_AL OUTCOME", "written_utc": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
            "parent_commit": SMM._git("rev-parse", "HEAD"), "targets_primary": list(PRIMARY), "targets_secondary": list(SECONDARY), "arms": list(SINGLE_ARMS) + ["MO_MAXVAR"],
            "budgets": [B0, B1], "grid": list(GRID), "populations": ["NEW", "OLD"], "repeats": list(REPEATS),
            "endpoints": "R2-AULC; attainable R2_full; level 0.9 x R2_full; sustained budget-to-target, censored at 64; FEWER SIMULATIONS / SAME-BUDGET GAIN rules as in the module docstring",

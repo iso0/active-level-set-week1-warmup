@@ -1,0 +1,19 @@
+{
+ "status": "PASS",
+ "checks": {
+  "unit_runs": true,
+  "hidden_values_do_not_change_path": true,
+  "qc_failures_are_never_surprises": true,
+  "sd_equals_base_before_first_surprise": true,
+  "qc_table_new": true
+ },
+ "info": {
+  "unit_seconds": 1.3849914073944092,
+  "events": {
+   "none": 44,
+   "QC_EVENT": 5,
+   "SURPRISE": 3
+  },
+  "first_surprise_log_index": 16
+ }
+}

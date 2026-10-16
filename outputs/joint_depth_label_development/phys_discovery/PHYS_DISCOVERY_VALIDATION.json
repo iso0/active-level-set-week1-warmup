@@ -9,7 +9,7 @@
   "qc_table_new": true
  },
  "info": {
-  "unit_seconds": 1.559093713760376,
+  "unit_seconds": 1.3849914073944092,
   "events": {
    "none": 44,
    "QC_EVENT": 5,
@@ -17,6 +17,6 @@
   },
   "first_surprise_log_index": 16
  },
- "seconds": 12.672179698944092,
+ "seconds": 11.254983901977539,
  "module_sha256": "33b7b3a724bc5e990a27ac18970041b0a990399e711c6e59ed90a7f6f2a93dc4"
 }

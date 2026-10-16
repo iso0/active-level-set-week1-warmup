@@ -10,7 +10,9 @@
   "hidden_targets_do_not_change_path_or_predictions": true,
   "mo_trajectory_runs": true,
   "random_path_independent_of_target": true,
-  "old_tasks_with_label_free_paths": true
+  "old_tasks_with_label_free_paths": true,
+  "known_malformed_token_mapped_to_sentinel": true,
+  "other_malformed_token_still_raises": true
  },
  "info": {
   "new_target_counts": {
@@ -23,9 +25,9 @@
    "log_etot_T0_J": 0,
    "log_npart_T0": 0
   },
-  "unit_seconds_IVR": 2.1067330837249756,
-  "unit_seconds_MO": 11.465083837509155
+  "unit_seconds_IVR": 1.8969850540161133,
+  "unit_seconds_MO": 10.586591958999634
  },
- "seconds": 27.645666360855103,
- "module_sha256": "cc7828abc7c5e9b7849f2ed1db793672d25e31f0bdc21457d36207b23fed99c6"
+ "seconds": 25.467872142791748,
+ "module_sha256": "32e78805fde496cf5743e583982426b6bbdfad7bc1bd2ce4f20717ad55170f8e"
 }
