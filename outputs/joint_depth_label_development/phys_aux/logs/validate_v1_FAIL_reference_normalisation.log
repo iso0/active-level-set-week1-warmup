@@ -1,0 +1,14 @@
+{
+ "status": "FAIL",
+ "checks": {
+  "closed_form_loo_equals_refits": false,
+  "aux_table_has_136_runs": true,
+  "unit_runs": true,
+  "hidden_labels_and_monitors_do_not_change_path_or_predictions": true,
+  "one_class_rule_same_as_pilot_A": true,
+  "references_available_from_pilot_A": true
+ },
+ "info": {
+  "unit_seconds_PHYS_AUX_r3f1": 2.2599523067474365
+ }
+}

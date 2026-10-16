@@ -1,0 +1,39 @@
+{
+ "study": "TEMPORAL_VEL",
+ "status_counts": {
+  "ok": 135,
+  "UNAVAILABLE: row counts or cutoff": 1
+ },
+ "per_repeat": {
+  "3": {
+   "R2_curve": 0.6418595546531469,
+   "rmse_gp": 0.20910062217664138,
+   "rmse_mean": 0.349404617793761,
+   "peak_err_gp": 1.1774768029735339,
+   "peak_err_mean": 1.3799377921479008,
+   "peakbin_err_gp": 7.851851851851852,
+   "peakbin_err_mean": 6.481481481481482,
+   "cover90": 0.8672222222222222,
+   "corner_R2_curve": 0.9806205788330349,
+   "n_test_runs": 135
+  },
+  "4": {
+   "R2_curve": 0.6383756570363084,
+   "rmse_gp": 0.20988715366906827,
+   "rmse_mean": 0.3490253965708634,
+   "peak_err_gp": 1.167452515581552,
+   "peak_err_mean": 1.3816771761752755,
+   "peakbin_err_gp": 7.4,
+   "peakbin_err_mean": 6.474074074074074,
+   "cover90": 0.866111111111111,
+   "corner_R2_curve": 0.9792089131368211,
+   "n_test_runs": 135
+  }
+ },
+ "verdict": "USEFUL",
+ "cost": {
+  "fit_seconds_median": 0.9738229513168335,
+  "fit_seconds_total": 9.664402961730957,
+  "wall_seconds": 37.70787262916565
+ }
+}

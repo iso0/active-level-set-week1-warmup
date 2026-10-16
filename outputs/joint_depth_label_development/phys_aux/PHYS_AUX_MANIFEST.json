@@ -1,0 +1,31 @@
+{
+ "study": "PHYS_AUX",
+ "status": "FROZEN BEFORE ANY PHYS_AUX OUTCOME",
+ "written_utc": "2026-10-16T21:35:31+00:00",
+ "parent_commit": "a262cba75d751224baa55964f855ab757f35c20c",
+ "aux": [
+  "ke_T0_med_nJ",
+  "vmax_spike_logratio"
+ ],
+ "arms": [
+  "PHYS_AUX",
+  "GPC_X"
+ ],
+ "references": [
+  "G3_MARGIN",
+  "E1_STRADDLE (pilot A cache)"
+ ],
+ "validation": {
+  "status": "PASS",
+  "sha256": "1a2c6815c3b30facd7994ad48bb9f439fbeaa047e46532ab4228d87246dc572e"
+ },
+ "code_sha256": {
+  "src/jdl_phys_aux.py": "09c2e317b7f321ea9f2503ec3ae4093a52f56515110052ceaf03eb951187a9af",
+  "src/jdl_surprise.py": "bcb75d5089068cef547ae282e5081757c0cab2361ef02f62ada3fdec92410b8c",
+  "src/jdl_trained_al.py": "914a8ca17314a13e6a5c47b978b603b63ca14f8339da50bd27f13da1aeeaeec7",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/jdl_trained_al_eval.py": "d39a4d8ea9a5c18790c9b1e5630b636119c408cc932e8f8f8df4810ee5c30ac7",
+  "src/jdl_physical_pilot.py": "e8c773c9dc52b5b1523d72c072c3f35976900bc8c49417bb5b7ce267b529e8ac"
+ }
+}

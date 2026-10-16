@@ -1,0 +1,18 @@
+{
+ "study": "PHYS_AUX",
+ "status": "PASS",
+ "checks": {
+  "closed_form_loo_equals_direct_conditioning": true,
+  "aux_table_has_136_runs": true,
+  "unit_runs": true,
+  "hidden_labels_and_monitors_do_not_change_path_or_predictions": true,
+  "one_class_rule_same_as_pilot_A": true,
+  "references_available_from_pilot_A": true
+ },
+ "info": {
+  "loo_max_abs_diff": 5.010574177788385e-10,
+  "unit_seconds_PHYS_AUX_r3f1": 2.2261087894439697
+ },
+ "seconds": 10.74552297592163,
+ "module_sha256": "09c2e317b7f321ea9f2503ec3ae4093a52f56515110052ceaf03eb951187a9af"
+}
