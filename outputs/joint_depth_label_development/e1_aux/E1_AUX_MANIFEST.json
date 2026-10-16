@@ -1,0 +1,33 @@
+{
+ "study": "E1_AUX",
+ "status": "FROZEN BEFORE ANY E1_AUX OUTCOME",
+ "written_utc": "2026-10-16T21:43:11+00:00",
+ "parent_commit": "3e3835911d258562d432bcfdd4522186f467b062",
+ "blocks": {
+  "r3_4": [
+   3,
+   4
+  ],
+  "r5_8": [
+   5,
+   6,
+   7,
+   8
+  ]
+ },
+ "criterion": "PRACTICALLY BETTER iff >= +0.04, interval > 0, every repeat positive, short-K >= 7/10 per repeat and within 2 of 20 (r3-4) / 4 of 40 (r5-8)",
+ "validation": {
+  "status": "PASS",
+  "sha256": "b30b9d11a3b3d310180eaf83fd2f1819f6a6770e63ff5640559164f2ce2ea772"
+ },
+ "code_sha256": {
+  "src/jdl_e1_aux.py": "e744f8fe5a4d7d6a3d50108dcc4ffc777acd1e8754c65c87173b18cc43a8cf9f",
+  "src/jdl_phys_aux.py": "09c2e317b7f321ea9f2503ec3ae4093a52f56515110052ceaf03eb951187a9af",
+  "src/jdl_phys_aux_rep.py": "2c67c5ee0bfb5030a0daa888f51c18132bbe6519634151cca05ef0f45177f37f",
+  "src/jdl_surprise.py": "bcb75d5089068cef547ae282e5081757c0cab2361ef02f62ada3fdec92410b8c",
+  "src/jdl_trained_al.py": "914a8ca17314a13e6a5c47b978b603b63ca14f8339da50bd27f13da1aeeaeec7",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d"
+ }
+}

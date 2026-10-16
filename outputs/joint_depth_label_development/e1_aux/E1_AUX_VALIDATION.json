@@ -1,0 +1,16 @@
+{
+ "study": "E1_AUX",
+ "status": "PASS",
+ "checks": {
+  "reduces_to_frozen_DepthGPR_without_aux": true,
+  "unit_runs": true,
+  "hidden_outcomes_and_monitors_do_not_change_path_or_predictions": true,
+  "controls_available": true
+ },
+ "info": {
+  "max_abs_diff_vs_frozen": 0.0,
+  "unit_seconds": 1.8734548091888428
+ },
+ "seconds": 11.747429370880127,
+ "module_sha256": "e744f8fe5a4d7d6a3d50108dcc4ffc777acd1e8754c65c87173b18cc43a8cf9f"
+}
