@@ -1,0 +1,71 @@
+{
+ "study": "SURPRISE_DISCOVERY",
+ "status": "FROZEN BEFORE ANY SURPRISE_DISCOVERY OUTCOME",
+ "written_utc": "2026-10-16T21:22:48+00:00",
+ "parent_commit": "69cb635b5b83082ff50611b417e1887b01467f4e",
+ "authorization": "owner request of 2026-10-16 (primary method question; Ioan's post-meeting task)",
+ "rule": {
+  "surprise_p": 0.2,
+  "m_local": 3,
+  "alternation": "local:global 1:1 while a seed is active",
+  "local": "nearest unpaid pool point to the seed (standardised log inputs)"
+ },
+ "synthetic": {
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "pool": 300,
+  "test": 1000,
+  "budgets": [
+   10,
+   40
+  ],
+  "arms": [
+   "MARGIN",
+   "STRADDLE",
+   "RANDOM",
+   "SD_MARGIN",
+   "SD_STRADDLE"
+  ],
+  "conditions": {
+   "synthetic": "arms choose freely from the feature-only start",
+   "synthetic_planted": "first post-start query of every arm = the island pool point nearest the island centre"
+  }
+ },
+ "real": {
+  "population": "NEW, DEV repeats 3-4, folds 1-5, frozen feature-only B16 starts",
+  "budgets": [
+   16,
+   40
+  ],
+  "arms": [
+   "G3_MARGIN",
+   "E1_STRADDLE",
+   "RANDOM",
+   "SD_MARGIN",
+   "SD_STRADDLE"
+  ]
+ },
+ "unit_time_limit_s": 1800,
+ "validation": {
+  "status": "PASS",
+  "sha256": "1c899d45f56a3396f52c3c41456650fd2fc285b6388195395b7bf6e7c3da568b"
+ },
+ "code_sha256": {
+  "src/jdl_surprise.py": "bcb75d5089068cef547ae282e5081757c0cab2361ef02f62ada3fdec92410b8c",
+  "src/jdl_trained_al.py": "914a8ca17314a13e6a5c47b978b603b63ca14f8339da50bd27f13da1aeeaeec7",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/jdl_trained_al_eval.py": "d39a4d8ea9a5c18790c9b1e5630b636119c408cc932e8f8f8df4810ee5c30ac7"
+ }
+}

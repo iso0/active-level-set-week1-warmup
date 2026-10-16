@@ -1,0 +1,34 @@
+{
+ "study": "SURPRISE_DISCOVERY",
+ "status": "PASS",
+ "checks": {
+  "sd_trigger_threshold_and_qc": true,
+  "sd_local_is_nearest_unpaid": true,
+  "sd_alternates_local_global": true,
+  "synthetic_deterministic": true,
+  "planted_point_identical_for_all_arms": true,
+  "planted_surprise_triggers_local_probes": true,
+  "real_unit_runs": true,
+  "hidden_outcomes_do_not_change_path_or_predictions": true,
+  "selector_ignores_evaluator_corner": true,
+  "one_class_start_continues_on_frozen_path": true,
+  "G3_MARGIN_reproduces_TRAINED_AL_r4f1": true,
+  "E1_STRADDLE_reproduces_TRAINED_AL_r4f1": true
+ },
+ "info": {
+  "synthetic_seed1_SD_MARGIN": {
+   "surprises": 0,
+   "island_paid_end": 0,
+   "n_island": 12,
+   "s": 1.2102041244506836
+  },
+  "planted_seed1": {
+   "SD_MARGIN_island_paid_end": 5,
+   "MARGIN_island_paid_end": 2
+  },
+  "real_unit_seconds_SD_MARGIN_r3f1": 1.1302158832550049,
+  "real_unit_seconds_G3_r3f4": 2.014630079269409
+ },
+ "seconds": 18.77177095413208,
+ "module_sha256": "bcb75d5089068cef547ae282e5081757c0cab2361ef02f62ada3fdec92410b8c"
+}

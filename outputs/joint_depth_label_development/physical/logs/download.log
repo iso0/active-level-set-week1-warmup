@@ -1,0 +1,31 @@
+paths-info 2e1eec9c: 100/952
+paths-info 2e1eec9c: 200/952
+paths-info 2e1eec9c: 300/952
+paths-info 2e1eec9c: 400/952
+paths-info 2e1eec9c: 500/952
+paths-info 2e1eec9c: 600/952
+paths-info 2e1eec9c: 700/952
+paths-info 2e1eec9c: 800/952
+paths-info 2e1eec9c: 900/952
+paths-info 2e1eec9c: 952/952
+{"resolved": 100, "of": 952, "utc": "2026-10-16T21:16:44+00:00"}
+{"resolved": 200, "of": 952, "utc": "2026-10-16T21:16:57+00:00"}
+{"resolved": 300, "of": 952, "utc": "2026-10-16T21:17:11+00:00"}
+{"resolved": 400, "of": 952, "utc": "2026-10-16T21:17:26+00:00"}
+{"resolved": 500, "of": 952, "utc": "2026-10-16T21:17:39+00:00"}
+{"resolved": 600, "of": 952, "utc": "2026-10-16T21:17:53+00:00"}
+{"resolved": 700, "of": 952, "utc": "2026-10-16T21:18:08+00:00"}
+{"resolved": 800, "of": 952, "utc": "2026-10-16T21:18:22+00:00"}
+{"resolved": 900, "of": 952, "utc": "2026-10-16T21:18:35+00:00"}
+{"resolved": 952, "of": 952, "utc": "2026-10-16T21:18:45+00:00"}
+{
+ "files": 952,
+ "verified": 952,
+ "by_source": {
+  "downloaded": 528,
+  "verified_cache": 424
+ },
+ "bytes": 2319247846,
+ "revision": "2e1eec9c98fd57609d2815f174586336ab59da07",
+ "finished_utc": "2026-10-16T21:18:45+00:00"
+}
