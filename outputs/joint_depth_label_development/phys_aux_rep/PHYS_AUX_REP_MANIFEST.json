@@ -1,0 +1,33 @@
+{
+ "study": "PHYS_AUX_REP",
+ "status": "FROZEN BEFORE ANY PHYS_AUX_REP OUTCOME",
+ "written_utc": "2026-10-16T21:39:15+00:00",
+ "parent_commit": "46d913f4927a3a22469f705cc2f364ad7e8f7d4b",
+ "repeats": [
+  5,
+  6,
+  7,
+  8
+ ],
+ "arms": [
+  "PHYS_AUX",
+  "GPC_X",
+  "G3_MARGIN",
+  "E1_STRADDLE"
+ ],
+ "continuation_criterion": "AUX EFFECT REPRODUCED iff PHYS_AUX - GPC_X BA-AULC mean >= +0.04, interval > 0, positive in >= 3 of 4 repeats",
+ "validation": {
+  "status": "PASS",
+  "sha256": "4d53705e82399b373d86e4cd651156ec51ebdaf9d621799a72748e2dd27e2a8e"
+ },
+ "code_sha256": {
+  "src/jdl_phys_aux_rep.py": "2c67c5ee0bfb5030a0daa888f51c18132bbe6519634151cca05ef0f45177f37f",
+  "src/jdl_phys_aux.py": "09c2e317b7f321ea9f2503ec3ae4093a52f56515110052ceaf03eb951187a9af",
+  "src/jdl_surprise.py": "bcb75d5089068cef547ae282e5081757c0cab2361ef02f62ada3fdec92410b8c",
+  "src/jdl_trained_al.py": "914a8ca17314a13e6a5c47b978b603b63ca14f8339da50bd27f13da1aeeaeec7",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d",
+  "src/jdl_physical_pilot.py": "e8c773c9dc52b5b1523d72c072c3f35976900bc8c49417bb5b7ce267b529e8ac"
+ }
+}

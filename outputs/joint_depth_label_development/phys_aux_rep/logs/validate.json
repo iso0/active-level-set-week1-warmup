@@ -1,0 +1,16 @@
+{
+ "study": "PHYS_AUX_REP",
+ "status": "PASS",
+ "checks": {
+  "twenty_tasks_with_frozen_EX1_paths": true,
+  "unit_runs": true,
+  "reference_runs": true,
+  "frame_for_repeats_5_8": true
+ },
+ "info": {
+  "unit_seconds": 2.1890082359313965,
+  "one_class_starts": []
+ },
+ "seconds": 13.187836647033691,
+ "module_sha256": "2c67c5ee0bfb5030a0daa888f51c18132bbe6519634151cca05ef0f45177f37f"
+}
