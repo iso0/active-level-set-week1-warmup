@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_corner_local.py", line 312, in <module>
+    {"validate": validate, "manifest": write_manifest, "work": lambda: work(sys.argv[2:]), "status": status}[step]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_corner_local.py", line 312, in <lambda>
+    {"validate": validate, "manifest": write_manifest, "work": lambda: work(sys.argv[2:]), "status": status}[step]()
+                                                                       ~~~~^^^^^^^^^^^^^^
+  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_corner_local.py", line 228, in work
+    res = {"rows": run_fixed(), "status": "ok"}
+                   ~~~~~~~~~^^
+  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_corner_local.py", line 183, in run_fixed
+    out, rec = predictors(t, std, list(t["path"][:b]), t["repeat"], t["fold"], b, {"test": std(t["X"][t["test"]])})
+                                       ~^^^^^^^^
+KeyError: 'path'
