@@ -1,0 +1,38 @@
+{"pop": "OLD", "rep": 3, "fold": 1, "s": 195.6}
+{"pop": "OLD", "rep": 3, "fold": 2, "s": 238.5}
+{"pop": "OLD", "rep": 3, "fold": 3, "s": 283.6}
+{"pop": "OLD", "rep": 3, "fold": 4, "s": 323.6}
+{"pop": "OLD", "rep": 3, "fold": 5, "s": 357.2}
+{"pop": "OLD", "rep": 4, "fold": 1, "s": 392.6}
+{"pop": "OLD", "rep": 4, "fold": 2, "s": 437.8}
+{"pop": "OLD", "rep": 4, "fold": 3, "s": 475.2}
+{"pop": "OLD", "rep": 4, "fold": 4, "s": 515.3}
+{"pop": "OLD", "rep": 4, "fold": 5, "s": 552.3}
+{
+ "pop": "OLD",
+ "status": {
+  "velocity": {
+   "ok": 349,
+   "UNAVAILABLE: FileNotFoundError": 56
+  },
+  "ke": {
+   "ok": 349,
+   "UNAVAILABLE: FileNotFoundError": 56
+  },
+  "depth": {
+   "ok": 349,
+   "UNAVAILABLE: FileNotFoundError": 56
+  }
+ },
+ "cost": {
+  "KRON": {
+   "median": 10.047,
+   "sum": 302.56
+  },
+  "PCA": {
+   "median": 1.401,
+   "sum": 56.513
+  }
+ },
+ "wall_seconds": 552.3875937461853
+}

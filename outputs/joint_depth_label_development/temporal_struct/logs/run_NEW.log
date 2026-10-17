@@ -1,0 +1,42 @@
+{"pop": "NEW", "rep": 3, "fold": 1, "s": 82.7}
+{"pop": "NEW", "rep": 3, "fold": 2, "s": 136.4}
+{"pop": "NEW", "rep": 3, "fold": 3, "s": 186.8}
+{"pop": "NEW", "rep": 3, "fold": 4, "s": 279.3}
+{"pop": "NEW", "rep": 3, "fold": 5, "s": 354.1}
+{"pop": "NEW", "rep": 4, "fold": 1, "s": 422.0}
+{"pop": "NEW", "rep": 4, "fold": 2, "s": 508.3}
+{"pop": "NEW", "rep": 4, "fold": 3, "s": 574.3}
+{"pop": "NEW", "rep": 4, "fold": 4, "s": 640.3}
+{"pop": "NEW", "rep": 4, "fold": 5, "s": 700.5}
+{
+ "pop": "NEW",
+ "status": {
+  "velocity": {
+   "ok": 135,
+   "UNAVAILABLE: row counts or cutoff": 1
+  },
+  "ke": {
+   "ok": 135,
+   "UNAVAILABLE: row counts or cutoff": 1
+  },
+  "depth": {
+   "ok": 135,
+   "UNAVAILABLE: row counts or cutoff": 1
+  }
+ },
+ "cost": {
+  "FULL5D": {
+   "median": 17.367,
+   "sum": 586.638
+  },
+  "KRON": {
+   "median": 1.844,
+   "sum": 52.714
+  },
+  "PCA": {
+   "median": 0.369,
+   "sum": 20.01
+  }
+ },
+ "wall_seconds": 700.5058765411377
+}

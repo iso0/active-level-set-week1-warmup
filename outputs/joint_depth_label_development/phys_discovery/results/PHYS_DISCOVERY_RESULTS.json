@@ -1,0 +1,170 @@
+{
+ "NEW": {
+  "family_hi_threshold": 1.6713870424236155,
+  "family_lo_threshold": 0.22282318530279013,
+  "n_family_hi": 14,
+  "arm_means": {
+   "MAXIMIN": {
+    "family_hi_AUDC": 0.4786,
+    "family_lo_AUDC": 0.4102,
+    "family_hi_found_B60": 0.7598,
+    "queries_to_half_hi": 34.7,
+    "surprises": 0.0,
+    "qc_events": 0.0,
+    "seconds": 2.0337
+   },
+   "MAXVAR": {
+    "family_hi_AUDC": 0.5028,
+    "family_lo_AUDC": 0.2019,
+    "family_hi_found_B60": 0.823,
+    "queries_to_half_hi": 29.6,
+    "surprises": 0.0,
+    "qc_events": 0.0,
+    "seconds": 2.4189
+   },
+   "RANDOM": {
+    "family_hi_AUDC": 0.3834,
+    "family_lo_AUDC": 0.3562,
+    "family_hi_found_B60": 0.6149,
+    "queries_to_half_hi": 44.2,
+    "surprises": 0.0,
+    "qc_events": 0.0,
+    "seconds": 2.3397
+   },
+   "SD_MAXVAR": {
+    "family_hi_AUDC": 0.4624,
+    "family_lo_AUDC": 0.2242,
+    "family_hi_found_B60": 0.7889,
+    "queries_to_half_hi": 34.9,
+    "surprises": 3.2,
+    "qc_events": 5.0,
+    "seconds": 2.5207
+   }
+  },
+  "R2_AULC": {
+   "MAXVAR|r3": 0.7645394517095455,
+   "MAXVAR|r4": 0.7945179167984905,
+   "SD_MAXVAR|r3": 0.8062222008526049,
+   "SD_MAXVAR|r4": 0.7647316914042559,
+   "RANDOM|r3": 0.7802204238085806,
+   "RANDOM|r4": 0.76332132997269,
+   "MAXIMIN|r3": 0.7664857912500126,
+   "MAXIMIN|r4": 0.8236287386726882
+  },
+  "contrasts": {
+   "SD_MAXVAR-MAXVAR": {
+    "family_hi_AUDC_diff": -0.0404614936345706,
+    "lo": -0.07333564752555141,
+    "hi": -0.008911713286713346,
+    "pairs": 10,
+    "R2_AULC_diff": 0.005948261874412386,
+    "verdict": "NO DISCOVERY GAIN ESTABLISHED"
+   },
+   "SD_MAXVAR-RANDOM": {
+    "family_hi_AUDC_diff": 0.07897861753630982,
+    "lo": 0.01774576945490405,
+    "hi": 0.14159447843822837,
+    "pairs": 10,
+    "R2_AULC_diff": 0.013706069237795104
+   },
+   "MAXVAR-RANDOM": {
+    "family_hi_AUDC_diff": 0.11944011117088041,
+    "lo": 0.06474298457952304,
+    "hi": 0.171371273758293,
+    "pairs": 10,
+    "R2_AULC_diff": 0.007757807363382718
+   },
+   "MAXVAR-MAXIMIN": {
+    "family_hi_AUDC_diff": 0.02426461359153668,
+    "lo": -0.027482954545454488,
+    "hi": 0.08610529574592078,
+    "pairs": 10,
+    "R2_AULC_diff": -0.015528580707332373
+   }
+  }
+ },
+ "OLD": {
+  "family_hi_threshold": 1.2379530958999867,
+  "family_lo_threshold": 0.029542036709800986,
+  "n_family_hi": 35,
+  "arm_means": {
+   "MAXIMIN": {
+    "family_hi_AUDC": 0.1854,
+    "family_lo_AUDC": 0.129,
+    "family_hi_found_B60": 0.3077,
+    "queries_to_half_hi": 64.0,
+    "surprises": 0.0,
+    "qc_events": 0.0,
+    "seconds": 2.7373
+   },
+   "MAXVAR": {
+    "family_hi_AUDC": 0.1894,
+    "family_lo_AUDC": 0.1276,
+    "family_hi_found_B60": 0.3177,
+    "queries_to_half_hi": 64.0,
+    "surprises": 0.0,
+    "qc_events": 0.0,
+    "seconds": 2.5419
+   },
+   "RANDOM": {
+    "family_hi_AUDC": 0.1598,
+    "family_lo_AUDC": 0.1138,
+    "family_hi_found_B60": 0.2455,
+    "queries_to_half_hi": 64.0,
+    "surprises": 0.0,
+    "qc_events": 0.0,
+    "seconds": 2.6542
+   },
+   "SD_MAXVAR": {
+    "family_hi_AUDC": 0.178,
+    "family_lo_AUDC": 0.1163,
+    "family_hi_found_B60": 0.2918,
+    "queries_to_half_hi": 64.0,
+    "surprises": 4.6,
+    "qc_events": 5.3,
+    "seconds": 2.7749
+   }
+  },
+  "R2_AULC": {
+   "MAXVAR|r3": 0.7314104413867804,
+   "MAXVAR|r4": 0.694046928369789,
+   "SD_MAXVAR|r3": 0.7488452313804596,
+   "SD_MAXVAR|r4": 0.6918511637160845,
+   "RANDOM|r3": 0.6712626068925908,
+   "RANDOM|r4": 0.6529101379792874,
+   "MAXIMIN|r3": 0.7245540665027259,
+   "MAXIMIN|r4": 0.7056804845750853
+  },
+  "contrasts": {
+   "SD_MAXVAR-MAXVAR": {
+    "family_hi_AUDC_diff": -0.011333809848357251,
+    "lo": -0.03905810989427636,
+    "hi": 0.011262935727267599,
+    "pairs": 10,
+    "R2_AULC_diff": 0.007619512669987338,
+    "verdict": "NO DISCOVERY GAIN ESTABLISHED"
+   },
+   "SD_MAXVAR-RANDOM": {
+    "family_hi_AUDC_diff": 0.01823672314674471,
+    "lo": -0.013340372823117981,
+    "hi": 0.053088860902128575,
+    "pairs": 10,
+    "R2_AULC_diff": 0.05826182511233291
+   },
+   "MAXVAR-RANDOM": {
+    "family_hi_AUDC_diff": 0.029570532995101963,
+    "lo": 0.0028845890699339145,
+    "hi": 0.05864878011715296,
+    "pairs": 10,
+    "R2_AULC_diff": 0.05064231244234557
+   },
+   "MAXVAR-MAXIMIN": {
+    "family_hi_AUDC_diff": 0.0039295654656645775,
+    "lo": -0.013964038718106616,
+    "hi": 0.025869189965027753,
+    "pairs": 10,
+    "R2_AULC_diff": -0.002388590660620915
+   }
+  }
+ }
+}

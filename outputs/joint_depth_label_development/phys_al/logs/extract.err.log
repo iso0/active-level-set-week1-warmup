@@ -1,33 +1,20 @@
-ValueError: could not convert string to float: 's3.402823e+38'
-
-The above exception was the direct cause of the following exception:
-
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_phys_al.py", line 489, in <module>
+  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_phys_al.py", line 521, in <module>
     {"validate": validate, "manifest": write_manifest, "extract": extract, "work": lambda: work(sys.argv[2:]),
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      "icm": lambda: icm_on_paths(pop_arg or "NEW"), "evaluate": lambda: print(json.dumps({k: {"units": v.get("units")} for k, v in evaluate().items()}))}[step]()
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_phys_al.py", line 102, in extract
-    t = f("time.dat"); z = f("position-bounds_melt.dat")[:, 4]; cut = float(W.loc[s, "active_cutoff_ms"]) if s in W.index else np.nan
-                           ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_phys_al.py", line 101, in <lambda>
-    f = lambda c: PP._load(PD2.local(s, c, pop))
-                  ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_physical_pilot.py", line 63, in _load
-    return np.loadtxt(path, delimiter=",", ndmin=1) if path.name.startswith("position") else np.loadtxt(path, ndmin=1)
-           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\numpy\lib\_npyio_impl.py", line 1381, in loadtxt
-    arr = _read(fname, dtype=dtype, comment=comment, delimiter=delimiter,
-                converters=converters, skiplines=skiprows, usecols=usecols,
-                unpack=unpack, ndmin=ndmin, encoding=encoding,
-                max_rows=max_rows, quote=quotechar)
-  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\numpy\lib\_npyio_impl.py", line 1035, in _read
-    arr = _load_from_filelike(
-        data, delimiter=delimiter, comment=comment, quote=quote,
-    ...<3 lines>...
-        encoding=encoding, filelike=filelike,
-        byte_converters=byte_converters)
-ValueError: could not convert string ' s3.402823e+38' to float64 at row 0, column 1.
+  File "C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\jdl_phys_al.py", line 142, in extract
+    print(json.dumps({"rows": len(D), "status": D.groupby(["population", "status"]).size().to_dict(), "s": time.time() - t0}, default=str))
+          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\json\__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\json\encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\json\encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+TypeError: keys must be str, int, float, bool or None, not tuple
+when serializing dict item 'status'
