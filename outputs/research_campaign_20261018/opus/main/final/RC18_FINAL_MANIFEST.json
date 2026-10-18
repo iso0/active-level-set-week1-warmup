@@ -1,0 +1,323 @@
+{
+ "study": "RC18_FINAL",
+ "status": "FROZEN BEFORE ANY FINAL OUTCOME",
+ "written_utc": "2026-10-18T10:32:57+00:00",
+ "parent_commit": "a79d2e1ef59b6c9a96158085a4e0c85bc1fba6ab",
+ "repeats": [
+  5,
+  6,
+  7,
+  8
+ ],
+ "jobs": {
+  "reg-new-maximin": [
+   [
+    "reg",
+    "NEW",
+    "M0",
+    "MAXIMIN"
+   ],
+   [
+    "reg",
+    "NEW",
+    "M0Q",
+    "MAXIMIN"
+   ],
+   [
+    "reg",
+    "NEW",
+    "SHQ",
+    "MAXIMIN"
+   ],
+   [
+    "reg",
+    "NEW",
+    "TRQ",
+    "MAXIMIN"
+   ],
+   [
+    "reg",
+    "NEW",
+    "TRSQ",
+    "MAXIMIN"
+   ]
+  ],
+  "reg-old-maximin": [
+   [
+    "reg",
+    "OLD",
+    "M0",
+    "MAXIMIN"
+   ],
+   [
+    "reg",
+    "OLD",
+    "SHQ",
+    "MAXIMIN"
+   ]
+  ],
+  "reg-designs": [
+   [
+    "reg",
+    "NEW",
+    "M0",
+    "RANDOM"
+   ],
+   [
+    "reg",
+    "NEW",
+    "M0",
+    "MOIVR"
+   ],
+   [
+    "reg",
+    "NEW",
+    "TRSQ",
+    "RANDOM"
+   ],
+   [
+    "reg",
+    "NEW",
+    "TRSQ",
+    "MOIVR"
+   ],
+   [
+    "reg",
+    "OLD",
+    "M0",
+    "RANDOM"
+   ],
+   [
+    "reg",
+    "OLD",
+    "M0",
+    "MOIVR"
+   ],
+   [
+    "reg",
+    "OLD",
+    "SHQ",
+    "RANDOM"
+   ],
+   [
+    "reg",
+    "OLD",
+    "SHQ",
+    "MOIVR"
+   ]
+  ],
+  "region": [
+   [
+    "region",
+    "NEW",
+    "M0",
+    "MAXIMIN"
+   ],
+   [
+    "region",
+    "NEW",
+    "M0",
+    "RANDOM"
+   ],
+   [
+    "region",
+    "NEW",
+    "M0",
+    "STRADDLE"
+   ],
+   [
+    "region",
+    "NEW",
+    "M0",
+    "TRUVAR"
+   ],
+   [
+    "region",
+    "NEW",
+    "M0",
+    "ASTRA_SURPRISE"
+   ],
+   [
+    "region",
+    "NEW",
+    "M0",
+    "ASTRA_STRADDLE_GLOBAL"
+   ],
+   [
+    "region",
+    "NEW",
+    "TRSQ",
+    "MAXIMIN"
+   ],
+   [
+    "region",
+    "NEW",
+    "TRSQ",
+    "RANDOM"
+   ],
+   [
+    "region",
+    "NEW",
+    "TRSQ",
+    "STRADDLE"
+   ],
+   [
+    "region",
+    "NEW",
+    "TRSQ",
+    "TRUVAR"
+   ],
+   [
+    "region",
+    "NEW",
+    "TRSQ",
+    "ASTRA_SURPRISE"
+   ],
+   [
+    "region",
+    "NEW",
+    "TRSQ",
+    "ASTRA_STRADDLE_GLOBAL"
+   ],
+   [
+    "region",
+    "OLD",
+    "M0",
+    "MAXIMIN"
+   ],
+   [
+    "region",
+    "OLD",
+    "M0",
+    "RANDOM"
+   ],
+   [
+    "region",
+    "OLD",
+    "M0",
+    "STRADDLE"
+   ],
+   [
+    "region",
+    "OLD",
+    "M0",
+    "TRUVAR"
+   ],
+   [
+    "region",
+    "OLD",
+    "M0",
+    "ASTRA_SURPRISE"
+   ],
+   [
+    "region",
+    "OLD",
+    "M0",
+    "ASTRA_STRADDLE_GLOBAL"
+   ],
+   [
+    "region",
+    "OLD",
+    "SHQ",
+    "MAXIMIN"
+   ],
+   [
+    "region",
+    "OLD",
+    "SHQ",
+    "RANDOM"
+   ],
+   [
+    "region",
+    "OLD",
+    "SHQ",
+    "STRADDLE"
+   ],
+   [
+    "region",
+    "OLD",
+    "SHQ",
+    "TRUVAR"
+   ],
+   [
+    "region",
+    "OLD",
+    "SHQ",
+    "ASTRA_SURPRISE"
+   ],
+   [
+    "region",
+    "OLD",
+    "SHQ",
+    "ASTRA_STRADDLE_GLOBAL"
+   ]
+  ],
+  "label": [
+   [
+    "label",
+    "NEW",
+    "None",
+    "G3_MARGIN"
+   ],
+   [
+    "label",
+    "NEW",
+    "None",
+    "ACTIVE_E1_STRADDLE"
+   ],
+   [
+    "label",
+    "NEW",
+    "None",
+    "ACTIVE_E1_MAXIMIN"
+   ],
+   [
+    "label",
+    "NEW",
+    "None",
+    "TR_E1_STRADDLE"
+   ],
+   [
+    "label",
+    "NEW",
+    "None",
+    "TR_E1_MAXIMIN"
+   ]
+  ]
+ },
+ "units": {
+  "reg-new-maximin": 100,
+  "reg-old-maximin": 40,
+  "reg-designs": 160,
+  "region": 480,
+  "label": 100
+ },
+ "rich": {
+  "NEW": "TRSQ",
+  "OLD": "SHQ"
+ },
+ "region": {
+  "response": "vmax_spike_logratio",
+  "tau": 0.6931471805599453
+ },
+ "code_sha256": {
+  "src/rc18_final.py": "9cc54f31eaf1b5f338185701ea9732794b7d4d5a3f8d5e0ee1b06e9e2e95a57a",
+  "src/rc18_campaign.py": "a98896753fe9843fc8178df430c785b9287c5e36649910fd984491a6d2d49dcd",
+  "src/rc18_gp.py": "129e60a6606050ef4aee810e04c458bbeb406797d12f4199ad89727765295585",
+  "src/rc18_common.py": "16ebdce433b2d69cd1cb6feb12b6562f4e1be81441a39d3902a27cd3e352c236",
+  "src/rc18_eval.py": "8606d8304001082a0e939fad05539fa662f4b3c3dfd5a8e3afa0e28d6df83c38",
+  "src/jdl_phys_al.py": "32e78805fde496cf5743e583982426b6bbdfad7bc1bd2ce4f20717ad55170f8e",
+  "src/jdl_stage_m.py": "a8ff32c0cbee2296699236bc17a4c185f0a9244bd75e154916d5fb2d91c1271a",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d",
+  "src/jdl_evaluate.py": "2cea4f3b6ba546156d2e4ddcb10707abe8d753ccafe0d173dca6b709d3d87b67",
+  "outputs/research_campaign_20261018/astra_pilot/astra_monitor_discovery_20261016/discovery.py": "ed7b926dfedf3bd140d2769604b1806cfe567efd236cc7a32ea82610c067ac1b"
+ },
+ "data_sha256": {
+  "outputs/research_campaign_20261018/opus/data/SUMMARIES.csv": "97a35cd7c63d011d8ca523dd36ed0c6a0c78994ebcc86519624ed0241706554b",
+  "outputs/research_campaign_20261018/opus/main/old_emulators/mu_OLD_at_NEW.csv": "254819c1bcf63aad5eafada2f4b20b5b1214ed6675126a120530bbaf9c11ab9d",
+  "outputs/research_campaign_20261018/opus/main/old_emulators/EMULATORS.json": "15063be44143456a34bcf2f57dcd3d2cd674049a726934229774874d91274744",
+  "outputs/joint_depth_label_development/physical/physical_summaries.csv": "79a404cfd2720203609b6c2474f562e9cae6d9db52b416aeaec86eee58d59a46",
+  "outputs/joint_depth_label_development/phys_al/extracted_summaries.csv": "fa124d987f6608027b744fa29cfed610e04b3e814e9447d8ead14c71f6f5dfaf",
+  "outputs/research_campaign_20261018/opus/PROTOCOL_20261018.md": "f4ef1da48bb8152a3e196fb6155a72b062ca0834442949f29bc6e4b13e5d67c0"
+ }
+}

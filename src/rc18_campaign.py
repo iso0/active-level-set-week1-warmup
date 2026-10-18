@@ -182,7 +182,7 @@ def run_reg(task, pop, model, acq, Tt, emu=None, budgets=None, record_from=None)
     if model.startswith("TR"):
         e = emulator_at(ids); E = {k: e[k].to_numpy(float) for k in e.columns}
     rng = np.random.default_rng(51000 + 100 * task["repeat"] + task["fold"] + (17 if pop == "OLD" else 0))
-    start = 0 if model.startswith("TR") and acq == "MAXIMIN" else B0
+    start = (0 if model.startswith("TR") else 3) if acq == "MAXIMIN" else B0
     L = [int(i) for i in task["path"][:start]]; evals = []; t0 = time.time(); prim = PRIMARY[pop]
     for b in range(start, B1 + 1):
         paid = np.asarray(L, int); fits = fit_model(model, Z, Y, paid, cols, emu=E, short=short)
@@ -221,7 +221,11 @@ def run_region(task, pop, model, acq, Tt, response="vmax_spike_logratio", tau=SP
     """Level-set learning of {x: response >= tau}. Every pool run is a candidate; invalid (NaN) responses are paid, kept
     in the paid ledger, and never used as regression rows. Returns test predictions per budget and the paid path."""
     ids = np.asarray(task["ids"]).astype(str); Z = zstd(task); pool, test = task["pool"], task["test"]
-    y = Tt.reindex(ids)[response].to_numpy(float); cols = [response]; Y = y[:, None]; short = qa_short(ids)
+    y = Tt.reindex(ids)[response].to_numpy(float); short = qa_short(ids)
+    if model.startswith("SH") or model.startswith("TRS"):
+        cols = ALL_T; Y = Tt.reindex(ids)[cols].to_numpy(float)
+    else:
+        cols = [response]; Y = y[:, None]
     E = None
     if model.startswith("TR"):
         e = emulator_at(ids); E = {k: e[k].to_numpy(float) for k in e.columns}
@@ -294,6 +298,7 @@ def run_label(task, pop, arm, budget_max=40):
     X, y, ids, pool, test = task["X"], task["y"], np.asarray(task["ids"]).astype(str), task["pool"], task["test"]
     A = np.asarray(task["A"], float); Z = zstd(task); logA = np.log(A)
     emu = emulator_at(ids)["log_A_um__mu"].to_numpy(float) if arm.startswith("TR_") else None
+    W = np.where(qa_short(ids), W_SHORT, 1.0)                                   # TR_E1 depth model = TRQ (transfer + QA-aware noise)
     L = [int(i) for i in task["path"][:B0]]; evals = []; t0 = time.time(); oneclass = 0
     for b in range(B0, budget_max + 1):
         Lr = np.asarray(L); usable = np.isfinite(A[Lr]) if "E1" in arm else np.ones(len(Lr), bool)
@@ -312,11 +317,11 @@ def run_label(task, pop, arm, budget_max=40):
                 f = E.fit_learner(("GPR_depth", "mlii"), {"X": X, "y": ym, "pool": pool, "prior": np.array([], int), "depth": dm}, L, None, {"kernel": None, "b0": len(L)})
                 p = np.asarray(E.proba(f, X[test]), float); mc, vc = E.latent(f, X[cands]); score_c = 1.96 * np.sqrt(vc) - np.abs(mc)
             else:                                                             # TR_E1: transfer depth model + the same rule
-                Lu = Lr[usable]; u = _u_rule(logA[Lu], y[Lu])
-                if len(Lu) >= 5:
-                    g = G.GP().fit(Z[Lu], logA[Lu], m0=emu[Lu]); mt_, lt_, _ = g.predict(Z[test], m0s=emu[test]); mc, lc, _ = g.predict(Z[cands], m0s=emu[cands])
+                Lu = Lr[usable]; u = _u_rule(logA[Lu], y[Lu]); Lg = Lu[W[Lu] <= 100]
+                if len(Lg) >= 5:
+                    g = G.GP().fit(Z[Lu], logA[Lu], m0=emu[Lu], w=W[Lu]); mt_, lt_, _ = g.predict(Z[test], m0s=emu[test]); mc, lc, _ = g.predict(Z[cands], m0s=emu[cands])
                 else:
-                    off = float(np.mean(logA[Lu] - emu[Lu])) if len(Lu) else 0.0; s2 = float(np.var(logA[Lu] - emu[Lu])) if len(Lu) > 1 else 0.05
+                    off = float(np.mean(logA[Lg] - emu[Lg])) if len(Lg) else 0.0; s2 = float(np.var(logA[Lg] - emu[Lg])) if len(Lg) > 1 else 0.05
                     mt_, lt_ = emu[test] + off, np.full(len(test), s2); mc, lc = emu[cands] + off, np.full(len(cands), s2)
                 p = ndtr((mt_ - u) / np.sqrt(lt_)); score_c = 1.96 * np.sqrt(lc) - np.abs(mc - u)
         evals.append({"budget": b, "p": p.tolist(), "two_classes": bool(two)})
@@ -350,6 +355,35 @@ def dev_reg(pops=("NEW", "OLD"), repeats=(1, 2), models=("M0", "SH", "TR", "TRs"
     U = {f"{pop}__r{t['repeat']}_f{t['fold']}__{m}__{a}": (pop, t, m, a) for pop, t, m, a in _units_reg(pops, repeats, models, acqs)}
     def fn(name):
         pop, t, m, a = U[name]; return run_reg(t, pop, m, a, T[pop])
+    RC.run_units(list(U), fn, DEV / tag / "units", DEV / tag / "locks", DEV / tag / "failed", log=lambda s: print(s, flush=True))
+
+
+REGION_ACQS = ("MAXIMIN", "RANDOM", "STRADDLE", "TRUVAR", "ASTRA_SURPRISE", "ASTRA_STRADDLE_GLOBAL")
+RICH = {"NEW": "TRSQ", "OLD": "SHQ"}
+
+
+LABEL_ARMS = ("G3_MARGIN", "ACTIVE_E1_STRADDLE", "ACTIVE_E1_MAXIMIN", "TR_E1_STRADDLE", "TR_E1_MAXIMIN")
+
+
+def dev_label(repeats=(1, 2), tag="label"):
+    RC.limit_threads(1); U = {}
+    for t in tasks("NEW", repeats):
+        for a in LABEL_ARMS:
+            U[f"NEW__r{t['repeat']}_f{t['fold']}__{a}"] = (t, a)
+    def fn(name):
+        t, a = U[name]; return run_label(t, "NEW", a)
+    RC.run_units(list(U), fn, DEV / tag / "units", DEV / tag / "locks", DEV / tag / "failed", log=lambda s: print(s, flush=True))
+
+
+def dev_region(pops=("NEW", "OLD"), repeats=(1, 2), tag="region"):
+    RC.limit_threads(1); T = {p: targets(p) for p in pops}; U = {}
+    for pop in pops:
+        for t in tasks(pop, repeats):
+            for m in ("M0", RICH[pop]):
+                for a in REGION_ACQS:
+                    U[f"{pop}__r{t['repeat']}_f{t['fold']}__{m}__{a}"] = (pop, t, m, a)
+    def fn(name):
+        pop, t, m, a = U[name]; return run_region(t, pop, m, a, T[pop])
     RC.run_units(list(U), fn, DEV / tag / "units", DEV / tag / "locks", DEV / tag / "failed", log=lambda s: print(s, flush=True))
 
 
@@ -424,5 +458,11 @@ if __name__ == "__main__":
         dev_reg(pops=("NEW",), models=("TRX", "TRXS"), tag="reg")
     elif step == "dev-reg3":
         dev_reg(pops=("NEW", "OLD"), models=("M0Q", "SHQ", "TRQ", "TRSQ"), tag="reg")
+    elif step == "dev-moivr":
+        dev_reg(pops=("NEW", "OLD"), models=("M0", "SHQ", "TRSQ"), acqs=("MOIVR",), tag="moivr")
+    elif step == "dev-region":
+        dev_region()
+    elif step == "dev-label":
+        dev_label()
     elif step == "eval-reg":
         D = eval_reg(); print(D.groupby(["pop", "model", "acq"])[["R2_AULC", "budget_to_target"]].mean().round(3).to_string())

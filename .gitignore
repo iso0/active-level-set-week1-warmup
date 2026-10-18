@@ -32,3 +32,8 @@ outputs/joint_depth_label_development/recovery/*/recovery.lock
 outputs/joint_depth_label_development/pool/pool_runner.lock
 outputs/research_campaign_20261018/opus/_cache/
 outputs/research_campaign_20261018/opus/runner/HEARTBEAT.json.tmp
+outputs/research_campaign_20261018/opus/main/**/units/
+outputs/research_campaign_20261018/opus/main/**/locks/
+outputs/research_campaign_20261018/opus/temporal/**/units/
+outputs/research_campaign_20261018/opus/temporal/**/locks/
+outputs/research_campaign_20261018/opus/fixes/**/locks/
