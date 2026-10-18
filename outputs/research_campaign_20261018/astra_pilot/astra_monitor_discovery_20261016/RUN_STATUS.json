@@ -1,0 +1,30 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "utc": "2026-10-17T07:33:07.243089+00:00",
+  "authoritative_package_directory": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_monitor_discovery_20261016",
+  "fitfree_checks": {
+    "status": "PASS",
+    "tests": 28,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_s": 0.06318749999627471,
+    "model_fits": 0,
+    "synthetic_experiments": 0,
+    "scope": "deterministic software contracts and hand-calculable time examples"
+  },
+  "controlled_fit_requests_started": 0,
+  "GP_component_solves_started": 0,
+  "independent_numerical_reference_fits_started": 0,
+  "real_data_fits_started": 0,
+  "scientific_results": null,
+  "reason": "No explicit Opus reservation in the sole coordination record",
+  "dry_run": "run after freeze; see FINAL_VERIFICATION.json",
+  "numerical_execution_owner": "Opus",
+  "budget_threads": 1,
+  "budget_wall_s": 1200,
+  "future_result_path": "pilot/CONTROLLED_RESULTS.json",
+  "BA_RISK_resumed": false,
+  "paid_compute": false,
+  "outbound_messages_sent": false,
+  "push_or_merge": false
+}

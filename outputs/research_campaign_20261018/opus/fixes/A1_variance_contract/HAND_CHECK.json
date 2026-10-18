@@ -1,0 +1,31 @@
+{
+ "sklearn": "1.9.0",
+ "numpy": "2.5.1",
+ "kernel": "2.0*Matern(l=0.7, nu=1.5) + White(0.3)",
+ "cases": {
+  "normalize_y=False": {
+   "predict_mean": 0.38015421932983984,
+   "analytic_mean": 0.38015421934666926,
+   "predict_sd^2": 1.087606599089343,
+   "analytic_latent_var": 0.7876065990464622,
+   "analytic_observation_var": 1.0876065990464623,
+   "noise_in_original_units": 0.3,
+   "frozen_code_noise_term": 0.3,
+   "predict_sd_equals": "observation (latent + noise)",
+   "frozen_code_denominator_var": 1.3876065990893431
+  },
+  "normalize_y=True": {
+   "predict_mean": 0.4044298692289823,
+   "analytic_mean": 0.40442986923798796,
+   "predict_sd^2": 0.6117787119877556,
+   "analytic_latent_var": 0.443028711963635,
+   "analytic_observation_var": 0.611778711963635,
+   "noise_in_original_units": 0.16874999999999998,
+   "frozen_code_noise_term": 0.16874999999999998,
+   "predict_sd_equals": "observation (latent + noise)",
+   "frozen_code_denominator_var": 0.7805287119877555
+  }
+ },
+ "contract": "In this environment predict(return_std=True) with a WhiteKernel in the fitted kernel returns the OBSERVATION predictive SD (latent + white noise); with normalize_y the noise in original units is exp(theta_white) * y_train_std^2. The frozen PHYS_DISCOVERY rule computed z = (y - m) / sqrt(sd^2 + noise), i.e. it counted the noise twice: denominator variance = latent + 2 * noise. The protocol's formula (y - m) / sqrt(var_prev + noise) with var_prev the LATENT variance equals (y - m) / sd.",
+ "status": "PASS"
+}

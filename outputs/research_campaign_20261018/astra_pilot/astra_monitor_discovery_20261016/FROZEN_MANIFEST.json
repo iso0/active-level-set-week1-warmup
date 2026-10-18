@@ -1,0 +1,136 @@
+{
+  "package": "astra_monitor_discovery_20261016",
+  "status": "FROZEN_BEFORE_ANY_SYNTHETIC_FIT",
+  "created_utc": "2026-10-17T07:34:16.287200+00:00",
+  "code_hashes": {
+    "check_numerics.py": "4a4b6e2b08d6740821e7b00dc53492e7acfb42b347b02304c0b67f8f3e2ebc24",
+    "discovery.py": "ed7b926dfedf3bd140d2769604b1806cfe567efd236cc7a32ea82610c067ac1b",
+    "freeze_package.py": "2a9cd0e1421962bda037a3d394da50a2ae8b64257c54d8c06349a9b91afb3ce4",
+    "monitor_support.py": "a624d53ae0e52bdd232fa49791706f3d6e24dd1dc4ce8c85adc9419a3b2ed619",
+    "record_handoff.py": "8688cdde8451918d24c4b35baac53034279e14768e6064a40f19906a88035984",
+    "run_pilot.py": "e69e67d655cf806f5caf34e8511033337ed9455c1dbd05e57101bacea1ee3905",
+    "synthetic.py": "f0e088107bae57c6fd5d525c95fcac1768be28521d7f63c6a62b12647b6dc1d7",
+    "test_fitfree.py": "2824d735484e0382ee2084486844f6eb8298eed160759b655bb7c2a27b1097a3",
+    "variance_contract.py": "5c3f011b74c78a2e691206805013e3acda559262880a70a1d48216219bbdb101"
+  },
+  "code_digest": "a41a90f62843cace054d4296294d3e6f19a472bee3239035f5a1b5a29fe8554b",
+  "document_hashes": {
+    "CONTEXT_AND_VARIANCE_AUDIT.md": "31bbb69ec6c972b75bd7fa36a2a833f80c4f0ea417de8bbc96d94be355fdc310",
+    "DATA_CONTRACT.md": "54416510482a4c5ae97770394be8323123e4b71553a4c9f16abe97d0d8015720",
+    "DESIGN.md": "8c44502fdacbf8c5386a9d0787e5e0a4eb01f395cebce016d2fef182f236c2f4",
+    "MONITOR_MODEL_SUPPORT.md": "e42ee51fbed0fce9cdb8eb637c1af8879726f87a7b71eb2aa44c7ab93edbb338",
+    "OPUS_HANDOFF.md": "5da95a77afec12fe2ac5dce6c9abe7b73404101d7d8a6cf94b98b69a5d86b4a7",
+    "README.md": "2d3062114b0470b85bc23c10c807d9fb574cf3a31f7ecdd4d017537d528483a5"
+  },
+  "provenance_hashes": {
+    "SOURCE_SNAPSHOT.json": "19a6e65966a079b6348831f6341b0716adbdbac43508cc33b3c8f0ca0d54b4d7",
+    "METHOD_CHOICE_RECORD.json": "7f8b69b9c862c1923d0243f83e53ce84d1fac8af8821fccb171f263f4f83d579",
+    "requirements.txt": "2b456667e42abeee7d387e6d6d98a5cce2bb9463d8a0fa464705cff6756a4bc5"
+  },
+  "experiment": {
+    "target": "uniform feature distribution on [0,1]^4; separate fixed evaluator cloud",
+    "pool_size": 512,
+    "eval_size": 2048,
+    "seeds": [
+      61016,
+      61017
+    ],
+    "worlds": [
+      "island",
+      "null_bad_scale",
+      "island_bad_monitor"
+    ],
+    "core_arms": [
+      "surprise",
+      "straddle_global",
+      "straddle",
+      "margin",
+      "random"
+    ],
+    "aux_arms": [
+      "primary_variance",
+      "multi_variance"
+    ],
+    "startup": 8,
+    "budget": 24,
+    "readouts": "every B from 8 through 24",
+    "core_trajectories": 30,
+    "aux_trajectories": 4,
+    "aux_world": "island",
+    "matched_startup_seed_offset": 100,
+    "matched_global_order_seed_offset": 200
+  },
+  "selector": {
+    "radius": 0.25,
+    "trigger_z": 2.5,
+    "confirmation_z": 1.5,
+    "max_local": 4,
+    "confirmation_attempts": 2,
+    "episode_lifetime": 8,
+    "calibration_window": 8,
+    "calibration_minimum": 4,
+    "calibration_alert": 2.0,
+    "straddle_beta": 1.96,
+    "threshold": 0.0,
+    "sd_floor": 1e-08
+  },
+  "model": {
+    "kernel": "isotropic Matern 3/2",
+    "length": 0.28,
+    "amplitude_sd": 0.8,
+    "noise_sd": 0.08,
+    "mean_primary": -0.4,
+    "mean_aux": 0.0,
+    "aux_length": 0.45,
+    "jitter_variance": 1e-10,
+    "optimizer": null,
+    "hyperparameter_uncertainty": "not integrated",
+    "decision": "posterior latent mean > 0",
+    "margin": "abs(P(f>0)-0.5)",
+    "null_bad_scale": "all supplied predictive SDs multiplied by 0.15, same GP in all arms"
+  },
+  "oracle": {
+    "cost": "one selected simulation; scalar primary + canonical synthetic label + auxiliary",
+    "hidden": "island/boundary memberships, latent truth, all unpaid outcomes, evaluator cloud",
+    "invalid_channel": "cost retained; no primary regression row or discovery trigger; label retained"
+  },
+  "targets": {
+    "discovery": "global error <=0.10 AND island recall >=0.75 AND island-boundary error <=0.20",
+    "paired_regression": "primary RMSE <=0.30 AND auxiliary RMSE <=0.30",
+    "confirmation": "two consecutive budget readouts; count second readout",
+    "censoring": "unreached at B24 is right-censored, not an assumed B25 hit",
+    "first_discovery": "first paid valid member of evaluator-defined island, startup included"
+  },
+  "caps": {
+    "controlled_fit_requests": 578,
+    "reference_fits": 4,
+    "component_solves": 650,
+    "wall_seconds": 1200,
+    "threads": 1
+  },
+  "numerics": {
+    "independent_dense_reference_absolute_tolerance": 1e-09,
+    "negative_variance_reject_below": -1e-07,
+    "tie_rule": "smallest pool index",
+    "near_ties": "no numerical refinement ladder; report deterministic ties"
+  },
+  "expected_directions": {
+    "island": "local response may help AFTER a valid surprise; no guaranteed initial hit benefit",
+    "null_bad_scale": "calibration guard should curb spurious local episodes; early errors may remain",
+    "island_bad_monitor": "flagged invalid channels cannot trigger; they still consume queries",
+    "auxiliary": "variance sharing may help auxiliary RMSE at a cost to primary accuracy; no numeric effect prediction"
+  },
+  "uncertainty": "all paired seed outcomes and seed range; two seeds cannot support reliable superiority inference",
+  "stops": [
+    "no allocation",
+    "expired/revoked allocation",
+    "20-minute cumulative wall budget",
+    "fit/component cap",
+    "reference error",
+    "nonfinite posterior",
+    "failed fit",
+    "unresolved interrupted attempt",
+    "code hash mismatch"
+  ],
+  "claim_scope": "synthetic feasibility only; no SPH, G3, short-K, C3/C4, Stage A or physical-simulator claim"
+}

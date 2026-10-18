@@ -1,0 +1,27 @@
+{
+ "status": "PASS",
+ "frozen_rule_reproduces_v10": {
+  "NEW_r3_f1": true,
+  "NEW_r3_f2": true,
+  "NEW_r3_f3": true,
+  "NEW_r3_f4": true,
+  "NEW_r3_f5": true,
+  "NEW_r4_f1": true,
+  "NEW_r4_f2": true,
+  "NEW_r4_f3": true,
+  "NEW_r4_f4": true,
+  "NEW_r4_f5": true,
+  "OLD_r3_f1": true,
+  "OLD_r3_f2": true,
+  "OLD_r3_f3": true,
+  "OLD_r3_f4": true,
+  "OLD_r3_f5": true,
+  "OLD_r4_f1": true,
+  "OLD_r4_f2": true,
+  "OLD_r4_f3": true,
+  "OLD_r4_f4": true,
+  "OLD_r4_f5": true
+ },
+ "utc": "2026-10-18T09:05:48+00:00",
+ "module_sha256": "12628a1ab959f96e3ee76cbe84e0d23cf4f09f4dfcc9fa67e00543aa59f68659"
+}

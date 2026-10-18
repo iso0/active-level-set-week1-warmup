@@ -1,0 +1,4 @@
+{"event":"RUNNER_START","pid":27680,"utc":"2026-10-18T08:53:31Z"}
+{"event":"WORKER_START","job":"selftest","worker":1,"pid":16492,"opus_used_before":0,"astra_used":0,"leaves":"","utc":"2026-10-18T08:53:32Z"}
+{"event":"COORD_UPDATE_ERROR","error":"Exception calling \"ReadAllText\" with \"2\" argument(s): \"The given path\u0027s format is not supported.\"","utc":"2026-10-18T08:53:32Z"}
+{"event":"RUNNER_EXCEPTION","error":"Exception calling \"ReadAllText\" with \"2\" argument(s): \"The given path\u0027s format is not supported.\"","line":40,"utc":"2026-10-18T08:54:02Z"}

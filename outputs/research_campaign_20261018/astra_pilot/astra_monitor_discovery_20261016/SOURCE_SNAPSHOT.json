@@ -1,0 +1,327 @@
+{
+  "recorded_utc": "2026-10-17T07:33:07.243089+00:00",
+  "host": "Burak",
+  "python_executable": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe",
+  "python_version": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "versions_metadata_only": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "main_head": "e2bcf97a55736cdd2933b6761678d8b695358205",
+  "opus_head": "ef761843fa3cae6fb64313a142fec0711ddeaf0a",
+  "sources": [
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week6_01_melt_pool_data_audit\\monitor_data_dictionary.csv",
+      "exists": true,
+      "sha256": "5b8effe693b485634f936b90eab4b7e968daf08227fa510a3fb7c5c38cdd4ad5",
+      "bytes": 8875
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week6_04_new_outputs_feature_effects\\kinetic_energy_monitor_audit.csv",
+      "exists": true,
+      "sha256": "f8562af92a2d52dad71066468060298e57c1291ca93f73ea08fe9af12f702632",
+      "bytes": 252830
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week6_04_new_outputs_feature_effects\\results_summary.md",
+      "exists": true,
+      "sha256": "5e4ba1fa291050343283ef355ec8a8e70f805bddc649c7f2264afcc5da7eb31f",
+      "bytes": 5979
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\outputs\\week7_03_new_data_physical_model_stability\\phase3_results_summary.md",
+      "exists": true,
+      "sha256": "b095e3dca97cb225c583ff94c1f647b53fc7a73803091b7417ea7c416c43fac5",
+      "bytes": 9200
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\src\\week19_sources.py",
+      "exists": true,
+      "sha256": "0c65e59174254acb442c7f7dc706ee113cb605f5fc09f33c3511abc722f97c5c",
+      "bytes": 10119
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\src\\week19_series.py",
+      "exists": true,
+      "sha256": "0d3b33e55ec50d1357d00ba24d65ae104b853fadf406292dd517786922d42c77",
+      "bytes": 21032
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\src\\jdl_physical_data.py",
+      "exists": true,
+      "sha256": "78eff9bd3809c5518a089b364608ba7651e22cdff12e2dc97ac105a8f3c91062",
+      "bytes": 3619
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\src\\jdl_physical_pilot.py",
+      "exists": true,
+      "sha256": "e8c773c9dc52b5b1523d72c072c3f35976900bc8c49417bb5b7ce267b529e8ac",
+      "bytes": 17152
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\src\\jdl_temporal_functional.py",
+      "exists": true,
+      "sha256": "6c5ec541bd5869e8530b3a31f7da65205f347a0b678fc3637d8cc261735e5cb5",
+      "bytes": 10599
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\src\\jdl_phys_discovery.py",
+      "exists": true,
+      "sha256": "33b7b3a724bc5e990a27ac18970041b0a990399e711c6e59ed90a7f6f2a93dc4",
+      "bytes": 15921
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\src\\jdl_phys_al.py",
+      "exists": true,
+      "sha256": "32e78805fde496cf5743e583982426b6bbdfad7bc1bd2ce4f20717ad55170f8e",
+      "bytes": 33895
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\physical\\PHYSICAL_PROTOCOL.md",
+      "exists": true,
+      "sha256": "363a9cad30b76351f8e42bcdaca9a12f37361424ffa5d15e577fcd729334eb3c",
+      "bytes": 4986
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\physical\\physical_summaries.csv",
+      "exists": true,
+      "sha256": "79a404cfd2720203609b6c2474f562e9cae6d9db52b416aeaec86eee58d59a46",
+      "bytes": 50399
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\physical\\provenance\\DOWNLOAD_SUMMARY.json",
+      "exists": true,
+      "sha256": "092edc683ebe03271d0fb7eb6081979fa46c9c55310df7f3762874b5378c6ceb",
+      "bytes": 235
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\pool\\POOL_PLAN.json",
+      "exists": true,
+      "sha256": "fea0d1a19c176ed9c4440c56f22f193cbe20512043df4f0009700a2b29d418aa",
+      "bytes": 3428
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\surprise_discovery\\SURPRISE_PROTOCOL.md",
+      "exists": true,
+      "sha256": "44b34432ccf2ff675c04be0e99b4cbc88b8392978ef7c13abfcc80017531a51e",
+      "bytes": 6165
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\phys_discovery\\PHYS_DISCOVERY_PROTOCOL.md",
+      "exists": true,
+      "sha256": "719aa2f9c33158fdc7ee6ff8d559ee22f69c5d9293886ccd6fda93c216e966d3",
+      "bytes": 3391
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\phys_al\\PHYS_AL_PROTOCOL.md",
+      "exists": true,
+      "sha256": "7a68259c62e62311b0682f294893dac2f6f8793d3149615bf5181ca961e5013a",
+      "bytes": 4832
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\temporal_vel\\TEMPORAL_VEL_PROTOCOL.md",
+      "exists": true,
+      "sha256": "490374efb46814bca8365c08720f34e7257b68400abbb7e4e982d4fab9768b33",
+      "bytes": 2680
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\temporal_struct\\TEMPORAL_STRUCT_PROTOCOL.md",
+      "exists": true,
+      "sha256": "c212067e16d8a15cfd89e9f03dc993e20193b067a5239a54b0ca81189ac7626a",
+      "bytes": 3506
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\sklearn\\gaussian_process\\_gpr.py",
+      "exists": true,
+      "sha256": "9baa8ea6e1387f0f27698837e7257de388c7425d195e9a24947bbd8c66287d08",
+      "bytes": 28960
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Lib\\site-packages\\sklearn\\gaussian_process\\kernels.py",
+      "exists": true,
+      "sha256": "fea674e5fcace6cf83942ef5f2c3006ad62eaecd435df76d5e436d5d0c84a27b",
+      "bytes": 87724
+    }
+  ],
+  "old_v2_preservation": [
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_joint_model_v2\\joint_model_v2.py",
+      "initial_sha256": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+      "current_sha256": "2cd25a8eb330b2d6b3a6e3d61c1e97b04972da92b52bbf23b1f8a07e291142a1",
+      "identical": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_joint_model_v2\\v1_reference.py",
+      "initial_sha256": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+      "current_sha256": "558b966a604cf512483d654c78e7dea0fc14084923f58174e2054126bacdbf59",
+      "identical": true
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_joint_model_v2\\CONTROLLED_RESULTS.json",
+      "initial_sha256": "59d3cea2856458ad05a2ad9dca98084b260661bd417a08b1c4a3c5e84b4cbc07",
+      "current_sha256": "59d3cea2856458ad05a2ad9dca98084b260661bd417a08b1c4a3c5e84b4cbc07",
+      "identical": true
+    }
+  ],
+  "scientific_core_unchanged_since_choice": {
+    "discovery.py": true,
+    "synthetic.py": true,
+    "monitor_support.py": true,
+    "check_numerics.py": true
+  },
+  "coordination_record": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\joint_depth_label_development\\pool\\POOL_PLAN.json",
+  "reservations_for_this_job": [],
+  "older_snapshot_in_opus_checkout": [
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\check_numerics.py",
+      "exists": true,
+      "sha256": "4a4b6e2b08d6740821e7b00dc53492e7acfb42b347b02304c0b67f8f3e2ebc24",
+      "bytes": 1373
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\DATA_CONTRACT.md",
+      "exists": true,
+      "sha256": "c5694e9e196506c91f1b489483d9616ea31120f508c4b39ad5e8d460bf628751",
+      "bytes": 5542
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\DESIGN.md",
+      "exists": true,
+      "sha256": "02f5ef1fa1f911b13611b2ae7e25909ed5d724e10feb4cf88fe53f5d7f49e76c",
+      "bytes": 10137
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\discovery.py",
+      "exists": true,
+      "sha256": "ed7b926dfedf3bd140d2769604b1806cfe567efd236cc7a32ea82610c067ac1b",
+      "bytes": 11393
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\FITFREE_CHECKS.json",
+      "exists": true,
+      "sha256": "582a41c6ab5b033c4e6ad180cb36c4f46024a6e2eeb2987cb254c04983c64ffc",
+      "bytes": 246
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\freeze_package.py",
+      "exists": true,
+      "sha256": "94cb9f443c22ef20e3d564202f0ce352a62535bb789642ee70f033059de6314d",
+      "bytes": 4727
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\MONITOR_MODEL_SUPPORT.md",
+      "exists": true,
+      "sha256": "8deebf446de9599d118f1537ee28f4e4970b9da64f4a548fb2c72420db9d2244",
+      "bytes": 12007
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\monitor_support.py",
+      "exists": true,
+      "sha256": "a624d53ae0e52bdd232fa49791706f3d6e24dd1dc4ce8c85adc9419a3b2ed619",
+      "bytes": 4526
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\OPUS_HANDOFF.md",
+      "exists": true,
+      "sha256": "d3d689139476e9d1b799119985bd1f153d6cb107bfc511db96ed983f58ed94b8",
+      "bytes": 7267
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\README.md",
+      "exists": true,
+      "sha256": "1518149c16f5ccf1ac2f6a485b5b888470e323191fcd7090f6a21ecdde0f5e1d",
+      "bytes": 4388
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\run_pilot.py",
+      "exists": true,
+      "sha256": "07b4f04555071839cba00424ea13c0e5d6ccd6b307066de25602ffd3280b1039",
+      "bytes": 14513
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\SNAPSHOT_SHA256SUMS.txt",
+      "exists": true,
+      "sha256": "56bba0a98e13fd1e6f1f3db7662392132ba39c4c4246fcebb11cdb94a52cafdd",
+      "bytes": 1066
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\synthetic.py",
+      "exists": true,
+      "sha256": "f0e088107bae57c6fd5d525c95fcac1768be28521d7f63c6a62b12647b6dc1d7",
+      "bytes": 6642
+    },
+    {
+      "path": "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\astra_monitor_discovery_20261016\\test_fitfree.py",
+      "exists": true,
+      "sha256": "00df929ff6d848d15a7ab4cd32da764dc4b86af65cc3cc98df81749b72bb3f47",
+      "bytes": 10290
+    }
+  ],
+  "physical_source_pin": "ioandanielc/sph_v2@2e1eec9c98fd57609d2815f174586336ab59da07",
+  "quality_scope": {
+    "nonfinite_KE_by_run": {
+      "H374c2f82c8": 364,
+      "Hce04be44b1": 931,
+      "H6dae2a1270": 63
+    },
+    "aligned_run_total": 1358,
+    "early_ended_unavailable_run": "He7dbd8e5ce",
+    "unavailable_run_counts": null,
+    "warning": "931 is part of 1358; row-mismatch run counts are blank, not zero"
+  },
+  "exposure": {
+    "method_choice_record": "METHOD_CHOICE_RECORD.json",
+    "later_incidental_aggregate_results_in_commit_body": "6fe4e9d439a8bf5bacdcd42e3b28fba58786bea3",
+    "method_tuned_to_these_results": false,
+    "new_result_tables_opened_for_selection": false
+  },
+  "filesystem_incident": {
+    "initial_action": "accidental empty directory in Opus output path; no source/result written in that operation",
+    "attempted_cleanup": "automatic approval review rejected deletion: blocked by policy; not retried",
+    "latest_observation": "directory now contains an earlier package snapshot; final package does not modify it",
+    "snapshot_origin": "not independently established"
+  },
+  "literature_access_window_utc": ["2026-10-16", "2026-10-17"],
+  "primary_sources": [
+    {
+      "date": "1990",
+      "url": "https://doi.org/10.1080/01621459.1990.10474975"
+    },
+    {
+      "date": "2013",
+      "url": "https://www.ijcai.org/Proceedings/13/Papers/202.pdf"
+    },
+    {
+      "date": "2024",
+      "url": "https://arxiv.org/html/2401.05579v1"
+    },
+    {
+      "date": "2025-03-27 preprint",
+      "url": "https://arxiv.org/html/2503.21095v1"
+    },
+    {
+      "date": "2026 indexed journal",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1568494626009117",
+      "access": "publisher full text inaccessible; method comparison uses accessible 2025 preprint"
+    },
+    {
+      "date": "2008",
+      "url": "https://www2.stat.duke.edu/courses/Spring14/sta961.01/ref/HigdGattWillRigh2008.pdf"
+    },
+    {
+      "date": "2016",
+      "url": "https://doi.org/10.1016/j.actamat.2016.02.014",
+      "accessible_preprint": "https://arxiv.org/abs/1512.02593"
+    },
+    {
+      "date": "2017-06-22",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5481335/"
+    },
+    {
+      "date": "live official documentation",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.gaussian_process.kernels.WhiteKernel.html"
+    }
+  ]
+}

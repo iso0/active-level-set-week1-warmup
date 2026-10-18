@@ -1,0 +1,5 @@
+# Versions present in the inspected thesis venv; no installation performed.
+# Deterministic checks, manifest freeze and dry-run use only the standard library.
+numpy==2.4.6
+scipy==1.17.1
+threadpoolctl==3.6.0

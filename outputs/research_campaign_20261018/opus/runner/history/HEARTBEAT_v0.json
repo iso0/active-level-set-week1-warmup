@@ -1,0 +1,51 @@
+{
+    "utc":  "2026-10-18T08:53:32Z",
+    "runner_pid":  27680,
+    "runner_start_utc":  "2026-10-18T08:53:31Z",
+    "cycle":  1,
+    "host":  "Burak",
+    "state":  "RUNNING",
+    "budget":  {
+                   "t0_utc":  "2026-10-18T08:41:20Z",
+                   "deadline_utc":  "2026-10-20T08:41:20Z",
+                   "elapsed_h":  0.2,
+                   "remaining_h":  47.8
+               },
+    "capacity":  {
+                     "opus_share":  2,
+                     "runner_slots":  1,
+                     "opus_used":  1,
+                     "opus_other_leaves":  0,
+                     "astra_used":  0,
+                     "leaves":  ""
+                 },
+    "workers":  [
+                    {
+                        "pid":  16492,
+                        "child_pids":  [
+
+                                       ],
+                        "job":  "selftest",
+                        "worker":  1,
+                        "start_utc":  "2026-10-18T08:53:32Z",
+                        "cpu_s":  0.1,
+                        "threads":  1,
+                        "log":  "C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\research_campaign_20261018\\opus\\runner\\workers\\selftest_1.log",
+                        "host":  "Burak"
+                    }
+                ],
+    "jobs":  {
+                 "selftest":  {
+                                  "done":  0,
+                                  "failed":  0,
+                                  "locks":  0,
+                                  "total":  3,
+                                  "remaining":  3,
+                                  "last_unit":  null,
+                                  "last_unit_utc":  null,
+                                  "paused":  false,
+                                  "live_workers":  0
+                              }
+             },
+    "restart":  "powershell -NoProfile -ExecutionPolicy Bypass -File src\\rc18_start_runner.ps1   (idempotent; skips finished units; lock prevents a second runner)"
+}

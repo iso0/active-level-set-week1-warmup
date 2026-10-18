@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-17T07:34:43.154398+00:00",
+  "code_digest": "a41a90f62843cace054d4296294d3e6f19a472bee3239035f5a1b5a29fe8554b",
+  "frozen_hashes_verified": true,
+  "document_links_verified": true,
+  "final_code_AST_parse": "PASS",
+  "fitfree_checks": {
+    "status": "PASS",
+    "tests": 28,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_s": 0.06318749999627471,
+    "model_fits": 0,
+    "synthetic_experiments": 0,
+    "scope": "deterministic software contracts and hand-calculable time examples"
+  },
+  "dry_run": "PASS_PREPARED_NOT_RUN",
+  "actual_coordination_gate": "no unique active Opus reservation in the coordination record",
+  "controlled_requests_arithmetic": 578,
+  "total_components_arithmetic": 650,
+  "scientific_core_unchanged_since_choice": {
+    "discovery.py": true,
+    "synthetic.py": true,
+    "monitor_support.py": true,
+    "check_numerics.py": true
+  },
+  "variance_hand_counterexample": {
+    "residual": 3.8,
+    "latent_variance": 1.0,
+    "noise_variance": 1.0,
+    "trigger_threshold": 2.5,
+    "correct_z": 2.68700576850888,
+    "double_counted_z": 2.193931022920578,
+    "correct_triggers": true,
+    "double_counted_triggers": false,
+    "interpretation": "possible trigger difference; no claim about historical frequency or outcome"
+  },
+  "numerical_libraries_imported": false,
+  "GP_fits_executed": 0,
+  "scientific_results": null,
+  "pilot_directory_created": false
+}

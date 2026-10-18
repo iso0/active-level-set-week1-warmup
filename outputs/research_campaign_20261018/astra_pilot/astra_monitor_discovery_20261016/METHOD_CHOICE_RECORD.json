@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-17T07:23:37.0300558Z",
+  "status": "METHOD_SELECTED_BEFORE_READING_NEW_OCT17_STUDY_PROTOCOLS_OR_RESULTS",
+  "code_hashes": {
+    "check_numerics.py": "4a4b6e2b08d6740821e7b00dc53492e7acfb42b347b02304c0b67f8f3e2ebc24",
+    "run_pilot.py": "07b4f04555071839cba00424ea13c0e5d6ccd6b307066de25602ffd3280b1039",
+    "synthetic.py": "f0e088107bae57c6fd5d525c95fcac1768be28521d7f63c6a62b12647b6dc1d7",
+    "freeze_package.py": "94cb9f443c22ef20e3d564202f0ce352a62535bb789642ee70f033059de6314d",
+    "test_fitfree.py": "00df929ff6d848d15a7ab4cd32da764dc4b86af65cc3cc98df81749b72bb3f47",
+    "discovery.py": "ed7b926dfedf3bd140d2769604b1806cfe567efd236cc7a32ea82610c067ac1b",
+    "monitor_support.py": "a624d53ae0e52bdd232fa49791706f3d6e24dd1dc4ce8c85adc9419a3b2ed619"
+  },
+  "design_sha256": "02f5ef1fa1f911b13611b2ae7e25909ed5d724e10feb4cf88fe53f5d7f49e76c",
+  "note": "New Opus commit titles indicate PHYS_AL, PHYS_DISCOVERY and TEMPORAL_STRUCT executed. Read protocols only next to avoid duplicate work; no numerical outcome used for selection."
+}

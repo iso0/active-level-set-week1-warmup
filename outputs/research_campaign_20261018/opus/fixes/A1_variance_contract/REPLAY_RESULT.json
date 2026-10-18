@@ -1,0 +1,174 @@
+{
+ "all_replays_exact": true,
+ "trajectories": {
+  "NEW_r3_f1": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.62,
+   "surprises_frozen": 3
+  },
+  "NEW_r3_f2": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 2.3,
+   "surprises_frozen": 2
+  },
+  "NEW_r3_f3": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.8,
+   "surprises_frozen": 3
+  },
+  "NEW_r3_f4": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.81,
+   "surprises_frozen": 6
+  },
+  "NEW_r3_f5": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.66,
+   "surprises_frozen": 1
+  },
+  "NEW_r4_f1": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.77,
+   "surprises_frozen": 3
+  },
+  "NEW_r4_f2": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.74,
+   "surprises_frozen": 5
+  },
+  "NEW_r4_f3": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.72,
+   "surprises_frozen": 2
+  },
+  "NEW_r4_f4": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.92,
+   "surprises_frozen": 1
+  },
+  "NEW_r4_f5": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.72,
+   "surprises_frozen": 6
+  },
+  "OLD_r3_f1": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.74,
+   "surprises_frozen": 9
+  },
+  "OLD_r3_f2": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.44,
+   "surprises_frozen": 5
+  },
+  "OLD_r3_f3": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 2.03,
+   "surprises_frozen": 3
+  },
+  "OLD_r3_f4": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.75,
+   "surprises_frozen": 4
+  },
+  "OLD_r3_f5": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.33,
+   "surprises_frozen": 4
+  },
+  "OLD_r4_f1": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.77,
+   "surprises_frozen": 3
+  },
+  "OLD_r4_f2": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.52,
+   "surprises_frozen": 1
+  },
+  "OLD_r4_f3": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.69,
+   "surprises_frozen": 4
+  },
+  "OLD_r4_f4": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.64,
+   "surprises_frozen": 9
+  },
+  "OLD_r4_f5": {
+   "replay_reproduces_path": true,
+   "replay_reproduces_z": true,
+   "seconds": 1.57,
+   "surprises_frozen": 4
+  }
+ },
+ "observations": 1040,
+ "trigger_changes_same_path": {
+  "total": 11,
+  "none_to_SURPRISE": 11,
+  "SURPRISE_to_none": 0,
+  "by_population": {
+   "NEW": 6,
+   "OLD": 5
+  }
+ },
+ "surprises_frozen": {
+  "NEW": 32,
+  "OLD": 46
+ },
+ "surprises_corrected_same_path": {
+  "NEW": 38,
+  "OLD": 51
+ },
+ "first_trigger_change_budget": {
+  "NEW_r3_f1": null,
+  "NEW_r3_f2": null,
+  "NEW_r3_f3": 28,
+  "NEW_r3_f4": 53,
+  "NEW_r3_f5": 32,
+  "NEW_r4_f1": null,
+  "NEW_r4_f2": null,
+  "NEW_r4_f3": null,
+  "NEW_r4_f4": 22,
+  "NEW_r4_f5": null,
+  "OLD_r3_f1": null,
+  "OLD_r3_f2": null,
+  "OLD_r3_f3": 22,
+  "OLD_r3_f4": 47,
+  "OLD_r3_f5": null,
+  "OLD_r4_f1": null,
+  "OLD_r4_f2": null,
+  "OLD_r4_f3": null,
+  "OLD_r4_f4": 17,
+  "OLD_r4_f5": 49
+ },
+ "noise_share_of_observation_var": {
+  "median": 0.16862030065669556,
+  "p10": 3.7288825302451037e-06,
+  "p90": 0.7359478614952826
+ },
+ "z_ratio_corrected_over_frozen": {
+  "median": 1.0841179672726484
+ },
+ "scope": "Same-path counterfactual only: after the first changed trigger the corrected rule would choose a different path, whose outcome is measured prospectively by the v1.1 run."
+}

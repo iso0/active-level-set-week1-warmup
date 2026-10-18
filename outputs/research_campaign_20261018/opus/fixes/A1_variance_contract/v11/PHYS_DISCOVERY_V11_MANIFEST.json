@@ -1,0 +1,20 @@
+{
+ "study": "PHYS_DISCOVERY_V11",
+ "status": "FROZEN BEFORE ANY V1.1 OUTCOME",
+ "written_utc": "2026-10-18T09:06:05+00:00",
+ "parent_commit": "e9e3db67ea2dc56aeb0316c7012634585308bd31",
+ "change": "surprise z denominator: sd_observation (latent + noise) instead of sqrt(sd_observation^2 + noise)",
+ "units": "SD_MAXVAR x {NEW, OLD} x r3-4 x f1-5 (20)",
+ "comparators": "MAXVAR v1.0 (unchanged, registered verdict rule); SD_MAXVAR v1.0 (fix effect)",
+ "verdict_rule": "DISCOVERY GAIN (DEV) iff SD_v11 - MAXVAR family AUDC > 0, its 10-pair bootstrap interval > 0, and R2-AULC not lower by > 0.02 (as v1.0)",
+ "validation": {
+  "status": "PASS",
+  "sha256": "fd64b7704ba998459a19262587beb8da60d8fce84505623eb2439c0234ccdd85"
+ },
+ "code_sha256": {
+  "src/rc18_phys_discovery_v11.py": "12628a1ab959f96e3ee76cbe84e0d23cf4f09f4dfcc9fa67e00543aa59f68659",
+  "src/jdl_phys_discovery.py": "33b7b3a724bc5e990a27ac18970041b0a990399e711c6e59ed90a7f6f2a93dc4",
+  "src/jdl_phys_al.py": "32e78805fde496cf5743e583982426b6bbdfad7bc1bd2ce4f20717ad55170f8e",
+  "src/rc18_common.py": "16ebdce433b2d69cd1cb6feb12b6562f4e1be81441a39d3902a27cd3e352c236"
+ }
+}
