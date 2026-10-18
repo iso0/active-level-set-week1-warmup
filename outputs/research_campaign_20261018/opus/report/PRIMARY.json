@@ -1,0 +1,41 @@
+{
+ "verdict": "FEWER SIMULATIONS (DEV)",
+ "mean_saved": 21.0,
+ "per_repeat": {
+  "5": 13.33,
+  "6": 32.67,
+  "7": 19.33,
+  "8": 18.67
+ },
+ "per_target": {
+  "laser_T0_W": 21.0,
+  "log_A_um": 12.0,
+  "log_ke_T0_nJ": 28.0,
+  "tmax_T0_K": 21.0,
+  "vmax_spike_logratio": 28.0,
+  "vmax_spike_us": 16.0
+ },
+ "M0_budget_mean_per_target": {
+  "laser_T0_W": 21.0,
+  "log_A_um": 12.0,
+  "log_ke_T0_nJ": 28.0,
+  "tmax_T0_K": 21.0,
+  "vmax_spike_logratio": 28.0,
+  "vmax_spike_us": 45.0
+ },
+ "TRSQ_budget_mean_per_target": {
+  "laser_T0_W": 0.0,
+  "log_A_um": 0.0,
+  "log_ke_T0_nJ": 0.0,
+  "tmax_T0_K": 0.0,
+  "vmax_spike_logratio": 0.0,
+  "vmax_spike_us": 29.0
+ },
+ "R2_AULC_diff_mean": 0.08316132715178205,
+ "R2_AULC_diff_per_repeat": {
+  "5": 0.0485,
+  "6": 0.1319,
+  "7": 0.0804,
+  "8": 0.0718
+ }
+}

@@ -230,7 +230,8 @@ def curves_figure(R):
     COL = {"M0": "#999999", "M0Q": "#56B4E9", "SHQ": "#009E73", "TRQ": "#E69F00", "TRSQ": "#D55E00"}
     for pop in ("NEW", "OLD"):
         tg = C.PRIMARY[pop]; d = R[(R["pop"] == pop) & (R.acq == "MAXIMIN")]
-        fig, axes = plt.subplots(2, 4, figsize=(14, 6.4), sharex=True); axes = axes.ravel()
+        nc = 3 if len(tg) <= 6 else 4; nr = int(np.ceil(len(tg) / nc))
+        fig, axes = plt.subplots(nr, nc, figsize=(3.6 * nc + 1, 3.0 * nr + 0.6)); axes = np.atleast_1d(axes).ravel()
         for ax, t in zip(axes, tg):
             for m, g in d[d.target == t].groupby("model"):
                 cur = [g_ for g_ in g.curve]; bs = sorted(set().union(*[c.keys() for c in cur])); bs = [b for b in bs if all(b in c for c in cur)]
@@ -238,6 +239,7 @@ def curves_figure(R):
                 ax.fill_between(bs, M.min(0), M.max(0), color=COL.get(m, "k"), alpha=0.12, lw=0)
             lev = d[d.target == t].level.iloc[0]; ax.axhline(lev, color="#CC79A7", ls=":", lw=1)
             ax.set_title(t, fontsize=9.5); ax.set_ylim(max(-0.3, ax.get_ylim()[0]), 1.0); ax.grid(True, color="#e6e6e6")
+            ax.set_xlabel(f"paid {pop} simulations", fontsize=8.5); ax.set_ylabel("out-of-fold R2", fontsize=8.5)
         for ax in axes[len(tg):]:
             ax.axis("off")
         axes[0].legend(frameon=False, fontsize=8)

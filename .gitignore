@@ -37,3 +37,10 @@ outputs/research_campaign_20261018/opus/main/**/locks/
 outputs/research_campaign_20261018/opus/temporal/**/units/
 outputs/research_campaign_20261018/opus/temporal/**/locks/
 outputs/research_campaign_20261018/opus/fixes/**/locks/
+# RC18: per-unit checkpoint files (reproducible from frozen code; summarised in committed tables) and live runner state
+outputs/research_campaign_20261018/opus/data/units/
+outputs/research_campaign_20261018/opus/fixes/**/units/
+outputs/research_campaign_20261018/opus/runner/runner.lock
+outputs/research_campaign_20261018/opus/runner/HEARTBEAT.json
+outputs/research_campaign_20261018/opus/runner/STATE.json
+outputs/research_campaign_20261018/opus/runner/STATUS.md

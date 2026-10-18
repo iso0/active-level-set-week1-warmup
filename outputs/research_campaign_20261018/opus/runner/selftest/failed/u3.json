@@ -1,0 +1,7 @@
+{
+ "unit": "u3",
+ "error": "RuntimeError: deliberate self-test failure",
+ "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\src\\rc18_common.py\", line 90, in run_units\n    res = fn(name)\n  File \"C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\src\\rc18_selftest.py\", line 18, in unit\n    raise RuntimeError(\"deliberate self-test failure\")\nRuntimeError: deliberate self-test failure\n",
+ "utc": "2026-10-18T08:56:13+00:00",
+ "pid": 14232
+}

@@ -59,3 +59,48 @@ This file is updated about every 6 hours. Live machine state is in `runner/HEART
 **Tamamlananlar:** Astra'nın pilotu bir kez çalıştı, A1 düzeltmesi yapıldı (karar değişmedi), A2 ve A3 yapıldı.
 
 **En güçlü yeni bulgu:** Tarihsel OLD koşuları, NEW'in fiziksel çıktılarını hiç NEW simülasyonu olmadan neredeyse NEW'in kendi erişilebilir doğruluğuyla öngörüyor. Ana iş, bunun öğrenme eğrilerinde gerçek bir simülasyon tasarrufuna dönüşüp dönüşmediği.
+
+## Update 2 — 2026-10-18 14:15 UTC (elapsed 5.6 h of 48 h)
+
+**Resource sharing, unchanged:** Opus 2 threads, Astra 2 threads reserved. Opus never used Astra's share, and Astra has registered no jobs.
+
+**Live processes:**
+- The runner supervisor (PID 7136) and runner (PID 29180) are alive. The runner has been **IDLE** since 13:39:51 with no queued work, and the heartbeat continues.
+- No Python worker is running. Restart command: as in Update 1.
+
+**Completed since Update 1** (all units finished, 0 failed; details in the ledger rows RC18-DEV2 … RC18-FINAL):
+1. Development on repeats 1–2, then the freeze of the final protocol (eaba0c8d), D2 (b6466777) and the report generator (a932c734 / 3cdfc91a) before any final result.
+2. Final programme on DEV repeats 5–8: 880 trajectories (regression, region, label). D2: 160 units.
+3. Addenda, each registered before running:
+   - A1, repeats 3–4 robustness;
+   - A2, transfer-gap design;
+   - A3, PHYS_TR physics-mediated label model;
+   - A4, PHYS_TR prior + residual GPC.
+4. Reports:
+   - `report/RESULTS_TABLE.md` (§1–13), with every CSV and figure;
+   - the interactive boundary view `report/boundary_view.html`, numbers checked equal to the evaluator, private claude.ai copy;
+   - `FINAL_REPORT_20261018.md`.
+
+**Results (DEV):**
+- **PRIMARY: FEWER SIMULATIONS (DEV).** TRSQ vs M0 under the identical MAXIMIN design saves **21.0** NEW simulations per output (13.3 / 32.7 / 19.3 / 18.7). It needs 0 NEW simulations for 5 of 6 outputs in all 4 repeats. Repeats 3–4 give 22.3.
+- **Where it comes from:** QA 5.0 + transfer 14.7 + sharing 1.3. Without a predecessor campaign, about 10 of 26 are saved.
+- **Acquisition:** for these smooth outputs it changes R²-AULC by at most ±0.015. Under transfer, MOIVR needs 6.7 more simulations, and GAP0 is worse in 4/4 repeats.
+- **Region (OLD):** straddle +0.035 and shared kernel +0.033; together about 22 vs ≥ 44 simulations. TruVaR and Astra's local reaction bring no gain.
+- **Label (NEW):** PHYS_TR at B0 has BA 0.69 with zero NEW simulations and the best calibration. E1 + straddle reaches 0.74 at B40. A4 is unchanged from PHYS_TR. The fast-scan corner is unresolved.
+- **D2:** level features transfer across campaigns, but curve models do not beat scalar GPs at B16 or B40.
+- **False confidence:** every model is overconfident at its claim; the rich models less so.
+
+**Cost:** about 5.0 h of wall clock and 4.15 CPU h. No SPH simulation was run.
+
+**Next:** no further fit is queued. The remaining budget (about 42.4 h) is kept in reserve, and the deadline rule still applies. Any new experiment would first need a registered question, an addendum written before it runs, and a ledger row.
+
+### Türkçe özet (Güncelleme 2)
+
+**Tek hüküm: AZ SİMÜLASYON (DEV).**
+- TRSQ, aynı tasarımda M0'a göre çıktı başına ortalama 21 yeni simülasyon tasarruf ediyor. 6 çıktının 5'inde hedefe sıfır yeni simülasyonla ulaşıyor.
+- Kazanç modelden geliyor, veri toplama stratejisinden değil.
+- Bölge öğreniminde model ve straddle benzer katkı veriyor.
+- Etikette fizik aracılı model (PHYS_TR) sıfır simülasyonla G3/E1-B16 düzeyinde ve en iyi kalibre; ama daha iyi değil.
+- Zamansal eğri modelleri skaler GP'yi geçmiyor.
+
+**Runner:** boşta, PID'ler 7136/29180. Astra'nın payı kullanılmadı. Kalan bütçe yaklaşık 42 saat, yedekte.

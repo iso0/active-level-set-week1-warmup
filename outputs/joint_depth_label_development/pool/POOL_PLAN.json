@@ -148,26 +148,27 @@
                                             "jobs":  [
 
                                                      ],
-                                            "jobs_updated_utc":  "2026-10-18T08:57:35Z"
+                                            "jobs_updated_utc":  "2026-10-18T13:39:51Z"
                                         },
                                         {
                                             "owner":  "Astra",
                                             "threads":  2,
-                                            "status":  "reserved",
+                                            "status":  "active",
                                             "granted_by":  "Opus (coordinator), per owner decision 2026-10-18",
                                             "granted_utc":  "2026-10-18T08:46:11+00:00",
                                             "valid_until_utc":  "2026-10-20T08:41:20+00:00",
                                             "note":  "Reserved for Astra\u0027s new campaign before any heavy Opus computation. Opus never uses these 2 threads without Astra\u0027s own completion/release record here. Astra lists her live jobs (pid, command, start_utc, threads) in \u0027jobs\u0027.",
                                             "jobs":  [
 
-                                                     ]
+                                                     ],
+                                            "jobs_updated_utc":  "2026-10-18T09:12:55.505324+00:00"
                                         }
                                     ],
                          "no_duplicate_fits":  "Opus: SPH-data model/acquisition research (outputs/research_campaign_20261018/opus/). Astra: her own campaign. Shared reference acquisitions (IVR/TruVaR/multiscale level set) are implemented once; the implementing side lists the module here under \u0027shared_implementations\u0027.",
                          "shared_implementations":  [
 
                                                     ],
-                         "last_update_utc":  "2026-10-18T08:57:35Z"
+                         "last_update_utc":  "2026-10-18T13:39:51Z"
                      },
     "external_reservations":  [
                                   {

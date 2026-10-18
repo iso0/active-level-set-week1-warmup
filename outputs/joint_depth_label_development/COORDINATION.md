@@ -74,3 +74,27 @@ This is the owner's instruction of 2026-10-16. Claude coordinates all new numeri
 **Not reopened:** ASTRA_AL / BA_RISK (cancelled by the owner on 2026-10-16) and the 2026-10-15 pool runner (ended with POOL_END).
 
 **Live jobs:** their PIDs, commands and start times are kept in `pool/POOL_PLAN.json` (the `shares[].jobs` and `external_reservations` fields) and in the runner heartbeat `outputs/research_campaign_20261018/opus/runner/HEARTBEAT.json`.
+
+**Opus runner jobs, RC18.** From `runner/runner_log.jsonl`. Each job ran 1 worker with 1 BLAS thread, every exit code was 0, and no unit failed.
+
+| Job | Worker PID | Start → end (UTC, 2026-10-18) | Units |
+|---|---|---|---|
+| selftest / selftest_crash | 19164 / 23564, 11268 | 08:56:04 → 08:56:34 | self-test only (crash path intended) |
+| data_extract | 25244 | 09:13:40 → 09:21:14 | 541 |
+| dev_reg / dev_moivr / dev_region | 5952 / 7176 / 11168 | 09:29:17 → 10:19:44 | 60 / 50 / 240 |
+| final_reg_new_maximin | 25932 | 10:36:20 → 10:53:04 | 100 |
+| final_reg_old_maximin | 12252 | 10:41:53 → 10:51:02 | 40 |
+| final_region | 3244 | 10:51:03 → 11:26:33 | 480 |
+| transfer_design (A2) | 11144 | 10:59:39 → 11:03:42 | 60 |
+| final_label | 25776 | 11:04:43 → 11:07:15 | 100 |
+| physlabel (A3) | 16284 | 11:08:16 → 11:13:21 | 40 |
+| final_reg_designs | 9352 | 11:15:53 → 11:46:48 | 160 |
+| d2_features | 26748 | 11:28:04 → 12:08:04 | 80 |
+| d2_curves | 13640 | 11:46:48 → 12:25:47 | 80 |
+| robust_r34 (A1) | 17772 | 12:08:04 → 12:18:12 | 70 |
+| physgpc (A4) | 17892 | 13:33:47 → 13:39:51 | 40 |
+
+**State at 14:05 UTC:**
+- The runner (PID 29180) and supervisor (PID 7136) are alive and IDLE, with no queued work.
+- Opus holds 0 slots in the record. Astra's 2-thread share is untouched, and she has registered no jobs.
+- Restart: `powershell -NoProfile -ExecutionPolicy Bypass -File src\rc18_start_runner.ps1`.

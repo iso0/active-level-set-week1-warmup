@@ -1,0 +1,49 @@
+population,contrast,metric,mean,per_repeat,positive_repeats
+NEW,"(a) STRADDLE - MAXIMIN, M0",BA_AULC,0.012078536184210592,"[0.0116, 0.026, 0.0286, -0.0179]",3
+NEW,"(a) STRADDLE - MAXIMIN, M0",budget_to_target,0.0,"[-8.0, -4.0, 4.0, 8.0]",2
+NEW,"(a) STRADDLE - MAXIMIN, M0",band_share_paid,0.0641633064516129,"[0.0813, 0.0573, 0.0431, 0.075]",4
+NEW,"(a) STRADDLE - MAXIMIN, TRSQ",BA_AULC,0.02642592810150382,"[0.0387, 0.0322, 0.0267, 0.008]",4
+NEW,"(a) STRADDLE - MAXIMIN, TRSQ",budget_to_target,-1.0,"[-4.0, 0.0, 0.0, 0.0]",0
+NEW,"(a) STRADDLE - MAXIMIN, TRSQ",band_share_paid,0.0702116935483871,"[0.0782, 0.0595, 0.0647, 0.0784]",4
+NEW,"(a) TRUVAR - STRADDLE, M0",BA_AULC,-0.008879620927318366,"[-0.012, 0.0009, -0.0087, -0.0158]",1
+NEW,"(a) TRUVAR - STRADDLE, M0",budget_to_target,2.0,"[4.0, 4.0, -4.0, 4.0]",3
+NEW,"(a) TRUVAR - STRADDLE, M0",band_share_paid,-0.007711693548387105,"[-0.0063, 0.0, 0.0, -0.0246]",0
+NEW,"(a) TRUVAR - STRADDLE, TRSQ",BA_AULC,-0.003778978696741875,"[-0.0007, 0.001, -0.0125, -0.0029]",1
+NEW,"(a) TRUVAR - STRADDLE, TRSQ",budget_to_target,0.0,"[0.0, 0.0, 0.0, 0.0]",0
+NEW,"(a) TRUVAR - STRADDLE, TRSQ",band_share_paid,-0.003729838709677427,"[0.0, -0.0073, -0.0077, 0.0]",0
+NEW,(b) TRSQ - M0 under STRADDLE,BA_AULC,0.013135867011278196,"[0.0249, 0.0158, -0.0057, 0.0175]",3
+NEW,(b) TRSQ - M0 under STRADDLE,budget_to_target,-6.0,"[-4.0, -4.0, -8.0, -8.0]",0
+NEW,(b) TRSQ - M0 under STRADDLE,band_share_paid,0.006048387096774199,"[-0.003, 0.0022, 0.0216, 0.0034]",3
+NEW,(b) TRSQ - M0 under MAXIMIN,BA_AULC,-0.0012115249060150324,"[-0.0022, 0.0096, -0.0038, -0.0085]",1
+NEW,(b) TRSQ - M0 under MAXIMIN,budget_to_target,-5.0,"[-8.0, -8.0, -4.0, 0.0]",0
+NEW,(b) TRSQ - M0 under MAXIMIN,band_share_paid,0.0,"[0.0, 0.0, 0.0, 0.0]",0
+NEW,"(c) local on - off (ASTRA), M0",BA_AULC,-0.0041656876566416035,"[-0.0018, -0.0129, -0.0018, -0.0001]",0
+NEW,"(c) local on - off (ASTRA), M0",budget_to_target,0.0,"[0.0, 0.0, 0.0, 0.0]",0
+NEW,"(c) local on - off (ASTRA), M0",band_share_paid,-0.0062500000000000056,"[-0.0125, 0.0125, -0.0188, -0.0063]",1
+NEW,"(c) local on - off (ASTRA), TRSQ",BA_AULC,-0.0007440476190476164,"[0.0, 0.0, -0.003, 0.0]",0
+NEW,"(c) local on - off (ASTRA), TRSQ",budget_to_target,0.0,"[0.0, 0.0, 0.0, 0.0]",0
+NEW,"(c) local on - off (ASTRA), TRSQ",band_share_paid,0.0013608870967741944,"[-0.0006, -0.0004, 0.0, 0.0065]",1
+OLD,"(a) STRADDLE - MAXIMIN, M0",BA_AULC,0.015695576977938414,"[0.0141, -0.0148, 0.0381, 0.0253]",3
+OLD,"(a) STRADDLE - MAXIMIN, M0",budget_to_target,-9.0,"[0.0, 0.0, -24.0, -12.0]",0
+OLD,"(a) STRADDLE - MAXIMIN, M0",band_share_paid,0.20261446589345644,"[0.2117, 0.1915, 0.192, 0.2152]",4
+OLD,"(a) STRADDLE - MAXIMIN, SHQ",BA_AULC,0.035415007488588834,"[0.0358, 0.02, 0.0352, 0.0506]",4
+OLD,"(a) STRADDLE - MAXIMIN, SHQ",budget_to_target,-13.0,"[-24.0, -4.0, -4.0, -20.0]",0
+OLD,"(a) STRADDLE - MAXIMIN, SHQ",band_share_paid,0.22505160606140867,"[0.2784, 0.1963, 0.2226, 0.2028]",4
+OLD,"(a) TRUVAR - STRADDLE, M0",BA_AULC,0.008266644280144564,"[0.0106, 0.0287, -0.0056, -0.0007]",2
+OLD,"(a) TRUVAR - STRADDLE, M0",budget_to_target,2.0,"[0.0, -12.0, 8.0, 12.0]",2
+OLD,"(a) TRUVAR - STRADDLE, M0",band_share_paid,-0.04641277056585734,"[-0.0439, -0.0769, -0.0808, 0.0159]",1
+OLD,"(a) TRUVAR - STRADDLE, SHQ",BA_AULC,-0.017631540628566006,"[-0.0164, -0.0268, -0.0008, -0.0266]",0
+OLD,"(a) TRUVAR - STRADDLE, SHQ",budget_to_target,3.0,"[8.0, 0.0, 4.0, 0.0]",2
+OLD,"(a) TRUVAR - STRADDLE, SHQ",band_share_paid,-0.02723247218679646,"[-0.0828, 0.0523, -0.0622, -0.0163]",1
+OLD,(b) SHQ - M0 under STRADDLE,BA_AULC,0.033415524557816656,"[0.0386, 0.0425, 0.0078, 0.0448]",4
+OLD,(b) SHQ - M0 under STRADDLE,budget_to_target,-13.0,"[-24.0, -16.0, -4.0, -8.0]",0
+OLD,(b) SHQ - M0 under STRADDLE,band_share_paid,0.022437140167952188,"[0.0668, 0.0048, 0.0306, -0.0124]",3
+OLD,(b) SHQ - M0 under MAXIMIN,BA_AULC,0.013696094047166235,"[0.0169, 0.0077, 0.0107, 0.0195]",4
+OLD,(b) SHQ - M0 under MAXIMIN,budget_to_target,-9.0,"[0.0, -12.0, -24.0, 0.0]",0
+OLD,(b) SHQ - M0 under MAXIMIN,band_share_paid,0.0,"[0.0, 0.0, 0.0, 0.0]",0
+OLD,"(c) local on - off (ASTRA), M0",BA_AULC,-0.0038462967145302396,"[-0.0234, -0.0153, 0.0057, 0.0177]",2
+OLD,"(c) local on - off (ASTRA), M0",budget_to_target,-2.0,"[20.0, 0.0, -12.0, -16.0]",1
+OLD,"(c) local on - off (ASTRA), M0",band_share_paid,-0.023789610556295804,"[-0.0089, -0.0616, 0.0185, -0.0432]",1
+OLD,"(c) local on - off (ASTRA), SHQ",BA_AULC,-0.006125041603271153,"[-0.013, -0.0067, 0.0003, -0.0051]",1
+OLD,"(c) local on - off (ASTRA), SHQ",budget_to_target,2.0,"[4.0, 4.0, 0.0, 0.0]",2
+OLD,"(c) local on - off (ASTRA), SHQ",band_share_paid,-0.00863847158897213,"[0.0107, 0.0003, -0.0469, 0.0014]",3

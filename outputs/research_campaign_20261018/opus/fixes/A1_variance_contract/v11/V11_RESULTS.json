@@ -1,0 +1,62 @@
+{
+ "NEW": {
+  "arm_means": {
+   "MAXVAR_v10": {
+    "AUDC": 0.5028,
+    "surprises": 0.0
+   },
+   "SD_MAXVAR_v10": {
+    "AUDC": 0.4624,
+    "surprises": 3.2
+   },
+   "SD_MAXVAR_v11": {
+    "AUDC": 0.4648,
+    "surprises": 3.8
+   }
+  },
+  "v11_paths_identical_to_v10": 6,
+  "SD_MAXVAR_v11-MAXVAR_v10": {
+   "diff": -0.038013268782499575,
+   "lo": -0.07799052750134482,
+   "hi": 0.007131956585081579,
+   "pairs": 10
+  },
+  "SD_MAXVAR_v11-SD_MAXVAR_v10": {
+   "diff": 0.0024482248520710237,
+   "lo": -0.017272928994082806,
+   "hi": 0.024615384615384633,
+   "pairs": 10
+  },
+  "verdict": "NO DISCOVERY GAIN ESTABLISHED"
+ },
+ "OLD": {
+  "arm_means": {
+   "MAXVAR_v10": {
+    "AUDC": 0.1894,
+    "surprises": 0.0
+   },
+   "SD_MAXVAR_v10": {
+    "AUDC": 0.178,
+    "surprises": 4.6
+   },
+   "SD_MAXVAR_v11": {
+    "AUDC": 0.185,
+    "surprises": 5.2
+   }
+  },
+  "v11_paths_identical_to_v10": 6,
+  "SD_MAXVAR_v11-MAXVAR_v10": {
+   "diff": -0.004345885874980677,
+   "lo": -0.035055376078463325,
+   "hi": 0.021749684497933436,
+   "pairs": 10
+  },
+  "SD_MAXVAR_v11-SD_MAXVAR_v10": {
+   "diff": 0.006987923973376574,
+   "lo": 0.0005305039787798449,
+   "hi": 0.0174253518272915,
+   "pairs": 10
+  },
+  "verdict": "NO DISCOVERY GAIN ESTABLISHED"
+ }
+}

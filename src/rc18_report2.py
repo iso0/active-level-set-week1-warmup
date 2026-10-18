@@ -201,8 +201,11 @@ def figures(B=None):
         for k, m in enumerate(models):
             g = d[d.model == m].groupby("target").budget_to_target; mu = g.mean().reindex(tg); lo = g.min().reindex(tg); hi = g.max().reindex(tg)
             ax.bar(x + (k - 2) * w, mu.values, w * 0.92, color=COLm[m], label=m, yerr=[mu.values - lo.values, hi.values - mu.values], capsize=2, error_kw={"lw": 0.8})
+            for xi, v in zip(x + (k - 2) * w, mu.values):
+                if v == 0:
+                    ax.text(xi, 0.6, "0", ha="center", va="bottom", fontsize=7.5, color=COLm[m], fontweight="bold")
         ax.set_xticks(x); ax.set_xticklabels(tg, fontsize=8.5); ax.set_ylabel("NEW simulations to the sustained level\n(mean, range over 4 repeats; 64 = never)")
-        ax.legend(frameon=False, ncol=5, fontsize=8); ax.set_title("PRIMARY (DEV r5-8): simulations needed to reach 0.9 x R2_full(M0), MAXIMIN design", fontsize=10)
+        ax.legend(frameon=False, ncol=5, fontsize=8); ax.set_title("PRIMARY (DEV r5-8): simulations needed to reach 0.9 x R2_full(M0), MAXIMIN design ('0' = reached with no NEW simulation)", fontsize=10)
         fig.tight_layout(); fig.savefig(REP / "budget_to_target_NEW.png", dpi=160); plt.close(fig)
     # transfer scatter
     Tn = C.targets("NEW"); Em = C.emulator_at(Tn.index); sh = C.qa_short(np.asarray(Tn.index))
