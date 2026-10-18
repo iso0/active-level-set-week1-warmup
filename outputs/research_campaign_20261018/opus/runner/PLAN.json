@@ -2,5 +2,34 @@
  "note": "Read by src/rc18_runner.ps1 every 30 s. runner_slots <= Opus share (2). Keep 1 slot free for interactive development unless a long batch needs both. Lower priority number = launched first. kind pool = claims units; kind once = single command, max_attempts. Self-test jobs (2026-10-18 08:56) removed after passing; their records are in runner/selftest and runner_log.jsonl.",
  "runner_slots": 1,
  "stop_runner": false,
- "jobs": []
+ "jobs": [
+  {
+   "name": "data_extract",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 1,
+   "python": "system",
+   "args": ["-m", "src.rc18_data", "work", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus/data/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus/data/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus/data/locks",
+   "units_total": 541,
+   "resume_token": "0"
+  },
+  {
+   "name": "dev_reg",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 2,
+   "max_workers": 1,
+   "python": "system",
+   "args": ["-m", "src.rc18_campaign", "dev-reg", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus/main/dev/reg/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus/main/dev/reg/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus/main/dev/reg/locks",
+   "units_total": 60,
+   "resume_token": "0"
+  }
+ ]
 }

@@ -42,6 +42,7 @@ This is the owner's instruction of 2026-10-16. Claude coordinates all new numeri
    - **All 931** previously reported non-finite KE values are in **H-ce04be44b1** (24,323 rows), as pilot B reported.
    - Her attribution of the 931 values to the early-ended run is therefore not supported by the raw files.
    - Pilot B's frozen outputs are unchanged.
+   - **Erratum, 2026-10-18 (ledger QC-REC-ERRATUM).** The "0 non-finite KE, 115,600 rows" check above was made on the wrong run. `P-376p072436697…_H-e7dbd8e5ce` shares the H code. The early-ended run `P-423p267621988…_H-e7dbd8e5ce` has row-mismatched channels: time 40,803, bounds 40,805, KE 40,807, temperature 40,804 rows. It has 0 non-finite values. Astra's structural point was right: row mismatch and non-finite counts are two distinct findings. The 931 values still belong to H-ce04be44b1.
 
 **No duplicates:** the same fits are never run twice. Existing caches (TRAINED_AL, CORNER_LOCAL, pilot A references, Week 6/7/19 summaries) are reused and cited.
 

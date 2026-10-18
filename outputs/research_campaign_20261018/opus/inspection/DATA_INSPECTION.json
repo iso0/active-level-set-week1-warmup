@@ -1,0 +1,320 @@
+{
+ "NEW": {
+  "n": 136,
+  "keyhole": 124,
+  "inputs": {
+   "P": {
+    "min": 350.032875191,
+    "max": 449.849097257
+   },
+   "VX": {
+    "min": 0.20930220516,
+    "max": 0.985529827275
+   },
+   "LS_um_radius": {
+    "min": 40.002953178800006,
+    "max": 49.9465552486
+   },
+   "ST": {
+    "min": 301.609503389,
+    "max": 499.76938249
+   },
+   "logh": {
+    "min": 20.733457620298765,
+    "max": 22.04042494022699
+   }
+  },
+  "targets": {
+   "log_A_um": {
+    "n_finite": 135,
+    "sd": 0.3807143733196185,
+    "cvR2_logh": 0.43974959192410734,
+    "cvR2_logh_ST": 0.44210424691971895,
+    "cvR2_logh+logV": 0.49296576515111246,
+    "cvR2_linear_4_log_inputs": 0.4743427850551173,
+    "AUC_for_label": 0.9780058651026392,
+    "resid_sd_keyhole": 0.2467086204965981,
+    "resid_sd_no_keyhole": 0.12019717011459691,
+    "resid_sd_fast_half": 0.34877642812749177,
+    "resid_sd_slow_half": 0.16096508480820024
+   },
+   "log_ke_T0_nJ": {
+    "n_finite": 135,
+    "sd": 0.2553624984938656,
+    "cvR2_logh": -0.02184118912318178,
+    "cvR2_logh_ST": -0.02298806525739705,
+    "cvR2_logh+logV": -0.056091735877315196,
+    "cvR2_linear_4_log_inputs": 0.11458580017938247,
+    "AUC_for_label": 0.7624633431085044,
+    "resid_sd_keyhole": 0.24332567881416556,
+    "resid_sd_no_keyhole": 0.06443523329230474,
+    "resid_sd_fast_half": 0.1969497256649783,
+    "resid_sd_slow_half": 0.2754428448947678
+   },
+   "vmax_spike_logratio": {
+    "n_finite": 135,
+    "sd": 0.46169323969845383,
+    "cvR2_logh": 0.45617337681163495,
+    "cvR2_logh_ST": 0.4491508798093762,
+    "cvR2_logh+logV": 0.6522924074967,
+    "cvR2_linear_4_log_inputs": 0.6446902854615165,
+    "AUC_for_label": 0.9765395894428153,
+    "resid_sd_keyhole": 0.257254714041976,
+    "resid_sd_no_keyhole": 0.13814041818119263,
+    "resid_sd_fast_half": 0.33948657974965935,
+    "resid_sd_slow_half": 0.1666559641996401
+   },
+   "vmax_spike_us": {
+    "n_finite": 135,
+    "sd": 65.39593045669668,
+    "cvR2_logh": 0.34257827000881647,
+    "cvR2_logh_ST": 0.3449957943695896,
+    "cvR2_logh+logV": 0.5585609690270485,
+    "cvR2_linear_4_log_inputs": 0.5507697739460234,
+    "AUC_for_label": 0.9721407624633431,
+    "resid_sd_keyhole": 45.484072805973746,
+    "resid_sd_no_keyhole": 15.972857507593764,
+    "resid_sd_fast_half": 34.1677122152682,
+    "resid_sd_slow_half": 50.979954572924974
+   },
+   "laser_T0_W": {
+    "n_finite": 135,
+    "sd": 14.701756363424083,
+    "cvR2_logh": -0.005213603529560462,
+    "cvR2_logh_ST": -0.005709357848831198,
+    "cvR2_logh+logV": 0.0077184371819051245,
+    "cvR2_linear_4_log_inputs": 0.13330353163263797,
+    "AUC_for_label": 0.6774193548387096,
+    "resid_sd_keyhole": 13.877540302816666,
+    "resid_sd_no_keyhole": 4.222677417190554,
+    "resid_sd_fast_half": 8.630579557030366,
+    "resid_sd_slow_half": 16.99542912928338
+   },
+   "tmax_T0_K": {
+    "n_finite": 135,
+    "sd": 166.93126383631795,
+    "cvR2_logh": 0.7535396627175815,
+    "cvR2_logh_ST": 0.7317175553005071,
+    "cvR2_logh+logV": 0.7574066098091387,
+    "cvR2_linear_4_log_inputs": 0.7527338775432829,
+    "AUC_for_label": 0.8973607038123167,
+    "resid_sd_keyhole": 85.1309446561602,
+    "resid_sd_no_keyhole": 46.06707083749319,
+    "resid_sd_fast_half": 71.24271616010266,
+    "resid_sd_slow_half": 92.92867563694213
+   },
+   "log_etot_T0_J": {
+    "n_finite": 135,
+    "sd": 0.39858050055829963,
+    "cvR2_logh": -0.012431997611604517,
+    "cvR2_logh_ST": -0.00604304346364426,
+    "cvR2_logh+logV": -0.02710206252058156,
+    "cvR2_linear_4_log_inputs": 0.04105839600744654,
+    "AUC_for_label": 0.9376832844574781,
+    "resid_sd_keyhole": 0.38485266890595543,
+    "resid_sd_no_keyhole": 0.17921830737518485,
+    "resid_sd_fast_half": 0.34884723224231795,
+    "resid_sd_slow_half": 0.42806052561460767
+   },
+   "log_npart_T0": {
+    "n_finite": 135,
+    "sd": 0.4302367889567714,
+    "cvR2_logh": -0.0207815089685619,
+    "cvR2_logh_ST": -0.017617095490895407,
+    "cvR2_logh+logV": -0.04348099437818975,
+    "cvR2_linear_4_log_inputs": 0.014331812353803097,
+    "AUC_for_label": 0.9156891495601173,
+    "resid_sd_keyhole": 0.4209397034054695,
+    "resid_sd_no_keyhole": 0.21861404810252807,
+    "resid_sd_fast_half": 0.3851503425519277,
+    "resid_sd_slow_half": 0.46570613867912647
+   }
+  }
+ },
+ "OLD": {
+  "n": 405,
+  "keyhole": 73,
+  "inputs": {
+   "P": {
+    "min": 52.5445860993,
+    "max": 449.762375807
+   },
+   "VX": {
+    "min": 0.201002332148,
+    "max": 0.998321353283
+   },
+   "LS_um_radius": {
+    "min": 40.0293473664,
+    "max": 89.7039861056
+   },
+   "ST": {
+    "min": 300.0,
+    "max": 399.817710522
+   },
+   "logh": {
+    "min": 18.40881145336975,
+    "max": 21.94103457991376
+   }
+  },
+  "targets": {
+   "log_A_um": {
+    "n_finite": 405,
+    "sd": 0.6208344464835247,
+    "cvR2_logh": 0.8373362961565911,
+    "cvR2_logh_ST": 0.8390682399421762,
+    "cvR2_logh+logV": 0.8358715063847182,
+    "cvR2_linear_4_log_inputs": 0.8757843225199474,
+    "AUC_for_label": 0.9999587390658524,
+    "resid_sd_keyhole": 0.28107548519903935,
+    "resid_sd_no_keyhole": 0.16517210054667336,
+    "resid_sd_fast_half": 0.1748013384878121,
+    "resid_sd_slow_half": 0.24895700296852072
+   },
+   "log_ke_T0_nJ": {
+    "n_finite": 349,
+    "sd": 0.6633509594598266,
+    "cvR2_logh": 0.5969188847597537,
+    "cvR2_logh_ST": 0.5994106574756761,
+    "cvR2_logh+logV": 0.6424847278138168,
+    "cvR2_linear_4_log_inputs": 0.9523839847726805,
+    "AUC_for_label": 0.9246287762416795,
+    "resid_sd_keyhole": 0.2065169441271209,
+    "resid_sd_no_keyhole": 0.12407901951182802,
+    "resid_sd_fast_half": 0.10852071287078348,
+    "resid_sd_slow_half": 0.17075815058686472
+   },
+   "vmax_spike_logratio": {
+    "n_finite": 349,
+    "sd": 0.4482503513043733,
+    "cvR2_logh": 0.6379803393671533,
+    "cvR2_logh_ST": 0.6402423791870624,
+    "cvR2_logh+logV": 0.7641415156450257,
+    "cvR2_linear_4_log_inputs": 0.7661427700602697,
+    "AUC_for_label": 0.9496671786994367,
+    "resid_sd_keyhole": 0.30178669955641246,
+    "resid_sd_no_keyhole": 0.168222698279803,
+    "resid_sd_fast_half": 0.21822184838857878,
+    "resid_sd_slow_half": 0.21438886107913616
+   },
+   "vmax_spike_us": {
+    "n_finite": 349,
+    "sd": 44.10376347200784,
+    "cvR2_logh": 0.26415007973682003,
+    "cvR2_logh_ST": 0.26492535406040263,
+    "cvR2_logh+logV": 0.4152697554591569,
+    "cvR2_linear_4_log_inputs": 0.41601958948621975,
+    "AUC_for_label": 0.8806707629288274,
+    "resid_sd_keyhole": 54.26771727388424,
+    "resid_sd_no_keyhole": 25.043831940418677,
+    "resid_sd_fast_half": 25.358112027858226,
+    "resid_sd_slow_half": 39.81035579442913
+   },
+   "laser_T0_W": {
+    "n_finite": 349,
+    "sd": 19.355205343605554,
+    "cvR2_logh": 0.5486160125523787,
+    "cvR2_logh_ST": 0.5496647301945389,
+    "cvR2_logh+logV": 0.6142355021866368,
+    "cvR2_linear_4_log_inputs": 0.8602230431952467,
+    "AUC_for_label": 0.8763440860215055,
+    "resid_sd_keyhole": 13.166461403496948,
+    "resid_sd_no_keyhole": 4.681363495320963,
+    "resid_sd_fast_half": 4.322243681279246,
+    "resid_sd_slow_half": 9.085907978770933
+   },
+   "tmax_T0_K": {
+    "n_finite": 349,
+    "sd": 276.1981222146694,
+    "cvR2_logh": 0.7757246209709109,
+    "cvR2_logh_ST": 0.7734762375568551,
+    "cvR2_logh+logV": 0.8178610260402304,
+    "cvR2_linear_4_log_inputs": 0.832440200022536,
+    "AUC_for_label": 0.9759344598054276,
+    "resid_sd_keyhole": 154.69056587609506,
+    "resid_sd_no_keyhole": 90.72331328381081,
+    "resid_sd_fast_half": 83.28644830155518,
+    "resid_sd_slow_half": 135.28726808757887
+   },
+   "log_etot_T0_J": {
+    "n_finite": 349,
+    "sd": 0.6233214365926688,
+    "cvR2_logh": 0.35017151085291487,
+    "cvR2_logh_ST": 0.3536400464958094,
+    "cvR2_logh+logV": 0.348795888311885,
+    "cvR2_linear_4_log_inputs": 0.842869827617158,
+    "AUC_for_label": 0.8089093701996928,
+    "resid_sd_keyhole": 0.28963161737801596,
+    "resid_sd_no_keyhole": 0.23441846633482177,
+    "resid_sd_fast_half": 0.200542386153422,
+    "resid_sd_slow_half": 0.2726783166439404
+   },
+   "log_npart_T0": {
+    "n_finite": 349,
+    "sd": 0.6286733576088596,
+    "cvR2_logh": 0.3538377300851445,
+    "cvR2_logh_ST": 0.3574511160388444,
+    "cvR2_logh+logV": 0.3521132821456945,
+    "cvR2_linear_4_log_inputs": 0.8363069589107699,
+    "AUC_for_label": 0.8193548387096774,
+    "resid_sd_keyhole": 0.3028407106263986,
+    "resid_sd_no_keyhole": 0.24023907714264686,
+    "resid_sd_fast_half": 0.19564413326414712,
+    "resid_sd_slow_half": 0.28716508545802955
+   }
+  }
+ },
+ "matched_box": {
+  "OLD_in_NEW_box": 40,
+  "note": "OLD runs inside NEW's min-max box on all four inputs",
+  "targets": {
+   "log_A_um": {
+    "sd_OLD_box": 0.3584051004227139,
+    "sd_NEW": 0.3807143733196185,
+    "sd_OLD_all": 0.6208344464835247,
+    "cvR2_linear_OLD_box": 0.1966659277000231
+   },
+   "log_ke_T0_nJ": {
+    "sd_OLD_box": 0.25421775199652635,
+    "sd_NEW": 0.2553624984938656,
+    "sd_OLD_all": 0.6633509594598266,
+    "cvR2_linear_OLD_box": 0.07310291463192953
+   },
+   "vmax_spike_logratio": {
+    "sd_OLD_box": 0.3399340669730547,
+    "sd_NEW": 0.46169323969845383,
+    "sd_OLD_all": 0.4482503513043733,
+    "cvR2_linear_OLD_box": 0.1760821620175379
+   },
+   "vmax_spike_us": {
+    "sd_OLD_box": 52.6873968348237,
+    "sd_NEW": 65.39593045669668,
+    "sd_OLD_all": 44.10376347200784,
+    "cvR2_linear_OLD_box": 0.15331281567375343
+   },
+   "laser_T0_W": {
+    "sd_OLD_box": 14.85523595260812,
+    "sd_NEW": 14.701756363424083,
+    "sd_OLD_all": 19.355205343605554,
+    "cvR2_linear_OLD_box": -0.057646888161289045
+   },
+   "tmax_T0_K": {
+    "sd_OLD_box": 162.1068870963495,
+    "sd_NEW": 166.93126383631795,
+    "sd_OLD_all": 276.1981222146694,
+    "cvR2_linear_OLD_box": 0.6601541572605678
+   },
+   "log_etot_T0_J": {
+    "sd_OLD_box": 0.3262739874141499,
+    "sd_NEW": 0.39858050055829963,
+    "sd_OLD_all": 0.6233214365926688,
+    "cvR2_linear_OLD_box": 0.17279339429594454
+   },
+   "log_npart_T0": {
+    "sd_OLD_box": 0.3313894349909317,
+    "sd_NEW": 0.4302367889567714,
+    "sd_OLD_all": 0.6286733576088596,
+    "cvR2_linear_OLD_box": 0.09337288855153969
+   }
+  }
+ }
+}

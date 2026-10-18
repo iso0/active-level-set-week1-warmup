@@ -30,3 +30,5 @@ outputs/joint_depth_label_development/queue/*.tmp
 outputs/joint_depth_label_development/recovery/*/recovery.lock
 # Coordinated pool runner lock
 outputs/joint_depth_label_development/pool/pool_runner.lock
+outputs/research_campaign_20261018/opus/_cache/
+outputs/research_campaign_20261018/opus/runner/HEARTBEAT.json.tmp
