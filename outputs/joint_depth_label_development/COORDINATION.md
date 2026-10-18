@@ -44,3 +44,32 @@ This is the owner's instruction of 2026-10-16. Claude coordinates all new numeri
    - Pilot B's frozen outputs are unchanged.
 
 **No duplicates:** the same fits are never run twice. Existing caches (TRAINED_AL, CORNER_LOCAL, pilot A references, Week 6/7/19 summaries) are reused and cited.
+
+---
+
+## Research campaign 20261018 (owner decision of 2026-10-18; 48 hours from T0)
+
+**Single coordination record.** From now on, the single machine-readable record is `pool/POOL_PLAN.json`, in the block `coordination` and the list `external_reservations`. Both Opus and Astra read it, and Astra's runner reads it directly. This file is its human-readable log.
+
+**Update protocol** (`src/rc18_coord.py`):
+1. Take the exclusive lock `pool/COORDINATION.lock`.
+2. Read the record and change only your own share.
+3. Write a temporary file and `os.replace` it.
+4. Delete the lock.
+
+**Budget:**
+- T0 = **2026-10-18 08:41:20 UTC**; deadline = **2026-10-20 08:41:20 UTC** (48 h).
+- This is one total budget: errors and restarts do not reset it, and no new fit starts after the deadline.
+
+**Host and capacity:** `Burak`, 8 logical CPUs / 4 physical cores, 31.8 GB RAM. Capacity is **4 numerical threads in total**.
+- At 08:45 UTC there were no unrelated numerical workers (0 python/julia/Rscript).
+- Background load was about 1 logical CPU, from interactive apps only (Claude, ChatGPT/Codex UI, Task Manager).
+
+| Share | Threads | Status | Granted (UTC) | Valid until (UTC) | Rule |
+|---|---|---|---|---|---|
+| Opus | 2 | active | 2026-10-18 08:46:11 | 2026-10-20 08:41:20 | runner `src/rc18_runner.ps1`, at most 2 leaf processes × 1 BLAS thread; Astra's frozen pilot (1 thread) is drawn from this share |
+| Astra | 2 | **reserved** | 2026-10-18 08:46:11 | 2026-10-20 08:41:20 | created before any heavy Opus computation; Opus never uses it without Astra's completion/release record; Astra lists her live jobs in the record |
+
+**Not reopened:** ASTRA_AL / BA_RISK (cancelled by the owner on 2026-10-16) and the 2026-10-15 pool runner (ended with POOL_END).
+
+**Live jobs:** their PIDs, commands and start times are kept in `pool/POOL_PLAN.json` (the `shares[].jobs` and `external_reservations` fields) and in the runner heartbeat `outputs/research_campaign_20261018/opus/runner/HEARTBEAT.json`.

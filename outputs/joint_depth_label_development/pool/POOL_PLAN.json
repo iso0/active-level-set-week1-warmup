@@ -1,5 +1,4 @@
 {
- "note": "Read by src/jdl_pool_runner.ps1 every cycle. Total capacity 4 threads shared with Astra; one BLAS thread per worker. Lower priority number = launched first. ASTRA_AL allocation per astra_al/ASTRA_AL_PROTOCOL.md section 4: cheap arms 1 worker each; BA_RISK starts with the single predeclared timing unit (max_workers 1) and is raised only after its first acquisition step is recorded.",
  "studies": [
   {
    "name": "trained_al",
@@ -42,7 +41,13 @@
    "priority": 1,
    "max_workers": 1,
    "python": "system",
-   "args": ["-m", "src.jdl_stop_rule", "work", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.jdl_stop_rule",
+    "work",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/joint_depth_label_development/_cache/stop_rule/NEW__*.json.gz",
    "units_total": 20,
    "locks_dir": "outputs/joint_depth_label_development/_cache/stop_rule/locks"
@@ -107,5 +112,55 @@
    "units_total": 10,
    "locks_dir": "outputs/joint_depth_label_development/_cache/astra_al/locks/BA_RISK"
   }
- ]
+ ],
+ "note_history": "Read by src/jdl_pool_runner.ps1 every cycle. Total capacity 4 threads shared with Astra; one BLAS thread per worker. Lower priority number = launched first. ASTRA_AL allocation per astra_al/ASTRA_AL_PROTOCOL.md section 4: cheap arms 1 worker each; BA_RISK starts with the single predeclared timing unit (max_workers 1) and is raised only after its first acquisition step is recorded.",
+ "studies_status": "HISTORY: the 'studies' list belongs to src/jdl_pool_runner.ps1 (2026-10-15/16); that runner ended with POOL_END and is not running. ASTRA_AL / BA_RISK stays cancelled (owner, 2026-10-16); never re-enable.",
+ "coordination": {
+  "role": "SINGLE COORDINATION RECORD (machine-readable) for all numerical work on this host. Human-readable log: outputs/joint_depth_label_development/COORDINATION.md. Update protocol: src/rc18_coord.py docstring (lock file pool/COORDINATION.lock, read, change only your own share, temp file + os.replace, delete lock).",
+  "coordinator": "Opus (Claude Code session, thesis worktree joint-depth-label-dev)",
+  "host": "Burak",
+  "host_capacity": {
+   "logical_cpus": 8,
+   "physical_cores": 4,
+   "ram_gb": 31.8,
+   "measured_utc": "2026-10-18T08:45:00+00:00",
+   "background_load_logical_cpus": 1.0,
+   "background_load_note": "interactive apps only (Claude, ChatGPT/Codex UI, Task Manager); no unrelated numerical workers (0 python/julia/Rscript)"
+  },
+  "capacity_threads_total": 4,
+  "thread_rule": "every leaf numerical process counts with its BLAS/Torch/OpenMP threads; 1 slot per process started with OMP/OPENBLAS/MKL_NUM_THREADS=1, otherwise counted as 4",
+  "campaign": {
+   "name": "research_campaign_20261018",
+   "owner_decision": "2026-10-18 (48-hour physical modelling and sample-efficiency campaign)",
+   "t0_utc": "2026-10-18T08:41:20+00:00",
+   "deadline_utc": "2026-10-20T08:41:20+00:00",
+   "rule": "48 h single total budget; errors/restarts do not reset it; no new fit starts after the deadline"
+  },
+  "shares": [
+   {
+    "owner": "Opus",
+    "threads": 2,
+    "status": "active",
+    "granted_by": "owner (2026-10-18)",
+    "granted_utc": "2026-10-18T08:46:11+00:00",
+    "valid_until_utc": "2026-10-20T08:41:20+00:00",
+    "runner": "src/rc18_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
+    "jobs": []
+   },
+   {
+    "owner": "Astra",
+    "threads": 2,
+    "status": "reserved",
+    "granted_by": "Opus (coordinator), per owner decision 2026-10-18",
+    "granted_utc": "2026-10-18T08:46:11+00:00",
+    "valid_until_utc": "2026-10-20T08:41:20+00:00",
+    "note": "Reserved for Astra's new campaign before any heavy Opus computation. Opus never uses these 2 threads without Astra's own completion/release record here. Astra lists her live jobs (pid, command, start_utc, threads) in 'jobs'.",
+    "jobs": []
+   }
+  ],
+  "no_duplicate_fits": "Opus: SPH-data model/acquisition research (outputs/research_campaign_20261018/opus/). Astra: her own campaign. Shared reference acquisitions (IVR/TruVaR/multiscale level set) are implemented once; the implementing side lists the module here under 'shared_implementations'.",
+  "shared_implementations": [],
+  "last_update_utc": "2026-10-18T08:46:11+00:00"
+ },
+ "external_reservations": []
 }
