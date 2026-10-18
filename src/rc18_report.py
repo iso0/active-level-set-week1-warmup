@@ -22,6 +22,14 @@ REPEATS = (5, 6, 7, 8)
 GRID = list(range(0, C.B1 + 1, 4))
 
 
+def md(df):
+    """Markdown table of a DataFrame (pandas.to_markdown needs `tabulate`, which is not installed; formatting only)."""
+    d = df.reset_index() if not isinstance(df.index, pd.RangeIndex) else df
+    cols = [str(c) for c in d.columns]
+    fmt = lambda v: f"{v:.3f}" if isinstance(v, (float, np.floating)) else str(v)
+    return "\n".join(["| " + " | ".join(cols) + " |", "|" + "---|" * len(cols)] + ["| " + " | ".join(fmt(v) for v in row) + " |" for row in d.itertuples(index=False)])
+
+
 def _concat_reg(full):
     parts = []
     for job in ("reg-new-maximin", "reg-old-maximin", "reg-designs"):
@@ -131,7 +139,7 @@ def label_section(L):
         L.append(f"| {a} | {b} | {g.BA.mean():.3f} | {g.sensitivity.mean():.3f} | {g.specificity.mean():.3f} | {g.q20.mean():.3f} | {g.shortK_captured.mean():.1f}/{int(g.shortK_total.iloc[0])} | "
                  f"{g.brier.mean():.3f} | {g.log_loss.mean():.3f} | {g.AUC.mean():.3f} |")
     au = B[(B.budget >= 8) & (B.budget <= 40)].groupby(["arm", "repeat"]).BA.mean().unstack(0)
-    L += ["", "BA-AULC (mean BA over B8-B40) per repeat:", "", au.round(3).to_markdown() if hasattr(au, "to_markdown") else au.round(3).to_string(), ""]
+    L += ["", "BA-AULC (mean BA over B8-B40) per repeat:", "", md(au.round(3)), ""]
     return B
 
 
@@ -196,7 +204,7 @@ def false_confidence(R, L):
     L += ["## 5b. Stopping with false confidence (exploratory)", "",
           "Learner-side rule: stop when the model's own self-R2 (1 - mean predictive observation variance / variance of paid outputs) reaches the "
           "level at two consecutive grid budgets. False confidence = the true out-of-fold R2 at that budget is still below the level.", "",
-          S.to_markdown() if hasattr(S, "to_markdown") else S.to_string(), ""]
+          md(S), ""]
     return T
 
 
@@ -211,7 +219,7 @@ def costs(L):
                                                                  simulations=("paid", "mean")).round(2)
     L += ["## 6. Cost breakdown", "", "Simulation cost = paid queries (one simulation yields every monitor output; counted once). Output reading: 0.84 s per "
           "simulation (all channels, RC18 extraction). Modelling CPU per trajectory below; the OLD emulators were a one-off 5 s on historical runs.", "",
-          s.to_markdown() if hasattr(s, "to_markdown") else s.to_string(), "", f"Total modelling CPU of the final programme: {Cst.seconds.sum() / 3600:.2f} h.", ""]
+          md(s), "", f"Total modelling CPU of the final programme: {Cst.seconds.sum() / 3600:.2f} h.", ""]
     return Cst
 
 

@@ -13,7 +13,40 @@
 
 ## 1. Main answer
 
-*(filled from the final tables; see §4)*
+**Can a better model learned from the simulations' physical outputs reach the same accuracy with fewer simulations?** For physical quantities: **yes (DEV), through the model.**
+
+**1. Physical outputs (NEW, primary, frozen rule).** The rich model TRSQ has three parts:
+- the previous campaign (OLD, 405 runs) as a GP prior mean;
+- lengthscales shared across the outputs of the same simulations;
+- a QA-aware observation model for truncated records.
+
+TRSQ reaches the target accuracy with **21 fewer NEW simulations on average** per output, and with **zero NEW simulations** for 5 of 6 outputs in all 4 repeats. Whether adaptive acquisition adds anything on top of this model is answered by the design contrasts in §4.
+
+**2. Physically defined region (OLD velocity-spike level set).** Model and acquisition each help by a similar amount:
+- shared-kernel model: +0.033 BA-AULC;
+- straddle acquisition: +0.035;
+- together: about 22 instead of ≥ 44 simulations to the region-accuracy level.
+
+TruVaR does not beat straddle, and Astra's surprise-triggered local reaction adds nothing under the same global schedule.
+
+**3. Keyhole label (NEW, exploratory).** A physics-mediated, cross-campaign classifier (PHYS_TR) has no NEW simulation and is the best calibrated arm:
+
+| Arm | BA |
+|---|---|
+| PHYS_TR at B0 | 0.69 |
+| G3 + margin at B40 | 0.69 |
+| E1 + straddle at B16 | 0.69 |
+| E1 + straddle at B40 | 0.74 |
+
+E1 + straddle overtakes PHYS_TR from about B24. The fast-scan corner remains unresolved (specificity about 0.44).
+
+**4. Temporal structure (D2).** *(below)*
+
+**What did not help (final repeats):**
+- TruVaR versus straddle;
+- local surprise reactions.
+
+*(The acquisition-design contrasts and D2 are added when their final tables are computed.)*
 
 ## 2. What was actually run
 
