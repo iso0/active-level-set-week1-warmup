@@ -135,6 +135,71 @@ def label_section(L):
     return B
 
 
+def levels_section(R, L):
+    """Exploratory: budget-to-target at several accuracy levels, and the share never reached (censored at 64)."""
+    rows = []
+    for pop, rich in (("NEW", "TRSQ"), ("OLD", "SHQ")):
+        d = R[(R["pop"] == pop) & (R.acq == "MAXIMIN") & R.target.isin(C.PRIMARY[pop])]
+        for f in (0.8, 0.9, 0.95):
+            for m in ("M0", rich) + (("M0Q", "SHQ", "TRQ") if pop == "NEW" else ()):
+                g = d[d.model == m]
+                if g.empty:
+                    continue
+                # lev = 0.9 x mean R2_full(M0) over the final repeats, so f x (lev / 0.9) = f x mean R2_full(M0)
+                b = [E.sustained(c, f * lev / 0.9, GRID, 64) for c, lev in zip(g.curve, g.level)]
+                rows.append({"pop": pop, "level_factor": f, "model": m, "budget_mean": float(np.mean(b)), "never_reached_share": float(np.mean(np.array(b) >= 64))})
+    T = pd.DataFrame(rows)
+    L += ["## 5a. Reaching the same accuracy at different levels (exploratory; level = factor x R2_full(M0), MAXIMIN design)", "",
+          "| pop | level factor | model | mean budget-to-target | share never reached by B60 |", "|---|---|---|---|---|"]
+    for _, r in T.iterrows():
+        L.append(f"| {r['pop']} | {r.level_factor} | {r.model} | {r.budget_mean:.1f} | {r.never_reached_share:.2f} |")
+    L.append("")
+    return T
+
+
+def false_confidence(R, L):
+    """Exploratory: a learner-side stopping rule. self-R2(b) = 1 - mean test observation variance / variance of the paid y
+    (the learner's own estimate; no held-out truth). Stop at the first grid budget where self-R2 >= level at b and b+4.
+    False confidence = the evaluator's true R2 at that budget is below the level. Pooled over the 5 folds of a repeat."""
+    rows = []
+    for job, pop in (("reg-new-maximin", "NEW"), ("reg-old-maximin", "OLD")):
+        U = E._units(FIN / job, pop); Tt = C.targets(pop)
+        models = sorted({m for (m, _, _, _) in U})
+        for m in models:
+            for t in C.PRIMARY[pop]:
+                for r in REPEATS:
+                    self_curve = {}
+                    for b in GRID:
+                        num = den = 0.0; okb = True
+                        for f in (1, 2, 3, 4, 5):
+                            u = U.get((m, "MAXIMIN", r, f)); e = None if u is None else {x["budget"]: x for x in u["evals"]}.get(b)
+                            if e is None or e["pred"].get(t) is None:
+                                okb = False; break
+                            ov = np.asarray(e["pred"][t][2]); yp = Tt.reindex(u["paid_ids"][:b])[t].to_numpy(float); yp = yp[np.isfinite(yp)]
+                            if len(yp) < 2:
+                                okb = False; break
+                            num += float(np.sum(ov)); den += len(ov) * float(np.var(yp))
+                        if okb and den > 0:
+                            self_curve[b] = 1 - num / den
+                    row = R[(R["pop"] == pop) & (R.model == m) & (R.acq == "MAXIMIN") & (R.target == t) & (R.repeat == r)]
+                    if row.empty or not self_curve:
+                        continue
+                    lev = float(row.level.iloc[0]); true_c = row.curve.iloc[0]; bs_ = E.sustained(self_curve, lev, GRID, 64)
+                    rows.append({"pop": pop, "model": m, "target": t, "repeat": r, "stop_budget": bs_, "stopped": bs_ < 64,
+                                 "true_R2_at_stop": true_c.get(bs_) if bs_ < 64 else None,
+                                 "false_confidence": bool(bs_ < 64 and true_c.get(bs_, -9) < lev), "true_budget": E.sustained(true_c, lev, GRID, 64)})
+    T = pd.DataFrame(rows)
+    if T.empty:
+        return T
+    S = T.groupby(["pop", "model"]).agg(stopped=("stopped", "mean"), false_confidence=("false_confidence", "mean"), stop_budget=("stop_budget", "mean"),
+                                         true_budget=("true_budget", "mean")).round(3)
+    L += ["## 5b. Stopping with false confidence (exploratory)", "",
+          "Learner-side rule: stop when the model's own self-R2 (1 - mean predictive observation variance / variance of paid outputs) reaches the "
+          "level at two consecutive grid budgets. False confidence = the true out-of-fold R2 at that budget is still below the level.", "",
+          S.to_markdown() if hasattr(S, "to_markdown") else S.to_string(), ""]
+    return T
+
+
 def costs(L):
     rows = []
     for job in ("reg-new-maximin", "reg-old-maximin", "reg-designs", "region", "label"):
@@ -218,7 +283,10 @@ def main():
     L = ["# RC18 final programme — single results table (DEV; final repeats 5-8; frozen protocol PROTOCOL_20261018.md)", "",
          "Every number below is computed by `src/rc18_report.py` from the frozen final units (manifest main/final/RC18_FINAL_MANIFEST.json). "
          "DEV evidence on previously inspected simulations; no C3/C4/Stage A.", ""]
-    R = _concat_reg(full); P, T = reg_section(R, L)
+    R = _concat_reg(full); P, T = reg_section(R, L); LV = levels_section(R, L); FC = false_confidence(R, L)
+    LV.to_csv(REP / "levels_budget.csv", index=False, lineterminator="\n")
+    if not FC.empty:
+        FC.to_csv(REP / "false_confidence.csv", index=False, lineterminator="\n")
     G, TG = region_section(L) if (FIN / "region" / "units").exists() else (None, None)
     B = label_section(L) if (FIN / "label" / "units").exists() else None
     Cst = costs(L)
