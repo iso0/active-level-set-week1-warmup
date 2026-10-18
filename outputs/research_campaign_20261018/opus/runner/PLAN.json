@@ -1,6 +1,6 @@
 {
- "note": "RC18 FINAL programme (manifest main/final/RC18_FINAL_MANIFEST.json, commit eaba0c8d). runner_slots 1: the second Opus slot is used for D2 development. Workers refuse to start if any frozen code/data hash changed. Do not edit frozen files while these jobs run.",
- "runner_slots": 1,
+ "note": "RC18 FINAL programme (manifest main/final/RC18_FINAL_MANIFEST.json, commit eaba0c8d) + D2 (temporal/TEMPORAL_PHASE_MANIFEST.json, commit b6466777). runner_slots 2 from 10:45 UTC: no interactive python while both slots are busy. Workers refuse to start if any frozen code/data hash changed. Do not edit frozen files while these jobs run.",
+ "runner_slots": 2,
  "stop_runner": false,
  "jobs": [
   {"name": "final_reg_new_maximin", "enabled": true, "kind": "pool", "priority": 1, "max_workers": 1, "python": "system",
@@ -27,6 +27,31 @@
    "args": ["-m", "src.rc18_final", "reg-designs", "--threads", "1"],
    "done_glob": "outputs/research_campaign_20261018/opus/main/final/reg-designs/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261018/opus/main/final/reg-designs/failed",
-   "locks_dir": "outputs/research_campaign_20261018/opus/main/final/reg-designs/locks", "units_total": 160, "resume_token": "0"}
+   "locks_dir": "outputs/research_campaign_20261018/opus/main/final/reg-designs/locks", "units_total": 160, "resume_token": "0"},
+  {"name": "d2_features", "enabled": true, "kind": "pool", "priority": 6, "max_workers": 1, "python": "system",
+   "args": ["-m", "src.rc18_temporal", "final-features", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus/temporal/final/features/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus/temporal/final/features/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus/temporal/final/features/locks", "units_total": 80, "resume_token": "0"},
+  {"name": "d2_curves", "enabled": true, "kind": "pool", "priority": 7, "max_workers": 1, "python": "system",
+   "args": ["-m", "src.rc18_temporal", "final-curves", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus/temporal/final/curves/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus/temporal/final/curves/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus/temporal/final/curves/locks", "units_total": 80, "resume_token": "0"},
+  {"name": "transfer_design", "enabled": true, "kind": "pool", "priority": 4, "max_workers": 1, "python": "system",
+   "args": ["-m", "src.rc18_transfer_design", "work", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus/main/transfer_design/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus/main/transfer_design/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus/main/transfer_design/locks", "units_total": 60, "resume_token": "0"},
+  {"name": "physlabel", "enabled": true, "kind": "pool", "priority": 4, "max_workers": 1, "python": "system",
+   "args": ["-m", "src.rc18_physlabel", "work", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus/main/physlabel/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus/main/physlabel/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus/main/physlabel/locks", "units_total": 40, "resume_token": "0"},
+  {"name": "robust_r34", "enabled": true, "kind": "pool", "priority": 8, "max_workers": 1, "python": "system",
+   "args": ["-m", "src.rc18_robust", "work", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus/main/robust_r34/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus/main/robust_r34/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus/main/robust_r34/locks", "units_total": 70, "resume_token": "0"}
  ]
 }
