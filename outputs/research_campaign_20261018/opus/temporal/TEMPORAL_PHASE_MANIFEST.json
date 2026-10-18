@@ -1,0 +1,53 @@
+{
+ "study": "RC18_TEMPORAL_PHASE",
+ "status": "FROZEN BEFORE ANY FINAL D2 OUTCOME",
+ "written_utc": "2026-10-18T10:40:48+00:00",
+ "parent_commit": "eaba0c8d5353cf80ee44c55b04fced74f1440bc7",
+ "repeats": [
+  5,
+  6,
+  7,
+  8
+ ],
+ "features": [
+  "t_on_ms",
+  "tmax__plateau",
+  "tmax__t90_ms",
+  "tmax__peak",
+  "tmax__peak_ms",
+  "tmax__overshoot",
+  "tmax__fluct",
+  "tmax__epeak",
+  "tmax__epeak_ms",
+  "ke__plateau",
+  "ke__t90_ms",
+  "ke__peak",
+  "ke__peak_ms",
+  "ke__overshoot",
+  "ke__fluct",
+  "ke__epeak",
+  "ke__epeak_ms"
+ ],
+ "rich": {
+  "NEW": "TRSQ",
+  "OLD": "SHQ"
+ },
+ "units": {
+  "features": 80,
+  "curves": 80
+ },
+ "code_sha256": {
+  "src/rc18_temporal.py": "6db92b2628f44854164180f1f57ab2523dfaea8b944d76ef9ac53a6934746649",
+  "src/rc18_campaign.py": "a98896753fe9843fc8178df430c785b9287c5e36649910fd984491a6d2d49dcd",
+  "src/rc18_gp.py": "129e60a6606050ef4aee810e04c458bbeb406797d12f4199ad89727765295585",
+  "src/rc18_common.py": "16ebdce433b2d69cd1cb6feb12b6562f4e1be81441a39d3902a27cd3e352c236",
+  "src/rc18_data.py": "0d425dda6a0d98baf63bf60b1cc9b88a9b69d438e88d0754a8729bfddaa34105",
+  "src/jdl_temporal_vel.py": "92888e63ff5411361354a69325f034f102a0b43a672fda5c8a5ac1c31b57c044"
+ },
+ "data_sha256": {
+  "outputs/research_campaign_20261018/opus/temporal/FEATURES.csv": "57417cc636a82bbc56e605edb32d1acfd5ac5f7d2d15ab4eb13c8b503ab548d3",
+  "outputs/research_campaign_20261018/opus/temporal/CURVES.npz": "8671b3fea431e44f9145dc3728c61bbb0ceef0e1831a13cfc35b24b969a80073",
+  "outputs/research_campaign_20261018/opus/temporal/old_feature_emulators.csv": "270312014a10118c2d935e1a640b7e2f76b95f87391fbe75469fb7bfab8b84d3",
+  "outputs/research_campaign_20261018/opus/temporal/TEMPORAL_PHASE_PROTOCOL.md": "31745cb7600ed083f49804e17d9fe564c5148fa4c92422d3dd98970adb0d54b2"
+ }
+}

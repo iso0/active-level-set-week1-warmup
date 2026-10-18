@@ -190,5 +190,60 @@ def curve_models(task, pop, model, F, CV, budgets=(16, 40, "full")):
     return out
 
 
+# ==================================================================================================== D2 driver (final repeats)
+D2_REPEATS = (5, 6, 7, 8)
+D2_MANIFEST = OUT / "TEMPORAL_PHASE_MANIFEST.json"
+D2_CODE = ("src/rc18_temporal.py", "src/rc18_campaign.py", "src/rc18_gp.py", "src/rc18_common.py", "src/rc18_data.py", "src/jdl_temporal_vel.py")
+D2_DATA = ("outputs/research_campaign_20261018/opus/temporal/FEATURES.csv", "outputs/research_campaign_20261018/opus/temporal/CURVES.npz",
+           "outputs/research_campaign_20261018/opus/temporal/old_feature_emulators.csv", "outputs/research_campaign_20261018/opus/temporal/TEMPORAL_PHASE_PROTOCOL.md")
+
+
+def _d2_units(kind):
+    import src.rc18_campaign as C
+    U = {}
+    for pop in ("NEW", "OLD"):
+        for t in C.tasks(pop, D2_REPEATS):
+            for m in ("M0", RICH_T[pop]):
+                U[f"{pop}__r{t['repeat']}_f{t['fold']}__{m}__{kind}"] = (pop, t, m)
+    return U
+
+
+def d2_manifest():
+    import json
+    import src.jdl_stage_m as SMM
+    man = {"study": "RC18_TEMPORAL_PHASE", "status": "FROZEN BEFORE ANY FINAL D2 OUTCOME", "written_utc": RC.utc(), "parent_commit": SMM._git("rev-parse", "HEAD"),
+           "repeats": list(D2_REPEATS), "features": FEATS, "rich": RICH_T, "units": {k: len(_d2_units(k)) for k in ("features", "curves")},
+           "code_sha256": {c: SMM.sha256(SMM.ROOT / c) for c in D2_CODE}, "data_sha256": {c: SMM.sha256(SMM.ROOT / c) for c in D2_DATA}}
+    D2_MANIFEST.write_text(json.dumps(man, indent=1), encoding="utf-8"); print(json.dumps(man["units"]))
+
+
+def d2_check():
+    import json
+    import src.jdl_stage_m as SMM
+    man = json.loads(D2_MANIFEST.read_text(encoding="utf-8"))
+    if not SMM._git("log", "--format=%H", "--", str(D2_MANIFEST.relative_to(SMM.ROOT)).replace("\\", "/")):
+        raise SystemExit("commit the D2 manifest before any final D2 run")
+    for grp in ("code_sha256", "data_sha256"):
+        for c, h in man[grp].items():
+            if SMM.sha256(SMM.ROOT / c) != h:
+                raise SystemExit(f"{c} changed after the D2 freeze")
+
+
+def d2_work(kind):
+    d2_check(); RC.limit_threads(1)
+    Fs = {p: feature_table(p) for p in ("NEW", "OLD")}; CV = dict(np.load(OUT / "CURVES.npz")); U = _d2_units(kind)
+    def fn(name):
+        pop, t, m = U[name]
+        if kind == "features":
+            return run_features_traj(t, pop, m, Fs[pop])
+        return {"rows": curve_models(t, pop, m, Fs[pop], CV), "population": pop, "repeat": t["repeat"], "fold": t["fold"], "model": m}
+    d = OUT / "final" / kind
+    RC.run_units(list(U), fn, d / "units", d / "locks", d / "failed", log=lambda s: print(s, flush=True))
+
+
 if __name__ == "__main__":
-    {"features": features, "emulators": fit_feature_emulators}[sys.argv[1]]()
+    step = sys.argv[1]
+    if step in ("final-features", "final-curves"):
+        d2_work(step.split("-")[1])
+    else:
+        {"features": features, "emulators": fit_feature_emulators, "manifest": d2_manifest}[step]()
