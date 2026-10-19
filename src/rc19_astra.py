@@ -103,7 +103,8 @@ def run_region_astra(task, model, mode, bmax, M=None):
         if snap.digest() != digest0:
             raise RuntimeError("pre-query snapshot changed during ask")
         out = rev.reveal(row); v = float(out["Y"][LN.TI[RESP]]); ok = bool(np.isfinite(v))
-        ev = pol.tell(AP.PaidObservation(paid_id=k, values=(v if ok else None,), quality=(ok,), cost=1.0, canonical_label=None))
+        # her primary channel is centred at the threshold (h = y - tau), the same scale as snapshot.mean
+        ev = pol.tell(AP.PaidObservation(paid_id=k, values=((v - TAU) if ok else None,), quality=(ok,), cost=1.0, canonical_label=None))
         events.append({"budget": b + 1, "reason": ch["reason"], "triggered": bool(ev.get("triggered")), "confirmed_now": bool(ev.get("confirmed_now")),
                        "ended": ev.get("ended"), "prequery_hash": ch["prequery_hash"], "near_tie": bool(ch.get("near_tie"))})
     return {"repeat": task["repeat"], "fold": task["fold"], "model": model, "acq": "ASTRA_" + mode.upper(), "paid": rev.order, "paid_ids": [ids[i] for i in rev.order],
@@ -143,5 +144,30 @@ def accept():
     (COPY / "ADAPTER_ACCEPTANCE.json").write_text(json.dumps(out, indent=1), encoding="utf-8"); print(json.dumps(out, indent=1))
 
 
+AX_TASKS = [(3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (4, 1), (4, 2), (4, 3)]
+AX_MODES = ("sur_global", "boundary_regional", "quota_surprise", "quota_no_surprise")
+AX_DIR = P.OUT / "addendum_ax"
+
+
+def ax_units():
+    return [(f"ax_r{r}_f{f}__{m}", r, f, m) for (r, f) in AX_TASKS for m in AX_MODES]
+
+
+def work():
+    """Runner entry for addendum AX. Refuses unless the main RC19 freeze is intact and the adapter acceptance PASSED."""
+    import src.rc19_final as F
+    F.check(); RC.limit_threads(1)
+    acc = json.loads((COPY / "ADAPTER_ACCEPTANCE.json").read_text(encoding="utf-8"))
+    if acc.get("status") != "PASS":
+        raise SystemExit("adapter acceptance has not passed")
+    M = P.manifest(); T = {(t["repeat"], t["fold"]): t for t in P.tasks(sorted({r for r, _ in AX_TASKS}))}; U = {n: (r, f, m) for n, r, f, m in ax_units()}
+    hashes = {f"r{r}_f{f}": {"split": T[(r, f)]["split_sha256"], "path": T[(r, f)]["path_sha256"]} for (r, f) in AX_TASKS}
+    AX_DIR.mkdir(parents=True, exist_ok=True); (AX_DIR / "AX_TASK_HASHES.json").write_text(json.dumps(hashes, indent=1), encoding="utf-8")
+
+    def fn(name):
+        r, f, m = U[name]; return run_region_astra(T[(r, f)], "SHQ", m, 40, M=M)
+    RC.run_units(list(U), fn, AX_DIR / "units", AX_DIR / "locks", AX_DIR / "failed", log=lambda s: print(s, flush=True))
+
+
 if __name__ == "__main__":
-    {"copy": lambda: print(json.dumps(make_copy(), indent=1)), "accept": accept}[sys.argv[1]]()
+    {"copy": lambda: print(json.dumps(make_copy(), indent=1)), "accept": accept, "work": work}[sys.argv[1]]()

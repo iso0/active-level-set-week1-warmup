@@ -1,0 +1,156 @@
+{
+  "version": "v2",
+  "frozen_utc": "2026-10-18T19:43:08.413405+00:00",
+  "campaign": {
+    "campaign_id": "astra_deep_discovery_20261018",
+    "owner": "Astra",
+    "authorized_by": "user 2026-10-18 message",
+    "started_utc": "2026-10-18T08:40:14+00:00",
+    "deadline_utc": "2026-10-20T08:40:14+00:00",
+    "maximum_elapsed_hours": 48,
+    "host": "BURAK",
+    "authorized_astra_slots": 2,
+    "global_numerical_threads": 4,
+    "coordinator": "Opus",
+    "coordination_record": "C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/outputs/joint_depth_label_development/pool/POOL_PLAN.json",
+    "reference_package": "C:/Users/ozgur/Documents/Codex/2026-10-10/files-pasted-by-the-user-you/outputs/astra_monitor_discovery_20261016",
+    "reference_execution_owner": "Opus; exactly once within its original 1200 s / 650 solves",
+    "initial_local_and_remote_head": "ef761843fa3cae6fb64313a142fec0711ddeaf0a",
+    "initial_reservation_state": "new two-slot allocation not yet present at 2026-10-18T08:40:14Z",
+    "initial_live_numerical_processes": [],
+    "forbidden": [
+      "paid compute",
+      "physical simulator",
+      "C4",
+      "real-data Stage A",
+      "main merge",
+      "external messages",
+      "BA_RISK restart"
+    ],
+    "time_policy": "Deadline is absolute. Restarts, idle coordination waits and sleep do not reset it. No new numerical work starts after deadline."
+  },
+  "source_hashes": {
+    "model.py": "de55fe42bb253de419a12ff1e24d0a9e47cdd3931b83524a037164658acdbb69",
+    "policy.py": "36795c6065c726fee6da081c0a81d4add906de1412dda827cc1919f472360d72",
+    "acquisition.py": "21c7f63c6640eacb6ab2f4fddfd824e4a52a83fb173729f4a0541edef5fc4a91",
+    "worlds.py": "23901884b96109769e8158e84e12d76e398b8f7bfd0369db46fda1ecc116b44c",
+    "numerical_checks.py": "bc0f1cc15b940dc5099aedd59d512a8ed1dd5d1b31886c2abf4078d1720c1a5c",
+    "run_unit.py": "ecf7fab3b06c47d162bd29538a281a47d8b2026e154aebe359a0a04f8c54c9dd",
+    "coordination.py": "c1daaaebeed3489a939ea7820678a7c04578ac5c48d6d9f09d3bcd9752f57776",
+    "ledger.py": "bfc6c243572a7977ffc118b2f197d9dc3484f52e9d8a77d0e07d2534580bc093",
+    "control.py": "1a2671fca57ec2fd02b1469db0cb97c34b4959de52841684480c4e75eb3afe0c",
+    "start_campaign.ps1": "10420ec6b7eaaad342ef117588460f3d5640f27b38e18f8b0f6be6a9cb7a40d5",
+    "supervisor.ps1": "23bdeb2599df204e604fb4ec83fb52753ec8214a8fe7d50885d3ffb9566d55c5",
+    "DESIGN_V1.md": "d978f0a7441cb5ea2090f78fcf95c74fa09b9f4d4d19d451d921ec5a493537de",
+    "EXPERIMENT_V1.md": "2f6852161f5ec36549d75236629cc1b67e7b7892ed65d191c89fa0f8effd0077",
+    "AMENDMENT_02_BOUNDARY_SURPRISE.md": "c5e45a9c3c2cf98f5806c95dcbd6107665c2e254fd0c3862488f22554343afb9",
+    "analyse.py": "776156c75f621d3e6de4de0af5d876b4b1e008058465c62a6002392df4c2c31b"
+  },
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "psutil": "7.2.2",
+    "threadpoolctl": "3.6.0",
+    "matplotlib": "3.10.9"
+  },
+  "families": [
+    "smooth",
+    "island_small_unseen",
+    "island_large_unseen",
+    "island_small_seen",
+    "island_large_seen",
+    "anisotropic",
+    "local_scale",
+    "heteroscedastic",
+    "heavy_tail",
+    "null",
+    "corrupt_correlated",
+    "multi_shared",
+    "multi_conflict",
+    "multi_missing"
+  ],
+  "arms": {
+    "simple": [
+      "random",
+      "maximin",
+      "maxvar",
+      "straddle",
+      "margin",
+      "truvar",
+      "multiscale_tree",
+      "ca_smart_adapt",
+      "sur_global",
+      "regional",
+      "ungated_local",
+      "blind_local",
+      "vtl",
+      "boundary_regional"
+    ],
+    "mixture": [
+      "straddle",
+      "sur_global",
+      "regional",
+      "ungated_local",
+      "blind_local",
+      "vtl",
+      "random",
+      "maximin",
+      "boundary_regional"
+    ],
+    "structure": [
+      "random",
+      "maximin",
+      "straddle",
+      "sur_global",
+      "boundary_regional",
+      "boundary_blind",
+      "ungated_local"
+    ]
+  },
+  "world_sizes": {
+    "dimension": 4,
+    "pool_size": 512,
+    "eval_size": 2048,
+    "ref_size": 1024,
+    "startup": 8,
+    "reference_rule": "sobol",
+    "reference_seed": 251018
+  },
+  "dev": {
+    "seed_base": 810000,
+    "realizations": 3,
+    "family_stride": 1000,
+    "budget": 40
+  },
+  "test": {
+    "seed_base": 920000,
+    "realizations": 24,
+    "family_stride": 1000,
+    "budget": 64
+  },
+  "nominal_counts": {
+    "DEV_trajectories": 1278,
+    "TEST_trajectories": 10224,
+    "controlled_requests": 624942,
+    "component_solves": 4019580,
+    "scope": "v2 planned, excluding retained v1 and diagnostic overhead; cumulative envelope applies to all versions"
+  },
+  "finite_envelope": {
+    "controlled_requests": 700000,
+    "controlled_component_solves": 6000000,
+    "reference_requests": 400,
+    "reference_component_solves": 6000
+  },
+  "reference_pilot": "owned and already completed once by Opus; never scheduled here",
+  "test_gate": "Automatic only after numerical reference PASS and all v2 DEV complete with matched-path invariants. No scientific-score gate or selection.",
+  "exposure": "All v1.1 DEV outcomes and Opus RC18 inspected before this revision; v2 TEST realizations never generated or opened.",
+  "analysis": "Original two primary comparisons plus two revised primary comparisons, Holm across four; target and censoring unchanged.",
+  "unit_prefix": "v2__",
+  "reference_unit_id": "000_REFERENCE_v2",
+  "amendment": "AMENDMENT_02_BOUNDARY_SURPRISE.md",
+  "parent_manifest_sha256": "ed179c5def23059cd239402bc76d040e01f72665b814862392203bf8f4243c44",
+  "policy_seed": 713019,
+  "automatic_test_release_after_all_DEV_complete": true
+}

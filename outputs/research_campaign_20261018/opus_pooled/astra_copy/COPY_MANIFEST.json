@@ -1,0 +1,12 @@
+{
+ "utc": "2026-10-19T13:31:00Z",
+ "purpose": "verbatim read-only copy of Astra's frozen v2 selector files for RC19 addendum AX (her workspace is never written or imported from)",
+ "source_dir": "C:/Users/ozgur/Documents/Codex/2026-10-10/files-pasted-by-the-user-you/outputs/astra_deep_discovery_20261018",
+ "her_manifests": {"FROZEN_MANIFEST_V2.json": "958a8794c1110f5fe1bff235d220be7eea3e43943b61b4c6342ddfc7cd505142", "FROZEN_QUOTA_CONTROL_V1.json": "copied as HER_FROZEN_QUOTA_CONTROL_V1.json"},
+ "files": {
+  "model.py": {"source_sha256": "de55fe42bb253de419a12ff1e24d0a9e47cdd3931b83524a037164658acdbb69", "copy_sha256": "de55fe42bb253de419a12ff1e24d0a9e47cdd3931b83524a037164658acdbb69", "listed_in": "FROZEN_MANIFEST_V2.json"},
+  "policy.py": {"source_sha256": "36795c6065c726fee6da081c0a81d4add906de1412dda827cc1919f472360d72", "copy_sha256": "36795c6065c726fee6da081c0a81d4add906de1412dda827cc1919f472360d72", "listed_in": "FROZEN_MANIFEST_V2.json"},
+  "acquisition.py": {"source_sha256": "21c7f63c6640eacb6ab2f4fddfd824e4a52a83fb173729f4a0541edef5fc4a91", "copy_sha256": "21c7f63c6640eacb6ab2f4fddfd824e4a52a83fb173729f4a0541edef5fc4a91", "listed_in": "FROZEN_MANIFEST_V2.json"},
+  "quota_policy.py": {"source_sha256": "187b11c06b815f8e8924d0d18310a77c3d07f6ac449e3be6842d34d41fd78d24", "copy_sha256": "187b11c06b815f8e8924d0d18310a77c3d07f6ac449e3be6842d34d41fd78d24", "listed_in": "FROZEN_QUOTA_CONTROL_V1.json"}
+ }
+}

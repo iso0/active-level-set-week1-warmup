@@ -1,0 +1,33 @@
+{
+  "version": "quota-control-v1",
+  "frozen_utc": "2026-10-18T19:52:26.332578+00:00",
+  "parent_manifest": "FROZEN_MANIFEST_V2.json",
+  "parent_sha256": "958a8794c1110f5fe1bff235d220be7eea3e43943b61b4c6342ddfc7cd505142",
+  "source_hashes": {
+    "quota_policy.py": "187b11c06b815f8e8924d0d18310a77c3d07f6ac449e3be6842d34d41fd78d24",
+    "quota_worker.py": "690e66920fd31f6cc2a0768ac6663a2d85f0f6a6af3573448809a4c7e10f8866",
+    "quota_checks.py": "0354c503b6bc73faad0a4b2e901b8db5c3cf3265bfb849a1af80804d6db2405d",
+    "quota_analysis.py": "78076ba9d3139673d8c5043eacdfcb5feb0bf3fdbe16fb26874b8c7938c3582c",
+    "postprocess.ps1": "715519ae8c3100d6b9b08a8233bdf860d2c033752fde665504011c5fdc7ea33a",
+    "AMENDMENT_03_FIXED_LOCAL_SHARE.md": "538fa22ac80543effe4ce87e7ab17e5ecbf9abbe2818253687772b505ae2936b",
+    "plot_results.py": "0c499164244d0c2138c5d13a694cc9ee1a51f7a040737a797440a26e47184a34",
+    "slice_and_replay.py": "58514ffac9f3df894317633dc88cb4b123b7fcf0bc7b12eb0a08a71a9d08acb9"
+  },
+  "policy_seed": 713019,
+  "model": "structure",
+  "arms": [
+    "quota_surprise",
+    "quota_no_surprise"
+  ],
+  "nominal": {
+    "DEV_trajectories": 84,
+    "TEST_trajectories": 672,
+    "controlled_requests": 41076,
+    "component_solves": 704160,
+    "reference_requests": 24,
+    "reference_component_solves": 288
+  },
+  "deadline_utc": "2026-10-20T08:40:14+00:00",
+  "no_new_capacity": true,
+  "analysis": "AMENDMENT_03_FIXED_LOCAL_SHARE.md; same unopened TEST worlds, descriptive matched-control contrast"
+}
