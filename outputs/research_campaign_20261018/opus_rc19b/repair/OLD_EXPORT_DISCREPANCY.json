@@ -1,0 +1,20 @@
+{
+ "label": {
+  "cells": 2968,
+  "BA_cells_changed": 44,
+  "BA_max_abs_diff": 0.03488372093023262,
+  "log_loss_max_abs_diff": 0.06589173613885202,
+  "worst_cell": {
+   "arm": "G3_MARGIN",
+   "repeat": 8.0,
+   "budget": 44.0,
+   "BA_f16": 0.8548061031755401,
+   "BA_csv": 0.8896898241057727
+  }
+ },
+ "region": {
+  "cells": 3392,
+  "BA_cells_changed": 37,
+  "BA_max_abs_diff": 0.0022321428571430157
+ }
+}

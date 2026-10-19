@@ -1,0 +1,53 @@
+{
+ "valid_duration": 484,
+ "zeros": 234,
+ "zero_share": 0.4834710743801653,
+ "missing_NaN": 57,
+ "zero_share_by_batch(provenance only)": {
+  "OLD": 0.6246418338108882,
+  "NEW": 0.11851851851851852
+ },
+ "zeros_with_logratio_ge_log2": 0,
+ "positives_with_logratio_lt_log2": 26,
+ "logratio_quantiles_zero": [
+  0.012,
+  0.195,
+  0.396,
+  0.652
+ ],
+ "logratio_quantiles_positive": [
+  0.146,
+  0.69,
+  1.159,
+  2.196
+ ],
+ "output_interval_DT_us_quantiles": [
+  1.9,
+  8.28,
+  31.95
+ ],
+ "positive_duration_in_rows_quantiles": [
+  0.0,
+  0.14,
+  2.85,
+  4.78,
+  10.95
+ ],
+ "positives_with_at_most_2_rows": 46,
+ "zero_share_short_records": 0.2,
+ "short_records_valid": 5,
+ "zero_share_by_keyhole_label": {
+  "0": 0.7689655172413793,
+  "1": 0.05670103092783505
+ },
+ "active_rows_quantiles_zero_vs_positive": [
+  [
+   52832.7,
+   66345.5
+  ],
+  [
+   59827.1,
+   85158.0
+  ]
+ ]
+}

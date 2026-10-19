@@ -57,6 +57,21 @@
    "args": ["-m", "src.rc19_astra", "work", "--threads", "1"],
    "done_glob": "outputs/research_campaign_20261018/opus_pooled/addendum_ax/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261018/opus_pooled/addendum_ax/failed",
-   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/addendum_ax/locks", "units_total": 32, "resume_token": "0"}
+   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/addendum_ax/locks", "units_total": 32, "resume_token": "0"},
+  {"name": "b_replay", "enabled": true, "kind": "pool", "priority": 21, "max_workers": 2, "python": "system",
+   "args": ["-m", "src.rc19b_jobs", "work", "b-replay", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus_rc19b/b-replay/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_rc19b/b-replay/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_rc19b/b-replay/locks", "units_total": 120, "resume_token": "0"},
+  {"name": "b_replay_k", "enabled": true, "kind": "pool", "priority": 22, "max_workers": 2, "python": "system",
+   "args": ["-m", "src.rc19b_jobs", "work", "b-replay-k", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus_rc19b/b-replay-k/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_rc19b/b-replay-k/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_rc19b/b-replay-k/locks", "units_total": 40, "resume_token": "0"},
+  {"name": "b_dur_replay", "enabled": true, "kind": "pool", "priority": 22, "max_workers": 1, "python": "system",
+   "args": ["-m", "src.rc19b_jobs", "work", "b-dur-replay", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus_rc19b/b-dur-replay/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_rc19b/b-dur-replay/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_rc19b/b-dur-replay/locks", "units_total": 120, "resume_token": "0"}
  ]
 }

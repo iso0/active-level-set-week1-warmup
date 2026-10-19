@@ -1,0 +1,32 @@
+{
+ "utc": "2026-10-19T18:31:29+00:00",
+ "honesty": {
+  "K": 5,
+  "own_outcome_changes_own_oof_prediction_max": 0.0,
+  "other_folds_changed_in_cases": 3,
+  "PASS": true
+ },
+ "shadow": {
+  "E1S": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 2.6
+  },
+  "ATSCF_MARGIN": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 2.5
+  },
+  "DEPTHCF_MARGIN": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 0.7
+  }
+ },
+ "calibration_identity_recovery": {
+  "a": 0.15792479292393885,
+  "c": 1.0098862343469686,
+  "ok": true
+ },
+ "status": "PASS"
+}

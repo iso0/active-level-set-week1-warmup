@@ -52,3 +52,6 @@ outputs/research_campaign_20261018/opus_pooled/runner/HEARTBEAT.json
 outputs/research_campaign_20261018/opus_pooled/runner/STATE.json
 outputs/research_campaign_20261018/opus_pooled/runner/STATUS.md
 outputs/research_campaign_20261018/opus_pooled/runner/*.tmp
+# RC19B continuation: per-unit checkpoints (reproducible from the frozen code) and claim locks; failure records stay tracked
+outputs/research_campaign_20261018/opus_rc19b/**/units/
+outputs/research_campaign_20261018/opus_rc19b/**/locks/
