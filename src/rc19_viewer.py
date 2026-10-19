@@ -37,9 +37,13 @@ def build(stage="final", repeat=None):
                     continue                                                   # every 2nd budget keeps the page small
                 vals = e["mean"] if task == "region" else e["p"]
                 row = A["pred"].setdefault(str(b), [None] * len(ids))
+                cut = float(np.log(2.0)) if task == "region" else 0.5
                 if vals is not None:
                     for i, v in zip(tix, vals):
-                        row[i] = None if v is None else round(float(v), 4)
+                        if v is None:
+                            row[i] = None; continue
+                        r_ = round(float(v), 4)
+                        row[i] = r_ if (r_ >= cut) == (float(v) >= cut) else float(v)   # rounding never moves a run across the decision cut
             A["paid"][str(u["fold"])] = [pos[s] for s in u["paid_ids"]]
         out["tasks"][task] = arms
     return out
@@ -155,18 +159,25 @@ def check_numbers(data, stage):
         for b, pred in A["pred"].items():
             pv = np.asarray([np.nan if v is None else v for v in pred], float); ok = np.isfinite(sp) & np.isfinite(pv); t = sp[ok] >= data["tau"]; q = pv[ok] >= data["tau"]
             ba = 0.5 * (np.mean(q[t]) + np.mean(~q[~t])); worst = max(worst, abs(ba - g.loc[int(b)]))
+    B = EV.label_metrics(EV.load_units(P.OUT / stage / ("final-label" if stage == "final" else "dev-label")), M)
+    y = np.asarray(data["runs"]["y"], int)
+    for arm, A in data["tasks"]["label"].items():
+        g = B[(B.arm == arm) & (B.repeat == r)].set_index("budget").BA
+        for b, pred in A["pred"].items():
+            pv = np.asarray([np.nan if v is None else v for v in pred], float); ok = np.isfinite(pv); q = pv[ok] >= 0.5; t = y[ok] == 1
+            ba = 0.5 * (np.mean(q[t]) + np.mean(~q[~t])); worst = max(worst, abs(ba - g.loc[int(b)]))
     return worst
 
 
 def main():
     stage = sys.argv[1] if len(sys.argv) > 1 else "final"; repeat = int(sys.argv[2]) if len(sys.argv) > 2 else None
     data = build(stage, repeat); REP = P.OUT / "report"; REP.mkdir(parents=True, exist_ok=True)
-    worst = check_numbers(data, stage); data["check_max_abs_diff_region_BA"] = worst
+    worst = check_numbers(data, stage); data["check_max_abs_diff_BA"] = worst
     tag = "" if stage == "final" else "_dev"
     (REP / f"pooled_boundary_view{tag}.json").write_text(json.dumps(data, separators=(",", ":")), encoding="utf-8")
     html = HTML.replace("__DATA__", json.dumps(data, separators=(",", ":"))).replace("__REPEAT__", str(data["repeat"])).replace("__STAGE__", stage)
     (REP / f"pooled_boundary_view{tag}.html").write_text(html, encoding="utf-8")
-    print(REP / f"pooled_boundary_view{tag}.html", len(html) // 1024, "KB; max |page BA - evaluator BA| (region) =", worst)
+    print(REP / f"pooled_boundary_view{tag}.html", len(html) // 1024, "KB; max |page BA - evaluator BA| (region and label) =", worst)
 
 
 if __name__ == "__main__":

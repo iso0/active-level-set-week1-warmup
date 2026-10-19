@@ -1,0 +1,8 @@
+{
+ "psd_finite": true,
+ "info_fraction_vs_dense_max_abs_diff": 2.549909727811439e-10,
+ "info_fraction_ok": true,
+ "deterministic_continuation": true,
+ "paid_ids_unique": true,
+ "status": "PASS"
+}

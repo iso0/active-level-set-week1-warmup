@@ -52,6 +52,11 @@
    "args": ["-m", "src.rc19_jobs", "work", "final-temporal", "--threads", "1"],
    "done_glob": "outputs/research_campaign_20261018/opus_pooled/final/final-temporal/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261018/opus_pooled/final/final-temporal/failed",
-   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/final/final-temporal/locks", "units_total": 40, "resume_token": "0"}
+   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/final/final-temporal/locks", "units_total": 40, "resume_token": "0"},
+  {"name": "addendum_ax", "enabled": true, "kind": "pool", "priority": 12, "max_workers": 1, "python": "system",
+   "args": ["-m", "src.rc19_astra", "work", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus_pooled/addendum_ax/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_pooled/addendum_ax/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/addendum_ax/locks", "units_total": 32, "resume_token": "0"}
  ]
 }

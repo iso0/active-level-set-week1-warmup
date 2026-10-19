@@ -146,7 +146,7 @@
         "valid_until_utc": "2026-10-20T08:41:20+00:00",
         "jobs": [],
         "runner": "src/rc19_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
-        "jobs_updated_utc": "2026-10-19T13:22:33Z"
+        "jobs_updated_utc": "2026-10-19T15:04:28Z"
       },
       {
         "owner": "Astra",
@@ -158,12 +158,12 @@
         "note": "Reserved for Astra's new campaign before any heavy Opus computation. Opus never uses these 2 threads without Astra's own completion/release record here. Astra lists her live jobs (pid, command, start_utc, threads) in 'jobs'.",
         "jobs": [
           {
-            "pid": 13332,
-            "create_time": 1792416425.4893703,
+            "pid": 24516,
+            "create_time": 1792422514.360379,
             "host": "Burak",
             "threads": 1,
             "job": "astra_deep_discovery_20261018",
-            "start_utc": "2026-10-19T13:27:10.654701+00:00",
+            "start_utc": "2026-10-19T15:08:38.381355+00:00",
             "command": [
               "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe",
               "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\run_unit.py",
@@ -175,12 +175,12 @@
             "variance_contract": "latent plus explicit independent noise"
           },
           {
-            "pid": 11408,
-            "create_time": 1792416426.1328807,
+            "pid": 25400,
+            "create_time": 1792422514.9204168,
             "host": "Burak",
             "threads": 1,
             "job": "astra_deep_discovery_20261018",
-            "start_utc": "2026-10-19T13:27:13.941854+00:00",
+            "start_utc": "2026-10-19T15:08:42.953525+00:00",
             "command": [
               "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe",
               "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\run_unit.py",
@@ -192,7 +192,7 @@
             "variance_contract": "latent plus explicit independent noise"
           }
         ],
-        "jobs_updated_utc": "2026-10-19T13:27:13.941867+00:00",
+        "jobs_updated_utc": "2026-10-19T15:08:42.953536+00:00",
         "handoff": {
           "path": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\OPUS_PACKAGE_ENTRY.md",
           "active_manifest": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\FROZEN_MANIFEST_V2.json",
@@ -213,7 +213,7 @@
     ],
     "no_duplicate_fits": "Opus: SPH-data model/acquisition research (outputs/research_campaign_20261018/opus/). Astra: her own campaign. Shared reference acquisitions (IVR/TruVaR/multiscale level set) are implemented once; the implementing side lists the module here under 'shared_implementations'.",
     "shared_implementations": [],
-    "last_update_utc": "2026-10-19T13:27:13.941869+00:00"
+    "last_update_utc": "2026-10-19T15:08:42.953538+00:00"
   },
   "external_reservations": [
     {

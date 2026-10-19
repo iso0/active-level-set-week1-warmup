@@ -17,3 +17,18 @@
 {"event":"WORKER_START","job":"dev_temporal","worker":1,"pid":24876,"opus_used_before":1,"astra_used":2,"leaves":"astra:27412:1 astra:29156:1","utc":"2026-10-19T13:18:29Z"}
 {"event":"WORKER_END","job":"dev_temporal","worker":1,"pid":24876,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:19:31Z"}
 {"event":"WORKER_END","job":"dev_full","worker":1,"pid":11888,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:22:33Z"}
+{"event":"WORKER_START","job":"final_label","worker":1,"pid":18244,"opus_used_before":0,"astra_used":2,"leaves":"astra:13332:1 astra:11408:1","utc":"2026-10-19T13:28:39Z"}
+{"event":"WORKER_START","job":"final_label","worker":2,"pid":18240,"opus_used_before":1,"astra_used":2,"leaves":"astra:13332:1 astra:11408:1","utc":"2026-10-19T13:29:10Z"}
+{"event":"WORKER_END","job":"final_label","worker":1,"pid":18244,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:39:54Z"}
+{"event":"WORKER_END","job":"final_label","worker":2,"pid":18240,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:39:54Z"}
+{"event":"WORKER_START","job":"final_region","worker":1,"pid":22464,"opus_used_before":0,"astra_used":2,"leaves":"astra:13332:1 astra:11408:1","utc":"2026-10-19T13:39:55Z"}
+{"event":"WORKER_START","job":"addendum_ax","worker":1,"pid":14516,"opus_used_before":1,"astra_used":2,"leaves":"astra:20304:1 astra:10072:1","utc":"2026-10-19T13:41:57Z"}
+{"event":"WORKER_END","job":"addendum_ax","worker":1,"pid":14516,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:50:39Z"}
+{"event":"WORKER_START","job":"final_region","worker":2,"pid":9484,"opus_used_before":1,"astra_used":2,"leaves":"astra:20304:1 astra:10072:1","utc":"2026-10-19T13:50:39Z"}
+{"event":"RUNNER_START","pid":17384,"utc":"2026-10-19T13:53:26Z"}
+{"event":"WORKER_START","job":"final_reg","worker":1,"pid":18696,"opus_used_before":0,"astra_used":3,"leaves":"astra:20304:1 astra:10072:1 astra:2044:1","utc":"2026-10-19T14:17:50Z"}
+{"event":"WORKER_START","job":"final_reg","worker":2,"pid":21748,"opus_used_before":1,"astra_used":2,"leaves":"astra:29212:1 astra:9740:1","utc":"2026-10-19T14:22:56Z"}
+{"event":"WORKER_END","job":"final_reg","worker":2,"pid":21748,"exit_code":0,"locks_released":0,"utc":"2026-10-19T15:01:54Z"}
+{"event":"WORKER_START","job":"final_temporal","worker":1,"pid":29480,"opus_used_before":1,"astra_used":2,"leaves":"astra:29212:1 astra:9740:1","utc":"2026-10-19T15:01:55Z"}
+{"event":"WORKER_END","job":"final_reg","worker":1,"pid":18696,"exit_code":0,"locks_released":0,"utc":"2026-10-19T15:02:26Z"}
+{"event":"WORKER_END","job":"final_temporal","worker":1,"pid":29480,"exit_code":0,"locks_released":0,"utc":"2026-10-19T15:04:28Z"}
