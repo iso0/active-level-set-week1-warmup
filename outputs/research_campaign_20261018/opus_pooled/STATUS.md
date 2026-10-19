@@ -47,3 +47,50 @@ This is idempotent: finished units are skipped and a lock prevents a second runn
 - figures, predictions and paths;
 - the 3D view (private claude.ai page);
 - `MODEL_DEFINITIONS_RC19.md`, `QUEUE.md`.
+
+## Update 3 — 2026-10-19 20:00 UTC (RC19B continuation; about 12.7 h left)
+
+The owner instruction of 2026-10-19 ("RC19 continuation: improve the pooled learner and prove where the gain comes from"); outputs in `../opus_rc19b/`; ledger rows RC19B-*.
+
+**Done:**
+1. **Repairs from caches** (no refit): dated erratum `ERRATUM_RC19_20261019.md` A–F; float32 exports with acceptance PASS. No RC19 verdict changed.
+2. **Development replays on the RC19 final paths**, 0 failures:
+   - 120 Keyhole units with K = 5;
+   - 40 fold-size units;
+   - 120 duration-hurdle units;
+   - the duration zero audit.
+   - The selection rules were recorded before the replays were read (RC19B-SELECT-RULES). They give CF_K = 10 and the QS_RAW hurdle (RC19B-DESIGN).
+3. **Acceptance and smoke test:** `RC19B_VALIDATION_FINAL.json` PASS; 45 smoke units on seen repeat 1; the frozen report and export ran end to end.
+4. **Freeze** before any final run: `../opus_rc19b/PROTOCOL_RC19B.md` and manifest, commit 8299437f. It includes the evaluation, report and export code.
+
+**Running** on the same queue (runner PID 17384), fresh repeats 11–18:
+- `b_final_label`, 200 trajectories, from 19:56 UTC on 2 workers;
+- then `b_final_reg`, 160 trajectories.
+
+**Resources:** Opus 2 leaf processes; Astra 2, untouched. Her TEST was 8,952 complete and 1,270 pending at 19:58 UTC.
+
+**Next:**
+- the frozen report (`src/rc19b_report.py all`);
+- the single-learner viewer and the relabelled RC19 view;
+- `FINAL_REPORT_RC19B.md` and the Turkish summary.
+
+## Update 4 — 2026-10-19 22:05 UTC (RC19B complete; about 10.6 h left)
+
+**Final programme complete:** `b_final_label` 200/200 and `b_final_reg` 160/160, 0 failures. Queue IDLE; the runner stops by itself at the deadline.
+
+**Verdicts (DEV, fresh repeats 11–18):**
+- **Keyhole PRIMARY: BETTER.** The honest physical classifier beats calibrated E1 in log loss, −0.030 (7/8).
+  - T/S beyond depth −0.030 (7/8).
+  - Every BA contrast is NOT DIFFERENT.
+  - The approximation still beats the honest construction (Brier WORSE).
+- **Physical outputs:**
+  - The hurdle duration is WORSE in 3 of 4 arms.
+  - Bottleneck-aware MOIVRB does not help.
+  - M0Q + MOIVR completes the joint target 7/8 and needs 23.5 fewer simulations than SHQ + RANDOM (BETTER). The ranking is unstable across repeat sets (RC19 had the opposite).
+- The fast-scan corner remains unresolved.
+
+**Deliverables:**
+- `../opus_rc19b/FINAL_REPORT_RC19B.md` (Turkish explanation first), `report/`, `export_final/`;
+- single-learner viewer (private claude.ai page); RC19 view relabelled.
+
+**Astra:** untouched (TEST 9,529 complete and 694 pending at 22:01 UTC).

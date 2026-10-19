@@ -72,6 +72,16 @@
    "args": ["-m", "src.rc19b_jobs", "work", "b-dur-replay", "--threads", "1"],
    "done_glob": "outputs/research_campaign_20261018/opus_rc19b/b-dur-replay/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261018/opus_rc19b/b-dur-replay/failed",
-   "locks_dir": "outputs/research_campaign_20261018/opus_rc19b/b-dur-replay/locks", "units_total": 120, "resume_token": "0"}
+   "locks_dir": "outputs/research_campaign_20261018/opus_rc19b/b-dur-replay/locks", "units_total": 120, "resume_token": "0"},
+  {"name": "b_final_label", "enabled": true, "kind": "pool", "priority": 31, "max_workers": 2, "python": "system",
+   "args": ["-m", "src.rc19b_jobs", "work", "b-final-label", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus_rc19b/b-final-label/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_rc19b/b-final-label/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_rc19b/b-final-label/locks", "units_total": 200, "resume_token": "0"},
+  {"name": "b_final_reg", "enabled": true, "kind": "pool", "priority": 32, "max_workers": 2, "python": "system",
+   "args": ["-m", "src.rc19b_jobs", "work", "b-final-reg", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus_rc19b/b-final-reg/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_rc19b/b-final-reg/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_rc19b/b-final-reg/locks", "units_total": 160, "resume_token": "0"}
  ]
 }

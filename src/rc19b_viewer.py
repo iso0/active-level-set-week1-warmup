@@ -145,8 +145,7 @@ def relabel():
            'For a single learner with its own grid predictions, use the single-learner view. The fourth input ST is filtered explicitly.</p>')
     out = src.replace(old, new.replace("__STAGE__", "final").replace("__REPEAT__", str(json.loads(
         (P.OUT / "report" / "pooled_boundary_view.json").read_text(encoding="utf-8"))["repeat"]))).replace(
-        "paid by the chosen fold</div>", "paid by the chosen fold's learner (training runs of that one learner only)</div>").replace(
-        "<title>Pooled Boundary View</title>", "<title>Pooled Boundary View (relabelled)</title>")
+        "paid by the chosen fold</div>", "paid by the chosen fold's learner (training runs of that one learner only)</div>")
     VIEW.mkdir(parents=True, exist_ok=True); (VIEW / "pooled_boundary_view_RC19_relabelled.html").write_text(out, encoding="utf-8")
     print(VIEW / "pooled_boundary_view_RC19_relabelled.html", "changed:", out != src)
 

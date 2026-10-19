@@ -21,6 +21,11 @@
 | final_reg | 280 | freeze manifest | `python -m src.rc19_jobs work final-reg --threads 1` |
 | final_temporal | 40 | freeze manifest | `python -m src.rc19_jobs work final-temporal --threads 1` |
 | addendum_ax | 32 | AX acceptance PASS + freeze manifest | `python -m src.rc19_astra work --threads 1` |
+| **RC19B (continuation, 2026-10-19)** | | | outputs in `opus_rc19b/<job>/` |
+| b_replay / b_replay_k / b_dur_replay | 120 / 40 / 120 (done, 0 failed) | — (development replays on RC19 final paths) | `python -m src.rc19b_jobs work <job> --threads 1` |
+| b_final_label | 200 (done 19:56–20:55 UTC, 0 failed) | RC19B freeze manifest `opus_rc19b/final/RC19B_FINAL_MANIFEST.json` (commit 8299437f) | `python -m src.rc19b_jobs work b-final-label --threads 1` |
+| b_final_reg | 160 (done 20:55–21:56 UTC, 0 failed) | RC19B freeze manifest | `python -m src.rc19b_jobs work b-final-reg --threads 1` |
+| report (not a queue job) | — | both final jobs | `python -m src.rc19b_report all`, then `python -m src.rc19b_viewer build`, `python -m src.rc19b_figures`, `python -m src.rc19b_paths` |
 
 ## Exact launch / resume
 
