@@ -1,0 +1,152 @@
+{
+ "utc": "2026-10-19T19:54:24+00:00",
+ "repeats": [
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18
+ ],
+ "files": {
+  "src/rc19b_keyhole.py": "d2a08f37f0e4c38e2b03e93d91e402c6f7f28a582e6d9619f6e60d85123c21bb",
+  "src/rc19b_duration.py": "5f168a3152856c3cf74d57e0c4e93364953156ac147123777ebd65766db68022",
+  "src/rc19b_jobs.py": "278951b85100f5c0202bec1d6526d53bab022f070a4d9c9044ed7a1147c5b4c9",
+  "src/rc19b_final.py": "ca6228bd9e08ccdf2e48125b2ed5933b8674a08350c21af5da62e1c3d9f8c500",
+  "src/rc19b_keyhole_eval.py": "84047cfcf30b78fc0b77d038446c66f3377f7c25421ee2cb5d666850011f5eb8",
+  "src/rc19b_duration_eval.py": "6e5d0c3a6ca77f5a5ca420fb63c474b4acae9e947f808235a769373d0326f113",
+  "src/rc19b_report.py": "83eb191eb6cb5606a20a756a5193ace057e6babe6235cdbd7f7fee0779770863",
+  "src/rc19b_repair.py": "2e723f890df9e94e8ee0cf14c40cd039c0f81904d2ec3ecea698c6f54d3675c1",
+  "src/rc19b_validate.py": "fe2726da825e39372a868ce2881cc73a36c6c1b3ac8abbb2756eec4e4c834716",
+  "src/rc19_pool.py": "842f6e0400d6e73e28201c07f218f3a3f92ee222a14043b11a21058bd3f24a83",
+  "src/rc19_learn.py": "19ba87415f78f71fb89c2997e67ac0c09ad2a22321b189a8220413fc6bd72703",
+  "src/rc19_eval.py": "8e733c694a2cb17ea282f04caf5cdddcf9d2d3913108e8700875664ee324abd1",
+  "src/rc19_report.py": "4c53d79d5c7209daf0b25f7140e7ee615a5018d99788c00366fefb9365144b75",
+  "src/rc19_final.py": "03751692a25dbad8216aee613cca973a6d507aeef116a419623f6d3ccb7716e5",
+  "src/rc18_campaign.py": "a98896753fe9843fc8178df430c785b9287c5e36649910fd984491a6d2d49dcd",
+  "src/rc18_gp.py": "129e60a6606050ef4aee810e04c458bbeb406797d12f4199ad89727765295585",
+  "src/rc18_common.py": "16ebdce433b2d69cd1cb6feb12b6562f4e1be81441a39d3902a27cd3e352c236",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d",
+  "src/week17_models.py": "7b7ad8846a4fa4f721b21ec6853b06b704ece658ee4a7e7902d3d21827d47570",
+  "src/week17_audit_impact.py": "46e05394afe519b28148a1d382bc7d9f767a97a99fba5e124457c223f653905e",
+  "src/week13_synthetic_al.py": "3df1c6f83e249bcc8831014914a3d99431371e3fa5269fa121b8ffd7d8317d5f",
+  "src/external_validation/analysis.py": "9df0d7e03a26e7e0635365dd0be5a9983e928254b9bb02bed7a441878a09f1b1",
+  "outputs/research_campaign_20261018/opus_pooled/data/POOLED_MANIFEST.csv": "fe1cd6e6a031b6ec5091f6c41dba9dc454cd6bb6a0254b3b675bce3ef019be5a",
+  "outputs/research_campaign_20261018/opus_rc19b/PROTOCOL_RC19B.md": "7cdb0626e77fb3da6d5c63397384b53d1d7b79a414f146cd62993aa18f8960b6"
+ },
+ "constants": {
+  "CF_K": 10,
+  "KEYHOLE_ARMS": [
+   "E1S",
+   "ATSCF_MARGIN",
+   "DEPTHCF_MARGIN",
+   "G3_MARGIN",
+   "ATSAPPROX_MARGIN"
+  ],
+  "KEYHOLE_PRIMARY": [
+   "ATSCF_MARGIN",
+   "E1CAL+straddle",
+   "LL_AULC",
+   "lower",
+   0.02
+  ],
+  "KEYHOLE_PAIRS": [
+   [
+    "ATSCF_MARGIN",
+    "E1CAL+straddle"
+   ],
+   [
+    "ATSCF_MARGIN",
+    "E1RAW+straddle"
+   ],
+   [
+    "ATSCF_MARGIN",
+    "DEPTHCF_MARGIN"
+   ],
+   [
+    "DEPTHCF_MARGIN",
+    "E1CAL+straddle"
+   ],
+   [
+    "E1CAL+straddle",
+    "E1RAW+straddle"
+   ],
+   [
+    "ATSCF_MARGIN",
+    "ATSAPPROX_MARGIN"
+   ],
+   [
+    "ATSCF_MARGIN",
+    "G3_MARGIN"
+   ],
+   [
+    "ATSAPPROX_MARGIN",
+    "E1RAW+straddle"
+   ]
+  ],
+  "MARGINS": {
+   "BA_AULC": 0.02,
+   "LL_AULC": 0.02,
+   "Brier_AULC": 0.005
+  },
+  "MIN_BETTER": 7,
+  "DECOMP_PAIRS": [
+   [
+    "ATSCF",
+    "E1CAL"
+   ],
+   [
+    "ATSCF",
+    "DEPTHCF"
+   ],
+   [
+    "DEPTHCF",
+    "E1CAL"
+   ],
+   [
+    "E1CAL",
+    "E1RAW"
+   ],
+   [
+    "ATSCF",
+    "ATSAPPROX"
+   ],
+   [
+    "ATSCF",
+    "G3"
+   ]
+  ],
+  "DURATION_VARIANT": "QS_RAW",
+  "REG_ARMS": [
+   [
+    "SHQ",
+    "RANDOM"
+   ],
+   [
+    "M0Q",
+    "MOIVR"
+   ],
+   [
+    "SHQ",
+    "MOIVR"
+   ],
+   [
+    "SHQ",
+    "MOIVRB"
+   ]
+  ],
+  "REG_REFERENCE": [
+   "SHQ",
+   "RANDOM"
+  ],
+  "DUR_MARGIN": 0.02,
+  "JOINT_GAIN": 2,
+  "SPEND_MARGIN": 4
+ },
+ "units": {
+  "b-final-label": 200,
+  "b-final-reg": 160
+ }
+}

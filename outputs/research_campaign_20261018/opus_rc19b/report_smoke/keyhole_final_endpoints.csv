@@ -1,0 +1,7 @@
+arm,repeat,first,spend,censored
+ATSAPPROX_MARGIN,1,14,18,False
+ATSCF_MARGIN,1,20,24,False
+DEPTHCF_MARGIN,1,25,29,False
+E1CAL+straddle,1,17,21,False
+E1RAW+straddle,1,16,20,False
+G3_MARGIN,1,25,29,False

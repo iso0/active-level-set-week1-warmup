@@ -79,8 +79,10 @@ def replay():
     (OUT / "DURATION_REPLAY.md").write_text("\n".join(L) + "\n", encoding="utf-8"); print("\n".join(L)[:15000])
 
 
-def final():
-    M = P.manifest(); U = EV.load_units(OUT / "b-final-reg")
+def final(U=None, write=True):
+    """Final regression units -> (R: 8-output curves, D: duration curves of the arm's own GP and of the hurdle, J: joint endpoints
+    with either duration). U defaults to the b-final-reg caches; write=False leaves file output to the caller (src.rc19b_report)."""
+    M = P.manifest(); U = EV.load_units(OUT / "b-final-reg") if U is None else U
 
     def pred(u, e):
         out = {"ORIG_GP": (_arr(e["pred"][DUR][0]), _arr(e["pred"][DUR][1])) if e["pred"].get(DUR) else None,
@@ -89,8 +91,10 @@ def final():
     D = dur_curves(U, M, pred); X = []
     for u in U:
         X.append({**u, "evals": [{"budget": e["budget"], "pred": {k: v for k, v in e["pred"].items() if k in P.TARGETS}} for e in u["evals"]]})
-    R = EV.reg_curves(X, M); R.to_csv(OUT / "reg_final_curves.csv", index=False, lineterminator="\n"); D.to_csv(OUT / "duration_final_curves.csv", index=False, lineterminator="\n")
-    J = joint_with(R[(R.budget >= P.B0) & (R.target != DUR)], D); J.to_csv(OUT / "duration_final_joint.csv", index=False, lineterminator="\n")
+    R = EV.reg_curves(X, M); J = joint_with(R[(R.budget >= P.B0) & (R.target != DUR)], D)
+    if write:
+        R.to_csv(OUT / "reg_final_curves.csv", index=False, lineterminator="\n"); D.to_csv(OUT / "duration_final_curves.csv", index=False, lineterminator="\n")
+        J.to_csv(OUT / "duration_final_joint.csv", index=False, lineterminator="\n")
     return R, D, J
 
 

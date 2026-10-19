@@ -106,30 +106,31 @@ def region_learner(task, unit, M, model, Xg):
     return out
 
 
-def build():
+def build(stage="final"):
     import src.rc19b_final as F
     RC.limit_threads(1); M = P.manifest(); lp, lv, Xg = grid(M); ids = M.index.to_numpy(str)
+    job, rf, tag = ("b-final-label", LABEL_RF, "") if stage == "final" else ("b-smoke-label", (F.SMOKE_REPEAT, 1), "_smoke")
     data = {"grid": {"logP": np.round(lp, 4).tolist(), "logVX": np.round(lv, 4).tolist(), "LS_um": list(LS_SLICES_UM), "ST_K": list(ST_FIXED_K), "NG": NG,
                      "ls_band": LS_BAND_UM, "st_band": ST_BAND_K},
             "runs": {"logP": np.round(np.log(M.P), 4).tolist(), "logVX": np.round(np.log(M.VX), 4).tolist(), "LS_um": np.round(M.LS * 1e6, 2).tolist(),
                      "ST": np.round(M.ST, 1).tolist(), "y": M.y.astype(int).tolist(), "id": ids.tolist(),
                      "inside": [None if not np.isfinite(v) else bool(v >= LN.TAU) for v in M.vmax_spike_logratio]},
             "budgets": list(BUDGETS), "tasks": {}}
-    r, f = LABEL_RF; t = {(x["repeat"], x["fold"]): x for x in P.tasks([r])}[(r, f)]; L = {}
+    r, f = rf; t = {(x["repeat"], x["fold"]): x for x in P.tasks([r])}[(r, f)]; L = {}
     for arm, cons in LABEL_LEARNERS:
-        u = RC.read_json_gz(OUT / "b-final-label" / "units" / f"r{r}_f{f}__{arm}.json.gz")
+        u = RC.read_json_gz(OUT / job / "units" / f"r{r}_f{f}__{arm}.json.gz")
         L[f"{arm} · {cons}"] = {"cons": cons, "desc": DESC[cons], "budgets": label_learner(t, u, M, arm, cons, F.CF_K, Xg)}
         print(arm, cons, "max check", max(v["check"] for v in L[f"{arm} · {cons}"]["budgets"].values()), flush=True)
-    data["tasks"]["label"] = {"name": "Keyhole label", "stage": f"RC19B final (fresh DEV repeat {r}), fold {f}", "repeat": r, "fold": f, "cut_name": "P(Keyhole)",
-                              "test": [int(i) for i in t["test"]], "learners": L}
+    data["tasks"]["label"] = {"name": "Keyhole label", "stage": (f"RC19B final (fresh DEV repeat {r}), fold {f}" if stage == "final" else f"SMOKE TEST (seen DEV repeat {r}), fold {f}"),
+                              "repeat": r, "fold": f, "cut_name": "P(Keyhole)", "test": [int(i) for i in t["test"]], "learners": L}
     r, f = REGION_RF; t = {(x["repeat"], x["fold"]): x for x in P.tasks([r])}[(r, f)]; m, a = REGION_LEARNER
     u = RC.read_json_gz(P.OUT / "final" / "final-region" / "units" / f"r{r}_f{f}__region__{m}__{a}.json.gz")
     data["tasks"]["region"] = {"name": "Velocity-spike region", "stage": f"RC19 final repeat {r}, fold {f}", "repeat": r, "fold": f, "cut_name": "P(spike ratio ≥ 2)",
                                "test": [int(i) for i in t["test"]], "learners": {f"{m} · {a}": {"cons": m, "desc": DESC[m], "budgets": region_learner(t, u, M, m, Xg)}}}
     VIEW.mkdir(parents=True, exist_ok=True); js = json.dumps(data, separators=(",", ":"))
-    (VIEW / "single_learner_view.json").write_text(js, encoding="utf-8")
-    (VIEW / "single_learner_view.html").write_text(HTML.replace("__DATA__", js), encoding="utf-8")
-    print(VIEW / "single_learner_view.html", len(js) // 1024, "KB")
+    (VIEW / f"single_learner_view{tag}.json").write_text(js, encoding="utf-8")
+    (VIEW / f"single_learner_view{tag}.html").write_text(HTML.replace("__DATA__", js), encoding="utf-8")
+    print(VIEW / f"single_learner_view{tag}.html", len(js) // 1024, "KB")
 
 
 def relabel():
@@ -285,4 +286,7 @@ fillL(); if (D.tasks.label.learners["ATSCF_MARGIN · ATSCF"]) ls.value = "ATSCF_
 
 
 if __name__ == "__main__":
-    {"build": build, "relabel": relabel}[sys.argv[1]]()
+    if sys.argv[1] == "build":
+        build(sys.argv[2] if len(sys.argv) > 2 else "final")
+    else:
+        relabel()

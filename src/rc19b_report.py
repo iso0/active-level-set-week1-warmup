@@ -23,9 +23,20 @@ import src.rc19b_final as F
 from src.rc19_report import md
 
 OUT = RC.ROOT / "outputs" / "research_campaign_20261018" / "opus_rc19b"
-REP = OUT / "report"
 DUR = "vmax_spike_us"
 HZ = {"label": 60, "reg": 80}
+STAGES = {"final": ("b-final-label", "b-final-reg", "report", "export_final"), "smoke": ("b-smoke-label", "b-smoke-reg", "report_smoke", "export_smoke")}
+CFG = {}
+REP = OUT / "report"
+
+
+def use(stage):
+    """final = the frozen comparison; smoke = the same code on one seen DEV task (code-path test before the freeze, no claim)."""
+    global REP
+    CFG.update(zip(("label", "reg", "rep", "exp"), STAGES[stage])); REP = OUT / CFG["rep"]
+
+
+use("final")
 
 
 def verdict(d, margin, direction):
@@ -59,7 +70,32 @@ def _spend_str(x):
 # ======================================================================================== Keyhole
 def label_units():
     import src.rc19b_keyhole_eval as KE
-    U = EV.load_units(OUT / "b-final-label"); return U, KE.as_units(U, key="__none__")
+    U = EV.load_units(OUT / CFG["label"]); return U, KE.as_units(U, key="__none__")
+
+
+def as_units_all(U):
+    """Matched-path decomposition on the final paths: every construction recorded at REC_ALL budgets on each arm's own path."""
+    out = []
+    for u in U:
+        ev = [e for e in u["evals"] if "p_all" in e]
+        for c in (ev[0]["p_all"].keys() if ev else []):
+            out.append({"arm": f"{c}@{u['arm']}", "repeat": u["repeat"], "fold": u["fold"], "test_ids": u["test_ids"],
+                        "evals": [{"budget": e["budget"], "p": e["p_all"][c], "status": "ok"} for e in ev]})
+    return out
+
+
+def decomposition(U, M):
+    import src.rc19b_keyhole_eval as KE
+    X = as_units_all(U); B = EV.label_metrics(X, M); Rl = KE.reliability(X, M)
+    B.to_csv(REP / "keyhole_final_decomposition_metrics.csv", index=False, lineterminator="\n"); L = []
+    for arm in F.KEYHOLE_ARMS:
+        s = f"@{arm}"; Bs = B[B.arm.str.endswith(s)]; Rs = Rl[Rl.arm.str.endswith(s)]
+        if Bs.empty:
+            continue
+        L1, _, _ = KE.summarise(Bs, Rs, f"Matched-path decomposition on the paths of {arm} (fresh repeats; every construction on the same paid prefixes)",
+                                [(a + s, b + s) for a, b in F.DECOMP_PAIRS], "B8–B60 (every 4)")
+        L += L1
+    return L
 
 
 def reliability_bins(X, M, budgets=(16, 24, 40, 60)):
@@ -140,14 +176,16 @@ def keyhole():
           md(CS, 3), "", "Reliability-diagram bins: report/keyhole_final_reliability_bins.csv.", "",
           "## Hard fast-scan corner (NEW-batch conduction test runs; evaluator-only diagnostic): conduction recall and error COUNTS summed over repeats", "", md(HC, 3), "",
           "## Secondary: q20 boundary BA and short-K capture", "", md(SEC, 2), ""] + L1[2:]
-    (REP / "KEYHOLE_FINAL.md").write_text("\n".join(Lk) + "\n", encoding="utf-8"); return Lk
+    (REP / "KEYHOLE_FINAL.md").write_text("\n".join(Lk) + "\n", encoding="utf-8")
+    Ld = ["# RC19B Keyhole — matched-path decomposition on the final paths (exploratory; same paid prefixes, recorded every 4 budgets)", ""] + decomposition(U, M)
+    (REP / "KEYHOLE_FINAL_DECOMPOSITION.md").write_text("\n".join(Ld) + "\n", encoding="utf-8"); return Lk
 
 
 # ======================================================================================== duration / joint
 def duration():
     import src.rc19b_duration_eval as DE
-    REP.mkdir(parents=True, exist_ok=True); M = P.manifest(); U = EV.load_units(OUT / "b-final-reg")
-    R, D, J = DE.final()
+    REP.mkdir(parents=True, exist_ok=True); M = P.manifest(); U = EV.load_units(OUT / CFG["reg"])
+    R, D, J = DE.final(U, write=False)
     E0 = EV.reg_endpoints(R[R.budget >= P.B0], F19.LEVELS, F19.PRIMARY_TARGETS); E0.to_csv(REP / "reg_final_endpoints.csv", index=False, lineterminator="\n")
     chk = J[J.variant == "ORIG_GP"].merge(E0[E0.target == "JOINT"][["model", "acq", "repeat", "confirmed", "censored"]], on=["model", "acq", "repeat"])
     consistency = int(((chk.joint_spend.fillna(-1) - (chk.confirmed + 4).fillna(-1)).abs() > 0).sum())
@@ -161,23 +199,26 @@ def duration():
     # pre-declared duration contrasts
     V = []
     for m, a in F.REG_ARMS:
-        g = J[(J.model == m) & (J.acq == a)].pivot_table(index="repeat", columns="variant", values="dur_AULC")
+        g = J[(J.model == m) & (J.acq == a)].pivot_table(index="repeat", columns="variant", values="dur_AULC", dropna=False).reindex(columns=["ORIG_GP", "HURDLE"])
         d = (g["HURDLE"] - g["ORIG_GP"]).dropna(); v, mu, good = verdict(d.values, F.DUR_MARGIN, "higher")
         V.append({"role": "D1 duration R2-AULC, matched path", "arm": f"{m}+{a}", "contrast": "HURDLE − own GP duration", "mean": mu, "se": _se(d.values), "repeats_good": f"{good}/{len(d)}", "verdict": v})
-        jj = J[(J.model == m) & (J.acq == a)].pivot_table(index="repeat", columns="variant", values="joint_censored", aggfunc="first")
+        jj = J[(J.model == m) & (J.acq == a)].pivot_table(index="repeat", columns="variant", values="joint_censored", aggfunc="first", dropna=False).reindex(columns=["ORIG_GP", "HURDLE"]).fillna(True)
         ch, cg = int((~jj["HURDLE"].astype(bool)).sum()), int((~jj["ORIG_GP"].astype(bool)).sum()); lost = int(((~jj["ORIG_GP"].astype(bool)) & jj["HURDLE"].astype(bool)).sum())
         jv = "IMPROVED" if (ch - cg >= F.JOINT_GAIN and lost == 0) else ("WORSE" if (cg - ch >= F.JOINT_GAIN) else "NO CLEAR CHANGE")
+        jv = f"INCOMPLETE ({len(jj)}/{len(F.REPEATS)})" if len(jj) < len(F.REPEATS) else f"{jv} (DEV)"
         V.append({"role": "D2 joint completion by B80, matched path", "arm": f"{m}+{a}", "contrast": "HURDLE vs own GP duration", "mean": float(ch - cg), "se": np.nan,
-                  "repeats_good": f"{ch}/8 vs {cg}/8 (lost {lost})", "verdict": f"{jv} (DEV)"})
-    ref = F.REG_REFERENCE; Jh = J[J.variant == "HURDLE"].copy(); Jh["arm"] = Jh.model + "+" + Jh.acq
-    Jh["spend_imp"] = Jh.joint_spend.fillna(HZ["reg"] + 4)                      # censored -> 84, a LOWER bound of the true spend
-    for m, a in F.REG_ARMS:
-        if (m, a) == ref:
-            continue
-        x = Jh[Jh.arm == f"{m}+{a}"].set_index("repeat").spend_imp; y = Jh[Jh.arm == f"{ref[0]}+{ref[1]}"].set_index("repeat").spend_imp; d = (x - y).dropna()
-        v, mu, good = verdict(d.values, F.SPEND_MARGIN, "lower")
-        V.append({"role": "D3 joint spend (hurdle duration), adaptive", "arm": f"{m}+{a}", "contrast": f"− {ref[0]}+{ref[1]} (censored = 84, lower bound)", "mean": mu, "se": _se(d.values),
-                  "repeats_good": f"{good}/{len(d)}", "verdict": v})
+                  "repeats_good": f"{ch}/{len(jj)} vs {cg}/{len(jj)} (lost {lost})", "verdict": jv})
+    ref = F.REG_REFERENCE
+    for var, role in (("ORIG_GP", "D3 joint spend, own GP duration (acquisition contrast)"), ("HURDLE", "D3b joint spend, hurdle duration (secondary)")):
+        Jh = J[J.variant == var].copy(); Jh["arm"] = Jh.model + "+" + Jh.acq
+        Jh["spend_imp"] = Jh.joint_spend.fillna(HZ["reg"] + 4)                  # censored -> 84, a LOWER bound of the true spend
+        for m, a in F.REG_ARMS:
+            if (m, a) == ref:
+                continue
+            x = Jh[Jh.arm == f"{m}+{a}"].set_index("repeat").spend_imp; y = Jh[Jh.arm == f"{ref[0]}+{ref[1]}"].set_index("repeat").spend_imp; d = (x - y).dropna()
+            v, mu, good = verdict(d.values, F.SPEND_MARGIN, "lower")
+            V.append({"role": role, "arm": f"{m}+{a}", "contrast": f"− {ref[0]}+{ref[1]} (censored = 84, lower bound)", "mean": mu, "se": _se(d.values),
+                      "repeats_good": f"{good}/{len(d)}", "verdict": v})
     V = pd.DataFrame(V); V.to_csv(REP / "duration_final_verdicts.csv", index=False, lineterminator="\n")
     EO = E0[E0.target != "JOINT"].groupby(["model", "acq", "target"]).agg(confirmed=("censored", lambda c: f"{int((~c).sum())}/{len(c)}"),
                                                                          spend_per_repeat=("confirm_spend", _spend_str), AULC=("AULC", "mean")).reset_index()
@@ -202,7 +243,7 @@ def duration():
 
 # ======================================================================================== exports + acceptance
 def export():
-    REP.mkdir(parents=True, exist_ok=True); exp = OUT / "export_final"; exp.mkdir(parents=True, exist_ok=True); M = P.manifest(); acc = {}; paths = []
+    REP.mkdir(parents=True, exist_ok=True); exp = OUT / CFG["exp"]; exp.mkdir(parents=True, exist_ok=True); M = P.manifest(); acc = {}; paths = []
     U, X = label_units(); keys, arrs, tids, buds = [], [], [], []
     for u in X:
         keys.append(f"{u['arm']}|r{u['repeat']}|f{u['fold']}"); arrs.append(np.asarray([[np.nan if v is None else v for v in e["p"]] for e in u["evals"]], np.float32))
@@ -219,7 +260,7 @@ def export():
                    "evals": [{"budget": int(b), "p": to(Z[f"pred_{i}"][j])} for j, b in enumerate(Z[f"budgets_{i}"])]})
     a, b = EV.label_metrics(Xe, M), pd.read_csv(REP / "keyhole_final_metrics.csv"); acc["label"] = _compare(a, b, ["arm", "repeat", "budget"],
                                                                                                          ["BA", "sensitivity", "specificity", "AUC", "brier", "log_loss", "q20_BA", "spec_NEW"])
-    U = EV.load_units(OUT / "b-final-reg"); keys, arrs, tids, buds = [], [], [], []; T9 = list(P.TARGETS) + [DUR + "__hurdle"]
+    U = EV.load_units(OUT / CFG["reg"]); keys, arrs, tids, buds = [], [], [], []; T9 = list(P.TARGETS) + [DUR + "__hurdle"]
     for u in U:
         b_ = [e["budget"] for e in u["evals"]]; arr = np.full((len(b_), len(T9), 2, len(u["test_ids"])), np.nan, np.float32)
         for i, e in enumerate(u["evals"]):
@@ -261,7 +302,7 @@ def _compare(a, b, key, cols):
 # ======================================================================================== compute cost
 def cost():
     REP.mkdir(parents=True, exist_ok=True); rows = []
-    for job, key in (("b-final-label", "arm"), ("b-final-reg", None)):
+    for job, key in ((CFG["label"], "arm"), (CFG["reg"], None)):
         for u in EV.load_units(OUT / job):
             arm = u["arm"] if key else f"{u['model']}+{u['acq']}"; q = u.get("queries", 0)
             rows.append({"job": job, "arm": arm, "seconds": float(u["seconds"]), "queries": q, "seconds_per_query_after_startup": float(u["seconds"]) / max(1, q - P.B0)})
@@ -272,8 +313,8 @@ def cost():
     (REP / "COMPUTE_COST.md").write_text("\n".join(L) + "\n", encoding="utf-8"); return L
 
 
-def main(what):
-    RC.limit_threads(1); L = []
+def main(what, stage="final"):
+    RC.limit_threads(1); use(stage); L = []
     if what in ("keyhole", "all"):
         L += keyhole()
     if what in ("duration", "all"):
@@ -286,4 +327,4 @@ def main(what):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "final")

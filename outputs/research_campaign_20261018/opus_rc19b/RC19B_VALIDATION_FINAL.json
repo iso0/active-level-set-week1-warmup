@@ -1,0 +1,55 @@
+{
+ "utc": "2026-10-19T19:35:02+00:00",
+ "CF_K": 10,
+ "honesty": {
+  "K": 10,
+  "own_outcome_changes_own_oof_prediction_max": 0.0,
+  "other_folds_changed_in_cases": 3,
+  "PASS": true
+ },
+ "shadow": {
+  "E1S": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 7.2,
+   "record_all_leaves_path_and_own_predictions_unchanged": true
+  },
+  "ATSCF_MARGIN": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 6.3,
+   "record_all_leaves_path_and_own_predictions_unchanged": true
+  },
+  "DEPTHCF_MARGIN": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 4.3,
+   "record_all_leaves_path_and_own_predictions_unchanged": true
+  },
+  "G3_MARGIN": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 5.3,
+   "record_all_leaves_path_and_own_predictions_unchanged": true
+  },
+  "ATSAPPROX_MARGIN": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 4.5,
+   "record_all_leaves_path_and_own_predictions_unchanged": true
+  },
+  "reg_SHQ_MOIVRB": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 4.6,
+   "hurdle_recorded": true
+  },
+  "reg_M0Q_MOIVR": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 3.4,
+   "hurdle_recorded": true
+  }
+ },
+ "status": "PASS"
+}

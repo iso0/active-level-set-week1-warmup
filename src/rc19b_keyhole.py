@@ -15,9 +15,11 @@ Probability constructions at one paid state (all learned from the paid runs only
   ATSAPPROX the RC19 PHYSCF_ATS construction (closed-form leave-one-out with the FULL-fit hyperparameters and normalisation):
           an approximation of cross-fitting, kept as the historical control.
   G3      frozen Week 18 direct GP classifier (reference).
-Folds: K = min(5, number of paid runs); fold of the j-th paid run (in query order) = j mod K (frozen rule). Fold fits with
-fewer than 3 usable rows for an output fall back to that fold's training mean for the output (counted). Every construction
-uses the one-class rule of RC19 (paid class rate until both classes are revealed).
+Folds: K = min(K, number of paid runs); fold of the j-th paid run (in query order) = j mod K (frozen rule). K = 5 in the
+development replay; K = None or "LOO" = exact refit leave-one-out (K = n); the final runs use the frozen constant
+rc19b_final.CF_K for ATSCF, DEPTHCF and E1CAL alike. Fold fits with fewer than 3 usable rows for an output fall back to that
+fold's training mean for the output (counted). Every construction uses the one-class rule of RC19 (paid class rate until both
+classes are revealed).
 """
 from __future__ import annotations
 
@@ -39,8 +41,8 @@ CAL_PRIOR = (1.0, 0.5)                       # prior SD of intercept a and of sl
 
 
 def folds(n, k=KMAX):
-    """k = None means exact leave-one-out (k = n): every held-out run gets its own refit on the other n - 1 runs."""
-    k = int(n if k is None else min(k, n)); return np.arange(n) % k, k
+    """k = None or "LOO" means exact leave-one-out (k = n): every held-out run gets its own refit on the other n - 1 runs."""
+    k = int(n if k in (None, "LOO") else min(int(k), n)); return np.arange(n) % k, k
 
 
 # ======================================================================================== cross-fitted response features
@@ -114,44 +116,52 @@ def e1_constructions(X, rev, rows_eval, cands, K=KMAX):
 
 
 # ======================================================================================== one paid state -> every construction
-def constructions(task, rev, Z, which, rng):
+def constructions(task, rev, Z, which, rng, K=KMAX, extra=None):
+    """Every requested construction at one paid state: test-row probabilities (out), acquisition scores on the candidates
+    (scores) and fit information. `extra` = additional row indices (the viewer's grid) predicted by the SAME fits
+    (info["_extra"]); they never enter any fit, so test predictions and scores are unchanged by them."""
     import src.week18_engine as E
-    X = task["X"]; test = task["test"]; cands = np.setdiff1d(task["pool"], rev.paid); rows = np.r_[test, cands]; nt = len(test)
-    y_p = rev.paid_y(); A_p = rev.paid_A(); L = rev.paid; usable = np.isfinite(A_p[L]); out, info, scores = {}, {}, {}
+    X = task["X"]; test = task["test"]; cands = np.setdiff1d(task["pool"], rev.paid); ex = np.asarray([] if extra is None else extra, int)
+    rows = np.r_[test, cands, ex]; nt, nc = len(test), len(cands)
+    y_p = rev.paid_y(); A_p = rev.paid_A(); L = rev.paid; usable = np.isfinite(A_p[L]); out, info, scores, ext = {}, {}, {}, {}
     two_all = len(set(y_p[L].tolist())) == 2; two_u = len(set(y_p[L][usable].tolist())) == 2
-    rate = float(np.mean(y_p[L]))
+    rate = float(np.mean(y_p[L])); const = lambda m: np.full(m, rate)
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         if "E1RAW" in which or "E1CAL" in which:
             if two_u:
-                pr, pc, sc, inf = e1_constructions(X, rev, rows, cands); out["E1RAW"], out["E1CAL"] = pr[:nt], pc[:nt]; scores["E1"] = sc; info["E1CAL"] = inf
+                pr, pc, sc, inf = e1_constructions(X, rev, rows, cands, K); out["E1RAW"], out["E1CAL"] = pr[:nt], pc[:nt]; scores["E1"] = sc
+                info["E1CAL"] = {**inf, "K": str(K)}; ext["E1RAW"], ext["E1CAL"] = pr[nt + nc:], pc[nt + nc:]
             else:
-                out["E1RAW"] = out["E1CAL"] = np.full(nt, rate)
+                out["E1RAW"] = out["E1CAL"] = const(nt); ext["E1RAW"] = ext["E1CAL"] = const(len(ex))
         for nm, feats in (("DEPTHCF", DEPTH), ("ATSCF", ATS)):
             if nm in which:
                 if two_u:
-                    pe, inf = cf_classifier(Z, rev, feats, rows)
+                    pe, inf = cf_classifier(Z, rev, feats, rows, K)
                     if pe is not None:
-                        out[nm] = pe[:nt]; scores[nm] = -np.abs(pe[nt:] - 0.5); info[nm] = inf
+                        out[nm] = pe[:nt]; scores[nm] = -np.abs(pe[nt:nt + nc] - 0.5); info[nm] = inf; ext[nm] = pe[nt + nc:]
                     else:
-                        out[nm] = np.full(nt, rate); info[nm] = inf
+                        out[nm] = const(nt); info[nm] = inf; ext[nm] = const(len(ex))
                 else:
-                    out[nm] = np.full(nt, rate)
+                    out[nm] = const(nt); ext[nm] = const(len(ex))
         if "ATSAPPROX" in which:
             if two_u:
                 pe, inf = LN.phys_classifier(Z, rev, ATS, rows, "CF", rng)
-                out["ATSAPPROX"] = pe[:nt] if pe is not None else np.full(nt, rate)
+                out["ATSAPPROX"] = pe[:nt] if pe is not None else const(nt); ext["ATSAPPROX"] = pe[nt + nc:] if pe is not None else const(len(ex))
                 if pe is not None:
-                    scores["ATSAPPROX"] = -np.abs(pe[nt:] - 0.5)
+                    scores["ATSAPPROX"] = -np.abs(pe[nt:nt + nc] - 0.5)
             else:
-                out["ATSAPPROX"] = np.full(nt, rate)
+                out["ATSAPPROX"] = const(nt); ext["ATSAPPROX"] = const(len(ex))
         if "G3" in which:
             if two_all:
                 tk = {"X": X, "y": y_p, "pool": task["pool"], "prior": np.array([], int), "depth": A_p}
                 f = E.fit_learner(("G3", "mlii"), tk, list(L), None, {"kernel": None, "b0": len(L)})
                 out["G3"] = np.asarray(E.proba(f, X[test]), float); scores["G3"] = -np.abs(np.asarray(E.proba(f, X[cands]), float) - 0.5)
+                ext["G3"] = np.asarray(E.proba(f, X[ex]), float) if len(ex) else np.zeros(0)
             else:
-                out["G3"] = np.full(nt, rate)
+                out["G3"] = const(nt); ext["G3"] = const(len(ex))
+    if extra is not None:
+        info["_extra"] = ext
     return out, scores, info, cands
 
 
@@ -203,18 +213,28 @@ ADAPTIVE = {"E1S": ("E1RAW", "E1CAL"), "ATSCF_MARGIN": ("ATSCF",), "DEPTHCF_MARG
 SCORE_OF = {"E1S": "E1", "ATSCF_MARGIN": "ATSCF", "DEPTHCF_MARGIN": "DEPTHCF", "G3_MARGIN": "G3", "ATSAPPROX_MARGIN": "ATSAPPROX"}
 
 
-def run_adaptive(task, arm, bmax, M=None):
+REC_ALL = tuple(range(P.B0, 61, 4))          # budgets at which every construction is also recorded on the arm's own path
+
+
+def run_adaptive(task, arm, bmax, M=None, K=KMAX, record_all=False):
     """One adaptive trajectory: the arm's own acquisition on its own probability construction (E1S records E1RAW and E1CAL on
-    E1's straddle path, which does not depend on the probability map)."""
+    E1's straddle path, which does not depend on the probability map). K = cross-fitting folds of ATSCF / DEPTHCF / E1CAL.
+    record_all: at the budgets REC_ALL every construction is also evaluated on this path's paid prefix ("p_all"; a matched-path
+    decomposition on fresh repeats). The arm's own predictions and scores are identical either way (deterministic fits)."""
     M = P.manifest() if M is None else M; rev = _rev_with(task, M, []); Z = P.zstd(task); LN.startup(task, rev)
     rng = np.random.default_rng([P.SPLIT_SEED, 19, task["repeat"], task["fold"]]); evals = []; t0 = time.time(); which = ADAPTIVE[arm]
     while True:
-        b = rev.queries; out, scores, info, cands = constructions(task, rev, Z, which, rng)
-        evals.append({"budget": b, "p": {k: LN._f32(v) for k, v in out.items()}, "info": info})
+        b = rev.queries; full = record_all and b in REC_ALL
+        out, scores, info, cands = constructions(task, rev, Z, REPLAY_WHICH if full else which, rng, K=K)
+        e = {"budget": b, "p": {k: LN._f32(out[k]) for k in which}, "info": info}
+        if full:
+            e["p_all"] = {k: LN._f32(v) for k, v in out.items()}
+        evals.append(e)
         if b >= bmax:
             break
         sc = scores.get(SCORE_OF[arm])
         nxt = LN.next_on_path(task, rev) if sc is None else int(cands[int(np.argmax(sc))])
         rev.reveal(nxt)
-    return {"repeat": task["repeat"], "fold": task["fold"], "arm": arm, "paid": rev.order, "paid_ids": [task["ids"][i] for i in rev.order],
-            "test_ids": [task["ids"][i] for i in task["test"]], "evals": evals, "seconds": time.time() - t0, "queries": rev.queries}
+    return {"repeat": task["repeat"], "fold": task["fold"], "arm": arm, "K": str(K), "record_all": bool(record_all), "paid": rev.order,
+            "paid_ids": [task["ids"][i] for i in rev.order], "test_ids": [task["ids"][i] for i in task["test"]], "evals": evals,
+            "seconds": time.time() - t0, "queries": rev.queries}

@@ -48,8 +48,9 @@ def work(job):
             m, acq = a; u = RC.read_json_gz(P.OUT / "final" / "final-reg" / "units" / f"r{r}_f{f}__reg__{m}__{acq}.json.gz")
             return D.replay_unit(t, u, M)
         if kind == "label":
+            import src.rc19b_final as F
             import src.rc19b_keyhole as K
-            return K.run_adaptive(t, a, 60, M=M)
+            return K.run_adaptive(t, a, 60, M=M, K=F.CF_K, record_all=True)
         if kind == "reg":
             import src.rc19b_duration as D
             m, acq = a; return D.run_reg_b(t, m, acq, 80, M=M)
@@ -62,4 +63,4 @@ if __name__ == "__main__":
     if sys.argv[1] == "work":
         work(sys.argv[2])
     elif sys.argv[1] == "list":
-        print({j: len(units(j)) for j in ("b-replay",)})
+        print({j: len(units(j)) for j in ("b-replay", "b-replay-k", "b-dur-replay", "b-smoke-label", "b-smoke-reg", "b-final-label", "b-final-reg")})
