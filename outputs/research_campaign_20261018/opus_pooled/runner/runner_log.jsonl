@@ -1,0 +1,19 @@
+{"event":"RUNNER_START","pid":19528,"utc":"2026-10-19T12:41:43Z"}
+{"event":"WORKER_START","job":"dev_label","worker":1,"pid":22896,"opus_used_before":0,"astra_used":2,"leaves":"astra:12604:1 astra:21212:1","utc":"2026-10-19T12:41:44Z"}
+{"event":"WORKER_START","job":"dev_label","worker":2,"pid":15784,"opus_used_before":1,"astra_used":1,"leaves":"astra:21212:1","utc":"2026-10-19T12:42:15Z"}
+{"event":"WORKER_END","job":"dev_label","worker":2,"pid":15784,"exit_code":0,"locks_released":0,"utc":"2026-10-19T12:45:18Z"}
+{"event":"WORKER_END","job":"dev_label","worker":1,"pid":22896,"exit_code":0,"locks_released":0,"utc":"2026-10-19T12:45:18Z"}
+{"event":"WORKER_START","job":"dev_region","worker":1,"pid":21148,"opus_used_before":0,"astra_used":2,"leaves":"astra:21212:1 astra:22628:1","utc":"2026-10-19T12:45:19Z"}
+{"event":"WORKER_START","job":"dev_label2","worker":1,"pid":21532,"opus_used_before":1,"astra_used":2,"leaves":"astra:27412:1 astra:29156:1","utc":"2026-10-19T12:48:53Z"}
+{"event":"WORKER_END","job":"dev_label2","worker":1,"pid":21532,"exit_code":0,"locks_released":0,"utc":"2026-10-19T12:57:33Z"}
+{"event":"WORKER_START","job":"dev_region","worker":2,"pid":8792,"opus_used_before":1,"astra_used":2,"leaves":"astra:27412:1 astra:29156:1","utc":"2026-10-19T12:57:33Z"}
+{"event":"WORKER_END","job":"dev_region","worker":2,"pid":8792,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:05:41Z"}
+{"event":"WORKER_START","job":"dev_reg","worker":1,"pid":22092,"opus_used_before":1,"astra_used":2,"leaves":"astra:27412:1 astra:29156:1","utc":"2026-10-19T13:05:42Z"}
+{"event":"WORKER_END","job":"dev_region","worker":1,"pid":21148,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:06:12Z"}
+{"event":"WORKER_START","job":"dev_reg","worker":2,"pid":10512,"opus_used_before":1,"astra_used":2,"leaves":"astra:27412:1 astra:29156:1","utc":"2026-10-19T13:06:13Z"}
+{"event":"WORKER_END","job":"dev_reg","worker":2,"pid":10512,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:17:27Z"}
+{"event":"WORKER_START","job":"dev_full","worker":1,"pid":11888,"opus_used_before":1,"astra_used":2,"leaves":"astra:27412:1 astra:29156:1","utc":"2026-10-19T13:17:27Z"}
+{"event":"WORKER_END","job":"dev_reg","worker":1,"pid":22092,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:18:29Z"}
+{"event":"WORKER_START","job":"dev_temporal","worker":1,"pid":24876,"opus_used_before":1,"astra_used":2,"leaves":"astra:27412:1 astra:29156:1","utc":"2026-10-19T13:18:29Z"}
+{"event":"WORKER_END","job":"dev_temporal","worker":1,"pid":24876,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:19:31Z"}
+{"event":"WORKER_END","job":"dev_full","worker":1,"pid":11888,"exit_code":0,"locks_released":0,"utc":"2026-10-19T13:22:33Z"}

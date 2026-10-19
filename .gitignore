@@ -44,3 +44,11 @@ outputs/research_campaign_20261018/opus/runner/runner.lock
 outputs/research_campaign_20261018/opus/runner/HEARTBEAT.json
 outputs/research_campaign_20261018/opus/runner/STATE.json
 outputs/research_campaign_20261018/opus/runner/STATUS.md
+# RC19 pooled campaign: per-unit checkpoints (reproducible from the frozen code), claim locks and live runner state
+outputs/research_campaign_20261018/opus_pooled/**/units/
+outputs/research_campaign_20261018/opus_pooled/**/locks/
+outputs/research_campaign_20261018/opus_pooled/runner/runner.lock
+outputs/research_campaign_20261018/opus_pooled/runner/HEARTBEAT.json
+outputs/research_campaign_20261018/opus_pooled/runner/STATE.json
+outputs/research_campaign_20261018/opus_pooled/runner/STATUS.md
+outputs/research_campaign_20261018/opus_pooled/runner/*.tmp

@@ -36,3 +36,4 @@
 {"event":"WORKER_END","job":"d2_curves","worker":1,"pid":13640,"exit_code":0,"locks_released":0,"utc":"2026-10-18T12:25:47Z"}
 {"event":"WORKER_START","job":"physgpc","worker":1,"pid":17892,"opus_used_before":0,"astra_used":0,"leaves":"","utc":"2026-10-18T13:33:47Z"}
 {"event":"WORKER_END","job":"physgpc","worker":1,"pid":17892,"exit_code":0,"locks_released":0,"utc":"2026-10-18T13:39:51Z"}
+{"event":"RUNNER_END","reason":"stop_runner set in PLAN.json and no live workers","utc":"2026-10-19T12:40:39Z"}

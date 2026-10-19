@@ -98,3 +98,21 @@ This is the owner's instruction of 2026-10-16. Claude coordinates all new numeri
 - The runner (PID 29180) and supervisor (PID 7136) are alive and IDLE, with no queued work.
 - Opus holds 0 slots in the record. Astra's 2-thread share is untouched, and she has registered no jobs.
 - Restart: `powershell -NoProfile -ExecutionPolicy Bypass -File src\rc18_start_runner.ps1`.
+
+### RC19 pooled from-scratch queue (owner instruction 2026-10-19)
+
+The budget is unchanged: the same campaign clock and the same deadline, 2026-10-20 08:41:20 UTC.
+
+**Single Opus queue:** `src/rc19_runner.ps1`, with plan `outputs/research_campaign_20261018/opus_pooled/runner/PLAN.json`.
+- Started detached at about 12:41 UTC through `src/rc19_start_runner.ps1`. Supervisor PID 17548; the runner PID is in `opus_pooled/runner/HEARTBEAT.json`.
+- The RC18 runner was idle and has been retired with `stop_runner` (exit 0 at 12:40:39 UTC).
+
+**Capacity:** Opus 2 threads, Astra 2 threads reserved and untouched, total 4.
+- At 12:25 UTC Astra had 2 live single-thread workers (`run_unit.py --threads 1`). They are not listed in her share's `jobs`, and they do not descend from codex.exe.
+- The RC19 runner therefore counts any process whose command line contains her workspace path (`\Codex\` or `astra_`) against her share, never against Opus.
+
+**Launch rule:** a worker starts only after the runner takes the coordination lock and re-checks that
+- Opus used + 1 ≤ min(2, runner_slots), and
+- Astra used + Opus used + 1 ≤ 4.
+
+The Opus job list in the record is written in the same lock.

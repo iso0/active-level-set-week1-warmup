@@ -1,0 +1,12 @@
+{
+ "rows": 541,
+ "sha256_csv": "fe1cd6e6a031b6ec5091f6c41dba9dc454cd6bb6a0254b3b675bce3ef019be5a",
+ "utc": "2026-10-19T12:33:34+00:00",
+ "sources": {
+  "inputs_labels": "src.week18_data_audit.load",
+  "depth": "outputs\\week19_temporal_regime_audit\\tables\\depth_definitions.csv",
+  "summaries": "src.rc18_campaign.targets (PHYS_AL + RC18 fix A2)",
+  "quality": "outputs/research_campaign_20261018/opus/data/SUMMARIES.csv",
+  "evaluator": "pilot_inputs.csv (frac_K_FCK, early_end, source_revision)"
+ }
+}

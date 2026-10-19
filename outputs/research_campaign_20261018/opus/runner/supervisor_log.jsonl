@@ -1,2 +1,4 @@
 {"pid":7136,"event":"SUPERVISOR_START","utc":"2026-10-18T08:56:03Z"}
 {"runner_pid":29180,"utc":"2026-10-18T08:56:03Z","event":"RUNNER_LAUNCH"}
+{"runner_pid":29180,"utc":"2026-10-19T12:40:39Z","event":"RUNNER_EXIT","exit_code":0}
+{"event":"SUPERVISOR_END","utc":"2026-10-19T12:40:39Z"}

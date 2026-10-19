@@ -1,0 +1,284 @@
+{
+ "utc": "2026-10-19T12:33:39+00:00",
+ "rows": 541,
+ "unique_sim_ids": true,
+ "source_counts": {
+  "OLD": 405,
+  "NEW": 136
+ },
+ "labels_agree_audit_pilot_W19": true,
+ "depth_agree_pilot_A_um": 0.0,
+ "depth_equals_log_A_target": 8.881784197001252e-16,
+ "duplicate_conditions": {
+  "exact_repeats_of_(P,VX,LS,ST)": 0,
+  "min_nn_distance_std_log_inputs": 0.07608613663764725,
+  "pairs_below_0.02": 0,
+  "grouping": "none needed: every run is its own group"
+ },
+ "H_codes_repeated": 104,
+ "input_ranges": {
+  "NEW": {
+   "P": [
+    350.032875191,
+    449.849097257
+   ],
+   "VX": [
+    0.20930220516,
+    0.985529827275
+   ],
+   "LS": [
+    4.00029531788e-05,
+    4.99465552486e-05
+   ],
+   "ST": [
+    301.609503389,
+    499.76938249
+   ]
+  },
+  "OLD": {
+   "P": [
+    52.5445860993,
+    449.762375807
+   ],
+   "VX": [
+    0.201002332148,
+    0.998321353283
+   ],
+   "LS": [
+    4.00293473664e-05,
+    8.97039861056e-05
+   ],
+   "ST": [
+    300.0,
+    399.817710522
+   ]
+  }
+ },
+ "settings": {
+  "TE_ms": {
+   "NEW:2.1": 136,
+   "OLD:1.25": 41,
+   "OLD:2.1": 364
+  },
+  "XI_mm": {
+   "NEW:0.2": 136,
+   "OLD:-0.2": 27,
+   "OLD:0.2": 378
+  }
+ },
+ "class_balance": {
+  "pooled_keyhole_share": 0.36414048059149723,
+  "NEW_keyhole_share": 0.9117647058823529,
+  "OLD_keyhole_share": 0.18024691358024691
+ },
+ "coverage": {
+  "A_um": {
+   "pooled": 540,
+   "NEW": 135,
+   "OLD": 405
+  },
+  "log_A_um": {
+   "pooled": 540,
+   "NEW": 135,
+   "OLD": 405
+  },
+  "log_ke_T0_nJ": {
+   "pooled": 539,
+   "NEW": 135,
+   "OLD": 404
+  },
+  "vmax_spike_logratio": {
+   "pooled": 484,
+   "NEW": 135,
+   "OLD": 349
+  },
+  "vmax_spike_us": {
+   "pooled": 484,
+   "NEW": 135,
+   "OLD": 349
+  },
+  "laser_T0_W": {
+   "pooled": 484,
+   "NEW": 135,
+   "OLD": 349
+  },
+  "tmax_T0_K": {
+   "pooled": 484,
+   "NEW": 135,
+   "OLD": 349
+  },
+  "log_etot_T0_J": {
+   "pooled": 484,
+   "NEW": 135,
+   "OLD": 349
+  },
+  "log_npart_T0": {
+   "pooled": 484,
+   "NEW": 135,
+   "OLD": 349
+  }
+ },
+ "quality": {
+  "short_record": {
+   "NEW": 6,
+   "OLD": 1
+  },
+  "early_end": {
+   "NEW": 79,
+   "OLD": 167
+  }
+ },
+ "shortK": {
+  "pooled_rule": 22,
+  "pooled_rule_by_batch": {
+   "NEW": 10,
+   "OLD": 12
+  },
+  "NEW_original": 10,
+  "NEW_original_subset_of_pooled": true
+ },
+ "definition_consistency_PHYS_AL_vs_RC18_loader": {
+  "log_ke_T0_nJ|OLD": {
+   "n": 404,
+   "max_abs_diff": 7.133011211712947e-05,
+   "median_abs_diff": 0.0
+  },
+  "log_ke_T0_nJ|NEW": {
+   "n": 135,
+   "max_abs_diff": 4.6952518314213876e-05,
+   "median_abs_diff": 0.0
+  },
+  "laser_T0_W|OLD": {
+   "n": 349,
+   "max_abs_diff": 0.0012471673358049884,
+   "median_abs_diff": 0.0
+  },
+  "laser_T0_W|NEW": {
+   "n": 135,
+   "max_abs_diff": 0.000855664927428279,
+   "median_abs_diff": 0.0
+  },
+  "tmax_T0_K|OLD": {
+   "n": 349,
+   "max_abs_diff": 0.08299999999962893,
+   "median_abs_diff": 0.0
+  },
+  "tmax_T0_K|NEW": {
+   "n": 135,
+   "max_abs_diff": 0.032999999999901775,
+   "median_abs_diff": 0.0
+  },
+  "log_etot_T0_J|OLD": {
+   "n": 349,
+   "max_abs_diff": 0.022411190661300928,
+   "median_abs_diff": 0.005095375499609922
+  },
+  "log_etot_T0_J|NEW": {
+   "n": 135,
+   "max_abs_diff": 0.010362933343822434,
+   "median_abs_diff": 0.005032355039217951
+  },
+  "log_npart_T0|OLD": {
+   "n": 349,
+   "max_abs_diff": 5.965341368430188e-05,
+   "median_abs_diff": 0.0
+  },
+  "log_npart_T0|NEW": {
+   "n": 135,
+   "max_abs_diff": 1.948830214715258e-05,
+   "median_abs_diff": 0.0
+  }
+ },
+ "cross_source_overlap_check": {
+  "log_A_um": {
+   "n_NEW_matched": 42,
+   "NEW_minus_OLDnn_median": -0.0021695001973691674,
+   "NEW_minus_OLDnn_IQR": 0.046957341721412416,
+   "OLD_minus_OLDnn_IQR_baseline": 0.10258055411275047,
+   "n_OLD_baseline": 229
+  },
+  "log_ke_T0_nJ": {
+   "n_NEW_matched": 42,
+   "NEW_minus_OLDnn_median": -0.04899141397556195,
+   "NEW_minus_OLDnn_IQR": 0.0995801712783097,
+   "OLD_minus_OLDnn_IQR_baseline": 0.18626520805916547,
+   "n_OLD_baseline": 229
+  },
+  "vmax_spike_logratio": {
+   "n_NEW_matched": 42,
+   "NEW_minus_OLDnn_median": -0.04833412478068233,
+   "NEW_minus_OLDnn_IQR": 0.23227143768961744,
+   "OLD_minus_OLDnn_IQR_baseline": 0.1094436229243351,
+   "n_OLD_baseline": 123
+  },
+  "vmax_spike_us": {
+   "n_NEW_matched": 42,
+   "NEW_minus_OLDnn_median": -0.45326666666674953,
+   "NEW_minus_OLDnn_IQR": 41.404025000000395,
+   "OLD_minus_OLDnn_IQR_baseline": 0.0363666666666762,
+   "n_OLD_baseline": 123
+  },
+  "laser_T0_W": {
+   "n_NEW_matched": 42,
+   "NEW_minus_OLDnn_median": -3.136208059707016,
+   "NEW_minus_OLDnn_IQR": 5.635816643077147,
+   "OLD_minus_OLDnn_IQR_baseline": 5.3038407976973705,
+   "n_OLD_baseline": 123
+  },
+  "tmax_T0_K": {
+   "n_NEW_matched": 42,
+   "NEW_minus_OLDnn_median": -31.82508333333294,
+   "NEW_minus_OLDnn_IQR": 97.10070833333384,
+   "OLD_minus_OLDnn_IQR_baseline": 44.785416666666606,
+   "n_OLD_baseline": 123
+  },
+  "log_etot_T0_J": {
+   "n_NEW_matched": 42,
+   "NEW_minus_OLDnn_median": -0.04641003302332969,
+   "NEW_minus_OLDnn_IQR": 0.12414144956634443,
+   "OLD_minus_OLDnn_IQR_baseline": 0.17150857081776216,
+   "n_OLD_baseline": 123
+  },
+  "log_npart_T0": {
+   "n_NEW_matched": 42,
+   "NEW_minus_OLDnn_median": -0.0478169536814983,
+   "NEW_minus_OLDnn_IQR": 0.1261957292621716,
+   "OLD_minus_OLDnn_IQR_baseline": 0.1704329921873562,
+   "n_OLD_baseline": 123
+  }
+ },
+ "missingness_vs_batch": {
+  "log_A_um": {
+   "NEW": 0.007352941176470588,
+   "OLD": 0.0
+  },
+  "log_ke_T0_nJ": {
+   "NEW": 0.007352941176470588,
+   "OLD": 0.0024691358024691358
+  },
+  "vmax_spike_logratio": {
+   "NEW": 0.007352941176470588,
+   "OLD": 0.1382716049382716
+  },
+  "vmax_spike_us": {
+   "NEW": 0.007352941176470588,
+   "OLD": 0.1382716049382716
+  },
+  "laser_T0_W": {
+   "NEW": 0.007352941176470588,
+   "OLD": 0.1382716049382716
+  },
+  "tmax_T0_K": {
+   "NEW": 0.007352941176470588,
+   "OLD": 0.1382716049382716
+  },
+  "log_etot_T0_J": {
+   "NEW": 0.007352941176470588,
+   "OLD": 0.1382716049382716
+  },
+  "log_npart_T0": {
+   "NEW": 0.007352941176470588,
+   "OLD": 0.1382716049382716
+  }
+ }
+}

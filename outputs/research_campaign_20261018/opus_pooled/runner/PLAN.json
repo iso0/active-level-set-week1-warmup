@@ -1,0 +1,101 @@
+{
+ "note": "RC19 pooled from-scratch queue (owner instruction 2026-10-19; research campaign 20261018 budget, deadline from the coordination record). One persistent queue: src/rc19_runner.ps1. Development jobs on pooled DEV repeats 1-2; final jobs are appended only after the final protocol and manifest are frozen and committed. 'after' = dependencies. No interactive python while both slots are busy.",
+ "runner_slots": 1,
+ "stop_runner": false,
+ "jobs": [
+  {
+   "name": "dev_label",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 2,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc19_jobs",
+    "work",
+    "dev-label",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261018/opus_pooled/dev/dev-label/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-label/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-label/locks",
+   "units_total": 100,
+   "resume_token": "0"
+  },
+  {
+   "name": "dev_region",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 2,
+   "max_workers": 2,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc19_jobs",
+    "work",
+    "dev-region",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261018/opus_pooled/dev/dev-region/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-region/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-region/locks",
+   "units_total": 120,
+   "resume_token": "0"
+  },
+  {
+   "name": "dev_reg",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 3,
+   "max_workers": 2,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc19_jobs",
+    "work",
+    "dev-reg",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261018/opus_pooled/dev/dev-reg/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-reg/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-reg/locks",
+   "units_total": 80,
+   "resume_token": "0"
+  },
+  {
+   "name": "dev_full",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 4,
+   "max_workers": 1,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc19_jobs",
+    "work",
+    "dev-full",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261018/opus_pooled/dev/dev-full/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-full/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-full/locks",
+   "units_total": 20,
+   "resume_token": "0"
+  },
+  {"name": "dev_label2", "enabled": true, "kind": "pool", "priority": 1, "max_workers": 1, "python": "system",
+   "args": ["-m", "src.rc19_jobs", "work", "dev-label2", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus_pooled/dev/dev-label2/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-label2/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-label2/locks", "units_total": 20, "resume_token": "0"},
+  {"name": "dev_temporal", "enabled": true, "kind": "pool", "priority": 5, "max_workers": 1, "python": "system",
+   "args": ["-m", "src.rc19_jobs", "work", "dev-temporal", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261018/opus_pooled/dev/dev-temporal/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-temporal/failed",
+   "locks_dir": "outputs/research_campaign_20261018/opus_pooled/dev/dev-temporal/locks", "units_total": 10, "resume_token": "0"}
+ ]
+}

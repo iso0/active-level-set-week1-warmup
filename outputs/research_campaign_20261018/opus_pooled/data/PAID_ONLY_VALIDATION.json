@@ -1,0 +1,76 @@
+{
+ "utc": "2026-10-19T12:37:37+00:00",
+ "task": {
+  "repeat": 1,
+  "fold": 1
+ },
+ "checks": {
+  "test_row_refused": true,
+  "double_pay_refused": true,
+  "unpaid_rows_hidden": true,
+  "reg:SHQ:MOIVR": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "startup_paid_and_counted": true,
+   "queries": 20,
+   "seconds": 4.0
+  },
+  "reg:M0Q:RANDOM": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "startup_paid_and_counted": true,
+   "queries": 20,
+   "seconds": 0.3
+  },
+  "reg:SHQH:MAXIMIN": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "startup_paid_and_counted": true,
+   "queries": 20,
+   "seconds": 0.7
+  },
+  "region:SHQ:STRADDLE": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "startup_paid_and_counted": true,
+   "queries": 20,
+   "seconds": 2.5
+  },
+  "region:M0:TRUVAR": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "startup_paid_and_counted": true,
+   "queries": 20,
+   "seconds": 0.2
+  },
+  "label:G3_MARGIN:": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "startup_paid_and_counted": true,
+   "queries": 24,
+   "seconds": 0.8
+  },
+  "label:E1_STRADDLE:": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "startup_paid_and_counted": true,
+   "queries": 24,
+   "seconds": 0.5
+  },
+  "label:PHYSCF_ATS_MARGIN:": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "startup_paid_and_counted": true,
+   "queries": 24,
+   "seconds": 0.8
+  },
+  "label:PHYSMC_AT_MARGIN:": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "startup_paid_and_counted": true,
+   "queries": 24,
+   "seconds": 0.6
+  }
+ },
+ "status": "PASS"
+}
