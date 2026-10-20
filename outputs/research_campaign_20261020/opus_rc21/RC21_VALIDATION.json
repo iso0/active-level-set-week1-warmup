@@ -1,0 +1,355 @@
+{
+ "utc": "2026-10-20T18:35:56+00:00",
+ "laplace": {
+  "weight_space": [
+   {
+    "state": [
+     11,
+     1,
+     "ATSCF_MARGIN",
+     12
+    ],
+    "theta": [
+     0.5,
+     4.0
+    ],
+    "max_abs_f_diff": 7.229772336359019e-13,
+    "abs_logZ_diff": 9.14823772291129e-14
+   },
+   {
+    "state": [
+     11,
+     1,
+     "ATSCF_MARGIN",
+     12
+    ],
+    "theta": [
+     1.0,
+     1.0
+    ],
+    "max_abs_f_diff": 2.1316282072803006e-14,
+    "abs_logZ_diff": 8.881784197001252e-16
+   },
+   {
+    "state": [
+     11,
+     1,
+     "ATSCF_MARGIN",
+     12
+    ],
+    "theta": [
+     4.0,
+     0.5
+    ],
+    "max_abs_f_diff": 3.375077994860476e-14,
+    "abs_logZ_diff": 1.4210854715202004e-14
+   },
+   {
+    "state": [
+     12,
+     2,
+     "E1S",
+     24
+    ],
+    "theta": [
+     0.5,
+     4.0
+    ],
+    "max_abs_f_diff": 2.4868995751603507e-14,
+    "abs_logZ_diff": 8.881784197001252e-16
+   },
+   {
+    "state": [
+     12,
+     2,
+     "E1S",
+     24
+    ],
+    "theta": [
+     1.0,
+     1.0
+    ],
+    "max_abs_f_diff": 3.5844216483837954e-11,
+    "abs_logZ_diff": 5.7909232964448165e-12
+   },
+   {
+    "state": [
+     12,
+     2,
+     "E1S",
+     24
+    ],
+    "theta": [
+     4.0,
+     0.5
+    ],
+    "max_abs_f_diff": 2.078337502098293e-12,
+    "abs_logZ_diff": 2.398081733190338e-13
+   },
+   {
+    "state": [
+     13,
+     4,
+     "G3_MARGIN",
+     60
+    ],
+    "theta": [
+     0.5,
+     4.0
+    ],
+    "max_abs_f_diff": 8.970602038971265e-14,
+    "abs_logZ_diff": 1.4210854715202004e-14
+   },
+   {
+    "state": [
+     13,
+     4,
+     "G3_MARGIN",
+     60
+    ],
+    "theta": [
+     1.0,
+     1.0
+    ],
+    "max_abs_f_diff": 9.142686607788164e-14,
+    "abs_logZ_diff": 1.7763568394002505e-14
+   },
+   {
+    "state": [
+     13,
+     4,
+     "G3_MARGIN",
+     60
+    ],
+    "theta": [
+     4.0,
+     0.5
+    ],
+    "max_abs_f_diff": 7.105427357601002e-14,
+    "abs_logZ_diff": 2.1316282072803006e-14
+   }
+  ],
+  "residual_vs_optimiser": [
+   {
+    "state": [
+     11,
+     1,
+     "ATSCF_MARGIN",
+     12
+    ],
+    "theta": [
+     1.0,
+     2.0,
+     0.5,
+     0.75
+    ],
+    "optimiser_minus_newton_objective": -8.327116773898524e-12,
+    "newton_stationarity_max_abs": 1.4897111322298429e-12,
+    "max_abs_f_diff": 1.3533903882034792e-06
+   },
+   {
+    "state": [
+     11,
+     1,
+     "ATSCF_MARGIN",
+     12
+    ],
+    "theta": [
+     1.0,
+     2.0,
+     2.0,
+     1.5
+    ],
+    "optimiser_minus_newton_objective": -1.0021317109476513e-11,
+    "newton_stationarity_max_abs": 2.421347844450139e-12,
+    "max_abs_f_diff": 3.346594574793471e-06
+   },
+   {
+    "state": [
+     12,
+     2,
+     "E1S",
+     24
+    ],
+    "theta": [
+     1.0,
+     2.0,
+     0.5,
+     0.75
+    ],
+    "optimiser_minus_newton_objective": -1.745261712926549e-10,
+    "newton_stationarity_max_abs": 3.885780586188048e-15,
+    "max_abs_f_diff": 4.370343503978802e-06
+   },
+   {
+    "state": [
+     12,
+     2,
+     "E1S",
+     24
+    ],
+    "theta": [
+     1.0,
+     2.0,
+     2.0,
+     1.5
+    ],
+    "optimiser_minus_newton_objective": -1.3730527825828176e-09,
+    "newton_stationarity_max_abs": 7.382983113757291e-15,
+    "max_abs_f_diff": 1.0280070625867666e-05
+   },
+   {
+    "state": [
+     13,
+     4,
+     "G3_MARGIN",
+     60
+    ],
+    "theta": [
+     1.0,
+     2.0,
+     0.5,
+     0.75
+    ],
+    "optimiser_minus_newton_objective": -3.128116799189229e-05,
+    "newton_stationarity_max_abs": 2.1871393585115584e-14,
+    "max_abs_f_diff": 0.0004366567173033076
+   },
+   {
+    "state": [
+     13,
+     4,
+     "G3_MARGIN",
+     60
+    ],
+    "theta": [
+     1.0,
+     2.0,
+     2.0,
+     1.5
+    ],
+    "optimiser_minus_newton_objective": -0.00016115226326718357,
+    "newton_stationarity_max_abs": 1.3766765505351941e-14,
+    "max_abs_f_diff": 0.0010373937155208068
+   }
+  ],
+  "PASS": true,
+  "worst": {
+   "weight_space": 3.5844216483837954e-11,
+   "optimiser_objective_gap": -8.327116773898524e-12,
+   "optimiser_f_gap_informational": 0.0010373937155208068,
+   "newton_stationarity": 2.421347844450139e-12
+  }
+ },
+ "quadrature": {
+  "max_abs_64_vs_200": 3.159473233038668e-08,
+  "max_abs_64_vs_mc": 0.0012295728590189237,
+  "PASS": true
+ },
+ "nesting_reproduction": {
+  "fxmap_vs_shq_ats_h": [
+   0.0011031180021490727,
+   0.0005334006484581932,
+   0.0003841057775604284,
+   0.00025635454774924904
+  ],
+  "wide_intercept": [
+   1.1233874813165734e-05,
+   4.907448993840546e-06,
+   5.884706577585774e-07,
+   8.327599753998882e-06
+  ],
+  "cache": [
+   2.871136972615318e-08,
+   2.9564815262617117e-08,
+   2.9707373783161017e-08,
+   2.9660048861401833e-08
+  ],
+  "rc20_cand_state": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "sklearn_vs_exact_informational": [
+   2.153734426857401e-05,
+   0.00012039085420179063,
+   0.0003164921818377131,
+   0.0002245112917860781
+  ],
+  "PASS": true
+ },
+ "shadow": {
+  "max_abs_diff": {
+   "SHQ_ATS_H": 0.0,
+   "SHQ_ATS_X": 0.0,
+   "PHR": 0.0,
+   "PHR_NR": 0.0,
+   "PHR_FX": 0.0,
+   "PHR_FXMAP": 0.0
+  },
+  "PASS": true
+ },
+ "geometry": {
+  "corr_Zd_zh": 0.9999999999999996,
+  "max_abs_Bt_d": 5.551115123125783e-17,
+  "max_abs_BtB_minus_I": 1.9782536742162317e-17,
+  "U_change_along_d_max": 4.440892098500626e-16,
+  "d": [
+   0.7655177613486739,
+   -0.333972526399119,
+   -0.5499499146925151,
+   0.0
+  ],
+  "pool_log_sd": [
+   0.5120615010999552,
+   0.4467942661259418,
+   0.24524419337757314,
+   0.12261411434976704
+  ],
+  "PASS": true
+ },
+ "timing": [
+  {
+   "state": [
+    11,
+    1,
+    "ATSCF_MARGIN",
+    8
+   ],
+   "cpu_s_shq_ats_h_only": 0.296875,
+   "cpu_s_all_constructions": 0.421875
+  },
+  {
+   "state": [
+    11,
+    1,
+    "ATSCF_MARGIN",
+    24
+   ],
+   "cpu_s_shq_ats_h_only": 0.53125,
+   "cpu_s_all_constructions": 0.65625
+  },
+  {
+   "state": [
+    11,
+    1,
+    "ATSCF_MARGIN",
+    60
+   ],
+   "cpu_s_shq_ats_h_only": 0.5,
+   "cpu_s_all_constructions": 0.765625
+  },
+  {
+   "state": [
+    12,
+    2,
+    "E1S",
+    60
+   ],
+   "cpu_s_shq_ats_h_only": 0.515625,
+   "cpu_s_all_constructions": 0.671875
+  }
+ ],
+ "status": "PASS"
+}

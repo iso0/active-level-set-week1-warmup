@@ -1,0 +1,15 @@
+{
+ "note": "RC21 continuation queue (owner instruction 2026-10-20 evening) INSIDE the remaining RC20 window: t0/deadline below are the RC20 ones (the 24-hour clock is not restarted; the completed 48-hour campaign is not reset). One persistent queue: src/rc21_runner.ps1 (detached via src/rc21_start_runner.ps1). 'after' = dependencies. Every worker runs single-threaded; Opus share 2 threads; Astra's separate 2-thread reservation is never used.",
+ "t0_utc": "2026-10-20T11:52:22Z",
+ "rc21_start_utc": "2026-10-20T18:18:07Z",
+ "deadline_utc": "2026-10-21T11:52:22Z",
+ "runner_slots": 2,
+ "stop_runner": false,
+ "jobs": [
+  {"name": "d_replay", "enabled": true, "kind": "pool", "priority": 1, "max_workers": 2, "python": "system",
+   "args": ["-m", "src.rc21_jobs", "work", "d-replay", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261020/opus_rc21/d-replay/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261020/opus_rc21/d-replay/failed",
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/d-replay/locks", "units_total": 200, "resume_token": "0"}
+ ]
+}

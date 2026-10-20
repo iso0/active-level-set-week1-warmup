@@ -63,3 +63,13 @@ outputs/research_campaign_20261020/opus_rc20/runner/HEARTBEAT.json
 outputs/research_campaign_20261020/opus_rc20/runner/STATE.json
 outputs/research_campaign_20261020/opus_rc20/runner/STATUS.md
 outputs/research_campaign_20261020/opus_rc20/runner/*.tmp
+# RC21 continuation (inside the RC20 window): unit checkpoints, claim locks and live runner state
+outputs/research_campaign_20261020/opus_rc21/**/units/
+outputs/research_campaign_20261020/opus_rc21/**/locks/
+outputs/research_campaign_20261020/opus_rc21/runner/runner.lock
+outputs/research_campaign_20261020/opus_rc21/runner/HEARTBEAT.json
+outputs/research_campaign_20261020/opus_rc21/runner/STATE.json
+outputs/research_campaign_20261020/opus_rc21/runner/STATUS.md
+outputs/research_campaign_20261020/opus_rc21/runner/*.tmp
+outputs/research_campaign_20261020/opus_rc21/runner/runner_stdout.txt
+outputs/research_campaign_20261020/opus_rc21/runner/runner_stderr.txt
