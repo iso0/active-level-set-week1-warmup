@@ -50,3 +50,4 @@
 {"event":"WORKER_START","job":"b_final_reg","worker":2,"pid":15284,"opus_used_before":1,"astra_used":2,"leaves":"astra:808:1 astra:6008:1","utc":"2026-10-19T20:58:57Z"}
 {"event":"WORKER_END","job":"b_final_reg","worker":1,"pid":20364,"exit_code":0,"locks_released":0,"utc":"2026-10-19T21:55:46Z"}
 {"event":"WORKER_END","job":"b_final_reg","worker":2,"pid":15284,"exit_code":0,"locks_released":0,"utc":"2026-10-19T21:56:17Z"}
+{"event":"RUNNER_END","reason":"deadline reached and no live workers","utc":"2026-10-20T08:41:28Z"}

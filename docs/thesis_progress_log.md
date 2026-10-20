@@ -1266,3 +1266,85 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - Ancak özgüllük kazancı yok (−0.018), bu yüzden BA farkı oluşmuyor.
 
 **Sonuç.** Aktif pencere hedefi, bütün-kayıt hedefinden açıkça iyi. G3'e karşı BA üstünlüğü ise doğrulanmadı. C3 harcandı; yeni bir aday için yeni veri ya da yeni bir doğrulama tasarımı gerekecek.
+
+### 2026-10-19 — RC19: tek havuz, sıfırdan aktif öğrenme (541 simülasyon)
+
+[Nihai rapor](../outputs/research_campaign_20261018/opus_pooled/FINAL_REPORT_RC19.md), [düzeltme](../outputs/research_campaign_20261018/opus_pooled/ERRATUM_RC19_20261019.md).
+
+**Kurulum.**
+- 405 OLD ve 136 NEW koşu tek bir havuzda birleştirildi; köken yalnızca kayıt için tutuldu.
+- Arşiv önbilgisi yok. 8 noktalı etiketsiz başlangıç dahil her ödenmiş simülasyon sayıldı.
+- Dondurma `8f82e404`. Final tekrarları 3–10: 920 yörünge, 0 hata.
+
+**Olumlu (DEV).**
+- **8 fiziksel çıktı:** SHQ (paylaşılan uzunluk ölçekleri + kayıt kalitesi), M0'dan iyi. R²-AULC +0.035 (8/8).
+- **Hız-sıçrama bölgesi:** SHQ + straddle, maximin'den iyi. BA-AULC +0.027 (8/8); BA ≥ 0.95, ortalama 27.1 simülasyonda teyit.
+
+**Boş (null).**
+- Fiziksel-yanıt sınıflandırıcısı ile E1 + straddle arasında BA farkı yok (+0.005). Log-kayıp 8/8 tekrarda daha iyi (−0.086).
+- Eğri modelleri skaler GP'yi geçmedi.
+
+**Düzeltilenler** (RC19B erratum):
+- harcama b + 4 olarak düzeltildi;
+- float16 dışa aktarım kayıplıydı;
+- "çapraz uyum" ifadesi yerinde değildi: yöntem yaklaşık bir LOO'ydu (ATSAPPROX);
+- ortak tamamlanma artık her kol için raporlanıyor.
+
+### 2026-10-19 — RC19B: dürüst çapraz uyum, kalibre E1 ve süre darboğazı
+
+[Nihai rapor](../outputs/research_campaign_20261018/opus_rc19b/FINAL_REPORT_RC19B.md), [ek (2026-10-20)](../outputs/research_campaign_20261018/opus_rc19b/ADDENDUM_RC19B_20261020.md).
+
+**Kurulum.**
+- Dondurma `8299437f`. Taze tekrarlar 11–18: 360 yörünge, 0 hata.
+
+**Olumlu (DEV).**
+- **Birincil:** dürüst ATSCF + margin, kalibre E1 + straddle'dan daha iyi olasılık verdi. LL-AULC −0.030 (7/8).
+- M0Q + MOIVR, ortak 8 çıktı hedefine 7/8 tekrarda ulaştı.
+
+**Boş (null).**
+- Hiçbir BA karşılaştırmasında fark yok.
+- RC19 yaklaşık sürümü dürüst sürümden hâlâ iyi (Brier WORSE).
+- Süre için hurdle modeli 4 kolun 3'ünde daha kötü; MOIVRB de kazanç getirmedi.
+- Hızlı-tarama köşesi çözülmedi.
+
+**Nitelendirilenler** (2026-10-20):
+- "23.5 simülasyon" kısıtlı bir skordur: tamamlamayanlara 84 atandı. Birleşik tamamlanma 12/16'ya karşı 11/16 ve kararsız.
+- "%45 eşleme / %55 fizik" ayrımı geri çekildi.
+- "≤ 2 satır" sayısı 46 değil 7: monitör aralığı 0.018 µs, dosya adındaki DT değil.
+
+### 2026-10-20 — RC20: kazancın kaynağı, log h birleşimi ve ödenmiş-sorgu testi
+
+[Nihai rapor](../outputs/research_campaign_20261020/opus_rc20/FINAL_REPORT_RC20.md), [Stage 1](../outputs/research_campaign_20261020/opus_rc20/stage1/STAGE1.md), [dondurma](../outputs/research_campaign_20261020/opus_rc20/PROTOCOL_RC20_FINAL.md).
+
+**Kurulum.**
+- Sahibin yeni, sınırlı programı: 24 saatlik tavan, 2 iş parçacığı, yalnız yerel commit.
+- Kurallar sonuçlardan önce kaydedildi (`47242600`). Ardışık aşama dondurması `6f41d4fd`.
+- Stage 1: 200 RC19B yolu üzerinde eşleştirilmiş tekrar oynatma. Ardışık aşama: taze tekrarlar 19–26, 240 yörünge, 0 hata.
+- Toplam 3.04 CPU-saat.
+
+**Olumlu (DEV).**
+- **Kazancın kaynağı:** aynı SHQ üst modeliyle sıcaklık ve hız-sıçrama özellikleri derinliğin ötesinde bilgi ekliyor. LL −0.029 (8/8, karar verici H1).
+- **log h:** sınıflandırıcıya büzülebilir bir terim olarak girdiğinde log-kaybı −0.020 (8/8) düşürüyor; küçük bütçede −0.036.
+- **Ardışık birincil sonuç BETTER:** SHQ_ATS_H + margin − ATSCF + margin, küçük bütçe LL-AULC'si −0.038 (8/8).
+- **Daha az simülasyon:**
+
+  | hedef | SHQ_ATS_H + margin | ATSCF + margin |
+  |---|---|---|
+  | BA ≥ 0.93 | 15.1 | 19.5 |
+  | LL ≤ 0.20 | 18.75 | 22.5 |
+
+  E1 + straddle'a göre 6–10 simülasyon daha az.
+
+**Boş (null).**
+- SHQ üst modelinin kendisi kazancın kaynağı değil (−0.003).
+- E1 olasılık haritası tüm yollarda maddi değil.
+- h-ortalamalı emülatör (SHQT) maddi değil.
+- İki çapraz-uyum çaresi (FD, MAP) pilotta eşiği geçemedi.
+- η-straddle seçicisi margin'den kötü.
+- BA marjı (0.02) geçilmedi.
+- RC19 yaklaşık sürümüyle fark yok.
+- Hızlı-tarama köşesi çözülmedi.
+
+**Tamamlanmamış / keşifsel.**
+- h'ye özgüllük: kazancın yaklaşık dörtte üçü "sınıflandırıcıya kesin kamusal girdi vermek"ten geliyor. log h genel girdilerden tutarlı ama küçük farkla iyi (7/8).
+- Fiziksel doğrulama (yeni simülasyon, C4) yapılmadı; sahibin kararı.

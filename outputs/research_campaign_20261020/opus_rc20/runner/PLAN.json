@@ -14,6 +14,16 @@
    "args": ["-m", "src.rc20_jobs", "work", "c-replay", "--threads", "1"],
    "done_glob": "outputs/research_campaign_20261020/opus_rc20/c-replay/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261020/opus_rc20/c-replay/failed",
-   "locks_dir": "outputs/research_campaign_20261020/opus_rc20/c-replay/locks", "units_total": 200, "resume_token": "0"}
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc20/c-replay/locks", "units_total": 200, "resume_token": "0"},
+  {"name": "c_final", "enabled": true, "kind": "pool", "priority": 3, "max_workers": 2, "python": "system", "after": ["c_replay"],
+   "args": ["-m", "src.rc20_jobs", "work", "c-final", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261020/opus_rc20/c-final/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261020/opus_rc20/c-final/failed",
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc20/c-final/locks", "units_total": 240, "resume_token": "0"},
+  {"name": "c_replay_x", "enabled": true, "kind": "pool", "priority": 4, "max_workers": 2, "python": "system", "after": ["c_final"],
+   "args": ["-m", "src.rc20_jobs", "work", "c-replay-x", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261020/opus_rc20/c-replay-x/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261020/opus_rc20/c-replay-x/failed",
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc20/c-replay-x/locks", "units_total": 200, "resume_token": "0"}
  ]
 }

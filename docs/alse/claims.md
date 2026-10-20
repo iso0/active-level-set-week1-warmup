@@ -85,3 +85,46 @@ P117 = `outputs/week9_phase1_17a_physics_contour_geometry_audit`; P118A = `outpu
 | Custom controlled 4D benchmark | `outputs/week3_4d_benchmark_comparison/` | C39 | replaced by named Ackley4 on 2026-06-25 |
 
 Two real-data protocols coexist. Phase 6/7 (4 x 5 = 20 runs, warm start 12-16) backs C03, C04, C13, C19 and is exploratory. Week 8.5 (20 x 5 = 100 runs, 16-point maximin design) backs C01, C02, C14 to C18 and every Week 9 row, and is the only confirmatory protocol. Never mix numbers across the two without saying which protocol produced them.
+
+## Ledger addendum (2026-10-20): pooled from-scratch work RC19, RC19B, RC20 (branch `joint-depth-label-dev`)
+
+Path aliases (relative to the repository root, not the archive):
+- RC19 = `outputs/research_campaign_20261018/opus_pooled`
+- RC19B = `outputs/research_campaign_20261018/opus_rc19b`
+- RC20 = `outputs/research_campaign_20261020/opus_rc20`
+
+Protocol: one 541-run pool (405 OLD + 136 NEW; provenance only), learned from a matched 8-point label-free start, with every paid simulation counted. Every row below is **DEV evidence** (new partitions of inspected simulations, not physical validation). "SUPPORTED exploratory" means a pre-registered contrast on fresh DEV repeats, or a pre-registered matched-path replay. Positive, null and qualified findings are listed separately.
+
+### Positive
+
+| ID | Claim | Status | Evidence artifact | Exact metric | Allowed wording | Forbidden overclaim |
+|---|---|---|---|---|---|---|
+| C41 | Sharing ARD lengthscales across the 8 physical outputs plus record quality (SHQ) improves physical-output learning over independent GPs under matched maximin | SUPPORTED exploratory | RC19/report/RESULTS_TABLE.md | R²-AULC +0.035 (8/8; +0.021 to +0.077), repeats 3–10 | "Shared lengthscales improved 8-output R²-AULC by 0.035 in all 8 DEV repeats." | physical validation; savings multiplied by 8 outputs |
+| C42 | SHQ + straddle learns the velocity-spike region faster than maximin | SUPPORTED exploratory | RC19/report/RESULTS_TABLE.md; RC19B/repair/REPAIR_endpoints.md | BA-AULC +0.027 (8/8); BA ≥ 0.95 confirmed at 27.125 paid simulations (25–30) | "SHQ + straddle confirmed region BA 0.95 after a mean of 27.1 paid simulations." | "23.1 queries" (that is the confirmed-pair b, not the spend) |
+| C44 | An honestly cross-fitted physical-response classifier (ATSCF, K = 10) gives better Keyhole probabilities than calibrated E1 at equal paid simulations | SUPPORTED exploratory | RC19B/report/KEYHOLE_FINAL.md | LL-AULC −0.030 ± 0.007 (7/8), repeats 11–18; BA +0.007 not different | "ATSCF lowered log-loss AULC by 0.030 vs calibrated E1; balanced accuracy did not change." | BA gain |
+| C45 | Temperature and spike-ratio features add Keyhole probability information beyond predicted depth, with IDENTICAL SHQ upstream fits, folds, normalisation, quality treatment and paths | SUPPORTED exploratory (matched replay) | RC20/stage1/STAGE1.md (H1) | SHQ_ATS − SHQ_A LL-AULC B8–B60 −0.0288 ± 0.0028 (8/8); B8–B24 −0.0468 (8/8); BA +0.002 | "With identical upstream fits, adding T and S lowered log-loss AULC by 0.029 in all 8 repeats." | BA gain; physical mechanism |
+| C48 | Adding the exact public coordinate log h (h = P/sqrt(VX LS³), LS = spot radius) as a shrinkable term in the same honest classifier improves probabilities, most at small budgets | SUPPORTED exploratory (matched replay) | RC20/stage1/STAGE1.md (H6) | SHQ_ATS_H − SHQ_ATS LL-AULC B8–B60 −0.0197 (8/8), B8–B24 −0.0356 (8/8) | "A shrinkable log-h classifier term lowered log-loss AULC by 0.020 (0.036 at B8–B24) on matched paths." | "the h direction is the mechanism" (see C58); enthalpy measured; transfer to other alloys |
+| C55 | SHQ_ATS_H + margin learns Keyhole probabilities faster than ATSCF + margin (same selector, fresh repeats) | SUPPORTED exploratory | RC20/final_report/FINAL.md (PRIMARY) | LL-AULC B8–B24 −0.0383 ± 0.0067 (8/8), BETTER; B8–B60 −0.0262 (8/8); Brier −0.0062 (8/8); BA +0.008 (8/8, below the 0.02 margin) | "At equal paid simulations the log-h classifier lowered small-budget log-loss AULC by 0.038 in 8/8 fresh DEV repeats." | BA superiority; physical validation |
+| C56 | SHQ_ATS_H + margin needs fewer paid simulations than ATSCF + margin and E1 + straddle to confirm the offline targets BA ≥ 0.93 and test log loss ≤ 0.20 (level at b and b + 4) | SUPPORTED exploratory (offline targets) | RC20/final_report/FINAL.md (paired spend) | BA ≥ 0.93: 15.1 vs 19.5 (ATSCF; 6 fewer/2 more) and 22.6 / 23.1 (E1RAW / E1CAL; 8/8); LL ≤ 0.20: 18.75 vs 22.5 (6/1/1) and 28.5 / 24.75 (8/8); no censoring; vs ATSAPPROX −1.5 / −1.75 (no clear difference) | "Against ATSCF the candidate confirmed both offline targets about 4 simulations earlier; against E1 + straddle 6–10 earlier." | an implementable stopping rule; savings multiplied by outputs; a saving vs the RC19 approximation |
+
+### Null or prohibited
+
+| ID | Claim | Status | Evidence artifact | Exact metric | Allowed wording | Forbidden overclaim |
+|---|---|---|---|---|---|---|
+| C43 | The RC19 physical classifier (PHYSCF, renamed ATSAPPROX) is cross-fitted | PROHIBITED (wording) | RC19/ERRATUM_RC19_20261019.md (C) | closed-form LOO of the FULL fit | "a paid-only, deployable approximation of cross-fitting" | "cross-fitted", "honest CF" |
+| C46 | The ATSCF-over-DEPTHCF gain comes from the shared-lengthscale upstream (SHQ) | NOT SUPPORTED | RC20/stage1/stage1_factorial.csv | upstream main effect −0.003 (orders −0.008 / +0.001); features −0.033 (−0.029 / −0.038); interaction +0.009 | "The gain over depth-only is the extra physical features; the SHQ upstream adds little." | an exact percentage split |
+| C47 | "45 % calibration / 55 % physical information" | PROHIBITED | RC20/stage1/STAGE1.md (H3) | E1CAL − E1RAW −0.0009 over all paths (4/8) | – | the 45/55 split |
+| C49 | A log-h mean in the physical-response emulators (learned-strength Gaussian-prior basis, SHQT) improves the classifier | NOT SUPPORTED | RC20/stage1/STAGE1.md (H7) | SHQT_ATS − SHQ_ATS +0.003 (4/8) B8–B60; −0.015 (5/8) B8–B24 | "h helps in the decision function, not as an emulator mean." | – |
+| C50 | Fold-deployment or MAP lengthscales remove the honest cross-fit small-budget deficit | NOT SUPPORTED | RC20/pilot/PILOT.md | Δ test LL B12–B24: FD +0.0100, MAP +0.0021 | "Neither remedy passed its pre-registered gate." | – |
+| C51 | A hurdle spike-duration model improves duration prediction or joint completion | NOT SUPPORTED | RC19B/report/DURATION_FINAL.md | D1 WORSE in 3/4 arms; D2 WORSE in 3/4 | – | – |
+| C53 | The zero/positive spike-duration boundary is limited by monitor-row resolution | NOT SUPPORTED | RC20/repairs/DURATION_CADENCE_REPAIR.json | monitor interval 0.018 µs; 7/250 positives ≤ 2 rows | – | "46 positives last ≤ 2 rows"; the filename DT used as the monitor cadence |
+| C54 | Any pooled learner resolves the fast-scan / high-power conduction corner | NOT SUPPORTED | RC19B/report/KEYHOLE_FINAL.md; RC20/final_report/FINAL.md | conduction recall ≤ 0.49 at B60 in every arm; SHQ_ATS_H 0.31 vs E1CAL 0.43 | "An unresolved corner; the physical classifiers are weakest there." | – |
+| C57 | An uncertainty-aware eta-straddle selector improves on margin for the same posterior | NOT SUPPORTED | RC20/final_report/FINAL.md | LL-AULC B8–B24 +0.0145 (1/8), WORSE; LL ≤ 0.20 spend +4.1 (MORE) | "Margin stayed the better selector for this posterior." | – |
+| C59 | The honest log-h classifier beats the RC19 approximation (ATSAPPROX) | NOT SUPPORTED | RC20/final_report/FINAL.md | LL-AULC −0.006 / −0.009 (5/8); spend −1.5 / −1.75 | "The honest classifier now matches the approximation." | superiority over ATSAPPROX |
+
+### Qualified or exploratory
+
+| ID | Claim | Status | Evidence artifact | Exact metric | Allowed wording | Forbidden overclaim |
+|---|---|---|---|---|---|---|
+| C52 | M0Q + MOIVR reaches the joint 8-output target with 23.5 fewer simulations than SHQ + RANDOM | QUALIFIED | RC19B/ADDENDUM_RC19B_20261020.md | restricted score (non-completers = 84); observed in 4/8 repeats; attainment 12/16 vs 11/16 over RC19 + RC19B | "With non-completers scored at 84 the restricted score favoured M0Q + MOIVR by 23.5; attainment is unstable." | "23.5 simulations saved" |
+| C58 | The log-h gain is specific to the h direction rather than to giving the classifier exact public inputs | QUALIFIED (exploratory, registered after Stage 1) | RC20/final_report/FINAL.md (by-products); RC20/stage1_x/STAGE1_X.md | 200 matched paths, paired: exact inputs vs none LL −0.0148 (8/8); log h vs none −0.0197 (8/8); log h vs exact inputs −0.0049 (h better 7/8; A only −0.0079, 8/8); candidate paths LL 0.1589 / 0.1664 / 0.1905 | "About three quarters of the gain comes from exact public inputs in the classifier; log h is a parsimonious, physics-shaped version that is consistently but modestly better." | "the physics coordinate h causes the gain" |

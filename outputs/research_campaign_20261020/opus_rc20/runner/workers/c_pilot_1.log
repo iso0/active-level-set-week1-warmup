@@ -1,0 +1,11 @@
+{"unit": "r11_f1__E1S", "status": "ok", "s": 15.64}
+{"unit": "r11_f1__ATSCF_MARGIN", "status": "ok", "s": 12.16}
+{"unit": "r11_f2__E1S", "status": "ok", "s": 17.7}
+{"unit": "r11_f3__ATSCF_MARGIN", "status": "ok", "s": 14.93}
+{"unit": "r11_f4__ATSCF_MARGIN", "status": "ok", "s": 14.7}
+{"unit": "r11_f5__ATSCF_MARGIN", "status": "ok", "s": 13.58}
+{"unit": "r12_f1__E1S", "status": "ok", "s": 18.07}
+{"unit": "r12_f2__ATSCF_MARGIN", "status": "ok", "s": 12.61}
+{"unit": "r12_f3__E1S", "status": "ok", "s": 14.59}
+{"unit": "r12_f4__E1S", "status": "ok", "s": 15.28}
+{"unit": "r12_f5__ATSCF_MARGIN", "status": "ok", "s": 13.19}

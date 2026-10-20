@@ -1,244 +1,254 @@
 {
- "studies": [
-  {
-   "name": "trained_al",
-   "enabled": true,
-   "priority": 1,
-   "max_workers": 3,
-   "python": "system",
-   "args": [
-    "-m",
-    "src.jdl_trained_al",
-    "work",
-    "--threads",
-    "1"
-   ],
-   "done_glob": "outputs/joint_depth_label_development/_cache/trained_al/NEW__*.json.gz",
-   "units_total": 40,
-   "locks_dir": "outputs/joint_depth_label_development/_cache/trained_al/locks"
-  },
-  {
-   "name": "corner_local",
-   "enabled": true,
-   "priority": 1,
-   "max_workers": 1,
-   "python": "system",
-   "args": [
-    "-m",
-    "src.jdl_corner_local",
-    "work",
-    "--threads",
-    "1"
-   ],
-   "done_glob": "outputs/joint_depth_label_development/_cache/corner_local/NEW__*.json.gz",
-   "units_total": 11,
-   "locks_dir": "outputs/joint_depth_label_development/_cache/corner_local/locks",
-   "note": "re-enabled 09:47 UTC after the v1.1 repair (commit 8573c1de); only the FIXED unit remains"
-  },
-  {
-   "name": "stop_rule",
-   "enabled": true,
-   "priority": 1,
-   "max_workers": 1,
-   "python": "system",
-   "args": [
-    "-m",
-    "src.jdl_stop_rule",
-    "work",
-    "--threads",
-    "1"
-   ],
-   "done_glob": "outputs/joint_depth_label_development/_cache/stop_rule/NEW__*.json.gz",
-   "units_total": 20,
-   "locks_dir": "outputs/joint_depth_label_development/_cache/stop_rule/locks"
-  },
-  {
-   "name": "astra_al_margin",
-   "enabled": true,
-   "priority": 2,
-   "max_workers": 1,
-   "python": "system",
-   "args": [
-    "-m",
-    "src.jdl_astra_al",
-    "work",
-    "--arms",
-    "ALIGNED_MARGIN",
-    "--threads",
-    "1"
-   ],
-   "done_glob": "outputs/joint_depth_label_development/_cache/astra_al/NEW__*__ALIGNED_MARGIN.json.gz",
-   "units_total": 10,
-   "locks_dir": "outputs/joint_depth_label_development/_cache/astra_al/locks/ALIGNED_MARGIN"
-  },
-  {
-   "name": "astra_al_variance",
-   "enabled": true,
-   "priority": 2,
-   "max_workers": 1,
-   "python": "system",
-   "args": [
-    "-m",
-    "src.jdl_astra_al",
-    "work",
-    "--arms",
-    "V2_VARIANCE",
-    "--threads",
-    "1"
-   ],
-   "done_glob": "outputs/joint_depth_label_development/_cache/astra_al/NEW__*__V2_VARIANCE.json.gz",
-   "units_total": 10,
-   "locks_dir": "outputs/joint_depth_label_development/_cache/astra_al/locks/V2_VARIANCE"
-  },
-  {
-   "name": "astra_al_risk",
-   "enabled": false,
-   "priority": 3,
-   "max_workers": 0,
-   "note": "STOPPED BY OWNER 2026-10-16 21:01 UTC (compute cost and priority; owner decision of 2026-10-16): no further BA_RISK launches. History: 10:04 UTC 1 -> 2 workers, 10:55 UTC -> 3 (ASTRA_AL_PROTOCOL section 4).",
-   "python": "system",
-   "args": [
-    "-m",
-    "src.jdl_astra_al",
-    "work",
-    "--arms",
-    "BA_RISK",
-    "--max-units",
-    "1",
-    "--threads",
-    "1"
-   ],
-   "done_glob": "outputs/joint_depth_label_development/_cache/astra_al/NEW__*__BA_RISK.json.gz",
-   "units_total": 10,
-   "locks_dir": "outputs/joint_depth_label_development/_cache/astra_al/locks/BA_RISK"
-  }
- ],
- "note_history": "Read by src/jdl_pool_runner.ps1 every cycle. Total capacity 4 threads shared with Astra; one BLAS thread per worker. Lower priority number = launched first. ASTRA_AL allocation per astra_al/ASTRA_AL_PROTOCOL.md section 4: cheap arms 1 worker each; BA_RISK starts with the single predeclared timing unit (max_workers 1) and is raised only after its first acquisition step is recorded.",
- "studies_status": "HISTORY: the 'studies' list belongs to src/jdl_pool_runner.ps1 (2026-10-15/16); that runner ended with POOL_END and is not running. ASTRA_AL / BA_RISK stays cancelled (owner, 2026-10-16); never re-enable.",
- "coordination": {
-  "role": "SINGLE COORDINATION RECORD (machine-readable) for all numerical work on this host. Human-readable log: outputs/joint_depth_label_development/COORDINATION.md. Update protocol: src/rc18_coord.py docstring (lock file pool/COORDINATION.lock, read, change only your own share, temp file + os.replace, delete lock).",
-  "coordinator": "Opus (Claude Code session, thesis worktree joint-depth-label-dev)",
-  "host": "Burak",
-  "host_capacity": {
-   "logical_cpus": 8,
-   "physical_cores": 4,
-   "ram_gb": 31.8,
-   "measured_utc": "2026-10-18T08:45:00+00:00",
-   "background_load_logical_cpus": 1.0,
-   "background_load_note": "interactive apps only (Claude, ChatGPT/Codex UI, Task Manager); no unrelated numerical workers (0 python/julia/Rscript)"
-  },
-  "capacity_threads_total": 4,
-  "thread_rule": "every leaf numerical process counts with its BLAS/Torch/OpenMP threads; 1 slot per process started with OMP/OPENBLAS/MKL_NUM_THREADS=1, otherwise counted as 4",
-  "campaign": {
-   "name": "research_campaign_20261018",
-   "owner_decision": "2026-10-18 (48-hour physical modelling and sample-efficiency campaign)",
-   "t0_utc": "2026-10-18T08:41:20+00:00",
-   "deadline_utc": "2026-10-20T08:41:20+00:00",
-   "rule": "48 h single total budget; errors/restarts do not reset it; no new fit starts after the deadline"
-  },
-  "shares": [
-   {
-    "owner": "Opus",
-    "threads": 2,
-    "status": "active",
-    "campaign_id": "opus_rc20_20261020",
-    "granted_by": "Owner explicit NEW bounded 24-hour/two-thread continuation (RC20), 2026-10-20",
-    "granted_utc": "2026-10-20T11:52:22+00:00",
-    "valid_until_utc": "2026-10-21T11:52:22+00:00",
-    "jobs": [],
-    "jobs_updated_utc": "2026-10-20T12:07:07+00:00",
-    "runner": "src/rc20_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
-    "note": "Fresh owner authorization; the completed 48-hour campaign is not reset; Astra share never used; combined numerical work <= 4.",
-    "prior_share": {
-     "owner": "Opus",
-     "threads": 2,
-     "status": "expired (completed campaign; deadline reached 2026-10-20T08:41:28Z, runner ended normally)",
-     "granted_by": "owner (2026-10-18)",
-     "granted_utc": "2026-10-18T08:46:11+00:00",
-     "valid_until_utc": "2026-10-20T08:41:20+00:00",
-     "jobs": [],
-     "runner": "src/rc19_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
-     "jobs_updated_utc": "2026-10-19T21:56:17Z"
-    }
-   },
-   {
-    "owner": "Astra",
-    "threads": 2,
-    "status": "reserved",
-    "campaign_id": "astra_representation_planning_20261020",
-    "granted_by": "Owner explicit NEW 24-hour/two-thread continuation, 2026-10-20",
-    "granted_utc": "2026-10-20T11:58:58+00:00",
-    "valid_until_utc": "2026-10-21T11:58:58+00:00",
-    "jobs": [],
-    "jobs_updated_utc": "2026-10-20T12:05:18.514333+00:00",
-    "prior_released_share": {
-     "owner": "Astra",
-     "threads": 2,
-     "status": "released",
-     "granted_by": "Opus (coordinator), per owner decision 2026-10-18",
-     "granted_utc": "2026-10-18T10:46:11+02:00",
-     "valid_until_utc": "2026-10-20T10:41:20+02:00",
-     "note": "Reserved for Astra's new campaign before any heavy Opus computation. Opus never uses these 2 threads without Astra's own completion/release record here. Astra lists her live jobs (pid, command, start_utc, threads) in 'jobs'.",
-     "jobs": [],
-     "jobs_updated_utc": "2026-10-20T05:22:01.319283+00:00",
-     "handoff": {
-      "path": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\OPUS_FINAL_HANDOFF.md",
-      "results_index": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\RESULTS_INDEX.md",
-      "portable_code": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\handoff\\reference_code",
-      "source_manifest": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\handoff\\SOURCE_MANIFEST.json",
-      "status": "13,065 controlled paths and all registered audits complete; no general local or query-savings claim",
-      "scientific_artifact_commit": "f4fc7398b4d1194d35f1ae26cb1fc53d3f0d40c0",
-      "updated_utc": "2026-10-20T05:22:01.319206+00:00",
-      "numerical_work_remaining": 0,
-      "capacity_transfer": "No transfer performed. Coordinator owns any later reassignment."
-     },
-     "released_utc": "2026-10-20T05:22:01.319206+00:00",
-     "release_reason": "All registered controlled and numerical work completed; final scientific report and portable handoff saved.",
-     "released_by": "Astra; explicit owner authorization for completed-campaign release"
-    },
-    "authority_file": "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_representation_planning_20261020\\OWNER_REQUEST.txt",
-    "authority_sha256": "af857ecf9d11a2b25762895bc43acae381233ebe39978edcfc1293c074643ca9",
-    "note": "Fresh owner authorization. Old completed campaign deadline unchanged; no Opus slot borrowed."
-   }
-  ],
-  "no_duplicate_fits": "Opus: SPH-data model/acquisition research (outputs/research_campaign_20261018/opus/). Astra: her own campaign. Shared reference acquisitions (IVR/TruVaR/multiscale level set) are implemented once; the implementing side lists the module here under 'shared_implementations'.",
-  "shared_implementations": [],
-  "last_update_utc": "2026-10-20T12:07:07+00:00"
- },
- "external_reservations": [
-  {
-   "job": "astra_monitor_discovery_20261016",
-   "status": "completed",
-   "granted_by": "Opus",
-   "threads": 1,
-   "host": "Burak",
-   "combined_active_threads": 4,
-   "code_digest": "a41a90f62843cace054d4296294d3e6f19a472bee3239035f5a1b5a29fe8554b",
-   "granted_utc": "2026-10-18T08:48:11+00:00",
-   "expires_utc": "2026-10-18T10:18:11+00:00",
-   "drawn_from_share": "Opus",
-   "combined_active_threads_basis": "planned maximum: this pilot 1 + one other Opus worker 1 + Astra's reserved share 2",
-   "source": "C:/Users/ozgur/Documents/Codex/2026-10-10/files-pasted-by-the-user-you/outputs/astra_monitor_discovery_20261016 (final 17 Oct package)",
-   "run_location": "outputs/research_campaign_20261018/astra_pilot/astra_monitor_discovery_20261016 (verbatim copy, 23/23 files SHA-256 identical; Astra's workspace is never written)",
-   "envelope": "1 thread, <= 1200 cumulative wall s, 578 controlled fit requests + 4 reference fits, 650 component solves; run once, no automatic retry",
-   "python": "C:/Users/ozgur/Documents/thesis/.venv/Scripts/python.exe (numpy 2.4.6, scipy 1.17.1 as in requirements.txt)",
-   "completed_utc": "2026-10-18T08:50:20+00:00",
-   "actual": {
-    "pid_launcher": 14216,
-    "pid_worker": 12872,
-    "start_utc": "2026-10-18T08:48:17+00:00",
-    "command": "C:/Users/ozgur/Documents/thesis/.venv/Scripts/python.exe -B run_pilot.py --run --coordination-record <this record>",
-    "exit_code": 0,
-    "status": "COMPLETE",
-    "used_wall_s": 10.6,
-    "controlled_fit_requests": 578,
-    "component_solves": 650,
-    "reference_fits": 4,
-    "numerical_references": "PASS",
-    "outputs": "outputs/research_campaign_20261018/astra_pilot/astra_monitor_discovery_20261016/pilot/",
-    "summary": "outputs/research_campaign_20261018/astra_pilot/PILOT_SUMMARY.md"
-   },
-   "note": "run once as frozen; status set to completed so the reservation cannot be reused; no retry"
-  }
- ]
+    "studies":  [
+                    {
+                        "name":  "trained_al",
+                        "enabled":  true,
+                        "priority":  1,
+                        "max_workers":  3,
+                        "python":  "system",
+                        "args":  [
+                                     "-m",
+                                     "src.jdl_trained_al",
+                                     "work",
+                                     "--threads",
+                                     "1"
+                                 ],
+                        "done_glob":  "outputs/joint_depth_label_development/_cache/trained_al/NEW__*.json.gz",
+                        "units_total":  40,
+                        "locks_dir":  "outputs/joint_depth_label_development/_cache/trained_al/locks"
+                    },
+                    {
+                        "name":  "corner_local",
+                        "enabled":  true,
+                        "priority":  1,
+                        "max_workers":  1,
+                        "python":  "system",
+                        "args":  [
+                                     "-m",
+                                     "src.jdl_corner_local",
+                                     "work",
+                                     "--threads",
+                                     "1"
+                                 ],
+                        "done_glob":  "outputs/joint_depth_label_development/_cache/corner_local/NEW__*.json.gz",
+                        "units_total":  11,
+                        "locks_dir":  "outputs/joint_depth_label_development/_cache/corner_local/locks",
+                        "note":  "re-enabled 09:47 UTC after the v1.1 repair (commit 8573c1de); only the FIXED unit remains"
+                    },
+                    {
+                        "name":  "stop_rule",
+                        "enabled":  true,
+                        "priority":  1,
+                        "max_workers":  1,
+                        "python":  "system",
+                        "args":  [
+                                     "-m",
+                                     "src.jdl_stop_rule",
+                                     "work",
+                                     "--threads",
+                                     "1"
+                                 ],
+                        "done_glob":  "outputs/joint_depth_label_development/_cache/stop_rule/NEW__*.json.gz",
+                        "units_total":  20,
+                        "locks_dir":  "outputs/joint_depth_label_development/_cache/stop_rule/locks"
+                    },
+                    {
+                        "name":  "astra_al_margin",
+                        "enabled":  true,
+                        "priority":  2,
+                        "max_workers":  1,
+                        "python":  "system",
+                        "args":  [
+                                     "-m",
+                                     "src.jdl_astra_al",
+                                     "work",
+                                     "--arms",
+                                     "ALIGNED_MARGIN",
+                                     "--threads",
+                                     "1"
+                                 ],
+                        "done_glob":  "outputs/joint_depth_label_development/_cache/astra_al/NEW__*__ALIGNED_MARGIN.json.gz",
+                        "units_total":  10,
+                        "locks_dir":  "outputs/joint_depth_label_development/_cache/astra_al/locks/ALIGNED_MARGIN"
+                    },
+                    {
+                        "name":  "astra_al_variance",
+                        "enabled":  true,
+                        "priority":  2,
+                        "max_workers":  1,
+                        "python":  "system",
+                        "args":  [
+                                     "-m",
+                                     "src.jdl_astra_al",
+                                     "work",
+                                     "--arms",
+                                     "V2_VARIANCE",
+                                     "--threads",
+                                     "1"
+                                 ],
+                        "done_glob":  "outputs/joint_depth_label_development/_cache/astra_al/NEW__*__V2_VARIANCE.json.gz",
+                        "units_total":  10,
+                        "locks_dir":  "outputs/joint_depth_label_development/_cache/astra_al/locks/V2_VARIANCE"
+                    },
+                    {
+                        "name":  "astra_al_risk",
+                        "enabled":  false,
+                        "priority":  3,
+                        "max_workers":  0,
+                        "note":  "STOPPED BY OWNER 2026-10-16 21:01 UTC (compute cost and priority; owner decision of 2026-10-16): no further BA_RISK launches. History: 10:04 UTC 1 -\u003e 2 workers, 10:55 UTC -\u003e 3 (ASTRA_AL_PROTOCOL section 4).",
+                        "python":  "system",
+                        "args":  [
+                                     "-m",
+                                     "src.jdl_astra_al",
+                                     "work",
+                                     "--arms",
+                                     "BA_RISK",
+                                     "--max-units",
+                                     "1",
+                                     "--threads",
+                                     "1"
+                                 ],
+                        "done_glob":  "outputs/joint_depth_label_development/_cache/astra_al/NEW__*__BA_RISK.json.gz",
+                        "units_total":  10,
+                        "locks_dir":  "outputs/joint_depth_label_development/_cache/astra_al/locks/BA_RISK"
+                    }
+                ],
+    "note_history":  "Read by src/jdl_pool_runner.ps1 every cycle. Total capacity 4 threads shared with Astra; one BLAS thread per worker. Lower priority number = launched first. ASTRA_AL allocation per astra_al/ASTRA_AL_PROTOCOL.md section 4: cheap arms 1 worker each; BA_RISK starts with the single predeclared timing unit (max_workers 1) and is raised only after its first acquisition step is recorded.",
+    "studies_status":  "HISTORY: the \u0027studies\u0027 list belongs to src/jdl_pool_runner.ps1 (2026-10-15/16); that runner ended with POOL_END and is not running. ASTRA_AL / BA_RISK stays cancelled (owner, 2026-10-16); never re-enable.",
+    "coordination":  {
+                         "role":  "SINGLE COORDINATION RECORD (machine-readable) for all numerical work on this host. Human-readable log: outputs/joint_depth_label_development/COORDINATION.md. Update protocol: src/rc18_coord.py docstring (lock file pool/COORDINATION.lock, read, change only your own share, temp file + os.replace, delete lock).",
+                         "coordinator":  "Opus (Claude Code session, thesis worktree joint-depth-label-dev)",
+                         "host":  "Burak",
+                         "host_capacity":  {
+                                               "logical_cpus":  8,
+                                               "physical_cores":  4,
+                                               "ram_gb":  31.8,
+                                               "measured_utc":  "2026-10-18T08:45:00+00:00",
+                                               "background_load_logical_cpus":  1.0,
+                                               "background_load_note":  "interactive apps only (Claude, ChatGPT/Codex UI, Task Manager); no unrelated numerical workers (0 python/julia/Rscript)"
+                                           },
+                         "capacity_threads_total":  4,
+                         "thread_rule":  "every leaf numerical process counts with its BLAS/Torch/OpenMP threads; 1 slot per process started with OMP/OPENBLAS/MKL_NUM_THREADS=1, otherwise counted as 4",
+                         "campaign":  {
+                                          "name":  "research_campaign_20261018",
+                                          "owner_decision":  "2026-10-18 (48-hour physical modelling and sample-efficiency campaign)",
+                                          "t0_utc":  "2026-10-18T08:41:20+00:00",
+                                          "deadline_utc":  "2026-10-20T08:41:20+00:00",
+                                          "rule":  "48 h single total budget; errors/restarts do not reset it; no new fit starts after the deadline"
+                                      },
+                         "shares":  [
+                                        {
+                                            "owner":  "Opus",
+                                            "threads":  2,
+                                            "status":  "active",
+                                            "campaign_id":  "opus_rc20_20261020",
+                                            "granted_by":  "Owner explicit NEW bounded 24-hour/two-thread continuation (RC20), 2026-10-20",
+                                            "granted_utc":  "2026-10-20T11:52:22+00:00",
+                                            "valid_until_utc":  "2026-10-21T11:52:22+00:00",
+                                            "jobs":  [
+
+                                                     ],
+                                            "note":  "Fresh owner authorization; the completed 48-hour campaign is not reset; Astra share never used; combined numerical work \u003c= 4.",
+                                            "prior_share":  {
+                                                                "owner":  "Opus",
+                                                                "threads":  2,
+                                                                "status":  "expired (completed campaign; deadline reached 2026-10-20T08:41:28Z, runner ended normally)",
+                                                                "granted_by":  "owner (2026-10-18)",
+                                                                "granted_utc":  "2026-10-18T08:46:11+00:00",
+                                                                "valid_until_utc":  "2026-10-20T08:41:20+00:00",
+                                                                "jobs":  [
+
+                                                                         ],
+                                                                "runner":  "src/rc19_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
+                                                                "jobs_updated_utc":  "2026-10-19T21:56:17Z"
+                                                            },
+                                            "runner":  "src/rc20_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
+                                            "jobs_updated_utc":  "2026-10-20T13:53:34Z"
+                                        },
+                                        {
+                                            "owner":  "Astra",
+                                            "threads":  2,
+                                            "status":  "active",
+                                            "campaign_id":  "astra_representation_planning_20261020",
+                                            "granted_by":  "Owner explicit NEW 24-hour/two-thread continuation, 2026-10-20",
+                                            "granted_utc":  "2026-10-20T11:58:58+00:00",
+                                            "valid_until_utc":  "2026-10-21T11:58:58+00:00",
+                                            "jobs":  [
+
+                                                     ],
+                                            "jobs_updated_utc":  "2026-10-20T13:40:05.582249+00:00",
+                                            "prior_released_share":  {
+                                                                         "owner":  "Astra",
+                                                                         "threads":  2,
+                                                                         "status":  "released",
+                                                                         "granted_by":  "Opus (coordinator), per owner decision 2026-10-18",
+                                                                         "granted_utc":  "2026-10-18T10:46:11+02:00",
+                                                                         "valid_until_utc":  "2026-10-20T10:41:20+02:00",
+                                                                         "note":  "Reserved for Astra\u0027s new campaign before any heavy Opus computation. Opus never uses these 2 threads without Astra\u0027s own completion/release record here. Astra lists her live jobs (pid, command, start_utc, threads) in \u0027jobs\u0027.",
+                                                                         "jobs":  [
+
+                                                                                  ],
+                                                                         "jobs_updated_utc":  "2026-10-20T05:22:01.319283+00:00",
+                                                                         "handoff":  {
+                                                                                         "path":  "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\OPUS_FINAL_HANDOFF.md",
+                                                                                         "results_index":  "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\RESULTS_INDEX.md",
+                                                                                         "portable_code":  "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\handoff\\reference_code",
+                                                                                         "source_manifest":  "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_deep_discovery_20261018\\handoff\\SOURCE_MANIFEST.json",
+                                                                                         "status":  "13,065 controlled paths and all registered audits complete; no general local or query-savings claim",
+                                                                                         "scientific_artifact_commit":  "f4fc7398b4d1194d35f1ae26cb1fc53d3f0d40c0",
+                                                                                         "updated_utc":  "2026-10-20T05:22:01.319206+00:00",
+                                                                                         "numerical_work_remaining":  0,
+                                                                                         "capacity_transfer":  "No transfer performed. Coordinator owns any later reassignment."
+                                                                                     },
+                                                                         "released_utc":  "2026-10-20T05:22:01.319206+00:00",
+                                                                         "release_reason":  "All registered controlled and numerical work completed; final scientific report and portable handoff saved.",
+                                                                         "released_by":  "Astra; explicit owner authorization for completed-campaign release"
+                                                                     },
+                                            "authority_file":  "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_representation_planning_20261020\\OWNER_REQUEST.txt",
+                                            "authority_sha256":  "af857ecf9d11a2b25762895bc43acae381233ebe39978edcfc1293c074643ca9",
+                                            "note":  "Fresh owner authorization. Old completed campaign deadline unchanged; no Opus slot borrowed."
+                                        }
+                                    ],
+                         "no_duplicate_fits":  "Opus: SPH-data model/acquisition research (outputs/research_campaign_20261018/opus/). Astra: her own campaign. Shared reference acquisitions (IVR/TruVaR/multiscale level set) are implemented once; the implementing side lists the module here under \u0027shared_implementations\u0027.",
+                         "shared_implementations":  [
+
+                                                    ],
+                         "last_update_utc":  "2026-10-20T13:53:34Z"
+                     },
+    "external_reservations":  [
+                                  {
+                                      "job":  "astra_monitor_discovery_20261016",
+                                      "status":  "completed",
+                                      "granted_by":  "Opus",
+                                      "threads":  1,
+                                      "host":  "Burak",
+                                      "combined_active_threads":  4,
+                                      "code_digest":  "a41a90f62843cace054d4296294d3e6f19a472bee3239035f5a1b5a29fe8554b",
+                                      "granted_utc":  "2026-10-18T08:48:11+00:00",
+                                      "expires_utc":  "2026-10-18T10:18:11+00:00",
+                                      "drawn_from_share":  "Opus",
+                                      "combined_active_threads_basis":  "planned maximum: this pilot 1 + one other Opus worker 1 + Astra\u0027s reserved share 2",
+                                      "source":  "C:/Users/ozgur/Documents/Codex/2026-10-10/files-pasted-by-the-user-you/outputs/astra_monitor_discovery_20261016 (final 17 Oct package)",
+                                      "run_location":  "outputs/research_campaign_20261018/astra_pilot/astra_monitor_discovery_20261016 (verbatim copy, 23/23 files SHA-256 identical; Astra\u0027s workspace is never written)",
+                                      "envelope":  "1 thread, \u003c= 1200 cumulative wall s, 578 controlled fit requests + 4 reference fits, 650 component solves; run once, no automatic retry",
+                                      "python":  "C:/Users/ozgur/Documents/thesis/.venv/Scripts/python.exe (numpy 2.4.6, scipy 1.17.1 as in requirements.txt)",
+                                      "completed_utc":  "2026-10-18T08:50:20+00:00",
+                                      "actual":  {
+                                                     "pid_launcher":  14216,
+                                                     "pid_worker":  12872,
+                                                     "start_utc":  "2026-10-18T08:48:17+00:00",
+                                                     "command":  "C:/Users/ozgur/Documents/thesis/.venv/Scripts/python.exe -B run_pilot.py --run --coordination-record \u003cthis record\u003e",
+                                                     "exit_code":  0,
+                                                     "status":  "COMPLETE",
+                                                     "used_wall_s":  10.6,
+                                                     "controlled_fit_requests":  578,
+                                                     "component_solves":  650,
+                                                     "reference_fits":  4,
+                                                     "numerical_references":  "PASS",
+                                                     "outputs":  "outputs/research_campaign_20261018/astra_pilot/astra_monitor_discovery_20261016/pilot/",
+                                                     "summary":  "outputs/research_campaign_20261018/astra_pilot/PILOT_SUMMARY.md"
+                                                 },
+                                      "note":  "run once as frozen; status set to completed so the reservation cannot be reused; no retry"
+                                  }
+                              ]
 }
