@@ -1,0 +1,5 @@
+arm,trajectories,cpu_s_mean,cpu_s_total,decision_cpu_s_per_step,paid_simulations_per_trajectory
+ATSAPPROX_MARGIN,2,4.0859375,8.171875,,60.0
+E1S,2,25.109375,50.21875,,60.0
+H_MARGIN,2,42.25,84.5,0.7970224056603774,60.0
+NEW_MARGIN,2,44.84375,89.6875,0.8461084905660378,60.0

@@ -1,0 +1,37 @@
+decomposition,contrast,window,metric,mean,se,repeats_good
+model on NEW_MARGIN's queries: NEW − H,PHR_NRMAP@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,small,log_loss,-0.01224358482203175,,1/1
+model on NEW_MARGIN's queries: NEW − H,PHR_NRMAP@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,small,sensitivity,0.0029784065524943726,,1/1
+model on NEW_MARGIN's queries: NEW − H,PHR_NRMAP@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,small,specificity,0.0008525149190110604,,1/1
+model on NEW_MARGIN's queries: NEW − H,PHR_NRMAP@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,all,log_loss,-0.0035277713777936565,,1/1
+model on NEW_MARGIN's queries: NEW − H,PHR_NRMAP@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,all,sensitivity,0.0004776689754000252,,1/1
+model on NEW_MARGIN's queries: NEW − H,PHR_NRMAP@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,all,specificity,-0.0008203445447088065,,0/1
+model on H_MARGIN's queries: NEW − H,PHR_NRMAP@H_MARGIN − SHQ_ATS_H@H_MARGIN,small,log_loss,-0.001372029261993396,,1/1
+model on H_MARGIN's queries: NEW − H,PHR_NRMAP@H_MARGIN − SHQ_ATS_H@H_MARGIN,small,sensitivity,-0.011913626209977712,,0/1
+model on H_MARGIN's queries: NEW − H,PHR_NRMAP@H_MARGIN − SHQ_ATS_H@H_MARGIN,small,specificity,-0.009377664109121775,,0/1
+model on H_MARGIN's queries: NEW − H,PHR_NRMAP@H_MARGIN − SHQ_ATS_H@H_MARGIN,all,log_loss,-0.0005289701264203917,,1/1
+model on H_MARGIN's queries: NEW − H,PHR_NRMAP@H_MARGIN − SHQ_ATS_H@H_MARGIN,all,sensitivity,-0.0066873656556006855,,0/1
+model on H_MARGIN's queries: NEW − H,PHR_NRMAP@H_MARGIN − SHQ_ATS_H@H_MARGIN,all,specificity,-0.003554826360404606,,0/1
+path: H model on NEW's vs H's queries,SHQ_ATS_H@NEW_MARGIN − SHQ_ATS_H@H_MARGIN,small,log_loss,-0.03904616309890485,,1/1
+path: H model on NEW's vs H's queries,SHQ_ATS_H@NEW_MARGIN − SHQ_ATS_H@H_MARGIN,small,sensitivity,0.07892777364110204,,1/1
+path: H model on NEW's vs H's queries,SHQ_ATS_H@NEW_MARGIN − SHQ_ATS_H@H_MARGIN,small,specificity,-0.011508951406649648,,0/1
+path: H model on NEW's vs H's queries,SHQ_ATS_H@NEW_MARGIN − SHQ_ATS_H@H_MARGIN,all,log_loss,-0.0018328475321501975,,1/1
+path: H model on NEW's vs H's queries,SHQ_ATS_H@NEW_MARGIN − SHQ_ATS_H@H_MARGIN,all,sensitivity,0.036064007642703566,,1/1
+path: H model on NEW's vs H's queries,SHQ_ATS_H@NEW_MARGIN − SHQ_ATS_H@H_MARGIN,all,specificity,-0.00792999726551813,,0/1
+path: NEW model on NEW's vs H's queries,PHR_NRMAP@NEW_MARGIN − PHR_NRMAP@H_MARGIN,small,log_loss,-0.049917718658943205,,1/1
+path: NEW model on NEW's vs H's queries,PHR_NRMAP@NEW_MARGIN − PHR_NRMAP@H_MARGIN,small,sensitivity,0.09381980640357412,,1/1
+path: NEW model on NEW's vs H's queries,PHR_NRMAP@NEW_MARGIN − PHR_NRMAP@H_MARGIN,small,specificity,-0.0012787723785168126,,0/1
+path: NEW model on NEW's vs H's queries,PHR_NRMAP@NEW_MARGIN − PHR_NRMAP@H_MARGIN,all,log_loss,-0.004831648783523462,,1/1
+path: NEW model on NEW's vs H's queries,PHR_NRMAP@NEW_MARGIN − PHR_NRMAP@H_MARGIN,all,sensitivity,0.04322904227370428,,1/1
+path: NEW model on NEW's vs H's queries,PHR_NRMAP@NEW_MARGIN − PHR_NRMAP@H_MARGIN,all,specificity,-0.00519551544982233,,0/1
+model on NEW_MARGIN's queries: X − H,SHQ_ATS_X@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,small,log_loss,0.0014065838553439791,,0/1
+model on NEW_MARGIN's queries: X − H,SHQ_ATS_X@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,small,sensitivity,-0.00893521965748334,,0/1
+model on NEW_MARGIN's queries: X − H,SHQ_ATS_X@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,small,specificity,0.005115089514066473,,1/1
+model on NEW_MARGIN's queries: X − H,SHQ_ATS_X@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,all,log_loss,0.009177075563234174,,0/1
+model on NEW_MARGIN's queries: X − H,SHQ_ATS_X@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,all,sensitivity,-0.008359207069500774,,0/1
+model on NEW_MARGIN's queries: X − H,SHQ_ATS_X@NEW_MARGIN − SHQ_ATS_H@NEW_MARGIN,all,specificity,0.0005468963631390933,,1/1
+model on H_MARGIN's queries: X − H,SHQ_ATS_X@H_MARGIN − SHQ_ATS_H@H_MARGIN,small,log_loss,0.021736072359716307,,0/1
+model on H_MARGIN's queries: X − H,SHQ_ATS_X@H_MARGIN − SHQ_ATS_H@H_MARGIN,small,sensitivity,-0.03723008190618016,,0/1
+model on H_MARGIN's queries: X − H,SHQ_ATS_X@H_MARGIN − SHQ_ATS_H@H_MARGIN,small,specificity,-0.0012787723785165905,,0/1
+model on H_MARGIN's queries: X − H,SHQ_ATS_X@H_MARGIN − SHQ_ATS_H@H_MARGIN,all,log_loss,0.008743177726464657,,0/1
+model on H_MARGIN's queries: X − H,SHQ_ATS_X@H_MARGIN − SHQ_ATS_H@H_MARGIN,all,sensitivity,-0.02842130403630283,,0/1
+model on H_MARGIN's queries: X − H,SHQ_ATS_X@H_MARGIN − SHQ_ATS_H@H_MARGIN,all,specificity,0.001914137270987104,,1/1

@@ -1,0 +1,15 @@
+{
+ "utc": "2026-10-20T20:26:56+00:00",
+ "H_vs_RC21_H_MARGIN_r27_f1": {
+  "budgets": 53,
+  "identical_paid_order_and_all_predictions": true,
+  "PASS": true
+ },
+ "NEW_trajectory_shadow": {
+  "construction": "PHR_NRMAP",
+  "same_paid_order": true,
+  "max_abs_p_diff_all_constructions": 0.0,
+  "PASS": true
+ },
+ "status": "PASS"
+}

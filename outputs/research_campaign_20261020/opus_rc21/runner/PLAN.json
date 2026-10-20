@@ -20,6 +20,11 @@
    "args": ["-m", "src.rc21_jobs", "work", "d-final", "--threads", "1"],
    "done_glob": "outputs/research_campaign_20261020/opus_rc21/d-final/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261020/opus_rc21/d-final/failed",
-   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/d-final/locks", "units_total": 240, "resume_token": "0"}
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/d-final/locks", "units_total": 240, "resume_token": "0"},
+  {"name": "e_smoke", "enabled": true, "kind": "pool", "priority": 4, "max_workers": 2, "python": "system", "after": ["d_final"],
+   "args": ["-m", "src.rc21b_jobs", "work", "e-smoke", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261020/opus_rc21/e-smoke/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261020/opus_rc21/e-smoke/failed",
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/e-smoke/locks", "units_total": 8, "resume_token": "0"}
  ]
 }
