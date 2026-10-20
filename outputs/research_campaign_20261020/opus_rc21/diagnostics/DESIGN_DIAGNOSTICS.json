@@ -1,0 +1,154 @@
+{
+ "utc": "2026-10-20T20:22:39+00:00",
+ "n": 541,
+ "keyhole_rate": 0.36414048059149723,
+ "boundary_direction": {
+  "raw_log_input_coef_over_P": [
+   1.0,
+   -0.5896094804320259,
+   -1.341199406977113,
+   -0.08283358394711783
+  ],
+  "h_law": [
+   1.0,
+   -0.5,
+   -1.5,
+   0.0
+  ],
+  "cosine_with_h_direction_in_Z": 0.9964531971749306
+ },
+ "cv_on_rows_with_all_outputs": {
+  "h only (C=1)": {
+   "LL": 0.13501173415126946,
+   "BA": 0.9475115535015997,
+   "NEW_conduction_recall": 0.0,
+   "NEW_conduction_n": 11
+  },
+  "h only (C=100)": {
+   "LL": 0.1296037867369731,
+   "BA": 0.9449342339139708,
+   "NEW_conduction_recall": 0.0,
+   "NEW_conduction_n": 11
+  },
+  "4 log inputs (C=1)": {
+   "LL": 0.13312524916514992,
+   "BA": 0.9423569143263419,
+   "NEW_conduction_recall": 0.0,
+   "NEW_conduction_n": 11
+  },
+  "4 log inputs (C=100)": {
+   "LL": 0.12893042519134382,
+   "BA": 0.9449342339139708,
+   "NEW_conduction_recall": 0.09090909090909091,
+   "NEW_conduction_n": 11
+  },
+  "h + U linear": {
+   "LL": 0.1365076384890535,
+   "BA": 0.9423569143263419,
+   "NEW_conduction_recall": 0.0,
+   "NEW_conduction_n": 11
+  },
+  "h + U + quadratic": {
+   "LL": 0.13498500549917375,
+   "BA": 0.9509776039815144,
+   "NEW_conduction_recall": 0.45454545454545453,
+   "NEW_conduction_n": 11
+  },
+  "ARD-RBF GPC on Z": {
+   "LL": 0.11008312071547403,
+   "BA": 0.9690188410949165,
+   "NEW_conduction_recall": 0.45454545454545453,
+   "NEW_conduction_n": 11
+  },
+  "oracle log A (evaluator only)": {
+   "LL": 0.07182937355923424,
+   "BA": 0.9776573053679346,
+   "NEW_conduction_recall": 0.9090909090909091,
+   "NEW_conduction_n": 11
+  },
+  "oracle A, T, S": {
+   "LL": 0.06825580359879001,
+   "BA": 0.9741912548880198,
+   "NEW_conduction_recall": 0.7272727272727273,
+   "NEW_conduction_n": 11
+  },
+  "oracle A, T, S + h": {
+   "LL": 0.06740058806679693,
+   "BA": 0.9750444365446143,
+   "NEW_conduction_recall": 0.5454545454545454,
+   "NEW_conduction_n": 11
+  }
+ },
+ "corner": {
+  "definition": "VX > 0.85 m/s and P > 330 W",
+  "runs": 39,
+  "keyhole": 22,
+  "conduction": 17,
+  "NEW_conduction_in_corner": 11,
+  "pool_share": 0.07208872458410351,
+  "nn_label_agreement_corner": 0.4358974358974359,
+  "nn_label_agreement_pool": 0.9131238447319778,
+  "rc20_paid_share_in_corner": [
+   {
+    "arm": "ATSAPPROX_MARGIN",
+    "B": 24,
+    "share_corner": 0.317
+   },
+   {
+    "arm": "ATSAPPROX_MARGIN",
+    "B": 60,
+    "share_corner": 0.43
+   },
+   {
+    "arm": "ATSCF_MARGIN",
+    "B": 24,
+    "share_corner": 0.31
+   },
+   {
+    "arm": "ATSCF_MARGIN",
+    "B": 60,
+    "share_corner": 0.432
+   },
+   {
+    "arm": "CAND_ETASTRADDLE",
+    "B": 24,
+    "share_corner": 0.139
+   },
+   {
+    "arm": "CAND_ETASTRADDLE",
+    "B": 60,
+    "share_corner": 0.284
+   },
+   {
+    "arm": "CAND_MARGIN",
+    "B": 24,
+    "share_corner": 0.269
+   },
+   {
+    "arm": "CAND_MARGIN",
+    "B": 60,
+    "share_corner": 0.414
+   },
+   {
+    "arm": "E1S",
+    "B": 24,
+    "share_corner": 0.146
+   },
+   {
+    "arm": "E1S",
+    "B": 60,
+    "share_corner": 0.26
+   },
+   {
+    "arm": "G3_MARGIN",
+    "B": 24,
+    "share_corner": 0.165
+   },
+   {
+    "arm": "G3_MARGIN",
+    "B": 60,
+    "share_corner": 0.274
+   }
+  ]
+ }
+}

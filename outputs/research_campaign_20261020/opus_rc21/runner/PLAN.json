@@ -15,6 +15,11 @@
    "args": ["-m", "src.rc21_jobs", "work", "d-smoke", "--threads", "1"],
    "done_glob": "outputs/research_campaign_20261020/opus_rc21/d-smoke/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261020/opus_rc21/d-smoke/failed",
-   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/d-smoke/locks", "units_total": 12, "resume_token": "0"}
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/d-smoke/locks", "units_total": 12, "resume_token": "0"},
+  {"name": "d_final", "enabled": true, "kind": "pool", "priority": 3, "max_workers": 2, "python": "system", "after": ["d_smoke"],
+   "args": ["-m", "src.rc21_jobs", "work", "d-final", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261020/opus_rc21/d-final/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261020/opus_rc21/d-final/failed",
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/d-final/locks", "units_total": 240, "resume_token": "0"}
  ]
 }
