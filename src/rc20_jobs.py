@@ -43,7 +43,7 @@ def replay_unit(task, unit, M, budgets, which, remedy, diag):
 def units(job):
     if job == "c-pilot":
         return [(f"r{r}_f{f}__{a}", ("replay", a, r, f)) for r in (11, 12) for f in range(1, 6) for a in ("E1S", "ATSCF_MARGIN")]
-    if job == "c-replay":
+    if job in ("c-replay", "c-replay-x"):
         return [(f"r{r}_f{f}__{a}", ("replay", a, r, f)) for r in range(11, 19) for f in range(1, 6) for a in ARMS19B]
     import src.rc20_final as F
     return F.units(job)
@@ -56,9 +56,13 @@ def work(job):
         remedy, which = DEC.REMEDY, A.ATTR
     elif job == "c-pilot":
         remedy, which = ("FD", "MAP"), A.ATTR
+    elif job == "c-replay-x":                                            # exploratory h-specificity control (registered after Stage 1)
+        remedy, which = (), ("SHQ_A", "SHQ_ATS", "SHQ_A_H", "SHQ_ATS_H", "SHQ_A_X", "SHQ_ATS_X")
     else:
         import src.rc20_final as F
-        F.check(); remedy, which = (), ()
+        if job == "c-final":
+            F.check()                                                     # frozen hashes verified before any final unit
+        remedy, which = (), ()
 
     def fn(name):
         kind, a, r, f = spec[name]; t = T[(r, f)]

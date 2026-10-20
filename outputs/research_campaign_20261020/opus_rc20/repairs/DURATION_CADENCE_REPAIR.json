@@ -1,0 +1,95 @@
+{
+ "valid_durations": 484,
+ "positives": 250,
+ "zeros": 234,
+ "monitor_row_interval_us_quantiles": [
+  0.018,
+  0.018,
+  0.018,
+  0.018,
+  0.018,
+  0.018,
+  0.018
+ ],
+ "solver_DT_us_quantiles": [
+  1.896,
+  5.063,
+  5.819,
+  8.277,
+  12.079,
+  17.12,
+  31.946
+ ],
+ "monitor_over_solver_ratio_quantiles": [
+  0.001,
+  0.001,
+  0.001,
+  0.002,
+  0.003,
+  0.004,
+  0.01
+ ],
+ "runs_with_irregular_monitor_steps_gt_1pct": 481,
+ "max_rel_dt_dev_quantiles": [
+  0.005,
+  0.05,
+  0.05,
+  0.05,
+  0.05,
+  0.05,
+  0.05
+ ],
+ "positive_duration_in_MONITOR_rows_quantiles": [
+  1.0,
+  64.216,
+  1831.851,
+  3008.185,
+  5035.989,
+  8971.926,
+  17747.453
+ ],
+ "positives_le_1_monitor_row": 5,
+ "positives_le_2_monitor_rows": 7,
+ "positives_le_5_monitor_rows": 13,
+ "previous_audit_le_2_rows_using_solver_DT": 46,
+ "recomputed_le_2_using_solver_DT": 46,
+ "spot_check_raw_time_dat": [
+  {
+   "sim_id": "P-350p032875191_VX-0p428269364999_LS-4p98260578998e-05_ST-372p155165959_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-1p12642205987e-05_H-1e886bd3a9",
+   "batch": "NEW",
+   "raw_median_dt_us": 0.018099999999992254,
+   "summaries_dt_us": 0.01809999999999225,
+   "solver_DT_us": 11.2642205987
+  },
+  {
+   "sim_id": "P-350p056845339_VX-0p672094265301_LS-4p21275064784e-05_ST-428p939656145_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-7p17774403395e-06_H-c7e74a2b3e",
+   "batch": "NEW",
+   "raw_median_dt_us": 0.018099999999992254,
+   "summaries_dt_us": 0.01809999999999225,
+   "solver_DT_us": 7.17774403395
+  },
+  {
+   "sim_id": "P-351p157464561_VX-0p813888376043_LS-4p78494456981e-05_ST-349p508071973_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p0021_DT-5p92725089215e-06_H-bba3700d20",
+   "batch": "NEW",
+   "raw_median_dt_us": 0.018099999999992254,
+   "summaries_dt_us": 0.01809999999999225,
+   "solver_DT_us": 5.92725089215
+  },
+  {
+   "sim_id": "P-105p276295276_VX-0p639039009111_LS-7p6636834293e-05_ST-367p44858305_M-TI64_XI-0p0002_XF-0p0014_XL-0p0012_TE-0p00125_DT-1p00822530836e-05_H-bf889bf790",
+   "batch": "OLD",
+   "raw_median_dt_us": 0.018199999999917935,
+   "summaries_dt_us": 0.01819999999991793,
+   "solver_DT_us": 10.0822530836
+  },
+  {
+   "sim_id": "P-109p759946449_VX-0p241926176876_LS-4p5e-05_ST-300_M-TI64_XI--0p0002_XF-0p0012_XL-0p0014_TE-0p00125_DT-7p72873359867e-06_H-fb250c7cf9",
+   "batch": "OLD",
+   "raw_median_dt_us": 0.018199999999917935,
+   "summaries_dt_us": 0.01819999999991793,
+   "solver_DT_us": 7.72873359867
+  }
+ ],
+ "spot_check_PASS": true,
+ "note": "Durations and the 0.60 duration R2 target are unchanged; only the 'rows' interpretation is repaired."
+}

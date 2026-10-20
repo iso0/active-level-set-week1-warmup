@@ -9,6 +9,11 @@
    "args": ["-m", "src.rc20_jobs", "work", "c-pilot", "--threads", "1"],
    "done_glob": "outputs/research_campaign_20261020/opus_rc20/c-pilot/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261020/opus_rc20/c-pilot/failed",
-   "locks_dir": "outputs/research_campaign_20261020/opus_rc20/c-pilot/locks", "units_total": 20, "resume_token": "0"}
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc20/c-pilot/locks", "units_total": 20, "resume_token": "0"},
+  {"name": "c_replay", "enabled": true, "kind": "pool", "priority": 2, "max_workers": 2, "python": "system", "after": ["c_pilot"],
+   "args": ["-m", "src.rc20_jobs", "work", "c-replay", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261020/opus_rc20/c-replay/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261020/opus_rc20/c-replay/failed",
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc20/c-replay/locks", "units_total": 200, "resume_token": "0"}
  ]
 }

@@ -1,0 +1,13 @@
+{
+ "rule": "mean per-unit test log loss over budgets 12-24, remedy minus SHQ_ATS; carry the more negative if <= -0.005; ties <= 0.002 -> FD",
+ "delta": {
+  "FD": 0.009980948618091972,
+  "MAP": 0.0020696219450367496
+ },
+ "units_budgets_better": {
+  "FD": 19,
+  "MAP": 60,
+  "n": 80
+ },
+ "choice": "NONE"
+}

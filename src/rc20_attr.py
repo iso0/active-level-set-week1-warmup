@@ -151,6 +151,29 @@ def approx_loo_features(full, Yall, paid, cols):
 ATTR = ("M0Q_A", "M0Q_ATS", "SHQ_A", "SHQ_ATS", "SHQ_A_H", "SHQ_ATS_H", "SHQT_A", "SHQT_ATS", "HONLY")
 
 
+def cand_state(task, rev, Z, cand, cands, Kf=KF):
+    """One sequential step of a candidate construction (SHQ_ATS_H or SHQT_ATS): probabilities at the test rows and the
+    candidates, the linear predictor eta and its upstream variance at the candidates (for eta-straddle), and the free
+    by-products SHQ_ATS / SHQ_A on the same upstream fit (SHQ-based candidates only)."""
+    test = task["test"]; rows = np.r_[test, cands]; nt = len(test)
+    y_p = rev.paid_y(); A_p = rev.paid_A(); L = rev.paid; y = y_p[L]; usable = np.isfinite(A_p[L])
+    if len(set(y_p[L][usable].tolist())) < 2:
+        return {"p_test": np.full(nt, float(np.mean(y))), "one_class": True}
+    h = hcol(task); up = "SHQT" if cand.startswith("SHQT") else "SHQ"; use_h = cand.endswith("_H")
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        R = cf(Z, rev, ATS, up, rows, Kf, Hc=h if up == "SHQT" else None)
+        xtr, xev = (h[L][:, None], h[rows][:, None]) if use_h else (None, None)
+        p, g, mu, sd = clf(R["F"], y, R["E"], xtr, xev); eta, var = eta_moments(g, mu, sd, R["E"], R["V"], xev)
+        extra = {}
+        if up == "SHQ":                                                   # exploratory by-products of the SAME upstream fit (no extra GP fit)
+            extra["SHQ_ATS"] = clf(R["F"], y, R["E"])[0][:nt]; extra["SHQ_A"] = clf(R["F"][:, :1], y, R["E"][:, :1])[0][:nt]
+            extra["SHQ_A_H"] = clf(R["F"][:, :1], y, R["E"][:, :1], h[L][:, None], h[rows][:, None])[0][:nt]
+            extra["SHQ_ATS_X"] = clf(R["F"], y, R["E"], Z[L], Z[rows])[0][:nt]          # generic control: the 4 exact log inputs instead of log h
+            extra["HONLY"] = clf(h[L][:, None], y, h[rows][:, None])[0][:nt] if len(set(y.tolist())) == 2 else np.full(nt, float(np.mean(y)))
+    return {"p_test": p[:nt], "p_cand": p[nt:], "eta_cand": eta[nt:], "var_cand": var[nt:], "coef": g.coef_[0].tolist(), "extra": extra, "one_class": False}
+
+
 def constructions(task, rev, Z, which=ATTR, Kf=KF, remedy=(), extra=None, diag=False):
     """Probabilities at the test rows (and at `extra` rows if given) for every requested construction at one paid state.
     remedy: subset of {"FD", "MAP"}: FD applies fold-deployment to SHQ_ATS (and to SHQ_ATS_H / SHQT_ATS when computed);
@@ -165,7 +188,7 @@ def constructions(task, rev, Z, which=ATTR, Kf=KF, remedy=(), extra=None, diag=F
         warnings.simplefilter("ignore")
         if "HONLY" in want:
             out["HONLY"] = clf(h[L][:, None], y, h[rows][:, None])[0] if two_all else const()
-        need_m0q = bool(want & {"M0Q_A", "M0Q_ATS"}); need_shq = bool(want & {"SHQ_A", "SHQ_ATS", "SHQ_A_H", "SHQ_ATS_H"}) or "FD" in remedy
+        need_m0q = bool(want & {"M0Q_A", "M0Q_ATS"}); need_shq = bool(want & {"SHQ_A", "SHQ_ATS", "SHQ_A_H", "SHQ_ATS_H", "SHQ_A_X", "SHQ_ATS_X"}) or "FD" in remedy
         need_shqt = bool(want & {"SHQT_A", "SHQT_ATS"})
         if not two_u:
             for nm in list(want - {"HONLY"}) + [r for r in ("SHQ_ATS_FD", "SHQ_ATS_H_FD", "SHQT_ATS_FD") if "FD" in remedy] + (["SHQM_ATS"] if "MAP" in remedy else []):
@@ -191,6 +214,9 @@ def constructions(task, rev, Z, which=ATTR, Kf=KF, remedy=(), extra=None, diag=F
                     p3h = clf(R["F"], y, R["E"], h[L][:, None], h[rows][:, None])
                     out["SHQ_A_H"], out["SHQ_ATS_H"] = pah[0], p3h[0]
                     info["SHQ_ATS_H_coef"] = p3h[1].coef_[0].tolist()
+                if want & {"SHQ_A_X", "SHQ_ATS_X"}:                       # exploratory generic control: 4 exact log inputs instead of log h
+                    out["SHQ_A_X"] = clf(R["F"][:, :1], y, R["E"][:, :1], Z[L], Z[rows])[0]
+                    out["SHQ_ATS_X"] = clf(R["F"], y, R["E"], Z[L], Z[rows])[0]
                 if fe:
                     out["SHQ_ATS_FD"] = np.mean([g3.predict_proba((R["FE"][j] - mu3) / sd3)[:, 1] for j in range(R["K"])], axis=0)
                     if "SHQ_ATS_H" in want:

@@ -1,0 +1,28 @@
+{
+ "utc": "2026-10-20T12:53:13+00:00",
+ "cand": "SHQ_ATS_H",
+ "shadow": {
+  "CAND_MARGIN": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 6.1
+  },
+  "CAND_ETASTRADDLE": {
+   "identical_path": true,
+   "identical_predictions": true,
+   "seconds": 5.3
+  }
+ },
+ "eta_variance": {
+  "max_rel_err_var": 0.04671945185244898,
+  "median_rel_err_var": 0.016016542012162818,
+  "max_abs_err_mean": 0.022674632689229313,
+  "cand_state_matches_direct": 4.440892098500626e-16,
+  "PASS": true
+ },
+ "consistency": {
+  "max_abs_diff": 0.0,
+  "PASS": true
+ },
+ "status": "PASS"
+}

@@ -1,0 +1,15 @@
+arm,repeat,target,first,confirmed_b,spend,censored
+ATSAPPROX_MARGIN,1,BA >= 0.93,,,,True
+ATSCF_MARGIN,1,BA >= 0.93,,,,True
+CAND_ETASTRADDLE,1,BA >= 0.93,,,,True
+CAND_MARGIN,1,BA >= 0.93,,,,True
+E1CAL+straddle,1,BA >= 0.93,,,,True
+E1RAW+straddle,1,BA >= 0.93,,,,True
+G3_MARGIN,1,BA >= 0.93,,,,True
+ATSAPPROX_MARGIN,1,log_loss <= 0.2,13,13,17,False
+ATSCF_MARGIN,1,log_loss <= 0.2,13,13,17,False
+CAND_ETASTRADDLE,1,log_loss <= 0.2,9,9,13,False
+CAND_MARGIN,1,log_loss <= 0.2,14,14,18,False
+E1CAL+straddle,1,log_loss <= 0.2,13,13,17,False
+E1RAW+straddle,1,log_loss <= 0.2,14,16,20,False
+G3_MARGIN,1,log_loss <= 0.2,45,45,49,False
