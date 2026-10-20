@@ -1,0 +1,66 @@
+{
+ "utc": "2026-10-20T12:05:18+00:00",
+ "reproduction": {
+  "max_abs_diff": {
+   "SHQ_ATS": 2.9713948968002057e-08,
+   "M0Q_A": 2.9800331424745252e-08
+  },
+  "PASS": true
+ },
+ "honesty": {
+  "K": 10,
+  "M0Q": {
+   "own_outcome_changes_own_oof_feature_max": 0.0,
+   "other_folds_changed_in_cases": 3,
+   "own_fold_model_changes_max": 0.0,
+   "PASS": true
+  },
+  "SHQ": {
+   "own_outcome_changes_own_oof_feature_max": 0.0,
+   "other_folds_changed_in_cases": 3,
+   "own_fold_model_changes_max": 0.0,
+   "PASS": true
+  },
+  "SHQT": {
+   "own_outcome_changes_own_oof_feature_max": 0.0,
+   "other_folds_changed_in_cases": 3,
+   "own_fold_model_changes_max": 0.0,
+   "PASS": true
+  },
+  "SHQM": {
+   "own_outcome_changes_own_oof_feature_max": 0.0,
+   "other_folds_changed_in_cases": 3,
+   "own_fold_model_changes_max": 0.0,
+   "PASS": true
+  },
+  "PASS": true
+ },
+ "shadow": {
+  "max_abs_diff": {
+   "HONLY": 0.0,
+   "M0Q_A": 0.0,
+   "M0Q_ATS": 0.0,
+   "SHQ_A": 0.0,
+   "SHQ_ATS": 0.0,
+   "SHQ_A_H": 0.0,
+   "SHQ_ATS_H": 0.0,
+   "SHQ_ATS_FD": 0.0,
+   "SHQ_ATS_H_FD": 0.0,
+   "SHQT_A": 0.0,
+   "SHQT_ATS": 0.0,
+   "SHQT_ATS_FD": 0.0,
+   "SHQM_ATS": 0.0
+  },
+  "PASS": true
+ },
+ "logh": {
+  "max_abs_diff_vs_week18_logh_standardised": 0.0,
+  "LS_range_m": [
+   4.00029531788e-05,
+   8.97039861056e-05
+  ],
+  "convention": "LS = Gaussian laser spot radius in metres (claims C20); h = P / sqrt(VX LS^3) in W s^0.5 m^-2; log h standardised on the pool",
+  "PASS": true
+ },
+ "status": "PASS"
+}
