@@ -3,7 +3,7 @@
  "t0_utc": "2026-10-20T11:52:22Z",
  "deadline_utc": "2026-10-21T11:52:22Z",
  "runner_slots": 2,
- "stop_runner": false,
+ "stop_runner": true,
  "jobs": [
   {"name": "c_pilot", "enabled": true, "kind": "pool", "priority": 1, "max_workers": 2, "python": "system",
    "args": ["-m", "src.rc20_jobs", "work", "c-pilot", "--threads", "1"],

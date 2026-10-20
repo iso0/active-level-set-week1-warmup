@@ -17,3 +17,4 @@
 {"event":"WORKER_START","job":"c_replay_x","worker":3,"pid":16848,"opus_used_before":1,"astra_used":0,"leaves":"","utc":"2026-10-20T13:46:59Z"}
 {"event":"WORKER_END","job":"c_replay_x","worker":3,"pid":16848,"exit_code":0,"locks_released":0,"utc":"2026-10-20T13:53:33Z"}
 {"event":"WORKER_END","job":"c_replay_x","worker":1,"pid":23076,"exit_code":0,"locks_released":0,"utc":"2026-10-20T13:53:33Z"}
+{"event":"RUNNER_END","reason":"stop_runner set in PLAN.json and no live workers","utc":"2026-10-20T13:59:06Z"}
