@@ -72,13 +72,18 @@ function Get-Usage([int[]]$mine, $coord) {
     $parents = @{}; foreach ($p in $num) { $parents[[int]$p.ParentProcessId] = $true }
     $myTree = Get-Tree $mine $all
     $astraRoots = @($all | Where-Object { $_.Name -match '^codex' } | ForEach-Object { [int]$_.ProcessId })
-    try { foreach ($s in @($coord.coordination.shares)) { if ($s.owner -eq 'Astra') { foreach ($j in @($s.jobs)) { if ($j.pid) { $astraRoots += [int]$j.pid } } } } } catch { }
+    # RC21 amendment (2026-10-20 18:45 UTC): a leaf that Astra lists in her share with threads = 0 and the role
+    # 'stdlib_supervisor_no_numerical_imports' (her controller / finisher) is counted as 0 numerical slots, as she declares it;
+    # every other leaf keeps the RC18-RC20 rule (1 slot with --threads 1 / rc1x-rc2x workers, otherwise 4).
+    $astraZero = @{}
+    try { foreach ($s in @($coord.coordination.shares)) { if ($s.owner -eq 'Astra') { foreach ($j in @($s.jobs)) { if ($j.pid) { $astraRoots += [int]$j.pid; if (([string]$j.role -eq 'stdlib_supervisor_no_numerical_imports') -and ([int]$j.threads -eq 0)) { $astraZero[[int]$j.pid] = $true } } } } } } catch { }
     $astraTree = Get-Tree $astraRoots $all
     $opusOther = 0; $astra = 0; $rows = @()
     foreach ($p in $num) {
         $id = [int]$p.ProcessId
         if ($parents.ContainsKey($id)) { continue }                     # launcher stub, its child is the leaf
         $slots = 4; if (([string]$p.CommandLine -match '--threads 1') -or ([string]$p.CommandLine -match 'rc1[89]_|rc2[0-9]_') -or ([string]$p.CommandLine -match 'run_pilot\.py')) { $slots = 1 }
+        if ($astraZero.ContainsKey($id)) { $slots = 0 }
         if ($myTree.ContainsKey($id)) { continue }
         if ($astraTree.ContainsKey($id) -or ([string]$p.CommandLine -match '\\Codex\\|astra_')) { $astra += $slots; $rows += ('astra:{0}:{1}' -f $id, $slots); continue }
         $opusOther += $slots; $rows += ('other:{0}:{1}' -f $id, $slots)

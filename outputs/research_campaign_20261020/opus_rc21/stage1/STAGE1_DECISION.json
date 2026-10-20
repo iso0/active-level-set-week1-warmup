@@ -1,0 +1,11 @@
+{
+ "rule": "NEW = PHR unless mean (PHR - PHR_NR) BA-AULC B8-B24 <= -0.003 or LL-AULC B8-B24 >= +0.003 (then PHR_NR); not carried if MATERIAL HARM vs SHQ_ATS_H (LL or BA, B8-B24)",
+ "residual_delta_BA_B8_B24": -0.000646433419903239,
+ "residual_delta_LL_B8_B24": 0.005353627498992979,
+ "choice": "PHR_NR",
+ "gate_vs_SHQ_ATS_H": {
+  "LL": "MATERIAL HARM",
+  "BA": "MATERIAL"
+ },
+ "NEW": null
+}

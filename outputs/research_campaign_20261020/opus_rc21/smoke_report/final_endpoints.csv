@@ -1,0 +1,15 @@
+arm,repeat,target,first,confirmed_b,spend,censored
+ATSAPPROX_MARGIN,1,BA >= 0.93,,,,True
+E1CAL+straddle,1,BA >= 0.93,,,,True
+E1RAW+straddle,1,BA >= 0.93,,,,True
+G3_MARGIN,1,BA >= 0.93,,,,True
+H_MARGIN,1,BA >= 0.93,,,,True
+NEW_MARGIN,1,BA >= 0.93,,,,True
+X_MARGIN,1,BA >= 0.93,,,,True
+ATSAPPROX_MARGIN,1,log_loss <= 0.2,13,13,17,False
+E1CAL+straddle,1,log_loss <= 0.2,13,13,17,False
+E1RAW+straddle,1,log_loss <= 0.2,14,16,20,False
+G3_MARGIN,1,log_loss <= 0.2,45,45,49,False
+H_MARGIN,1,log_loss <= 0.2,14,14,18,False
+NEW_MARGIN,1,log_loss <= 0.2,13,13,17,False
+X_MARGIN,1,log_loss <= 0.2,11,11,15,False

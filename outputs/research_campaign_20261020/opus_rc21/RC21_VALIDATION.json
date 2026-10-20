@@ -1,5 +1,5 @@
 {
- "utc": "2026-10-20T18:35:56+00:00",
+ "utc": "2026-10-20T19:06:59+00:00",
  "laplace": {
   "weight_space": [
    {
@@ -286,7 +286,8 @@
    "PHR": 0.0,
    "PHR_NR": 0.0,
    "PHR_FX": 0.0,
-   "PHR_FXMAP": 0.0
+   "PHR_FXMAP": 0.0,
+   "PHR_NRMAP": 0.0
   },
   "PASS": true
  },
@@ -318,7 +319,7 @@
     8
    ],
    "cpu_s_shq_ats_h_only": 0.296875,
-   "cpu_s_all_constructions": 0.421875
+   "cpu_s_all_constructions": 0.40625
   },
   {
    "state": [
@@ -327,8 +328,8 @@
     "ATSCF_MARGIN",
     24
    ],
-   "cpu_s_shq_ats_h_only": 0.53125,
-   "cpu_s_all_constructions": 0.65625
+   "cpu_s_shq_ats_h_only": 0.375,
+   "cpu_s_all_constructions": 0.515625
   },
   {
    "state": [
@@ -337,8 +338,8 @@
     "ATSCF_MARGIN",
     60
    ],
-   "cpu_s_shq_ats_h_only": 0.5,
-   "cpu_s_all_constructions": 0.765625
+   "cpu_s_shq_ats_h_only": 0.453125,
+   "cpu_s_all_constructions": 0.671875
   },
   {
    "state": [
@@ -347,8 +348,8 @@
     "E1S",
     60
    ],
-   "cpu_s_shq_ats_h_only": 0.515625,
-   "cpu_s_all_constructions": 0.671875
+   "cpu_s_shq_ats_h_only": 0.453125,
+   "cpu_s_all_constructions": 0.65625
   }
  ],
  "status": "PASS"

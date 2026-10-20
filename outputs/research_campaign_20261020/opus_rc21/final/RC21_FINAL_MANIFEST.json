@@ -1,0 +1,51 @@
+{
+ "utc": "2026-10-20T19:13:45+00:00",
+ "repeats": [
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34
+ ],
+ "arms": [
+  "NEW_MARGIN",
+  "H_MARGIN",
+  "X_MARGIN",
+  "ATSAPPROX_MARGIN",
+  "E1S",
+  "G3_MARGIN"
+ ],
+ "new": "PHR_NR",
+ "files": {
+  "src/rc21_phr.py": "75b31cc8c760ffa7c8281ca140c0b71ca4bd18520fbdb041827346fc09ac5ba6",
+  "src/rc21_attr.py": "bbc3c240a7d5354914c0501dd79d9db17d164d453d5dadc91561a7bef1b9d909",
+  "src/rc21_final.py": "f5a1fb44795a59ed301a5c7b3b18791c2772ae2106bbc10f14ade20c3c702fce",
+  "src/rc21_jobs.py": "ec87d56640b82bc98f4b2e2ec960d84eb45d8c302d8a9a24bf9bc5224a04803a",
+  "src/rc21_decisions.py": "c1a6abe9d543f3c29f21450ee5f87f8ebc057fffa7abb49337476d4e34c50e16",
+  "src/rc21_report.py": "6fa93c02e539a5470c198ab619a605317808688432e035db4d33bf876cecb257",
+  "src/rc20_attr.py": "e9d73d8ca7da4a47b73f7904885baadb5f35061d6dbeb73ffcbdf5ca3254aada",
+  "src/rc20_gp.py": "cc33c3e92ce4639a74076a3c5b86f9f02c8c226fa42a0a4f721c33e39c5a8971",
+  "src/rc19b_keyhole.py": "d2a08f37f0e4c38e2b03e93d91e402c6f7f28a582e6d9619f6e60d85123c21bb",
+  "src/rc19b_keyhole_eval.py": "84047cfcf30b78fc0b77d038446c66f3377f7c25421ee2cb5d666850011f5eb8",
+  "src/rc19_pool.py": "842f6e0400d6e73e28201c07f218f3a3f92ee222a14043b11a21058bd3f24a83",
+  "src/rc19_learn.py": "19ba87415f78f71fb89c2997e67ac0c09ad2a22321b189a8220413fc6bd72703",
+  "src/rc19_eval.py": "8e733c694a2cb17ea282f04caf5cdddcf9d2d3913108e8700875664ee324abd1",
+  "src/rc19_report.py": "4c53d79d5c7209daf0b25f7140e7ee615a5018d99788c00366fefb9365144b75",
+  "src/rc18_campaign.py": "a98896753fe9843fc8178df430c785b9287c5e36649910fd984491a6d2d49dcd",
+  "src/rc18_gp.py": "129e60a6606050ef4aee810e04c458bbeb406797d12f4199ad89727765295585",
+  "src/rc18_common.py": "16ebdce433b2d69cd1cb6feb12b6562f4e1be81441a39d3902a27cd3e352c236",
+  "src/week18_engine.py": "7816db720a05ea8d1cc784bd8fdec987b7b02184d384c344e00944aed096a30d",
+  "src/week17_models.py": "7b7ad8846a4fa4f721b21ec6853b06b704ece658ee4a7e7902d3d21827d47570",
+  "src/week17_audit_impact.py": "46e05394afe519b28148a1d382bc7d9f767a97a99fba5e124457c223f653905e",
+  "src/week13_synthetic_al.py": "3df1c6f83e249bcc8831014914a3d99431371e3fa5269fa121b8ffd7d8317d5f",
+  "src/external_validation/analysis.py": "9df0d7e03a26e7e0635365dd0be5a9983e928254b9bb02bed7a441878a09f1b1",
+  "outputs/research_campaign_20261018/opus_pooled/data/POOLED_MANIFEST.csv": "fe1cd6e6a031b6ec5091f6c41dba9dc454cd6bb6a0254b3b675bce3ef019be5a",
+  "outputs/research_campaign_20261020/opus_rc21/PROTOCOL_RC21_FINAL.md": "d5a1fe03494a72452cc160f3118e402312a7592a65b10052e49cf12ea59032b3"
+ },
+ "units": {
+  "d-final": 240
+ }
+}

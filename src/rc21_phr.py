@@ -23,7 +23,9 @@ By-products of the same fits (decomposition, not separate candidates):
   PHR       full posterior average (the RC21 construction);
   PHR_NR    the same restricted to sigma_r = 0 (learned regularisation, no residual);
   PHR_FX    fixed theta = (1, 1, 0), Laplace predictive (integration only);
-  PHR_FXMAP fixed theta = (1, 1, 0), plug-in sigma(m) (nesting check against SHQ_ATS_H).
+  PHR_FXMAP fixed theta = (1, 1, 0), plug-in sigma(m) (nesting check against SHQ_ATS_H);
+  PHR_NRMAP the PHR_NR posterior weights with each configuration's plug-in sigma(m) (exploratory by-product added by amendment
+            A1 after Stage 1, to isolate the latent integration on the sequential paths; never used for a decision).
 """
 from __future__ import annotations
 
@@ -122,11 +124,11 @@ def fit_predict(Ftr, htr, Utr, y, Fev, hev, Uev):
     Htr, Hev = (Xtr - mu) / sd, (Xev - mu) / sd; y = np.asarray(y, float)
     Gtt = Gram(Htr, Htr, Utr, Utr); Get = Gram(Hev, Htr, Uev, Utr)
     kss_c = np.ones(len(Hev)); kss_h = Hev[:, 0] ** 2; kss_F = np.sum(Hev[:, 1:] ** 2, 1)
-    G = grid(); logw = np.empty(len(G)); P = np.empty((len(G), len(Hev))); diag = []
+    G = grid(); logw = np.empty(len(G)); P = np.empty((len(G), len(Hev))); Pm = np.empty((len(G), len(Hev)))
     for g, (tf, th, sr, el, lp) in enumerate(G):
         mode = laplace(Gtt.K(tf, th, sr, el), y)
         kss = V0 * kss_c + th ** 2 * kss_h + tf ** 2 * kss_F + (sr ** 2 if sr > 0 else 0.0)
-        _, _, P[g] = predictive(mode, Get.K(tf, th, sr, el), kss); logw[g] = mode["logZ"] + lp
+        m_g, _, P[g] = predictive(mode, Get.K(tf, th, sr, el), kss); Pm[g] = expit(m_g); logw[g] = mode["logZ"] + lp
         if (tf, th, sr) == (1.0, 1.0, 0.0):
             _, _, p_map = predictive(mode, Get.K(tf, th, sr, el), kss, plugin=True); p_fx = P[g].copy()
     w = np.exp(logw - logw.max()); w /= w.sum()
@@ -135,4 +137,4 @@ def fit_predict(Ftr, htr, Utr, y, Fev, hev, Uev):
     info = {"post_residual": float(w[~nr].sum()), "post_mean_tau_F": float(w @ arr[:, 0]), "post_mean_tau_h": float(w @ arr[:, 1]),
             "post_mean_sigma_r": float(w @ arr[:, 2]), "post_mean_ell_given_res": float((w[~nr] @ arr[~nr, 3]) / max(w[~nr].sum(), 1e-300)),
             "map_config": [float(v) for v in arr[int(np.argmax(logw))]], "n_configs": len(G)}
-    return {"PHR": w @ P, "PHR_NR": wn @ P, "PHR_FX": p_fx, "PHR_FXMAP": p_map}, info
+    return {"PHR": w @ P, "PHR_NR": wn @ P, "PHR_FX": p_fx, "PHR_FXMAP": p_map, "PHR_NRMAP": wn @ Pm}, info

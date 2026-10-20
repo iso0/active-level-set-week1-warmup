@@ -1,0 +1,34 @@
+{
+ "utc": "2026-10-20T19:07:19+00:00",
+ "stage1_reproduction_after_A1": {
+  "constructions_compared": 15,
+  "max_abs_diff_float32": 0.0,
+  "PASS": true
+ },
+ "H_vs_RC20_CAND": {
+  "same_paid_order": true,
+  "max_abs_p_diff": 0.0,
+  "PASS": true
+ },
+ "trajectory_shadow": {
+  "NEW_MARGIN": {
+   "same_paid_order": true,
+   "max_abs_p_diff_all_constructions": 0.0,
+   "construction": "PHR_NR",
+   "PASS": true
+  },
+  "H_MARGIN": {
+   "same_paid_order": true,
+   "max_abs_p_diff_all_constructions": 0.0,
+   "construction": "SHQ_ATS_H",
+   "PASS": true
+  },
+  "X_MARGIN": {
+   "same_paid_order": true,
+   "max_abs_p_diff_all_constructions": 0.0,
+   "construction": "SHQ_ATS_X",
+   "PASS": true
+  }
+ },
+ "status": "PASS"
+}
