@@ -4,7 +4,7 @@
  "rc21_start_utc": "2026-10-20T18:18:07Z",
  "deadline_utc": "2026-10-21T11:52:22Z",
  "runner_slots": 2,
- "stop_runner": false,
+ "stop_runner": true,
  "jobs": [
   {"name": "d_replay", "enabled": true, "kind": "pool", "priority": 1, "max_workers": 2, "python": "system",
    "args": ["-m", "src.rc21_jobs", "work", "d-replay", "--threads", "1"],
@@ -25,6 +25,11 @@
    "args": ["-m", "src.rc21b_jobs", "work", "e-smoke", "--threads", "1"],
    "done_glob": "outputs/research_campaign_20261020/opus_rc21/e-smoke/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261020/opus_rc21/e-smoke/failed",
-   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/e-smoke/locks", "units_total": 8, "resume_token": "0"}
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/e-smoke/locks", "units_total": 8, "resume_token": "0"},
+  {"name": "e_final", "enabled": true, "kind": "pool", "priority": 5, "max_workers": 2, "python": "system", "after": ["e_smoke"],
+   "args": ["-m", "src.rc21b_jobs", "work", "e-final", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261020/opus_rc21/e-final/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261020/opus_rc21/e-final/failed",
+   "locks_dir": "outputs/research_campaign_20261020/opus_rc21/e-final/locks", "units_total": 160, "resume_token": "0"}
  ]
 }

@@ -1348,3 +1348,37 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 **Tamamlanmamış / keşifsel.**
 - h'ye özgüllük: kazancın yaklaşık dörtte üçü "sınıflandırıcıya kesin kamusal girdi vermek"ten geliyor. log h genel girdilerden tutarlı ama küçük farkla iyi (7/8).
 - Fiziksel doğrulama (yeni simülasyon, C4) yapılmadı; sahibin kararı.
+
+### 2026-10-20 (akşam) — RC21 / RC21B: kesin kamusal girdilerden daha fazla yararlanma
+
+[Nihai rapor](../outputs/research_campaign_20261020/opus_rc21/FINAL_REPORT_RC21.md), [Stage 1](../outputs/research_campaign_20261020/opus_rc21/stage1/STAGE1.md), [RC21 sıralı](../outputs/research_campaign_20261020/opus_rc21/final_report/FINAL.md), [RC21B doğrulama](../outputs/research_campaign_20261020/opus_rc21/b_final_report/FINAL.md), [A1 değişikliği](../outputs/research_campaign_20261020/opus_rc21/AMENDMENT_A1.md).
+
+**Kurulum.**
+- RC20 penceresinin kalan kısmında yürütüldü; saat yeniden başlatılmadı, Astra'ya dokunulmadı.
+- Tek yeni birleşim PHR: dürüst SHQ fiziksel özetleri + kesin log-h eğilimi + h'ye dik büzülebilir artık GP. Bütün güçler ödenmiş etiketlerden öğrenildi (Laplace, 112 noktalı ızgarada marjinal olabilirlik ortalaması).
+- Kurallar sonuçtan önce kaydedildi (`1f198d2d`).
+- Aşamalar: Stage 1, 200 eşleşik yol. RC21 sıralı test: taze tekrarlar 27–34, 240 yörünge. RC21B doğrulama: taze tekrarlar 35–42, 160 yörünge.
+- Hata yok. Toplam 4.13 CPU-saat.
+
+**Olumlu (DEV).**
+- Öğrenilen düzenlileştirme (C = 1 yerine): PHR_NRMAP + margin, SHQ_ATS_H + margin'e göre küçük bütçe log-loss AULC'sinde −0.030 (8/8), tüm bütçede −0.012 (8/8). B24 kalibrasyon eğimi 1.71'den 1.34'e indi.
+- LL ≤ 0.20 hedefine 16.9'a karşı 20.6 simülasyon (−3.75, 7/8).
+- Dürüst sınıflandırıcı olasılıkta ATSAPPROX'u geçti (−0.024, 7/8).
+
+**Boş (null).**
+- Ana soru (daha iyi karar ya da BA ≥ 0.93'e daha az ücretli sorgu) iki testte de HAYIR:
+  - RC21: BA +0.002 (5/8), harcama −1.75 (4/1/3);
+  - RC21B: BA +0.003 (6/8), harcama −0.4 (4/1/3).
+- h'ye dik artık GP yararsız (LL +0.005, 0/8).
+- Laplace integrasyonu olasılıkları bozdu (+0.042). RC21'in PHR_NR kolu log-loss'ta WORSE (+0.020).
+- Genel kesin girdiler kendi sorgularıyla h'den iyi değil (BA −0.007 / −0.003). Aynı sorgularda BA −0.011 (0/8).
+- Hızlı-tarama köşesi çözülmedi (62–70/96 hata). Köşe girdi uzayında etiket bakımından iç içe: en yakın komşu uyumu 0.44, havuz geneli 0.91.
+
+**Nitelikli / keşifsel.**
+- Aynı sorgularda öğrenilen düzenlileştirme BA'yı küçük ama tutarlı biçimde artırıyor (+0.003 ile +0.010, 7–8/8). Sıralı öğrenmede bu, karar kazancına dönüşmedi; yeni modelin kendi sorgu yolu kazancın bir kısmını götürdü.
+- A1: ön-kayıtlı kapı PHR_NR'yi "taşınmaz" saydı (LL zararı). Sıralı sonuçtan önce, gerekçesi yazılarak aşıldı.
+- PHR_NRMAP, RC21'den sonra seçildi; bu yüzden taze tekrarlarda ayrıca doğrulandı.
+
+**Sonraki adım.**
+- PHR_NRMAP, SHQ_ATS_H yerine varsayılan olasılık modeli olabilir: kararlar aynı, olasılıklar daha iyi.
+- Karar ve sorgu kazancı için seçici (iç içe köşede tekrarlı sorgular) ya da yeni fiziksel bilgi gerekiyor. Köşe için yeni simülasyon sahibin kararı.

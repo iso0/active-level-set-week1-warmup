@@ -46,13 +46,13 @@ def stage1(plt):
     fig.tight_layout(); FIG.mkdir(parents=True, exist_ok=True); fig.savefig(FIG / "fig_rc21_stage1.png", dpi=160); plt.close(fig)
 
 
-def final(plt):
-    p = OUT / "final_report" / "final_metrics.csv"
+def final(plt, rep="final_report", fname="fig_rc21_final.png", title="RC21 sequential stage, fresh DEV repeats 27–34", arms=None):
+    p = OUT / rep / "final_metrics.csv"
     if not p.exists():
         print("final metrics missing; skip"); return
-    B = pd.read_csv(p); E = pd.read_csv(OUT / "final_report" / "final_endpoints.csv")
+    B = pd.read_csv(p); E = pd.read_csv(OUT / rep / "final_endpoints.csv")
     fig, axes = plt.subplots(1, 5, figsize=(23, 4.4))
-    arms = ["NEW_MARGIN", "H_MARGIN", "X_MARGIN", "ATSAPPROX_MARGIN", "E1RAW+straddle", "E1CAL+straddle", "G3_MARGIN"]
+    arms = arms or ["NEW_MARGIN", "H_MARGIN", "X_MARGIN", "ATSAPPROX_MARGIN", "E1RAW+straddle", "E1CAL+straddle", "G3_MARGIN"]
     for ax, (met, title) in zip(axes[:4], (("BA", "balanced accuracy"), ("sensitivity", "Keyhole recall"), ("specificity", "conduction recall"), ("log_loss", "held-out log loss"))):
         for a in arms:
             g = B[B.arm == a]
@@ -76,12 +76,14 @@ def final(plt):
     except TypeError:
         ax.boxplot(data, labels=labels, vert=True, widths=0.6)
     ax.set_ylabel("paid simulations to confirm BA ≥ 0.93 (censored = 64)"); ax.tick_params(axis="x", rotation=45); ax.set_title("confirmation spend (b + 4)")
-    fig.suptitle("RC21 sequential stage, fresh DEV repeats 27–34 (each arm on its own adaptive path; mean of 8 repeats)", x=0.01, ha="left", fontsize=10.5)
-    fig.tight_layout(); FIG.mkdir(parents=True, exist_ok=True); fig.savefig(FIG / "fig_rc21_final.png", dpi=160); plt.close(fig)
+    fig.suptitle(f"{title} (each arm on its own adaptive path; mean of 8 repeats)", x=0.01, ha="left", fontsize=10.5)
+    fig.tight_layout(); FIG.mkdir(parents=True, exist_ok=True); fig.savefig(FIG / fname, dpi=160); plt.close(fig)
 
 
 def main():
-    plt = _plt(); stage1(plt); final(plt); print("figures in", FIG)
+    plt = _plt(); stage1(plt); final(plt)
+    final(plt, "b_final_report", "fig_rc21b_final.png", "RC21B confirmation (NEW = PHR_NRMAP), fresh DEV repeats 35–42",
+          ["NEW_MARGIN", "H_MARGIN", "ATSAPPROX_MARGIN", "E1RAW+straddle", "E1CAL+straddle"]); print("figures in", FIG)
 
 
 if __name__ == "__main__":

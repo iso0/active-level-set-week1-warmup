@@ -1,7 +1,7 @@
 """RC21 reporting additions (not frozen; no verdict depends on them):
   export : float32 export of every recomputed Stage 1 prediction (PHR family on the 200 RC19B paths) + acceptance against
            stage1/stage1_metrics.csv; posterior diagnostics per state as CSV
-  compute: CPU accounting of every RC21 job from the unit records
+  compute: CPU accounting of every RC21 / RC21B job from the unit records
     python -m src.rc21_eval_extra export | compute
 """
 from __future__ import annotations
@@ -56,7 +56,7 @@ def export_stage1():
 
 def compute():
     rows = []
-    for job in ("d-replay", "d-smoke", "d-final"):
+    for job in ("d-replay", "d-smoke", "d-final", "e-smoke", "e-final"):
         d = OUT / job / "units"
         if not d.exists():
             continue

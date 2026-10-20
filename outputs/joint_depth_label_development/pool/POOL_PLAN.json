@@ -146,7 +146,7 @@
         "granted_utc": "2026-10-20T11:52:22+00:00",
         "valid_until_utc": "2026-10-21T11:52:22+00:00",
         "jobs": [],
-        "note": "RC21 continuation (owner instruction 2026-10-20 evening) INSIDE the RC20 window: same 2 threads, same validity (until 2026-10-21T11:52:22Z; the 24-hour clock is not restarted). RC20 runner stopped 13:59 UTC; RC21 runner src/rc21_runner.ps1. Astra share never used; combined numerical work <= 4.",
+        "note": "RC21 / RC21B finished inside the RC20 window; RC21 runner stopped 2026-10-20T21:25:35Z (stop_runner, no live workers). Share remains valid until 2026-10-21T11:52:22Z but no Opus job is queued. Astra share never used; combined numerical work <= 4.",
         "prior_share": {
           "owner": "Opus",
           "threads": 2,
@@ -159,7 +159,7 @@
           "jobs_updated_utc": "2026-10-19T21:56:17Z"
         },
         "runner": "src/rc21_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
-        "jobs_updated_utc": "2026-10-20T13:53:34Z"
+        "jobs_updated_utc": "2026-10-20T21:25:52+00:00"
       },
       {
         "owner": "Astra",
@@ -203,37 +203,22 @@
             "campaign_id": "astra_representation_planning_20261020"
           },
           {
-            "pid": 29356,
-            "create_time": 1792521581.7672188,
+            "pid": 11908,
+            "create_time": 1792531567.154203,
             "host": "Burak",
             "threads": 1,
-            "start_utc": "2026-10-20T18:39:45.126123+00:00",
+            "start_utc": "2026-10-20T21:26:11.155205+00:00",
             "command": [
               "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe",
               "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_representation_planning_20261020\\runner.py",
-              "test__w007__e2e__existing__h2",
-              "--threads",
-              "1"
-            ],
-            "campaign_id": "astra_representation_planning_20261020"
-          },
-          {
-            "pid": 26896,
-            "create_time": 1792521599.0097945,
-            "host": "Burak",
-            "threads": 1,
-            "start_utc": "2026-10-20T18:40:02.995234+00:00",
-            "command": [
-              "C:\\Users\\ozgur\\Documents\\thesis\\.venv\\Scripts\\python.exe",
-              "C:\\Users\\ozgur\\Documents\\Codex\\2026-10-10\\files-pasted-by-the-user-you\\outputs\\astra_representation_planning_20261020\\runner.py",
-              "test__w007__e2e__local__h1",
+              "test__w056__prefix__existing__mixture_h1",
               "--threads",
               "1"
             ],
             "campaign_id": "astra_representation_planning_20261020"
           }
         ],
-        "jobs_updated_utc": "2026-10-20T18:40:02.995244+00:00",
+        "jobs_updated_utc": "2026-10-20T21:26:19.503558+00:00",
         "prior_released_share": {
           "owner": "Astra",
           "threads": 2,
@@ -266,7 +251,7 @@
     ],
     "no_duplicate_fits": "Opus: SPH-data model/acquisition research (outputs/research_campaign_20261018/opus/). Astra: her own campaign. Shared reference acquisitions (IVR/TruVaR/multiscale level set) are implemented once; the implementing side lists the module here under 'shared_implementations'.",
     "shared_implementations": [],
-    "last_update_utc": "2026-10-20T18:40:02.995356+00:00"
+    "last_update_utc": "2026-10-20T21:26:19.503728+00:00"
   },
   "external_reservations": [
     {

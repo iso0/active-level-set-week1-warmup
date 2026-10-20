@@ -1,0 +1,37 @@
+{
+ "cells_compared": 2120,
+ "cells_in_csv": 2120,
+ "BA": {
+  "max_abs_diff": 0.0,
+  "cells_differing_gt_1e-12": 0
+ },
+ "sensitivity": {
+  "max_abs_diff": 0.0,
+  "cells_differing_gt_1e-12": 0
+ },
+ "specificity": {
+  "max_abs_diff": 0.0,
+  "cells_differing_gt_1e-12": 0
+ },
+ "AUC": {
+  "max_abs_diff": 0.0,
+  "cells_differing_gt_1e-12": 0
+ },
+ "brier": {
+  "max_abs_diff": 0.0,
+  "cells_differing_gt_1e-12": 0
+ },
+ "log_loss": {
+  "max_abs_diff": 0.0,
+  "cells_differing_gt_1e-12": 0
+ },
+ "q20_BA": {
+  "max_abs_diff": 0.0,
+  "cells_differing_gt_1e-12": 0
+ },
+ "spec_NEW": {
+  "max_abs_diff": 0.0,
+  "cells_differing_gt_1e-12": 0
+ },
+ "PASS": true
+}
