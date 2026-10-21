@@ -1,0 +1,6 @@
+{"unit": "RAND8__r1_f1__REF", "status": "ok", "s": 20.57}
+{"unit": "RAND8__r1_f1__H", "status": "ok", "s": 23.13}
+{"unit": "LOCAL8__r1_f1__REF", "status": "ok", "s": 31.39}
+{"unit": "LOCAL8__r1_f1__E1S", "status": "ok", "s": 20.92}
+{"unit": "s1_b1__H", "status": "ok", "s": 27.13}
+{"unit": "STD__r1_f2__A2_MARGIN_COV", "status": "ok", "s": 28.9}

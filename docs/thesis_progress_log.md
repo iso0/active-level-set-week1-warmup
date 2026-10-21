@@ -1382,3 +1382,41 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 **Sonraki adım.**
 - PHR_NRMAP, SHQ_ATS_H yerine varsayılan olasılık modeli olabilir: kararlar aynı, olasılıklar daha iyi.
 - Karar ve sorgu kazancı için seçici (iç içe köşede tekrarlı sorgular) ya da yeni fiziksel bilgi gerekiyor. Köşe için yeni simülasyon sahibin kararı.
+
+### 2026-10-21 — RC22: sağlamlık, gerekli bileşenler ve tek bir sorgu-seçici testi
+
+[Ana rapor](../outputs/research_campaign_20261021/opus_rc22/FINAL_REPORT_RC22.md), [protokol](../outputs/research_campaign_20261021/opus_rc22/PROTOCOL_RC22.md), [edinim dondurması](../outputs/research_campaign_20261021/opus_rc22/PROTOCOL_RC22_ACQ.md), [RC21 düzeltmesi](../outputs/research_campaign_20261020/opus_rc21/ERRATUM_RC21_20261021.md).
+
+**Kurulum.**
+- Yeni 24 saatlik program, 13:48 UTC'de başladı; 2 iş parçacığı.
+- Astra'nın paketi yalnız okundu. Onun üç düzeltmesi RC21'e erratum olarak eklendi:
+  - köşe "öğrenilemez" denemez;
+  - h katsayısı fiziksel özetlerden ayrı tanımlanmış değildir;
+  - hedefler katlar birleştirilerek ölçülmüştü.
+- Kurallar sonuçlardan önce donduruldu: F1 (`7eceb46a`), F2 (`1a199995`).
+- 680 birim, hata yok, 4.13 CPU-saat.
+
+**Olumlu (DEV).**
+- Öğrenilmiş düzenlileştirmeli fizik sınıflandırıcısı (referans), sıcaklık / hız-sıçrama değerlerinin %25–50'si eksikken neredeyse hiç kötüleşmiyor. Sabit cezalı model dengeli doğrulukta −0.011 kaybediyor; aradaki fark +0.014 (8/8).
+- Kümelenmiş başlangıçta (40'ın 30'u tek sınıfla başladı) referansın olasılık üstünlüğü büyük: −0.112 (8/8).
+- Tahmini derinlik, log h'nin ötesinde olasılık bilgisi ekliyor (8/8).
+- Sadeleştirilmiş model (log h + tahmini derinlik, öğrenilmiş düzenlileştirme; HA_LR) + margin, taze tekrarlarda referansa göre:
+  - erken log-loss −0.013 (7/8);
+  - dengeli doğruluk 0.95'e 8 simülasyon daha az (6/8);
+  - dengeli doğrulukta fark yok.
+- Referansın kazancı büyük ölçüde güven ölçeğinin değişmesi (logit eğimi 1.35 → 0.98, R² ≥ 0.99). Dürüst tek ölçekli yeniden kalibrasyon bunu bulamıyor.
+
+**Boş (null).**
+- Bilgi kazancı seçicisi (Houlsby ve ark. 2011), aynı kapsama takvimiyle margin'den kötü:
+  - dengeli doğruluk −0.003 / −0.008;
+  - dengeli doğruluk 0.95 hedefinde 5/8 sansür;
+  - önceden tanımlı başarı ölçütü geçmedi.
+- Kapsama takvimi etkisiz. Etiketsiz en-uzak-nokta tasarımı daha kötü.
+- Sıcaklık ve hız-sıçrama özetleri, h + derinlik + öğrenilmiş düzenlileştirme varken yararsız.
+- Geometrik dış-değerlendirmede referans ile kontrol arasında fark yok; bütün modeller azınlık sınıfında kötü.
+- Rastgele başlangıçta referansın olasılık üstünlüğü marjın altına iniyor ve 0.95'e daha geç ulaşıyor.
+
+**Tamamlanmamış / önerilen.**
+- Sadeleştirilmiş modelin başlangıç ve blok sağlamlığı test edilmedi.
+- Emülatör belirsizliğini kullanan seçici, ortak bir gelecek-gözlem modeli gerektiriyor.
+- Fiziksel doğrulama sahibin kararı.

@@ -157,3 +157,38 @@ Path alias: RC21 = `outputs/research_campaign_20261020/opus_rc21` (RC21B lives i
 |---|---|---|---|---|---|---|
 | C68 | Learned regularisation improves decisions on identical queries | QUALIFIED (matched paths only) | RC21/stage1/STAGE1.md (S2c, PHR_NR − SHQ_ATS_H); RC21/final_report/FINAL.md (decomposition) | Stage 1 BA +0.010 (8/8), Keyhole recall +0.015 (8/8); fresh RC21 paths BA +0.005 to +0.0065 (7–8/8); RC21B paths PHR_NRMAP +0.003 / +0.007 | "On identical data the learned-regularisation layer is slightly but consistently better in BA; in sequential learning this did not become a decision gain." | sequential BA superiority |
 | C69 | PHR_NR (with amendment A1) was a legitimate confirmatory test | QUALIFIED | RC21/AMENDMENT_A1.md | the pre-registered gate returned "not carried" (LL harm +0.016); A1 overrode it before any sequential outcome | "Run under a disclosed amendment." | "pre-registered without deviation" |
+
+## Ledger addendum (2026-10-21): RC22 and the RC21 erratum (branch `joint-depth-label-dev`)
+
+Path alias: RC22 = `outputs/research_campaign_20261021/opus_rc22`. All rows are DEV evidence.
+
+**RC21 wording corrections** (erratum `opus_rc21/ERRATUM_RC21_20261021.md`, from Astra's context audit):
+- **C67 superseded.** Read it as "the corner is label-interleaved at the available density and was not resolved by the tested models". The low nearest-neighbour agreement is not an impossibility proof.
+- **β_h identification.** The claim that β_h is identified is withdrawn: the residual cannot duplicate the h trend, but β_h is prior-regularised against the physical-summary terms.
+- **RC21 targets** refer to fold-pooled repeat curves.
+
+### Positive
+
+| ID | Claim | Status | Evidence artifact | Exact metric | Allowed wording | Forbidden overclaim |
+|---|---|---|---|---|---|---|
+| C70 | The learned-regularisation classifier (PHR_NRMAP) is robust to missing temperature / spike monitor channels, unlike the fixed-penalty SHQ_ATS_H | SUPPORTED exploratory (matched) | RC22/miss/MISSING_CHANNELS.md | MCAR25 / MCAR50: REF ΔBA −0.004 / −0.003 (not material), H −0.011 / −0.010 (material); REF − H BA +0.014 (8/8) | "With a quarter or half of the monitor values missing, the learned-regularisation classifier kept its accuracy; the fixed-penalty one lost about 0.01 BA." | robustness to missing depth or labels (not tested) |
+| C71 | PHR_NRMAP's probability advantage over SHQ_ATS_H holds with the standard and a clustered (mostly one-class) start, and it beats E1 + straddle in every tested startup | SUPPORTED exploratory | RC22/start/STARTUPS.md | LL-AULC B8–B24: STD −0.030 (8/8), LOCAL8 −0.112 (8/8); vs E1RAW / E1CAL FEWER sims to BA ≥ 0.93 under STD / RAND8 / LOCAL8 | "The probability advantage survived a clustered start; against E1 the advantage held under every start." | BA superiority over SHQ_ATS_H |
+| C72 | Predicted depth adds probability information beyond the exact log h under the same learned regularisation | SUPPORTED exploratory (matched) | RC22/ingr/INGREDIENTS.md | HA_LR − HONLY_LR LL −0.020 (B8–B24), −0.038 (B8–B60), 8/8 | "Adding predicted depth to log h improved probabilities in every repeat." | causal physics |
+| C73 | The simpler HA_LR (log h + predicted depth, learned regularisation) + margin is at least as good as PHR_NRMAP + margin | SUPPORTED exploratory (matched + one prospective test) | RC22/ingr/INGREDIENTS.md; RC22/acq/ACQUISITION.md (A5 − A1) | matched BA +0.0095, LL −0.015 (7/8); prospective LL-AULC B8–B24 −0.0128 (7/8, BETTER), BA +0.006 / +0.003 (ND), sims to BA ≥ 0.95 −8.0 (6/2/0, FEWER), to BA ≥ 0.93 −2.0 (ND) | "Dropping the temperature and spike summaries lost nothing and improved small-budget probabilities." | BA superiority; robustness of HA_LR to startups / blocks (not tested) |
+| C74 | PHR_NRMAP's gain over SHQ_ATS_H is close to a common positive rescaling of the logit that honest scalar recalibration does not recover | SUPPORTED exploratory (matched) | RC22/ingr/INGREDIENTS.md | slope 1.35 → 0.98, R² 0.991–0.999, decision flips ≤ 3.6 %; SHQ_ATS_H_RECAL − SHQ_ATS_H LL +0.020 (0/8) | "The new classifier mostly sharpens the old one's confidence; an honest out-of-fold recalibration cannot reproduce that." | "identical decisions" |
+
+### Null or prohibited
+
+| ID | Claim | Status | Evidence artifact | Exact metric | Allowed wording | Forbidden overclaim |
+|---|---|---|---|---|---|---|
+| C75 | A classifier-weight information-gain selector (BALD_LAP) with a fixed coverage schedule improves BA-AULC or the paid simulations to BA ≥ 0.93 over margin with the same schedule | NOT SUPPORTED (pre-registered, failed) | RC22/acq/ACQUISITION.md | A3 − A2 BA −0.0033 (2/8), −0.0082 (0/8); spend +0.5; BA ≥ 0.95 MORE (+20, 5/8 censored); Keyhole recall −0.024 | "The information-gain selector chose very different runs but learned the boundary worse." | that BALD never helps |
+| C76 | A fixed every-5th farthest-point coverage schedule changes margin learning | NOT SUPPORTED | RC22/acq/ACQUISITION.md | A2 − A1 BA −0.002 / −0.0004, spend +1.0 | "Occasional coverage queries neither helped nor hurt." | – |
+| C77 | Temperature and spike summaries add information once log h, predicted depth and learned regularisation are present | NOT SUPPORTED (matched) | RC22/ingr/INGREDIENTS.md | PHR_NRMAP − HA_LR LL +0.015 (B8–B24, material harm), BA −0.0095 | – | – |
+| C78 | Any tested learner extrapolates well to a withheld region of the input space | NOT SUPPORTED | RC22/block/BLOCKS.md | pooled BA-AULC B8–B60 0.89–0.91; BA ≥ 0.95 never reached; minority-class recall 0.13–0.71 per block | "Withheld-region extrapolation failed for every learner." | – |
+
+### Qualified or exploratory
+
+| ID | Claim | Status | Evidence artifact | Exact metric | Allowed wording | Forbidden overclaim |
+|---|---|---|---|---|---|---|
+| C79 | log h alone (learned regularisation) gives the best early decisions | QUALIFIED (matched only; not carried by the pre-registered rule) | RC22/ingr/INGREDIENTS.md | HONLY_LR − PHR_NRMAP BA-AULC B8–B24 +0.017 (7/8), LL B8–B60 +0.029 (harm) | "On identical data log h alone gave the highest early BA but clearly worse probabilities." | prospective superiority |
+| C80 | PHR_NRMAP's advantage over SHQ_ATS_H survives a random startup | QUALIFIED | RC22/start/STARTUPS.md | RAND8 LL −0.018 (6/8, below verdict), sims to BA ≥ 0.95 +5.75 (MORE) | "With a random start the advantage shrank and reaching BA 0.95 took longer." | – |

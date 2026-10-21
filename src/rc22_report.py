@@ -59,7 +59,7 @@ def export(part, units, rows, B):
     pd.DataFrame(paths).to_csv(d / "paths.csv.gz", index=False, compression="gzip")
     Z = np.load(d / "predictions_f32.npz", allow_pickle=False); R2 = []; byk = {(r["arm"], r["repeat"], r["fold"], r["budget"]): r for r in rows}
     for i, k in enumerate(Z["keys"]):
-        arm, rep, f = k.split("|")
+        arm, rep, f = k.rsplit("|", 2)
         for j, b in enumerate(Z[f"budgets_{i}"]):
             r = dict(byk[(arm, int(rep[1:]), int(f[1:]), int(b))]); r["p"] = Z[f"pred_{i}"][j].astype(float); R2.append(r)
     B2 = E.pooled_metrics(R2); j = B2.merge(B, on=["arm", "repeat", "budget"], suffixes=("_x", "_t")); res = {"cells": int(len(j)), "cells_table": int(len(B))}
@@ -261,5 +261,33 @@ def smoke():
         print(u["arm"], u.get("startup"), u.get("block"), u["queries"], round(u.get("cpu_s", 0), 1), sorted(set(e.get("how", "") for e in u["evals"])))
 
 
+# ======================================================================================== extras (not frozen): matched-state export, CPU accounting
+def extras():
+    for job, part in (("g-ingr", "ingr"), ("g-miss", "miss")):
+        U = _load(job); d = OUT / part / "export"; d.mkdir(parents=True, exist_ok=True); arr = {}; keys = []
+        for i, u in enumerate(U):
+            for e in u["evals"]:
+                tag = f"{u['path_of']}|r{u['repeat']}|f{u['fold']}|b{e['budget']}" + (f"|{e['cond']}" if "cond" in e else ""); keys.append(tag); k = len(keys) - 1
+                for c, v in e["p"].items():
+                    arr[f"test_{k}__{c}"] = np.asarray([np.nan if x is None else x for x in v], np.float32)
+                for c, v in (e.get("cand") or {}).items():
+                    arr[f"cand_{k}__{c}"] = np.asarray(v, np.int16) if c == "cand_rows" else np.asarray([np.nan if x is None else x for x in v], np.float32)
+            arr[f"testids_{i}"] = np.asarray(u["test_ids"]); arr[f"paidids_{i}"] = np.asarray(u["paid_ids"])
+        np.savez_compressed(d / "matched_states_f32.npz", keys=np.asarray(keys), **arr,
+                            schema=np.asarray([json.dumps({"test_K__C": "P(Keyhole) of construction C on the test fold at state K (float32)",
+                                                           "cand_K__C": "candidate-level probability / selector score at state K; cand_rows = row indices into rc19_pool ids",
+                                                           "state key": "path|repeat|fold|budget[|condition]", "paid prefix": "paidids_i[:budget] of the i-th unit (RC21B path)"})]))
+        print(part, len(keys), "states exported")
+    rows = []
+    for job in ("g-smoke", "g-ingr", "g-miss", "g-start", "g-block", "g-acq"):
+        U = _load(job); cpu = sum(float(u.get("cpu_s") or sum((e.get("cpu_s") or 0.0) for e in u["evals"]) or u.get("seconds", 0.0)) for u in U)
+        rows.append({"job": job, "units": len(U), "CPU-h": round(cpu / 3600, 2)})
+    T = pd.DataFrame(rows)
+    L = ["# RC22 compute accounting (single-thread CPU seconds recorded by each unit; validation / reporting runs excluded, each < 10 min)", "", md(T, 2), "",
+         f"Total {T['CPU-h'].sum():.2f} CPU-h on <= 2 single-thread workers (Astra's share released, never used). Paid simulations are a separate axis: every trajectory spends <= 60 "
+         "(startup included); no new physical simulation was run."]
+    (OUT / "COMPUTE.md").write_text("\n".join(L) + "\n", encoding="utf-8"); print("\n".join(L))
+
+
 if __name__ == "__main__":
-    RC.limit_threads(1); {"ingr": ingr, "miss": miss, "start": start, "block": block, "acq": acq, "smoke": smoke}[sys.argv[1]]()
+    RC.limit_threads(1); {"ingr": ingr, "miss": miss, "start": start, "block": block, "acq": acq, "smoke": smoke, "extras": extras}[sys.argv[1]]()

@@ -83,3 +83,4 @@ outputs/research_campaign_20261021/opus_rc22/runner/STATUS.md
 outputs/research_campaign_20261021/opus_rc22/runner/*.tmp
 outputs/research_campaign_20261021/opus_rc22/runner/runner_stdout.txt
 outputs/research_campaign_20261021/opus_rc22/runner/runner_stderr.txt
+outputs/research_campaign_20261021/opus_rc22/review_bundle/RC22_REVIEW_BUNDLE.zip

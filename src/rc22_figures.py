@@ -95,7 +95,7 @@ def acq(plt):
         axes[4].boxplot(data, tick_labels=arms, widths=0.6)
     except TypeError:
         axes[4].boxplot(data, labels=arms, widths=0.6)
-    axes[4].tick_params(axis="x", rotation=35); axes[4].set_title("paid simulations to confirm BA ≥ 0.93 (censored = 64)")
+    axes[4].tick_params(axis="x", rotation=35); axes[4].set_title("sims to confirm BA ≥ 0.93 (censored = 64)", fontsize=9)
     fig.suptitle("RC22 part 3: acquisition with the predictive model fixed (PHR_NRMAP), fresh DEV repeats 43–50 (fold-pooled, mean of 8 repeats)", x=0.01, ha="left", fontsize=10.5)
     fig.tight_layout(); FIG.mkdir(parents=True, exist_ok=True); fig.savefig(FIG / "fig_rc22_acquisition.png", dpi=150); plt.close(fig)
 
