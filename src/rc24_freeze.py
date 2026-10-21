@@ -17,7 +17,10 @@ COMMON = ["src/rc23_common.py", "src/rc22_common.py", "src/rc22_eval.py", "src/r
           "src/rc18_common.py", "src/week18_engine.py", "src/week13_synthetic_al.py", "src/external_validation/analysis.py",
           "outputs/research_campaign_20261018/opus_pooled/data/POOLED_MANIFEST.csv"]
 STAGES = {"A": {"files": ["src/rc24_models.py", "src/rc24_jobs.py", "src/rc24_eval.py", "src/rc24_correction.py", "outputs/research_campaign_20261021/opus_rc24/PROTOCOL_RC24_STAGE_A.md"] + COMMON,
-                "jobs": ("a-own", "a-match")}}
+                "jobs": ("a-own", "a-match")},
+          "C": {"files": ["src/rc24_confirm.py", "src/rc24_pac.py", "src/rc24_pilot.py", "src/rc24_eval_c.py", "src/rc24_eval.py", "src/rc24_correction.py", "src/rc24_jeer.py",
+                          "outputs/research_campaign_20261021/opus_rc24/PROTOCOL_RC24_STAGE_C.md", "outputs/research_campaign_20261021/opus_rc24/PRIMARY.txt"] + COMMON,
+                "jobs": ("c-own", "c-match")}}
 
 
 def _sha(p):

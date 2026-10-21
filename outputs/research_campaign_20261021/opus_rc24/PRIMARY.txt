@@ -1,0 +1,3 @@
+PRIMARY = HA_TREND_MARGIN
+SECONDARY = HT_PHYS
+fixed 2026-10-21 (UTC evening) from DEV evidence only (section 1 of PROTOCOL_RC24_STAGE_C.md), before any Stage C run

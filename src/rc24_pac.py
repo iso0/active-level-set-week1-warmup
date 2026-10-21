@@ -31,6 +31,7 @@ Ablations on the same paid states:
   PAC_FLAT  PAC with a constant-mean emulator (b = 0)                              -> the physics anchor
   PAC_GEN   PAC with a generic linear trend in all four standardised log inputs (b = 3 each) -> physics anchor vs any linear trend
   HA_TREND  HA_LEAN's honest K = 10 stacking with the physics-anchored emulator (plug-in) -> structural vs stacked training
+  HA_TREND_B1 / HA_TREND_B10  HA_TREND with trend-prior SD b = 1 / 10 (prior-sensitivity controls; never candidates)
 """
 from __future__ import annotations
 
@@ -63,8 +64,9 @@ def _basis(task, Z, kind):
     return None
 
 
-def depth_fit(task, rev, Z, kind="phys", rows=None):
-    """Depth GP on the paid depths (rows `rows` of the paid set, default all) with basis kind in {phys, gen, flat}. None if < 3 good rows."""
+def depth_fit(task, rev, Z, kind="phys", rows=None, b=None):
+    """Depth GP on the paid depths (rows `rows` of the paid set, default all) with basis kind in {phys, gen, flat}; b = prior SD of the
+    trend coefficient (default B_TREND = 3; 1 and 10 are sensitivity controls). None if < 3 good rows."""
     L = rev.paid if rows is None else np.asarray(rows); Y = rev.paid_Y()[:, DEPTH_COL]; W = np.where(rev.paid_short(), C18.W_SHORT, 1.0)
     Lu = L[np.isfinite(Y[L])]
     if (W[Lu] <= 100).sum() < 3:
@@ -72,7 +74,7 @@ def depth_fit(task, rev, Z, kind="phys", rows=None):
     H = _basis(task, Z, kind)
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
-        g = G.GP(H_cols=0 if H is None else H.shape[1], b=B_TREND).fit(Z[Lu], Y[Lu], H=None if H is None else H[Lu], w=W[Lu])
+        g = G.GP(H_cols=0 if H is None else H.shape[1], b=B_TREND if b is None else b).fit(Z[Lu], Y[Lu], H=None if H is None else H[Lu], w=W[Lu])
     return {"g": g, "H": H, "rows": Lu}
 
 
@@ -128,23 +130,24 @@ def state(task, rev, Z, rows, which=PAC_CONS):
             fam = lr_family(np.c_[h[L], mt], y, np.c_[h[rows], me])
             out[nm] = fam["w"] @ expit(fam["m"]) if nm == "PAC_PLUG" else eiv_prob(fam, ve)
             info[f"{nm}_cA_mean"] = float(fam["w"] @ fam["cA"])
-        if "HA_TREND" in which:
-            R = cf_phys(task, rev, Z, rows)
-            out["HA_TREND"] = C22.phr_family(R["F"], h[L], y, R["E"], h[rows], feats=(0,))[0]; info["HA_TREND_fallbacks"] = R["fallbacks"]
+        for nm, bb in (("HA_TREND", None), ("HA_TREND_B1", 1.0), ("HA_TREND_B10", 10.0)):
+            if nm in which:
+                R = cf_phys(task, rev, Z, rows, b=bb)
+                out[nm] = C22.phr_family(R["F"], h[L], y, R["E"], h[rows], feats=(0,))[0]; info[f"{nm}_fallbacks"] = R["fallbacks"]
     for k in [k for k in info if k.startswith("fit_")]:
         info.pop(k)
     return {k: out[k] for k in which}, info
 
 
-def cf_phys(task, rev, Z, rows, Kf=A.KF):
+def cf_phys(task, rev, Z, rows, Kf=A.KF, b=None):
     """Honest K-fold out-of-fold predicted log depth of the paid runs from the PHYSICS-ANCHORED emulator (fold of the j-th paid run =
     j mod K, as src.rc20_attr.cf; each fold's fit uses only the paid runs outside the fold) + the full fit's means at rows."""
     paid = rev.paid; Y = rev.paid_Y()[:, DEPTH_COL]; fold, k = K.folds(len(paid), Kf); F = np.full((len(paid), 1), np.nan); fb = 0
     for j in range(k):
-        tr = paid[fold != j]; f = depth_fit(task, rev, Z, "phys", rows=tr)
+        tr = paid[fold != j]; f = depth_fit(task, rev, Z, "phys", rows=tr, b=b)
         if f is None:
             v = Y[tr]; v = v[np.isfinite(v)]; F[fold == j, 0] = float(np.mean(v)) if len(v) else 0.0; fb += 1
         else:
             F[fold == j, 0] = depth_predict(f, Z, paid[fold == j])[0]
-    full = depth_fit(task, rev, Z, "phys"); E = depth_predict(full, Z, rows)[0][:, None] if full is not None else np.full((len(rows), 1), np.nanmean(Y[paid]))
+    full = depth_fit(task, rev, Z, "phys", b=b); E = depth_predict(full, Z, rows)[0][:, None] if full is not None else np.full((len(rows), 1), np.nanmean(Y[paid]))
     return {"F": F, "E": E, "fallbacks": fb}

@@ -2,7 +2,7 @@
  "note": "RC24 queue (owner instruction 2026-10-21 ~20:30 UTC; ONE 48-hour window from t0, never restarted between stages). src/rc24_runner.ps1 (detached via src/rc24_start_runner.ps1, supervised by src/rc24_supervisor.ps1). 'after' = dependencies. 6 single-thread workers (RC24 timing trial); all-cores authorisation recorded in POOL_PLAN.json capacity_history.",
  "t0_utc": "2026-10-21T20:32:31Z",
  "deadline_utc": "2026-10-23T20:32:31Z",
- "runner_slots": 6,
+ "runner_slots": 8,
  "stop_runner": false,
  "jobs": [
   {
@@ -118,6 +118,128 @@
    "after": [
     "b_smoke"
    ]
+  },
+  {
+   "name": "b_smoke2",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 6,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_pilot",
+    "work",
+    "b-smoke2",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/b-smoke2/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/b-smoke2/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/b-smoke2/locks",
+   "units_total": 1,
+   "resume_token": "0"
+  },
+  {
+   "name": "b_pilot2",
+   "enabled": false,
+   "kind": "pool",
+   "priority": 7,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_pilot",
+    "work",
+    "b-pilot2",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/b-pilot2/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/b-pilot2/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/b-pilot2/locks",
+   "units_total": 80,
+   "resume_token": "0",
+   "after": [
+    "b_smoke2"
+   ],
+   "disabled_utc": "2026-10-21T22:12:13Z",
+   "disabled_reason": "P2 (JEER) closed on the pre-registered pilot criteria (cost and discriminability): after 16 learners JEER - PAC_MARGIN BA-AULC -0.004 / -0.001, corner query share unchanged (0.349 vs 0.352) although 99% of choices differ, 4.1 s per step (30x margin); the mechanism (avoid the aleatoric corner) is not realised -> no BA_RISK-like continuation"
+  },
+  {
+   "name": "b_pilot3",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 3,
+   "max_workers": 1,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_pilot",
+    "work",
+    "b-pilot3",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/b-pilot3/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/b-pilot3/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/b-pilot3/locks",
+   "units_total": 80,
+   "resume_token": "0"
+  },
+  {
+   "name": "s_dev",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 8,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_synth",
+    "work",
+    "s-dev",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/s-dev/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/s-dev/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/s-dev/locks",
+   "units_total": 192,
+   "resume_token": "0"
+  },
+  {
+   "name": "d_paths",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 2,
+   "max_workers": 1,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_dev_paths",
+    "work",
+    "d-paths",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/d-paths/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/d-paths/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/d-paths/locks",
+   "units_total": 80,
+   "resume_token": "0"
+  }
+ ],
+ "slot_history": [
+  {
+   "utc": "2026-10-21T21:53:16Z",
+   "runner_slots": 7,
+   "note": "7th single-thread worker for the light b-pilot3 while b-pilot2 holds 6; within the 8-CPU all-cores authorisation"
+  },
+  {
+   "utc": "2026-10-21T22:10:34Z",
+   "runner_slots": 8,
+   "note": "8th single-thread worker for the light DEV matched diagnostic d-paths (within the 8-CPU authorisation)"
   }
  ]
 }

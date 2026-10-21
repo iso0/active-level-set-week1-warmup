@@ -1,0 +1,122 @@
+{
+ "std": {
+  "contrasts": [
+   {
+    "window": "small",
+    "contrast": "PAC_MARGIN \u2212 HA_LEAN",
+    "mean": -0.0009464600679133656,
+    "good": "3/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "small",
+    "contrast": "PAC_MARGIN \u2212 HA_LEAN [LL]",
+    "mean": -0.0004912406961768839,
+    "good": "4/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "all",
+    "contrast": "PAC_MARGIN \u2212 HA_LEAN",
+    "mean": -0.0036454841490278223,
+    "good": "2/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "all",
+    "contrast": "PAC_MARGIN \u2212 HA_LEAN [LL]",
+    "mean": 0.012941855417412718,
+    "good": "0/8",
+    "verdict": "WORSE (DEV)"
+   },
+   {
+    "window": "small",
+    "contrast": "PAC_MARGIN \u2212 HONLY_LR",
+    "mean": -0.006701497149444111,
+    "good": "1/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "small",
+    "contrast": "PAC_MARGIN \u2212 HONLY_LR [LL]",
+    "mean": -0.023384611952229184,
+    "good": "7/8",
+    "verdict": "BETTER (DEV)"
+   },
+   {
+    "window": "all",
+    "contrast": "PAC_MARGIN \u2212 HONLY_LR",
+    "mean": -0.0002747129217774563,
+    "good": "3/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "all",
+    "contrast": "PAC_MARGIN \u2212 HONLY_LR [LL]",
+    "mean": -0.024296334841795438,
+    "good": "8/8",
+    "verdict": "BETTER (DEV)"
+   }
+  ]
+ },
+ "block": {
+  "contrasts": [
+   {
+    "window": "small",
+    "contrast": "PAC_MARGIN \u2212 HA_LEAN",
+    "mean": 0.008071330733922674,
+    "good": "6/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "small",
+    "contrast": "PAC_MARGIN \u2212 HA_LEAN [LL]",
+    "mean": -0.009458558466754544,
+    "good": "6/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "all",
+    "contrast": "PAC_MARGIN \u2212 HA_LEAN",
+    "mean": 0.010341835657949591,
+    "good": "7/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "all",
+    "contrast": "PAC_MARGIN \u2212 HA_LEAN [LL]",
+    "mean": -0.015122490274100772,
+    "good": "6/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "small",
+    "contrast": "PAC_MARGIN \u2212 HONLY_LR",
+    "mean": -0.005575195563410157,
+    "good": "2/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "small",
+    "contrast": "PAC_MARGIN \u2212 HONLY_LR [LL]",
+    "mean": -0.007810624089504257,
+    "good": "5/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "all",
+    "contrast": "PAC_MARGIN \u2212 HONLY_LR",
+    "mean": -0.010026734524894013,
+    "good": "1/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   },
+   {
+    "window": "all",
+    "contrast": "PAC_MARGIN \u2212 HONLY_LR [LL]",
+    "mean": 0.002977076453177057,
+    "good": "3/8",
+    "verdict": "NOT DIFFERENT (DEV)"
+   }
+  ]
+ }
+}

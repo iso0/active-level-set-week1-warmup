@@ -1,5 +1,8 @@
 """RC24 Stage B pilots on ALREADY-USED DEV data (repeats 51-58 standard startup, k-means geometry blocks seeds 1-8). Pilots check
 cost and discriminability of a prototype before any confirmatory run; they never decide a claim.
+  b-pilot3  HA_TREND + margin (P1 ablation that won the matched pilot: HA_LEAN stacking with the physics-anchored emulator) own-query
+            on std 51-58 and blocks s1-8 (80)
+  b-pilot2  P2 = PAC + JEER (two-observation lookahead) and the ablation PAC + JEER_LABEL (no depth update) on std 51-58 (40 + 40)
   b-pilot   P1 = PAC + margin (src.rc24_pac) own-query trajectories on std 51-58 (40) and blocks s1-8 (40), and the PAC family
             (PAC, PAC_PLUG, PAC_FLAT, PAC_GEN, HA_TREND) evaluated on the RC23 HA_LEAN + margin paths of the same tasks (matched, budgets
             8..60 step 4; 80 units). References HA_LEAN / HONLY_LR + margin are the RC23 h-std / h-block units (reused, not rerun).
@@ -43,6 +46,28 @@ def run_pac(task, M, bmax=60, cons="PAC"):
             "seconds": time.time() - t0, "cpu_s": time.process_time() - c0, "queries": rev.queries}
 
 
+def run_jeer(task, M, bmax=60, depth_update=True):
+    """P2: PAC probabilities, JEER acquisition (src.rc24_jeer); records the PAC + margin choice on the same state (audit)."""
+    import src.rc24_jeer as JE
+    rev = K._rev_with(task, M, []); Z = P.zstd(task); C22.startup(task, rev); nt = len(task["test"]); evals = []; t0 = time.time(); c0 = time.process_time()
+    while True:
+        b = rev.queries; cands = np.setdiff1d(task["pool"], rev.paid); t1 = time.process_time(); rows = np.r_[task["test"], cands]
+        out, info = PC.state(task, rev, Z, rows, ("PAC",))
+        e = {"budget": b, "p": {"PAC": LN._f32(out["PAC"][:nt])}}
+        if b >= bmax:
+            e["cpu_s"] = time.process_time() - t1; evals.append(e); break
+        S = None if info.get("one_class") else JE.scores(task, rev, Z, cands, depth_update=depth_update)
+        if S is None:
+            nxt = LN.next_on_path(task, rev); how = "path"
+        else:
+            i = int(np.argmax(S["score"])); im = int(np.argmax(-np.abs(out["PAC"][nt:] - 0.5))); nxt = int(cands[i]); how = "jeer" if depth_update else "jeer_label"
+            e["audit"] = {"same_as_margin": bool(i == im), "best_gain": S["best_gain"], "gain_spread": S["gain_spread"], "n_cfg": S["n_cfg_fantasy"]}
+        e["cpu_s"] = time.process_time() - t1; e["how"] = how; evals.append(e); rev.reveal(nxt)
+    return {"repeat": task["repeat"], "fold": task["fold"], "startup": task.get("startup", "STD"), "block": task.get("block"), "construction": "PAC",
+            "arm": "PAC_JEER" if depth_update else "PAC_JEER_LABEL", "paid": rev.order, "paid_ids": [task["ids"][i] for i in rev.order],
+            "test_ids": [task["ids"][i] for i in task["test"]], "evals": evals, "seconds": time.time() - t0, "cpu_s": time.process_time() - c0, "queries": rev.queries}
+
+
 def match_pac(task, unit, M, budgets=MB):
     Z = P.zstd(task); pos = {s: i for i, s in enumerate(task["ids"])}; paid = [pos[s] for s in unit["paid_ids"]]; evals = []; t0 = time.time()
     for b in budgets:
@@ -60,6 +85,14 @@ def units(job):
                 + [(f"s{s}_b{b}__PAC_MARGIN", ("own", "block", s, b)) for s in range(1, 9) for b in range(1, 6)]
                 + [(f"MATCH_STD__r{r}_f{f}", ("match", "std", r, f)) for r in range(51, 59) for f in range(1, 6)]
                 + [(f"MATCH_BLOCK__s{s}_b{b}", ("match", "block", s, b)) for s in range(1, 9) for b in range(1, 6)])
+    if job == "b-pilot2":
+        return ([(f"STD__r{r}_f{f}__PAC_JEER", ("jeer", "std", r, f)) for r in range(51, 59) for f in range(1, 6)]
+                + [(f"STD__r{r}_f{f}__PAC_JEER_LABEL", ("jeer_label", "std", r, f)) for r in range(51, 59) for f in range(1, 6)])
+    if job == "b-pilot3":
+        return ([(f"STD__r{r}_f{f}__HA_TREND_MARGIN", ("own_trend", "std", r, f)) for r in range(51, 59) for f in range(1, 6)]
+                + [(f"s{s}_b{b}__HA_TREND_MARGIN", ("own_trend", "block", s, b)) for s in range(1, 9) for b in range(1, 6)])
+    if job == "b-smoke2":
+        return [("STD__r1_f1__PAC_JEER", ("jeer_smoke", "std", 1, 1))]
     if job == "b-smoke":
         return [("STD__r1_f1__PAC_MARGIN", ("own_smoke", "std", 1, 1))]
     raise ValueError(job)
@@ -77,6 +110,12 @@ def work(job):
             return run_pac(task, M)
         if kind == "own_smoke":
             return run_pac(task, M, bmax=16)
+        if kind == "own_trend":
+            return run_pac(task, M, cons="HA_TREND")
+        if kind in ("jeer", "jeer_label"):
+            return run_jeer(task, M, depth_update=kind == "jeer")
+        if kind == "jeer_smoke":
+            return run_jeer(task, M, bmax=14)
         ref = R23 / ("h-std" if part == "std" else "h-block") / "units" / (f"STD__r{r}_f{f}__HA_LEAN.json.gz" if part == "std" else f"s{r}_b{f}__HA_LEAN.json.gz")
         return match_pac(task, RC.read_json_gz(ref), M)
     d = OUT / job
@@ -87,4 +126,4 @@ if __name__ == "__main__":
     if sys.argv[1] == "work":
         work(sys.argv[2])
     elif sys.argv[1] == "list":
-        print({j: len(units(j)) for j in ("b-pilot", "b-smoke")})
+        print({j: len(units(j)) for j in ("b-pilot", "b-smoke", "b-pilot2", "b-smoke2", "b-pilot3")})
