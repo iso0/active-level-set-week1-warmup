@@ -73,6 +73,51 @@
    "after": [
     "a_own"
    ]
+  },
+  {
+   "name": "b_smoke",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 4,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_pilot",
+    "work",
+    "b-smoke",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/b-smoke/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/b-smoke/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/b-smoke/locks",
+   "units_total": 1,
+   "resume_token": "0"
+  },
+  {
+   "name": "b_pilot",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 5,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_pilot",
+    "work",
+    "b-pilot",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/b-pilot/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/b-pilot/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/b-pilot/locks",
+   "units_total": 160,
+   "resume_token": "0",
+   "after": [
+    "b_smoke"
+   ]
   }
  ]
 }

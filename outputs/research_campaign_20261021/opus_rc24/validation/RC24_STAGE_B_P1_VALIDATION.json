@@ -1,0 +1,44 @@
+{
+ "utc": "2026-10-21T21:45:13+00:00",
+ "V1_eiv_integral": {
+  "status": "PASS",
+  "max_abs_dp": 0.001562562002557416,
+  "rows": 240,
+  "variance_scale": 1.0
+ },
+ "V1_control_variance_x4_must_FAIL": {
+  "status": "FAIL",
+  "max_abs_dp": 0.057421035117957875,
+  "rows": 80,
+  "variance_scale": 4.0
+ },
+ "V2_classifier_equals_phr_family": {
+  "status": "PASS",
+  "max_abs_dp": 0.0
+ },
+ "V3_physics_anchor_extrapolation": {
+  "status": "PASS",
+  "far_mean": 19.673644845714122,
+  "trend_prediction": 19.673644845713994,
+  "relative_error": 8.516184167105029e-15,
+  "theta_hat_std_units": 1.546791809967781,
+  "z_h_far": 20.86727896039215,
+  "kind": "phys"
+ },
+ "V3_control_flat_must_FAIL": {
+  "status": "FAIL",
+  "far_mean_minus_mu_over_sd": 6.205497993401269e-06,
+  "note": "constant-mean emulator: no trend term (control)",
+  "kind": "flat"
+ },
+ "V4_shadow": {
+  "status": "PASS"
+ },
+ "V5_honesty_HA_TREND": {
+  "status": "PASS",
+  "own_change_max": 0.0,
+  "other_folds_changed_cases": 3
+ },
+ "negative_controls_behave": true,
+ "status": "PASS"
+}

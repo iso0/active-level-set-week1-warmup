@@ -1,0 +1,684 @@
+{
+ "utc": "2026-10-21T21:42:44+00:00",
+ "units_own": 240,
+ "units_match": 240,
+ "Q1": [
+  "H-ONLY NOT SUFFICIENT (DEV)",
+  {
+   "noninferiority": [
+    "PASS",
+    "PASS"
+   ],
+   "spend_BA_0.95": {
+    "window": "endpoint",
+    "contrast": "HONLY_MARGIN \u2212 HA_LEAN_MARGIN",
+    "metric": "BA >= 0.95",
+    "mean": 6.125,
+    "observed_both_attained": -2.0,
+    "attained": "5/7",
+    "verdict": "NO CLEAR DIFFERENCE (DEV)",
+    "status": "PASS"
+   },
+   "attained_0.95": {
+    "HONLY_MARGIN": 5,
+    "HA_LEAN_MARGIN": 7
+   }
+  }
+ ],
+ "Q2": {
+  "M3_MARGIN": [
+   "SIMILAR (non-inferior, DEV)",
+   {
+    "BA_verdicts": [
+     "NOT DIFFERENT (DEV)",
+     "NOT DIFFERENT (DEV)"
+    ],
+    "noninferiority": [
+     "PASS",
+     "PASS"
+    ]
+   }
+  ],
+  "E1S": [
+   "WORSE (DEV)",
+   {
+    "BA_verdicts": [
+     "WORSE (DEV)",
+     "NOT DIFFERENT (DEV)"
+    ],
+    "noninferiority": [
+     "FAIL",
+     "FAIL"
+    ]
+   }
+  ],
+  "G3_MARGIN": [
+   "WORSE (DEV)",
+   {
+    "BA_verdicts": [
+     "WORSE (DEV)",
+     "NOT DIFFERENT (DEV)"
+    ],
+    "noninferiority": [
+     "FAIL",
+     "FAIL"
+    ]
+   }
+  ],
+  "E1S_RAW": [
+   "NON-INFERIORITY NOT SHOWN (DEV)",
+   {
+    "BA_verdicts": [
+     "NOT DIFFERENT (DEV)",
+     "NOT DIFFERENT (DEV)"
+    ],
+    "noninferiority": [
+     "FAIL",
+     "FAIL"
+    ]
+   }
+  ]
+ },
+ "Q3": [
+  "NON-INFERIORITY NOT SHOWN (DEV)",
+  {
+   "BA_verdicts": [
+    "NOT DIFFERENT (DEV)",
+    "NOT DIFFERENT (DEV)"
+   ],
+   "noninferiority": [
+    "FAIL",
+    "FAIL"
+   ]
+  }
+ ],
+ "straddle_audit": {
+  "steps": 2080,
+  "share_choice_differs_from_margin": 0.8605769230769231,
+  "share_numerically_indistinguishable_top2": 0.0,
+  "median_s_at_choice": 1.9593611377646045,
+  "median_abs_eta_at_choice": 1.1166201555322015,
+  "median_s_over_candidates": 1.9200875090259748,
+  "median_share_rows_with_excess_depth_variance": 0.08063030176609651
+ },
+ "Q4": {
+  "HONLY_MARGIN": {
+   "small": {
+    "window": "small",
+    "total_own_query": {
+     "mean": 0.006034374631094325,
+     "se": 0.0018071168691393483,
+     "good": "6/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": 0.004138014992326786,
+     "se": 0.0014007022149299456,
+     "good": "7/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": 0.001896359638767539,
+     "se": 0.0021435764269442676,
+     "good": "4/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": 0.002259362826112582,
+     "se": 0.0013010791249933437,
+     "good": "6/8"
+    },
+    "order2_path_for_X": {
+     "mean": 0.0037750118049817427,
+     "se": 0.0021604275568942455,
+     "good": "7/8"
+    },
+    "interaction": {
+     "mean": 0.0018786521662142036,
+     "se": 0.0013891897800215314,
+     "good": "6/8"
+    },
+    "calibration_cells": {
+     "HONLY_LR@HONLY_MARGIN": {
+      "BA": 0.939888110907803,
+      "AUC": 0.9826001947821981,
+      "oracle_threshold_BA": 0.9471612708062803,
+      "threshold_gap": 0.007273159898477169
+     },
+     "HA_LEAN@HONLY_MARGIN": {
+      "BA": 0.9357500959154763,
+      "AUC": 0.9820184305276827,
+      "oracle_threshold_BA": 0.9428952455436194,
+      "threshold_gap": 0.0071451496281430965
+     },
+     "HONLY_LR@HA_LEAN_MARGIN": {
+      "BA": 0.9361130991028214,
+      "AUC": 0.9810983797662614,
+      "oracle_threshold_BA": 0.9458101537598866,
+      "threshold_gap": 0.009697054657065288
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9338537362767088,
+      "AUC": 0.9820187994333608,
+      "oracle_threshold_BA": 0.9438746901192303,
+      "threshold_gap": 0.010020953842521524
+     }
+    }
+   },
+   "all": {
+    "window": "all",
+    "total_own_query": {
+     "mean": -0.0014918940882338444,
+     "se": 0.0012434823778755023,
+     "good": "5/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": -0.0047209386646879375,
+     "se": 0.0012306906000524003,
+     "good": "1/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": 0.003229044576454093,
+     "se": 0.0016402241016194757,
+     "good": "6/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": -0.005615600810327706,
+     "se": 0.0007934059797766116,
+     "good": "0/8"
+    },
+    "order2_path_for_X": {
+     "mean": 0.004123706722093862,
+     "se": 0.0009330651602408129,
+     "good": "7/8"
+    },
+    "interaction": {
+     "mean": 0.0008946621456397685,
+     "se": 0.0011979626604306116,
+     "good": "6/8"
+    },
+    "calibration_cells": {
+     "HONLY_LR@HONLY_MARGIN": {
+      "BA": 0.9439482077508137,
+      "AUC": 0.9842684126094069,
+      "oracle_threshold_BA": 0.9503405526417863,
+      "threshold_gap": 0.006392344890972582
+     },
+     "HA_LEAN@HONLY_MARGIN": {
+      "BA": 0.9486691464155017,
+      "AUC": 0.987754439516333,
+      "oracle_threshold_BA": 0.9547653786237078,
+      "threshold_gap": 0.006096232208206126
+     },
+     "HONLY_LR@HA_LEAN_MARGIN": {
+      "BA": 0.9398245010287198,
+      "AUC": 0.9835338291776986,
+      "oracle_threshold_BA": 0.9499290251825556,
+      "threshold_gap": 0.010104524153835753
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9454401018390475,
+      "AUC": 0.9868896850810327,
+      "oracle_threshold_BA": 0.9526524713518391,
+      "threshold_gap": 0.007212369512791528
+     }
+    }
+   }
+  },
+  "M3_MARGIN": {
+   "small": {
+    "window": "small",
+    "total_own_query": {
+     "mean": 0.003649214968716785,
+     "se": 0.0021659067829303473,
+     "good": "6/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": 0.00581487575256763,
+     "se": 0.0019443890299174257,
+     "good": "7/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": -0.002165660783850845,
+     "se": 0.0024386414827299056,
+     "good": "4/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": 0.00208745278007319,
+     "se": 0.0016216964843068957,
+     "good": "6/8"
+    },
+    "order2_path_for_X": {
+     "mean": 0.001561762188643595,
+     "se": 0.0017220701066929683,
+     "good": "6/8"
+    },
+    "interaction": {
+     "mean": 0.00372742297249444,
+     "se": 0.002340671846694278,
+     "good": "6/8"
+    },
+    "calibration_cells": {
+     "M3@M3_MARGIN": {
+      "BA": 0.9375029512454256,
+      "AUC": 0.9657836294416244,
+      "oracle_threshold_BA": 0.9440927133750443,
+      "threshold_gap": 0.006589762129618662
+     },
+     "HA_LEAN@M3_MARGIN": {
+      "BA": 0.931688075492858,
+      "AUC": 0.980885152284264,
+      "oracle_threshold_BA": 0.9419276059497108,
+      "threshold_gap": 0.010239530456852844
+     },
+     "M3@HA_LEAN_MARGIN": {
+      "BA": 0.935941189056782,
+      "AUC": 0.9703883101168693,
+      "oracle_threshold_BA": 0.9467110214260418,
+      "threshold_gap": 0.010769832369259824
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9338537362767088,
+      "AUC": 0.9820187994333608,
+      "oracle_threshold_BA": 0.9438746901192303,
+      "threshold_gap": 0.010020953842521524
+     }
+    }
+   },
+   "all": {
+    "window": "all",
+    "total_own_query": {
+     "mean": -0.002136029752769955,
+     "se": 0.0007866327049751721,
+     "good": "1/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": -0.0037559209361350265,
+     "se": 0.001501840800609137,
+     "good": "2/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": 0.0016198911833650714,
+     "se": 0.0018604085126479092,
+     "good": "5/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": -0.006561514494831125,
+     "se": 0.0007661115086551352,
+     "good": "0/8"
+    },
+    "order2_path_for_X": {
+     "mean": 0.00442548474206117,
+     "se": 0.0007812689575320427,
+     "good": "8/8"
+    },
+    "interaction": {
+     "mean": 0.0028055935586960984,
+     "se": 0.0015994960775565226,
+     "good": "5/8"
+    },
+    "calibration_cells": {
+     "M3@M3_MARGIN": {
+      "BA": 0.9433040720862775,
+      "AUC": 0.9792638118285917,
+      "oracle_threshold_BA": 0.951904976221394,
+      "threshold_gap": 0.008600904135116424
+     },
+     "HA_LEAN@M3_MARGIN": {
+      "BA": 0.9470599930224126,
+      "AUC": 0.9871993023466616,
+      "oracle_threshold_BA": 0.9539450904978329,
+      "threshold_gap": 0.006885097475420349
+     },
+     "M3@HA_LEAN_MARGIN": {
+      "BA": 0.9388785873442165,
+      "AUC": 0.9807269180987235,
+      "oracle_threshold_BA": 0.9512003005000254,
+      "threshold_gap": 0.012321713155808892
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9454401018390475,
+      "AUC": 0.9868896850810327,
+      "oracle_threshold_BA": 0.9526524713518391,
+      "threshold_gap": 0.007212369512791528
+     }
+    }
+   }
+  },
+  "E1S": {
+   "small": {
+    "window": "small",
+    "total_own_query": {
+     "mean": -0.019411447881005822,
+     "se": 0.0036570303022026643,
+     "good": "0/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": -0.018406917719277535,
+     "se": 0.0033415618409955283,
+     "good": "0/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": -0.001004530161728287,
+     "se": 0.0014257079770342782,
+     "good": "3/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": -0.04054771426041792,
+     "se": 0.010515741029910054,
+     "good": "0/8"
+    },
+    "order2_path_for_X": {
+     "mean": 0.0211362663794121,
+     "se": 0.008503812754987882,
+     "good": "8/8"
+    },
+    "interaction": {
+     "mean": 0.022140796541140387,
+     "se": 0.009430882821705228,
+     "good": "8/8"
+    },
+    "calibration_cells": {
+     "E1CAL@E1S": {
+      "BA": 0.9144422883957031,
+      "AUC": 0.9599999262188643,
+      "oracle_threshold_BA": 0.9255555719513635,
+      "threshold_gap": 0.011113283555660478
+     },
+     "HA_LEAN@E1S": {
+      "BA": 0.9328492061149805,
+      "AUC": 0.9818155324046748,
+      "oracle_threshold_BA": 0.9425680262070593,
+      "threshold_gap": 0.009718820092078861
+     },
+     "E1CAL@HA_LEAN_MARGIN": {
+      "BA": 0.893306022016291,
+      "AUC": 0.9494269050289221,
+      "oracle_threshold_BA": 0.9067137144374926,
+      "threshold_gap": 0.013407692421201767
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9338537362767088,
+      "AUC": 0.9820187994333608,
+      "oracle_threshold_BA": 0.9438746901192303,
+      "threshold_gap": 0.010020953842521524
+     }
+    }
+   },
+   "all": {
+    "window": "all",
+    "total_own_query": {
+     "mean": -0.010947078372430336,
+     "se": 0.002317774251099043,
+     "good": "0/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": -0.010596354474088077,
+     "se": 0.0017560479469961227,
+     "good": "0/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": -0.0003507238983422589,
+     "se": 0.0010601076196833867,
+     "good": "4/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": -0.01804067343204549,
+     "se": 0.004651944639751461,
+     "good": "0/8"
+    },
+    "order2_path_for_X": {
+     "mean": 0.007093595059615154,
+     "se": 0.003010905675387981,
+     "good": "6/8"
+    },
+    "interaction": {
+     "mean": 0.007444318957957413,
+     "se": 0.003694411589290633,
+     "good": "7/8"
+    },
+    "calibration_cells": {
+     "E1CAL@E1S": {
+      "BA": 0.9344930234666172,
+      "AUC": 0.9766062416732718,
+      "oracle_threshold_BA": 0.9457629601834832,
+      "threshold_gap": 0.01126993671686595
+     },
+     "HA_LEAN@E1S": {
+      "BA": 0.9450893779407052,
+      "AUC": 0.9855911370937822,
+      "oracle_threshold_BA": 0.9518437115284079,
+      "threshold_gap": 0.006754333587702568
+     },
+     "E1CAL@HA_LEAN_MARGIN": {
+      "BA": 0.9273994284070021,
+      "AUC": 0.9687632410788067,
+      "oracle_threshold_BA": 0.9364585660952494,
+      "threshold_gap": 0.009059137688247274
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9454401018390475,
+      "AUC": 0.9868896850810327,
+      "oracle_threshold_BA": 0.9526524713518391,
+      "threshold_gap": 0.007212369512791528
+     }
+    }
+   }
+  },
+  "G3_MARGIN": {
+   "small": {
+    "window": "small",
+    "total_own_query": {
+     "mean": -0.03919936400661077,
+     "se": 0.005309556983579629,
+     "good": "0/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": -0.03889188112383421,
+     "se": 0.004420023078065005,
+     "good": "0/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": -0.000307482882776558,
+     "se": 0.0012473951080634164,
+     "good": "5/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": -0.12820320800377766,
+     "se": 0.010812796470467696,
+     "good": "0/8"
+    },
+    "order2_path_for_X": {
+     "mean": 0.08900384399716688,
+     "se": 0.010602968715623738,
+     "good": "8/8"
+    },
+    "interaction": {
+     "mean": 0.08931132687994343,
+     "se": 0.010918328580628633,
+     "good": "8/8"
+    },
+    "calibration_cells": {
+     "G3@G3_MARGIN": {
+      "BA": 0.8946543722700979,
+      "AUC": 0.9285398344351317,
+      "oracle_threshold_BA": 0.9058528730374218,
+      "threshold_gap": 0.011198500767323774
+     },
+     "HA_LEAN@G3_MARGIN": {
+      "BA": 0.9335462533939323,
+      "AUC": 0.9841577145555425,
+      "oracle_threshold_BA": 0.9444608812418841,
+      "threshold_gap": 0.01091462784795183
+     },
+     "G3@HA_LEAN_MARGIN": {
+      "BA": 0.8056505282729312,
+      "AUC": 0.8627788926927165,
+      "oracle_threshold_BA": 0.8183744540195963,
+      "threshold_gap": 0.012723925746665157
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9338537362767088,
+      "AUC": 0.9820187994333608,
+      "oracle_threshold_BA": 0.9438746901192303,
+      "threshold_gap": 0.010020953842521524
+     }
+    }
+   },
+   "all": {
+    "window": "all",
+    "total_own_query": {
+     "mean": -0.01890588899944351,
+     "se": 0.003200880278416633,
+     "good": "0/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": -0.018776706136060847,
+     "se": 0.0028796258305326915,
+     "good": "0/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": -0.0001291828633826625,
+     "se": 0.00173822892182445,
+     "good": "3/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": -0.1261528302443632,
+     "se": 0.011254522818949817,
+     "good": "0/8"
+    },
+    "order2_path_for_X": {
+     "mean": 0.10724694124491967,
+     "se": 0.009312366657706246,
+     "good": "8/8"
+    },
+    "interaction": {
+     "mean": 0.10737612410830233,
+     "se": 0.010953434857617482,
+     "good": "8/8"
+    },
+    "calibration_cells": {
+     "G3@G3_MARGIN": {
+      "BA": 0.926534212839604,
+      "AUC": 0.9618888155176484,
+      "oracle_threshold_BA": 0.9339122605275141,
+      "threshold_gap": 0.007378047687910019
+     },
+     "HA_LEAN@G3_MARGIN": {
+      "BA": 0.9453109189756649,
+      "AUC": 0.9880570739244818,
+      "oracle_threshold_BA": 0.9535451572170599,
+      "threshold_gap": 0.008234238241395006
+     },
+     "G3@HA_LEAN_MARGIN": {
+      "BA": 0.8192872715946844,
+      "AUC": 0.8772056606995295,
+      "oracle_threshold_BA": 0.8300477232195558,
+      "threshold_gap": 0.010760451624871409
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9454401018390475,
+      "AUC": 0.9868896850810327,
+      "oracle_threshold_BA": 0.9526524713518391,
+      "threshold_gap": 0.007212369512791528
+     }
+    }
+   }
+  },
+  "HA_LEAN_STRADDLE": {
+   "small": {
+    "window": "small",
+    "total_own_query": {
+     "mean": -0.010665063156652124,
+     "se": 0.00554828986937082,
+     "good": "1/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": 0.0,
+     "se": 0.0,
+     "good": "0/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": -0.010665063156652124,
+     "se": 0.00554828986937082,
+     "good": "1/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": 0.0,
+     "se": 0.0,
+     "good": "0/8"
+    },
+    "order2_path_for_X": {
+     "mean": -0.010665063156652124,
+     "se": 0.00554828986937082,
+     "good": "1/8"
+    },
+    "interaction": {
+     "mean": 0.0,
+     "se": 0.0,
+     "good": "0/8"
+    },
+    "calibration_cells": {
+     "HA_LEAN@HA_LEAN_STRADDLE": {
+      "BA": 0.9231886731200567,
+      "AUC": 0.9781449209066226,
+      "oracle_threshold_BA": 0.9342231953134223,
+      "threshold_gap": 0.011034522193365578
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9338537362767088,
+      "AUC": 0.9820187994333608,
+      "oracle_threshold_BA": 0.9438746901192303,
+      "threshold_gap": 0.010020953842521524
+     }
+    }
+   },
+   "all": {
+    "window": "all",
+    "total_own_query": {
+     "mean": -0.008503275882422417,
+     "se": 0.0037187654279825853,
+     "good": "1/8"
+    },
+    "order1_model_on_X_path": {
+     "mean": 0.0,
+     "se": 0.0,
+     "good": "0/8"
+    },
+    "order1_path_for_HA_LEAN": {
+     "mean": -0.008503275882422417,
+     "se": 0.0037187654279825853,
+     "good": "1/8"
+    },
+    "order2_model_on_HA_LEAN_path": {
+     "mean": 0.0,
+     "se": 0.0,
+     "good": "0/8"
+    },
+    "order2_path_for_X": {
+     "mean": -0.008503275882422417,
+     "se": 0.0037187654279825853,
+     "good": "1/8"
+    },
+    "interaction": {
+     "mean": 0.0,
+     "se": 0.0,
+     "good": "0/8"
+    },
+    "calibration_cells": {
+     "HA_LEAN@HA_LEAN_STRADDLE": {
+      "BA": 0.9369368259566251,
+      "AUC": 0.9839780311398552,
+      "oracle_threshold_BA": 0.9464372011864006,
+      "threshold_gap": 0.009500375229775551
+     },
+     "HA_LEAN@HA_LEAN_MARGIN": {
+      "BA": 0.9454401018390475,
+      "AUC": 0.9868896850810327,
+      "oracle_threshold_BA": 0.9526524713518391,
+      "threshold_gap": 0.007212369512791528
+     }
+    }
+   }
+  }
+ },
+ "match_reproduction_max_abs_vs_own": 0.0,
+ "match_reproduction_checks": 3920
+}

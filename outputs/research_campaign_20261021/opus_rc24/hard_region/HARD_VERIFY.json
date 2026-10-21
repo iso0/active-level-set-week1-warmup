@@ -1,0 +1,96 @@
+{
+ "source": "RC23 h-std units (repeats 51-58, 5 folds, own-query margin paths); fold-pooled per repeat, mean over 8 repeats",
+ "group_sizes": [
+  {
+   "n_shortK_NEW": 10,
+   "n_cond_NEW": 12
+  }
+ ],
+ "by_budget": {
+  "B24": {
+   "HA_LEAN": {
+    "recall_shortK_NEW": 0.9375,
+    "spec_cond_NEW": 0.1875,
+    "BA_hard_group": 0.5625,
+    "recall_shortK_pooled": 0.8523
+   },
+   "HA_LR": {
+    "recall_shortK_NEW": 0.9625,
+    "spec_cond_NEW": 0.1667,
+    "BA_hard_group": 0.5646,
+    "recall_shortK_pooled": 0.8352
+   },
+   "HONLY_LR": {
+    "recall_shortK_NEW": 1.0,
+    "spec_cond_NEW": 0.0,
+    "BA_hard_group": 0.5,
+    "recall_shortK_pooled": 0.875
+   },
+   "PHR_NRMAP": {
+    "recall_shortK_NEW": 0.95,
+    "spec_cond_NEW": 0.1146,
+    "BA_hard_group": 0.5323,
+    "recall_shortK_pooled": 0.8523
+   }
+  },
+  "B40": {
+   "HA_LEAN": {
+    "recall_shortK_NEW": 0.9875,
+    "spec_cond_NEW": 0.2188,
+    "BA_hard_group": 0.6031,
+    "recall_shortK_pooled": 0.8466
+   },
+   "HA_LR": {
+    "recall_shortK_NEW": 0.9375,
+    "spec_cond_NEW": 0.1667,
+    "BA_hard_group": 0.5521,
+    "recall_shortK_pooled": 0.8295
+   },
+   "HONLY_LR": {
+    "recall_shortK_NEW": 1.0,
+    "spec_cond_NEW": 0.0,
+    "BA_hard_group": 0.5,
+    "recall_shortK_pooled": 0.875
+   },
+   "PHR_NRMAP": {
+    "recall_shortK_NEW": 0.925,
+    "spec_cond_NEW": 0.2812,
+    "BA_hard_group": 0.6031,
+    "recall_shortK_pooled": 0.8011
+   }
+  },
+  "B60": {
+   "HA_LEAN": {
+    "recall_shortK_NEW": 0.95,
+    "spec_cond_NEW": 0.3333,
+    "BA_hard_group": 0.6417,
+    "recall_shortK_pooled": 0.8011
+   },
+   "HA_LR": {
+    "recall_shortK_NEW": 0.925,
+    "spec_cond_NEW": 0.3438,
+    "BA_hard_group": 0.6344,
+    "recall_shortK_pooled": 0.8409
+   },
+   "HONLY_LR": {
+    "recall_shortK_NEW": 1.0,
+    "spec_cond_NEW": 0.0,
+    "BA_hard_group": 0.5,
+    "recall_shortK_pooled": 0.875
+   },
+   "PHR_NRMAP": {
+    "recall_shortK_NEW": 0.8875,
+    "spec_cond_NEW": 0.3542,
+    "BA_hard_group": 0.6208,
+    "recall_shortK_pooled": 0.7955
+   }
+  }
+ },
+ "owner_figures": {
+  "HA_LEAN_shortK_NEW_recall": "~0.95",
+  "HA_LEAN_NEW_conduction_specificity": "~0.33",
+  "HONLY_LR": "all positives right, all 12 negatives called Keyhole",
+  "HA_LEAN_local_BA": "~0.64",
+  "HA_LEAN_pooled_22_shortK_recall": "~0.80"
+ }
+}
