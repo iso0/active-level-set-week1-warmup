@@ -1,0 +1,141 @@
+{
+ "utc": "2026-10-21T13:57:10+00:00",
+ "fast_phr_nrmap_vs_rc21": {
+  "max_abs_diff": 9.455769500732458e-13,
+  "PASS": true
+ },
+ "reproduction_rc21b_r35_f1": {
+  "REF": true,
+  "H": true,
+  "E1S": true,
+  "PASS": true
+ },
+ "startups_blocks": {
+  "startups": {
+   "RAND8": {
+    "one_class_starts_in_10": 0,
+    "paths_are_permutations_of_pool": true
+   },
+   "LOCAL8": {
+    "one_class_starts_in_10": 6,
+    "paths_are_permutations_of_pool": true
+   }
+  },
+  "blocks": [
+   {
+    "block": 0,
+    "n": 149,
+    "keyhole": 1,
+    "conduction": 148,
+    "disjoint": true
+   },
+   {
+    "block": 1,
+    "n": 88,
+    "keyhole": 84,
+    "conduction": 4,
+    "disjoint": true
+   },
+   {
+    "block": 2,
+    "n": 91,
+    "keyhole": 0,
+    "conduction": 91,
+    "disjoint": true
+   },
+   {
+    "block": 3,
+    "n": 118,
+    "keyhole": 101,
+    "conduction": 17,
+    "disjoint": true
+   },
+   {
+    "block": 4,
+    "n": 95,
+    "keyhole": 11,
+    "conduction": 84,
+    "disjoint": true
+   }
+  ],
+  "labels_unused": "startup_task / block_tasks / blocks take no label argument (paths from public X only)",
+  "PASS": true
+ },
+ "shadow": {
+  "margin_cov": {
+   "same_paid": true,
+   "max_abs_p_diff": 0.0,
+   "hows": [
+    "",
+    "coverage",
+    "margin",
+    "path"
+   ]
+  },
+  "bald_lap_cov": {
+   "same_paid": true,
+   "max_abs_p_diff": 0.0,
+   "hows": [
+    "",
+    "BALD_LAP",
+    "coverage",
+    "path"
+   ]
+  },
+  "bald_grid": {
+   "same_paid": true,
+   "max_abs_p_diff": 0.0,
+   "hows": [
+    "",
+    "BALD_GRID",
+    "path"
+   ]
+  },
+  "maximin": {
+   "same_paid": true,
+   "max_abs_p_diff": 0.0,
+   "hows": [
+    "",
+    "maximin",
+    "path"
+   ]
+  },
+  "PASS": true
+ },
+ "selector_numerics": {
+  "bald_lap_mc_excess_over_3se": 2.4654735529512986e-05,
+  "max_mc_se": 0.0005076415205603694,
+  "bald_grid_vs_direct": 1.169203622808368e-15,
+  "PASS": true
+ },
+ "recal_honesty": {
+  "own_oof_change_max": 0.0,
+  "other_changed_cases": 3,
+  "PASS": true
+ },
+ "masking": {
+  "masked_channel_values_at_B40": {
+   "REAL": 0,
+   "MCAR25": 25,
+   "MCAR50": 37,
+   "QOFF": 0,
+   "SHORTDROP": 0
+  },
+  "PASS": true
+ },
+ "timing": [
+  {
+   "budget": 16,
+   "H_only_s": 0.390625,
+   "H+REF+BALD_s": 0.421875,
+   "all_ingredients_s": 2.40625
+  },
+  {
+   "budget": 60,
+   "H_only_s": 0.640625,
+   "H+REF+BALD_s": 0.671875,
+   "all_ingredients_s": 2.984375
+  }
+ ],
+ "status": "PASS"
+}

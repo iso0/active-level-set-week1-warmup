@@ -73,3 +73,13 @@ outputs/research_campaign_20261020/opus_rc21/runner/STATUS.md
 outputs/research_campaign_20261020/opus_rc21/runner/*.tmp
 outputs/research_campaign_20261020/opus_rc21/runner/runner_stdout.txt
 outputs/research_campaign_20261020/opus_rc21/runner/runner_stderr.txt
+# RC22 programme: unit checkpoints, claim locks and live runner state
+outputs/research_campaign_20261021/opus_rc22/**/units/
+outputs/research_campaign_20261021/opus_rc22/**/locks/
+outputs/research_campaign_20261021/opus_rc22/runner/runner.lock
+outputs/research_campaign_20261021/opus_rc22/runner/HEARTBEAT.json
+outputs/research_campaign_20261021/opus_rc22/runner/STATE.json
+outputs/research_campaign_20261021/opus_rc22/runner/STATUS.md
+outputs/research_campaign_20261021/opus_rc22/runner/*.tmp
+outputs/research_campaign_20261021/opus_rc22/runner/runner_stdout.txt
+outputs/research_campaign_20261021/opus_rc22/runner/runner_stderr.txt
