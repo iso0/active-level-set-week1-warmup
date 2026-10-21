@@ -1,0 +1,63 @@
+{
+ "utc": "2026-10-21T17:51:16+00:00",
+ "reproduction": {
+  "HA_LR_vs_RC22_A5_r43_f1": true,
+  "PHR_NRMAP_vs_RC22_RAND8_r35_f1": true,
+  "HONLY_LR_vs_RC22_ingr_max_abs": 0.0,
+  "PASS": true
+ },
+ "channel_independence": {
+  "state_change_max": {
+   "nan": {
+    "HA_LEAN": 0.0,
+    "HONLY_LR": 0.0,
+    "HA_LR_finite": true
+   },
+   "random": {
+    "PHR_NRMAP": 0.470086242864246,
+    "HA_LR": 0.5319609351188351,
+    "HA_LEAN": 0.0,
+    "HONLY_LR": 0.0
+   }
+  },
+  "trajectory_identical_with_all_TS_replaced": {
+   "HA_LEAN": true,
+   "HONLY_LR": true
+  },
+  "PASS": true
+ },
+ "shadow": {
+  "HA_LEAN": true,
+  "HONLY_LR": true,
+  "PASS": true
+ },
+ "honesty_depth_only": {
+  "own_change_max": 0.0,
+  "other_folds_changed_cases": 3,
+  "PASS": true
+ },
+ "timing_cpu_s_per_state": [
+  {
+   "budget": 16,
+   "PHR_NRMAP": 0.3854166666666667,
+   "HA_LR": 0.3958333333333333,
+   "HA_LEAN": 0.09895833333333333,
+   "HONLY_LR": 0.005208333333333333
+  },
+  {
+   "budget": 40,
+   "PHR_NRMAP": 0.484375,
+   "HA_LR": 0.3958333333333333,
+   "HA_LEAN": 0.11979166666666667,
+   "HONLY_LR": 0.005208333333333333
+  },
+  {
+   "budget": 60,
+   "PHR_NRMAP": 0.6197916666666666,
+   "HA_LR": 0.6197916666666666,
+   "HA_LEAN": 0.18229166666666666,
+   "HONLY_LR": 0.005208333333333333
+  }
+ ],
+ "status": "PASS"
+}

@@ -1,0 +1,14 @@
+{
+ "note": "RC23 queue (owner instruction 2026-10-21 evening; one 24-hour window from its recorded start; earlier grants finished). src/rc23_runner.ps1 (detached via src/rc23_start_runner.ps1). 'after' = dependencies. Single-thread workers; Opus share 2 threads; Astra share released and never used.",
+ "t0_utc": "2026-10-21T17:46:17Z",
+ "deadline_utc": "2026-10-22T17:46:17Z",
+ "runner_slots": 2,
+ "stop_runner": false,
+ "jobs": [
+  {"name": "h_smoke", "enabled": true, "kind": "pool", "priority": 1, "max_workers": 2, "python": "system",
+   "args": ["-m", "src.rc23_jobs", "work", "h-smoke", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc23/h-smoke/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc23/h-smoke/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc23/h-smoke/locks", "units_total": 6, "resume_token": "0"}
+ ]
+}
