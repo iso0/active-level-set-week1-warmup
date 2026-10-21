@@ -1420,3 +1420,38 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - Sadeleştirilmiş modelin başlangıç ve blok sağlamlığı test edilmedi.
 - Emülatör belirsizliğini kullanan seçici, ortak bir gelecek-gözlem modeli gerektiriyor.
 - Fiziksel doğrulama sahibin kararı.
+
+
+### 2026-10-21 (akşam) — RC23: tamamen sade h + derinlik sistemi ve tek model kararı
+
+[Ana rapor](../outputs/research_campaign_20261021/opus_rc23/FINAL_REPORT_RC23.md), [protokol](../outputs/research_campaign_20261021/opus_rc23/PROTOCOL_RC23.md), [karar](../outputs/research_campaign_20261021/opus_rc23/DECISION.json), [RC22 eki](../outputs/research_campaign_20261021/opus_rc22/ADDENDUM_RC22_20261021.md).
+
+**Kurulum.**
+- Tek 24 saatlik pencere (17:46 UTC), 2 iş parçacığı; margin her kolda sabit.
+- Kurallar sonuçlardan önce donduruldu (`8cef7a54`).
+- 726 birim, hata yok, 2.35 CPU-saat.
+
+**RC22 düzeltmeleri (tarihli ek).**
+- RC22 adayının derinliği hâlâ sıcaklık/akışla ortak eğitilen üst modelden geliyordu.
+- "8 simülasyon" atanmış bir skordu. Gözlenen fark −8.14 (7 çift); doğru alt sınır 64 değil 61.
+
+**Olumlu (DEV).**
+- Tamamen sade sistem (derinlik GP'si yalnız ödenmiş derinliklerden; HA_LEAN) + margin, taze tekrarlarda referansa göre performansı korudu:
+  - BA-AULC +0.0056 / +0.0038;
+  - alt güven sınırları +0.0006 / +0.0005;
+  - önceden belirlenen kabul edilebilir kayıp −0.010.
+- Dört sağlamlık koşulunda kötüleşmedi; bloklarda erken BA'da daha iyi (+0.024, 8/8).
+- Sıcaklık/akış değerlerinden bit düzeyinde bağımsız; adım başına işlem süresi 0.14 s (referans 0.48 s).
+- Tahmini derinlik, yalnız-h'ye göre olasılık kalitesini belirgin iyileştiriyor (−0.023 / −0.037) ve BA ≥ 0.95'e ulaşmayı sağlıyor (8/8'e karşı 3/8).
+
+**Boş.**
+- Ortak üç kanallı üst modelin ölçülebilir katkısı yok: aynı yollarda +0.001.
+- BA'da pratik üstünlük yok (marj 0.020).
+
+**Sınırlar / sınanmamış.**
+- Kümelenmiş başlangıçta bütün modeller düşüyor.
+- Bloklarda azınlık sınıfı duyarlılığı 0.22–0.51; BA ≥ 0.95'e ulaşılmıyor.
+- Köşe zayıf (B60'ta NEW-iletim duyarlılığı ~0.33).
+- Fiziksel doğrulama ve margin dışı seçiciler sınanmadı.
+
+**Karar: D1 — tamamen sade h + derinlik sistemi + margin.**

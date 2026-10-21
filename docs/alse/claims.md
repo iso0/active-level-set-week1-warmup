@@ -192,3 +192,20 @@ Path alias: RC22 = `outputs/research_campaign_20261021/opus_rc22`. All rows are 
 |---|---|---|---|---|---|---|
 | C79 | log h alone (learned regularisation) gives the best early decisions | QUALIFIED (matched only; not carried by the pre-registered rule) | RC22/ingr/INGREDIENTS.md | HONLY_LR − PHR_NRMAP BA-AULC B8–B24 +0.017 (7/8), LL B8–B60 +0.029 (harm) | "On identical data log h alone gave the highest early BA but clearly worse probabilities." | prospective superiority |
 | C80 | PHR_NRMAP's advantage over SHQ_ATS_H survives a random startup | QUALIFIED | RC22/start/STARTUPS.md | RAND8 LL −0.018 (6/8, below verdict), sims to BA ≥ 0.95 +5.75 (MORE) | "With a random start the advantage shrank and reaching BA 0.95 took longer." | – |
+
+## Ledger addendum (2026-10-21, evening): RC23 and the RC22 addendum
+
+Path alias: RC23 = `outputs/research_campaign_20261021/opus_rc23`. DEV evidence.
+
+**RC22 wording corrections** (`opus_rc22/ADDENDUM_RC22_20261021.md`):
+- **C73 narrowed.** HA_LR removes temperature / spike only from the classifier; its depth comes from the three-channel shared upstream.
+- **The "−8 simulations to BA ≥ 0.95"** is a restricted score (non-attaining reference = 64). The observed difference is −8.14 on the 7 both-attained repeats. 64 is not a strict lower bound; 61 is.
+
+| ID | Claim | Status | Evidence artifact | Exact metric | Allowed wording | Forbidden overclaim |
+|---|---|---|---|---|---|---|
+| C81 | The fully lean h + depth system (HA_LEAN: depth GP from paid depths only + learned-regularisation classifier on log h and depth) + margin preserves the BA learning curve of PHR_NRMAP + margin | SUPPORTED exploratory (pre-registered non-inferiority, fresh repeats 51–58) | RC23/std/STD.md; RC23/DECISION.json | BA-AULC B8–B24 +0.0056 (LCB +0.0006), B8–B60 +0.0038 (LCB +0.0005) vs δ = −0.010 | "Dropping temperature and spike from the whole system did not lose BA (loss smaller than 0.010 at 95 %)." | equivalence; BA superiority |
+| C82 | HA_LEAN does not lose robustness relative to PHR_NRMAP under random / clustered startups and geometry blocks | SUPPORTED exploratory | RC23/rob_*/; RC23/block/BLOCK.md | no WORSE BA verdict in 4 conditions; blocks BA B8–B24 +0.024 (8/8) | "Under every tested startup and in withheld-region blocks the lean system was at least as good." | good extrapolation (minority-class recall 0.22–0.51) |
+| C83 | HA_LEAN is invariant to paid temperature / spike values and needs about one third of the decision CPU | SUPPORTED (numerical) | RC23/RC23_VALIDATION.json; RC23/COMPUTE.md | bit-identical predictions and paths with T / S changed or removed; 0.143 vs 0.478 s per step | "The lean system ignores those channels entirely and is about 3× faster per decision." | – |
+| C84 | Predicted depth adds probability quality beyond log h under the same learned regularisation, prospectively | SUPPORTED exploratory | RC23/std/STD.md | HA_LEAN − HONLY_LR LL −0.023 (B8–B24, 7/8), −0.037 (B8–B60, 8/8); BA ≥ 0.95 attained 8/8 vs 3/8 | "Depth mainly buys probability quality and late accuracy." | an early-BA gain (HONLY_LR is 0.006 better early) |
+| C85 | The three-channel upstream (shared lengthscales with T, S) is needed | NOT SUPPORTED | RC23/match/MATCH.md; RC23/std/STD.md | HA_LEAN − HA_LR matched BA +0.001, LL +0.001; prospective BA +0.002 / +0.001 | "The shared upstream added nothing measurable." | – |
+| C86 | PHR_NRMAP runs when a monitor channel is absent in every paid run | NOT SUPPORTED (failure found in acceptance) | RC23/RC23_VALIDATION.json | the full-fit mean of an empty channel is NaN → solver error | "The reference needs every channel present at least once." | – |

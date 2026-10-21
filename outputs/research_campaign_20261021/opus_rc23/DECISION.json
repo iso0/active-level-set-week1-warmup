@@ -1,0 +1,311 @@
+{
+ "decision": "D1: the fully lean system is sufficient \u2014 HA_LEAN + margin",
+ "detail": {
+  "HA_LEAN": {
+   "noninferiority": [
+    {
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "mean": 0.005575955075100544,
+     "se": 0.00263529113544266,
+     "lower_95": 0.0005831888717075309,
+     "delta": 0.01,
+     "good": "6/8",
+     "verdict": "NON-INFERIOR (DEV)"
+    },
+    {
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "mean": 0.0038198790880317607,
+     "se": 0.0017295480634797057,
+     "lower_95": 0.0005431143304882582,
+     "delta": 0.01,
+     "good": "6/8",
+     "verdict": "NON-INFERIOR (DEV)"
+    }
+   ],
+   "spend_BA_0.93": {
+    "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+    "target": "BA >= 0.93",
+    "units": 8,
+    "attained_a": 8,
+    "attained_b": 8,
+    "both_attained": 8,
+    "observed_mean_diff_both_attained": -1.25,
+    "restricted_mean_diff(censored=61)": -1.25,
+    "fewer/equal/more(restricted)": "5/1/2",
+    "per_unit": "14/15;13/17;25/17;14/14;14/21;14/13;15/17;14/19",
+    "verdict": "NO CLEAR DIFFERENCE (DEV)"
+   },
+   "robust": true,
+   "robust_rows": [
+    {
+     "condition": "STD",
+     "window": "small",
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.00443207621851717,
+     "se": 0.002695833165518935,
+     "min": -0.004539275868534198,
+     "max": 0.015682831390140706,
+     "good": "5/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "STD",
+     "window": "all",
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.0021693568011172254,
+     "se": 0.0014963699861461584,
+     "min": -0.002304755625742061,
+     "max": 0.009033316776660971,
+     "good": "5/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "RAND8",
+     "window": "small",
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.013144868825820971,
+     "se": 0.004364372366933673,
+     "min": 3.689056781963629e-05,
+     "max": 0.03502824515474945,
+     "good": "8/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "RAND8",
+     "window": "all",
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.005789348175684841,
+     "se": 0.0010833086734846782,
+     "min": 0.0009502453431575741,
+     "max": 0.010000267282604614,
+     "good": "8/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "LOCAL8",
+     "window": "small",
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.003315051525273033,
+     "se": 0.0029958492384767953,
+     "min": -0.008915799231981714,
+     "max": 0.014248439311977834,
+     "good": "5/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "LOCAL8",
+     "window": "all",
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.0011671340399988656,
+     "se": 0.0014608159907606997,
+     "min": -0.004940691103721195,
+     "max": 0.007100947071362218,
+     "good": "6/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "BLOCK",
+     "window": "small",
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.023662098457019415,
+     "se": 0.008739547913090215,
+     "min": 0.0014912469532730732,
+     "max": 0.07607789899102124,
+     "good": "8/8",
+     "verdict": "BETTER (DEV)"
+    },
+    {
+     "condition": "BLOCK",
+     "window": "all",
+     "contrast": "HA_LEAN \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.011957503318758972,
+     "se": 0.003222280630782555,
+     "min": -0.0001740121123567917,
+     "max": 0.029408186197971697,
+     "good": "7/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    }
+   ],
+   "pass": true
+  },
+  "HA_LR": {
+   "noninferiority": [
+    {
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "mean": 0.003569270938218308,
+     "se": 0.0026835225528311826,
+     "lower_95": -0.0015148734766521664,
+     "delta": 0.01,
+     "good": "6/8",
+     "verdict": "NON-INFERIOR (DEV)"
+    },
+    {
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "mean": 0.002969568901000752,
+     "se": 0.0015932207860354698,
+     "lower_95": -4.891311340673174e-05,
+     "delta": 0.01,
+     "good": "6/8",
+     "verdict": "NON-INFERIOR (DEV)"
+    }
+   ],
+   "spend_BA_0.93": {
+    "contrast": "HA_LR \u2212 PHR_NRMAP",
+    "target": "BA >= 0.93",
+    "units": 8,
+    "attained_a": 8,
+    "attained_b": 8,
+    "both_attained": 8,
+    "observed_mean_diff_both_attained": -2.0,
+    "restricted_mean_diff(censored=61)": -2.0,
+    "fewer/equal/more(restricted)": "6/1/1",
+    "per_unit": "15/15;14/17;15/17;12/14;16/21;12/13;19/17;14/19",
+    "verdict": "FEWER SIMULATIONS (DEV)"
+   },
+   "robust": true,
+   "robust_rows": [
+    {
+     "condition": "STD",
+     "window": "small",
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.008448916545723523,
+     "se": 0.002850123871513802,
+     "min": 0.0010963008742630453,
+     "max": 0.024839504329650652,
+     "good": "8/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "STD",
+     "window": "all",
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.003063309225927305,
+     "se": 0.0014580150457986797,
+     "min": -0.0016261083875508398,
+     "max": 0.009401665616097565,
+     "good": "6/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "RAND8",
+     "window": "small",
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.007959953769608438,
+     "se": 0.0036638689198851652,
+     "min": -0.0050661599783343725,
+     "max": 0.02286954800808294,
+     "good": "6/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "RAND8",
+     "window": "all",
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.002631515570325385,
+     "se": 0.0011831408166662223,
+     "min": -0.0026736613039382018,
+     "max": 0.007545165191786385,
+     "good": "6/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "LOCAL8",
+     "window": "small",
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": -0.0009531871714569679,
+     "se": 0.0021431694637748717,
+     "min": -0.008116792933676842,
+     "max": 0.005802235308005832,
+     "good": "4/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "LOCAL8",
+     "window": "all",
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": -0.0010077563462913136,
+     "se": 0.001297024119742407,
+     "min": -0.00422306515236226,
+     "max": 0.004103205609370941,
+     "good": "3/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    },
+    {
+     "condition": "BLOCK",
+     "window": "small",
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.02176022693341291,
+     "se": 0.00635145112344118,
+     "min": 0.002341032033164936,
+     "max": 0.05215154471657635,
+     "good": "8/8",
+     "verdict": "BETTER (DEV)"
+    },
+    {
+     "condition": "BLOCK",
+     "window": "all",
+     "contrast": "HA_LR \u2212 PHR_NRMAP",
+     "metric": "BA",
+     "direction": "higher",
+     "margin": 0.02,
+     "mean": 0.010750102875960801,
+     "se": 0.003529467863880467,
+     "min": -0.008499169196570788,
+     "max": 0.021433419903199136,
+     "good": "6/8",
+     "verdict": "NOT DIFFERENT (DEV)"
+    }
+   ],
+   "pass": true
+  }
+ }
+}
