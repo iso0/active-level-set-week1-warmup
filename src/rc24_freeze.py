@@ -20,7 +20,10 @@ STAGES = {"A": {"files": ["src/rc24_models.py", "src/rc24_jobs.py", "src/rc24_ev
                 "jobs": ("a-own", "a-match")},
           "C": {"files": ["src/rc24_confirm.py", "src/rc24_pac.py", "src/rc24_pilot.py", "src/rc24_eval_c.py", "src/rc24_eval.py", "src/rc24_correction.py", "src/rc24_jeer.py",
                           "outputs/research_campaign_20261021/opus_rc24/PROTOCOL_RC24_STAGE_C.md", "outputs/research_campaign_20261021/opus_rc24/PRIMARY.txt"] + COMMON,
-                "jobs": ("c-own", "c-match")}}
+                "jobs": ("c-own", "c-match")},
+          "S": {"files": ["src/rc24_synth.py", "src/rc24_synth_eval.py", "src/rc24_pac.py", "src/rc24_pilot.py", "src/rc24_jeer.py",
+                          "outputs/research_campaign_20261021/opus_rc24/synthetic/PREREG_SYNTHETIC_TEST.md"] + COMMON,
+                "jobs": ("s-test",)}}
 
 
 def _sha(p):

@@ -16,7 +16,7 @@ Splits per world: "std" = random 80 / 20 pool / test; "block" = k-means (k = 5, 
   whose positive rate is closest to the world's among the blocks with >= 15 runs of each class (evaluator-side rule; learners never
   see it), the other blocks are the pool (extrapolation).
 Families: DEV families (development only) and TEST families (frozen before any test-family world is run; different parameter values,
-  fresh seeds 101-105). Arms: HONLY_MARGIN, HA_LEAN_MARGIN, HA_TREND_MARGIN, PAC_MARGIN (+ registered later candidates).
+  fresh seeds 101-110). Arms: HONLY_MARGIN, HA_LEAN_MARGIN, HA_TREND_MARGIN, PAC_MARGIN (+ registered later candidates).
     python -m src.rc24_synth work s-dev | s-test
 """
 from __future__ import annotations
@@ -57,7 +57,7 @@ FAMILIES = {
 }
 DEV = [k for k in FAMILIES if k.startswith("D")]
 TEST = [k for k in FAMILIES if k.startswith("T")]
-SEEDS_DEV, SEEDS_TEST = (1, 2, 3, 4), (101, 102, 103, 104, 105)
+SEEDS_DEV, SEEDS_TEST = (1, 2, 3, 4), tuple(range(101, 111))
 ARMS = ("HONLY_MARGIN", "HA_LEAN_MARGIN", "HA_TREND_MARGIN", "PAC_MARGIN")
 
 
