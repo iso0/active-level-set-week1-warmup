@@ -1,0 +1,174 @@
+{
+ "utc": "2026-10-21T20:48:52+00:00",
+ "host": {
+  "cpu": "Intel Core i5-10300H",
+  "physical_cores": 4,
+  "logical_cpus": 8,
+  "ram_gb": 31.8
+ },
+ "layouts": [
+  {
+   "workers": 1,
+   "threads_per_worker": 1,
+   "logical_cpus_used": 1,
+   "wall_s_slowest": 5.8938979000085965,
+   "worker_wall_s": [
+    3.17
+   ],
+   "worker_cpu_s": [
+    3.17
+   ],
+   "workloads_per_minute": 18.907640085384948,
+   "end_to_end_workloads_per_minute": 10.180020254492785
+  },
+  {
+   "workers": 2,
+   "threads_per_worker": 1,
+   "logical_cpus_used": 2,
+   "wall_s_slowest": 6.219659799942747,
+   "worker_wall_s": [
+    3.4,
+    3.46
+   ],
+   "worker_cpu_s": [
+    3.34,
+    3.38
+   ],
+   "workloads_per_minute": 34.66975913200649,
+   "end_to_end_workloads_per_minute": 19.29365975951042
+  },
+  {
+   "workers": 4,
+   "threads_per_worker": 1,
+   "logical_cpus_used": 4,
+   "wall_s_slowest": 7.535451699979603,
+   "worker_wall_s": [
+    4.26,
+    4.25,
+    4.22,
+    4.27
+   ],
+   "worker_cpu_s": [
+    4.19,
+    4.22,
+    4.2,
+    4.17
+   ],
+   "workloads_per_minute": 56.2388286845825,
+   "end_to_end_workloads_per_minute": 31.849451042284514
+  },
+  {
+   "workers": 6,
+   "threads_per_worker": 1,
+   "logical_cpus_used": 6,
+   "wall_s_slowest": 9.876078799949028,
+   "worker_wall_s": [
+    5.62,
+    5.65,
+    5.56,
+    5.62,
+    5.56,
+    5.6
+   ],
+   "worker_cpu_s": [
+    5.2,
+    5.25,
+    5.23,
+    5.36,
+    5.3,
+    5.22
+   ],
+   "workloads_per_minute": 63.667619936335356,
+   "end_to_end_workloads_per_minute": 36.45171401445866
+  },
+  {
+   "workers": 8,
+   "threads_per_worker": 1,
+   "logical_cpus_used": 8,
+   "wall_s_slowest": 12.717611900065094,
+   "worker_wall_s": [
+    7.8,
+    6.42,
+    6.47,
+    7.74,
+    7.7,
+    6.44,
+    7.81,
+    6.33
+   ],
+   "worker_cpu_s": [
+    5.64,
+    6.19,
+    6.17,
+    5.56,
+    5.34,
+    6.22,
+    5.56,
+    6.08
+   ],
+   "workloads_per_minute": 61.42400420645414,
+   "end_to_end_workloads_per_minute": 37.74293505509027
+  },
+  {
+   "workers": 4,
+   "threads_per_worker": 2,
+   "logical_cpus_used": 8,
+   "wall_s_slowest": 7.962961700046435,
+   "worker_wall_s": [
+    4.65,
+    4.65,
+    4.65,
+    4.65
+   ],
+   "worker_cpu_s": [
+    4.59,
+    4.61,
+    4.48,
+    4.58
+   ],
+   "workloads_per_minute": 51.566441307400915,
+   "end_to_end_workloads_per_minute": 30.13953966381635
+  },
+  {
+   "workers": 2,
+   "threads_per_worker": 4,
+   "logical_cpus_used": 8,
+   "wall_s_slowest": 6.97433620004449,
+   "worker_wall_s": [
+    4.14,
+    4.16
+   ],
+   "worker_cpu_s": [
+    4.2,
+    4.42
+   ],
+   "workloads_per_minute": 28.825844791238946,
+   "end_to_end_workloads_per_minute": 17.205938537811598
+  }
+ ],
+ "rule": "highest workloads/minute (compute wall of the slowest worker); layouts within 5 % of the best -> the one using fewer logical CPUs",
+ "choice": {
+  "workers": 6,
+  "threads_per_worker": 1,
+  "logical_cpus_used": 6,
+  "wall_s_slowest": 9.876078799949028,
+  "worker_wall_s": [
+   5.62,
+   5.65,
+   5.56,
+   5.62,
+   5.56,
+   5.6
+  ],
+  "worker_cpu_s": [
+   5.2,
+   5.25,
+   5.23,
+   5.36,
+   5.3,
+   5.22
+  ],
+  "workloads_per_minute": 63.667619936335356,
+  "end_to_end_workloads_per_minute": 36.45171401445866
+ }
+}

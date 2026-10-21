@@ -1,0 +1,164 @@
+{
+ "utc": "2026-10-21T20:44:33+00:00",
+ "frozen_rule": "src/rc23_eval.py::decide (unchanged)",
+ "corrected_rule": "src/rc24_correction.py::decide_corrected",
+ "rc23_recomputed_from_saved_tables": {
+  "old_rule": "D1: the fully lean system is sufficient \u2014 HA_LEAN + margin",
+  "corrected_rule": "D1: the fully lean system is sufficient - HA_LEAN + margin",
+  "candidate_status": {
+   "HA_LEAN": {
+    "noninferiority_B8_B24": "PASS",
+    "noninferiority_B8_B60": "PASS",
+    "spend_BA_0.93": "PASS",
+    "robustness": "PASS",
+    "overall": "PASS"
+   },
+   "HA_LR": {
+    "noninferiority_B8_B24": "PASS",
+    "noninferiority_B8_B60": "PASS",
+    "spend_BA_0.93": "PASS",
+    "robustness": "PASS",
+    "overall": "PASS"
+   }
+  },
+  "max_abs_diff_vs_DECISION_json": 4.163336342344337e-17,
+  "checked_numbers": 26,
+  "reproduced": true
+ },
+ "negative_control_real_data_reference_HONLY_LR": {
+  "old_rule": "D3: simplification not robust enough \u2014 keep PHR_NRMAP + margin",
+  "corrected_rule": "D3: simplification not robust enough - keep PHR_NRMAP + margin",
+  "HA_LEAN_components": {
+   "noninferiority_B8_B24": "FAIL",
+   "noninferiority_B8_B60": "PASS",
+   "spend_BA_0.93": "FAIL",
+   "robustness": "FAIL"
+  },
+  "HA_LEAN_status": "FAIL",
+  "HA_LEAN_minus_HONLY_LR_B8_B24": {
+   "mean": -0.005755037081530731,
+   "lower_95": -0.011735969088422699,
+   "verdict": "NON-INFERIORITY NOT SHOWN",
+   "status": "FAIL"
+  },
+  "reaches_D1_old": false,
+  "reaches_D1_corrected": false
+ },
+ "negative_controls_synthetic": {
+  "pass": {
+   "expected_candidate_status": "PASS",
+   "corrected_candidate_status": "PASS",
+   "corrected_components": {
+    "noninferiority_B8_B24": "PASS",
+    "noninferiority_B8_B60": "PASS",
+    "spend_BA_0.93": "PASS",
+    "robustness": "PASS"
+   },
+   "corrected_decision": "D1: the fully lean system is sufficient - HA_LEAN + margin",
+   "old_decision": "D1: the fully lean system is sufficient \u2014 HA_LEAN + margin",
+   "old_reaches_D1": true,
+   "corrected_reaches_D1": true,
+   "status_as_expected": true
+  },
+  "fail_ni": {
+   "expected_candidate_status": "FAIL",
+   "corrected_candidate_status": "FAIL",
+   "corrected_components": {
+    "noninferiority_B8_B24": "FAIL",
+    "noninferiority_B8_B60": "FAIL",
+    "spend_BA_0.93": "PASS",
+    "robustness": "PASS"
+   },
+   "corrected_decision": "D3: simplification not robust enough - keep PHR_NRMAP + margin",
+   "old_decision": "D1: the fully lean system is sufficient \u2014 HA_LEAN + margin",
+   "old_reaches_D1": true,
+   "corrected_reaches_D1": false,
+   "status_as_expected": true
+  },
+  "nan_ni": {
+   "expected_candidate_status": "INCOMPLETE",
+   "corrected_candidate_status": "INCOMPLETE",
+   "corrected_components": {
+    "noninferiority_B8_B24": "INCOMPLETE",
+    "noninferiority_B8_B60": "INCOMPLETE",
+    "spend_BA_0.93": "PASS",
+    "robustness": "PASS"
+   },
+   "corrected_decision": "INCOMPLETE: HA_LEAN status incomplete - no decision",
+   "old_decision": "D1: the fully lean system is sufficient \u2014 HA_LEAN + margin",
+   "old_reaches_D1": true,
+   "corrected_reaches_D1": false,
+   "status_as_expected": true
+  },
+  "spend_incomplete": {
+   "expected_candidate_status": "INCOMPLETE",
+   "corrected_candidate_status": "INCOMPLETE",
+   "corrected_components": {
+    "noninferiority_B8_B24": "PASS",
+    "noninferiority_B8_B60": "PASS",
+    "spend_BA_0.93": "INCOMPLETE",
+    "robustness": "PASS"
+   },
+   "corrected_decision": "INCOMPLETE: HA_LEAN status incomplete - no decision",
+   "old_decision": "D1: the fully lean system is sufficient \u2014 HA_LEAN + margin",
+   "old_reaches_D1": true,
+   "corrected_reaches_D1": false,
+   "status_as_expected": true
+  },
+  "missing_condition": {
+   "expected_candidate_status": "INCOMPLETE",
+   "corrected_candidate_status": "INCOMPLETE",
+   "corrected_components": {
+    "noninferiority_B8_B24": "PASS",
+    "noninferiority_B8_B60": "PASS",
+    "spend_BA_0.93": "PASS",
+    "robustness": "INCOMPLETE"
+   },
+   "corrected_decision": "INCOMPLETE: HA_LEAN status incomplete - no decision",
+   "old_decision": "D1: the fully lean system is sufficient \u2014 HA_LEAN + margin",
+   "old_reaches_D1": true,
+   "corrected_reaches_D1": false,
+   "status_as_expected": true
+  },
+  "worse": {
+   "expected_candidate_status": "FAIL",
+   "corrected_candidate_status": "FAIL",
+   "corrected_components": {
+    "noninferiority_B8_B24": "PASS",
+    "noninferiority_B8_B60": "PASS",
+    "spend_BA_0.93": "PASS",
+    "robustness": "FAIL"
+   },
+   "corrected_decision": "D3: simplification not robust enough - keep PHR_NRMAP + margin",
+   "old_decision": "D3: simplification not robust enough \u2014 keep PHR_NRMAP + margin",
+   "old_reaches_D1": false,
+   "corrected_reaches_D1": false,
+   "status_as_expected": true
+  },
+  "more_spend": {
+   "expected_candidate_status": "FAIL",
+   "corrected_candidate_status": "FAIL",
+   "corrected_components": {
+    "noninferiority_B8_B24": "PASS",
+    "noninferiority_B8_B60": "PASS",
+    "spend_BA_0.93": "FAIL",
+    "robustness": "PASS"
+   },
+   "corrected_decision": "D3: simplification not robust enough - keep PHR_NRMAP + margin",
+   "old_decision": "D3: simplification not robust enough \u2014 keep PHR_NRMAP + margin",
+   "old_reaches_D1": false,
+   "corrected_reaches_D1": false,
+   "status_as_expected": true
+  }
+ },
+ "old_rule_defect_demonstrated": {
+  "fail_ni": true,
+  "nan_ni": true,
+  "spend_incomplete": true,
+  "missing_condition": true,
+  "worse": false,
+  "more_spend": false,
+  "real_data_HONLY_LR": false
+ },
+ "status": "PASS"
+}

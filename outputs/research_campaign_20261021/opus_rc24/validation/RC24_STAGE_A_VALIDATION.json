@@ -1,0 +1,64 @@
+{
+ "utc": "2026-10-21T21:01:52+00:00",
+ "T1_m3_parity": {
+  "status": "PASS",
+  "max_abs_dp": 0.0,
+  "per_state": {
+   "r35f1b10": 0.0,
+   "r35f1b16": 0.0,
+   "r35f1b30": 0.0,
+   "r35f1b60": 0.0,
+   "r43f2b10": 0.0,
+   "r43f2b16": 0.0,
+   "r43f2b30": 0.0,
+   "r43f2b60": 0.0
+  },
+  "states": 8,
+  "sibling_head": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+  "C_port": 1000000.0
+ },
+ "T1_negative_C1e5_must_FAIL": {
+  "status": "FAIL",
+  "max_abs_dp": 0.027939256815670888,
+  "states": 8,
+  "sibling_head": "255207857d22a9823f67cb1a23d9b71bdc12ec1c",
+  "C_port": 100000.0
+ },
+ "T1_missing_sibling_must_be_INCOMPLETE": {
+  "status": "INCOMPLETE",
+  "reason": "sibling repository not found: C:\\does\\not\\exist"
+ },
+ "T2_straddle_mc": {
+  "status": "PASS",
+  "rows": 360,
+  "median_rel_err_var": 0.005157511752575024,
+  "max_rel_err_var": 0.023424163830324585,
+  "max_mean_err_sd": 0.016348577666596014,
+  "rows_with_excess_depth_variance": 177,
+  "max_depth_share_of_var": 0.855303047435923,
+  "scale_tested": 1.0
+ },
+ "T2_negative_variance_x2_must_FAIL": {
+  "status": "FAIL",
+  "rows": 40,
+  "median_rel_err_var": 0.5012886126300042,
+  "max_rel_err_var": 0.5126575947865567,
+  "max_mean_err_sd": 0.009576311504425908,
+  "rows_with_excess_depth_variance": 11,
+  "max_depth_share_of_var": 0.23396433510304726,
+  "scale_tested": 2.0
+ },
+ "T3_reproduction": {
+  "status": "PASS",
+  "HA_LEAN_MARGIN": true,
+  "HONLY_MARGIN": true
+ },
+ "T4_shadow": {
+  "status": "PASS",
+  "M3_MARGIN": true,
+  "G3_MARGIN": true,
+  "HA_LEAN_STRADDLE": true
+ },
+ "negative_controls_behave": true,
+ "status": "PASS"
+}

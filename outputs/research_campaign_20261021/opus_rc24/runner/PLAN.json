@@ -1,0 +1,78 @@
+{
+ "note": "RC24 queue (owner instruction 2026-10-21 ~20:30 UTC; ONE 48-hour window from t0, never restarted between stages). src/rc24_runner.ps1 (detached via src/rc24_start_runner.ps1, supervised by src/rc24_supervisor.ps1). 'after' = dependencies. 6 single-thread workers (RC24 timing trial); all-cores authorisation recorded in POOL_PLAN.json capacity_history.",
+ "t0_utc": "2026-10-21T20:32:31Z",
+ "deadline_utc": "2026-10-23T20:32:31Z",
+ "runner_slots": 6,
+ "stop_runner": false,
+ "jobs": [
+  {
+   "name": "a_smoke",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_jobs",
+    "work",
+    "a-smoke",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/a-smoke/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/a-smoke/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/a-smoke/locks",
+   "units_total": 7,
+   "resume_token": "0"
+  },
+  {
+   "name": "a_own",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 2,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_jobs",
+    "work",
+    "a-own",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/a-own/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/a-own/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/a-own/locks",
+   "units_total": 240,
+   "resume_token": "0",
+   "after": [
+    "a_smoke"
+   ]
+  },
+  {
+   "name": "a_match",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 3,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_jobs",
+    "work",
+    "a-match",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/a-match/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/a-match/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/a-match/locks",
+   "units_total": 240,
+   "resume_token": "0",
+   "after": [
+    "a_own"
+   ]
+  }
+ ]
+}

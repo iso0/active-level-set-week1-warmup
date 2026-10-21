@@ -1,0 +1,121 @@
+{
+ "utc": "2026-10-21T20:45:57+00:00",
+ "state": "repeat 35 fold 1, the recorded RC22 g-ingr H_MARGIN paid prefix at budget 24 (as RC23 validation)",
+ "cases": {
+  "control_none_absent": {
+   "PHR_NRMAP": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   },
+   "HA_LR": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   },
+   "HA_LEAN": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   },
+   "HONLY_LR": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   }
+  },
+  "T_absent": {
+   "PHR_NRMAP": {
+    "outcome": "exception",
+    "type": "ValueError",
+    "message": "array must not contain infs or NaNs",
+    "where": "asarray_chkfinite"
+   },
+   "HA_LR": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.44161037419565097
+   },
+   "HA_LEAN": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   },
+   "HONLY_LR": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   }
+  },
+  "S_absent": {
+   "PHR_NRMAP": {
+    "outcome": "exception",
+    "type": "ValueError",
+    "message": "array must not contain infs or NaNs",
+    "where": "asarray_chkfinite"
+   },
+   "HA_LR": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.44161037419565097
+   },
+   "HA_LEAN": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   },
+   "HONLY_LR": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   }
+  },
+  "TS_absent": {
+   "PHR_NRMAP": {
+    "outcome": "exception",
+    "type": "ValueError",
+    "message": "array must not contain infs or NaNs",
+    "where": "asarray_chkfinite"
+   },
+   "HA_LR": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.44161037419565097
+   },
+   "HA_LEAN": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   },
+   "HONLY_LR": {
+    "outcome": "finite",
+    "n": 517,
+    "n_nonfinite": 0,
+    "max_abs_change_vs_control": 0.0
+   }
+  }
+ },
+ "acceptance": {
+  "W1_PHR_NRMAP_fails_visibly_when_a_channel_is_wholly_absent": "PASS",
+  "W1_control_PHR_NRMAP_finite_with_all_channels": "PASS",
+  "W2_HA_LEAN_and_HONLY_LR_unchanged_bitwise": "PASS",
+  "HA_LR_recorded_separately": {
+   "T_absent": "finite",
+   "S_absent": "finite",
+   "TS_absent": "finite"
+  }
+ },
+ "status": "PASS"
+}

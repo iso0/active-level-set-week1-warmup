@@ -127,7 +127,7 @@
    "background_load_logical_cpus": 1.0,
    "background_load_note": "interactive apps only (Claude, ChatGPT/Codex UI, Task Manager); no unrelated numerical workers (0 python/julia/Rscript)"
   },
-  "capacity_threads_total": 4,
+  "capacity_threads_total": 8,
   "thread_rule": "every leaf numerical process counts with its BLAS/Torch/OpenMP threads; 1 slot per process started with OMP/OPENBLAS/MKL_NUM_THREADS=1, otherwise counted as 4",
   "campaign": {
    "name": "research_campaign_20261018",
@@ -139,29 +139,27 @@
   "shares": [
    {
     "owner": "Opus",
-    "threads": 2,
+    "threads": "all available local cores (worker count set by the RC24 timing trial; one BLAS/OpenMP thread per worker)",
     "status": "active",
-    "campaign_id": "opus_rc23_20261021",
-    "granted_by": "Owner explicit NEW bounded 24-hour/two-thread programme (RC23: lean h + depth system, robustness, single decision), 2026-10-21",
-    "granted_utc": "2026-10-21T17:46:17+00:00",
-    "valid_until_utc": "2026-10-22T17:46:17+00:00",
+    "campaign_id": "opus_rc24_20261021",
+    "granted_by": "Owner chat instruction 2026-10-21 ~20:30 UTC (RC24 research programme): Opus may use ALL available local CPU cores for this programme; the earlier Opus 2-thread / total 4-thread limit does not apply to RC24. Astra runs no job (share released 2026-10-21 06:45 UTC); Astra's files are not modified; any unexpected other job is not stopped.",
+    "granted_utc": "2026-10-21T20:32:31+00:00",
+    "valid_until_utc": "2026-10-23T20:32:31+00:00",
     "jobs": [],
-    "note": "RC23 finished 2026-10-21; RC23 runner stopped 19:12:09 UTC (stop_runner, no live workers). Share valid until 2026-10-22T17:46:17Z but no Opus job is queued. Astra share never used; combined numerical work <= 4.",
+    "runner": "src/rc24_runner.ps1",
     "prior_share": {
      "owner": "Opus",
      "threads": 2,
      "status": "finished",
-     "campaign_id": "opus_rc22_20261021",
-     "granted_by": "Owner explicit NEW bounded 24-hour/two-thread programme (RC22: robustness, ingredients, acquisition), 2026-10-21",
-     "granted_utc": "2026-10-21T13:48:07+00:00",
-     "valid_until_utc": "2026-10-22T13:48:07+00:00",
+     "campaign_id": "opus_rc23_20261021",
+     "granted_by": "Owner explicit NEW bounded 24-hour/two-thread programme (RC23: lean h + depth system, robustness, single decision), 2026-10-21",
+     "granted_utc": "2026-10-21T17:46:17+00:00",
+     "valid_until_utc": "2026-10-22T17:46:17+00:00",
      "jobs": [],
-     "note": "RC22 finished 2026-10-21; RC22 runner stopped 16:45:31 UTC (stop_runner, no live workers). Share valid until 2026-10-22T13:48:07Z but no Opus job is queued. Astra share never used; combined numerical work <= 4.",
-     "runner": "src/rc22_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
-     "jobs_updated_utc": "2026-10-21T16:53:53+00:00"
-    },
-    "runner": "src/rc23_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
-    "jobs_updated_utc": "2026-10-21T19:20:44+00:00"
+     "note": "RC23 finished 2026-10-21; RC23 runner stopped 19:12:09 UTC (stop_runner, no live workers). Share valid until 2026-10-22T17:46:17Z but no Opus job is queued. Astra share never used; combined numerical work <= 4.",
+     "runner": "src/rc23_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
+     "jobs_updated_utc": "2026-10-21T19:20:44+00:00"
+    }
    },
    {
     "owner": "Astra",
@@ -212,12 +210,29 @@
      "scientific_artifact_commit": "a59249277d090e17061eceed60883f596f4a4bfa",
      "numerical_work_remaining": 0,
      "capacity_transfer": "No transfer performed. Coordinator owns any subsequent reassignment."
-    }
+    },
+    "note_rc24": "Released share; per the owner's RC24 instruction its idle capacity may be used by Opus while Astra runs no job. Astra's files untouched."
    }
   ],
   "no_duplicate_fits": "Opus: SPH-data model/acquisition research (outputs/research_campaign_20261018/opus/). Astra: her own campaign. Shared reference acquisitions (IVR/TruVaR/multiscale level set) are implemented once; the implementing side lists the module here under 'shared_implementations'.",
   "shared_implementations": [],
-  "last_update_utc": "2026-10-21T19:20:44+00:00"
+  "last_update_utc": "2026-10-21T20:33:04+00:00",
+  "capacity_history": [
+   {
+    "utc": "2026-10-21T20:33:04+00:00",
+    "previous_capacity_threads_total": 4,
+    "note": "Owner chat instruction 2026-10-21 ~20:30 UTC (RC24 research programme): Opus may use ALL available local CPU cores for this programme; the earlier Opus 2-thread / total 4-thread limit does not apply to RC24. Astra runs no job (share released 2026-10-21 06:45 UTC); Astra's files are not modified; any unexpected other job is not stopped."
+   }
+  ],
+  "host_capacity_rc24": {
+   "logical_cpus": 8,
+   "physical_cores": 4,
+   "cpu": "Intel Core i5-10300H @ 2.50GHz",
+   "ram_gb": 31.8,
+   "ram_free_gb_at_start": 15.7,
+   "background_load_pct_at_start": 24,
+   "measured_utc": "2026-10-21T20:32:31+00:00"
+  }
  },
  "external_reservations": [
   {
