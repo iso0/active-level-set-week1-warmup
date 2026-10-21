@@ -3,7 +3,7 @@
  "t0_utc": "2026-10-21T20:32:31Z",
  "deadline_utc": "2026-10-23T20:32:31Z",
  "runner_slots": 8,
- "stop_runner": false,
+ "stop_runner": true,
  "jobs": [
   {
    "name": "a_smoke",
@@ -192,7 +192,7 @@
    "enabled": true,
    "kind": "pool",
    "priority": 8,
-   "max_workers": 6,
+   "max_workers": 2,
    "python": "system",
    "args": [
     "-m",
@@ -228,6 +228,96 @@
    "locks_dir": "outputs/research_campaign_20261021/opus_rc24/d-paths/locks",
    "units_total": 80,
    "resume_token": "0"
+  },
+  {
+   "name": "c_smoke",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_confirm",
+    "work",
+    "c-smoke",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/c-smoke/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/c-smoke/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/c-smoke/locks",
+   "units_total": 3,
+   "resume_token": "0"
+  },
+  {
+   "name": "c_own",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_confirm",
+    "work",
+    "c-own",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/c-own/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/c-own/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/c-own/locks",
+   "units_total": 240,
+   "resume_token": "0",
+   "after": [
+    "c_smoke"
+   ]
+  },
+  {
+   "name": "c_match",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_confirm",
+    "work",
+    "c-match",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/c-match/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/c-match/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/c-match/locks",
+   "units_total": 160,
+   "resume_token": "0",
+   "after": [
+    "c_own"
+   ]
+  },
+  {
+   "name": "s_test",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 9,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24_synth",
+    "work",
+    "s-test",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/s-test/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/s-test/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/s-test/locks",
+   "units_total": 640,
+   "resume_token": "0"
   }
  ],
  "slot_history": [
@@ -240,6 +330,12 @@
    "utc": "2026-10-21T22:10:34Z",
    "runner_slots": 8,
    "note": "8th single-thread worker for the light DEV matched diagnostic d-paths (within the 8-CPU authorisation)"
+  },
+  {
+   "utc": "2026-10-21T22:24:38Z",
+   "runner_slots": 8,
+   "note": "s_dev limited to 2 workers so that the confirmatory Stage C jobs get 6 (4 s_dev workers stopped; their unfinished units resume later)"
   }
- ]
+ ],
+ "stop_note": "2026-10-21T23:28:09Z: RC24 programme complete (Stage A, B pilots, C confirmation, synthetic dev/test done); no further work is created to fill the 48 h window."
 }

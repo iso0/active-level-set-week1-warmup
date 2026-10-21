@@ -1455,3 +1455,38 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - Fiziksel doğrulama ve margin dışı seçiciler sınanmadı.
 
 **Karar: D1 — tamamen sade h + derinlik sistemi + margin.**
+
+### 2026-10-21/22 (gece) — RC24: fizik bağlantılı istifleme ve taze veride doğrulama
+
+[Ana rapor](../outputs/research_campaign_20261021/opus_rc24/FINAL_REPORT_RC24.md), [Stage A](../outputs/research_campaign_20261021/opus_rc24/stage_a/STAGE_A.md), [Stage C](../outputs/research_campaign_20261021/opus_rc24/stage_c/STAGE_C.md), [makale taslağı](../outputs/research_campaign_20261021/opus_rc24/paper/PAPER_DRAFT.md), [literatür matrisi](../outputs/research_campaign_20261021/opus_rc24/literature/LITERATURE_MATRIX.md).
+
+**Kurulum.**
+- Tek 48 saatlik pencere (20:32 UTC); bütün çekirdekler kullanıldı (6 işçi).
+- Donmalar sonuçlardan önce: e69c726c (Stage A), e82d2845 (Stage C), b3b54f75 (sentetik test).
+- 2,062 birim, hata yok, 9.0 CPU-saat.
+
+**Düzeltme.**
+- RC23 karar kuralının önek hatası giderildi; D1 değişmedi.
+- PHR_NRMAP için doğrudan tanık eklendi.
+
+**Stage A (taze 59–66).**
+- Yalnız-h yeterli değil: BA ≥ 0.95'e 5/8'e karşı 7/8 ulaşıyor.
+- M3 BA'da benzer ama kalibrasyonu kötü.
+- E1, G3 ve straddle kötü.
+- Margin, sorgularının %45'ini köşeye harcıyor.
+
+**Sert bölge.**
+- Kısa-Keyhole bir başlangıç geçici olayı.
+- Hiçbir yasal özellik ayırmıyor.
+
+**Stage B.**
+- PAC ve JEER kapatıldı.
+- Kazanan bileşen: derinlik emülatörünün log h'ye bağlanması (HA_TREND).
+
+**Stage C (taze 67–74, blok 9–16).**
+- HA_TREND + margin CONFIRMED:
+  - standartta non-inferior;
+  - bloklarda +0.0112 (8/8).
+- Yalnız-h hâlâ erken ve bloklarda biraz daha iyi.
+
+**Karar: HA_TREND + margin tezin öğrenicisi.**

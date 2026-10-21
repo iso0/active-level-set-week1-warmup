@@ -1,0 +1,182 @@
+{
+    "utc":  "2026-10-21T23:28:32Z",
+    "runner_pid":  29516,
+    "runner_start_utc":  "2026-10-21T21:06:53Z",
+    "cycle":  268,
+    "host":  "Burak",
+    "state":  "IDLE",
+    "budget":  {
+                   "t0_utc":  "2026-10-21T20:32:31Z",
+                   "deadline_utc":  "2026-10-23T20:32:31Z",
+                   "elapsed_h":  2.93,
+                   "remaining_h":  45.07
+               },
+    "capacity":  {
+                     "opus_share":  8,
+                     "runner_slots":  8,
+                     "opus_used":  0,
+                     "opus_other_leaves":  0,
+                     "astra_used":  0,
+                     "leaves":  ""
+                 },
+    "workers":  [
+
+                ],
+    "jobs":  {
+                 "a_own":  {
+                               "done":  240,
+                               "failed":  0,
+                               "locks":  0,
+                               "total":  240,
+                               "remaining":  0,
+                               "last_unit":  "E1S__r66_f5.json.gz",
+                               "last_unit_utc":  "2026-10-21T21:18:07Z",
+                               "paused":  false,
+                               "live_workers":  0
+                           },
+                 "b_pilot2":  {
+                                  "done":  18,
+                                  "failed":  0,
+                                  "locks":  0,
+                                  "total":  80,
+                                  "remaining":  62,
+                                  "last_unit":  "STD__r54_f2__PAC_JEER.json.gz",
+                                  "last_unit_utc":  "2026-10-21T22:12:05Z",
+                                  "paused":  true,
+                                  "live_workers":  0
+                              },
+                 "b_pilot":  {
+                                 "done":  160,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  160,
+                                 "remaining":  0,
+                                 "last_unit":  "MATCH_BLOCK__s8_b5.json.gz",
+                                 "last_unit_utc":  "2026-10-21T21:50:47Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
+                 "s_test":  {
+                                "done":  640,
+                                "failed":  0,
+                                "locks":  0,
+                                "total":  640,
+                                "remaining":  0,
+                                "last_unit":  "T8_corner_partial45__s110__block__HA_LEAN_MARGIN.json.gz",
+                                "last_unit_utc":  "2026-10-21T23:17:29Z",
+                                "paused":  false,
+                                "live_workers":  0
+                            },
+                 "s_dev":  {
+                               "done":  192,
+                               "failed":  0,
+                               "locks":  0,
+                               "total":  192,
+                               "remaining":  0,
+                               "last_unit":  "D6_aleatoric_corner__s4__block__HA_TREND_MARGIN.json.gz",
+                               "last_unit_utc":  "2026-10-21T22:20:43Z",
+                               "paused":  false,
+                               "live_workers":  0
+                           },
+                 "b_pilot3":  {
+                                  "done":  80,
+                                  "failed":  0,
+                                  "locks":  0,
+                                  "total":  80,
+                                  "remaining":  0,
+                                  "last_unit":  "s8_b5__HA_TREND_MARGIN.json.gz",
+                                  "last_unit_utc":  "2026-10-21T22:21:00Z",
+                                  "paused":  false,
+                                  "live_workers":  0
+                              },
+                 "c_smoke":  {
+                                 "done":  3,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  3,
+                                 "remaining":  0,
+                                 "last_unit":  "STD__r1_f1__HA_TREND_MARGIN.json.gz",
+                                 "last_unit_utc":  "2026-10-21T22:24:47Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
+                 "c_match":  {
+                                 "done":  160,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  160,
+                                 "remaining":  0,
+                                 "last_unit":  "MATCH_BLOCK__s16_b5__HONLY_MARGIN.json.gz",
+                                 "last_unit_utc":  "2026-10-21T23:25:19Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
+                 "a_smoke":  {
+                                 "done":  7,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  7,
+                                 "remaining":  0,
+                                 "last_unit":  "PATH_HA_LEAN_MARGIN__r1_f1.json.gz",
+                                 "last_unit_utc":  "2026-10-21T21:07:06Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
+                 "c_own":  {
+                               "done":  240,
+                               "failed":  0,
+                               "locks":  0,
+                               "total":  240,
+                               "remaining":  0,
+                               "last_unit":  "BLOCK__s16_b5__HA_TREND_MARGIN.json.gz",
+                               "last_unit_utc":  "2026-10-21T22:35:46Z",
+                               "paused":  false,
+                               "live_workers":  0
+                           },
+                 "b_smoke2":  {
+                                  "done":  1,
+                                  "failed":  0,
+                                  "locks":  0,
+                                  "total":  1,
+                                  "remaining":  0,
+                                  "last_unit":  "STD__r1_f1__PAC_JEER.json.gz",
+                                  "last_unit_utc":  "2026-10-21T21:51:28Z",
+                                  "paused":  false,
+                                  "live_workers":  0
+                              },
+                 "d_paths":  {
+                                 "done":  80,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  80,
+                                 "remaining":  0,
+                                 "last_unit":  "HA_LEAN_MARGIN__r66_f5.json.gz",
+                                 "last_unit_utc":  "2026-10-21T22:18:34Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
+                 "a_match":  {
+                                 "done":  240,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  240,
+                                 "remaining":  0,
+                                 "last_unit":  "PATH_G3_MARGIN__r66_f5.json.gz",
+                                 "last_unit_utc":  "2026-10-21T21:29:59Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
+                 "b_smoke":  {
+                                 "done":  1,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  1,
+                                 "remaining":  0,
+                                 "last_unit":  "STD__r1_f1__PAC_MARGIN.json.gz",
+                                 "last_unit_utc":  "2026-10-21T21:46:28Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             }
+             },
+    "restart":  "powershell -NoProfile -ExecutionPolicy Bypass -File src\\rc24_start_runner.ps1   (idempotent; skips finished units; lock prevents a second runner)"
+}

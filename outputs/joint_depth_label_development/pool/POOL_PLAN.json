@@ -146,7 +146,6 @@
     "granted_utc": "2026-10-21T20:32:31+00:00",
     "valid_until_utc": "2026-10-23T20:32:31+00:00",
     "jobs": [],
-    "runner": "src/rc24_runner.ps1",
     "prior_share": {
      "owner": "Opus",
      "threads": 2,
@@ -159,7 +158,10 @@
      "note": "RC23 finished 2026-10-21; RC23 runner stopped 19:12:09 UTC (stop_runner, no live workers). Share valid until 2026-10-22T17:46:17Z but no Opus job is queued. Astra share never used; combined numerical work <= 4.",
      "runner": "src/rc23_runner.ps1 (max 2 concurrent leaf processes x 1 thread)",
      "jobs_updated_utc": "2026-10-21T19:20:44+00:00"
-    }
+    },
+    "runner": "src/rc24_runner.ps1 (max PLAN.runner_slots concurrent leaf processes x 1 thread; all-cores authorisation RC24)",
+    "jobs_updated_utc": "2026-10-21T23:32:03+00:00",
+    "note": "RC24 finished 2026-10-21 23:30 UTC (2,062 units, 9.0 CPU-h); runner stop_runner set, no live worker. Window valid until 2026-10-23T20:32:31Z but no Opus job is queued; no work is created to fill the window."
    },
    {
     "owner": "Astra",
@@ -216,7 +218,6 @@
   ],
   "no_duplicate_fits": "Opus: SPH-data model/acquisition research (outputs/research_campaign_20261018/opus/). Astra: her own campaign. Shared reference acquisitions (IVR/TruVaR/multiscale level set) are implemented once; the implementing side lists the module here under 'shared_implementations'.",
   "shared_implementations": [],
-  "last_update_utc": "2026-10-21T20:33:04+00:00",
   "capacity_history": [
    {
     "utc": "2026-10-21T20:33:04+00:00",
@@ -232,7 +233,8 @@
    "ram_free_gb_at_start": 15.7,
    "background_load_pct_at_start": 24,
    "measured_utc": "2026-10-21T20:32:31+00:00"
-  }
+  },
+  "last_update_utc": "2026-10-21T23:32:03+00:00"
  },
  "external_reservations": [
   {

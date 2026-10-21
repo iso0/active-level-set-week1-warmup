@@ -1,0 +1,15 @@
+job,units,failed,cpu_h
+a-smoke,7,0,0.0
+a-own,240,0,0.8
+a-match,240,0,0.94
+b-smoke,1,0,0.0
+b-pilot,160,0,0.19
+b-smoke2,1,0,0.0
+b-pilot2,18,0,1.1
+b-pilot3,80,0,0.32
+d-paths,80,0,0.12
+s-dev,192,0,0.45
+s-test,640,0,1.52
+c-smoke,3,0,0.0
+c-own,240,0,0.63
+c-match,160,0,2.96

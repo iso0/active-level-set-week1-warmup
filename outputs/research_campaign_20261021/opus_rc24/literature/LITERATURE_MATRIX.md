@@ -57,7 +57,7 @@ None of them combines the three ingredients of our setting:
 2. a known dimensionless physics coordinate that enters both the label model and the mean of the auxiliary-response emulator;
 3. a pool-based classification loss with small budgets.
 
-The RC24 evidence (pilot and confirmation in `FINAL_REPORT_RC24.md`) separates the parts:
+The RC24 evidence (pilot and Stage C confirmation in `FINAL_REPORT_RC24.md`; HA_TREND + margin CONFIRMED) separates the parts:
 - **What helps** is anchoring the auxiliary emulator's mean on the physics coordinate, with the trend coefficient integrated, inside honest stacking.
 - **What does not help** is the structural errors-in-variables composite, the fixed physics mean (M3) and straddle-type acquisition.
 

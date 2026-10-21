@@ -1,0 +1,7 @@
+{"unit": "HA_LEAN_MARGIN__r1_f1", "status": "ok", "s": 1.2}
+{"unit": "HONLY_MARGIN__r1_f1", "status": "ok", "s": 0.04}
+{"unit": "M3_MARGIN__r1_f1", "status": "ok", "s": 0.22}
+{"unit": "E1S__r1_f1", "status": "ok", "s": 4.48}
+{"unit": "G3_MARGIN__r1_f1", "status": "ok", "s": 0.34}
+{"unit": "HA_LEAN_STRADDLE__r1_f1", "status": "ok", "s": 1.18}
+{"unit": "PATH_HA_LEAN_MARGIN__r1_f1", "status": "ok", "s": 1.44}
