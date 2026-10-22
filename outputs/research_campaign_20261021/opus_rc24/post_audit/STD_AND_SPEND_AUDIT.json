@@ -1,0 +1,384 @@
+{
+ "stagec_std": {
+  "pooled": [
+   {
+    "window": "B8_B24",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.9322,
+    "sens": 0.9232,
+    "spec": 0.9412
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HA_TREND_MARGIN",
+    "BA": 0.9356,
+    "sens": 0.9246,
+    "spec": 0.9467
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9416,
+    "sens": 0.9405,
+    "spec": 0.9428
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.9464,
+    "sens": 0.9397,
+    "spec": 0.9532
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_TREND_MARGIN",
+    "BA": 0.9472,
+    "sens": 0.9397,
+    "spec": 0.9546
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9451,
+    "sens": 0.9417,
+    "spec": 0.9484
+   }
+  ],
+  "individual": [
+   {
+    "window": "B8_B24",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.933,
+    "sens": 0.9249,
+    "spec": 0.941
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HA_TREND_MARGIN",
+    "BA": 0.9368,
+    "sens": 0.9268,
+    "spec": 0.9467
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9422,
+    "sens": 0.942,
+    "spec": 0.9425
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.9467,
+    "sens": 0.9402,
+    "spec": 0.9531
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_TREND_MARGIN",
+    "BA": 0.9477,
+    "sens": 0.9408,
+    "spec": 0.9546
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9461,
+    "sens": 0.9438,
+    "spec": 0.9483
+   }
+  ]
+ },
+ "stagec_block": {
+  "pooled": [
+   {
+    "window": "B8_B24",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.9268,
+    "sens": 0.9395,
+    "spec": 0.9142
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HA_TREND_MARGIN",
+    "BA": 0.9375,
+    "sens": 0.9514,
+    "spec": 0.9236
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9401,
+    "sens": 0.9525,
+    "spec": 0.9278
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.9274,
+    "sens": 0.9568,
+    "spec": 0.8981
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_TREND_MARGIN",
+    "BA": 0.9386,
+    "sens": 0.9639,
+    "spec": 0.9133
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9468,
+    "sens": 0.9515,
+    "spec": 0.9421
+   }
+  ],
+  "individual": [
+   {
+    "window": "B8_B24",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.6687,
+    "sens": 0.7434,
+    "spec": 0.6749
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HA_TREND_MARGIN",
+    "BA": 0.6827,
+    "sens": 0.7925,
+    "spec": 0.6582
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.6381,
+    "sens": 0.7173,
+    "spec": 0.647
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.7225,
+    "sens": 0.8508,
+    "spec": 0.6752
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_TREND_MARGIN",
+    "BA": 0.6893,
+    "sens": 0.8048,
+    "spec": 0.659
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.6268,
+    "sens": 0.68,
+    "spec": 0.659
+   }
+  ]
+ },
+ "stagea_std": {
+  "pooled": [
+   {
+    "window": "B8_B24",
+    "arm": "E1S",
+    "BA": 0.9115,
+    "sens": 0.9117,
+    "spec": 0.9113
+   },
+   {
+    "window": "B8_B24",
+    "arm": "E1S_RAW",
+    "BA": 0.9173,
+    "sens": 0.943,
+    "spec": 0.8915
+   },
+   {
+    "window": "B8_B24",
+    "arm": "G3_MARGIN",
+    "BA": 0.9002,
+    "sens": 0.8686,
+    "spec": 0.9319
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.936,
+    "sens": 0.9301,
+    "spec": 0.9419
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HA_LEAN_STRADDLE",
+    "BA": 0.9235,
+    "sens": 0.9186,
+    "spec": 0.9284
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9422,
+    "sens": 0.9448,
+    "spec": 0.9397
+   },
+   {
+    "window": "B8_B24",
+    "arm": "M3_MARGIN",
+    "BA": 0.9391,
+    "sens": 0.9385,
+    "spec": 0.9398
+   },
+   {
+    "window": "B8_B60",
+    "arm": "E1S",
+    "BA": 0.9344,
+    "sens": 0.9298,
+    "spec": 0.9391
+   },
+   {
+    "window": "B8_B60",
+    "arm": "E1S_RAW",
+    "BA": 0.9403,
+    "sens": 0.953,
+    "spec": 0.9276
+   },
+   {
+    "window": "B8_B60",
+    "arm": "G3_MARGIN",
+    "BA": 0.9289,
+    "sens": 0.9111,
+    "spec": 0.9467
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.9467,
+    "sens": 0.9408,
+    "spec": 0.9526
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_LEAN_STRADDLE",
+    "BA": 0.9372,
+    "sens": 0.933,
+    "spec": 0.9414
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9451,
+    "sens": 0.9431,
+    "spec": 0.9471
+   },
+   {
+    "window": "B8_B60",
+    "arm": "M3_MARGIN",
+    "BA": 0.9443,
+    "sens": 0.9383,
+    "spec": 0.9502
+   }
+  ],
+  "individual": [
+   {
+    "window": "B8_B24",
+    "arm": "E1S",
+    "BA": 0.9116,
+    "sens": 0.9127,
+    "spec": 0.9105
+   },
+   {
+    "window": "B8_B24",
+    "arm": "E1S_RAW",
+    "BA": 0.9168,
+    "sens": 0.9431,
+    "spec": 0.8905
+   },
+   {
+    "window": "B8_B24",
+    "arm": "G3_MARGIN",
+    "BA": 0.9003,
+    "sens": 0.869,
+    "spec": 0.9317
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.9356,
+    "sens": 0.9298,
+    "spec": 0.9415
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HA_LEAN_STRADDLE",
+    "BA": 0.9237,
+    "sens": 0.9193,
+    "spec": 0.9281
+   },
+   {
+    "window": "B8_B24",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9418,
+    "sens": 0.9444,
+    "spec": 0.9393
+   },
+   {
+    "window": "B8_B24",
+    "arm": "M3_MARGIN",
+    "BA": 0.939,
+    "sens": 0.9386,
+    "spec": 0.9394
+   },
+   {
+    "window": "B8_B60",
+    "arm": "E1S",
+    "BA": 0.9344,
+    "sens": 0.9301,
+    "spec": 0.9386
+   },
+   {
+    "window": "B8_B60",
+    "arm": "E1S_RAW",
+    "BA": 0.94,
+    "sens": 0.9529,
+    "spec": 0.927
+   },
+   {
+    "window": "B8_B60",
+    "arm": "G3_MARGIN",
+    "BA": 0.9288,
+    "sens": 0.9108,
+    "spec": 0.9467
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_LEAN_MARGIN",
+    "BA": 0.9466,
+    "sens": 0.9409,
+    "spec": 0.9524
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HA_LEAN_STRADDLE",
+    "BA": 0.9373,
+    "sens": 0.9333,
+    "spec": 0.9413
+   },
+   {
+    "window": "B8_B60",
+    "arm": "HONLY_MARGIN",
+    "BA": 0.9448,
+    "sens": 0.9427,
+    "spec": 0.9468
+   },
+   {
+    "window": "B8_B60",
+    "arm": "M3_MARGIN",
+    "BA": 0.944,
+    "sens": 0.9381,
+    "spec": 0.95
+   }
+  ]
+ }
+}

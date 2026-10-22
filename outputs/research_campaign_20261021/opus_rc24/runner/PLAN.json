@@ -2,8 +2,8 @@
  "note": "RC24 queue (owner instruction 2026-10-21 ~20:30 UTC; ONE 48-hour window from t0, never restarted between stages). src/rc24_runner.ps1 (detached via src/rc24_start_runner.ps1, supervised by src/rc24_supervisor.ps1). 'after' = dependencies. 6 single-thread workers (RC24 timing trial); all-cores authorisation recorded in POOL_PLAN.json capacity_history.",
  "t0_utc": "2026-10-21T20:32:31Z",
  "deadline_utc": "2026-10-23T20:32:31Z",
- "runner_slots": 8,
- "stop_runner": true,
+ "runner_slots": 6,
+ "stop_runner": false,
  "jobs": [
   {
    "name": "a_smoke",
@@ -318,6 +318,27 @@
    "locks_dir": "outputs/research_campaign_20261021/opus_rc24/s-test/locks",
    "units_total": 640,
    "resume_token": "0"
+  },
+  {
+   "name": "p_match",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 6,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.rc24p_jobs",
+    "work",
+    "p-match",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261021/opus_rc24/p-match/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261021/opus_rc24/p-match/failed",
+   "locks_dir": "outputs/research_campaign_20261021/opus_rc24/p-match/locks",
+   "units_total": 200,
+   "resume_token": "0"
   }
  ],
  "slot_history": [
@@ -337,5 +358,8 @@
    "note": "s_dev limited to 2 workers so that the confirmatory Stage C jobs get 6 (4 s_dev workers stopped; their unfinished units resume later)"
   }
  ],
- "stop_note": "2026-10-21T23:28:09Z: RC24 programme complete (Stage A, B pilots, C confirmation, synthetic dev/test done); no further work is created to fill the 48 h window."
+ "stop_note": "2026-10-21T23:28:09Z: RC24 programme complete (Stage A, B pilots, C confirmation, synthetic dev/test done); no further work is created to fill the 48 h window.",
+ "post_audit_notes": [
+  "2026-10-22T12:33:53Z: RC24 post-audit continuation inside the SAME RC24 window (t0 / deadline unchanged); stop_runner reset to false."
+ ]
 }
