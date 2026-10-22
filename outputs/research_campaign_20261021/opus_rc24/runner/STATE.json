@@ -5,18 +5,22 @@
     "consecutive_failures":  {
                                  "a_own":  0,
                                  "b_pilot2":  6,
+                                 "f_own":  0,
                                  "b_pilot":  0,
-                                 "d_paths":  0,
-                                 "s_dev":  0,
                                  "s_test":  0,
+                                 "s_dev":  0,
+                                 "p_match":  0,
+                                 "b_pilot3":  0,
                                  "c_smoke":  0,
+                                 "f_smoke":  0,
                                  "c_match":  0,
                                  "a_smoke":  0,
                                  "c_own":  0,
                                  "b_smoke2":  0,
-                                 "b_smoke":  0,
+                                 "d_paths":  0,
                                  "a_match":  0,
-                                 "b_pilot3":  0
+                                 "b_smoke":  0,
+                                 "f_match":  0
                              },
     "paused":  {
                    "b_pilot2":  "2026-10-21T22:12:30Z"

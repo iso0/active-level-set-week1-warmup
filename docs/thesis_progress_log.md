@@ -1490,3 +1490,32 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - Yalnız-h hâlâ erken ve bloklarda biraz daha iyi.
 
 **Karar: HA_TREND + margin tezin öğrenicisi.**
+
+### 2026-10-22 — RC24 sonrası denetim ve son karar
+
+[Rapor](../outputs/research_campaign_20261021/opus_rc24/post_audit/FINAL_REPORT_RC24P.md), [RC24 kararına ek](../outputs/research_campaign_20261021/opus_rc24/post_audit/ADDENDUM_RC24_DECISION.md), [son karşılaştırma](../outputs/research_campaign_20261021/opus_rc24/post_audit/final/FINAL_COMPARISON.md).
+
+**Kurulum.**
+- RC24 penceresi içinde yapıldı; pencere yeniden başlatılmadı.
+- 765 birim, hata yok, 2.3 CPU-saat.
+- Son karşılaştırma sonuçlardan önce donduruldu (0c8fe09c).
+
+**Düzeltmeler.**
+- h boyutsuz değil; boyutsuz olan z_h.
+- "Taze geometri" aslında aynı beş bölgede yeni başlangıçtı.
+- Blok kazancı yalnız havuzlanmış ölçütte. Bölge başına HA_TREND daha kötü (0.689'a karşı 0.723).
+- BA ≥ 0.95 harcamasında non-inferiority gösterilmedi.
+- P2'nin genel garantisi geri çekildi.
+- Kısa-K zamanlama ifadesi daraltıldı.
+
+**Temiz kontrol.**
+- Erken kazancı genel bir eğilim de veriyor.
+- Fizik doğrultusu yalnız havuzlanmış blok ölçütüne katkı yapıyor.
+
+**Son karşılaştırma (taze 75–82; aynı bölgeler, yeni başlangıç; yeni k = 4 bölüntü).** HA_TREND, HA_LEAN'e göre:
+- erken BA +0.0088;
+- havuzlanmış harcama 0.93'te −3.3, 0.95'te −6.5;
+- log loss +0.0073 (üst sınır +0.0123): kural FAIL dedi;
+- bölge başına −0.038 / +0.031.
+
+**Karar: HA_LEAN + margin.** Koşulsuz kazanan yok.

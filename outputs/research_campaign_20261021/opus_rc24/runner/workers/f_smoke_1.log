@@ -1,0 +1,5 @@
+{"unit": "STD__r1_f1__F_HA_LEAN", "status": "ok", "s": 0.9}
+{"unit": "STD__r1_f1__F_HA_TREND", "status": "ok", "s": 0.78}
+{"unit": "STD__r1_f1__F_HONLY", "status": "ok", "s": 0.04}
+{"unit": "STD__r1_f1__F_TR_GEN15", "status": "ok", "s": 1.3}
+{"unit": "BLOCK_B__s1_b1__F_TR_GEN15", "status": "ok", "s": 0.89}

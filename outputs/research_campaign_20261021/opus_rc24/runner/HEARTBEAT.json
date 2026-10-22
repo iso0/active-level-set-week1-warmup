@@ -1,23 +1,23 @@
 {
-    "utc":  "2026-10-21T23:28:32Z",
-    "runner_pid":  29516,
-    "runner_start_utc":  "2026-10-21T21:06:53Z",
-    "cycle":  268,
+    "utc":  "2026-10-22T13:09:26Z",
+    "runner_pid":  32056,
+    "runner_start_utc":  "2026-10-22T12:34:04Z",
+    "cycle":  68,
     "host":  "Burak",
     "state":  "IDLE",
     "budget":  {
                    "t0_utc":  "2026-10-21T20:32:31Z",
                    "deadline_utc":  "2026-10-23T20:32:31Z",
-                   "elapsed_h":  2.93,
-                   "remaining_h":  45.07
+                   "elapsed_h":  16.62,
+                   "remaining_h":  31.38
                },
     "capacity":  {
                      "opus_share":  8,
-                     "runner_slots":  8,
-                     "opus_used":  0,
-                     "opus_other_leaves":  0,
+                     "runner_slots":  6,
+                     "opus_used":  4,
+                     "opus_other_leaves":  4,
                      "astra_used":  0,
-                     "leaves":  ""
+                     "leaves":  "other:27128:4"
                  },
     "workers":  [
 
@@ -45,6 +45,17 @@
                                   "paused":  true,
                                   "live_workers":  0
                               },
+                 "f_own":  {
+                               "done":  448,
+                               "failed":  0,
+                               "locks":  0,
+                               "total":  448,
+                               "remaining":  0,
+                               "last_unit":  "BLOCK_B__s8_b4__F_TR_GEN15.json.gz",
+                               "last_unit_utc":  "2026-10-22T12:59:30Z",
+                               "paused":  false,
+                               "live_workers":  0
+                           },
                  "b_pilot":  {
                                  "done":  160,
                                  "failed":  0,
@@ -67,17 +78,28 @@
                                 "paused":  false,
                                 "live_workers":  0
                             },
-                 "s_dev":  {
-                               "done":  192,
-                               "failed":  0,
-                               "locks":  0,
-                               "total":  192,
-                               "remaining":  0,
-                               "last_unit":  "D6_aleatoric_corner__s4__block__HA_TREND_MARGIN.json.gz",
-                               "last_unit_utc":  "2026-10-21T22:20:43Z",
-                               "paused":  false,
-                               "live_workers":  0
-                           },
+                 "c_smoke":  {
+                                 "done":  3,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  3,
+                                 "remaining":  0,
+                                 "last_unit":  "STD__r1_f1__HA_TREND_MARGIN.json.gz",
+                                 "last_unit_utc":  "2026-10-21T22:24:47Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
+                 "p_match":  {
+                                 "done":  200,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  200,
+                                 "remaining":  0,
+                                 "last_unit":  "stagec_block__r16_f4.json.gz",
+                                 "last_unit_utc":  "2026-10-22T12:44:39Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
                  "b_pilot3":  {
                                   "done":  80,
                                   "failed":  0,
@@ -89,14 +111,25 @@
                                   "paused":  false,
                                   "live_workers":  0
                               },
-                 "c_smoke":  {
-                                 "done":  3,
+                 "s_dev":  {
+                               "done":  192,
+                               "failed":  0,
+                               "locks":  0,
+                               "total":  192,
+                               "remaining":  0,
+                               "last_unit":  "D6_aleatoric_corner__s4__block__HA_TREND_MARGIN.json.gz",
+                               "last_unit_utc":  "2026-10-21T22:20:43Z",
+                               "paused":  false,
+                               "live_workers":  0
+                           },
+                 "f_smoke":  {
+                                 "done":  5,
                                  "failed":  0,
                                  "locks":  0,
-                                 "total":  3,
+                                 "total":  5,
                                  "remaining":  0,
-                                 "last_unit":  "STD__r1_f1__HA_TREND_MARGIN.json.gz",
-                                 "last_unit_utc":  "2026-10-21T22:24:47Z",
+                                 "last_unit":  "BLOCK_B__s1_b1__F_TR_GEN15.json.gz",
+                                 "last_unit_utc":  "2026-10-22T12:44:56Z",
                                  "paused":  false,
                                  "live_workers":  0
                              },
@@ -174,6 +207,17 @@
                                  "remaining":  0,
                                  "last_unit":  "STD__r1_f1__PAC_MARGIN.json.gz",
                                  "last_unit_utc":  "2026-10-21T21:46:28Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
+                 "f_match":  {
+                                 "done":  112,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  112,
+                                 "remaining":  0,
+                                 "last_unit":  "MATCH_BLOCK_B__s8_b4.json.gz",
+                                 "last_unit_utc":  "2026-10-22T13:04:48Z",
                                  "paused":  false,
                                  "live_workers":  0
                              }

@@ -1,8 +1,8 @@
 # Opus RC24 runner status (auto-generated)
 
-Updated 2026-10-21T23:25:30Z. Runner PID 29516 (started 2026-10-21T21:06:53Z). State **IDLE**. Budget: elapsed 2.88 h, remaining 45.12 h (deadline 2026-10-23T20:32:31Z).
+Updated 2026-10-22T13:04:52Z. Runner PID 32056 (started 2026-10-22T12:34:04Z). State **IDLE**. Budget: elapsed 16.54 h, remaining 31.46 h (deadline 2026-10-23T20:32:31Z).
 
-Capacity: Opus share 8 threads, runner slots 8, Opus used 1, Astra used 0 (capacity 8 logical CPUs; all-cores authorisation RC24). Leaves: other:10976:1
+Capacity: Opus share 8 threads, runner slots 6, Opus used 0, Astra used 0 (capacity 8 logical CPUs; all-cores authorisation RC24). Leaves: 
 
 | job | done | failed | remaining | live workers | paused | last completed unit (UTC) |
 |---|---|---|---|---|---|---|
@@ -18,6 +18,10 @@ Capacity: Opus share 8 threads, runner slots 8, Opus used 1, Astra used 0 (capac
 | c_own | 240/240 | 0 | 0 | 0 | False | BLOCK__s16_b5__HA_TREND_MARGIN.json.gz (2026-10-21T22:35:46Z) |
 | c_smoke | 3/3 | 0 | 0 | 0 | False | STD__r1_f1__HA_TREND_MARGIN.json.gz (2026-10-21T22:24:47Z) |
 | d_paths | 80/80 | 0 | 0 | 0 | False | HA_LEAN_MARGIN__r66_f5.json.gz (2026-10-21T22:18:34Z) |
+| f_match | 112/112 | 0 | 0 | 0 | False | MATCH_BLOCK_B__s8_b4.json.gz (2026-10-22T13:04:48Z) |
+| f_own | 448/448 | 0 | 0 | 0 | False | BLOCK_B__s8_b4__F_TR_GEN15.json.gz (2026-10-22T12:59:30Z) |
+| f_smoke | 5/5 | 0 | 0 | 0 | False | BLOCK_B__s1_b1__F_TR_GEN15.json.gz (2026-10-22T12:44:56Z) |
+| p_match | 200/200 | 0 | 0 | 0 | False | stagec_block__r16_f4.json.gz (2026-10-22T12:44:39Z) |
 | s_dev | 192/192 | 0 | 0 | 0 | False | D6_aleatoric_corner__s4__block__HA_TREND_MARGIN.json.gz (2026-10-21T22:20:43Z) |
 | s_test | 640/640 | 0 | 0 | 0 | False | T8_corner_partial45__s110__block__HA_LEAN_MARGIN.json.gz (2026-10-21T23:17:29Z) |
 

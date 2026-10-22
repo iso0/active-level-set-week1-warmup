@@ -1,0 +1,100 @@
+{
+ "final_own_std": {
+  "cells": 1696,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "final_own_block_a": {
+  "cells": 1696,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "final_own_block_b": {
+  "cells": 1696,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "final_match_std": {
+  "cells": 560,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "final_match_block_a": {
+  "cells": 560,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "final_match_block_b": {
+  "cells": 560,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "devmatch_rc23_block": {
+  "cells": 560,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "devmatch_rc23_std": {
+  "cells": 560,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "devmatch_stagea_std": {
+  "cells": 560,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "devmatch_stagec_block": {
+  "cells": 560,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "devmatch_stagec_std": {
+  "cells": 560,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "rc24_c-match_std": {
+  "cells": 5936,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "rc24_c-match_block": {
+  "cells": 5936,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ },
+ "rc24_a-match_std": {
+  "cells": 4704,
+  "BA": 0.0,
+  "sens": 0.0,
+  "spec": 0.0,
+  "PASS": true
+ }
+}
