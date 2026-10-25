@@ -1,0 +1,26 @@
+{
+ "note": "EL study queue (owner instruction 2026-10-24). ONE 48-hour window from t0 (first action of this task), never restarted by quota waits or runner restarts. src/el_runner.ps1 (detached via src/el_start_runner.ps1, supervised by src/el_supervisor.ps1). At most 3 single-thread Opus workers; Astra's 3-worker share is never used. Coordination only through C:/Users/ozgur/Documents/thesis_shared_runtime/campaign_20261024/opus_state.json (own file).",
+ "t0_utc": "2026-10-25T20:07:51Z",
+ "deadline_utc": "2026-10-27T20:07:51Z",
+ "runner_slots": 3,
+ "min_free_mb": 3072,
+ "stop_runner": false,
+ "campaign_closed": false,
+ "jobs": [
+  {
+   "name": "el_cross",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": ["-m", "src.el_cross", "work", "el-cross", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261024/opus_early_learning/el-cross/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261024/opus_early_learning/el-cross/failed",
+   "locks_dir": "outputs/research_campaign_20261024/opus_early_learning/el-cross/locks",
+   "units_total": 464,
+   "resume_token": "0"
+  }
+ ],
+ "notes": []
+}
