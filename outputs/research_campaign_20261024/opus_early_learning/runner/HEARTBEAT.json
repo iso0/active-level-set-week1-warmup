@@ -1,31 +1,64 @@
 {
-    "utc":  "2026-10-25T21:41:52Z",
+    "utc":  "2026-10-25T23:18:43Z",
     "runner_pid":  14300,
     "runner_start_utc":  "2026-10-25T20:21:29Z",
-    "cycle":  159,
+    "cycle":  349,
     "host":  "BURAK",
     "state":  "IDLE",
     "budget":  {
                    "t0_utc":  "2026-10-25T20:07:51Z",
                    "deadline_utc":  "2026-10-27T20:07:51Z",
-                   "elapsed_h":  1.57,
-                   "remaining_h":  46.43
+                   "elapsed_h":  3.18,
+                   "remaining_h":  44.82
                },
     "capacity":  {
                      "logical_cpus":  8,
                      "opus_cap":  3,
                      "runner_slots":  3,
-                     "opus_used":  0,
-                     "opus_other_leaves":  0,
+                     "opus_used":  1,
+                     "opus_other_leaves":  1,
                      "astra_used":  0,
-                     "free_mb":  16839,
+                     "free_mb":  16747,
                      "min_free_mb":  3072,
-                     "leaves":  ""
+                     "leaves":  "other:30576"
                  },
     "workers":  [
 
                 ],
     "jobs":  {
+                 "el_mix_dev":  {
+                                    "done":  544,
+                                    "failed":  0,
+                                    "locks":  0,
+                                    "total":  544,
+                                    "remaining":  0,
+                                    "last_unit":  "K4__s16_b4.json.gz",
+                                    "last_unit_utc":  "2026-10-25T22:36:24Z",
+                                    "paused":  false,
+                                    "live_workers":  0
+                                },
+                 "el_mix_smoke":  {
+                                      "done":  1,
+                                      "failed":  0,
+                                      "locks":  0,
+                                      "total":  1,
+                                      "remaining":  0,
+                                      "last_unit":  "STD__r1_f1.json.gz",
+                                      "last_unit_utc":  "2026-10-25T22:40:33Z",
+                                      "paused":  false,
+                                      "live_workers":  0
+                                  },
+                 "el_mix_fwd":  {
+                                    "done":  272,
+                                    "failed":  0,
+                                    "locks":  0,
+                                    "total":  272,
+                                    "remaining":  0,
+                                    "last_unit":  "K4__s24_b4.json.gz",
+                                    "last_unit_utc":  "2026-10-25T23:15:09Z",
+                                    "paused":  false,
+                                    "live_workers":  0
+                                },
                  "el_fwd":  {
                                 "done":  544,
                                 "failed":  0,
@@ -37,17 +70,6 @@
                                 "paused":  false,
                                 "live_workers":  0
                             },
-                 "el_smoke":  {
-                                  "done":  2,
-                                  "failed":  0,
-                                  "locks":  0,
-                                  "total":  2,
-                                  "remaining":  0,
-                                  "last_unit":  "STD__r1_f1__T.json.gz",
-                                  "last_unit_utc":  "2026-10-25T20:51:06Z",
-                                  "paused":  false,
-                                  "live_workers":  0
-                              },
                  "el_cross":  {
                                   "done":  464,
                                   "failed":  0,
@@ -56,6 +78,17 @@
                                   "remaining":  0,
                                   "last_unit":  "D__K4__r8_f4.json.gz",
                                   "last_unit_utc":  "2026-10-25T20:41:34Z",
+                                  "paused":  false,
+                                  "live_workers":  0
+                              },
+                 "el_smoke":  {
+                                  "done":  2,
+                                  "failed":  0,
+                                  "locks":  0,
+                                  "total":  2,
+                                  "remaining":  0,
+                                  "last_unit":  "STD__r1_f1__T.json.gz",
+                                  "last_unit_utc":  "2026-10-25T20:51:06Z",
                                   "paused":  false,
                                   "live_workers":  0
                               }

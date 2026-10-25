@@ -3,9 +3,12 @@
 
                  },
     "consecutive_failures":  {
+                                 "el_mix_dev":  0,
+                                 "el_mix_smoke":  0,
+                                 "el_mix_fwd":  0,
                                  "el_fwd":  0,
-                                 "el_smoke":  0,
-                                 "el_cross":  0
+                                 "el_cross":  0,
+                                 "el_smoke":  0
                              },
     "paused":  {
 

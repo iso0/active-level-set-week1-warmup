@@ -13,3 +13,18 @@
 {"event":"WORKER_END","job":"el_fwd","worker":2,"pid":25844,"exit_code":0,"locks_released":0,"utc":"2026-10-25T21:36:48Z"}
 {"event":"WORKER_END","job":"el_fwd","worker":1,"pid":29960,"exit_code":0,"locks_released":0,"utc":"2026-10-25T21:36:48Z"}
 {"event":"WORKER_END","job":"el_fwd","worker":3,"pid":15388,"exit_code":0,"locks_released":0,"utc":"2026-10-25T21:37:19Z"}
+{"event":"WORKER_START","job":"el_mix_dev","worker":1,"pid":32332,"opus_used_before":0,"astra_used":0,"free_mb":16795,"leaves":"","utc":"2026-10-25T21:48:25Z"}
+{"event":"WORKER_START","job":"el_mix_dev","worker":2,"pid":24128,"opus_used_before":1,"astra_used":0,"free_mb":16823,"leaves":"","utc":"2026-10-25T21:48:56Z"}
+{"event":"WORKER_START","job":"el_mix_dev","worker":3,"pid":32952,"opus_used_before":2,"astra_used":0,"free_mb":16626,"leaves":"","utc":"2026-10-25T21:49:27Z"}
+{"event":"WORKER_END","job":"el_mix_dev","worker":1,"pid":32332,"exit_code":0,"locks_released":0,"utc":"2026-10-25T22:36:25Z"}
+{"event":"WORKER_END","job":"el_mix_dev","worker":2,"pid":24128,"exit_code":0,"locks_released":0,"utc":"2026-10-25T22:36:25Z"}
+{"event":"WORKER_END","job":"el_mix_dev","worker":3,"pid":32952,"exit_code":0,"locks_released":0,"utc":"2026-10-25T22:36:25Z"}
+{"event":"WORKER_START","job":"el_mix_smoke","worker":1,"pid":26268,"opus_used_before":0,"astra_used":0,"free_mb":16858,"leaves":"","utc":"2026-10-25T22:40:28Z"}
+{"event":"WORKER_END","job":"el_mix_smoke","worker":1,"pid":26268,"exit_code":0,"locks_released":0,"utc":"2026-10-25T22:40:59Z"}
+{"event":"WORKER_START","job":"el_mix_fwd","worker":1,"pid":27016,"opus_used_before":0,"astra_used":0,"free_mb":16857,"leaves":"","utc":"2026-10-25T22:40:59Z"}
+{"event":"WORKER_START","job":"el_mix_fwd","worker":2,"pid":17492,"opus_used_before":1,"astra_used":0,"free_mb":16410,"leaves":"","utc":"2026-10-25T22:41:30Z"}
+{"event":"WORKER_START","job":"el_mix_fwd","worker":3,"pid":33216,"opus_used_before":2,"astra_used":0,"free_mb":16535,"leaves":"","utc":"2026-10-25T22:42:01Z"}
+{"event":"WORKER_END","job":"el_mix_fwd","worker":2,"pid":17492,"exit_code":0,"locks_released":0,"utc":"2026-10-25T23:15:10Z"}
+{"event":"WORKER_END","job":"el_mix_fwd","worker":1,"pid":27016,"exit_code":0,"locks_released":0,"utc":"2026-10-25T23:15:10Z"}
+{"event":"WORKER_END","job":"el_mix_fwd","worker":3,"pid":33216,"exit_code":0,"locks_released":0,"utc":"2026-10-25T23:15:10Z"}
+{"event":"RUNNER_END","reason":"stop_runner set in PLAN.json and no live workers","utc":"2026-10-25T23:18:43Z"}

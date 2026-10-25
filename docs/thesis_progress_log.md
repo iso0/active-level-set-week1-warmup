@@ -1519,3 +1519,38 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - bölge başına −0.038 / +0.031.
 
 **Karar: HA_LEAN + margin.** Koşulsuz kazanan yok.
+
+### 2026-10-25 — EL çalışması: erken kazanç tek öğrenicide tasarrufa dönüşüyor mu?
+
+[Rapor](../outputs/research_campaign_20261024/opus_early_learning/FINAL_REPORT_EL.md), [EL-1 son karşılaştırma](../outputs/research_campaign_20261024/opus_early_learning/final/FINAL_COMPARISON.md), [EL-2 doğrulama](../outputs/research_campaign_20261024/opus_early_learning/el2_final/EL2_CONFIRMATION.md).
+
+**Kurulum.**
+- Yeni tek 48 saatlik pencere (20:07 UTC) açıldı; iş bitince 23:18 UTC'de kapatıldı.
+- En çok 3 işçi; Astra'nın payı kullanılmadı. Koordinasyon yalnız kendi `opus_state.json` dosyam üzerinden.
+- 1827 birim, hata yok, 6.1 işçi-saat.
+- Hedef sırası sonuçlardan önce kaydedildi: erken BA-AULC, 0.93/0.95'e simülasyon sayısı, ulaşma ve koruma, sonra log loss/CPU.
+
+**Seçen ve tahmin eden ayrıldı.**
+- Dört sistem: A L/L, B T/T, C T seçer/L tahmin eder, D L seçer/T tahmin eder.
+- Erken kazanç tahminden geliyor, seçimden değil. Taze 40 tekrarda aynı yolda HA_TREND tahmini +0.0040 / +0.0062; yol etkisi ≈0.
+- Kazanç b ≤ 16'da toplanıyor.
+
+**EL-1 taze testi (83–122).**
+- D: erken +0.0040 gösterildi.
+- Tasarruf: 0.93'te +0.8 (gösterilemedi), 0.95'te −1.1.
+- 0.95'e ulaşma ve koruma −4 ile −4.5 puan.
+- Kural: NOT_ADOPTED. B ve C de kabul edilmedi.
+
+**EL-2 (kayıtlı yön değişikliği, tek mekanizma).**
+- E: HA_LEAN seçer; emülatör seçimine Laplace kanıtıyla Bayesçi ortalama uygulanıyor.
+- Taze 123–162'de: erken +0.0028 gösterildi, 0.93'te +1.1 simülasyon tasarruf gösterildi, 0.95'te +0.45 (daha kötü değil).
+- Log loss A ile aynı. HA_TREND ağırlığı 0.52'den 0.33'e kendiliğinden iniyor.
+- 0.95'i B60'ta koruma −5 puan (alt sınır −0.081): kural NOT_ADOPTED.
+- D de yine NOT_ADOPTED; bu testte 0.93'te +2.0 tasarruf gösterdi.
+
+**Sonuç: tez öğrenicisi HA_LEAN seçer / HA_LEAN tahmin eder olarak kalıyor.** Koşulsuz kazanan yok:
+- sabit 8–16 simülasyonluk bütçe için D;
+- BA 0.93 için D ya da E;
+- 0.95'e ulaşıp korumak ve güvenilir olasılık için A.
+
+Önceki donmuş kararlar değişmedi.

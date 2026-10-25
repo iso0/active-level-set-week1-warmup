@@ -127,5 +127,62 @@ def exports():
     (base / "EXPORTS_ACCEPTANCE.json").write_text(json.dumps(acc, indent=1), encoding="utf-8"); print(json.dumps(acc, indent=1)); return acc
 
 
+NAMES["E"] = "HA_LEAN selects / evidence-weighted HA_LEAN + HA_TREND mixture predicts"
+
+
+def el2_final():
+    """Markdown for the stage-2 confirmation (numbers from el2_final/EL2_FINAL_DECISION.json written by src.el_mix final)."""
+    res = json.loads((OUT / "el2_final" / "EL2_FINAL_DECISION.json").read_text(encoding="utf-8")); dec = res["decision"]; std = res["STD"]; S = pd.DataFrame(std["summary"])
+    p = dec["primary"]
+    L = ["# EL stage 2 confirmation — fresh STD repeats 123–162, K5 startups 33–40, K4 startups 17–24", "",
+         "Frozen before any run: `PROTOCOL_EL2_FINAL.md`, `freeze/EL2_FINAL_MANIFEST.json`. DEV evidence (same 541-run pool). Individual learners primary, pooled beside.", "",
+         f"## Decision (registered rule): **{p['verdict']}** for E = {NAMES['E']} against A = {NAMES['A']}", "",
+         f"* E1 early gain shown: {p['E1_early_gain_shown']} — ΔBA-AULC B8–B24 {f(p['E1'])}",
+         f"* E2 savings: 0.93 → {p['E2']['0.93']} ({f(p['E2_values']['0.93'], 2)}), 0.95 → {p['E2']['0.95']} ({f(p['E2_values']['0.95'], 2)})",
+         f"* E3 reliability not worse: 0.93 {p['E3_reliability_not_worse']['0.93']}, 0.95 {p['E3_reliability_not_worse']['0.95']} — Δattain / Δkept 0.93: {f(p['E3_values']['0.93']['d_attain'], 3)} / {f(p['E3_values']['0.93']['d_kept'], 3)}; 0.95: {f(p['E3_values']['0.95']['d_attain'], 3)} / {f(p['E3_values']['0.95']['d_kept'], 3)}",
+         f"* E4 guardrails ok: {p['E4']['ok']} — ΔLL {p['E4']['dLL_B8_B60']:+.4f}, ΔBrier {p['E4']['dBrier_B8_B60']:+.4f}, CPU ratio {p['E4']['cpu_ratio']:.2f}", "",
+         f"Secondary (same rule): D = {NAMES['D']} → **{dec['secondary']['D']['verdict']}**", "",
+         "Robustness warnings (per-region BA-AULC B8–B60 LCB < −0.02 against A; not in the verdict): "
+         + "; ".join(f"{c}: " + ", ".join(f"{x} {w['mean']:+.4f} [LCB {w['lcb']:+.4f}]{' WARNING' if w['warning'] else ''}" for x, w in d.items()) for c, d in dec["robustness_warning"].items()), "",
+         f"## 1. STD — {std['learners']} individual learners in {std['clusters']} repeat clusters", ""]
+    L += summary_table(S) + ["", "### Targets", ""] + target_table(S, std["contrasts_vs_A"]) + ["", "### Paired against A", ""] + contrast_rows(std["contrasts_vs_A"])
+    L += ["", "### Attainment tables", ""] + attain_rows(std["contrasts_vs_A"]) + ["", "### E against D", ""] + contrast_rows({"E": std["E_vs_D"]}, ref="D")
+    L += ["", "### BA by budget against A", "", "| budget | E − A | D − A |", "|---|---|---|"]
+    for b in EV.AT_B:
+        L.append(f"| {b} | {f(std['BA_at_budgets_vs_A']['E'][str(b)]['diff'])} | {f(std['BA_at_budgets_vs_A']['D'][str(b)]['diff'])} |")
+    L += ["", "### Evidence weight on the trend emulator (mean W_T; share of learners with W_T > 0.5)", "", "| budget | mean W_T | share > 0.5 |", "|---|---|---|"]
+    for w in std["W_T_by_budget"]:
+        if w["budget"] in (8, 12, 16, 20, 24, 32, 40, 50, 60):
+            L.append(f"| {w['budget']} | {w['mean']:.3f} | {w['share_T_majority']:.3f} |")
+    L += ["", "CPU per decision step (process s): " + ", ".join(f"{k} {v:.3f}" for k, v in std["cpu_mean_per_step"].items()) + f". Check: {std['checks']}.", ""]
+    for cond in ("K5", "K4"):
+        r = res[cond]; S2 = pd.DataFrame(r["summary"])
+        L += [f"## 2. Robustness — {cond} ({r['learners']} learners, {r['clusters']} startups)", ""] + summary_table(S2) + [""] + contrast_rows(r["contrasts_vs_A"]) + [""]
+        L += ["Per-region BA-AULC B8–B60 against A: " + ", ".join(f"{x} {f(v)}" for x, v in r["per_region_vs_A"].items()), ""]
+    (OUT / "el2_final" / "EL2_CONFIRMATION.md").write_text("\n".join(L) + "\n", encoding="utf-8"); return L
+
+
+def el2_exports():
+    import src.el_mix as MX
+    M = P.manifest(); base = OUT / "exports"; acc = json.loads((base / "EXPORTS_ACCEPTANCE.json").read_text(encoding="utf-8"))
+    for stage, job in (("el2_dev", "el-mix-dev"), ("el2_final", "el-mix-fwd")):
+        for cond in ("STD", "K5", "K4"):
+            E, CPU, W, CHK = MX.load(job, cond); rows = []
+            for fp in sorted((OUT / job / "units").glob(f"{cond}__*.json.gz")):
+                u = RC.read_json_gz(fp)
+                if stage == "el2_dev":
+                    src_u = MX.dev_path(cond, int(u["repeat"]), int(u["fold"]))[0]; hw = [e.get("how") for e in src_u["evals"]]
+                else:
+                    hw = [e.get("how") for e in u["own_evals"]]
+                for q, s in enumerate(u["paid_ids"][:60], 1):
+                    rows.append({"path": "HA_LEAN-selected", "systems": "A,D,E", "condition": cond, "cluster": u["repeat"], "learner": u["fold"], "query": q, "sim_id": s,
+                                 "rule": "startup" if q <= 8 else (hw[q - 9] or "margin")})
+            d = base / f"{stage}_{cond.lower()}"; n = EX.export_set(d, E, rows)
+            W.to_csv(d / "evidence_weight_W_T.csv.gz", index=False, compression="gzip")
+            D = EV.learner_rows(E, M.y); Ai = EV.aulc(D, ("system", "cluster", "learner")); Ei = EV.endpoints(D, ("system", "cluster", "learner"))
+            acc[d.name] = {**EX.compare(d, M, Ai, Ei, cond), "keys": n}
+    (base / "EXPORTS_ACCEPTANCE.json").write_text(json.dumps(acc, indent=1), encoding="utf-8"); print(json.dumps({k: v["PASS"] for k, v in acc.items()}, indent=1)); return acc
+
+
 if __name__ == "__main__":
-    {"final": final, "exports": exports}[sys.argv[1]]()
+    {"final": final, "exports": exports, "el2_final": el2_final, "el2_exports": el2_exports}[sys.argv[1]]()

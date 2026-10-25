@@ -4,8 +4,8 @@
  "deadline_utc": "2026-10-27T20:07:51Z",
  "runner_slots": 3,
  "min_free_mb": 3072,
- "stop_runner": false,
- "campaign_closed": false,
+ "stop_runner": true,
+ "campaign_closed": true,
  "jobs": [
   {
    "name": "el_cross",
@@ -72,10 +72,82 @@
    "after": [
     "el_smoke"
    ]
+  },
+  {
+   "name": "el_mix_dev",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.el_mix",
+    "work",
+    "el-mix-dev",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261024/opus_early_learning/el-mix-dev/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261024/opus_early_learning/el-mix-dev/failed",
+   "locks_dir": "outputs/research_campaign_20261024/opus_early_learning/el-mix-dev/locks",
+   "units_total": 544,
+   "resume_token": "0"
+  },
+  {
+   "name": "el_mix_smoke",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.el_mix",
+    "work",
+    "el-mix-smoke",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261024/opus_early_learning/el-mix-smoke/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261024/opus_early_learning/el-mix-smoke/failed",
+   "locks_dir": "outputs/research_campaign_20261024/opus_early_learning/el-mix-smoke/locks",
+   "units_total": 1,
+   "resume_token": "0"
+  },
+  {
+   "name": "el_mix_fwd",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 2,
+   "max_workers": 3,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.el_mix",
+    "work",
+    "el-mix-fwd",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261024/opus_early_learning/el-mix-fwd/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261024/opus_early_learning/el-mix-fwd/failed",
+   "locks_dir": "outputs/research_campaign_20261024/opus_early_learning/el-mix-fwd/locks",
+   "units_total": 272,
+   "resume_token": "0",
+   "after": [
+    "el_mix_smoke"
+   ]
   }
  ],
  "notes": [
   "2026-10-25T20:50:50Z: job el_smoke added (2 units)",
-  "2026-10-25T20:50:51Z: job el_fwd added (544 units)"
+  "2026-10-25T20:50:51Z: job el_fwd added (544 units)",
+  "2026-10-25T21:48:06Z: job el_mix_dev added (544 units)",
+  "2026-10-25T22:40:23Z: job el_mix_smoke added (1 units)",
+  "2026-10-25T22:40:23Z: job el_mix_fwd added (272 units)",
+  "2026-10-25T23:18:21Z: all registered work done: EL-1 (DEV cross, forward) and EL-2 (one mechanism, DEV + confirmation); no further job; campaign closed early (window end 2026-10-27T20:07:51Z not needed)",
+  "2026-10-25T23:18:22Z: stop_runner set",
+  "2026-10-25T23:18:22Z: campaign closed (work done before the window end)"
  ]
 }

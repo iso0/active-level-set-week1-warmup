@@ -23,6 +23,16 @@ The physics-mean GP, universal-kriging, stacking and margin sources are those al
 - **Stacking / honest out-of-fold combination**: Wolpert 1992; Breiman 1996; van der Laan et al. 2007.
 - **Uncertainty / margin sampling**: Lewis & Gale 1994; Scheffer et al. 2001.
 
+## 2b. Known components of the stage-2 system E
+
+| component | source | used in E |
+|---|---|---|
+| Bayesian model averaging over a discrete model choice, weighted by the posterior model probability | Hoeting, Madigan, Raftery & Volinsky 1999, "Bayesian Model Averaging: A Tutorial", *Statistical Science* 14(4), 382–417 (with discussion), checked at the journal-record / abstract level | the emulator choice (trend / no trend) is averaged, not selected |
+| evidence (marginal likelihood) for comparing classifier variants; moderated, posterior-averaged classifier outputs | MacKay 1992, "The Evidence Framework Applied to Classification Networks", *Neural Computation* 4, 720–736, checked at the record / abstract level | the same Laplace evidence that HA_LEAN already uses for its (τ_F, τ_h) grid now also weights the emulator |
+| Laplace approximation to the GP / logistic marginal likelihood | Rasmussen & Williams 2006, ch. 3 (RC24-verified) | log Z_{e,g} for every emulator and grid configuration |
+
+E adds no new statistical idea. It is BMA over one more discrete hyperparameter of an existing evidence-weighted classifier. Ours is the measured effect on early learning and target attainment in this active-learning setting.
+
 ## 3. What is ours, and its limit
 
 **Ours (measured, DEV, one 541-run pool):**

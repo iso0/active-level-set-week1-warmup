@@ -76,5 +76,83 @@
   "undefined_curves_agree": true,
   "PASS": true,
   "keys": 128
+ },
+ "el2_dev_std": {
+  "condition": "STD",
+  "learner_curves": 960,
+  "defined_curves": 960,
+  "aulc_cells_compared": 1920,
+  "endpoint_cells_compared": 2880,
+  "max_abs_diff_BA_AULC_B8_B24": 2.220446049250313e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 4.440892098500626e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 960
+ },
+ "el2_dev_k5": {
+  "condition": "K5",
+  "learner_curves": 480,
+  "defined_curves": 384,
+  "aulc_cells_compared": 768,
+  "endpoint_cells_compared": 1152,
+  "max_abs_diff_BA_AULC_B8_B24": 1.1102230246251565e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 4.440892098500626e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 480
+ },
+ "el2_dev_k4": {
+  "condition": "K4",
+  "learner_curves": 192,
+  "defined_curves": 192,
+  "aulc_cells_compared": 384,
+  "endpoint_cells_compared": 576,
+  "max_abs_diff_BA_AULC_B8_B24": 1.1102230246251565e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 3.3306690738754696e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 192
+ },
+ "el2_final_std": {
+  "condition": "STD",
+  "learner_curves": 600,
+  "defined_curves": 600,
+  "aulc_cells_compared": 1200,
+  "endpoint_cells_compared": 1800,
+  "max_abs_diff_BA_AULC_B8_B24": 2.220446049250313e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 4.440892098500626e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 600
+ },
+ "el2_final_k5": {
+  "condition": "K5",
+  "learner_curves": 120,
+  "defined_curves": 96,
+  "aulc_cells_compared": 192,
+  "endpoint_cells_compared": 288,
+  "max_abs_diff_BA_AULC_B8_B24": 1.1102230246251565e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 3.3306690738754696e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 120
+ },
+ "el2_final_k4": {
+  "condition": "K4",
+  "learner_curves": 96,
+  "defined_curves": 96,
+  "aulc_cells_compared": 192,
+  "endpoint_cells_compared": 288,
+  "max_abs_diff_BA_AULC_B8_B24": 1.1102230246251565e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 3.3306690738754696e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 96
  }
 }
