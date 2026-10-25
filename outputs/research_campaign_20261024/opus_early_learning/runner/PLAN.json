@@ -14,13 +14,68 @@
    "priority": 1,
    "max_workers": 3,
    "python": "system",
-   "args": ["-m", "src.el_cross", "work", "el-cross", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.el_cross",
+    "work",
+    "el-cross",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/research_campaign_20261024/opus_early_learning/el-cross/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261024/opus_early_learning/el-cross/failed",
    "locks_dir": "outputs/research_campaign_20261024/opus_early_learning/el-cross/locks",
    "units_total": 464,
    "resume_token": "0"
+  },
+  {
+   "name": "el_smoke",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.el_final",
+    "work",
+    "el-smoke",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261024/opus_early_learning/el-smoke/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261024/opus_early_learning/el-smoke/failed",
+   "locks_dir": "outputs/research_campaign_20261024/opus_early_learning/el-smoke/locks",
+   "units_total": 2,
+   "resume_token": "0"
+  },
+  {
+   "name": "el_fwd",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 2,
+   "max_workers": 3,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.el_final",
+    "work",
+    "el-fwd",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261024/opus_early_learning/el-fwd/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261024/opus_early_learning/el-fwd/failed",
+   "locks_dir": "outputs/research_campaign_20261024/opus_early_learning/el-fwd/locks",
+   "units_total": 544,
+   "resume_token": "0",
+   "after": [
+    "el_smoke"
+   ]
   }
  ],
- "notes": []
+ "notes": [
+  "2026-10-25T20:50:50Z: job el_smoke added (2 units)",
+  "2026-10-25T20:50:51Z: job el_fwd added (544 units)"
+ ]
 }

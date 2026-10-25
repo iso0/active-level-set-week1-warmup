@@ -1,0 +1,12 @@
+{
+ "condition": "K4",
+ "learner_curves": 128,
+ "defined_curves": 128,
+ "aulc_cells_compared": 256,
+ "endpoint_cells_compared": 384,
+ "max_abs_diff_BA_AULC_B8_B24": 1.1102230246251565e-16,
+ "max_abs_diff_BA_AULC_B8_B60": 3.3306690738754696e-16,
+ "max_abs_diff_rms_spend": 0.0,
+ "undefined_curves_agree": true,
+ "PASS": true
+}

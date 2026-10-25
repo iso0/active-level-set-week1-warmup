@@ -1,0 +1,15 @@
+{"event":"RUNNER_START","pid":14300,"logical_cpus":8,"opus_cap":3,"utc":"2026-10-25T20:21:29Z"}
+{"event":"WORKER_START","job":"el_cross","worker":1,"pid":29076,"opus_used_before":0,"astra_used":0,"free_mb":16516,"leaves":"","utc":"2026-10-25T20:21:29Z"}
+{"event":"WORKER_START","job":"el_cross","worker":2,"pid":25360,"opus_used_before":2,"astra_used":0,"free_mb":16214,"leaves":"other:24764","utc":"2026-10-25T20:22:00Z"}
+{"event":"WORKER_START","job":"el_cross","worker":3,"pid":26836,"opus_used_before":2,"astra_used":0,"free_mb":16155,"leaves":"","utc":"2026-10-25T20:22:31Z"}
+{"event":"WORKER_END","job":"el_cross","worker":2,"pid":25360,"exit_code":0,"locks_released":0,"utc":"2026-10-25T20:41:56Z"}
+{"event":"WORKER_END","job":"el_cross","worker":1,"pid":29076,"exit_code":0,"locks_released":0,"utc":"2026-10-25T20:41:56Z"}
+{"event":"WORKER_END","job":"el_cross","worker":3,"pid":26836,"exit_code":0,"locks_released":0,"utc":"2026-10-25T20:41:56Z"}
+{"event":"WORKER_START","job":"el_smoke","worker":1,"pid":21104,"opus_used_before":0,"astra_used":0,"free_mb":16784,"leaves":"","utc":"2026-10-25T20:51:00Z"}
+{"event":"WORKER_END","job":"el_smoke","worker":1,"pid":21104,"exit_code":0,"locks_released":0,"utc":"2026-10-25T20:51:30Z"}
+{"event":"WORKER_START","job":"el_fwd","worker":1,"pid":29960,"opus_used_before":0,"astra_used":0,"free_mb":16831,"leaves":"","utc":"2026-10-25T20:51:31Z"}
+{"event":"WORKER_START","job":"el_fwd","worker":2,"pid":25844,"opus_used_before":1,"astra_used":0,"free_mb":16668,"leaves":"","utc":"2026-10-25T20:52:01Z"}
+{"event":"WORKER_START","job":"el_fwd","worker":3,"pid":15388,"opus_used_before":2,"astra_used":0,"free_mb":16531,"leaves":"","utc":"2026-10-25T20:52:32Z"}
+{"event":"WORKER_END","job":"el_fwd","worker":2,"pid":25844,"exit_code":0,"locks_released":0,"utc":"2026-10-25T21:36:48Z"}
+{"event":"WORKER_END","job":"el_fwd","worker":1,"pid":29960,"exit_code":0,"locks_released":0,"utc":"2026-10-25T21:36:48Z"}
+{"event":"WORKER_END","job":"el_fwd","worker":3,"pid":15388,"exit_code":0,"locks_released":0,"utc":"2026-10-25T21:37:19Z"}

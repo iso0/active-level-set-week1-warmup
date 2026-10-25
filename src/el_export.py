@@ -62,7 +62,10 @@ def compare(d, M, Ai, Ei, condition):
     e = Ei[Ei.defined == True][["system", "cluster", "learner", "target", "rms"]]  # noqa: E712
     k = R2.dropna().merge(e, on=["system", "cluster", "learner", "target"], suffixes=("_re", "_ev"), how="inner")
     ds = float(np.max(np.abs(k.rms_re - k.rms_ev))) if len(k) else np.nan
-    acc = {"condition": condition, "learner_curves": int(len(R1)), "aulc_cells_compared": int(2 * len(j)), "endpoint_cells_compared": int(len(k)),
-           "max_abs_diff_BA_AULC_B8_B24": float(d24), "max_abs_diff_BA_AULC_B8_B60": float(d60), "max_abs_diff_rms_spend": ds}
-    acc["PASS"] = bool(len(j) == len(R1) and len(j) > 0 and d24 <= 1e-9 and d60 <= 1e-9 and ds == 0.0)
+    n_def = int(R1.BA_B8_B60.notna().sum())                       # one-class test sets (BA undefined) are absent from the evaluator's table
+    und = R1[R1.BA_B8_B60.isna()].merge(A, on=["system", "cluster", "learner"], how="inner")
+    und_ok = bool(len(und) == 0 or (und.B8_B60.isna().all() and und.B8_B24.isna().all()))
+    acc = {"condition": condition, "learner_curves": int(len(R1)), "defined_curves": n_def, "aulc_cells_compared": int(2 * len(j)), "endpoint_cells_compared": int(len(k)),
+           "max_abs_diff_BA_AULC_B8_B24": float(d24), "max_abs_diff_BA_AULC_B8_B60": float(d60), "max_abs_diff_rms_spend": ds, "undefined_curves_agree": und_ok}
+    acc["PASS"] = bool(len(j) == n_def and len(j) > 0 and und_ok and d24 <= 1e-9 and d60 <= 1e-9 and ds == 0.0)
     (d / "EXPORT_ACCEPTANCE.json").write_text(json.dumps(acc, indent=1), encoding="utf-8"); return acc

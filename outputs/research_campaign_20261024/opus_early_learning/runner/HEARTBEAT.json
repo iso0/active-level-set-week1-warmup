@@ -1,0 +1,64 @@
+{
+    "utc":  "2026-10-25T21:41:52Z",
+    "runner_pid":  14300,
+    "runner_start_utc":  "2026-10-25T20:21:29Z",
+    "cycle":  159,
+    "host":  "BURAK",
+    "state":  "IDLE",
+    "budget":  {
+                   "t0_utc":  "2026-10-25T20:07:51Z",
+                   "deadline_utc":  "2026-10-27T20:07:51Z",
+                   "elapsed_h":  1.57,
+                   "remaining_h":  46.43
+               },
+    "capacity":  {
+                     "logical_cpus":  8,
+                     "opus_cap":  3,
+                     "runner_slots":  3,
+                     "opus_used":  0,
+                     "opus_other_leaves":  0,
+                     "astra_used":  0,
+                     "free_mb":  16839,
+                     "min_free_mb":  3072,
+                     "leaves":  ""
+                 },
+    "workers":  [
+
+                ],
+    "jobs":  {
+                 "el_fwd":  {
+                                "done":  544,
+                                "failed":  0,
+                                "locks":  0,
+                                "total":  544,
+                                "remaining":  0,
+                                "last_unit":  "K4__s16_b4__T.json.gz",
+                                "last_unit_utc":  "2026-10-25T21:36:52Z",
+                                "paused":  false,
+                                "live_workers":  0
+                            },
+                 "el_smoke":  {
+                                  "done":  2,
+                                  "failed":  0,
+                                  "locks":  0,
+                                  "total":  2,
+                                  "remaining":  0,
+                                  "last_unit":  "STD__r1_f1__T.json.gz",
+                                  "last_unit_utc":  "2026-10-25T20:51:06Z",
+                                  "paused":  false,
+                                  "live_workers":  0
+                              },
+                 "el_cross":  {
+                                  "done":  464,
+                                  "failed":  0,
+                                  "locks":  0,
+                                  "total":  464,
+                                  "remaining":  0,
+                                  "last_unit":  "D__K4__r8_f4.json.gz",
+                                  "last_unit_utc":  "2026-10-25T20:41:34Z",
+                                  "paused":  false,
+                                  "live_workers":  0
+                              }
+             },
+    "restart":  "powershell -NoProfile -ExecutionPolicy Bypass -File src\\el_start_runner.ps1   (idempotent; skips finished units; lock prevents a second runner)"
+}

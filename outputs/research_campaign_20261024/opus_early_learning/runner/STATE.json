@@ -1,0 +1,16 @@
+{
+    "attempts":  {
+
+                 },
+    "consecutive_failures":  {
+                                 "el_fwd":  0,
+                                 "el_smoke":  0,
+                                 "el_cross":  0
+                             },
+    "paused":  {
+
+               },
+    "resume_tokens":  {
+
+                      }
+}

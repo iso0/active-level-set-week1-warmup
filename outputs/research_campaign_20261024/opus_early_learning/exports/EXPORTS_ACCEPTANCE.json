@@ -1,0 +1,80 @@
+{
+ "dev_std": {
+  "condition": "STD",
+  "learner_curves": 480,
+  "defined_curves": 480,
+  "aulc_cells_compared": 960,
+  "endpoint_cells_compared": 1440,
+  "max_abs_diff_BA_AULC_B8_B24": 2.220446049250313e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 4.440892098500626e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 480
+ },
+ "dev_k5": {
+  "condition": "K5",
+  "learner_curves": 480,
+  "defined_curves": 384,
+  "aulc_cells_compared": 768,
+  "endpoint_cells_compared": 1152,
+  "max_abs_diff_BA_AULC_B8_B24": 1.1102230246251565e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 4.440892098500626e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 480
+ },
+ "dev_k4": {
+  "condition": "K4",
+  "learner_curves": 128,
+  "defined_curves": 128,
+  "aulc_cells_compared": 256,
+  "endpoint_cells_compared": 384,
+  "max_abs_diff_BA_AULC_B8_B24": 1.1102230246251565e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 3.3306690738754696e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 128
+ },
+ "final_std": {
+  "condition": "STD",
+  "learner_curves": 800,
+  "defined_curves": 800,
+  "aulc_cells_compared": 1600,
+  "endpoint_cells_compared": 2400,
+  "max_abs_diff_BA_AULC_B8_B24": 3.3306690738754696e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 5.551115123125783e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 800
+ },
+ "final_k5": {
+  "condition": "K5",
+  "learner_curves": 160,
+  "defined_curves": 128,
+  "aulc_cells_compared": 256,
+  "endpoint_cells_compared": 384,
+  "max_abs_diff_BA_AULC_B8_B24": 1.1102230246251565e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 3.3306690738754696e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 160
+ },
+ "final_k4": {
+  "condition": "K4",
+  "learner_curves": 128,
+  "defined_curves": 128,
+  "aulc_cells_compared": 256,
+  "endpoint_cells_compared": 384,
+  "max_abs_diff_BA_AULC_B8_B24": 1.1102230246251565e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 3.3306690738754696e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true,
+  "keys": 128
+ }
+}
