@@ -1,0 +1,30 @@
+{
+ "utc": "2026-10-25T20:49:16+00:00",
+ "files": {
+  "src/el_final.py": "96aa4c08fa3a95b70e4fac7cc566909875251544fccc4e8b120135c78bcad9f4",
+  "src/el_cross.py": "798b8ffed113a0cdbd01ab1748dcf7188a8ae31d36fb6861b659fb11be6f82c3",
+  "src/el_eval.py": "95cb9572132e233014be53d190b3a88850cf93af03cfca8ef1860873017fb87a",
+  "src/el_decide.py": "4a0efe15d5190563abb02d12082c7f43006938c1c5fb480bb8583fcecced40fd",
+  "src/el_freeze.py": "d6ad8beff388bee1a188e2093d2dd9c4ed221cc72e42839b5560050114f23646",
+  "src/rc24_pac.py": "09ade991a1085d3dc405e1c41399c95e26c8462156096aabc523cf0607f3c695",
+  "src/rc24_pilot.py": "8b2ea2ca7d3f3a734ba7322ac7c111191253aa41c040a9c2367532b64926d8eb",
+  "src/rc24p_final.py": "e2b27c2a4b6e00c7ea2ff6e815fbde31788c6d1da7f9c2fef1cf47f83f389229",
+  "src/rc24p_models.py": "51fcb528d607f703e995991b9f16b49a9ca10664bdea32889fd47c9493d7c0c4",
+  "src/rc23_common.py": "8a76f51ead22a78e103a3314d957cd4e1967d2eb6ee3cb885c78f6388ba9cf9b",
+  "src/rc22_common.py": "7c58298304ec10834269c5ac2534604f832a4694dda9bcbbc57a9e46afbb0564",
+  "src/rc21_phr.py": "75b31cc8c760ffa7c8281ca140c0b71ca4bd18520fbdb041827346fc09ac5ba6",
+  "src/rc20_attr.py": "e9d73d8ca7da4a47b73f7904885baadb5f35061d6dbeb73ffcbdf5ca3254aada",
+  "src/rc20_gp.py": "cc33c3e92ce4639a74076a3c5b86f9f02c8c226fa42a0a4f721c33e39c5a8971",
+  "src/rc19b_keyhole.py": "d2a08f37f0e4c38e2b03e93d91e402c6f7f28a582e6d9619f6e60d85123c21bb",
+  "src/rc19_pool.py": "842f6e0400d6e73e28201c07f218f3a3f92ee222a14043b11a21058bd3f24a83",
+  "src/rc19_learn.py": "19ba87415f78f71fb89c2997e67ac0c09ad2a22321b189a8220413fc6bd72703",
+  "src/rc18_campaign.py": "a98896753fe9843fc8178df430c785b9287c5e36649910fd984491a6d2d49dcd",
+  "src/rc18_gp.py": "129e60a6606050ef4aee810e04c458bbeb406797d12f4199ad89727765295585",
+  "src/rc18_common.py": "16ebdce433b2d69cd1cb6feb12b6562f4e1be81441a39d3902a27cd3e352c236",
+  "src/week13_synthetic_al.py": "3df1c6f83e249bcc8831014914a3d99431371e3fa5269fa121b8ffd7d8317d5f",
+  "src/external_validation/analysis.py": "9df0d7e03a26e7e0635365dd0be5a9983e928254b9bb02bed7a441878a09f1b1",
+  "outputs/research_campaign_20261018/opus_pooled/data/POOLED_MANIFEST.csv": "fe1cd6e6a031b6ec5091f6c41dba9dc454cd6bb6a0254b3b675bce3ef019be5a",
+  "outputs/research_campaign_20261024/opus_early_learning/PROTOCOL_EL_OBJECTIVES.md": "077a5cb0d6aa471008acad8fe5af264ee1b4c2bfa284c83baaf687ef3060c022",
+  "outputs/research_campaign_20261024/opus_early_learning/PROTOCOL_EL_FINAL.md": "917d81b21e8438f8dde634db781c624830899e6b6cc2f390c1ea16a6599d2576"
+ }
+}
