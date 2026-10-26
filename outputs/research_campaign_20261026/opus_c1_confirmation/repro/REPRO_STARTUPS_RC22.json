@@ -1,0 +1,13 @@
+{
+ "RAND8": {
+  "tasks_checked": 40,
+  "problems": [],
+  "PASS": true
+ },
+ "LOCAL8": {
+  "tasks_checked": 40,
+  "problems": [],
+  "PASS": true
+ },
+ "ALL_PASS": true
+}

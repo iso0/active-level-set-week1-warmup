@@ -1,0 +1,16 @@
+{
+ "campaign_id": "opus_c1_confirmation_20261026",
+ "start_utc": "2026-10-26T18:05:16Z",
+ "deadline_utc": "2026-10-28T18:05:16Z",
+ "start_head": "21a1c045d5fb0fb811fac85dbea186259235b38d",
+ "stage": "1_registered_runs_pending",
+ "stages_done": ["0_preparation", "0_reproduction_checks_old_ids", "1_registration"],
+ "commits": {"registration": "(this commit; see git log)"},
+ "jobs": {"c1c-repro": "4/4 (old IDs, bit-exact)", "c1c-prior-repro": "2/2 (old IDs, scale 1 bit-exact)", "c1c-main": "0/800", "c1c-start": "0/400", "c1c-prior": "0/200"},
+ "decisions": ["registration: PROTOCOL_C1C.md + freeze/C1C_MANIFEST.json before any new result; verdict set = STD 203-282 (80 clusters); startups RAND8 283-302, LOCAL8 303-322; prior controls on DEV paths 123-162"],
+ "notes": ["2026-10-26T18:05:16Z: task started; HEAD = origin = 21a1c045, no later commits, no tracked changes; EA campaign CLOSED 17:17:19Z; Astra campaign astra_joint_local_20261026 ACTIVE (3 workers, read-only check)",
+           "2026-10-26: ID inventory: highest repeat id in any recorded unit name = 202 (STD 1-202 used); RAND8 / LOCAL8 used only on repeats 1 (smoke) and 35-42 (RC22); new IDs 203-322 unused",
+           "2026-10-26T18:18Z: the first direct reproduction runs stopped at once (DEADLINE_STOP: without RC18_DEADLINE_UTC the shared code falls back to an old campaign deadline); rerun with RC18_DEADLINE_UTC = the window end; no unit was lost",
+           "2026-10-26T18:2xZ: reproduction checks on OLD IDs: EA units 4/4 bit-exact, RC22 startups 80/80 (37 path-rule queries), prior scale 1 bit-exact 2/2; dry run of the evaluation / export code on old EA data reproduces the EA decision exactly",
+           "2026-10-26T18:31Z: session resumed after a usage-limit pause (no process was running; nothing lost)"]
+}

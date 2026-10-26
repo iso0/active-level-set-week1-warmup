@@ -1,0 +1,35 @@
+{
+ "STD__r163_f1__L": {
+  "paid_ids_equal": true,
+  "test_ids_equal": true,
+  "own_pred_maxabs": 0.0,
+  "cross_pred_maxabs": 0.0,
+  "budgets_equal": true,
+  "PASS": true
+ },
+ "STD__r163_f1__X": {
+  "paid_ids_equal": true,
+  "test_ids_equal": true,
+  "own_pred_maxabs": 0.0,
+  "cross_pred_maxabs": 0.0,
+  "budgets_equal": true,
+  "PASS": true
+ },
+ "STD__r197_f5__L": {
+  "paid_ids_equal": true,
+  "test_ids_equal": true,
+  "own_pred_maxabs": 0.0,
+  "cross_pred_maxabs": 0.0,
+  "budgets_equal": true,
+  "PASS": true
+ },
+ "STD__r197_f5__X": {
+  "paid_ids_equal": true,
+  "test_ids_equal": true,
+  "own_pred_maxabs": 0.0,
+  "cross_pred_maxabs": 0.0,
+  "budgets_equal": true,
+  "PASS": true
+ },
+ "ALL_PASS": true
+}
