@@ -164,7 +164,8 @@ def run():
             res[cond]["steps"] = steps(Wi)
             T = transitions(ex); T.to_csv(OUT / "std_error_transitions.csv.gz", index=False, compression="gzip")
             tsum = T[T.error != "R0_correct_R3_wrong"].groupby(["window", "error", "first_fix"]).size().unstack(fill_value=0)
-            res[cond]["transitions_first_fix"] = tsum.to_dict(orient="index"); res[cond]["broken_by_R3"] = T[T.error == "R0_correct_R3_wrong"].groupby("window").size().to_dict()
+            res[cond]["transitions_first_fix"] = {f"{w}|{e}": {k: int(v) for k, v in row.items()} for (w, e), row in tsum.to_dict(orient="index").items()}
+            res[cond]["broken_by_R3"] = {k: int(v) for k, v in T[T.error == "R0_correct_R3_wrong"].groupby("window").size().to_dict().items()}
             pers = T[(T.window == "late") & (~T.fixed_by_R3) & (T.error != "R0_correct_R3_wrong")].groupby(["sim_id", "error"]).size().reset_index(name="late_learner_budget_errors")
             pers.to_csv(OUT / "std_persistent_errors_not_fixed_by_true_depth.csv", index=False)
             Eg, unl = emulator_error(rows, M, U); Eg.to_csv(OUT / "std_emulator_error.csv.gz", index=False, compression="gzip")
