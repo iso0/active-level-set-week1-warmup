@@ -1,0 +1,9 @@
+{
+ "condition": "K4",
+ "curves": 320,
+ "compared": 320,
+ "max_abs_diff_early": 3.3306690738754696e-16,
+ "max_abs_diff_late": 2.220446049250313e-16,
+ "keys": 320,
+ "PASS": true
+}

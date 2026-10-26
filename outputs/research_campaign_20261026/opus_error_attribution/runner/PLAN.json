@@ -4,8 +4,8 @@
  "deadline_utc": "2026-10-28T13:33:01Z",
  "runner_slots": 3,
  "min_free_mb": 3072,
- "stop_runner": false,
- "campaign_closed": false,
+ "stop_runner": true,
+ "campaign_closed": true,
  "jobs": [
   {
    "name": "ea_diag",
@@ -14,13 +14,113 @@
    "priority": 1,
    "max_workers": 3,
    "python": "system",
-   "args": ["-m", "src.ea_diag", "work", "ea-diag", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.ea_diag",
+    "work",
+    "ea-diag",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/research_campaign_20261026/opus_error_attribution/ea-diag/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-diag/failed",
    "locks_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-diag/locks",
    "units_total": 272,
    "resume_token": "0"
+  },
+  {
+   "name": "ea_diag2",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.ea_diag2",
+    "work",
+    "ea-diag2",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261026/opus_error_attribution/ea-diag2/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-diag2/failed",
+   "locks_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-diag2/locks",
+   "units_total": 200,
+   "resume_token": "0"
+  },
+  {
+   "name": "ea_d2t",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.ea_diag2",
+    "work",
+    "ea-d2t",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261026/opus_error_attribution/ea-d2t/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-d2t/failed",
+   "locks_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-d2t/locks",
+   "units_total": 200,
+   "resume_token": "0"
+  },
+  {
+   "name": "ea_cand_dev",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.ea_cand",
+    "work",
+    "ea-cand-dev",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261026/opus_error_attribution/ea-cand-dev/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-cand-dev/failed",
+   "locks_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-cand-dev/locks",
+   "units_total": 272,
+   "resume_token": "0"
+  },
+  {
+   "name": "ea_fwd",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": [
+    "-m",
+    "src.ea_fwd",
+    "work",
+    "ea-fwd",
+    "--threads",
+    "1"
+   ],
+   "done_glob": "outputs/research_campaign_20261026/opus_error_attribution/ea-fwd/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-fwd/failed",
+   "locks_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-fwd/locks",
+   "units_total": 544,
+   "resume_token": "0"
   }
  ],
- "notes": ["2026-10-26: ea-unlimited (1 unit, 23 s) and ea-smoke (1 unit; R0_L = recorded A and R0_T = recorded D bit-exact) were run directly before the queue"]
+ "notes": [
+  "2026-10-26: ea-unlimited (1 unit, 23 s) and ea-smoke (1 unit; R0_L = recorded A and R0_T = recorded D bit-exact) were run directly before the queue",
+  "2026-10-26T14:34:44Z: job ea_diag2 added (200 units)",
+  "2026-10-26T14:50:20Z: job ea_d2t added (200 units)",
+  "2026-10-26T14:58:32Z: job ea_cand_dev added (272 units)",
+  "2026-10-26T15:56:33Z: job ea_fwd added (544 units)",
+  "2026-10-26T17:16:49Z: all registered numeric work done (diagnosis, amendments 1-2, candidate DEV, fresh validation); no further job",
+  "2026-10-26T17:16:49Z: stop_runner set",
+  "2026-10-26T17:16:49Z: campaign closed (work done before the window end)"
+ ]
 }

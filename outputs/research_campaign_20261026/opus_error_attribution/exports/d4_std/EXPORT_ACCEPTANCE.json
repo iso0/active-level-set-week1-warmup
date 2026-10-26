@@ -1,0 +1,12 @@
+{
+ "condition": "STD",
+ "learner_curves": 400,
+ "defined_curves": 400,
+ "aulc_cells_compared": 800,
+ "endpoint_cells_compared": 1200,
+ "max_abs_diff_BA_AULC_B8_B24": 2.220446049250313e-16,
+ "max_abs_diff_BA_AULC_B8_B60": 4.440892098500626e-16,
+ "max_abs_diff_rms_spend": 0.0,
+ "undefined_curves_agree": true,
+ "PASS": true
+}

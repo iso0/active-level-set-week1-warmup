@@ -1554,3 +1554,45 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - 0.95'e ulaşıp korumak ve güvenilir olasılık için A.
 
 Önceki donmuş kararlar değişmedi.
+
+### 2026-10-26 — EA çalışması: hata ayrıştırması ve hiperöncüllü eğilim modeli
+
+[Rapor](../outputs/research_campaign_20261026/opus_error_attribution/FINAL_REPORT_EA.md), [teşhis](../outputs/research_campaign_20261026/opus_error_attribution/diagnosis/DIAGNOSIS.md), [doğrulama](../outputs/research_campaign_20261026/opus_error_attribution/validation/VALIDATION.md).
+
+**Kurulum.**
+- Yeni tek 48 saatlik pencere 13:33 UTC'de açıldı; iş bitince 17:17 UTC'de kapatıldı.
+- En çok 3 işçi; Astra'nın payı kullanılmadı.
+- 1495 birim, hata yok, 6.6 işçi-saat.
+
+**Teşhis (aynı yollar, oracle'lar yalnız değerlendiricide).**
+- Darboğaz, sorgulanmamış koşuların derinliği. Gerçek derinlik erken +0.040, geç +0.027 BA kazandırıyor.
+- Erken açığın çoğu bilgi sınırı. İdeal hiperparametreler yalnız +0.005, sınırsız veri +0.022 getiriyor.
+- Sınıflandırıcı ailesi, temsil ve seçici darboğaz değil.
+- HA_TREND'in geç kaybı, küçük n'de ML-II hiperparametre kestiriminin aşırı uyumundan geliyor: sınıra dayanma, gürültünün çökmesi.
+
+**Geliştirme ve doğrulama.**
+- C1: HA_TREND + sabit, zayıf hiperöncül altında MAP.
+- DEV'de kayıtlı taşıma kuralını geçmedi (geç −0.0015). Kayıtlı yön değişikliğiyle bir kez taze kimliklerde (163–202) üç ayrı hükümle sınandı:
+  - erken +0.0056: gösterildi;
+  - 0.93: daha kötü değil;
+  - 0.95: güvenilir, tasarruf +2.0 simülasyon: gösterildi, tek test;
+  - geç dönemde kayıp yok;
+  - log loss A ile aynı.
+- Eski beş bölgede bölge başına uyarı var.
+- Tez öğrenicisi (HA_LEAN + margin) değiştirilmedi. Sonraki adım: 0.95 hükmünü daha büyük bir taze testte tekrarlamak.
+
+**Astra'nın astra_local_correction_20261024 teslimi** (kaynaklı kısa kayıt, salt okunur).
+- **Durum dosyası:** `C:\Users\ozgur\Documents\thesis_shared_runtime\campaign_20261024\astra_state.json`. Durum CLOSED (2026-10-26 06:50 UTC). Gerekçe: "Both prospective DEV screens failed; complete artifact handoff sealed; no pending units."
+- **Mühürlü paket:** `C:\Users\ozgur\Documents\Codex\2026-10-10\files-pasted-by-the-user-you\outputs\astra_local_correction_20261024\handoff`. SHA-256 değerleri:
+  - README.md 4bc5e1d2…;
+  - api.py 256260b7…;
+  - local_core.py 7290682c…;
+  - coherent_core.py 0b684f4c…;
+  - __init__.py 845febae….
+- **README'ye göre:**
+  - iki yerel düzeltme DEV genişletme elemesini geçemedi: kompakt / kapılı / iz-eşlemeli yerel çekirdek bileşenleri ve "coherent" rank-one düzeltmeler;
+  - Astra'nın önerisi, güçlü GP / margin kontrolünü korumak ve paketi daha iyi bir kanonik Keyhole öğrenicisi olarak dağıtmamak;
+  - paketteki öğrenici sürekli bir "monitör" değişkenini modelliyor, P(gizli monitör ≥ 0); kayıtlı Keyhole etiketini kullanmıyor.
+- **Doğrulanmamış:**
+  - Astra'nın sayısal sonuçları ve paketin dışındaki evidence klasörü (okunmadı);
+  - kod çalıştırılmadı ve import edilmedi.

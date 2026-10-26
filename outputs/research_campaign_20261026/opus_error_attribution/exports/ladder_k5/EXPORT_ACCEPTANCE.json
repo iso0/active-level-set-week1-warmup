@@ -1,0 +1,9 @@
+{
+ "condition": "K5",
+ "curves": 400,
+ "compared": 320,
+ "max_abs_diff_early": 3.3306690738754696e-16,
+ "max_abs_diff_late": 2.220446049250313e-16,
+ "keys": 400,
+ "PASS": true
+}

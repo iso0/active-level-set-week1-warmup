@@ -1,0 +1,18 @@
+{
+    "attempts":  {
+
+                 },
+    "consecutive_failures":  {
+                                 "ea_diag":  0,
+                                 "ea_diag2":  0,
+                                 "ea_d2t":  0,
+                                 "ea_fwd":  0,
+                                 "ea_cand_dev":  0
+                             },
+    "paused":  {
+
+               },
+    "resume_tokens":  {
+
+                      }
+}

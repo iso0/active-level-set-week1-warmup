@@ -1,0 +1,86 @@
+{
+    "utc":  "2026-10-26T17:17:19Z",
+    "runner_pid":  20572,
+    "runner_start_utc":  "2026-10-26T13:47:22Z",
+    "cycle":  413,
+    "host":  "BURAK",
+    "state":  "IDLE",
+    "budget":  {
+                   "t0_utc":  "2026-10-26T13:33:01Z",
+                   "deadline_utc":  "2026-10-28T13:33:01Z",
+                   "elapsed_h":  3.74,
+                   "remaining_h":  44.26
+               },
+    "capacity":  {
+                     "logical_cpus":  8,
+                     "opus_cap":  3,
+                     "runner_slots":  3,
+                     "opus_used":  1,
+                     "opus_other_leaves":  1,
+                     "astra_used":  0,
+                     "free_mb":  17611,
+                     "min_free_mb":  3072,
+                     "leaves":  "other:22548"
+                 },
+    "workers":  [
+
+                ],
+    "jobs":  {
+                 "ea_d2t":  {
+                                "done":  200,
+                                "failed":  0,
+                                "locks":  0,
+                                "total":  200,
+                                "remaining":  0,
+                                "last_unit":  "STD__r122_f5.json.gz",
+                                "last_unit_utc":  "2026-10-26T14:51:42Z",
+                                "paused":  false,
+                                "live_workers":  0
+                            },
+                 "ea_diag2":  {
+                                  "done":  200,
+                                  "failed":  0,
+                                  "locks":  0,
+                                  "total":  200,
+                                  "remaining":  0,
+                                  "last_unit":  "STD__r122_f5.json.gz",
+                                  "last_unit_utc":  "2026-10-26T14:46:03Z",
+                                  "paused":  false,
+                                  "live_workers":  0
+                              },
+                 "ea_cand_dev":  {
+                                     "done":  272,
+                                     "failed":  0,
+                                     "locks":  0,
+                                     "total":  272,
+                                     "remaining":  0,
+                                     "last_unit":  "K4__s24_b3.json.gz",
+                                     "last_unit_utc":  "2026-10-26T15:49:38Z",
+                                     "paused":  false,
+                                     "live_workers":  0
+                                 },
+                 "ea_diag":  {
+                                 "done":  272,
+                                 "failed":  0,
+                                 "locks":  0,
+                                 "total":  272,
+                                 "remaining":  0,
+                                 "last_unit":  "K4__s16_b4.json.gz",
+                                 "last_unit_utc":  "2026-10-26T14:20:10Z",
+                                 "paused":  false,
+                                 "live_workers":  0
+                             },
+                 "ea_fwd":  {
+                                "done":  544,
+                                "failed":  0,
+                                "locks":  0,
+                                "total":  544,
+                                "remaining":  0,
+                                "last_unit":  "K4__s32_b4__X.json.gz",
+                                "last_unit_utc":  "2026-10-26T17:13:36Z",
+                                "paused":  false,
+                                "live_workers":  0
+                            }
+             },
+    "restart":  "powershell -NoProfile -ExecutionPolicy Bypass -File src\\ea_start_runner.ps1   (idempotent; skips finished units; lock prevents a second runner)"
+}

@@ -1,0 +1,9 @@
+{
+ "condition": "STD",
+ "curves": 2600,
+ "compared": 2000,
+ "max_abs_diff_early": 3.3306690738754696e-16,
+ "max_abs_diff_late": 3.3306690738754696e-16,
+ "keys": 2600,
+ "PASS": true
+}

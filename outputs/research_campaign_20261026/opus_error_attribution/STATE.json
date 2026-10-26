@@ -2,15 +2,21 @@
  "campaign_id": "opus_error_attribution_20261026",
  "start_utc": "2026-10-26T13:33:01Z",
  "deadline_utc": "2026-10-28T13:33:01Z",
+ "closed_utc": "2026-10-26T17:17:19Z",
  "start_head": "acf673924b44413a64f55511660baefd9256e9a0",
- "stage": "2_candidate_dev",
- "stages_done": ["1_registration", "1_diagnosis"],
- "commits": {"hypotheses": "d4dc329d", "diag_code": "3a5595ed", "amendment1": "fb7e361f", "amendment2": "613c9c7b", "candidates": "0020b07e"},
- "jobs": {"ea-unlimited": "1/1", "ea-smoke": "1/1", "ea-diag": "272/272", "ea-theta": "1/1", "ea-diag2": "200/200", "ea-theta-trend": "1/1", "ea-d2t": "200/200", "ea-cand-smoke": "1/1", "ea-cand-dev": "running"},
+ "stage": "closed",
+ "stages_done": ["1_registration", "1_diagnosis", "2_candidate_dev", "3_validation", "4_exports_records"],
+ "commits": {"hypotheses": "d4dc329d", "diag_code": "3a5595ed", "amendment1": "fb7e361f", "amendment2": "613c9c7b", "candidates": "0020b07e", "validation_freeze": "04fc468a"},
+ "jobs": {"ea-unlimited": "1/1", "ea-smoke": "1/1", "ea-diag": "272/272", "ea-theta": "1/1", "ea-diag2": "200/200", "ea-theta-trend": "1/1", "ea-d2t": "200/200",
+          "ea-cand-smoke": "1/1", "ea-cand-dev": "272/272", "ea-fwd-smoke": "2/2", "ea-fwd": "544/544"},
  "decisions": [
-  "diagnosis: dominant early stage = depth at unqueried inputs (information limit); H-B and H-C rejected; late near input-only ceiling; selector slack small",
-  "amendment-2 rule met (D2T - R0_T early +0.0031 >= 0.002): one emulator-inference candidate registered (C1)"
+  "diagnosis: dominant stage = depth at unqueried inputs (information limit + small-n hyperparameter estimation of the trend GP); H-B and H-C rejected; late near the input-only ceiling; selector slack small",
+  "amendment-2 rule met (D2T - R0_T early +0.0031): one candidate C1 registered",
+  "DEV carry rule NOT met for C1 (late -0.0015); recorded direction change: one fresh validation with separate verdicts",
+  "fresh validation (163-202): V-EARLY SHOWN (+0.0056), V-0.93 NOT WORSE, V-0.95 RELIABLE + saving SHOWN (+2.0, single test), late NO LOSS SHOWN, harm limits ok, K5 per-region warning",
+  "thesis learner unchanged (HA_LEAN + margin); next: replicate the 0.95 verdict on >= 80 fresh repeats"
  ],
  "notes": ["2026-10-26T13:33:01Z: task started; Astra 1024 campaign CLOSED; handoff copied read-only to the scratchpad with SHA-256",
-           "2026-10-26T14:36Z: an EL-campaign plan file was edited by mistake with the EL helper and immediately restored with git checkout (no content change committed)"]
+           "2026-10-26T14:36Z: an EL-campaign plan file was edited by mistake with the EL helper and immediately restored with git checkout (no content change committed)",
+           "2026-10-26T15:57Z: a waiter pointed at the EL folder was started by mistake and stopped (no effect on compute)"]
 }
