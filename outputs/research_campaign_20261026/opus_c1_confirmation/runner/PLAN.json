@@ -4,8 +4,8 @@
  "deadline_utc": "2026-10-28T18:05:16Z",
  "runner_slots": 3,
  "min_free_mb": 3072,
- "stop_runner": false,
- "campaign_closed": false,
+ "stop_runner": true,
+ "campaign_closed": true,
  "jobs": [
   {
    "name": "c1c_main",
@@ -14,7 +14,14 @@
    "priority": 1,
    "max_workers": 3,
    "python": "system",
-   "args": ["-m", "src.c1c_fwd", "work", "c1c-main", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.c1c_fwd",
+    "work",
+    "c1c-main",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/research_campaign_20261026/opus_c1_confirmation/c1c-main/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261026/opus_c1_confirmation/c1c-main/failed",
    "locks_dir": "outputs/research_campaign_20261026/opus_c1_confirmation/c1c-main/locks",
@@ -28,7 +35,14 @@
    "priority": 2,
    "max_workers": 3,
    "python": "system",
-   "args": ["-m", "src.c1c_fwd", "work", "c1c-start", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.c1c_fwd",
+    "work",
+    "c1c-start",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/research_campaign_20261026/opus_c1_confirmation/c1c-start/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261026/opus_c1_confirmation/c1c-start/failed",
    "locks_dir": "outputs/research_campaign_20261026/opus_c1_confirmation/c1c-start/locks",
@@ -42,7 +56,14 @@
    "priority": 3,
    "max_workers": 3,
    "python": "system",
-   "args": ["-m", "src.c1c_prior", "work", "c1c-prior", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.c1c_prior",
+    "work",
+    "c1c-prior",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/research_campaign_20261026/opus_c1_confirmation/c1c-prior/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261026/opus_c1_confirmation/c1c-prior/failed",
    "locks_dir": "outputs/research_campaign_20261026/opus_c1_confirmation/c1c-prior/locks",
@@ -51,6 +72,9 @@
   }
  ],
  "notes": [
-  "2026-10-26: c1c-repro (4 units, EA units bit-exact), c1c-prior-repro (2 units, scale 1 bit-exact) and the RC22 startup check (80/80) were run directly before the queue, on OLD IDs only"
+  "2026-10-26: c1c-repro (4 units, EA units bit-exact), c1c-prior-repro (2 units, scale 1 bit-exact) and the RC22 startup check (80/80) were run directly before the queue, on OLD IDs only",
+  "2026-10-26T21:45:29Z: all registered work done (c1c-main 800, c1c-start 400, c1c-prior 200; 0 failed); evaluation, exports (5/5 + headline 3/3 PASS), reports and records written; no further job",
+  "2026-10-26T21:45:29Z: stop_runner set",
+  "2026-10-26T21:45:29Z: campaign closed (work done before the window end)"
  ]
 }

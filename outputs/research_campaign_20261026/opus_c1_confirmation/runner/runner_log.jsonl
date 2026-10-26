@@ -1,0 +1,20 @@
+{"event":"RUNNER_START","pid":14908,"logical_cpus":8,"opus_cap":3,"utc":"2026-10-26T18:33:46Z"}
+{"event":"WORKER_START","job":"c1c_main","worker":1,"pid":31756,"opus_used_before":0,"astra_used":0,"free_mb":17253,"leaves":"","utc":"2026-10-26T18:33:46Z"}
+{"event":"WORKER_START","job":"c1c_main","worker":2,"pid":33472,"opus_used_before":1,"astra_used":0,"free_mb":16938,"leaves":"","utc":"2026-10-26T18:34:17Z"}
+{"event":"WORKER_START","job":"c1c_main","worker":3,"pid":8888,"opus_used_before":2,"astra_used":0,"free_mb":16869,"leaves":"","utc":"2026-10-26T18:34:48Z"}
+{"event":"WORKER_END","job":"c1c_main","worker":2,"pid":33472,"exit_code":0,"locks_released":0,"utc":"2026-10-26T20:19:18Z"}
+{"event":"WORKER_END","job":"c1c_main","worker":1,"pid":31756,"exit_code":0,"locks_released":0,"utc":"2026-10-26T20:19:18Z"}
+{"event":"WORKER_END","job":"c1c_main","worker":3,"pid":8888,"exit_code":0,"locks_released":0,"utc":"2026-10-26T20:19:18Z"}
+{"event":"WORKER_START","job":"c1c_start","worker":1,"pid":23772,"opus_used_before":0,"astra_used":0,"free_mb":18540,"leaves":"","utc":"2026-10-26T20:19:18Z"}
+{"event":"WORKER_START","job":"c1c_start","worker":2,"pid":23048,"opus_used_before":1,"astra_used":0,"free_mb":18433,"leaves":"","utc":"2026-10-26T20:19:49Z"}
+{"event":"WORKER_START","job":"c1c_start","worker":3,"pid":16476,"opus_used_before":2,"astra_used":0,"free_mb":18257,"leaves":"","utc":"2026-10-26T20:20:20Z"}
+{"event":"WORKER_END","job":"c1c_start","worker":3,"pid":16476,"exit_code":0,"locks_released":0,"utc":"2026-10-26T21:12:48Z"}
+{"event":"WORKER_END","job":"c1c_start","worker":2,"pid":23048,"exit_code":0,"locks_released":0,"utc":"2026-10-26T21:12:48Z"}
+{"event":"WORKER_END","job":"c1c_start","worker":1,"pid":23772,"exit_code":0,"locks_released":0,"utc":"2026-10-26T21:12:48Z"}
+{"event":"WORKER_START","job":"c1c_prior","worker":1,"pid":32180,"opus_used_before":0,"astra_used":0,"free_mb":18580,"leaves":"","utc":"2026-10-26T21:12:48Z"}
+{"event":"WORKER_START","job":"c1c_prior","worker":2,"pid":31144,"opus_used_before":1,"astra_used":0,"free_mb":18351,"leaves":"","utc":"2026-10-26T21:13:19Z"}
+{"event":"WORKER_START","job":"c1c_prior","worker":3,"pid":12284,"opus_used_before":2,"astra_used":0,"free_mb":18272,"leaves":"","utc":"2026-10-26T21:13:50Z"}
+{"event":"WORKER_END","job":"c1c_prior","worker":3,"pid":12284,"exit_code":0,"locks_released":0,"utc":"2026-10-26T21:33:12Z"}
+{"event":"WORKER_END","job":"c1c_prior","worker":2,"pid":31144,"exit_code":0,"locks_released":0,"utc":"2026-10-26T21:33:12Z"}
+{"event":"WORKER_END","job":"c1c_prior","worker":1,"pid":32180,"exit_code":0,"locks_released":0,"utc":"2026-10-26T21:33:12Z"}
+{"event":"RUNNER_END","reason":"stop_runner set in PLAN.json and no live workers","utc":"2026-10-26T21:45:49Z"}

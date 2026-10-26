@@ -1596,3 +1596,33 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - **Doğrulanmamış:**
   - Astra'nın sayısal sonuçları ve paketin dışındaki evidence klasörü (okunmadı);
   - kod çalıştırılmadı ve import edilmedi.
+
+### 2026-10-26 — C1C: C1 + margin doğrulaması (kayıtlı 80 tekrar)
+
+[Rapor](../outputs/research_campaign_20261026/opus_c1_confirmation/FINAL_REPORT_C1C.md), [karar](../outputs/research_campaign_20261026/opus_c1_confirmation/DECISION_C1C.md), [tablolar](../outputs/research_campaign_20261026/opus_c1_confirmation/evaluation/RESULTS_C1C.md), [dış plan](../outputs/research_campaign_20261026/opus_c1_confirmation/EXTERNAL_VALIDATION_PLAN_C1C.md).
+
+**Kurulum**
+- Yeni tek 48 saatlik pencere 18:05 UTC'de açıldı; iş bitince erken kapatıldı.
+- En çok 3 işçi; Astra'nın payı kullanılmadı.
+- Tarif, kimlikler, ölçütler ve karar kuralları hiçbir yeni sonuçtan önce donduruldu (63e9ae1d, push).
+- Dondurma öncesi yeniden üretim yalnız eski kimliklerde yapıldı: EA birimleri 4/4 bit düzeyinde aynı; RC22 başlangıçları 80/80.
+- 1.406 birim, hata yok, 8.8 işçi-saat.
+
+**Sonuç** (C1 + margin − HA_LEAN + margin; 80 yeni tekrar, 400 öğrenici). Kayıtlı bütün hükümler geçti:
+- erken BA-AULC +0.0053 [+0.0039], gösterildi (EA'da +0.0056);
+- 0.90 / 0.93 / 0.95 için +0.38 / +1.09 / +1.81 daha az simülasyon; 0.95 tekrarlandı;
+- 0.95 GÜVENİLİR;
+- geç dönem 0.003 içinde korundu;
+- başlangıçtan ve önsel genişliğinden bağımsız.
+
+**Çekinceler**
+- 0.95'te sürdürme iyileşmedi (−0.007; EA'daki +0.055 tekrarlanmadı).
+- 0.95 tasarrufu çoğunlukla daha çok öğrenicinin hedefe ulaşmasından geliyor.
+- Alternatif başlangıçlarda 0.95'i koruma gösterilmedi.
+- MAP düzeltmesi, aynı veride eski eğilimli modelin (D) geç kaybını ve log loss cezasını kaldırıyor.
+
+**Karar** (önceden kayıtlı eşleme)
+- C1 + margin, havuz içinde önerilen öğrenici.
+- HA_LEAN + margin, donmuş referans ve havuz dışına taşımada güvenli seçenek olarak kalıyor (K5 uyarısı sürüyor).
+- Doğrulama dalı kapandı.
+- Ioan için 176 koşuluk dış doğrulama planı önerildi; hiçbir simülasyon başlatılmadı, mesaj gönderilmedi.

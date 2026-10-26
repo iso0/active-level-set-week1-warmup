@@ -1,0 +1,16 @@
+{
+    "attempts":  {
+
+                 },
+    "consecutive_failures":  {
+                                 "c1c_start":  0,
+                                 "c1c_main":  0,
+                                 "c1c_prior":  0
+                             },
+    "paused":  {
+
+               },
+    "resume_tokens":  {
+
+                      }
+}

@@ -1,0 +1,80 @@
+{
+ "c1c-repro": {
+  "units": 4,
+  "failed": 0,
+  "unit_wall_hours_from_worker_logs": 0.0,
+  "units_with_wall": 0,
+  "cpu_hours_recorded": 0.032,
+  "first_finished": "2026-10-26T18:20:46+00:00",
+  "last_finished": "2026-10-26T18:21:22+00:00",
+  "learners": 2,
+  "simulations_opened_union_per_learner_mean": 68.0,
+  "simulations_opened_total_union": 136,
+  "simulations_per_arm_path": {
+   "A path (L)": 120,
+   "C1 path (X)": 120
+  },
+  "note": "each arm opens 60 runs per learner (8 shared startup + 52 queries); cross predictions reuse opened runs (0 extra)"
+ },
+ "c1c-prior-repro": {
+  "units": 2,
+  "failed": 0,
+  "unit_wall_hours_from_worker_logs": 0.009,
+  "units_with_wall": 2,
+  "cpu_hours_recorded": 0.001,
+  "first_finished": "2026-10-26T18:20:33+00:00",
+  "last_finished": "2026-10-26T18:20:35+00:00"
+ },
+ "c1c-main": {
+  "units": 800,
+  "failed": 0,
+  "unit_wall_hours_from_worker_logs": 5.225,
+  "units_with_wall": 800,
+  "cpu_hours_recorded": 5.95,
+  "first_finished": "2026-10-26T18:34:26+00:00",
+  "last_finished": "2026-10-26T20:19:02+00:00",
+  "learners": 400,
+  "simulations_opened_union_per_learner_mean": 67.84,
+  "simulations_opened_total_union": 27137,
+  "simulations_per_arm_path": {
+   "A path (L)": 24000,
+   "C1 path (X)": 24000
+  },
+  "note": "each arm opens 60 runs per learner (8 shared startup + 52 queries); cross predictions reuse opened runs (0 extra)"
+ },
+ "c1c-start": {
+  "units": 400,
+  "failed": 0,
+  "unit_wall_hours_from_worker_logs": 2.625,
+  "units_with_wall": 400,
+  "cpu_hours_recorded": 3.004,
+  "first_finished": "2026-10-26T20:19:54+00:00",
+  "last_finished": "2026-10-26T21:12:35+00:00",
+  "learners": 200,
+  "simulations_opened_union_per_learner_mean": 68.51,
+  "simulations_opened_total_union": 13702,
+  "simulations_per_arm_path": {
+   "A path (L)": 12000,
+   "C1 path (X)": 12000
+  },
+  "note": "each arm opens 60 runs per learner (8 shared startup + 52 queries); cross predictions reuse opened runs (0 extra)"
+ },
+ "c1c-prior": {
+  "units": 200,
+  "failed": 0,
+  "unit_wall_hours_from_worker_logs": 0.972,
+  "units_with_wall": 200,
+  "cpu_hours_recorded": 0.959,
+  "first_finished": "2026-10-26T21:13:09+00:00",
+  "last_finished": "2026-10-26T21:33:00+00:00"
+ },
+ "total_units": 1406,
+ "total_unit_wall_hours": 8.831,
+ "export_MB": {
+  "main_s1": 34.93,
+  "main_s2": 34.94,
+  "prior_dev": 11.77,
+  "start_local8": 17.26,
+  "start_rand8": 17.46
+ }
+}
