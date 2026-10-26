@@ -1,0 +1,26 @@
+{
+ "note": "EA study queue (owner instruction 2026-10-26). ONE 48-hour window from t0 (first action), never restarted by quota waits, runner restarts or session changes. src/ea_runner.ps1 (detached via src/ea_start_runner.ps1, supervised by src/ea_supervisor.ps1). At most 3 single-thread Opus workers (Astra 3, system 2 of 8 logical CPUs); Astra's share is never used. Coordination only through C:/Users/ozgur/Documents/thesis_shared_runtime/campaign_20261026/opus_state.json (own file).",
+ "t0_utc": "2026-10-26T13:33:01Z",
+ "deadline_utc": "2026-10-28T13:33:01Z",
+ "runner_slots": 3,
+ "min_free_mb": 3072,
+ "stop_runner": false,
+ "campaign_closed": false,
+ "jobs": [
+  {
+   "name": "ea_diag",
+   "enabled": true,
+   "kind": "pool",
+   "priority": 1,
+   "max_workers": 3,
+   "python": "system",
+   "args": ["-m", "src.ea_diag", "work", "ea-diag", "--threads", "1"],
+   "done_glob": "outputs/research_campaign_20261026/opus_error_attribution/ea-diag/units/*.json.gz",
+   "failed_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-diag/failed",
+   "locks_dir": "outputs/research_campaign_20261026/opus_error_attribution/ea-diag/locks",
+   "units_total": 272,
+   "resume_token": "0"
+  }
+ ],
+ "notes": ["2026-10-26: ea-unlimited (1 unit, 23 s) and ea-smoke (1 unit; R0_L = recorded A and R0_T = recorded D bit-exact) were run directly before the queue"]
+}
