@@ -103,7 +103,41 @@ def learner(task, unit, M, theta, budgets=DG.BUDS):
     return {"evals": out, "D4_capped": cap, "check_same_startup": bool(chk_start)}
 
 
+def theta_full_trend(M):
+    ids = M.index.to_numpy(str); Xall = M[list(P.INPUTS)].to_numpy(float); n = len(ids)
+    task = {"repeat": 0, "fold": 0, "ids": ids, "X": Xall, "pool": np.arange(n), "test": np.arange(0), "path": np.arange(n)}
+    Z = P.zstd(task); rev = K._rev_with(task, M, np.arange(n)); f = PC.depth_fit(task, rev, Z, "phys")
+    return {"theta": f["g"].theta.tolist(), "opt": f["g"].opt, "n": int(len(f["rows"]))}
+
+
+def depth_fit_fixed_trend(task, rev, Z, theta, rows):
+    """HA_TREND's depth GP (trend basis z_h with integrated N(0, 3^2) coefficient) with FIXED hyperparameters (evaluator-only D2T)."""
+    L = np.asarray(rows); Y = rev.paid_Y()[:, DCOL]; W = np.where(rev.paid_short(), C18.W_SHORT, 1.0); Lu = L[np.isfinite(Y[L])]
+    if (W[Lu] <= 100).sum() < 3:
+        return None
+    H = A.hcol(task)[:, None]
+    g = G.GP(H_cols=1, b=PC.B_TREND).fit(Z[Lu], Y[Lu], H=H[Lu], w=W[Lu], theta0=np.asarray(theta, float), optimize=False)
+    return {"g": g, "H": H, "rows": Lu}
+
+
+def learner_d2t(task, unit, M, theta, budgets=DG.BUDS):
+    Z = P.zstd(task); pos = {s: i for i, s in enumerate(task["ids"])}; paid_all = [pos[s] for s in unit["paid_ids"]]; te = np.asarray(task["test"]); h = A.hcol(task); out = []
+    for b in budgets:
+        rev = K._rev_with(task, M, paid_all[:b]); L = rev.paid; y_p = rev.paid_y(); y = y_p[L]; A_p = rev.paid_A(); usable = np.isfinite(A_p[L])
+        if len(set(y_p[L][usable].tolist())) < 2:
+            out.append({"budget": b, "one_class": True, "p": LN._f32(np.full(len(te), float(np.mean(y))))}); continue
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            F, E = cf_generic(rev, Z, te, lambda r: depth_fit_fixed_trend(task, rev, Z, theta, r), lambda f, idx: PC.depth_predict(f, Z, idx)[0])
+        out.append({"budget": b, "one_class": False, "p": LN._f32(DG.lin(F, h[L], y, E, h[te]))})
+    return {"evals": out}
+
+
 def units(job):
+    if job == "ea-theta-trend":
+        return [("THETA_TREND", ("theta_trend",))]
+    if job == "ea-d2t":
+        return [(f"STD__r{r}_f{f}", ("d2t", "STD", r, f)) for r in range(83, 123) for f in range(1, 6)]
     if job == "ea-theta":
         return [("THETA", ("theta",))]
     if job == "ea-diag2":
@@ -118,6 +152,15 @@ def work(job):
     if job == "ea-theta":
         def fn(name):
             return theta_full(M)
+    elif job == "ea-theta-trend":
+        def fn(name):
+            return theta_full_trend(M)
+    elif job == "ea-d2t":
+        th = RC.read_json_gz(OUT / "ea-theta-trend" / "units" / "THETA_TREND.json.gz")["theta"]; T = X.tasks_for({n: (None, v[1], v[2], v[3]) for n, v in S.items()}, M)
+
+        def fn(name):
+            kind, c, r, f = S[name]; task = T[(c, r, f)]; u = DG.path_unit(c, r, f)
+            return {"condition": c, "repeat": r, "fold": f, "test_ids": u["test_ids"], **learner_d2t(task, u, M, th)}
     else:
         th = RC.read_json_gz(OUT / "ea-theta" / "units" / "THETA.json.gz")["theta"]; T = X.tasks_for({n: (None, v[1], v[2], v[3]) for n, v in S.items()}, M)
 
