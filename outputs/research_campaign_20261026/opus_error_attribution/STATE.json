@@ -1,0 +1,12 @@
+{
+ "campaign_id": "opus_error_attribution_20261026",
+ "start_utc": "2026-10-26T13:33:01Z",
+ "deadline_utc": "2026-10-28T13:33:01Z",
+ "start_head": "acf673924b44413a64f55511660baefd9256e9a0",
+ "stage": "1_registration",
+ "stages_done": [],
+ "commits": {},
+ "jobs": {},
+ "decisions": [],
+ "notes": ["2026-10-26T13:33:01Z: task started; Astra 1024 campaign CLOSED; handoff copied read-only to the scratchpad with SHA-256 (README, api.py, local_core.py, coherent_core.py, __init__.py)"]
+}
