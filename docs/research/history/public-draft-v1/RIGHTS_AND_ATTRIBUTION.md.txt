@@ -1,0 +1,7 @@
+# Rights and attribution pending
+
+No license has been selected or granted by the assistant. PUBLIC_CANDIDATE is a review category, not ownership verification or publication approval. Included source and text retain campaign/commit/hash provenance, including historical implementations. Confirm the authority to distribute each campaign's authored text and source, and identify any third-party material before approval.
+
+Operational handoffs, schedulers and literature-review/excerpt files outside the chosen scope remain held. Figures, datasets and PDFs are absent. Published primary-thesis documents are referenced through verified pinned URLs instead of being newly copied. Known method components do not establish a novelty claim.
+
+The two publication decisions, exact membership hashes and campaign/type groups are in PUBLICATION_DECISIONS_REQUIRED.md. Those decisions concern content and terms only; they do not authorize a Git commit or upload.

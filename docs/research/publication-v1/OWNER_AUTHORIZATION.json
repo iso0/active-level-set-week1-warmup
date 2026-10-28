@@ -1,0 +1,21 @@
+{
+  "authorization_id": "OWNER-2026-10-28-HUB-V1",
+  "date": "2026-10-28",
+  "owner_public_identity": "iso0",
+  "ownership_confirmed_campaigns": [
+    "AD18",
+    "RP20",
+    "LC24",
+    "JL26"
+  ],
+  "approved_public_draft_files": 249,
+  "approved_public_draft_bytes": 2769453,
+  "approved_public_draft_manifest_sha256": "a143dff609a8b4b85656ce5db07c6ce83b5ee1d57d4f49ce6e0c275efdeed939",
+  "source_code_license": "MIT",
+  "original_documentation_license": "CC-BY-4.0",
+  "approved_additions": "Scoped licensing, attribution, navigation and verification records only",
+  "commit_and_push_authorized_branch": "research-hub-public-2026-10-28",
+  "merge_or_release_authorized": false,
+  "raw_data_or_sealed_oracle_authorized": false,
+  "original_owner_request_not_copied": "Only this public-safe decision summary is published; private source-machine paths are omitted"
+}

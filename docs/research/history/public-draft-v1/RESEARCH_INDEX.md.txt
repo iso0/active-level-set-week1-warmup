@@ -1,0 +1,25 @@
+# Thesis Research Hub — first publication draft
+
+**Local draft only. No file is approved, committed or uploaded.** Read [the two grouped publication decisions](PUBLICATION_DECISIONS_REQUIRED.md), then [scientific navigation by scope](docs/research/SCIENTIFIC_NAVIGATION.md). This is an editorial reading layer built only from reviewed PUBLIC_CANDIDATE sources and newly written safe summaries.
+
+## Campaigns
+
+| Campaign | Included source files | Original commit | Recorded conclusion and scope |
+|---|---:|---|---|
+| [AD18](research/astra/astra_deep_discovery_20261018/README_PUBLIC.md) | 75 | 833211403b50051e1bee25c8af38de8443e154b4 | Representation helps on the tested anisotropic boundary; local discovery/acquisition does not establish general improvement or query savings. Small-island failures and versioned amendments remain visible. |
+| [RP20](research/astra/astra_representation_planning_20261020/README_PUBLIC.md) | 63 | 797654d1aad53f28139db1ff994a6602096b7801 | The proposed local representation and two-step planning do not establish general useful gains. Three incomplete learned paths remain part of the reported record; no terminal outcomes are imputed. |
+| [LC24](research/astra/astra_local_correction_20261024/README_PUBLIC.md) | 40 | 3b3eb1f5cc596b30d445b0ecc59ac6baa71c98f2 | Both prospective DEV expansion screens failed. V2 reuses the exposed worlds/paths; no independent TEST or new local-model acquisition experiment was run. |
+| [JL26](research/astra/astra_joint_local_20261026/README_PUBLIC.md) | 43 | a71c638ac9338297021bfc5ba75bd73b1aa0cb9c | Joint global/local learning has a positive independent synthetic model increment, but misses the frozen practical screen versus fixed_extra. No acquisition expansion or physical validation is claimed. |
+
+## Registries
+
+- [Claim ledger](docs/research/CLAIM_LEDGER.csv): 16 scoped claims, with original versus editorial interpretation explicit.
+- [Experiment registry](docs/research/EXPERIMENT_REGISTRY.csv): 15 phase/control contexts, with negative and incomplete results retained.
+- [Reported findings](docs/research/REPORTED_FINDINGS.csv): existing reported values only, no recalculation.
+- [Archive manifest](docs/research/ARCHIVE_MANIFEST.md) and [machine-readable registry](docs/research/ARCHIVE_MANIFEST.csv): included, already-published, RESTRICTED and PENDING_ARCHIVE entries.
+- [Public provenance](docs/research/PROVENANCE_PUBLIC.json): logical repository IDs, commits, Git blob IDs and hashes without personal machine paths.
+- [Reproducible allowlist](PUBLICATION_ALLOWLIST.json), [file-level allowlist](PUBLICATION_ALLOWLIST.csv), [differences from all 608 local records](docs/research/DIFF_FROM_LOCAL_REVIEW.csv).
+- [Selection scope](docs/research/SELECTION_SCOPE.md), [rights](RIGHTS_AND_ATTRIBUTION.md), [data availability](DATA_AVAILABILITY.md), [reading guide](docs/research/READING_GUIDE.md).
+- [Draft validation](PUBLIC_DRAFT_VALIDATION.json), [SHA-256 manifest](PUBLIC_DRAFT_SHA256.csv), [group members and hashes](PUBLICATION_GROUP_MEMBERS.csv).
+
+Historical Track A M3 controls, Week 17–18 G3/binary and OLD depth-threshold findings, later C1C C1/HA_LEAN in-pool decisions and the four Astra synthetic campaigns remain separate. No external validation or general new-method claim is introduced. No figures, datasets, raw unit records, databases or active agent instructions are included.
