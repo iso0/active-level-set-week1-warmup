@@ -1,0 +1,31 @@
+{
+  "captured_utc": "2026-10-21T04:19:26.981800+00:00",
+  "failures": [
+    {
+      "unit": "test__w081__e2e__existing__h2",
+      "evidence": "results/audits/failed_evidence__test__w081__e2e__existing__h2.json.gz",
+      "sha256": "bcae6ddb531b977800a1557d7b039d9b01ca175a31769b7168bafa8efb040f53",
+      "partial_paid_count": 29,
+      "path_files": 63,
+      "status": "FAILED"
+    },
+    {
+      "unit": "test__w175__prefix__existing__h2",
+      "evidence": "results/audits/failed_evidence__test__w175__prefix__existing__h2.json.gz",
+      "sha256": "295a4eb2d6154e8da1b8c65e88a0aa8b46d65cbc1c855e249450ac5b54da3e37",
+      "partial_paid_count": 36,
+      "path_files": 12,
+      "status": "FAILED"
+    },
+    {
+      "unit": "test__w211__prefix__local__h2",
+      "evidence": "results/audits/failed_evidence__test__w211__prefix__local__h2.json.gz",
+      "sha256": "a962adba93d168d5c416584d046beea0f76870304d2e596fe26f66fa0664fab4",
+      "partial_paid_count": 36,
+      "path_files": 12,
+      "status": "FAILED"
+    }
+  ],
+  "source_sha256": "d56ebb465dcbcd74a6a1f7e8708db47cbc6f35466689a886060c302eb0a07dbf",
+  "scientific_endpoint_interpretation": "NONE; failed path and incomplete losses/costs preserved for review."
+}

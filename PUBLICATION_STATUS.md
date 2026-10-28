@@ -1,13 +1,12 @@
-# Research Hub v1 — owner-authorized publication scope
+# Research Hub publication status
 
-The owner authorized the reviewed 249-file public draft and the scoped license/navigation additions on 2026-10-28, subject to integrity/security/rights gates. This version belongs on the dedicated branch research-hub-public-2026-10-28; it does not merge into main or joint-depth-label-dev.
+Canonical main contains the original Research Hub v1 and the owner-authorized curated synthetic evidence extension.
 
-- Original owner-authored code/software specifications: MIT.
-- Original owner-authored research documents/protocols/explanations/editorial Hub metadata: CC BY 4.0.
-- Excluded originals, third-party dependencies, data, quotations, figures and existing thesis content outside the import retain their original terms.
-- Unpublished execution evidence stays PENDING_ARCHIVE or RESTRICTED; no additional raw asset is released.
-- Original scientific status labels and source commit/hash identifiers are preserved. Publication permission is not new statistical or physical validation.
+- The original v1 grant and source publication are retained in Git history at 86e400887a069ab054da55a76e34082835052e25.
+- The updated owner decision OWNER-2026-10-28-CURATED-EVIDENCE authorizes the 56 selected original self-generated synthetic result, configuration and figure files. Historical NEEDS_AUTHORIZATION and local-candidate workflow states do not override this explicit decision.
+- This extension publishes 56 files; 0 are withheld. Non-scientific private metadata is removed only from separately hashed publication copies.
+- Original software remains MIT; the explicit original research/protocol/result/figure and editorial scope is CC BY 4.0. No root-wide license or third-party dataset grant is added.
+- Scientific outcomes, failed/incomplete paths, missingness, frozen protocols and conclusions are unchanged. Permission to publish is not new statistical or physical validation.
+- The complete raw archive remains offline; no GitHub Release or LFS migration is created.
 
-[Licensing boundaries](docs/research/LICENSING_SCOPE.md), [path-by-path scope](docs/research/LICENSE_SCOPE.csv), [verification](docs/research/PUBLICATION_VERIFICATION.json), [checksums](docs/research/PUBLICATION_SHA256.csv), [authorization](PUBLICATION_DECISIONS_REQUIRED.md) and [input history](docs/research/history/public-draft-v1/README.md).
-
-The actual publication commit is the containing Git commit. Earlier unapproved draft records remain historical and do not override the explicit owner authorization recorded here.
+[Curated index](docs/research/CURATED_EVIDENCE_INDEX.md), [public manifest](docs/research/CURATED_EVIDENCE_MANIFEST.csv), [authorization](docs/research/CURATED_PUBLICATION_AUTHORIZATION.json), [transformation log](docs/research/CURATED_PUBLICATION_TRANSFORMATIONS.csv), [current checks](docs/research/CURATED_PUBLICATION_VERIFICATION.json), [scope](docs/research/LICENSING_SCOPE.md) and [checksums](docs/research/PUBLICATION_SHA256.csv).

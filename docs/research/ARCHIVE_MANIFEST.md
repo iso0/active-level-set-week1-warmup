@@ -1,4391 +1,3985 @@
 # Public evidence and archive registry
 
-INCLUDED identifies owner-authorized Research Hub v1 content under the explicit licensing scope. PUBLISHED_PRIMARY is a pinned reference retaining its original terms. RESTRICTED originals remain absent. PENDING_ARCHIVE does not assert an available asset or permission to release raw data. Private original filenames and forensic paths are omitted.
+INCLUDED identifies authorized files at their listed repository paths. PUBLISHED_PRIMARY retains its original pinned scope and terms. RESTRICTED/PENDING_ARCHIVE entries remain unavailable; these states do not promise an upload or redistribution permission. [Curated evidence](CURATED_EVIDENCE_INDEX.md) supersedes historical availability wording for its explicitly listed subset. The complete execution archive remains offline.
 
 ### PENDING-03096A61A6316515
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-06F94F641590D4DC
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-0E346DB97912B891
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-0E7742DA089B2C84
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-12DBEA6E47D0AFCE
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-13A8608413FFFEE7
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-16038A7AC5CCCC54
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-169075671F075370
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-198E701CD0E140CA
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-1BC5577CF87FAE38
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-2080A2AB0DF909C4
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-238467DAFFBBA985
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-258CC53D3A5AA87C
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-28CD6E0615C0ECB4
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-2FBB5734404262FF
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-2FC6FF7658B762E8
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-333EF670090450E0
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-35B29B53589C56BC
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-394DEBF4E6056220
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-3C6FE757134715BC
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-42536C6325E9DB62
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-42D34E68B81D9621
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-4318B9F650225BA7
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-48C8192A1CFB7F37
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-49A6E0D0FD18893A
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-4CD92147D114F1B0
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-4F52A38D7490F7CF
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-587BC7F868641B82
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-59C761C34A88664D
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-5D20D4D00E1CEFCC
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-61E8B4614439A1B3
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-62068CBA162CFC96
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-630ADE4149E1E550
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-6321C9C50CD3C8E4
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-6495EE202797AD5B
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-65ADC0467400B3DF
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-66CF6CEB5A94571D
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-67D183CBA6ED8FCD
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-6B3EFE42D1E3571B
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-6C675EF3F5C2E4D5
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-708EB00D7499E5F1
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-7097E89D366FDD9A
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-71548672C3A1F46D
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-7261D3BB59C7AA8F
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-7A8A099A8FAB900F
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-7E1C39B7741E88E1
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-7F7E4439B2AB6EA6
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-7F7F97630FDA88BA
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-839DBCB5F1CD17F0
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-84C5E4F6FD6C4599
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-86DCAA214CFCE02B
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-880E563EFC2B9BDD
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-8AD7B759E8A328CF
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-8F2991CC7AD4584F
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-97D2FBBAA77A62CD
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-9FD39B523371798B
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-A248D8C23323A335
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-A2EFDCDDC920301A
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-A7BA1595E9456149
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-A7F0F4122D6FE963
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-AABEC29C96C336D3
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-AAD70CEEBBD5EB41
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-AC7A346C985397C2
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-B07A2BE58EB0AD5B
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-B0D1CAEE3A0C7561
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-B0E89C462B3B609B
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-B3BEA26AF90AFC63
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-B3D8571D6751D60F
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-B6994FE6C88F6B83
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-B7BD02E857469C71
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-B88DBDE50034B934
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-BCDEA8C276695E12
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-BE209D48862A908C
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-BF3C68028D5EF1E1
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-BF3F5E6246B5B41B
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-BFEA1C6CAF2FB504
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-C23557882757EB63
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-C64A0B446EB98572
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-C881FB58381B2EDA
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-CAED592B8D945DEE
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-CB9CF72B19F95D1F
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-CEE103E51B6199D8
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-CF7205116F1C419F
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-CFE22BF3216C9F78
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-D31211C2970B1AE1
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-D707D717816E19A5
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-DA3FD2DC4211239F
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-DB0E92DC313181F7
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-DD9AD56A9AF662C7
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-DFD26430349ED058
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-E048DD027C264AD3
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-E3D8EDE98926C98F
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-E82074791F427E8D
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-EB9BD255BD49E966
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-EC4AF519D215B8A3
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-F6F0532E24BEAA18
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-FAD4256A1E3E9C9A
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### PENDING-FB3AFC4F3E0E17B9
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Referenced evidence or scholarly reference outside this approved-host reading scope.
+- Referenced evidence or scholarly reference outside this approved-host reading scope
 
 ### RAW-AD18
 
 - Status: **PENDING_ARCHIVE**; campaign: AD18.
-- Raw execution/data evidence outside this publication draft.
+- Raw execution/data evidence outside this publication draft
 
 ### RAW-JL26
 
 - Status: **PENDING_ARCHIVE**; campaign: JL26.
-- Raw execution/data evidence outside this publication draft.
+- Raw execution/data evidence outside this publication draft
 
 ### RAW-LC24
 
 - Status: **PENDING_ARCHIVE**; campaign: LC24.
-- Raw execution/data evidence outside this publication draft.
+- Raw execution/data evidence outside this publication draft
 
 ### RAW-RP20
 
 - Status: **PENDING_ARCHIVE**; campaign: RP20.
-- Raw execution/data evidence outside this publication draft.
+- Raw execution/data evidence outside this publication draft
 
 ### REC-GEN-0001
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0001; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8c6c72d804c462ba795e1a42da1932fec8ec6ba23912fd504aae395e34be0a89.
+- Reviewed record GEN-0001; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0002
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0002; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 090833332c1b418d249bef17508ac72dbce1e081aab987a711ab206e0bdc3154.
+- Reviewed record GEN-0002; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0003
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0003; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3dbdcd0c4a1d923bf3b82995f030bcd97b619ddaf4c0c939a296e3cff9dd5584.
+- Reviewed record GEN-0003; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0004
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0004; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: bdc744036af5f26a935aad1f2f36cefa76b16d4c1835f7f114ca897ab6fbf3de.
+- Reviewed record GEN-0004; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0005
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0005; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a0fb85ebb058975099d5f123215d0cd473d5227da25c46db802fdc2e3619e73d.
+- Reviewed record GEN-0005; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0006
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0006; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: dbc1c378a17833c4685f4a9798a0ec01d320303c30e49af04508e6636c686b9e.
+- Reviewed record GEN-0006; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0007
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0007; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 12133245f6d5d2db15bc73979a20241730e5d22c1daf4d13722e192b0e10964d.
+- Reviewed record GEN-0007; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0008
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0008; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d48cda30f44e15a7c7f82d45583b169cd0eef0a5d3a4d9d641650111156aba88.
+- Reviewed record GEN-0008; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0009
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0009; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 869b4d00010fc8cb795aaa36172c55ca586d4842399ddd02ced95574db938819.
+- Reviewed record GEN-0009; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0010
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record GEN-0010; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a64cbd3950eeeb8c5c2c13636fcb7f87c11a2895de11f3d804d65278c7e8fe76.
+- Reviewed record GEN-0010; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0011
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0011; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1f6b0541a079216153d1586bd2186e88813158b3f7bcdac76958127e787ccb61.
+- Reviewed record GEN-0011; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0012
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0012; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 53834ee130058b9a634cf6a55a610aec30c24c84cffe07001c0d983daf4b1a7a.
+- Reviewed record GEN-0012; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0013
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0013; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1def067c249d76e6125244ff510afc6207ddba4dd644aa4f872caea9d768a165.
+- Reviewed record GEN-0013; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0014
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0014; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4d975ea1a4ba839e776e4ecff2a463af88dac82ce6df9f2d2f7b0e00d313edb7.
+- Reviewed record GEN-0014; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0015
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0015; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 232b21752a6c025e875892de151934494900bd3208cda6a4f96abf9383daa872.
+- Reviewed record GEN-0015; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0016
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0016; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 025b67a59b7b8168576d577fb925ee86a36db7ccbde5ea33bb53594458c2e54c.
+- Reviewed record GEN-0016; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0017
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0017; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b7a306ff65c1904a153dde5255735d8b0c648feeb642597e4cf492308da3b2f1.
+- Reviewed record GEN-0017; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0018
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0018; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 36d6cd1b7393a5818e200f9c59eca0e1554f38799a9e8dd4ee0ab3581294dda5.
+- Reviewed record GEN-0018; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0019
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0019; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3299662dc76e83941f85d5df2749ab0e180241eb8bd0391e47b012e46e5b735a.
+- Reviewed record GEN-0019; original excluded or replaced by a public editorial summary
 
 ### REC-GEN-0020
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record GEN-0020; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 33d029d3159361f25ed26f120ac7ce3b9e2538f506ed022167464ad9e264194b.
+- Reviewed record GEN-0020; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0001
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0001; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b73d269aa8fd697ad04c8eac67c4c9327bf89e4704fc243d5952cc316bef56e8.
+- Reviewed record PKG-0001; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0002
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0002; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6bebdebb268a39a747c6de8b00697b544bfd83200eb549de0cdeb5cba89caf70.
+- Reviewed record PKG-0002; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0003
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0003; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 25eb77b134219d15172495c1b9b6a47e7bd46bc70e50e79005fb05530a17f572.
+- Reviewed record PKG-0003; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0004
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0004; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fb7f0eff031d7ff26b9042e93cced17efe2338104e2ef8e22a4d61c4bf57d550.
+- Reviewed record PKG-0004; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0005
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0005; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fe65f679526abb994c61e421fb0a25573eb05dc6e52411062cd01960dac4170c.
+- Reviewed record PKG-0005; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0006
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0006; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 58c3968570b072cd518d197ba3225c6c5e8add001bde15a150bd28775dde64d9.
+- Reviewed record PKG-0006; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0007
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0007; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c058affe2d116c4509e4e189e8bcc62c4460e7e936bec336ac49871d447b44d7.
+- Reviewed record PKG-0007; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0008
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0008; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0795812cba77d3e166db2c7b6e2e785ccf8c2b769288bc81b6d7fca93ab3c687.
+- Reviewed record PKG-0008; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0009
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0009; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 7d464984a8eb48eebc7cc53ef0143580171221193f2fc18b74edd23f61bb38a7.
+- Reviewed record PKG-0009; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0010
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0010; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 76616529e8fbd35d2e941887f17de1a1c638b524550e0f44e736db2caa721253.
+- Reviewed record PKG-0010; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0011
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0011; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c411907b0f1867982b089d6fd534eeedad44e6ada5472a891bd6688febdfd7f3.
+- Reviewed record PKG-0011; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0012
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0012; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a298fd30e9e02d9a020bf815a5c4556c002e175d5dd00978fb56f1d95fcd9fa9.
+- Reviewed record PKG-0012; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0013
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0013; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: cdabdaa49addbf7b7d3d4d7298f8a22e9b4362830f9ea87d593ba5b76333a673.
+- Reviewed record PKG-0013; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0014
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0014; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d6b519048944e224567c7429a7f2e4b7a3d1e1f8f2090181f7af487deb65adc6.
+- Reviewed record PKG-0014; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0015
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0015; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8156e195cdd1ce9a4bb09dc177aebfa021c3b6ecdda20536c6f9c251364455d9.
+- Reviewed record PKG-0015; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0016
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0016; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 75a20b42e7c9f62c12cd335d7a896c78c6bc0fd3eae78c68608f4906d422409d.
+- Reviewed record PKG-0016; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0017
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0017; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 73c32db67e75ad33bf8a8a946ca8794aeb52194485d355144dfe9a15c50a6666.
+- Reviewed record PKG-0017; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0018
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0018; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e6b9119217f87a397b7bf5e7b4a3661e4bb61a1e0488797ea00f6746c8725438.
+- Reviewed record PKG-0018; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0019
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0019; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9ae0b1d165648ec1733eead2c7e7a506099e3285e5f562a830b5e470aa6191f2.
+- Reviewed record PKG-0019; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0020
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0020; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 417dcb733b0e9beb95b5756ea403b10a71f4002264a5249eebdd540a40e7bed4.
+- Reviewed record PKG-0020; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0021
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0021; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fa81d6c9e857762e3bf5cbee08baf38cdcaa3799de8a32c1791958c82864c4a4.
+- Reviewed record PKG-0021; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0022
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0022; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: eedc5faa0736e3ac55bd724574a2a6108532c87d07dc8002fb12f78771bee964.
+- Reviewed record PKG-0022; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0023
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0023; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1393d27d77d8c16c163cfd30dd3b12db19032145901d4c647789b005d01e2477.
+- Reviewed record PKG-0023; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0024
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0024; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 82e70a13088e7e2f195a6c4016e4281eecad404231c0b4514710473e3df615fb.
+- Reviewed record PKG-0024; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0025
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0025; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 673fee65853aad351015efa3300054cc7a6086dfb2696ab2317f74929b01e5b1.
+- Reviewed record PKG-0025; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0026
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0026; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3cef86b6e39350ade317a775bc6c561bf35d6aa6f97a529e54c17bb38088ff7c.
+- Reviewed record PKG-0026; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0027
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0027; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8896de0ba9572bb06375cd761c802da1d4a049475f82dee4ad15489ac83ff4d9.
+- Reviewed record PKG-0027; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0028
 
 - Status: **RESTRICTED**; campaign: EDITORIAL.
-- Reviewed record PKG-0028; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e306934bbac4d70beaf21fd5b9b49871e0bc5b77be28802ec5bd203cb4eb733e.
+- Reviewed record PKG-0028; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0029
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0029; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b446dde25970efde6c8d87f2b917b95b6514494af4b15bc62a5e36c9c5af38ef.
+- Reviewed record PKG-0029; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0030
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0030; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4c2745f00ca4b5a2373bf47cbe17396c4519c393b4fe9061eec880c6f83900de.
+- Reviewed record PKG-0030; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0031
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0031; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fa3988519efcbccb8cfd172ec861ed00feaf1650cb226040b62447fd52412e0b.
+- Reviewed record PKG-0031; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0032
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0032; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 008d2adaa5583e0206ba7d43106c14928aa3a06428a2786f3c2fbc68b3d9b45b.
+- Reviewed record PKG-0032; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0033
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0033; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 591b0c8e91a6af4233fe8e8a6ef09baea2ca7b744010a2d164366004bb837eeb.
+- Status: **INCLUDED**; campaign: AD18.
+- Retain the original final outcome/status record, including negative decisions; not a new estimate.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/CONTROLLED_RESULTS.json).
+- Curated evidence: CE-AD18-001; published SHA-256: 591b0c8e91a6af4233fe8e8a6ef09baea2ca7b744010a2d164366004bb837eeb.
 
 ### REC-PKG-0034
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0034; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fcae312867147e2cdf5bab41c56b1eaf06b4deb1f48466d2bfd23d444df4b70f.
+- Reviewed record PKG-0034; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0035
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0035; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 7d9a13f3bbb3405275cededc31454810839a631d133c6633c97554099811c6ca.
+- Reviewed record PKG-0035; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0036
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0036; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d8b51a4352467ee92775354723460a236b35a1f8ff3b164cce0db9c6a2793796.
+- Reviewed record PKG-0036; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0037
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/INFERENCE_AND_COMPLETION_AUDIT.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/INFERENCE_AND_COMPLETION_AUDIT.md).
-- Original content SHA-256: a149669b6c18193a693632fa9b723fcc238e4920030116ad1065815cfdf1e3bc.
+- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/INFERENCE_AND_COMPLETION_AUDIT.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/INFERENCE_AND_COMPLETION_AUDIT.md).
 
 ### REC-PKG-0038
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/LOCAL_VALUE_ANALYTIC_CHECK.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/LOCAL_VALUE_ANALYTIC_CHECK.md).
-- Original content SHA-256: 57ed5af5ec3f787528d8b83b88123ef79a57e7b760594be7b972ce3f0aa468e5.
+- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/LOCAL_VALUE_ANALYTIC_CHECK.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/LOCAL_VALUE_ANALYTIC_CHECK.md).
 
 ### REC-PKG-0039
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0039; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 94763b8ab3ebd7b22916f5722cac13cc1558bfcf313b215415ead91ba11b140f.
+- Reviewed record PKG-0039; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0040
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/completion_integrity.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/completion_integrity.py).
-- Original content SHA-256: d50a404c192bdd6826f8115cdcd510151d16ad2e3ddeba7170fa4e02c7208ca2.
+- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/completion_integrity.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/completion_integrity.py).
 
 ### REC-PKG-0041
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/local_value_reference.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/local_value_reference.py).
-- Original content SHA-256: 1745112906ec723564b3a9f2410dcef6082f1f2bd3771adcea58fca6fd26db20.
+- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/local_value_reference.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1/source/local_value_reference.py).
 
 ### REC-PKG-0042
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0042; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a8f0687436a27107f8d5430de318b46fc89197601a278ce33d0ae23fb1adb5a5.
+- Reviewed record PKG-0042; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0043
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/INFERENCE_AND_COMPLETION_AUDIT.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/INFERENCE_AND_COMPLETION_AUDIT.md).
-- Original content SHA-256: a149669b6c18193a693632fa9b723fcc238e4920030116ad1065815cfdf1e3bc.
+- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/INFERENCE_AND_COMPLETION_AUDIT.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/INFERENCE_AND_COMPLETION_AUDIT.md).
 
 ### REC-PKG-0044
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/LOCAL_VALUE_ANALYTIC_CHECK.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/LOCAL_VALUE_ANALYTIC_CHECK.md).
-- Original content SHA-256: 57ed5af5ec3f787528d8b83b88123ef79a57e7b760594be7b972ce3f0aa468e5.
+- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/LOCAL_VALUE_ANALYTIC_CHECK.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/LOCAL_VALUE_ANALYTIC_CHECK.md).
 
 ### REC-PKG-0045
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0045; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e548460f5c057ef8445eec1928aad7354a38b79aae2fc7416e0aa1f8448f1348.
+- Reviewed record PKG-0045; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0046
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/completion_integrity.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/completion_integrity.py).
-- Original content SHA-256: 4d968cc66dbbf3e667d1735a659bd21ec1ebd5f451b6f8c4d4573127b753bbde.
+- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/completion_integrity.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/completion_integrity.py).
 
 ### REC-PKG-0047
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/local_value_reference.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/local_value_reference.py).
-- Original content SHA-256: d381318196d6ef32bac4b1ba71ce54c5230ffef42ae9470ce28c4ae20891afe8.
+- research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/local_value_reference.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/finishing_v1_1/source/local_value_reference.py).
 
 ### REC-PKG-0048
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0048; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a8f0687436a27107f8d5430de318b46fc89197601a278ce33d0ae23fb1adb5a5.
+- Reviewed record PKG-0048; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0049
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/README.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/README.md).
-- Original content SHA-256: 0a632ef7094a1edaebdf2a32835da9b6442fea41cec18627136475247dc6d04b.
+- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/README.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/README.md).
 
 ### REC-PKG-0050
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/DESIGN_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/DESIGN_V1.md).
-- Original content SHA-256: d978f0a7441cb5ea2090f78fcf95c74fa09b9f4d4d19d451d921ec5a493537de.
+- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/DESIGN_V1.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/DESIGN_V1.md).
 
 ### REC-PKG-0051
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/EXPERIMENT_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/EXPERIMENT_V1.md).
-- Original content SHA-256: 2f6852161f5ec36549d75236629cc1b67e7b7892ed65d191c89fa0f8effd0077.
+- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/EXPERIMENT_V1.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/EXPERIMENT_V1.md).
 
 ### REC-PKG-0052
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/acquisition.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/acquisition.py).
-- Original content SHA-256: 21c7f63c6640eacb6ab2f4fddfd824e4a52a83fb173729f4a0541edef5fc4a91.
+- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/acquisition.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/acquisition.py).
 
 ### REC-PKG-0053
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0053; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8a626a47b86dae0ba1bae8d76646cd414d7244fc5c49005f37856b1c879aab0d.
+- Reviewed record PKG-0053; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0054
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0054; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6ec29637351c1880ad71f2c6cddf60a7cd9a0f4ec53af5fbccfb3780e8ec7551.
+- Reviewed record PKG-0054; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0055
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0055; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 30b100fe09ea4aa3fb018e7ddbaacdcb30e0ead33ce61f4d2ac17ea42d0aac0b.
+- Reviewed record PKG-0055; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0056
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/model.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/model.py).
-- Original content SHA-256: 5186f258a8d72a7008528cde02879691e85b194f11d8a5def764f3de7f86c552.
+- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/model.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/model.py).
 
 ### REC-PKG-0057
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/numerical_checks.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/numerical_checks.py).
-- Original content SHA-256: 2349f9c36323c8ab9491aacaba422f4f77fddbb71c6f53a6401354b1174d6668.
+- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/numerical_checks.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/numerical_checks.py).
 
 ### REC-PKG-0058
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/policy.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/policy.py).
-- Original content SHA-256: bad3cb196f883b58a17d4e58ecabb01e860d4e23bcaf4dbbc2cd7dac06d5ad83.
+- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/policy.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/policy.py).
 
 ### REC-PKG-0059
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/run_unit.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/run_unit.py).
-- Original content SHA-256: 5d708192ed354157c5a22594afc6684fa1431035275bb29c237bc1b8e608e20d.
+- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/run_unit.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/run_unit.py).
 
 ### REC-PKG-0060
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0060; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 10420ec6b7eaaad342ef117588460f3d5640f27b38e18f8b0f6be6a9cb7a40d5.
+- Reviewed record PKG-0060; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0061
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0061; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 23bdeb2599df204e604fb4ec83fb52753ec8214a8fe7d50885d3ffb9566d55c5.
+- Reviewed record PKG-0061; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0062
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/worlds.py).
-- Original content SHA-256: 9904bc6dcfc6ab15812bf71b162182e57e973beabdf31da204b5fb3b9ee62131.
+- research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/worlds.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v1_1/source/worlds.py).
 
 ### REC-PKG-0063
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/AMENDMENT_02_BOUNDARY_SURPRISE.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/AMENDMENT_02_BOUNDARY_SURPRISE.md).
-- Original content SHA-256: c5e45a9c3c2cf98f5806c95dcbd6107665c2e254fd0c3862488f22554343afb9.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/AMENDMENT_02_BOUNDARY_SURPRISE.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/AMENDMENT_02_BOUNDARY_SURPRISE.md).
 
 ### REC-PKG-0064
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/DESIGN_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/DESIGN_V1.md).
-- Original content SHA-256: d978f0a7441cb5ea2090f78fcf95c74fa09b9f4d4d19d451d921ec5a493537de.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/DESIGN_V1.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/DESIGN_V1.md).
 
 ### REC-PKG-0065
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/EXPERIMENT_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/EXPERIMENT_V1.md).
-- Original content SHA-256: 2f6852161f5ec36549d75236629cc1b67e7b7892ed65d191c89fa0f8effd0077.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/EXPERIMENT_V1.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/EXPERIMENT_V1.md).
 
 ### REC-PKG-0066
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/acquisition.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/acquisition.py).
-- Original content SHA-256: 21c7f63c6640eacb6ab2f4fddfd824e4a52a83fb173729f4a0541edef5fc4a91.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/acquisition.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/acquisition.py).
 
 ### REC-PKG-0067
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/analyse.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/analyse.py).
-- Original content SHA-256: 776156c75f621d3e6de4de0af5d876b4b1e008058465c62a6002392df4c2c31b.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/analyse.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/analyse.py).
 
 ### REC-PKG-0068
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0068; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1a2671fca57ec2fd02b1469db0cb97c34b4959de52841684480c4e75eb3afe0c.
+- Reviewed record PKG-0068; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0069
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0069; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c1daaaebeed3489a939ea7820678a7c04578ac5c48d6d9f09d3bcd9752f57776.
+- Reviewed record PKG-0069; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0070
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0070; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: bfc6c243572a7977ffc118b2f197d9dc3484f52e9d8a77d0e07d2534580bc093.
+- Reviewed record PKG-0070; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0071
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/model.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/model.py).
-- Original content SHA-256: de55fe42bb253de419a12ff1e24d0a9e47cdd3931b83524a037164658acdbb69.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/model.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/model.py).
 
 ### REC-PKG-0072
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/numerical_checks.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/numerical_checks.py).
-- Original content SHA-256: bc0f1cc15b940dc5099aedd59d512a8ed1dd5d1b31886c2abf4078d1720c1a5c.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/numerical_checks.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/numerical_checks.py).
 
 ### REC-PKG-0073
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/policy.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/policy.py).
-- Original content SHA-256: 36795c6065c726fee6da081c0a81d4add906de1412dda827cc1919f472360d72.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/policy.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/policy.py).
 
 ### REC-PKG-0074
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/run_unit.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/run_unit.py).
-- Original content SHA-256: ecf7fab3b06c47d162bd29538a281a47d8b2026e154aebe359a0a04f8c54c9dd.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/run_unit.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/run_unit.py).
 
 ### REC-PKG-0075
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0075; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 10420ec6b7eaaad342ef117588460f3d5640f27b38e18f8b0f6be6a9cb7a40d5.
+- Reviewed record PKG-0075; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0076
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0076; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 23bdeb2599df204e604fb4ec83fb52753ec8214a8fe7d50885d3ffb9566d55c5.
+- Reviewed record PKG-0076; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0077
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/worlds.py).
-- Original content SHA-256: 23901884b96109769e8158e84e12d76e398b8f7bfd0369db46fda1ecc116b44c.
+- research/astra/astra_deep_discovery_20261018/archive/history/v2/source/worlds.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/archive/history/v2/source/worlds.py).
 
 ### REC-PKG-0078
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0078; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d31f7fa8cf4bacf894d6996c1a6a2ad6a1fb80a11fb7c3248b6c3260921c2f4f.
+- Reviewed record PKG-0078; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0079
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0079; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5ac3defb0acea1e35b6a771c867f5bf066fadc605297a3c7ef55d07fe88f8d17.
+- Reviewed record PKG-0079; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0080
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0080; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3a418b26da0df51653c587db42bce1933a0ba9db3d9aff9e8a1a4de6314f7e2a.
+- Reviewed record PKG-0080; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0081
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0081; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 487a925431311fb1ca60156c425f9a7426553f5a47210f8683caea2a5a9aed2c.
+- Reviewed record PKG-0081; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0082
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0082; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6193b0dc0acf9d79271c2c1c7443626a7395a23e496d7fc23cb011f64ba7350f.
+- Reviewed record PKG-0082; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0083
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0083; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: de79afe0e4720a0375f61c8d9a386a87bc0e552cae4ca397ca318d029f37fef3.
+- Reviewed record PKG-0083; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0084
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0084; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 375922cd9f50b4c174b1fcd1c7f97ec52c1d51c5db5fcee2087e70ac9651ce10.
+- Reviewed record PKG-0084; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0085
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0085; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6da55a6a1a830cf7c7bbca875839c235d1fd525756257dea491f7d0c77029bfe.
+- Reviewed record PKG-0085; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0086
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0086; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c93c9c6d2f11c545a7124c396818e0e3c09da503c36221b0a36c6cc2f80c4e09.
+- Reviewed record PKG-0086; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0087
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0087; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da.
+- Reviewed record PKG-0087; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0088
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0088; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e36ee044d6e75416cc5bfbd01e32adf2b7e3bff9fa00c1f0d62ddb338705bd9b.
+- Reviewed record PKG-0088; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0089
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0089; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3188037ee94ae91d96dbceead29ce13eea8c05ff44a727632a8e7f0f18f0ce02.
+- Reviewed record PKG-0089; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0090
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0090; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e7fc781e2e102d49391fa920e578b3ec518abe8013bf27b059ee8c5b2735925a.
+- Reviewed record PKG-0090; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0091
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0091; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 82da789f09ace3c9fd6e11d0c26829d0dda7bf3f1c8254d5e735d5b82c0b077a.
+- Reviewed record PKG-0091; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0092
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0092; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: dd4769e3fdd62e355a3aff0cd043cc947c94c79a7f4907ead97ee1f9b42743a9.
+- Reviewed record PKG-0092; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0093
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/github/outputs/research_campaign_20261024/opus_early_learning/FINAL_REPORT_EL.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/github/outputs/research_campaign_20261024/opus_early_learning/FINAL_REPORT_EL.md).
-- Original content SHA-256: 684f962cf6ddb6bf06c88511f09e2315510c8a27b3359bd879b946f6c031aee4.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/github/outputs/research_campaign_20261024/opus_early_learning/FINAL_REPORT_EL.md
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/github/outputs/research_campaign_20261024/opus_early_learning/FINAL_REPORT_EL.md).
 
 ### REC-PKG-0094
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/github/outputs/research_campaign_20261024/opus_early_learning/PROTOCOL_EL_OBJECTIVES.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/github/outputs/research_campaign_20261024/opus_early_learning/PROTOCOL_EL_OBJECTIVES.md).
-- Original content SHA-256: 077a5cb0d6aa471008acad8fe5af264ee1b4c2bfa284c83baaf687ef3060c022.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/github/outputs/research_campaign_20261024/opus_early_learning/PROTOCOL_EL_OBJECTIVES.md
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/github/outputs/research_campaign_20261024/opus_early_learning/PROTOCOL_EL_OBJECTIVES.md).
 
 ### REC-PKG-0095
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/github/src/el_eval.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/github/src/el_eval.py).
-- Original content SHA-256: 95cb9572132e233014be53d190b3a88850cf93af03cfca8ef1860873017fb87a.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/github/src/el_eval.py
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/github/src/el_eval.py).
 
 ### REC-PKG-0096
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/github/src/el_mix.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/github/src/el_mix.py).
-- Original content SHA-256: d8e32b9c90573f2175936eef4a802291ba79eb9c276dd4dbfe6c9e5cc85f0f75.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/github/src/el_mix.py
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/github/src/el_mix.py).
 
 ### REC-PKG-0097
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/FINAL_REPORT.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/FINAL_REPORT.md).
-- Original content SHA-256: 3d54d1f1125b69e76bced1de9d3ae0b3b3bfbd34f8d5e1ec77c1fd76c4dc0a51.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/FINAL_REPORT.md
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/FINAL_REPORT.md).
 
 ### REC-PKG-0098
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0098; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 04de134971e8554476abac77dd6fbcfdff9fbd5bf3633216b6e9dad8490ddc78.
+- Reviewed record PKG-0098; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0099
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/ANALYTICAL_LIMITS.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/ANALYTICAL_LIMITS.md).
-- Original content SHA-256: 0dbf83b69fe4ed6a0574559b3cd295e8cb978cdcd67cd23d8024c5e249ee4aa0.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/ANALYTICAL_LIMITS.md
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/ANALYTICAL_LIMITS.md).
 
 ### REC-PKG-0100
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/DEV_V1_REVIEW.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/DEV_V1_REVIEW.md).
-- Original content SHA-256: 4b6455cfb1085749c4937dbe4629d22d83f5553072b03d39000b035ceca7bdc2.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/DEV_V1_REVIEW.md
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/DEV_V1_REVIEW.md).
 
 ### REC-PKG-0101
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/DEV_V2_PROTOCOL.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/DEV_V2_PROTOCOL.md).
-- Original content SHA-256: 25b7cfb6011611866eade631a1e208f507f4b15d5b26b7245a44d97727b8f357.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/DEV_V2_PROTOCOL.md
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/DEV_V2_PROTOCOL.md).
 
 ### REC-PKG-0102
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/MODEL_DESIGN_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/MODEL_DESIGN_V1.md).
-- Original content SHA-256: 5a707cb93f7b2aef3012ff8f6457b2aa011e2641b70f3e97dae6dde991197c99.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/MODEL_DESIGN_V1.md
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/docs/MODEL_DESIGN_V1.md).
 
 ### REC-PKG-0103
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0103; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6efb5472c0e429d1ca008405546be1006d8170cc2e101e1d24d9c9a4d331a026.
+- Reviewed record PKG-0103; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0104
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v1/model.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v1/model.py).
-- Original content SHA-256: 7290682c533fb2e9909de3b986fc1f7440f34eefd23eddeec7c6aff0023e8b94.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v1/model.py
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v1/model.py).
 
 ### REC-PKG-0105
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0105; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 36c475689257ac8bc3fb879e5fc2ada69bc874290534b39fd096b3bd4e47e42d.
+- Reviewed record PKG-0105; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0106
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v1/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v1/worlds.py).
-- Original content SHA-256: 1f17b631f6d1ab2b0312e3c67019b3cfa5ad4aefe9efb1844a2a16ae15fe32ba.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v1/worlds.py
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v1/worlds.py).
 
 ### REC-PKG-0107
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v2.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v2.py).
-- Original content SHA-256: 3b86cf69ab4dabcdb842e2679803a3f7970a9b4e9dad7014c8aa21101dd9afc1.
+- research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v2.py
+- [Available file](../../research/astra/astra_joint_local_20261026/archive/source_snapshot/previous/research_v2.py).
 
 ### REC-PKG-0108
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0108; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 84dc838e44254a4a3e31117459f4c07c29a67ad4f4a08c0e531234fb7bb3f2d8.
+- Reviewed record PKG-0108; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0109
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0109; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e770ef52cccc2a689dec32f75a43559f0dbac1f5bd6f9a219be9781862acd87e.
+- Reviewed record PKG-0109; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0110
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0110; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8cccf72e0a64451a9bda9fb9a45622222b22bf7e0a28dc7758ff2c00453e78c2.
+- Reviewed record PKG-0110; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0111
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0111; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6cdb478a8608d0b887b6f073329a74d309b116d920ffa4401d1c9d044a287568.
+- Reviewed record PKG-0111; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0112
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0112; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 47217e4b90173845a8ee0783d2e44bb79dec9d2db1263eaceefb2b59fe927451.
+- Reviewed record PKG-0112; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0113
 
-- Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0113; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ae777ad250b07e84159c6d9081091f2d965c1c33ce5a690a205b75017267f71b.
+- Status: **INCLUDED**; campaign: LC24.
+- Retain the original final outcome/status record, including negative decisions; not a new estimate.
+- [Available file](../../research/astra/astra_local_correction_20261024/CONTROLLED_RESULTS.json).
+- Curated evidence: CE-LC24-001; published SHA-256: ae777ad250b07e84159c6d9081091f2d965c1c33ce5a690a205b75017267f71b.
 
 ### REC-PKG-0114
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0114; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 997b6647198ec091fa261b56c2e179397f233289709bc5a8e1b8a2d345c33e30.
+- Reviewed record PKG-0114; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0115
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0115; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 74f49475b43a5441c3fb2fb76ad35c22001440ae4703a628ad44ee4c21e2514a.
+- Reviewed record PKG-0115; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0116
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0116; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 69d3aacf912e3d7b79f191b0eb182dc53a15f441be96c4f5485c09f6384d5f91.
+- Reviewed record PKG-0116; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0117
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/FINAL_REPORT.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/FINAL_REPORT.md).
-- Original content SHA-256: ec4ee495806cc1210f595865c612905584e7624311074d31fd7940b747d949aa.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/FINAL_REPORT.md
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/FINAL_REPORT.md).
 
 ### REC-PKG-0118
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0118; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e9749f9acece70cca73c4ef06ad32658e4bc25dfd874fb86dec32a399588da41.
+- Reviewed record PKG-0118; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0119
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/MECHANISM_INTERPRETATION.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/MECHANISM_INTERPRETATION.md).
-- Original content SHA-256: 5a73b7c8bac8985c30d53898b47680b094e39ef9599cfd66131b797327ec16fd.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/MECHANISM_INTERPRETATION.md
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/MECHANISM_INTERPRETATION.md).
 
 ### REC-PKG-0120
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/METHOD_DESIGN.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/METHOD_DESIGN.md).
-- Original content SHA-256: 080b09f60c33f116eca89a5d9ffc3257c5e224f70240809c39a7b47845c712d6.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/METHOD_DESIGN.md
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/METHOD_DESIGN.md).
 
 ### REC-PKG-0121
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/posterior.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/posterior.py).
-- Original content SHA-256: ac5f50e329b7fd32ffc0e570b80ee68c0a644aa77947d30cfad409e4434bf000.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/posterior.py
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/astra_previous/posterior.py).
 
 ### REC-PKG-0122
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/outputs/research_campaign_20261021/opus_rc24/post_audit/FINAL_REPORT_RC24P.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/outputs/research_campaign_20261021/opus_rc24/post_audit/FINAL_REPORT_RC24P.md).
-- Original content SHA-256: ed583fef7a5876b8bf3956a3e3adb0e5c5b32aa596b8d568c125687cda04eb90.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/outputs/research_campaign_20261021/opus_rc24/post_audit/FINAL_REPORT_RC24P.md
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/outputs/research_campaign_20261021/opus_rc24/post_audit/FINAL_REPORT_RC24P.md).
 
 ### REC-PKG-0123
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0123; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ca2b34095d2a9f2daa985dcf188744b9f5df66f4c33a016d594105f1444ed664.
+- Reviewed record PKG-0123; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0124
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/outputs/research_campaign_20261021/opus_rc24/post_audit/final/FINAL_COMPARISON.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/outputs/research_campaign_20261021/opus_rc24/post_audit/final/FINAL_COMPARISON.md).
-- Original content SHA-256: d85155b636467a6ee7a4d7dffc64ced4ed9526449571af40b7bdee366ee23eaf.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/outputs/research_campaign_20261021/opus_rc24/post_audit/final/FINAL_COMPARISON.md
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/outputs/research_campaign_20261021/opus_rc24/post_audit/final/FINAL_COMPARISON.md).
 
 ### REC-PKG-0125
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc23_common.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc23_common.py).
-- Original content SHA-256: 8a76f51ead22a78e103a3314d957cd4e1967d2eb6ee3cb885c78f6388ba9cf9b.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc23_common.py
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc23_common.py).
 
 ### REC-PKG-0126
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_correction.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_correction.py).
-- Original content SHA-256: aa0e707c7d7f1a128191bedddf69e435fccb513a61d262585087b8e72223473e.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_correction.py
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_correction.py).
 
 ### REC-PKG-0127
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_jeer.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_jeer.py).
-- Original content SHA-256: aeed675bb84225c5985b4fcce761afd9055e3b89f263882298de3aad6994a381.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_jeer.py
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_jeer.py).
 
 ### REC-PKG-0128
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_models.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_models.py).
-- Original content SHA-256: 8de55f673e5fed99ac6eb9f5b69bc793b32a535080ebd6f30cc62732ec832fc6.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_models.py
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_models.py).
 
 ### REC-PKG-0129
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_pac.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_pac.py).
-- Original content SHA-256: 09ade991a1085d3dc405e1c41399c95e26c8462156096aabc523cf0607f3c695.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_pac.py
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_pac.py).
 
 ### REC-PKG-0130
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_synth.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_synth.py).
-- Original content SHA-256: b4f287df114684600852eb4f96ef391824418f886f0af2651b79fe50990aa5ac.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_synth.py
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24_synth.py).
 
 ### REC-PKG-0131
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24p_models.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24p_models.py).
-- Original content SHA-256: 51fcb528d607f703e995991b9f16b49a9ca10664bdea32889fd47c9493d7c0c4.
+- research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24p_models.py
+- [Available file](../../research/astra/astra_local_correction_20261024/archive/source_snapshot/github/src/rc24p_models.py).
 
 ### REC-PKG-0132
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0132; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6ffdccba52d033812aa94c28acb2a73f1277cceef91cade3ade5964e69c7f166.
+- Reviewed record PKG-0132; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0133
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0133; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 100fbee616c74d2b2d184dcc21a297b88b181372a145193a1aa9665fee2eec0d.
+- Reviewed record PKG-0133; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0134
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0134; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 63eaa1a18f56d39858b7956c75ad757ea38f70d62ad745501e92aa772e677126.
+- Reviewed record PKG-0134; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0135
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0135; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: cfd1fc2563e9d6acbf1c93526a4739b4b2a5714f12cb3e32d9b7087663d141af.
+- Status: **INCLUDED**; campaign: RP20.
+- Retain the original final outcome/status record, including negative decisions; not a new estimate.
+- [Available file](../../research/astra/astra_representation_planning_20261020/CONTROLLED_RESULTS.json).
+- Curated evidence: CE-RP20-001; published SHA-256: 6bf5c336941c1f365d7b9d1626767d18a075d672858aef2140fe1e5aa5fbb8ce.
 
 ### REC-PKG-0136
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0136; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 39903a98a5c62fbb6c6235e5a6c39f5c606d2cdb0b41fa02b956eb400f67a1c0.
+- Reviewed record PKG-0136; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0137
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0137; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: cb4a1248eb6aedd7aa00eabc9001f2a72f4c75878506b4093b0451a7f29c8216.
+- Reviewed record PKG-0137; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0138
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0138; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 358941066217ba9f87e5a5d0816d2368950c4785a9c61631bc5f28b3f555a543.
+- Reviewed record PKG-0138; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0139
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0139; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fcc5c49d32deca331e01a9e61b2b64375e18c1da9f742ef13397a91cda8113e8.
+- Reviewed record PKG-0139; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0140
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0140; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 47e7e007d8fac57412ec87509c769ba0bcb98515f1c165ff5a36d427aa9073f1.
+- Status: **INCLUDED**; campaign: RP20.
+- Retain the original frozen comparison estimates, intervals, practical gates and missingness qualifications.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/analysis/PRIMARY_CONTRASTS.json).
+- Curated evidence: CE-RP20-002; published SHA-256: 47e7e007d8fac57412ec87509c769ba0bcb98515f1c165ff5a36d427aa9073f1.
 
 ### REC-PKG-0141
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0141; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6ca26851074fb22e7988fcd652e0506b8f0c46edd8be2ee37b45862fef6be3e2.
+- Reviewed record PKG-0141; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0142
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0142; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ef0bb1b8207328988e478688d96f12501c4de8a4881a9408a645036e5147baa7.
+- Reviewed record PKG-0142; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0143
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0143; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d9a88f1ea501b9b92bb519e65d4d513873bcafd7cc6e11312560487510588aee.
+- Reviewed record PKG-0143; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0144
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0144; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 85c54d51c167188fbedb1b6ef2aba12915f9352529f0739e8fa4a97f5ff3c76f.
+- Reviewed record PKG-0144; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0145
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0145; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fd889f84bcce55565e35d626d6b77fbb02e6ddc1acb223a28bdc7693d4b9ef2a.
+- Reviewed record PKG-0145; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0146
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/mixture_acquisition.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/mixture_acquisition.py).
-- Original content SHA-256: 58a4b58e578d8f3b146a9ff9937549f7c73a8f8cdb5123f23994023d23783895.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/mixture_acquisition.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/mixture_acquisition.py).
 
 ### REC-PKG-0147
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/planner.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/planner.py).
-- Original content SHA-256: aba3bf8f58e328aed7dcd8a5a2bb22a4cae3ed39fb3acce10c97fd84970b0650.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/planner.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/planner.py).
 
 ### REC-PKG-0148
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/policy.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/policy.py).
-- Original content SHA-256: 3ad04491b8da8c544582e9bcab1a076b0fabcea1838a03b3398eadffbda07999.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/policy.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/policy.py).
 
 ### REC-PKG-0149
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/posterior.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/posterior.py).
-- Original content SHA-256: ac5f50e329b7fd32ffc0e570b80ee68c0a644aa77947d30cfad409e4434bf000.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/posterior.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/posterior.py).
 
 ### REC-PKG-0150
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0150; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5bc03ab346194b5bcdcd97a8bd7f73a5d1b2a80b8974f6b23cdd09e4b8abc99f.
+- Reviewed record PKG-0150; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0151
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/worlds.py).
-- Original content SHA-256: eda4656c483f2a56ca0b23d035e5a6ab22deefd1094bd28e6b60bb329a1c1a7b.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/worlds.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_mixture/worlds.py).
 
 ### REC-PKG-0152
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0152; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 85c54d51c167188fbedb1b6ef2aba12915f9352529f0739e8fa4a97f5ff3c76f.
+- Reviewed record PKG-0152; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0153
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0153; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: cae9c3c387f9ad321d6fddde1d27facba33627eb37a100c3e2e37f465c507e83.
+- Reviewed record PKG-0153; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0154
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/planner.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/planner.py).
-- Original content SHA-256: aba3bf8f58e328aed7dcd8a5a2bb22a4cae3ed39fb3acce10c97fd84970b0650.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/planner.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/planner.py).
 
 ### REC-PKG-0155
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/policy.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/policy.py).
-- Original content SHA-256: 87443c362345acbad1248623c01ea99415ff23f6ceedb97156344e9f1a9cd879.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/policy.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/policy.py).
 
 ### REC-PKG-0156
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/posterior.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/posterior.py).
-- Original content SHA-256: ac5f50e329b7fd32ffc0e570b80ee68c0a644aa77947d30cfad409e4434bf000.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/posterior.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/posterior.py).
 
 ### REC-PKG-0157
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0157; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: f073df16b81bc5221c42fdd9844c071062ad3a9f910e4023b45fc0895f96ec02.
+- Reviewed record PKG-0157; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0158
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/worlds.py).
-- Original content SHA-256: eda4656c483f2a56ca0b23d035e5a6ab22deefd1094bd28e6b60bb329a1c1a7b.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/worlds.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v1/worlds.py).
 
 ### REC-PKG-0159
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0159; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 85c54d51c167188fbedb1b6ef2aba12915f9352529f0739e8fa4a97f5ff3c76f.
+- Reviewed record PKG-0159; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0160
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0160; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fd889f84bcce55565e35d626d6b77fbb02e6ddc1acb223a28bdc7693d4b9ef2a.
+- Reviewed record PKG-0160; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0161
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/planner.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/planner.py).
-- Original content SHA-256: aba3bf8f58e328aed7dcd8a5a2bb22a4cae3ed39fb3acce10c97fd84970b0650.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/planner.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/planner.py).
 
 ### REC-PKG-0162
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/policy.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/policy.py).
-- Original content SHA-256: 87443c362345acbad1248623c01ea99415ff23f6ceedb97156344e9f1a9cd879.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/policy.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/policy.py).
 
 ### REC-PKG-0163
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/posterior.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/posterior.py).
-- Original content SHA-256: ac5f50e329b7fd32ffc0e570b80ee68c0a644aa77947d30cfad409e4434bf000.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/posterior.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/posterior.py).
 
 ### REC-PKG-0164
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0164; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b4c5cdce9e64fa037afd85dfafa31686891986e317e0fe4fac23dbbd7c904140.
+- Reviewed record PKG-0164; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0165
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/worlds.py).
-- Original content SHA-256: eda4656c483f2a56ca0b23d035e5a6ab22deefd1094bd28e6b60bb329a1c1a7b.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/worlds.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/dev_v2/worlds.py).
 
 ### REC-PKG-0166
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0166; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e1f55618b71e9cb401972900b6359b2c06b79d3b491ec566c7f9ffef8b269bb0.
+- Reviewed record PKG-0166; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0167
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0167; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d2a88130d050df13107f0495a54fb51d9c8b4f2775962115cd1b9c834febebc7.
+- Reviewed record PKG-0167; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0168
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0168; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4c1bc5b1205eb5e3fee7229820dd76c93c3a5ad3e75be744cbcb96919e974cc2.
+- Reviewed record PKG-0168; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0169
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0169; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fd889f84bcce55565e35d626d6b77fbb02e6ddc1acb223a28bdc7693d4b9ef2a.
+- Reviewed record PKG-0169; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0170
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/mixture_acquisition.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/mixture_acquisition.py).
-- Original content SHA-256: 58a4b58e578d8f3b146a9ff9937549f7c73a8f8cdb5123f23994023d23783895.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/mixture_acquisition.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/mixture_acquisition.py).
 
 ### REC-PKG-0171
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/planner.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/planner.py).
-- Original content SHA-256: aba3bf8f58e328aed7dcd8a5a2bb22a4cae3ed39fb3acce10c97fd84970b0650.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/planner.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/planner.py).
 
 ### REC-PKG-0172
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/policy.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/policy.py).
-- Original content SHA-256: 3ad04491b8da8c544582e9bcab1a076b0fabcea1838a03b3398eadffbda07999.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/policy.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/policy.py).
 
 ### REC-PKG-0173
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/posterior.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/posterior.py).
-- Original content SHA-256: ac5f50e329b7fd32ffc0e570b80ee68c0a644aa77947d30cfad409e4434bf000.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/posterior.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/posterior.py).
 
 ### REC-PKG-0174
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0174; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5bc03ab346194b5bcdcd97a8bd7f73a5d1b2a80b8974f6b23cdd09e4b8abc99f.
+- Reviewed record PKG-0174; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0175
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/worlds.py).
-- Original content SHA-256: eda4656c483f2a56ca0b23d035e5a6ab22deefd1094bd28e6b60bb329a1c1a7b.
+- research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/worlds.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/archive/source_versions/test_v1/worlds.py).
 
 ### REC-PKG-0176
 
 - Status: **PUBLISHED_PRIMARY**; campaign: THESIS-NAV.
-- Reviewed record PKG-0176; original excluded or replaced by a public editorial summary.
-- [Open already-published primary source](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/docs/AUTHORITATIVE_RESULTS_INDEX.md).
-- Original content SHA-256: d310fd7e960fb8715fd641681ce19d1e9bda60c95f61fd4494e9bf8cd17ec544.
+- Reviewed record PKG-0176; original excluded or replaced by a public editorial summary
+- [Published reference](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/docs/AUTHORITATIVE_RESULTS_INDEX.md).
 
 ### REC-PKG-0177
 
 - Status: **RESTRICTED**; campaign: THESIS-NAV.
-- Reviewed record PKG-0177; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 604ab31c01b7fb7ad2d17c8d3f8342091fce3b83384ca7a22153abf428bba5bb.
+- Reviewed record PKG-0177; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0178
 
 - Status: **PUBLISHED_PRIMARY**; campaign: THESIS-NAV.
-- Reviewed record PKG-0178; original excluded or replaced by a public editorial summary.
-- [Open already-published primary source](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/docs/THESIS_PROJECT_MAP.md).
-- Original content SHA-256: 81165fe14e9466c5bbe765961fd86f5f4018e5b78d80ea54934b4191adac3551.
+- Reviewed record PKG-0178; original excluded or replaced by a public editorial summary
+- [Published reference](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/docs/THESIS_PROJECT_MAP.md).
 
 ### REC-PKG-0179
 
 - Status: **PUBLISHED_PRIMARY**; campaign: THESIS-NAV.
-- Reviewed record PKG-0179; original excluded or replaced by a public editorial summary.
-- [Open already-published primary source](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/docs/trackA_freeze/TRACK_A_FINAL_STATE.md).
-- Original content SHA-256: e837264a6b4ef7a9205730d2d143f1f913ef2928ada5c40afd7575e890290ebe.
+- Reviewed record PKG-0179; original excluded or replaced by a public editorial summary
+- [Published reference](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/docs/trackA_freeze/TRACK_A_FINAL_STATE.md).
 
 ### REC-PKG-0180
 
 - Status: **PUBLISHED_PRIMARY**; campaign: THESIS-NAV.
-- Reviewed record PKG-0180; original excluded or replaced by a public editorial summary.
-- [Open already-published primary source](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/DECISION_C1C.md).
-- Original content SHA-256: abed2344550a33b02b6923eba5329351d9e4af69e2849c1d51f34904a71be50e.
+- Reviewed record PKG-0180; original excluded or replaced by a public editorial summary
+- [Published reference](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/DECISION_C1C.md).
 
 ### REC-PKG-0181
 
 - Status: **PUBLISHED_PRIMARY**; campaign: THESIS-NAV.
-- Reviewed record PKG-0181; original excluded or replaced by a public editorial summary.
-- [Open already-published primary source](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/EXTERNAL_VALIDATION_PLAN_C1C.md).
-- Original content SHA-256: 5326d06bf4a79b49a50fa9e70530b89cbf9148ca3f11e2b103de7b24976569ea.
+- Reviewed record PKG-0181; original excluded or replaced by a public editorial summary
+- [Published reference](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/EXTERNAL_VALIDATION_PLAN_C1C.md).
 
 ### REC-PKG-0182
 
 - Status: **PUBLISHED_PRIMARY**; campaign: THESIS-NAV.
-- Reviewed record PKG-0182; original excluded or replaced by a public editorial summary.
-- [Open already-published primary source](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/FINAL_REPORT_C1C.md).
-- Original content SHA-256: 2543ebe05915a7ceea36140ef91b229db4438c618b439493ba32364b69d04810.
+- Reviewed record PKG-0182; original excluded or replaced by a public editorial summary
+- [Published reference](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/FINAL_REPORT_C1C.md).
 
 ### REC-PKG-0183
 
 - Status: **RESTRICTED**; campaign: THESIS-NAV.
-- Reviewed record PKG-0183; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 282bb512a62390313b662dc39e9f251540672e8210aa2eed93754ddb9b99466a.
+- Reviewed record PKG-0183; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0184
 
 - Status: **RESTRICTED**; campaign: THESIS-NAV.
-- Reviewed record PKG-0184; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 044e02309d477e04c8977229fe0d18b9e5534a90b2cf5f22adf6ad4a8f9585d9.
+- Reviewed record PKG-0184; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0185
 
 - Status: **PUBLISHED_PRIMARY**; campaign: THESIS-NAV.
-- Reviewed record PKG-0185; original excluded or replaced by a public editorial summary.
-- [Open already-published primary source](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/evaluation/RESULTS_C1C.md).
-- Original content SHA-256: 53af70a6d952f8254f139f14724ac81d14ed08689ba791e77edafe3619928db7.
+- Reviewed record PKG-0185; original excluded or replaced by a public editorial summary
+- [Published reference](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/evaluation/RESULTS_C1C.md).
 
 ### REC-PKG-0186
 
 - Status: **PUBLISHED_PRIMARY**; campaign: THESIS-NAV.
-- Reviewed record PKG-0186; original excluded or replaced by a public editorial summary.
-- [Open already-published primary source](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/week17_model_and_acquisition/WEEK17_REPORT.md).
-- Original content SHA-256: 56569a09e17d6f626e07b0835035e97b54b33e7c7d979814e579bfc1f90c6419.
+- Reviewed record PKG-0186; original excluded or replaced by a public editorial summary
+- [Published reference](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/week17_model_and_acquisition/WEEK17_REPORT.md).
 
 ### REC-PKG-0187
 
 - Status: **PUBLISHED_PRIMARY**; campaign: THESIS-NAV.
-- Reviewed record PKG-0187; original excluded or replaced by a public editorial summary.
-- [Open already-published primary source](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/week18_independent_research/REPORT.md).
-- Original content SHA-256: 63ad672fb3bd498ce2701287fd26a70a44fefa2b414bcb69e94124b1b914c00c.
+- Reviewed record PKG-0187; original excluded or replaced by a public editorial summary
+- [Published reference](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/week18_independent_research/REPORT.md).
 
 ### REC-PKG-0188
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0188; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9c73b83d241d3e8a021c7d6e9cbc74ffc4806f7f14be3da52fb63be8633b3561.
+- Reviewed record PKG-0188; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0189
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0189; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9a46fb270e9334a13a1b14a30d75def4ea9f7d3a0dcd1774b1c8f419071dbccc.
+- Reviewed record PKG-0189; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0190
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0190; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 845febae84b642e2c0479a82fd6dcd53f3587fb53bccaed6bde6d2eb53d54a04.
+- Reviewed record PKG-0190; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0191
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0191; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0b684f4c4c2431b3305d9189e05d605de671bc881e541255c7c3bfaf79b666dc.
+- Reviewed record PKG-0191; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0192
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/ACQUISITION_AUDIT_PLAN.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/ACQUISITION_AUDIT_PLAN.md).
-- Original content SHA-256: 0b575aa2e0c08ed7dda1078e6cc6e9e7ae472b2e440c7a40b60248b575c878a0.
+- research/astra/astra_deep_discovery_20261018/ACQUISITION_AUDIT_PLAN.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/ACQUISITION_AUDIT_PLAN.md).
 
 ### REC-PKG-0193
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0193; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 678d1815f313066566e22b996b3ad89a0d7b367c924f0e6dc2dcbdb7e4370361.
+- Reviewed record PKG-0193; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0194
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/AMENDMENT_01_QUADRATURE.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/AMENDMENT_01_QUADRATURE.md).
-- Original content SHA-256: 12a5549532413a3a0feeddad7557fa347fe2c7bc4b6f12ed79a342cca0c68cf7.
+- research/astra/astra_deep_discovery_20261018/AMENDMENT_01_QUADRATURE.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/AMENDMENT_01_QUADRATURE.md).
 
 ### REC-PKG-0195
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/AMENDMENT_02_BOUNDARY_SURPRISE.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/AMENDMENT_02_BOUNDARY_SURPRISE.md).
-- Original content SHA-256: c5e45a9c3c2cf98f5806c95dcbd6107665c2e254fd0c3862488f22554343afb9.
+- research/astra/astra_deep_discovery_20261018/AMENDMENT_02_BOUNDARY_SURPRISE.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/AMENDMENT_02_BOUNDARY_SURPRISE.md).
 
 ### REC-PKG-0196
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/AMENDMENT_03_FIXED_LOCAL_SHARE.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/AMENDMENT_03_FIXED_LOCAL_SHARE.md).
-- Original content SHA-256: 538fa22ac80543effe4ce87e7ab17e5ecbf9abbe2818253687772b505ae2936b.
+- research/astra/astra_deep_discovery_20261018/AMENDMENT_03_FIXED_LOCAL_SHARE.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/AMENDMENT_03_FIXED_LOCAL_SHARE.md).
 
 ### REC-PKG-0197
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0197; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8ab3adfb01e00ecb89ed4c6184161305c5be9f5678db53273d43b010bbe37822.
+- Reviewed record PKG-0197; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0198
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/ANALYTICAL_CHECKS.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/ANALYTICAL_CHECKS.md).
-- Original content SHA-256: 57fa50608e7aee6ab274644e8abd6e61ce51f50837fd631cfc4ed07787de0de1.
+- research/astra/astra_deep_discovery_20261018/ANALYTICAL_CHECKS.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/ANALYTICAL_CHECKS.md).
 
 ### REC-PKG-0199
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/BOUNDARY_DECISION_AND_LIMITS.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/BOUNDARY_DECISION_AND_LIMITS.md).
-- Original content SHA-256: d5b0cd461f4f2f844a449ecad4c108747e98e02b4581dab929f160223b3f557b.
+- research/astra/astra_deep_discovery_20261018/BOUNDARY_DECISION_AND_LIMITS.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/BOUNDARY_DECISION_AND_LIMITS.md).
 
 ### REC-PKG-0200
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0200; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 75b1193611db9fdca4ed8eb4dc9376e04c599e49307251091d5a4799a3375a8d.
+- Reviewed record PKG-0200; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0201
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0201; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: cbf32bfaa2bf01b0ad86c95e8546e6ce2d543bef1a2eb0018d7622e84f0b18bf.
+- Reviewed record PKG-0201; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0202
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/DESIGN_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/DESIGN_V1.md).
-- Original content SHA-256: d978f0a7441cb5ea2090f78fcf95c74fa09b9f4d4d19d451d921ec5a493537de.
+- research/astra/astra_deep_discovery_20261018/DESIGN_V1.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/DESIGN_V1.md).
 
 ### REC-PKG-0203
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0203; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: f84d0eedc60b6427a269edaa3466fe603ff248d1fa880d32f9af99efda6c0a27.
+- Reviewed record PKG-0203; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0204
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/EXPERIMENT_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/EXPERIMENT_V1.md).
-- Original content SHA-256: 2f6852161f5ec36549d75236629cc1b67e7b7892ed65d191c89fa0f8effd0077.
+- research/astra/astra_deep_discovery_20261018/EXPERIMENT_V1.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/EXPERIMENT_V1.md).
 
 ### REC-PKG-0205
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0205; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9020d3ae01ab92f2a1ba5f5a8db5237feead3cd99f55457e91b10c1793669055.
+- Reviewed record PKG-0205; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0206
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0206; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 35b02817f863219fd7057f51c59e02cbfbe1a0c7e075d0155de704d41ae3da42.
+- Reviewed record PKG-0206; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0207
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0207; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 48b51054f69754532ad21e5adaddea01930df7cf36128a3ea3212dc4f9a37971.
+- Reviewed record PKG-0207; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0208
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/FINAL_REPORT.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/FINAL_REPORT.md).
-- Original content SHA-256: 4aa1eb0f56c5c875259644d890958bd6654e33c06d8f62f28626f1af9a41550c.
+- research/astra/astra_deep_discovery_20261018/FINAL_REPORT.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/FINAL_REPORT.md).
 
 ### REC-PKG-0209
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/FINISHING_AUDITS_REPAIR_01.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/FINISHING_AUDITS_REPAIR_01.md).
-- Original content SHA-256: 9e329e952d5807dff6f62dbd09b623fb430f165f10a574342dec162a2561f1fa.
+- research/astra/astra_deep_discovery_20261018/FINISHING_AUDITS_REPAIR_01.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/FINISHING_AUDITS_REPAIR_01.md).
 
 ### REC-PKG-0210
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/FINISHING_AUDITS_REPAIR_02.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/FINISHING_AUDITS_REPAIR_02.md).
-- Original content SHA-256: b9abc1a461a4e5a7e09dc3c2999b2f1a9ed35031e0bc8be399fc0e53230d2d0b.
+- research/astra/astra_deep_discovery_20261018/FINISHING_AUDITS_REPAIR_02.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/FINISHING_AUDITS_REPAIR_02.md).
 
 ### REC-PKG-0211
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/FINISHING_INTEGRITY_RETRY_03.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/FINISHING_INTEGRITY_RETRY_03.md).
-- Original content SHA-256: 0b19b9dc035bbda4989996f94c64c1442423727cdfe6cf8436ee338e67a91862.
+- research/astra/astra_deep_discovery_20261018/FINISHING_INTEGRITY_RETRY_03.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/FINISHING_INTEGRITY_RETRY_03.md).
 
 ### REC-PKG-0212
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0212; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6acec352b9a94930b09ff1467871eada8c366345f6a3fad6ecafc12d02af1cf1.
+- Reviewed record PKG-0212; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0213
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0213; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9723a7fb744805717f2cdf30ae269f0cc2fe9fb81d0aa32630de18dcb24b8a87.
+- Reviewed record PKG-0213; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0214
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0214; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 23214dfa737aa50767531cb55209c64ff911b0f21f16b30f09ac81d7171ee059.
+- Reviewed record PKG-0214; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0215
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0215; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c701f9979c30196c77db5b84333ff58a2dace4e5b37012dc3575576edd1987e4.
+- Reviewed record PKG-0215; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0216
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0216; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9f66675385e641c1828bf88afe1d4bac23acd268b975e433a962c4febb6f331c.
+- Reviewed record PKG-0216; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0217
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0217; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ed179c5def23059cd239402bc76d040e01f72665b814862392203bf8f4243c44.
+- Reviewed record PKG-0217; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0218
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0218; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 958a8794c1110f5fe1bff235d220be7eea3e43943b61b4c6342ddfc7cd505142.
+- Reviewed record PKG-0218; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0219
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0219; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 46993cd72c26db421323c5bcb5acc974d6a8a68e61aeb5566cb9fb97522e23a8.
+- Reviewed record PKG-0219; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0220
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0220; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3ccf764f4726b580d350c1cb9de977a31695ad85696213a3dc51861b1a3c2547.
+- Reviewed record PKG-0220; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0221
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/INFERENCE_AND_COMPLETION_AUDIT.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/INFERENCE_AND_COMPLETION_AUDIT.md).
-- Original content SHA-256: a149669b6c18193a693632fa9b723fcc238e4920030116ad1065815cfdf1e3bc.
+- research/astra/astra_deep_discovery_20261018/INFERENCE_AND_COMPLETION_AUDIT.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/INFERENCE_AND_COMPLETION_AUDIT.md).
 
 ### REC-PKG-0222
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0222; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6bbc0525aedc4d993e5b1306004858148857e3e6e5bc95a9e15eb6a1fab26fdd.
+- Reviewed record PKG-0222; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0223
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0223; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 20ebe7d247d7dceb8cc559c1c30a781b79fcc070af90c88e23fe0128d7a4d1bb.
+- Reviewed record PKG-0223; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0224
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/LOCAL_VALUE_ANALYTIC_CHECK.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/LOCAL_VALUE_ANALYTIC_CHECK.md).
-- Original content SHA-256: c0f077c6512b9620097583ea02ecaecc8ca85db08ead2ce5fb3bda73b967948b.
+- research/astra/astra_deep_discovery_20261018/LOCAL_VALUE_ANALYTIC_CHECK.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/LOCAL_VALUE_ANALYTIC_CHECK.md).
 
 ### REC-PKG-0225
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/METHOD_AND_ASSUMPTIONS.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/METHOD_AND_ASSUMPTIONS.md).
-- Original content SHA-256: 106631eebf48014fe73570243c7bf344af485f4104cfbd6b731f08bb0e83160a.
+- research/astra/astra_deep_discovery_20261018/METHOD_AND_ASSUMPTIONS.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/METHOD_AND_ASSUMPTIONS.md).
 
 ### REC-PKG-0226
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/NUMERICAL_REFINEMENT_PLAN.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/NUMERICAL_REFINEMENT_PLAN.md).
-- Original content SHA-256: 2f2a3a3f6425d127e4caf5b9451d2b9d7a77761b4460969fc0b966283978aa78.
+- research/astra/astra_deep_discovery_20261018/NUMERICAL_REFINEMENT_PLAN.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/NUMERICAL_REFINEMENT_PLAN.md).
 
 ### REC-PKG-0227
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0227; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6511d77949a8944cf2ef1c303c0b0405ab906f516464489991a6040ca1676ed6.
+- Reviewed record PKG-0227; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0228
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0228; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 023c60e443d46a8d1461655ef52b4d5171a83e561bd50cbb4ae35b30a4fab735.
+- Reviewed record PKG-0228; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0229
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0229; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5a2affd95bd5ef274b4700a3ec0da9d6c4132c037da7fbc4154b1bc4ef1e4e0c.
+- Reviewed record PKG-0229; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0230
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0230; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: db1b9a191cf8d41f9350daf6db4c0412561155ddffcaa8dfcbf8dccecff7a22d.
+- Reviewed record PKG-0230; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0231
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0231; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c5ef7fc9d51f4f48ca200b761cb4db5dc56726f342ce52588dc4775c0ef0c3fb.
+- Reviewed record PKG-0231; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0232
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0232; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3122165dfa37e0f57ee857762b31fd94a5bfa6e46134e3d350d426dbf9480b29.
+- Reviewed record PKG-0232; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0233
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0233; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a40cf73fc5ec58f63aef5764940a542dfb730d778057b38f98c63d5d9b5a0e63.
+- Reviewed record PKG-0233; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0234
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0234; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a0ac2edee37bb3d57589be1213d17d5e30cc3ce1cdfa8503af02d21816cd6f32.
+- Reviewed record PKG-0234; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0235
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/OZET_TR.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/OZET_TR.md).
-- Original content SHA-256: e494a93f8937104e53a01ced708a26da7887b88c68902ddc87436ad4b9e3b4fc.
+- research/astra/astra_deep_discovery_20261018/OZET_TR.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/OZET_TR.md).
 
 ### REC-PKG-0236
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0236; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b2a9fdef847b746b3a2faa400b812600dcbc12654dbd2f7ae87efbcf0cb8ac29.
+- Reviewed record PKG-0236; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0237
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0237; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: f3edd428b0aaece101e2a87fb818220670d3de19819e1b97769673067d9f2388.
+- Reviewed record PKG-0237; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0238
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0238; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 05f0700631799b507831caddd272c1f18557f8017a770b368453c2765b914dea.
+- Reviewed record PKG-0238; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0239
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/RESULTS_INDEX.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/RESULTS_INDEX.md).
-- Original content SHA-256: 96bf9a530195e8c952081b8213ad42f99b48e5edf65cb6b1e40ed99a8ee8e269.
+- research/astra/astra_deep_discovery_20261018/RESULTS_INDEX.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/RESULTS_INDEX.md).
 
 ### REC-PKG-0240
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0240; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fee7502769281688be3d7e992a90bfca329ff3d670990dba0fc72e016fd02a8b.
+- Reviewed record PKG-0240; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0241
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0241; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4312907eaf919f4ee509ef5dd291323d722a7de7e6073dc6ed3bc4f54d05492a.
+- Reviewed record PKG-0241; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0242
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/acquisition.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/acquisition.py).
-- Original content SHA-256: 21c7f63c6640eacb6ab2f4fddfd824e4a52a83fb173729f4a0541edef5fc4a91.
+- research/astra/astra_deep_discovery_20261018/acquisition.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/acquisition.py).
 
 ### REC-PKG-0243
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/acquisition_audit.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/acquisition_audit.py).
-- Original content SHA-256: 6d5f3bd9fb3e94ec681b207e45e4cd6d1eaa07c111a7484b2b2f9be25e14d365.
+- research/astra/astra_deep_discovery_20261018/acquisition_audit.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/acquisition_audit.py).
 
 ### REC-PKG-0244
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/analyse.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/analyse.py).
-- Original content SHA-256: 776156c75f621d3e6de4de0af5d876b4b1e008058465c62a6002392df4c2c31b.
+- research/astra/astra_deep_discovery_20261018/analyse.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/analyse.py).
 
 ### REC-PKG-0245
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/assemble_report_tables.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/assemble_report_tables.py).
-- Original content SHA-256: 04ecbc8c3459ee5b59b5f2a988a1b1ff2a81670e8f8fc2eb429f9b963818cfcf.
+- research/astra/astra_deep_discovery_20261018/assemble_report_tables.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/assemble_report_tables.py).
 
 ### REC-PKG-0246
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0246; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 668fe2a3a1b89b136ac80f7be1046c65f90150d464db70b76a0d5e446a0e1040.
+- Reviewed record PKG-0246; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0247
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0247; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 50c1f129b9fe15dcb8483612195f294821ebf4aeb52b73cbcef16f66caad2d5c.
+- Reviewed record PKG-0247; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0248
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0248; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 609fd3e321b8cc7bc9c8d129f718dc66818e22b435ab20c1910ba86e8494b3a1.
+- Reviewed record PKG-0248; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0249
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/completion_integrity.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/completion_integrity.py).
-- Original content SHA-256: 95e42d34eb6caf8ca7eabe9031e61b8d2748850f7b616f228eff028003538ecc.
+- research/astra/astra_deep_discovery_20261018/completion_integrity.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/completion_integrity.py).
 
 ### REC-PKG-0250
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0250; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1a2671fca57ec2fd02b1469db0cb97c34b4959de52841684480c4e75eb3afe0c.
+- Reviewed record PKG-0250; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0251
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0251; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c1daaaebeed3489a939ea7820678a7c04578ac5c48d6d9f09d3bcd9752f57776.
+- Reviewed record PKG-0251; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0252
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/dev_diagnosis.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/dev_diagnosis.py).
-- Original content SHA-256: 42e410ff3138b7d23938a1487a5ae3aaeb37c005a887101c24690dc460875e31.
+- research/astra/astra_deep_discovery_20261018/dev_diagnosis.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/dev_diagnosis.py).
 
 ### REC-PKG-0253
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/format_final_tables.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/format_final_tables.py).
-- Original content SHA-256: 1d2b19df3ab7e155ccf6232f8270687272837a6e08282d1fd83a5a763cdac2c1.
+- research/astra/astra_deep_discovery_20261018/format_final_tables.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/format_final_tables.py).
 
 ### REC-PKG-0254
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0254; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c2b7c2eff69a151a61d57dd30e8f7a8cda5a12e3225743fe4a4a12366989e2d4.
+- Reviewed record PKG-0254; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0255
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0255; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5865f9b4803133bc1db0cc97efb6f8a2e1a987e8fc291401154b1cf987a8cf51.
+- Reviewed record PKG-0255; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0256
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0256; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 352c8c04cebd7f1d1893358b5f10289841ccd75cd9ae0a3c94902677bff924e5.
+- Reviewed record PKG-0256; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0257
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/handoff/reference_code/acquisition.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/handoff/reference_code/acquisition.py).
-- Original content SHA-256: 21c7f63c6640eacb6ab2f4fddfd824e4a52a83fb173729f4a0541edef5fc4a91.
+- research/astra/astra_deep_discovery_20261018/handoff/reference_code/acquisition.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/handoff/reference_code/acquisition.py).
 
 ### REC-PKG-0258
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/handoff/reference_code/model.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/handoff/reference_code/model.py).
-- Original content SHA-256: de55fe42bb253de419a12ff1e24d0a9e47cdd3931b83524a037164658acdbb69.
+- research/astra/astra_deep_discovery_20261018/handoff/reference_code/model.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/handoff/reference_code/model.py).
 
 ### REC-PKG-0259
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/handoff/reference_code/policy.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/handoff/reference_code/policy.py).
-- Original content SHA-256: 36795c6065c726fee6da081c0a81d4add906de1412dda827cc1919f472360d72.
+- research/astra/astra_deep_discovery_20261018/handoff/reference_code/policy.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/handoff/reference_code/policy.py).
 
 ### REC-PKG-0260
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/handoff/reference_code/quota_policy.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/handoff/reference_code/quota_policy.py).
-- Original content SHA-256: 187b11c06b815f8e8924d0d18310a77c3d07f6ac449e3be6842d34d41fd78d24.
+- research/astra/astra_deep_discovery_20261018/handoff/reference_code/quota_policy.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/handoff/reference_code/quota_policy.py).
 
 ### REC-PKG-0261
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0261; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: bfc6c243572a7977ffc118b2f197d9dc3484f52e9d8a77d0e07d2534580bc093.
+- Reviewed record PKG-0261; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0262
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/local_value_reference.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/local_value_reference.py).
-- Original content SHA-256: 14c00aeab6aea326ce94b0d686f09afaac1052c3dfcc2ee24039f97b083a6e1d.
+- research/astra/astra_deep_discovery_20261018/local_value_reference.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/local_value_reference.py).
 
 ### REC-PKG-0263
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/model.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/model.py).
-- Original content SHA-256: de55fe42bb253de419a12ff1e24d0a9e47cdd3931b83524a037164658acdbb69.
+- research/astra/astra_deep_discovery_20261018/model.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/model.py).
 
 ### REC-PKG-0264
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/numerical_checks.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/numerical_checks.py).
-- Original content SHA-256: bc0f1cc15b940dc5099aedd59d512a8ed1dd5d1b31886c2abf4078d1720c1a5c.
+- research/astra/astra_deep_discovery_20261018/numerical_checks.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/numerical_checks.py).
 
 ### REC-PKG-0265
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/numerical_refinement.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/numerical_refinement.py).
-- Original content SHA-256: 2c7572f9a491ff486bab426dbcc58aa3c5d5fd385fe21525015632963da70507.
+- research/astra/astra_deep_discovery_20261018/numerical_refinement.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/numerical_refinement.py).
 
 ### REC-PKG-0266
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/plot_results.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/plot_results.py).
-- Original content SHA-256: 0c499164244d0c2138c5d13a694cc9ee1a51f7a040737a797440a26e47184a34.
+- research/astra/astra_deep_discovery_20261018/plot_results.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/plot_results.py).
 
 ### REC-PKG-0267
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/policy.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/policy.py).
-- Original content SHA-256: 36795c6065c726fee6da081c0a81d4add906de1412dda827cc1919f472360d72.
+- research/astra/astra_deep_discovery_20261018/policy.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/policy.py).
 
 ### REC-PKG-0268
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0268; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 715519ae8c3100d6b9b08a8233bdf860d2c033752fde665504011c5fdc7ea33a.
+- Reviewed record PKG-0268; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0269
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0269; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 483ba259547e1d0b777a809b48b9884a66d8d934f1a5ef69f27b04c6679cf711.
+- Reviewed record PKG-0269; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0270
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/quota_analysis.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/quota_analysis.py).
-- Original content SHA-256: 78076ba9d3139673d8c5043eacdfcb5feb0bf3fdbe16fb26874b8c7938c3582c.
+- research/astra/astra_deep_discovery_20261018/quota_analysis.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/quota_analysis.py).
 
 ### REC-PKG-0271
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/quota_checks.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/quota_checks.py).
-- Original content SHA-256: 0354c503b6bc73faad0a4b2e901b8db5c3cf3265bfb849a1af80804d6db2405d.
+- research/astra/astra_deep_discovery_20261018/quota_checks.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/quota_checks.py).
 
 ### REC-PKG-0272
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/quota_policy.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/quota_policy.py).
-- Original content SHA-256: 187b11c06b815f8e8924d0d18310a77c3d07f6ac449e3be6842d34d41fd78d24.
+- research/astra/astra_deep_discovery_20261018/quota_policy.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/quota_policy.py).
 
 ### REC-PKG-0273
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0273; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 690e66920fd31f6cc2a0768ac6663a2d85f0f6a6af3573448809a4c7e10f8866.
+- Reviewed record PKG-0273; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0274
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/reference_probe.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/reference_probe.py).
-- Original content SHA-256: ca0f1b22f955091faafc26c191350aa2ed6dbaec248a1c8c23cac5c0ad900008.
+- research/astra/astra_deep_discovery_20261018/reference_probe.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/reference_probe.py).
 
 ### REC-PKG-0275
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/requirements.txt.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/requirements.txt).
-- Original content SHA-256: 5260e63506019c71e5d517a8577ded0087f956aa9d79fd66d4bffa9de14a5676.
+- research/astra/astra_deep_discovery_20261018/requirements.txt
+- [Available file](../../research/astra/astra_deep_discovery_20261018/requirements.txt).
 
 ### REC-PKG-0276
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0276; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: f77901bc708ec23a609111ce096657bfd40962da4bc7ceb8ae66e9e42307189c.
+- Reviewed record PKG-0276; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0277
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0277; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0a93b3fd89b8b83e8001dad983df6e1de225f79123d42b19c2ed3515c39a0d47.
+- Reviewed record PKG-0277; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0278
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/results/analysis/v1_1__DEV/SUMMARY.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/results/analysis/v1_1__DEV/SUMMARY.md).
-- Original content SHA-256: e9548fb70cc3a4bb13caa8ef1f79e014db7c02574d69755a72dcee20679f99b0.
+- research/astra/astra_deep_discovery_20261018/results/analysis/v1_1__DEV/SUMMARY.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/analysis/v1_1__DEV/SUMMARY.md).
 
 ### REC-PKG-0279
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0279; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4e7c9686d8cc8dcd065b7e8926aa62f8872ccac979bc75f92d6d8904ea3365e1.
+- Reviewed record PKG-0279; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0280
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0280; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 02edde4bfdb9bbb350d33e691e9e49dfa2473cd23629ae1ea3e30b2bc3531022.
+- Reviewed record PKG-0280; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0281
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0281; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1c6f1745769267466a67ea813d39a504bd94412310a4ff40ce06f2635ad371cf.
+- Reviewed record PKG-0281; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0282
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0282; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 895a6f79b0886bbc773454880c5dbc733f217fe76b8638840dec944cc8da1a88.
+- Reviewed record PKG-0282; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0283
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0283; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a539a5fbdea9e1f6b9bffdc17facc24e85b66380bafdfcbfb4a059c5b38a2754.
+- Reviewed record PKG-0283; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0284
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0284; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b0947ae84e2accde6fba6c90c30e43059236f4a07b694b1f02822669b901e0b1.
+- Reviewed record PKG-0284; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0285
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/results/analysis/v2__DEV/SUMMARY.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/results/analysis/v2__DEV/SUMMARY.md).
-- Original content SHA-256: 4d6e489e61441ca73777211de95e4df8232ecdfe81f379f8f99386ed88f92fcb.
+- research/astra/astra_deep_discovery_20261018/results/analysis/v2__DEV/SUMMARY.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/analysis/v2__DEV/SUMMARY.md).
 
 ### REC-PKG-0286
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0286; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8a2f7aa6e7f432c8900ea2f3f95333dcb6604da6ab79b59db89eb4e24ff4026f.
+- Reviewed record PKG-0286; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0287
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0287; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: aedcda8c8090de2c12a9c48a440ea7dbe0de4208275726c91d5610074de92527.
+- Reviewed record PKG-0287; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0288
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/results/analysis/v2__TEST/SUMMARY.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/results/analysis/v2__TEST/SUMMARY.md).
-- Original content SHA-256: 8ef36728408b6d679b33e36cbf1595bca0ab2078e1323beef86a6c03b5656360.
+- research/astra/astra_deep_discovery_20261018/results/analysis/v2__TEST/SUMMARY.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/analysis/v2__TEST/SUMMARY.md).
 
 ### REC-PKG-0289
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0289; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fe6d95fb64aa2f0240fab4569c5cd8ddb573473772a8ca767764b47dea4b43ce.
+- Status: **INCLUDED**; campaign: AD18.
+- Show attainment/censoring and computational trade-offs, not physical simulator hours saved.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/analysis/v2__TEST/attainment_and_query_burden.png).
+- Curated evidence: CE-AD18-017; published SHA-256: fe6d95fb64aa2f0240fab4569c5cd8ddb573473772a8ca767764b47dea4b43ce.
 
 ### REC-PKG-0290
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0290; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ff7a0d20185171fc8e9fe7ceeb24eb93c3927d06efb65c908c5348fd7ba70223.
+- Reviewed record PKG-0290; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0291
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0291; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e07b70c86f47eb0ecb28490b90c87d1601cc9aeafd1f588fb87183876bc68c7c.
+- Status: **INCLUDED**; campaign: AD18.
+- Show the existing reported learning curves; no figure was regenerated or reinterpreted as physical validation.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/analysis/v2__TEST/error_curves.png).
+- Curated evidence: CE-AD18-015; published SHA-256: e07b70c86f47eb0ecb28490b90c87d1601cc9aeafd1f588fb87183876bc68c7c.
 
 ### REC-PKG-0292
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0292; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d20d902ad6dbe0c8633761cd597bc37ddea9b4ac3c3f77ba089c07902c4528e7.
+- Reviewed record PKG-0292; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0293
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0293; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 40c9133d9bbb0b79e02dca69f33ca60ef3458ec82652598c2ddd74bad9546f75.
+- Status: **INCLUDED**; campaign: AD18.
+- Show small-region/family failures or search limitations alongside the broad mean.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/analysis/v2__TEST/island_recall_curves.png).
+- Curated evidence: CE-AD18-016; published SHA-256: 40c9133d9bbb0b79e02dca69f33ca60ef3458ec82652598c2ddd74bad9546f75.
 
 ### REC-PKG-0294
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0294; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 63199d10254a7d0655afbef11ae3924b61f8103997a3267e494a5ae6b922c52a.
+- Reviewed record PKG-0294; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0295
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0295; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 31e138d1c9359acfa57dee931faad8d8634a8d871350431b92d0d71d61bd891d.
+- Reviewed record PKG-0295; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0296
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0296; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 80931d128442ad447344608e76ace2b5e2a587d1692201a5bd5b444ae132e797.
+- Reviewed record PKG-0296; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0297
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0297; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: f2926c7f108018b6df8b00468dae7b74bfde35760ca7675fd0b587f1e8903fbd.
+- Reviewed record PKG-0297; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0298
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0298; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1e70afbfb0f6eb3ad1992f8be25f6c60ad6b0eadf0c4679d9cf61ba7f8ce3716.
+- Reviewed record PKG-0298; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0299
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0299; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a924a7bfdd692909994f66a54ba4ce29418886a568f3e8b02a01daa0b6524ffd.
+- Reviewed record PKG-0299; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0300
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0300; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d302ff3428cb8ee0b207077579b5f600f6761532827d6ee148b092f9a1c080d9.
+- Reviewed record PKG-0300; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0301
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0301; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9743f9bfea86eb4fd10abf2d3bb0f653b0a40e59e981ac091c98bf3aee7372ff.
+- Reviewed record PKG-0301; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0302
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0302; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 2ec4d3f4d0f8ff8e104d7c630b18431fc03d5ac3048f572ff07368812d9409fb.
+- Reviewed record PKG-0302; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0303
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0303; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 63bf5a76b4875e7ac488febf7707308ecf1747a5904b9f9940e0da694e4ee10f.
+- Reviewed record PKG-0303; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0304
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0304; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 08393d587e8403b7d69a4359b8ccc9647107c4bfb01343e409264ab5940f81a6.
+- Reviewed record PKG-0304; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0305
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0305; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 111deb25015bae18cb5b712bdc0163823bc9cc6fadbda11f63e8c75d520393ad.
+- Reviewed record PKG-0305; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0306
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0306; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8e221a3dc1c7ac3e0389ee3522af87d0dd436ef4c20edca43e2b47ec79503f0a.
+- Reviewed record PKG-0306; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0307
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0307; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d53eddcfc2a5505c4e6903fcd4de10e25e608697c1372a5e0d18c916ae4e1b02.
+- Reviewed record PKG-0307; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0308
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0308; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 391fbf53bb5f44eba49ff6e457d6017546cdce4139ca06de73f782b413e98308.
+- Status: **INCLUDED**; campaign: AD18.
+- Expose the original final arm comparison in a machine-readable table.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/final_readout/ALL_ARMS_SUMMARY.csv).
+- Curated evidence: CE-AD18-008; published SHA-256: 391fbf53bb5f44eba49ff6e457d6017546cdce4139ca06de73f782b413e98308.
 
 ### REC-PKG-0309
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0309; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 32c9305298f2107cef8f63bb55c8979f5ed1459ecef08a0b101886826eafac06.
+- Status: **INCLUDED**; campaign: AD18.
+- Preserve all-family outcomes, regional harms, undefined subsets and denominator qualifications.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/final_readout/ALL_FAMILY_REVIEW.csv).
+- Curated evidence: CE-AD18-009; published SHA-256: 32c9305298f2107cef8f63bb55c8979f5ed1459ecef08a0b101886826eafac06.
 
 ### REC-PKG-0310
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0310; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c1ed00836a6474ab90985c6a8f5c59c60a968ef4670c41ec7684e7f970710eb9.
+- Status: **INCLUDED**; campaign: AD18.
+- Separate model representation/prediction value on common paid paths from acquisition changes.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/final_readout/MATCHED_PATH_SUMMARY.csv).
+- Curated evidence: CE-AD18-010; published SHA-256: c1ed00836a6474ab90985c6a8f5c59c60a968ef4670c41ec7684e7f970710eb9.
 
 ### REC-PKG-0311
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/results/final_readout/SAME_TARGET_QUERY_COST_TABLE.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/results/final_readout/SAME_TARGET_QUERY_COST_TABLE.md).
-- Original content SHA-256: 2e6d31dd6fb3172564a0063d0555aafa0cb46d30e39ac5ed5294c60d8a6204bb.
+- research/astra/astra_deep_discovery_20261018/results/final_readout/SAME_TARGET_QUERY_COST_TABLE.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/final_readout/SAME_TARGET_QUERY_COST_TABLE.md).
 
 ### REC-PKG-0312
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/results/final_tables/README.md.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/results/final_tables/README.md).
-- Original content SHA-256: 490cd4fca3c2bc9e19014f6707c3c768de24ae5f3437b2f5e9b2be1e42ef3ad7.
+- research/astra/astra_deep_discovery_20261018/results/final_tables/README.md
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/final_tables/README.md).
 
 ### REC-PKG-0313
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0313; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 03f0eaeb671ac8255c5222972e2919d4fbabec74afe27dd43f5b74590cbeef78.
+- Status: **INCLUDED**; campaign: AD18.
+- Preserve all-family outcomes, regional harms, undefined subsets and denominator qualifications.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/final_tables/all_family_metrics_and_mechanisms.csv).
+- Curated evidence: CE-AD18-011; published SHA-256: 03f0eaeb671ac8255c5222972e2919d4fbabec74afe27dd43f5b74590cbeef78.
 
 ### REC-PKG-0314
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0314; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1905078361924b4f88ef2a1822838fb8f392b4c37b6fdf06991c9f9b43185920.
+- Status: **INCLUDED**; campaign: AD18.
+- Retain same-target attainment, censoring and computation; restricted burden is not automatically query savings.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/final_tables/existing_paired_query_burden_contrasts.csv).
+- Curated evidence: CE-AD18-012; published SHA-256: 1905078361924b4f88ef2a1822838fb8f392b4c37b6fdf06991c9f9b43185920.
 
 ### REC-PKG-0315
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0315; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: f1711b53c2a666003b5d5b9556a85e7e7b95aa04f9298bc6af9c775a68f711b5.
+- Status: **INCLUDED**; campaign: AD18.
+- Retain compact matched world/path endpoint evidence and dependence context; worlds and paths are not interchangeable replicates.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/final_tables/per_world_matched_paths_and_gates.csv).
+- Curated evidence: CE-AD18-013; published SHA-256: f1711b53c2a666003b5d5b9556a85e7e7b95aa04f9298bc6af9c775a68f711b5.
 
 ### REC-PKG-0316
 
-- Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0316; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 699223425affc66d3f640254ab59e583ec628349f03f01ace03ccb8c99d78aac.
+- Status: **INCLUDED**; campaign: AD18.
+- Retain same-target attainment, censoring and computation; restricted burden is not automatically query savings.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/final_tables/same_target_queries_and_full_horizon_cost.csv).
+- Curated evidence: CE-AD18-014; published SHA-256: 699223425affc66d3f640254ab59e583ec628349f03f01ace03ccb8c99d78aac.
 
 ### REC-PKG-0317
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0317; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5b27809e72f66e8a29e742d40cca6d1717c23bc1c1bbff75151b694a8ff98505.
+- Reviewed record PKG-0317; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0318
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0318; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a8f0687436a27107f8d5430de318b46fc89197601a278ce33d0ae23fb1adb5a5.
+- Reviewed record PKG-0318; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0319
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/run_unit.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/run_unit.py).
-- Original content SHA-256: ecf7fab3b06c47d162bd29538a281a47d8b2026e154aebe359a0a04f8c54c9dd.
+- research/astra/astra_deep_discovery_20261018/run_unit.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/run_unit.py).
 
 ### REC-PKG-0320
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0320; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 59c3d89e6b0f7447332a61726c4bdd469726101fd6ebb6756583f3db44a35001.
+- Reviewed record PKG-0320; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0321
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/slice_and_replay.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/slice_and_replay.py).
-- Original content SHA-256: 58514ffac9f3df894317633dc88cb4b123b7fcf0bc7b12eb0a08a71a9d08acb9.
+- research/astra/astra_deep_discovery_20261018/slice_and_replay.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/slice_and_replay.py).
 
 ### REC-PKG-0322
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0322; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 10420ec6b7eaaad342ef117588460f3d5640f27b38e18f8b0f6be6a9cb7a40d5.
+- Reviewed record PKG-0322; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0323
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0323; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 23bdeb2599df204e604fb4ec83fb52753ec8214a8fe7d50885d3ffb9566d55c5.
+- Reviewed record PKG-0323; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0324
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0324; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1f122b9702ddc18347939880b14eb9ba43dae9496de72063cd41f656138af01c.
+- Reviewed record PKG-0324; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0325
 
 - Status: **INCLUDED**; campaign: AD18.
-- research/astra/astra_deep_discovery_20261018/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_deep_discovery_20261018/worlds.py).
-- Original content SHA-256: 23901884b96109769e8158e84e12d76e398b8f7bfd0369db46fda1ecc116b44c.
+- research/astra/astra_deep_discovery_20261018/worlds.py
+- [Available file](../../research/astra/astra_deep_discovery_20261018/worlds.py).
 
 ### REC-PKG-0326
 
 - Status: **RESTRICTED**; campaign: AD18.
-- Reviewed record PKG-0326; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4431a8c24b1c5d70cca51f46bb27129c2ae35db1091d0e03cdbb023eaed43381.
+- Reviewed record PKG-0326; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0327
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0327; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 115592b25805ede841f479d51179a2ac51f132a8b172769f90d49e1ef9547901.
+- Reviewed record PKG-0327; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0328
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/FINAL_REPORT.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/FINAL_REPORT.md).
-- Original content SHA-256: 4f46f6fa3d9c6ba8f3ae02bba2784b75beb4920ac45c77b57ac3211d0b23188f.
+- research/astra/astra_joint_local_20261026/FINAL_REPORT.md
+- [Available file](../../research/astra/astra_joint_local_20261026/FINAL_REPORT.md).
 
 ### REC-PKG-0329
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0329; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8316fa50e9f8c6272ed89855d67adecdfa26716a49198cdd017925428e7362b2.
+- Reviewed record PKG-0329; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0330
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0330; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 417fa652fd4c1a5a2b67b7ce861dcb3ecce4e4d82d74c76a66630e48b6b1e0c5.
+- Reviewed record PKG-0330; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0331
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0331; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5e19aeb8b4bbcffa77cafc0aa08a9449f1baab42383c8306f2fda7f9ea7ea260.
+- Reviewed record PKG-0331; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0332
 
-- Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0332; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d2d30efbe93c81a8fdc9a50eca4fc528954413432f99aaf17c535417726a4da4.
+- Status: **INCLUDED**; campaign: JL26.
+- Retain the original prospective configuration, endpoints, gates and provenance; operational metadata may require withholding.
+- [Available file](../../research/astra/astra_joint_local_20261026/FROZEN_TEST_V1.json).
+- Curated evidence: CE-JL26-001; published SHA-256: d2d30efbe93c81a8fdc9a50eca4fc528954413432f99aaf17c535417726a4da4.
 
 ### REC-PKG-0333
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0333; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8c1d9f2cb752ae0374af38b8cca9e73381a5078a39db01b5b67c6d89185a4fbd.
+- Reviewed record PKG-0333; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0334
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0334; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 228a458ffbf38c9799bf48e550143c08179d6c24059574d382a57a6b51267650.
+- Reviewed record PKG-0334; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0335
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0335; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: aa817914ec2a39c20c8fa5993afc0df3fc518635782aa70cef386caa26e3e2cf.
+- Reviewed record PKG-0335; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0336
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/RESULTS_INDEX.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/RESULTS_INDEX.md).
-- Original content SHA-256: aca2767a2325c2bdea2496b0b4319f693edfc72beeb5c233004b32a25f549c24.
+- research/astra/astra_joint_local_20261026/RESULTS_INDEX.md
+- [Available file](../../research/astra/astra_joint_local_20261026/RESULTS_INDEX.md).
 
 ### REC-PKG-0337
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0337; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 2369186f2b668e4114592c1d03a0a206f56f220379cf43ca35a0dc5b3d24a860.
+- Reviewed record PKG-0337; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0338
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/THESIS_LOG_INSERT.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/THESIS_LOG_INSERT.md).
-- Original content SHA-256: 7d76e615caaa8f84c645dc1d7df6ec2d4dfb14303abc5a074f82d75a639c6507.
+- research/astra/astra_joint_local_20261026/THESIS_LOG_INSERT.md
+- [Available file](../../research/astra/astra_joint_local_20261026/THESIS_LOG_INSERT.md).
 
 ### REC-PKG-0339
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0339; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 600e0388a9a5f663e7c984e4db785a6e939af17df4c241001450250cbe5ad59a.
+- Reviewed record PKG-0339; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0340
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/bind_receipt.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/bind_receipt.py).
-- Original content SHA-256: 68dd9525f28cf0e1a9599608b4fe4a64f38e397f35f956ac8e534a3ff5f79614.
+- research/astra/astra_joint_local_20261026/bind_receipt.py
+- [Available file](../../research/astra/astra_joint_local_20261026/bind_receipt.py).
 
 ### REC-PKG-0341
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0341; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 7eac28e58c90beea79050c1a69ca264119ac11b535b796826bd87c292ada2007.
+- Reviewed record PKG-0341; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0342
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/build_completion_tables.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/build_completion_tables.py).
-- Original content SHA-256: b8eb24eede573547865104446c8f17433a894d8726d26b2849a022d060298086.
+- research/astra/astra_joint_local_20261026/build_completion_tables.py
+- [Available file](../../research/astra/astra_joint_local_20261026/build_completion_tables.py).
 
 ### REC-PKG-0343
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0343; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e815b78e80651dafda34eca9f40e3fcf17900256640739e74cff06b427d6d43c.
+- Reviewed record PKG-0343; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0344
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/complete_bootstrap.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/complete_bootstrap.py).
-- Original content SHA-256: d12190a03f5ff66245dd828f96b5155ec66f062f7e4329d9b8ab4f81e3a7d6d6.
+- research/astra/astra_joint_local_20261026/complete_bootstrap.py
+- [Available file](../../research/astra/astra_joint_local_20261026/complete_bootstrap.py).
 
 ### REC-PKG-0345
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0345; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9458e26c028abcf2450c7f2a338d639c90be57dec34c39d8ba436bcbb49512ab.
+- Reviewed record PKG-0345; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0346
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/docs/ANALYTICAL_LIMITS.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/docs/ANALYTICAL_LIMITS.md).
-- Original content SHA-256: 6793c9a3652667ed70aad5282c60a48734416cdafdae4fc27ac27f3351855d01.
+- research/astra/astra_joint_local_20261026/docs/ANALYTICAL_LIMITS.md
+- [Available file](../../research/astra/astra_joint_local_20261026/docs/ANALYTICAL_LIMITS.md).
 
 ### REC-PKG-0347
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0347; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d58cc4abc1360bffe0f47262b2868c1819bd39ae53597cfe50bf0655fc6e7d8d.
+- Reviewed record PKG-0347; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0348
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0348; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0dee2133f26cf47cdb49b31afed6b5964bebc09bb97e69af1312b652a694be4c.
+- Reviewed record PKG-0348; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0349
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/docs/DESIGN_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/docs/DESIGN_V1.md).
-- Original content SHA-256: e8b38f9b08c06e156d14de17ff645e931ec0a85e21b687d6a7a899ee17cef4c8.
+- research/astra/astra_joint_local_20261026/docs/DESIGN_V1.md
+- [Available file](../../research/astra/astra_joint_local_20261026/docs/DESIGN_V1.md).
 
 ### REC-PKG-0350
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/docs/DEV_PROTOCOL_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/docs/DEV_PROTOCOL_V1.md).
-- Original content SHA-256: 8fc4a90531e686c095870552541350a92e7713532a99474122f31d4f5a05cdc5.
+- research/astra/astra_joint_local_20261026/docs/DEV_PROTOCOL_V1.md
+- [Available file](../../research/astra/astra_joint_local_20261026/docs/DEV_PROTOCOL_V1.md).
 
 ### REC-PKG-0351
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/docs/DEV_V1_REVIEW.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/docs/DEV_V1_REVIEW.md).
-- Original content SHA-256: 6e52c6d26d81d4e0113fc037f29a3cceb6a5ca21d704c8038b49fd5d10540276.
+- research/astra/astra_joint_local_20261026/docs/DEV_V1_REVIEW.md
+- [Available file](../../research/astra/astra_joint_local_20261026/docs/DEV_V1_REVIEW.md).
 
 ### REC-PKG-0352
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/docs/FINISHING_PROTOCOL_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/docs/FINISHING_PROTOCOL_V1.md).
-- Original content SHA-256: 6be3689d5619f5dfdafe7063f936d28e58fc6d8fdd3eb666eca0ec96d8c263b6.
+- research/astra/astra_joint_local_20261026/docs/FINISHING_PROTOCOL_V1.md
+- [Available file](../../research/astra/astra_joint_local_20261026/docs/FINISHING_PROTOCOL_V1.md).
 
 ### REC-PKG-0353
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/docs/SOURCE_REVIEW.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/docs/SOURCE_REVIEW.md).
-- Original content SHA-256: 87ec2adc3f3a1caa2ac9809b5f4a72415b7158c285f95727f71b823f62b7c5d2.
+- research/astra/astra_joint_local_20261026/docs/SOURCE_REVIEW.md
+- [Available file](../../research/astra/astra_joint_local_20261026/docs/SOURCE_REVIEW.md).
 
 ### REC-PKG-0354
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/docs/TEST_PROTOCOL_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/docs/TEST_PROTOCOL_V1.md).
-- Original content SHA-256: 8990c85176715384da37d04f84715e36fa72d4c7f8b3eaf150e92da161f708ba.
+- research/astra/astra_joint_local_20261026/docs/TEST_PROTOCOL_V1.md
+- [Available file](../../research/astra/astra_joint_local_20261026/docs/TEST_PROTOCOL_V1.md).
 
 ### REC-PKG-0355
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/docs/TEST_V1_REVIEW.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/docs/TEST_V1_REVIEW.md).
-- Original content SHA-256: 972f6b79ca32fc1e7186cde9ec602428b7969ae0a665a8370ec3b5c28e969457.
+- research/astra/astra_joint_local_20261026/docs/TEST_V1_REVIEW.md
+- [Available file](../../research/astra/astra_joint_local_20261026/docs/TEST_V1_REVIEW.md).
 
 ### REC-PKG-0356
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0356; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 64ca24b9f71dafa9c1f70de471fc05d27fbace5207ef7172d56f12caf6ff9176.
+- Reviewed record PKG-0356; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0357
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/finishing_audit.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/finishing_audit.py).
-- Original content SHA-256: a1271225c82e6360759c5910d4908e09c4c060cc204a9f8348f1a4fdf842d597.
+- research/astra/astra_joint_local_20261026/finishing_audit.py
+- [Available file](../../research/astra/astra_joint_local_20261026/finishing_audit.py).
 
 ### REC-PKG-0358
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0358; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0fd0393d5206ec8d4c2b8e2ca74f1c112aa930bca1eb026110b0ac245f1e6b5e.
+- Reviewed record PKG-0358; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0359
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0359; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fbc942cdbb69dbd463ead32ad4d29abddc523eee9c0e5234c6c69803213c50b4.
+- Reviewed record PKG-0359; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0360
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/handoff_api.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/handoff_api.py).
-- Original content SHA-256: 60b853a43628b9969fd0edc20a47c30c50708dab9b8934eac15ec6d761c09faa.
+- research/astra/astra_joint_local_20261026/handoff_api.py
+- [Available file](../../research/astra/astra_joint_local_20261026/handoff_api.py).
 
 ### REC-PKG-0361
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/joint_analysis.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/joint_analysis.py).
-- Original content SHA-256: 37758ccf8be5279264557761e42cd38ef3406d4024dfa91113b80c5c4cc8c036.
+- research/astra/astra_joint_local_20261026/joint_analysis.py
+- [Available file](../../research/astra/astra_joint_local_20261026/joint_analysis.py).
 
 ### REC-PKG-0362
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/joint_model.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/joint_model.py).
-- Original content SHA-256: bf3fae8333e1b94cd3788484c9f05214cec81fab695e39e65453351f7e4906bb.
+- research/astra/astra_joint_local_20261026/joint_model.py
+- [Available file](../../research/astra/astra_joint_local_20261026/joint_model.py).
 
 ### REC-PKG-0363
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/joint_references.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/joint_references.py).
-- Original content SHA-256: b254607bc2ec848e2707b383db6430b15b50bd527d71ae9c44b54f3449b88765.
+- research/astra/astra_joint_local_20261026/joint_references.py
+- [Available file](../../research/astra/astra_joint_local_20261026/joint_references.py).
 
 ### REC-PKG-0364
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0364; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 2e339743ed813e904e6eee8fbf0808a2cb3ad0cca5b18b1f2192bb07f0606c97.
+- Reviewed record PKG-0364; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0365
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/legacy_model.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/legacy_model.py).
-- Original content SHA-256: 7290682c533fb2e9909de3b986fc1f7440f34eefd23eddeec7c6aff0023e8b94.
+- research/astra/astra_joint_local_20261026/legacy_model.py
+- [Available file](../../research/astra/astra_joint_local_20261026/legacy_model.py).
 
 ### REC-PKG-0366
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/portable_check.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/portable_check.py).
-- Original content SHA-256: 5b31052267c1855ad4299b51df4144f7ea7bc6c78f30e75a346426f56c7a4982.
+- research/astra/astra_joint_local_20261026/portable_check.py
+- [Available file](../../research/astra/astra_joint_local_20261026/portable_check.py).
 
 ### REC-PKG-0367
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/portable_validation.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/portable_validation.py).
-- Original content SHA-256: 5ea51f6c6a5ba0c85818a0ee3acc36c28f6b46f78ccccd348e4f38f7b030bc90.
+- research/astra/astra_joint_local_20261026/portable_validation.py
+- [Available file](../../research/astra/astra_joint_local_20261026/portable_validation.py).
 
 ### REC-PKG-0368
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0368; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 2a40c1bb0e26c66b4581eaeda1b1a52d11a1ae279525ad3f8aa684415b4b7320.
+- Reviewed record PKG-0368; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0369
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0369; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 427ebd488e45db118a591bbb1a1a67c37ea89db0749ec2b5fae6c327ec700f9d.
+- Reviewed record PKG-0369; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0370
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0370; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ae804a03d32e2d7a1d93b8beb9b7905326acd3ac19f7b5f87a4f4c63303a29ee.
+- Reviewed record PKG-0370; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0371
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0371; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6efb5472c0e429d1ca008405546be1006d8170cc2e101e1d24d9c9a4d331a026.
+- Reviewed record PKG-0371; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0372
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0372; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 7c59820f542e85abc5df6fbcc2796d51cd319c38d63c96bd3d581c2e09f25cd4.
+- Reviewed record PKG-0372; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0373
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0373; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e4764bcd0888e19e2f870a373ea812965b342afec38710f478cf45a1ea7c2361.
+- Reviewed record PKG-0373; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0374
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0374; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0736cc86499075e8b0972ee4dcc8d4db0bfbe8523497993b0f8ca4c249d67017.
+- Reviewed record PKG-0374; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0375
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/render_review_figures.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/render_review_figures.py).
-- Original content SHA-256: 5ea5e2a64322925d768efad6f6821d54f564414879cbe6320be59226537edebe.
+- research/astra/astra_joint_local_20261026/render_review_figures.py
+- [Available file](../../research/astra/astra_joint_local_20261026/render_review_figures.py).
 
 ### REC-PKG-0376
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/requirements.txt.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/requirements.txt).
-- Original content SHA-256: ddab7a3676d1ec541c27b6b3fc761e3cae0ac526dc1353037e155952428f4edd.
+- research/astra/astra_joint_local_20261026/requirements.txt
+- [Available file](../../research/astra/astra_joint_local_20261026/requirements.txt).
 
 ### REC-PKG-0377
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0377; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e0d912f7a6580e0e5616eca25e6832612ec08676c10b00322a7d7f19a67d4267.
+- Reviewed record PKG-0377; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0378
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0378; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4ac1e58942616aa2a100415fa9acb144f2ed90b2b1b9997abc150c8fc5772414.
+- Reviewed record PKG-0378; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0379
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/results/analysis_dev_v1/ALL_FAMILIES.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/results/analysis_dev_v1/ALL_FAMILIES.md).
-- Original content SHA-256: c49bc87c8092df774e63c102148d0dfde70d6e483dbca3b4d0b059d1254283ce.
+- research/astra/astra_joint_local_20261026/results/analysis_dev_v1/ALL_FAMILIES.md
+- [Available file](../../research/astra/astra_joint_local_20261026/results/analysis_dev_v1/ALL_FAMILIES.md).
 
 ### REC-PKG-0380
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0380; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3c82ee871269324dc1819206e8b35b70e3e75a738c12376df574446837ab2636.
+- Reviewed record PKG-0380; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0381
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0381; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3eb2bb11cbd392c375c3a66b1b0377a63c892ed9434f8e66bca7a5fd0cb21319.
+- Reviewed record PKG-0381; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0382
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0382; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 83182ae0b23f38570e6cf6358da85dd8e4de6458e46eb4aa85cf721e78aa9f08.
+- Reviewed record PKG-0382; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0383
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0383; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 52925ae8fb2c8af31c38e16276d45058e69633c0c138734c78033197da03625f.
+- Reviewed record PKG-0383; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0384
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0384; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 40d58abcfdde759fc0a06af47e91f380db7f423e1032cb4235c4c905d5d00e1b.
+- Reviewed record PKG-0384; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0385
 
-- Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0385; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6d4658e6c4018db867e9ff730086b4de0f3bdd0120b5b04a2f44ab11352afcc6.
+- Status: **INCLUDED**; campaign: JL26.
+- Preserve all-family outcomes, regional harms, undefined subsets and denominator qualifications.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/analysis_test_v1/ALL_FAMILIES.csv).
+- Curated evidence: CE-JL26-003; published SHA-256: 6d4658e6c4018db867e9ff730086b4de0f3bdd0120b5b04a2f44ab11352afcc6.
 
 ### REC-PKG-0386
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/results/analysis_test_v1/ALL_FAMILIES.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/results/analysis_test_v1/ALL_FAMILIES.md).
-- Original content SHA-256: 8a7dee6cd705ca53affe7f2fee18930285a00133494826a1f914c4c51b2bc337.
+- research/astra/astra_joint_local_20261026/results/analysis_test_v1/ALL_FAMILIES.md
+- [Available file](../../research/astra/astra_joint_local_20261026/results/analysis_test_v1/ALL_FAMILIES.md).
 
 ### REC-PKG-0387
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0387; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c54b8362a206578bb3016893d9fbce813c044f89b27d19d68de4a09d7d51cf77.
+- Reviewed record PKG-0387; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0388
 
-- Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0388; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 2b0da611d95b661e745cf957cd2c45068cf5923b735bb9e40cdc6ff6ead278cf.
+- Status: **INCLUDED**; campaign: JL26.
+- Show small-region/family failures or search limitations alongside the broad mean.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/analysis_test_v1/ALL_FAMILIES.png).
+- Curated evidence: CE-JL26-012; published SHA-256: 2b0da611d95b661e745cf957cd2c45068cf5923b735bb9e40cdc6ff6ead278cf.
 
 ### REC-PKG-0389
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0389; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b801bfb1bf442a9694684739ea59168f141054d3f837ae2fb24f772537db1e1a.
+- Reviewed record PKG-0389; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0390
 
-- Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0390; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 06bb1c51885d59583ad96cde8a29d04bc8f4c11cfc3d3210e9fc718bfb4eaeb9.
+- Status: **INCLUDED**; campaign: JL26.
+- Retain compact matched world/path endpoint evidence and dependence context; worlds and paths are not interchangeable replicates.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/analysis_test_v1/PER_WORLD_PATH_MODEL.csv).
+- Curated evidence: CE-JL26-004; published SHA-256: 06bb1c51885d59583ad96cde8a29d04bc8f4c11cfc3d3210e9fc718bfb4eaeb9.
 
 ### REC-PKG-0391
 
-- Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0391; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 921b315f94104f32e8e4503c9c5ab56b35205fbaf0aaffc735a55284bcb599d6.
+- Status: **INCLUDED**; campaign: JL26.
+- Retain the original dependency-aware model CPU accounting and exclusions.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/completion/COMPUTE_COST.csv).
+- Curated evidence: CE-JL26-006; published SHA-256: 921b315f94104f32e8e4503c9c5ab56b35205fbaf0aaffc735a55284bcb599d6.
 
 ### REC-PKG-0392
 
-- Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0392; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 04ff6ccc5a4d90228189e71d14e08573f7511337fcbda997002ef43689508a27.
+- Status: **INCLUDED**; campaign: JL26.
+- Retain first-hit/post-hit and regional harm diagnostics without extending them to a new selector or physical regime claim.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/completion/FAMILY_DIAGNOSTICS_B24.csv).
+- Curated evidence: CE-JL26-007; published SHA-256: 04ff6ccc5a4d90228189e71d14e08573f7511337fcbda997002ef43689508a27.
 
 ### REC-PKG-0393
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0393; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 20f725fd4fccc343e13e6a90f31d7383dc9548e760ce9967e157ddaec38e4722.
+- Reviewed record PKG-0393; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0394
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0394; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 132347bd39857ee82d2a03b74aa19864fdf55c9acc47c0762e6a4d16791419b0.
+- Reviewed record PKG-0394; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0395
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0395; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4363bb390528d0d64e51602b5f619afb7cc121b7844ec569d8831dcda3f32a80.
+- Reviewed record PKG-0395; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0396
 
-- Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0396; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c6446ebeacd4f2a36a9a6d151c3de5f42a2a41b7b8b13d5ed58b12f529e82a61.
+- Status: **INCLUDED**; campaign: JL26.
+- Show the existing reported learning curves; no figure was regenerated or reinterpreted as physical validation.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/completion/LEARNING_CURVES_REVIEWED.png).
+- Curated evidence: CE-JL26-013; published SHA-256: c6446ebeacd4f2a36a9a6d151c3de5f42a2a41b7b8b13d5ed58b12f529e82a61.
 
 ### REC-PKG-0397
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0397; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 7cf52ce4fc0ea1e62b3998d74d81ced81022eea9cd355707f8714912c3a0591e.
+- Reviewed record PKG-0397; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0398
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0398; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: f92faf77f21f3bc427dcef51b5a2ba258c970763a0c331bb4ca5b6937fb14e4f.
+- Reviewed record PKG-0398; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0399
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/results/completion/SAME_TARGET_COST.md.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/results/completion/SAME_TARGET_COST.md).
-- Original content SHA-256: 5826672098183565e97fcf981c678e67106ba105dfafe03f8e4c331e8308f0ef.
+- research/astra/astra_joint_local_20261026/results/completion/SAME_TARGET_COST.md
+- [Available file](../../research/astra/astra_joint_local_20261026/results/completion/SAME_TARGET_COST.md).
 
 ### REC-PKG-0400
 
-- Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0400; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a817fbb1cbbda8942552b62f6f910ef52bdb67f253906fc485626ca398ea4689.
+- Status: **INCLUDED**; campaign: JL26.
+- Retain the original attained/censored counts and paid confirmation rule.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/completion/TARGET_ATTAINMENT.csv).
+- Curated evidence: CE-JL26-008; published SHA-256: a817fbb1cbbda8942552b62f6f910ef52bdb67f253906fc485626ca398ea4689.
 
 ### REC-PKG-0401
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0401; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 536fc8c6041436f57eda50eb8732e474a1608c062b294a7397380bbd35d23267.
+- Reviewed record PKG-0401; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0402
 
-- Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0402; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 35e2c212dcefc27df4c99cb6b0eafb3a68fc17155d1db7944d2d33fbb90193e3.
+- Status: **INCLUDED**; campaign: JL26.
+- Retain first-hit/post-hit and regional harm diagnostics without extending them to a new selector or physical regime claim.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/finishing/HIT_DIAGNOSTICS.csv).
+- Curated evidence: CE-JL26-009; published SHA-256: 35e2c212dcefc27df4c99cb6b0eafb3a68fc17155d1db7944d2d33fbb90193e3.
 
 ### REC-PKG-0403
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0403; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b058b53539de17402fdd3b66bdb64eaef085b3c28355bffe04fd8d63f5c61b9d.
+- Reviewed record PKG-0403; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0404
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0404; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 2a7f8c342a8c11ee1ec8d78b6ffee163eaabd3ad3a261e754e98b979a92907c0.
+- Reviewed record PKG-0404; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0405
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0405; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 274d08206205af1da7058fd565951ce3741eb29bbaf0e08202928ebf9882f1e0.
+- Reviewed record PKG-0405; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0406
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0406; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 618102e913785d5bfbd7d136dfc11158e712a996313869643a26ed7c5e8b0154.
+- Reviewed record PKG-0406; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0407
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0407; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: f3fb0585b615463845a0ed65e403ea354e985a46bc55086956c20501c3edd52d.
+- Reviewed record PKG-0407; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0408
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0408; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a35fffc15257c7b265afc0cf4c5c36b4ca005ab054331b6344756049b2cfd3af.
+- Reviewed record PKG-0408; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0409
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/status_check.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/status_check.py).
-- Original content SHA-256: 8ad46dcaa0d0dd9780557f510ef327aad21663f0d402ffbe49e117436728eb37.
+- research/astra/astra_joint_local_20261026/status_check.py
+- [Available file](../../research/astra/astra_joint_local_20261026/status_check.py).
 
 ### REC-PKG-0410
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/test_analysis.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/test_analysis.py).
-- Original content SHA-256: 5c31ba945b8a21f255fbd518dfb98fff67871d6315d142bee6aeabd7a38970c0.
+- research/astra/astra_joint_local_20261026/test_analysis.py
+- [Available file](../../research/astra/astra_joint_local_20261026/test_analysis.py).
 
 ### REC-PKG-0411
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/test_path_builder.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/test_path_builder.py).
-- Original content SHA-256: 45563b8b55e66ce02fc7e535a9eed6e8babd961c063d119c7a90df8a4be42370.
+- research/astra/astra_joint_local_20261026/test_path_builder.py
+- [Available file](../../research/astra/astra_joint_local_20261026/test_path_builder.py).
 
 ### REC-PKG-0412
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0412; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 66a825880e824d04acd8ce913ab06768cefab6b674a3f188ad6654235f5f7a7f.
+- Reviewed record PKG-0412; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0413
 
 - Status: **INCLUDED**; campaign: JL26.
-- research/astra/astra_joint_local_20261026/test_worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_joint_local_20261026/test_worlds.py).
-- Original content SHA-256: 8e275b97427142612e901ad3c517b70c116db84359b5c509d7f4a00a3e3365a5.
+- research/astra/astra_joint_local_20261026/test_worlds.py
+- [Available file](../../research/astra/astra_joint_local_20261026/test_worlds.py).
 
 ### REC-PKG-0414
 
 - Status: **RESTRICTED**; campaign: JL26.
-- Reviewed record PKG-0414; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 24215c19efdb5f2151719c5a1ea52e6dbb2ebf1a6836d08b1c45e91253f0ba35.
+- Reviewed record PKG-0414; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0415
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0415; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d7f95e181ab78545aab3b04dc1d2786ccb0b7312e75edfa2f10c791c9afe0498.
+- Reviewed record PKG-0415; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0416
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/ALL_FAMILIES.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/ALL_FAMILIES.md).
-- Original content SHA-256: 017356ee71ab28694a04fcae15cc7447f9075c03587d68ecb8ddf570ffc0d9a7.
+- research/astra/astra_local_correction_20261024/ALL_FAMILIES.md
+- [Available file](../../research/astra/astra_local_correction_20261024/ALL_FAMILIES.md).
 
 ### REC-PKG-0417
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/FINAL_REPORT.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/FINAL_REPORT.md).
-- Original content SHA-256: 1875635e68bc402c51fe40728d27b8dffea347344c412a6004452044afaa6227.
+- research/astra/astra_local_correction_20261024/FINAL_REPORT.md
+- [Available file](../../research/astra/astra_local_correction_20261024/FINAL_REPORT.md).
 
 ### REC-PKG-0418
 
-- Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0418; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3b2fbd573a22ae9ca57d82db7f6dbe195389a9a48e3ace007f405de848eabbe0.
+- Status: **INCLUDED**; campaign: LC24.
+- Retain the original prospective configuration, endpoints, gates and provenance; operational metadata may require withholding.
+- [Available file](../../research/astra/astra_local_correction_20261024/FROZEN_DEV_V1.json).
+- Curated evidence: CE-LC24-002; published SHA-256: 3b2fbd573a22ae9ca57d82db7f6dbe195389a9a48e3ace007f405de848eabbe0.
 
 ### REC-PKG-0419
 
-- Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0419; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 56fc358ef73dce589a8e9e0f1aef097cc7eeec0bd3573e5a95828d8f4840dbd1.
+- Status: **INCLUDED**; campaign: LC24.
+- Retain the original prospective configuration, endpoints, gates and provenance; operational metadata may require withholding.
+- [Available file](../../research/astra/astra_local_correction_20261024/FROZEN_DEV_V2.json).
+- Curated evidence: CE-LC24-003; published SHA-256: 56fc358ef73dce589a8e9e0f1aef097cc7eeec0bd3573e5a95828d8f4840dbd1.
 
 ### REC-PKG-0420
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0420; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c0d8b141254a9699dbc622ee4ca89dd94640bf52f172320e10c2a42d3e4d02bb.
+- Reviewed record PKG-0420; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0421
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0421; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 2f832a9060214dd7ae7c369d6fb8e2bd17f8c6627d85fc2154a774b9f5ae8fcb.
+- Reviewed record PKG-0421; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0422
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0422; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ebbb17f4f5ea143247d207dfe2cdafedb2d73a669a676e27cf9dcc7496bedd23.
+- Reviewed record PKG-0422; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0423
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0423; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: bba4881b2d7eded5ffa7993a4ae5e2cb0096bc3a60a929528ba96a18c6f41fba.
+- Reviewed record PKG-0423; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0424
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/RESULTS_INDEX.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/RESULTS_INDEX.md).
-- Original content SHA-256: f193e889ce57647b1200d045f7aab3af15719b6abe9f45c007c75a17529e7f40.
+- research/astra/astra_local_correction_20261024/RESULTS_INDEX.md
+- [Available file](../../research/astra/astra_local_correction_20261024/RESULTS_INDEX.md).
 
 ### REC-PKG-0425
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/SAME_TARGET_QUERY_COST.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/SAME_TARGET_QUERY_COST.md).
-- Original content SHA-256: 27240cfa407d249e7835af06d669032933750d513a5e1cac856eac6e58e09747.
+- research/astra/astra_local_correction_20261024/SAME_TARGET_QUERY_COST.md
+- [Available file](../../research/astra/astra_local_correction_20261024/SAME_TARGET_QUERY_COST.md).
 
 ### REC-PKG-0426
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0426; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 957b1ebc53f641427e8d718893ef927ac869b3525473bb95095adbba0c8b799b.
+- Reviewed record PKG-0426; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0427
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/analyse_dev.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/analyse_dev.py).
-- Original content SHA-256: 19928cc2166fcf12cfd5ebc665258d579388a0301bc74d9366cce13f994a8656.
+- research/astra/astra_local_correction_20261024/analyse_dev.py
+- [Available file](../../research/astra/astra_local_correction_20261024/analyse_dev.py).
 
 ### REC-PKG-0428
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/analyse_v2.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/analyse_v2.py).
-- Original content SHA-256: 5470e3490883f70b9d775d149137f2c4da9d4407b6d4ab8e5ce0037e5b3dd7b3.
+- research/astra/astra_local_correction_20261024/analyse_v2.py
+- [Available file](../../research/astra/astra_local_correction_20261024/analyse_v2.py).
 
 ### REC-PKG-0429
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0429; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 04de134971e8554476abac77dd6fbcfdff9fbd5bf3633216b6e9dad8490ddc78.
+- Reviewed record PKG-0429; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0430
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/diagnose_v1.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/diagnose_v1.py).
-- Original content SHA-256: a221aca4a7b9e93e3b814409906bc41a50086f10bdb47c5c9414abecfe5cf68a.
+- research/astra/astra_local_correction_20261024/diagnose_v1.py
+- [Available file](../../research/astra/astra_local_correction_20261024/diagnose_v1.py).
 
 ### REC-PKG-0431
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/docs/ANALYTICAL_LIMITS.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/docs/ANALYTICAL_LIMITS.md).
-- Original content SHA-256: 6fcb06455acc2ef59662c2745058def82a2db384b00172b4a069fc8757b3d213.
+- research/astra/astra_local_correction_20261024/docs/ANALYTICAL_LIMITS.md
+- [Available file](../../research/astra/astra_local_correction_20261024/docs/ANALYTICAL_LIMITS.md).
 
 ### REC-PKG-0432
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0432; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0a3c5773b3c647ccc6fbf90d5b68e85b783eeac1f6a86e8e9dbc16eb0b7214d8.
+- Reviewed record PKG-0432; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0433
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/docs/DEV_PROTOCOL_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/docs/DEV_PROTOCOL_V1.md).
-- Original content SHA-256: aaf78305809b86b27f6833c05fd97bc3a4703eb9b929bc53869c2c77ed55dcf7.
+- research/astra/astra_local_correction_20261024/docs/DEV_PROTOCOL_V1.md
+- [Available file](../../research/astra/astra_local_correction_20261024/docs/DEV_PROTOCOL_V1.md).
 
 ### REC-PKG-0434
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/docs/DEV_V1_REVIEW.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/docs/DEV_V1_REVIEW.md).
-- Original content SHA-256: 4b6455cfb1085749c4937dbe4629d22d83f5553072b03d39000b035ceca7bdc2.
+- research/astra/astra_local_correction_20261024/docs/DEV_V1_REVIEW.md
+- [Available file](../../research/astra/astra_local_correction_20261024/docs/DEV_V1_REVIEW.md).
 
 ### REC-PKG-0435
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/docs/DEV_V2_PROTOCOL.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/docs/DEV_V2_PROTOCOL.md).
-- Original content SHA-256: 25b7cfb6011611866eade631a1e208f507f4b15d5b26b7245a44d97727b8f357.
+- research/astra/astra_local_correction_20261024/docs/DEV_V2_PROTOCOL.md
+- [Available file](../../research/astra/astra_local_correction_20261024/docs/DEV_V2_PROTOCOL.md).
 
 ### REC-PKG-0436
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/docs/MODEL_DESIGN_V1.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/docs/MODEL_DESIGN_V1.md).
-- Original content SHA-256: 5a707cb93f7b2aef3012ff8f6457b2aa011e2641b70f3e97dae6dde991197c99.
+- research/astra/astra_local_correction_20261024/docs/MODEL_DESIGN_V1.md
+- [Available file](../../research/astra/astra_local_correction_20261024/docs/MODEL_DESIGN_V1.md).
 
 ### REC-PKG-0437
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/docs/SOURCE_REVIEW.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/docs/SOURCE_REVIEW.md).
-- Original content SHA-256: f66efefdf7827d2546727772aa0eb4512cdecf375cb9b58ad96ee9298464e426.
+- research/astra/astra_local_correction_20261024/docs/SOURCE_REVIEW.md
+- [Available file](../../research/astra/astra_local_correction_20261024/docs/SOURCE_REVIEW.md).
 
 ### REC-PKG-0438
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0438; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a906eed5e89159528fedca6b4adba9a799e66bb41be403238b039e095457a22a.
+- Reviewed record PKG-0438; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0439
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/finish_reports.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/finish_reports.py).
-- Original content SHA-256: def293c9cb37c9962ccc5edabb633f9737d4e1f60dd8566d51517a8530710dda.
+- research/astra/astra_local_correction_20261024/finish_reports.py
+- [Available file](../../research/astra/astra_local_correction_20261024/finish_reports.py).
 
 ### REC-PKG-0440
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/finishing_checks.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/finishing_checks.py).
-- Original content SHA-256: 28284345295492f5e4b0239db206bef3eb2e1a0eb7e12490c784f2b87d49d535.
+- research/astra/astra_local_correction_20261024/finishing_checks.py
+- [Available file](../../research/astra/astra_local_correction_20261024/finishing_checks.py).
 
 ### REC-PKG-0441
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0441; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 29920efa56058baa80f30cb7a61f239bbac148088a096d066d50f44b38c704ff.
+- Reviewed record PKG-0441; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0442
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0442; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b5ac3c5fd75476125a61a27935fe3933424790b1e9db7b19e64001783f5cfdcb.
+- Reviewed record PKG-0442; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0443
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/handoff/README.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/handoff/README.md).
-- Original content SHA-256: 4bc5e1d202cc263b0e98e195dbafa39c54b1604cb2187f4633af9f03b409b2b9.
+- research/astra/astra_local_correction_20261024/handoff/README.md
+- [Available file](../../research/astra/astra_local_correction_20261024/handoff/README.md).
 
 ### REC-PKG-0444
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/handoff/__init__.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/handoff/__init__.py).
-- Original content SHA-256: 8e1d4dfca2cbde3bd2155f91a2ad0cd69e9f09fa49f9f1661cdc5a27635ff5f2.
+- research/astra/astra_local_correction_20261024/handoff/__init__.py
+- [Available file](../../research/astra/astra_local_correction_20261024/handoff/__init__.py).
 
 ### REC-PKG-0445
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/handoff/api.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/handoff/api.py).
-- Original content SHA-256: 256260b707d6994cac8afc72c91b8f9cd477be3ae6702ca461e453379823d5ef.
+- research/astra/astra_local_correction_20261024/handoff/api.py
+- [Available file](../../research/astra/astra_local_correction_20261024/handoff/api.py).
 
 ### REC-PKG-0446
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/handoff/coherent_core.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/handoff/coherent_core.py).
-- Original content SHA-256: e6e64c5068480bc03084e12dc823ed2a5506a78f44757afee5f43841532eda6f.
+- research/astra/astra_local_correction_20261024/handoff/coherent_core.py
+- [Available file](../../research/astra/astra_local_correction_20261024/handoff/coherent_core.py).
 
 ### REC-PKG-0447
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/handoff/local_core.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/handoff/local_core.py).
-- Original content SHA-256: 7290682c533fb2e9909de3b986fc1f7440f34eefd23eddeec7c6aff0023e8b94.
+- research/astra/astra_local_correction_20261024/handoff/local_core.py
+- [Available file](../../research/astra/astra_local_correction_20261024/handoff/local_core.py).
 
 ### REC-PKG-0448
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0448; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 6efb5472c0e429d1ca008405546be1006d8170cc2e101e1d24d9c9a4d331a026.
+- Reviewed record PKG-0448; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0449
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/requirements.txt.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/requirements.txt).
-- Original content SHA-256: ddab7a3676d1ec541c27b6b3fc761e3cae0ac526dc1353037e155952428f4edd.
+- research/astra/astra_local_correction_20261024/requirements.txt
+- [Available file](../../research/astra/astra_local_correction_20261024/requirements.txt).
 
 ### REC-PKG-0450
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/research_v1/__init__.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/research_v1/__init__.py).
-- Original content SHA-256: 688c4cf3593228f66a30e759d063807fa0cf15934205312a42b9d9bb47c8fa67.
+- research/astra/astra_local_correction_20261024/research_v1/__init__.py
+- [Available file](../../research/astra/astra_local_correction_20261024/research_v1/__init__.py).
 
 ### REC-PKG-0451
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/research_v1/model.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/research_v1/model.py).
-- Original content SHA-256: 7290682c533fb2e9909de3b986fc1f7440f34eefd23eddeec7c6aff0023e8b94.
+- research/astra/astra_local_correction_20261024/research_v1/model.py
+- [Available file](../../research/astra/astra_local_correction_20261024/research_v1/model.py).
 
 ### REC-PKG-0452
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/research_v1/references.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/research_v1/references.py).
-- Original content SHA-256: 8d6ba9aa623f3152c782a785563f1eeebbb7726f4721c551d59bc6831d6c53b8.
+- research/astra/astra_local_correction_20261024/research_v1/references.py
+- [Available file](../../research/astra/astra_local_correction_20261024/research_v1/references.py).
 
 ### REC-PKG-0453
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0453; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 36c475689257ac8bc3fb879e5fc2ada69bc874290534b39fd096b3bd4e47e42d.
+- Reviewed record PKG-0453; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0454
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/research_v1/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/research_v1/worlds.py).
-- Original content SHA-256: 1f17b631f6d1ab2b0312e3c67019b3cfa5ad4aefe9efb1844a2a16ae15fe32ba.
+- research/astra/astra_local_correction_20261024/research_v1/worlds.py
+- [Available file](../../research/astra/astra_local_correction_20261024/research_v1/worlds.py).
 
 ### REC-PKG-0455
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/research_v2.py.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/research_v2.py).
-- Original content SHA-256: 3b86cf69ab4dabcdb842e2679803a3f7970a9b4e9dad7014c8aa21101dd9afc1.
+- research/astra/astra_local_correction_20261024/research_v2.py
+- [Available file](../../research/astra/astra_local_correction_20261024/research_v2.py).
 
 ### REC-PKG-0456
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0456; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 84dc838e44254a4a3e31117459f4c07c29a67ad4f4a08c0e531234fb7bb3f2d8.
+- Reviewed record PKG-0456; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0457
 
-- Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0457; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 239698afc35a4e8c79c59c684df566502371ef9b001d4cba3c247d3fffae0f72.
+- Status: **INCLUDED**; campaign: LC24.
+- Show small-region/family failures or search limitations alongside the broad mean.
+- [Available file](../../research/astra/astra_local_correction_20261024/results/analysis_dev_v1/ALL_FAMILIES.png).
+- Curated evidence: CE-LC24-011; published SHA-256: 239698afc35a4e8c79c59c684df566502371ef9b001d4cba3c247d3fffae0f72.
 
 ### REC-PKG-0458
 
-- Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0458; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: db47ccabba5b262c98246faff3d6d552cf7a769411e9e73003e1939d219376b0.
+- Status: **INCLUDED**; campaign: LC24.
+- Retain compact matched world/path endpoint evidence and dependence context; worlds and paths are not interchangeable replicates.
+- [Available file](../../research/astra/astra_local_correction_20261024/results/analysis_dev_v1/PER_WORLD_PATH_MODEL.csv).
+- Curated evidence: CE-LC24-006; published SHA-256: db47ccabba5b262c98246faff3d6d552cf7a769411e9e73003e1939d219376b0.
 
 ### REC-PKG-0459
 
-- Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0459; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 29f54fbf9b7ecc8b8d5985c9f984b995582c55578d237166b8060eefea28536b.
+- Status: **INCLUDED**; campaign: LC24.
+- Show the existing reported learning curves; no figure was regenerated or reinterpreted as physical validation.
+- [Available file](../../research/astra/astra_local_correction_20261024/results/analysis_dev_v2/LEARNING_CURVES.png).
+- Curated evidence: CE-LC24-012; published SHA-256: 29f54fbf9b7ecc8b8d5985c9f984b995582c55578d237166b8060eefea28536b.
 
 ### REC-PKG-0460
 
-- Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0460; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: acfac526ed9e3344bd6355952680c6de3dce5688df80bb9d43e760e376e78c81.
+- Status: **INCLUDED**; campaign: LC24.
+- Retain compact matched world/path endpoint evidence and dependence context; worlds and paths are not interchangeable replicates.
+- [Available file](../../research/astra/astra_local_correction_20261024/results/analysis_dev_v2/PER_WORLD_PATH_MODEL.csv).
+- Curated evidence: CE-LC24-007; published SHA-256: acfac526ed9e3344bd6355952680c6de3dce5688df80bb9d43e760e376e78c81.
 
 ### REC-PKG-0461
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0461; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 71267959604ee603e5bad04d9b5ad50f217d6ecd9e8507ca4d612f740010157a.
+- Reviewed record PKG-0461; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0462
 
 - Status: **INCLUDED**; campaign: LC24.
-- research/astra/astra_local_correction_20261024/review_bundle/README.md.
-- [Open retained reading evidence](../../research/astra/astra_local_correction_20261024/review_bundle/README.md).
-- Original content SHA-256: b584a1d028edbb9447ccc042c423c5e28fda0d009aa3aa351c162edae255e319.
+- research/astra/astra_local_correction_20261024/review_bundle/README.md
+- [Available file](../../research/astra/astra_local_correction_20261024/review_bundle/README.md).
 
 ### REC-PKG-0463
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0463; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e770ef52cccc2a689dec32f75a43559f0dbac1f5bd6f9a219be9781862acd87e.
+- Reviewed record PKG-0463; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0464
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0464; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ccb483430e006fb530506ea8623e3ae2ea41251618b93c5e35bf855bd7b7710c.
+- Reviewed record PKG-0464; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0465
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0465; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e426a39b2fb97de0b0b28cf8c074b729df811c5d9cb39da7e591137de0c0d80b.
+- Reviewed record PKG-0465; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0466
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0466; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9520a8ee17209493fd7ae9617fde4f4c2d9512036a94f85f613e58dc3a563d69.
+- Reviewed record PKG-0466; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0467
 
 - Status: **RESTRICTED**; campaign: LC24.
-- Reviewed record PKG-0467; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b109ecfcde253ca885bb27bf95bd2181d9117ea391ce90af2063ff99e1ebd17a.
+- Reviewed record PKG-0467; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0468
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/ALL_FAMILIES_REVIEW.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/ALL_FAMILIES_REVIEW.md).
-- Original content SHA-256: 80deee9d61ce8ea7c9ee30bfd44a20e6d5e247c43932b3dcc06f216417f772d2.
+- research/astra/astra_representation_planning_20261020/ALL_FAMILIES_REVIEW.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/ALL_FAMILIES_REVIEW.md).
 
 ### REC-PKG-0469
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/CLAIMS_LOG.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/CLAIMS_LOG.md).
-- Original content SHA-256: d8d7f98e5601c88f65b14634659991557cdbf9b798ab89c17d3863d6e4eeb1a3.
+- research/astra/astra_representation_planning_20261020/CLAIMS_LOG.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/CLAIMS_LOG.md).
 
 ### REC-PKG-0470
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/COMPONENT_LEARNING_CONTROL.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/COMPONENT_LEARNING_CONTROL.md).
-- Original content SHA-256: fb43f56b2de2839ac16d12f8dce123cf3df1e6cec39a7b3bbf6c031366d2d9b9.
+- research/astra/astra_representation_planning_20261020/COMPONENT_LEARNING_CONTROL.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/COMPONENT_LEARNING_CONTROL.md).
 
 ### REC-PKG-0471
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0471; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3e2a07a466f0e27d657c98bda4d169c23781977c2729056be3dc1754a96a9136.
+- Reviewed record PKG-0471; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0472
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/DEVELOPMENT_PROTOCOL.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/DEVELOPMENT_PROTOCOL.md).
-- Original content SHA-256: d8038aca54eb4604c840c34867548c70b698a701bcf4124ae0e07a551e7a100c.
+- research/astra/astra_representation_planning_20261020/DEVELOPMENT_PROTOCOL.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/DEVELOPMENT_PROTOCOL.md).
 
 ### REC-PKG-0473
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/FINAL_DELIVERY.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/FINAL_DELIVERY.md).
-- Original content SHA-256: f2b3eabab1069ea098b800c40160f69152fc97ef908ad718b6e50c1da38bab93.
+- research/astra/astra_representation_planning_20261020/FINAL_DELIVERY.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/FINAL_DELIVERY.md).
 
 ### REC-PKG-0474
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/FINAL_REPORT.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/FINAL_REPORT.md).
-- Original content SHA-256: ec4ee495806cc1210f595865c612905584e7624311074d31fd7940b747d949aa.
+- research/astra/astra_representation_planning_20261020/FINAL_REPORT.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/FINAL_REPORT.md).
 
 ### REC-PKG-0475
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/FINAL_REVIEW_SCOPE.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/FINAL_REVIEW_SCOPE.md).
-- Original content SHA-256: 5622765c32f09300a6d1adcb1e5247c3d106e841364e376da75312e111fcaa4f.
+- research/astra/astra_representation_planning_20261020/FINAL_REVIEW_SCOPE.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/FINAL_REVIEW_SCOPE.md).
 
 ### REC-PKG-0476
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/FROZEN_ANALYSIS_IMPLEMENTATION.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/FROZEN_ANALYSIS_IMPLEMENTATION.md).
-- Original content SHA-256: 5901cd06e298583dc4ae99a12d2a86739fda29b6729143ff60465faee07c37f6.
+- research/astra/astra_representation_planning_20261020/FROZEN_ANALYSIS_IMPLEMENTATION.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/FROZEN_ANALYSIS_IMPLEMENTATION.md).
 
 ### REC-PKG-0477
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0477; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ffde8979f77bbe9077166ccd7dc24104f7e618af25b922f73e40707c47b61e88.
+- Reviewed record PKG-0477; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0478
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0478; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 412fb0836b0f8327407ced79b3f232b7aa77760f57a48d5efbd91cf26ef58a26.
+- Reviewed record PKG-0478; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0479
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0479; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a50a5dcd649162fdc63bd16195cba3f4475b3e6cc26817c430f2e27542902d50.
+- Reviewed record PKG-0479; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0480
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0480; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 993346fc8540f859bdb639f81a419af6435fb6bb6ad6271123ff1f47fca702fb.
+- Reviewed record PKG-0480; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0481
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0481; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0b3feecad5a1a1e1a92a73409fad3ac4557bab74816846c4b58da365c1ccf0c9.
+- Reviewed record PKG-0481; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0482
 
 - Status: **EDITORIAL_SUMMARY**; campaign: EDITORIAL.
-- Reviewed record PKG-0482; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 1b733e8abb3dd6bc7124cda8bb6bb24136daeecd4a22cbb7465afe4028106d09.
+- Reviewed record PKG-0482; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0483
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0483; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e9749f9acece70cca73c4ef06ad32658e4bc25dfd874fb86dec32a399588da41.
+- Reviewed record PKG-0483; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0484
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/MECHANISM_INTERPRETATION.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/MECHANISM_INTERPRETATION.md).
-- Original content SHA-256: 5a73b7c8bac8985c30d53898b47680b094e39ef9599cfd66131b797327ec16fd.
+- research/astra/astra_representation_planning_20261020/MECHANISM_INTERPRETATION.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/MECHANISM_INTERPRETATION.md).
 
 ### REC-PKG-0485
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/METHOD_DESIGN.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/METHOD_DESIGN.md).
-- Original content SHA-256: 080b09f60c33f116eca89a5d9ffc3257c5e224f70240809c39a7b47845c712d6.
+- research/astra/astra_representation_planning_20261020/METHOD_DESIGN.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/METHOD_DESIGN.md).
 
 ### REC-PKG-0486
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/MIXTURE_ATTRIBUTION_NOTE.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/MIXTURE_ATTRIBUTION_NOTE.md).
-- Original content SHA-256: 65e5ffe243c500bbbf08fc90cb26a41958377ed314cdd85d9d507aaf8378f3e1.
+- research/astra/astra_representation_planning_20261020/MIXTURE_ATTRIBUTION_NOTE.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/MIXTURE_ATTRIBUTION_NOTE.md).
 
 ### REC-PKG-0487
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/NUMERICAL_REFINEMENT_01.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/NUMERICAL_REFINEMENT_01.md).
-- Original content SHA-256: 876abae2b73f87ee493a632c1f50a41965a48c65691f1594c8ac4ca19118be74.
+- research/astra/astra_representation_planning_20261020/NUMERICAL_REFINEMENT_01.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/NUMERICAL_REFINEMENT_01.md).
 
 ### REC-PKG-0488
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/NUMERICAL_REFINEMENT_02.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/NUMERICAL_REFINEMENT_02.md).
-- Original content SHA-256: ee0a9a13512c42f2e70ae51199796a125554c8b606416df5ae47ae4fa8e0c203.
+- research/astra/astra_representation_planning_20261020/NUMERICAL_REFINEMENT_02.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/NUMERICAL_REFINEMENT_02.md).
 
 ### REC-PKG-0489
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0489; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a38ebf32ac11aaf973ee0c9d677326156e2f4b221b3f593944d84419ec90a232.
+- Reviewed record PKG-0489; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0490
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0490; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a54cc1467c993d9372ce714b3084dbfb8244759112703380f405058e2376515e.
+- Reviewed record PKG-0490; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0491
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0491; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8c7f73839696776771411a92a04ed9ec5272784fa365cdfb9a88c16943730d27.
+- Reviewed record PKG-0491; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0492
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0492; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 37224b734c011a530c6f01260b077b21f57b187a72073b769fd091610eff31e9.
+- Reviewed record PKG-0492; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0493
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/PRIOR_RECONCILIATION.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/PRIOR_RECONCILIATION.md).
-- Original content SHA-256: 9066510890c28ab1debda600d85c917e6cb55eccd2287247d3897289def4a094.
+- research/astra/astra_representation_planning_20261020/PRIOR_RECONCILIATION.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/PRIOR_RECONCILIATION.md).
 
 ### REC-PKG-0494
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/RESEARCH_LOG.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/RESEARCH_LOG.md).
-- Original content SHA-256: badd41e8dd1bd1cd84b94a30dc7495b4bc5246d4d8667e57628e63500a55e1bb.
+- research/astra/astra_representation_planning_20261020/RESEARCH_LOG.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/RESEARCH_LOG.md).
 
 ### REC-PKG-0495
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/RESULTS_INDEX.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/RESULTS_INDEX.md).
-- Original content SHA-256: b46c7ce1f5e3f1a4192a610ab3246bd1724597c9c116c3cfbbc9ffcdb92f3f38.
+- research/astra/astra_representation_planning_20261020/RESULTS_INDEX.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/RESULTS_INDEX.md).
 
 ### REC-PKG-0496
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/SAME_TARGET_QUERY_COST.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/SAME_TARGET_QUERY_COST.md).
-- Original content SHA-256: 57892dc38b4a41d112f8d9ede7af830751bc28d34d1a43d3bd729690a2fb3268.
+- research/astra/astra_representation_planning_20261020/SAME_TARGET_QUERY_COST.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/SAME_TARGET_QUERY_COST.md).
 
 ### REC-PKG-0497
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/SONUC_TR.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/SONUC_TR.md).
-- Original content SHA-256: eea7b7547b1a66657d48c9c0bfcae61269459531e89c905997f83d0d5cdc2503.
+- research/astra/astra_representation_planning_20261020/SONUC_TR.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/SONUC_TR.md).
 
 ### REC-PKG-0498
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/TEST_EXECUTION_ENVELOPE.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/TEST_EXECUTION_ENVELOPE.md).
-- Original content SHA-256: 14173a16b30c14b1f633189980a18f1b97f5116f1766d3e2e462a459560bbd27.
+- research/astra/astra_representation_planning_20261020/TEST_EXECUTION_ENVELOPE.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/TEST_EXECUTION_ENVELOPE.md).
 
 ### REC-PKG-0499
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/TEST_PROTOCOL.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/TEST_PROTOCOL.md).
-- Original content SHA-256: bf457552bc5f33a87bc5325f1a7e8c7e5bbaed78ae50913286e3060ceeab8e18.
+- research/astra/astra_representation_planning_20261020/TEST_PROTOCOL.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/TEST_PROTOCOL.md).
 
 ### REC-PKG-0500
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/VISUAL_REVIEW.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/VISUAL_REVIEW.md).
-- Original content SHA-256: 64aa8729f87389b1d5c36a9f87b6cd17a90b480b127bad2e57b7e20420fe9b71.
+- research/astra/astra_representation_planning_20261020/VISUAL_REVIEW.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/VISUAL_REVIEW.md).
 
 ### REC-PKG-0501
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/analyze_test.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/analyze_test.py).
-- Original content SHA-256: 54c1805d956d3c3f0c96c6e2d91a14fc3637d5df60a2d3bafa78eafc4abbe7e0.
+- research/astra/astra_representation_planning_20261020/analyze_test.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/analyze_test.py).
 
 ### REC-PKG-0502
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0502; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 085d4a836742e40ce1012331151e453567cb807c3591a52ef93edcfc3ab13d0e.
+- Reviewed record PKG-0502; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0503
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/audit_paths.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/audit_paths.py).
-- Original content SHA-256: 6caed8823aa6910c04e5b70cdcaa85c5baf7ec78553165f11ef8c1b62842dc45.
+- research/astra/astra_representation_planning_20261020/audit_paths.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/audit_paths.py).
 
 ### REC-PKG-0504
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/audit_pilot_numerics.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/audit_pilot_numerics.py).
-- Original content SHA-256: aca49182d147db0127b87da88c749e2c7a69c9d8070e12718e7887151527866d.
+- research/astra/astra_representation_planning_20261020/audit_pilot_numerics.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/audit_pilot_numerics.py).
 
 ### REC-PKG-0505
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0505; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8f19c75415c8e01008976b79d1277f18931321afd3ad274cd8efea3583d11812.
+- Reviewed record PKG-0505; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0506
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/check_mixture_control.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/check_mixture_control.py).
-- Original content SHA-256: cdd5e70b75f7cf7d57f31e78fc9a42c79cca4807b1b4a216586e22b6313f695b.
+- research/astra/astra_representation_planning_20261020/check_mixture_control.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/check_mixture_control.py).
 
 ### REC-PKG-0507
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/checks.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/checks.py).
-- Original content SHA-256: 272d9b3fd3852a5fd23a2a4e842aee058f16a454a7932ce5e58afe8035b8ddc8.
+- research/astra/astra_representation_planning_20261020/checks.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/checks.py).
 
 ### REC-PKG-0508
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/complete_development.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/complete_development.py).
-- Original content SHA-256: 6b7759ca424f93616ef9f6b5714e6a9c8736c425b9a4883acb660456d43bd9e7.
+- research/astra/astra_representation_planning_20261020/complete_development.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/complete_development.py).
 
 ### REC-PKG-0509
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0509; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e1f55618b71e9cb401972900b6359b2c06b79d3b491ec566c7f9ffef8b269bb0.
+- Reviewed record PKG-0509; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0510
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0510; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d2a88130d050df13107f0495a54fb51d9c8b4f2775962115cd1b9c834febebc7.
+- Reviewed record PKG-0510; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0511
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0511; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ae99844a4b2bfdb7dcdbae158af3b998ee6c32ffa3c600dffcc46760e21ca2ee.
+- Reviewed record PKG-0511; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0512
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0512; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 3d4122f7697bc22938da8fd8261a8e44faac33f70f63d983440033cc06c4e7ee.
+- Reviewed record PKG-0512; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0513
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0513; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9a9db89d811a26ab7178635e93ac34aa25925db9564755370a66abe083e2c162.
+- Reviewed record PKG-0513; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0514
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0514; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 57ed9f75dc5752cf41b2405545a64dc0a9614a74807f1a6e73b16df4ff19c0b8.
+- Reviewed record PKG-0514; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0515
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0515; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 05aec0894c14670c3792329b8410bb6d6552ff9aec8be032e0e4edae332458cc.
+- Reviewed record PKG-0515; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0516
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0516; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 528dbf0218c93e051a3aedc42166186f65192cdf32a1c98e0a774edc5e43ab3c.
+- Reviewed record PKG-0516; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0517
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0517; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ccf83e0ef7de4773f5b23e02139412d64ef7ad8b602411305b093fcea47684ff.
+- Reviewed record PKG-0517; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0518
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0518; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4ac922c086f8afa3e62af9b9b81d0159e9ac8003955adc01275c1455bbb85bce.
+- Reviewed record PKG-0518; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0519
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0519; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: f6d9da23347e75642fe6da6cad2f0588b4f05a89d920b99e1e3dd1ace8e9f517.
+- Reviewed record PKG-0519; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0520
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0520; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8c623c4c73fa1655f2dc701f2e283427dd0beb74538288c7198a02f5d52325f6.
+- Status: **INCLUDED**; campaign: RP20.
+- Show small-region/family failures or search limitations alongside the broad mean.
+- [Available file](../../research/astra/astra_representation_planning_20261020/figures/reviewed/end_to_end_first_hit.png).
+- Curated evidence: CE-RP20-015; published SHA-256: 8c623c4c73fa1655f2dc701f2e283427dd0beb74538288c7198a02f5d52325f6.
 
 ### REC-PKG-0521
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0521; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 7ec7126bb148e257e2bbfa5fca886a0bed3bffe9e54e57ea7ab940c9ae93242f.
+- Reviewed record PKG-0521; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0522
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0522; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d4cf77d88607a31d1bd13535cd2411441b1ce6af365b685d0118249872202287.
+- Status: **INCLUDED**; campaign: RP20.
+- Show the original primary model/planning contrasts and uncertainty.
+- [Available file](../../research/astra/astra_representation_planning_20261020/figures/reviewed/primary_mechanism_contrasts.png).
+- Curated evidence: CE-RP20-013; published SHA-256: d4cf77d88607a31d1bd13535cd2411441b1ce6af365b685d0118249872202287.
 
 ### REC-PKG-0523
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0523; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 45f99ea17b3fbe3326b9b011d8a312192c4daaa761a4826e695285e5758ca830.
+- Reviewed record PKG-0523; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0524
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0524; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5eaa20cb3cc351d02626928df6b6ebdbe81d6f854bf2eec3ac5c88be76516964.
+- Status: **INCLUDED**; campaign: RP20.
+- Show attainment/censoring and computational trade-offs, not physical simulator hours saved.
+- [Available file](../../research/astra/astra_representation_planning_20261020/figures/reviewed/target_query_compute_cost.png).
+- Curated evidence: CE-RP20-014; published SHA-256: 5eaa20cb3cc351d02626928df6b6ebdbe81d6f854bf2eec3ac5c88be76516964.
 
 ### REC-PKG-0525
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0525; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e32e3e241f224f8fb357be635a7cf7d72994a3accab4f79d020cd56be0cf00da.
+- Reviewed record PKG-0525; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0526
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0526; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0e3c5f5a8b2d3d49e29de83c727f2cc5ea062121c1e2de0e05ce63e424574567.
+- Reviewed record PKG-0526; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0527
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0527; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8aff63fd737135a4e5f163da1c4ce734ae118b26bf6e690ffc4feab08fec182a.
+- Reviewed record PKG-0527; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0528
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0528; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 2da8aeaed79e49e8340a95c3a210f7273d24d20a2c46bb36f07eab840eb2e88e.
+- Reviewed record PKG-0528; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0529
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0529; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 7830d9e87bc6230881513eff0ada86faeb9b40bd8a6d3b86974167fb2f8801d5.
+- Reviewed record PKG-0529; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0530
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0530; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 19cfda7b241bc71bca4261d317e41542037ccd7f145b1dd088e2fe77818cc529.
+- Reviewed record PKG-0530; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0531
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0531; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8c4058b2fcf8414fbc02c3ca65df984aa28417b958700892fedecf5f9f74907b.
+- Reviewed record PKG-0531; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0532
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0532; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ad8d16dd0f2a68c0c68e39de58ae7c2fc4f6896ea692328975d97c376b9df189.
+- Reviewed record PKG-0532; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0533
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0533; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a38e1e61ce2b79d2b78e4b65e9d862a4df3a7bef77f1df0b86e636a05595d9aa.
+- Reviewed record PKG-0533; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0534
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0534; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b4739a29631ea197a14770e6d4e847921e715a79e49f8ef6c38240c542914527.
+- Reviewed record PKG-0534; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0535
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0535; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 002cf16681e24d16a8b56282490997852d82fcf1ab5eec56145f8ad2959338d2.
+- Reviewed record PKG-0535; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0536
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0536; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 78ccca3e638f934fbd28404f8e48c010a4848bcb274a31ce5ab2b081d50144fa.
+- Reviewed record PKG-0536; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0537
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0537; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 2019e5e20ec54b5391bf1777a2ebd3f7d87cad2b61acf59a8ed58b06d801d7d4.
+- Reviewed record PKG-0537; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0538
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0538; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 89d8a1d1dc42dc8b9f1272471bec62a3ea206498ada52e0352185410836be463.
+- Reviewed record PKG-0538; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0539
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0539; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c0b16157eea5a7edf1160b8daa2446c4208e675f54ac5695fe1945323037c013.
+- Reviewed record PKG-0539; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0540
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0540; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8f18352e2805ded5be1fed5056f68a5df1efbed7db7ff4537cdab0858fc6244e.
+- Reviewed record PKG-0540; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0541
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/final_review_support.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/final_review_support.py).
-- Original content SHA-256: 8f4eeef5f4e8313badaee39c0e93e9a07d7c7f24f86a97ce0787ec1ac79fecb4.
+- research/astra/astra_representation_planning_20261020/final_review_support.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/final_review_support.py).
 
 ### REC-PKG-0542
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0542; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 698888864c98cde8765c19f961aeca76d14ac887101dcc9d6cfab372414396e1.
+- Reviewed record PKG-0542; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0543
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0543; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ed6ca6784c49cb5d41b1f024d2e2c27a8e744c8c6f71fd28860d6179642bcc41.
+- Reviewed record PKG-0543; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0544
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/finishing_checks.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/finishing_checks.py).
-- Original content SHA-256: e9203d0fec5e7b0bddb4f86ab0abdb7b466c3ebff4417bbb2e3430ee2edc3afd.
+- research/astra/astra_representation_planning_20261020/finishing_checks.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/finishing_checks.py).
 
 ### REC-PKG-0545
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0545; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: ab632a0db0164288ca011d86f06a31fe5399576d8e3678170637cd819cfe2d51.
+- Reviewed record PKG-0545; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0546
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0546; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: a01c767af60a81cbd02652371f2cb398e25d4d7a3b2f9b4ae70ccab537c6a747.
+- Reviewed record PKG-0546; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0547
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0547; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d46fc03f5a43619618ddc71cd204938db6ad7b259e7e44c330966c20e512ac4c.
+- Reviewed record PKG-0547; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0548
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0548; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: edb43087dcb02a3ccb19834de8343bcffdee7e84b77147e46d20d165e4f73eba.
+- Reviewed record PKG-0548; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0549
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0549; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 4c1bc5b1205eb5e3fee7229820dd76c93c3a5ad3e75be744cbcb96919e974cc2.
+- Reviewed record PKG-0549; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0550
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/handoff/ADAPTER_CONTRACT.md.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/handoff/ADAPTER_CONTRACT.md).
-- Original content SHA-256: 264905d0913e172e5a1ca3a88db5539950f806c0fdc22c7c9e63102c7df1f8d1.
+- research/astra/astra_representation_planning_20261020/handoff/ADAPTER_CONTRACT.md
+- [Available file](../../research/astra/astra_representation_planning_20261020/handoff/ADAPTER_CONTRACT.md).
 
 ### REC-PKG-0551
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/handoff/adapter.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/handoff/adapter.py).
-- Original content SHA-256: 3c4597421550ffba5a6be1340488fb689e0b803130d17e7a5fe53f6d6efbafea.
+- research/astra/astra_representation_planning_20261020/handoff/adapter.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/handoff/adapter.py).
 
 ### REC-PKG-0552
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/handoff/mixture_acquisition.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/handoff/mixture_acquisition.py).
-- Original content SHA-256: 58a4b58e578d8f3b146a9ff9937549f7c73a8f8cdb5123f23994023d23783895.
+- research/astra/astra_representation_planning_20261020/handoff/mixture_acquisition.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/handoff/mixture_acquisition.py).
 
 ### REC-PKG-0553
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/handoff/planner.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/handoff/planner.py).
-- Original content SHA-256: aba3bf8f58e328aed7dcd8a5a2bb22a4cae3ed39fb3acce10c97fd84970b0650.
+- research/astra/astra_representation_planning_20261020/handoff/planner.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/handoff/planner.py).
 
 ### REC-PKG-0554
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/handoff/posterior.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/handoff/posterior.py).
-- Original content SHA-256: ac5f50e329b7fd32ffc0e570b80ee68c0a644aa77947d30cfad409e4434bf000.
+- research/astra/astra_representation_planning_20261020/handoff/posterior.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/handoff/posterior.py).
 
 ### REC-PKG-0555
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0555; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: de4c244d8404c014d6a4e095ff7a865715f21cedd2d47e3ddf0b97d034c7ea3a.
+- Reviewed record PKG-0555; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0556
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0556; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fd889f84bcce55565e35d626d6b77fbb02e6ddc1acb223a28bdc7693d4b9ef2a.
+- Reviewed record PKG-0556; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0557
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/mixture_acquisition.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/mixture_acquisition.py).
-- Original content SHA-256: 58a4b58e578d8f3b146a9ff9937549f7c73a8f8cdb5123f23994023d23783895.
+- research/astra/astra_representation_planning_20261020/mixture_acquisition.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/mixture_acquisition.py).
 
 ### REC-PKG-0558
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0558; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: fbb09fcc45a13b7ccd4874051c918ee50116bfce642a024e66515fb517817ea5.
+- Reviewed record PKG-0558; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0559
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/planner.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/planner.py).
-- Original content SHA-256: aba3bf8f58e328aed7dcd8a5a2bb22a4cae3ed39fb3acce10c97fd84970b0650.
+- research/astra/astra_representation_planning_20261020/planner.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/planner.py).
 
 ### REC-PKG-0560
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/policy.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/policy.py).
-- Original content SHA-256: 3ad04491b8da8c544582e9bcab1a076b0fabcea1838a03b3398eadffbda07999.
+- research/astra/astra_representation_planning_20261020/policy.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/policy.py).
 
 ### REC-PKG-0561
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/posterior.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/posterior.py).
-- Original content SHA-256: ac5f50e329b7fd32ffc0e570b80ee68c0a644aa77947d30cfad409e4434bf000.
+- research/astra/astra_representation_planning_20261020/posterior.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/posterior.py).
 
 ### REC-PKG-0562
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0562; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5c2c859a3344f772d7204ea28195531d5fb49d2f1ddace36191523f7f8a0e318.
+- Reviewed record PKG-0562; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0563
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0563; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: d56ebb465dcbcd74a6a1f7e8708db47cbc6f35466689a886060c302eb0a07dbf.
+- Reviewed record PKG-0563; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0564
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/reconcile_prior.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/reconcile_prior.py).
-- Original content SHA-256: a1adefae088acb05fb7d15051de2de2f3556416d50f1d554c5e68918db6ce215.
+- research/astra/astra_representation_planning_20261020/reconcile_prior.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/reconcile_prior.py).
 
 ### REC-PKG-0565
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/replay_checks.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/replay_checks.py).
-- Original content SHA-256: 0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115.
+- research/astra/astra_representation_planning_20261020/replay_checks.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/replay_checks.py).
 
 ### REC-PKG-0566
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0566; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c5c058915b83b363bfa55da0d0aa06f2c6070c8ef264f68ac9ccd4227f1b8a7c.
+- Status: **INCLUDED**; campaign: RP20.
+- Separate model representation/prediction value on common paid paths from acquisition changes.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/analysis/B32_same_paid_path_model_effects.csv).
+- Curated evidence: CE-RP20-003; published SHA-256: c5c058915b83b363bfa55da0d0aa06f2c6070c8ef264f68ac9ccd4227f1b8a7c.
 
 ### REC-PKG-0567
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0567; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: e567211ffacc49d4407767f02ffb6733059ab93f8cd3da7549802913dde4ccaf.
+- Reviewed record PKG-0567; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0568
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0568; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5172047381245b8e0eb6146716bfb9bb2fd694c0ab2f6b3f03403fd23075d893.
+- Reviewed record PKG-0568; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0569
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0569; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 18054c382ae993f672cb532726e7f8a51b0f80886f010f79efe63cd3777f1252.
+- Status: **INCLUDED**; campaign: RP20.
+- Support the reported bounded-computation planning comparison without recomputing endpoints.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/analysis/equal_compute_summary.csv).
+- Curated evidence: CE-RP20-007; published SHA-256: 18054c382ae993f672cb532726e7f8a51b0f80886f010f79efe63cd3777f1252.
 
 ### REC-PKG-0570
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0570; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 688d84de66986f71614740410aa7e23e925b18a3f66098f64adf15e623ac65e2.
+- Status: **INCLUDED**; campaign: RP20.
+- Preserve all-family outcomes, regional harms, undefined subsets and denominator qualifications.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/analysis/family_metrics.csv).
+- Curated evidence: CE-RP20-004; published SHA-256: 688d84de66986f71614740410aa7e23e925b18a3f66098f64adf15e623ac65e2.
 
 ### REC-PKG-0571
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0571; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: c8acd0ba6839d642addd31e8e961beaf9559d88b84fc37ce61ccb61742c9b6af.
+- Status: **INCLUDED**; campaign: RP20.
+- Keep incomplete paths and their original evidence references; do not impute, retry or assign final outcomes.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/analysis/incomplete_units.csv).
+- Curated evidence: CE-RP20-008; published SHA-256: 250b20321176c5be06bf9132df103c8b4ab949247baa19b114685ff39d9cda40.
 
 ### REC-PKG-0572
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0572; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: dbce2a9aea5d01b67a6383f2a9269f51d56428dc60f0e9c3f0504fb074aceba9.
+- Status: **INCLUDED**; campaign: RP20.
+- Retain secondary paired effects and regional trade-offs with their original inferential scope.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/analysis/paired_secondary_effects.csv).
+- Curated evidence: CE-RP20-005; published SHA-256: dbce2a9aea5d01b67a6383f2a9269f51d56428dc60f0e9c3f0504fb074aceba9.
 
 ### REC-PKG-0573
 
-- Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0573; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 8ef7b53d7a406fefba0dd8b568e5f8a137527f93381a71c80335d1b3abedaf81.
+- Status: **INCLUDED**; campaign: RP20.
+- Retain same-target attainment, censoring and computation; restricted burden is not automatically query savings.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/analysis/same_target_query_cost.csv).
+- Curated evidence: CE-RP20-006; published SHA-256: 8ef7b53d7a406fefba0dd8b568e5f8a137527f93381a71c80335d1b3abedaf81.
 
 ### REC-PKG-0574
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0574; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 0b9cac7a8b49d50a2e45e3e7439c8e3541dad077835cc56a0906244528ff31c2.
+- Reviewed record PKG-0574; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0575
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0575; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: b43622ea1bcedfa270d02654e94c5d196078bebc2224d18d9bdd115a98a9f5b8.
+- Reviewed record PKG-0575; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0576
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0576; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9cfa98c5dfbd25354bad6e5fd8f6efe25729b855b033f4191f5500e187543482.
+- Reviewed record PKG-0576; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0577
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0577; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 505adab58b1b6b930f50ab94d78d489b5afaaa6511e09f9e93790b9e14960a94.
+- Reviewed record PKG-0577; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0578
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0578; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5b96d1a3e8eac7cec84850fac21c6168c9c37259769afdbee4b5456e1b75df6e.
+- Reviewed record PKG-0578; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0579
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0579; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9e6fcbdedffd34a9f89b9c85e8dd4c6f78092330762f46e425b1013648fd5d2f.
+- Reviewed record PKG-0579; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0580
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0580; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 095f7947b8fe6b12463e27043b301bb37c411cf96fa1550fed10388a0f35189b.
+- Reviewed record PKG-0580; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0581
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0581; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 9f990292f7a634c43a8931971035749330b80f47471a8e977cc1d46cb80903d0.
+- Reviewed record PKG-0581; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0582
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0582; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 517537cf81b5558f5b9b2284839feaadb6ab87b783bcd15d01893edaf32065a8.
+- Reviewed record PKG-0582; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0583
 
 - Status: **RESTRICTED**; campaign: RP20.
-- Reviewed record PKG-0583; original excluded or replaced by a public editorial summary.
-- Original content SHA-256: 5bc03ab346194b5bcdcd97a8bd7f73a5d1b2a80b8974f6b23cdd09e4b8abc99f.
+- Reviewed record PKG-0583; original excluded or replaced by a public editorial summary
 
 ### REC-PKG-0584
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/scientific_figures.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/scientific_figures.py).
-- Original content SHA-256: 19b7cc52ee1104e41482b5c69cf0b608c0ad26583018470ba1bee49e677671de.
+- research/astra/astra_representation_planning_20261020/scientific_figures.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/scientific_figures.py).
 
 ### REC-PKG-0585
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/search_controls.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/search_controls.py).
-- Original content SHA-256: beeb6088a4288371bdd2b8558dd04a1b61d678cf591ac43ab6fad05268addcf9.
+- research/astra/astra_representation_planning_20261020/search_controls.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/search_controls.py).
 
 ### REC-PKG-0586
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/secondary_checks.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/secondary_checks.py).
-- Original content SHA-256: c7bac0487377d46502c0a92842ad9a9c2c4aba8ac0cf596bd92c21cba439a2c1.
+- research/astra/astra_representation_planning_20261020/secondary_checks.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/secondary_checks.py).
 
 ### REC-PKG-0587
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/summarize_development.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/summarize_development.py).
-- Original content SHA-256: acf96e66487f539f63cfb292e2c11b28865e41ac7bd1511d8f78466838ea3c7a.
+- research/astra/astra_representation_planning_20261020/summarize_development.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/summarize_development.py).
 
 ### REC-PKG-0588
 
 - Status: **INCLUDED**; campaign: RP20.
-- research/astra/astra_representation_planning_20261020/worlds.py.
-- [Open retained reading evidence](../../research/astra/astra_representation_planning_20261020/worlds.py).
-- Original content SHA-256: eda4656c483f2a56ca0b23d035e5a6ab22deefd1094bd28e6b60bb329a1c1a7b.
+- research/astra/astra_representation_planning_20261020/worlds.py
+- [Available file](../../research/astra/astra_representation_planning_20261020/worlds.py).
+
+### CE-AD18-003
+
+- Status: **INCLUDED**; campaign: AD18.
+- Support the equal-local-share mechanism control without conflating a secondary contrast with general acquisition success.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/QUOTA_CONTROL_RESULTS.json).
+- Curated evidence: CE-AD18-003; published SHA-256: 5865fad446ee2dd0b06d329f7561d1c8c1e24c5a12ed6ce2a56fb933e44e68bf.
+
+### CE-AD18-004
+
+- Status: **INCLUDED**; campaign: AD18.
+- Retain numerical approximation/reference qualifications; software credibility is separate from scientific effect evidence.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/QMC_REFINEMENT.json).
+- Curated evidence: CE-AD18-004; published SHA-256: c418517de72dba2549fe46fa1261110ab6c3ab4b0b6a71d71a7d649abae3ec30.
+
+### CE-AD18-005
+
+- Status: **INCLUDED**; campaign: AD18.
+- Retain earlier failed numerical checks and their diagnosis rather than silently replacing the history with successful checks.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/REFERENCE_FAILURE_DIAGNOSIS.json).
+- Curated evidence: CE-AD18-005; published SHA-256: 9d08d69841587853a6e7abb06edc8245ba51faeca07e5d56b869ffbfeb8804c9.
+
+### CE-AD18-006
+
+- Status: **INCLUDED**; campaign: AD18.
+- Retain numerical approximation/reference qualifications; software credibility is separate from scientific effect evidence.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/LOCAL_VALUE_EXACT_REFERENCE.json).
+- Curated evidence: CE-AD18-006; published SHA-256: 545da86872ac14f96d6a8f70df0236538b8d5a74b835fe905b21e33bf5ae052f.
+
+### CE-AD18-007
+
+- Status: **INCLUDED**; campaign: AD18.
+- Retain existing source/path/integrity checks; these do not establish scientific validity by themselves.
+- [Available file](../../research/astra/astra_deep_discovery_20261018/results/COMPLETION_INTEGRITY.json).
+- Curated evidence: CE-AD18-007; published SHA-256: e38ed7c10bc7c3b639949d7b74fb108edd5f4ead6e164dd307026cf43d966bed.
+
+### CE-RP20-009
+
+- Status: **INCLUDED**; campaign: RP20.
+- Keep incomplete paths and their original evidence references; do not impute, retry or assign final outcomes.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/audits/FAILED_UNIT_EVIDENCE_INDEX.json).
+- Curated evidence: CE-RP20-009; published SHA-256: 5a871890f003ec38ce84a37202b51c263f9d96a5cfad294c587285466fb36202.
+
+### CE-RP20-010
+
+- Status: **INCLUDED**; campaign: RP20.
+- Retain existing post-hoc descriptive mechanism diagnostics as such; not new confirmatory evidence.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/audits/FINAL_REVIEW_FACTS.json).
+- Curated evidence: CE-RP20-010; published SHA-256: fe6ed3ae750fec27c0af236174b5a264a066f8a1bdc55abe85019e42962dff89.
+
+### CE-RP20-011
+
+- Status: **INCLUDED**; campaign: RP20.
+- Retain existing source/path/integrity checks; these do not establish scientific validity by themselves.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/audits/PATH_INTEGRITY.json).
+- Curated evidence: CE-RP20-011; published SHA-256: 5f723b53c74ac3763d9a0b6ba46045987e9b78ae1d407472025a034e89854f66.
+
+### CE-RP20-012
+
+- Status: **INCLUDED**; campaign: RP20.
+- Retain numerical approximation/reference qualifications; software credibility is separate from scientific effect evidence.
+- [Available file](../../research/astra/astra_representation_planning_20261020/results/audits/NUMERICAL_REPLAY.json).
+- Curated evidence: CE-RP20-012; published SHA-256: 40ecb97638c0bad968c865bbda28a3109439422667f052cca117b2efdf4ab11f.
+
+### CE-LC24-004
+
+- Status: **INCLUDED**; campaign: LC24.
+- Preserve the original failed DEV screen and pointwise descriptive limits; this is not independent TEST.
+- [Available file](../../research/astra/astra_local_correction_20261024/results/analysis_dev_v1/ANALYSIS.json).
+- Curated evidence: CE-LC24-004; published SHA-256: 17f81a8ada8d4883c7826ee62aeb2d3720bdfbd310d04822517c3f59e7c1f2ca.
+
+### CE-LC24-005
+
+- Status: **INCLUDED**; campaign: LC24.
+- Preserve the original failed DEV screen and pointwise descriptive limits; this is not independent TEST.
+- [Available file](../../research/astra/astra_local_correction_20261024/results/analysis_dev_v2/ANALYSIS.json).
+- Curated evidence: CE-LC24-005; published SHA-256: 4315e3ff781a8ff82f4844ad45c077ae0bbb0b3a7c14796920417db9679933f6.
+
+### CE-LC24-008
+
+- Status: **INCLUDED**; campaign: LC24.
+- Retain first-hit/post-hit and regional harm diagnostics without extending them to a new selector or physical regime claim.
+- [Available file](../../research/astra/astra_local_correction_20261024/results/analysis_dev_v1/GEOMETRY_DIAGNOSIS.json).
+- Curated evidence: CE-LC24-008; published SHA-256: 620c051e4df442ada35ce60eab452e898fc48804950df0adbd0a6553ac697a4d.
+
+### CE-LC24-009
+
+- Status: **INCLUDED**; campaign: LC24.
+- Retain existing source/path/integrity checks; these do not establish scientific validity by themselves.
+- [Available file](../../research/astra/astra_local_correction_20261024/results/analysis_dev_v1/INTEGRITY.json).
+- Curated evidence: CE-LC24-009; published SHA-256: 5f2d5f4d8f3203554cb7fd710816c90580a9a6331f8acdf89702271a507462c0.
+
+### CE-LC24-010
+
+- Status: **INCLUDED**; campaign: LC24.
+- Retain existing source/path/integrity checks; these do not establish scientific validity by themselves.
+- [Available file](../../research/astra/astra_local_correction_20261024/results/analysis_dev_v2/INTEGRITY.json).
+- Curated evidence: CE-LC24-010; published SHA-256: d8c47efc0e5a1e99cf2db06c8fc880e95726de8a8e60bb7abf90d947ac3617c3.
+
+### CE-JL26-002
+
+- Status: **INCLUDED**; campaign: JL26.
+- Retain the original frozen comparison estimates, intervals, practical gates and missingness qualifications.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/analysis_test_v1/ANALYSIS.json).
+- Curated evidence: CE-JL26-002; published SHA-256: c815f9b150f69e884ce966a7db65c8d045a3287404bf6dd640f79f3a012a79df.
+
+### CE-JL26-005
+
+- Status: **INCLUDED**; campaign: JL26.
+- Retain existing post-hoc descriptive mechanism diagnostics as such; not new confirmatory evidence.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/completion/COMPLETION_SUMMARY.json).
+- Curated evidence: CE-JL26-005; published SHA-256: fc390ba10e353e0e5c5e7de329f5c0f20957a45babf70eb2ab59a9466e4cf0e0.
+
+### CE-JL26-010
+
+- Status: **INCLUDED**; campaign: JL26.
+- Retain existing source/path/integrity checks; these do not establish scientific validity by themselves.
+- [Available file](../../research/astra/astra_joint_local_20261026/results/finishing/AUDIT.json).
+- Curated evidence: CE-JL26-010; published SHA-256: 71a421be08176d97be6a61d03694fa5efd8d3167c690572e038d077e8a854320.
+
+### CE-JL26-011
+
+- Status: **INCLUDED**; campaign: JL26.
+- Retain portable implementation-check evidence, separate from an independent scientific test.
+- [Available file](../../research/astra/astra_joint_local_20261026/evidence/PORTABLE_CHECK.json).
+- Curated evidence: CE-JL26-011; published SHA-256: 4d309440df4d47bafb98917f84f9b7605282a1d25ed66796d8065a4677571816.

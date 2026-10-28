@@ -1,0 +1,454 @@
+{
+  "status": "PASS",
+  "units": [
+    {
+      "id": "dev_v1_smooth_202610260_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_smooth_202610260_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_smooth_202610261_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_smooth_202610261_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_smooth_202610262_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_smooth_202610262_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_smooth_202610263_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_smooth_202610263_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_local_shift_202610360_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_local_shift_202610360_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_local_shift_202610361_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_local_shift_202610361_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_local_shift_202610362_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_local_shift_202610362_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_local_shift_202610363_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_local_shift_202610363_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_small_island_202610460_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_small_island_202610460_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_small_island_202610461_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_small_island_202610461_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_small_island_202610462_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_small_island_202610462_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_small_island_202610463_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_small_island_202610463_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rotated_local_202610560_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rotated_local_202610560_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rotated_local_202610561_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rotated_local_202610561_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rotated_local_202610562_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rotated_local_202610562_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rotated_local_202610563_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rotated_local_202610563_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rare_negative_202610660_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rare_negative_202610660_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rare_negative_202610661_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rare_negative_202610661_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rare_negative_202610662_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rare_negative_202610662_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rare_negative_202610663_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_rare_negative_202610663_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_heteroskedastic_202610760_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_heteroskedastic_202610760_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_heteroskedastic_202610761_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_heteroskedastic_202610761_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_heteroskedastic_202610762_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_heteroskedastic_202610762_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_heteroskedastic_202610763_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_heteroskedastic_202610763_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_outliers_202610860_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_outliers_202610860_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_outliers_202610861_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_outliers_202610861_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_outliers_202610862_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_outliers_202610862_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_outliers_202610863_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_outliers_202610863_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_correlated_corruption_202610960_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_correlated_corruption_202610960_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_correlated_corruption_202610961_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_correlated_corruption_202610961_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_correlated_corruption_202610962_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_correlated_corruption_202610962_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_correlated_corruption_202610963_maximin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    },
+    {
+      "id": "dev_v1_correlated_corruption_202610963_strong_margin",
+      "status": "PASS",
+      "budgets": 9,
+      "prequery_hashes": 16,
+      "scope": "All cached metrics and paths; margin rankings at even budgets, odd ranking not reconstructible from scalar receipt."
+    }
+  ],
+  "failures": []
+}

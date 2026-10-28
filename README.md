@@ -8,6 +8,7 @@ Start with **[Thesis Research Hub](RESEARCH_INDEX.md)** and **[scientific scopes
 
 - [Claim ledger](docs/research/CLAIM_LEDGER.csv): 16 scoped claim records with source references and limitations.
 - [Experiment registry](docs/research/EXPERIMENT_REGISTRY.csv): 15 experiment/control contexts, protocols, reports and dependence assumptions.
+- [Curated Astra numerical evidence and figures](docs/research/CURATED_EVIDENCE_INDEX.md): selected original synthetic results, configurations and figures with source/published checksums.
 - [Reported findings](docs/research/REPORTED_FINDINGS.csv): existing reported values; no new endpoint calculations.
 - [Evidence/archive index](docs/research/ARCHIVE_MANIFEST.md) and [structured manifest](docs/research/ARCHIVE_MANIFEST.csv): included evidence, existing thesis evidence and explicit unavailable/restricted records.
 - [Public provenance](docs/research/PROVENANCE_PUBLIC.json), [source allowlist](PUBLICATION_ALLOWLIST.json) and [SHA-256 manifest](docs/research/PUBLICATION_SHA256.csv): original campaign commits, file identities and publication scope.
@@ -40,7 +41,7 @@ Original independent Astra Git histories remain separate provenance records; thi
 
 ## Data availability, offline evidence and rights
 
-The complete Astra execution archive remains in local/external preservation. It will not be mirrored wholesale to GitHub Releases, Git LFS or cloud storage. Only a small, scientifically useful selection may be proposed for later publication, following separate integrity and redistribution-rights review. No new curated evidence is added by this navigation update.
+The complete Astra execution archive remains in local/external preservation. It will not be mirrored wholesale to GitHub Releases, Git LFS or cloud storage. The owner-authorized curated synthetic subset is available through the evidence index. Future additions remain subject to their own integrity and rights checks; the complete archive is not included.
 
 Existing PENDING_ARCHIVE entries mean unavailable or unresolved evidence; they are not download links, promises of future upload, or redistribution permission. Restricted originals and raw execution records remain excluded from the Hub import. TUM-owned inputs, simulator internals, external datasets and third-party material require their own established rights. Protected evaluation targets are excluded.
 

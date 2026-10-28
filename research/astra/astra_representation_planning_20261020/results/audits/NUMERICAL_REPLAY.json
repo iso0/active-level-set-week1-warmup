@@ -1,0 +1,2253 @@
+{
+  "expected_states": 24,
+  "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+  "states": [
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.022898203879816094,
+        0.019710989945533303,
+        0.0211662045393666,
+        0.022202545976261825,
+        0.02223754728495892,
+        0.022639292249882374
+      ],
+      "cached_vs_highest_max_abs": 1.5016796495820328e-05,
+      "cpu_seconds": 1.515625,
+      "family": "smooth",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.01668726497173281,
+        0.003006745860157435,
+        0.013581099664108743,
+        0.011870069237225125,
+        0.017119550094738856,
+        0.015875894477004725
+      ],
+      "moment_one_step_winner": 260,
+      "refined_scores": {
+        "129": [
+          0.02291012863390689,
+          0.019704449744388713,
+          0.02118122133586242,
+          0.022201838262468226,
+          0.022237982221991644,
+          0.022641057094557417
+        ],
+        "65": [
+          0.022898203879816094,
+          0.019710989945533303,
+          0.0211662045393666,
+          0.022202545976261825,
+          0.02223754728495892,
+          0.022639292249882374
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 460,
+      "refinement_max_abs": 1.5016796495820328e-05,
+      "selected": 460,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "d9eafd260111e877960c34b3780de63dc9dc0304b879c8d3b2125327b47206e7",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w000__prefix__existing__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w000__prefix__existing__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.017950900105140524,
+        0.004390772827607289,
+        0.013562267017369498,
+        0.011823645083933043,
+        0.019406971093355773,
+        0.016300485189391856
+      ],
+      "cached_vs_highest_max_abs": 1.6424274446785736e-05,
+      "cpu_seconds": 1.046875,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.12439304558603209,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.286901384010363
+          },
+          {
+            "mass": 1.0000000000000004,
+            "maximum_normalized_weight": 0.13005274263285227,
+            "nodes": 129,
+            "quadrature_effective_nodes": 11.548827020451236
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.10915670763567843,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.796454061943473
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.1103754317005482,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.773433550724688
+          },
+          {
+            "mass": 0.999999999966285,
+            "maximum_normalized_weight": 0.11676245973396052,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.545604208722677
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.10780950705765131,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.924820648112279
+          }
+        ],
+        "257": [
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.09018482081262155,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.329967969999586
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.09280679852703828,
+            "nodes": 257,
+            "quadrature_effective_nodes": 16.28792174549861
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07793552827206739,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.048736276686
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07886261500308982,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.016233807209897
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.08298151723087946,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.695626159223075
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.07645476133731682,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.229960280045788
+          }
+        ]
+      },
+      "family": "smooth",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.01668726497173281,
+        0.003006745860157435,
+        0.013581099664108743,
+        0.011870069237225125,
+        0.017119550094738856,
+        0.015875894477004725
+      ],
+      "moment_one_step_winner": 260,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.01796539610485229,
+          0.004393878052868884,
+          0.01357237490913851,
+          0.011817288017327973,
+          0.019421793394479955,
+          0.016341869057419155
+        ],
+        "257": [
+          0.01796372688723034,
+          0.004391463876533858,
+          0.01356657395284631,
+          0.011819785167166636,
+          0.019417819675817585,
+          0.016316909463838642
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 260,
+      "refinement_max_abs": 2.4959593580512612e-05,
+      "selected": 260,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "c048710f003f84ccd534cb4d314e2b1a33bd5e46ed54da458373f2191ccf3b16",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w000__prefix__existing__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w000__prefix__existing__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.02287261956102976,
+        0.019691791051637805,
+        0.02114382403165175,
+        0.02217828279731201,
+        0.02221320509280373,
+        0.022613485296844302
+      ],
+      "cached_vs_highest_max_abs": 1.5186275634949259e-05,
+      "cpu_seconds": 1.53125,
+      "family": "smooth",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.016667723372181507,
+        0.003004008276405682,
+        0.013564589867914078,
+        0.011855870606703968,
+        0.017101697881879457,
+        0.015858556061138007
+      ],
+      "moment_one_step_winner": 260,
+      "refined_scores": {
+        "129": [
+          0.022884597752151833,
+          0.01968522529231153,
+          0.0211590103072867,
+          0.02217751932720541,
+          0.02221359277472838,
+          0.022615312894909867
+        ],
+        "65": [
+          0.02287261956102976,
+          0.019691791051637805,
+          0.02114382403165175,
+          0.02217828279731201,
+          0.02221320509280373,
+          0.022613485296844302
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 460,
+      "refinement_max_abs": 1.5186275634949259e-05,
+      "selected": 460,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "68c8f43d78671dfc85b05793bf9f1d0ba278b89d84acad44fd59c0904e8bcac8",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w000__prefix__local__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w000__prefix__local__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.01793617792060478,
+        0.004387800582397235,
+        0.01355063357202635,
+        0.011813640715815685,
+        0.019393545720540067,
+        0.0162888299459089
+      ],
+      "cached_vs_highest_max_abs": 1.6419312393278068e-05,
+      "cpu_seconds": 2.203125,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.12440484839541201,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.286995406133363
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.13011727927700792,
+            "nodes": 129,
+            "quadrature_effective_nodes": 11.54532079232429
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.10916592311461597,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.79603657780595
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.11038068719315136,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.77292871453474
+          },
+          {
+            "mass": 0.9999999999664846,
+            "maximum_normalized_weight": 0.11677987372769609,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.545233270042207
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.10781802182699286,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.924303417934347
+          }
+        ],
+        "257": [
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.09018395484853996,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.330099388425687
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.09285010353672293,
+            "nodes": 257,
+            "quadrature_effective_nodes": 16.282974016107918
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.0779402025537653,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.04814674965437
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07886772134533132,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.015520980295328
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.08299168645909173,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.695100880909404
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07646079971626518,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.229229933498072
+          }
+        ]
+      },
+      "family": "smooth",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.016667723372181507,
+        0.003004008276405682,
+        0.013564589867914078,
+        0.011855870606703968,
+        0.017101697881879457,
+        0.015858556061138007
+      ],
+      "moment_one_step_winner": 260,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.017950568044951362,
+          0.0043910143438591785,
+          0.013560868530295863,
+          0.011807154124707484,
+          0.019408103225963994,
+          0.016330231128570044
+        ],
+        "257": [
+          0.017949018577299088,
+          0.004388439188292864,
+          0.013555116123339967,
+          0.011809692810682936,
+          0.01940415609223517,
+          0.01630524925830218
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 260,
+      "refinement_max_abs": 2.4981870267865025e-05,
+      "selected": 260,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "b78db6fe79202c2f61570a2d4bb3e7ff6ef7fcaffe19701758164678a1b422e5",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w000__prefix__local__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w000__prefix__local__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.012543727050650147,
+        0.014863542451657993,
+        0.014906391053292046,
+        0.014384605712043112,
+        0.013070346716994464,
+        0.013605950234806465
+      ],
+      "cached_vs_highest_max_abs": 2.226418702649599e-05,
+      "cpu_seconds": 1.390625,
+      "family": "coordinate",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.0017839768168030356,
+        0.008533450727558387,
+        0.010759748402247636,
+        0.0091810920600088,
+        0.0027333010287126564,
+        0.007493729450760927
+      ],
+      "moment_one_step_winner": 299,
+      "refined_scores": {
+        "129": [
+          0.012543726582817603,
+          0.014881190480485262,
+          0.014913239095344262,
+          0.014405560368025622,
+          0.013070136337511607,
+          0.01362821442183296
+        ],
+        "65": [
+          0.01254372647052111,
+          0.014878279720152175,
+          0.014897911609223245,
+          0.01441173067631676,
+          0.013070668099082642,
+          0.013620977927937547
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 299,
+      "refinement_max_abs": 1.5327486121017447e-05,
+      "selected": 299,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "be40a7864662b4a3376af7cfe07a896af68adfab1b3c029f6e24a1e665756b6b",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w001__prefix__existing__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w001__prefix__existing__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.0017776623834161915,
+        0.008553260443141196,
+        0.010792405662933883,
+        0.0091926048397628,
+        0.002752355472851289,
+        0.007513357166808777
+      ],
+      "cached_vs_highest_max_abs": 2.6722656478718465e-05,
+      "cpu_seconds": 0.984375,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11035136498635607,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.821086340764838
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11019603914979965,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.830858853093648
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11017711884596211,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.832068287486765
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11017119986290667,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.832418584359525
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11085497026825027,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.787080970786056
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11029793208769138,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.824457236172204
+          }
+        ],
+        "257": [
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07825735877604333,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.08345511986623
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.07814720708267654,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.097251424912276
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.0781337894597432,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.098958797966397
+          },
+          {
+            "mass": 0.9999999999999997,
+            "maximum_normalized_weight": 0.07812959192235326,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.099453377293383
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.0786144981664947,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.03545059576687
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.0782194660184706,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.088213893813084
+          }
+        ]
+      },
+      "family": "coordinate",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.0017839768168030356,
+        0.008533450727558387,
+        0.010759748402247636,
+        0.0091810920600088,
+        0.0027333010287126564,
+        0.007493729450760927
+      ],
+      "moment_one_step_winner": 299,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.0017857142969290862,
+          0.008546053913023906,
+          0.010775485419034081,
+          0.00919872863367622,
+          0.002751686540639057,
+          0.0075046971167942195
+        ],
+        "257": [
+          0.001780406097889358,
+          0.008542754742334156,
+          0.010765683006455164,
+          0.009190947806883643,
+          0.0027520620307594167,
+          0.007504498133215884
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 299,
+      "refinement_max_abs": 9.802412578916939e-06,
+      "selected": 299,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "f7b362b682fcfbb79a0ac30cb204bf74b395df17e95037dc3b2a1b10de97e304",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w001__prefix__existing__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w001__prefix__existing__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.012541628079442948,
+        0.014861243373249363,
+        0.0149040923313052,
+        0.01438250572339288,
+        0.013068398937353738,
+        0.013604110956832637
+      ],
+      "cached_vs_highest_max_abs": 2.2236126178857424e-05,
+      "cpu_seconds": 1.40625,
+      "family": "coordinate",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.0017833816369661431,
+        0.008531901198374704,
+        0.010758244554393304,
+        0.009179662171784222,
+        0.0027327446997334323,
+        0.007492691227559036
+      ],
+      "moment_one_step_winner": 299,
+      "refined_scores": {
+        "129": [
+          0.012541627547607665,
+          0.014878884300254806,
+          0.014910943451592874,
+          0.014403457105434572,
+          0.013068194577852871,
+          0.013626347083011494
+        ],
+        "65": [
+          0.012541627404357486,
+          0.014875991812224421,
+          0.014895613086949906,
+          0.014409614604430916,
+          0.013068729613781818,
+          0.013619116673491652
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 299,
+      "refinement_max_abs": 1.533036464296776e-05,
+      "selected": 299,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "9f92608c500f9c62d4a871d9a35c63b45b13a94c77f553d0edc6962ca3d10daa",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w001__prefix__local__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w001__prefix__local__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.0017772837009787015,
+        0.008552642898390464,
+        0.010791770864239207,
+        0.00919198746401439,
+        0.002752227724921752,
+        0.007512827455978472
+      ],
+      "cached_vs_highest_max_abs": 2.6723775709208003e-05,
+      "cpu_seconds": 2.21875,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.11035556469842585,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.820779390562127
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11019904936094664,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.830647618071824
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11017933549258167,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.831916351049617
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11017335055530059,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.83227120566436
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11086055097764169,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.786664034685174
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11029896895218151,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.824387368748889
+          }
+        ],
+        "257": [
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07826033706611014,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.083021822774402
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07814934181996544,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.0969532320907
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07813536142860653,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.09874431182194
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.07813111711876844,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.099245325012156
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07861845581194044,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.034862059226946
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.07822020132678704,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.088115261594517
+          }
+        ]
+      },
+      "family": "coordinate",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.0017833816369661431,
+        0.008531901198374704,
+        0.010758244554393304,
+        0.009179662171784222,
+        0.0027327446997334323,
+        0.007492691227559036
+      ],
+      "moment_one_step_winner": 299,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.0017853452613149218,
+          0.008545427071763674,
+          0.010774850807513413,
+          0.009198096321999777,
+          0.0027515465157949255,
+          0.007504169610366433
+        ],
+        "257": [
+          0.0017800289192274536,
+          0.008542147179059103,
+          0.010765047088529999,
+          0.009190332028524659,
+          0.0027519272360376863,
+          0.007503968792277173
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 299,
+      "refinement_max_abs": 9.803718983413673e-06,
+      "selected": 299,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "f5576680dec5d31633ecf21d177bf768cc0fff2dc28bba223ad89e12fb41cdb9",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w001__prefix__local__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w001__prefix__local__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.008577613723494568,
+        0.005107443109663395,
+        0.007250642510502914,
+        0.0075573279281658115,
+        0.00857655493121343,
+        0.006936279407441173
+      ],
+      "cached_vs_highest_max_abs": 8.517405142838969e-06,
+      "cpu_seconds": 1.484375,
+      "family": "rotated",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.004236486895588846,
+        0.000537383920727377,
+        0.002815928311406195,
+        0.0031291171070337758,
+        0.00457257472355288,
+        0.002458628099900938
+      ],
+      "moment_one_step_winner": 278,
+      "refined_scores": {
+        "129": [
+          0.008581011769910902,
+          0.005109870592156317,
+          0.007257313418352181,
+          0.0075653101281117395,
+          0.008585072336356268,
+          0.006936232573470031
+        ],
+        "65": [
+          0.00858561956482674,
+          0.005109659093696254,
+          0.007260102050979458,
+          0.007564217375482272,
+          0.008583304822027779,
+          0.006943411618131801
+        ]
+      },
+      "refined_tie_count": 2,
+      "refined_winner_with_ordinary_tie": 59,
+      "refinement_max_abs": 7.1790446617703285e-06,
+      "selected": 278,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "ffcdbaed2a94b699084c307387ca0d72f7ac0ce9dd9dd044883a850a378a3b2d",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w002__prefix__existing__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w002__prefix__existing__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.004694853930805389,
+        0.0006849321142529224,
+        0.0030070274360356006,
+        0.004058725369382675,
+        0.006439681208817246,
+        0.003785373623712193
+      ],
+      "cached_vs_highest_max_abs": 5.412083732407071e-06,
+      "cpu_seconds": 0.953125,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11279515599885716,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.664348588455903
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.11193011363133777,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.735606987880974
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11094212025689774,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.777771683409888
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.10788688437206356,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.80170992118624
+          },
+          {
+            "mass": 1.0000000018805657,
+            "maximum_normalized_weight": 0.1411338428365312,
+            "nodes": 129,
+            "quadrature_effective_nodes": 11.095395041598941
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.1095316095912992,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.809960428895304
+          }
+        ],
+        "257": [
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07999041056079119,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.862205630381986
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07937695253134305,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.962777821721303
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07867630191427577,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.022308602530593
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07695961255599938,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.056217540458032
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.10155654522028912,
+            "nodes": 257,
+            "quadrature_effective_nodes": 15.648616450160816
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.07814521459654887,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.067842701443592
+          }
+        ]
+      },
+      "family": "rotated",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.004236486895588846,
+        0.000537383920727377,
+        0.002815928311406195,
+        0.0031291171070337758,
+        0.00457257472355288,
+        0.002458628099900938
+      ],
+      "moment_one_step_winner": 278,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.004694853930805389,
+          0.0006849321142529224,
+          0.0030070274360356006,
+          0.004058725369382675,
+          0.006439681208817246,
+          0.003785373623712193
+        ],
+        "257": [
+          0.00469032808449815,
+          0.0006852284649400723,
+          0.0030089441738641244,
+          0.004057168704141544,
+          0.006445093292549653,
+          0.00378673511881614
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 278,
+      "refinement_max_abs": 5.412083732407071e-06,
+      "selected": 278,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "3fb5438a5f385e0cd2c61c8afe6b0a533000d1630d46ea5d20aca62ff5e2ded1",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w002__prefix__existing__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w002__prefix__existing__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.008563059611670643,
+        0.005006751473365158,
+        0.00862020673802914,
+        0.007325125109880244,
+        0.008347990049593412,
+        0.006599049070037938
+      ],
+      "cached_vs_highest_max_abs": 6.631249675030648e-06,
+      "cpu_seconds": 1.453125,
+      "family": "rotated",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.004144072813804846,
+        0.000530510895971083,
+        0.004493814489893282,
+        0.003046828538338055,
+        0.004297765729478807,
+        0.002295113163856034
+      ],
+      "moment_one_step_winner": 219,
+      "refined_scores": {
+        "129": [
+          0.008556428361995612,
+          0.005005822836671878,
+          0.008617052607994965,
+          0.0073280846147731095,
+          0.008348260725192479,
+          0.006601214678096844
+        ],
+        "65": [
+          0.008563059611670643,
+          0.005006751473365158,
+          0.00862020673802914,
+          0.007325125109880244,
+          0.008347990049593412,
+          0.006599049070037938
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 219,
+      "refinement_max_abs": 6.631249675030648e-06,
+      "selected": 219,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "b3ac50a17cec7194051e16d15420a57867ef72ff7374640880e56873758691bc",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w002__prefix__local__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w002__prefix__local__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.004609196887778103,
+        0.0006941684044490395,
+        0.004623004602353481,
+        0.003956952249238851,
+        0.006143425391481312,
+        0.0035554752024766685
+      ],
+      "cached_vs_highest_max_abs": 1.0593765709745323e-05,
+      "cpu_seconds": 2.15625,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.11379893137019458,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.594333569788015
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11350954099755779,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.622765843118493
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.11310463552717924,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.638020260635447
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.10874769728390253,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.748181917586637
+          },
+          {
+            "mass": 1.000000002910274,
+            "maximum_normalized_weight": 0.14084175330695362,
+            "nodes": 129,
+            "quadrature_effective_nodes": 11.146952903385989
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.11073201147327794,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.715106366980654
+          }
+        ],
+        "257": [
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.08070225322241141,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.763379107676197
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.08049702761219288,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.803501533257734
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.0803178584862273,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.825060840707213
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07755453776889504,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.980648495672337
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.10108423168650801,
+            "nodes": 257,
+            "quadrature_effective_nodes": 15.72132685591378
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.0789873208432969,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.933954972651332
+          }
+        ]
+      },
+      "family": "rotated",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.004144072813804846,
+        0.000530510895971083,
+        0.004493814489893282,
+        0.003046828538338055,
+        0.004297765729478807,
+        0.002295113163856034
+      ],
+      "moment_one_step_winner": 219,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.004609196887778103,
+          0.0006941684044490395,
+          0.004623004602353481,
+          0.003956952249238851,
+          0.006143425391481312,
+          0.0035554752024766685
+        ],
+        "257": [
+          0.0046063171231821975,
+          0.0006936974328158071,
+          0.004633598368063227,
+          0.003956287097858764,
+          0.006143157320035735,
+          0.0035525532185380192
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 278,
+      "refinement_max_abs": 1.0593765709745323e-05,
+      "selected": 278,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "4c736dd2fe74f3867d92f58fa1bdb705c7b61f7b27c2d6d330482eadd2352858",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w002__prefix__local__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w002__prefix__local__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.02928981845198394,
+        0.019187505287309222,
+        0.02930131686915467,
+        0.026609596941864346,
+        0.02338613342986712,
+        0.020817826093634792
+      ],
+      "cached_vs_highest_max_abs": 1.9866402214692436e-05,
+      "cpu_seconds": 1.4375,
+      "family": "local_scale",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.012561017463345403,
+        0.0025588463413064957,
+        0.01679643607074535,
+        0.014033245807679328,
+        0.009866152087388816,
+        0.005260792002820572
+      ],
+      "moment_one_step_winner": 367,
+      "refined_scores": {
+        "129": [
+          0.029285661781364353,
+          0.01918653655088882,
+          0.02929922422208968,
+          0.026614264556057834,
+          0.023405999832081813,
+          0.02082548347775972
+        ],
+        "65": [
+          0.02928981845198394,
+          0.019187505287309222,
+          0.02930131686915467,
+          0.026609596941864346,
+          0.02338613342986712,
+          0.020817826093634792
+        ]
+      },
+      "refined_tie_count": 2,
+      "refined_winner_with_ordinary_tie": 48,
+      "refinement_max_abs": 1.9866402214692436e-05,
+      "selected": 367,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "7cef1ce8c01bb642146083547d058dc6054b68b57791ae3670c6837c0d3fc491",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w003__prefix__existing__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w003__prefix__existing__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.012242498687884929,
+        0.0027690646185788547,
+        0.016315024248625458,
+        0.013485801468053043,
+        0.009580169614404029,
+        0.005570994691824743
+      ],
+      "cached_vs_highest_max_abs": 1.9543374792395374e-05,
+      "cpu_seconds": 1.0,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.1105592281602801,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.809782063400773
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.11134489561232881,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.745238581681466
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11023381672070756,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.827516920026358
+          },
+          {
+            "mass": 0.9999999999999997,
+            "maximum_normalized_weight": 0.11068576849603842,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.806672581542731
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11064648624399971,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.791544383084803
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.11141591222649835,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.741650672368397
+          }
+        ],
+        "257": [
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07840476812598757,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.06749619350516
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07896193621975096,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.976390697939173
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07817399762505534,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.092534018824427
+          },
+          {
+            "mass": 0.9999999999999997,
+            "maximum_normalized_weight": 0.07849450614106611,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.063103227424993
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07846664853104283,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.04175209801015
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.07901229873819206,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.971325262894666
+          }
+        ]
+      },
+      "family": "local_scale",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.012561017463345403,
+        0.0025588463413064957,
+        0.01679643607074535,
+        0.014033245807679328,
+        0.009866152087388816,
+        0.005260792002820572
+      ],
+      "moment_one_step_winner": 367,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.012230920736630324,
+          0.002759972866424805,
+          0.016336577326727292,
+          0.013472848166243294,
+          0.009594664697452284,
+          0.0055707718019716275
+        ],
+        "257": [
+          0.012234701081126316,
+          0.0027627015376961565,
+          0.016334567623417853,
+          0.013481800319230556,
+          0.009589366285768784,
+          0.00556948477752621
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 367,
+      "refinement_max_abs": 8.95215298726132e-06,
+      "selected": 367,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "1402cadc8590eae3913fb2be6e3cbd92d643eb131f610570dc91b8efc0b42d31",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w003__prefix__existing__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w003__prefix__existing__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.029280115609036504,
+        0.01918017365254573,
+        0.029291581848250852,
+        0.026600465113916505,
+        0.023377812124721724,
+        0.020810404756647468
+      ],
+      "cached_vs_highest_max_abs": 1.979373177766336e-05,
+      "cpu_seconds": 1.40625,
+      "family": "local_scale",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.012556880296601668,
+        0.0025567032256277288,
+        0.016790837075611537,
+        0.01402819561650445,
+        0.009861971807958458,
+        0.005258220173997553
+      ],
+      "moment_one_step_winner": 367,
+      "refined_scores": {
+        "129": [
+          0.029275951665449662,
+          0.019179212702601905,
+          0.02928950437975366,
+          0.026605131972579216,
+          0.023397605856499387,
+          0.020818051170391136
+        ],
+        "65": [
+          0.029280115609036504,
+          0.01918017365254573,
+          0.029291581848250852,
+          0.026600465113916505,
+          0.023377812124721724,
+          0.020810404756647468
+        ]
+      },
+      "refined_tie_count": 2,
+      "refined_winner_with_ordinary_tie": 48,
+      "refinement_max_abs": 1.979373177766336e-05,
+      "selected": 367,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "eb7d730a545d6b9692c074a8010ae95c3c62aa56af735a62659c1ee7b23afb0a",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w003__prefix__local__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w003__prefix__local__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.012240306286892629,
+        0.0027683026288909656,
+        0.01631170008647697,
+        0.013482705185141693,
+        0.009577637068084444,
+        0.005569553726448703
+      ],
+      "cached_vs_highest_max_abs": 1.9508296731675367e-05,
+      "cpu_seconds": 2.328125,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11056551263004129,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.809327431400968
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.11137203703145783,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.742948347918984
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11023727019804805,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.827280042406107
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.1106887701728924,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.806465464236975
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11065001080842543,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.791312205204154
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11142127711400752,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.741281156005966
+          }
+        ],
+        "257": [
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.07840922485386656,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.06685442473975
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07898118397237038,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.973158168012542
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07817644671134705,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.092199622740175
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.07849663482613056,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.06281085008042
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07846914802982861,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.041424336102747
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.0790161033302481,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.970803643808967
+          }
+        ]
+      },
+      "family": "local_scale",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.012556880296601668,
+        0.0025567032256277288,
+        0.016790837075611537,
+        0.01402819561650445,
+        0.009861971807958458,
+        0.005258220173997553
+      ],
+      "moment_one_step_winner": 367,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.012228714953198315,
+          0.002759196320912824,
+          0.016333230066963134,
+          0.013469751818341405,
+          0.009592173782846863,
+          0.005569353681946199
+        ],
+        "257": [
+          0.012232513984031341,
+          0.0027619585021333754,
+          0.016331208383208645,
+          0.01347872144401021,
+          0.009586863136058459,
+          0.005568053740633533
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 367,
+      "refinement_max_abs": 8.969625668804257e-06,
+      "selected": 367,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "849d8cf7ab9424c5bc698335e099ff5799d298b64ead5d39befb32b22fef258e",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w003__prefix__local__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w003__prefix__local__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.02060672503875497,
+        0.022448209531526174,
+        0.023414445187718083,
+        0.023676932216266922,
+        0.020246793102485082,
+        0.02001643877319447
+      ],
+      "cached_vs_highest_max_abs": 5.3609189994922174e-05,
+      "cpu_seconds": 1.453125,
+      "family": "island_small",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.00036503476906830766,
+        0.002633058780590967,
+        0.018443311210470496,
+        0.019920660602849426,
+        0.0003261314909002323,
+        9.571928676882917e-05
+      ],
+      "moment_one_step_winner": 283,
+      "refined_scores": {
+        "129": [
+          0.020608276569957472,
+          0.02244918893259715,
+          0.023468054377713005,
+          0.023688617522764483,
+          0.020246793102830164,
+          0.020016438700787696
+        ],
+        "65": [
+          0.02060672503875497,
+          0.022448209531526174,
+          0.023414445187718083,
+          0.023676932216266922,
+          0.020246793102485082,
+          0.02001643877319447
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 283,
+      "refinement_max_abs": 5.3609189994922174e-05,
+      "selected": 283,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "141717f007cb4de02ddb1307a0b876ecdb59205b04c0635dc372beb173e47171",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w004__prefix__existing__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w004__prefix__existing__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.0003573458262597852,
+        0.0026506337236892807,
+        0.01848241327537302,
+        0.019966537067095568,
+        0.000325864627195979,
+        9.428212018534573e-05
+      ],
+      "cached_vs_highest_max_abs": 6.729662655904911e-05,
+      "cpu_seconds": 1.203125,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.1106582117211548,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.801521233490645
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.11117813990495376,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.766794233274872
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11021347943908288,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.830831375761695
+          },
+          {
+            "mass": 1.0000000000000004,
+            "maximum_normalized_weight": 0.11028422846454536,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.82895800370047
+          },
+          {
+            "mass": 0.9999999999999997,
+            "maximum_normalized_weight": 0.11032299436946072,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.82348898656565
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11306261958312279,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.628676637349663
+          }
+        ],
+        "257": [
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07847496383255867,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.055834583988634
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.0788436788586244,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.00681158097586
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07815957513064552,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.097212133774846
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07820974788446114,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.094566595923954
+          },
+          {
+            "mass": 0.9999999999999997,
+            "maximum_normalized_weight": 0.07823723931902209,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.086846642968904
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.0801800864535723,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.811858703093026
+          }
+        ]
+      },
+      "family": "island_small",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.00036503476906830766,
+        0.002633058780590967,
+        0.018443311210470496,
+        0.019920660602849426,
+        0.0003261314909002323,
+        9.571928676882917e-05
+      ],
+      "moment_one_step_winner": 283,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.00035663332082966934,
+          0.002666850446614875,
+          0.018426182383028702,
+          0.019912343862760407,
+          0.0003252570821097506,
+          9.464350308482613e-05
+        ],
+        "257": [
+          0.000356285356549908,
+          0.0026625978308423507,
+          0.018425321379232276,
+          0.01989924044053652,
+          0.0003248248063404929,
+          9.490532597606727e-05
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 283,
+      "refinement_max_abs": 1.3103422223888217e-05,
+      "selected": 283,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "9dc8a178580811543cb9d3827fb2728c51c76a792749157388187dcf7829a0e5",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w004__prefix__existing__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w004__prefix__existing__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.02059938148646301,
+        0.022438584472295308,
+        0.02340636205276973,
+        0.023668376050508182,
+        0.0202394301729023,
+        0.02000939109218877
+      ],
+      "cached_vs_highest_max_abs": 5.335841181053e-05,
+      "cpu_seconds": 1.484375,
+      "family": "island_small",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.00036458015911130105,
+        0.00263015126824992,
+        0.01843657510235398,
+        0.019913765671343116,
+        0.00032566342822347146,
+        9.556448869560263e-05
+      ],
+      "moment_one_step_winner": 283,
+      "refined_scores": {
+        "129": [
+          0.020600898517001583,
+          0.02243958302602222,
+          0.02345972046458026,
+          0.023680015570591923,
+          0.02023943017330948,
+          0.02000939124568083
+        ],
+        "65": [
+          0.02059938148646301,
+          0.022438584472295308,
+          0.02340636205276973,
+          0.023668376050508182,
+          0.0202394301729023,
+          0.02000939109218877
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 283,
+      "refinement_max_abs": 5.335841181053e-05,
+      "selected": 283,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "248b0f41205eb3cc089da5177f1708bf36f802c47a626bb92e0a8053c201313a",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w004__prefix__local__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w004__prefix__local__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.00035681701624564914,
+        0.002649835337994481,
+        0.018478126342656963,
+        0.019962175413674246,
+        0.0003251902217221657,
+        9.40857009388204e-05
+      ],
+      "cached_vs_highest_max_abs": 6.729545932371989e-05,
+      "cpu_seconds": 2.6875,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.11069536597644203,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.798524350783387
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11123573724151428,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.761941211216893
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.11021701248145996,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.83059716900085
+          },
+          {
+            "mass": 1.0000000000000004,
+            "maximum_normalized_weight": 0.11028755471266773,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.828739824337013
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11033696235666318,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.822469641496767
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11313850439666533,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.622021984474214
+          }
+        ],
+        "257": [
+          {
+            "mass": 0.9999999999999997,
+            "maximum_normalized_weight": 0.07850131234112881,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.051604431952185
+          },
+          {
+            "mass": 0.9999999999999997,
+            "maximum_normalized_weight": 0.07888452489104382,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.99996177786538
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07816208064170022,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.0968815019108
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.07821210674420631,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.094258589020075
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07824714493084681,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.0854077101638
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.08023390133007868,
+            "nodes": 257,
+            "quadrature_effective_nodes": 17.802466853953582
+          }
+        ]
+      },
+      "family": "island_small",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.00036458015911130105,
+        0.00263015126824992,
+        0.01843657510235398,
+        0.019913765671343116,
+        0.00032566342822347146,
+        9.556448869560263e-05
+      ],
+      "moment_one_step_winner": 283,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.00035611220844546007,
+          0.0026661911874384684,
+          0.01842191388072506,
+          0.019907988404936232,
+          0.00032461586211501576,
+          9.444062350649681e-05
+        ],
+        "257": [
+          0.0003557565247306189,
+          0.0026618939637336656,
+          0.018421033202494313,
+          0.019894879954350526,
+          0.00032418991105239803,
+          9.471882352699651e-05
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 283,
+      "refinement_max_abs": 1.3108450585705422e-05,
+      "selected": 283,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "6b563382a62a372768f3769dc3aff0ff46bc77fc5d94ac273d656c70bcea7729",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w004__prefix__local__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w004__prefix__local__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.00694566425145513,
+        0.008168481294727513,
+        0.0077831057329894714,
+        0.008049491377324304,
+        0.007081269290412684,
+        0.006654885161696795
+      ],
+      "cached_vs_highest_max_abs": 2.4293135313828602e-05,
+      "cpu_seconds": 1.46875,
+      "family": "island_large",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.0003198373660118185,
+        0.006623403409821014,
+        0.005649262286942047,
+        0.004385067282766271,
+        0.00045442238281256155,
+        2.7417588723263236e-05
+      ],
+      "moment_one_step_winner": 23,
+      "refined_scores": {
+        "129": [
+          0.0069455375026162775,
+          0.008144261850654453,
+          0.007758812597675643,
+          0.008025630778676818,
+          0.007081156685617396,
+          0.006655036255139776
+        ],
+        "65": [
+          0.00694566425145513,
+          0.008168481294727513,
+          0.0077831057329894714,
+          0.008049491377324304,
+          0.007081269290412684,
+          0.006654885161696795
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 23,
+      "refinement_max_abs": 2.4293135313828602e-05,
+      "selected": 23,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "da8296d1ec4d5107b59345f83578da3b5c912b58d8987cf84d82828c5392150b",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w005__prefix__existing__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w005__prefix__existing__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.0003080401757633091,
+        0.006653471234840708,
+        0.0056767228649235914,
+        0.00450312614379719,
+        0.0004956583601385011,
+        0.00013036363721762774
+      ],
+      "cached_vs_highest_max_abs": 2.778069801005669e-05,
+      "cpu_seconds": 1.078125,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11061114511414759,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.804737355091786
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11166870758375684,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.774016872249543
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11081139795207957,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.807841609571721
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.11033042646931332,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.823570637012608
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.10952460176998348,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.862537231413802
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.12137989029509413,
+            "nodes": 129,
+            "quadrature_effective_nodes": 11.970158324092969
+          }
+        ],
+        "257": [
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07844158582811452,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.060374811015507
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07919157243337782,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.016992258535797
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07858359819185737,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.06475098622379
+          },
+          {
+            "mass": 0.9999999999999998,
+            "maximum_normalized_weight": 0.07824250990633831,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.08696169983345
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07767104699227421,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.141979918167475
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.08607840622718539,
+            "nodes": 257,
+            "quadrature_effective_nodes": 16.88252094780197
+          }
+        ]
+      },
+      "family": "island_large",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.0003198373660118185,
+        0.006623403409821014,
+        0.005649262286942047,
+        0.004385067282766271,
+        0.00045442238281256155,
+        2.7417588723263236e-05
+      ],
+      "moment_one_step_winner": 23,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.000307985672885293,
+          0.006682174888988858,
+          0.005701177622211054,
+          0.004525322043721446,
+          0.0005036763845617266,
+          0.00013030961921111546
+        ],
+        "257": [
+          0.0003091566513139754,
+          0.0066812519328507645,
+          0.005692688237847471,
+          0.004509983341847967,
+          0.0005026426138775486,
+          0.00013035818158499434
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 23,
+      "refinement_max_abs": 1.5338701873478765e-05,
+      "selected": 23,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "e8d6f5295d36c1eb34fc11e7c7b3714e1c11e7e288a61f342319c49a671cb733",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w005__prefix__existing__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w005__prefix__existing__mixture_h1"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 1164
+      },
+      "cached_scores": [
+        0.00692791086287793,
+        0.008145753059919245,
+        0.007762780774263725,
+        0.008027663357400796,
+        0.007061419310582485,
+        0.0066380116154552025
+      ],
+      "cached_vs_highest_max_abs": 2.4159042737157722e-05,
+      "cpu_seconds": 1.4375,
+      "family": "island_large",
+      "interpretation": "Gaussian working-posterior GH65/129; same recurrence, an integration refinement rather than an independent posterior reference.",
+      "moment_one_step_scores": [
+        0.00031861721430152877,
+        0.006606926815452355,
+        0.005634744013907024,
+        0.004373953859524547,
+        0.00045102777420323093,
+        2.700721741920468e-05
+      ],
+      "moment_one_step_winner": 23,
+      "refined_scores": {
+        "129": [
+          0.006927807903289344,
+          0.008121758365723694,
+          0.007738621731526567,
+          0.00800403349095858,
+          0.007061307343067338,
+          0.006638184172872535
+        ],
+        "65": [
+          0.00692791086287793,
+          0.008145753059919245,
+          0.007762780774263725,
+          0.008027663357400796,
+          0.007061419310582485,
+          0.0066380116154552025
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 23,
+      "refinement_max_abs": 2.4159042737157722e-05,
+      "selected": 23,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "8cbac66299561782050354e33c9fd6898c880f76986ed9b9ad99c11452b3f54f",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w005__prefix__local__h2",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w005__prefix__local__h2"
+    },
+    {
+      "actual_budget": {
+        "planning_fantasy_states": 2316
+      },
+      "cached_scores": [
+        0.00030697275216063047,
+        0.0066452666989787286,
+        0.0056692532147573456,
+        0.004497512239402091,
+        0.0004935001566986192,
+        0.0001278000251247797
+      ],
+      "cached_vs_highest_max_abs": 2.7744069451144174e-05,
+      "cpu_seconds": 2.390625,
+      "diagnostics": {
+        "129": [
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11068754451109744,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.79888909014566
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.1116867094073002,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.772761741134246
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.11083543812969805,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.80616473081117
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.11035315073781876,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.82200202332057
+          },
+          {
+            "mass": 1.0000000000000002,
+            "maximum_normalized_weight": 0.10956039247332792,
+            "nodes": 129,
+            "quadrature_effective_nodes": 12.859945109142773
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.12168683953588903,
+            "nodes": 129,
+            "quadrature_effective_nodes": 11.94697311016905
+          }
+        ],
+        "257": [
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07849576562931693,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.052119604996108
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07920433870195845,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.015220499008592
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07860064665161282,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.062383828892173
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.07825862516901379,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.084747334930587
+          },
+          {
+            "mass": 1.0,
+            "maximum_normalized_weight": 0.07769642851712277,
+            "nodes": 257,
+            "quadrature_effective_nodes": 18.13832068093149
+          },
+          {
+            "mass": 0.9999999999999999,
+            "maximum_normalized_weight": 0.0862960839773962,
+            "nodes": 257,
+            "quadrature_effective_nodes": 16.849803276766693
+          }
+        ]
+      },
+      "family": "island_large",
+      "interpretation": "Exact retained-component updates with GH129/257 importance integration; not an exact integral or an iid ESS guarantee.",
+      "moment_one_step_scores": [
+        0.00031861721430152877,
+        0.006606926815452355,
+        0.005634744013907024,
+        0.004373953859524547,
+        0.00045102777420323093,
+        2.700721741920468e-05
+      ],
+      "moment_one_step_winner": 23,
+      "omitted_mass": 0.0,
+      "refined_scores": {
+        "129": [
+          0.0003067444815017232,
+          0.00667391687811907,
+          0.0056937031563858796,
+          0.004519759622022217,
+          0.0005014957087035762,
+          0.00012772019212574907
+        ],
+        "257": [
+          0.0003079957714677774,
+          0.006673010768429873,
+          0.005685201290861868,
+          0.004504380204921143,
+          0.0005004789644520479,
+          0.00012778706592502258
+        ]
+      },
+      "refined_tie_count": 1,
+      "refined_winner_with_ordinary_tie": 23,
+      "refinement_max_abs": 1.537941710107356e-05,
+      "selected": 23,
+      "selected_refined_score_gap": 0.0,
+      "snapshot_hash": "da7067b79d9b0d01ed1cdd4b87a27db8aeaab4d8b6d147cc173a137d6a7a2d36",
+      "source_sha256": "0439f6ec83d037726b4af28b7fa4524172adf6ce5602a59dde43e8ff2e594115",
+      "source_unit": "test__w005__prefix__local__mixture_h1",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "unit": "replay__test__w005__prefix__local__mixture_h1"
+    }
+  ],
+  "status": "COMPLETE",
+  "test_manifest_sha256": "f5d303a2ef255c53f40d4e259ef58c72d80d4ff14f512aea3aa0ca5b2cdd06e4",
+  "utc": "2026-10-21T05:28:24.617515+00:00"
+}

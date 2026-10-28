@@ -1,0 +1,17 @@
+{
+  "authorization_id": "OWNER-2026-10-28-CURATED-EVIDENCE",
+  "date": "2026-10-28",
+  "owner": "iso0",
+  "scope": "The 56 already-selected original self-generated Astra synthetic results, numerical evidence, configurations and figures.",
+  "historical_workflow_states_superseded_within_this_scope": true,
+  "original_software_license": "MIT",
+  "original_research_evidence_and_documentation_license": "CC-BY-4.0",
+  "exclusions": [
+    "Third-party/TUM datasets or simulator internals without established rights",
+    "Secrets and private paths",
+    "Protected evaluation targets",
+    "Complete raw execution archive"
+  ],
+  "source_results_or_endpoint_changes_authorized": false,
+  "safe_publication_copy_metadata_sanitization_authorized": true
+}

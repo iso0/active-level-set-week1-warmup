@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-26T22:46:00.476316+00:00",
+  "all_path_checks": 288,
+  "prequery_hashes": 4608,
+  "saved_prediction_hashes": 2592,
+  "dense_mixture_prefixes": [
+    {
+      "family": "annular_shell",
+      "seed": 20261033000,
+      "budget": 16,
+      "dense_error": 6.566969190657801e-14,
+      "saved_error": 3.3306690738754696e-16,
+      "components": 65
+    },
+    {
+      "family": "compact_plateau",
+      "seed": 20261031000,
+      "budget": 16,
+      "dense_error": 1.2878587085651816e-14,
+      "saved_error": 3.3306690738754696e-16,
+      "components": 65
+    },
+    {
+      "family": "correlated_corruption",
+      "seed": 20261039000,
+      "budget": 16,
+      "dense_error": 1.6653345369377348e-14,
+      "saved_error": 2.220446049250313e-16,
+      "components": 65
+    },
+    {
+      "family": "heavy_tail",
+      "seed": 20261037000,
+      "budget": 16,
+      "dense_error": 2.0181703530575135e-12,
+      "saved_error": 3.3306690738754696e-16,
+      "components": 65
+    },
+    {
+      "family": "heteroskedastic",
+      "seed": 20261036000,
+      "budget": 16,
+      "dense_error": 4.884981308350689e-15,
+      "saved_error": 2.220446049250313e-16,
+      "components": 65
+    },
+    {
+      "family": "outliers",
+      "seed": 20261038000,
+      "budget": 16,
+      "dense_error": 1.5537571229629066e-13,
+      "saved_error": 3.3306690738754696e-16,
+      "components": 65
+    },
+    {
+      "family": "radial_island",
+      "seed": 20261029000,
+      "budget": 16,
+      "dense_error": 2.786659791809143e-14,
+      "saved_error": 3.3306690738754696e-16,
+      "components": 65
+    },
+    {
+      "family": "radial_shift",
+      "seed": 20261028000,
+      "budget": 16,
+      "dense_error": 1.486255563065697e-12,
+      "saved_error": 3.3306690738754696e-16,
+      "components": 65
+    },
+    {
+      "family": "rare_negative",
+      "seed": 20261035000,
+      "budget": 16,
+      "dense_error": 1.83861953440001e-11,
+      "saved_error": 4.440892098500626e-16,
+      "components": 65
+    },
+    {
+      "family": "rotated_ridge",
+      "seed": 20261030000,
+      "budget": 16,
+      "dense_error": 1.0469070055307839e-11,
+      "saved_error": 3.3306690738754696e-16,
+      "components": 65
+    },
+    {
+      "family": "smooth",
+      "seed": 20261034000,
+      "budget": 16,
+      "dense_error": 2.7125468538002906e-11,
+      "saved_error": 4.440892098500626e-16,
+      "components": 65
+    },
+    {
+      "family": "twin_islands",
+      "seed": 20261032000,
+      "budget": 16,
+      "dense_error": 2.131073095767988e-13,
+      "saved_error": 2.220446049250313e-16,
+      "components": 65
+    }
+  ],
+  "independent_null_prequery_count": 192,
+  "max_prequery_moment_error": 1.2789769243681803e-13,
+  "nonidentical_argmax": 0,
+  "near_ties": 50,
+  "max_score_regret": 0.0,
+  "reference_factorizations": 972,
+  "used_contract_counts": {
+    "model_requests": 17,
+    "optimizer_evaluations": 700,
+    "rankone_updates": 23040
+  },
+  "cpu_seconds": 12.4375,
+  "scope": "Cached-parameter references and one toy interface fit; no scientific refits, method changes or new acquisition experiment"
+}

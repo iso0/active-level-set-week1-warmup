@@ -1,0 +1,181 @@
+{
+  "campaign": {
+    "application_contract": "One archive-free eligible 541-run pool; public P,VX,LS,ST; one cost per run with all available outputs; no OLD/NEW routing or free outcomes.",
+    "astra_threads": 2,
+    "authorization": "NON_SCIENTIFIC_AUTHORIZATION_WITHHELD",
+    "campaign_id": "astra_representation_planning_20261020",
+    "clock_rule": "The new deadline includes development, waiting, interrupted work and restart; never resets. Prior campaign clock and files are immutable.",
+    "coordination_record": "NON_SCIENTIFIC_COORDINATION_RECORD_WITHHELD",
+    "deadline_utc": "2026-10-21T11:58:58+00:00",
+    "finite_envelope": {
+      "alternative_mechanisms_after_primary_failure": 1,
+      "controlled_factorizations": 8000000,
+      "controlled_fit_requests": 125000,
+      "planning_fantasy_states": 30000000,
+      "reference_factorizations": 20000,
+      "reference_fit_requests": 500
+    },
+    "forbidden": [
+      "paid cloud",
+      "new physical simulations",
+      "C4",
+      "real-data Stage A",
+      "BA_RISK restart",
+      "main merge",
+      "remote publication or push",
+      "external messages",
+      "modifying Opus live source",
+      "using Opus allocation",
+      "changing labels, exclusions or q20"
+    ],
+    "global_numerical_threads": 4,
+    "host": "NON_SCIENTIFIC_HOST_WITHHELD",
+    "maximum_elapsed_hours": 24,
+    "opus_threads_reserved": 2,
+    "owner": "NON_SCIENTIFIC_OWNER_WITHHELD",
+    "prior_final_commit": "833211403b50051e1bee25c8af38de8443e154b4",
+    "prior_package": "NON_SCIENTIFIC_PRIOR_PACKAGE_WITHHELD",
+    "python": "NON_SCIENTIFIC_PYTHON_WITHHELD",
+    "started_utc": "2026-10-20T11:58:58+00:00"
+  },
+  "claim_scope": "Independent synthetic realizations within frozen families only; no physical/simulator/Keyhole-BA validation.",
+  "clean_primary_pass": false,
+  "final_report": {
+    "path": "FINAL_REPORT.md",
+    "sha256": "ec4ee495806cc1210f595865c612905584e7624311074d31fd7940b747d949aa"
+  },
+  "final_review_facts": {
+    "path": "results/audits/FINAL_REVIEW_FACTS.json",
+    "sha256": "b9c6bbe5a6c09fd26e86402a6a153de1bbb7803bb5f1b81a7e4d7ab7591c6e1f"
+  },
+  "handoff_manifest": {
+    "created_utc": "2026-10-21T05:30:02.886739+00:00",
+    "files": [
+      {
+        "path": "adapter.py",
+        "sha256": "3c4597421550ffba5a6be1340488fb689e0b803130d17e7a5fe53f6d6efbafea"
+      },
+      {
+        "path": "ADAPTER_CONTRACT.md",
+        "sha256": "264905d0913e172e5a1ca3a88db5539950f806c0fdc22c7c9e63102c7df1f8d1"
+      },
+      {
+        "path": "mixture_acquisition.py",
+        "sha256": "58a4b58e578d8f3b146a9ff9937549f7c73a8f8cdb5123f23994023d23783895"
+      },
+      {
+        "path": "planner.py",
+        "sha256": "aba3bf8f58e328aed7dcd8a5a2bb22a4cae3ed39fb3acce10c97fd84970b0650"
+      },
+      {
+        "path": "posterior.py",
+        "sha256": "ac5f50e329b7fd32ffc0e570b80ee68c0a644aa77947d30cfad409e4434bf000"
+      }
+    ],
+    "scope": "Local integration review only. Scalar latent-monitor sign loss; stronger backend may supply matching moments. No real-data execution or automatic posterior replacement.",
+    "test_manifest_sha256": "f5d303a2ef255c53f40d4e259ef58c72d80d4ff14f512aea3aa0ca5b2cdd06e4"
+  },
+  "historical_automated_summary_sha256": "b146b3dfefcad034e651512713bcbbcc45fb866596b511fc81fe860c0275d52f",
+  "human_visual_review": "Assistant reviewed 15 PNGs and 24 numerical replay states; owner/human review not claimed.",
+  "ledger": {
+    "counts": [
+      {
+        "n": 40,
+        "phase": "DEV",
+        "status": "COMPLETE"
+      },
+      {
+        "n": 39,
+        "phase": "REFERENCE",
+        "status": "COMPLETE"
+      },
+      {
+        "n": 4093,
+        "phase": "TEST",
+        "status": "COMPLETE"
+      },
+      {
+        "n": 3,
+        "phase": "TEST",
+        "status": "FAILED"
+      }
+    ],
+    "reservations": {
+      "controlled_factorizations": 4590464,
+      "controlled_fit_requests": 116752,
+      "planning_fantasy_states": 14487368,
+      "reference_factorizations": 5888,
+      "reference_fit_requests": 128
+    },
+    "running": []
+  },
+  "ledger_exports": {
+    "attempts": {
+      "path": "review_bundle/final/ATTEMPTS_LEDGER.csv",
+      "sha256": "b220b4f33604562478df546bd2b349d9df0a5846f0d646aa477bd7580f4d8803"
+    },
+    "events": {
+      "path": "review_bundle/final/EVENTS_LEDGER.csv",
+      "sha256": "fe48437aa3e79cc447da9ad4227c9c944d56087bda9e61a431b710441a250954"
+    },
+    "reservations": {
+      "path": "review_bundle/final/RESERVATIONS_LEDGER.csv",
+      "sha256": "dfd85029fba9f6a6bd439a22e32ce89d539814435c512c3f9ef4da3817094b72"
+    },
+    "units": {
+      "path": "review_bundle/final/UNITS_LEDGER.csv",
+      "sha256": "7b76d77e3a354deba215bb614bf564dfd23dce316fa2203610b661d2297350a4"
+    }
+  },
+  "recommended_action": "Retain the stronger model and cheap matched controls; do not promote the tested local bank or two-step planner.",
+  "remaining_scientific_work": 0,
+  "status": "FINAL_SCIENTIFIC_REVIEW_COMPLETE_WITH_PRESERVED_FAILURES",
+  "statuses": {
+    "analysis": {
+      "path": "results/analysis/ANALYSIS_STATUS.json",
+      "present": true,
+      "sha256": "019da1a67bd378eca28cea1703df01481f40948214f27a19c3865890cc564415",
+      "status": "COMPLETE_WITH_INCOMPLETE_TEST_UNITS"
+    },
+    "figures": {
+      "path": "figures/FIGURE_INDEX.json",
+      "present": true,
+      "sha256": "c63cadfff7f2f04e007eaf514c604c17db1f19bc745d4a7880d13aef82c35122",
+      "status": "GENERATED_PENDING_VISUAL_REVIEW"
+    },
+    "integrity": {
+      "path": "results/audits/PATH_INTEGRITY.json",
+      "present": true,
+      "sha256": "85ababec189a30527a92c187a17e4380bbdc7c3d2806014b76f4705e76ac816b",
+      "status": "ISSUES_RETAINED"
+    },
+    "numerical_replay": {
+      "path": "results/audits/NUMERICAL_REPLAY.json",
+      "present": true,
+      "sha256": "8a01e2b82944a46db2b5a1a1da711c4310fd3c27ed46a5eac3acd12d1e020ec2",
+      "status": "COMPLETE"
+    },
+    "primary": {
+      "path": "results/analysis/PRIMARY_CONTRASTS.json",
+      "present": true,
+      "sha256": "dec2e8bd6302d5099569fe91f874ddaef465d96c399d427c3ccb21db9d98bfdc",
+      "status": "INCOMPLETE_NO_CLEAN_PRIMARY_PASS"
+    },
+    "search": {
+      "path": "results/SEARCH_CONTROLS.json",
+      "present": true,
+      "sha256": "23a9c628b18abec6abc832d8841d3f30e7c000002c9aee331f40dfc7e2aca671",
+      "status": "COMPLETE"
+    }
+  },
+  "test_manifest_sha256": "f5d303a2ef255c53f40d4e259ef58c72d80d4ff14f512aea3aa0ca5b2cdd06e4",
+  "turkish_report": {
+    "path": "SONUC_TR.md",
+    "sha256": "eea7b7547b1a66657d48c9c0bfcae61269459531e89c905997f83d0d5cdc2503"
+  },
+  "utc": "2026-10-21T06:43:40.114528+00:00",
+  "visual_review": {
+    "path": "VISUAL_REVIEW.json",
+    "sha256": "746ee738a49a47b6df0cb96449828ac51b9caae34638756eb5194036eb01d265"
+  }
+}

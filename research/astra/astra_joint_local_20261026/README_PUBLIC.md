@@ -27,8 +27,28 @@ Start with [the original scientific report reading view](FINAL_REPORT.md). Scien
 
 ## Evidence limits
 
-Frozen JSON, detailed tables, figures and raw execution records not authorized for this publication remain [explicitly restricted or pending](../../../docs/research/ARCHIVE_MANIFEST.md). This is a reading layer, not a runnable complete experiment distribution. Operational scripts were not executed or included for public publication. No new endpoint was computed.
+The original raw execution archive and other files outside the authorized curated subset remain [explicitly restricted or pending](../../../docs/research/ARCHIVE_MANIFEST.md). This is a reading layer, not a runnable complete experiment distribution. Operational scripts were not executed or included for public publication. No new endpoint was computed.
 
 ## Licensing and publication scope
 
 Original code/software specifications: MIT. Original research text and editorial documentation: CC BY 4.0. Third-party dependencies, quotations, data and figures retain their own terms. [Exact scope and attribution](../../../docs/research/LICENSING_SCOPE.md). No new license is imposed on existing thesis files outside the explicit Hub manifest.
+
+## Curated numerical evidence and original figures
+
+The owner authorized 13 selected original synthetic evidence files for normal Git publication. [Complete curated index](../../../docs/research/CURATED_EVIDENCE_INDEX.md#jl26) and [original/published checksums](../../../docs/research/CURATED_EVIDENCE_MANIFEST.csv) identify this exact scope. Older report availability labels are historical; the current evidence registry resolves the newly available subset. Scientific conclusions, failed paths and limitations are unchanged.
+
+| Supporting evidence | Role |
+|---|---|
+| [FROZEN_TEST_V1.json](FROZEN_TEST_V1.json) | FROZEN_PROTOCOL_CONFIGURATION |
+| [results/analysis_test_v1/ANALYSIS.json](results/analysis_test_v1/ANALYSIS.json) | PRIMARY_TEST_CONTRASTS |
+| [results/analysis_test_v1/ALL_FAMILIES.csv](results/analysis_test_v1/ALL_FAMILIES.csv) | FAMILY_LIMITATIONS |
+| [results/analysis_test_v1/PER_WORLD_PATH_MODEL.csv](results/analysis_test_v1/PER_WORLD_PATH_MODEL.csv) | WORLD_LEVEL_MATCHED_EVIDENCE |
+| [results/completion/COMPLETION_SUMMARY.json](results/completion/COMPLETION_SUMMARY.json) | FINAL_MECHANISM_DIAGNOSTICS |
+| [results/completion/COMPUTE_COST.csv](results/completion/COMPUTE_COST.csv) | REPORTED_MODEL_COSTS |
+| [results/completion/FAMILY_DIAGNOSTICS_B24.csv](results/completion/FAMILY_DIAGNOSTICS_B24.csv) | REGIONAL_HARM_DIAGNOSIS |
+| [results/completion/TARGET_ATTAINMENT.csv](results/completion/TARGET_ATTAINMENT.csv) | TARGET_ATTAINMENT_AND_CENSORING |
+| [results/finishing/HIT_DIAGNOSTICS.csv](results/finishing/HIT_DIAGNOSTICS.csv) | REGIONAL_HARM_DIAGNOSIS |
+| [results/finishing/AUDIT.json](results/finishing/AUDIT.json) | PATH_INTEGRITY |
+| [evidence/PORTABLE_CHECK.json](evidence/PORTABLE_CHECK.json) | PORTABLE_NUMERICAL_CHECK |
+| [results/analysis_test_v1/ALL_FAMILIES.png](results/analysis_test_v1/ALL_FAMILIES.png) | FIGURE_ISLAND_LIMITATIONS |
+| [results/completion/LEARNING_CURVES_REVIEWED.png](results/completion/LEARNING_CURVES_REVIEWED.png) | FIGURE_GLOBAL_ERROR |

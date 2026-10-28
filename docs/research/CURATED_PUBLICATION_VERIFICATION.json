@@ -1,0 +1,131 @@
+{
+  "schema": "curated-astra-publication-verification-v1",
+  "status": "PRECOMMIT_CONTENT_GATES_PASS",
+  "base_commit": "1a9b2e0d005a3a667d21e79c95624d682077f2e5",
+  "publication_authorization": "OWNER-2026-10-28-CURATED-EVIDENCE",
+  "selected_source_files": 56,
+  "selected_source_bytes": 10492379,
+  "published_evidence_files": 56,
+  "published_evidence_bytes": 10348638,
+  "published_files_by_campaign": {
+    "AD18": 16,
+    "RP20": 15,
+    "LC24": 12,
+    "JL26": 13
+  },
+  "published_bytes_by_campaign": {
+    "AD18": 1462778,
+    "RP20": 2332775,
+    "LC24": 913721,
+    "JL26": 5639364
+  },
+  "withheld": [],
+  "byte_identical_files": 53,
+  "sanitized_derivative_files": [
+    "research/astra/astra_representation_planning_20261020/CONTROLLED_RESULTS.json",
+    "research/astra/astra_representation_planning_20261020/results/analysis/incomplete_units.csv",
+    "research/astra/astra_joint_local_20261026/results/analysis_test_v1/ANALYSIS.json"
+  ],
+  "field_or_path_transformations": 32,
+  "all_scientific_json_values_and_statuses_preserved": true,
+  "csv_rows_columns_missing_values_and_nonprivate_cells_preserved": true,
+  "png_files_checked": 10,
+  "png_bytes_and_pixels_unchanged": true,
+  "png_metadata": [
+    {
+      "evidence_id": "CE-AD18-015",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    },
+    {
+      "evidence_id": "CE-AD18-016",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    },
+    {
+      "evidence_id": "CE-AD18-017",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    },
+    {
+      "evidence_id": "CE-RP20-013",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    },
+    {
+      "evidence_id": "CE-RP20-014",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    },
+    {
+      "evidence_id": "CE-RP20-015",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    },
+    {
+      "evidence_id": "CE-LC24-011",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    },
+    {
+      "evidence_id": "CE-LC24-012",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    },
+    {
+      "evidence_id": "CE-JL26-012",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    },
+    {
+      "evidence_id": "CE-JL26-013",
+      "metadata": [
+        "Standard Matplotlib software attribution only"
+      ],
+      "unchanged_image_bytes": true
+    }
+  ],
+  "figure_content_review": "Ten figures checked; four earlier views reused after unchanged-source SHA verification and six remaining views completed.",
+  "existing_claims": 16,
+  "existing_experiment_contexts": 15,
+  "scientific_claim_fields_or_experiment_interpretations_changed": false,
+  "new_statistical_analysis_or_endpoint_recalculation": false,
+  "imported_research_code_executed": false,
+  "research_tests_simulations_or_retraining": false,
+  "graphify_rebuilt": false,
+  "raw_execution_archive_uploaded": false,
+  "lfs_payload_uploads": false,
+  "github_release_created": false,
+  "local_auxiliary_records_imported": false,
+  "external_hdd_accessed": false,
+  "sealed_target_accessed": false,
+  "source_directories_or_backups_modified": false,
+  "license_scope_files": 339,
+  "prior_license_assignments_changed": false,
+  "repository_root_license_added": false,
+  "archive_manifest_entries": 728,
+  "matched_existing_archive_evidence_ids": 38,
+  "new_archive_records": 18,
+  "metadata_field_or_path_transformations": 29,
+  "serialization_only_records": 3,
+  "exact_decimal_scientific_numeric_values_checked_in_json_derivatives": 57536,
+  "prior_frozen_report_correspondence_checks_reused": 38
+}

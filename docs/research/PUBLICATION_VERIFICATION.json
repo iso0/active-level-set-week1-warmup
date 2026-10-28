@@ -51,5 +51,8 @@
     },
     "git_diff_check_exit_code": 2
   },
-  "automatic_lfs_payload_uploads_disabled_for_publication": true
+  "automatic_lfs_payload_uploads_disabled_for_publication": true,
+  "historical_record_at_commit": "86e400887a069ab054da55a76e34082835052e25",
+  "current_curated_extension_verification": "docs/research/CURATED_PUBLICATION_VERIFICATION.json",
+  "record_scope": "Original v1 prepublication checks only; current extension is separately verified."
 }

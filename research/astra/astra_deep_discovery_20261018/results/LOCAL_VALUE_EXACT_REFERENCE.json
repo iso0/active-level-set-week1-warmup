@@ -1,0 +1,217 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-20T04:41:01.751822+00:00",
+  "cases": [
+    {
+      "name": "rare_coherent_two_step",
+      "inputs": {
+        "q": {
+          "rational": "1/100",
+          "decimal": 0.01
+        },
+        "w": {
+          "rational": "1/2",
+          "decimal": 0.5
+        },
+        "eta": {
+          "rational": "1/20",
+          "decimal": 0.05
+        },
+        "g": {
+          "rational": "3/1000",
+          "decimal": 0.003
+        }
+      },
+      "prior_atoms": 32,
+      "recursion_nodes": 64,
+      "initial_risk": {
+        "rational": "1/125",
+        "decimal": 0.008
+      },
+      "one_local_risk": {
+        "rational": "1/125",
+        "decimal": 0.008
+      },
+      "two_local_risk": {
+        "rational": "189/40000",
+        "decimal": 0.004725
+      },
+      "optimal_two_step_risk": {
+        "rational": "6627/2000000",
+        "decimal": 0.0033135
+      },
+      "greedy_two_step_risk": {
+        "rational": "1/200",
+        "decimal": 0.005
+      },
+      "optimal_first_actions": [
+        0,
+        1
+      ],
+      "greedy_first_actions": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "unreliable_local",
+      "inputs": {
+        "q": {
+          "rational": "1/100",
+          "decimal": 0.01
+        },
+        "w": {
+          "rational": "1/2",
+          "decimal": 0.5
+        },
+        "eta": {
+          "rational": "3/10",
+          "decimal": 0.3
+        },
+        "g": {
+          "rational": "3/1000",
+          "decimal": 0.003
+        }
+      },
+      "prior_atoms": 32,
+      "recursion_nodes": 64,
+      "initial_risk": {
+        "rational": "1/125",
+        "decimal": 0.008
+      },
+      "one_local_risk": {
+        "rational": "1/125",
+        "decimal": 0.008
+      },
+      "two_local_risk": {
+        "rational": "1/125",
+        "decimal": 0.008
+      },
+      "optimal_two_step_risk": {
+        "rational": "1/200",
+        "decimal": 0.005
+      },
+      "greedy_two_step_risk": {
+        "rational": "1/200",
+        "decimal": 0.005
+      },
+      "optimal_first_actions": [
+        2,
+        3
+      ],
+      "greedy_first_actions": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "small_mass",
+      "inputs": {
+        "q": {
+          "rational": "1/100",
+          "decimal": 0.01
+        },
+        "w": {
+          "rational": "1/100",
+          "decimal": 0.01
+        },
+        "eta": {
+          "rational": "1/20",
+          "decimal": 0.05
+        },
+        "g": {
+          "rational": "3/1000",
+          "decimal": 0.003
+        }
+      },
+      "prior_atoms": 32,
+      "recursion_nodes": 64,
+      "initial_risk": {
+        "rational": "31/10000",
+        "decimal": 0.0031
+      },
+      "one_local_risk": {
+        "rational": "31/10000",
+        "decimal": 0.0031
+      },
+      "two_local_risk": {
+        "rational": "6069/2000000",
+        "decimal": 0.0030345
+      },
+      "optimal_two_step_risk": {
+        "rational": "1/10000",
+        "decimal": 0.0001
+      },
+      "greedy_two_step_risk": {
+        "rational": "1/10000",
+        "decimal": 0.0001
+      },
+      "optimal_first_actions": [
+        2,
+        3
+      ],
+      "greedy_first_actions": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "uncertain_coherent",
+      "inputs": {
+        "q": {
+          "rational": "1/2",
+          "decimal": 0.5
+        },
+        "w": {
+          "rational": "1/10",
+          "decimal": 0.1
+        },
+        "eta": {
+          "rational": "1/20",
+          "decimal": 0.05
+        },
+        "g": {
+          "rational": "3/50",
+          "decimal": 0.06
+        }
+      },
+      "prior_atoms": 32,
+      "recursion_nodes": 64,
+      "initial_risk": {
+        "rational": "11/100",
+        "decimal": 0.11
+      },
+      "one_local_risk": {
+        "rational": "13/200",
+        "decimal": 0.065
+      },
+      "two_local_risk": {
+        "rational": "13/200",
+        "decimal": 0.065
+      },
+      "optimal_two_step_risk": {
+        "rational": "7/200",
+        "decimal": 0.035
+      },
+      "greedy_two_step_risk": {
+        "rational": "7/200",
+        "decimal": 0.035
+      },
+      "optimal_first_actions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "greedy_first_actions": [
+        0,
+        1
+      ]
+    }
+  ],
+  "arithmetic": "exact rational",
+  "GP_fits": 0,
+  "component_solves": 0,
+  "wall_seconds": 0.22547950001899153,
+  "scope": "Four analytic examples; not additional campaign-world evidence."
+}

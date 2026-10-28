@@ -14,12 +14,16 @@ No repository-root license was added. This document does not grant a new license
 
 ## Exclusions
 
-Third-party dependency implementations, external datasets, attributed quotations, figures, linked literature, trademarks and other rights not owned by iso0 are excluded from the new grant. Dependency names/version lists do not relicense the packages they describe. Existing third-party notices must be retained; none were removed.
+Third-party dependency implementations, external datasets, attributed quotations, third-party figures, linked literature, trademarks and other rights not owned by iso0 are excluded from the new grant. Dependency names/version lists do not relicense the packages they describe. Existing third-party notices must be retained; none were removed.
 
-The RAW campaign entries are PENDING_ARCHIVE, not authorized data releases. Other withheld files remain RESTRICTED. No new raw unit records, simulation datasets, checkpoints, databases, figures or protected evaluation targets are included in this publication.
+The RAW campaign entries are PENDING_ARCHIVE, not authorized data releases. Other withheld files remain RESTRICTED. No new raw unit records, simulation datasets, checkpoints, databases or protected evaluation targets are included. The specifically owner-authorized original synthetic figures in the curated manifest are included.
 
 ## Provenance and changes
 
 [Public provenance](PROVENANCE_PUBLIC.json) retains original repo IDs, commits, blob identities and hashes. The 221 included original reading sources retain their scientific conclusions; the original public-draft code and source payloads remain unchanged. Eighteen source-document reading views already contained navigation-only changes before this publication. Editorial permission/status/license pages were updated after owner approval; scientific endpoints were not recomputed.
 
 [Publication status](../../PUBLICATION_STATUS.md), [authorization record](../../PUBLICATION_DECISIONS_REQUIRED.md), [input mapping](publication-v1/PUBLICATION_INPUTS.csv), and [current checksums](PUBLICATION_SHA256.csv).
+
+## Curated original synthetic research scope
+
+The owner additionally authorized the prepared 56-file collection of original synthetic results, configurations and figures. Its published paths and new editorial manifests are explicitly added to LICENSE_SCOPE.csv under CC BY 4.0. This covers the owner's original expression/compilation/figures to the extent applicable; it does not assert new rights over uncopyrightable facts or third-party source data. All pre-existing path license assignments remain unchanged. [Curated manifest](CURATED_EVIDENCE_MANIFEST.csv), [authorization](CURATED_PUBLICATION_AUTHORIZATION.json), [metadata transformations](CURATED_PUBLICATION_TRANSFORMATIONS.csv) and [current checks](CURATED_PUBLICATION_VERIFICATION.json) define the extension. The earlier v1 verification remains a historical record of its original publication.
