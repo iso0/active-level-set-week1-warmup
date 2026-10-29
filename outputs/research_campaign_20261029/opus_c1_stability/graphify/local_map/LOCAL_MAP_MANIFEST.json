@@ -1,0 +1,16 @@
+{
+ "graphify_version": "0.9.96",
+ "files": {
+  "src/c1s_diag.py": "92b2f2b43904ad19678558fec57f05af3eee8cffda1c364bfa903482ae1683fd",
+  "src/c1s_trace.py": "a3797fd96df65162bc2592b313d66f7c293b9fb65bbe9d88de8eed9e8713b208",
+  "src/c1s_dev.py": "d397754379c93c6021943547d715a0ba8740a841269f5c7a1d6ad78af5c78b09",
+  "src/c1s_fwd.py": "655f77c6fe3249e658194dd234e2a714a9685451e81ecaa3c024571d79e40d72",
+  "src/c1s_eval.py": "0b1ccf18b69fcc0283d08a141effbdbdc494ee8695dc607e24e5c1cb366fc39b",
+  "src/c1s_export.py": "e465174e5af4f090c60a02ae23937e714b07266231423cad708b00ce2063c043",
+  "src/c1s_freeze.py": "e8e74e3ffaf1cf4d7e99bdc4bf6e64677a6aa9d5adc7c3dd7074ba3a689c9f11"
+ },
+ "nodes": 92,
+ "edges": 233,
+ "written": true,
+ "note": "AST-only local map of this task's new files; the shared pinned graph is unchanged"
+}

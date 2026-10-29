@@ -1,0 +1,12 @@
+{
+ "condition": "LOCAL8",
+ "learner_curves": 300,
+ "defined_curves": 300,
+ "aulc_cells_compared": 600,
+ "endpoint_cells_compared": 900,
+ "max_abs_diff_BA_AULC_B8_B24": 2.220446049250313e-16,
+ "max_abs_diff_BA_AULC_B8_B60": 5.551115123125783e-16,
+ "max_abs_diff_rms_spend": 0.0,
+ "undefined_curves_agree": true,
+ "PASS": true
+}

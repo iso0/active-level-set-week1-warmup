@@ -1,0 +1,71 @@
+{
+ "c1s-trace-smoke": {
+  "units": 1,
+  "failed": 0,
+  "unit_wall_hours_from_logs": 0.003,
+  "units_with_wall": 1,
+  "cpu_hours_recorded": 0.002,
+  "first_finished": "2026-10-29T00:24:53+00:00",
+  "last_finished": "2026-10-29T00:24:53+00:00",
+  "note": "DEV replay of already-evaluated C1C learners (recorded paths, bit-exact); 0 newly opened runs, nothing charged twice"
+ },
+ "c1s-trace": {
+  "units": 50,
+  "failed": 0,
+  "unit_wall_hours_from_logs": 0.137,
+  "units_with_wall": 50,
+  "cpu_hours_recorded": 0.136,
+  "first_finished": "2026-10-29T00:25:29+00:00",
+  "last_finished": "2026-10-29T00:28:07+00:00",
+  "note": "DEV replay of already-evaluated C1C learners (recorded paths, bit-exact); 0 newly opened runs, nothing charged twice"
+ },
+ "c1s-main": {
+  "units": 400,
+  "failed": 0,
+  "unit_wall_hours_from_logs": 2.568,
+  "units_with_wall": 400,
+  "cpu_hours_recorded": 2.935,
+  "first_finished": "2026-10-29T00:46:40+00:00",
+  "last_finished": "2026-10-29T01:38:17+00:00",
+  "learners": 200,
+  "simulations_opened_union_per_learner_mean": 68.05,
+  "simulations_opened_total_union": 13609,
+  "simulations_per_arm_path": {
+   "HA_LEAN path (L)": 12000,
+   "C1 path (X; also AVG4 / EVERY4 / FREEZE24)": 12000
+  },
+  "note": "each path opens 60 runs per learner (8 shared startup + 52 queries); AVG4, EVERY4 and FREEZE24 are computed from C1's stored per-budget probabilities on C1's path (0 extra runs); cross predictions (C1 on HA_LEAN's path) reuse opened runs (0 extra)"
+ },
+ "c1s-start": {
+  "units": 200,
+  "failed": 0,
+  "unit_wall_hours_from_logs": 1.3,
+  "units_with_wall": 200,
+  "cpu_hours_recorded": 1.493,
+  "first_finished": "2026-10-29T01:38:46+00:00",
+  "last_finished": "2026-10-29T02:04:50+00:00",
+  "learners": 100,
+  "simulations_opened_union_per_learner_mean": 68.29,
+  "simulations_opened_total_union": 6829,
+  "simulations_per_arm_path": {
+   "HA_LEAN path (L)": 6000,
+   "C1 path (X; also AVG4 / EVERY4 / FREEZE24)": 6000
+  },
+  "note": "each path opens 60 runs per learner (8 shared startup + 52 queries); AVG4, EVERY4 and FREEZE24 are computed from C1's stored per-budget probabilities on C1's path (0 extra runs); cross predictions (C1 on HA_LEAN's path) reuse opened runs (0 extra)"
+ },
+ "total_units": 651,
+ "total_failed": 0,
+ "total_unit_wall_hours": 4.008,
+ "total_cpu_hours_recorded": 4.566,
+ "fresh_test_window": {
+  "runner_launch_utc": "2026-10-29T00:46:06Z",
+  "last_unit_utc": "2026-10-29T02:04:50+00:00",
+  "workers": 3,
+  "note": "wall-clock of the fresh test; analysis steps (diagnosis, DEV screen, evaluation 29 s, export) ran as single foreground processes"
+ },
+ "export_MB": {
+  "main": 30.01,
+  "start_local8": 7.4,
+  "start_rand8": 7.5
+ }
+}

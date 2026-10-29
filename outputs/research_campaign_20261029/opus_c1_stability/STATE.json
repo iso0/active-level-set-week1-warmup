@@ -4,14 +4,41 @@
  "deadline_utc": "2026-10-31T00:10:41Z",
  "start_head": "3caf7c4e49499f30e6c9b642a226454068f08969",
  "branch": "c1-stability-20261029",
- "stage": "2_registered_fresh_test_pending",
- "stages_done": ["0_start_checks", "0_graphify_queries_and_code_map", "1_dev_diagnosis", "1_dev_candidate_screen", "1_dry_run", "2_registration"],
- "commits": {"registration": "(this commit; see git log)"},
- "jobs": {"c1s-trace (DEV)": "50/50 bit-exact", "c1s-main": "0/400", "c1s-start": "0/200"},
- "decisions": ["DEV mechanism: near-boundary flips in the interleaved corner / hard group, local to each new margin label (classifier refit 62 %, MAP hyperparameter drift 28 %, weight switch 12 %); balanced; 18 % of the late shortfall below 0.95 (82 % persistent level)",
-               "mode averaging dropped (the two MAP starts reach the same optimum)",
-               "carried candidate AVG4 (path-identical decision layer); HYST05 excluded by the spend harm limit on DEV; controls EVERY4, FREEZE24"],
- "notes": ["2026-10-29T00:10:41Z: task started; HEAD = origin/joint-depth-label-dev = 3caf7c4e; origin/main = 4fc9b5d (src identical); branch c1-stability-20261029 created at 3caf7c4e; 49 untracked records kept; no Python process running; shared folder campaign_20261029 created with own opus_state.json only",
-           "2026-10-29: Graphify 0.9.96 used only with the explicit pinned graph (GRAPHIFY_NO_AUTO_REFRESH=1, GRAPHIFY_QUERY_LOG_DISABLE=1); 2 queries; missing cross-file call edges verified in source; old-graph pointers (thesis CLAUDE.md / AGENTS.md / .claude/settings.json hook-guard) found, not changed",
-           "2026-10-29: c1s_trace first smoke failed (KeyError 8: fold count < 10 at b < 10); fixed with dict.get before the DEV run; no result affected"]
+ "stage": "3_closed",
+ "stages_done": [
+  "0_start_checks",
+  "0_graphify_queries_and_code_map",
+  "1_dev_diagnosis",
+  "1_dev_candidate_screen",
+  "1_dry_run",
+  "2_registration",
+  "2_fresh_test",
+  "3_evaluation",
+  "3_exports_independent_recomputation",
+  "3_reports_and_records",
+  "3_closed"
+ ],
+ "commits": {
+  "registration": "9cad00ad (pushed before any fresh result)",
+  "results": "(the results commit on c1-stability-20261029; see git log)"
+ },
+ "jobs": {
+  "c1s-trace (DEV)": "50/50 bit-exact (+1 smoke)",
+  "c1s-main": "400/400, 0 failed",
+  "c1s-start": "200/200, 0 failed"
+ },
+ "decisions": [
+  "DEV mechanism: near-boundary flips in the interleaved corner / hard group, local to each new margin label (classifier refit 62 %, MAP hyperparameter drift 28 %, weight switch 12 %); balanced; 18 % of the late shortfall below 0.95 (82 % persistent level)",
+  "mode averaging dropped (the two MAP starts reach the same optimum)",
+  "carried candidate AVG4 (path-identical decision layer); HYST05 excluded by the spend harm limit on DEV; controls EVERY4, FREEZE24",
+  "FRESH TEST (STD 323-362, 40 clusters): AVG4 - C1 STABILITY NOT_SHOWN (dS95 -0.000001 [-0.00010, +0.00010]); EARLY identical; sustained(0.93 / 0.95) SHOWN (+0.065 / +0.070, equal to EVERY4); 0.95 spend -0.64 [-1.06] fails the -1.0 harm limit -> KEEP_C1_UNCHANGED (registered branch 3); 5/5 mechanism predictions hold; C1 - A descriptive: early +0.0059 [+0.0041], 0.95 saving +1.80 [+0.11], kept(0.95) -0.030 [-0.071]"
+ ],
+ "notes": [
+  "2026-10-29T00:10:41Z: task started; HEAD = origin/joint-depth-label-dev = 3caf7c4e; origin/main = 4fc9b5d (src identical); branch c1-stability-20261029 created at 3caf7c4e; 49 untracked records kept; no Python process running; shared folder campaign_20261029 created with own opus_state.json only",
+  "2026-10-29: Graphify 0.9.96 used only with the explicit pinned graph (GRAPHIFY_NO_AUTO_REFRESH=1, GRAPHIFY_QUERY_LOG_DISABLE=1); 2 queries; missing cross-file call edges verified in source; old-graph pointers (thesis CLAUDE.md / AGENTS.md / .claude/settings.json hook-guard) found, not changed",
+  "2026-10-29: c1s_trace first smoke failed (KeyError 8: fold count < 10 at b < 10); fixed with dict.get before the DEV run; no result affected",
+  "2026-10-29T02:05:43Z: all 600 fresh units done (0 failed); freeze check final True; evaluation 29 s; exports 23 s, independent recomputation 3/3 PASS",
+  "2026-10-29T02:13:11Z: stop_runner + campaign_closed set; RUNNER_END, SUPERVISOR_END; opus_state.json CLOSED; no process left"
+ ],
+ "closed_utc": "2026-10-29T02:13:11Z"
 }

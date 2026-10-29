@@ -4,8 +4,8 @@
  "deadline_utc": "2026-10-31T00:10:41Z",
  "runner_slots": 3,
  "min_free_mb": 3072,
- "stop_runner": false,
- "campaign_closed": false,
+ "stop_runner": true,
+ "campaign_closed": true,
  "jobs": [
   {
    "name": "c1s_main",
@@ -14,7 +14,14 @@
    "priority": 1,
    "max_workers": 3,
    "python": "system",
-   "args": ["-m", "src.c1s_fwd", "work", "c1s-main", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.c1s_fwd",
+    "work",
+    "c1s-main",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/research_campaign_20261029/opus_c1_stability/c1s-main/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261029/opus_c1_stability/c1s-main/failed",
    "locks_dir": "outputs/research_campaign_20261029/opus_c1_stability/c1s-main/locks",
@@ -28,7 +35,14 @@
    "priority": 2,
    "max_workers": 3,
    "python": "system",
-   "args": ["-m", "src.c1s_fwd", "work", "c1s-start", "--threads", "1"],
+   "args": [
+    "-m",
+    "src.c1s_fwd",
+    "work",
+    "c1s-start",
+    "--threads",
+    "1"
+   ],
    "done_glob": "outputs/research_campaign_20261029/opus_c1_stability/c1s-start/units/*.json.gz",
    "failed_dir": "outputs/research_campaign_20261029/opus_c1_stability/c1s-start/failed",
    "locks_dir": "outputs/research_campaign_20261029/opus_c1_stability/c1s-start/locks",
@@ -37,6 +51,8 @@
   }
  ],
  "notes": [
-  "2026-10-29: DEV diagnosis (anatomy from the C1C exports, instrumented replay of 50 learners c1s-trace, decision-layer screen) and a dry run of the evaluation / export code were done on OLD data only, before the queue"
+  "2026-10-29: DEV diagnosis (anatomy from the C1C exports, instrumented replay of 50 learners c1s-trace, decision-layer screen) and a dry run of the evaluation / export code were done on OLD data only, before the queue",
+  "2026-10-29T02:13:08Z: stop_runner set (all 600 registered units done, 0 failed; evaluation and exports complete)",
+  "2026-10-29T02:13:08Z: campaign closed (work done before the window end)"
  ]
 }

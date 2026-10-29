@@ -1626,3 +1626,35 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - HA_LEAN + margin, donmuş referans ve havuz dışına taşımada güvenli seçenek olarak kalıyor (K5 uyarısı sürüyor).
 - Doğrulama dalı kapandı.
 - Ioan için 176 koşuluk dış doğrulama planı önerildi; hiçbir simülasyon başlatılmadı, mesaj gönderilmedi.
+
+### 2026-10-29 — C1S: C1'in geç gerilemeleri ve tek dengeleyici (kayıtlı taze sınama)
+
+[Rapor](../outputs/research_campaign_20261029/opus_c1_stability/FINAL_REPORT_C1S.md), [karar](../outputs/research_campaign_20261029/opus_c1_stability/DECISION_C1S.md), [tablolar](../outputs/research_campaign_20261029/opus_c1_stability/evaluation/RESULTS_C1S.md), [teşhis](../outputs/research_campaign_20261029/opus_c1_stability/diag/DIAGNOSIS_C1S.md).
+
+**Kurulum**
+- Araştırma dalı `c1-stability-20261029` (3caf7c4e'den); main'e merge yok.
+- Yeni tek 48 saatlik pencere 00:10:41 UTC'de açıldı; iş bitince 02:13:11 UTC'de erken kapandı.
+- En çok 3 işçi; Astra'nın payı kullanılmadı.
+- Graphify 0.9.96 yalnız açık sabit grafikle kullanıldı: 2 dar sorgu ve C1 kod haritası.
+- Aday, kimlikler, ölçütler ve karar kuralları hiçbir taze sonuçtan önce donduruldu (9cad00ad, push).
+- 651 birim, hata yok, 4.0 işçi-saat.
+
+**Teşhis** (DEV, C1C verisi)
+- C1'in geç gerilemeleri, sınıra yakın tek noktaların dengeli çevrilmeleri. Çoğu Keyhole; iç içe etiketli köşede ve zor grupta, her yeni margin etiketinin yakınında.
+- Kaynak: sınıflandırıcının yeniden kurulması %62, MAP kayması %28, ağırlık değişimi %12.
+- 0.95 altındaki geç eksiğin yaklaşık %81'i kalıcı düzey açığı.
+- Beş kayıtlı mekanizma öngörüsünün beşi taze veride tuttu.
+
+**Sonuç** (AVG4 − C1; 40 yeni tekrar, 200 öğrenici)
+- Birincil istikrar ölçütü (S95) değişmedi: −0.000001 [−0.00010, +0.00010].
+- Erken dönem birebir aynı.
+- Eğri düzleşti; 0.95'i sürdüren öğrenici 31'den 45'e çıktı. Aynı kazancı "seyrek güncelle" kontrolü de veriyor.
+- 0.95 hedefinde harcama −0.64 [−1.06]; −1.0 sınırı aşıldı.
+- İki sınıfta da zarar yok.
+
+**Karar** (önceden kayıtlı eşleme)
+- C1 + margin değişmeden kalıyor; AVG4 hiçbir kullanımda benimsenmedi.
+- HA_LEAN + margin donmuş referans olarak kalıyor.
+- Betimsel: C1'in HA_LEAN'e göre erken kazancı (+0.0059) ve 0.95 tasarrufu (+1.80) üçüncü kez görüldü.
+- Bu kümede 0.95'i koruma −0.030 [−0.071]; C1C'deki eşdeğerlik burada sağlanmadı.
+- Astra'nın dört kampanyasının merkezi kaydı Research Hub'dan kaynaktan aktarıldı; yeniden hesaplanmadı.

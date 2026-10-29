@@ -76,3 +76,10 @@ Keep C1's early success, find the cause of the regressions during learning, and 
 **Graphify:**
 - [graphify/GRAPHIFY_USAGE.md](graphify/GRAPHIFY_USAGE.md)
 - [graphify/C1_CODE_MAP.md](graphify/C1_CODE_MAP.md)
+
+## Outcome (2026-10-29T02:13:11Z, closed early)
+
+- **Decision:** KEEP_C1_UNCHANGED (registered mapping, branch 3). C1 + margin is unchanged; the one carried candidate AVG4 is adopted for no use.
+- **Mechanism:** balanced near-boundary flips; all 5 registered predictions hold on fresh data. About 81 % of the late shortfall below 0.95 is a level deficit.
+- **Fresh test:** AVG4 - C1 dS95 -0.000001 [-0.00010, +0.00010] (NOT_SHOWN); early identical; sustained(0.95) +0.070 [+0.037]; 0.95 spend -0.64 [-1.06] fails the -1.0 harm limit.
+- **Reports:** [FINAL_REPORT_C1S.md](FINAL_REPORT_C1S.md) (Turkish), [DECISION_C1S.md](DECISION_C1S.md), [evaluation/RESULTS_C1S.md](evaluation/RESULTS_C1S.md), [COST_BREAKDOWN.json](COST_BREAKDOWN.json).

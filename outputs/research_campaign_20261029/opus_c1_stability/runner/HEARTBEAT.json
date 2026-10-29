@@ -1,0 +1,53 @@
+{
+    "utc":  "2026-10-29T02:13:11Z",
+    "runner_pid":  27048,
+    "runner_start_utc":  "2026-10-29T00:46:06Z",
+    "cycle":  172,
+    "host":  "BURAK",
+    "state":  "IDLE",
+    "budget":  {
+                   "t0_utc":  "2026-10-29T00:10:41Z",
+                   "deadline_utc":  "2026-10-31T00:10:41Z",
+                   "elapsed_h":  2.04,
+                   "remaining_h":  45.96
+               },
+    "capacity":  {
+                     "logical_cpus":  8,
+                     "opus_cap":  3,
+                     "runner_slots":  3,
+                     "opus_used":  0,
+                     "opus_other_leaves":  0,
+                     "astra_used":  0,
+                     "free_mb":  17014,
+                     "min_free_mb":  3072,
+                     "leaves":  ""
+                 },
+    "workers":  [
+
+                ],
+    "jobs":  {
+                 "c1s_main":  {
+                                  "done":  400,
+                                  "failed":  0,
+                                  "locks":  0,
+                                  "total":  400,
+                                  "remaining":  0,
+                                  "last_unit":  "STD__r362_f5__L.json.gz",
+                                  "last_unit_utc":  "2026-10-29T01:38:17Z",
+                                  "paused":  false,
+                                  "live_workers":  0
+                              },
+                 "c1s_start":  {
+                                   "done":  200,
+                                   "failed":  0,
+                                   "locks":  0,
+                                   "total":  200,
+                                   "remaining":  0,
+                                   "last_unit":  "LOCAL8__r382_f5__X.json.gz",
+                                   "last_unit_utc":  "2026-10-29T02:04:50Z",
+                                   "paused":  false,
+                                   "live_workers":  0
+                               }
+             },
+    "restart":  "powershell -NoProfile -ExecutionPolicy Bypass -File src\\c1s_start_runner.ps1   (idempotent; skips finished units; lock prevents a second runner)"
+}
