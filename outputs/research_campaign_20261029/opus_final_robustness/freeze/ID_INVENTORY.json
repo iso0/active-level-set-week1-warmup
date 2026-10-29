@@ -1,0 +1,55 @@
+{
+ "files_scanned": 34852,
+ "STD": {
+  "n_ids": 374,
+  "min": 1,
+  "max": 382,
+  "gaps_below_max": [
+   59,
+   60,
+   61,
+   62,
+   63,
+   64,
+   65,
+   66
+  ],
+  "max_by_campaign": {
+   "research_campaign_20261018/opus_pooled": 10,
+   "research_campaign_20261018/opus_rc19b": 18,
+   "research_campaign_20261020/opus_rc20": 26,
+   "research_campaign_20261020/opus_rc21": 42,
+   "research_campaign_20261021/opus_rc22": 50,
+   "research_campaign_20261021/opus_rc23": 58,
+   "research_campaign_20261021/opus_rc24": 82,
+   "research_campaign_20261024/opus_early_learning": 162,
+   "research_campaign_20261026/opus_c1_confirmation": 322,
+   "research_campaign_20261026/opus_error_attribution": 202,
+   "research_campaign_20261029/opus_c1_stability": 382
+  }
+ },
+ "K5": {
+  "n_ids": 48,
+  "min": 1,
+  "max": 48,
+  "gaps_below_max": [],
+  "max_by_campaign": {
+   "research_campaign_20261021/opus_rc22": 8,
+   "research_campaign_20261021/opus_rc23": 8,
+   "research_campaign_20261021/opus_rc24": 24,
+   "research_campaign_20261024/opus_early_learning": 40,
+   "research_campaign_20261026/opus_error_attribution": 48
+  }
+ },
+ "K4": {
+  "n_ids": 32,
+  "min": 1,
+  "max": 32,
+  "gaps_below_max": [],
+  "max_by_campaign": {
+   "research_campaign_20261021/opus_rc24": 8,
+   "research_campaign_20261024/opus_early_learning": 24,
+   "research_campaign_20261026/opus_error_attribution": 32
+  }
+ }
+}

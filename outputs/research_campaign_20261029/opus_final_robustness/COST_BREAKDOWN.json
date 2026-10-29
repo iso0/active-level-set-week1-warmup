@@ -1,0 +1,24 @@
+{
+ "note": "worker-h = sum of unit wall seconds / 3600; CPU-h = sum of unit process CPU; the DEV replay and the gate refits reopen only already-paid runs (0 new simulations)",
+ "fr-dev": {
+  "units": 392,
+  "failed": 0,
+  "wall_h": 1.54,
+  "cpu_h": 1.522,
+  "first_finished_utc": "2026-10-29T13:50:18+00:00",
+  "last_finished_utc": "2026-10-29T14:21:56+00:00",
+  "new_simulations": 0
+ },
+ "smoke": {
+  "runs": 6,
+  "wall_h": 0.033,
+  "cpu_h": 0.032,
+  "new_simulations": 0
+ },
+ "total": {
+  "units": 392,
+  "failed": 0,
+  "wall_h": 1.573,
+  "cpu_h": 1.554
+ }
+}

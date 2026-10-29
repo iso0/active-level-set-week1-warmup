@@ -1,0 +1,45 @@
+{
+ "el_export_compare": {
+  "condition": "DEV",
+  "learner_curves": 1404,
+  "defined_curves": 1404,
+  "aulc_cells_compared": 2808,
+  "endpoint_cells_compared": 4212,
+  "max_abs_diff_BA_AULC_B8_B24": 2.220446049250313e-16,
+  "max_abs_diff_BA_AULC_B8_B60": 4.440892098500626e-16,
+  "max_abs_diff_rms_spend": 0.0,
+  "undefined_curves_agree": true,
+  "PASS": true
+ },
+ "independent": {
+  "C_GEO": {
+   "mean": 0.004512594320709052,
+   "lcb": -0.0015799829738965118,
+   "ucb": 0.010605171615314615,
+   "n": 32
+  },
+  "C_EARLY": {
+   "mean": 0.00015408206833877777,
+   "lcb": -0.00028899762027719786,
+   "ucb": 0.0005971617569547534,
+   "n": 20
+  },
+  "C_LATE": {
+   "mean": 0.0009224238005862615,
+   "lcb": 0.0005157302684163465,
+   "ucb": 0.0013291173327561764,
+   "n": 20
+  },
+  "AVG-C1_geometric": {
+   "mean": 0.009978145130951875,
+   "lcb": 0.0017493503349365527,
+   "ucb": 0.018206939926967196,
+   "n": 32
+  },
+  "G1_geometric_GA": 0.04874633495956278,
+  "max_abs_diff_vs_DEV_GATE_json": 4.163336342344337e-17,
+  "abs_diff_G1_vs_GAIN_AREA_json": 0.0,
+  "PASS": true
+ },
+ "PASS": true
+}

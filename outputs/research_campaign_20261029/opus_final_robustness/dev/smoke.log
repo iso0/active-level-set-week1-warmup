@@ -1,0 +1,11 @@
+{
+ "reduce_w1_path_equals_C1_own": true,
+ "reduce_w1_max_abs_p_vs_C1_own": 0.0,
+ "reduce_w0_path_equals_A_own": true,
+ "reduce_w0_max_abs_p_vs_A_own": 0.0,
+ "shadow_path_identical": true,
+ "shadow_max_abs_p": 0.0,
+ "shadow_gate_params_identical": true,
+ "cost_STD_gate_own_path_cpu_s": 31.34375,
+ "cost_K5_gate_own_path_cpu_s": 31.59375
+}

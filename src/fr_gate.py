@@ -193,20 +193,54 @@ def dev_units():
     return U
 
 
+# ======================================================================================== fresh-test units (PROTOCOL_FR_FRESH.md)
+FRESH_STD = tuple(range(383, 407)); FRESH_K5 = tuple(range(49, 61)); FRESH_K4 = tuple(range(33, 45))
+
+
+def unit_L(task, M, bmax=60):
+    """A = HA_LEAN + margin own path (src.rc23_common.run_arm, unchanged); on it at every budget D = HA_TREND (ML-II) via
+    src.el_mix.mix_state p_T (the registered EL / EA definition of D_on_A), with the EA check that its p_L equals A's own predictions."""
+    import src.el_mix as MX
+    u = C23.run_arm(task, "HA_LEAN", M, bmax=bmax); Z = P.zstd(task); te = np.asarray(task["test"]); paid = list(u["paid"]); ev = []; chk = 0.0
+    own = {e["budget"]: e["p"]["HA_LEAN"] for e in u["evals"]}
+    for b in range(8, bmax + 1):
+        rev = K._rev_with(task, M, paid[:b]); t0 = time.process_time(); s = MX.mix_state(task, rev, Z, te); c = time.process_time() - t0
+        chk = max(chk, float(np.max(np.abs(np.asarray(LN._f32(s["p_L"]), float) - np.asarray(own[b], float)))))
+        ev.append({"budget": b, "p": {"D": LN._f32(s["p_T"])}, "cpu_D": c, "one_class": bool(s["one_class"])})
+    u["cross"] = ev; u["check_pL_vs_own_A_maxabs"] = chk; u["path"] = "HA_LEAN"; return u
+
+
+def fresh_units(std=FRESH_STD, k5=FRESH_K5, k4=FRESH_K4):
+    return ([(f"STD__r{r}_f{f}__{p}", ("STD", r, f, p)) for r in std for f in range(1, 6) for p in ("G", "X", "L")]
+            + [(f"K5__s{s}_b{b}__{p}", ("K5", s, b, p)) for s in k5 for b in range(1, 6) for p in ("G", "X", "L")]
+            + [(f"K4__s{s}_b{b}__{p}", ("K4", s, b, p)) for s in k4 for b in range(1, 5) for p in ("G", "X", "L")])
+
+
 def units(job):
     if job == "fr-dev":
         return dev_units()
+    if job == "fr-fresh":
+        return fresh_units()
+    if job == "fr-evalsmoke":                      # DEV IDs (already examined): evaluator dry run and unit cost; never part of a verdict
+        return fresh_units((163,), (41,), (25,))
     raise ValueError(job)
 
 
 def work(job):
     RC.limit_threads(1); U_ = units(job); M = P.manifest(); S = dict(U_); C22.set_manifest(M)
+    import src.ea_fwd as EF
+    if job == "fr-fresh":
+        import src.fr_freeze as FZ
+        FZ.check(job)
     T = X.tasks_for({n: (None, c, r, f) for n, (c, r, f, t) in S.items()}, M)
 
     def fn(name):
-        c, r, f, t = S[name]; task = T[(c, r, f)]; ids = recorded_paid(c, r, f, t)
-        t0 = time.process_time(); res = gate_on_path(task, M, ids)
-        return {"condition": c, "cluster": r, "learner": f, "path": t, "paid_ids": ids, "test_ids": [task["ids"][i] for i in task["test"]], **res, "cpu_s": time.process_time() - t0}
+        c, r, f, t = S[name]; task = T[(c, r, f)]
+        if job == "fr-dev":
+            ids = recorded_paid(c, r, f, t); t0 = time.process_time(); res = gate_on_path(task, M, ids)
+            return {"condition": c, "cluster": r, "learner": f, "path": t, "paid_ids": ids, "test_ids": [task["ids"][i] for i in task["test"]], **res, "cpu_s": time.process_time() - t0}
+        u = run_gate(task, M, 60) if t == "G" else EF.unit_X(task, M, 60) if t == "X" else unit_L(task, M, 60)
+        return {**u, "condition": c, "unit_kind": t}
     d = OUT / job
     RC.run_units([n for n, _ in U_], fn, d / "units", d / "locks", d / "failed", log=lambda s: print(s, flush=True))
 

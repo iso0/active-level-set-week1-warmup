@@ -3,9 +3,30 @@
  "start_utc": "2026-10-29T13:31:37Z",
  "deadline_utc": "2026-10-29T19:31:37Z",
  "stages_done": [
-  "0_opened"
+  "0_opened",
+  "1_gain_area (G1 PASS, G2 PASS)",
+  "2_dev_replay (392 units, 0 failed)",
+  "2_dev_decision (C-GEO FAIL -> CLOSE)",
+  "3_exports_independent_recomputation (PASS)",
+  "3_reports_and_records",
+  "3_closed"
  ],
- "notes": [],
- "stage": "1_gain_area",
- "updated_utc": "2026-10-29T13:38:39Z"
+ "notes": [
+  "no worker or timer of this task is running",
+  "PROTOCOL_FR_FRESH.md was drafted only (never frozen, never run)"
+ ],
+ "stage": "3_closed",
+ "updated_utc": "2026-10-29T13:38:39Z",
+ "closed_utc": "2026-10-29T14:32:46Z",
+ "commits": {
+  "registration_gain_rule": "4dced919",
+  "registration_candidate_dev_rule": "c4edc59a",
+  "closing": "this push"
+ },
+ "decision": "CLOSE by the registered DEV rule (C-GEO failed: GATE - C1 geometric +0.0045 [-0.0016, +0.0106]); no fresh test; C1 + margin unchanged; GATE adopted for no use; HA_LEAN + margin frozen reference",
+ "fresh_ids_unused": {
+  "STD": "383+",
+  "K5": "49+",
+  "K4": "33+"
+ }
 }

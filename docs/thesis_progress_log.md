@@ -1658,3 +1658,37 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - Betimsel: C1'in HA_LEAN'e göre erken kazancı (+0.0059) ve 0.95 tasarrufu (+1.80) üçüncü kez görüldü.
 - Bu kümede 0.95'i koruma −0.030 [−0.071]; C1C'deki eşdeğerlik burada sağlanmadı.
 - Astra'nın dört kampanyasının merkezi kaydı Research Hub'dan kaynaktan aktarıldı; yeniden hesaplanmadı.
+
+### 2026-10-29 — FR: C1 ile HA_LEAN arasında güven kuralı (son araştırma görevi)
+
+[Rapor](../outputs/research_campaign_20261029/opus_final_robustness/FINAL_REPORT_FR.md), [DEV sonucu](../outputs/research_campaign_20261029/opus_final_robustness/dev/DEV_RESULT.md), [kazanç alanı](../outputs/research_campaign_20261029/opus_final_robustness/gain/GAIN_AREA.json), [toplantı özeti](../outputs/research_campaign_20261029/opus_final_robustness/MEETING_SUMMARY_IOAN.md).
+
+**Kurulum**
+- Araştırma dalı `final-robustness-20261029` (c8437907'den); main'e merge yok.
+- Tek 6 saatlik pencere 13:31:37 UTC'de açıldı; iş bitince erken kapandı.
+- En çok 3 işçi; Astra'nın payı kullanılmadı.
+- Kazanç alanı kuralı hiçbir sayıdan önce (4dced919), aday ve DEV kuralı hiçbir DEV sonucundan önce (c4edc59a) kaydedildi.
+- 392 birim, hata yok, 1.6 işçi-saat, yeni simülasyon yok.
+
+**Kazanç alanı** (DEV, aynı ödenmiş önekler)
+- Doğru modeli test etiketiyle seçen oracle, geometrik bloklarda C1'i +0.049 iyileştirirdi.
+- C1'in blok hatalarının %85'i iki modelin ortak hatası; hiçbir birleşim onları düzeltemez.
+- Etiket bilgili teşhis (yöntem değil) +0.021'ini öngörebildi. İki geçiş kuralı da geçti.
+
+**Aday** (GATE)
+- p = w(x)·p_C1 + (1 − w(x))·p_HA_LEAN; w, ödenmiş veriye uzaklığa bağlı.
+- a ve c yalnız ödenmiş koşularda iç içe uzaysal çapraz tahminlerden öğrenildi; b < 16'da C1 aynen.
+- İndirgeme ve gölge testleri geçti.
+
+**Sonuç** (DEV, kayıtlı yollar; GATE − C1)
+- Geometrik bloklarda +0.0045 [−0.0016, +0.0106]. Kural en az +0.010 ve alt sınır > 0 istiyordu; **geçmedi**.
+- K5'te +0.022, K4'te −0.013 (kayıp gösterildi).
+- Sabit yarı-yarıya ortalama bloklarda daha iyi.
+- STD'de erken dönem korundu (+0.0002), geç +0.0009.
+- **Mekanizma:** ödenmiş veride C1 her tasarımda daha iyi genelliyor; kural uzakta C1'e daha çok güveniyor. K5'te doğrusu tersi ve o bilgi hiç açılmayan koşularda.
+
+**Karar**
+- Kayıtlı kural gereği taze sınama yapılmadı; taze kimlikler boş kaldı (STD 383+, K5 49+, K4 33+).
+- C1 + margin değişmeden kalıyor; GATE hiçbir kullanımda benimsenmedi; HA_LEAN donmuş referans.
+- HA_LEAN'in uzanım avantajı tasarıma bağlı: K5'te var, K4'te yok.
+- Astra'nın finite-pool assurance çalışması teslim kaynağından aktarıldı: asıl pratik kapı geçmedi. Yeniden hesaplanmadı.
