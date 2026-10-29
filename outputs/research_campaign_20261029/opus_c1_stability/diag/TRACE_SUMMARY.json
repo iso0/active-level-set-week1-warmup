@@ -1,0 +1,39 @@
+{
+ "learners": 50,
+ "replay_bit_exact_all": true,
+ "replay_max_abs": 0.0,
+ "paths_reproduced_all": true,
+ "steps": 1800,
+ "flips": 850,
+ "harmful": 409,
+ "share_flips_caused_by_reestimation": 0.27647058823529413,
+ "share_harm_caused_by_reestimation": 0.2860635696821516,
+ "share_flips_from_depth_change_alone": 0.3847058823529412,
+ "share_flips_needing_classifier_refit": 0.6152941176470588,
+ "share_harm_needing_classifier_refit": 0.6063569682151589,
+ "share_flips_caused_by_weight_switch": 0.1223529411764706,
+ "share_harm_caused_by_weight_switch": 0.1295843520782396,
+ "reestimation_only_flips_per_step": 0.13055555555555556,
+ "start_switch_share": 0.4766666666666667,
+ "dtheta_max_median": 0.12392124835869645,
+ "dtheta_max_p90": 0.5665691694924034,
+ "dmu_abs_median": 0.004315686986748002,
+ "dsd_rel_abs_median": 0.009737889041559089,
+ "w_TV_median": 0.04930131675499099,
+ "w_argmax_switch_share": 0.33166666666666667,
+ "dE_test_median": 0.008360028266906738,
+ "harm_steps_vs_others": {
+  "dtheta_max": [
+   0.3060035424527006,
+   0.21829210698392018
+  ],
+  "w_TV": [
+   0.08250071568776626,
+   0.06019975716468034
+  ],
+  "dE_test_med": [
+   0.019000707594163578,
+   0.012803806944812169
+  ]
+ }
+}

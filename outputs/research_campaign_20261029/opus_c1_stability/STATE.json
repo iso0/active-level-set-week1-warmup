@@ -1,0 +1,17 @@
+{
+ "campaign_id": "opus_c1_stability_20261029",
+ "start_utc": "2026-10-29T00:10:41Z",
+ "deadline_utc": "2026-10-31T00:10:41Z",
+ "start_head": "3caf7c4e49499f30e6c9b642a226454068f08969",
+ "branch": "c1-stability-20261029",
+ "stage": "2_registered_fresh_test_pending",
+ "stages_done": ["0_start_checks", "0_graphify_queries_and_code_map", "1_dev_diagnosis", "1_dev_candidate_screen", "1_dry_run", "2_registration"],
+ "commits": {"registration": "(this commit; see git log)"},
+ "jobs": {"c1s-trace (DEV)": "50/50 bit-exact", "c1s-main": "0/400", "c1s-start": "0/200"},
+ "decisions": ["DEV mechanism: near-boundary flips in the interleaved corner / hard group, local to each new margin label (classifier refit 62 %, MAP hyperparameter drift 28 %, weight switch 12 %); balanced; 18 % of the late shortfall below 0.95 (82 % persistent level)",
+               "mode averaging dropped (the two MAP starts reach the same optimum)",
+               "carried candidate AVG4 (path-identical decision layer); HYST05 excluded by the spend harm limit on DEV; controls EVERY4, FREEZE24"],
+ "notes": ["2026-10-29T00:10:41Z: task started; HEAD = origin/joint-depth-label-dev = 3caf7c4e; origin/main = 4fc9b5d (src identical); branch c1-stability-20261029 created at 3caf7c4e; 49 untracked records kept; no Python process running; shared folder campaign_20261029 created with own opus_state.json only",
+           "2026-10-29: Graphify 0.9.96 used only with the explicit pinned graph (GRAPHIFY_NO_AUTO_REFRESH=1, GRAPHIFY_QUERY_LOG_DISABLE=1); 2 queries; missing cross-file call edges verified in source; old-graph pointers (thesis CLAUDE.md / AGENTS.md / .claude/settings.json hook-guard) found, not changed",
+           "2026-10-29: c1s_trace first smoke failed (KeyError 8: fold count < 10 at b < 10); fixed with dict.get before the DEV run; no result affected"]
+}

@@ -1,0 +1,4 @@
+﻿Graph: C:/Users/ozgur/Documents/thesis-graphify-sync-2026-10-29/source/graphify-out/graph.json (11025 nodes) | Traversal: BFS depth=2 | Start (given): ['ea_diag2.py', 'rc19b_keyhole.py'] | Context: call (explicit) | 2 nodes found
+
+NODE ea_diag2.py [src=src/ea_diag2.py loc=L1 community=3]
+NODE rc19b_keyhole.py [src=src/rc19b_keyhole.py loc=L1 community=3]
