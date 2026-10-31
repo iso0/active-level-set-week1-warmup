@@ -1,0 +1,4 @@
+# raw per-unit screen files (85 MB); the predictions are exported to exports/screen/predictions_f32.npz
+ir-screen/units/
+ir-screen/locks/
+ir-screen/failed/

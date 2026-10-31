@@ -2,12 +2,15 @@
  "study": "IR (Ioan requests)",
  "branch": "ioan-requests-20261031",
  "base_commit": "b0e9569f",
+ "registration_commit": "0ecf9f70",
  "start_utc": "2026-10-31T16:09:01Z",
  "deadline_utc": "2026-11-02T16:09:01Z",
- "part_C_finish_by_utc": "2026-11-01T18:00:00Z",
- "part_E_no_start_after_utc": "2026-11-02T00:00:00Z",
  "max_workers": 3,
  "blas_threads": 1,
- "stage": "REGISTERED",
+ "stage": "CLOSED",
+ "closed_utc": "2026-10-31T17:05:00Z",
+ "parts": {"P1": "done (V1 PASS)", "A": "done", "B": "done", "C": "done - no candidate carried", "D": "not run (registered stop)", "E": "not run", "F": "done", "G": "done", "X_extras": "done"},
+ "verdict": "V-A ANSWERED, NO GAIN",
+ "fresh_ids_unused": {"STD": "383+", "K5": "49+", "K4": "33+"},
  "coordination": "C:\\Users\\ozgur\\Documents\\thesis_shared_runtime\\campaign_20261031\\opus_state.json"
 }

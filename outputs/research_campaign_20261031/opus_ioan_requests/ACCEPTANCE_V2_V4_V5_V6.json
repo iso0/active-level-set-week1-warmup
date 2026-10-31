@@ -1,0 +1,50 @@
+{
+ "checks": {
+  "V6_gstar_frozen": true,
+  "V5_C1_reproduces_recorded_1e-6": true,
+  "V4_zero_basis_equals_R0_1e-10": true,
+  "V4_own_q_never_changes_own_oof": true,
+  "V2_shadow_identical": true
+ },
+ "info": {
+  "gstar": {
+   "mu": [
+    20.3745991139507,
+    4.5769101151285785
+   ],
+   "sd": [
+    0.8153932114070774,
+    0.7852226975844842
+   ],
+   "coef": [
+    1.8789027197680563,
+    4.175591637062202
+   ],
+   "intercept": -1.8143606613063694,
+   "n": 534,
+   "BA_true_depth": 0.9779071004208895
+  },
+  "V5_max_abs_dp": 0.0,
+  "V4_zero_basis_max_abs": 0.0,
+  "V2_shadow_max_abs": 0.0,
+  "V2_models": [
+   "CHAIN_KE",
+   "CHAIN_T",
+   "CHAIN_W",
+   "ICM_W",
+   "LEARN_ETOT",
+   "LEARN_KE",
+   "LEARN_LAS",
+   "LEARN_NPART",
+   "LEARN_SPK",
+   "LEARN_T",
+   "LEARN_W",
+   "LMC_KE",
+   "LMC_T",
+   "LMC_W",
+   "R0",
+   "SUM2"
+  ]
+ },
+ "status": "PASS"
+}

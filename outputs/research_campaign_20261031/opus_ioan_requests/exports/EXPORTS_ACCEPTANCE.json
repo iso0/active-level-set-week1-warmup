@@ -1,0 +1,12 @@
+{
+ "export": {
+  "keys": 3264,
+  "sha256_npz": "30658d584608fe5171cd176e147714f3c57c1ff1a02bf4565fbe6460ad3c987d"
+ },
+ "independent_recomputation": {
+  "max_abs_diff_vs_SCREEN_RESULT": 0.0,
+  "PASS": true,
+  "models": 11
+ },
+ "utc": "2026-10-31T16:58:33+00:00"
+}

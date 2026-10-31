@@ -1,0 +1,37 @@
+{
+ "unit": "STD r163 f1",
+ "wall_s": 10.7,
+ "cpu_s_per_budget": {
+  "8": 0.64,
+  "12": 0.89,
+  "16": 1.11,
+  "20": 1.08,
+  "24": 1.22,
+  "32": 1.34,
+  "40": 1.62,
+  "60": 2.69
+ },
+ "projected_worker_hours_full": 0.81,
+ "projected_worker_hours_reduced": 0.51,
+ "models": [
+  "CHAIN_KE",
+  "CHAIN_T",
+  "CHAIN_W",
+  "ICM_W",
+  "LEARN_ETOT",
+  "LEARN_KE",
+  "LEARN_LAS",
+  "LEARN_NPART",
+  "LEARN_SPK",
+  "LEARN_T",
+  "LEARN_W",
+  "LMC_KE",
+  "LMC_T",
+  "LMC_W",
+  "ORACLE_CHAIN_KE",
+  "ORACLE_CHAIN_T",
+  "ORACLE_CHAIN_W",
+  "R0",
+  "SUM2"
+ ]
+}

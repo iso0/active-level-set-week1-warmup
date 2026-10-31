@@ -1,0 +1,50 @@
+{
+ "V1": {
+  "runs": 541,
+  "finite_pooled_A": 540,
+  "compared": 540,
+  "max_abs_diff_um": 5.684341886080802e-14,
+  "PASS": true
+ },
+ "seconds": 202.8,
+ "utc": "2026-10-31T16:18:44+00:00",
+ "files": {
+  "data\\IR_GEOMETRY.csv": "9613fc9b22eddfe21e80cb29514e1173447e0cecb78dc5ba9a111cd7d48684c5",
+  "temporal\\per_run_time_stats.csv": "70a5d3840f8fc56e52e88b4fcf773f3bafb173d283795ef87cdbbf55712c8140",
+  "temporal\\F3_event_windows.npz": "fe969a76a7f81a1f73cc8e425211e96ec052dc1de7b4a4705f4e43a7f2ac4d9e"
+ },
+ "channel_status": {
+  "KE": {
+   "ok": 539,
+   "ROW_MISMATCH 98304/115600": 1,
+   "NOT_READ": 1
+  },
+  "T": {
+   "ok": 485,
+   "MISSING_FILE": 55,
+   "NOT_READ": 1
+  },
+  "V": {
+   "ok": 484,
+   "MISSING_FILE": 56,
+   "NOT_READ": 1
+  },
+  "LASER": {
+   "ok": 484,
+   "MISSING_FILE": 56,
+   "NOT_READ": 1
+  },
+  "ETOT": {
+   "ok": 485,
+   "MISSING_FILE": 55,
+   "NOT_READ": 1
+  },
+  "NPART": {
+   "ok": 484,
+   "MISSING_FILE": 56,
+   "NOT_READ": 1
+  }
+ },
+ "width_available": 540,
+ "keyhole_event_runs": 197
+}

@@ -1,0 +1,42 @@
+........................................................................ [ 35%]
+...................................F.s........s......................... [ 70%]
+................F..........................................              [100%]
+================================== FAILURES ===================================
+________________ test_t_tobit_truth_is_the_frozen_phase2_truth ________________
+
+    def test_t_tobit_truth_is_the_frozen_phase2_truth():
+        f = W.truth("T_TOBIT")
+>       assert np.allclose(f.theta, [-0.251764, -1.189419, 0.923598, 0.958547, 1.173827, 2.822081, -7.469518], atol=1e-5)
+E       assert False
+E        +  where False = <function allclose at 0x00000269A46D7070>(array([-0.22565139, -1.44918456,  0.76506545,  0.8679615 ,  1.25078832,\n        2.76103145, -7.38979374]), [-0.251764, -1.189419, 0.923598, 0.958547, 1.173827, 2.822081, ...], atol=1e-05)
+E        +    where <function allclose at 0x00000269A46D7070> = np.allclose
+E        +    and   array([-0.22565139, -1.44918456,  0.76506545,  0.8679615 ,  1.25078832,\n        2.76103145, -7.38979374]) = <function truth.<locals>.f at 0x00000269AE4C3690>.theta
+
+src\tests\test_week18_twin_truth_frozen.py:11: AssertionError
+____________________ test_reports_use_full_simulation_ids _____________________
+
+    def test_reports_use_full_simulation_ids():
+        """H suffixes are not unique; a bare suffix may appear only in a sentence that is about suffixes."""
+        import re
+        pat = re.compile(r"(?<![0-9A-Za-z_])H-[0-9a-f]{10}")
+        files = sorted(OUT.glob("*.md")) + sorted((OUT / "exploratory").glob("*.md")) + [OUT / "JOINT_MODEL_WALKTHROUGH.ipynb"]
+        bad = []
+        for f in files:
+            if f.exists():
+                for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+                    bad += [f"{f.name}:{i}: {m.group(0)}" for m in pat.finditer(line) if "suffix" not in line.lower()]
+>       assert not bad, bad[:10]
+E       AssertionError: ['ATTEMPT_LEDGER.md:84: H-e7dbd8e5ce', 'ATTEMPT_LEDGER.md:84: H-ce04be44b1', 'ATTEMPT_LEDGER.md:93: H-e7dbd8e5ce', 'ATTEMPT_LEDGER.md:93: H-e7dbd8e5ce', 'ATTEMPT_LEDGER.md:93: H-ce04be44b1', 'ATTEMPT_LEDGER.md:93: H-ce04be44b1', ...]
+E       assert not ['ATTEMPT_LEDGER.md:84: H-e7dbd8e5ce', 'ATTEMPT_LEDGER.md:84: H-ce04be44b1', 'ATTEMPT_LEDGER.md:93: H-e7dbd8e5ce', 'ATTEMPT_LEDGER.md:93: H-e7dbd8e5ce', 'ATTEMPT_LEDGER.md:93: H-ce04be44b1', 'ATTEMPT_LEDGER.md:93: H-ce04be44b1', ...]
+
+src\tests\test_joint_depth_label.py:185: AssertionError
+============================== warnings summary ===============================
+src/tests/test_week12_active_learning.py::test_single_class_discovery_is_paid_and_never_fits_invalid_gp
+  C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pytest_asyncio\plugin.py:1216: DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16
+    return asyncio.get_event_loop_policy()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED src/tests/test_week18_twin_truth_frozen.py::test_t_tobit_truth_is_the_frozen_phase2_truth
+FAILED src/tests/test_joint_depth_label.py::test_reports_use_full_simulation_ids
+2 failed, 199 passed, 2 skipped, 1 warning in 58.35s
