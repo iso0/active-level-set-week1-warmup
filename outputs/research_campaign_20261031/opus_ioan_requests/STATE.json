@@ -1,0 +1,13 @@
+{
+ "study": "IR (Ioan requests)",
+ "branch": "ioan-requests-20261031",
+ "base_commit": "b0e9569f",
+ "start_utc": "2026-10-31T16:09:01Z",
+ "deadline_utc": "2026-11-02T16:09:01Z",
+ "part_C_finish_by_utc": "2026-11-01T18:00:00Z",
+ "part_E_no_start_after_utc": "2026-11-02T00:00:00Z",
+ "max_workers": 3,
+ "blas_threads": 1,
+ "stage": "REGISTERED",
+ "coordination": "C:\\Users\\ozgur\\Documents\\thesis_shared_runtime\\campaign_20261031\\opus_state.json"
+}
