@@ -5,7 +5,8 @@
 > - Erken sıcaklık ne simülasyon sayısına ne de yürütme süresine ek katkı gösterdi.
 > - Kayıtlı kurallar gereği kendi-yol (G3) ve taze doğrulama (G4) aşamaları koşulmadı. Taze kimlikler kullanılmadı.
 
-- **Kapsam.** 2026-11-02, 17:45–20:00 UTC. 24 saatlik pencere (2026-11-03 17:45 UTC'ye kadar) erken kapandı.
+- **Kapsam.** 2026-11-02, 17:45–20:05 UTC. 24 saatlik pencere (2026-11-03 17:45 UTC'ye kadar) erken kapandı.
+- **Commit'ler.** Sonuçlar `71d73020`; test notu bir sonraki commit'te.
 - **Dal.** `geometry-temperature-20261102`, IR sonucu 0a57d644'ten açıldı. main'e merge yok.
 - **Kayıt.** `9dcee41f`. Hiçbir öğrenici, sınıflandırıcı ya da etiket ilişkisi sayısından önce gönderildi.
 - **Hesaplama.**
@@ -333,7 +334,10 @@ Tarihli ek: `outputs/research_campaign_20261031/opus_ioan_requests/IR_ADDENDUM_2
 - **Tam takım** (59 dosya; önceki çalışmaların koşmadığı 8.5–11. hafta testleri dahil): 719 geçti, 2 atlandı, 40 başarısız (`regression/FULL_SUITE_all59files.log`).
   - 40'ın 2'si yukarıdaki bilinen başarısızlıklar.
   - Kalan 38'i 8.5–9. hafta testleri: Week 9 başlangıç SHA'sına göre `git diff` ile "tarihsel çıktılar değişmedi" kontrolleri (binlerce sonraki dosya), eski `tests/` klasör düzeni, defter özetleri ve yeniden çalıştırma, atlanan checkpoint'ler.
-  - Bu çalışmadan bağımsız oldukları, IR taban commit'i `0a57d644` (GT'den önce) üzerinde yeniden koşularak sınandı. Sonuç `regression/FULL_SUITE_NOTE.md` dosyasında.
+  - Bu 38 test, IR taban commit'i `0a57d644` (GT'den önce) üzerinde yeniden koşuldu. 38'in 38'i orada da başarısız ve küme birebir aynı. Yani önceden var, GT'den bağımsız (`regression/FULL_SUITE_NOTE.md`, `regression/BASE_0a57d644_38_older_tests.log`).
+  - **Yan etkiler (açıklanıyor).**
+    - Eski Week 9 testleri izlenen üç tarihsel dosyayı yeniden yazdı: satır sonları ve bir satır. Bunlar `git restore` ile geri alındı, commit edilmedi.
+    - Bir Week 9 Phase 1.10 testi, dış Masinelli 2025 verisinden herkese açık üç dosyayı (yaklaşık 3.6 MB) izlenmeyen `.cache/external_masinelli/` klasörüne indirdi. Commit edilmediler ve silinebilirler.
 
 **Kayıtlar:**
 - bu çalışmanın defteri `ATTEMPT_LEDGER.md`;

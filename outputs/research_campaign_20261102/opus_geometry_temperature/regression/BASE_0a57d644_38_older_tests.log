@@ -1,0 +1,849 @@
+﻿# base 0a57d644 (IR results, before GT), 2026-11-02T19:43:45Z
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF                                   [100%]
+================================== FAILURES ===================================
+________ FrozenConfirmationTests.test_protocol_is_canonical_and_hashed ________
+
+self = <src.tests.test_week8_5_frozen_sample_efficiency_confirmation.FrozenConfirmationTests testMethod=test_protocol_is_canonical_and_hashed>
+
+    def test_protocol_is_canonical_and_hashed(self) -> None:
+>       self.assertEqual(w85.protocol_sha256(), "bb16865a06d8fbdeea00f8c41f0929bfb7fbaf2f7b3e4ebade9cb2ffc59b1c66")
+                         ^^^^^^^^^^^^^^^^^^^^^
+
+src\tests\test_week8_5_frozen_sample_efficiency_confirmation.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\week8_5_frozen_sample_efficiency_confirmation.py:89: in protocol_sha256
+    require(PROTOCOL_PATH.read_bytes() == canonical, "Protocol JSON is not canonical")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+condition = False, message = 'Protocol JSON is not canonical'
+
+    def require(condition: bool, message: str) -> None:
+        if not condition:
+>           raise RuntimeError(message)
+E           RuntimeError: Protocol JSON is not canonical
+
+src\week8_5_frozen_sample_efficiency_confirmation.py:71: RuntimeError
+_ FrozenConfirmationTests.test_random_order_information_flow_and_checkpoint_resume _
+
+self = <src.tests.test_week8_5_frozen_sample_efficiency_confirmation.FrozenConfirmationTests testMethod=test_random_order_information_flow_and_checkpoint_resume>
+
+    def test_random_order_information_flow_and_checkpoint_resume(self) -> None:
+        population, specs = w85.smoke_fixture()
+        distances = w85.b1_distance(population)
+        with tempfile.TemporaryDirectory() as first_dir, tempfile.TemporaryDirectory() as second_dir:
+>           one = w85.run_trajectory(specs[0], "binary_random", 1, 18, population, distances, checkpoint_dir=Path(first_dir))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+src\tests\test_week8_5_frozen_sample_efficiency_confirmation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\week8_5_frozen_sample_efficiency_confirmation.py:372: in run_trajectory
+    "protocol_sha256": protocol_sha256(),
+                       ^^^^^^^^^^^^^^^^^
+src\week8_5_frozen_sample_efficiency_confirmation.py:89: in protocol_sha256
+    require(PROTOCOL_PATH.read_bytes() == canonical, "Protocol JSON is not canonical")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+condition = False, message = 'Protocol JSON is not canonical'
+
+    def require(condition: bool, message: str) -> None:
+        if not condition:
+>           raise RuntimeError(message)
+E           RuntimeError: Protocol JSON is not canonical
+
+src\week8_5_frozen_sample_efficiency_confirmation.py:71: RuntimeError
+_ FrozenConfirmationTests.test_saved_mechanism_audit_uses_persisted_split_manifest _
+
+self = <src.tests.test_week8_5_frozen_sample_efficiency_confirmation.FrozenConfirmationTests testMethod=test_saved_mechanism_audit_uses_persisted_split_manifest>
+
+    def test_saved_mechanism_audit_uses_persisted_split_manifest(self) -> None:
+>       checkpoint = next(w85.CHECKPOINT_ROOT.glob("w85__r01_f01__binary_margin__c01.json"))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       StopIteration
+
+src\tests\test_week8_5_frozen_sample_efficiency_confirmation.py:45: StopIteration
+____________________ test_claim_boundaries_and_no_raw_data ____________________
+
+    def test_claim_boundaries_and_no_raw_data() -> None:
+        ledger=(c.OUTPUT/"claim_ledger.md").read_text(encoding="utf-8")
+        assert "The LS^-3/2 exponent is externally validated. | NOT TESTABLE" in ledger
+        assert "Physics is universally proven. | NOT SUPPORTED" in ledger
+        assert "Frozen Phase 1.10 primary verdict changes. | NOT ALLOWED / UNCHANGED" in ledger
+        assert subprocess.check_output(["git","ls-files",".cache"],cwd=c.ROOT,text=True).strip()==""
+        assert not list(c.ROOT.rglob("Neuchatel data.zip"))
+>       assert c.historical_changes()==[]
+E       AssertionError: assert ['outputs/wee...anifest.json'] == []
+E         
+E         Left contains one more item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_10_closure_diagnostics.py:118: AssertionError
+________________ test_notebook_figures_validation_and_manifest ________________
+
+    def test_notebook_figures_validation_and_manifest() -> None:
+        notebook=nbf.read(c.NOTEBOOK,as_version=4)
+        code=[cell for cell in notebook.cells if cell.cell_type=="code"]
+        assert code and all(cell.execution_count is not None for cell in code)
+        assert not [output for cell in code for output in cell.get("outputs",[]) if output.get("output_type")=="error"]
+        figures=pd.read_csv(c.OUTPUT/"figure_manifest.csv")
+        assert len(figures)==2
+        assert all(c.sha256_file(c.FIGURES/row.figure)==row.sha256 for row in figures.itertuples(index=False))
+        validation=json.loads((c.OUTPUT/"validation_report.json").read_text(encoding="utf-8"))
+        manifest=json.loads((c.OUTPUT/"run_manifest.json").read_text(encoding="utf-8"))
+        assert validation["status"]=="PASS" and validation["check_count"]==28
+        assert manifest["validation"]==validation
+        for row in manifest["files"]:
+            path=c.ROOT/row["path"]
+>           assert path.is_file() and c.artifact_sha256(path)==row["sha256"]
+E           AssertionError: assert (False)
+E            +  where False = is_file()
+E            +    where is_file = WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/tests/test_week9_phase1_10_closure_diagnostics.py').is_file
+
+src\tests\test_week9_phase1_10_closure_diagnostics.py:107: AssertionError
+______________ test_start_sha_and_frozen_phase110_are_untouched _______________
+
+    def test_start_sha_and_frozen_phase110_are_untouched() -> None:
+        assert c.START_SHA == "45e2677b7a57ed3aa5ad5154459100a9b5d2d436"
+        assert subprocess.run(["git","merge-base","--is-ancestor",c.START_SHA,"HEAD"],cwd=c.ROOT).returncode == 0
+>       assert c.historical_changes() == []
+E       AssertionError: assert ['outputs/wee...anifest.json'] == []
+E         
+E         Left contains one more item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_10_closure_diagnostics.py:17: AssertionError
+___ test_no_external_raw_data_or_historical_phase1x_change_and_claim_safety ___
+
+    def test_no_external_raw_data_or_historical_phase1x_change_and_claim_safety() -> None:
+        assert subprocess.check_output(["git", "ls-files", ".cache"], cwd=p10.ROOT, text=True).strip() == ""
+        assert not list(p10.ROOT.rglob("Neuchatel data.zip"))
+>       assert p10.historical_phase1x_changes() == []
+E       AssertionError: assert ['outputs/AST...ary.csv', ...] == []
+E         
+E         Left contains 24689 more items, first extra item: 'outputs/ASTRA_RESEARCH_INDEX.md'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_10_external_experimental_validation.py:140: AssertionError
+_____________ test_notebook_executed_figures_and_manifest_hashes ______________
+
+    def test_notebook_executed_figures_and_manifest_hashes() -> None:
+        notebook = nbf.read(p10.NOTEBOOK, as_version=4)
+        code = [cell for cell in notebook.cells if cell.cell_type == "code"]
+        assert code and all(cell.execution_count is not None for cell in code)
+        assert not [output for cell in code for output in cell.get("outputs", []) if output.get("output_type") == "error"]
+        figures = pd.read_csv(p10.OUTPUT / "figure_manifest.csv")
+        assert len(figures) == 4
+        assert all(p10.sha256_file(p10.FIGURES / row.figure) == row.sha256 for row in figures.itertuples(index=False))
+        manifest = json.loads((p10.OUTPUT / "run_manifest.json").read_text(encoding="utf-8"))
+        validation = json.loads((p10.OUTPUT / "validation_report.json").read_text(encoding="utf-8"))
+        assert manifest["validation"] == validation
+        assert validation["status"] == "PASS" and validation["check_count"] == 30
+        for row in manifest["files"]:
+            path = p10.ROOT / row["path"]
+>           assert path.is_file() and p10.sha256_file(path) == row["sha256"]
+E           AssertionError: assert (True and '4ef11c008a42...891ef48b14bf7' == '3f68158de4b5...dea4ff825b374'
+E            +  where True = is_file()
+E            +    where is_file = WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/notebooks/week_09/07_week9_phase1_10_external_experimental_validation.ipynb').is_file
+E             
+E             - 3f68158de4b55cdd526966f8785b1fb9c20175b546f87679ae4dea4ff825b374
+E             + 4ef11c008a423e95ef60c2a1eb7ab678ba3e95c1af255f27854891ef48b14bf7)
+
+src\tests\test_week9_phase1_10_external_experimental_validation.py:134: AssertionError
+_________ test_claim_language_and_no_checkpoint_or_raw_data_tracking __________
+
+    def test_claim_language_and_no_checkpoint_or_raw_data_tracking() -> None:
+        report=(p.OUTPUT/"FINAL_PHASE1_11_REPORT.md").read_text().lower()
+        assert "no acquisition claim" in report and "does not solve identifiability" in report
+        tracked=subprocess.check_output(["git","ls-files",str(p.OUTPUT/"checkpoints")],cwd=p.ROOT,text=True).strip()
+>       assert tracked=="" and p.historical_changes()==[]
+E       AssertionError: assert ('' == '' and ['outputs/wee...60.json', ...] == []
+E         
+E         Left contains 81 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff)
+
+src\tests\test_week9_phase1_11_fixed_mean_discrepancy_gp.py:122: AssertionError
+________________ test_notebook_figures_validation_and_manifest ________________
+
+    def test_notebook_figures_validation_and_manifest() -> None:
+        notebook=nbf.read(p.NOTEBOOK,as_version=4); code=[cell for cell in notebook.cells if cell.cell_type=="code"]
+        assert code and all(cell.execution_count is not None for cell in code)
+        assert not [out for cell in code for out in cell.get("outputs",[]) if out.get("output_type")=="error"]
+        figures=pd.read_csv(p.OUTPUT/"figure_manifest.csv"); assert len(figures)==4
+        assert all(p.sha256_file(p.FIGURES/row.figure)==row.sha256 for row in figures.itertuples(index=False))
+        validation=json.loads((p.OUTPUT/"validation_report.json").read_text()); assert validation["status"]=="PASS" and validation["check_count"]==36
+        manifest=json.loads((p.OUTPUT/"run_manifest.json").read_text()); assert manifest["validation"]==validation
+        for row in manifest["files"]:
+>           path=p.ROOT/row["path"]; payload=p.artifact_bytes(path)
+                                             ^^^^^^^^^^^^^^^^^^^^^^
+
+src\tests\test_week9_phase1_11_fixed_mean_discrepancy_gp.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\week9_phase1_11_fixed_mean_discrepancy_gp.py:96: in artifact_bytes
+    payload = path.read_bytes()
+              ^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:777: in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/tests/test_week9_phase1_11_fixed_mean_discrepancy_gp.py')
+mode = 'rb', buffering = 0, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\tests\\test_week9_phase1_11_fixed_mean_discrepancy_gp.py'
+
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:771: FileNotFoundError
+______________ test_start_population_h_and_historical_integrity _______________
+
+    def test_start_population_h_and_historical_integrity() -> None:
+        population,specs,paths,_=p.load_inputs()
+        assert p.START_SHA=="e33cca4f81b865d330577ef9a8140c4bbe306e5a"
+        assert len(population)==405 and int(population.has_keyhole.sum())==73
+        expected=np.log(population.P.to_numpy(float)/np.sqrt(population.VX.to_numpy(float)*population.LS.to_numpy(float)**3))
+        np.testing.assert_allclose(p.log_h_values(population),expected,rtol=0,atol=1e-12)
+>       assert len(specs)==len(paths)==100 and p.historical_changes()==[]
+E       AssertionError: assert (100 == 100 and ['outputs/wee...60.json', ...] == []
+E        +  where 100 = len({'w85__r01_f01': [286, 157, 308, 216, 136, 183, ...], 'w85__r01_f02': [213, 162, 155, 69, 144, 258, ...], 'w85__r01_f03': [52, 165, 162, 144, 216, 58, ...], 'w85__r01_f04': [379, 150, 165, 309, 111, 102, ...], ...})
+E         
+E         Left contains 81 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff)
+
+src\tests\test_week9_phase1_11_fixed_mean_discrepancy_gp.py:20: AssertionError
+______________________ test_historical_outputs_unchanged ______________________
+
+    def test_historical_outputs_unchanged() -> None:
+>       assert p12.historical_changes()==[]
+E       AssertionError: assert ['outputs/wee...60.json', ...] == []
+E         
+E         Left contains 81 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_12_gpc_kernel_adequacy.py:102: AssertionError
+_________________ test_manifest_hashes_and_red_team_language __________________
+
+    def test_manifest_hashes_and_red_team_language() -> None:
+        manifest=json.loads((OUT/"run_manifest.json").read_text())
+        for item in manifest["files"]:
+>           data=p12.artifact_bytes(ROOT/item["path"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+src\tests\test_week9_phase1_12_gpc_kernel_adequacy.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\week9_phase1_12_gpc_kernel_adequacy.py:95: in artifact_bytes
+    data=path.read_bytes()
+         ^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:777: in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/tests/test_week9_phase1_12_gpc_kernel_adequacy.py')
+mode = 'rb', buffering = 0, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\tests\\test_week9_phase1_12_gpc_kernel_adequacy.py'
+
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:771: FileNotFoundError
+________________ test_notebook_figures_validation_and_manifest ________________
+
+    def test_notebook_figures_validation_and_manifest() -> None:
+        notebook=nbformat.read(ROOT/"notebooks/week_09/11_week9_phase1_13_fixed_physics_ard_discrepancy.ipynb",as_version=4); code=[c for c in notebook.cells if c.cell_type=="code"]
+        assert code and all(c.execution_count is not None for c in code)
+        assert not [o for c in code for o in c.get("outputs",[]) if o.get("output_type")=="error"]
+        figures=pd.read_csv(OUT/"figure_manifest.csv"); assert len(figures)<=5 and all(p13.sha256_file(OUT/"figures"/r.figure)==r.sha256 for r in figures.itertuples(index=False))
+        validation=json.loads((OUT/"validation_report.json").read_text()); assert validation["status"]=="PASS" and validation["check_count"]>=56 and validation["passed"]==validation["check_count"]
+        manifest=json.loads((OUT/"run_manifest.json").read_text())
+>       for item in manifest["files"]: assert hashlib.sha256(p13.artifact_bytes(ROOT/item["path"])).hexdigest()==item["sha256"]
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+src\tests\test_week9_phase1_13_fixed_physics_ard_discrepancy.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\week9_phase1_13_fixed_physics_ard_discrepancy.py:93: in artifact_bytes
+    payload=path.read_bytes()
+            ^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:777: in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/outputs/week9_phase1_13_fixed_physics_ard_discrepancy/sensitivity_checkpoints/w85__r01_f01.json.gz')
+mode = 'rb', buffering = 0, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\week9_phase1_13_fixed_physics_ard_discrepancy\\sensitivity_checkpoints\\w85__r01_f01.json.gz'
+
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:771: FileNotFoundError
+_________________ test_parent_placeholder_and_historical_gate _________________
+
+    def test_parent_placeholder_and_historical_gate() -> None:
+        gate=json.loads((OUT/"baseline_gate.json").read_text())
+        assert subprocess.run(["git","merge-base","--is-ancestor",p13.PHASE112_SHA,"HEAD"],cwd=ROOT).returncode==0
+        assert gate["phase112_placeholder_absent"]
+        assert "{future}" not in (ROOT/"outputs/week9_phase1_12_gpc_kernel_adequacy/FINAL_PHASE1_12_REPORT.md").read_text()
+>       assert p13.historical_changes()==[]
+E       AssertionError: assert ['outputs/wee...60.json', ...] == []
+E         
+E         Left contains 81 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_13_fixed_physics_ard_discrepancy.py:24: AssertionError
+______________ test_claim_discipline_and_historical_immutability ______________
+
+    def test_claim_discipline_and_historical_immutability() -> None:
+        report=(OUT/"FINAL_PHASE1_14_REPORT.md").read_text().lower(); red=(OUT/"FINAL_RED_TEAM_REPORT.md").read_text().lower()
+>       assert p14.historical_changes()==[]
+E       AssertionError: assert ['outputs/wee...60.json', ...] == []
+E         
+E         Left contains 81 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_14_m3_margin_acquisition.py:91: AssertionError
+________________ test_notebook_figures_validation_and_manifest ________________
+
+    def test_notebook_figures_validation_and_manifest() -> None:
+        notebook=nbformat.read(p14.NOTEBOOK,as_version=4); code=[c for c in notebook.cells if c.cell_type=="code"]
+        assert code and all(c.execution_count is not None for c in code)
+        assert not [o for c in code for o in c.get("outputs",[]) if o.get("output_type")=="error"]
+        figures=pd.read_csv(OUT/"figure_manifest.csv"); assert len(figures)<=5 and all(p14.sha256_file(p14.FIGURES/r.figure)==r.sha256 for r in figures.itertuples(index=False))
+        validation=json.loads((OUT/"validation_report.json").read_text()); assert validation["status"]=="PASS" and validation["passed"]==validation["check_count"] and validation["check_count"]>=48
+        manifest=json.loads((OUT/"run_manifest.json").read_text())
+>       for item in manifest["files"]: assert hashlib.sha256(p14.artifact_bytes(ROOT/item["path"])).hexdigest()==item["sha256"]
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+src\tests\test_week9_phase1_14_m3_margin_acquisition.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\week9_phase1_14_m3_margin_acquisition.py:78: in artifact_bytes
+    payload=path.read_bytes()
+            ^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:777: in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/outputs/week9_phase1_14_m3_margin_acquisition/sensitivity_checkpoints/w85__r01_f01.json.gz')
+mode = 'rb', buffering = 0, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\outputs\\week9_phase1_14_m3_margin_acquisition\\sensitivity_checkpoints\\w85__r01_f01.json.gz'
+
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:771: FileNotFoundError
+_______________________ test_figure_and_artifact_hashes _______________________
+
+    def test_figure_and_artifact_hashes() -> None:
+        figures=pd.read_csv(OUT/"figure_manifest.csv")
+        assert len(figures)<=5 and all(p15.sha256_file(OUT/"figures"/r.figure)==r.sha256 for r in figures.itertuples(index=False))
+        manifest=json.loads((OUT/"run_manifest.json").read_text())
+        for item in manifest["files"]:
+>           payload=p15.artifact_bytes(ROOT/item["path"])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+src\tests\test_week9_phase1_15a_physics_residual_signal_audit.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\week9_phase1_15a_physics_residual_signal_audit.py:78: in artifact_bytes
+    payload=path.read_bytes()
+            ^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:777: in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/tests/test_week9_phase1_15a_physics_residual_signal_audit.py')
+mode = 'rb', buffering = 0, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\tests\\test_week9_phase1_15a_physics_residual_signal_audit.py'
+
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:771: FileNotFoundError
+___________________ test_validation_and_historical_outputs ____________________
+
+    def test_validation_and_historical_outputs() -> None:
+        validation=json.loads((OUT/"validation_report.json").read_text()); manifest=json.loads((OUT/"run_manifest.json").read_text())
+        assert validation["status"]=="PASS" and validation==manifest["validation"]
+>       assert p15.historical_changes()==[] and manifest["historical_changes"]==[]
+E       AssertionError: assert (['outputs/wee...60.json', ...] == []
+E         
+E         Left contains 81 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff)
+
+src\tests\test_week9_phase1_15a_physics_residual_signal_audit.py:91: AssertionError
+________________ test_git_diff_has_no_historical_phase_outputs ________________
+
+    def test_git_diff_has_no_historical_phase_outputs() -> None:
+        changed = subprocess.check_output(["git", "diff", "--name-only", p16.PARENT_SHA, "--", "outputs"], cwd=ROOT, text=True).splitlines()
+>       assert all(path.startswith("outputs/week9_phase1_16_m3_repulsion_scale_audit/") for path in changed)
+E       assert False
+E        +  where False = all(<generator object test_git_diff_has_no_historical_phase_outputs.<locals>.<genexpr> at 0x000002685EB3D9A0>)
+
+src\tests\test_week9_phase1_16_m3_repulsion_scale_audit.py:104: AssertionError
+_________________ test_notebook_figures_manifest_and_history __________________
+
+    def test_notebook_figures_manifest_and_history() -> None:
+        notebook = nbf.read(p16.NOTEBOOK, as_version=4)
+        code = [cell for cell in notebook.cells if cell.cell_type == "code"]
+        assert code and all(cell.execution_count is not None for cell in code)
+        assert not [o for cell in code for o in cell.get("outputs", []) if o.get("output_type") == "error"]
+        figures = pd.read_csv(OUT / "figure_manifest.csv")
+        assert len(figures) <= 6
+        assert all(p16.sha256_file(p16.FIGURES / row.figure) == row.sha256 for row in figures.itertuples(index=False))
+>       assert p16.historical_changes() == []
+E       AssertionError: assert ['outputs/wee...60.json', ...] == []
+E         
+E         Left contains 81 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_16_m3_repulsion_scale_audit.py:89: AssertionError
+___________________ test_historical_phase_outputs_unchanged ___________________
+
+    def test_historical_phase_outputs_unchanged() -> None:
+>       assert p17a.historical_changes() == []
+E       AssertionError: assert ['outputs/wee...json.gz', ...] == []
+E         
+E         Left contains 11880 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_17a_physics_contour_geometry_audit.py:105: AssertionError
+____________ test_validation_manifest_history_and_artifact_hashes _____________
+
+    def test_validation_manifest_history_and_artifact_hashes() -> None:
+        validation = json.loads((OUT / "validation_report.json").read_text())
+        manifest = json.loads((OUT / "run_manifest.json").read_text())
+        assert validation["status"] == "PASS"
+        assert validation["passed"] == validation["check_count"] == 27
+        assert manifest["validation"] == validation
+        assert manifest["decision"] == "MIXED_GEOMETRIC_MECHANISM"
+        assert manifest["historical_changes"] == []
+        for item in manifest["files"]:
+>           payload = p17a.artifact_bytes(ROOT / item["path"])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+src\tests\test_week9_phase1_17a_physics_contour_geometry_audit.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\week9_phase1_17a_physics_contour_geometry_audit.py:80: in artifact_bytes
+    payload = path.read_bytes()
+              ^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:777: in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/tests/test_week9_phase1_17a_physics_contour_geometry_audit.py')
+mode = 'rb', buffering = 0, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ozgur\\Documents\\thesis\\.claude\\worktrees\\joint-depth-label-dev\\tests\\test_week9_phase1_17a_physics_contour_geometry_audit.py'
+
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py:771: FileNotFoundError
+______________________ test_historical_outputs_unchanged ______________________
+
+    def test_historical_outputs_unchanged():
+>       assert phase.historical_changes() == []
+E       AssertionError: assert ['outputs/wee...json.gz', ...] == []
+E         
+E         Left contains 11855 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_18a_level_set_acquisition_compatibility_audit.py:110: AssertionError
+_________________ test_validation_and_manifest_are_consistent _________________
+
+    def test_validation_and_manifest_are_consistent():
+        validation = json.loads((OUT / "validation_report.json").read_text())
+        manifest = json.loads((OUT / "run_manifest.json").read_text())
+        assert validation["status"] == "PASS"
+        assert manifest["validation"] == validation
+        assert manifest["historical_changes"] == []
+        for item in manifest["files"]:
+            path = phase.ROOT / item["path"]
+            assert path.is_file()
+>           assert phase.sha256_file(path) == item["sha256"]
+E           AssertionError: assert '34fbeff56c79...2e6ca1e6fed14' == 'fcc046c62272...9db92454cbfcb'
+E             
+E             - fcc046c62272a6d48512f4f09bbf802b72d421b16649052b4989db92454cbfcb
+E             + 34fbeff56c7933dee1d1cc464c5e0a34dcdb5a20680f51d9a962e6ca1e6fed14
+
+src\tests\test_week9_phase1_18b_prospective_global_gpc_sur_benchmark.py:91: AssertionError
+__________________ test_candidate_design_hash_and_no_leakage __________________
+
+    def test_candidate_design_hash_and_no_leakage():
+        c=pd.read_csv(OUT/'candidate_validation_design.csv');h=json.loads((OUT/'candidate_validation_design_sha256.json').read_text())
+>       assert h['sha256']==phase.sha256_file(OUT/'candidate_validation_design.csv')
+E       AssertionError: assert '334ffa83d241...81d3f7261d296' == 'b7c0aba301c6...92915633c112f'
+E         
+E         - b7c0aba301c6ca5a2156e40f60af6fb59634fba425f6f6aae3f92915633c112f
+E         + 334ffa83d241ffbbba726f7100ea9b55a4c654dc0348e1e4ec881d3f7261d296
+
+src\tests\test_week9_phase1_18b0_fast_gpc_sur_update_validation.py:22: AssertionError
+______________ test_validation_manifest_match_and_history_clean _______________
+
+    def test_validation_manifest_match_and_history_clean():
+        v=json.loads((OUT/'validation_report.json').read_text());m=json.loads((OUT/'run_manifest.json').read_text())
+        assert v==m['validation'] and v['status']=='PASS'
+>       assert phase.historical_changes()==[]
+E       AssertionError: assert ['outputs/wee...json.gz', ...] == []
+E         
+E         Left contains 11853 more items, first extra item: 'outputs/week9_phase1_10_external_experimental_validation/source_manifest.json'
+E         Use -v to get more diff
+
+src\tests\test_week9_phase1_18b0_fast_gpc_sur_update_validation.py:82: AssertionError
+_____________ test_historical_outputs_unchanged_and_parent_exact ______________
+
+    def test_historical_outputs_unchanged_and_parent_exact():
+        assert audit.git("merge-base", "HEAD", audit.PARENT_SHA) == audit.PARENT_SHA
+        changed = audit.git("diff", "--name-only", audit.PARENT_SHA, "--", "outputs").splitlines()
+>       assert all(path.startswith("outputs/week9_phase1_19a_integrity_posterior_monotonicity_audit/") for path in changed)
+E       assert False
+E        +  where False = all(<generator object test_historical_outputs_unchanged_and_parent_exact.<locals>.<genexpr> at 0x000002685A1A8900>)
+
+src\tests\test_week9_phase1_19a_integrity_posterior_monotonicity_audit.py:105: AssertionError
+____________ test_no_historical_output_changes_or_checkpoint_cache ____________
+
+    def test_no_historical_output_changes_or_checkpoint_cache():
+        changed = phase.git("diff", "--name-only", phase.PARENT_SHA, "--", "outputs").splitlines()
+>       assert all(path.startswith("outputs/week9_phase1_19b_prospective_robust_monotone_pool_lse/") for path in changed)
+E       assert False
+E        +  where False = all(<generator object test_no_historical_output_changes_or_checkpoint_cache.<locals>.<genexpr> at 0x000002685A1A82E0>)
+
+src\tests\test_week9_phase1_19b_prospective_robust_monotone_pool_lse.py:149: AssertionError
+____________ test_historical_outputs_unchanged_and_artifact_hashes ____________
+
+    def test_historical_outputs_unchanged_and_artifact_hashes() -> None:
+        changed = subprocess.check_output(
+            [
+                "git",
+                "diff",
+                "--name-only",
+                p17.STARTING_SHA,
+                "--",
+                "outputs/week8_5_frozen_confirmation",
+                "outputs/week9_phase1_close_week8",
+                "outputs/week9_phase1_5_h_physics_confirmation",
+                "notebooks/week_09/02_week9_phase1_5_h_physics_confirmation.ipynb",
+            ],
+            cwd=p17.ROOT,
+            text=True,
+        ).strip()
+>       assert changed == ""
+E       AssertionError: assert 'notebooks/we..._checklist.md' == ''
+E         
+E         + notebooks/week_09/02_week9_phase1_5_h_physics_confirmation.ipynb
+E         + outputs/week8_5_frozen_confirmation/ARTIFACT_PACKAGING.md
+E         + outputs/week8_5_frozen_confirmation/adaptive_horizon_decision.json
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/01_research_evidence_map.md
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/02_preregistered_claim_contract.md
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/04_critic_audit.md...
+E         
+E         ...Full output truncated (140 lines hidden), use '-vv' to show
+
+src\tests\test_week9_phase1_7_physics_ridge_residual_gp.py:126: AssertionError
+________ test_historical_outputs_unchanged_notebook_and_figure_hashes _________
+
+    def test_historical_outputs_unchanged_notebook_and_figure_hashes() -> None:
+        changed = subprocess.check_output(
+            [
+                "git",
+                "diff",
+                "--name-only",
+                p18.STARTING_SHA,
+                "--",
+                "outputs/week8_5_frozen_confirmation",
+                "outputs/week9_phase1_close_week8",
+                "outputs/week9_phase1_5_h_physics_confirmation",
+                "outputs/week9_phase1_7_physics_ridge_residual_gp",
+                "notebooks/week_09/03_week9_phase1_7_physics_ridge_residual_gp.ipynb",
+            ],
+            cwd=p18.ROOT,
+            text=True,
+        ).strip()
+>       assert changed == ""
+E       AssertionError: assert 'notebooks/we..._checklist.md' == ''
+E         
+E         + notebooks/week_09/03_week9_phase1_7_physics_ridge_residual_gp.ipynb
+E         + outputs/week8_5_frozen_confirmation/ARTIFACT_PACKAGING.md
+E         + outputs/week8_5_frozen_confirmation/adaptive_horizon_decision.json
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/01_research_evidence_map.md
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/02_preregistered_claim_contract.md
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/04_critic_audit.md...
+E         
+E         ...Full output truncated (167 lines hidden), use '-vv' to show
+
+src\tests\test_week9_phase1_8_model_path_decomposition.py:142: AssertionError
+___________________ test_manifest_hashes_and_red_team_pass ____________________
+
+    def test_manifest_hashes_and_red_team_pass() -> None:
+        manifest = json.loads((p18.OUTPUT / "run_manifest.json").read_text(encoding="utf-8"))
+        assert manifest["new_query_trajectories"] == 0
+        assert manifest["primary_models_frozen"] is True
+        assert all("checkpoints" not in row["path"] for row in manifest["files"])
+        for row in manifest["files"]:
+            path = p18.ROOT / row["path"]
+            assert path.is_file()
+>           assert p18.sha256_file(path) == row["sha256"]
+E           AssertionError: assert 'acbd6db84ba2...3957088d450a6' == 'a9acccecf744...08463bd05ee9b'
+E             
+E             - a9acccecf744442ed14a1ceec8621f8861f74e27880c51eee7c08463bd05ee9b
+E             + acbd6db84ba2978a2b77caa1bf5e29093a4cf8cf6870bfeaa583957088d450a6
+
+src\tests\test_week9_phase1_8_model_path_decomposition.py:163: AssertionError
+______________ test_q20_q30_are_evaluation_only_in_replay_source ______________
+
+    def test_q20_q30_are_evaluation_only_in_replay_source() -> None:
+        tree = ast.parse((p18.ROOT / "src" / "week9_phase1_8_model_path_decomposition.py").read_text(encoding="utf-8"))
+        functions = {node.name: node for node in tree.body if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))}
+        for name in ("_fit_m0", "_fit_m1", "run_cross_arm", "fit_additive_with_bound"):
+            source = ast.unparse(functions[name]).lower()
+            assert "b1_q20" not in source
+            assert "b1_q30" not in source
+            assert "boundary_flags" not in source
+>       assert "only current query-path prefix" in (p18.OUTPUT / "cross_execution_report.json").read_text(encoding="utf-8") or p18.CHECKPOINTS.exists()
+E       assert ('only current query-path prefix' in '{\n  "checkpoint_reuses": 200,\n  "elapsed_seconds": 4.233449220657349,\n  "fits": 13000,\n  "new_arms": [\n    "Y10",\n    "Y01"\n  ],\n  "new_query_trajectories": 0,\n  "outer_runs": 100,\n  "status": "PASS"\n}\n' or False)
+E        +  where '{\n  "checkpoint_reuses": 200,\n  "elapsed_seconds": 4.233449220657349,\n  "fits": 13000,\n  "new_arms": [\n    "Y10",\n    "Y01"\n  ],\n  "new_query_trajectories": 0,\n  "outer_runs": 100,\n  "status": "PASS"\n}\n' = read_text(encoding='utf-8')
+E        +    where read_text = (WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/outputs/week9_phase1_8_model_path_decomposition') / 'cross_execution_report.json').read_text
+E        +      where WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/outputs/week9_phase1_8_model_path_decomposition') = p18.OUTPUT
+E        +  and   False = exists()
+E        +    where exists = WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/outputs/week9_phase1_8_model_path_decomposition/checkpoints').exists
+E        +      where WindowsPath('C:/Users/ozgur/Documents/thesis/.claude/worktrees/joint-depth-label-dev/outputs/week9_phase1_8_model_path_decomposition/checkpoints') = p18.CHECKPOINTS
+
+src\tests\test_week9_phase1_8_model_path_decomposition.py:112: AssertionError
+__________________ test_historical_phase1_outputs_unchanged ___________________
+
+    def test_historical_phase1_outputs_unchanged() -> None:
+>       assert p19.historical_changes() == ""
+E       AssertionError: assert 'notebooks/we...n_report.json' == ''
+E         
+E         + notebooks/week_09/03_week9_phase1_7_physics_ridge_residual_gp.ipynb
+E         + notebooks/week_09/04_week9_phase1_8_model_path_decomposition.ipynb
+E         + outputs/week8_5_frozen_confirmation/ARTIFACT_PACKAGING.md
+E         + outputs/week8_5_frozen_confirmation/adaptive_horizon_decision.json
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/01_research_evidence_map.md
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/02_preregistered_claim_contract.md...
+E         
+E         ...Full output truncated (124 lines hidden), use '-vv' to show
+
+src\tests\test_week9_phase1_9_physics_specificity_control.py:136: AssertionError
+_____________________ test_manifest_hashes_and_validation _____________________
+
+    def test_manifest_hashes_and_validation() -> None:
+        manifest = json.loads((p19.OUTPUT / "run_manifest.json").read_text(encoding="utf-8"))
+        validation = json.loads((p19.OUTPUT / "validation_report.json").read_text(encoding="utf-8"))
+        assert validation["status"] == "PASS"
+        assert manifest["validation"] == validation
+        assert manifest["new_query_paths"] == 0
+        for row in manifest["files"]:
+            path = p19.ROOT / row["path"]
+            assert path.is_file()
+>           assert p19.sha256_file(path) == row["sha256"]
+E           AssertionError: assert 'bbf75884d243...b6b4673b34ac5' == 'e80d0ba21325...418f56861a1ca'
+E             
+E             - e80d0ba213251589ab92d66312d678c061ee3d7149b4a316200418f56861a1ca
+E             + bbf75884d2432269d66dddbdacb70512eade3d2670f50efc87fb6b4673b34ac5
+
+src\tests\test_week9_phase1_9_physics_specificity_control.py:132: AssertionError
+__________ test_committed_notebook_has_stored_outputs_and_reexecutes __________
+
+    def test_committed_notebook_has_stored_outputs_and_reexecutes() -> None:
+        notebook=nbformat.read(p2.NOTEBOOK,as_version=4); executed=[c for c in notebook.cells if c.cell_type=="code" and c.execution_count is not None and c.outputs]
+        assert len(executed)>=10
+>       ExecutePreprocessor(timeout=300,kernel_name="python3").preprocess(notebook,{"metadata":{"path":str(p2.ROOT)}})
+
+src\tests\test_week9_phase2_temporal_width_dynamics.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\nbconvert\preprocessors\execute.py:97: in preprocess
+    with self.setup_kernel():
+         ^^^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py:141: in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\nbclient\client.py:600: in setup_kernel
+    self.start_new_kernel(**kwargs)
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_core\utils\__init__.py:165: in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\asyncio\base_events.py:719: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\nbclient\client.py:550: in async_start_new_kernel
+    await ensure_async(self.km.start_kernel(extra_arguments=self.extra_arguments, **kwargs))
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_core\utils\__init__.py:214: in ensure_async
+    result = await obj
+             ^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\manager.py:116: in wrapper
+    raise e
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\manager.py:107: in wrapper
+    out = await method(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\manager.py:528: in _async_start_kernel
+    kernel_cmd, kw = await self._async_pre_start_kernel(**kw)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\manager.py:490: in _async_pre_start_kernel
+    self.kernel_spec,
+    ^^^^^^^^^^^^^^^^
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\manager.py:267: in kernel_spec
+    self._kernel_spec = self.kernel_spec_manager.get_kernel_spec(self.kernel_name)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <jupyter_client.kernelspec.KernelSpecManager object at 0x000002685A1481A0>
+kernel_name = 'python3'
+
+    def get_kernel_spec(self, kernel_name: str) -> KernelSpec:
+        """Returns a :class:`KernelSpec` instance for the given kernel_name.
+    
+        Raises :exc:`NoSuchKernel` if the given kernel name is not found.
+        """
+        if not _is_valid_kernel_name(kernel_name):
+            self.log.warning(
+                f"Kernelspec name {kernel_name} is invalid: {_kernel_name_description}"
+            )
+    
+        resource_dir = self._find_spec_directory(kernel_name.lower())
+        if resource_dir is None:
+>           raise NoSuchKernel(kernel_name)
+E           jupyter_client.kernelspec.NoSuchKernel: No such kernel named python3
+
+C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\kernelspec.py:295: NoSuchKernel
+------------------------------ Captured log call ------------------------------
+ERROR    traitlets:manager.py:115 No such kernel named python3
+Traceback (most recent call last):
+  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\manager.py", line 107, in wrapper
+    out = await method(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\manager.py", line 528, in _async_start_kernel
+    kernel_cmd, kw = await self._async_pre_start_kernel(**kw)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\manager.py", line 490, in _async_pre_start_kernel
+    self.kernel_spec,
+    ^^^^^^^^^^^^^^^^
+  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\manager.py", line 267, in kernel_spec
+    self._kernel_spec = self.kernel_spec_manager.get_kernel_spec(self.kernel_name)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jupyter_client\kernelspec.py", line 295, in get_kernel_spec
+    raise NoSuchKernel(kernel_name)
+jupyter_client.kernelspec.NoSuchKernel: No such kernel named python3
+__________________ test_historical_phase1_outputs_unchanged ___________________
+
+    def test_historical_phase1_outputs_unchanged() -> None:
+        changed=subprocess.run(["git","diff","--name-only",p2.STARTING_SHA,"--","outputs/week8_5_frozen_confirmation","outputs/week9_phase1_close_week8","outputs/week9_phase1_5_h_physics_confirmation","outputs/week9_phase1_7_physics_ridge_residual_gp","outputs/week9_phase1_8_model_path_decomposition"],cwd=p2.ROOT,text=True,capture_output=True,check=True).stdout.strip()
+>       assert changed==""
+E       AssertionError: assert 'outputs/week..._checklist.md' == ''
+E         
+E         + outputs/week8_5_frozen_confirmation/ARTIFACT_PACKAGING.md
+E         + outputs/week8_5_frozen_confirmation/adaptive_horizon_decision.json
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/01_research_evidence_map.md
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/02_preregistered_claim_contract.md
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/04_critic_audit.md
+E         + outputs/week8_5_frozen_confirmation/agent_handoffs/05_supervisor_decision.md...
+E         
+E         ...Full output truncated (187 lines hidden), use '-vv' to show
+
+src\tests\test_week9_phase2_temporal_width_dynamics.py:100: AssertionError
+_________ test_manifest_artifact_hashes_and_validation_snapshot_match _________
+
+    def test_manifest_artifact_hashes_and_validation_snapshot_match() -> None:
+        run=json.loads(out("run_manifest.json").read_text()); validation=json.loads(out("validation_report.json").read_text())
+        assert run["validation"]==validation and run["notebook_sha256"]==p2.sha256_file(p2.NOTEBOOK)
+>       for relative,digest in run["artifact_hashes"].items(): assert p2.sha256_file(p2.OUTPUT/relative)==digest
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: assert '0e76ee771ad7...44d45c67728b3' == '3a1a21ccb75f...d31eeb802b013'
+E         
+E         - 3a1a21ccb75f64967add17385120b9436a9ec35ec2d7ae4a24dd31eeb802b013
+E         + 0e76ee771ad78dd22ac78650e125b0efe3d81ce7a567e2fcb7d44d45c67728b3
+
+src\tests\test_week9_phase2_temporal_width_dynamics.py:92: AssertionError
+============================== warnings summary ===============================
+src/tests/test_week8_5_frozen_sample_efficiency_confirmation.py::FrozenConfirmationTests::test_protocol_is_canonical_and_hashed
+  C:\Users\ozgur\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pytest_asyncio\plugin.py:1216: DeprecationWarning: 'asyncio.get_event_loop_policy' is deprecated and slated for removal in Python 3.16
+    return asyncio.get_event_loop_policy()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED src/tests/test_week8_5_frozen_sample_efficiency_confirmation.py::FrozenConfirmationTests::test_protocol_is_canonical_and_hashed
+FAILED src/tests/test_week8_5_frozen_sample_efficiency_confirmation.py::FrozenConfirmationTests::test_random_order_information_flow_and_checkpoint_resume
+FAILED src/tests/test_week8_5_frozen_sample_efficiency_confirmation.py::FrozenConfirmationTests::test_saved_mechanism_audit_uses_persisted_split_manifest
+FAILED src/tests/test_week9_phase1_10_closure_diagnostics.py::test_claim_boundaries_and_no_raw_data
+FAILED src/tests/test_week9_phase1_10_closure_diagnostics.py::test_notebook_figures_validation_and_manifest
+FAILED src/tests/test_week9_phase1_10_closure_diagnostics.py::test_start_sha_and_frozen_phase110_are_untouched
+FAILED src/tests/test_week9_phase1_10_external_experimental_validation.py::test_no_external_raw_data_or_historical_phase1x_change_and_claim_safety
+FAILED src/tests/test_week9_phase1_10_external_experimental_validation.py::test_notebook_executed_figures_and_manifest_hashes
+FAILED src/tests/test_week9_phase1_11_fixed_mean_discrepancy_gp.py::test_claim_language_and_no_checkpoint_or_raw_data_tracking
+FAILED src/tests/test_week9_phase1_11_fixed_mean_discrepancy_gp.py::test_notebook_figures_validation_and_manifest
+FAILED src/tests/test_week9_phase1_11_fixed_mean_discrepancy_gp.py::test_start_population_h_and_historical_integrity
+FAILED src/tests/test_week9_phase1_12_gpc_kernel_adequacy.py::test_historical_outputs_unchanged
+FAILED src/tests/test_week9_phase1_12_gpc_kernel_adequacy.py::test_manifest_hashes_and_red_team_language
+FAILED src/tests/test_week9_phase1_13_fixed_physics_ard_discrepancy.py::test_notebook_figures_validation_and_manifest
+FAILED src/tests/test_week9_phase1_13_fixed_physics_ard_discrepancy.py::test_parent_placeholder_and_historical_gate
+FAILED src/tests/test_week9_phase1_14_m3_margin_acquisition.py::test_claim_discipline_and_historical_immutability
+FAILED src/tests/test_week9_phase1_14_m3_margin_acquisition.py::test_notebook_figures_validation_and_manifest
+FAILED src/tests/test_week9_phase1_15a_physics_residual_signal_audit.py::test_figure_and_artifact_hashes
+FAILED src/tests/test_week9_phase1_15a_physics_residual_signal_audit.py::test_validation_and_historical_outputs
+FAILED src/tests/test_week9_phase1_16_m3_repulsion_scale_audit.py::test_git_diff_has_no_historical_phase_outputs
+FAILED src/tests/test_week9_phase1_16_m3_repulsion_scale_audit.py::test_notebook_figures_manifest_and_history
+FAILED src/tests/test_week9_phase1_17a_physics_contour_geometry_audit.py::test_historical_phase_outputs_unchanged
+FAILED src/tests/test_week9_phase1_17a_physics_contour_geometry_audit.py::test_validation_manifest_history_and_artifact_hashes
+FAILED src/tests/test_week9_phase1_18a_level_set_acquisition_compatibility_audit.py::test_historical_outputs_unchanged
+FAILED src/tests/test_week9_phase1_18b_prospective_global_gpc_sur_benchmark.py::test_validation_and_manifest_are_consistent
+FAILED src/tests/test_week9_phase1_18b0_fast_gpc_sur_update_validation.py::test_candidate_design_hash_and_no_leakage
+FAILED src/tests/test_week9_phase1_18b0_fast_gpc_sur_update_validation.py::test_validation_manifest_match_and_history_clean
+FAILED src/tests/test_week9_phase1_19a_integrity_posterior_monotonicity_audit.py::test_historical_outputs_unchanged_and_parent_exact
+FAILED src/tests/test_week9_phase1_19b_prospective_robust_monotone_pool_lse.py::test_no_historical_output_changes_or_checkpoint_cache
+FAILED src/tests/test_week9_phase1_7_physics_ridge_residual_gp.py::test_historical_outputs_unchanged_and_artifact_hashes
+FAILED src/tests/test_week9_phase1_8_model_path_decomposition.py::test_historical_outputs_unchanged_notebook_and_figure_hashes
+FAILED src/tests/test_week9_phase1_8_model_path_decomposition.py::test_manifest_hashes_and_red_team_pass
+FAILED src/tests/test_week9_phase1_8_model_path_decomposition.py::test_q20_q30_are_evaluation_only_in_replay_source
+FAILED src/tests/test_week9_phase1_9_physics_specificity_control.py::test_historical_phase1_outputs_unchanged
+FAILED src/tests/test_week9_phase1_9_physics_specificity_control.py::test_manifest_hashes_and_validation
+FAILED src/tests/test_week9_phase2_temporal_width_dynamics.py::test_committed_notebook_has_stored_outputs_and_reexecutes
+FAILED src/tests/test_week9_phase2_temporal_width_dynamics.py::test_historical_phase1_outputs_unchanged
+FAILED src/tests/test_week9_phase2_temporal_width_dynamics.py::test_manifest_artifact_hashes_and_validation_snapshot_match
+38 failed, 1 warning in 19.96s
