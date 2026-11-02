@@ -1,0 +1,11 @@
+{
+ "info_rule": {
+  "passes_at_times": [],
+  "pass": false
+ },
+ "time_rule": {
+  "pass": false
+ },
+ "decision": "TEMPERATURE-B: NO EXTRA BENEFIT (VAL closed; no time-model campaign)",
+ "seconds": 269.3
+}

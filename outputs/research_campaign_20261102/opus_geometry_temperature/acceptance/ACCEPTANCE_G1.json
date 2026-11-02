@@ -1,0 +1,171 @@
+{
+ "utc": "2026-11-02T18:19:08+00:00",
+ "V2_matched": [
+  {
+   "task": [
+    "STD",
+    163,
+    1
+   ],
+   "identical": true,
+   "budgets": "8-20",
+   "identical_by_system": {
+    "GEO_A1": true,
+    "GEO_A2": true,
+    "GEO_B1": true,
+    "GEO_B2": true,
+    "GEO_B3": true,
+    "C1": true,
+    "CAL_B1": true,
+    "C1_G": true,
+    "C1_T": true,
+    "ORACLE_T": false
+   },
+   "note": "every method identical; ORACLE_T (evaluator-only, reads test truth) changes = positive control"
+  },
+  {
+   "task": [
+    "STD",
+    170,
+    3
+   ],
+   "identical": true,
+   "budgets": "8-20",
+   "identical_by_system": {
+    "GEO_A1": true,
+    "GEO_A2": true,
+    "GEO_B1": true,
+    "GEO_B2": true,
+    "GEO_B3": true,
+    "C1": true,
+    "CAL_B1": true,
+    "C1_G": true,
+    "C1_T": true,
+    "ORACLE_T": false
+   },
+   "note": "every method identical; ORACLE_T (evaluator-only, reads test truth) changes = positive control"
+  },
+  {
+   "task": [
+    "K5",
+    41,
+    2
+   ],
+   "identical": true,
+   "budgets": "8-20",
+   "identical_by_system": {
+    "GEO_A1": true,
+    "GEO_A2": true,
+    "GEO_B1": true,
+    "GEO_B2": true,
+    "GEO_B3": true,
+    "C1": true,
+    "CAL_B1": true,
+    "C1_G": true,
+    "C1_T": true,
+    "ORACLE_T": false
+   },
+   "note": "every method identical; ORACLE_T (evaluator-only, reads test truth) changes = positive control"
+  },
+  {
+   "task": [
+    "K4",
+    25,
+    3
+   ],
+   "identical": true,
+   "budgets": "8-20",
+   "identical_by_system": {
+    "GEO_A1": true,
+    "GEO_A2": true,
+    "GEO_B1": true,
+    "GEO_B2": true,
+    "GEO_B3": true,
+    "C1": true,
+    "CAL_B1": true,
+    "C1_G": true,
+    "C1_T": true,
+    "ORACLE_T": false
+   },
+   "note": "every method identical; ORACLE_T (evaluator-only, reads test truth) changes = positive control"
+  }
+ ],
+ "V2_own": [
+  {
+   "task": [
+    "STD",
+    163,
+    1
+   ],
+   "system": "GEO_A1",
+   "selector": "margin",
+   "identical_path_and_predictions": true,
+   "bmax": 20
+  },
+  {
+   "task": [
+    "STD",
+    163,
+    1
+   ],
+   "system": "GEO_A1",
+   "selector": "straddle",
+   "identical_path_and_predictions": true,
+   "bmax": 20
+  },
+  {
+   "task": [
+    "STD",
+    163,
+    1
+   ],
+   "system": "GEO_A1",
+   "selector": "space",
+   "identical_path_and_predictions": true,
+   "bmax": 20
+  },
+  {
+   "task": [
+    "STD",
+    163,
+    1
+   ],
+   "system": "GEO_B1",
+   "selector": "margin",
+   "identical_path_and_predictions": true,
+   "bmax": 20
+  },
+  {
+   "task": [
+    "STD",
+    163,
+    1
+   ],
+   "system": "GEO_B1",
+   "selector": "straddle",
+   "identical_path_and_predictions": true,
+   "bmax": 20
+  },
+  {
+   "task": [
+    "STD",
+    163,
+    1
+   ],
+   "system": "GEO_B1",
+   "selector": "space",
+   "identical_path_and_predictions": true,
+   "bmax": 20
+  }
+ ],
+ "V3_depth_gp_max_abs": 0.0,
+ "V6_linearity_max_abs": 2.864375403532904e-14,
+ "V7_mc_max_abs": 0.0026663549665530695,
+ "PASS": {
+  "V2": true,
+  "V3": true,
+  "V6": true,
+  "V7": true
+ },
+ "seconds": 58.8
+}

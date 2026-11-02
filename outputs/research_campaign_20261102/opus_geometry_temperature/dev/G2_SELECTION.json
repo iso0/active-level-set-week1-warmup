@@ -1,0 +1,9 @@
+{
+ "system": "GEO_B1",
+ "promising": false,
+ "selector_controls": false,
+ "C1_G_carried": false,
+ "C1_T_carried": false,
+ "utc": "2026-11-02T19:29:35+00:00",
+ "rule": "PROTOCOL_GT section 5 G2"
+}

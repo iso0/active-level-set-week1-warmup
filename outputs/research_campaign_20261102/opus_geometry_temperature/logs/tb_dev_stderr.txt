@@ -1,0 +1,10 @@
+C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\gt_tb.py:177: RuntimeWarning: Mean of empty slice
+  P_ = {m: np.nanmean(PR[m], 0) for m in MODELS}
+C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\gt_tb.py:186: RuntimeWarning: Mean of empty slice
+  return {key: (float(np.nanmean([q[key] for q in per])) if key != "n" else per[0]["n"]) for key in per[0]}
+C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\gt_tb.py:186: RuntimeWarning: Mean of empty slice
+  return {key: (float(np.nanmean([q[key] for q in per])) if key != "n" else per[0]["n"]) for key in per[0]}
+C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\gt_tb.py:186: RuntimeWarning: Mean of empty slice
+  return {key: (float(np.nanmean([q[key] for q in per])) if key != "n" else per[0]["n"]) for key in per[0]}
+C:\Users\ozgur\Documents\thesis\.claude\worktrees\joint-depth-label-dev\src\gt_tb.py:218: RuntimeWarning: All-NaN slice encountered
+  ta_med = np.nanmedian(np.stack([x["t_alarm"] for x in tr_runs]), 0)

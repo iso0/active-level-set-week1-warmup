@@ -1,0 +1,1 @@
+﻿restart command: powershell -File src\gt_runner.ps1 -Job gt-dev -Module src.gt_dev -Workers 6

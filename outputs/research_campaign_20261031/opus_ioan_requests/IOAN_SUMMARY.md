@@ -2,6 +2,15 @@
 
 Burak Öztürk, 31 October 2026.
 
+> **Dated correction (2 November 2026).** Some interpretations below are qualified in [IR_ADDENDUM_20261102.md](IR_ADDENDUM_20261102.md) (English section). No number changed. The addendum covers:
+> - the depth-label link is not causal;
+> - "no output adds" is limited to the tried features and models;
+> - no full sequential test was run;
+> - the true-KE control bounds only its construction;
+> - the transfer-cancellation result needs specific assumptions;
+> - a descriptive first look preceded the registration;
+> - the ceiling's effect on learning was not tested.
+
 **Data:** all 541 simulations of the pool; no new simulations.
 
 **Method:**

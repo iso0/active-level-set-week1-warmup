@@ -1,0 +1,30 @@
+{
+ "utc": "2026-11-02T19:32:24+00:00",
+ "stage": "g2",
+ "files": {
+  "predictions_f32_part1.npz": {
+   "systems": [
+    "C1",
+    "CAL_B1",
+    "C1_G",
+    "C1_T",
+    "ORACLE_T"
+   ],
+   "keys": 1360,
+   "sha256": "b174d31b916fa6733dd7e67cc45eb1b8557cb34406b61c3bc874f6465b01e6b7"
+  },
+  "predictions_f32_part2.npz": {
+   "systems": [
+    "GEO_A1",
+    "GEO_A2",
+    "GEO_B1",
+    "GEO_B2",
+    "GEO_B3"
+   ],
+   "keys": 1360,
+   "sha256": "0ae880b6bc7cc022250aa9ff750a28f70f15a8e3e40b3ef743955bc5221e2c2c"
+  }
+ },
+ "sha256_paths": "4e4a36a61cd04f861f8185a0878f37112b69febc59b6bdef7e6170129d3d3dcb",
+ "not_exported": "C1_recomputed (= recorded C1, V4 max |diff| 0.0)"
+}

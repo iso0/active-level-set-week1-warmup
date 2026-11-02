@@ -121,3 +121,31 @@ All population results are on previously inspected simulations: DEV repeats 1–
 | Q8 | A non-separable 5-D GP improves curves over the separable one (NEW subgrid) | Velocity **yes** (R²_sub 0.69 vs 0.65); KE and depth no | EXPL (registered) | About 10× the cost (17 s vs 1.8 s per fit). |
 | Q9 | Scalar summaries (T0 level, peak height) predicted from curves beat a direct scalar GP by ≥ 5% | **No**, in every channel and population | EXPL (registered) | The closest call is OLD velocity T0 (about 2% better). Peak timing: no better than the mean curve for NEW velocity and depth; better in OLD. |
 | Q10 | Curve availability and data handling | NEW 135/136; OLD 349/405 (56 runs lack remote channels; the frozen loader also drops their KE and depth curves) | OBS | Recorded, not silently excluded (PAL-EXT, TS-OLD). |
+
+## 9. IR, Ioan's requests of 2026-10-30 (`outputs/research_campaign_20261031/opus_ioan_requests/`; registration 0ecf9f70, results 0a57d644; rows added 2026-11-02 with the dated addendum `IR_ADDENDUM_20261102.md`)
+
+One pool of 541 runs, all paid-only. A descriptive first look preceded the registration (IR-PRE, disclosed). No number below was changed by the addendum; only the wording is limited.
+
+| # | Claim or question | Result | Label | Status and caveats |
+|---|---|---|---|---|
+| IR1 | Physical outputs are related to depth, not only to the label | ρ with depth: KE 0.90, max temperature 0.85, spike ratio 0.85, laser 0.82, total energy / particles 0.80; GP out-of-fold residual ρ after the inputs ≤ 0.27 (spike ratio 0.43) | DESCRIPTIVE | **Positive**, mostly through the inputs (h alone ρ 0.945). |
+| IR2 | Melt-pool width is related to depth | ρ 0.50; conduction D ∝ W^0.90, D/W ≈ 0.34; true W/D ≤ 2 gives BA 0.978; width alone AUC 0.64 | DESCRIPTIVE (true values) | **Positive but moderate.** 0.978 is a true-value agreement, neither a model result nor a ceiling. |
+| IR3 | With true values, another output adds label information beyond [h, D] | 16 additions: Δ log loss −0.0013 to +0.0148, ΔBA −0.0096 to +0.0001 | DESCRIPTIVE (true values) | **Negative within the tried features (T0 summaries, active maxima, width, length) and models (L2 logistic, HGB).** Not causal or universal (addendum 1–2). |
+| IR4 | Co-output depth models (LMC / CHAIN × W / KE / T) improve C1's depth-based classification | best +0.0001 proxy BA (carry rule S1 failed); CHAIN harmful; ORACLE_CHAIN_KE +0.001 | DEV (registered) | **Negative in the matched screen.** The full sequential comparison was NOT RUN; the true-KE control bounds only that construction (addendum 3–5). |
+| IR5 | Maximum temperature rises before the first Keyhole frame | about 28 µs before, in event-aligned averages | DESCRIPTIVE | **Not deployable as stated:** aligned on a manual-label time. The GT study tests causal early windows. |
+| IR6 | Keyhole depth piles up near 300 µm | 134/197 Keyhole runs; plateau 300.2 µm (GT internal evidence) | OBS | The cause (domain / substrate floor) is a **HYPOTHESIS**; the ceiling's effect on learning was not tested in IR. |
+
+## 10. GT, geometric Keyhole classifier and early temperature (`outputs/research_campaign_20261102/opus_geometry_temperature/`; registration 9dcee41f)
+
+DEV evidence only: matched comparison on the 272 recorded C1 paths (EA validation IDs; same opened runs and startups) and a run-level split for QT-B. No fresh test ran (registered stop); the fresh IDs STD 383+, K5 49+, K4 33+ stay unused.
+
+| # | Claim or question | Result | Label | Status and caveats |
+|---|---|---|---|---|
+| GT1 | Width is the melt-pool width; IR's ratio is instantaneous | width ≠ beam (W_A / 2LS median 1.54); the depth and width maxima lie 0.35 ms apart (median); true-value agreement R1 0.977, R2 0.974, R3 0.969 | DESCRIPTIVE | **Width positive; simultaneity negative.** The true-value agreement is neither a model result nor a ceiling. |
+| GT2 | A label-free classifier from PREDICTED geometry with d / w = 1/2 beats C1 + margin | best GEO_B1 −0.0174 [−0.0196, −0.0153] early BA-AULC; others −0.027 to −0.048; 0.95 reached 124/200 vs 169/200 | DEV (registered) | **Negative.** The promising rule (≥ −0.003) failed; no own-path or fresh test. |
+| GT3 | A direct ratio target is easier than separate depth and width predictions | B1 − A1 +0.009; B2 − A2 +0.010 (early AULC) | DEV (registered) | **Positive within geometry**, but both stay below C1. |
+| GT4 | Why the fixed threshold fails | g = 0 sits at the conduction cluster's edge (true g: conduction q95 −0.03, Keyhole q05 +0.27); smoothing pushes near-boundary conduction runs over it (28 % at b = 12 vs 4 % true) | POST-HOC descriptive | Mechanism after the result; Keyhole recall +0.05, conduction −0.085. |
+| GT5 | The predicted ratio adds to C1, or label calibration rescues geometry | C1_G −0.0008 [−0.0012, −0.0003]; CAL_B1 −0.0093 [−0.0119, −0.0067] | DEV (registered) | **Negative.** The ratio is a rewrite of depth and width; no new information. |
+| GT6 | Early temperature, predicted before a run, adds to C1 (simulation count) | C1_T −0.0069 [−0.0082, −0.0056]; true early temperature at the test runs −0.0037 | DEV (registered) | **Negative**, even with the oracle. |
+| GT7 | Early temperature helps judge a started run (execution time) | beyond settings + early depth: Δ log loss 0.50 / 0.75 / 1.00 ms −0.0007 / +0.0002 / +0.050; alarm time read −0.0001 [−0.005, +0.006] | DEV (run-level CV, 242 runs) | **Negative.** VAL half not opened. The early-DEPTH stopping figures (Keyhole time read ~0.20) are DEV descriptive only. |
+| GT8 | The ~300 µm pile-up is the domain floor | plateau 300.2 µm (SD 0.7), level independent of P / LS / ST; no file holds the z-extent | OBS | **HYPOTHESIS (unverified).** The geometric loss does not come from the ceiling. |

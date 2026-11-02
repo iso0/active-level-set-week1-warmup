@@ -1,0 +1,79 @@
+{
+ "label": "POST-HOC (after the G2 result), descriptive",
+ "true_g1_quantiles": {
+  "conduction": {
+   "0.05": -0.8262197094104007,
+   "0.25": -0.5289530723397451,
+   "0.5": -0.3756396837042935,
+   "0.75": -0.22976204596675145,
+   "0.9": -0.12870065131299252,
+   "0.95": -0.03223965861652832,
+   "0.99": 0.32471156903879544
+  },
+  "keyhole": {
+   "0.05": 0.2707495073999321,
+   "0.25": 0.9197027196811874,
+   "0.5": 1.0723744189126023,
+   "0.75": 1.1923100024268825,
+   "0.9": 1.273293667972974,
+   "0.95": 1.3074737723449292,
+   "0.99": 1.3456162385632207
+  }
+ },
+ "true_rule_errors": {
+  "conduction_with_g1_ge_0": 14,
+  "keyhole_with_g1_lt_0": 1,
+  "n_conduction": 344,
+  "n_keyhole": 197
+ },
+ "class_gap_in_g1": {
+  "conduction_max_g1": 0.4506804498230455,
+  "keyhole_min_g1": -0.0956287861103994,
+  "keyhole_g1_q10": 0.3632395477591693,
+  "conduction_g1_q90": -0.12870065131299252
+ },
+ "by_budget": {
+  "12": {
+   "conduction_pred_ge_0": 0.14978134110787172,
+   "conduction_true_ge_0": 0.04081632653061224,
+   "keyhole_pred_lt_0": 0.0133248730964467,
+   "near_boundary_conduction(g_true>-0.35)": {
+    "n": 6240,
+    "pred_ge_0": 0.27884615384615385,
+    "mean_bias_m_minus_g": 0.07309805995346252
+   },
+   "far_conduction(g_true<=-0.35)": {
+    "pred_ge_0": 0.042112299465240643
+   },
+   "keyhole_mean_bias_m_minus_g": -0.24796206927293174
+  },
+  "24": {
+   "conduction_pred_ge_0": 0.12150145772594752,
+   "conduction_true_ge_0": 0.04081632653061224,
+   "keyhole_pred_lt_0": 0.018781725888324875,
+   "near_boundary_conduction(g_true>-0.35)": {
+    "n": 6240,
+    "pred_ge_0": 0.24503205128205127,
+    "mean_bias_m_minus_g": 0.037143842211923184
+   },
+   "far_conduction(g_true<=-0.35)": {
+    "pred_ge_0": 0.018449197860962566
+   },
+   "keyhole_mean_bias_m_minus_g": -0.18640111189582248
+  },
+  "60": {
+   "conduction_pred_ge_0": 0.08454810495626822,
+   "conduction_true_ge_0": 0.04081632653061224,
+   "keyhole_pred_lt_0": 0.019923857868020305,
+   "near_boundary_conduction(g_true>-0.35)": {
+    "n": 6240,
+    "pred_ge_0": 0.18076923076923077,
+    "mean_bias_m_minus_g": -0.026245380227375555
+   },
+   "far_conduction(g_true<=-0.35)": {
+    "pred_ge_0": 0.0042780748663101605
+   },
+   "keyhole_mean_bias_m_minus_g": -0.08156800949023868
+  }
+ }
+}

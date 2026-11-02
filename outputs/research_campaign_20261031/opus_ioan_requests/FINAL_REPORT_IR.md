@@ -1,5 +1,7 @@
 # IR sonuç raporu: Ioan'ın 30 Ekim istekleri
 
+> **Tarihli düzeltme (2026-11-02).** Bu raporun yorumlarından bazıları [IR_ADDENDUM_20261102.md](IR_ADDENDUM_20261102.md) ile sınırlandırıldı. Hiçbir sayı değişmedi. Şu noktalarda ek geçerlidir: derinlik–etiket bağının nedensel olmaması, "bilgi eklemiyor" ifadesinin kapsamı, tam ardışık sınamanın koşulmaması, gerçek-KE kontrolünün genel bir üst sınır olmaması, transfer iptali teoreminin koşulları, kayıt öncesi ilk bakış ve tavanın öğrenmeye etkisi.
+
 - **Kapsam:** 2026-10-31, 16:09–17:05 UTC.
 - **Dal ve kayıt:** dal `ioan-requests-20261031`. Kayıt `0ecf9f70`, hiçbir sayı hesaplanmadan önce yapıldı.
 - **Hesaplama:** 0 yeni simülasyon, en fazla 3 tek iş parçacıklı işçi, yaklaşık 1.5 işçi-saat.

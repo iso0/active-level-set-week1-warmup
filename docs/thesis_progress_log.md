@@ -1692,3 +1692,72 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 - C1 + margin değişmeden kalıyor; GATE hiçbir kullanımda benimsenmedi; HA_LEAN donmuş referans.
 - HA_LEAN'in uzanım avantajı tasarıma bağlı: K5'te var, K4'te yok.
 - Astra'nın finite-pool assurance çalışması teslim kaynağından aktarıldı: asıl pratik kapı geçmedi. Yeniden hesaplanmadı.
+
+### 2026-10-31 — IR: Ioan'ın 30 Ekim istekleri (fiziksel çıktılar, genişlik ve derinlik)
+
+[Rapor](../outputs/research_campaign_20261031/opus_ioan_requests/FINAL_REPORT_IR.md), [Ioan özeti](../outputs/research_campaign_20261031/opus_ioan_requests/IOAN_SUMMARY.md), [protokol](../outputs/research_campaign_20261031/opus_ioan_requests/PROTOCOL_IR.md), [tarihli ek, 2026-11-02](../outputs/research_campaign_20261031/opus_ioan_requests/IR_ADDENDUM_20261102.md).
+
+Bu bölüm 2026-11-02'de, GT çalışması sırasında eklendi: IR'nin merkezi kayıtları eksikti. Sayılar IR'nin dondurulmuş sonuçlarıdır (0a57d644).
+
+**Kurulum**
+- Araştırma dalı `ioan-requests-20261031` (b0e9569f'den); main'e merge yok.
+- Kayıt 0ecf9f70, A–G bölümlerinin hiçbir sayısından önce yapıldı.
+- Betimleyici bir ilk bakış (korelasyonlar, gerçek değerlerle lojistik) kayıttan önce yapıldı. `prelook/` klasöründe ve defterde IR-PRE olarak açıklandı.
+- 0 yeni simülasyon, en çok 3 tek iş parçacıklı işçi, yaklaşık 1.5 işçi-saat.
+
+**Bulgular**
+- KE, maksimum sıcaklık, hız sıçraması, lazer ve enerji derinlikle güçlü ilişkili (ρ 0.80–0.90). Bu ilişki büyük ölçüde girdilerden geliyor: GP kat-dışı artık ρ ≤ 0.27, hız sıçraması 0.43. (BETİMSEL)
+- Genişlik derinlikle orta düzeyde ilişkili (ρ 0.50).
+  - Gerçek W/D ≤ 2 kuralı BA 0.978 veriyor.
+  - Genişlik tek başına AUC 0.64.
+- Gerçek değerlerle [h, D]'ye eklenen hiçbir özellik pratik ek bilgi getirmedi. Log loss değişimi −0.0013 ile +0.0148, BA değişimi −0.0096 ile +0.0001 arasında. (BETİMSEL; denenen özellik ve modellerle sınırlı)
+- Eş-çıktı derinlik modelleri (LMC / CHAIN × W / KE / T), 272 kayıtlı C1 yolunda taşıma kuralı S1'i geçmedi. En iyisi +0.0001 vekil BA; CHAIN zararlı. D/E bölümleri koşulmadı. (DEV)
+- Koşu içinde maksimum sıcaklık, ilk K karesinden yaklaşık 28 µs önce yükseliyor. Bu, etikete hizalı betimsel bir bulgu; çalışan bir sistem bu zamanı bilemez.
+- 134/197 Keyhole koşusu yaklaşık 300 µm derinlik platosunda. Nedeni HİPOTEZ.
+
+**Karar:** V-A CEVAPLANDI, KAZANÇ YOK. C1 + margin değişmedi. Taze kimlikler kullanılmadı.
+
+**2026-11-02 eki** (yalnız yorum; sayı değişmedi):
+- "Derinlik bütün etiket bilgisini taşıyor" nedensel ya da evrensel değil.
+- "Hiçbir çıktı bilgi eklemiyor" ifadesi denenen özellik ve modellerle sınırlı.
+- "Tasarruf yok" için tam ardışık karşılaştırma koşulmadı.
+- Gerçek-KE kontrolü bir üst sınır değil.
+- Transfer iptali teoreminin koşulları (ICM, izotopik veri, gürültü) yazıldı.
+- İlk bakış özetlerde de korunuyor.
+- Tavanın öğrenmeye etkisi IR'de sınanmadı.
+
+### 2026-11-02 — GT: geometrik Keyhole sınıflandırıcısı ve erken sıcaklık
+
+[Rapor](../outputs/research_campaign_20261102/opus_geometry_temperature/FINAL_REPORT_GT.md), [protokol](../outputs/research_campaign_20261102/opus_geometry_temperature/PROTOCOL_GT.md), [tablolar](../outputs/research_campaign_20261102/opus_geometry_temperature/REPORT_TABLES.md).
+
+**Kurulum**
+- Araştırma dalı `geometry-temperature-20261102` (0a57d644'ten); main'e merge yok.
+- Kayıt 9dcee41f; hiçbir öğrenici, sınıflandırıcı ya da etiket ilişkisi sayısından önce yapıldı. Kayıt öncesi bakışlar §0'da açıklandı.
+- 24 saatlik pencere, erken kapandı. En çok 6 tek iş parçacıklı işçi. 0 yeni simülasyon.
+
+**Ölçümler** (BETİMSEL)
+- Genişlik eriyik havuzu genişliği, ışın çapı değil.
+- IR'nin A / W_A oranı eşzamanlı değil: iki maksimum medyan 0.35 ms arayla oluşuyor.
+- Gerçek değerle uyum: R1 0.977, R2 0.974, R3 (anlık oranın maksimumu) 0.969.
+
+**Geometri** (DEV; 272 kayıtlı C1 yolu; aynı açılmış simülasyonlar)
+- Etiketsiz geometrik sınıflandırıcıların hepsi C1'den kötü. Erken BA-AULC farkı: en iyisi GEO_B1 −0.017 [−0.020, −0.015], en kötüsü −0.048.
+- 0.95'e C1'in 169/200'üne karşı GEO_B1'in 124/200 öğrenicisi ulaştı.
+- Keyhole geri çağırma yükseliyor (+0.05), conduction düşüyor (−0.085).
+- Mekanizma (POST-HOC): eşik g = 0, conduction kümesinin kıyısında duruyor.
+- Doğrudan oran hedefi, ayrı tahminden kolay (+0.009).
+- Etiketle kalibrasyon −0.009; oranı C1'e eklemek −0.0008.
+- "Umut verici" kuralı geçmedi; kendi-yol ve taze sınama koşulmadı, taze kimlikler kullanılmadı.
+
+**Erken sıcaklık**
+- A (simülasyon sayısı): C1 + tahmini erken sıcaklık −0.0069. Gerçek erken sıcaklıkla bile −0.0037.
+- B (başlamış koşu, yürütme süresi): sıcaklık, ayarlara ve aynı anda görülen erken derinliğe bilgi eklemiyor. 0.75 ms'de Δ log loss +0.0002; alarm süresinde −0.0001.
+- VAL yarısı açılmadı; zaman modeli kampanyası yok.
+
+**Tavan:** 300.2 µm'de çok dar bir plato; alanın z boyutu hiçbir dosyada yok. HİPOTEZ. Geometrik kayıp tavandan gelmiyor.
+
+**Testler:**
+- 12. hafta ve sonrası: 217 geçti, 2 başarısız.
+- İki başarısızlık eski taban b0e9569f'de de aynı değerlerle tekrarlandı; önceden var oldukları doğrulandı.
+
+**Karar:** C1 KORUNUYOR. C1 + margin havuz içi önerilen öğrenici; HA_LEAN + margin donmuş referans. Hiçbir aday benimsenmedi.

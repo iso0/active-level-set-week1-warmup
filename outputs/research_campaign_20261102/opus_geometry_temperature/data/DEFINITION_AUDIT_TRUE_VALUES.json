@@ -1,0 +1,22 @@
+{
+ "R1 A/W_A": {
+  "n": 540,
+  "BA": 0.9771,
+  "Keyhole_recall": 0.9949,
+  "conduction_recall": 0.9592
+ },
+ "R2 A/W_atA": {
+  "n": 540,
+  "BA": 0.9738,
+  "Keyhole_recall": 1.0,
+  "conduction_recall": 0.9475
+ },
+ "R3 max d(t)/w(t)": {
+  "n": 540,
+  "BA": 0.9694,
+  "Keyhole_recall": 1.0,
+  "conduction_recall": 0.9388
+ },
+ "guard_excluded_rows_median_share": 0.0011591469222463672,
+ "t_depth_max_minus_t_width_max_ms_median_abs": 0.3479697499999999
+}

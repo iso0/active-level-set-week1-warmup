@@ -1,0 +1,99 @@
+{
+ "utc": "2026-11-02T18:29:29+00:00",
+ "rule_um": 295.0,
+ "runs_with_rows_at_or_above_295um": 134,
+ "by_batch": {
+  "NEW": 100,
+  "OLD": 34
+ },
+ "labels_of_ceiling_runs": {
+  "1": 134
+ },
+ "plateau_level_um": {
+  "median": 300.196125,
+  "q05": 299.587375,
+  "q25": 300.05256249999996,
+  "q75": 300.39475,
+  "q95": 300.595485,
+  "sd": 0.7242817109540065,
+  "by_batch_median": {
+   "NEW": 300.16749999999996,
+   "OLD": 300.30465000000004
+  }
+ },
+ "plateau_level_vs_inputs_spearman": {
+  "P": 0.08509593024349842,
+  "VX": -0.4291804501062578,
+  "LS": -0.004668393207391761,
+  "ST": -0.0878690356102824
+ },
+ "A_max_um_ceiling_runs": {
+  "median": 302.79695,
+  "max": 305.7694,
+  "min": 297.0478
+ },
+ "whole_record_max_um": {
+  "max": 311.9999,
+  "runs_ge_295_outside_active": 7
+ },
+ "time_at_ceiling": {
+  "frac_active_rows_median": 0.41844507815147014,
+  "frac_active_rows_q25_q75": [
+   0.15372773522922506,
+   0.6411056025427218
+  ],
+  "longest_episode_ms_median": 0.1705388499999999,
+  "episodes_median": 13.0,
+  "first_reach_ms_median": 0.7204825
+ },
+ "keyhole_A_histogram_10um": {
+  "0-10": 0,
+  "10-20": 0,
+  "20-30": 0,
+  "30-40": 0,
+  "40-50": 0,
+  "50-60": 0,
+  "60-70": 0,
+  "70-80": 1,
+  "80-90": 0,
+  "90-100": 0,
+  "100-110": 0,
+  "110-120": 13,
+  "120-130": 5,
+  "130-140": 3,
+  "140-150": 5,
+  "150-160": 6,
+  "160-170": 3,
+  "170-180": 1,
+  "180-190": 2,
+  "190-200": 1,
+  "200-210": 3,
+  "210-220": 3,
+  "220-230": 2,
+  "230-240": 6,
+  "240-250": 0,
+  "250-260": 3,
+  "260-270": 1,
+  "270-280": 3,
+  "280-290": 1,
+  "290-300": 4,
+  "300-310": 131
+ },
+ "gap_check": {
+  "keyhole_A_in_[280,295)": 2,
+  "keyhole_A_in_[295,310)": 134,
+  "keyhole_A_in_[250,280)": 7
+ },
+ "width_has_no_pile_up": {
+  "W_A_ge_295_runs": 1,
+  "W_A_max_um": 303.6544
+ },
+ "sources_searched": [
+  "local raw cache data/raw/sph_v2/<revision>/<run>: only frames.csv and monitor/*.dat (no parameter file)",
+  "src/week11_new_data_arrival_audit (tests): parameters.json holds exactly four keys (laser_power, scan_speed_x, laser_spot_size, substrate_temperature)",
+  "outputs/week7_01_sph_v2_audit/file_type_counts.csv: .png, .dat, .gif, .csv, .json (407 files, 120 kB in total) and one extension-less file",
+  "outputs/week19_temporal_regime_audit/REPORT.md hypothesis 3 (unverified)",
+  "run-folder names: P, VX, LS, ST, M, XI, XF, XL, TE, DT, H (no z-extent)"
+ ],
+ "verdict": "HYPOTHESIS (not verified): a hard geometric lower bound near z = -300 um (substrate / domain floor) is consistent with every internal check; no available file states the domain z-extent"
+}
