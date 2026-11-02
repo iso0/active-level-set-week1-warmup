@@ -1267,6 +1267,36 @@ Eşleşmiş çift ifadesi şöyle düzeltildi: "benzer girdi ve derinlik seyri, 
 
 **Sonuç.** Aktif pencere hedefi, bütün-kayıt hedefinden açıkça iyi. G3'e karşı BA üstünlüğü ise doğrulanmadı. C3 harcandı; yeni bir aday için yeni veri ya da yeni bir doğrulama tasarımı gerekecek.
 
+### 2026-10-13 → 10-18 — Ortak derinlik–etiket çalışması ve RC18 (kayıt 2026-11-02'de, kapanışta eklendi)
+
+[İddia matrisi](../outputs/joint_depth_label_development/CLAIMS_MATRIX.md), [Stage M](../outputs/joint_depth_label_development/STAGE_M_REPORT.md), [V2](../outputs/joint_depth_label_development/V2_MODEL_REPORT.md), [karar denetimi](../outputs/joint_depth_label_development/v2_decision_audit/DECISION_AUDIT_REPORT.md), [zamansal onarım](../outputs/joint_depth_label_development/TEMPORAL_REPAIR_REPORT.md), [10-15 çalışmaları](../outputs/joint_depth_label_development/IOAN_RESEARCH_UPDATE.md), [10-16 pilotları](../outputs/joint_depth_label_development/PILOT_CAMPAIGN_20261016.md), [10-17 çalışmaları](../outputs/joint_depth_label_development/STUDIES_REPORT_20261017.md), [RC18 nihai raporu](../outputs/research_campaign_20261018/opus/FINAL_REPORT_20261018.md).
+
+Bu dönem o tarihte günlüğe işlenmemişti. Sayılar yukarıdaki raporlardan ve merkezi deneme defterinden aynen alındı.
+
+- **Ortak model, Stage M (10-13/14).**
+  - Astra'nın derinlik–etiket ortak modeli J, eşleşik ikili modele karşı ön elemeyi geçemedi: NEW B40 BA +0.006 [−0.052, +0.065].
+  - Olasılık kalitesi daha iyi: log loss −0.172, AUC +0.074. OLD'da BA +0.067 / +0.057.
+  - π̂ kuralının NEW kazancı, hızlı tarama köşesinin (VX > 0.85) bir bölünmesinden geliyor. Köşeyi hiçbir model çözmüyor.
+- **V2, karar denetimi ve zamansal onarım (10-14/15).**
+  - V2 ön elemesi geçmedi: BA −0.002.
+  - Karar denetimi PRIMARY_UNAVAILABLE. A1 değişikliği 0.858 ile tamamlandı; bu bir eşik takası.
+  - PPCA ve NGD SVGP zamansal modelleri iyileştirdi, ama A için skaler GP kaldı.
+- **Yürütme çalışmaları (10-15).**
+  - TRAINED_AL'in birincil karşılaştırması, tek sınıflı bir başlangıç yüzünden oluşmadı.
+  - Köşe-yerel model desteklenmedi.
+  - Durdurma kuralının kazancını sabit bir B30 durdurması da veriyor.
+  - ASTRA_AL (BA-risk seçici) 10-16'da sahibin kararıyla durduruldu: eksik, olumsuz değil.
+- **Pilotlar (10-16) ve çalışmalar (10-17).**
+  - Gerçek NEW'de sürpriz-keşif kazancı yok.
+  - Fiziksel çıktılar girdilerden öğrenilebiliyor, ama derinlik modellenince E1'e bir şey katmıyor.
+  - Fiziksel çıktıları daha az simülasyonla öğreten bir tasarım yok (0/48).
+  - Doğrudan skaler GP, eğriden türetilen skalerlerden her yerde iyi.
+- **RC18 (10-18; donma eaba0c8d, DEV).**
+  - Sahibin kararıyla 48 saatlik bir fiziksel modelleme kampanyası yapıldı.
+  - OLD öncül ortalaması + ortak uzunluk ölçekleri + kayıt kalitesi (TRSQ), çıktı başına 21 NEW simülasyonu tasarruf ediyor.
+  - Etikette yalnız fizikle B0'da BA 0.69 / AUC 0.92 elde edildi. Köşe çözülmedi.
+  - RC19'dan itibaren kullanılan tek havuz ve "yalnız ödenmiş sonuç" kuralı bu kampanyadan sonra başladı.
+
 ### 2026-10-19 — RC19: tek havuz, sıfırdan aktif öğrenme (541 simülasyon)
 
 [Nihai rapor](../outputs/research_campaign_20261018/opus_pooled/FINAL_REPORT_RC19.md), [düzeltme](../outputs/research_campaign_20261018/opus_pooled/ERRATUM_RC19_20261019.md).
@@ -1761,3 +1791,26 @@ Bu bölüm 2026-11-02'de, GT çalışması sırasında eklendi: IR'nin merkezi k
 - İki başarısızlık eski taban b0e9569f'de de aynı değerlerle tekrarlandı; önceden var oldukları doğrulandı.
 
 **Karar:** C1 KORUNUYOR. C1 + margin havuz içi önerilen öğrenici; HA_LEAN + margin donmuş referans. Hiçbir aday benimsenmedi.
+
+### 2026-11-02 — Tez öncesi kapanış
+
+[Kapanış katmanı](final/README.md), [Türkçe özet](final/OZET_TR.md), [sentez](final/THESIS_SYNTHESIS.md), [çalışma indeksi](final/STUDY_INDEX.md), [açık madde kaydı](final/OPEN_ITEMS_REGISTER.md), [depo haritası](final/REPOSITORY_MAP.md).
+
+**Kapsam.** Yeni simülasyon, öğrenici ya da protokol değişikliği yok. Dondurulmuş hiçbir sayı değişmedi.
+
+- **GitHub.**
+  - Bütün çalışmalar tek doğrusal zincirdeydi; `main` dört çalışma (C1S, FR, IR, GT) gerideydi.
+  - Kapanış dalı `thesis-finalization-20261102` `main`'le birleştirildi; `main` artık tam ve güncel.
+  - Her dondurulmuş çalışma durumu için bir etiket eklendi.
+  - SHA-256 ile kilitli Research Hub dosyaları değiştirilmedi.
+- **Kayıtlar.**
+  - Karar, deney ve ilerleme kayıtlarındaki Hafta 10 → RC18 boşluğu tarihli satırlarla dolduruldu.
+  - İddia defterine ve CLAIMS_MATRIX'e kapanış ekleri yazıldı.
+  - 69 belgede 448 göreli bağlantı denetlendi; kırık yok.
+- **Testler.**
+  - `T_TOBIT` hatasının nedeni BLAS iş parçacığı sayısı: dondurma 8 iş parçacığıyla yapılmış, GT koşuları 1 iş parçacığıyla çalışmış. Test artık bunu kendisi sabitliyor.
+  - H soneki hatası 10 tarihsel satırda; tarihli FIN-IDS satırı tam kimlikleri veriyor.
+  - Weeks 12+ takımı: 219 geçti, 2 atlandı, 0 başarısız.
+- **Ham çıktılar.** Yalnız worktree'de duran yaklaşık 3 GB ham birim çıktısı, SHA-256 doğrulamasıyla `Documents\thesis_archive\` altına kopyalandı (18.972 dosya).
+- **Tez için `docs/final/`.** Sentez, çalışma indeksi, iddia haritası, açık madde kaydı, sözlük ve depo haritası. Ayrıca C1C'nin dondurulmuş verilerinden çizilip sayılarla doğrulanan üç şekil.
+- **Karar değişmedi.** C1 + margin önerilen havuz-içi öğrenici; HA_LEAN + margin dondurulmuş referans.

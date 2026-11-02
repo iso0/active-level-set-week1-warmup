@@ -42,3 +42,23 @@ The 38 are historical-integrity checks:
 - **A Week 9 Phase 1.10 test downloaded three public files** of the external Masinelli 2025 dataset (pinned GitHub / Zenodo sources in `src/week9_phase1_10_external_experimental_validation.py`) into the untracked `.cache/external_masinelli/` (about 3.6 MB, 18:45 UTC).
   - They were not committed and are used by nothing in GT.
   - They can be deleted.
+
+## 4. Erratum (2026-11-02, finalization; ledger rows FIN-TOBIT and FIN-IDS)
+
+Two statements of §1 are corrected. No GT number changes, and no frozen reference was changed.
+
+1. **The T_TOBIT failure is not a library-version drift.**
+   - The frozen truth is reproduced exactly with the machine's default 8 OpenBLAS threads: max \|Δθ\| 4.4e-7. With 4 threads the difference is 0.058; with 1 thread it is 0.26.
+   - The cause is the fit itself: L-BFGS-B with finite-difference gradients, whose path depends on the BLAS summation order.
+   - The runs of this note inherited BLAS = 1 from the campaign environment. Their θ equals the 1-thread result exactly.
+   - With the default threads, the Weeks 12+ suite gave 218 passed, 2 skipped, 1 failed before the fixes.
+   - The test now pins 8 threads.
+2. **The bare H suffixes are on 10 lines, not 2.** The assertion message showed only the first 10 matches. The affected lines are:
+   - `ATTEMPT_LEDGER.md` lines 84, 93, 112 and 113;
+   - `COORDINATION.md` lines 41, 42 and 45;
+   - `PILOT_CAMPAIGN_20261016.md` lines 65 and 66;
+   - `STUDIES_REPORT_20261017.md` line 26.
+
+   The central ledger row FIN-IDS resolves each suffix to a full simulation ID. The test exempts exactly these lines.
+
+After both fixes the regression gate (`python tools/run_regression_gate.py`) gives 219 passed, 2 skipped, 0 failed, with the default threads and with 1 thread.

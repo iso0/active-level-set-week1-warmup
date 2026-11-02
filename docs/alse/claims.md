@@ -352,3 +352,40 @@ No new simulation. The registered stops left G3 / G4 unrun, and the fresh IDs (S
 | C156 | (GT) An early-temperature summary predicted before the run (Tmax(0.75 ms)) adds to C1 | NOT SUPPORTED (DEV; registered stop) | GT/dev/G2_RESULT.json | C1_T −0.0069 [−0.0082, −0.0056]; ORACLE_T (true value at test runs) −0.0037 [−0.0047, −0.0026] | "Early temperature does not reduce the simulation count." | 'temperature is useless in every model' |
 | C157 | (GT) Early temperature adds to the settings and the early depth for judging a started run (execution time) | NOT SUPPORTED (DEV run-level; benefit rule failed; VAL half closed) | GT/temporal/TB_DEV_RESULT.json | Δ log loss (S+D+T − S+D) 0.50 / 0.75 / 1.00 ms: −0.0007 / +0.0002 / +0.050; alarm time read −0.0001 [−0.005, +0.006] at a realised 5.5 % false-alarm rate | "No execution-time benefit from temperature beyond early depth." | 'CPU time saved', 'early warning system' |
 | C158 | (GT) Use decision | C1 + margin UNCHANGED; no candidate adopted; HA_LEAN + margin frozen reference | GT/FINAL_REPORT_GT.md | 272 G2 units, 0 failed, 86,496 GP fits ok; C1 reproduced exactly (0.0); exports + independent recomputation PASS (8e-17) | "The geometric and early-temperature routes were negative on DEV." | 'external validation', 'novel method' |
+
+## Ledger addendum (2026-11-02): finalization (branch `thesis-finalization-20261102`)
+
+**No claim status changed.** This addendum closes three gaps; the thesis-facing selection of claims is `docs/final/CLAIMS_FOR_THESIS.md`.
+
+### 1. Claims held outside this ledger
+
+The ledger runs C01–C40 (Weeks 1–9) and C41–C158 (RC19 → GT). The claims of the period between are held in the study records below; they were not copied here, to keep one source per claim.
+
+| Period | Claims held in |
+|---|---|
+| Week 10 / Track A (2026-09-21) | `docs/trackA_freeze/TRACK_A_FINAL_STATE.md`, `docs/trackA_freeze/NEGATIVE_RESULTS_REGISTER.md`; Hub claim TRACKA-001 |
+| Week 11 (2026-10-02) | `outputs/week11_external_execution_record/CONFIRMATORY_STOP_REPORT.md` (INCOMPLETE_FROZEN_STOP: no effect estimate) |
+| Week 12 (2026-10-03) | `outputs/week12_startup_and_transfer_development/COMPREHENSIVE_REPORT.md` (decisions Q1–Q12) |
+| Week 13 (2026-10-03) | `outputs/week13_boundary_evaluation_and_mechanisms/WEEK13_RESEARCH_REPORT.md` |
+| Week 14 (2026-10-04) | `outputs/week14_research_program/CLAIM_LEDGER.md` |
+| Week 15 (2026-10-04) | `outputs/week15_boundary_acquisition/WEEK15_REPORT.md` |
+| Week 16 (2026-10-04/05) | `outputs/week16_theory_meets_data/CLAIM_LEDGER.md` |
+| Week 17 (2026-10-05) | `outputs/week17_model_and_acquisition/WEEK17_REPORT.md`, `PREDICTIONS_AND_FREEZE.md`; Hub claim W17-001 |
+| Week 18 (2026-10-05) | `outputs/week18_independent_research/REPORT.md`, `THESIS_IMPLICATIONS.md`; Hub claim W18-001 |
+| Week 19 (2026-10-09/10) | `outputs/week19_temporal_regime_audit/REPORT.md`, `outputs/week19_temporal_regime_dev_pilot/PILOT_REPORT.md` |
+| Week 20 and C3 (2026-10-12/13) | `outputs/week20_active_temporal_development/DEVELOPMENT_REPORT.md`, `c3/decision_c3.json` |
+| Joint depth–label study (2026-10-13 → 10-17) | `outputs/joint_depth_label_development/CLAIMS_MATRIX.md` §1–8 (and its §11 for the final status of the untested items) |
+| RC18 (2026-10-18) | `outputs/research_campaign_20261018/opus/FINAL_REPORT_20261018.md` (contribution sentence and limits) |
+
+### 2. Corrections that change no claim
+
+- **FIN-TOBIT.** The Week 18 T_TOBIT twin truth depends on the BLAS thread count: it is reproduced exactly only with the freeze-time 8 OpenBLAS threads. This corrects the GT note's attribution to library versions. No Week 18 claim changes: the Week 18 results were computed with the frozen truth.
+- **FIN-IDS.** Bare H suffixes on 10 historical lines are resolved to full simulation IDs. QC-REC-ERRATUM (2026-10-18) had already corrected the wrong-run check, and an independent re-read of the raw monitors agrees with it.
+
+### 3. Figures of the final claims
+
+`docs/final/figures/` draws C123–C127 from the frozen C1C exports. The checks in `FIGURE_CHECKS.json` reproduce the recorded values:
+- early +0.0053;
+- late −0.0006;
+- BA(60) 0.9568 / 0.9569;
+- cumulative attainment of BA 0.95 within 16 / 24 / 60 simulations: 0.390 / 0.575 / 0.838 against 0.335 / 0.532 / 0.797.

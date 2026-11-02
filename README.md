@@ -2,6 +2,31 @@
 
 This is the canonical research repository for the MSc thesis. It contains the historical Week 1-10 work, later depth/label and in-pool studies, and the four independent Astra synthetic campaigns. The current scope extends beyond the early weekly record.
 
+## Final state for thesis writing (2026-11-02)
+
+**Start with [docs/final/README.md](docs/final/README.md).** It holds:
+- the synthesis of the whole research;
+- the study index from Week 1 to GT;
+- the claims the thesis may make;
+- the open-items register;
+- the glossary of reused identifiers;
+- the repository and folder map;
+- the main-result figures.
+
+The Turkish summary is [docs/final/OZET_TR.md](docs/final/OZET_TR.md).
+
+- **Decision.** C1 + margin is the recommended in-pool learner (C1C; kept by C1S, FR, IR and GT). HA_LEAN + margin is the frozen reference. All real-data results are re-splits of one 541-run SPH pool; none is external validation.
+- **Central records:**
+  - [claim ledger C01–C158](docs/alse/claims.md);
+  - [decision log](docs/alse/decisions.md);
+  - [experiment index](docs/alse/experiments.md);
+  - [progress log](docs/thesis_progress_log.md);
+  - [central attempt ledger](outputs/joint_depth_label_development/ATTEMPT_LEDGER.md);
+  - [claims matrix](outputs/joint_depth_label_development/CLAIMS_MATRIX.md).
+- **The Research Hub below** is the dated public reading layer of 2026-10-28. It covers results up to C1C, and its files are SHA-256-locked and unchanged.
+
+## Thesis Research Hub (2026-10-28)
+
 Start with **[Thesis Research Hub](RESEARCH_INDEX.md)** and **[scientific scopes and reading order](docs/research/SCIENTIFIC_NAVIGATION.md)**. These distinguish source-reported findings, editorial synthesis, negative results and incomplete studies.
 
 ## Find a result and its evidence
@@ -24,9 +49,10 @@ These are different tasks and evidence scopes, not successive universal winners.
 | Week 17-18 binary labels / G3 | Week 17 reports NO CHANGE JUSTIFIED. G3 + margin is retained for the stated binary-only tasks; this is not a universal replacement claim across data types. | [Week 17 report](outputs/week17_model_and_acquisition/WEEK17_REPORT.md), [Week 18 report and corrections](outputs/week18_independent_research/REPORT.md) |
 | Week 18 OLD depth-threshold task | Depth GP + straddle improvement is limited to OLD-type tasks where revealed depth determines the label. It is not extended to NEW/POOLED binary-label tasks. | [Week 18 report](outputs/week18_independent_research/REPORT.md), [scope guide](docs/research/SCIENTIFIC_NAVIGATION.md) |
 | Later C1C in-pool study | C1 + margin is recommended for specified early and stop-at-0.95 uses within the existing 541-run pool. HA_LEAN + margin remains the frozen reference and safer extrapolation/sustaining-target reference. Sustainment and alternative-start reliability limits remain; this is not external physical validation. | [C1C decision](outputs/research_campaign_20261026/opus_c1_confirmation/DECISION_C1C.md), [external validation plan](outputs/research_campaign_20261026/opus_c1_confirmation/EXTERNAL_VALIDATION_PLAN_C1C.md) |
+| Robustness and supervisor questions after C1C (C1S, FR, IR, GT; 2026-10-29 to 11-02; added 2026-11-02) | None of these improved on C1 + margin: a decision-layer stabiliser (C1S, registered fresh test), a paid-only C1 / HA_LEAN trust gate (FR, DEV rule), co-output depth models and the other physical outputs including width (IR), label-free geometric classifiers with d/w = 1/2 and early temperature (GT, DEV). The remaining gap is an information limit at unopened inputs. All in the same pool. | [C1S decision](outputs/research_campaign_20261029/opus_c1_stability/DECISION_C1S.md), [FR report](outputs/research_campaign_20261029/opus_final_robustness/FINAL_REPORT_FR.md), [IR report](outputs/research_campaign_20261031/opus_ioan_requests/FINAL_REPORT_IR.md), [GT report](outputs/research_campaign_20261102/opus_geometry_temperature/FINAL_REPORT_GT.md), [study index](docs/final/STUDY_INDEX.md) |
 | Independent Astra synthetic studies | Representation/model gains are separated from acquisition, query savings, regional harm and computation. Negative screens and incomplete paths remain evidence. Synthetic latent-monitor results do not validate physical Keyhole labels or the 541-run application. | [Four campaign guides](#independent-astra-campaigns), [claim ledger](docs/research/CLAIM_LEDGER.csv) |
 
-The Week 18 block named C1 and the later C1C learner are distinct identifiers. HA_LEAN is not assumed to be an alias of G3. An external-validation plan is not an executed experiment. Historical frozen reports and corrections retain their original interpretations.
+The Week 18 block named C1 and the later C1C learner are distinct identifiers. HA_LEAN is not assumed to be an alias of G3. An external-validation plan is not an executed experiment. Historical frozen reports and corrections retain their original interpretations. Every reused identifier is listed in [the glossary](docs/final/GLOSSARY.md).
 
 ## Independent Astra campaigns
 
@@ -56,6 +82,7 @@ Read [data availability](DATA_AVAILABILITY.md), [rights and attribution](RIGHTS_
 
 | Path | Role |
 |---|---|
+| docs/final/ | Thesis-writing layer (2026-11-02): synthesis, study index, claims, open items, glossary, repository map, final figures. |
 | src/ | Current models, acquisitions, experiment drivers and related tests; historical implementations are explicitly under src/_history/ or other archived paths. |
 | research/astra/ | Reviewed campaign reading layers, original software, protocols and reports. |
 | outputs/ | Preserved thesis reports, scientific outputs, protocols and manifests. |

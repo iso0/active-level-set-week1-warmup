@@ -149,3 +149,26 @@ DEV evidence only: matched comparison on the 272 recorded C1 paths (EA validatio
 | GT6 | Early temperature, predicted before a run, adds to C1 (simulation count) | C1_T −0.0069 [−0.0082, −0.0056]; true early temperature at the test runs −0.0037 | DEV (registered) | **Negative**, even with the oracle. |
 | GT7 | Early temperature helps judge a started run (execution time) | beyond settings + early depth: Δ log loss 0.50 / 0.75 / 1.00 ms −0.0007 / +0.0002 / +0.050; alarm time read −0.0001 [−0.005, +0.006] | DEV (run-level CV, 242 runs) | **Negative.** VAL half not opened. The early-DEPTH stopping figures (Keyhole time read ~0.20) are DEV descriptive only. |
 | GT8 | The ~300 µm pile-up is the domain floor | plateau 300.2 µm (SD 0.7), level independent of P / LS / ST; no file holds the z-extent | OBS | **HYPOTHESIS (unverified).** The geometric loss does not come from the ceiling. |
+
+## 11. Final status of the open items (added 2026-11-02, finalization; no number above changed)
+
+**The gap between §8 and §9.** The one-pool campaigns of 2026-10-18 → 10-29 also ran on this branch line, but their claims are in the central ledger `docs/alse/claims.md`, not here:
+- RC18: `FINAL_REPORT_20261018.md`;
+- RC19 → RC24: C41–C108;
+- EL: C109–C114;
+- EA: C115–C122;
+- C1C: C123–C130;
+- C1S: C131–C138;
+- FR: C139–C144.
+
+The chronological table of every study is `docs/final/STUDY_INDEX.md`.
+
+| # (§4) | Question | Final status | Where |
+|---|---|---|---|
+| U1 | Probability-variance acquisition vs margin with the model fixed (Stage A) | **ANSWERED in the one-pool setting**: with the model fixed, no tested selector beat margin (RC22 BALD, C75; RC24 principled straddle, C91; EL: the query path adds nothing early, C109). Stage A itself was never run on J: the J line closed after F1 / F6 | `docs/final/OPEN_ITEMS_REGISTER.md` #1 |
+| U2 | Generalisation of J_trained + π̂ (C4 stability) | **CLOSED, not run**: superseded by the one-pool learners; J_trained is not a thesis learner | #2 |
+| U3 | Query savings | **ANSWERED** by own-path registered designs: C1C restricted-mean saving to BA 0.95 +1.81 [+0.53, +3.09] (C124) | #3 |
+| U4 | What separates Keyhole from no Keyhole inside the fast-scan corner | **LIMITATION / FUTURE WORK**: unresolved by every later learner (C54, C67); the label hinges on a start-up transient (C93, C105); replicate runs inside the corner are proposed, not run (`opus_rc24/PHYSICAL_DATA_PROPOSAL.md` R1–R2) | #4 |
+| U5 | Astra's finite-batch rule on the frozen V2 posteriors | **CLOSED**: PRIMARY_UNAVAILABLE stays; A1 is a cutoff trade equal to the posterior-mean-π rule | #5 |
+| U6 | Astra's balanced-risk selector | **CLOSED**: external and incomplete (72/84 trajectories); ASTRA_AL stopped by the owner (E7) | #6 |
+| L1–L13 | Limitations of §3 | unchanged; L1, L2 and L10 are among the thesis limitations (`docs/final/THESIS_SYNTHESIS.md` §6) | — |
