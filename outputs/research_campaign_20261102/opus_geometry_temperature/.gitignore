@@ -1,0 +1,5 @@
+# raw per-unit files and runner locks; predictions are exported to exports/
+*/units/
+*/locks/
+*/failed/
+runner/*.lock

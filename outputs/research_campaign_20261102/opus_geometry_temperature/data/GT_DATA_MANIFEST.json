@@ -1,0 +1,13 @@
+{
+ "utc": "2026-11-02T18:10:04+00:00",
+ "runs": 541,
+ "grid_ms": [
+  0.3,
+  2.1,
+  73
+ ],
+ "width_guard_um": 12.0,
+ "sha256_runs_csv": "61df879fdf25d7ea11ebdc42555b94e80bddad63dc8da2dfea9666b5c8f381de",
+ "sha256_early_npz": "08452c3be91fbd4122699871056adb54b6249f7df8a77a2b4c115f05ecc98d93",
+ "seconds": 55.4
+}

@@ -1,0 +1,14 @@
+{
+ "study": "GT (geometric Keyhole classifier and early temperature)",
+ "branch": "geometry-temperature-20261102",
+ "base_commit": "0a57d644",
+ "start_utc": "2026-11-02T17:45:00Z",
+ "branch_opened_utc": "2026-11-02T18:05:06Z",
+ "deadline_utc": "2026-11-03T17:45:00Z",
+ "max_workers": 6,
+ "blas_threads": 1,
+ "stage": "REGISTERED",
+ "dev_ids": {"STD": "163-202", "K5": "41-48", "K4": "25-32"},
+ "fresh_ids_reserved": {"STD": "383-462", "K5": "49-56", "K4": "33-40"},
+ "coordination": "C:\\Users\\ozgur\\Documents\\thesis_shared_runtime\\campaign_20261102\\opus_state.json"
+}

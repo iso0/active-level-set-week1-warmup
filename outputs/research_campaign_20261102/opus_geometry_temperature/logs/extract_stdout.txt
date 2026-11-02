@@ -1,0 +1,11 @@
+﻿{"extracted": 60, "of": 541, "s": 9.9}
+{"extracted": 120, "of": 541, "s": 14.0}
+{"extracted": 180, "of": 541, "s": 19.9}
+{"extracted": 240, "of": 541, "s": 24.1}
+{"extracted": 300, "of": 541, "s": 30.8}
+{"extracted": 360, "of": 541, "s": 35.3}
+{"extracted": 420, "of": 541, "s": 42.8}
+{"extracted": 480, "of": 541, "s": 49.3}
+{"extracted": 540, "of": 541, "s": 54.4}
+{"extracted": 541, "of": 541, "s": 54.4}
+{"utc": "2026-11-02T18:10:04+00:00", "runs": 541, "grid_ms": [0.3, 2.1, 73], "width_guard_um": 12.0, "sha256_runs_csv": "61df879fdf25d7ea11ebdc42555b94e80bddad63dc8da2dfea9666b5c8f381de", "sha256_early_npz": "08452c3be91fbd4122699871056adb54b6249f7df8a77a2b4c115f05ecc98d93", "seconds": 55.4}
