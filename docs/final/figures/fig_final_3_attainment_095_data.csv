@@ -1,0 +1,107 @@
+series,budget,share_reached_and_confirmed_0.95
+C1 + margin,8,0.000000
+C1 + margin,9,0.000000
+C1 + margin,10,0.000000
+C1 + margin,11,0.000000
+C1 + margin,12,0.150000
+C1 + margin,13,0.245000
+C1 + margin,14,0.320000
+C1 + margin,15,0.355000
+C1 + margin,16,0.390000
+C1 + margin,17,0.417500
+C1 + margin,18,0.430000
+C1 + margin,19,0.455000
+C1 + margin,20,0.490000
+C1 + margin,21,0.495000
+C1 + margin,22,0.507500
+C1 + margin,23,0.540000
+C1 + margin,24,0.575000
+C1 + margin,25,0.595000
+C1 + margin,26,0.602500
+C1 + margin,27,0.620000
+C1 + margin,28,0.630000
+C1 + margin,29,0.647500
+C1 + margin,30,0.667500
+C1 + margin,31,0.682500
+C1 + margin,32,0.690000
+C1 + margin,33,0.692500
+C1 + margin,34,0.697500
+C1 + margin,35,0.705000
+C1 + margin,36,0.717500
+C1 + margin,37,0.730000
+C1 + margin,38,0.742500
+C1 + margin,39,0.745000
+C1 + margin,40,0.752500
+C1 + margin,41,0.755000
+C1 + margin,42,0.760000
+C1 + margin,43,0.767500
+C1 + margin,44,0.780000
+C1 + margin,45,0.782500
+C1 + margin,46,0.792500
+C1 + margin,47,0.797500
+C1 + margin,48,0.802500
+C1 + margin,49,0.802500
+C1 + margin,50,0.810000
+C1 + margin,51,0.815000
+C1 + margin,52,0.817500
+C1 + margin,53,0.820000
+C1 + margin,54,0.820000
+C1 + margin,55,0.825000
+C1 + margin,56,0.832500
+C1 + margin,57,0.832500
+C1 + margin,58,0.835000
+C1 + margin,59,0.837500
+C1 + margin,60,0.837500
+HA_LEAN + margin (reference),8,0.000000
+HA_LEAN + margin (reference),9,0.000000
+HA_LEAN + margin (reference),10,0.000000
+HA_LEAN + margin (reference),11,0.000000
+HA_LEAN + margin (reference),12,0.117500
+HA_LEAN + margin (reference),13,0.182500
+HA_LEAN + margin (reference),14,0.240000
+HA_LEAN + margin (reference),15,0.305000
+HA_LEAN + margin (reference),16,0.335000
+HA_LEAN + margin (reference),17,0.360000
+HA_LEAN + margin (reference),18,0.382500
+HA_LEAN + margin (reference),19,0.417500
+HA_LEAN + margin (reference),20,0.460000
+HA_LEAN + margin (reference),21,0.475000
+HA_LEAN + margin (reference),22,0.500000
+HA_LEAN + margin (reference),23,0.517500
+HA_LEAN + margin (reference),24,0.532500
+HA_LEAN + margin (reference),25,0.555000
+HA_LEAN + margin (reference),26,0.567500
+HA_LEAN + margin (reference),27,0.582500
+HA_LEAN + margin (reference),28,0.592500
+HA_LEAN + margin (reference),29,0.600000
+HA_LEAN + margin (reference),30,0.630000
+HA_LEAN + margin (reference),31,0.637500
+HA_LEAN + margin (reference),32,0.650000
+HA_LEAN + margin (reference),33,0.670000
+HA_LEAN + margin (reference),34,0.682500
+HA_LEAN + margin (reference),35,0.692500
+HA_LEAN + margin (reference),36,0.705000
+HA_LEAN + margin (reference),37,0.707500
+HA_LEAN + margin (reference),38,0.712500
+HA_LEAN + margin (reference),39,0.722500
+HA_LEAN + margin (reference),40,0.727500
+HA_LEAN + margin (reference),41,0.730000
+HA_LEAN + margin (reference),42,0.737500
+HA_LEAN + margin (reference),43,0.737500
+HA_LEAN + margin (reference),44,0.737500
+HA_LEAN + margin (reference),45,0.747500
+HA_LEAN + margin (reference),46,0.752500
+HA_LEAN + margin (reference),47,0.760000
+HA_LEAN + margin (reference),48,0.765000
+HA_LEAN + margin (reference),49,0.767500
+HA_LEAN + margin (reference),50,0.767500
+HA_LEAN + margin (reference),51,0.770000
+HA_LEAN + margin (reference),52,0.772500
+HA_LEAN + margin (reference),53,0.777500
+HA_LEAN + margin (reference),54,0.780000
+HA_LEAN + margin (reference),55,0.780000
+HA_LEAN + margin (reference),56,0.782500
+HA_LEAN + margin (reference),57,0.790000
+HA_LEAN + margin (reference),58,0.792500
+HA_LEAN + margin (reference),59,0.795000
+HA_LEAN + margin (reference),60,0.797500

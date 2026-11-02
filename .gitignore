@@ -94,3 +94,64 @@ outputs/research_campaign_20261021/opus_rc23/runner/STATUS.md
 outputs/research_campaign_20261021/opus_rc23/runner/*.tmp
 outputs/research_campaign_20261021/opus_rc23/runner/runner_stdout.txt
 outputs/research_campaign_20261021/opus_rc23/runner/runner_stderr.txt
+
+# Finalization 2026-11-02: raw unit checkpoints, smoke runs and live runner files of RC24, EL, EA, C1C, C1S and FR that
+# had no ignore rule (each listed exactly). They stay on disk, are copied with SHA-256 to
+# Documents\thesis_archive\worktree_raw_outputs_20261102 (docs/final/REPOSITORY_MAP.md section 4), and their committed
+# exports, tables and decisions remain the evidence of record. Also: public files a legacy Week 9 test downloads
+# (.cache/) and Astra's own temporary hand-off file in the pool folder.
+.cache/
+outputs/joint_depth_label_development/pool/POOL_PLAN.json.astra-handoff.8888.tmp
+outputs/research_campaign_20261018/opus_pooled/dev/report_smoke/
+outputs/research_campaign_20261020/opus_rc20/runner/runner_stderr.txt
+outputs/research_campaign_20261020/opus_rc20/runner/runner_stdout.txt
+outputs/research_campaign_20261021/opus_rc24/a-match/
+outputs/research_campaign_20261021/opus_rc24/a-own/
+outputs/research_campaign_20261021/opus_rc24/a-smoke/
+outputs/research_campaign_20261021/opus_rc24/b-pilot/
+outputs/research_campaign_20261021/opus_rc24/b-pilot2/
+outputs/research_campaign_20261021/opus_rc24/b-pilot3/
+outputs/research_campaign_20261021/opus_rc24/b-smoke/
+outputs/research_campaign_20261021/opus_rc24/b-smoke2/
+outputs/research_campaign_20261021/opus_rc24/c-match/
+outputs/research_campaign_20261021/opus_rc24/c-own/
+outputs/research_campaign_20261021/opus_rc24/c-smoke/
+outputs/research_campaign_20261021/opus_rc24/d-paths/
+outputs/research_campaign_20261021/opus_rc24/f-match/
+outputs/research_campaign_20261021/opus_rc24/f-own/
+outputs/research_campaign_20261021/opus_rc24/f-smoke/
+outputs/research_campaign_20261021/opus_rc24/p-match/
+outputs/research_campaign_20261021/opus_rc24/runner/runner.lock
+outputs/research_campaign_20261021/opus_rc24/runner/runner_stderr.txt
+outputs/research_campaign_20261021/opus_rc24/runner/runner_stdout.txt
+outputs/research_campaign_20261021/opus_rc24/s-dev/
+outputs/research_campaign_20261021/opus_rc24/s-test/
+outputs/research_campaign_20261024/opus_early_learning/el-cross/
+outputs/research_campaign_20261024/opus_early_learning/el-fwd/
+outputs/research_campaign_20261024/opus_early_learning/el-mix-dev/
+outputs/research_campaign_20261024/opus_early_learning/el-mix-fwd/
+outputs/research_campaign_20261024/opus_early_learning/el-mix-smoke/
+outputs/research_campaign_20261024/opus_early_learning/el-smoke/
+outputs/research_campaign_20261024/opus_early_learning/runner/runner.lock
+outputs/research_campaign_20261024/opus_early_learning/runner/runner_stderr.txt
+outputs/research_campaign_20261024/opus_early_learning/runner/runner_stdout.txt
+outputs/research_campaign_20261026/opus_c1_confirmation/c1c-main/
+outputs/research_campaign_20261026/opus_c1_confirmation/c1c-prior/
+outputs/research_campaign_20261026/opus_c1_confirmation/c1c-start/
+outputs/research_campaign_20261026/opus_c1_confirmation/runner/runner.lock
+outputs/research_campaign_20261026/opus_error_attribution/ea-cand-dev/
+outputs/research_campaign_20261026/opus_error_attribution/ea-cand-smoke/
+outputs/research_campaign_20261026/opus_error_attribution/ea-d2t/
+outputs/research_campaign_20261026/opus_error_attribution/ea-diag/
+outputs/research_campaign_20261026/opus_error_attribution/ea-diag2/
+outputs/research_campaign_20261026/opus_error_attribution/ea-fwd-smoke/
+outputs/research_campaign_20261026/opus_error_attribution/ea-fwd/
+outputs/research_campaign_20261026/opus_error_attribution/ea-smoke/
+outputs/research_campaign_20261026/opus_error_attribution/runner/runner.lock
+outputs/research_campaign_20261026/opus_error_attribution/runner/runner_stderr.txt
+outputs/research_campaign_20261026/opus_error_attribution/runner/runner_stdout.txt
+outputs/research_campaign_20261029/opus_c1_stability/c1s-main/
+outputs/research_campaign_20261029/opus_c1_stability/c1s-start/
+outputs/research_campaign_20261029/opus_c1_stability/graphify/local_map/graphify-out/
+outputs/research_campaign_20261029/opus_c1_stability/runner/runner.lock
+outputs/research_campaign_20261029/opus_final_robustness/fr-dev/units/
