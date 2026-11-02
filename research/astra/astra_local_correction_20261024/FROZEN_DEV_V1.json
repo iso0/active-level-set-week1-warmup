@@ -1,0 +1,175 @@
+{
+  "version": "DEV_V1",
+  "utc": "2026-10-26T01:48:52.763499+00:00",
+  "campaign_id": "astra_local_correction_20261024",
+  "source_hashes": {
+    "research_v1/__init__.py": "688c4cf3593228f66a30e759d063807fa0cf15934205312a42b9d9bb47c8fa67",
+    "research_v1/model.py": "7290682c533fb2e9909de3b986fc1f7440f34eefd23eddeec7c6aff0023e8b94",
+    "research_v1/worlds.py": "1f17b631f6d1ab2b0312e3c67019b3cfa5ad4aefe9efb1844a2a16ae15fe32ba",
+    "research_v1/worker.py": "36c475689257ac8bc3fb879e5fc2ada69bc874290534b39fd096b3bd4e47e42d",
+    "research_v1/references.py": "8d6ba9aa623f3152c782a785563f1eeebbb7726f4721c551d59bc6831d6c53b8"
+  },
+  "protocol_sha256": "aaf78305809b86b27f6833c05fd97bc3a4703eb9b929bc53869c2c77ed55dcf7",
+  "model_design_sha256": "5a707cb93f7b2aef3012ff8f6457b2aa011e2641b70f3e97dae6dde991197c99",
+  "source_context_sha256": "b93ec3f8f68a283ef5f9f82616c3c8e97f774c5059dec3ff32851acc67b5fbd3",
+  "budgets": [
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24
+  ],
+  "paths": [
+    "maximin",
+    "strong_margin"
+  ],
+  "arms": [
+    "strong",
+    "compact",
+    "gated",
+    "trace_match"
+  ],
+  "worlds": [
+    {
+      "family": "smooth",
+      "seed": 202610260
+    },
+    {
+      "family": "smooth",
+      "seed": 202610261
+    },
+    {
+      "family": "smooth",
+      "seed": 202610262
+    },
+    {
+      "family": "smooth",
+      "seed": 202610263
+    },
+    {
+      "family": "local_shift",
+      "seed": 202610360
+    },
+    {
+      "family": "local_shift",
+      "seed": 202610361
+    },
+    {
+      "family": "local_shift",
+      "seed": 202610362
+    },
+    {
+      "family": "local_shift",
+      "seed": 202610363
+    },
+    {
+      "family": "small_island",
+      "seed": 202610460
+    },
+    {
+      "family": "small_island",
+      "seed": 202610461
+    },
+    {
+      "family": "small_island",
+      "seed": 202610462
+    },
+    {
+      "family": "small_island",
+      "seed": 202610463
+    },
+    {
+      "family": "rotated_local",
+      "seed": 202610560
+    },
+    {
+      "family": "rotated_local",
+      "seed": 202610561
+    },
+    {
+      "family": "rotated_local",
+      "seed": 202610562
+    },
+    {
+      "family": "rotated_local",
+      "seed": 202610563
+    },
+    {
+      "family": "rare_negative",
+      "seed": 202610660
+    },
+    {
+      "family": "rare_negative",
+      "seed": 202610661
+    },
+    {
+      "family": "rare_negative",
+      "seed": 202610662
+    },
+    {
+      "family": "rare_negative",
+      "seed": 202610663
+    },
+    {
+      "family": "heteroskedastic",
+      "seed": 202610760
+    },
+    {
+      "family": "heteroskedastic",
+      "seed": 202610761
+    },
+    {
+      "family": "heteroskedastic",
+      "seed": 202610762
+    },
+    {
+      "family": "heteroskedastic",
+      "seed": 202610763
+    },
+    {
+      "family": "outliers",
+      "seed": 202610860
+    },
+    {
+      "family": "outliers",
+      "seed": 202610861
+    },
+    {
+      "family": "outliers",
+      "seed": 202610862
+    },
+    {
+      "family": "outliers",
+      "seed": 202610863
+    },
+    {
+      "family": "correlated_corruption",
+      "seed": 202610960
+    },
+    {
+      "family": "correlated_corruption",
+      "seed": 202610961
+    },
+    {
+      "family": "correlated_corruption",
+      "seed": 202610962
+    },
+    {
+      "family": "correlated_corruption",
+      "seed": 202610963
+    }
+  ],
+  "limits": {
+    "model_requests": 10000,
+    "component_solves": 200000,
+    "optimizer_evaluations": 300000,
+    "reference_solves": 2000
+  },
+  "target": "Uniform independent 768 input reference; latent f>=0; probability cutoff0.5 fixed; BA-AULC B8-B24 primary",
+  "test_status": "NOT_CREATED_OR_INSPECTED",
+  "role": "DEVELOPMENT screening only"
+}

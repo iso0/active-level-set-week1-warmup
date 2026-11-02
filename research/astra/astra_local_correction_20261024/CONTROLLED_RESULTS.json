@@ -1,0 +1,156 @@
+{
+  "scientific_status": "COMPLETE_BOTH_DEV_SCREENS_FAILED",
+  "independent_worlds": 32,
+  "actual_query_paths": 64,
+  "v2_same_path_prediction_replays": 64,
+  "failed_scientific_units": 0,
+  "independent_test_executed": false,
+  "new_selector_executed": false,
+  "v1": {
+    "local_ba_gated_minus_strong": {
+      "mean": -0.00029503902945098026,
+      "worlds": 12,
+      "interval": [
+        -0.0024539366085657966,
+        0.0014972553936641383
+      ],
+      "families_with_data": 3
+    },
+    "local_ba_gated_minus_trace": {
+      "mean": -0.0004879058222410683,
+      "worlds": 12,
+      "interval": [
+        -0.0019368261401381559,
+        0.0010743006622745332
+      ],
+      "families_with_data": 3
+    },
+    "local_error_gated_minus_strong": {
+      "mean": 0.007264092924931721,
+      "worlds": 12,
+      "interval": [
+        0.0041640471136062404,
+        0.011664059235066838
+      ],
+      "families_with_data": 3
+    },
+    "control_ba_gated_minus_strong": {
+      "mean": 0.0019476172699310484,
+      "worlds": 16,
+      "interval": [
+        0.0012893970043008037,
+        0.002569165011522029
+      ],
+      "families_with_data": 4
+    },
+    "passed": false,
+    "interpretation": "Prospective DEV expansion screen, not a confirmatory scientific win."
+  },
+  "v2": {
+    "local_ba_coherent_minus_strong": {
+      "mean": 0.0017257743735161573,
+      "interval": [
+        0.0004019296496031967,
+        0.0032190897267079187
+      ],
+      "worlds": 12,
+      "families_with_data": 3
+    },
+    "local_ba_coherent_minus_trace": {
+      "mean": 0.001719476569028396,
+      "interval": [
+        0.0004769067186274165,
+        0.0030429760054095146
+      ],
+      "worlds": 12,
+      "families_with_data": 3
+    },
+    "local_error_coherent_minus_strong": {
+      "mean": -0.00018189679612486768,
+      "interval": [
+        -0.00214183937055198,
+        0.0020776907873223264
+      ],
+      "worlds": 12,
+      "families_with_data": 3
+    },
+    "control_ba_coherent_minus_strong": {
+      "mean": 0.001001158487378452,
+      "interval": [
+        0.00043277358566260333,
+        0.0015638654835494117
+      ],
+      "worlds": 16,
+      "families_with_data": 4
+    },
+    "passed": false
+  },
+  "cost": {
+    "v1_total_cpu_seconds": 106.9375,
+    "v1_mean_cpu_seconds": 1.6708984375,
+    "v1_peak_rss_bytes": 130027520,
+    "v2_incremental_cpu_seconds": 27.0625,
+    "v2_mean_incremental_cpu_seconds": 0.4228515625,
+    "v2_peak_rss_bytes": 92508160,
+    "v2_dense_factorizations": 576,
+    "v2_rankone_updates": 73728,
+    "v1_component_solves_actual": 75968,
+    "optimizer_evaluations_actual": 142609,
+    "optimizer_refreshes": 320,
+    "chosen_optimizer_failures": 0,
+    "individual_optimizer_start_failures": 2
+  },
+  "queue": {
+    "counts": [
+      {
+        "phase": "DEV_V1",
+        "status": "COMPLETE",
+        "n": 64
+      },
+      {
+        "phase": "DEV_V2",
+        "status": "COMPLETE",
+        "n": 64
+      },
+      {
+        "phase": "FINISHING",
+        "status": "COMPLETE",
+        "n": 1
+      },
+      {
+        "phase": "REFERENCE_V1",
+        "status": "COMPLETE",
+        "n": 1
+      },
+      {
+        "phase": "REFERENCE_V2",
+        "status": "COMPLETE",
+        "n": 1
+      },
+      {
+        "phase": "SELFTEST",
+        "status": "COMPLETE",
+        "n": 1
+      }
+    ],
+    "reservations": {
+      "component_solves": 152128,
+      "model_requests": 3968,
+      "optimizer_evaluations": 143552,
+      "reference_solves": 968,
+      "setup_steps": 6
+    },
+    "running": []
+  },
+  "last_analysis_utc": "2026-10-26T02:21:37.448139+00:00",
+  "artifacts": {
+    "design": "docs/MODEL_DESIGN_V1.md",
+    "v2": "docs/DEV_V2_PROTOCOL.md",
+    "all_results": "results/",
+    "query_cost": "SAME_TARGET_QUERY_COST.md",
+    "family_tables": "ALL_FAMILIES.md",
+    "handoff": "handoff/README.md",
+    "automatic_resume": "AUTO_RESUME_RECEIPT.json",
+    "attempt_ledger": "evidence/FINAL_ATTEMPT_LEDGER.json"
+  }
+}

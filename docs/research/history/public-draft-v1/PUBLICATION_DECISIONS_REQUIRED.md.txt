@@ -1,0 +1,36 @@
+# Publication decisions required — first draft
+
+**No decision has been taken by the assistant. Zero files are approved, committed or uploaded.** Two grouped decisions are sufficient for this text/code draft. Excluded data, figures, operations and private originals require no approval now because they are absent.
+
+## Decision D01: authority to distribute the four campaigns
+
+Confirm ownership/permission for the included authored code, dependency descriptions, protocols, reports and historical variants in each campaign below. Hold any subgroup whose authorship or third-party status is unclear. This is not approval of excluded datasets, figures or literature excerpts.
+
+| Campaign | Code/dependency files | Report/protocol files | Total | Bytes | SHA-256 member-set digest |
+|---|---:|---:|---:|---:|---|
+| AD18 | 42 | 33 | 75 | 479920 | c263fa3aeaead3e1635d8b58522e679f044b4b20e13ff8de9b899866920ea238 |
+| RP20 | 41 | 22 | 63 | 434439 | cca3c3509749e0c79a054e3ab8e87538940280a37fe36ad1dda5728e0793ba5a |
+| LC24 | 23 | 17 | 40 | 269181 | 4c78e186e281ac22b1e74da8e48369fb47deddae61f74a9b9ace4b8999ed38e2 |
+| JL26 | 22 | 21 | 43 | 245857 | 69520e8ad93467a31d606a246b888276b882bceea6f5a92f447373b751febb93 |
+
+## Decision D02: editorial scope, attribution and release terms
+
+Review the 16 scoped claims, 15 experiment contexts, unchanged negative/incomplete findings, M3/G3/C1C navigation, public link/availability labels, and campaign attribution. Specify the code/text reuse terms you authorize; no license is invented. Confirm that linking to the nine already-published thesis documents is an acceptable source-reference choice. These are same-pool/synthetic/historical distinctions, not new external validation.
+
+This decision covers **28 newly authored editorial/build/manifest files**. The non-circular member set contains 25 files / 1251916 bytes; its SHA-256 digest is **94305e57f435eac5f0a16bc829d13cf9e2a2ab16a5e4000225048b1e87db87a7**.
+
+Three control files are excluded from that member-set digest to avoid self-hash cycles: PUBLICATION_GROUP_MEMBERS.csv, this decision document, and PUBLIC_DRAFT_SHA256.csv. The final SHA-256 manifest gives the individual hashes of the first two and every other draft file; the checksum manifest's own hash is reported at completion. Exact membership/hashes are in [PUBLICATION_GROUP_MEMBERS.csv](PUBLICATION_GROUP_MEMBERS.csv).
+
+## What is deliberately outside both decisions
+
+PRIVATE_ONLY, NEEDS_AUTHORIZATION and NEEDS_SECURITY_REVIEW originals were not copied. Additional operational/literature/rights-review public candidates remain held. No raw simulation dataset, checkpoint, database, figure, PDF or sealed oracle is part of this draft. No Release URL is fabricated. Any later expansion requires a separate artifact-specific decision.
+
+## Exact draft and input accounting
+
+- Draft files: 249.
+- Included original reading sources: 221.
+- Referenced published thesis documents: 9 (their payloads are not newly copied).
+- All 608 integrated review records are accounted for in DIFF_FROM_LOCAL_REVIEW.csv; no private original filename/path is disclosed for excluded records.
+- [Explicit allowlist](PUBLICATION_ALLOWLIST.csv), [input/output differences](docs/research/DIFF_FROM_LOCAL_REVIEW.csv), [final hashes](PUBLIC_DRAFT_SHA256.csv), [validation](PUBLIC_DRAFT_VALIDATION.json).
+
+Digest recipe: SHA-256 of sorted compact UTF-8 JSON lines [public_path, bytes, sha256], each followed by LF. These decisions do not authorize git add, commit, upload, release creation or a change of repository visibility.

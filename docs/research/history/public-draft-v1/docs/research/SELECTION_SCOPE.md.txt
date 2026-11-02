@@ -1,0 +1,5 @@
+# Selection and preservation scope
+
+The local integrated hub retains all 608 reviewed records. Its earlier 511-versus-393 comparison contained 366 shared records, 145 omissions preserved in an annex and 27 additions. This first public draft applies a separate category-and-content allowlist. Exclusion here is a publication decision boundary, not deletion or a scientific judgment. Failed experiments, negative conclusions and incomplete findings remain in the campaign reports and scoped registries.
+
+DIFF_FROM_LOCAL_REVIEW.csv accounts for all 608 records with opaque IDs, hashes and dispositions; private original names/paths are omitted. PUBLICATION_ALLOWLIST lists every included source and every reviewed public-candidate input. Exact private forensic manifests stay in the existing local review area.

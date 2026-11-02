@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-20T04:43:04.758814+00:00",
+  "status": "PASS",
+  "errors": [],
+  "phases": {
+    "DEV": {
+      "registered_units": 1278,
+      "worlds": 42,
+      "full_feature_only_model_pairs": 168
+    },
+    "TEST": {
+      "registered_units": 10224,
+      "worlds": 336,
+      "full_feature_only_model_pairs": 1344
+    },
+    "EXTRADEV": {
+      "registered_units": 84,
+      "worlds": 42,
+      "full_feature_only_model_pairs": 0
+    },
+    "EXTRATEST": {
+      "registered_units": 672,
+      "worlds": 336,
+      "full_feature_only_model_pairs": 0
+    }
+  },
+  "hashes_checked": 32,
+  "GP_fits": 0,
+  "component_solves": 0,
+  "wall_seconds": 26.788358699996024,
+  "scope": "All saved paths and frozen hashes; numerical replay is a separate artifact."
+}

@@ -1,0 +1,7 @@
+# Data and archive availability
+
+This draft includes no simulation datasets, raw compressed unit records, NPZ checkpoints, SQLite databases, figure files or PDFs. Restricted evidence is represented by explicit registry entries, never by invented Release URLs. The original local review/preservation records remain authoritative for the excluded material. No private inventory or absolute source-machine path is reproduced.
+
+Reported metrics in REPORTED_FINDINGS.csv are projections of already reviewed claim text, not new statistical analyses or substitutes for raw evidence. Synthetic, physical-pool, historical, in-pool and external scopes remain distinct. The sealed oracle is completely excluded and was not accessed.
+
+See [the archive registry](docs/research/ARCHIVE_MANIFEST.md). No decision about releasing excluded data is required to approve this first text/code draft. A separate authorization would be needed for any future data or figure package.

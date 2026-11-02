@@ -1,0 +1,52 @@
+{
+  "schema": "public-draft-validation-v1",
+  "status": "STRUCTURAL_AND_SCREENING_CHECKS_PASS_NOT_PUBLICATION_APPROVAL",
+  "source_review_records": 608,
+  "reviewed_public_candidates": 357,
+  "record_dispositions": {
+    "EXCLUDED_REVIEW_CATEGORY": 251,
+    "HELD_FOCUSED_REVIEW": 1,
+    "REBUILT_EDITORIAL_INPUT": 22,
+    "INCLUDED_SOURCE": 221,
+    "HELD_OPERATIONAL_OR_RIGHTS_REVIEW": 104,
+    "REFERENCED_PUBLISHED_PRIMARY": 9
+  },
+  "included_original_sources": 221,
+  "included_source_bytes": 1429397,
+  "byte_identical_sources": 203,
+  "navigation_only_markdown_views": 18,
+  "campaigns_retained": [
+    "AD18",
+    "JL26",
+    "LC24",
+    "RP20"
+  ],
+  "claims": 16,
+  "experiment_contexts": 15,
+  "new_statistical_analyses": 0,
+  "private_or_authorization_or_security_category_originals_copied": 0,
+  "figures_pdfs_raw_datasets_or_databases": 0,
+  "active_agent_instruction_files": 0,
+  "scanned_sensitive_path_or_credential_findings_in_included_files": 0,
+  "public_navigation_links_checked_before_final_control_documents": 576,
+  "navigation_missing_targets": 0,
+  "verified_published_primary_target_paths": 165,
+  "published_primary_repository": "iso0/active-level-set-week1-warmup",
+  "published_primary_commit": "3caf7c4e49499f30e6c9b642a226454068f08969",
+  "original_review_unchanged": true,
+  "original_review_manifest_sha256": "4d975ea1a4ba839e776e4ecff2a463af88dac82ce6df9f2d2f7b0e00d313edb7",
+  "draft_file_count": 249,
+  "decision_groups": 2,
+  "publication_approved_files": 0,
+  "remaining_decisions": [
+    "D01: confirm campaign ownership/permission including historical source and authored text",
+    "D02: approve editorial scope/attribution and specify authorized code/text reuse terms"
+  ],
+  "excluded_uncertain_cases_remain_local": true,
+  "external_disk_access": false,
+  "sealed_oracle_access": false,
+  "imported_scripts_executed": false,
+  "research_tests_simulations_experiments_or_graphify": false,
+  "git_mutations_or_uploads": false,
+  "manifest_self_hash_note": "Final manifest excludes itself; its hash is printed at completion"
+}

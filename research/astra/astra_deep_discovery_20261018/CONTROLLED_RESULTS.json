@@ -1,0 +1,275 @@
+{
+  "campaign_id": "astra_deep_discovery_20261018",
+  "status": "CONTROLLED_EXPERIMENTS_AND_NUMERICAL_AUDITS_COMPLETE",
+  "deadline_utc": "2026-10-20T08:40:14+00:00",
+  "counts": {
+    "v1_1_DEV_trajectories": 807,
+    "v2_DEV_trajectories": 1278,
+    "v2_TEST_trajectories": 10224,
+    "quota_DEV_trajectories": 84,
+    "quota_TEST_trajectories": 672,
+    "total_completed_controlled_trajectories": 13065,
+    "TEST_independent_worlds": 336,
+    "TEST_families": 14,
+    "TEST_realizations_per_family": 24,
+    "v2_DEV_worlds": 42,
+    "controlled_failed_or_incomplete": 0
+  },
+  "replicate_definition": "A whole function/noise world; arms and quota controls within it are dependent.",
+  "budget_reserved": [
+    {
+      "kind": "controlled",
+      "requests": 692967,
+      "components": 4795398
+    },
+    {
+      "kind": "reference",
+      "requests": 58,
+      "components": 388
+    }
+  ],
+  "budget_limits": {
+    "controlled_requests": 700000,
+    "controlled_component_solves": 6000000,
+    "reference_requests": 400,
+    "reference_component_solves": 6000
+  },
+  "primary_endpoint": "B64 uniform latent sign-error mass; paired A minus B",
+  "primary_contrasts_verbatim": [
+    {
+      "contrast": "H1_same_model_local_effect",
+      "A": [
+        "mixture",
+        "regional"
+      ],
+      "B": [
+        "mixture",
+        "sur_global"
+      ],
+      "metric": "error",
+      "A_minus_B": -8.719308035714287e-06,
+      "ci95": [
+        -5.812872023809524e-05,
+        4.069010416666667e-05
+      ],
+      "families": 14,
+      "pairs": 336,
+      "scope": "frozen synthetic distribution",
+      "primary": true,
+      "randomization_p_two_sided": 0.7481251874812519,
+      "holm_p": 1.0,
+      "confirmatory_pass": false
+    },
+    {
+      "contrast": "H2_same_selector_model_effect",
+      "A": [
+        "mixture",
+        "regional"
+      ],
+      "B": [
+        "simple",
+        "regional"
+      ],
+      "metric": "error",
+      "A_minus_B": 0.0001845586867559524,
+      "ci95": [
+        -0.0005362737746465774,
+        0.0009169805617559523
+      ],
+      "families": 14,
+      "pairs": 336,
+      "scope": "frozen synthetic distribution",
+      "primary": true,
+      "randomization_p_two_sided": 0.6392360763923608,
+      "holm_p": 1.0,
+      "confirmatory_pass": false
+    },
+    {
+      "contrast": "H3_boundary_gate",
+      "A": [
+        "structure",
+        "boundary_regional"
+      ],
+      "B": [
+        "structure",
+        "sur_global"
+      ],
+      "metric": "error",
+      "A_minus_B": -2.4704706101190466e-05,
+      "ci95": [
+        -0.0003865559895833333,
+        0.0003255208333333333
+      ],
+      "families": 14,
+      "pairs": 336,
+      "scope": "frozen synthetic distribution",
+      "primary": true,
+      "randomization_p_two_sided": 0.9031096890310969,
+      "holm_p": 1.0,
+      "confirmatory_pass": false
+    },
+    {
+      "contrast": "H4_structural_representation",
+      "A": [
+        "structure",
+        "boundary_regional"
+      ],
+      "B": [
+        "simple",
+        "boundary_regional"
+      ],
+      "metric": "error",
+      "A_minus_B": -0.03264654250372024,
+      "ci95": [
+        -0.033793131510416664,
+        -0.03147521246047246
+      ],
+      "families": 14,
+      "pairs": 336,
+      "scope": "frozen synthetic distribution",
+      "primary": true,
+      "randomization_p_two_sided": 9.999000099990002e-05,
+      "holm_p": 0.00039996000399960006,
+      "confirmatory_pass": true
+    }
+  ],
+  "inference_qualification": "Saved sign-flip p-values require exchangeability or symmetry of paired differences; zero mean alone is insufficient and algorithm labels were not randomized. Holm adjusts four primary comparisons only. Other intervals are pointwise descriptive.",
+  "quota_effects_verbatim": [
+    {
+      "metric": "error",
+      "surprise_minus_no_surprise": 4.6502976190476195e-05,
+      "ci95": [
+        -8.719308035714286e-05,
+        0.00021507626488095235
+      ],
+      "families": 14,
+      "pairs": 336,
+      "descriptive_only": true
+    },
+    {
+      "metric": "boundary_error",
+      "surprise_minus_no_surprise": 0.0001951599889173855,
+      "ci95": [
+        -0.0003321334176495615,
+        0.0007636437158473251
+      ],
+      "families": 12,
+      "pairs": 288,
+      "descriptive_only": true
+    },
+    {
+      "metric": "island_recall",
+      "surprise_minus_no_surprise": 0.012341402367579107,
+      "ci95": [
+        0.003120383008276465,
+        0.02410022970695187
+      ],
+      "families": 4,
+      "pairs": 96,
+      "descriptive_only": true
+    },
+    {
+      "metric": "recall_positive",
+      "surprise_minus_no_surprise": 0.00032904122451188843,
+      "ci95": [
+        -1.0148336294369051e-05,
+        0.000696354837468211
+      ],
+      "families": 12,
+      "pairs": 288,
+      "descriptive_only": true
+    },
+    {
+      "metric": "recall_negative",
+      "surprise_minus_no_surprise": -6.349034464881912e-05,
+      "ci95": [
+        -0.00026503920494009734,
+        0.00012227670289003764
+      ],
+      "families": 14,
+      "pairs": 336,
+      "descriptive_only": true
+    },
+    {
+      "metric": "brier",
+      "surprise_minus_no_surprise": 0.00011694288891883607,
+      "ci95": [
+        2.2788562634824885e-05,
+        0.00025648289351366474
+      ],
+      "families": 14,
+      "pairs": 336,
+      "descriptive_only": true
+    },
+    {
+      "metric": "log_loss",
+      "surprise_minus_no_surprise": 0.00032759300513050826,
+      "ci95": [
+        6.17853263230048e-05,
+        0.0007151306500673545
+      ],
+      "families": 14,
+      "pairs": 336,
+      "descriptive_only": true
+    },
+    {
+      "metric": "restricted_query_burden",
+      "surprise_minus_no_surprise": 0.02380952380952381,
+      "ci95": [
+        -0.03571428571428571,
+        0.10714285714285714
+      ],
+      "families": 14,
+      "pairs": 336,
+      "descriptive_only": true
+    }
+  ],
+  "query_savings": {
+    "established_by_frozen_rule": false,
+    "evidence": "results/final_tables/existing_paired_query_burden_contrasts.csv",
+    "rule": "Both attainments at least 0.8 and paired upper interval below zero.",
+    "censoring": "Right censoring at B64; restricted burden is mean min(T,64), not uncensored E[T].",
+    "target": "error<=.08; boundary<=.25; island recall>=.70 and both recalls>=.85 where defined",
+    "confirmation": "Two successive readouts four queries apart; charge the second; all paths continue to B64.",
+    "compute_at_target_recorded": false,
+    "physical_simulation_cost_recorded": false
+  },
+  "numerical_audit": {
+    "reference_status": "PASS",
+    "exact_decision_status": "PASS",
+    "full_path_integrity_status": "PASS",
+    "query_replay_status": "PASS",
+    "finite_mixture_states": 6,
+    "all_quadrature_references_accepted": true,
+    "screened_winner_agreements": 5,
+    "max_screened_score_error": 0.0026104948078049042,
+    "max_screened_regret": 0.00017608707084686517,
+    "qualification": "Eight screened candidates and 32 reference points per state; not full-pool ranking validation."
+  },
+  "judgment": {
+    "tested_coordinate_anisotropy_representation_benefit": true,
+    "general_local_acquisition_superiority_established": false,
+    "small_island_problem_solved": false,
+    "physical_boundary_or_SPH_superiority_established": false,
+    "next_discriminator_executed": false,
+    "next_discriminator": "Paid-first-hit 2x2: fixed local-discrepancy model factor crossed with one/two-step horizon."
+  },
+  "evidence": {
+    "scientific_report": "FINAL_REPORT.md",
+    "method": "METHOD_AND_ASSUMPTIONS.md",
+    "primary_results": "results/analysis/v2__TEST/CONTROLLED_RESULTS.json",
+    "all_seed_endpoints": "results/analysis/v2__TEST/per_seed_endpoints.csv",
+    "quota_results": "results/QUOTA_CONTROL_RESULTS.json",
+    "all_family_metrics": "results/final_tables/all_family_metrics_and_mechanisms.csv",
+    "all_arm_metrics": "results/final_readout/ALL_ARMS_SUMMARY.csv",
+    "query_cost_table": "results/final_readout/SAME_TARGET_QUERY_COST_TABLE.md",
+    "report_input_output_hashes": "results/final_tables/COMPLETE.json",
+    "numerical_review": "VISUAL_AND_NUMERICAL_REVIEW.md",
+    "failed_diagnostics": "results/failures/",
+    "attempt_ledger": "results/attempts.jsonl",
+    "fit_reservation_ledger": "results/events.jsonl",
+    "unit_registry": "results/units.jsonl",
+    "Opus_handoff": "OPUS_FINAL_HANDOFF.md",
+    "all_results_index": "RESULTS_INDEX.md"
+  }
+}

@@ -1,0 +1,58 @@
+id,world_id,family,seed,panel,model,selector,arm,status,result,note
+test__w081__e2e__existing__h2,w081,island_small,1998577897,e2e,existing,h2,existing__h2,FAILED,,"Traceback (most recent call last):
+  File ""[LOCAL_PATH_WITHHELD]"", line 157, in main
+    result = run_unit(unit, attempt, slot, args.stop_after)
+  File ""[LOCAL_PATH_WITHHELD]"", line 65, in run_unit
+    slot.check()
+    ~~~~~~~~~~^^
+  File ""[LOCAL_PATH_WITHHELD]"", line 175, in check
+    record = read()
+  File ""[LOCAL_PATH_WITHHELD]"", line 59, in read
+    return json.loads(RECORD.read_text(encoding=""utf-8-sig""))
+                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File ""[LOCAL_PATH_WITHHELD]"", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""[LOCAL_PATH_WITHHELD]"", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '[LOCAL_PATH_WITHHELD]'
+"
+test__w175__prefix__existing__h2,w175,missing,695426214,prefix,existing,h2,existing__h2,FAILED,,"Traceback (most recent call last):
+  File ""[LOCAL_PATH_WITHHELD]"", line 157, in main
+    result = run_unit(unit, attempt, slot, args.stop_after)
+  File ""[LOCAL_PATH_WITHHELD]"", line 65, in run_unit
+    slot.check()
+    ~~~~~~~~~~^^
+  File ""[LOCAL_PATH_WITHHELD]"", line 175, in check
+    record = read()
+  File ""[LOCAL_PATH_WITHHELD]"", line 59, in read
+    return json.loads(RECORD.read_text(encoding=""utf-8-sig""))
+                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File ""[LOCAL_PATH_WITHHELD]"", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""[LOCAL_PATH_WITHHELD]"", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '[LOCAL_PATH_WITHHELD]'
+"
+test__w211__prefix__local__h2,w211,island_large,1620338148,prefix,local,h2,local__h2,FAILED,,"Traceback (most recent call last):
+  File ""[LOCAL_PATH_WITHHELD]"", line 157, in main
+    result = run_unit(unit, attempt, slot, args.stop_after)
+  File ""[LOCAL_PATH_WITHHELD]"", line 65, in run_unit
+    slot.check()
+    ~~~~~~~~~~^^
+  File ""[LOCAL_PATH_WITHHELD]"", line 175, in check
+    record = read()
+  File ""[LOCAL_PATH_WITHHELD]"", line 59, in read
+    return json.loads(RECORD.read_text(encoding=""utf-8-sig""))
+                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File ""[LOCAL_PATH_WITHHELD]"", line 787, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""[LOCAL_PATH_WITHHELD]"", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '[LOCAL_PATH_WITHHELD]'
+"

@@ -1,0 +1,14 @@
+{
+  "schema": "thesis-public-draft-build-inputs-v1",
+  "expected_review_manifest_sha256": "4d975ea1a4ba839e776e4ecff2a463af88dac82ce6df9f2d2f7b0e00d313edb7",
+  "expected_review_files": 608,
+  "expected_review_head": "3caf7c4e49499f30e6c9b642a226454068f08969",
+  "expected_review_branch": "research-hub-integration-2026-10-28",
+  "source_category_required": "PUBLIC_CANDIDATE",
+  "publication_approved": false,
+  "build_date": "2026-10-28",
+  "primary_repository": "iso0/active-level-set-week1-warmup",
+  "primary_visibility": "public",
+  "published_commit_verified": "3caf7c4e49499f30e6c9b642a226454068f08969",
+  "primary_commit_url": "https://github.com/iso0/active-level-set-week1-warmup/commit/3caf7c4e49499f30e6c9b642a226454068f08969"
+}

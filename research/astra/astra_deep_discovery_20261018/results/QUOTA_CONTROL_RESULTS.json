@@ -1,0 +1,344 @@
+{
+  "EXTRADEV": {
+    "phase": "EXTRADEV",
+    "utc": "2026-10-20T04:33:13.702360+00:00",
+    "completed": 84,
+    "unfinished": [],
+    "path_or_quota_errors": [],
+    "effects": [
+      {
+        "metric": "error",
+        "surprise_minus_no_surprise": -5.812872023809524e-05,
+        "ci95": [
+          -0.00017438616071428572,
+          0.0
+        ],
+        "families": 14,
+        "pairs": 42,
+        "descriptive_only": true
+      },
+      {
+        "metric": "boundary_error",
+        "surprise_minus_no_surprise": 0.0009303561935140886,
+        "ci95": [
+          0.0,
+          0.0027910685805422656
+        ],
+        "families": 12,
+        "pairs": 36,
+        "descriptive_only": true
+      },
+      {
+        "metric": "island_recall",
+        "surprise_minus_no_surprise": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "families": 4,
+        "pairs": 12,
+        "descriptive_only": true
+      },
+      {
+        "metric": "recall_positive",
+        "surprise_minus_no_surprise": -0.0001511030522816586,
+        "ci95": [
+          -0.0004533091568449758,
+          0.0
+        ],
+        "families": 12,
+        "pairs": 36,
+        "descriptive_only": true
+      },
+      {
+        "metric": "recall_negative",
+        "surprise_minus_no_surprise": 0.000277147896195516,
+        "ci95": [
+          0.0,
+          0.0008314436885865481
+        ],
+        "families": 14,
+        "pairs": 42,
+        "descriptive_only": true
+      },
+      {
+        "metric": "brier",
+        "surprise_minus_no_surprise": -5.627982253865625e-05,
+        "ci95": [
+          -0.00016883946761596876,
+          0.0
+        ],
+        "families": 14,
+        "pairs": 42,
+        "descriptive_only": true
+      },
+      {
+        "metric": "log_loss",
+        "surprise_minus_no_surprise": -0.0001505640717841803,
+        "ci95": [
+          -0.00045169221535254093,
+          0.0
+        ],
+        "families": 14,
+        "pairs": 42,
+        "descriptive_only": true
+      },
+      {
+        "metric": "restricted_query_burden",
+        "surprise_minus_no_surprise": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "families": 14,
+        "pairs": 42,
+        "descriptive_only": true
+      }
+    ],
+    "joint_target_unchanged": true,
+    "interpretation": "surprise-informed anchor choice at exactly equal local/global expenditure; not an independent new test population",
+    "families": {
+      "smooth": {
+        "pairs": 3,
+        "attainment_surprise": 0.3333333333333333,
+        "attainment_no_surprise": 0.3333333333333333
+      },
+      "island_small_unseen": {
+        "pairs": 3,
+        "attainment_surprise": 0.0,
+        "attainment_no_surprise": 0.0
+      },
+      "island_large_unseen": {
+        "pairs": 3,
+        "attainment_surprise": 0.0,
+        "attainment_no_surprise": 0.0
+      },
+      "island_small_seen": {
+        "pairs": 3,
+        "attainment_surprise": 0.0,
+        "attainment_no_surprise": 0.0
+      },
+      "island_large_seen": {
+        "pairs": 3,
+        "attainment_surprise": 0.0,
+        "attainment_no_surprise": 0.0
+      },
+      "anisotropic": {
+        "pairs": 3,
+        "attainment_surprise": 0.0,
+        "attainment_no_surprise": 0.0
+      },
+      "local_scale": {
+        "pairs": 3,
+        "attainment_surprise": 0.0,
+        "attainment_no_surprise": 0.0
+      },
+      "heteroscedastic": {
+        "pairs": 3,
+        "attainment_surprise": 0.3333333333333333,
+        "attainment_no_surprise": 0.3333333333333333
+      },
+      "heavy_tail": {
+        "pairs": 3,
+        "attainment_surprise": 0.3333333333333333,
+        "attainment_no_surprise": 0.3333333333333333
+      },
+      "null": {
+        "pairs": 3,
+        "attainment_surprise": 1.0,
+        "attainment_no_surprise": 1.0
+      },
+      "corrupt_correlated": {
+        "pairs": 3,
+        "attainment_surprise": 1.0,
+        "attainment_no_surprise": 1.0
+      },
+      "multi_shared": {
+        "pairs": 3,
+        "attainment_surprise": 0.3333333333333333,
+        "attainment_no_surprise": 0.3333333333333333
+      },
+      "multi_conflict": {
+        "pairs": 3,
+        "attainment_surprise": 0.3333333333333333,
+        "attainment_no_surprise": 0.3333333333333333
+      },
+      "multi_missing": {
+        "pairs": 3,
+        "attainment_surprise": 0.0,
+        "attainment_no_surprise": 0.0
+      }
+    }
+  },
+  "EXTRATEST": {
+    "phase": "EXTRATEST",
+    "utc": "2026-10-20T04:33:16.071132+00:00",
+    "completed": 672,
+    "unfinished": [],
+    "path_or_quota_errors": [],
+    "effects": [
+      {
+        "metric": "error",
+        "surprise_minus_no_surprise": 4.6502976190476195e-05,
+        "ci95": [
+          -8.719308035714286e-05,
+          0.00021507626488095235
+        ],
+        "families": 14,
+        "pairs": 336,
+        "descriptive_only": true
+      },
+      {
+        "metric": "boundary_error",
+        "surprise_minus_no_surprise": 0.0001951599889173855,
+        "ci95": [
+          -0.0003321334176495615,
+          0.0007636437158473251
+        ],
+        "families": 12,
+        "pairs": 288,
+        "descriptive_only": true
+      },
+      {
+        "metric": "island_recall",
+        "surprise_minus_no_surprise": 0.012341402367579107,
+        "ci95": [
+          0.003120383008276465,
+          0.02410022970695187
+        ],
+        "families": 4,
+        "pairs": 96,
+        "descriptive_only": true
+      },
+      {
+        "metric": "recall_positive",
+        "surprise_minus_no_surprise": 0.00032904122451188843,
+        "ci95": [
+          -1.0148336294369051e-05,
+          0.000696354837468211
+        ],
+        "families": 12,
+        "pairs": 288,
+        "descriptive_only": true
+      },
+      {
+        "metric": "recall_negative",
+        "surprise_minus_no_surprise": -6.349034464881912e-05,
+        "ci95": [
+          -0.00026503920494009734,
+          0.00012227670289003764
+        ],
+        "families": 14,
+        "pairs": 336,
+        "descriptive_only": true
+      },
+      {
+        "metric": "brier",
+        "surprise_minus_no_surprise": 0.00011694288891883607,
+        "ci95": [
+          2.2788562634824885e-05,
+          0.00025648289351366474
+        ],
+        "families": 14,
+        "pairs": 336,
+        "descriptive_only": true
+      },
+      {
+        "metric": "log_loss",
+        "surprise_minus_no_surprise": 0.00032759300513050826,
+        "ci95": [
+          6.17853263230048e-05,
+          0.0007151306500673545
+        ],
+        "families": 14,
+        "pairs": 336,
+        "descriptive_only": true
+      },
+      {
+        "metric": "restricted_query_burden",
+        "surprise_minus_no_surprise": 0.02380952380952381,
+        "ci95": [
+          -0.03571428571428571,
+          0.10714285714285714
+        ],
+        "families": 14,
+        "pairs": 336,
+        "descriptive_only": true
+      }
+    ],
+    "joint_target_unchanged": true,
+    "interpretation": "surprise-informed anchor choice at exactly equal local/global expenditure; not an independent new test population",
+    "families": {
+      "smooth": {
+        "pairs": 24,
+        "attainment_surprise": 0.5833333333333334,
+        "attainment_no_surprise": 0.5833333333333334
+      },
+      "island_small_unseen": {
+        "pairs": 24,
+        "attainment_surprise": 0.041666666666666664,
+        "attainment_no_surprise": 0.041666666666666664
+      },
+      "island_large_unseen": {
+        "pairs": 24,
+        "attainment_surprise": 0.08333333333333333,
+        "attainment_no_surprise": 0.125
+      },
+      "island_small_seen": {
+        "pairs": 24,
+        "attainment_surprise": 0.0,
+        "attainment_no_surprise": 0.0
+      },
+      "island_large_seen": {
+        "pairs": 24,
+        "attainment_surprise": 0.041666666666666664,
+        "attainment_no_surprise": 0.041666666666666664
+      },
+      "anisotropic": {
+        "pairs": 24,
+        "attainment_surprise": 0.3333333333333333,
+        "attainment_no_surprise": 0.3333333333333333
+      },
+      "local_scale": {
+        "pairs": 24,
+        "attainment_surprise": 0.0,
+        "attainment_no_surprise": 0.0
+      },
+      "heteroscedastic": {
+        "pairs": 24,
+        "attainment_surprise": 0.25,
+        "attainment_no_surprise": 0.25
+      },
+      "heavy_tail": {
+        "pairs": 24,
+        "attainment_surprise": 0.2916666666666667,
+        "attainment_no_surprise": 0.2916666666666667
+      },
+      "null": {
+        "pairs": 24,
+        "attainment_surprise": 1.0,
+        "attainment_no_surprise": 1.0
+      },
+      "corrupt_correlated": {
+        "pairs": 24,
+        "attainment_surprise": 1.0,
+        "attainment_no_surprise": 1.0
+      },
+      "multi_shared": {
+        "pairs": 24,
+        "attainment_surprise": 0.625,
+        "attainment_no_surprise": 0.625
+      },
+      "multi_conflict": {
+        "pairs": 24,
+        "attainment_surprise": 0.875,
+        "attainment_no_surprise": 0.875
+      },
+      "multi_missing": {
+        "pairs": 24,
+        "attainment_surprise": 0.7083333333333334,
+        "attainment_no_surprise": 0.7083333333333334
+      }
+    }
+  }
+}

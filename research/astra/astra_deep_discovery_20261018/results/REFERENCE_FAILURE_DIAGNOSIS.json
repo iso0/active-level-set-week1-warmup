@@ -1,0 +1,209 @@
+{
+  "utc": "2026-10-18T14:31:54.961596+00:00",
+  "rows": [
+    {
+      "a": 0.0,
+      "rho": 0.01,
+      "old_future_risk": 0.4968168480841268,
+      "bounded_future_risk": 0.496816848084127,
+      "bounded_gain": 0.0031831519158729837,
+      "derivative_integral_gain": 0.003183151915873071,
+      "owen_gain": 0.0031831519158730948,
+      "bounded_vs_derivative_error": 8.716985466783456e-17
+    },
+    {
+      "a": 0.0,
+      "rho": 0.2,
+      "old_future_risk": 0.435905783151025,
+      "bounded_future_risk": 0.43590578315102513,
+      "bounded_gain": 0.06409421684897487,
+      "derivative_integral_gain": 0.06409421684897494,
+      "owen_gain": 0.06409421684897493,
+      "bounded_vs_derivative_error": 6.938893903907228e-17
+    },
+    {
+      "a": 0.0,
+      "rho": 0.7,
+      "old_future_risk": 0.25318331110663495,
+      "bounded_future_risk": 0.25318331110663495,
+      "bounded_gain": 0.24681668889336505,
+      "derivative_integral_gain": 0.246816688893365,
+      "owen_gain": 0.24681668889336505,
+      "bounded_vs_derivative_error": 5.551115123125783e-17
+    },
+    {
+      "a": 0.0,
+      "rho": 0.99,
+      "old_future_risk": 0.045053413644412156,
+      "bounded_future_risk": 0.04505341364441213,
+      "bounded_gain": 0.4549465863555879,
+      "derivative_integral_gain": 0.45494658635558793,
+      "owen_gain": 0.4549465863555879,
+      "bounded_vs_derivative_error": 5.551115123125783e-17
+    },
+    {
+      "a": 0.2,
+      "rho": 0.01,
+      "old_future_risk": 0.42074029056089707,
+      "bounded_future_risk": 0.420740290560897,
+      "bounded_gain": -5.551115123125783e-17,
+      "derivative_integral_gain": 1.0954314901072822e-92,
+      "owen_gain": 0.0,
+      "bounded_vs_derivative_error": 5.551115123125783e-17
+    },
+    {
+      "a": 0.2,
+      "rho": 0.2,
+      "old_future_risk": 0.4072725636106271,
+      "bounded_future_risk": 0.40727256361062664,
+      "bounded_gain": 0.01346772695027032,
+      "derivative_integral_gain": 0.013467726950270363,
+      "owen_gain": 0.013467726950270376,
+      "bounded_vs_derivative_error": 4.336808689942018e-17
+    },
+    {
+      "a": 0.2,
+      "rho": 0.7,
+      "old_future_risk": 0.24677515048966905,
+      "bounded_future_risk": 0.2467751504896692,
+      "bounded_gain": 0.17396514007122776,
+      "derivative_integral_gain": 0.17396514007122776,
+      "owen_gain": 0.17396514007122788,
+      "bounded_vs_derivative_error": 0.0
+    },
+    {
+      "a": 0.2,
+      "rho": 0.99,
+      "old_future_risk": 0.0441553513427398,
+      "bounded_future_risk": 0.04415535134273979,
+      "bounded_gain": 0.37658493921815717,
+      "derivative_integral_gain": 0.3765849392181572,
+      "owen_gain": 0.37658493921815717,
+      "bounded_vs_derivative_error": 5.551115123125783e-17
+    },
+    {
+      "a": 1.0,
+      "rho": 0.01,
+      "old_future_risk": 0.0,
+      "bounded_future_risk": 0.15865525393145707,
+      "bounded_gain": 0.0,
+      "derivative_integral_gain": 0.0,
+      "owen_gain": 0.0,
+      "bounded_vs_derivative_error": 0.0
+    },
+    {
+      "a": 1.0,
+      "rho": 0.2,
+      "old_future_risk": 0.15865524523579377,
+      "bounded_future_risk": 0.15865524523579375,
+      "bounded_gain": 8.695663328284198e-09,
+      "derivative_integral_gain": 8.69566330539082e-09,
+      "owen_gain": 8.695663300528622e-09,
+      "bounded_vs_derivative_error": 2.2893378196540165e-17
+    },
+    {
+      "a": 1.0,
+      "rho": 0.7,
+      "old_future_risk": 0.13464304944031638,
+      "bounded_future_risk": 0.13464304944031635,
+      "bounded_gain": 0.02401220449114072,
+      "derivative_integral_gain": 0.024012204491140682,
+      "owen_gain": 0.02401220449114061,
+      "bounded_vs_derivative_error": 3.8163916471489756e-17
+    },
+    {
+      "a": 1.0,
+      "rho": 0.99,
+      "old_future_risk": 0.027234578585756834,
+      "bounded_future_risk": 0.02723457858575688,
+      "bounded_gain": 0.1314206753457002,
+      "derivative_integral_gain": 0.13142067534568752,
+      "owen_gain": 0.13142067534570023,
+      "bounded_vs_derivative_error": 1.2684298056342413e-14
+    },
+    {
+      "a": 3.0,
+      "rho": 0.01,
+      "old_future_risk": 0.0,
+      "bounded_future_risk": 0.0013498980316300946,
+      "bounded_gain": -1.5178830414797062e-18,
+      "derivative_integral_gain": 0.0,
+      "owen_gain": 0.0,
+      "bounded_vs_derivative_error": 1.5178830414797062e-18
+    },
+    {
+      "a": 3.0,
+      "rho": 0.2,
+      "old_future_risk": 0.0013498980316300935,
+      "bounded_future_risk": 0.0013498980316300935,
+      "bounded_gain": -4.336808689942018e-19,
+      "derivative_integral_gain": 3.9505394013383465e-53,
+      "owen_gain": 0.0,
+      "bounded_vs_derivative_error": 4.336808689942018e-19
+    },
+    {
+      "a": 3.0,
+      "rho": 0.7,
+      "old_future_risk": 0.0013484349123382257,
+      "bounded_future_risk": 0.0013484349123382257,
+      "bounded_gain": 1.4631192918673416e-06,
+      "derivative_integral_gain": 1.4631192918768625e-06,
+      "owen_gain": 1.4631192918638722e-06,
+      "bounded_vs_derivative_error": 9.52086208537515e-18
+    },
+    {
+      "a": 3.0,
+      "rho": 0.99,
+      "old_future_risk": 0.00048574245083052097,
+      "bounded_future_risk": 0.0004857424508305205,
+      "bounded_gain": 0.0008641555807995726,
+      "derivative_integral_gain": 0.0008641555807995726,
+      "owen_gain": 0.0008641555807995726,
+      "bounded_vs_derivative_error": 0.0
+    },
+    {
+      "a": -1.0,
+      "rho": 0.01,
+      "old_future_risk": 0.0,
+      "bounded_future_risk": 0.15865525393145707,
+      "bounded_gain": 0.0,
+      "derivative_integral_gain": 0.0,
+      "owen_gain": 0.0,
+      "bounded_vs_derivative_error": 0.0
+    },
+    {
+      "a": -1.0,
+      "rho": 0.2,
+      "old_future_risk": 0.15865524523579377,
+      "bounded_future_risk": 0.15865524523579375,
+      "bounded_gain": 8.695663328284198e-09,
+      "derivative_integral_gain": 8.69566330539082e-09,
+      "owen_gain": 8.695663300528622e-09,
+      "bounded_vs_derivative_error": 2.2893378196540165e-17
+    },
+    {
+      "a": -1.0,
+      "rho": 0.7,
+      "old_future_risk": 0.13464304944031638,
+      "bounded_future_risk": 0.13464304944031635,
+      "bounded_gain": 0.02401220449114072,
+      "derivative_integral_gain": 0.024012204491140682,
+      "owen_gain": 0.02401220449114061,
+      "bounded_vs_derivative_error": 3.8163916471489756e-17
+    },
+    {
+      "a": -1.0,
+      "rho": 0.99,
+      "old_future_risk": 0.027234578585756834,
+      "bounded_future_risk": 0.02723457858575688,
+      "bounded_gain": 0.1314206753457002,
+      "derivative_integral_gain": 0.13142067534568752,
+      "owen_gain": 0.13142067534570023,
+      "bounded_vs_derivative_error": 1.2684298056342413e-14
+    }
+  ],
+  "truncation_error_bound": 3.552964224155306e-33,
+  "GP_fits": 0,
+  "status": "diagnostic only",
+  "cases": 20
+}

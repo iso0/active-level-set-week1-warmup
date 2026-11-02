@@ -1,0 +1,2547 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-10-26T02:07:05.443446+00:00",
+  "manifest_sha256": "56fc358ef73dce589a8e9e0f1aef097cc7eeec0bd3573e5a95828d8f4840dbd1",
+  "analysis_code_sha256": "5470e3490883f70b9d775d149137f2c4da9d4407b6d4ab8e5ce0037e5b3dd7b3",
+  "completed_units": 64,
+  "scheduled_units": 64,
+  "failures": [],
+  "contrasts": {
+    "world_average_of_both_paths": {
+      "coherent__minus__strong": {
+        "ba_aulc": {
+          "mean": 0.0011453710843304273,
+          "interval": [
+            0.0005219007952542759,
+            0.001785484788814109
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": 0.00018319712556458538,
+          "interval": [
+            -0.0010287976852577179,
+            0.0012649472883802337
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": 0.002107545043096277,
+          "interval": [
+            0.0010756347233183154,
+            0.003084712811905665
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": -0.00026316079213259153,
+          "interval": [
+            -0.001149392954859249,
+            0.0006928165447412391
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": -0.11718114971483717,
+          "interval": [
+            -0.1512324704742333,
+            -0.0849729002738382
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": -0.0019327799479166628,
+          "interval": [
+            -0.002711073557535801,
+            -0.0010780970255533837
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": -0.125,
+          "interval": [
+            -0.40625,
+            0.03125
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -0.0005805110213199384,
+          "interval": [
+            -0.0014341607661115378,
+            0.0003018296632495845
+          ],
+          "worlds": 30,
+          "families_with_data": 8
+        }
+      },
+      "coherent__minus__gated": {
+        "ba_aulc": {
+          "mean": 0.0004329013788246603,
+          "interval": [
+            -0.00022328312435977832,
+            0.0011294237884941286
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": 0.0024385307943404814,
+          "interval": [
+            0.0009530919227214438,
+            0.003855024050935676
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": -0.00157272803669115,
+          "interval": [
+            -0.0025758354219749965,
+            -0.0005830601404898098
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": -0.0017585889405991198,
+          "interval": [
+            -0.003027033181861985,
+            -0.0005227962628351498
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": 0.08782774492158364,
+          "interval": [
+            0.06987423551572518,
+            0.10819053499824119
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": 0.0009180704752604173,
+          "interval": [
+            0.0003534317016601576,
+            0.001595815022786458
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.125,
+          "interval": [
+            0.0,
+            0.375
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": -0.03125,
+          "interval": [
+            -0.09375,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": -0.09375,
+          "interval": [
+            -0.375,
+            0.125
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -0.002608995017614313,
+          "interval": [
+            -0.0035064935011363714,
+            -0.0017488658148034776
+          ],
+          "worlds": 30,
+          "families_with_data": 8
+        }
+      },
+      "coherent_trace__minus__strong": {
+        "ba_aulc": {
+          "mean": 9.079704778525849e-06,
+          "interval": [
+            -5.7160700802241e-05,
+            6.826986087339551e-05
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": -5.684751078123302e-05,
+          "interval": [
+            -0.00012954990220951566,
+            1.3456478105257497e-05
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": 7.50069203382794e-05,
+          "interval": [
+            -4.835255311441582e-05,
+            0.00020146752526508077
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": 6.714024089898808e-05,
+          "interval": [
+            -2.82318787215555e-05,
+            0.00015983225626918445
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": -0.0004899909980884526,
+          "interval": [
+            -0.0007885054448152969,
+            -0.0002364043212684022
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": -7.375081380208098e-05,
+          "interval": [
+            -0.00015770594278971133,
+            8.900960286464658e-06
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": 6.266485935368486e-05,
+          "interval": [
+            -4.8716193813568594e-05,
+            0.00017434442530839606
+          ],
+          "worlds": 30,
+          "families_with_data": 8
+        }
+      },
+      "coherent__minus__coherent_trace": {
+        "ba_aulc": {
+          "mean": 0.0011362913795519014,
+          "interval": [
+            0.0005187087338792675,
+            0.0017757591695300265
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": 0.0002400446363458183,
+          "interval": [
+            -0.0010076482418955538,
+            0.0013002944368934466
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": 0.0020325381227579977,
+          "interval": [
+            0.0010827445062989575,
+            0.003045579280896562
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": -0.0003303010330315796,
+          "interval": [
+            -0.0011656602434722686,
+            0.0006019800429178351
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": -0.11669115871674872,
+          "interval": [
+            -0.1532193544717065,
+            -0.08616908451662252
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": -0.001859029134114582,
+          "interval": [
+            -0.0026514689127604177,
+            -0.001082007090250648
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": -0.125,
+          "interval": [
+            -0.40625,
+            0.03125
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -0.0006431758806736232,
+          "interval": [
+            -0.001510214139354652,
+            0.00020803435052735278
+          ],
+          "worlds": 30,
+          "families_with_data": 8
+        }
+      }
+    },
+    "maximin": {
+      "coherent__minus__strong": {
+        "ba_aulc": {
+          "mean": 0.0012258013248250751,
+          "interval": [
+            0.00020493983774520793,
+            0.0023929562347443315
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": 0.0005053912831605519,
+          "interval": [
+            -0.0010697482306463424,
+            0.0022283008729695347
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": 0.0019462113664896127,
+          "interval": [
+            0.000774304008775497,
+            0.0031053763057444853
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": -0.0005533403828511399,
+          "interval": [
+            -0.0021218920942404464,
+            0.0008434802266948439
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": -0.12728629955509024,
+          "interval": [
+            -0.16521010452820406,
+            -0.08945374282203797
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": -0.002288818359374996,
+          "interval": [
+            -0.0034918467203776016,
+            -0.0012130101521809849
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -0.0007852729983841166,
+          "interval": [
+            -0.0021830979896557755,
+            0.000775563258792461
+          ],
+          "worlds": 31,
+          "families_with_data": 8
+        }
+      },
+      "coherent__minus__gated": {
+        "ba_aulc": {
+          "mean": -1.0301009525821858e-05,
+          "interval": [
+            -0.0010110782306476296,
+            0.0008808598162305376
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": 0.003106517717151692,
+          "interval": [
+            0.0010615042281497298,
+            0.005257161377238859
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": -0.0031271197362033234,
+          "interval": [
+            -0.0049555598884337025,
+            -0.001446663689960167
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": -0.001816909938864741,
+          "interval": [
+            -0.0035812394365657327,
+            2.5368657081611606e-05
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": 0.07625500067063877,
+          "interval": [
+            0.060292619019594984,
+            0.09373357168888768
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": 0.0013198852539062496,
+          "interval": [
+            0.0004856745402018203,
+            0.0022837956746419247
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": 0.125,
+          "interval": [
+            0.0,
+            0.375
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -0.0028213655846746127,
+          "interval": [
+            -0.004335040500339121,
+            -0.0012060982391092808
+          ],
+          "worlds": 31,
+          "families_with_data": 8
+        }
+      },
+      "coherent_trace__minus__strong": {
+        "ba_aulc": {
+          "mean": -3.462916148000081e-05,
+          "interval": [
+            -0.0001628428417092289,
+            0.00010370459318157227
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": -0.00010690589469503704,
+          "interval": [
+            -0.00023803556261740817,
+            2.5017289591592993e-05
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": 3.7647571735030874e-05,
+          "interval": [
+            -0.00015889629335062816,
+            0.0002456861679577965
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": 0.00011417501370534263,
+          "interval": [
+            -6.542918991669763e-05,
+            0.000294442505993858
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": -0.000552922605520458,
+          "interval": [
+            -0.0010595828472768519,
+            -0.0001940503110203962
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": -5.5948893229162836e-05,
+          "interval": [
+            -0.00021616617838541097,
+            7.37508138020887e-05
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": 6.574872791229838e-05,
+          "interval": [
+            -0.00011041627429796486,
+            0.00026174706290591463
+          ],
+          "worlds": 31,
+          "families_with_data": 8
+        }
+      },
+      "coherent__minus__coherent_trace": {
+        "ba_aulc": {
+          "mean": 0.001260430486305076,
+          "interval": [
+            0.0003167406415679474,
+            0.002416235091167867
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": 0.0006122971778555887,
+          "interval": [
+            -0.0008325808372354937,
+            0.002109093917639595
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": 0.0019085637947545819,
+          "interval": [
+            0.0008257857507477038,
+            0.0030084049417752035
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": -0.0006675153965564826,
+          "interval": [
+            -0.0020776654298879,
+            0.0006523965524239691
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": -0.12673337694956976,
+          "interval": [
+            -0.16380494390806377,
+            -0.09168778327172858
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": -0.002232869466145833,
+          "interval": [
+            -0.003285789489746092,
+            -0.001184908548990885
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -0.000851021726296415,
+          "interval": [
+            -0.002249457970158362,
+            0.0005474356938775718
+          ],
+          "worlds": 31,
+          "families_with_data": 8
+        }
+      }
+    },
+    "strong_margin": {
+      "coherent__minus__strong": {
+        "ba_aulc": {
+          "mean": 0.0010649408438357794,
+          "interval": [
+            0.0005546722710291645,
+            0.0015920515988532152
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": -0.0001389970320313811,
+          "interval": [
+            -0.0015704649065697753,
+            0.0009999138798073022
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": 0.0022688787197029416,
+          "interval": [
+            0.0011044862580063266,
+            0.0035867693692366504
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": 2.7018798585956875e-05,
+          "interval": [
+            -0.0008667419520698238,
+            0.0008749238393319779
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": -0.1070759998745841,
+          "interval": [
+            -0.1491335420484662,
+            -0.07454334306014092
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": -0.0015767415364583296,
+          "interval": [
+            -0.0026399612426757746,
+            -0.0007349650065104168
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": -0.25,
+          "interval": [
+            -0.8125,
+            0.0625
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -0.0001683965225589917,
+          "interval": [
+            -0.0008807340448457073,
+            0.0005410324965834302
+          ],
+          "worlds": 31,
+          "families_with_data": 8
+        }
+      },
+      "coherent__minus__gated": {
+        "ba_aulc": {
+          "mean": 0.0008761037671751425,
+          "interval": [
+            -0.0001254215591838032,
+            0.0017620771326717262
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": 0.001770543871529271,
+          "interval": [
+            9.854946604900768e-05,
+            0.003449681945167009
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": -1.8336337178976453e-05,
+          "interval": [
+            -0.0009264854042833417,
+            0.0008260121482848003
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": -0.0017002679423334982,
+          "interval": [
+            -0.003161643355886295,
+            -0.00020362197679545932
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": 0.0994004891725285,
+          "interval": [
+            0.07432268866011428,
+            0.12562068669332682
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": 0.000516255696614585,
+          "interval": [
+            -5.08626302083262e-05,
+            0.0010478337605794301
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.25,
+          "interval": [
+            0.0,
+            0.75
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": -0.0625,
+          "interval": [
+            -0.1875,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": -0.3125,
+          "interval": [
+            -0.8125,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -0.0018143780023538061,
+          "interval": [
+            -0.0032019595920150853,
+            -0.0004056900179497986
+          ],
+          "worlds": 31,
+          "families_with_data": 8
+        }
+      },
+      "coherent_trace__minus__strong": {
+        "ba_aulc": {
+          "mean": 5.2788571037052506e-05,
+          "interval": [
+            -9.689743836632618e-06,
+            0.00011188802631971973
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": -6.789126867428989e-06,
+          "interval": [
+            -0.0001422477357981367,
+            0.00010354565047671673
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": 0.00011236626894152793,
+          "interval": [
+            3.952431417355053e-05,
+            0.00019368168492049298
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": 2.0105468092633527e-05,
+          "interval": [
+            -6.817418589101856e-05,
+            0.00012244724523909414
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": -0.00042705939065644733,
+          "interval": [
+            -0.000557380898205026,
+            -0.00024331486353633045
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": -9.155273437499913e-05,
+          "interval": [
+            -0.00014502207438151163,
+            -3.814697265624955e-05
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -3.4925002587325206e-05,
+          "interval": [
+            -0.0002148315114966397,
+            0.00011882474166956952
+          ],
+          "worlds": 31,
+          "families_with_data": 8
+        }
+      },
+      "coherent__minus__coherent_trace": {
+        "ba_aulc": {
+          "mean": 0.0010121522727987269,
+          "interval": [
+            0.0005209278978682609,
+            0.001522994509976102
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "positive_recall_aulc": {
+          "mean": -0.0001322079051639521,
+          "interval": [
+            -0.0015154695486670772,
+            0.0008999784237777392
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "negative_recall_aulc": {
+          "mean": 0.0021565124507614136,
+          "interval": [
+            0.0009295664076539645,
+            0.003511199775616739
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "regional_error_aulc": {
+          "mean": 6.913330493323348e-06,
+          "interval": [
+            -0.0007818808596773193,
+            0.0008416610970048195
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "log_loss_aulc": {
+          "mean": -0.10664894048392766,
+          "interval": [
+            -0.14811461264955456,
+            -0.07483334513209872
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "error_aulc": {
+          "mean": -0.0014851888020833304,
+          "interval": [
+            -0.0025380452473958304,
+            -0.0006230672200520836
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.90": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.93": {
+          "mean": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "burden_0.95": {
+          "mean": -0.25,
+          "interval": [
+            -0.8125,
+            0.0625
+          ],
+          "worlds": 32,
+          "families_with_data": 8
+        },
+        "conditional_post_hit_error": {
+          "mean": -0.0001334715199716665,
+          "interval": [
+            -0.000791697642459931,
+            0.0005685894024985096
+          ],
+          "worlds": 31,
+          "families_with_data": 8
+        }
+      }
+    }
+  },
+  "screen": {
+    "local_ba_coherent_minus_strong": {
+      "mean": 0.0017257743735161573,
+      "interval": [
+        0.0004019296496031967,
+        0.0032190897267079187
+      ],
+      "worlds": 12,
+      "families_with_data": 3
+    },
+    "local_ba_coherent_minus_trace": {
+      "mean": 0.001719476569028396,
+      "interval": [
+        0.0004769067186274165,
+        0.0030429760054095146
+      ],
+      "worlds": 12,
+      "families_with_data": 3
+    },
+    "local_error_coherent_minus_strong": {
+      "mean": -0.00018189679612486768,
+      "interval": [
+        -0.00214183937055198,
+        0.0020776907873223264
+      ],
+      "worlds": 12,
+      "families_with_data": 3
+    },
+    "control_ba_coherent_minus_strong": {
+      "mean": 0.001001158487378452,
+      "interval": [
+        0.00043277358566260333,
+        0.0015638654835494117
+      ],
+      "worlds": 16,
+      "families_with_data": 4
+    },
+    "passed": false
+  },
+  "families": [
+    {
+      "family": "smooth",
+      "arm": "strong",
+      "world_paths": 8,
+      "ba_aulc": 0.9328642759181447,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9431785809637176,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.9225499708725717,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.061703420594903066,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.1596173779009072,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 1.0,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.75,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 8,
+      "attainment_0.93": 7,
+      "attainment_0.95": 3
+    },
+    {
+      "family": "smooth",
+      "arm": "gated",
+      "world_paths": 8,
+      "ba_aulc": 0.9325655508212859,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9448935703348695,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.9202375313077021,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.062059023434785636,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.1569309272728655,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.7966365146877823,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.75,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 8,
+      "attainment_0.93": 7,
+      "attainment_0.95": 3
+    },
+    {
+      "family": "smooth",
+      "arm": "coherent",
+      "world_paths": 8,
+      "ba_aulc": 0.9330808130974553,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9439298730845919,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.9222317531103187,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.06078578706960948,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.15637755876569231,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.6201544507032135,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.75,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 8,
+      "attainment_0.93": 7,
+      "attainment_0.95": 3
+    },
+    {
+      "family": "smooth",
+      "arm": "coherent_trace",
+      "world_paths": 8,
+      "ba_aulc": 0.9329307333688266,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9432256442167297,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.9226358225209235,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.06158767985416233,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.1596775575241201,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5025766853944272,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.75,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 8,
+      "attainment_0.93": 7,
+      "attainment_0.95": 3
+    },
+    {
+      "family": "local_shift",
+      "arm": "strong",
+      "world_paths": 8,
+      "ba_aulc": 0.8355129220457898,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.927669135897168,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7433567081944114,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.12466215001559347,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.5757616223331086,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 1.0,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.75,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 3,
+      "attainment_0.93": 2,
+      "attainment_0.95": 1
+    },
+    {
+      "family": "local_shift",
+      "arm": "gated",
+      "world_paths": 8,
+      "ba_aulc": 0.8391037039535854,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9267482399788659,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7514591679283049,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.12724269041195832,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.341879169950423,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.6475129997397248,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.75,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 3,
+      "attainment_0.93": 2,
+      "attainment_0.95": 2
+    },
+    {
+      "family": "local_shift",
+      "arm": "coherent",
+      "world_paths": 8,
+      "ba_aulc": 0.8385831058934556,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.928839344349653,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7483268674372583,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.12430432847916051,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.42872702834192067,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.48439568043076864,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.75,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 3,
+      "attainment_0.93": 2,
+      "attainment_0.95": 2
+    },
+    {
+      "family": "local_shift",
+      "arm": "coherent_trace",
+      "world_paths": 8,
+      "ba_aulc": 0.8354613357483152,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.927669135897168,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7432535355994625,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.12454466881258595,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.5757902465985449,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5130574009031075,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.75,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 3,
+      "attainment_0.93": 2,
+      "attainment_0.95": 1
+    },
+    {
+      "family": "small_island",
+      "arm": "strong",
+      "world_paths": 8,
+      "ba_aulc": 0.6079642675639558,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.3268590883201501,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.8890694468077616,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.6173788825099241,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 1.0142009764542093,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 1.0,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 1.875,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 0,
+      "attainment_0.93": 0,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "small_island",
+      "arm": "gated",
+      "world_paths": 8,
+      "ba_aulc": 0.6020431355043727,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.30097240081883087,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.9031138701899146,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.6354896099069165,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.41467069246063504,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.4691141791440894,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 1.875,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 0,
+      "attainment_0.93": 0,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "small_island",
+      "arm": "coherent",
+      "world_paths": 8,
+      "ba_aulc": 0.6090516811148612,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.32014348297631234,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.89795987925341,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.6210384587983666,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.5113531445221754,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.410878783706553,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 1.875,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 0,
+      "attainment_0.93": 0,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "small_island",
+      "arm": "coherent_trace",
+      "world_paths": 8,
+      "ba_aulc": 0.6080776039738411,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.3262825604657851,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.8898726474818974,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.6178706695023446,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 1.009836219759239,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.43269193251543414,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 1.875,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 0,
+      "attainment_0.93": 0,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "rotated_local",
+      "arm": "strong",
+      "world_paths": 8,
+      "ba_aulc": 0.8546869835201134,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9107572865225537,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7986166805176731,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.11682597159696397,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.42451869698457534,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 1.0,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.125,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 3,
+      "attainment_0.93": 3,
+      "attainment_0.95": 2
+    },
+    {
+      "family": "rotated_local",
+      "arm": "gated",
+      "world_paths": 8,
+      "ba_aulc": 0.8561322165835479,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9104896950675714,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.8017747380995242,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.11792698257840195,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.33722641142359866,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5562297940113003,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.125,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 3,
+      "attainment_0.93": 3,
+      "attainment_0.95": 1
+    },
+    {
+      "family": "rotated_local",
+      "arm": "coherent",
+      "world_paths": 8,
+      "ba_aulc": 0.8557067092420905,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9130392271946949,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.798374191289486,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.11297852645657991,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.3708860354404334,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.4668259159605714,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.125,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 3,
+      "attainment_0.93": 3,
+      "attainment_0.95": 1
+    },
+    {
+      "family": "rotated_local",
+      "arm": "coherent_trace",
+      "world_paths": 8,
+      "ba_aulc": 0.8546441268211658,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9106556245276245,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7986326291147069,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.11697621198157933,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.42461885177771996,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5095975894273648,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.125,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 3,
+      "attainment_0.93": 3,
+      "attainment_0.95": 2
+    },
+    {
+      "family": "rare_negative",
+      "arm": "strong",
+      "world_paths": 8,
+      "ba_aulc": 0.8772862396108412,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9797988652666068,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7747736139550757,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.03253328319964349,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.09915938748686251,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 1.0,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.625,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 3,
+      "attainment_0.95": 2
+    },
+    {
+      "family": "rare_negative",
+      "arm": "gated",
+      "world_paths": 8,
+      "ba_aulc": 0.8760806452635161,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9801896280487497,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7719716624782825,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.032066706392485225,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.09588565953895622,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.7484466176480733,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.625,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 3,
+      "attainment_0.95": 2
+    },
+    {
+      "family": "rare_negative",
+      "arm": "coherent",
+      "world_paths": 8,
+      "ba_aulc": 0.8772672512154223,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9797030073328055,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7748314950980393,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.03239203380880529,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.09852251085451066,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.6200672121862402,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.625,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 3,
+      "attainment_0.95": 2
+    },
+    {
+      "family": "rare_negative",
+      "arm": "coherent_trace",
+      "world_paths": 8,
+      "ba_aulc": 0.8773356858133728,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9797988652666066,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7748725063601389,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.032597625914068444,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.09917930262389255,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.49972997564814503,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.625,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 3,
+      "attainment_0.95": 2
+    },
+    {
+      "family": "heteroskedastic",
+      "arm": "strong",
+      "world_paths": 8,
+      "ba_aulc": 0.8385399736199413,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.8898101380509447,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7872698091889376,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.18859208996109073,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.44913935763568336,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 1.0,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.0,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 2,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "heteroskedastic",
+      "arm": "gated",
+      "world_paths": 8,
+      "ba_aulc": 0.8406623281620671,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.8925415006218942,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.78878315570224,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.18642664470048628,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.3643818084288941,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5057676195102891,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.0,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 2,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "heteroskedastic",
+      "arm": "coherent",
+      "world_paths": 8,
+      "ba_aulc": 0.8398023104252869,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.8927319956576938,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7868726251928799,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.18890298305759595,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.4111819096433353,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5026755733568747,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.0,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 2,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "heteroskedastic",
+      "arm": "coherent_trace",
+      "world_paths": 8,
+      "ba_aulc": 0.8385816345107342,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.8900698110949197,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.7870934579265486,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.1886631807177957,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.44926449087807474,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5084831274604711,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 3.0,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 2,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "outliers",
+      "arm": "strong",
+      "world_paths": 8,
+      "ba_aulc": 0.8489236470446142,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.7860257348055466,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.9118215592836819,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.18992154551031362,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.538849167841956,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 1.0,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 4.5,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 2,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "outliers",
+      "arm": "gated",
+      "world_paths": 8,
+      "ba_aulc": 0.8516871401686187,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.7897640751890682,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.9136102051481692,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.1869672451307415,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.4195656340141146,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.6596693710592341,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 4.5,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 2,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "outliers",
+      "arm": "coherent",
+      "world_paths": 8,
+      "ba_aulc": 0.8511178049743654,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.7873129716093317,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.9149226383393994,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.18780793507016333,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.496357021943576,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5401718773118191,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 4.5,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 2,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "outliers",
+      "arm": "coherent_trace",
+      "world_paths": 8,
+      "ba_aulc": 0.8488559257870918,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.785942408271604,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.9117694433025796,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.18991442853308793,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.5388625532626646,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5038390411246065,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 4.5,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 4,
+      "attainment_0.93": 2,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "correlated_corruption",
+      "arm": "strong",
+      "world_paths": 8,
+      "ba_aulc": 0.7317687089547145,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9879745676707761,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.4755628502386529,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.46979763635873384,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 1.3969388417345754,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 1.0,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.875,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 0,
+      "attainment_0.93": 0,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "correlated_corruption",
+      "arm": "gated",
+      "world_paths": 8,
+      "ba_aulc": 0.7349720554651672,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9884316180874064,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.4815124928429279,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.4651995023791231,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 0.8875739681910235,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.6421377532211583,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.875,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 0,
+      "attainment_0.93": 0,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "correlated_corruption",
+      "arm": "coherent",
+      "world_paths": 8,
+      "ba_aulc": 0.7321003109898209,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9878390722968972,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.4763615496827446,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.4710996406698245,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 1.247331021141536,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5516810476757588,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.875,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 0,
+      "attainment_0.93": 0,
+      "attainment_0.95": 0
+    },
+    {
+      "family": "correlated_corruption",
+      "arm": "coherent_trace",
+      "world_paths": 8,
+      "ba_aulc": 0.7317326098929954,
+      "ba_aulc_defined": 8,
+      "positive_recall_aulc": 0.9879745676707761,
+      "positive_recall_aulc_defined": 8,
+      "negative_recall_aulc": 0.47549065211521474,
+      "negative_recall_aulc_defined": 8,
+      "regional_error_aulc": 0.46979763635873384,
+      "regional_error_aulc_defined": 8,
+      "log_loss_aulc": 1.397036277962914,
+      "log_loss_aulc_defined": 8,
+      "null_weight_b24": 0.5081444676253896,
+      "null_weight_b24_defined": 8,
+      "paid_region_hits": 2.875,
+      "paid_region_hits_defined": 8,
+      "attainment_0.90": 0,
+      "attainment_0.93": 0,
+      "attainment_0.95": 0
+    }
+  ],
+  "costs": [
+    {
+      "id": "dev_v2_correlated_corruption_202610960_maximin",
+      "incremental_cpu_seconds": 0.390625,
+      "incremental_wall_seconds": 0.5932647000299767,
+      "peak_rss_bytes": 85725184,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_correlated_corruption_202610960_strong_margin",
+      "incremental_cpu_seconds": 0.390625,
+      "incremental_wall_seconds": 0.5994359999895096,
+      "peak_rss_bytes": 88547328,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_correlated_corruption_202610961_maximin",
+      "incremental_cpu_seconds": 0.359375,
+      "incremental_wall_seconds": 0.5519673000089824,
+      "peak_rss_bytes": 89874432,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_correlated_corruption_202610961_strong_margin",
+      "incremental_cpu_seconds": 0.390625,
+      "incremental_wall_seconds": 0.5635379999876022,
+      "peak_rss_bytes": 90075136,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_correlated_corruption_202610962_maximin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.6190926000708714,
+      "peak_rss_bytes": 85618688,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_correlated_corruption_202610962_strong_margin",
+      "incremental_cpu_seconds": 0.453125,
+      "incremental_wall_seconds": 0.624028000049293,
+      "peak_rss_bytes": 89407488,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_correlated_corruption_202610963_maximin",
+      "incremental_cpu_seconds": 0.34375,
+      "incremental_wall_seconds": 0.6207951999967918,
+      "peak_rss_bytes": 88309760,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_correlated_corruption_202610963_strong_margin",
+      "incremental_cpu_seconds": 0.484375,
+      "incremental_wall_seconds": 0.6551742000738159,
+      "peak_rss_bytes": 88539136,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_heteroskedastic_202610760_maximin",
+      "incremental_cpu_seconds": 0.453125,
+      "incremental_wall_seconds": 0.611792300012894,
+      "peak_rss_bytes": 88756224,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_heteroskedastic_202610760_strong_margin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.625989600084722,
+      "peak_rss_bytes": 88711168,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_heteroskedastic_202610761_maximin",
+      "incremental_cpu_seconds": 0.453125,
+      "incremental_wall_seconds": 0.6296078000450507,
+      "peak_rss_bytes": 88637440,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_heteroskedastic_202610761_strong_margin",
+      "incremental_cpu_seconds": 0.375,
+      "incremental_wall_seconds": 0.5909468999598175,
+      "peak_rss_bytes": 88711168,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_heteroskedastic_202610762_maximin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.5978878000751138,
+      "peak_rss_bytes": 88883200,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_heteroskedastic_202610762_strong_margin",
+      "incremental_cpu_seconds": 0.328125,
+      "incremental_wall_seconds": 0.6358511000871658,
+      "peak_rss_bytes": 86052864,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_heteroskedastic_202610763_maximin",
+      "incremental_cpu_seconds": 0.390625,
+      "incremental_wall_seconds": 0.5883654999779537,
+      "peak_rss_bytes": 88907776,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_heteroskedastic_202610763_strong_margin",
+      "incremental_cpu_seconds": 0.40625,
+      "incremental_wall_seconds": 0.595534099964425,
+      "peak_rss_bytes": 89706496,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_local_shift_202610360_maximin",
+      "incremental_cpu_seconds": 0.375,
+      "incremental_wall_seconds": 0.6398905999958515,
+      "peak_rss_bytes": 88809472,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_local_shift_202610360_strong_margin",
+      "incremental_cpu_seconds": 0.46875,
+      "incremental_wall_seconds": 0.6690867999568582,
+      "peak_rss_bytes": 89542656,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_local_shift_202610361_maximin",
+      "incremental_cpu_seconds": 0.375,
+      "incremental_wall_seconds": 0.6804579999297857,
+      "peak_rss_bytes": 88924160,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_local_shift_202610361_strong_margin",
+      "incremental_cpu_seconds": 0.453125,
+      "incremental_wall_seconds": 0.6271133999107406,
+      "peak_rss_bytes": 88498176,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_local_shift_202610362_maximin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.6339178000343964,
+      "peak_rss_bytes": 88715264,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_local_shift_202610362_strong_margin",
+      "incremental_cpu_seconds": 0.390625,
+      "incremental_wall_seconds": 0.6595141999423504,
+      "peak_rss_bytes": 91582464,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_local_shift_202610363_maximin",
+      "incremental_cpu_seconds": 0.484375,
+      "incremental_wall_seconds": 0.6336318999528885,
+      "peak_rss_bytes": 88752128,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_local_shift_202610363_strong_margin",
+      "incremental_cpu_seconds": 0.484375,
+      "incremental_wall_seconds": 0.6480534999864176,
+      "peak_rss_bytes": 88653824,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_outliers_202610860_maximin",
+      "incremental_cpu_seconds": 0.390625,
+      "incremental_wall_seconds": 0.6074358000187203,
+      "peak_rss_bytes": 89489408,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_outliers_202610860_strong_margin",
+      "incremental_cpu_seconds": 0.359375,
+      "incremental_wall_seconds": 0.6323662999784574,
+      "peak_rss_bytes": 89243648,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_outliers_202610861_maximin",
+      "incremental_cpu_seconds": 0.34375,
+      "incremental_wall_seconds": 0.6096782999811694,
+      "peak_rss_bytes": 89554944,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_outliers_202610861_strong_margin",
+      "incremental_cpu_seconds": 0.421875,
+      "incremental_wall_seconds": 0.6149006999330595,
+      "peak_rss_bytes": 90976256,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_outliers_202610862_maximin",
+      "incremental_cpu_seconds": 0.515625,
+      "incremental_wall_seconds": 0.6476495999377221,
+      "peak_rss_bytes": 88772608,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_outliers_202610862_strong_margin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.6109213000163436,
+      "peak_rss_bytes": 89300992,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_outliers_202610863_maximin",
+      "incremental_cpu_seconds": 0.359375,
+      "incremental_wall_seconds": 0.6214080998906866,
+      "peak_rss_bytes": 89579520,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_outliers_202610863_strong_margin",
+      "incremental_cpu_seconds": 0.40625,
+      "incremental_wall_seconds": 0.6624223999679089,
+      "peak_rss_bytes": 89124864,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rare_negative_202610660_maximin",
+      "incremental_cpu_seconds": 0.40625,
+      "incremental_wall_seconds": 0.6639143000356853,
+      "peak_rss_bytes": 89149440,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rare_negative_202610660_strong_margin",
+      "incremental_cpu_seconds": 0.5,
+      "incremental_wall_seconds": 0.6707390000810847,
+      "peak_rss_bytes": 89624576,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rare_negative_202610661_maximin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.6823854999383911,
+      "peak_rss_bytes": 88780800,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rare_negative_202610661_strong_margin",
+      "incremental_cpu_seconds": 0.484375,
+      "incremental_wall_seconds": 0.690953699988313,
+      "peak_rss_bytes": 89423872,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rare_negative_202610662_maximin",
+      "incremental_cpu_seconds": 0.453125,
+      "incremental_wall_seconds": 0.6814453999977559,
+      "peak_rss_bytes": 89505792,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rare_negative_202610662_strong_margin",
+      "incremental_cpu_seconds": 0.484375,
+      "incremental_wall_seconds": 0.6936868999619037,
+      "peak_rss_bytes": 89387008,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rare_negative_202610663_maximin",
+      "incremental_cpu_seconds": 0.40625,
+      "incremental_wall_seconds": 0.6442493998911232,
+      "peak_rss_bytes": 89423872,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rare_negative_202610663_strong_margin",
+      "incremental_cpu_seconds": 0.390625,
+      "incremental_wall_seconds": 0.6239774000132456,
+      "peak_rss_bytes": 89657344,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rotated_local_202610560_maximin",
+      "incremental_cpu_seconds": 0.375,
+      "incremental_wall_seconds": 0.6249126000329852,
+      "peak_rss_bytes": 88952832,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rotated_local_202610560_strong_margin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.6514076999155805,
+      "peak_rss_bytes": 89403392,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rotated_local_202610561_maximin",
+      "incremental_cpu_seconds": 0.34375,
+      "incremental_wall_seconds": 0.6112593000289053,
+      "peak_rss_bytes": 89493504,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rotated_local_202610561_strong_margin",
+      "incremental_cpu_seconds": 0.359375,
+      "incremental_wall_seconds": 0.6047739000059664,
+      "peak_rss_bytes": 89108480,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rotated_local_202610562_maximin",
+      "incremental_cpu_seconds": 0.34375,
+      "incremental_wall_seconds": 0.6519967999774963,
+      "peak_rss_bytes": 91152384,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rotated_local_202610562_strong_margin",
+      "incremental_cpu_seconds": 0.421875,
+      "incremental_wall_seconds": 0.690202800091356,
+      "peak_rss_bytes": 89649152,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rotated_local_202610563_maximin",
+      "incremental_cpu_seconds": 0.484375,
+      "incremental_wall_seconds": 0.7517536000814289,
+      "peak_rss_bytes": 88944640,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_rotated_local_202610563_strong_margin",
+      "incremental_cpu_seconds": 0.484375,
+      "incremental_wall_seconds": 0.9089879000093788,
+      "peak_rss_bytes": 89624576,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_small_island_202610460_maximin",
+      "incremental_cpu_seconds": 0.53125,
+      "incremental_wall_seconds": 1.020017599919811,
+      "peak_rss_bytes": 89030656,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_small_island_202610460_strong_margin",
+      "incremental_cpu_seconds": 0.578125,
+      "incremental_wall_seconds": 0.931072499952279,
+      "peak_rss_bytes": 89411584,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_small_island_202610461_maximin",
+      "incremental_cpu_seconds": 0.515625,
+      "incremental_wall_seconds": 0.8822229999350384,
+      "peak_rss_bytes": 89608192,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_small_island_202610461_strong_margin",
+      "incremental_cpu_seconds": 0.484375,
+      "incremental_wall_seconds": 0.7340604999335483,
+      "peak_rss_bytes": 89292800,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_small_island_202610462_maximin",
+      "incremental_cpu_seconds": 0.46875,
+      "incremental_wall_seconds": 0.670206900103949,
+      "peak_rss_bytes": 89341952,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_small_island_202610462_strong_margin",
+      "incremental_cpu_seconds": 0.375,
+      "incremental_wall_seconds": 0.6427059000125155,
+      "peak_rss_bytes": 89509888,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_small_island_202610463_maximin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.6508497999748215,
+      "peak_rss_bytes": 89477120,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_small_island_202610463_strong_margin",
+      "incremental_cpu_seconds": 0.390625,
+      "incremental_wall_seconds": 0.6528785000555217,
+      "peak_rss_bytes": 88948736,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_smooth_202610260_maximin",
+      "incremental_cpu_seconds": 0.453125,
+      "incremental_wall_seconds": 0.7235822000075132,
+      "peak_rss_bytes": 89513984,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_smooth_202610260_strong_margin",
+      "incremental_cpu_seconds": 0.40625,
+      "incremental_wall_seconds": 0.6600953999441117,
+      "peak_rss_bytes": 92508160,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_smooth_202610261_maximin",
+      "incremental_cpu_seconds": 0.359375,
+      "incremental_wall_seconds": 0.7176091000437737,
+      "peak_rss_bytes": 89010176,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_smooth_202610261_strong_margin",
+      "incremental_cpu_seconds": 0.375,
+      "incremental_wall_seconds": 0.6253607999533415,
+      "peak_rss_bytes": 89817088,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_smooth_202610262_maximin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.6704479000763968,
+      "peak_rss_bytes": 92180480,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_smooth_202610262_strong_margin",
+      "incremental_cpu_seconds": 0.359375,
+      "incremental_wall_seconds": 0.640715999994427,
+      "peak_rss_bytes": 89309184,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_smooth_202610263_maximin",
+      "incremental_cpu_seconds": 0.4375,
+      "incremental_wall_seconds": 0.6796144000254571,
+      "peak_rss_bytes": 89829376,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    },
+    {
+      "id": "dev_v2_smooth_202610263_strong_margin",
+      "incremental_cpu_seconds": 0.40625,
+      "incremental_wall_seconds": 0.6091724999714643,
+      "peak_rss_bytes": 89174016,
+      "new_queries": 0,
+      "new_background_optimizations": 0,
+      "dense_factorizations": 9,
+      "rankone_updates": 1152
+    }
+  ],
+  "queue": {
+    "counts": [
+      {
+        "phase": "DEV_V1",
+        "status": "COMPLETE",
+        "n": 64
+      },
+      {
+        "phase": "DEV_V2",
+        "status": "COMPLETE",
+        "n": 64
+      },
+      {
+        "phase": "REFERENCE_V1",
+        "status": "COMPLETE",
+        "n": 1
+      },
+      {
+        "phase": "REFERENCE_V2",
+        "status": "COMPLETE",
+        "n": 1
+      },
+      {
+        "phase": "SELFTEST",
+        "status": "COMPLETE",
+        "n": 1
+      }
+    ],
+    "reservations": {
+      "component_solves": 152128,
+      "model_requests": 3968,
+      "optimizer_evaluations": 143552,
+      "reference_solves": 200,
+      "setup_steps": 6
+    },
+    "running": []
+  },
+  "scope": "DEV on previously inspected worlds; both paths averaged within world; pointwise descriptive bootstrap.",
+  "limits": "No new acquisition paths or independent TEST; incremental v2 CPU is not standalone whole-learner CPU."
+}

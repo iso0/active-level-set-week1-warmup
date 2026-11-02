@@ -1,0 +1,313 @@
+{
+  "assumptions": "Independent worlds within fixed families; whole-world stratified bootstrap approximation; six simultaneous estimates. No distribution-free or sign-flip claim.",
+  "contrasts": {
+    "error__H": {
+      "bootstrap_standard_error": 0.0003458644461330287,
+      "ci95_pointwise": [
+        -0.0011360258809398889,
+        0.00023530538980062857
+      ],
+      "ci95_simultaneous": [
+        -0.0012890615892760197,
+        0.00044119475477588454
+      ],
+      "degenerate": false,
+      "estimate": -0.0004239334172500676,
+      "invalid_bootstrap_replicates": 0,
+      "missing_outcome_bounds": {
+        "lower": -0.0005926652388139205,
+        "scope": "Known eligibility only; unknown membership prevents a complete conditional bound.",
+        "unknown_conditional_memberships": 0,
+        "upper": 0.002958471124822443
+      },
+      "n": {
+        "coordinate": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "corrupt_correlated": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "heavy_tail": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "heteroscedastic": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "island_large": {
+          "eligible_pairs": 63,
+          "scheduled_worlds": 64
+        },
+        "island_small": {
+          "eligible_pairs": 128,
+          "scheduled_worlds": 128
+        },
+        "local_scale": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "missing": {
+          "eligible_pairs": 15,
+          "scheduled_worlds": 16
+        },
+        "null": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "rotated": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "smooth": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        }
+      },
+      "undefined_families": []
+    },
+    "error__I": {
+      "bootstrap_standard_error": 0.0001457165076908071,
+      "ci95_pointwise": [
+        -0.0007102423003225616,
+        -0.0001483980539385205
+      ],
+      "ci95_simultaneous": [
+        -0.0007736900155418938,
+        -4.4713924810288724e-05
+      ],
+      "degenerate": false,
+      "estimate": -0.00040920197017609125,
+      "invalid_bootstrap_replicates": 0,
+      "missing_outcome_bounds": {
+        "lower": -0.005908619273792614,
+        "scope": "Known eligibility only; unknown membership prevents a complete conditional bound.",
+        "unknown_conditional_memberships": 0,
+        "upper": 0.0011936534534801137
+      },
+      "n": {
+        "coordinate": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "corrupt_correlated": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "heavy_tail": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "heteroscedastic": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "island_large": {
+          "eligible_pairs": 63,
+          "scheduled_worlds": 64
+        },
+        "island_small": {
+          "eligible_pairs": 128,
+          "scheduled_worlds": 128
+        },
+        "local_scale": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "missing": {
+          "eligible_pairs": 15,
+          "scheduled_worlds": 16
+        },
+        "null": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "rotated": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "smooth": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        }
+      },
+      "undefined_families": []
+    },
+    "error__R": {
+      "bootstrap_standard_error": 0.00013619622524911387,
+      "ci95_pointwise": [
+        -0.0003613561434835239,
+        0.000171661376953125
+      ],
+      "ci95_simultaneous": [
+        -0.0004294583967396968,
+        0.0002518905693305608
+      ],
+      "degenerate": false,
+      "estimate": -8.8783913704568e-05,
+      "invalid_bootstrap_replicates": 0,
+      "missing_outcome_bounds": {
+        "lower": -0.0028384815562855115,
+        "scope": "Known eligibility only; unknown membership prevents a complete conditional bound.",
+        "unknown_conditional_memberships": 0,
+        "upper": 0.0007126548073508523
+      },
+      "n": {
+        "coordinate": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "corrupt_correlated": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "heavy_tail": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "heteroscedastic": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "island_large": {
+          "eligible_pairs": 63,
+          "scheduled_worlds": 64
+        },
+        "island_small": {
+          "eligible_pairs": 128,
+          "scheduled_worlds": 128
+        },
+        "local_scale": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "missing": {
+          "eligible_pairs": 15,
+          "scheduled_worlds": 16
+        },
+        "null": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "rotated": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        },
+        "smooth": {
+          "eligible_pairs": 16,
+          "scheduled_worlds": 16
+        }
+      },
+      "undefined_families": []
+    },
+    "island_error__H": {
+      "bootstrap_standard_error": 0.000990735008464242,
+      "ci95_pointwise": [
+        -0.0008728014409832588,
+        0.0029677206851119846
+      ],
+      "ci95_simultaneous": [
+        -0.0017598232529098833,
+        0.0031965275742295873
+      ],
+      "degenerate": false,
+      "estimate": 0.000718352160659852,
+      "invalid_bootstrap_replicates": 25,
+      "missing_outcome_bounds": {
+        "lower": -0.004741372544402849,
+        "scope": "Known eligibility only; unknown membership prevents a complete conditional bound.",
+        "unknown_conditional_memberships": 0,
+        "upper": 0.004517886714856411
+      },
+      "n": {
+        "island_large": {
+          "eligible_pairs": 26,
+          "scheduled_worlds": 64
+        },
+        "island_small": {
+          "eligible_pairs": 6,
+          "scheduled_worlds": 128
+        }
+      },
+      "undefined_families": []
+    },
+    "island_error__I": {
+      "bootstrap_standard_error": 0.0,
+      "ci95_pointwise": [
+        0.0,
+        0.0
+      ],
+      "ci95_simultaneous": [
+        0.0,
+        0.0
+      ],
+      "degenerate": true,
+      "estimate": 0.0,
+      "invalid_bootstrap_replicates": 25,
+      "missing_outcome_bounds": {
+        "lower": -0.010866238138965412,
+        "scope": "Known eligibility only; unknown membership prevents a complete conditional bound.",
+        "unknown_conditional_memberships": 0,
+        "upper": 0.007652280379553106
+      },
+      "n": {
+        "island_large": {
+          "eligible_pairs": 26,
+          "scheduled_worlds": 64
+        },
+        "island_small": {
+          "eligible_pairs": 6,
+          "scheduled_worlds": 128
+        }
+      },
+      "undefined_families": []
+    },
+    "island_error__R": {
+      "bootstrap_standard_error": 0.0,
+      "ci95_pointwise": [
+        0.0,
+        0.0
+      ],
+      "ci95_simultaneous": [
+        0.0,
+        0.0
+      ],
+      "degenerate": true,
+      "estimate": 0.0,
+      "invalid_bootstrap_replicates": 25,
+      "missing_outcome_bounds": {
+        "lower": -0.005433119069482706,
+        "scope": "Known eligibility only; unknown membership prevents a complete conditional bound.",
+        "unknown_conditional_memberships": 0,
+        "upper": 0.003826140189776553
+      },
+      "n": {
+        "island_large": {
+          "eligible_pairs": 26,
+          "scheduled_worlds": 64
+        },
+        "island_small": {
+          "eligible_pairs": 6,
+          "scheduled_worlds": 128
+        }
+      },
+      "undefined_families": []
+    }
+  },
+  "gates": {
+    "H": {
+      "not_a_model_replacement_or_physical_savings_claim": true,
+      "supported_under_registered_guard": false
+    },
+    "R": {
+      "not_a_model_replacement_or_physical_savings_claim": true,
+      "supported_under_registered_guard": false
+    }
+  },
+  "joint_valid_bootstrap_replicates": 9975,
+  "max_standardized_critical_value": 2.5013504038897385,
+  "replicates": 10000,
+  "status": "INCOMPLETE_NO_CLEAN_PRIMARY_PASS"
+}

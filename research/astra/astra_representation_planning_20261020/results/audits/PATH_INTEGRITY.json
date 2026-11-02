@@ -1,0 +1,62 @@
+{
+  "complete_path_receipts": 4093,
+  "cpu_seconds": 476.4375,
+  "issues": [
+    {
+      "kind": "missing_result",
+      "unit": "test__w081__e2e__existing__h2"
+    },
+    {
+      "kind": "missing_result",
+      "unit": "test__w175__prefix__existing__h2"
+    },
+    {
+      "kind": "missing_result",
+      "unit": "test__w211__prefix__local__h2"
+    }
+  ],
+  "numeric_groups": {
+    "e2e__existing__risk_h2": {
+      "decisions": 5250,
+      "fallbacks": 3643,
+      "rank_changes": 457,
+      "unaccepted": 276
+    },
+    "e2e__local__risk_h2": {
+      "decisions": 5280,
+      "fallbacks": 3662,
+      "rank_changes": 451,
+      "unaccepted": 257
+    },
+    "prefix__existing__mixture_risk_h1": {
+      "decisions": 4032,
+      "fallbacks": 1029,
+      "rank_changes": 162,
+      "unaccepted": 29
+    },
+    "prefix__existing__risk_h2": {
+      "decisions": 4020,
+      "fallbacks": 2784,
+      "rank_changes": 417,
+      "unaccepted": 294
+    },
+    "prefix__local__mixture_risk_h1": {
+      "decisions": 4032,
+      "fallbacks": 1025,
+      "rank_changes": 159,
+      "unaccepted": 29
+    },
+    "prefix__local__risk_h2": {
+      "decisions": 4020,
+      "fallbacks": 2763,
+      "rank_changes": 420,
+      "unaccepted": 289
+    }
+  },
+  "scope": "All completed TEST path snapshots, unique IDs and paid transitions; cached per-path receipts retain immutable hashes. No replay of paid simulator outcomes or model fits.",
+  "snapshots": 99256,
+  "source_sha256": "6caed8823aa6910c04e5b70cdcaa85c5baf7ec78553165f11ef8c1b62842dc45",
+  "status": "ISSUES_RETAINED",
+  "test_manifest_sha256": "f5d303a2ef255c53f40d4e259ef58c72d80d4ff14f512aea3aa0ca5b2cdd06e4",
+  "utc": "2026-10-21T05:27:36.421262+00:00"
+}

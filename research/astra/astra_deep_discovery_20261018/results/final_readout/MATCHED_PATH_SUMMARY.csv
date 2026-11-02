@@ -1,0 +1,17 @@
+contrast,paired_worlds,identical_full_paths,A_gate_active_worlds,B_gate_active_worlds,A_local_queries,B_local_queries
+H1_same_model_local_effect,336,333,3,0,10.0,0.0
+H2_same_selector_model_effect,336,9,3,14,10.0,50.0
+H3_boundary_gate,336,310,26,0,109.0,0.0
+H4_structural_representation,336,0,26,41,109.0,301.0
+SUR_vs_VTL,336,0,0,0,0.0,0.0
+boundary_gate_original_model,336,302,35,0,208.0,0.0
+boundary_loss_vs_blind,336,311,26,26,109.0,108.0
+boundary_vs_ungated,336,0,26,336,109.0,9310.0
+equal_share_anchor_choice,336,318,20,0,9408.0,9408.0
+local_loss_vs_blind,336,333,3,3,10.0,10.0
+matched_maximin_model,336,336,0,0,0.0,0.0
+matched_random_model,336,336,0,0,0.0,0.0
+paired_vs_primary,72,45,0,0,0.0,0.0
+paired_vs_primary_structure,72,0,0,0,0.0,0.0
+structure_vs_mixture_same_gate,336,0,26,35,109.0,208.0
+surprise_vs_ungated,336,0,3,336,10.0,9316.0

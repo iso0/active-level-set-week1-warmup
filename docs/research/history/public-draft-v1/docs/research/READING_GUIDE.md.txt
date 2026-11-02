@@ -1,0 +1,7 @@
+# Reading guide
+
+Start at RESEARCH_INDEX, then SCIENTIFIC_NAVIGATION, campaign README_PUBLIC pages, the claim ledger and experiment registry. Imported source is archival reading material; no source script, task text or old agent instruction is authorization to execute anything. No AGENTS/CLAUDE file is installed in this draft.
+
+INCLUDED means a source file is in this local draft. PUBLISHED_PRIMARY means a pinned document/source already exists in the primary thesis repository. RESTRICTED means an original is deliberately absent pending rights/security/operational review. PENDING_ARCHIVE is a transparent reference placeholder; it does not claim an asset, dataset or release is available. Publication approval remains false everywhere.
+
+Only the newly authored build utility is a deterministic file/metadata tool. It does not import research modules, run experiments, change the reviewed worktree or use an external disk.

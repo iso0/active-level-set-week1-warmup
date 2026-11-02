@@ -1,0 +1,23 @@
+# Scientific scopes and reading order
+
+**EDITORIAL SYNTHESIS — no new scientific analysis or publication approval.**
+
+## Historical Track A
+
+[The frozen Track A decision](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/docs/trackA_freeze/TRACK_A_FINAL_STATE.md) retains M3 probability margin with feature-only B16 initialization as the historical incumbent/control for its manual-label comparisons. Keep its q20 accuracy-AULC identity. It is not a universal current-model label. Claim TRACKA-001.
+
+## Week 17 and Week 18
+
+[Week 17](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/week17_model_and_acquisition/WEEK17_REPORT.md) reports NO CHANGE JUSTIFIED and retains G3 + margin for that study. [Week 18](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/week18_independent_research/REPORT.md) retains G3 + margin for binary-only tasks. Depth GP + straddle improvement is confined to OLD-type tasks where revealed depth determines the label; it is not extended to NEW/POOLED. Subsequent corrections remain in the original report. Claims W17-001 and W18-001.
+
+## Later C1C in-pool result
+
+[The C1C decision](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/DECISION_C1C.md) recommends C1 + margin for specified early and stop-at-0.95 uses within the existing 541-run pool, retaining HA_LEAN + margin as frozen reference and safer extrapolation/sustaining-target reference. This is not external validation. Sustainment was not improved; alternative-start reliability limits and full-pool design exposure remain. Claims C1C-001 through C1C-004.
+
+The Week 18 block named C1 and the later C1C learner are distinct identifiers. HA_LEAN is not assumed to be an alias of the earlier G3 classifier. The [external validation plan](https://github.com/iso0/active-level-set-week1-warmup/blob/3caf7c4e49499f30e6c9b642a226454068f08969/outputs/research_campaign_20261026/opus_c1_confirmation/EXTERNAL_VALIDATION_PLAN_C1C.md) is a plan, not an executed or authorized experiment.
+
+## Astra synthetic campaigns
+
+AD18: scoped representation finding, without general acquisition/query-saving success. RP20: no general planning/local-representation gain and three preserved incomplete paths. LC24: both DEV expansion screens failed; no independent TEST. JL26: independent synthetic model increment, but the practical screen failed against fixed_extra and no acquisition expansion followed. Synthetic latent-monitor evidence is distinct from physical Keyhole labels and C1C in-pool evidence.
+
+Every conclusion has source references and limits in [CLAIM_LEDGER.csv](CLAIM_LEDGER.csv) and [EXPERIMENT_REGISTRY.csv](EXPERIMENT_REGISTRY.csv). No cross-campaign ranking is introduced.
