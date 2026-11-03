@@ -86,6 +86,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File "%USERPROFILE%\Documents\the
 
 Hiçbiri yazmayı engellemiyor.
 
+**Tezde nereye girecek?** 2026-11-03 kararıyla dış doğrulama soruları tezin "Further studies" bölümüne girecek; yazımdan önce çalıştırılmayacaklar. Liste `THESIS_SYNTHESIS.md` §8'de:
+- yeni koşularda genelleme;
+- aralık dışı güvenlik;
+- köşedeki etiketin belirlenimli olup olmadığı;
+- 49 bekletilen koşu;
+- 300 µm tabanı.
+
 1. SPH alanının z derinliği nedir; 300 µm alanın tabanı mı? Bu, Keyhole koşularının 300 µm'de birikmesini hipotezden olguya çevirir.
 2. Tezden sonra küçük bir dış doğrulama koşusu mümkün mü? Plan `EXTERNAL_VALIDATION_PLAN_C1C.md`'de: 152–176 koşu.
 3. Bug nedeniyle bekletilen 49 NEW koşusunun fiziği bozuk mu, yoksa yalnız kayıtları mı? Geçerliyse, hiç dokunulmamış tek küçük dış set bunlar.

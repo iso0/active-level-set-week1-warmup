@@ -15,7 +15,7 @@ Every other branch is an ancestor of `main`: nothing exists only on a side branc
 
 | Branch | Tip | What it holds | Status |
 |---|---|---|---|
-| `main` | tag `thesis-final-2026-11-02` | everything | **canonical** |
+| `main` | tag `thesis-final-2026-11-02`, plus later writing notes | everything | **canonical** |
 | `thesis-finalization-20261102` | = `main` at the finalization | the finalization commits | merged; kept |
 | `geometry-temperature-20261102` | 7ffaa7d9 | GT (and every earlier study) | merged; frozen |
 | `ioan-requests-20261031` | 0a57d644 | IR | merged; frozen |

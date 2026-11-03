@@ -61,6 +61,8 @@ No item remains without a status.
 | 37 | C1C, EA and C1S have tables but no figures | **FIXED**: three figures drawn from the frozen C1C exports, checked against the reported numbers | `docs/final/figures/` |
 | 38 | Stale "live" runner status files (`runner/STATUS.md` with "remaining … h") | **Known**: snapshots at closure; every study STATE and coordination record says CLOSED | REPOSITORY_MAP §5 |
 
+**Thesis section.** Owner decision of 2026-11-03: items 4, 8 and 21 above, together with the questions below, are written into the thesis as a **Further studies** section. They will not be run before writing. The list is in `THESIS_SYNTHESIS.md` §8.
+
 ## 3. Questions for Ioan before or during writing
 
 These are the only points that need someone else. None blocks writing.

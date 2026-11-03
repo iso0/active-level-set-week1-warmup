@@ -225,8 +225,29 @@ The outline is a suggestion; each section names the records to draw from.
 | 7 Two-stage depth-then-label learning | RC18–RC24, EL, EA: simplification to HA_LEAN; trend emulator; error attribution; C1 | RC reports; EL and EA reports; C41–C122 |
 | 8 Confirmation and robustness | C1C replication; C1S stability; FR extrapolation; IR and GT supervisor questions | C1C, C1S, FR, IR, GT reports; C123–C158 |
 | 9 Discussion | model vs acquisition; information limit; the corner; what new data would test; limitations (§6) | this file §5–§6; OPEN_ITEMS_REGISTER |
-| 10 Conclusion | the answer of §1 | — |
+| 10 Conclusion and further studies | the answer of §1; then the **Further studies** section below (owner decision 2026-11-03) | this file §1, §6; `EXTERNAL_VALIDATION_PLAN_C1C.md` |
 | Appendices | integrity method (registration, freezes, ledgers, errata), negative results, glossary, reproducibility, Astra's track | ledgers; `docs/trackA_freeze/NEGATIVE_RESULTS_REGISTER.md`; GLOSSARY; REPOSITORY_MAP |
+
+**Further studies.** On 2026-11-03 the owner decided that these questions go into the thesis as a "Further studies" section. They will not be run before writing.
+
+Each question is one that the 541-run pool cannot answer. The run blocks are those of `outputs/research_campaign_20261026/opus_c1_confirmation/EXTERNAL_VALIDATION_PLAN_C1C.md`: 176 runs, 152 at minimum. That plan was never sent and no run was started.
+
+1. **Generalisation to new runs (V1: 136 new runs over the same input ranges).**
+   - Question: does the early gain of C1 + margin over HA_LEAN + margin hold on simulations that played no part in any design choice?
+   - Why the pool cannot answer it: every result so far re-splits the same pool, and the C1 prior was chosen after the full-pool diagnostics.
+   - Caveat: one 136-run batch may be too small to detect an effect of +0.005 BA-AULC, so a non-confirmation would be inconclusive.
+2. **Extrapolation (R3: 16 runs with the spot radius 10 % outside the pooled range).**
+   - Question: is C1 safe outside the sampled region, or should HA_LEAN be preferred there?
+   - Background: EA gave a K5 per-region warning of −0.049, and FR found HA_LEAN's advantage there design-dependent.
+3. **Determinism of the fast-scan corner (R1: 8 corner inputs × 3 solver seeds; optional R2 ramp-up probe).**
+   - Question: does the label flip between solver seeds?
+   - If the flip rate is ≥ 0.2, the corner is aleatoric. The remaining error near it is then a data ceiling, not a learner failure.
+   - R2 would test whether the short keyhole is a ramp-up overshoot.
+4. **The 49 Bug-withheld NEW runs.**
+   - They carry the "Screenshot Bug" annotation: late onset, cause unknown, never opened.
+   - If Ioan confirms the label is unaffected, they can serve as a small untouched external check under a protocol frozen before opening.
+5. **The ~300 µm Keyhole depth plateau.**
+   - Question: is it the domain floor (z-extent), and does the ceiling affect learning?
 
 **Figures for the main result** (`docs/final/figures/`, drawn on 2026-11-02 from the frozen C1C exports by `python -m src.fin_figures`; every plotted summary is checked against the reported numbers in `FIGURE_CHECKS.json`, and the plotted values are in the matching `*_data.csv`):
 - `fig_final_1_learning_curves`: BA vs paid simulations, C1 + margin and HA_LEAN + margin, 95 % cluster-bootstrap bands.
